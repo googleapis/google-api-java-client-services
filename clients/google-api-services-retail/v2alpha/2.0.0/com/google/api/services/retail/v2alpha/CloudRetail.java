@@ -195,8 +195,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
         /**
          * Completes the specified prefix with keyword suggestions. This feature is only available for users
-         * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
-         * feature.
+         * who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
          *
          * Create a request for the method "catalogs.completeQuery".
          *
@@ -222,8 +221,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * Completes the specified prefix with keyword suggestions. This feature is only available for
-           * users who have Retail Search enabled. Please enable Retail Search on Cloud Console before using
-           * this feature.
+           * users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this
+           * feature.
            *
            * Create a request for the method "catalogs.completeQuery".
            *
@@ -685,7 +684,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote operation.
          *
          * @param name Required. Full CompletionConfig resource name. Format:
-         *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+         *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig`
          * @return the request
          */
         public GetCompletionConfig getCompletionConfig(java.lang.String name) throws java.io.IOException {
@@ -713,7 +712,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * invoking the constructor. </p>
            *
            * @param name Required. Full CompletionConfig resource name. Format:
-         *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+         *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig`
            * @since 1.13
            */
           protected GetCompletionConfig(java.lang.String name) {
@@ -792,22 +791,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. Full CompletionConfig resource name. Format: projects/{project_number}/locati
-           * ons/{location_id}/catalogs/{catalog_id}/completionConfig
+           * Required. Full CompletionConfig resource name. Format: `projects/{project_number}/locat
+           * ions/{location_id}/catalogs/{catalog_id}/completionConfig`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Full CompletionConfig resource name. Format:
-         projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+         `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Full CompletionConfig resource name. Format: projects/{project_number}/locati
-           * ons/{location_id}/catalogs/{catalog_id}/completionConfig
+           * Required. Full CompletionConfig resource name. Format: `projects/{project_number}/locat
+           * ions/{location_id}/catalogs/{catalog_id}/completionConfig`
            */
           public GetCompletionConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2618,6 +2617,189 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           }
           /**
+           * An accessor for creating requests from the Places collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudRetail retail = new CloudRetail(...);}
+           *   {@code CloudRetail.Places.List request = retail.places().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Places places() {
+            return new Places();
+          }
+
+          /**
+           * The "places" collection of methods.
+           */
+          public class Places {
+
+            /**
+             * An accessor for creating requests from the Operations collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code CloudRetail retail = new CloudRetail(...);}
+             *   {@code CloudRetail.Operations.List request = retail.operations().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Operations operations() {
+              return new Operations();
+            }
+
+            /**
+             * The "operations" collection of methods.
+             */
+            public class Operations {
+
+              /**
+               * Gets the latest state of a long-running operation. Clients can use this method to poll the
+               * operation result at intervals as recommended by the API service.
+               *
+               * Create a request for the method "operations.get".
+               *
+               * This request holds the parameters needed by the retail server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name The name of the operation resource.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v2alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/places/[^/]+/operations/[^/]+$");
+
+                /**
+                 * Gets the latest state of a long-running operation. Clients can use this method to poll the
+                 * operation result at intervals as recommended by the API service.
+                 *
+                 * Create a request for the method "operations.get".
+                 *
+                 * This request holds the parameters needed by the the retail server.  After setting any optional
+                 * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+                 * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+                 * called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name The name of the operation resource.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/places/[^/]+/operations/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** The name of the operation resource. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** The name of the operation resource.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** The name of the operation resource. */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/places/[^/]+/operations/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+          /**
            * An accessor for creating requests from the Products collection.
            *
            * <p>The typical use is:</p>
@@ -2646,7 +2828,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
              * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Please enable Retail Search on Cloud Console before using this feature.
+             * Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.addFulfillmentPlaces".
              *
@@ -2683,7 +2865,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards.
                * If conflicting updates are issued, the Operations associated with the stale updates will not be
                * marked as done until being obsolete. This feature is only available for users who have Retail
-               * Search enabled. Please enable Retail Search on Cloud Console before using this feature.
+               * Search enabled. Enable Retail Search on Cloud Console before using this feature.
                *
                * Create a request for the method "products.addFulfillmentPlaces".
                *
@@ -2814,8 +2996,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND
              * afterwards. If conflicting updates are issued, the Operations associated with the stale updates
              * will not be marked as done until being obsolete. This feature is only available for users who
-             * have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
-             * feature.
+             * have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.addLocalInventories".
              *
@@ -2853,8 +3034,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * has no effect on local inventories. The returned Operations will be obsolete after 1 day, and
                * GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the
                * Operations associated with the stale updates will not be marked as done until being obsolete.
-               * This feature is only available for users who have Retail Search enabled. Please enable Retail
-               * Search on Cloud Console before using this feature.
+               * This feature is only available for users who have Retail Search enabled. Enable Retail Search
+               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.addLocalInventories".
                *
@@ -4302,7 +4483,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
              * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Please enable Retail Search on Cloud Console before using this feature.
+             * Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.removeFulfillmentPlaces".
              *
@@ -4339,8 +4520,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND
                * afterwards. If conflicting updates are issued, the Operations associated with the stale updates
                * will not be marked as done until being obsolete. This feature is only available for users who
-               * have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
-               * feature.
+               * have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
                *
                * Create a request for the method "products.removeFulfillmentPlaces".
                *
@@ -4470,7 +4650,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
              * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Please enable Retail Search on Cloud Console before using this feature.
+             * Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.removeLocalInventories".
              *
@@ -4508,8 +4688,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will
                * return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with
                * the stale updates will not be marked as done until being obsolete. This feature is only
-               * available for users who have Retail Search enabled. Please enable Retail Search on Cloud
-               * Console before using this feature.
+               * available for users who have Retail Search enabled. Enable Retail Search on Cloud Console
+               * before using this feature.
                *
                * Create a request for the method "products.removeLocalInventories".
                *
@@ -4632,23 +4812,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             /**
              * Updates inventory information for a Product while respecting the last update timestamps of each
              * inventory field. This process is asynchronous and does not require the Product to exist before
-             * updating fulfillment information. If the request is valid, the update will be enqueued and
-             * processed downstream. As a consequence, when a response is returned, updates are not immediately
-             * manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts.
-             * When inventory is updated with ProductService.CreateProduct and ProductService.UpdateProduct, the
-             * specified inventory field value(s) will overwrite any existing value(s) while ignoring the last
-             * update time for this field. Furthermore, the last update time for the specified inventory fields
-             * will be overwritten to the time of the ProductService.CreateProduct or
-             * ProductService.UpdateProduct request. If no inventory fields are set in
-             * CreateProductRequest.product, then any pre-existing inventory information for this product will
-             * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
-             * inventory information will be preserved. Pre-existing inventory information can only be updated
-             * with ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and
-             * ProductService.RemoveFulfillmentPlaces. The returned Operations will be obsolete after 1 day, and
-             * GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the
-             * Operations associated with the stale updates will not be marked as done until being obsolete.
-             * This feature is only available for users who have Retail Search enabled. Please enable Retail
-             * Search on Cloud Console before using this feature.
+             * updating fulfillment information. If the request is valid, the update is enqueued and processed
+             * downstream. As a consequence, when a response is returned, updates are not immediately manifested
+             * in the Product queried by ProductService.GetProduct or ProductService.ListProducts. When
+             * inventory is updated with ProductService.CreateProduct and ProductService.UpdateProduct, the
+             * specified inventory field value(s) overwrite any existing value(s) while ignoring the last update
+             * time for this field. Furthermore, the last update times for the specified inventory fields are
+             * overwritten by the times of the ProductService.CreateProduct or ProductService.UpdateProduct
+             * request. If no inventory fields are set in CreateProductRequest.product, then any pre-existing
+             * inventory information for this product is used. If no inventory fields are set in
+             * SetInventoryRequest.set_mask, then any existing inventory information is preserved. Pre-existing
+             * inventory information can only be updated with ProductService.SetInventory,
+             * ProductService.AddFulfillmentPlaces, and ProductService.RemoveFulfillmentPlaces. The returned
+             * Operations is obsolete after one day, and the GetOperation API returns `NOT_FOUND` afterwards. If
+             * conflicting updates are issued, the Operations associated with the stale updates are not marked
+             * as done until they are obsolete. This feature is only available for users who have Retail Search
+             * enabled. Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.setInventory".
              *
@@ -4677,23 +4856,23 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               /**
                * Updates inventory information for a Product while respecting the last update timestamps of each
                * inventory field. This process is asynchronous and does not require the Product to exist before
-               * updating fulfillment information. If the request is valid, the update will be enqueued and
-               * processed downstream. As a consequence, when a response is returned, updates are not
-               * immediately manifested in the Product queried by ProductService.GetProduct or
-               * ProductService.ListProducts. When inventory is updated with ProductService.CreateProduct and
-               * ProductService.UpdateProduct, the specified inventory field value(s) will overwrite any
-               * existing value(s) while ignoring the last update time for this field. Furthermore, the last
-               * update time for the specified inventory fields will be overwritten to the time of the
-               * ProductService.CreateProduct or ProductService.UpdateProduct request. If no inventory fields
-               * are set in CreateProductRequest.product, then any pre-existing inventory information for this
-               * product will be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any
-               * existing inventory information will be preserved. Pre-existing inventory information can only
-               * be updated with ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and
-               * ProductService.RemoveFulfillmentPlaces. The returned Operations will be obsolete after 1 day,
-               * and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the
-               * Operations associated with the stale updates will not be marked as done until being obsolete.
-               * This feature is only available for users who have Retail Search enabled. Please enable Retail
-               * Search on Cloud Console before using this feature.
+               * updating fulfillment information. If the request is valid, the update is enqueued and processed
+               * downstream. As a consequence, when a response is returned, updates are not immediately
+               * manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts.
+               * When inventory is updated with ProductService.CreateProduct and ProductService.UpdateProduct,
+               * the specified inventory field value(s) overwrite any existing value(s) while ignoring the last
+               * update time for this field. Furthermore, the last update times for the specified inventory
+               * fields are overwritten by the times of the ProductService.CreateProduct or
+               * ProductService.UpdateProduct request. If no inventory fields are set in
+               * CreateProductRequest.product, then any pre-existing inventory information for this product is
+               * used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
+               * inventory information is preserved. Pre-existing inventory information can only be updated with
+               * ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and
+               * ProductService.RemoveFulfillmentPlaces. The returned Operations is obsolete after one day, and
+               * the GetOperation API returns `NOT_FOUND` afterwards. If conflicting updates are issued, the
+               * Operations associated with the stale updates are not marked as done until they are obsolete.
+               * This feature is only available for users who have Retail Search enabled. Enable Retail Search
+               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.setInventory".
                *
@@ -4834,8 +5013,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * Bulk import of processed completion dataset. Request processing is asynchronous. Partial updating
            * is not supported. The operation is successfully finished only after the imported suggestions are
            * indexed successfully and ready for serving. The process takes hours. This feature is only
-           * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
-           * before using this feature.
+           * available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before
+           * using this feature.
            *
            * Create a request for the method "completionData.import".
            *
@@ -4864,8 +5043,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Bulk import of processed completion dataset. Request processing is asynchronous. Partial
              * updating is not supported. The operation is successfully finished only after the imported
              * suggestions are indexed successfully and ready for serving. The process takes hours. This
-             * feature is only available for users who have Retail Search enabled. Please enable Retail Search
-             * on Cloud Console before using this feature.
+             * feature is only available for users who have Retail Search enabled. Enable Retail Search on
+             * Cloud Console before using this feature.
              *
              * Create a request for the method "completionData.import".
              *
@@ -5312,7 +5491,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the retail server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Control to delete. Format:
+           * @param name Required. The resource name of the Control to get. Format:
            *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control
            *        _id}`
            * @return the request
@@ -5340,7 +5519,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Control to delete. Format:
+             * @param name Required. The resource name of the Control to get. Format:
            *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control
            *        _id}`
              * @since 1.13
@@ -5421,13 +5600,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource name of the Control to delete. Format: `projects/{project_numb
-             * er}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}`
+             * Required. The resource name of the Control to get. Format: `projects/{project_number}
+             * /locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Control to delete. Format:
+            /** Required. The resource name of the Control to get. Format:
            `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}`
              */
             public java.lang.String getName() {
@@ -5435,8 +5614,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource name of the Control to delete. Format: `projects/{project_numb
-             * er}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}`
+             * Required. The resource name of the Control to get. Format: `projects/{project_number}
+             * /locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5454,7 +5633,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists all Controls linked to this catalog.
+           * Lists all Controls by their parent Catalog.
            *
            * Create a request for the method "controls.list".
            *
@@ -5479,7 +5658,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Lists all Controls linked to this catalog.
+             * Lists all Controls by their parent Catalog.
              *
              * Create a request for the method "controls.list".
              *
@@ -5674,7 +5853,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Updates a Control. Control cannot be set to a different oneof field, if so an INVALID_ARGUMENT is
-           * returned. If the Control to delete does not exist, a NOT_FOUND error is returned.
+           * returned. If the Control to update does not exist, a NOT_FOUND error is returned.
            *
            * Create a request for the method "controls.patch".
            *
@@ -5700,7 +5879,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Updates a Control. Control cannot be set to a different oneof field, if so an INVALID_ARGUMENT
-             * is returned. If the Control to delete does not exist, a NOT_FOUND error is returned.
+             * is returned. If the Control to update does not exist, a NOT_FOUND error is returned.
              *
              * Create a request for the method "controls.patch".
              *
@@ -5858,7 +6037,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent resource under which to create the model. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaModel}
            * @return the request
            */
@@ -5886,7 +6065,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent resource under which to create the model. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaModel}
              * @since 1.13
              */
@@ -5957,13 +6136,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent resource under which to create the model. Format:
-             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource under which to create the model. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -5971,7 +6150,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent resource under which to create the model. Format:
-             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6019,7 +6198,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the Model to delete. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6046,7 +6226,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the Model to delete. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6115,22 +6296,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource name of the Model to delete. Format: projects/{project_number}
-             * /locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The resource name of the Model to delete. Format: `projects/{project_number
+             * }/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the Model to delete. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Model to delete. Format: projects/{project_number}
-             * /locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The resource name of the Model to delete. Format: `projects/{project_number
+             * }/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6156,7 +6337,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent for which to list models. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -6183,7 +6364,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent for which to list models. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -6263,13 +6444,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent for which to list models. Format:
-             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent for which to list models. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -6277,7 +6458,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent for which to list models. Format:
-             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6518,7 +6699,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the model to pause. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPauseModelRequest}
            * @return the request
            */
@@ -6546,7 +6728,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the model to pause. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPauseModelRequest}
              * @since 1.13
              */
@@ -6616,22 +6799,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The name of the model to pause. Format: projects/{project_number}/locations
-             * /{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The name of the model to pause. Format: `projects/{project_number}/location
+             * s/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the model to pause. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the model to pause. Format: projects/{project_number}/locations
-             * /{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The name of the model to pause. Format: `projects/{project_number}/location
+             * s/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public Pause setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6657,7 +6840,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the model to resume. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaResumeModelRequest}
            * @return the request
            */
@@ -6685,7 +6869,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the model to resume. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaResumeModelRequest}
              * @since 1.13
              */
@@ -6755,22 +6940,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The name of the model to resume. Format: projects/{project_number}/location
-             * s/{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The name of the model to resume. Format: `projects/{project_number}/locatio
+             * ns/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the model to resume. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the model to resume. Format: projects/{project_number}/location
-             * s/{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The name of the model to resume. Format: `projects/{project_number}/locatio
+             * ns/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public Resume setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6796,7 +6981,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Tune#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the model to tune. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaTuneModelRequest}
            * @return the request
            */
@@ -6824,7 +7010,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the model to tune. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaTuneModelRequest}
              * @since 1.13
              */
@@ -6894,22 +7081,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource name of the model to tune. Format: projects/{project_number}/l
-             * ocations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The resource name of the model to tune. Format: `projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the model to tune. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the model to tune. Format: projects/{project_number}/l
-             * ocations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+             * Required. The resource name of the model to tune. Format: `projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
              */
             public Tune setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -7487,7 +7674,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Performs a search. This feature is only available for users who have Retail Search enabled.
-           * Please enable Retail Search on Cloud Console before using this feature.
+           * Enable Retail Search on Cloud Console before using this feature.
            *
            * Create a request for the method "placements.search".
            *
@@ -7518,7 +7705,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Performs a search. This feature is only available for users who have Retail Search enabled.
-             * Please enable Retail Search on Cloud Console before using this feature.
+             * Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "placements.search".
              *
@@ -7680,8 +7867,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the retail server.  After setting any optional
            * parameters, call the {@link AddControl#execute()} method to invoke the remote operation.
            *
-           * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
-           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @param servingConfig Required. The source ServingConfig resource name . Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddControlRequest}
            * @return the request
            */
@@ -7713,8 +7900,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * AddControl#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
-           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @param servingConfig Required. The source ServingConfig resource name . Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddControlRequest}
              * @since 1.13
              */
@@ -7784,22 +7971,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
-             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * Required. The source ServingConfig resource name . Format: `projects/{project_number}
+             * /locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
-            /** Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loc
-           ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+            /** Required. The source ServingConfig resource name . Format: `projects/{project_number}/locations/{lo
+           cation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
             }
 
             /**
-             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
-             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * Required. The source ServingConfig resource name . Format: `projects/{project_number}
+             * /locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             public AddControl setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -7991,8 +8178,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the retail server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the ServingConfig to delete. Format: projects/{project_number}/locati
-           *        ons/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @param name Required. The resource name of the ServingConfig to delete. Format: `projects/{project_number}/locat
+           *        ions/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8018,8 +8205,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the ServingConfig to delete. Format: projects/{project_number}/locati
-           *        ons/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @param name Required. The resource name of the ServingConfig to delete. Format: `projects/{project_number}/locat
+           *        ions/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -8088,24 +8275,24 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource name of the ServingConfig to delete. Format: projects/{project
-             * _number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config
-             * _id}
+             * Required. The resource name of the ServingConfig to delete. Format: `projects/{projec
+             * t_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_confi
+             * g_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the ServingConfig to delete. Format: projects/{project_number}/locat
-           ions/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+            /** Required. The resource name of the ServingConfig to delete. Format: `projects/{project_number}/loca
+           tions/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the ServingConfig to delete. Format: projects/{project
-             * _number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config
-             * _id}
+             * Required. The resource name of the ServingConfig to delete. Format: `projects/{projec
+             * t_number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_confi
+             * g_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8130,8 +8317,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the retail server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the ServingConfig to get. Format: projects/{project_number}/locations
-           *        /{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
+           *        s/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -8157,8 +8344,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the ServingConfig to get. Format: projects/{project_number}/locations
-           *        /{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
+           *        s/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -8237,24 +8424,24 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource name of the ServingConfig to get. Format: projects/{project_nu
-             * mber}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id
-             * }
+             * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
+             * umber}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_i
+             * d}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the ServingConfig to get. Format: projects/{project_number}/location
-           s/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+            /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
+           ns/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the ServingConfig to get. Format: projects/{project_nu
-             * mber}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id
-             * }
+             * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
+             * umber}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_i
+             * d}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8280,7 +8467,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The catalog resource name. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -8307,7 +8494,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The catalog resource name. Format:
-           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -8387,13 +8574,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The catalog resource name. Format:
-             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The catalog resource name. Format:
-           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -8401,7 +8588,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The catalog resource name. Format:
-             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -8807,8 +8994,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the retail server.  After setting any optional
            * parameters, call the {@link RemoveControl#execute()} method to invoke the remote operation.
            *
-           * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
-           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @param servingConfig Required. The source ServingConfig resource name . Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveControlRequest}
            * @return the request
            */
@@ -8837,8 +9024,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * equest)} must be called to initialize this instance immediately after invoking the constructor.
              * </p>
              *
-             * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
-           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @param servingConfig Required. The source ServingConfig resource name . Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveControlRequest}
              * @since 1.13
              */
@@ -8908,22 +9095,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
-             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * Required. The source ServingConfig resource name . Format: `projects/{project_number}
+             * /locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
-            /** Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loc
-           ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+            /** Required. The source ServingConfig resource name . Format: `projects/{project_number}/locations/{lo
+           cation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
             }
 
             /**
-             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
-             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * Required. The source ServingConfig resource name . Format: `projects/{project_number}
+             * /locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}`
              */
             public RemoveControl setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -8942,7 +9129,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Performs a search. This feature is only available for users who have Retail Search enabled.
-           * Please enable Retail Search on Cloud Console before using this feature.
+           * Enable Retail Search on Cloud Console before using this feature.
            *
            * Create a request for the method "servingConfigs.search".
            *
@@ -8973,7 +9160,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Performs a search. This feature is only available for users who have Retail Search enabled.
-             * Please enable Retail Search on Cloud Console before using this feature.
+             * Enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "servingConfigs.search".
              *
@@ -9625,11 +9812,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Starts a user event rejoin operation with latest product catalog. Events will not be annotated
-           * with detailed product information if product is missing from the catalog at the time the user
-           * event is ingested, and these events are stored as unjoined events with a limited usage on
-           * training and serving. This method can be used to start a join operation on specified events with
-           * latest version of product catalog. It can also be used to correct events joined with the wrong
+           * Starts a user-event rejoin operation with latest product catalog. Events are not annotated with
+           * detailed product information for products that are missing from the catalog when the user event
+           * is ingested. These events are stored as unjoined events with limited usage on training and
+           * serving. You can use this method to start a join operation on specified events with the latest
+           * version of product catalog. You can also use this method to correct events joined with the wrong
            * product catalog. A rejoin operation can take hours or days to complete.
            *
            * Create a request for the method "userEvents.rejoin".
@@ -9656,11 +9843,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Starts a user event rejoin operation with latest product catalog. Events will not be annotated
-             * with detailed product information if product is missing from the catalog at the time the user
-             * event is ingested, and these events are stored as unjoined events with a limited usage on
-             * training and serving. This method can be used to start a join operation on specified events
-             * with latest version of product catalog. It can also be used to correct events joined with the
+             * Starts a user-event rejoin operation with latest product catalog. Events are not annotated with
+             * detailed product information for products that are missing from the catalog when the user event
+             * is ingested. These events are stored as unjoined events with limited usage on training and
+             * serving. You can use this method to start a join operation on specified events with the latest
+             * version of product catalog. You can also use this method to correct events joined with the
              * wrong product catalog. A rejoin operation can take hours or days to complete.
              *
              * Create a request for the method "userEvents.rejoin".

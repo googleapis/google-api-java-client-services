@@ -148,8 +148,8 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
 
   /**
    * The categories associated with a category page. To represent full path of category, use '>'
-   * sign to separate different hierarchies. If '>' is part of the category name, please replace it
-   * with other character(s). Category pages include special pages such as sales or promotions. For
+   * sign to separate different hierarchies. If '>' is part of the category name, replace it with
+   * other character(s). Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
    * 2017 Black Friday Deals"]. Required for `category-page-view` events. At least one of
    * search_query or page_categories is required for `search` events. Other event types should not
@@ -509,8 +509,8 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
 
   /**
    * The categories associated with a category page. To represent full path of category, use '>'
-   * sign to separate different hierarchies. If '>' is part of the category name, please replace it
-   * with other character(s). Category pages include special pages such as sales or promotions. For
+   * sign to separate different hierarchies. If '>' is part of the category name, replace it with
+   * other character(s). Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
    * 2017 Black Friday Deals"]. Required for `category-page-view` events. At least one of
    * search_query or page_categories is required for `search` events. Other event types should not
@@ -523,8 +523,8 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
 
   /**
    * The categories associated with a category page. To represent full path of category, use '>'
-   * sign to separate different hierarchies. If '>' is part of the category name, please replace it
-   * with other character(s). Category pages include special pages such as sales or promotions. For
+   * sign to separate different hierarchies. If '>' is part of the category name, replace it with
+   * other character(s). Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
    * 2017 Black Friday Deals"]. Required for `category-page-view` events. At least one of
    * search_query or page_categories is required for `search` events. Other event types should not

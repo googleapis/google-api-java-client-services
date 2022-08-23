@@ -45,19 +45,14 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   private GoogleRpcStatus error;
 
   /**
-   * Service-specific metadata associated with the operation. It typically contains progress
-   * information and common metadata such as create time. Some services might not provide such
-   * metadata. Any method that returns a long-running operation should document the metadata type,
-   * if any.
+   * This field will contain a `SubmitUriMetadata` object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
-   * `operations/{unique_id}`.
+   * This will match the pattern `/v1/{project-name}/operations/{operation-id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,10 +107,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * Service-specific metadata associated with the operation. It typically contains progress
-   * information and common metadata such as create time. Some services might not provide such
-   * metadata. Any method that returns a long-running operation should document the metadata type,
-   * if any.
+   * This field will contain a `SubmitUriMetadata` object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -123,10 +115,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * Service-specific metadata associated with the operation. It typically contains progress
-   * information and common metadata such as create time. Some services might not provide such
-   * metadata. Any method that returns a long-running operation should document the metadata type,
-   * if any.
+   * This field will contain a `SubmitUriMetadata` object.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleLongrunningOperation setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -135,9 +124,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
-   * `operations/{unique_id}`.
+   * This will match the pattern `/v1/{project-name}/operations/{operation-id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -145,9 +132,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
-   * `operations/{unique_id}`.
+   * This will match the pattern `/v1/{project-name}/operations/{operation-id}`.
    * @param name name or {@code null} for none
    */
   public GoogleLongrunningOperation setName(java.lang.String name) {

@@ -1547,6 +1547,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         return this;
       }
 
+      /**
+       * Optional. Controls whether Projects in the DELETING state should be returned. Defaults to
+       * false.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showDeleted;
+
+      /** Optional. Controls whether Projects in the DELETING state should be returned. Defaults to false.
+       */
+      public java.lang.Boolean getShowDeleted() {
+        return showDeleted;
+      }
+
+      /**
+       * Optional. Controls whether Projects in the DELETING state should be returned. Defaults to
+       * false.
+       */
+      public List setShowDeleted(java.lang.Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -3279,6 +3301,165 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         @Override
         public Remove set(String parameterName, Object value) {
           return (Remove) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Restores the specified AndroidApp to the project.
+       *
+       * Create a request for the method "androidApps.undelete".
+       *
+       * This request holds the parameters needed by the firebase server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the AndroidApp, in the format: projects/
+       *        PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+       *        Resource from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/androidApps/APP_ID Refer to the AndroidApp
+       *        [name](../projects.androidApps#AndroidApp.FIELDS.name) field for details about
+       *        PROJECT_IDENTIFIER and APP_ID values.
+       * @param content the {@link com.google.api.services.firebase.v1beta1.model.UndeleteAndroidAppRequest}
+       * @return the request
+       */
+      public Undelete undelete(java.lang.String name, com.google.api.services.firebase.v1beta1.model.UndeleteAndroidAppRequest content) throws java.io.IOException {
+        Undelete result = new Undelete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undelete extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:undelete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
+
+        /**
+         * Restores the specified AndroidApp to the project.
+         *
+         * Create a request for the method "androidApps.undelete".
+         *
+         * This request holds the parameters needed by the the firebase server.  After setting any
+         * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the AndroidApp, in the format: projects/
+       *        PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+       *        Resource from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/androidApps/APP_ID Refer to the AndroidApp
+       *        [name](../projects.androidApps#AndroidApp.FIELDS.name) field for details about
+       *        PROJECT_IDENTIFIER and APP_ID values.
+         * @param content the {@link com.google.api.services.firebase.v1beta1.model.UndeleteAndroidAppRequest}
+         * @since 1.13
+         */
+        protected Undelete(java.lang.String name, com.google.api.services.firebase.v1beta1.model.UndeleteAndroidAppRequest content) {
+          super(FirebaseManagement.this, "POST", REST_PATH, content, com.google.api.services.firebase.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/androidApps/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undelete set$Xgafv(java.lang.String $Xgafv) {
+          return (Undelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undelete setAccessToken(java.lang.String accessToken) {
+          return (Undelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undelete setAlt(java.lang.String alt) {
+          return (Undelete) super.setAlt(alt);
+        }
+
+        @Override
+        public Undelete setCallback(java.lang.String callback) {
+          return (Undelete) super.setCallback(callback);
+        }
+
+        @Override
+        public Undelete setFields(java.lang.String fields) {
+          return (Undelete) super.setFields(fields);
+        }
+
+        @Override
+        public Undelete setKey(java.lang.String key) {
+          return (Undelete) super.setKey(key);
+        }
+
+        @Override
+        public Undelete setOauthToken(java.lang.String oauthToken) {
+          return (Undelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undelete setQuotaUser(java.lang.String quotaUser) {
+          return (Undelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undelete setUploadType(java.lang.String uploadType) {
+          return (Undelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the AndroidApp, in the format: projects/
+         * PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/androidApps/APP_ID Refer to the AndroidApp
+         * [name](../projects.androidApps#AndroidApp.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER and APP_ID values.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the AndroidApp, in the format: projects/
+       PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource
+       from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
+       Refer to the AndroidApp [name](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+       about PROJECT_IDENTIFIER and APP_ID values.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the AndroidApp, in the format: projects/
+         * PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/androidApps/APP_ID Refer to the AndroidApp
+         * [name](../projects.androidApps#AndroidApp.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER and APP_ID values.
+         */
+        public Undelete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/androidApps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undelete set(String parameterName, Object value) {
+          return (Undelete) super.set(parameterName, value);
         }
       }
 
@@ -5348,6 +5529,165 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return (Remove) super.set(parameterName, value);
         }
       }
+      /**
+       * Restores the specified IosApp to the project.
+       *
+       * Create a request for the method "iosApps.undelete".
+       *
+       * This request holds the parameters needed by the firebase server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the IosApp, in the format: projects/
+       *        PROJECT_IDENTIFIER/iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+       *        Resource from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/iosApps/APP_ID Refer to the IosApp
+       *        [name](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       *        and APP_ID values.
+       * @param content the {@link com.google.api.services.firebase.v1beta1.model.UndeleteIosAppRequest}
+       * @return the request
+       */
+      public Undelete undelete(java.lang.String name, com.google.api.services.firebase.v1beta1.model.UndeleteIosAppRequest content) throws java.io.IOException {
+        Undelete result = new Undelete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undelete extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:undelete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/iosApps/[^/]+$");
+
+        /**
+         * Restores the specified IosApp to the project.
+         *
+         * Create a request for the method "iosApps.undelete".
+         *
+         * This request holds the parameters needed by the the firebase server.  After setting any
+         * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the IosApp, in the format: projects/
+       *        PROJECT_IDENTIFIER/iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+       *        Resource from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/iosApps/APP_ID Refer to the IosApp
+       *        [name](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       *        and APP_ID values.
+         * @param content the {@link com.google.api.services.firebase.v1beta1.model.UndeleteIosAppRequest}
+         * @since 1.13
+         */
+        protected Undelete(java.lang.String name, com.google.api.services.firebase.v1beta1.model.UndeleteIosAppRequest content) {
+          super(FirebaseManagement.this, "POST", REST_PATH, content, com.google.api.services.firebase.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/iosApps/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undelete set$Xgafv(java.lang.String $Xgafv) {
+          return (Undelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undelete setAccessToken(java.lang.String accessToken) {
+          return (Undelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undelete setAlt(java.lang.String alt) {
+          return (Undelete) super.setAlt(alt);
+        }
+
+        @Override
+        public Undelete setCallback(java.lang.String callback) {
+          return (Undelete) super.setCallback(callback);
+        }
+
+        @Override
+        public Undelete setFields(java.lang.String fields) {
+          return (Undelete) super.setFields(fields);
+        }
+
+        @Override
+        public Undelete setKey(java.lang.String key) {
+          return (Undelete) super.setKey(key);
+        }
+
+        @Override
+        public Undelete setOauthToken(java.lang.String oauthToken) {
+          return (Undelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undelete setQuotaUser(java.lang.String quotaUser) {
+          return (Undelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undelete setUploadType(java.lang.String uploadType) {
+          return (Undelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the IosApp, in the format: projects/
+         * PROJECT_IDENTIFIER/iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/iosApps/APP_ID Refer to the IosApp
+         * [name](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+         * and APP_ID values.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the IosApp, in the format: projects/
+       PROJECT_IDENTIFIER/iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from
+       Sub-Collection access pattern may be used here, in the format: projects/-/iosApps/APP_ID Refer to
+       the IosApp [name](../projects.iosApps#IosApp.FIELDS.name) field for details about
+       PROJECT_IDENTIFIER and APP_ID values.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the IosApp, in the format: projects/
+         * PROJECT_IDENTIFIER/iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/iosApps/APP_ID Refer to the IosApp
+         * [name](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+         * and APP_ID values.
+         */
+        public Undelete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/iosApps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undelete set(String parameterName, Object value) {
+          return (Undelete) super.set(parameterName, value);
+        }
+      }
 
     }
     /**
@@ -6430,6 +6770,165 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         @Override
         public Remove set(String parameterName, Object value) {
           return (Remove) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Restores the specified WebApp to the project.
+       *
+       * Create a request for the method "webApps.undelete".
+       *
+       * This request holds the parameters needed by the firebase server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the WebApp, in the format: projects/
+       *        PROJECT_IDENTIFIER/webApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+       *        Resource from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/webApps/APP_ID Refer to the WebApp
+       *        [name](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       *        and APP_ID values.
+       * @param content the {@link com.google.api.services.firebase.v1beta1.model.UndeleteWebAppRequest}
+       * @return the request
+       */
+      public Undelete undelete(java.lang.String name, com.google.api.services.firebase.v1beta1.model.UndeleteWebAppRequest content) throws java.io.IOException {
+        Undelete result = new Undelete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undelete extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:undelete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/webApps/[^/]+$");
+
+        /**
+         * Restores the specified WebApp to the project.
+         *
+         * Create a request for the method "webApps.undelete".
+         *
+         * This request holds the parameters needed by the the firebase server.  After setting any
+         * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the WebApp, in the format: projects/
+       *        PROJECT_IDENTIFIER/webApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+       *        Resource from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/webApps/APP_ID Refer to the WebApp
+       *        [name](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       *        and APP_ID values.
+         * @param content the {@link com.google.api.services.firebase.v1beta1.model.UndeleteWebAppRequest}
+         * @since 1.13
+         */
+        protected Undelete(java.lang.String name, com.google.api.services.firebase.v1beta1.model.UndeleteWebAppRequest content) {
+          super(FirebaseManagement.this, "POST", REST_PATH, content, com.google.api.services.firebase.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/webApps/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undelete set$Xgafv(java.lang.String $Xgafv) {
+          return (Undelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undelete setAccessToken(java.lang.String accessToken) {
+          return (Undelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undelete setAlt(java.lang.String alt) {
+          return (Undelete) super.setAlt(alt);
+        }
+
+        @Override
+        public Undelete setCallback(java.lang.String callback) {
+          return (Undelete) super.setCallback(callback);
+        }
+
+        @Override
+        public Undelete setFields(java.lang.String fields) {
+          return (Undelete) super.setFields(fields);
+        }
+
+        @Override
+        public Undelete setKey(java.lang.String key) {
+          return (Undelete) super.setKey(key);
+        }
+
+        @Override
+        public Undelete setOauthToken(java.lang.String oauthToken) {
+          return (Undelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undelete setQuotaUser(java.lang.String quotaUser) {
+          return (Undelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undelete setUploadType(java.lang.String uploadType) {
+          return (Undelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the WebApp, in the format: projects/
+         * PROJECT_IDENTIFIER/webApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/webApps/APP_ID Refer to the WebApp
+         * [name](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+         * and APP_ID values.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the WebApp, in the format: projects/
+       PROJECT_IDENTIFIER/webApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from
+       Sub-Collection access pattern may be used here, in the format: projects/-/webApps/APP_ID Refer to
+       the WebApp [name](../projects.webApps#WebApp.FIELDS.name) field for details about
+       PROJECT_IDENTIFIER and APP_ID values.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the WebApp, in the format: projects/
+         * PROJECT_IDENTIFIER/webApps/APP_ID Since an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/webApps/APP_ID Refer to the WebApp
+         * [name](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER
+         * and APP_ID values.
+         */
+        public Undelete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/webApps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undelete set(String parameterName, Object value) {
+          return (Undelete) super.set(parameterName, value);
         }
       }
 

@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2alphaTuneModelMetadata extends com.google.
 
   /**
    * The resource name of the model that this tune applies to. Format:
-   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2alphaTuneModelMetadata extends com.google.
 
   /**
    * The resource name of the model that this tune applies to. Format:
-   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2alphaTuneModelMetadata extends com.google.
 
   /**
    * The resource name of the model that this tune applies to. Format:
-   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * @param model model or {@code null} for none
    */
   public GoogleCloudRetailV2alphaTuneModelMetadata setModel(java.lang.String model) {

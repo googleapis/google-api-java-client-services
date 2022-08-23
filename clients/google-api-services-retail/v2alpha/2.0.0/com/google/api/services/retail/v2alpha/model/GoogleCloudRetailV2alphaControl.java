@@ -17,8 +17,8 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Configures dynamic serving time metadata that is used to pre and post process
- * search/recommendation model results.
+ * Configures dynamic metadata that can be linked to a ServingConfig and affect search or
+ * recommendation results at serving time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -31,9 +31,9 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of serving configuration ids that that are associated with this control. Note
-   * the association is managed via the ServingConfig, this is an output only denormalizeed view.
-   * Assumed to be in the same catalog.
+   * Output only. List of serving configuration ids that are associated with this control in the
+   * same Catalog. Note the association is managed via the ServingConfig, this is an output only
+   * denormalized view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,8 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   private java.lang.String displayName;
 
   /**
-   * A facet specification to perform faceted search.
+   * A facet specification to perform faceted search. Note that this field is deprecated and will
+   * throw NOT_IMPLEMENTED if used for creating a control.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +72,18 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   private GoogleCloudRetailV2alphaRule rule;
 
   /**
-   * Required. Immutable. The solution types that the serving config is used for. Currently we
-   * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
-   * is supported at the moment. If no solution type is provided at creation time, will default to
+   * Specifies the use case for the control. Affects what condition fields can be set. Only settable
+   * by search controls. Will default to SEARCH_SOLUTION_USE_CASE_SEARCH if not specified. Currently
+   * only allow one search_solution_use_case per control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> searchSolutionUseCase;
+
+  /**
+   * Required. Immutable. The solution types that the control is used for. Currently we support
+   * setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is
+   * supported at the moment. If no solution type is provided at creation time, will default to
    * SOLUTION_TYPE_SEARCH.
    * The value may be {@code null}.
    */
@@ -81,9 +91,9 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   private java.util.List<java.lang.String> solutionTypes;
 
   /**
-   * Output only. List of serving configuration ids that that are associated with this control. Note
-   * the association is managed via the ServingConfig, this is an output only denormalizeed view.
-   * Assumed to be in the same catalog.
+   * Output only. List of serving configuration ids that are associated with this control in the
+   * same Catalog. Note the association is managed via the ServingConfig, this is an output only
+   * denormalized view.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssociatedServingConfigIds() {
@@ -91,9 +101,9 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * Output only. List of serving configuration ids that that are associated with this control. Note
-   * the association is managed via the ServingConfig, this is an output only denormalizeed view.
-   * Assumed to be in the same catalog.
+   * Output only. List of serving configuration ids that are associated with this control in the
+   * same Catalog. Note the association is managed via the ServingConfig, this is an output only
+   * denormalized view.
    * @param associatedServingConfigIds associatedServingConfigIds or {@code null} for none
    */
   public GoogleCloudRetailV2alphaControl setAssociatedServingConfigIds(java.util.List<java.lang.String> associatedServingConfigIds) {
@@ -123,7 +133,8 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * A facet specification to perform faceted search.
+   * A facet specification to perform faceted search. Note that this field is deprecated and will
+   * throw NOT_IMPLEMENTED if used for creating a control.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequestFacetSpec getFacetSpec() {
@@ -131,7 +142,8 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * A facet specification to perform faceted search.
+   * A facet specification to perform faceted search. Note that this field is deprecated and will
+   * throw NOT_IMPLEMENTED if used for creating a control.
    * @param facetSpec facetSpec or {@code null} for none
    */
   public GoogleCloudRetailV2alphaControl setFacetSpec(GoogleCloudRetailV2alphaSearchRequestFacetSpec facetSpec) {
@@ -176,9 +188,30 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * Required. Immutable. The solution types that the serving config is used for. Currently we
-   * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
-   * is supported at the moment. If no solution type is provided at creation time, will default to
+   * Specifies the use case for the control. Affects what condition fields can be set. Only settable
+   * by search controls. Will default to SEARCH_SOLUTION_USE_CASE_SEARCH if not specified. Currently
+   * only allow one search_solution_use_case per control.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSearchSolutionUseCase() {
+    return searchSolutionUseCase;
+  }
+
+  /**
+   * Specifies the use case for the control. Affects what condition fields can be set. Only settable
+   * by search controls. Will default to SEARCH_SOLUTION_USE_CASE_SEARCH if not specified. Currently
+   * only allow one search_solution_use_case per control.
+   * @param searchSolutionUseCase searchSolutionUseCase or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaControl setSearchSolutionUseCase(java.util.List<java.lang.String> searchSolutionUseCase) {
+    this.searchSolutionUseCase = searchSolutionUseCase;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The solution types that the control is used for. Currently we support
+   * setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is
+   * supported at the moment. If no solution type is provided at creation time, will default to
    * SOLUTION_TYPE_SEARCH.
    * @return value or {@code null} for none
    */
@@ -187,9 +220,9 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * Required. Immutable. The solution types that the serving config is used for. Currently we
-   * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
-   * is supported at the moment. If no solution type is provided at creation time, will default to
+   * Required. Immutable. The solution types that the control is used for. Currently we support
+   * setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is
+   * supported at the moment. If no solution type is provided at creation time, will default to
    * SOLUTION_TYPE_SEARCH.
    * @param solutionTypes solutionTypes or {@code null} for none
    */

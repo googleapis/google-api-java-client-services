@@ -38,8 +38,9 @@ public final class GoogleCloudRetailV2betaConditionQueryTerm extends com.google.
 
   /**
    * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if
-   * specified as a partial match. Each space separated string is considered as one term. Example)
-   * "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
+   * specified as a partial match. Each space separated string is considered as one term. For
+   * example, "a b c" is 3 terms and allowed, but " a b c d" is 4 terms and not allowed for a
+   * partial match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +65,9 @@ public final class GoogleCloudRetailV2betaConditionQueryTerm extends com.google.
 
   /**
    * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if
-   * specified as a partial match. Each space separated string is considered as one term. Example)
-   * "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
+   * specified as a partial match. Each space separated string is considered as one term. For
+   * example, "a b c" is 3 terms and allowed, but " a b c d" is 4 terms and not allowed for a
+   * partial match.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -74,8 +76,9 @@ public final class GoogleCloudRetailV2betaConditionQueryTerm extends com.google.
 
   /**
    * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if
-   * specified as a partial match. Each space separated string is considered as one term. Example)
-   * "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
+   * specified as a partial match. Each space separated string is considered as one term. For
+   * example, "a b c" is 3 terms and allowed, but " a b c d" is 4 terms and not allowed for a
+   * partial match.
    * @param value value or {@code null} for none
    */
   public GoogleCloudRetailV2betaConditionQueryTerm setValue(java.lang.String value) {

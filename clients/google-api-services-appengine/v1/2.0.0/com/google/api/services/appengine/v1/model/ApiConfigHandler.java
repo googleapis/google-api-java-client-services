@@ -17,8 +17,7 @@
 package com.google.api.services.appengine.v1.model;
 
 /**
- * Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/) configuration
- * for API handlers.
+ * Cloud Endpoints (https://cloud.google.com/endpoints/) configuration for API handlers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Engine Admin API. For a detailed explanation see:

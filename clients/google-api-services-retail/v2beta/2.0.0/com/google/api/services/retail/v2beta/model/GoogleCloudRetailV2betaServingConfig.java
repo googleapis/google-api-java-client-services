@@ -18,8 +18,7 @@ package com.google.api.services.retail.v2beta.model;
 
 /**
  * Configures metadata that is used to generate serving time results (e.g. search results or
- * recommendation predictions). The ServingConfig is passed in the search and predict request and
- * together with the Catalog.default_branch, generates results.
+ * recommendation predictions).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -54,15 +53,22 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   private java.lang.String displayName;
 
   /**
-   * How much diversity to use in recommendation model results e.g. 'medium-diversity' or 'high-
-   * diversity'. Currently supported values: * 'no-diversity' * 'low-diversity' * 'medium-diversity'
-   * * 'high-diversity' * 'auto-diversity' If not specified, we choose default based on
-   * recommendation model type. Default value: 'no-diversity'. Can only be set if solution_types is
+   * How much diversity to use in recommendation model results e.g. `medium-diversity` or `high-
+   * diversity`. Currently supported values: * `no-diversity` * `low-diversity` * `medium-diversity`
+   * * `high-diversity` * `auto-diversity` If not specified, we choose default based on
+   * recommendation model type. Default value: `no-diversity`. Can only be set if solution_types is
    * SOLUTION_TYPE_RECOMMENDATION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diversityLevel;
+
+  /**
+   * What kind of diversity to use - data driven or rule based.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diversityType;
 
   /**
    * Condition do not associate specifications. If multiple do not associate conditions match, all
@@ -82,9 +88,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   private GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec dynamicFacetSpec;
 
   /**
-   * Whether to add additional category filters on the 'similar-items' model. If not specified, we
-   * enable it by default. Allowed values are: * 'no-category-match': No additional filtering of
-   * original results from the model and the customer's filters. * 'relaxed-category-match': Only
+   * Whether to add additional category filters on the `similar-items` model. If not specified, we
+   * enable it by default. Allowed values are: * `no-category-match`: No additional filtering of
+   * original results from the model and the customer's filters. * `relaxed-category-match`: Only
    * keep results with categories that match at least one item categories in the PredictRequests's
    * context item. * If customer also sends filters in the PredictRequest, then the results will
    * satisfy both conditions (user given and category match). Can only be set if solution_types is
@@ -124,10 +130,10 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   private java.util.List<java.lang.String> ignoreControlIds;
 
   /**
-   * The id of the model to use at serving time. Currently only RecommendationModels are supported:
-   * https://cloud.google.com/retail/recommendations-ai/docs/create-models Can be changed but only
-   * to a compatible model (e.g. others-you-may-like CTR to others-you-may-like CVR). Required when
-   * solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * The id of the model in the same Catalog to use at serving time. Currently only
+   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
+   * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
+   * others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,12 +157,22 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   private java.util.List<java.lang.String> onewaySynonymsControlIds;
 
   /**
+   * The specification for personalization spec. Can only be set if solution_types is
+   * SOLUTION_TYPE_SEARCH. Notice that if both ServingConfig.personalization_spec and
+   * SearchRequest.personalization_spec are set. SearchRequest.personalization_spec will override
+   * ServingConfig.personalization_spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec;
+
+  /**
    * How much price ranking we want in serving results. Price reranking causes product items with a
    * similar recommendation probability to be ordered by price, with the highest-priced items first.
    * This setting could result in a decrease in click-through and conversion rates. Allowed values
-   * are: * 'no-price-reranking' * 'low-price-raranking' * 'medium-price-reranking' * 'high-price-
-   * reranking' If not specified, we choose default based on model type. Default value: 'no-price-
-   * reranking'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * are: * `no-price-reranking` * `low-price-raranking` * `medium-price-reranking` * `high-price-
+   * reranking` If not specified, we choose default based on model type. Default value: `no-price-
+   * reranking`. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,10 +264,10 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
-   * How much diversity to use in recommendation model results e.g. 'medium-diversity' or 'high-
-   * diversity'. Currently supported values: * 'no-diversity' * 'low-diversity' * 'medium-diversity'
-   * * 'high-diversity' * 'auto-diversity' If not specified, we choose default based on
-   * recommendation model type. Default value: 'no-diversity'. Can only be set if solution_types is
+   * How much diversity to use in recommendation model results e.g. `medium-diversity` or `high-
+   * diversity`. Currently supported values: * `no-diversity` * `low-diversity` * `medium-diversity`
+   * * `high-diversity` * `auto-diversity` If not specified, we choose default based on
+   * recommendation model type. Default value: `no-diversity`. Can only be set if solution_types is
    * SOLUTION_TYPE_RECOMMENDATION.
    * @return value or {@code null} for none
    */
@@ -260,15 +276,32 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
-   * How much diversity to use in recommendation model results e.g. 'medium-diversity' or 'high-
-   * diversity'. Currently supported values: * 'no-diversity' * 'low-diversity' * 'medium-diversity'
-   * * 'high-diversity' * 'auto-diversity' If not specified, we choose default based on
-   * recommendation model type. Default value: 'no-diversity'. Can only be set if solution_types is
+   * How much diversity to use in recommendation model results e.g. `medium-diversity` or `high-
+   * diversity`. Currently supported values: * `no-diversity` * `low-diversity` * `medium-diversity`
+   * * `high-diversity` * `auto-diversity` If not specified, we choose default based on
+   * recommendation model type. Default value: `no-diversity`. Can only be set if solution_types is
    * SOLUTION_TYPE_RECOMMENDATION.
    * @param diversityLevel diversityLevel or {@code null} for none
    */
   public GoogleCloudRetailV2betaServingConfig setDiversityLevel(java.lang.String diversityLevel) {
     this.diversityLevel = diversityLevel;
+    return this;
+  }
+
+  /**
+   * What kind of diversity to use - data driven or rule based.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiversityType() {
+    return diversityType;
+  }
+
+  /**
+   * What kind of diversity to use - data driven or rule based.
+   * @param diversityType diversityType or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaServingConfig setDiversityType(java.lang.String diversityType) {
+    this.diversityType = diversityType;
     return this;
   }
 
@@ -313,9 +346,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
-   * Whether to add additional category filters on the 'similar-items' model. If not specified, we
-   * enable it by default. Allowed values are: * 'no-category-match': No additional filtering of
-   * original results from the model and the customer's filters. * 'relaxed-category-match': Only
+   * Whether to add additional category filters on the `similar-items` model. If not specified, we
+   * enable it by default. Allowed values are: * `no-category-match`: No additional filtering of
+   * original results from the model and the customer's filters. * `relaxed-category-match`: Only
    * keep results with categories that match at least one item categories in the PredictRequests's
    * context item. * If customer also sends filters in the PredictRequest, then the results will
    * satisfy both conditions (user given and category match). Can only be set if solution_types is
@@ -327,9 +360,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
-   * Whether to add additional category filters on the 'similar-items' model. If not specified, we
-   * enable it by default. Allowed values are: * 'no-category-match': No additional filtering of
-   * original results from the model and the customer's filters. * 'relaxed-category-match': Only
+   * Whether to add additional category filters on the `similar-items` model. If not specified, we
+   * enable it by default. Allowed values are: * `no-category-match`: No additional filtering of
+   * original results from the model and the customer's filters. * `relaxed-category-match`: Only
    * keep results with categories that match at least one item categories in the PredictRequests's
    * context item. * If customer also sends filters in the PredictRequest, then the results will
    * satisfy both conditions (user given and category match). Can only be set if solution_types is
@@ -409,10 +442,10 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
-   * The id of the model to use at serving time. Currently only RecommendationModels are supported:
-   * https://cloud.google.com/retail/recommendations-ai/docs/create-models Can be changed but only
-   * to a compatible model (e.g. others-you-may-like CTR to others-you-may-like CVR). Required when
-   * solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * The id of the model in the same Catalog to use at serving time. Currently only
+   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
+   * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
+   * others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelId() {
@@ -420,10 +453,10 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
-   * The id of the model to use at serving time. Currently only RecommendationModels are supported:
-   * https://cloud.google.com/retail/recommendations-ai/docs/create-models Can be changed but only
-   * to a compatible model (e.g. others-you-may-like CTR to others-you-may-like CVR). Required when
-   * solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * The id of the model in the same Catalog to use at serving time. Currently only
+   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
+   * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
+   * others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @param modelId modelId or {@code null} for none
    */
   public GoogleCloudRetailV2betaServingConfig setModelId(java.lang.String modelId) {
@@ -472,12 +505,35 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
   }
 
   /**
+   * The specification for personalization spec. Can only be set if solution_types is
+   * SOLUTION_TYPE_SEARCH. Notice that if both ServingConfig.personalization_spec and
+   * SearchRequest.personalization_spec are set. SearchRequest.personalization_spec will override
+   * ServingConfig.personalization_spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequestPersonalizationSpec getPersonalizationSpec() {
+    return personalizationSpec;
+  }
+
+  /**
+   * The specification for personalization spec. Can only be set if solution_types is
+   * SOLUTION_TYPE_SEARCH. Notice that if both ServingConfig.personalization_spec and
+   * SearchRequest.personalization_spec are set. SearchRequest.personalization_spec will override
+   * ServingConfig.personalization_spec.
+   * @param personalizationSpec personalizationSpec or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaServingConfig setPersonalizationSpec(GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec) {
+    this.personalizationSpec = personalizationSpec;
+    return this;
+  }
+
+  /**
    * How much price ranking we want in serving results. Price reranking causes product items with a
    * similar recommendation probability to be ordered by price, with the highest-priced items first.
    * This setting could result in a decrease in click-through and conversion rates. Allowed values
-   * are: * 'no-price-reranking' * 'low-price-raranking' * 'medium-price-reranking' * 'high-price-
-   * reranking' If not specified, we choose default based on model type. Default value: 'no-price-
-   * reranking'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * are: * `no-price-reranking` * `low-price-raranking` * `medium-price-reranking` * `high-price-
+   * reranking` If not specified, we choose default based on model type. Default value: `no-price-
+   * reranking`. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriceRerankingLevel() {
@@ -488,9 +544,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
    * How much price ranking we want in serving results. Price reranking causes product items with a
    * similar recommendation probability to be ordered by price, with the highest-priced items first.
    * This setting could result in a decrease in click-through and conversion rates. Allowed values
-   * are: * 'no-price-reranking' * 'low-price-raranking' * 'medium-price-reranking' * 'high-price-
-   * reranking' If not specified, we choose default based on model type. Default value: 'no-price-
-   * reranking'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * are: * `no-price-reranking` * `low-price-raranking` * `medium-price-reranking` * `high-price-
+   * reranking` If not specified, we choose default based on model type. Default value: `no-price-
+   * reranking`. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @param priceRerankingLevel priceRerankingLevel or {@code null} for none
    */
   public GoogleCloudRetailV2betaServingConfig setPriceRerankingLevel(java.lang.String priceRerankingLevel) {

@@ -18,8 +18,8 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An
- * action specifies what occurs on that trigger. Currently only boost rules are supported. Currently
- * only supported by the search endpoint.
+ * action specifies what occurs on that trigger. Currently rules only work for controls with
+ * SOLUTION_TYPE_SEARCH.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

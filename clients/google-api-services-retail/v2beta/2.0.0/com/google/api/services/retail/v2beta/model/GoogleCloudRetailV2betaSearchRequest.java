@@ -127,9 +127,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * The categories associated with a category page. Required for category navigation queries to
    * achieve good search quality. The format should be the same as UserEvent.page_categories; To
    * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
-   * of the category name, please replace it with other character(s). Category pages include special
-   * pages such as sales or promotions. For instance, a special sale page may have the category
-   * hierarchy: "pageCategories" : ["Sales > 2017 Black Friday Deals"].
+   * of the category name, replace it with other character(s). Category pages include special pages
+   * such as sales or promotions. For instance, a special sale page may have the category hierarchy:
+   * "pageCategories" : ["Sales > 2017 Black Friday Deals"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   private java.lang.String pageToken;
 
   /**
-   * The specification for personalization.
+   * The specification for personalization. Notice that if both ServingConfig.personalization_spec
+   * and SearchRequest.personalization_spec are set. SearchRequest.personalization_spec will
+   * override ServingConfig.personalization_spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -460,9 +462,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * The categories associated with a category page. Required for category navigation queries to
    * achieve good search quality. The format should be the same as UserEvent.page_categories; To
    * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
-   * of the category name, please replace it with other character(s). Category pages include special
-   * pages such as sales or promotions. For instance, a special sale page may have the category
-   * hierarchy: "pageCategories" : ["Sales > 2017 Black Friday Deals"].
+   * of the category name, replace it with other character(s). Category pages include special pages
+   * such as sales or promotions. For instance, a special sale page may have the category hierarchy:
+   * "pageCategories" : ["Sales > 2017 Black Friday Deals"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageCategories() {
@@ -473,9 +475,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * The categories associated with a category page. Required for category navigation queries to
    * achieve good search quality. The format should be the same as UserEvent.page_categories; To
    * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
-   * of the category name, please replace it with other character(s). Category pages include special
-   * pages such as sales or promotions. For instance, a special sale page may have the category
-   * hierarchy: "pageCategories" : ["Sales > 2017 Black Friday Deals"].
+   * of the category name, replace it with other character(s). Category pages include special pages
+   * such as sales or promotions. For instance, a special sale page may have the category hierarchy:
+   * "pageCategories" : ["Sales > 2017 Black Friday Deals"].
    * @param pageCategories pageCategories or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setPageCategories(java.util.List<java.lang.String> pageCategories) {
@@ -528,7 +530,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
-   * The specification for personalization.
+   * The specification for personalization. Notice that if both ServingConfig.personalization_spec
+   * and SearchRequest.personalization_spec are set. SearchRequest.personalization_spec will
+   * override ServingConfig.personalization_spec.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestPersonalizationSpec getPersonalizationSpec() {
@@ -536,7 +540,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
-   * The specification for personalization.
+   * The specification for personalization. Notice that if both ServingConfig.personalization_spec
+   * and SearchRequest.personalization_spec are set. SearchRequest.personalization_spec will
+   * override ServingConfig.personalization_spec.
    * @param personalizationSpec personalizationSpec or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setPersonalizationSpec(GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec) {

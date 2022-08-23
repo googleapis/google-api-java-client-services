@@ -102,10 +102,10 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    * Product categories. This field is repeated for supporting one product belonging to several
    * parallel categories. Strongly recommended using the full path for better search /
    * recommendation quality. To represent full path of category, use '>' sign to separate different
-   * hierarchies. If '>' is part of the category name, please replace it with other character(s).
-   * For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports
-   * & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [
-   * "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
+   * hierarchies. If '>' is part of the category name, replace it with other character(s). For
+   * example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports &
+   * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
+   * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
    * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
    * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -240,6 +240,21 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
+
+  /**
+   * Output only. A list of local inventories specific to different places. This is only available
+   * for users who have Retail Search enabled, and it can be managed by AddLocalInventories and
+   * RemoveLocalInventories APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2LocalInventory> localInventories;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2LocalInventory used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2LocalInventory.class);
+  }
 
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
@@ -564,10 +579,10 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    * Product categories. This field is repeated for supporting one product belonging to several
    * parallel categories. Strongly recommended using the full path for better search /
    * recommendation quality. To represent full path of category, use '>' sign to separate different
-   * hierarchies. If '>' is part of the category name, please replace it with other character(s).
-   * For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports
-   * & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [
-   * "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
+   * hierarchies. If '>' is part of the category name, replace it with other character(s). For
+   * example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports &
+   * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
+   * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
    * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
    * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -584,10 +599,10 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    * Product categories. This field is repeated for supporting one product belonging to several
    * parallel categories. Strongly recommended using the full path for better search /
    * recommendation quality. To represent full path of category, use '>' sign to separate different
-   * hierarchies. If '>' is part of the category name, please replace it with other character(s).
-   * For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports
-   * & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [
-   * "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
+   * hierarchies. If '>' is part of the category name, replace it with other character(s). For
+   * example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports &
+   * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
+   * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
    * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
    * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -852,6 +867,27 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    */
   public GoogleCloudRetailV2Product setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Output only. A list of local inventories specific to different places. This is only available
+   * for users who have Retail Search enabled, and it can be managed by AddLocalInventories and
+   * RemoveLocalInventories APIs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2LocalInventory> getLocalInventories() {
+    return localInventories;
+  }
+
+  /**
+   * Output only. A list of local inventories specific to different places. This is only available
+   * for users who have Retail Search enabled, and it can be managed by AddLocalInventories and
+   * RemoveLocalInventories APIs.
+   * @param localInventories localInventories or {@code null} for none
+   */
+  public GoogleCloudRetailV2Product setLocalInventories(java.util.List<GoogleCloudRetailV2LocalInventory> localInventories) {
+    this.localInventories = localInventories;
     return this;
   }
 

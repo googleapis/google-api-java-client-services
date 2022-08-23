@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2alphaRejoinUserEventsRequest extends com.g
 
   /**
    * The type of the user event rejoin to define the scope and range of the user events to be
-   * rejoined with the latest product catalog. Defaults to USER_EVENT_REJOIN_SCOPE_UNSPECIFIED if
+   * rejoined with the latest product catalog. Defaults to `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED` if
    * this field is not set, or set to an invalid integer value.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class GoogleCloudRetailV2alphaRejoinUserEventsRequest extends com.g
 
   /**
    * The type of the user event rejoin to define the scope and range of the user events to be
-   * rejoined with the latest product catalog. Defaults to USER_EVENT_REJOIN_SCOPE_UNSPECIFIED if
+   * rejoined with the latest product catalog. Defaults to `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED` if
    * this field is not set, or set to an invalid integer value.
    * @return value or {@code null} for none
    */
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2alphaRejoinUserEventsRequest extends com.g
 
   /**
    * The type of the user event rejoin to define the scope and range of the user events to be
-   * rejoined with the latest product catalog. Defaults to USER_EVENT_REJOIN_SCOPE_UNSPECIFIED if
+   * rejoined with the latest product catalog. Defaults to `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED` if
    * this field is not set, or set to an invalid integer value.
    * @param userEventRejoinScope userEventRejoinScope or {@code null} for none
    */

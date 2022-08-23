@@ -54,14 +54,6 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   private java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus> individualDocumentResyncStatuses;
 
   /**
-   * Returns the newly added document Cloud Storage prefix if the documents are founded in Cloud
-   * Storage while not in Document Service storage.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument> newlyAddedDocuments;
-
-  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -113,25 +105,6 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
    */
   public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setIndividualDocumentResyncStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus> individualDocumentResyncStatuses) {
     this.individualDocumentResyncStatuses = individualDocumentResyncStatuses;
-    return this;
-  }
-
-  /**
-   * Returns the newly added document Cloud Storage prefix if the documents are founded in Cloud
-   * Storage while not in Document Service storage.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument> getNewlyAddedDocuments() {
-    return newlyAddedDocuments;
-  }
-
-  /**
-   * Returns the newly added document Cloud Storage prefix if the documents are founded in Cloud
-   * Storage while not in Document Service storage.
-   * @param newlyAddedDocuments newlyAddedDocuments or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setNewlyAddedDocuments(java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument> newlyAddedDocuments) {
-    this.newlyAddedDocuments = newlyAddedDocuments;
     return this;
   }
 

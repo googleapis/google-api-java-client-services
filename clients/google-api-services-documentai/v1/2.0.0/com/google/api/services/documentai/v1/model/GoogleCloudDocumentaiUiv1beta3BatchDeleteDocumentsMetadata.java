@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata ex
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
+   * Total number of documents that failed to be deleted in storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer errorDocumentCount;
+
+  /**
    * The list of response details of each document.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata ex
    */
   public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * Total number of documents that failed to be deleted in storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getErrorDocumentCount() {
+    return errorDocumentCount;
+  }
+
+  /**
+   * Total number of documents that failed to be deleted in storage.
+   * @param errorDocumentCount errorDocumentCount or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata setErrorDocumentCount(java.lang.Integer errorDocumentCount) {
+    this.errorDocumentCount = errorDocumentCount;
     return this;
   }
 

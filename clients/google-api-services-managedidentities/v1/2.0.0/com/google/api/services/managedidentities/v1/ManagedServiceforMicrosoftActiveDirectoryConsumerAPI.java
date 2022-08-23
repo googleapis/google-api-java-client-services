@@ -1151,6 +1151,147 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
+           * Extend Schema for Domain
+           *
+           * Create a request for the method "domains.extendSchema".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link ExtendSchema#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+           * @param content the {@link com.google.api.services.managedidentities.v1.model.ExtendSchemaRequest}
+           * @return the request
+           */
+          public ExtendSchema extendSchema(java.lang.String domain, com.google.api.services.managedidentities.v1.model.ExtendSchemaRequest content) throws java.io.IOException {
+            ExtendSchema result = new ExtendSchema(domain, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ExtendSchema extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+domain}:extendSchema";
+
+            private final java.util.regex.Pattern DOMAIN_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Extend Schema for Domain
+             *
+             * Create a request for the method "domains.extendSchema".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link ExtendSchema#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * ExtendSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+             * @param content the {@link com.google.api.services.managedidentities.v1.model.ExtendSchemaRequest}
+             * @since 1.13
+             */
+            protected ExtendSchema(java.lang.String domain, com.google.api.services.managedidentities.v1.model.ExtendSchemaRequest content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "POST", REST_PATH, content, com.google.api.services.managedidentities.v1.model.Operation.class);
+              this.domain = com.google.api.client.util.Preconditions.checkNotNull(domain, "Required parameter domain must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public ExtendSchema set$Xgafv(java.lang.String $Xgafv) {
+              return (ExtendSchema) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExtendSchema setAccessToken(java.lang.String accessToken) {
+              return (ExtendSchema) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExtendSchema setAlt(java.lang.String alt) {
+              return (ExtendSchema) super.setAlt(alt);
+            }
+
+            @Override
+            public ExtendSchema setCallback(java.lang.String callback) {
+              return (ExtendSchema) super.setCallback(callback);
+            }
+
+            @Override
+            public ExtendSchema setFields(java.lang.String fields) {
+              return (ExtendSchema) super.setFields(fields);
+            }
+
+            @Override
+            public ExtendSchema setKey(java.lang.String key) {
+              return (ExtendSchema) super.setKey(key);
+            }
+
+            @Override
+            public ExtendSchema setOauthToken(java.lang.String oauthToken) {
+              return (ExtendSchema) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExtendSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExtendSchema) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExtendSchema setQuotaUser(java.lang.String quotaUser) {
+              return (ExtendSchema) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExtendSchema setUploadType(java.lang.String uploadType) {
+              return (ExtendSchema) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExtendSchema setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExtendSchema) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String domain;
+
+            /** Required. The domain resource name using the form:
+           `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public java.lang.String getDomain() {
+              return domain;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public ExtendSchema setDomain(java.lang.String domain) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.domain = domain;
+              return this;
+            }
+
+            @Override
+            public ExtendSchema set(String parameterName, Object value) {
+              return (ExtendSchema) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets information about a domain.
            *
            * Create a request for the method "domains.get".

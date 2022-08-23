@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class ConnectionProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * BigQuery Connection Profile configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryProfile bigqueryProfile;
+
+  /**
    * Output only. The create time of the resource.
    * The value may be {@code null}.
    */
@@ -86,6 +93,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private OracleProfile oracleProfile;
 
   /**
+   * PostgreSQL Connection Profile configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostgresqlProfile postgresqlProfile;
+
+  /**
    * Private connectivity.
    * The value may be {@code null}.
    */
@@ -105,6 +119,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * BigQuery Connection Profile configuration.
+   * @return value or {@code null} for none
+   */
+  public BigQueryProfile getBigqueryProfile() {
+    return bigqueryProfile;
+  }
+
+  /**
+   * BigQuery Connection Profile configuration.
+   * @param bigqueryProfile bigqueryProfile or {@code null} for none
+   */
+  public ConnectionProfile setBigqueryProfile(BigQueryProfile bigqueryProfile) {
+    this.bigqueryProfile = bigqueryProfile;
+    return this;
+  }
 
   /**
    * Output only. The create time of the resource.
@@ -239,6 +270,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setOracleProfile(OracleProfile oracleProfile) {
     this.oracleProfile = oracleProfile;
+    return this;
+  }
+
+  /**
+   * PostgreSQL Connection Profile configuration.
+   * @return value or {@code null} for none
+   */
+  public PostgresqlProfile getPostgresqlProfile() {
+    return postgresqlProfile;
+  }
+
+  /**
+   * PostgreSQL Connection Profile configuration.
+   * @param postgresqlProfile postgresqlProfile or {@code null} for none
+   */
+  public ConnectionProfile setPostgresqlProfile(PostgresqlProfile postgresqlProfile) {
+    this.postgresqlProfile = postgresqlProfile;
     return this;
   }
 

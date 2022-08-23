@@ -44,6 +44,13 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
   private OracleObjectIdentifier oracleIdentifier;
 
   /**
+   * PostgreSQL data source object identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostgresqlObjectIdentifier postgresqlIdentifier;
+
+  /**
    * Mysql data source object identifier.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
    */
   public SourceObjectIdentifier setOracleIdentifier(OracleObjectIdentifier oracleIdentifier) {
     this.oracleIdentifier = oracleIdentifier;
+    return this;
+  }
+
+  /**
+   * PostgreSQL data source object identifier.
+   * @return value or {@code null} for none
+   */
+  public PostgresqlObjectIdentifier getPostgresqlIdentifier() {
+    return postgresqlIdentifier;
+  }
+
+  /**
+   * PostgreSQL data source object identifier.
+   * @param postgresqlIdentifier postgresqlIdentifier or {@code null} for none
+   */
+  public SourceObjectIdentifier setPostgresqlIdentifier(PostgresqlObjectIdentifier postgresqlIdentifier) {
+    this.postgresqlIdentifier = postgresqlIdentifier;
     return this;
   }
 

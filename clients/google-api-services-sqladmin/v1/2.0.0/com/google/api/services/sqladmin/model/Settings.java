@@ -80,6 +80,18 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String collation;
 
   /**
+   * Specifies if connections must use Cloud SQL connectors. Option values include the following: *
+   * `NOT_REQUIRED`: Cloud SQL instances can be connected without Cloud SQL Connectors. *
+   * `REQUIRED`: Only allow connections that use Cloud SQL Connectors. Note that using REQUIRED
+   * disables all existing authorized networks. If this field is not specified when creating a new
+   * instance, NOT_REQUIRED is used. If this field is not specified when patching or updating an
+   * existing instance, it is left unchanged in the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorEnforcement;
+
+  /**
    * Configuration specific to read replica instances. Indicates whether database flags for crash-
    * safe replication are enabled. This property was only applicable to First Generation instances.
    * The value may be {@code null}.
@@ -366,6 +378,33 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setCollation(java.lang.String collation) {
     this.collation = collation;
+    return this;
+  }
+
+  /**
+   * Specifies if connections must use Cloud SQL connectors. Option values include the following: *
+   * `NOT_REQUIRED`: Cloud SQL instances can be connected without Cloud SQL Connectors. *
+   * `REQUIRED`: Only allow connections that use Cloud SQL Connectors. Note that using REQUIRED
+   * disables all existing authorized networks. If this field is not specified when creating a new
+   * instance, NOT_REQUIRED is used. If this field is not specified when patching or updating an
+   * existing instance, it is left unchanged in the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorEnforcement() {
+    return connectorEnforcement;
+  }
+
+  /**
+   * Specifies if connections must use Cloud SQL connectors. Option values include the following: *
+   * `NOT_REQUIRED`: Cloud SQL instances can be connected without Cloud SQL Connectors. *
+   * `REQUIRED`: Only allow connections that use Cloud SQL Connectors. Note that using REQUIRED
+   * disables all existing authorized networks. If this field is not specified when creating a new
+   * instance, NOT_REQUIRED is used. If this field is not specified when patching or updating an
+   * existing instance, it is left unchanged in the instance.
+   * @param connectorEnforcement connectorEnforcement or {@code null} for none
+   */
+  public Settings setConnectorEnforcement(java.lang.String connectorEnforcement) {
+    this.connectorEnforcement = connectorEnforcement;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class DestinationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * BigQuery destination configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryDestinationConfig bigqueryDestinationConfig;
+
+  /**
    * Required. Destination connection profile resource. Format:
    * `projects/{project}/locations/{location}/connectionProfiles/{name}`
    * The value may be {@code null}.
@@ -43,6 +50,23 @@ public final class DestinationConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private GcsDestinationConfig gcsDestinationConfig;
+
+  /**
+   * BigQuery destination configuration.
+   * @return value or {@code null} for none
+   */
+  public BigQueryDestinationConfig getBigqueryDestinationConfig() {
+    return bigqueryDestinationConfig;
+  }
+
+  /**
+   * BigQuery destination configuration.
+   * @param bigqueryDestinationConfig bigqueryDestinationConfig or {@code null} for none
+   */
+  public DestinationConfig setBigqueryDestinationConfig(BigQueryDestinationConfig bigqueryDestinationConfig) {
+    this.bigqueryDestinationConfig = bigqueryDestinationConfig;
+    return this;
+  }
 
   /**
    * Required. Destination connection profile resource. Format:

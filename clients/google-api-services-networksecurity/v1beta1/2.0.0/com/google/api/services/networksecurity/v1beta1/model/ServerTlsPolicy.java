@@ -18,7 +18,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
  * ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests.
- * This resource itself does not affect configuration unless it is attached to a target https proxy
+ * This resource itself does not affect configuration unless it is attached to a target HTTPS proxy
  * or endpoint config selector resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

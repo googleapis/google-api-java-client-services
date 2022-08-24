@@ -9914,7 +9914,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspaces's API relative path. Example:
+           * @param parent GTM Workspace's API relative path. Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
            * @return the request
@@ -9943,7 +9943,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspaces's API relative path. Example:
+             * @param parent GTM Workspace's API relative path. Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
              * @since 1.13
@@ -10018,13 +10018,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * GTM Workspaces's API relative path. Example:
+             * GTM Workspace's API relative path. Example:
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspaces's API relative path. Example:
+            /** GTM Workspace's API relative path. Example:
            accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public java.lang.String getParent() {
@@ -10032,7 +10032,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * GTM Workspaces's API relative path. Example:
+             * GTM Workspace's API relative path. Example:
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
@@ -10347,7 +10347,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspaces's API relative path. Example:
+           * @param parent GTM Workspace's API relative path. Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -10374,7 +10374,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspaces's API relative path. Example:
+             * @param parent GTM Workspace's API relative path. Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
@@ -10454,13 +10454,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * GTM Workspaces's API relative path. Example:
+             * GTM Workspace's API relative path. Example:
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspaces's API relative path. Example:
+            /** GTM Workspace's API relative path. Example:
            accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public java.lang.String getParent() {
@@ -10468,7 +10468,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * GTM Workspaces's API relative path. Example:
+             * GTM Workspace's API relative path. Example:
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {

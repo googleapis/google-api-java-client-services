@@ -134,6 +134,151 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the GithubDotComWebhook collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+   *   {@code CloudBuild.GithubDotComWebhook.List request = cloudbuild.githubDotComWebhook().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public GithubDotComWebhook githubDotComWebhook() {
+    return new GithubDotComWebhook();
+  }
+
+  /**
+   * The "githubDotComWebhook" collection of methods.
+   */
+  public class GithubDotComWebhook {
+
+    /**
+     * ReceiveGitHubDotComWebhook is called when the API receives a github.com webhook.
+     *
+     * Create a request for the method "githubDotComWebhook.receive".
+     *
+     * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+     * parameters, call the {@link Receive#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudbuild.v1.model.HttpBody}
+     * @return the request
+     */
+    public Receive receive(com.google.api.services.cloudbuild.v1.model.HttpBody content) throws java.io.IOException {
+      Receive result = new Receive(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Receive extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/githubDotComWebhook:receive";
+
+      /**
+       * ReceiveGitHubDotComWebhook is called when the API receives a github.com webhook.
+       *
+       * Create a request for the method "githubDotComWebhook.receive".
+       *
+       * This request holds the parameters needed by the the cloudbuild server.  After setting any
+       * optional parameters, call the {@link Receive#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Receive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudbuild.v1.model.HttpBody}
+       * @since 1.13
+       */
+      protected Receive(com.google.api.services.cloudbuild.v1.model.HttpBody content) {
+        super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Empty.class);
+      }
+
+      @Override
+      public Receive set$Xgafv(java.lang.String $Xgafv) {
+        return (Receive) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Receive setAccessToken(java.lang.String accessToken) {
+        return (Receive) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Receive setAlt(java.lang.String alt) {
+        return (Receive) super.setAlt(alt);
+      }
+
+      @Override
+      public Receive setCallback(java.lang.String callback) {
+        return (Receive) super.setCallback(callback);
+      }
+
+      @Override
+      public Receive setFields(java.lang.String fields) {
+        return (Receive) super.setFields(fields);
+      }
+
+      @Override
+      public Receive setKey(java.lang.String key) {
+        return (Receive) super.setKey(key);
+      }
+
+      @Override
+      public Receive setOauthToken(java.lang.String oauthToken) {
+        return (Receive) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Receive setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Receive) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Receive setQuotaUser(java.lang.String quotaUser) {
+        return (Receive) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Receive setUploadType(java.lang.String uploadType) {
+        return (Receive) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Receive setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Receive) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * For GitHub Enterprise webhooks, this key is used to associate the webhook request with the
+       * GitHubEnterpriseConfig to use for validation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String webhookKey;
+
+      /** For GitHub Enterprise webhooks, this key is used to associate the webhook request with the
+     GitHubEnterpriseConfig to use for validation.
+       */
+      public java.lang.String getWebhookKey() {
+        return webhookKey;
+      }
+
+      /**
+       * For GitHub Enterprise webhooks, this key is used to associate the webhook request with the
+       * GitHubEnterpriseConfig to use for validation.
+       */
+      public Receive setWebhookKey(java.lang.String webhookKey) {
+        this.webhookKey = webhookKey;
+        return this;
+      }
+
+      @Override
+      public Receive set(String parameterName, Object value) {
+        return (Receive) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Locations collection.
    *
    * <p>The typical use is:</p>

@@ -93,7 +93,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private AccountGoogleMyBusinessLink googleMyBusinessLink;
 
   /**
-   * Required for update. Merchant Center account ID.
+   * Required. 64-bit Merchant Center account ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -299,7 +299,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required for update. Merchant Center account ID.
+   * Required. 64-bit Merchant Center account ID.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -307,7 +307,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required for update. Merchant Center account ID.
+   * Required. 64-bit Merchant Center account ID.
    * @param id id or {@code null} for none
    */
   public Account setId(java.math.BigInteger id) {

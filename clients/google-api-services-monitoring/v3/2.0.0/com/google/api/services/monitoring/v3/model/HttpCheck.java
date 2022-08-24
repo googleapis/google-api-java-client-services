@@ -99,6 +99,13 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
+   * Contains information needed to add pings to an HTTP check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PingConfig pingConfig;
+
+  /**
    * Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on
    * the HTTP server against which to run the check. Will be combined with host (specified within
    * the monitored_resource) and path to construct the full URL.
@@ -325,6 +332,23 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   public HttpCheck setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * Contains information needed to add pings to an HTTP check.
+   * @return value or {@code null} for none
+   */
+  public PingConfig getPingConfig() {
+    return pingConfig;
+  }
+
+  /**
+   * Contains information needed to add pings to an HTTP check.
+   * @param pingConfig pingConfig or {@code null} for none
+   */
+  public HttpCheck setPingConfig(PingConfig pingConfig) {
+    this.pingConfig = pingConfig;
     return this;
   }
 

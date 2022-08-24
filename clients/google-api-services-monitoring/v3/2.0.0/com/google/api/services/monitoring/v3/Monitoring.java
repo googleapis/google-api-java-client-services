@@ -8420,6 +8420,32 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * If provided, this field specifies the criteria that must be met by uptime checks to be
+         * included in the response.For more details, see Filtering syntax
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering#filter_syntax).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** If provided, this field specifies the criteria that must be met by uptime checks to be included in
+       the response.For more details, see Filtering syntax (https://cloud.google.com/monitoring/api/v3
+       /sorting-and-filtering#filter_syntax).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * If provided, this field specifies the criteria that must be met by uptime checks to be
+         * included in the response.For more details, see Filtering syntax
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering#filter_syntax).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * The maximum number of results to return in a single response. The server may further
          * constrain the maximum number of results returned in a single page. If the page_size is
          * <=0, the server will decide the number of results to be returned.

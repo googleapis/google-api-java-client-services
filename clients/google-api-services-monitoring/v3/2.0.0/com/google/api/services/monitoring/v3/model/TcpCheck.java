@@ -30,12 +30,36 @@ package com.google.api.services.monitoring.v3.model;
 public final class TcpCheck extends com.google.api.client.json.GenericJson {
 
   /**
+   * Contains information needed to add pings to a TCP check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PingConfig pingConfig;
+
+  /**
    * The TCP port on the server against which to run the check. Will be combined with host
    * (specified within the monitored_resource) to construct the full URL. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Contains information needed to add pings to a TCP check.
+   * @return value or {@code null} for none
+   */
+  public PingConfig getPingConfig() {
+    return pingConfig;
+  }
+
+  /**
+   * Contains information needed to add pings to a TCP check.
+   * @param pingConfig pingConfig or {@code null} for none
+   */
+  public TcpCheck setPingConfig(PingConfig pingConfig) {
+    this.pingConfig = pingConfig;
+    return this;
+  }
 
   /**
    * The TCP port on the server against which to run the check. Will be combined with host

@@ -49,13 +49,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Required. Labels are a flexible and lightweight mechanism for organizing cloud resources into
-   * groups that reflect a customer's organizational needs and deployment strategies. They can be
-   * used to filter resources and aggregate metrics. * Label keys must be between 1 and 63
-   * characters long and must conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label
-   * values must be between 0 and 63 characters long and must conform to the regular expression:
-   * `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. * No more than 64 labels can be associated with a given
-   * resource. * Keys and values must both be under 128 bytes.
+   * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that
+   * reflect a customer's organizational needs and deployment strategies. They can be used to filter
+   * resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must
+   * conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label values must be between 0 and
+   * 63 characters long and must conform to the regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. *
+   * No more than 64 labels can be associated with a given resource. * Keys and values must both be
+   * under 128 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Required. The type of the instance. Defaults to `PRODUCTION`.
+   * The type of the instance. Defaults to `PRODUCTION`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,13 +131,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Labels are a flexible and lightweight mechanism for organizing cloud resources into
-   * groups that reflect a customer's organizational needs and deployment strategies. They can be
-   * used to filter resources and aggregate metrics. * Label keys must be between 1 and 63
-   * characters long and must conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label
-   * values must be between 0 and 63 characters long and must conform to the regular expression:
-   * `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. * No more than 64 labels can be associated with a given
-   * resource. * Keys and values must both be under 128 bytes.
+   * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that
+   * reflect a customer's organizational needs and deployment strategies. They can be used to filter
+   * resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must
+   * conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label values must be between 0 and
+   * 63 characters long and must conform to the regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. *
+   * No more than 64 labels can be associated with a given resource. * Keys and values must both be
+   * under 128 bytes.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -145,13 +145,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Labels are a flexible and lightweight mechanism for organizing cloud resources into
-   * groups that reflect a customer's organizational needs and deployment strategies. They can be
-   * used to filter resources and aggregate metrics. * Label keys must be between 1 and 63
-   * characters long and must conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label
-   * values must be between 0 and 63 characters long and must conform to the regular expression:
-   * `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. * No more than 64 labels can be associated with a given
-   * resource. * Keys and values must both be under 128 bytes.
+   * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that
+   * reflect a customer's organizational needs and deployment strategies. They can be used to filter
+   * resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must
+   * conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label values must be between 0 and
+   * 63 characters long and must conform to the regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. *
+   * No more than 64 labels can be associated with a given resource. * Keys and values must both be
+   * under 128 bytes.
    * @param labels labels or {@code null} for none
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -213,7 +213,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the instance. Defaults to `PRODUCTION`.
+   * The type of the instance. Defaults to `PRODUCTION`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -221,7 +221,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the instance. Defaults to `PRODUCTION`.
+   * The type of the instance. Defaults to `PRODUCTION`.
    * @param type type or {@code null} for none
    */
   public Instance setType(java.lang.String type) {

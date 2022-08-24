@@ -18,7 +18,7 @@ package com.google.api.services.tagmanager.model;
 
 /**
  * Built-in variables are a special category of variables that are pre-created and non-customizable.
- * They provide common functionality like accessing propeties of the gtm data layer, monitoring
+ * They provide common functionality like accessing properties of the gtm data layer, monitoring
  * clicks, or accessing elements of a page URL.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -121,7 +121,7 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   private java.lang.String numZones;
 
   /**
-   * GTM Container Versions's API relative path.
+   * GTM Container Version's API relative path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -349,7 +349,7 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   }
 
   /**
-   * GTM Container Versions's API relative path.
+   * GTM Container Version's API relative path.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -357,7 +357,7 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   }
 
   /**
-   * GTM Container Versions's API relative path.
+   * GTM Container Version's API relative path.
    * @param path path or {@code null} for none
    */
   public ContainerVersionHeader setPath(java.lang.String path) {

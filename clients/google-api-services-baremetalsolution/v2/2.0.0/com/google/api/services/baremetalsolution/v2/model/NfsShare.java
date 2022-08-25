@@ -59,7 +59,7 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The name of the NFS share.
+   * Immutable. The name of the NFS share.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,14 +81,21 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   private java.lang.Long requestedSizeGib;
 
   /**
-   * The state of the NFS share.
+   * Output only. The state of the NFS share.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The volume containing the share.
+   * Immutable. The storage type of the underlying volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageType;
+
+  /**
+   * Output only. The underlying volume of the share. Created automatically during provisioning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +155,7 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the NFS share.
+   * Immutable. The name of the NFS share.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -156,7 +163,7 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the NFS share.
+   * Immutable. The name of the NFS share.
    * @param name name or {@code null} for none
    */
   public NfsShare setName(java.lang.String name) {
@@ -201,7 +208,7 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the NFS share.
+   * Output only. The state of the NFS share.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -209,7 +216,7 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the NFS share.
+   * Output only. The state of the NFS share.
    * @param state state or {@code null} for none
    */
   public NfsShare setState(java.lang.String state) {
@@ -218,7 +225,24 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The volume containing the share.
+   * Immutable. The storage type of the underlying volume.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageType() {
+    return storageType;
+  }
+
+  /**
+   * Immutable. The storage type of the underlying volume.
+   * @param storageType storageType or {@code null} for none
+   */
+  public NfsShare setStorageType(java.lang.String storageType) {
+    this.storageType = storageType;
+    return this;
+  }
+
+  /**
+   * Output only. The underlying volume of the share. Created automatically during provisioning.
    * @return value or {@code null} for none
    */
   public java.lang.String getVolume() {
@@ -226,7 +250,7 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The volume containing the share.
+   * Output only. The underlying volume of the share. Created automatically during provisioning.
    * @param volume volume or {@code null} for none
    */
   public NfsShare setVolume(java.lang.String volume) {

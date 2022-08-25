@@ -82,7 +82,8 @@ public final class AllowedClient extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean noRootSquash;
 
   /**
-   * The IP address of the share on this network.
+   * Output only. The IP address of the share on this network. Assigned automatically during
+   * provisioning based on the network's services_cidr.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +213,8 @@ public final class AllowedClient extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The IP address of the share on this network.
+   * Output only. The IP address of the share on this network. Assigned automatically during
+   * provisioning based on the network's services_cidr.
    * @return value or {@code null} for none
    */
   public java.lang.String getShareIp() {
@@ -220,7 +222,8 @@ public final class AllowedClient extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The IP address of the share on this network.
+   * Output only. The IP address of the share on this network. Assigned automatically during
+   * provisioning based on the network's services_cidr.
    * @param shareIp shareIp or {@code null} for none
    */
   public AllowedClient setShareIp(java.lang.String shareIp) {

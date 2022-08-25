@@ -54,7 +54,7 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   private java.util.List<ProcessSignature> signatures;
 
   /**
-   * The list of URIs associated to the Findings
+   * The list of URIs associated to the Findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of URIs associated to the Findings
+   * The list of URIs associated to the Findings.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUris() {
@@ -120,7 +120,7 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of URIs associated to the Findings
+   * The list of URIs associated to the Findings.
    * @param uris uris or {@code null} for none
    */
   public Indicator setUris(java.util.List<java.lang.String> uris) {

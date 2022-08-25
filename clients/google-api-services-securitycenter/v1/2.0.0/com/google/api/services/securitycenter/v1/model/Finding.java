@@ -91,7 +91,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
    * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] }
+   * "person2@company.com" } ] } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,7 +420,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
    * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] }
+   * "person2@company.com" } ] } }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ContactDetails> getContacts() {
@@ -432,7 +432,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
    * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] }
+   * "person2@company.com" } ] } }
    * @param contacts contacts or {@code null} for none
    */
   public Finding setContacts(java.util.Map<String, ContactDetails> contacts) {

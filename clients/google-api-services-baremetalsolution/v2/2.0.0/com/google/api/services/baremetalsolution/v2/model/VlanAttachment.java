@@ -31,6 +31,13 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class VlanAttachment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. Pairing key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pairingKey;
+
+  /**
    * The peer IP of the attachment.
    * The value may be {@code null}.
    */
@@ -45,11 +52,36 @@ public final class VlanAttachment extends com.google.api.client.json.GenericJson
   private java.lang.Long peerVlanId;
 
   /**
+   * The QOS policy applied to this VLAN attachment. This value should be preferred to using qos at
+   * vrf level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QosPolicy qosPolicy;
+
+  /**
    * The router IP of the attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String routerIp;
+
+  /**
+   * Input only. Pairing key.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPairingKey() {
+    return pairingKey;
+  }
+
+  /**
+   * Input only. Pairing key.
+   * @param pairingKey pairingKey or {@code null} for none
+   */
+  public VlanAttachment setPairingKey(java.lang.String pairingKey) {
+    this.pairingKey = pairingKey;
+    return this;
+  }
 
   /**
    * The peer IP of the attachment.
@@ -82,6 +114,25 @@ public final class VlanAttachment extends com.google.api.client.json.GenericJson
    */
   public VlanAttachment setPeerVlanId(java.lang.Long peerVlanId) {
     this.peerVlanId = peerVlanId;
+    return this;
+  }
+
+  /**
+   * The QOS policy applied to this VLAN attachment. This value should be preferred to using qos at
+   * vrf level.
+   * @return value or {@code null} for none
+   */
+  public QosPolicy getQosPolicy() {
+    return qosPolicy;
+  }
+
+  /**
+   * The QOS policy applied to this VLAN attachment. This value should be preferred to using qos at
+   * vrf level.
+   * @param qosPolicy qosPolicy or {@code null} for none
+   */
+  public VlanAttachment setQosPolicy(QosPolicy qosPolicy) {
+    this.qosPolicy = qosPolicy;
     return this;
   }
 

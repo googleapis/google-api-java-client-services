@@ -52,6 +52,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String ipAddress;
 
   /**
+   * Whether network uses standard frames or jumbo ones.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean jumboFramesEnabled;
+
+  /**
    * Labels as key value pairs.
    * The value may be {@code null}.
    */
@@ -66,6 +73,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> macAddress;
 
   /**
+   * Input only. List of mount points to attach the network to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkMountPoint> mountPoints;
+
+  /**
    * Output only. The resource name of this `Network`. Resource names are schemeless URIs that
    * follow the conventions in https://cloud.google.com/apis/design/resource_names. Format:
    * `projects/{project}/locations/{location}/networks/{network}`
@@ -73,6 +87,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Pod name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pod;
 
   /**
    * List of IP address reservations in this network. When updating this field, an error will be
@@ -169,6 +190,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether network uses standard frames or jumbo ones.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getJumboFramesEnabled() {
+    return jumboFramesEnabled;
+  }
+
+  /**
+   * Whether network uses standard frames or jumbo ones.
+   * @param jumboFramesEnabled jumboFramesEnabled or {@code null} for none
+   */
+  public Network setJumboFramesEnabled(java.lang.Boolean jumboFramesEnabled) {
+    this.jumboFramesEnabled = jumboFramesEnabled;
+    return this;
+  }
+
+  /**
    * Labels as key value pairs.
    * @return value or {@code null} for none
    */
@@ -203,6 +241,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Input only. List of mount points to attach the network to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkMountPoint> getMountPoints() {
+    return mountPoints;
+  }
+
+  /**
+   * Input only. List of mount points to attach the network to.
+   * @param mountPoints mountPoints or {@code null} for none
+   */
+  public Network setMountPoints(java.util.List<NetworkMountPoint> mountPoints) {
+    this.mountPoints = mountPoints;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of this `Network`. Resource names are schemeless URIs that
    * follow the conventions in https://cloud.google.com/apis/design/resource_names. Format:
    * `projects/{project}/locations/{location}/networks/{network}`
@@ -220,6 +275,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Pod name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPod() {
+    return pod;
+  }
+
+  /**
+   * Output only. Pod name.
+   * @param pod pod or {@code null} for none
+   */
+  public Network setPod(java.lang.String pod) {
+    this.pod = pod;
     return this;
   }
 

@@ -38,7 +38,9 @@ public final class VRF extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The QOS policy applied to this VRF.
+   * The QOS policy applied to this VRF. The value is only meaningful when all the vlan attachments
+   * have the same QoS. This field should not be used for new integrations, use vlan attachment
+   * level qos instead. The field is left for backward-compatibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +78,9 @@ public final class VRF extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The QOS policy applied to this VRF.
+   * The QOS policy applied to this VRF. The value is only meaningful when all the vlan attachments
+   * have the same QoS. This field should not be used for new integrations, use vlan attachment
+   * level qos instead. The field is left for backward-compatibility.
    * @return value or {@code null} for none
    */
   public QosPolicy getQosPolicy() {
@@ -84,7 +88,9 @@ public final class VRF extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The QOS policy applied to this VRF.
+   * The QOS policy applied to this VRF. The value is only meaningful when all the vlan attachments
+   * have the same QoS. This field should not be used for new integrations, use vlan attachment
+   * level qos instead. The field is left for backward-compatibility.
    * @param qosPolicy qosPolicy or {@code null} for none
    */
   public VRF setQosPolicy(QosPolicy qosPolicy) {

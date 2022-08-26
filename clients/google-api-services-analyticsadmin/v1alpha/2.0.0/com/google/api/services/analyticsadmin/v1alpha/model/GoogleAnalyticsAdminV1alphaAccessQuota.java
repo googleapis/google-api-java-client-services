@@ -54,11 +54,21 @@ public final class GoogleAnalyticsAdminV1alphaAccessQuota extends com.google.api
 
   /**
    * Properties can use 50,000 tokens per hour. An API request consumes a single number of tokens,
-   * and that number is deducted from both the hourly and daily quotas.
+   * and that number is deducted from all of the hourly, daily, and per project hourly quotas.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerHour;
+
+  /**
+   * Properties can use up to 25% of their tokens per project per hour. This amounts to Analytics
+   * 360 Properties can use 12,500 tokens per project per hour. An API request consumes a single
+   * number of tokens, and that number is deducted from all of the hourly, daily, and per project
+   * hourly quotas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerProjectPerHour;
 
   /**
    * Properties can use up to 50 concurrent requests.
@@ -113,7 +123,7 @@ public final class GoogleAnalyticsAdminV1alphaAccessQuota extends com.google.api
 
   /**
    * Properties can use 50,000 tokens per hour. An API request consumes a single number of tokens,
-   * and that number is deducted from both the hourly and daily quotas.
+   * and that number is deducted from all of the hourly, daily, and per project hourly quotas.
    * @return value or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAccessQuotaStatus getTokensPerHour() {
@@ -122,11 +132,34 @@ public final class GoogleAnalyticsAdminV1alphaAccessQuota extends com.google.api
 
   /**
    * Properties can use 50,000 tokens per hour. An API request consumes a single number of tokens,
-   * and that number is deducted from both the hourly and daily quotas.
+   * and that number is deducted from all of the hourly, daily, and per project hourly quotas.
    * @param tokensPerHour tokensPerHour or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAccessQuota setTokensPerHour(GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerHour) {
     this.tokensPerHour = tokensPerHour;
+    return this;
+  }
+
+  /**
+   * Properties can use up to 25% of their tokens per project per hour. This amounts to Analytics
+   * 360 Properties can use 12,500 tokens per project per hour. An API request consumes a single
+   * number of tokens, and that number is deducted from all of the hourly, daily, and per project
+   * hourly quotas.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAccessQuotaStatus getTokensPerProjectPerHour() {
+    return tokensPerProjectPerHour;
+  }
+
+  /**
+   * Properties can use up to 25% of their tokens per project per hour. This amounts to Analytics
+   * 360 Properties can use 12,500 tokens per project per hour. An API request consumes a single
+   * number of tokens, and that number is deducted from all of the hourly, daily, and per project
+   * hourly quotas.
+   * @param tokensPerProjectPerHour tokensPerProjectPerHour or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAccessQuota setTokensPerProjectPerHour(GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerProjectPerHour) {
+    this.tokensPerProjectPerHour = tokensPerProjectPerHour;
     return this;
   }
 

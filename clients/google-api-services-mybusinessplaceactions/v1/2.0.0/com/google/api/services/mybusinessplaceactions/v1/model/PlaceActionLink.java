@@ -67,14 +67,6 @@ public final class PlaceActionLink extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Optional. Metadata for the order online link. Supports action with PlaceActionType of
-   * SHOP_ONLINE.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private OrderOnlineMetadata orderOnlineMetadata;
-
-  /**
    * Required. The type of place action that can be performed using this link.
    * The value may be {@code null}.
    */
@@ -185,25 +177,6 @@ public final class PlaceActionLink extends com.google.api.client.json.GenericJso
    */
   public PlaceActionLink setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. Metadata for the order online link. Supports action with PlaceActionType of
-   * SHOP_ONLINE.
-   * @return value or {@code null} for none
-   */
-  public OrderOnlineMetadata getOrderOnlineMetadata() {
-    return orderOnlineMetadata;
-  }
-
-  /**
-   * Optional. Metadata for the order online link. Supports action with PlaceActionType of
-   * SHOP_ONLINE.
-   * @param orderOnlineMetadata orderOnlineMetadata or {@code null} for none
-   */
-  public PlaceActionLink setOrderOnlineMetadata(OrderOnlineMetadata orderOnlineMetadata) {
-    this.orderOnlineMetadata = orderOnlineMetadata;
     return this;
   }
 

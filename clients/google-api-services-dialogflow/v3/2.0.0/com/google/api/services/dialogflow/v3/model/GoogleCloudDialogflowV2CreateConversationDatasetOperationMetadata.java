@@ -29,6 +29,33 @@ package com.google.api.services.dialogflow.v3.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The resource name of the conversation dataset that will be created. Format:
+   * `projects//locations//conversationDatasets/`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conversationDataset;
+
+  /**
+   * The resource name of the conversation dataset that will be created. Format:
+   * `projects//locations//conversationDatasets/`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConversationDataset() {
+    return conversationDataset;
+  }
+
+  /**
+   * The resource name of the conversation dataset that will be created. Format:
+   * `projects//locations//conversationDatasets/`
+   * @param conversationDataset conversationDataset or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata setConversationDataset(java.lang.String conversationDataset) {
+    this.conversationDataset = conversationDataset;
+    return this;
+  }
+
   @Override
   public GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata set(String fieldName, Object value) {
     return (GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata) super.set(fieldName, value);

@@ -48,6 +48,13 @@ public final class LongRunningRecognizeResponse extends com.google.api.client.js
   private Status outputError;
 
   /**
+   * The ID associated with the request. This is a unique ID specific only to the given request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long requestId;
+
+  /**
    * Sequential list of transcription results corresponding to sequential portions of audio.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class LongRunningRecognizeResponse extends com.google.api.client.js
    */
   public LongRunningRecognizeResponse setOutputError(Status outputError) {
     this.outputError = outputError;
+    return this;
+  }
+
+  /**
+   * The ID associated with the request. This is a unique ID specific only to the given request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * The ID associated with the request. This is a unique ID specific only to the given request.
+   * @param requestId requestId or {@code null} for none
+   */
+  public LongRunningRecognizeResponse setRequestId(java.lang.Long requestId) {
+    this.requestId = requestId;
     return this;
   }
 

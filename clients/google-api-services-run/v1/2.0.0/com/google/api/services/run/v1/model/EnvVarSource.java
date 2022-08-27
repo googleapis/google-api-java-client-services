@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class EnvVarSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Not supported by Cloud Run. Selects a key of a ConfigMap.
+   * Not supported by Cloud Run. Not supported in Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   private SecretKeySelector secretKeyRef;
 
   /**
-   * Not supported by Cloud Run. Selects a key of a ConfigMap.
+   * Not supported by Cloud Run. Not supported in Cloud Run.
    * @return value or {@code null} for none
    */
   public ConfigMapKeySelector getConfigMapKeyRef() {
@@ -52,7 +52,7 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not supported by Cloud Run. Selects a key of a ConfigMap.
+   * Not supported by Cloud Run. Not supported in Cloud Run.
    * @param configMapKeyRef configMapKeyRef or {@code null} for none
    */
   public EnvVarSource setConfigMapKeyRef(ConfigMapKeySelector configMapKeyRef) {

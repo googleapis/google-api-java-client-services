@@ -46,7 +46,11 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   private String completionTime;
 
   /**
-   * Optional. The latest available observations of an execution's current state.
+   * Optional. Conditions communicate information about ongoing/complete reconciliation processes
+   * that bring the "spec" inline with the observed state of the world. Execution-specific
+   * conditions include: * `ResourcesAvailable`: `True` when underlying resources have been
+   * provisioned. * `Started`: `True` when the execution has started to execute. * `Completed`:
+   * `True` when the execution has succeeded. `False` when the execution has failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +146,11 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The latest available observations of an execution's current state.
+   * Optional. Conditions communicate information about ongoing/complete reconciliation processes
+   * that bring the "spec" inline with the observed state of the world. Execution-specific
+   * conditions include: * `ResourcesAvailable`: `True` when underlying resources have been
+   * provisioned. * `Started`: `True` when the execution has started to execute. * `Completed`:
+   * `True` when the execution has succeeded. `False` when the execution has failed.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -150,7 +158,11 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The latest available observations of an execution's current state.
+   * Optional. Conditions communicate information about ongoing/complete reconciliation processes
+   * that bring the "spec" inline with the observed state of the world. Execution-specific
+   * conditions include: * `ResourcesAvailable`: `True` when underlying resources have been
+   * provisioned. * `Started`: `True` when the execution has started to execute. * `Completed`:
+   * `True` when the execution has succeeded. `False` when the execution has failed.
    * @param conditions conditions or {@code null} for none
    */
   public ExecutionStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {

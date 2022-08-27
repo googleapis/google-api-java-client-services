@@ -30,12 +30,12 @@ package com.google.api.services.run.v1.model;
 public final class RevisionStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
    * the "spec" inline with the observed state of the world. As a Revision is being prepared, it
    * will incrementally update conditions. Revision-specific conditions include: *
-   * "ResourcesAvailable": True when underlying resources have been provisioned. *
-   * "ContainerHealthy": True when the Revision readiness check completes. * "Active": True when the
-   * Revision may receive traffic.
+   * `ResourcesAvailable`: `True` when underlying resources have been provisioned. *
+   * `ContainerHealthy`: `True` when the Revision readiness check completes. * `Active`: `True` when
+   * the Revision may receive traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,12 +81,12 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   private java.lang.String serviceName;
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
    * the "spec" inline with the observed state of the world. As a Revision is being prepared, it
    * will incrementally update conditions. Revision-specific conditions include: *
-   * "ResourcesAvailable": True when underlying resources have been provisioned. *
-   * "ContainerHealthy": True when the Revision readiness check completes. * "Active": True when the
-   * Revision may receive traffic.
+   * `ResourcesAvailable`: `True` when underlying resources have been provisioned. *
+   * `ContainerHealthy`: `True` when the Revision readiness check completes. * `Active`: `True` when
+   * the Revision may receive traffic.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -94,12 +94,12 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
    * the "spec" inline with the observed state of the world. As a Revision is being prepared, it
    * will incrementally update conditions. Revision-specific conditions include: *
-   * "ResourcesAvailable": True when underlying resources have been provisioned. *
-   * "ContainerHealthy": True when the Revision readiness check completes. * "Active": True when the
-   * Revision may receive traffic.
+   * `ResourcesAvailable`: `True` when underlying resources have been provisioned. *
+   * `ContainerHealthy`: `True` when the Revision readiness check completes. * `Active`: `True` when
+   * the Revision may receive traffic.
    * @param conditions conditions or {@code null} for none
    */
   public RevisionStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {

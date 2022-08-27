@@ -33,11 +33,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
-   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+   * references are not supported in Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,12 +41,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * not provided. Variable references are not supported in Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,11 +176,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
-   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+   * references are not supported in Cloud Run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -198,11 +185,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
-   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+   * references are not supported in Cloud Run.
    * @param args args or {@code null} for none
    */
   public Container setArgs(java.util.List<java.lang.String> args) {
@@ -212,12 +195,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * not provided. Variable references are not supported in Cloud Run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommand() {
@@ -226,12 +204,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * not provided. Variable references are not supported in Cloud Run.
    * @param command command or {@code null} for none
    */
   public Container setCommand(java.util.List<java.lang.String> command) {

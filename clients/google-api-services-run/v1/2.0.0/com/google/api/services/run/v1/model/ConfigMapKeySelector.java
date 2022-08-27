@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run. Selects a key from a ConfigMap.
+ * Not supported by Cloud Run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,36 +30,35 @@ package com.google.api.services.run.v1.model;
 public final class ConfigMapKeySelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The key to select.
+   * Required. Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * This field should not be used directly as it is meant to be inlined directly into the message.
-   * Use the "name" field instead.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LocalObjectReference localObjectReference;
 
   /**
-   * Required. The ConfigMap to select from.
+   * Required. Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Specify whether the ConfigMap or its key must be defined
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optional;
 
   /**
-   * Required. The key to select.
+   * Required. Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -67,7 +66,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The key to select.
+   * Required. Not supported by Cloud Run.
    * @param key key or {@code null} for none
    */
   public ConfigMapKeySelector setKey(java.lang.String key) {
@@ -76,8 +75,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field should not be used directly as it is meant to be inlined directly into the message.
-   * Use the "name" field instead.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public LocalObjectReference getLocalObjectReference() {
@@ -85,8 +83,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field should not be used directly as it is meant to be inlined directly into the message.
-   * Use the "name" field instead.
+   * Not supported by Cloud Run.
    * @param localObjectReference localObjectReference or {@code null} for none
    */
   public ConfigMapKeySelector setLocalObjectReference(LocalObjectReference localObjectReference) {
@@ -95,7 +92,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The ConfigMap to select from.
+   * Required. Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +100,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The ConfigMap to select from.
+   * Required. Not supported by Cloud Run.
    * @param name name or {@code null} for none
    */
   public ConfigMapKeySelector setName(java.lang.String name) {
@@ -112,7 +109,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specify whether the ConfigMap or its key must be defined
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -120,7 +117,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specify whether the ConfigMap or its key must be defined
+   * Not supported by Cloud Run.
    * @param optional optional or {@code null} for none
    */
   public ConfigMapKeySelector setOptional(java.lang.Boolean optional) {

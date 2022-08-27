@@ -30,9 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class Volume extends com.google.api.client.json.GenericJson {
 
   /**
-   * Adapts a ConfigMap into a volume. The contents of the target ConfigMap's Data field will be
-   * presented in a volume as files using the keys in the Data field as the file names, unless the
-   * items element is populated with specific mappings of keys to paths.
+   * Not supported in Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +52,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private SecretVolumeSource secret;
 
   /**
-   * Adapts a ConfigMap into a volume. The contents of the target ConfigMap's Data field will be
-   * presented in a volume as files using the keys in the Data field as the file names, unless the
-   * items element is populated with specific mappings of keys to paths.
+   * Not supported in Cloud Run.
    * @return value or {@code null} for none
    */
   public ConfigMapVolumeSource getConfigMap() {
@@ -64,9 +60,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Adapts a ConfigMap into a volume. The contents of the target ConfigMap's Data field will be
-   * presented in a volume as files using the keys in the Data field as the file names, unless the
-   * items element is populated with specific mappings of keys to paths.
+   * Not supported in Cloud Run.
    * @param configMap configMap or {@code null} for none
    */
   public Volume setConfigMap(ConfigMapVolumeSource configMap) {

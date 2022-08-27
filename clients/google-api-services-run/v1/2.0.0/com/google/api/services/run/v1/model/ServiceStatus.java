@@ -37,8 +37,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   private Addressable address;
 
   /**
-   * Communicates information about ongoing/complete reconciliation processes that bring the `spec`
-   * inline with the observed state of the world. Service-specific conditions include: *
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
+   * the `spec` inline with the observed state of the world. Service-specific conditions include: *
    * `ConfigurationsReady`: `True` when the underlying Configuration is ready. * `RoutesReady`:
    * `True` when the underlying Route is ready. * `Ready`: `True` when all underlying resources are
    * ready.
@@ -114,8 +114,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Communicates information about ongoing/complete reconciliation processes that bring the `spec`
-   * inline with the observed state of the world. Service-specific conditions include: *
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
+   * the `spec` inline with the observed state of the world. Service-specific conditions include: *
    * `ConfigurationsReady`: `True` when the underlying Configuration is ready. * `RoutesReady`:
    * `True` when the underlying Route is ready. * `Ready`: `True` when all underlying resources are
    * ready.
@@ -126,8 +126,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Communicates information about ongoing/complete reconciliation processes that bring the `spec`
-   * inline with the observed state of the world. Service-specific conditions include: *
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
+   * the `spec` inline with the observed state of the world. Service-specific conditions include: *
    * `ConfigurationsReady`: `True` when the underlying Configuration is ready. * `RoutesReady`:
    * `True` when the underlying Route is ready. * `Ready`: `True` when all underlying resources are
    * ready.

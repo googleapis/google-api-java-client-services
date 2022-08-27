@@ -39,8 +39,10 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   private String completionTime;
 
   /**
-   * Optional. The latest available observations of a task's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
+   * Optional. Conditions communicate information about ongoing/complete reconciliation processes
+   * that bring the "spec" inline with the observed state of the world. Task-specific conditions
+   * include: * `Started`: `True` when the task has started to execute. * `Completed`: `True` when
+   * the task has succeeded. `False` when the task has failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +121,10 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The latest available observations of a task's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
+   * Optional. Conditions communicate information about ongoing/complete reconciliation processes
+   * that bring the "spec" inline with the observed state of the world. Task-specific conditions
+   * include: * `Started`: `True` when the task has started to execute. * `Completed`: `True` when
+   * the task has succeeded. `False` when the task has failed.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -128,8 +132,10 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The latest available observations of a task's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
+   * Optional. Conditions communicate information about ongoing/complete reconciliation processes
+   * that bring the "spec" inline with the observed state of the world. Task-specific conditions
+   * include: * `Started`: `True` when the task has started to execute. * `Completed`: `True` when
+   * the task has succeeded. `False` when the task has failed.
    * @param conditions conditions or {@code null} for none
    */
   public TaskStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {

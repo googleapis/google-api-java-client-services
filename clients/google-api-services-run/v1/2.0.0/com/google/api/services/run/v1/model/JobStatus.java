@@ -30,8 +30,9 @@ package com.google.api.services.run.v1.model;
 public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The latest available observations of a job's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
+   * the "spec" inline with the observed state of the world. Job-specific conditions include: *
+   * `Ready`: `True` when the job is ready to be executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +67,9 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   private java.lang.Integer observedGeneration;
 
   /**
-   * The latest available observations of a job's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
+   * the "spec" inline with the observed state of the world. Job-specific conditions include: *
+   * `Ready`: `True` when the job is ready to be executed.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -75,8 +77,9 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The latest available observations of a job's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
+   * the "spec" inline with the observed state of the world. Job-specific conditions include: *
+   * `Ready`: `True` when the job is ready to be executed.
    * @param conditions conditions or {@code null} for none
    */
   public JobStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {

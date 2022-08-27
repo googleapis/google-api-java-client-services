@@ -1960,14 +1960,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
          * setting, and deletes in the background. Please see
-         * http://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+         * https://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
          * information.
          */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
         /** Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-       deletes in the background. Please see http://kubernetes.io/docs/concepts/workloads/controllers
+       deletes in the background. Please see https://kubernetes.io/docs/concepts/workloads/controllers
        /garbage-collection/ for more information.
          */
         public java.lang.String getPropagationPolicy() {
@@ -1977,7 +1977,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
          * setting, and deletes in the background. Please see
-         * http://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+         * https://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
          * information.
          */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
@@ -6001,13 +6001,30 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. Allows to filter resources based on a label. Supported operations are =, !=,
-         * exists, in, and notIn.
+         * exists, in, and notIn. For example, to list all tasks of execution "foo" in succeeded
+         * state: `run.googleapis.com/execution=foo,run.googleapis.com/runningState=Succeeded`.
+         * Supported states are: * `Pending`: Initial state of all tasks. The task has not yet
+         * started but eventually will. * `Running`: Container instances for this task are running
+         * or will be running shortly. * `Succeeded`: No more container instances to run for the
+         * task, and the last attempt succeeded. * `Failed`: No more container instances to run for
+         * the task, and the last attempt failed. This task has run out of retry attempts. *
+         * `Cancelled`: Task was running but got stopped because its parent execution has been
+         * aborted. * `Abandoned`: The task has not yet started and never will because its parent
+         * execution has been aborted.
          */
         @com.google.api.client.util.Key
         private java.lang.String labelSelector;
 
         /** Optional. Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
-       and notIn.
+       and notIn. For example, to list all tasks of execution "foo" in succeeded state:
+       `run.googleapis.com/execution=foo,run.googleapis.com/runningState=Succeeded`. Supported states are:
+       * `Pending`: Initial state of all tasks. The task has not yet started but eventually will. *
+       `Running`: Container instances for this task are running or will be running shortly. * `Succeeded`:
+       No more container instances to run for the task, and the last attempt succeeded. * `Failed`: No
+       more container instances to run for the task, and the last attempt failed. This task has run out of
+       retry attempts. * `Cancelled`: Task was running but got stopped because its parent execution has
+       been aborted. * `Abandoned`: The task has not yet started and never will because its parent
+       execution has been aborted.
          */
         public java.lang.String getLabelSelector() {
           return labelSelector;
@@ -6015,7 +6032,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. Allows to filter resources based on a label. Supported operations are =, !=,
-         * exists, in, and notIn.
+         * exists, in, and notIn. For example, to list all tasks of execution "foo" in succeeded
+         * state: `run.googleapis.com/execution=foo,run.googleapis.com/runningState=Succeeded`.
+         * Supported states are: * `Pending`: Initial state of all tasks. The task has not yet
+         * started but eventually will. * `Running`: Container instances for this task are running
+         * or will be running shortly. * `Succeeded`: No more container instances to run for the
+         * task, and the last attempt succeeded. * `Failed`: No more container instances to run for
+         * the task, and the last attempt failed. This task has run out of retry attempts. *
+         * `Cancelled`: Task was running but got stopped because its parent execution has been
+         * aborted. * `Abandoned`: The task has not yet started and never will because its parent
+         * execution has been aborted.
          */
         public List setLabelSelector(java.lang.String labelSelector) {
           this.labelSelector = labelSelector;

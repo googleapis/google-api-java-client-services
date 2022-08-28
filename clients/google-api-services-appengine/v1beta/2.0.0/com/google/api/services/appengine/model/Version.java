@@ -31,9 +31,8 @@ package com.google.api.services.appengine.model;
 public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
-   * Serving configuration for Google Cloud Endpoints
-   * (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if
-   * view=FULL is set.
+   * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/endpoints).Only
+   * returned in GET requests if view=FULL is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,9 +366,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> zones;
 
   /**
-   * Serving configuration for Google Cloud Endpoints
-   * (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if
-   * view=FULL is set.
+   * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/endpoints).Only
+   * returned in GET requests if view=FULL is set.
    * @return value or {@code null} for none
    */
   public ApiConfigHandler getApiConfig() {
@@ -377,9 +375,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Serving configuration for Google Cloud Endpoints
-   * (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if
-   * view=FULL is set.
+   * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/endpoints).Only
+   * returned in GET requests if view=FULL is set.
    * @param apiConfig apiConfig or {@code null} for none
    */
   public Version setApiConfig(ApiConfigHandler apiConfig) {

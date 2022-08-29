@@ -122,6 +122,13 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   private java.lang.String stepId;
 
   /**
+   * Optional. Job is a Trino job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrinoJob trinoJob;
+
+  /**
    * Optional. Job is a Hadoop job.
    * @return value or {@code null} for none
    */
@@ -338,6 +345,23 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
    */
   public OrderedJob setStepId(java.lang.String stepId) {
     this.stepId = stepId;
+    return this;
+  }
+
+  /**
+   * Optional. Job is a Trino job.
+   * @return value or {@code null} for none
+   */
+  public TrinoJob getTrinoJob() {
+    return trinoJob;
+  }
+
+  /**
+   * Optional. Job is a Trino job.
+   * @param trinoJob trinoJob or {@code null} for none
+   */
+  public OrderedJob setTrinoJob(TrinoJob trinoJob) {
+    this.trinoJob = trinoJob;
     return this;
   }
 

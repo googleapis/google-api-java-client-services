@@ -30,9 +30,9 @@ package com.google.api.services.dataproc.model;
 public final class ExecutionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The duration to keep the underlying cluster alive while idling Passing this threshold
-   * will cause the cluster to be terminated. Minimum value is 30 minutes; maximum value is 14 days
-   * (see JSON representation of Duration (https://developers.google.com/protocol-
+   * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
+   * cause the session to be terminated. Minimum value is 30 minutes; maximum value is 14 days (see
+   * JSON representation of Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).
    * The value may be {@code null}.
    */
@@ -75,9 +75,9 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String subnetworkUri;
 
   /**
-   * Optional. The duration to keep the underlying cluster alive while idling Passing this threshold
-   * will cause the cluster to be terminated. Minimum value is 30 minutes; maximum value is 14 days
-   * (see JSON representation of Duration (https://developers.google.com/protocol-
+   * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
+   * cause the session to be terminated. Minimum value is 30 minutes; maximum value is 14 days (see
+   * JSON representation of Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).
    * @return value or {@code null} for none
    */
@@ -86,9 +86,9 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration to keep the underlying cluster alive while idling Passing this threshold
-   * will cause the cluster to be terminated. Minimum value is 30 minutes; maximum value is 14 days
-   * (see JSON representation of Duration (https://developers.google.com/protocol-
+   * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
+   * cause the session to be terminated. Minimum value is 30 minutes; maximum value is 14 days (see
+   * JSON representation of Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).
    * @param idleTtl idleTtl or {@code null} for none
    */

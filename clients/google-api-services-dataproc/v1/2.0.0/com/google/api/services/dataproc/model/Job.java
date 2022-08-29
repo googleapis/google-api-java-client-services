@@ -167,6 +167,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.List<JobStatus> statusHistory;
 
   /**
+   * Optional. Job is a Trino job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrinoJob trinoJob;
+
+  /**
    * Output only. The collection of YARN applications spun up by this job.Beta Feature: This report
    * is available for testing purposes only. It may be changed before final release.
    * The value may be {@code null}.
@@ -499,6 +506,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setStatusHistory(java.util.List<JobStatus> statusHistory) {
     this.statusHistory = statusHistory;
+    return this;
+  }
+
+  /**
+   * Optional. Job is a Trino job.
+   * @return value or {@code null} for none
+   */
+  public TrinoJob getTrinoJob() {
+    return trinoJob;
+  }
+
+  /**
+   * Optional. Job is a Trino job.
+   * @param trinoJob trinoJob or {@code null} for none
+   */
+  public Job setTrinoJob(TrinoJob trinoJob) {
+    this.trinoJob = trinoJob;
     return this;
   }
 

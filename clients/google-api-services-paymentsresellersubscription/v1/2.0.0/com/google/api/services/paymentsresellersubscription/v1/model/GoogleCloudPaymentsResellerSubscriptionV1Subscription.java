@@ -77,8 +77,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> lineItems;
 
   /**
-   * Output only. Response only. Resource name of the subscription. It will have the format of
-   * "partners/{partner_id}/subscriptions/{subscription_id}"
+   * Optional. Resource name of the subscription. It will have the format of
+   * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
+   * but otherwise is response only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,8 +295,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Output only. Response only. Resource name of the subscription. It will have the format of
-   * "partners/{partner_id}/subscriptions/{subscription_id}"
+   * Optional. Resource name of the subscription. It will have the format of
+   * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
+   * but otherwise is response only.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -303,8 +305,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Output only. Response only. Resource name of the subscription. It will have the format of
-   * "partners/{partner_id}/subscriptions/{subscription_id}"
+   * Optional. Resource name of the subscription. It will have the format of
+   * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
+   * but otherwise is response only.
    * @param name name or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Subscription setName(java.lang.String name) {

@@ -66,7 +66,7 @@ public final class Access extends com.google.api.client.json.GenericJson {
    * A string representing the principal_subject associated with the identity. As compared to
    * `principal_email`, supports principals that aren't associated with email addresses, such as
    * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)` except for some GKE
+   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
    * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
    * `serviceAccount:{identity pool name}[{subject}]`
    * The value may be {@code null}.
@@ -188,7 +188,7 @@ public final class Access extends com.google.api.client.json.GenericJson {
    * A string representing the principal_subject associated with the identity. As compared to
    * `principal_email`, supports principals that aren't associated with email addresses, such as
    * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)` except for some GKE
+   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
    * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
    * `serviceAccount:{identity pool name}[{subject}]`
    * @return value or {@code null} for none
@@ -201,7 +201,7 @@ public final class Access extends com.google.api.client.json.GenericJson {
    * A string representing the principal_subject associated with the identity. As compared to
    * `principal_email`, supports principals that aren't associated with email addresses, such as
    * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)` except for some GKE
+   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
    * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
    * `serviceAccount:{identity pool name}[{subject}]`
    * @param principalSubject principalSubject or {@code null} for none

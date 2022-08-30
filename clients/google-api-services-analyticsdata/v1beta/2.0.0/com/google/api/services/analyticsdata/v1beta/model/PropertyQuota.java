@@ -67,11 +67,22 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   /**
    * Standard Analytics Properties can use up to 5,000 tokens per hour; Analytics 360 Properties can
    * use 50,000 tokens per hour. An API request consumes a single number of tokens, and that number
-   * is deducted from both the hourly and daily quotas.
+   * is deducted from all of the hourly, daily, and per project hourly quotas.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuotaStatus tokensPerHour;
+
+  /**
+   * Analytics Properties can use up to 25% of their tokens per project per hour. This amounts to
+   * standard Analytics Properties can use up to 1,250 tokens per project per hour, and Analytics
+   * 360 Properties can use 12,500 tokens per project per hour. An API request consumes a single
+   * number of tokens, and that number is deducted from all of the hourly, daily, and per project
+   * hourly quotas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QuotaStatus tokensPerProjectPerHour;
 
   /**
    * Standard Analytics Properties can send up to 10 concurrent requests; Analytics 360 Properties
@@ -154,7 +165,7 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   /**
    * Standard Analytics Properties can use up to 5,000 tokens per hour; Analytics 360 Properties can
    * use 50,000 tokens per hour. An API request consumes a single number of tokens, and that number
-   * is deducted from both the hourly and daily quotas.
+   * is deducted from all of the hourly, daily, and per project hourly quotas.
    * @return value or {@code null} for none
    */
   public QuotaStatus getTokensPerHour() {
@@ -164,11 +175,36 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   /**
    * Standard Analytics Properties can use up to 5,000 tokens per hour; Analytics 360 Properties can
    * use 50,000 tokens per hour. An API request consumes a single number of tokens, and that number
-   * is deducted from both the hourly and daily quotas.
+   * is deducted from all of the hourly, daily, and per project hourly quotas.
    * @param tokensPerHour tokensPerHour or {@code null} for none
    */
   public PropertyQuota setTokensPerHour(QuotaStatus tokensPerHour) {
     this.tokensPerHour = tokensPerHour;
+    return this;
+  }
+
+  /**
+   * Analytics Properties can use up to 25% of their tokens per project per hour. This amounts to
+   * standard Analytics Properties can use up to 1,250 tokens per project per hour, and Analytics
+   * 360 Properties can use 12,500 tokens per project per hour. An API request consumes a single
+   * number of tokens, and that number is deducted from all of the hourly, daily, and per project
+   * hourly quotas.
+   * @return value or {@code null} for none
+   */
+  public QuotaStatus getTokensPerProjectPerHour() {
+    return tokensPerProjectPerHour;
+  }
+
+  /**
+   * Analytics Properties can use up to 25% of their tokens per project per hour. This amounts to
+   * standard Analytics Properties can use up to 1,250 tokens per project per hour, and Analytics
+   * 360 Properties can use 12,500 tokens per project per hour. An API request consumes a single
+   * number of tokens, and that number is deducted from all of the hourly, daily, and per project
+   * hourly quotas.
+   * @param tokensPerProjectPerHour tokensPerProjectPerHour or {@code null} for none
+   */
+  public PropertyQuota setTokensPerProjectPerHour(QuotaStatus tokensPerProjectPerHour) {
+    this.tokensPerProjectPerHour = tokensPerProjectPerHour;
     return this;
   }
 

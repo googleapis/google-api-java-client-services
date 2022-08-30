@@ -1980,6 +1980,172 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
     }
     /**
+     * An accessor for creating requests from the IdentityPlatform collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code IdentityToolkit identitytoolkit = new IdentityToolkit(...);}
+     *   {@code IdentityToolkit.IdentityPlatform.List request = identitytoolkit.identityPlatform().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public IdentityPlatform identityPlatform() {
+      return new IdentityPlatform();
+    }
+
+    /**
+     * The "identityPlatform" collection of methods.
+     */
+    public class IdentityPlatform {
+
+      /**
+       * Initialize Identity Platform for a Cloud project. Identity Platform is an end-to-end
+       * authentication system for third-party users to access your apps and services. These could include
+       * mobile/web apps, games, APIs and beyond. This is the publicly available variant of
+       * EnableIdentityPlatform that is only available to billing-enabled projects.
+       *
+       * Create a request for the method "identityPlatform.initializeAuth".
+       *
+       * This request holds the parameters needed by the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link InitializeAuth#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param project The resource name of the target project the developer wants to enable Identity Platform for.
+       * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformRequest}
+       * @return the request
+       */
+      public InitializeAuth initializeAuth(java.lang.String project, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformRequest content) throws java.io.IOException {
+        InitializeAuth result = new InitializeAuth(project, content);
+        initialize(result);
+        return result;
+      }
+
+      public class InitializeAuth extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse> {
+
+        private static final String REST_PATH = "v2/{+project}/identityPlatform:initializeAuth";
+
+        private final java.util.regex.Pattern PROJECT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Initialize Identity Platform for a Cloud project. Identity Platform is an end-to-end
+         * authentication system for third-party users to access your apps and services. These could
+         * include mobile/web apps, games, APIs and beyond. This is the publicly available variant of
+         * EnableIdentityPlatform that is only available to billing-enabled projects.
+         *
+         * Create a request for the method "identityPlatform.initializeAuth".
+         *
+         * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+         * optional parameters, call the {@link InitializeAuth#execute()} method to invoke the remote
+         * operation. <p> {@link InitializeAuth#initialize(com.google.api.client.googleapis.services.Abstr
+         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param project The resource name of the target project the developer wants to enable Identity Platform for.
+         * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformRequest}
+         * @since 1.13
+         */
+        protected InitializeAuth(java.lang.String project, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformRequest content) {
+          super(IdentityToolkit.this, "POST", REST_PATH, content, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                "Parameter project must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public InitializeAuth set$Xgafv(java.lang.String $Xgafv) {
+          return (InitializeAuth) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public InitializeAuth setAccessToken(java.lang.String accessToken) {
+          return (InitializeAuth) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public InitializeAuth setAlt(java.lang.String alt) {
+          return (InitializeAuth) super.setAlt(alt);
+        }
+
+        @Override
+        public InitializeAuth setCallback(java.lang.String callback) {
+          return (InitializeAuth) super.setCallback(callback);
+        }
+
+        @Override
+        public InitializeAuth setFields(java.lang.String fields) {
+          return (InitializeAuth) super.setFields(fields);
+        }
+
+        @Override
+        public InitializeAuth setKey(java.lang.String key) {
+          return (InitializeAuth) super.setKey(key);
+        }
+
+        @Override
+        public InitializeAuth setOauthToken(java.lang.String oauthToken) {
+          return (InitializeAuth) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public InitializeAuth setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (InitializeAuth) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public InitializeAuth setQuotaUser(java.lang.String quotaUser) {
+          return (InitializeAuth) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public InitializeAuth setUploadType(java.lang.String uploadType) {
+          return (InitializeAuth) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public InitializeAuth setUploadProtocol(java.lang.String uploadProtocol) {
+          return (InitializeAuth) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the target project the developer wants to enable Identity Platform
+         * for.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** The resource name of the target project the developer wants to enable Identity Platform for.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /**
+         * The resource name of the target project the developer wants to enable Identity Platform
+         * for.
+         */
+        public InitializeAuth setProject(java.lang.String project) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                "Parameter project must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.project = project;
+          return this;
+        }
+
+        @Override
+        public InitializeAuth set(String parameterName, Object value) {
+          return (InitializeAuth) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the InboundSamlConfigs collection.
      *
      * <p>The typical use is:</p>

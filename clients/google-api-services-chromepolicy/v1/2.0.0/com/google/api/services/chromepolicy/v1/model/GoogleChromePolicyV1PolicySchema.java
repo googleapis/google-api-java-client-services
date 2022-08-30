@@ -17,7 +17,7 @@
 package com.google.api.services.chromepolicy.v1.model;
 
 /**
- * Resource representing a policy schema. Next ID: 13
+ * Resource representing a policy schema. Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Policy API. For a detailed explanation see:
@@ -50,6 +50,13 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleChromePolicyV1AdditionalTargetKeyName.class);
   }
+
+  /**
+   * Output only. Title of the category in which a setting belongs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryTitle;
 
   /**
    * Schema definition using proto descriptor.
@@ -159,6 +166,23 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
    */
   public GoogleChromePolicyV1PolicySchema setAdditionalTargetKeyNames(java.util.List<GoogleChromePolicyV1AdditionalTargetKeyName> additionalTargetKeyNames) {
     this.additionalTargetKeyNames = additionalTargetKeyNames;
+    return this;
+  }
+
+  /**
+   * Output only. Title of the category in which a setting belongs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryTitle() {
+    return categoryTitle;
+  }
+
+  /**
+   * Output only. Title of the category in which a setting belongs.
+   * @param categoryTitle categoryTitle or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchema setCategoryTitle(java.lang.String categoryTitle) {
+    this.categoryTitle = categoryTitle;
     return this;
   }
 

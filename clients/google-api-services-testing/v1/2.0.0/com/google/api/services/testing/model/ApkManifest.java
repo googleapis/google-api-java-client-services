@@ -79,6 +79,20 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> usesPermission;
 
   /**
+   * Version number used internally by the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long versionCode;
+
+  /**
+   * Version number shown to users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String versionName;
+
+  /**
    * User-readable name for the application.
    * @return value or {@code null} for none
    */
@@ -192,6 +206,40 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
    */
   public ApkManifest setUsesPermission(java.util.List<java.lang.String> usesPermission) {
     this.usesPermission = usesPermission;
+    return this;
+  }
+
+  /**
+   * Version number used internally by the app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVersionCode() {
+    return versionCode;
+  }
+
+  /**
+   * Version number used internally by the app.
+   * @param versionCode versionCode or {@code null} for none
+   */
+  public ApkManifest setVersionCode(java.lang.Long versionCode) {
+    this.versionCode = versionCode;
+    return this;
+  }
+
+  /**
+   * Version number shown to users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersionName() {
+    return versionName;
+  }
+
+  /**
+   * Version number shown to users.
+   * @param versionName versionName or {@code null} for none
+   */
+  public ApkManifest setVersionName(java.lang.String versionName) {
+    this.versionName = versionName;
     return this;
   }
 

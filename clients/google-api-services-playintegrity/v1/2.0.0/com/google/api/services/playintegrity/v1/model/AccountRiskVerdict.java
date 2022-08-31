@@ -36,7 +36,31 @@ public final class AccountRiskVerdict extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String risk;
+
+  /**
+   * Required. Indicates the account risk level of the current user session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String riskLevel;
+
+  /**
+   * Required. Indicates the account risk level of the current user session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRisk() {
+    return risk;
+  }
+
+  /**
+   * Required. Indicates the account risk level of the current user session.
+   * @param risk risk or {@code null} for none
+   */
+  public AccountRiskVerdict setRisk(java.lang.String risk) {
+    this.risk = risk;
+    return this;
+  }
 
   /**
    * Required. Indicates the account risk level of the current user session.

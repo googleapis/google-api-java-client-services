@@ -714,7 +714,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private UsageLog usageLog;
 
   /**
-   * Whether transferring files over USB is disabled.
+   * Whether transferring files over USB is disabled. This is supported only on company-owned
+   * devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2285,7 +2286,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether transferring files over USB is disabled.
+   * Whether transferring files over USB is disabled. This is supported only on company-owned
+   * devices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUsbFileTransferDisabled() {
@@ -2293,7 +2295,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether transferring files over USB is disabled.
+   * Whether transferring files over USB is disabled. This is supported only on company-owned
+   * devices.
    * @param usbFileTransferDisabled usbFileTransferDisabled or {@code null} for none
    */
   public Policy setUsbFileTransferDisabled(java.lang.Boolean usbFileTransferDisabled) {

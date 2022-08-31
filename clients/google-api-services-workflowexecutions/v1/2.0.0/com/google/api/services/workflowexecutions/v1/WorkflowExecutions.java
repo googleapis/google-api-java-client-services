@@ -962,15 +962,15 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
 
             /**
              * Maximum number of executions to return per call. Max supported value depends on the
-             * selected Execution view: it's 10000 for BASIC and 100 for FULL. The default value
-             * used if the field is not specified is 100, regardless of the selected view. Values
-             * greater than the max value will be coerced down to it.
+             * selected Execution view: it's 1000 for BASIC and 100 for FULL. The default value used
+             * if the field is not specified is 100, regardless of the selected view. Values greater
+             * than the max value will be coerced down to it.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Maximum number of executions to return per call. Max supported value depends on the selected
-           Execution view: it's 10000 for BASIC and 100 for FULL. The default value used if the field is not
+           Execution view: it's 1000 for BASIC and 100 for FULL. The default value used if the field is not
            specified is 100, regardless of the selected view. Values greater than the max value will be
            coerced down to it.
              */
@@ -980,9 +980,9 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
 
             /**
              * Maximum number of executions to return per call. Max supported value depends on the
-             * selected Execution view: it's 10000 for BASIC and 100 for FULL. The default value
-             * used if the field is not specified is 100, regardless of the selected view. Values
-             * greater than the max value will be coerced down to it.
+             * selected Execution view: it's 1000 for BASIC and 100 for FULL. The default value used
+             * if the field is not specified is 100, regardless of the selected view. Values greater
+             * than the max value will be coerced down to it.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

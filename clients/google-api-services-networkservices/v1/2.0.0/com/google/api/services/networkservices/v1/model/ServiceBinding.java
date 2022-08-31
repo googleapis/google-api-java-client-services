@@ -53,15 +53,15 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Name of the ServiceBinding resource. It matches pattern
-   * `projects/locations/global/serviceBindings/service_binding_name>`.
+   * `projects/locations/global/serviceBindings/service_binding_name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The full service directory service name of the format
-   * /projects/locations/namespaces/services
+   * Required. The full Service Directory Service name of the format
+   * projects/locations/namespaces/services
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +127,7 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Name of the ServiceBinding resource. It matches pattern
-   * `projects/locations/global/serviceBindings/service_binding_name>`.
+   * `projects/locations/global/serviceBindings/service_binding_name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -136,7 +136,7 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Name of the ServiceBinding resource. It matches pattern
-   * `projects/locations/global/serviceBindings/service_binding_name>`.
+   * `projects/locations/global/serviceBindings/service_binding_name`.
    * @param name name or {@code null} for none
    */
   public ServiceBinding setName(java.lang.String name) {
@@ -145,8 +145,8 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The full service directory service name of the format
-   * /projects/locations/namespaces/services
+   * Required. The full Service Directory Service name of the format
+   * projects/locations/namespaces/services
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -154,8 +154,8 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The full service directory service name of the format
-   * /projects/locations/namespaces/services
+   * Required. The full Service Directory Service name of the format
+   * projects/locations/namespaces/services
    * @param service service or {@code null} for none
    */
   public ServiceBinding setService(java.lang.String service) {

@@ -31,6 +31,13 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class VlanAttachment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. The identifier of the attachment within vrf.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Input only. Pairing key.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class VlanAttachment extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String routerIp;
+
+  /**
+   * Immutable. The identifier of the attachment within vrf.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Immutable. The identifier of the attachment within vrf.
+   * @param id id or {@code null} for none
+   */
+  public VlanAttachment setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
 
   /**
    * Input only. Pairing key.

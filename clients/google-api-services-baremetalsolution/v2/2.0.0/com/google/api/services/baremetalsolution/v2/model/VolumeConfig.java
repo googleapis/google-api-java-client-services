@@ -86,6 +86,13 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Performance tier of the Volume. Default is SHARED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String performanceTier;
+
+  /**
    * Volume protocol.
    * The value may be {@code null}.
    */
@@ -222,6 +229,23 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
    */
   public VolumeConfig setNfsExports(java.util.List<NfsExport> nfsExports) {
     this.nfsExports = nfsExports;
+    return this;
+  }
+
+  /**
+   * Performance tier of the Volume. Default is SHARED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPerformanceTier() {
+    return performanceTier;
+  }
+
+  /**
+   * Performance tier of the Volume. Default is SHARED.
+   * @param performanceTier performanceTier or {@code null} for none
+   */
+  public VolumeConfig setPerformanceTier(java.lang.String performanceTier) {
+    this.performanceTier = performanceTier;
     return this;
   }
 

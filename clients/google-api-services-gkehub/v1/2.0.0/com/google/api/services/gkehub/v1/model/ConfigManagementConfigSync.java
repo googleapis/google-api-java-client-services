@@ -62,7 +62,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private java.lang.Boolean preventDrift;
 
   /**
-   * Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode.
+   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode.
+   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceFormat() {
@@ -153,7 +153,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode.
+   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
    * @param sourceFormat sourceFormat or {@code null} for none
    */
   public ConfigManagementConfigSync setSourceFormat(java.lang.String sourceFormat) {

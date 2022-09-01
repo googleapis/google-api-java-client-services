@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2JobNotificationEmails jobNotificationEmails;
 
   /**
-   * Publish a notification to a pubsub topic.
+   * Publish a notification to a Pub/Sub topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Publish a notification to a pubsub topic.
+   * Publish a notification to a Pub/Sub topic.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2PublishToPubSub getPubSub() {
@@ -123,7 +123,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Publish a notification to a pubsub topic.
+   * Publish a notification to a Pub/Sub topic.
    * @param pubSub pubSub or {@code null} for none
    */
   public GooglePrivacyDlpV2Action setPubSub(GooglePrivacyDlpV2PublishToPubSub pubSub) {

@@ -19,7 +19,6 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Pub/Sub topic message for a DataProfileAction.PubSubNotification event. To receive a message of
  * protocol buffer schema type, convert the message data to an object of this proto class.
- * https://cloud.google.com/pubsub/docs/samples/pubsub-subscribe-proto-messages
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

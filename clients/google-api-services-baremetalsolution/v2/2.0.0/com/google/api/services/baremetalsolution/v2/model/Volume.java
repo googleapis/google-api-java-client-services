@@ -94,11 +94,26 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Input only. User-specified notes for new Volume. Used to provision Volumes that require manual
+   * intervention.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notes;
+
+  /**
    * Originally requested size, in GiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long originallyRequestedSizeGib;
+
+  /**
+   * Immutable. Performance tier of the Volume. Default is SHARED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String performanceTier;
 
   /**
    * Immutable. Pod name.
@@ -322,6 +337,25 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Input only. User-specified notes for new Volume. Used to provision Volumes that require manual
+   * intervention.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotes() {
+    return notes;
+  }
+
+  /**
+   * Input only. User-specified notes for new Volume. Used to provision Volumes that require manual
+   * intervention.
+   * @param notes notes or {@code null} for none
+   */
+  public Volume setNotes(java.lang.String notes) {
+    this.notes = notes;
+    return this;
+  }
+
+  /**
    * Originally requested size, in GiB.
    * @return value or {@code null} for none
    */
@@ -335,6 +369,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setOriginallyRequestedSizeGib(java.lang.Long originallyRequestedSizeGib) {
     this.originallyRequestedSizeGib = originallyRequestedSizeGib;
+    return this;
+  }
+
+  /**
+   * Immutable. Performance tier of the Volume. Default is SHARED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPerformanceTier() {
+    return performanceTier;
+  }
+
+  /**
+   * Immutable. Performance tier of the Volume. Default is SHARED.
+   * @param performanceTier performanceTier or {@code null} for none
+   */
+  public Volume setPerformanceTier(java.lang.String performanceTier) {
+    this.performanceTier = performanceTier;
     return this;
   }
 

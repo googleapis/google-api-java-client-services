@@ -17,10 +17,10 @@
 package com.google.api.services.apigeeregistry.v1.model;
 
 /**
- * An ApiDeployment describes a service running at particular address that provides a particular
- * version of an API. ApiDeployments have revisions which correspond to different configurations of
- * a single deployment in time. Revision identifiers should be updated whenever the served API spec
- * or endpoint address changes.
+ * Describes a service running at particular address that provides a particular version of an API.
+ * ApiDeployments have revisions which correspond to different configurations of a single deployment
+ * in time. Revision identifiers should be updated whenever the served API spec or endpoint address
+ * changes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee Registry API. For a detailed explanation see:
@@ -50,9 +50,9 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * The full resource name (including revision id) of the spec of the API being served by the
+   * The full resource name (including revision ID) of the spec of the API being served by the
    * deployment. Changes to this value will update the revision. Format:
-   * apis/{api}/deployments/{deployment}
+   * `apis/{api}/deployments/{deployment}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   private java.lang.String endpointUri;
 
   /**
-   * The address of the external channel of the API (e.g. the Developer Portal). Changes to this
+   * The address of the external channel of the API (e.g., the Developer Portal). Changes to this
    * value will not affect the revision.
    * The value may be {@code null}.
    */
@@ -109,7 +109,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,9 +185,9 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The full resource name (including revision id) of the spec of the API being served by the
+   * The full resource name (including revision ID) of the spec of the API being served by the
    * deployment. Changes to this value will update the revision. Format:
-   * apis/{api}/deployments/{deployment}
+   * `apis/{api}/deployments/{deployment}`
    * @return value or {@code null} for none
    */
   public java.lang.String getApiSpecRevision() {
@@ -195,9 +195,9 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The full resource name (including revision id) of the spec of the API being served by the
+   * The full resource name (including revision ID) of the spec of the API being served by the
    * deployment. Changes to this value will update the revision. Format:
-   * apis/{api}/deployments/{deployment}
+   * `apis/{api}/deployments/{deployment}`
    * @param apiSpecRevision apiSpecRevision or {@code null} for none
    */
   public ApiDeployment setApiSpecRevision(java.lang.String apiSpecRevision) {
@@ -274,7 +274,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The address of the external channel of the API (e.g. the Developer Portal). Changes to this
+   * The address of the external channel of the API (e.g., the Developer Portal). Changes to this
    * value will not affect the revision.
    * @return value or {@code null} for none
    */
@@ -283,7 +283,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The address of the external channel of the API (e.g. the Developer Portal). Changes to this
+   * The address of the external channel of the API (e.g., the Developer Portal). Changes to this
    * value will not affect the revision.
    * @param externalChannelUri externalChannelUri or {@code null} for none
    */
@@ -318,7 +318,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -332,7 +332,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @param labels labels or {@code null} for none
    */
   public ApiDeployment setLabels(java.util.Map<String, java.lang.String> labels) {

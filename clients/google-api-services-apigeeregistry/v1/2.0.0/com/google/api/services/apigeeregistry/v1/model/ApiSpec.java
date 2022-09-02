@@ -17,12 +17,12 @@
 package com.google.api.services.apigeeregistry.v1.model;
 
 /**
- * An ApiSpec describes a version of an API in a structured way. ApiSpecs provide formal
- * descriptions that consumers can use to use a version. ApiSpec resources are intended to be fully-
- * resolved descriptions of an ApiVersion. When specs consist of multiple files, these should be
- * bundled together (e.g. in a zip archive) and stored as a unit. Multiple specs can exist to
- * provide representations in different API description formats. Synchronization of these
- * representations would be provided by tooling and background services.
+ * Describes a version of an API in a structured way. ApiSpecs provide formal descriptions that
+ * consumers can use to use a version. ApiSpec resources are intended to be fully-resolved
+ * descriptions of an ApiVersion. When specs consist of multiple files, these should be bundled
+ * together (e.g., in a zip archive) and stored as a unit. Multiple specs can exist to provide
+ * representations in different API description formats. Synchronization of these representations
+ * would be provided by tooling and background services.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee Registry API. For a detailed explanation see:
@@ -87,7 +87,7 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
   /**
    * A style (format) descriptor for this spec that is specified as a Media Type
    * (https://en.wikipedia.org/wiki/Media_type). Possible values include
-   * "application/vnd.apigee.proto", "application/vnd.apigee.openapi", and
-   * "application/vnd.apigee.graphql", with possible suffixes representing compression types. These
+   * `application/vnd.apigee.proto`, `application/vnd.apigee.openapi`, and
+   * `application/vnd.apigee.graphql`, with possible suffixes representing compression types. These
    * hypothetical names are defined in the vendor tree defined in RFC6838
    * (https://tools.ietf.org/html/rfc6838) and are not final. Content types can specify compression.
    * Currently only GZip compression is supported (indicated with "+gzip").
@@ -299,7 +299,7 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -313,7 +313,7 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @param labels labels or {@code null} for none
    */
   public ApiSpec setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -324,8 +324,8 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
   /**
    * A style (format) descriptor for this spec that is specified as a Media Type
    * (https://en.wikipedia.org/wiki/Media_type). Possible values include
-   * "application/vnd.apigee.proto", "application/vnd.apigee.openapi", and
-   * "application/vnd.apigee.graphql", with possible suffixes representing compression types. These
+   * `application/vnd.apigee.proto`, `application/vnd.apigee.openapi`, and
+   * `application/vnd.apigee.graphql`, with possible suffixes representing compression types. These
    * hypothetical names are defined in the vendor tree defined in RFC6838
    * (https://tools.ietf.org/html/rfc6838) and are not final. Content types can specify compression.
    * Currently only GZip compression is supported (indicated with "+gzip").
@@ -338,8 +338,8 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
   /**
    * A style (format) descriptor for this spec that is specified as a Media Type
    * (https://en.wikipedia.org/wiki/Media_type). Possible values include
-   * "application/vnd.apigee.proto", "application/vnd.apigee.openapi", and
-   * "application/vnd.apigee.graphql", with possible suffixes representing compression types. These
+   * `application/vnd.apigee.proto`, `application/vnd.apigee.openapi`, and
+   * `application/vnd.apigee.graphql`, with possible suffixes representing compression types. These
    * hypothetical names are defined in the vendor tree defined in RFC6838
    * (https://tools.ietf.org/html/rfc6838) and are not final. Content types can specify compression.
    * Currently only GZip compression is supported (indicated with "+gzip").

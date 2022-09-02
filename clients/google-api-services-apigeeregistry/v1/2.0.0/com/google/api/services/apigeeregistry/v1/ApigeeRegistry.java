@@ -535,14 +535,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
       public class Apis {
 
         /**
-         * CreateApi creates a specified API.
+         * Creates a specified API.
          *
          * Create a request for the method "apis.create".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of APIs. Format: projects/locations
+         * @param parent Required. The parent, which owns this collection of APIs. Format: `projects/locations`
          * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Api}
          * @return the request
          */
@@ -560,7 +560,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * CreateApi creates a specified API.
+           * Creates a specified API.
            *
            * Create a request for the method "apis.create".
            *
@@ -570,7 +570,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of APIs. Format: projects/locations
+           * @param parent Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Api}
            * @since 1.13
            */
@@ -640,19 +640,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. The parent, which owns this collection of APIs. Format: projects/locations
+           * Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of APIs. Format: projects/locations
+          /** Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent, which owns this collection of APIs. Format: projects/locations
+           * Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -665,14 +665,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. The ID to use for the api, which will become the final component of the api's
+           * Required. The ID to use for the API, which will become the final component of the API's
            * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
            * Following AIP-162, IDs must not have the form of a UUID.
            */
           @com.google.api.client.util.Key
           private java.lang.String apiId;
 
-          /** Required. The ID to use for the api, which will become the final component of the api's resource
+          /** Required. The ID to use for the API, which will become the final component of the API's resource
          name. This value should be 4-63 characters, and valid characters are /a-z-/. Following AIP-162, IDs
          must not have the form of a UUID.
            */
@@ -681,7 +681,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. The ID to use for the api, which will become the final component of the api's
+           * Required. The ID to use for the API, which will become the final component of the API's
            * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
            * Following AIP-162, IDs must not have the form of a UUID.
            */
@@ -696,14 +696,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * DeleteApi removes a specified API and all of the resources that it owns.
+         * Removes a specified API and all of the resources that it owns.
          *
          * Create a request for the method "apis.delete".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the API to delete. Format: projects/locations/apis
+         * @param name Required. The name of the API to delete. Format: `projects/locations/apis`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -720,7 +720,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
           /**
-           * DeleteApi removes a specified API and all of the resources that it owns.
+           * Removes a specified API and all of the resources that it owns.
            *
            * Create a request for the method "apis.delete".
            *
@@ -730,7 +730,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the API to delete. Format: projects/locations/apis
+           * @param name Required. The name of the API to delete. Format: `projects/locations/apis`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -798,17 +798,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the API to delete. Format: projects/locations/apis */
+          /** Required. The name of the API to delete. Format: `projects/locations/apis` */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the API to delete. Format: projects/locations/apis
+          /** Required. The name of the API to delete. Format: `projects/locations/apis`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the API to delete. Format: projects/locations/apis */
+          /** Required. The name of the API to delete. Format: `projects/locations/apis` */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -848,14 +848,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * GetApi returns a specified API.
+         * Returns a specified API.
          *
          * Create a request for the method "apis.get".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the API to retrieve. Format: projects/locations/apis
+         * @param name Required. The name of the API to retrieve. Format: `projects/locations/apis`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -872,7 +872,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
           /**
-           * GetApi returns a specified API.
+           * Returns a specified API.
            *
            * Create a request for the method "apis.get".
            *
@@ -881,7 +881,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the API to retrieve. Format: projects/locations/apis
+           * @param name Required. The name of the API to retrieve. Format: `projects/locations/apis`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -959,17 +959,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the API to retrieve. Format: projects/locations/apis */
+          /** Required. The name of the API to retrieve. Format: `projects/locations/apis` */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the API to retrieve. Format: projects/locations/apis
+          /** Required. The name of the API to retrieve. Format: `projects/locations/apis`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the API to retrieve. Format: projects/locations/apis */
+          /** Required. The name of the API to retrieve. Format: `projects/locations/apis` */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1185,14 +1185,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * ListApis returns matching APIs.
+         * Returns matching APIs.
          *
          * Create a request for the method "apis.list".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of APIs. Format: projects/locations
+         * @param parent Required. The parent, which owns this collection of APIs. Format: `projects/locations`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1209,7 +1209,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * ListApis returns matching APIs.
+           * Returns matching APIs.
            *
            * Create a request for the method "apis.list".
            *
@@ -1218,7 +1218,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of APIs. Format: projects/locations
+           * @param parent Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1297,19 +1297,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. The parent, which owns this collection of APIs. Format: projects/locations
+           * Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of APIs. Format: projects/locations
+          /** Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent, which owns this collection of APIs. Format: projects/locations
+           * Required. The parent, which owns this collection of APIs. Format: `projects/locations`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1341,6 +1341,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /**
+           * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+           * order using the "desc" identifier, e.g. "foo desc,bar"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+         "desc" identifier, e.g. "foo desc,bar"
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+           * order using the "desc" identifier, e.g. "foo desc,bar"
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
             return this;
           }
 
@@ -1401,7 +1424,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * UpdateApi can be used to modify a specified API.
+         * Used to modify a specified API.
          *
          * Create a request for the method "apis.patch".
          *
@@ -1426,7 +1449,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
           /**
-           * UpdateApi can be used to modify a specified API.
+           * Used to modify a specified API.
            *
            * Create a request for the method "apis.patch".
            *
@@ -1527,13 +1550,13 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * If set to true, and the api is not found, a new api will be created. In this situation,
+           * If set to true, and the API is not found, a new API will be created. In this situation,
            * `update_mask` is ignored.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** If set to true, and the api is not found, a new api will be created. In this situation,
+          /** If set to true, and the API is not found, a new API will be created. In this situation,
          `update_mask` is ignored.
            */
           public java.lang.Boolean getAllowMissing() {
@@ -1541,7 +1564,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * If set to true, and the api is not found, a new api will be created. In this situation,
+           * If set to true, and the API is not found, a new API will be created. In this situation,
            * `update_mask` is ignored.
            */
           public Patch setAllowMissing(java.lang.Boolean allowMissing) {
@@ -1551,15 +1574,16 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
           /**
            * The list of fields to be updated. If omitted, all fields are updated that are set in
-           * the request message (fields set to default values are ignored). If a "*" is specified,
-           * all fields are updated, including fields that are unspecified/default in the request.
+           * the request message (fields set to default values are ignored). If an asterisk "*" is
+           * specified, all fields are updated, including fields that are unspecified/default in the
+           * request.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The list of fields to be updated. If omitted, all fields are updated that are set in the request
-         message (fields set to default values are ignored). If a "*" is specified, all fields are updated,
-         including fields that are unspecified/default in the request.
+         message (fields set to default values are ignored). If an asterisk "*" is specified, all fields are
+         updated, including fields that are unspecified/default in the request.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1567,8 +1591,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
           /**
            * The list of fields to be updated. If omitted, all fields are updated that are set in
-           * the request message (fields set to default values are ignored). If a "*" is specified,
-           * all fields are updated, including fields that are unspecified/default in the request.
+           * the request message (fields set to default values are ignored). If an asterisk "*" is
+           * specified, all fields are updated, including fields that are unspecified/default in the
+           * request.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -1902,14 +1927,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
         public class Artifacts {
 
           /**
-           * CreateArtifact creates a specified artifact.
+           * Creates a specified artifact.
            *
            * Create a request for the method "artifacts.create".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+           * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
            * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
            * @return the request
            */
@@ -1927,7 +1952,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
             /**
-             * CreateArtifact creates a specified artifact.
+             * Creates a specified artifact.
              *
              * Create a request for the method "artifacts.create".
              *
@@ -1937,7 +1962,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+             * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
              * @since 1.13
              */
@@ -2006,17 +2031,21 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+            /**
+             * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+            /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+            /**
+             * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
+             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2059,14 +2088,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * DeleteArtifact removes a specified artifact.
+           * Removes a specified artifact.
            *
            * Create a request for the method "artifacts.delete".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+           * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2083,7 +2112,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/artifacts/[^/]+$");
 
             /**
-             * DeleteArtifact removes a specified artifact.
+             * Removes a specified artifact.
              *
              * Create a request for the method "artifacts.delete".
              *
@@ -2093,7 +2122,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -2161,17 +2190,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+            /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the artifact to delete. Format: {parent}/artifacts
+            /** Required. The name of the artifact to delete. Format: `{parent}/artifacts`
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+            /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2188,14 +2217,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * GetArtifact returns a specified artifact.
+           * Returns a specified artifact.
            *
            * Create a request for the method "artifacts.get".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+           * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2212,7 +2241,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/artifacts/[^/]+$");
 
             /**
-             * GetArtifact returns a specified artifact.
+             * Returns a specified artifact.
              *
              * Create a request for the method "artifacts.get".
              *
@@ -2221,7 +2250,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2299,17 +2328,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+            /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+            /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+            /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2326,9 +2355,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-           * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-           * response field indicates the exact format returned).
+           * Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the
+           * default behavior is to return the artifact uncompressed (the mime_type response field indicates
+           * the exact format returned).
            *
            * Create a request for the method "artifacts.getContents".
            *
@@ -2336,7 +2365,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * optional parameters, call the {@link GetContents#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+           * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
            * @return the request
            */
           public GetContents getContents(java.lang.String name) throws java.io.IOException {
@@ -2353,9 +2382,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/artifacts/[^/]+$");
 
             /**
-             * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-             * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-             * response field indicates the exact format returned).
+             * Returns the contents of a specified artifact. If artifacts are stored with GZip compression,
+             * the default behavior is to return the artifact uncompressed (the mime_type response field
+             * indicates the exact format returned).
              *
              * Create a request for the method "artifacts.getContents".
              *
@@ -2365,7 +2394,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * GetContents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
              * @since 1.13
              */
             protected GetContents(java.lang.String name) {
@@ -2445,12 +2474,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the artifact whose contents should be retrieved. Format:
-             * {parent}/artifacts
+             * `{parent}/artifacts`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+            /** Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
              */
             public java.lang.String getName() {
               return name;
@@ -2458,7 +2487,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the artifact whose contents should be retrieved. Format:
-             * {parent}/artifacts
+             * `{parent}/artifacts`
              */
             public GetContents setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2675,14 +2704,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * ListArtifacts returns matching artifacts.
+           * Returns matching artifacts.
            *
            * Create a request for the method "artifacts.list".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+           * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2699,7 +2728,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
             /**
-             * ListArtifacts returns matching artifacts.
+             * Returns matching artifacts.
              *
              * Create a request for the method "artifacts.list".
              *
@@ -2708,7 +2737,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+             * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2786,17 +2815,21 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+            /**
+             * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+            /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+            /**
+             * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2827,6 +2860,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
+              return this;
+            }
+
+            /**
+             * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+             * order using the "desc" identifier, e.g. "foo desc,bar"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+           "desc" identifier, e.g. "foo desc,bar"
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+             * order using the "desc" identifier, e.g. "foo desc,bar"
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
               return this;
             }
 
@@ -2888,7 +2944,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * ReplaceArtifact can be used to replace a specified artifact.
+           * Used to replace a specified artifact.
            *
            * Create a request for the method "artifacts.replaceArtifact".
            *
@@ -2914,7 +2970,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/artifacts/[^/]+$");
 
             /**
-             * ReplaceArtifact can be used to replace a specified artifact.
+             * Used to replace a specified artifact.
              *
              * Create a request for the method "artifacts.replaceArtifact".
              *
@@ -3342,14 +3398,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
         public class Deployments {
 
           /**
-           * CreateApiDeployment creates a specified deployment.
+           * Creates a specified deployment.
            *
            * Create a request for the method "deployments.create".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of deployments. Format: projects/locations/apis
+           * @param parent Required. The parent, which owns this collection of deployments. Format: `projects/locations/apis`
            * @param content the {@link com.google.api.services.apigeeregistry.v1.model.ApiDeployment}
            * @return the request
            */
@@ -3367,7 +3423,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
             /**
-             * CreateApiDeployment creates a specified deployment.
+             * Creates a specified deployment.
              *
              * Create a request for the method "deployments.create".
              *
@@ -3377,7 +3433,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of deployments. Format: projects/locations/apis
+             * @param parent Required. The parent, which owns this collection of deployments. Format: `projects/locations/apis`
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.ApiDeployment}
              * @since 1.13
              */
@@ -3448,12 +3504,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of deployments. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of deployments. Format: projects/locations/apis
+            /** Required. The parent, which owns this collection of deployments. Format: `projects/locations/apis`
              */
             public java.lang.String getParent() {
               return parent;
@@ -3461,7 +3517,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of deployments. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3505,15 +3561,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * DeleteApiDeployment removes a specified deployment, all revisions, and all child resources (e.g.
-           * artifacts).
+           * Removes a specified deployment, all revisions, and all child resources (e.g., artifacts).
            *
            * Create a request for the method "deployments.delete".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the deployment to delete. Format: projects/locations/apis/deployments
+           * @param name Required. The name of the deployment to delete. Format: `projects/locations/apis/deployments`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3530,8 +3585,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * DeleteApiDeployment removes a specified deployment, all revisions, and all child resources
-             * (e.g. artifacts).
+             * Removes a specified deployment, all revisions, and all child resources (e.g., artifacts).
              *
              * Create a request for the method "deployments.delete".
              *
@@ -3541,7 +3595,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the deployment to delete. Format: projects/locations/apis/deployments
+             * @param name Required. The name of the deployment to delete. Format: `projects/locations/apis/deployments`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3611,12 +3665,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the deployment to delete. Format:
-             * projects/locations/apis/deployments
+             * `projects/locations/apis/deployments`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the deployment to delete. Format: projects/locations/apis/deployments
+            /** Required. The name of the deployment to delete. Format: `projects/locations/apis/deployments`
              */
             public java.lang.String getName() {
               return name;
@@ -3624,7 +3678,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the deployment to delete. Format:
-             * projects/locations/apis/deployments
+             * `projects/locations/apis/deployments`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3665,7 +3719,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * DeleteApiDeploymentRevision deletes a revision of a deployment.
+           * Deletes a revision of a deployment.
            *
            * Create a request for the method "deployments.deleteRevision".
            *
@@ -3674,7 +3728,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * operation.
            *
            * @param name Required. The name of the deployment revision to be deleted, with a revision ID explicitly included.
-           *        Example: projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
+           *        Example: `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
            * @return the request
            */
           public DeleteRevision deleteRevision(java.lang.String name) throws java.io.IOException {
@@ -3691,7 +3745,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * DeleteApiDeploymentRevision deletes a revision of a deployment.
+             * Deletes a revision of a deployment.
              *
              * Create a request for the method "deployments.deleteRevision".
              *
@@ -3702,7 +3756,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * the constructor. </p>
              *
              * @param name Required. The name of the deployment revision to be deleted, with a revision ID explicitly included.
-           *        Example: projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
+           *        Example: `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
              * @since 1.13
              */
             protected DeleteRevision(java.lang.String name) {
@@ -3773,13 +3827,13 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             /**
              * Required. The name of the deployment revision to be deleted, with a revision ID
              * explicitly included. Example:
-             * projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
+             * `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the deployment revision to be deleted, with a revision ID explicitly
-           included. Example: projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
+           included. Example: `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
              */
             public java.lang.String getName() {
               return name;
@@ -3788,7 +3842,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             /**
              * Required. The name of the deployment revision to be deleted, with a revision ID
              * explicitly included. Example:
-             * projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
+             * `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
              */
             public DeleteRevision setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3806,14 +3860,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * GetApiDeployment returns a specified deployment.
+           * Returns a specified deployment.
            *
            * Create a request for the method "deployments.get".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the deployment to retrieve. Format: projects/locations/apis/deployments
+           * @param name Required. The name of the deployment to retrieve. Format: `projects/locations/apis/deployments`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3830,7 +3884,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * GetApiDeployment returns a specified deployment.
+             * Returns a specified deployment.
              *
              * Create a request for the method "deployments.get".
              *
@@ -3839,7 +3893,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the deployment to retrieve. Format: projects/locations/apis/deployments
+             * @param name Required. The name of the deployment to retrieve. Format: `projects/locations/apis/deployments`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3919,12 +3973,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the deployment to retrieve. Format:
-             * projects/locations/apis/deployments
+             * `projects/locations/apis/deployments`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the deployment to retrieve. Format: projects/locations/apis/deployments
+            /** Required. The name of the deployment to retrieve. Format: `projects/locations/apis/deployments`
              */
             public java.lang.String getName() {
               return name;
@@ -3932,7 +3986,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the deployment to retrieve. Format:
-             * projects/locations/apis/deployments
+             * `projects/locations/apis/deployments`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4149,14 +4203,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * ListApiDeployments returns matching deployments.
+           * Returns matching deployments.
            *
            * Create a request for the method "deployments.list".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of deployments. Format: projects/locations/apis
+           * @param parent Required. The parent, which owns this collection of deployments. Format: `projects/locations/apis`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4173,7 +4227,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
             /**
-             * ListApiDeployments returns matching deployments.
+             * Returns matching deployments.
              *
              * Create a request for the method "deployments.list".
              *
@@ -4182,7 +4236,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of deployments. Format: projects/locations/apis
+             * @param parent Required. The parent, which owns this collection of deployments. Format: `projects/locations/apis`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4262,12 +4316,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of deployments. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of deployments. Format: projects/locations/apis
+            /** Required. The parent, which owns this collection of deployments. Format: `projects/locations/apis`
              */
             public java.lang.String getParent() {
               return parent;
@@ -4275,7 +4329,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of deployments. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4307,6 +4361,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
+              return this;
+            }
+
+            /**
+             * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+             * order using the "desc" identifier, e.g. "foo desc,bar"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+           "desc" identifier, e.g. "foo desc,bar"
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+             * order using the "desc" identifier, e.g. "foo desc,bar"
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
               return this;
             }
 
@@ -4368,8 +4445,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * ListApiDeploymentRevisions lists all revisions of a deployment. Revisions are returned in
-           * descending order of revision creation time.
+           * Lists all revisions of a deployment. Revisions are returned in descending order of revision
+           * creation time.
            *
            * Create a request for the method "deployments.listRevisions".
            *
@@ -4394,8 +4471,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * ListApiDeploymentRevisions lists all revisions of a deployment. Revisions are returned in
-             * descending order of revision creation time.
+             * Lists all revisions of a deployment. Revisions are returned in descending order of revision
+             * creation time.
              *
              * Create a request for the method "deployments.listRevisions".
              *
@@ -4549,7 +4626,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * UpdateApiDeployment can be used to modify a specified deployment.
+           * Used to modify a specified deployment.
            *
            * Create a request for the method "deployments.patch".
            *
@@ -4574,7 +4651,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * UpdateApiDeployment can be used to modify a specified deployment.
+             * Used to modify a specified deployment.
              *
              * Create a request for the method "deployments.patch".
              *
@@ -4699,7 +4776,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * The list of fields to be updated. If omitted, all fields are updated that are set in
-             * the request message (fields set to default values are ignored). If a "*" is
+             * the request message (fields set to default values are ignored). If an asterisk "*" is
              * specified, all fields are updated, including fields that are unspecified/default in
              * the request.
              */
@@ -4707,8 +4784,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             private String updateMask;
 
             /** The list of fields to be updated. If omitted, all fields are updated that are set in the request
-           message (fields set to default values are ignored). If a "*" is specified, all fields are updated,
-           including fields that are unspecified/default in the request.
+           message (fields set to default values are ignored). If an asterisk "*" is specified, all fields are
+           updated, including fields that are unspecified/default in the request.
              */
             public String getUpdateMask() {
               return updateMask;
@@ -4716,7 +4793,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * The list of fields to be updated. If omitted, all fields are updated that are set in
-             * the request message (fields set to default values are ignored). If a "*" is
+             * the request message (fields set to default values are ignored). If an asterisk "*" is
              * specified, all fields are updated, including fields that are unspecified/default in
              * the request.
              */
@@ -4731,8 +4808,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * RollbackApiDeployment sets the current revision to a specified prior revision. Note that this
-           * creates a new revision with a new revision ID.
+           * Sets the current revision to a specified prior revision. Note that this creates a new revision
+           * with a new revision ID.
            *
            * Create a request for the method "deployments.rollback".
            *
@@ -4757,8 +4834,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * RollbackApiDeployment sets the current revision to a specified prior revision. Note that this
-             * creates a new revision with a new revision ID.
+             * Sets the current revision to a specified prior revision. Note that this creates a new revision
+             * with a new revision ID.
              *
              * Create a request for the method "deployments.rollback".
              *
@@ -5012,7 +5089,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * TagApiDeploymentRevision adds a tag to a specified revision of a deployment.
+           * Adds a tag to a specified revision of a deployment.
            *
            * Create a request for the method "deployments.tagRevision".
            *
@@ -5038,7 +5115,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
             /**
-             * TagApiDeploymentRevision adds a tag to a specified revision of a deployment.
+             * Adds a tag to a specified revision of a deployment.
              *
              * Create a request for the method "deployments.tagRevision".
              *
@@ -5317,14 +5394,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           public class Artifacts {
 
             /**
-             * CreateArtifact creates a specified artifact.
+             * Creates a specified artifact.
              *
              * Create a request for the method "artifacts.create".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+             * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
              * @return the request
              */
@@ -5342,7 +5419,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
               /**
-               * CreateArtifact creates a specified artifact.
+               * Creates a specified artifact.
                *
                * Create a request for the method "artifacts.create".
                *
@@ -5352,7 +5429,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
                * @since 1.13
                */
@@ -5422,19 +5499,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+              /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5478,14 +5555,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * DeleteArtifact removes a specified artifact.
+             * Removes a specified artifact.
              *
              * Create a request for the method "artifacts.delete".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5502,7 +5579,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+/artifacts/[^/]+$");
 
               /**
-               * DeleteArtifact removes a specified artifact.
+               * Removes a specified artifact.
                *
                * Create a request for the method "artifacts.delete".
                *
@@ -5512,7 +5589,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -5580,17 +5657,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the artifact to delete. Format: {parent}/artifacts
+              /** Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5607,14 +5684,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * GetArtifact returns a specified artifact.
+             * Returns a specified artifact.
              *
              * Create a request for the method "artifacts.get".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -5631,7 +5708,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+/artifacts/[^/]+$");
 
               /**
-               * GetArtifact returns a specified artifact.
+               * Returns a specified artifact.
                *
                * Create a request for the method "artifacts.get".
                *
@@ -5640,7 +5717,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -5718,17 +5795,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+              /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5745,9 +5822,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-             * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-             * response field indicates the exact format returned).
+             * Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the
+             * default behavior is to return the artifact uncompressed (the mime_type response field indicates
+             * the exact format returned).
              *
              * Create a request for the method "artifacts.getContents".
              *
@@ -5755,7 +5832,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * optional parameters, call the {@link GetContents#execute()} method to invoke the remote
              * operation.
              *
-             * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
              * @return the request
              */
             public GetContents getContents(java.lang.String name) throws java.io.IOException {
@@ -5772,9 +5849,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+/artifacts/[^/]+$");
 
               /**
-               * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-               * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-               * response field indicates the exact format returned).
+               * Returns the contents of a specified artifact. If artifacts are stored with GZip compression,
+               * the default behavior is to return the artifact uncompressed (the mime_type response field
+               * indicates the exact format returned).
                *
                * Create a request for the method "artifacts.getContents".
                *
@@ -5784,7 +5861,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * GetContents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                * @since 1.13
                */
               protected GetContents(java.lang.String name) {
@@ -5864,12 +5941,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the artifact whose contents should be retrieved. Format:
-               * {parent}/artifacts
+               * `{parent}/artifacts`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+              /** Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                */
               public java.lang.String getName() {
                 return name;
@@ -5877,7 +5954,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the artifact whose contents should be retrieved. Format:
-               * {parent}/artifacts
+               * `{parent}/artifacts`
                */
               public GetContents setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5895,14 +5972,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * ListArtifacts returns matching artifacts.
+             * Returns matching artifacts.
              *
              * Create a request for the method "artifacts.list".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+             * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -5919,7 +5996,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+$");
 
               /**
-               * ListArtifacts returns matching artifacts.
+               * Returns matching artifacts.
                *
                * Create a request for the method "artifacts.list".
                *
@@ -5928,7 +6005,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6007,19 +6084,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+              /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -6051,6 +6128,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
+                return this;
+              }
+
+              /**
+               * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+               * order using the "desc" identifier, e.g. "foo desc,bar"
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+             "desc" identifier, e.g. "foo desc,bar"
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+               * order using the "desc" identifier, e.g. "foo desc,bar"
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
                 return this;
               }
 
@@ -6112,7 +6212,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * ReplaceArtifact can be used to replace a specified artifact.
+             * Used to replace a specified artifact.
              *
              * Create a request for the method "artifacts.replaceArtifact".
              *
@@ -6138,7 +6238,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/deployments/[^/]+/artifacts/[^/]+$");
 
               /**
-               * ReplaceArtifact can be used to replace a specified artifact.
+               * Used to replace a specified artifact.
                *
                * Create a request for the method "artifacts.replaceArtifact".
                *
@@ -6267,14 +6367,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
         public class Versions {
 
           /**
-           * CreateApiVersion creates a specified version.
+           * Creates a specified version.
            *
            * Create a request for the method "versions.create".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of versions. Format: projects/locations/apis
+           * @param parent Required. The parent, which owns this collection of versions. Format: `projects/locations/apis`
            * @param content the {@link com.google.api.services.apigeeregistry.v1.model.ApiVersion}
            * @return the request
            */
@@ -6292,7 +6392,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
             /**
-             * CreateApiVersion creates a specified version.
+             * Creates a specified version.
              *
              * Create a request for the method "versions.create".
              *
@@ -6302,7 +6402,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of versions. Format: projects/locations/apis
+             * @param parent Required. The parent, which owns this collection of versions. Format: `projects/locations/apis`
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.ApiVersion}
              * @since 1.13
              */
@@ -6373,12 +6473,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of versions. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of versions. Format: projects/locations/apis
+            /** Required. The parent, which owns this collection of versions. Format: `projects/locations/apis`
              */
             public java.lang.String getParent() {
               return parent;
@@ -6386,7 +6486,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of versions. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6430,14 +6530,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * DeleteApiVersion removes a specified version and all of the resources that it owns.
+           * Removes a specified version and all of the resources that it owns.
            *
            * Create a request for the method "versions.delete".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the version to delete. Format: projects/locations/apis/versions
+           * @param name Required. The name of the version to delete. Format: `projects/locations/apis/versions`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6454,7 +6554,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
             /**
-             * DeleteApiVersion removes a specified version and all of the resources that it owns.
+             * Removes a specified version and all of the resources that it owns.
              *
              * Create a request for the method "versions.delete".
              *
@@ -6464,7 +6564,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the version to delete. Format: projects/locations/apis/versions
+             * @param name Required. The name of the version to delete. Format: `projects/locations/apis/versions`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6533,19 +6633,21 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
 
             /**
-             * Required. The name of the version to delete. Format: projects/locations/apis/versions
+             * Required. The name of the version to delete. Format:
+             * `projects/locations/apis/versions`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the version to delete. Format: projects/locations/apis/versions
+            /** Required. The name of the version to delete. Format: `projects/locations/apis/versions`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the version to delete. Format: projects/locations/apis/versions
+             * Required. The name of the version to delete. Format:
+             * `projects/locations/apis/versions`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6586,14 +6688,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * GetApiVersion returns a specified version.
+           * Returns a specified version.
            *
            * Create a request for the method "versions.get".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the version to retrieve. Format: projects/locations/apis/versions
+           * @param name Required. The name of the version to retrieve. Format: `projects/locations/apis/versions`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -6610,7 +6712,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
             /**
-             * GetApiVersion returns a specified version.
+             * Returns a specified version.
              *
              * Create a request for the method "versions.get".
              *
@@ -6619,7 +6721,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the version to retrieve. Format: projects/locations/apis/versions
+             * @param name Required. The name of the version to retrieve. Format: `projects/locations/apis/versions`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -6699,12 +6801,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the version to retrieve. Format:
-             * projects/locations/apis/versions
+             * `projects/locations/apis/versions`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the version to retrieve. Format: projects/locations/apis/versions
+            /** Required. The name of the version to retrieve. Format: `projects/locations/apis/versions`
              */
             public java.lang.String getName() {
               return name;
@@ -6712,7 +6814,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The name of the version to retrieve. Format:
-             * projects/locations/apis/versions
+             * `projects/locations/apis/versions`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6929,14 +7031,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * ListApiVersions returns matching versions.
+           * Returns matching versions.
            *
            * Create a request for the method "versions.list".
            *
            * This request holds the parameters needed by the apigeeregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of versions. Format: projects/locations/apis
+           * @param parent Required. The parent, which owns this collection of versions. Format: `projects/locations/apis`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -6953,7 +7055,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+$");
 
             /**
-             * ListApiVersions returns matching versions.
+             * Returns matching versions.
              *
              * Create a request for the method "versions.list".
              *
@@ -6962,7 +7064,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of versions. Format: projects/locations/apis
+             * @param parent Required. The parent, which owns this collection of versions. Format: `projects/locations/apis`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -7042,12 +7144,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of versions. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of versions. Format: projects/locations/apis
+            /** Required. The parent, which owns this collection of versions. Format: `projects/locations/apis`
              */
             public java.lang.String getParent() {
               return parent;
@@ -7055,7 +7157,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent, which owns this collection of versions. Format:
-             * projects/locations/apis
+             * `projects/locations/apis`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -7087,6 +7189,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
+              return this;
+            }
+
+            /**
+             * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+             * order using the "desc" identifier, e.g. "foo desc,bar"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+           "desc" identifier, e.g. "foo desc,bar"
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+             * order using the "desc" identifier, e.g. "foo desc,bar"
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
               return this;
             }
 
@@ -7148,7 +7273,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             }
           }
           /**
-           * UpdateApiVersion can be used to modify a specified version.
+           * Used to modify a specified version.
            *
            * Create a request for the method "versions.patch".
            *
@@ -7173,7 +7298,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
             /**
-             * UpdateApiVersion can be used to modify a specified version.
+             * Used to modify a specified version.
              *
              * Create a request for the method "versions.patch".
              *
@@ -7298,7 +7423,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * The list of fields to be updated. If omitted, all fields are updated that are set in
-             * the request message (fields set to default values are ignored). If a "*" is
+             * the request message (fields set to default values are ignored). If an asterisk "*" is
              * specified, all fields are updated, including fields that are unspecified/default in
              * the request.
              */
@@ -7306,8 +7431,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             private String updateMask;
 
             /** The list of fields to be updated. If omitted, all fields are updated that are set in the request
-           message (fields set to default values are ignored). If a "*" is specified, all fields are updated,
-           including fields that are unspecified/default in the request.
+           message (fields set to default values are ignored). If an asterisk "*" is specified, all fields are
+           updated, including fields that are unspecified/default in the request.
              */
             public String getUpdateMask() {
               return updateMask;
@@ -7315,7 +7440,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
             /**
              * The list of fields to be updated. If omitted, all fields are updated that are set in
-             * the request message (fields set to default values are ignored). If a "*" is
+             * the request message (fields set to default values are ignored). If an asterisk "*" is
              * specified, all fields are updated, including fields that are unspecified/default in
              * the request.
              */
@@ -7651,14 +7776,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           public class Artifacts {
 
             /**
-             * CreateArtifact creates a specified artifact.
+             * Creates a specified artifact.
              *
              * Create a request for the method "artifacts.create".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+             * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
              * @return the request
              */
@@ -7676,7 +7801,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
               /**
-               * CreateArtifact creates a specified artifact.
+               * Creates a specified artifact.
                *
                * Create a request for the method "artifacts.create".
                *
@@ -7686,7 +7811,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
                * @since 1.13
                */
@@ -7756,19 +7881,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+              /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -7812,14 +7937,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * DeleteArtifact removes a specified artifact.
+             * Removes a specified artifact.
              *
              * Create a request for the method "artifacts.delete".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -7836,7 +7961,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/artifacts/[^/]+$");
 
               /**
-               * DeleteArtifact removes a specified artifact.
+               * Removes a specified artifact.
                *
                * Create a request for the method "artifacts.delete".
                *
@@ -7846,7 +7971,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -7914,17 +8039,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the artifact to delete. Format: {parent}/artifacts
+              /** Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7941,14 +8066,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * GetArtifact returns a specified artifact.
+             * Returns a specified artifact.
              *
              * Create a request for the method "artifacts.get".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -7965,7 +8090,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/artifacts/[^/]+$");
 
               /**
-               * GetArtifact returns a specified artifact.
+               * Returns a specified artifact.
                *
                * Create a request for the method "artifacts.get".
                *
@@ -7974,7 +8099,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -8052,17 +8177,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+              /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+              /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8079,9 +8204,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-             * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-             * response field indicates the exact format returned).
+             * Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the
+             * default behavior is to return the artifact uncompressed (the mime_type response field indicates
+             * the exact format returned).
              *
              * Create a request for the method "artifacts.getContents".
              *
@@ -8089,7 +8214,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * optional parameters, call the {@link GetContents#execute()} method to invoke the remote
              * operation.
              *
-             * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+             * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
              * @return the request
              */
             public GetContents getContents(java.lang.String name) throws java.io.IOException {
@@ -8106,9 +8231,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/artifacts/[^/]+$");
 
               /**
-               * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-               * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-               * response field indicates the exact format returned).
+               * Returns the contents of a specified artifact. If artifacts are stored with GZip compression,
+               * the default behavior is to return the artifact uncompressed (the mime_type response field
+               * indicates the exact format returned).
                *
                * Create a request for the method "artifacts.getContents".
                *
@@ -8118,7 +8243,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * GetContents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                * @since 1.13
                */
               protected GetContents(java.lang.String name) {
@@ -8198,12 +8323,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the artifact whose contents should be retrieved. Format:
-               * {parent}/artifacts
+               * `{parent}/artifacts`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+              /** Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                */
               public java.lang.String getName() {
                 return name;
@@ -8211,7 +8336,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the artifact whose contents should be retrieved. Format:
-               * {parent}/artifacts
+               * `{parent}/artifacts`
                */
               public GetContents setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -8430,14 +8555,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * ListArtifacts returns matching artifacts.
+             * Returns matching artifacts.
              *
              * Create a request for the method "artifacts.list".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+             * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -8454,7 +8579,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
               /**
-               * ListArtifacts returns matching artifacts.
+               * Returns matching artifacts.
                *
                * Create a request for the method "artifacts.list".
                *
@@ -8463,7 +8588,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -8542,19 +8667,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+              /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -8586,6 +8711,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
+                return this;
+              }
+
+              /**
+               * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+               * order using the "desc" identifier, e.g. "foo desc,bar"
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+             "desc" identifier, e.g. "foo desc,bar"
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+               * order using the "desc" identifier, e.g. "foo desc,bar"
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
                 return this;
               }
 
@@ -8647,7 +8795,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * ReplaceArtifact can be used to replace a specified artifact.
+             * Used to replace a specified artifact.
              *
              * Create a request for the method "artifacts.replaceArtifact".
              *
@@ -8673,7 +8821,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/artifacts/[^/]+$");
 
               /**
-               * ReplaceArtifact can be used to replace a specified artifact.
+               * Used to replace a specified artifact.
                *
                * Create a request for the method "artifacts.replaceArtifact".
                *
@@ -9101,14 +9249,15 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           public class Specs {
 
             /**
-             * CreateApiSpec creates a specified spec.
+             * Creates a specified spec.
              *
              * Create a request for the method "specs.create".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent, which owns this collection of specs. Format: projects/locations/apis/versions
+             * @param parent Required. The parent, which owns this collection of specs. Format:
+             *        `projects/locations/apis/versions`
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.ApiSpec}
              * @return the request
              */
@@ -9126,7 +9275,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
               /**
-               * CreateApiSpec creates a specified spec.
+               * Creates a specified spec.
                *
                * Create a request for the method "specs.create".
                *
@@ -9136,7 +9285,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent, which owns this collection of specs. Format: projects/locations/apis/versions
+               * @param parent Required. The parent, which owns this collection of specs. Format:
+             *        `projects/locations/apis/versions`
                * @param content the {@link com.google.api.services.apigeeregistry.v1.model.ApiSpec}
                * @since 1.13
                */
@@ -9207,12 +9357,13 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The parent, which owns this collection of specs. Format:
-               * projects/locations/apis/versions
+               * `projects/locations/apis/versions`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent, which owns this collection of specs. Format: projects/locations/apis/versions
+              /** Required. The parent, which owns this collection of specs. Format:
+             `projects/locations/apis/versions`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -9220,7 +9371,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The parent, which owns this collection of specs. Format:
-               * projects/locations/apis/versions
+               * `projects/locations/apis/versions`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -9264,14 +9415,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * DeleteApiSpec removes a specified spec, all revisions, and all child resources (e.g. artifacts).
+             * Removes a specified spec, all revisions, and all child resources (e.g., artifacts).
              *
              * Create a request for the method "specs.delete".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the spec to delete. Format: projects/locations/apis/versions/specs
+             * @param name Required. The name of the spec to delete. Format: `projects/locations/apis/versions/specs`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9288,8 +9439,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * DeleteApiSpec removes a specified spec, all revisions, and all child resources (e.g.
-               * artifacts).
+               * Removes a specified spec, all revisions, and all child resources (e.g., artifacts).
                *
                * Create a request for the method "specs.delete".
                *
@@ -9299,7 +9449,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the spec to delete. Format: projects/locations/apis/versions/specs
+               * @param name Required. The name of the spec to delete. Format: `projects/locations/apis/versions/specs`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -9369,12 +9519,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec to delete. Format:
-               * projects/locations/apis/versions/specs
+               * `projects/locations/apis/versions/specs`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the spec to delete. Format: projects/locations/apis/versions/specs
+              /** Required. The name of the spec to delete. Format: `projects/locations/apis/versions/specs`
                */
               public java.lang.String getName() {
                 return name;
@@ -9382,7 +9532,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec to delete. Format:
-               * projects/locations/apis/versions/specs
+               * `projects/locations/apis/versions/specs`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -9423,7 +9573,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * DeleteApiSpecRevision deletes a revision of a spec.
+             * Deletes a revision of a spec.
              *
              * Create a request for the method "specs.deleteRevision".
              *
@@ -9432,8 +9582,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * operation.
              *
              * @param name Required. The name of the spec revision to be deleted, with a revision ID explicitly included.
-             *        Example:
-             *        projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
+             *        Example: `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml
+             *        @c7cfa2a8`
              * @return the request
              */
             public DeleteRevision deleteRevision(java.lang.String name) throws java.io.IOException {
@@ -9450,7 +9600,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * DeleteApiSpecRevision deletes a revision of a spec.
+               * Deletes a revision of a spec.
                *
                * Create a request for the method "specs.deleteRevision".
                *
@@ -9461,8 +9611,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * the constructor. </p>
                *
                * @param name Required. The name of the spec revision to be deleted, with a revision ID explicitly included.
-             *        Example:
-             *        projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
+             *        Example: `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml
+             *        @c7cfa2a8`
                * @since 1.13
                */
               protected DeleteRevision(java.lang.String name) {
@@ -9532,14 +9682,15 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec revision to be deleted, with a revision ID
-               * explicitly included. Example: projects/sample/locations/global/apis/petstore/versio
-               * ns/1.0.0/specs/openapi.yaml@c7cfa2a8
+               * explicitly included. Example: `projects/sample/locations/global/apis/petstore/versi
+               * ons/1.0.0/specs/openapi.yaml@c7cfa2a8`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the spec revision to be deleted, with a revision ID explicitly included.
-             Example: projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
+             Example:
+             `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
                */
               public java.lang.String getName() {
                 return name;
@@ -9547,8 +9698,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec revision to be deleted, with a revision ID
-               * explicitly included. Example: projects/sample/locations/global/apis/petstore/versio
-               * ns/1.0.0/specs/openapi.yaml@c7cfa2a8
+               * explicitly included. Example: `projects/sample/locations/global/apis/petstore/versi
+               * ons/1.0.0/specs/openapi.yaml@c7cfa2a8`
                */
               public DeleteRevision setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -9566,14 +9717,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * GetApiSpec returns a specified spec.
+             * Returns a specified spec.
              *
              * Create a request for the method "specs.get".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the spec to retrieve. Format: projects/locations/apis/versions/specs
+             * @param name Required. The name of the spec to retrieve. Format: `projects/locations/apis/versions/specs`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -9590,7 +9741,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * GetApiSpec returns a specified spec.
+               * Returns a specified spec.
                *
                * Create a request for the method "specs.get".
                *
@@ -9599,7 +9750,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the spec to retrieve. Format: projects/locations/apis/versions/specs
+               * @param name Required. The name of the spec to retrieve. Format: `projects/locations/apis/versions/specs`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -9679,12 +9830,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec to retrieve. Format:
-               * projects/locations/apis/versions/specs
+               * `projects/locations/apis/versions/specs`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the spec to retrieve. Format: projects/locations/apis/versions/specs
+              /** Required. The name of the spec to retrieve. Format: `projects/locations/apis/versions/specs`
                */
               public java.lang.String getName() {
                 return name;
@@ -9692,7 +9843,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec to retrieve. Format:
-               * projects/locations/apis/versions/specs
+               * `projects/locations/apis/versions/specs`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -9710,9 +9861,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * GetApiSpecContents returns the contents of a specified spec. If specs are stored with GZip
-             * compression, the default behavior is to return the spec uncompressed (the mime_type response
-             * field indicates the exact format returned).
+             * Returns the contents of a specified spec. If specs are stored with GZip compression, the default
+             * behavior is to return the spec uncompressed (the mime_type response field indicates the exact
+             * format returned).
              *
              * Create a request for the method "specs.getContents".
              *
@@ -9721,7 +9872,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * operation.
              *
              * @param name Required. The name of the spec whose contents should be retrieved. Format:
-             *        projects/locations/apis/versions/specs
+             *        `projects/locations/apis/versions/specs`
              * @return the request
              */
             public GetContents getContents(java.lang.String name) throws java.io.IOException {
@@ -9738,9 +9889,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * GetApiSpecContents returns the contents of a specified spec. If specs are stored with GZip
-               * compression, the default behavior is to return the spec uncompressed (the mime_type response
-               * field indicates the exact format returned).
+               * Returns the contents of a specified spec. If specs are stored with GZip compression, the
+               * default behavior is to return the spec uncompressed (the mime_type response field indicates the
+               * exact format returned).
                *
                * Create a request for the method "specs.getContents".
                *
@@ -9751,7 +9902,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The name of the spec whose contents should be retrieved. Format:
-             *        projects/locations/apis/versions/specs
+             *        `projects/locations/apis/versions/specs`
                * @since 1.13
                */
               protected GetContents(java.lang.String name) {
@@ -9831,13 +9982,13 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec whose contents should be retrieved. Format:
-               * projects/locations/apis/versions/specs
+               * `projects/locations/apis/versions/specs`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the spec whose contents should be retrieved. Format:
-             projects/locations/apis/versions/specs
+             `projects/locations/apis/versions/specs`
                */
               public java.lang.String getName() {
                 return name;
@@ -9845,7 +9996,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The name of the spec whose contents should be retrieved. Format:
-               * projects/locations/apis/versions/specs
+               * `projects/locations/apis/versions/specs`
                */
               public GetContents setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10064,14 +10215,15 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * ListApiSpecs returns matching specs.
+             * Returns matching specs.
              *
              * Create a request for the method "specs.list".
              *
              * This request holds the parameters needed by the apigeeregistry server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent, which owns this collection of specs. Format: projects/locations/apis/versions
+             * @param parent Required. The parent, which owns this collection of specs. Format:
+             *        `projects/locations/apis/versions`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -10088,7 +10240,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
 
               /**
-               * ListApiSpecs returns matching specs.
+               * Returns matching specs.
                *
                * Create a request for the method "specs.list".
                *
@@ -10097,7 +10249,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent, which owns this collection of specs. Format: projects/locations/apis/versions
+               * @param parent Required. The parent, which owns this collection of specs. Format:
+             *        `projects/locations/apis/versions`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -10177,12 +10330,13 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The parent, which owns this collection of specs. Format:
-               * projects/locations/apis/versions
+               * `projects/locations/apis/versions`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent, which owns this collection of specs. Format: projects/locations/apis/versions
+              /** Required. The parent, which owns this collection of specs. Format:
+             `projects/locations/apis/versions`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -10190,7 +10344,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * Required. The parent, which owns this collection of specs. Format:
-               * projects/locations/apis/versions
+               * `projects/locations/apis/versions`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -10222,6 +10376,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
+                return this;
+              }
+
+              /**
+               * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+               * order using the "desc" identifier, e.g. "foo desc,bar"
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+             "desc" identifier, e.g. "foo desc,bar"
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+               * order using the "desc" identifier, e.g. "foo desc,bar"
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
                 return this;
               }
 
@@ -10283,8 +10460,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * ListApiSpecRevisions lists all revisions of a spec. Revisions are returned in descending order of
-             * revision creation time.
+             * Lists all revisions of a spec. Revisions are returned in descending order of revision creation
+             * time.
              *
              * Create a request for the method "specs.listRevisions".
              *
@@ -10309,8 +10486,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * ListApiSpecRevisions lists all revisions of a spec. Revisions are returned in descending order
-               * of revision creation time.
+               * Lists all revisions of a spec. Revisions are returned in descending order of revision creation
+               * time.
                *
                * Create a request for the method "specs.listRevisions".
                *
@@ -10464,7 +10641,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * UpdateApiSpec can be used to modify a specified spec.
+             * Used to modify a specified spec.
              *
              * Create a request for the method "specs.patch".
              *
@@ -10489,7 +10666,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * UpdateApiSpec can be used to modify a specified spec.
+               * Used to modify a specified spec.
                *
                * Create a request for the method "specs.patch".
                *
@@ -10614,16 +10791,16 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * The list of fields to be updated. If omitted, all fields are updated that are set
-               * in the request message (fields set to default values are ignored). If a "*" is
-               * specified, all fields are updated, including fields that are unspecified/default in
-               * the request.
+               * in the request message (fields set to default values are ignored). If an asterisk
+               * "*" is specified, all fields are updated, including fields that are
+               * unspecified/default in the request.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
               /** The list of fields to be updated. If omitted, all fields are updated that are set in the request
-             message (fields set to default values are ignored). If a "*" is specified, all fields are updated,
-             including fields that are unspecified/default in the request.
+             message (fields set to default values are ignored). If an asterisk "*" is specified, all fields are
+             updated, including fields that are unspecified/default in the request.
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -10631,9 +10808,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
               /**
                * The list of fields to be updated. If omitted, all fields are updated that are set
-               * in the request message (fields set to default values are ignored). If a "*" is
-               * specified, all fields are updated, including fields that are unspecified/default in
-               * the request.
+               * in the request message (fields set to default values are ignored). If an asterisk
+               * "*" is specified, all fields are updated, including fields that are
+               * unspecified/default in the request.
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
@@ -10646,8 +10823,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * RollbackApiSpec sets the current revision to a specified prior revision. Note that this creates a
-             * new revision with a new revision ID.
+             * Sets the current revision to a specified prior revision. Note that this creates a new revision
+             * with a new revision ID.
              *
              * Create a request for the method "specs.rollback".
              *
@@ -10672,8 +10849,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * RollbackApiSpec sets the current revision to a specified prior revision. Note that this creates
-               * a new revision with a new revision ID.
+               * Sets the current revision to a specified prior revision. Note that this creates a new revision
+               * with a new revision ID.
                *
                * Create a request for the method "specs.rollback".
                *
@@ -10927,7 +11104,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               }
             }
             /**
-             * TagApiSpecRevision adds a tag to a specified revision of a spec.
+             * Adds a tag to a specified revision of a spec.
              *
              * Create a request for the method "specs.tagRevision".
              *
@@ -10953,7 +11130,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * TagApiSpecRevision adds a tag to a specified revision of a spec.
+               * Adds a tag to a specified revision of a spec.
                *
                * Create a request for the method "specs.tagRevision".
                *
@@ -11232,14 +11409,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             public class Artifacts {
 
               /**
-               * CreateArtifact creates a specified artifact.
+               * Creates a specified artifact.
                *
                * Create a request for the method "artifacts.create".
                *
                * This request holds the parameters needed by the apigeeregistry server.  After setting any
                * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
                *
-               * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
                * @return the request
                */
@@ -11257,7 +11434,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
                 /**
-                 * CreateArtifact creates a specified artifact.
+                 * Creates a specified artifact.
                  *
                  * Create a request for the method "artifacts.create".
                  *
@@ -11267,7 +11444,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                  * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+                 * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
                  * @since 1.13
                  */
@@ -11337,19 +11514,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
 
                 /**
-                 * Required. The parent, which owns this collection of artifacts. Format: {parent}
+                 * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+                /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
                 /**
-                 * Required. The parent, which owns this collection of artifacts. Format: {parent}
+                 * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  */
                 public Create setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -11393,14 +11570,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
               }
               /**
-               * DeleteArtifact removes a specified artifact.
+               * Removes a specified artifact.
                *
                * Create a request for the method "artifacts.delete".
                *
                * This request holds the parameters needed by the apigeeregistry server.  After setting any
                * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                * @return the request
                */
               public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -11417,7 +11594,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+/artifacts/[^/]+$");
 
                 /**
-                 * DeleteArtifact removes a specified artifact.
+                 * Removes a specified artifact.
                  *
                  * Create a request for the method "artifacts.delete".
                  *
@@ -11427,7 +11604,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                  * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+                 * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                  * @since 1.13
                  */
                 protected Delete(java.lang.String name) {
@@ -11495,17 +11672,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   return (Delete) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+                /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The name of the artifact to delete. Format: {parent}/artifacts
+                /** Required. The name of the artifact to delete. Format: `{parent}/artifacts`
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
-                /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+                /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
                 public Delete setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11522,14 +11699,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
               }
               /**
-               * GetArtifact returns a specified artifact.
+               * Returns a specified artifact.
                *
                * Create a request for the method "artifacts.get".
                *
                * This request holds the parameters needed by the apigeeregistry server.  After setting any
                * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                * @return the request
                */
               public Get get(java.lang.String name) throws java.io.IOException {
@@ -11546,7 +11723,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+/artifacts/[^/]+$");
 
                 /**
-                 * GetArtifact returns a specified artifact.
+                 * Returns a specified artifact.
                  *
                  * Create a request for the method "artifacts.get".
                  *
@@ -11555,7 +11732,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                  * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+                 * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                  * @since 1.13
                  */
                 protected Get(java.lang.String name) {
@@ -11633,17 +11810,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                   return (Get) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+                /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+                /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
-                /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+                /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
                 public Get setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11660,9 +11837,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
               }
               /**
-               * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-               * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-               * response field indicates the exact format returned).
+               * Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the
+               * default behavior is to return the artifact uncompressed (the mime_type response field indicates
+               * the exact format returned).
                *
                * Create a request for the method "artifacts.getContents".
                *
@@ -11670,7 +11847,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * optional parameters, call the {@link GetContents#execute()} method to invoke the remote
                * operation.
                *
-               * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+               * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                * @return the request
                */
               public GetContents getContents(java.lang.String name) throws java.io.IOException {
@@ -11687,9 +11864,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+/artifacts/[^/]+$");
 
                 /**
-                 * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-                 * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-                 * response field indicates the exact format returned).
+                 * Returns the contents of a specified artifact. If artifacts are stored with GZip compression,
+                 * the default behavior is to return the artifact uncompressed (the mime_type response field
+                 * indicates the exact format returned).
                  *
                  * Create a request for the method "artifacts.getContents".
                  *
@@ -11699,7 +11876,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                  * GetContents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+                 * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                  * @since 1.13
                  */
                 protected GetContents(java.lang.String name) {
@@ -11779,12 +11956,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
                 /**
                  * Required. The name of the artifact whose contents should be retrieved. Format:
-                 * {parent}/artifacts
+                 * `{parent}/artifacts`
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+                /** Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
                  */
                 public java.lang.String getName() {
                   return name;
@@ -11792,7 +11969,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
                 /**
                  * Required. The name of the artifact whose contents should be retrieved. Format:
-                 * {parent}/artifacts
+                 * `{parent}/artifacts`
                  */
                 public GetContents setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -12011,14 +12188,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
               }
               /**
-               * ListArtifacts returns matching artifacts.
+               * Returns matching artifacts.
                *
                * Create a request for the method "artifacts.list".
                *
                * This request holds the parameters needed by the apigeeregistry server.  After setting any
                * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
                *
-               * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+               * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                * @return the request
                */
               public List list(java.lang.String parent) throws java.io.IOException {
@@ -12035,7 +12212,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
                 /**
-                 * ListArtifacts returns matching artifacts.
+                 * Returns matching artifacts.
                  *
                  * Create a request for the method "artifacts.list".
                  *
@@ -12044,7 +12221,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                  * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+                 * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  * @since 1.13
                  */
                 protected List(java.lang.String parent) {
@@ -12123,19 +12300,19 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
 
                 /**
-                 * Required. The parent, which owns this collection of artifacts. Format: {parent}
+                 * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+                /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
                 /**
-                 * Required. The parent, which owns this collection of artifacts. Format: {parent}
+                 * Required. The parent, which owns this collection of artifacts. Format: `{parent}`
                  */
                 public List setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -12167,6 +12344,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                  */
                 public List setFilter(java.lang.String filter) {
                   this.filter = filter;
+                  return this;
+                }
+
+                /**
+                 * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in
+                 * descending order using the "desc" identifier, e.g. "foo desc,bar"
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String orderBy;
+
+                /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+               "desc" identifier, e.g. "foo desc,bar"
+                 */
+                public java.lang.String getOrderBy() {
+                  return orderBy;
+                }
+
+                /**
+                 * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in
+                 * descending order using the "desc" identifier, e.g. "foo desc,bar"
+                 */
+                public List setOrderBy(java.lang.String orderBy) {
+                  this.orderBy = orderBy;
                   return this;
                 }
 
@@ -12228,7 +12428,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 }
               }
               /**
-               * ReplaceArtifact can be used to replace a specified artifact.
+               * Used to replace a specified artifact.
                *
                * Create a request for the method "artifacts.replaceArtifact".
                *
@@ -12254,7 +12454,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+/artifacts/[^/]+$");
 
                 /**
-                 * ReplaceArtifact can be used to replace a specified artifact.
+                 * Used to replace a specified artifact.
                  *
                  * Create a request for the method "artifacts.replaceArtifact".
                  *
@@ -12685,14 +12885,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
       public class Artifacts {
 
         /**
-         * CreateArtifact creates a specified artifact.
+         * Creates a specified artifact.
          *
          * Create a request for the method "artifacts.create".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+         * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
          * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
          * @return the request
          */
@@ -12710,7 +12910,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * CreateArtifact creates a specified artifact.
+           * Creates a specified artifact.
            *
            * Create a request for the method "artifacts.create".
            *
@@ -12720,7 +12920,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+           * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
            * @param content the {@link com.google.api.services.apigeeregistry.v1.model.Artifact}
            * @since 1.13
            */
@@ -12789,17 +12989,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+          /** Required. The parent, which owns this collection of artifacts. Format: `{parent}` */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+          /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+          /** Required. The parent, which owns this collection of artifacts. Format: `{parent}` */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12842,14 +13042,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * DeleteArtifact removes a specified artifact.
+         * Removes a specified artifact.
          *
          * Create a request for the method "artifacts.delete".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+         * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -12866,7 +13066,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/artifacts/[^/]+$");
 
           /**
-           * DeleteArtifact removes a specified artifact.
+           * Removes a specified artifact.
            *
            * Create a request for the method "artifacts.delete".
            *
@@ -12876,7 +13076,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the artifact to delete. Format: {parent}/artifacts
+           * @param name Required. The name of the artifact to delete. Format: `{parent}/artifacts`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -12944,17 +13144,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+          /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the artifact to delete. Format: {parent}/artifacts
+          /** Required. The name of the artifact to delete. Format: `{parent}/artifacts`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the artifact to delete. Format: {parent}/artifacts */
+          /** Required. The name of the artifact to delete. Format: `{parent}/artifacts` */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12971,14 +13171,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * GetArtifact returns a specified artifact.
+         * Returns a specified artifact.
          *
          * Create a request for the method "artifacts.get".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+         * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -12995,7 +13195,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/artifacts/[^/]+$");
 
           /**
-           * GetArtifact returns a specified artifact.
+           * Returns a specified artifact.
            *
            * Create a request for the method "artifacts.get".
            *
@@ -13004,7 +13204,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+           * @param name Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -13082,17 +13282,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+          /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts
+          /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the artifact to retrieve. Format: {parent}/artifacts */
+          /** Required. The name of the artifact to retrieve. Format: `{parent}/artifacts` */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13109,9 +13309,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-         * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-         * response field indicates the exact format returned).
+         * Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the
+         * default behavior is to return the artifact uncompressed (the mime_type response field indicates
+         * the exact format returned).
          *
          * Create a request for the method "artifacts.getContents".
          *
@@ -13119,7 +13319,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link GetContents#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+         * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
          * @return the request
          */
         public GetContents getContents(java.lang.String name) throws java.io.IOException {
@@ -13136,9 +13336,9 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/artifacts/[^/]+$");
 
           /**
-           * GetArtifactContents returns the contents of a specified artifact. If artifacts are stored with
-           * GZip compression, the default behavior is to return the artifact uncompressed (the mime_type
-           * response field indicates the exact format returned).
+           * Returns the contents of a specified artifact. If artifacts are stored with GZip compression,
+           * the default behavior is to return the artifact uncompressed (the mime_type response field
+           * indicates the exact format returned).
            *
            * Create a request for the method "artifacts.getContents".
            *
@@ -13148,7 +13348,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * GetContents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+           * @param name Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
            * @since 1.13
            */
           protected GetContents(java.lang.String name) {
@@ -13228,12 +13428,12 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
           /**
            * Required. The name of the artifact whose contents should be retrieved. Format:
-           * {parent}/artifacts
+           * `{parent}/artifacts`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the artifact whose contents should be retrieved. Format: {parent}/artifacts
+          /** Required. The name of the artifact whose contents should be retrieved. Format: `{parent}/artifacts`
            */
           public java.lang.String getName() {
             return name;
@@ -13241,7 +13441,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
           /**
            * Required. The name of the artifact whose contents should be retrieved. Format:
-           * {parent}/artifacts
+           * `{parent}/artifacts`
            */
           public GetContents setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13458,14 +13658,14 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * ListArtifacts returns matching artifacts.
+         * Returns matching artifacts.
          *
          * Create a request for the method "artifacts.list".
          *
          * This request holds the parameters needed by the apigeeregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+         * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13482,7 +13682,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * ListArtifacts returns matching artifacts.
+           * Returns matching artifacts.
            *
            * Create a request for the method "artifacts.list".
            *
@@ -13491,7 +13691,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of artifacts. Format: {parent}
+           * @param parent Required. The parent, which owns this collection of artifacts. Format: `{parent}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13569,17 +13769,17 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+          /** Required. The parent, which owns this collection of artifacts. Format: `{parent}` */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of artifacts. Format: {parent}
+          /** Required. The parent, which owns this collection of artifacts. Format: `{parent}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of artifacts. Format: {parent} */
+          /** Required. The parent, which owns this collection of artifacts. Format: `{parent}` */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13610,6 +13810,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /**
+           * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+           * order using the "desc" identifier, e.g. "foo desc,bar"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending order using the
+         "desc" identifier, e.g. "foo desc,bar"
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * A comma-separated list of fields, e.g. "foo,bar" Fields can be sorted in descending
+           * order using the "desc" identifier, e.g. "foo desc,bar"
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
             return this;
           }
 
@@ -13671,7 +13894,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * ReplaceArtifact can be used to replace a specified artifact.
+         * Used to replace a specified artifact.
          *
          * Create a request for the method "artifacts.replaceArtifact".
          *
@@ -13697,7 +13920,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/artifacts/[^/]+$");
 
           /**
-           * ReplaceArtifact can be used to replace a specified artifact.
+           * Used to replace a specified artifact.
            *
            * Create a request for the method "artifacts.replaceArtifact".
            *

@@ -311,33 +311,39 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
 
         /**
-         * Optional. Specifies the filters for the products results. The syntax defined in the EBNF
-         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
-         * if any specified parameter is not supported. Currently, it can only be used by Youtube
-         * partners. Allowed parameters are: - regionCodes - zipCode - eligibilityId Multiple
-         * parameters can be specified, for example: "regionCodes=US zipCode=94043
-         * eligibilityId=2022H1Campaign"
+         * Optional. Specifies the filters for the product results. The syntax is defined in
+         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * are supported: - `region_codes` - `youtube_payload.partner_eligibility_id` -
+         * `youtube_payload.postal_code` - Unless explicitly mentioned above, other features are not
+         * supported. Example: `region_codes:US AND youtube_payload.postal_code=94043 AND
+         * youtube_payload.partner_eligibility_id=eligibility-id`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Specifies the filters for the products results. The syntax defined in the EBNF grammar:
-       https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown if any specified
-       parameter is not supported. Currently, it can only be used by Youtube partners. Allowed parameters
-       are: - regionCodes - zipCode - eligibilityId Multiple parameters can be specified, for example:
-       "regionCodes=US zipCode=94043 eligibilityId=2022H1Campaign"
+        /** Optional. Specifies the filters for the product results. The syntax is defined in
+       https://google.aip.dev/160 with the following caveats: - Only the following features are supported:
+       - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal operator `.` -
+       Has operator `:` (no wildcards `*`) - Only the following fields are supported: - `region_codes` -
+       `youtube_payload.partner_eligibility_id` - `youtube_payload.postal_code` - Unless explicitly
+       mentioned above, other features are not supported. Example: `region_codes:US AND
+       youtube_payload.postal_code=94043 AND youtube_payload.partner_eligibility_id=eligibility-id`
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. Specifies the filters for the products results. The syntax defined in the EBNF
-         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
-         * if any specified parameter is not supported. Currently, it can only be used by Youtube
-         * partners. Allowed parameters are: - regionCodes - zipCode - eligibilityId Multiple
-         * parameters can be specified, for example: "regionCodes=US zipCode=94043
-         * eligibilityId=2022H1Campaign"
+         * Optional. Specifies the filters for the product results. The syntax is defined in
+         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * are supported: - `region_codes` - `youtube_payload.partner_eligibility_id` -
+         * `youtube_payload.postal_code` - Unless explicitly mentioned above, other features are not
+         * supported. Example: `region_codes:US AND youtube_payload.postal_code=94043 AND
+         * youtube_payload.partner_eligibility_id=eligibility-id`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -695,34 +701,44 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
 
         /**
-         * Optional. Specifies the filters for the promotion results. The syntax defined in the EBNF
-         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
-         * if the specified parameter(s) is not supported. Currently, it can only be used by Youtube
-         * partners. Allowed parameters are: - region_codes: "US" - zip_code: "94043" -
-         * eligibility_id: "2022H1Campaign" Multiple parameters can be specified, for example:
-         * "region_codes=US zip_code=94043 eligibility_id=2022H1Campaign"
+         * Optional. Specifies the filters for the promotion results. The syntax is defined in
+         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * are supported: - `applicable_products` - `region_codes` -
+         * `youtube_payload.partner_eligibility_id` - `youtube_payload.postal_code` - Unless
+         * explicitly mentioned above, other features are not supported. Example:
+         * `applicable_products:partners/partner1/products/product1 AND region_codes:US AND
+         * youtube_payload.postal_code=94043 AND youtube_payload.partner_eligibility_id=eligibility-
+         * id`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Specifies the filters for the promotion results. The syntax defined in the EBNF grammar:
-       https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown if the specified
-       parameter(s) is not supported. Currently, it can only be used by Youtube partners. Allowed
-       parameters are: - region_codes: "US" - zip_code: "94043" - eligibility_id: "2022H1Campaign"
-       Multiple parameters can be specified, for example: "region_codes=US zip_code=94043
-       eligibility_id=2022H1Campaign"
+        /** Optional. Specifies the filters for the promotion results. The syntax is defined in
+       https://google.aip.dev/160 with the following caveats: - Only the following features are supported:
+       - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal operator `.` -
+       Has operator `:` (no wildcards `*`) - Only the following fields are supported: -
+       `applicable_products` - `region_codes` - `youtube_payload.partner_eligibility_id` -
+       `youtube_payload.postal_code` - Unless explicitly mentioned above, other features are not
+       supported. Example: `applicable_products:partners/partner1/products/product1 AND region_codes:US
+       AND youtube_payload.postal_code=94043 AND youtube_payload.partner_eligibility_id=eligibility-id`
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. Specifies the filters for the promotion results. The syntax defined in the EBNF
-         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
-         * if the specified parameter(s) is not supported. Currently, it can only be used by Youtube
-         * partners. Allowed parameters are: - region_codes: "US" - zip_code: "94043" -
-         * eligibility_id: "2022H1Campaign" Multiple parameters can be specified, for example:
-         * "region_codes=US zip_code=94043 eligibility_id=2022H1Campaign"
+         * Optional. Specifies the filters for the promotion results. The syntax is defined in
+         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * are supported: - `applicable_products` - `region_codes` -
+         * `youtube_payload.partner_eligibility_id` - `youtube_payload.postal_code` - Unless
+         * explicitly mentioned above, other features are not supported. Example:
+         * `applicable_products:partners/partner1/products/product1 AND region_codes:US AND
+         * youtube_payload.postal_code=94043 AND youtube_payload.partner_eligibility_id=eligibility-
+         * id`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

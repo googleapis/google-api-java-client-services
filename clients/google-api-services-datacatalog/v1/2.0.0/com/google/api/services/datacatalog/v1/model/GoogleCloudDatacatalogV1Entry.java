@@ -210,7 +210,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String type;
 
   /**
-   * Output only. Resource usage statistics.
+   * Resource usage statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -649,7 +649,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Output only. Resource usage statistics.
+   * Resource usage statistics.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1UsageSignal getUsageSignal() {
@@ -657,7 +657,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Output only. Resource usage statistics.
+   * Resource usage statistics.
    * @param usageSignal usageSignal or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setUsageSignal(GoogleCloudDatacatalogV1UsageSignal usageSignal) {

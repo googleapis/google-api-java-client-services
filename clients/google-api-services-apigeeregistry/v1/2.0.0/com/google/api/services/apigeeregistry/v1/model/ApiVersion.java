@@ -17,8 +17,7 @@
 package com.google.api.services.apigeeregistry.v1.model;
 
 /**
- * An ApiVersion describes a particular version of an API. ApiVersions are what consumers actually
- * use.
+ * Describes a particular version of an API. ApiVersions are what consumers actually use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee Registry API. For a detailed explanation see:
@@ -67,7 +66,7 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +81,7 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-definable description of the lifecycle phase of this API version. Format: free-form, but
-   * we expect single words that describe API maturity, e.g. "CONCEPT", "DESIGN", "DEVELOPMENT",
+   * we expect single words that describe API maturity, e.g., "CONCEPT", "DESIGN", "DEVELOPMENT",
    * "STAGING", "PRODUCTION", "DEPRECATED", "RETIRED".
    * The value may be {@code null}.
    */
@@ -175,7 +174,7 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -189,7 +188,7 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @param labels labels or {@code null} for none
    */
   public ApiVersion setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -216,7 +215,7 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-definable description of the lifecycle phase of this API version. Format: free-form, but
-   * we expect single words that describe API maturity, e.g. "CONCEPT", "DESIGN", "DEVELOPMENT",
+   * we expect single words that describe API maturity, e.g., "CONCEPT", "DESIGN", "DEVELOPMENT",
    * "STAGING", "PRODUCTION", "DEPRECATED", "RETIRED".
    * @return value or {@code null} for none
    */
@@ -226,7 +225,7 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-definable description of the lifecycle phase of this API version. Format: free-form, but
-   * we expect single words that describe API maturity, e.g. "CONCEPT", "DESIGN", "DEVELOPMENT",
+   * we expect single words that describe API maturity, e.g., "CONCEPT", "DESIGN", "DEVELOPMENT",
    * "STAGING", "PRODUCTION", "DEPRECATED", "RETIRED".
    * @param state state or {@code null} for none
    */

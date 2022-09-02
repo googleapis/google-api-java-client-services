@@ -17,8 +17,7 @@
 package com.google.api.services.apigeeregistry.v1.model;
 
 /**
- * An Api is a top-level description of an API. Apis are produced by producers and are commitments
- * to provide services.
+ * A top-level description of an API. Produced by producers and are commitments to provide services.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee Registry API. For a detailed explanation see:
@@ -41,7 +40,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-definable description of the availability of this service. Format: free-form, but we
-   * expect single words that describe availability, e.g. "NONE", "TESTING", "PREVIEW", "GENERAL",
+   * expect single words that describe availability, e.g., "NONE", "TESTING", "PREVIEW", "GENERAL",
    * "DEPRECATED", "SHUTDOWN".
    * The value may be {@code null}.
    */
@@ -72,11 +71,11 @@ public final class Api extends com.google.api.client.json.GenericJson {
   /**
    * Labels attach identifying metadata to resources. Identifying metadata can be used to filter
    * list operations. Label keys and values can be no longer than 64 characters (Unicode
-   * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
+   * codepoints), can only contain lowercase letters, numeric characters, underscores, and dashes.
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,14 +89,14 @@ public final class Api extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The recommended deployment of the API. Format: apis/{api}/deployments/{deployment}
+   * The recommended deployment of the API. Format: `apis/{api}/deployments/{deployment}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recommendedDeployment;
 
   /**
-   * The recommended version of the API. Format: apis/{api}/versions/{version}
+   * The recommended version of the API. Format: `apis/{api}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +132,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-definable description of the availability of this service. Format: free-form, but we
-   * expect single words that describe availability, e.g. "NONE", "TESTING", "PREVIEW", "GENERAL",
+   * expect single words that describe availability, e.g., "NONE", "TESTING", "PREVIEW", "GENERAL",
    * "DEPRECATED", "SHUTDOWN".
    * @return value or {@code null} for none
    */
@@ -143,7 +142,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-definable description of the availability of this service. Format: free-form, but we
-   * expect single words that describe availability, e.g. "NONE", "TESTING", "PREVIEW", "GENERAL",
+   * expect single words that describe availability, e.g., "NONE", "TESTING", "PREVIEW", "GENERAL",
    * "DEPRECATED", "SHUTDOWN".
    * @param availability availability or {@code null} for none
    */
@@ -206,11 +205,11 @@ public final class Api extends com.google.api.client.json.GenericJson {
   /**
    * Labels attach identifying metadata to resources. Identifying metadata can be used to filter
    * list operations. Label keys and values can be no longer than 64 characters (Unicode
-   * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
+   * codepoints), can only contain lowercase letters, numeric characters, underscores, and dashes.
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -220,11 +219,11 @@ public final class Api extends com.google.api.client.json.GenericJson {
   /**
    * Labels attach identifying metadata to resources. Identifying metadata can be used to filter
    * list operations. Label keys and values can be no longer than 64 characters (Unicode
-   * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
+   * codepoints), can only contain lowercase letters, numeric characters, underscores, and dashes.
    * International characters are allowed. No more than 64 user labels can be associated with one
    * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
    * examples of labels. System reserved label keys are prefixed with
-   * "apigeeregistry.googleapis.com/" and cannot be changed.
+   * `apigeeregistry.googleapis.com/` and cannot be changed.
    * @param labels labels or {@code null} for none
    */
   public Api setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -250,7 +249,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended deployment of the API. Format: apis/{api}/deployments/{deployment}
+   * The recommended deployment of the API. Format: `apis/{api}/deployments/{deployment}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommendedDeployment() {
@@ -258,7 +257,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended deployment of the API. Format: apis/{api}/deployments/{deployment}
+   * The recommended deployment of the API. Format: `apis/{api}/deployments/{deployment}`
    * @param recommendedDeployment recommendedDeployment or {@code null} for none
    */
   public Api setRecommendedDeployment(java.lang.String recommendedDeployment) {
@@ -267,7 +266,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended version of the API. Format: apis/{api}/versions/{version}
+   * The recommended version of the API. Format: `apis/{api}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommendedVersion() {
@@ -275,7 +274,7 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended version of the API. Format: apis/{api}/versions/{version}
+   * The recommended version of the API. Format: `apis/{api}/versions/{version}`
    * @param recommendedVersion recommendedVersion or {@code null} for none
    */
   public Api setRecommendedVersion(java.lang.String recommendedVersion) {

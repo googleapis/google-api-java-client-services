@@ -45,7 +45,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Format: `projects/locations/instance`. Currently only locations/global is supported.
+   * Format: `projects/locations/instance`. Currently only `locations/global` is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Format: `projects/locations/instance`. Currently only locations/global is supported.
+   * Format: `projects/locations/instance`. Currently only `locations/global` is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,7 +115,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Format: `projects/locations/instance`. Currently only locations/global is supported.
+   * Format: `projects/locations/instance`. Currently only `locations/global` is supported.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {

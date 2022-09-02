@@ -31,7 +31,7 @@ public final class RollbackApiDeploymentRequest extends com.google.api.client.js
 
   /**
    * Required. The revision ID to roll back to. It must be a revision of the same deployment.
-   * Example: c7cfa2a8
+   * Example: `c7cfa2a8`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class RollbackApiDeploymentRequest extends com.google.api.client.js
 
   /**
    * Required. The revision ID to roll back to. It must be a revision of the same deployment.
-   * Example: c7cfa2a8
+   * Example: `c7cfa2a8`
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -48,7 +48,7 @@ public final class RollbackApiDeploymentRequest extends com.google.api.client.js
 
   /**
    * Required. The revision ID to roll back to. It must be a revision of the same deployment.
-   * Example: c7cfa2a8
+   * Example: `c7cfa2a8`
    * @param revisionId revisionId or {@code null} for none
    */
   public RollbackApiDeploymentRequest setRevisionId(java.lang.String revisionId) {

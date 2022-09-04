@@ -1548,21 +1548,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Optional. Controls whether Projects in the DELETING state should be returned. Defaults to
-       * false.
+       * Optional. Controls whether Projects in the DELETED state should be returned in the
+       * response. If not specified, only `ACTIVE` Projects will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showDeleted;
 
-      /** Optional. Controls whether Projects in the DELETING state should be returned. Defaults to false.
+      /** Optional. Controls whether Projects in the DELETED state should be returned in the response. If not
+     specified, only `ACTIVE` Projects will be returned.
        */
       public java.lang.Boolean getShowDeleted() {
         return showDeleted;
       }
 
       /**
-       * Optional. Controls whether Projects in the DELETING state should be returned. Defaults to
-       * false.
+       * Optional. Controls whether Projects in the DELETED state should be returned in the
+       * response. If not specified, only `ACTIVE` Projects will be returned.
        */
       public List setShowDeleted(java.lang.Boolean showDeleted) {
         this.showDeleted = showDeleted;
@@ -1731,22 +1732,33 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Specifies which fields to update. If this list is empty, then no state will be updated.
-       * Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.
+       * Specifies which fields of the FirebaseProject to update. Note that the following fields are
+       * immutable: `name`, `project_id`, and `project_number`. To update `state`, use any of the
+       * following Google Cloud endpoints: [`projects.delete`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects/delete) or
+       * [`projects.undelete`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects/undelete)
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Specifies which fields to update. If this list is empty, then no state will be updated. Note that
-     the fields `name`, `projectId`, and `projectNumber` are all immutable.
+      /** Specifies which fields of the FirebaseProject to update. Note that the following fields are
+     immutable: `name`, `project_id`, and `project_number`. To update `state`, use any of the following
+     Google Cloud endpoints: [`projects.delete`](https://cloud.google.com/resource-
+     manager/reference/rest/v1/projects/delete) or [`projects.undelete`](https://cloud.google.com
+     /resource-manager/reference/rest/v1/projects/undelete)
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * Specifies which fields to update. If this list is empty, then no state will be updated.
-       * Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.
+       * Specifies which fields of the FirebaseProject to update. Note that the following fields are
+       * immutable: `name`, `project_id`, and `project_number`. To update `state`, use any of the
+       * following Google Cloud endpoints: [`projects.delete`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects/delete) or
+       * [`projects.undelete`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects/undelete)
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -2193,17 +2205,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         return this;
       }
 
-      /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+      /**
+       * Controls whether Apps in the DELETED state should be returned. If not specified, only
+       * `ACTIVE` Apps will be returned.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean showDeleted;
 
-      /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+      /** Controls whether Apps in the DELETED state should be returned. If not specified, only `ACTIVE` Apps
+     will be returned.
        */
       public java.lang.Boolean getShowDeleted() {
         return showDeleted;
       }
 
-      /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+      /**
+       * Controls whether Apps in the DELETED state should be returned. If not specified, only
+       * `ACTIVE` Apps will be returned.
+       */
       public SearchApps setShowDeleted(java.lang.Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -2926,17 +2945,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return this;
         }
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        /**
+         * Controls whether Apps in the DELETED state should be returned in the response. If not
+         * specified, only `ACTIVE` Apps will be returned.
+         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showDeleted;
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+        /** Controls whether Apps in the DELETED state should be returned in the response. If not specified,
+       only `ACTIVE` Apps will be returned.
          */
         public java.lang.Boolean getShowDeleted() {
           return showDeleted;
         }
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        /**
+         * Controls whether Apps in the DELETED state should be returned in the response. If not
+         * specified, only `ACTIVE` Apps will be returned.
+         */
         public List setShowDeleted(java.lang.Boolean showDeleted) {
           this.showDeleted = showDeleted;
           return this;
@@ -3117,22 +3143,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-         * `package_name`, and `state` are all immutable.
+         * Specifies which fields of the AndroidApp to update. Note that the following fields are
+         * immutable: `name`, `app_id`, `project_id`, and `package_name`. To update `state`, use any
+         * of the following endpoints: RemoveAndroidApp or UndeleteAndroidApp.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-       `package_name`, and `state` are all immutable.
+        /** Specifies which fields of the AndroidApp to update. Note that the following fields are immutable:
+       `name`, `app_id`, `project_id`, and `package_name`. To update `state`, use any of the following
+       endpoints: RemoveAndroidApp or UndeleteAndroidApp.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-         * `package_name`, and `state` are all immutable.
+         * Specifies which fields of the AndroidApp to update. Note that the following fields are
+         * immutable: `name`, `app_id`, `project_id`, and `package_name`. To update `state`, use any
+         * of the following endpoints: RemoveAndroidApp or UndeleteAndroidApp.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -3145,7 +3174,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Removes the specified AndroidApp from the project.
+       * Removes the specified AndroidApp from the FirebaseProject.
        *
        * Create a request for the method "androidApps.remove".
        *
@@ -3175,7 +3204,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
 
         /**
-         * Removes the specified AndroidApp from the project.
+         * Removes the specified AndroidApp from the FirebaseProject.
          *
          * Create a request for the method "androidApps.remove".
          *
@@ -3304,7 +3333,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Restores the specified AndroidApp to the project.
+       * Restores the specified AndroidApp to the FirebaseProject.
        *
        * Create a request for the method "androidApps.undelete".
        *
@@ -3334,7 +3363,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
 
         /**
-         * Restores the specified AndroidApp to the project.
+         * Restores the specified AndroidApp to the FirebaseProject.
          *
          * Create a request for the method "androidApps.undelete".
          *
@@ -5155,17 +5184,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return this;
         }
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        /**
+         * Controls whether Apps in the DELETED state should be returned in the response. If not
+         * specified, only `ACTIVE` Apps will be returned.
+         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showDeleted;
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+        /** Controls whether Apps in the DELETED state should be returned in the response. If not specified,
+       only `ACTIVE` Apps will be returned.
          */
         public java.lang.Boolean getShowDeleted() {
           return showDeleted;
         }
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        /**
+         * Controls whether Apps in the DELETED state should be returned in the response. If not
+         * specified, only `ACTIVE` Apps will be returned.
+         */
         public List setShowDeleted(java.lang.Boolean showDeleted) {
           this.showDeleted = showDeleted;
           return this;
@@ -5343,22 +5379,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`,
-         * `bundleId`, and `state` are all immutable
+         * Specifies which fields of the IosApp to update. Note that the following fields are
+         * immutable: `name`, `app_id`, `project_id`, and `bundle_id`. To update `state`, use any of
+         * the following endpoints: RemoveIosApp or UndeleteIosApp.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, `bundleId`,
-       and `state` are all immutable
+        /** Specifies which fields of the IosApp to update. Note that the following fields are immutable:
+       `name`, `app_id`, `project_id`, and `bundle_id`. To update `state`, use any of the following
+       endpoints: RemoveIosApp or UndeleteIosApp.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`,
-         * `bundleId`, and `state` are all immutable
+         * Specifies which fields of the IosApp to update. Note that the following fields are
+         * immutable: `name`, `app_id`, `project_id`, and `bundle_id`. To update `state`, use any of
+         * the following endpoints: RemoveIosApp or UndeleteIosApp.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -5371,7 +5410,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Removes the specified IosApp from the project.
+       * Removes the specified IosApp from the FirebaseProject.
        *
        * Create a request for the method "iosApps.remove".
        *
@@ -5401,7 +5440,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/iosApps/[^/]+$");
 
         /**
-         * Removes the specified IosApp from the project.
+         * Removes the specified IosApp from the FirebaseProject.
          *
          * Create a request for the method "iosApps.remove".
          *
@@ -5530,7 +5569,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Restores the specified IosApp to the project.
+       * Restores the specified IosApp to the FirebaseProject.
        *
        * Create a request for the method "iosApps.undelete".
        *
@@ -5560,7 +5599,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/iosApps/[^/]+$");
 
         /**
-         * Restores the specified IosApp to the project.
+         * Restores the specified IosApp to the FirebaseProject.
          *
          * Create a request for the method "iosApps.undelete".
          *
@@ -6398,17 +6437,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return this;
         }
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        /**
+         * Controls whether Apps in the DELETED state should be returned in the response. If not
+         * specified, only `ACTIVE` Apps will be returned.
+         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showDeleted;
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+        /** Controls whether Apps in the DELETED state should be returned in the response. If not specified,
+       only `ACTIVE` Apps will be returned.
          */
         public java.lang.Boolean getShowDeleted() {
           return showDeleted;
         }
 
-        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        /**
+         * Controls whether Apps in the DELETED state should be returned in the response. If not
+         * specified, only `ACTIVE` Apps will be returned.
+         */
         public List setShowDeleted(java.lang.Boolean showDeleted) {
           this.showDeleted = showDeleted;
           return this;
@@ -6586,22 +6632,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId` and
-         * `state` are all immutable
+         * Specifies which fields of the WebApp to update. Note that the following fields are
+         * immutable: `name`, `app_id`, and `project_id`. To update `state`, use any of the
+         * following endpoints: RemoveWebApp or UndeleteWebApp.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId` and `state` are
-       all immutable
+        /** Specifies which fields of the WebApp to update. Note that the following fields are immutable:
+       `name`, `app_id`, and `project_id`. To update `state`, use any of the following endpoints:
+       RemoveWebApp or UndeleteWebApp.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId` and
-         * `state` are all immutable
+         * Specifies which fields of the WebApp to update. Note that the following fields are
+         * immutable: `name`, `app_id`, and `project_id`. To update `state`, use any of the
+         * following endpoints: RemoveWebApp or UndeleteWebApp.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -6614,7 +6663,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Removes the specified WebApp from the project.
+       * Removes the specified WebApp from the FirebaseProject.
        *
        * Create a request for the method "webApps.remove".
        *
@@ -6644,7 +6693,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/webApps/[^/]+$");
 
         /**
-         * Removes the specified WebApp from the project.
+         * Removes the specified WebApp from the FirebaseProject.
          *
          * Create a request for the method "webApps.remove".
          *
@@ -6773,7 +6822,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Restores the specified WebApp to the project.
+       * Restores the specified WebApp to the FirebaseProject.
        *
        * Create a request for the method "webApps.undelete".
        *
@@ -6803,7 +6852,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/webApps/[^/]+$");
 
         /**
-         * Restores the specified WebApp to the project.
+         * Restores the specified WebApp to the FirebaseProject.
          *
          * Create a request for the method "webApps.undelete".
          *

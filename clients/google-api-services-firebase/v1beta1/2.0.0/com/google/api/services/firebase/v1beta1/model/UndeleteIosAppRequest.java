@@ -39,7 +39,7 @@ public final class UndeleteIosAppRequest extends com.google.api.client.json.Gene
   private java.lang.String etag;
 
   /**
-   * If set to true, only validate the request and do not undelete the app.
+   * If set to true, the request is only validated. The App will _not_ be undeleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class UndeleteIosAppRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * If set to true, only validate the request and do not undelete the app.
+   * If set to true, the request is only validated. The App will _not_ be undeleted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -73,7 +73,7 @@ public final class UndeleteIosAppRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * If set to true, only validate the request and do not undelete the app.
+   * If set to true, the request is only validated. The App will _not_ be undeleted.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public UndeleteIosAppRequest setValidateOnly(java.lang.Boolean validateOnly) {

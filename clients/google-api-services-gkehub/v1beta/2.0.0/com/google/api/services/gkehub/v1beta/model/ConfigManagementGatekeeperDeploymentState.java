@@ -44,6 +44,13 @@ public final class ConfigManagementGatekeeperDeploymentState extends com.google.
   private java.lang.String gatekeeperControllerManagerState;
 
   /**
+   * Status of the pod serving the mutation webhook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatekeeperMutation;
+
+  /**
    * Status of gatekeeper-audit deployment.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ConfigManagementGatekeeperDeploymentState extends com.google.
    */
   public ConfigManagementGatekeeperDeploymentState setGatekeeperControllerManagerState(java.lang.String gatekeeperControllerManagerState) {
     this.gatekeeperControllerManagerState = gatekeeperControllerManagerState;
+    return this;
+  }
+
+  /**
+   * Status of the pod serving the mutation webhook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatekeeperMutation() {
+    return gatekeeperMutation;
+  }
+
+  /**
+   * Status of the pod serving the mutation webhook.
+   * @param gatekeeperMutation gatekeeperMutation or {@code null} for none
+   */
+  public ConfigManagementGatekeeperDeploymentState setGatekeeperMutation(java.lang.String gatekeeperMutation) {
+    this.gatekeeperMutation = gatekeeperMutation;
     return this;
   }
 

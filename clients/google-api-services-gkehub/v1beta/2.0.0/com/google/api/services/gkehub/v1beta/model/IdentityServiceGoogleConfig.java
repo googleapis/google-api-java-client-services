@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * **Anthos Observability**: Spec
+ * Configuration for the Google Plugin Auth flow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AnthosObservabilityFeatureSpec extends com.google.api.client.json.GenericJson {
+public final class IdentityServiceGoogleConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Default membership spec for unconfigured memberships
+   * Disable automatic configuration of Google Plugin on supported platforms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AnthosObservabilityMembershipSpec defaultMembershipSpec;
+  private java.lang.Boolean disable;
 
   /**
-   * Default membership spec for unconfigured memberships
+   * Disable automatic configuration of Google Plugin on supported platforms.
    * @return value or {@code null} for none
    */
-  public AnthosObservabilityMembershipSpec getDefaultMembershipSpec() {
-    return defaultMembershipSpec;
+  public java.lang.Boolean getDisable() {
+    return disable;
   }
 
   /**
-   * Default membership spec for unconfigured memberships
-   * @param defaultMembershipSpec defaultMembershipSpec or {@code null} for none
+   * Disable automatic configuration of Google Plugin on supported platforms.
+   * @param disable disable or {@code null} for none
    */
-  public AnthosObservabilityFeatureSpec setDefaultMembershipSpec(AnthosObservabilityMembershipSpec defaultMembershipSpec) {
-    this.defaultMembershipSpec = defaultMembershipSpec;
+  public IdentityServiceGoogleConfig setDisable(java.lang.Boolean disable) {
+    this.disable = disable;
     return this;
   }
 
   @Override
-  public AnthosObservabilityFeatureSpec set(String fieldName, Object value) {
-    return (AnthosObservabilityFeatureSpec) super.set(fieldName, value);
+  public IdentityServiceGoogleConfig set(String fieldName, Object value) {
+    return (IdentityServiceGoogleConfig) super.set(fieldName, value);
   }
 
   @Override
-  public AnthosObservabilityFeatureSpec clone() {
-    return (AnthosObservabilityFeatureSpec) super.clone();
+  public IdentityServiceGoogleConfig clone() {
+    return (IdentityServiceGoogleConfig) super.clone();
   }
 
 }

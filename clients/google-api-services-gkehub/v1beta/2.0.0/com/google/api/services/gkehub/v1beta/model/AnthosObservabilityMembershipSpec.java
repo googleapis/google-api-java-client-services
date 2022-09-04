@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class AnthosObservabilityMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * use full of metrics rather than optimized metrics. See
+   * Use full of metrics rather than optimized metrics. See
    * https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/concepts/logging-and-
    * monitoring#optimized_metrics_default_metrics
    * The value may be {@code null}.
@@ -39,8 +39,7 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
   private java.lang.Boolean doNotOptimizeMetrics;
 
   /**
-   * enable collecting and reporting metrics and logs from user apps See go/onyx-application-
-   * metrics-logs-user-guide
+   * Enable collecting and reporting metrics and logs from user apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +53,7 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
   private java.lang.String version;
 
   /**
-   * use full of metrics rather than optimized metrics. See
+   * Use full of metrics rather than optimized metrics. See
    * https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/concepts/logging-and-
    * monitoring#optimized_metrics_default_metrics
    * @return value or {@code null} for none
@@ -64,7 +63,7 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
   }
 
   /**
-   * use full of metrics rather than optimized metrics. See
+   * Use full of metrics rather than optimized metrics. See
    * https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/concepts/logging-and-
    * monitoring#optimized_metrics_default_metrics
    * @param doNotOptimizeMetrics doNotOptimizeMetrics or {@code null} for none
@@ -75,8 +74,7 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
   }
 
   /**
-   * enable collecting and reporting metrics and logs from user apps See go/onyx-application-
-   * metrics-logs-user-guide
+   * Enable collecting and reporting metrics and logs from user apps.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStackdriverOnApplications() {
@@ -84,8 +82,7 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
   }
 
   /**
-   * enable collecting and reporting metrics and logs from user apps See go/onyx-application-
-   * metrics-logs-user-guide
+   * Enable collecting and reporting metrics and logs from user apps.
    * @param enableStackdriverOnApplications enableStackdriverOnApplications or {@code null} for none
    */
   public AnthosObservabilityMembershipSpec setEnableStackdriverOnApplications(java.lang.Boolean enableStackdriverOnApplications) {

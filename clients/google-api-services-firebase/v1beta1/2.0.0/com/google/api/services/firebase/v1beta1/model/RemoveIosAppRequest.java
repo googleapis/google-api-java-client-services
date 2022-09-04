@@ -47,7 +47,7 @@ public final class RemoveIosAppRequest extends com.google.api.client.json.Generi
   private java.lang.String etag;
 
   /**
-   * If set to true, only validate the request and do not delete the app.
+   * If set to true, the request is only validated. The App will _not_ be removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class RemoveIosAppRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If set to true, only validate the request and do not delete the app.
+   * If set to true, the request is only validated. The App will _not_ be removed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -100,7 +100,7 @@ public final class RemoveIosAppRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If set to true, only validate the request and do not delete the app.
+   * If set to true, the request is only validated. The App will _not_ be removed.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public RemoveIosAppRequest setValidateOnly(java.lang.Boolean validateOnly) {

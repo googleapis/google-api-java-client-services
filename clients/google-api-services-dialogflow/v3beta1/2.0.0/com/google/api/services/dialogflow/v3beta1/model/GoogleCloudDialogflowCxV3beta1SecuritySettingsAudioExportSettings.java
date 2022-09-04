@@ -51,8 +51,9 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   private java.lang.Boolean enableAudioRedaction;
 
   /**
-   * Cloud Storage bucket to export audio record to. You need to grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Storage Object Admin` role in this bucket.
+   * Cloud Storage bucket to export audio record to. Settings this field would grant the Storage
+   * Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field
+   * should have the permission of storage.buckets.setIamPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +111,9 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Cloud Storage bucket to export audio record to. You need to grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Storage Object Admin` role in this bucket.
+   * Cloud Storage bucket to export audio record to. Settings this field would grant the Storage
+   * Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field
+   * should have the permission of storage.buckets.setIamPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsBucket() {
@@ -119,8 +121,9 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Cloud Storage bucket to export audio record to. You need to grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Storage Object Admin` role in this bucket.
+   * Cloud Storage bucket to export audio record to. Settings this field would grant the Storage
+   * Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field
+   * should have the permission of storage.buckets.setIamPolicy.
    * @param gcsBucket gcsBucket or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setGcsBucket(java.lang.String gcsBucket) {

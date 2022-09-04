@@ -30,14 +30,14 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class AnthosObservabilityFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * default membership spec for unconfigured memberships
+   * Default membership spec for unconfigured memberships
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AnthosObservabilityMembershipSpec defaultMembershipSpec;
 
   /**
-   * default membership spec for unconfigured memberships
+   * Default membership spec for unconfigured memberships
    * @return value or {@code null} for none
    */
   public AnthosObservabilityMembershipSpec getDefaultMembershipSpec() {
@@ -45,7 +45,7 @@ public final class AnthosObservabilityFeatureSpec extends com.google.api.client.
   }
 
   /**
-   * default membership spec for unconfigured memberships
+   * Default membership spec for unconfigured memberships
    * @param defaultMembershipSpec defaultMembershipSpec or {@code null} for none
    */
   public AnthosObservabilityFeatureSpec setDefaultMembershipSpec(AnthosObservabilityMembershipSpec defaultMembershipSpec) {

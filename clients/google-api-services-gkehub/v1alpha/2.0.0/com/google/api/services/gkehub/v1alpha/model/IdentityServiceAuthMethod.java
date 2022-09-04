@@ -31,6 +31,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class IdentityServiceAuthMethod extends com.google.api.client.json.GenericJson {
 
   /**
+   * GoogleConfig specific configuration
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceGoogleConfig googleConfig;
+
+  /**
    * Identifier for auth config.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String proxy;
+
+  /**
+   * GoogleConfig specific configuration
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceGoogleConfig getGoogleConfig() {
+    return googleConfig;
+  }
+
+  /**
+   * GoogleConfig specific configuration
+   * @param googleConfig googleConfig or {@code null} for none
+   */
+  public IdentityServiceAuthMethod setGoogleConfig(IdentityServiceGoogleConfig googleConfig) {
+    this.googleConfig = googleConfig;
+    return this;
+  }
 
   /**
    * Identifier for auth config.

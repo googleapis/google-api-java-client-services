@@ -116,18 +116,18 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The immutable name of the resource. In Cloud Run, name is required when creating top-level
-   * resources (Service, Job), and must be unique within a Cloud Run project/region. More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#names If ObjectMeta is part of a
-   * CreateServiceRequest, name must contain fewer than 50 characters. Otherwise,
+   * Required. The name of the resource. In Cloud Run, name is required when creating top-level
+   * resources (Service, Job), must be unique within a Cloud Run project/region, and cannot be
+   * changed once created. More info: https://kubernetes.io/docs/user-guide/identifiers#names If
+   * ObjectMeta is part of a CreateServiceRequest, name must contain fewer than 50 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Defines the space within each name must be unique within a Cloud Run region. In Cloud Run, it
-   * must be project ID or number.
+   * Required. Defines the space within each name must be unique within a Cloud Run region. In Cloud
+   * Run, it must be project ID or number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,12 +141,12 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.util.List<OwnerReference> ownerReferences;
 
   /**
-   * Optional. Opaque, system-generated value that represents the internal version of this object
-   * that can be used by clients to determine when objects have changed. May be used for optimistic
-   * concurrency, change detection, and the watch operation on a resource or set of resources.
-   * Clients must treat these values as opaque and passed unmodified back to the server or omit the
-   * value to disable conflict-detection. More info: https://git.k8s.io/community/contributors/devel
-   * /sig-architecture/api-conventions.md#concurrency-control-and-consistency
+   * Opaque, system-generated value that represents the internal version of this object that can be
+   * used by clients to determine when objects have changed. May be used for optimistic concurrency,
+   * change detection, and the watch operation on a resource or set of resources. Clients must treat
+   * these values as opaque and passed unmodified back to the server or omit the value to disable
+   * conflict-detection. More info: https://git.k8s.io/community/contributors/devel/sig-architecture
+   * /api-conventions.md#concurrency-control-and-consistency
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -365,10 +365,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The immutable name of the resource. In Cloud Run, name is required when creating top-level
-   * resources (Service, Job), and must be unique within a Cloud Run project/region. More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#names If ObjectMeta is part of a
-   * CreateServiceRequest, name must contain fewer than 50 characters. Otherwise,
+   * Required. The name of the resource. In Cloud Run, name is required when creating top-level
+   * resources (Service, Job), must be unique within a Cloud Run project/region, and cannot be
+   * changed once created. More info: https://kubernetes.io/docs/user-guide/identifiers#names If
+   * ObjectMeta is part of a CreateServiceRequest, name must contain fewer than 50 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -376,10 +376,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The immutable name of the resource. In Cloud Run, name is required when creating top-level
-   * resources (Service, Job), and must be unique within a Cloud Run project/region. More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#names If ObjectMeta is part of a
-   * CreateServiceRequest, name must contain fewer than 50 characters. Otherwise,
+   * Required. The name of the resource. In Cloud Run, name is required when creating top-level
+   * resources (Service, Job), must be unique within a Cloud Run project/region, and cannot be
+   * changed once created. More info: https://kubernetes.io/docs/user-guide/identifiers#names If
+   * ObjectMeta is part of a CreateServiceRequest, name must contain fewer than 50 characters.
    * @param name name or {@code null} for none
    */
   public ObjectMeta setName(java.lang.String name) {
@@ -388,8 +388,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the space within each name must be unique within a Cloud Run region. In Cloud Run, it
-   * must be project ID or number.
+   * Required. Defines the space within each name must be unique within a Cloud Run region. In Cloud
+   * Run, it must be project ID or number.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespace() {
@@ -397,8 +397,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the space within each name must be unique within a Cloud Run region. In Cloud Run, it
-   * must be project ID or number.
+   * Required. Defines the space within each name must be unique within a Cloud Run region. In Cloud
+   * Run, it must be project ID or number.
    * @param namespace namespace or {@code null} for none
    */
   public ObjectMeta setNamespace(java.lang.String namespace) {
@@ -424,12 +424,12 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Opaque, system-generated value that represents the internal version of this object
-   * that can be used by clients to determine when objects have changed. May be used for optimistic
-   * concurrency, change detection, and the watch operation on a resource or set of resources.
-   * Clients must treat these values as opaque and passed unmodified back to the server or omit the
-   * value to disable conflict-detection. More info: https://git.k8s.io/community/contributors/devel
-   * /sig-architecture/api-conventions.md#concurrency-control-and-consistency
+   * Opaque, system-generated value that represents the internal version of this object that can be
+   * used by clients to determine when objects have changed. May be used for optimistic concurrency,
+   * change detection, and the watch operation on a resource or set of resources. Clients must treat
+   * these values as opaque and passed unmodified back to the server or omit the value to disable
+   * conflict-detection. More info: https://git.k8s.io/community/contributors/devel/sig-architecture
+   * /api-conventions.md#concurrency-control-and-consistency
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -437,12 +437,12 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Opaque, system-generated value that represents the internal version of this object
-   * that can be used by clients to determine when objects have changed. May be used for optimistic
-   * concurrency, change detection, and the watch operation on a resource or set of resources.
-   * Clients must treat these values as opaque and passed unmodified back to the server or omit the
-   * value to disable conflict-detection. More info: https://git.k8s.io/community/contributors/devel
-   * /sig-architecture/api-conventions.md#concurrency-control-and-consistency
+   * Opaque, system-generated value that represents the internal version of this object that can be
+   * used by clients to determine when objects have changed. May be used for optimistic concurrency,
+   * change detection, and the watch operation on a resource or set of resources. Clients must treat
+   * these values as opaque and passed unmodified back to the server or omit the value to disable
+   * conflict-detection. More info: https://git.k8s.io/community/contributors/devel/sig-architecture
+   * /api-conventions.md#concurrency-control-and-consistency
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ObjectMeta setResourceVersion(java.lang.String resourceVersion) {

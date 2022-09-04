@@ -4647,9 +4647,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
-       *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
-       *        * `projects/{project_id_or_number}/regions/{region}`
+       * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/services` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -4677,9 +4679,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
-       *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
-       *        * `projects/{project_id_or_number}/regions/{region}`
+         * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/services` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -4749,25 +4753,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The resource's parent. In Cloud Run, it may be one of the following: *
-         * `namespaces/{project_id_or_number}` *
+         * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/services` *
          * `projects/{project_id_or_number}/locations/{region}` *
          * `projects/{project_id_or_number}/regions/{region}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource's parent. In Cloud Run, it may be one of the following: *
-       `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
-       `projects/{project_id_or_number}/regions/{region}`
+        /** Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       `namespaces/{project_id_or_number}/services` * `projects/{project_id_or_number}/locations/{region}`
+       * `projects/{project_id_or_number}/regions/{region}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The resource's parent. In Cloud Run, it may be one of the following: *
-         * `namespaces/{project_id_or_number}` *
+         * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/services` *
          * `projects/{project_id_or_number}/locations/{region}` *
          * `projects/{project_id_or_number}/regions/{region}`
          */
@@ -4818,7 +4825,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+       * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
        *        `namespaces/{project_id_or_number}/services/{service_name}` *
        *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
@@ -4848,7 +4855,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+         * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
        *        `namespaces/{project_id_or_number}/services/{service_name}` *
        *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
@@ -4920,16 +4927,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The fully qualified name of the service to delete. It can be any of the following forms:
-         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * Required. The fully qualified name of the service to delete. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified name of the service to delete. It can be any of the following forms: *
-       `namespaces/{project_id_or_number}/services/{service_name}` *
+        /** Required. The fully qualified name of the service to delete. It can be any of the following forms:
+       * `namespaces/{project_id_or_number}/services/{service_name}` *
        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -4938,8 +4945,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The fully qualified name of the service to delete. It can be any of the following forms:
-         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * Required. The fully qualified name of the service to delete. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5037,8 +5044,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
-       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
        *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @return the request
@@ -5066,8 +5073,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
-       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
        *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @since 1.13
@@ -5148,16 +5155,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The fully qualified name of the service to retrieve. It can be any of the following
-         * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * Required. The fully qualified name of the service to retrieve. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified name of the service to retrieve. It can be any of the following forms: *
-       `namespaces/{project_id_or_number}/services/{service_name}` *
+        /** Required. The fully qualified name of the service to retrieve. It can be any of the following
+       forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5166,8 +5173,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The fully qualified name of the service to retrieve. It can be any of the following
-         * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * Required. The fully qualified name of the service to retrieve. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5194,8 +5201,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
-       *        * `namespaces/{project_id_or_number}` *
+       * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/services` *
        *        `projects/{project_id_or_number}/locations/{region}` *
        *        `projects/{project_id_or_number}/regions/{region}`
        * @return the request
@@ -5223,8 +5231,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
-       *        * `namespaces/{project_id_or_number}` *
+         * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/services` *
        *        `projects/{project_id_or_number}/locations/{region}` *
        *        `projects/{project_id_or_number}/regions/{region}`
          * @since 1.13
@@ -5305,25 +5314,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The parent from where the resources should be listed. In Cloud Run, it may be one of the
-         * following: * `namespaces/{project_id_or_number}` *
+         * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+         * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/services` *
          * `projects/{project_id_or_number}/locations/{region}` *
          * `projects/{project_id_or_number}/regions/{region}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
-       * `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
-       `projects/{project_id_or_number}/regions/{region}`
+        /** Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       `namespaces/{project_id_or_number}/services` * `projects/{project_id_or_number}/locations/{region}`
+       * `projects/{project_id_or_number}/regions/{region}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent from where the resources should be listed. In Cloud Run, it may be one of the
-         * following: * `namespaces/{project_id_or_number}` *
+         * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+         * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/services` *
          * `projects/{project_id_or_number}/locations/{region}` *
          * `projects/{project_id_or_number}/regions/{region}`
          */
@@ -5337,17 +5349,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. Encoded string to continue paging. */
+        /** Encoded string to continue paging. */
         @com.google.api.client.util.Key("continue")
         private java.lang.String continue__;
 
-        /** Optional. Encoded string to continue paging.
+        /** Encoded string to continue paging.
          */
         public java.lang.String getContinue() {
           return continue__;
         }
 
-        /** Optional. Encoded string to continue paging. */
+        /** Encoded string to continue paging. */
         public List setContinue(java.lang.String continue__) {
           this.continue__ = continue__;
           return this;
@@ -5407,17 +5419,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. The maximum number of records that should be returned. */
+        /** The maximum number of records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** Optional. The maximum number of records that should be returned.
+        /** The maximum number of records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** Optional. The maximum number of records that should be returned. */
+        /** The maximum number of records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
@@ -5470,8 +5482,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
-       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
        *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @param content the {@link com.google.api.services.run.v1.model.Service}
@@ -5504,8 +5516,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * ientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
-       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
        *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
@@ -5577,16 +5589,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The fully qualified name of the service to replace. It can be any of the following forms:
-         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * Required. The fully qualified name of the service to replace. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified name of the service to replace. It can be any of the following forms: *
-       `namespaces/{project_id_or_number}/services/{service_name}` *
+        /** Required. The fully qualified name of the service to replace. It can be any of the following forms:
+       * `namespaces/{project_id_or_number}/services/{service_name}` *
        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5595,8 +5607,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The fully qualified name of the service to replace. It can be any of the following forms:
-         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * Required. The fully qualified name of the service to replace. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -9714,9 +9726,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
-         *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
-         *        * `projects/{project_id_or_number}/regions/{region}`
+         * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         *        `namespaces/{project_id_or_number}/services` *
+         *        `projects/{project_id_or_number}/locations/{region}` *
+         *        `projects/{project_id_or_number}/regions/{region}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -9744,9 +9758,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
-         *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
-         *        * `projects/{project_id_or_number}/regions/{region}`
+           * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         *        `namespaces/{project_id_or_number}/services` *
+         *        `projects/{project_id_or_number}/locations/{region}` *
+         *        `projects/{project_id_or_number}/regions/{region}`
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -9816,25 +9832,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The resource's parent. In Cloud Run, it may be one of the following: *
-           * `namespaces/{project_id_or_number}` *
+           * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+           * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+           * `namespaces/{project_id_or_number}/services` *
            * `projects/{project_id_or_number}/locations/{region}` *
            * `projects/{project_id_or_number}/regions/{region}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The resource's parent. In Cloud Run, it may be one of the following: *
-         `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
-         `projects/{project_id_or_number}/regions/{region}`
+          /** Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         `namespaces/{project_id_or_number}/services` * `projects/{project_id_or_number}/locations/{region}`
+         * `projects/{project_id_or_number}/regions/{region}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The resource's parent. In Cloud Run, it may be one of the following: *
-           * `namespaces/{project_id_or_number}` *
+           * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+           * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+           * `namespaces/{project_id_or_number}/services` *
            * `projects/{project_id_or_number}/locations/{region}` *
            * `projects/{project_id_or_number}/regions/{region}`
            */
@@ -9885,7 +9904,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+         * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
          *        `namespaces/{project_id_or_number}/services/{service_name}` *
          *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
@@ -9915,7 +9934,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+           * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
          *        `namespaces/{project_id_or_number}/services/{service_name}` *
          *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
@@ -9987,16 +10006,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of the service to delete. It can be any of the following
-           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * Required. The fully qualified name of the service to delete. It can be any of the
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The fully qualified name of the service to delete. It can be any of the following forms: *
-         `namespaces/{project_id_or_number}/services/{service_name}` *
+          /** Required. The fully qualified name of the service to delete. It can be any of the following forms:
+         * `namespaces/{project_id_or_number}/services/{service_name}` *
          `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10005,8 +10024,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of the service to delete. It can be any of the following
-           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * Required. The fully qualified name of the service to delete. It can be any of the
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10104,8 +10123,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
-         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
          *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @return the request
@@ -10133,8 +10152,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
-         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+           * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
          *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @since 1.13
@@ -10215,16 +10234,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of the service to retrieve. It can be any of the following
-           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * Required. The fully qualified name of the service to retrieve. It can be any of the
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The fully qualified name of the service to retrieve. It can be any of the following forms: *
-         `namespaces/{project_id_or_number}/services/{service_name}` *
+          /** Required. The fully qualified name of the service to retrieve. It can be any of the following
+         forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
          `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10233,8 +10252,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of the service to retrieve. It can be any of the following
-           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * Required. The fully qualified name of the service to retrieve. It can be any of the
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10459,8 +10478,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
-         *        * `namespaces/{project_id_or_number}` *
+         * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+         *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         *        `namespaces/{project_id_or_number}/services` *
          *        `projects/{project_id_or_number}/locations/{region}` *
          *        `projects/{project_id_or_number}/regions/{region}`
          * @return the request
@@ -10488,8 +10508,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
-         *        * `namespaces/{project_id_or_number}` *
+           * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+         *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         *        `namespaces/{project_id_or_number}/services` *
          *        `projects/{project_id_or_number}/locations/{region}` *
          *        `projects/{project_id_or_number}/regions/{region}`
            * @since 1.13
@@ -10570,25 +10591,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The parent from where the resources should be listed. In Cloud Run, it may be one of
-           * the following: * `namespaces/{project_id_or_number}` *
+           * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+           * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}`
+           * * `namespaces/{project_id_or_number}/services` *
            * `projects/{project_id_or_number}/locations/{region}` *
            * `projects/{project_id_or_number}/regions/{region}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
-         * `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
-         `projects/{project_id_or_number}/regions/{region}`
+          /** Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+         following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         `namespaces/{project_id_or_number}/services` * `projects/{project_id_or_number}/locations/{region}`
+         * `projects/{project_id_or_number}/regions/{region}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent from where the resources should be listed. In Cloud Run, it may be one of
-           * the following: * `namespaces/{project_id_or_number}` *
+           * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+           * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}`
+           * * `namespaces/{project_id_or_number}/services` *
            * `projects/{project_id_or_number}/locations/{region}` *
            * `projects/{project_id_or_number}/regions/{region}`
            */
@@ -10602,17 +10626,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. Encoded string to continue paging. */
+          /** Encoded string to continue paging. */
           @com.google.api.client.util.Key("continue")
           private java.lang.String continue__;
 
-          /** Optional. Encoded string to continue paging.
+          /** Encoded string to continue paging.
            */
           public java.lang.String getContinue() {
             return continue__;
           }
 
-          /** Optional. Encoded string to continue paging. */
+          /** Encoded string to continue paging. */
           public List setContinue(java.lang.String continue__) {
             this.continue__ = continue__;
             return this;
@@ -10672,17 +10696,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The maximum number of records that should be returned. */
+          /** The maximum number of records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** Optional. The maximum number of records that should be returned.
+          /** The maximum number of records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** Optional. The maximum number of records that should be returned. */
+          /** The maximum number of records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;
@@ -10735,8 +10759,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
          *
-         * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
-         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
          *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
@@ -10769,8 +10793,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * ientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
-         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+           * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
          *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @param content the {@link com.google.api.services.run.v1.model.Service}
@@ -10842,16 +10866,16 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of the service to replace. It can be any of the following
-           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * Required. The fully qualified name of the service to replace. It can be any of the
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The fully qualified name of the service to replace. It can be any of the following forms: *
-         `namespaces/{project_id_or_number}/services/{service_name}` *
+          /** Required. The fully qualified name of the service to replace. It can be any of the following forms:
+         * `namespaces/{project_id_or_number}/services/{service_name}` *
          `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10860,8 +10884,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of the service to replace. It can be any of the following
-           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * Required. The fully qualified name of the service to replace. It can be any of the
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */

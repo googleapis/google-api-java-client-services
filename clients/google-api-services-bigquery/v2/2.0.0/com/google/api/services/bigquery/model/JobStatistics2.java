@@ -217,6 +217,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private SearchStatistics searchStatistics;
 
   /**
+   * [Output-only] Statistics of a Spark procedure job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkStatistics sparkStatistics;
+
+  /**
    * The type of query statement, if valid. Possible values (new values might be added in the
    * future): "SELECT": SELECT query. "INSERT": INSERT query; see
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
@@ -705,6 +712,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setSearchStatistics(SearchStatistics searchStatistics) {
     this.searchStatistics = searchStatistics;
+    return this;
+  }
+
+  /**
+   * [Output-only] Statistics of a Spark procedure job.
+   * @return value or {@code null} for none
+   */
+  public SparkStatistics getSparkStatistics() {
+    return sparkStatistics;
+  }
+
+  /**
+   * [Output-only] Statistics of a Spark procedure job.
+   * @param sparkStatistics sparkStatistics or {@code null} for none
+   */
+  public JobStatistics2 setSparkStatistics(SparkStatistics sparkStatistics) {
+    this.sparkStatistics = sparkStatistics;
     return this;
   }
 

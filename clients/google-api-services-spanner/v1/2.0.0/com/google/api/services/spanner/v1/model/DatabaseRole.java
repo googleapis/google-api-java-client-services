@@ -31,8 +31,8 @@ public final class DatabaseRole extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the database role. Values are of the form
-   * `projects//instances//databases//databaseRoles/ `, where `` is as specified in the `CREATE
-   * ROLE` DDL statement.
+   * `projects//instances//databases//databaseRoles/` where `` is as specified in the `CREATE ROLE`
+   * DDL statement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class DatabaseRole extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the database role. Values are of the form
-   * `projects//instances//databases//databaseRoles/ `, where `` is as specified in the `CREATE
-   * ROLE` DDL statement.
+   * `projects//instances//databases//databaseRoles/` where `` is as specified in the `CREATE ROLE`
+   * DDL statement.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -50,8 +50,8 @@ public final class DatabaseRole extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the database role. Values are of the form
-   * `projects//instances//databases//databaseRoles/ `, where `` is as specified in the `CREATE
-   * ROLE` DDL statement.
+   * `projects//instances//databases//databaseRoles/` where `` is as specified in the `CREATE ROLE`
+   * DDL statement.
    * @param name name or {@code null} for none
    */
   public DatabaseRole setName(java.lang.String name) {

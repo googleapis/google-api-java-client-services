@@ -112,8 +112,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
-   * value is 1500 bytes. If unspecified, defaults to 1460.
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1300 and the maximum
+   * value is 8896. The suggested value is 1500, which is the default MTU used on the Internet, or
+   * 8896 if you want to use Jumbo frames. If unspecified, the value defaults to 1460.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,8 +368,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
-   * value is 1500 bytes. If unspecified, defaults to 1460.
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1300 and the maximum
+   * value is 8896. The suggested value is 1500, which is the default MTU used on the Internet, or
+   * 8896 if you want to use Jumbo frames. If unspecified, the value defaults to 1460.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMtu() {
@@ -376,8 +378,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
-   * value is 1500 bytes. If unspecified, defaults to 1460.
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1300 and the maximum
+   * value is 8896. The suggested value is 1500, which is the default MTU used on the Internet, or
+   * 8896 if you want to use Jumbo frames. If unspecified, the value defaults to 1460.
    * @param mtu mtu or {@code null} for none
    */
   public Network setMtu(java.lang.Integer mtu) {

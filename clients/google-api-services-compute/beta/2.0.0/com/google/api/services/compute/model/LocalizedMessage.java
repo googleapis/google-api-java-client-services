@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class LocalizedMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The locale used following the specification defined at http://www.rfc-
+   * The locale used following the specification defined at https://www.rfc-
    * editor.org/rfc/bcp/bcp47.txt. Examples are: "en-US", "fr-CH", "es-MX"
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class LocalizedMessage extends com.google.api.client.json.GenericJs
   private java.lang.String message;
 
   /**
-   * The locale used following the specification defined at http://www.rfc-
+   * The locale used following the specification defined at https://www.rfc-
    * editor.org/rfc/bcp/bcp47.txt. Examples are: "en-US", "fr-CH", "es-MX"
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class LocalizedMessage extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The locale used following the specification defined at http://www.rfc-
+   * The locale used following the specification defined at https://www.rfc-
    * editor.org/rfc/bcp/bcp47.txt. Examples are: "en-US", "fr-CH", "es-MX"
    * @param locale locale or {@code null} for none
    */

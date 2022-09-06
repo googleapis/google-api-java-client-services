@@ -83,8 +83,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default
-   * is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for
-   * `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+   * is `INGRESS`. For `EGRESS` traffic, you cannot specify the sourceTags fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,8 +317,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default
-   * is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for
-   * `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+   * is `INGRESS`. For `EGRESS` traffic, you cannot specify the sourceTags fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -328,8 +326,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default
-   * is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for
-   * `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+   * is `INGRESS`. For `EGRESS` traffic, you cannot specify the sourceTags fields.
    * @param direction direction or {@code null} for none
    */
   public Firewall setDirection(java.lang.String direction) {

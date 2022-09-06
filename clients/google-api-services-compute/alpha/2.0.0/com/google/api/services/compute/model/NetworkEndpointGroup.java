@@ -136,6 +136,12 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String networkEndpointType;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkEndpointGroupPscData pscData;
+
+  /**
    * The target service url used to set up private service connection to a Google API or a PSC
    * Producer Service Attachment. An example value is: "asia-northeast3-cloudkms.googleapis.com"
    * The value may be {@code null}.
@@ -442,6 +448,21 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {
     this.networkEndpointType = networkEndpointType;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public NetworkEndpointGroupPscData getPscData() {
+    return pscData;
+  }
+
+  /**
+   * @param pscData pscData or {@code null} for none
+   */
+  public NetworkEndpointGroup setPscData(NetworkEndpointGroupPscData pscData) {
+    this.pscData = pscData;
     return this;
   }
 

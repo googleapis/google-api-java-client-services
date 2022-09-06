@@ -2872,6 +2872,22 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
+            /** The field to order the results by. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** The field to order the results by.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** The field to order the results by. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
             /** The maximum number of artifacts to return. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;

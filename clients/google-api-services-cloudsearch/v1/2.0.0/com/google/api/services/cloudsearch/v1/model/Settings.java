@@ -75,7 +75,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean defaultAsViewer;
 
   /**
-   * Indicates whether the meeting space is moderated. go/meet-multimod-dd
+   * Indicates whether the meeting space is moderated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the meeting space is moderated. go/meet-multimod-dd
+   * Indicates whether the meeting space is moderated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getModerationEnabled() {
@@ -212,7 +212,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the meeting space is moderated. go/meet-multimod-dd
+   * Indicates whether the meeting space is moderated.
    * @param moderationEnabled moderationEnabled or {@code null} for none
    */
   public Settings setModerationEnabled(java.lang.Boolean moderationEnabled) {

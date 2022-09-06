@@ -190,6 +190,15 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private MessageId id;
 
   /**
+   * Whether the message is content purged. Content purged messages contain only data required for
+   * tombstone (see go/chat-infinite-tombstone). This field is only used by Vault to display
+   * tombstone and should only be set to true if the message is a tombstone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isContentPurged;
+
+  /**
    * Output only. Indicates if the message is an inline reply. Set to true only if the message's
    * ParentPath is non-NULL. Currently, only inline replies have non-NULL ParentPath. See go/chat-
    * be-inline-reply-indicator.
@@ -702,6 +711,27 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setId(MessageId id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Whether the message is content purged. Content purged messages contain only data required for
+   * tombstone (see go/chat-infinite-tombstone). This field is only used by Vault to display
+   * tombstone and should only be set to true if the message is a tombstone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsContentPurged() {
+    return isContentPurged;
+  }
+
+  /**
+   * Whether the message is content purged. Content purged messages contain only data required for
+   * tombstone (see go/chat-infinite-tombstone). This field is only used by Vault to display
+   * tombstone and should only be set to true if the message is a tombstone.
+   * @param isContentPurged isContentPurged or {@code null} for none
+   */
+  public Message setIsContentPurged(java.lang.Boolean isContentPurged) {
+    this.isContentPurged = isContentPurged;
     return this;
   }
 

@@ -690,7 +690,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean tetheringConfigDisabled;
 
   /**
-   * Whether user uninstallation of applications is disabled.
+   * Whether user uninstallation of applications is disabled. This prevents apps from being
+   * uninstalled, even those removed using applications
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2229,7 +2230,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user uninstallation of applications is disabled.
+   * Whether user uninstallation of applications is disabled. This prevents apps from being
+   * uninstalled, even those removed using applications
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUninstallAppsDisabled() {
@@ -2237,7 +2239,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user uninstallation of applications is disabled.
+   * Whether user uninstallation of applications is disabled. This prevents apps from being
+   * uninstalled, even those removed using applications
    * @param uninstallAppsDisabled uninstallAppsDisabled or {@code null} for none
    */
   public Policy setUninstallAppsDisabled(java.lang.Boolean uninstallAppsDisabled) {

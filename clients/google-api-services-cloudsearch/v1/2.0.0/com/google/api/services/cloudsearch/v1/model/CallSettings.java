@@ -65,7 +65,7 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean cseEnabled;
 
   /**
-   * Indicates whether the current call is moderated. go/meet-multimod-dd
+   * Indicates whether the current call is moderated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the current call is moderated. go/meet-multimod-dd
+   * Indicates whether the current call is moderated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getModerationEnabled() {
@@ -195,7 +195,7 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the current call is moderated. go/meet-multimod-dd
+   * Indicates whether the current call is moderated.
    * @param moderationEnabled moderationEnabled or {@code null} for none
    */
   public CallSettings setModerationEnabled(java.lang.Boolean moderationEnabled) {

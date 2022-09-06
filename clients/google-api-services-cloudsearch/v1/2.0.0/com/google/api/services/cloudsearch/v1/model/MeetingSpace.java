@@ -90,7 +90,7 @@ public final class MeetingSpace extends com.google.api.client.json.GenericJson {
   /**
    * An optional alias for the meeting space. The alias can in some cases be resolved to the meeting
    * space, similar to the meeting code. The limitation is that the user needs to be in the same
-   * meeting domain as the meeting space. See go/thor-backend/meeting-alias for more details.
+   * meeting domain as the meeting space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class MeetingSpace extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A URL that clients (e.g. Calendar) can use to show the web page with all join
    * methods available for this meeting space. This link is also used in iOS universal links and
-   * Android intents, used for opening the "More ways to join" view in the Thor mobile apps.
+   * Android intents, used for opening the "More ways to join" view in the Meet mobile apps.
    * Example: https://tel.meet/mee-ting-cod?pin=1234567891011 Here, "pin" is the universal phone
    * PIN. We include it explicitly to better support the offline case on the mobile. This is set
    * when the meeting space has either a universal PIN or an interop PIN and clients who can show a
@@ -260,7 +260,7 @@ public final class MeetingSpace extends com.google.api.client.json.GenericJson {
   /**
    * An optional alias for the meeting space. The alias can in some cases be resolved to the meeting
    * space, similar to the meeting code. The limitation is that the user needs to be in the same
-   * meeting domain as the meeting space. See go/thor-backend/meeting-alias for more details.
+   * meeting domain as the meeting space.
    * @return value or {@code null} for none
    */
   public java.lang.String getMeetingAlias() {
@@ -270,7 +270,7 @@ public final class MeetingSpace extends com.google.api.client.json.GenericJson {
   /**
    * An optional alias for the meeting space. The alias can in some cases be resolved to the meeting
    * space, similar to the meeting code. The limitation is that the user needs to be in the same
-   * meeting domain as the meeting space. See go/thor-backend/meeting-alias for more details.
+   * meeting domain as the meeting space.
    * @param meetingAlias meetingAlias or {@code null} for none
    */
   public MeetingSpace setMeetingAlias(java.lang.String meetingAlias) {
@@ -338,7 +338,7 @@ public final class MeetingSpace extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A URL that clients (e.g. Calendar) can use to show the web page with all join
    * methods available for this meeting space. This link is also used in iOS universal links and
-   * Android intents, used for opening the "More ways to join" view in the Thor mobile apps.
+   * Android intents, used for opening the "More ways to join" view in the Meet mobile apps.
    * Example: https://tel.meet/mee-ting-cod?pin=1234567891011 Here, "pin" is the universal phone
    * PIN. We include it explicitly to better support the offline case on the mobile. This is set
    * when the meeting space has either a universal PIN or an interop PIN and clients who can show a
@@ -352,7 +352,7 @@ public final class MeetingSpace extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A URL that clients (e.g. Calendar) can use to show the web page with all join
    * methods available for this meeting space. This link is also used in iOS universal links and
-   * Android intents, used for opening the "More ways to join" view in the Thor mobile apps.
+   * Android intents, used for opening the "More ways to join" view in the Meet mobile apps.
    * Example: https://tel.meet/mee-ting-cod?pin=1234567891011 Here, "pin" is the universal phone
    * PIN. We include it explicitly to better support the offline case on the mobile. This is set
    * when the meeting space has either a universal PIN or an interop PIN and clients who can show a

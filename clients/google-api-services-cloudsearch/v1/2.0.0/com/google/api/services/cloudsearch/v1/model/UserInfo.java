@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Contains info regarding the updater of an Activity Feed item. Next Id: 6
+ * Contains info regarding the updater of an Activity Feed item. Next Id: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -57,6 +57,15 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long updaterToShowGaiaId;
+
+  /**
+   * The display name of the updater for clients to show used for Gmail items. This (along with the
+   * updater fields above) will be populated in the thread pipeline (http://shortn/_rPS0GCp94Y) when
+   * converting Activity Feed message attributes into client-renderable Activity Feed items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String updaterToShowName;
 
   /**
    * The updater for clients to show used for Dynamite Chat items.
@@ -132,6 +141,27 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    */
   public UserInfo setUpdaterToShowGaiaId(java.lang.Long updaterToShowGaiaId) {
     this.updaterToShowGaiaId = updaterToShowGaiaId;
+    return this;
+  }
+
+  /**
+   * The display name of the updater for clients to show used for Gmail items. This (along with the
+   * updater fields above) will be populated in the thread pipeline (http://shortn/_rPS0GCp94Y) when
+   * converting Activity Feed message attributes into client-renderable Activity Feed items.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpdaterToShowName() {
+    return updaterToShowName;
+  }
+
+  /**
+   * The display name of the updater for clients to show used for Gmail items. This (along with the
+   * updater fields above) will be populated in the thread pipeline (http://shortn/_rPS0GCp94Y) when
+   * converting Activity Feed message attributes into client-renderable Activity Feed items.
+   * @param updaterToShowName updaterToShowName or {@code null} for none
+   */
+  public UserInfo setUpdaterToShowName(java.lang.String updaterToShowName) {
+    this.updaterToShowName = updaterToShowName;
     return this;
   }
 

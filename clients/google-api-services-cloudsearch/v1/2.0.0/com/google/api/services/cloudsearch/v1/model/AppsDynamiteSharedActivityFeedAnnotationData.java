@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Next Id: 5
+ * Next Id: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -30,15 +30,12 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class AppsDynamiteSharedActivityFeedAnnotationData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique id of the Activity Feed message. This will be in the form of "space-id/message-id" or
-   * "dm-id/message-id", where the space-/dm-id and message-id components are extracted from the
-   * top-level MessageId in message.proto (http://shortn/_SulV51DNfF). This is copied into
-   * annotations so that no client changes are needed to access this value. Clients will need a
-   * unique id for every Activity Feed message to implement click-to-source.
+   * Unique id of the Activity Feed message used by clients to implement click-to-source. This is
+   * the same messageId as the top-level id field for the Activity Feed item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String activityFeedMessageId;
+  private MessageId activityFeedMessageId;
 
   /**
    * The value may be {@code null}.
@@ -61,26 +58,20 @@ public final class AppsDynamiteSharedActivityFeedAnnotationData extends com.goog
   private AppsDynamiteSharedActivityFeedAnnotationDataUserInfo userInfo;
 
   /**
-   * Unique id of the Activity Feed message. This will be in the form of "space-id/message-id" or
-   * "dm-id/message-id", where the space-/dm-id and message-id components are extracted from the
-   * top-level MessageId in message.proto (http://shortn/_SulV51DNfF). This is copied into
-   * annotations so that no client changes are needed to access this value. Clients will need a
-   * unique id for every Activity Feed message to implement click-to-source.
+   * Unique id of the Activity Feed message used by clients to implement click-to-source. This is
+   * the same messageId as the top-level id field for the Activity Feed item.
    * @return value or {@code null} for none
    */
-  public java.lang.String getActivityFeedMessageId() {
+  public MessageId getActivityFeedMessageId() {
     return activityFeedMessageId;
   }
 
   /**
-   * Unique id of the Activity Feed message. This will be in the form of "space-id/message-id" or
-   * "dm-id/message-id", where the space-/dm-id and message-id components are extracted from the
-   * top-level MessageId in message.proto (http://shortn/_SulV51DNfF). This is copied into
-   * annotations so that no client changes are needed to access this value. Clients will need a
-   * unique id for every Activity Feed message to implement click-to-source.
+   * Unique id of the Activity Feed message used by clients to implement click-to-source. This is
+   * the same messageId as the top-level id field for the Activity Feed item.
    * @param activityFeedMessageId activityFeedMessageId or {@code null} for none
    */
-  public AppsDynamiteSharedActivityFeedAnnotationData setActivityFeedMessageId(java.lang.String activityFeedMessageId) {
+  public AppsDynamiteSharedActivityFeedAnnotationData setActivityFeedMessageId(MessageId activityFeedMessageId) {
     this.activityFeedMessageId = activityFeedMessageId;
     return this;
   }

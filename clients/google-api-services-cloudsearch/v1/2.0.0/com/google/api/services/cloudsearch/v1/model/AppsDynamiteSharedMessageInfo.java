@@ -17,7 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Information that references a Dynamite chat message.
+ * Information that references a Dynamite chat message. This is only used for Activity Feed
+ * messages.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -36,6 +37,13 @@ public final class AppsDynamiteSharedMessageInfo extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private MessageId messageId;
+
+  /**
+   * The type of the source chat message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String messageType;
 
   /**
    * Timestamp of when the topic containing the message has been read by the user. This is populated
@@ -62,6 +70,23 @@ public final class AppsDynamiteSharedMessageInfo extends com.google.api.client.j
    */
   public AppsDynamiteSharedMessageInfo setMessageId(MessageId messageId) {
     this.messageId = messageId;
+    return this;
+  }
+
+  /**
+   * The type of the source chat message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMessageType() {
+    return messageType;
+  }
+
+  /**
+   * The type of the source chat message.
+   * @param messageType messageType or {@code null} for none
+   */
+  public AppsDynamiteSharedMessageInfo setMessageType(java.lang.String messageType) {
+    this.messageType = messageType;
     return this;
   }
 

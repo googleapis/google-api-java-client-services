@@ -46,6 +46,14 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   private java.lang.String host;
 
   /**
+   * Output only. If the source is a Cloud SQL database, this field indicates the network
+   * architecture it's associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkArchitecture;
+
+  /**
    * Required. Input only. The password for the user that Database Migration Service will be using
    * to connect to the database. This field is not returned on request, and the value is encrypted
    * when stored in Database Migration Service.
@@ -116,6 +124,25 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   public PostgreSqlConnectionProfile setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Output only. If the source is a Cloud SQL database, this field indicates the network
+   * architecture it's associated with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkArchitecture() {
+    return networkArchitecture;
+  }
+
+  /**
+   * Output only. If the source is a Cloud SQL database, this field indicates the network
+   * architecture it's associated with.
+   * @param networkArchitecture networkArchitecture or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setNetworkArchitecture(java.lang.String networkArchitecture) {
+    this.networkArchitecture = networkArchitecture;
     return this;
   }
 

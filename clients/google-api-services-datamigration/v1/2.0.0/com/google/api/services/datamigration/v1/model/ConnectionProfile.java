@@ -31,6 +31,13 @@ package com.google.api.services.datamigration.v1.model;
 public final class ConnectionProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * An AlloyDB cluster connection profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlloyDbConnectionProfile alloydb;
+
+  /**
    * A CloudSQL database connection profile.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * An AlloyDB cluster connection profile.
+   * @return value or {@code null} for none
+   */
+  public AlloyDbConnectionProfile getAlloydb() {
+    return alloydb;
+  }
+
+  /**
+   * An AlloyDB cluster connection profile.
+   * @param alloydb alloydb or {@code null} for none
+   */
+  public ConnectionProfile setAlloydb(AlloyDbConnectionProfile alloydb) {
+    this.alloydb = alloydb;
+    return this;
+  }
 
   /**
    * A CloudSQL database connection profile.

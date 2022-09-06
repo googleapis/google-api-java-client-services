@@ -81,7 +81,8 @@ public final class Provider extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the Provider. Format:
-   * projects/{project}/locations/{location}/providers/{provider}
+   * projects/{project}/locations/{location}/providers/{provider} Only global location is supported
+   * for Provider resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +225,8 @@ public final class Provider extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the Provider. Format:
-   * projects/{project}/locations/{location}/providers/{provider}
+   * projects/{project}/locations/{location}/providers/{provider} Only global location is supported
+   * for Provider resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -233,7 +235,8 @@ public final class Provider extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the Provider. Format:
-   * projects/{project}/locations/{location}/providers/{provider}
+   * projects/{project}/locations/{location}/providers/{provider} Only global location is supported
+   * for Provider resource.
    * @param name name or {@code null} for none
    */
   public Provider setName(java.lang.String name) {

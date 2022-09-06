@@ -81,7 +81,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the Connector. Format:
-   * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector}
+   * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector} Only global
+   * location is supported for Connector resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +225,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the Connector. Format:
-   * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector}
+   * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector} Only global
+   * location is supported for Connector resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -233,7 +235,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the Connector. Format:
-   * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector}
+   * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector} Only global
+   * location is supported for Connector resource.
    * @param name name or {@code null} for none
    */
   public Connector setName(java.lang.String name) {

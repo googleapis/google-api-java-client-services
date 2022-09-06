@@ -52,7 +52,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Connector version on which the connection is created. The format is:
-   * projects/locations/global/providers/connectors/versions
+   * projects/locations/providers/connectors/versions Only global location is supported for
+   * ConnectorVersion resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +72,14 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional. Configuration of the Connector's destination. Only accepted for Connectors that
+   * accepts user defined destination(s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DestinationConfig> destinationConfigs;
 
   /**
    * Output only. GCR location where the envoy image is stored. formatted like:
@@ -110,6 +119,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Configuration for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeConfig nodeConfig;
 
   /**
    * Optional. Service account needed for runtime plane to access GCP resources.
@@ -186,7 +202,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Connector version on which the connection is created. The format is:
-   * projects/locations/global/providers/connectors/versions
+   * projects/locations/providers/connectors/versions Only global location is supported for
+   * ConnectorVersion resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectorVersion() {
@@ -195,7 +212,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Connector version on which the connection is created. The format is:
-   * projects/locations/global/providers/connectors/versions
+   * projects/locations/providers/connectors/versions Only global location is supported for
+   * ConnectorVersion resource.
    * @param connectorVersion connectorVersion or {@code null} for none
    */
   public Connection setConnectorVersion(java.lang.String connectorVersion) {
@@ -234,6 +252,25 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration of the Connector's destination. Only accepted for Connectors that
+   * accepts user defined destination(s).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DestinationConfig> getDestinationConfigs() {
+    return destinationConfigs;
+  }
+
+  /**
+   * Optional. Configuration of the Connector's destination. Only accepted for Connectors that
+   * accepts user defined destination(s).
+   * @param destinationConfigs destinationConfigs or {@code null} for none
+   */
+  public Connection setDestinationConfigs(java.util.List<DestinationConfig> destinationConfigs) {
+    this.destinationConfigs = destinationConfigs;
     return this;
   }
 
@@ -327,6 +364,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the connection.
+   * @return value or {@code null} for none
+   */
+  public NodeConfig getNodeConfig() {
+    return nodeConfig;
+  }
+
+  /**
+   * Optional. Configuration for the connection.
+   * @param nodeConfig nodeConfig or {@code null} for none
+   */
+  public Connection setNodeConfig(NodeConfig nodeConfig) {
+    this.nodeConfig = nodeConfig;
     return this;
   }
 

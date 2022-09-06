@@ -38,7 +38,7 @@ public final class AppIntegrity extends com.google.api.client.json.GenericJson {
   private java.lang.String appRecognitionVerdict;
 
   /**
-   * Hex fingerprint of the application signing certificate. e.g. “ABCE1F....” Set iff
+   * The SHA256 hash of the requesting app's signing certificates (base64 web-safe encoded). Set iff
    * app_recognition_verdict != UNEVALUATED.
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class AppIntegrity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hex fingerprint of the application signing certificate. e.g. “ABCE1F....” Set iff
+   * The SHA256 hash of the requesting app's signing certificates (base64 web-safe encoded). Set iff
    * app_recognition_verdict != UNEVALUATED.
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class AppIntegrity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hex fingerprint of the application signing certificate. e.g. “ABCE1F....” Set iff
+   * The SHA256 hash of the requesting app's signing certificates (base64 web-safe encoded). Set iff
    * app_recognition_verdict != UNEVALUATED.
    * @param certificateSha256Digest certificateSha256Digest or {@code null} for none
    */

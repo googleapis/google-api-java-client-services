@@ -79,6 +79,13 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
+   * Output only. The time when the docker image was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Time the image was uploaded.
    * The value may be {@code null}.
    */
@@ -197,6 +204,23 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
    */
   public DockerImage setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the docker image was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The time when the docker image was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public DockerImage setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

@@ -2953,7 +2953,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
          * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
          * Domains using the `ImportDomain` method. Since individual users can own domains in Google
          * Domains, the list of domains returned depends on the individual user making the call. Domains
-         * supported by Google Domains, but not supported by Cloud Domains, are not returned.
+         * already managed by Cloud Domains are not returned.
          *
          * Create a request for the method "registrations.retrieveImportableDomains".
          *
@@ -2981,7 +2981,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
            * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
            * Domains using the `ImportDomain` method. Since individual users can own domains in Google
            * Domains, the list of domains returned depends on the individual user making the call. Domains
-           * supported by Google Domains, but not supported by Cloud Domains, are not returned.
+           * already managed by Cloud Domains are not returned.
            *
            * Create a request for the method "registrations.retrieveImportableDomains".
            *

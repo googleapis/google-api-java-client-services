@@ -83,6 +83,13 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   private java.lang.Integer none;
 
   /**
+   * [Output Only] The number of instances that the managed instance group is currently queuing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer queuing;
+
+  /**
    * [Output Only] The number of instances in the managed instance group that are scheduled to be
    * recreated or are currently being being recreated. Recreating an instance deletes the existing
    * root persistent disk and creates a new disk from the image that is defined in the instance
@@ -271,6 +278,23 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
    */
   public InstanceGroupManagerActionsSummary setNone(java.lang.Integer none) {
     this.none = none;
+    return this;
+  }
+
+  /**
+   * [Output Only] The number of instances that the managed instance group is currently queuing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQueuing() {
+    return queuing;
+  }
+
+  /**
+   * [Output Only] The number of instances that the managed instance group is currently queuing.
+   * @param queuing queuing or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setQueuing(java.lang.Integer queuing) {
+    this.queuing = queuing;
     return this;
   }
 

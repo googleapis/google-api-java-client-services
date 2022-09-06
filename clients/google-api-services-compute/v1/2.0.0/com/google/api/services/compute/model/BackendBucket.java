@@ -45,6 +45,14 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private BackendBucketCdnPolicy cdnPolicy;
 
   /**
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
+   * header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String compressionMode;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -144,6 +152,25 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   public BackendBucket setCdnPolicy(BackendBucketCdnPolicy cdnPolicy) {
     this.cdnPolicy = cdnPolicy;
+    return this;
+  }
+
+  /**
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
+   * header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompressionMode() {
+    return compressionMode;
+  }
+
+  /**
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
+   * header.
+   * @param compressionMode compressionMode or {@code null} for none
+   */
+  public BackendBucket setCompressionMode(java.lang.String compressionMode) {
+    this.compressionMode = compressionMode;
     return this;
   }
 

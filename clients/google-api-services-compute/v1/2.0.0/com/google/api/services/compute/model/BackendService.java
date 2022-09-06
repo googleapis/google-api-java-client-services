@@ -77,6 +77,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private CircuitBreakers circuitBreakers;
 
   /**
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
+   * header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String compressionMode;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -475,6 +483,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setCircuitBreakers(CircuitBreakers circuitBreakers) {
     this.circuitBreakers = circuitBreakers;
+    return this;
+  }
+
+  /**
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
+   * header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompressionMode() {
+    return compressionMode;
+  }
+
+  /**
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
+   * header.
+   * @param compressionMode compressionMode or {@code null} for none
+   */
+  public BackendService setCompressionMode(java.lang.String compressionMode) {
+    this.compressionMode = compressionMode;
     return this;
   }
 

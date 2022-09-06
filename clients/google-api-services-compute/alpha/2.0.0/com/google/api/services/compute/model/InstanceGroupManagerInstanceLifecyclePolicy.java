@@ -32,9 +32,9 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
    * VM. Valid options are: - NO (default): If configuration updates are available, they are not
-   * forcefully applied during repair. However, if you've set up a proactive type of update policy,
-   * then configuration updates are applied as usual. - YES: If configuration updates are available,
-   * they are applied during repair.
+   * forcefully applied during repair. Instead, configuration updates are applied according to the
+   * group's update policy. - YES: If configuration updates are available, they are applied during
+   * repair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +57,9 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
    * VM. Valid options are: - NO (default): If configuration updates are available, they are not
-   * forcefully applied during repair. However, if you've set up a proactive type of update policy,
-   * then configuration updates are applied as usual. - YES: If configuration updates are available,
-   * they are applied during repair.
+   * forcefully applied during repair. Instead, configuration updates are applied according to the
+   * group's update policy. - YES: If configuration updates are available, they are applied during
+   * repair.
    * @return value or {@code null} for none
    */
   public java.lang.String getForceUpdateOnRepair() {
@@ -69,9 +69,9 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
    * VM. Valid options are: - NO (default): If configuration updates are available, they are not
-   * forcefully applied during repair. However, if you've set up a proactive type of update policy,
-   * then configuration updates are applied as usual. - YES: If configuration updates are available,
-   * they are applied during repair.
+   * forcefully applied during repair. Instead, configuration updates are applied according to the
+   * group's update policy. - YES: If configuration updates are available, they are applied during
+   * repair.
    * @param forceUpdateOnRepair forceUpdateOnRepair or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicy setForceUpdateOnRepair(java.lang.String forceUpdateOnRepair) {

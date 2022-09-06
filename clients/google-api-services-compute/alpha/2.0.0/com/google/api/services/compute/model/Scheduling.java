@@ -66,6 +66,12 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Long currentMemoryMb;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingDynamicResizeProperties dynamicResizeProperties;
+
+  /**
    * Specify the time in seconds for host error detection, the value must be within the range of
    * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
    * be used.
@@ -251,6 +257,21 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setCurrentMemoryMb(java.lang.Long currentMemoryMb) {
     this.currentMemoryMb = currentMemoryMb;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SchedulingDynamicResizeProperties getDynamicResizeProperties() {
+    return dynamicResizeProperties;
+  }
+
+  /**
+   * @param dynamicResizeProperties dynamicResizeProperties or {@code null} for none
+   */
+  public Scheduling setDynamicResizeProperties(SchedulingDynamicResizeProperties dynamicResizeProperties) {
+    this.dynamicResizeProperties = dynamicResizeProperties;
     return this;
   }
 

@@ -2612,1081 +2612,6 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * An accessor for creating requests from the Global collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Connectors connectors = new Connectors(...);}
-       *   {@code Connectors.Global.List request = connectors.global().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Global global() {
-        return new Global();
-      }
-
-      /**
-       * The "global" collection of methods.
-       */
-      public class Global {
-
-        /**
-         * An accessor for creating requests from the Providers collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code Connectors connectors = new Connectors(...);}
-         *   {@code Connectors.Providers.List request = connectors.providers().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Providers providers() {
-          return new Providers();
-        }
-
-        /**
-         * The "providers" collection of methods.
-         */
-        public class Providers {
-
-          /**
-           * Gets details of a single Provider.
-           *
-           * Create a request for the method "providers.get".
-           *
-           * This request holds the parameters needed by the connectors server.  After setting any optional
-           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. Resource name of the form: `projects/locations/providers`
-           * @return the request
-           */
-          public Get get(java.lang.String name) throws java.io.IOException {
-            Get result = new Get(name);
-            initialize(result);
-            return result;
-          }
-
-          public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Provider> {
-
-            private static final String REST_PATH = "v1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/providers/[^/]+$");
-
-            /**
-             * Gets details of a single Provider.
-             *
-             * Create a request for the method "providers.get".
-             *
-             * This request holds the parameters needed by the the connectors server.  After setting any
-             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. Resource name of the form: `projects/locations/providers`
-             * @since 1.13
-             */
-            protected Get(java.lang.String name) {
-              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.Provider.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/providers/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public Get set$Xgafv(java.lang.String $Xgafv) {
-              return (Get) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Get setAccessToken(java.lang.String accessToken) {
-              return (Get) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Get setAlt(java.lang.String alt) {
-              return (Get) super.setAlt(alt);
-            }
-
-            @Override
-            public Get setCallback(java.lang.String callback) {
-              return (Get) super.setCallback(callback);
-            }
-
-            @Override
-            public Get setFields(java.lang.String fields) {
-              return (Get) super.setFields(fields);
-            }
-
-            @Override
-            public Get setKey(java.lang.String key) {
-              return (Get) super.setKey(key);
-            }
-
-            @Override
-            public Get setOauthToken(java.lang.String oauthToken) {
-              return (Get) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Get) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Get setQuotaUser(java.lang.String quotaUser) {
-              return (Get) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Get setUploadType(java.lang.String uploadType) {
-              return (Get) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Get setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Get) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. Resource name of the form: `projects/locations/providers` */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. Resource name of the form: `projects/locations/providers`
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** Required. Resource name of the form: `projects/locations/providers` */
-            public Get setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/providers/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Get set(String parameterName, Object value) {
-              return (Get) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Lists Providers in a given project and location.
-           *
-           * Create a request for the method "providers.list".
-           *
-           * This request holds the parameters needed by the connectors server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. Parent resource of the API, of the form: `projects/locations`
-           * @return the request
-           */
-          public List list(java.lang.String parent) throws java.io.IOException {
-            List result = new List(parent);
-            initialize(result);
-            return result;
-          }
-
-          public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListProvidersResponse> {
-
-            private static final String REST_PATH = "v1/{+parent}/providers";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
-
-            /**
-             * Lists Providers in a given project and location.
-             *
-             * Create a request for the method "providers.list".
-             *
-             * This request holds the parameters needed by the the connectors server.  After setting any
-             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. Parent resource of the API, of the form: `projects/locations`
-             * @since 1.13
-             */
-            protected List(java.lang.String parent) {
-              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListProvidersResponse.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/global$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public List set$Xgafv(java.lang.String $Xgafv) {
-              return (List) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public List setAccessToken(java.lang.String accessToken) {
-              return (List) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public List setAlt(java.lang.String alt) {
-              return (List) super.setAlt(alt);
-            }
-
-            @Override
-            public List setCallback(java.lang.String callback) {
-              return (List) super.setCallback(callback);
-            }
-
-            @Override
-            public List setFields(java.lang.String fields) {
-              return (List) super.setFields(fields);
-            }
-
-            @Override
-            public List setKey(java.lang.String key) {
-              return (List) super.setKey(key);
-            }
-
-            @Override
-            public List setOauthToken(java.lang.String oauthToken) {
-              return (List) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (List) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public List setQuotaUser(java.lang.String quotaUser) {
-              return (List) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public List setUploadType(java.lang.String uploadType) {
-              return (List) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public List setUploadProtocol(java.lang.String uploadProtocol) {
-              return (List) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. Parent resource of the API, of the form: `projects/locations` */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. Parent resource of the API, of the form: `projects/locations`
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /** Required. Parent resource of the API, of the form: `projects/locations` */
-            public List setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/global$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /** Page size. */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Page size.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /** Page size. */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /** Page token. */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** Page token.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /** Page token. */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            @Override
-            public List set(String parameterName, Object value) {
-              return (List) super.set(parameterName, value);
-            }
-          }
-
-          /**
-           * An accessor for creating requests from the ConnectorsOperations collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code Connectors connectors = new Connectors(...);}
-           *   {@code Connectors.ConnectorsOperations.List request = connectors.connectors().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public ConnectorsOperations connectors() {
-            return new ConnectorsOperations();
-          }
-
-          /**
-           * The "connectors" collection of methods.
-           */
-          public class ConnectorsOperations {
-
-            /**
-             * Gets details of a single Connector.
-             *
-             * Create a request for the method "connectors.get".
-             *
-             * This request holds the parameters needed by the connectors server.  After setting any optional
-             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. Resource name of the form: `projects/locations/providers/connectors`
-             * @return the request
-             */
-            public Get get(java.lang.String name) throws java.io.IOException {
-              Get result = new Get(name);
-              initialize(result);
-              return result;
-            }
-
-            public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Connector> {
-
-              private static final String REST_PATH = "v1/{+name}";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+$");
-
-              /**
-               * Gets details of a single Connector.
-               *
-               * Create a request for the method "connectors.get".
-               *
-               * This request holds the parameters needed by the the connectors server.  After setting any
-               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. Resource name of the form: `projects/locations/providers/connectors`
-               * @since 1.13
-               */
-              protected Get(java.lang.String name) {
-                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.Connector.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public Get set$Xgafv(java.lang.String $Xgafv) {
-                return (Get) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Get setAccessToken(java.lang.String accessToken) {
-                return (Get) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Get setAlt(java.lang.String alt) {
-                return (Get) super.setAlt(alt);
-              }
-
-              @Override
-              public Get setCallback(java.lang.String callback) {
-                return (Get) super.setCallback(callback);
-              }
-
-              @Override
-              public Get setFields(java.lang.String fields) {
-                return (Get) super.setFields(fields);
-              }
-
-              @Override
-              public Get setKey(java.lang.String key) {
-                return (Get) super.setKey(key);
-              }
-
-              @Override
-              public Get setOauthToken(java.lang.String oauthToken) {
-                return (Get) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Get) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Get setQuotaUser(java.lang.String quotaUser) {
-                return (Get) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Get setUploadType(java.lang.String uploadType) {
-                return (Get) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Get) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. Resource name of the form: `projects/locations/providers/connectors` */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. Resource name of the form: `projects/locations/providers/connectors`
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /** Required. Resource name of the form: `projects/locations/providers/connectors` */
-              public Get setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Get set(String parameterName, Object value) {
-                return (Get) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Lists Connectors in a given project and location.
-             *
-             * Create a request for the method "connectors.list".
-             *
-             * This request holds the parameters needed by the connectors server.  After setting any optional
-             * parameters, call the {@link List#execute()} method to invoke the remote operation.
-             *
-             * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers`
-             * @return the request
-             */
-            public List list(java.lang.String parent) throws java.io.IOException {
-              List result = new List(parent);
-              initialize(result);
-              return result;
-            }
-
-            public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListConnectorsResponse> {
-
-              private static final String REST_PATH = "v1/{+parent}/connectors";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/providers/[^/]+$");
-
-              /**
-               * Lists Connectors in a given project and location.
-               *
-               * Create a request for the method "connectors.list".
-               *
-               * This request holds the parameters needed by the the connectors server.  After setting any
-               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers`
-               * @since 1.13
-               */
-              protected List(java.lang.String parent) {
-                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListConnectorsResponse.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/providers/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public List set$Xgafv(java.lang.String $Xgafv) {
-                return (List) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public List setAccessToken(java.lang.String accessToken) {
-                return (List) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public List setAlt(java.lang.String alt) {
-                return (List) super.setAlt(alt);
-              }
-
-              @Override
-              public List setCallback(java.lang.String callback) {
-                return (List) super.setCallback(callback);
-              }
-
-              @Override
-              public List setFields(java.lang.String fields) {
-                return (List) super.setFields(fields);
-              }
-
-              @Override
-              public List setKey(java.lang.String key) {
-                return (List) super.setKey(key);
-              }
-
-              @Override
-              public List setOauthToken(java.lang.String oauthToken) {
-                return (List) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (List) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public List setQuotaUser(java.lang.String quotaUser) {
-                return (List) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public List setUploadType(java.lang.String uploadType) {
-                return (List) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public List setUploadProtocol(java.lang.String uploadProtocol) {
-                return (List) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. Parent resource of the connectors, of the form:
-               * `projects/locations/providers`
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. Parent resource of the connectors, of the form: `projects/locations/providers`
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /**
-               * Required. Parent resource of the connectors, of the form:
-               * `projects/locations/providers`
-               */
-              public List setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/providers/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              /** Page size. */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** Page size.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /** Page size. */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /** Page token. */
-              @com.google.api.client.util.Key
-              private java.lang.String pageToken;
-
-              /** Page token.
-               */
-              public java.lang.String getPageToken() {
-                return pageToken;
-              }
-
-              /** Page token. */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
-                return this;
-              }
-
-              @Override
-              public List set(String parameterName, Object value) {
-                return (List) super.set(parameterName, value);
-              }
-            }
-
-            /**
-             * An accessor for creating requests from the Versions collection.
-             *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code Connectors connectors = new Connectors(...);}
-             *   {@code Connectors.Versions.List request = connectors.versions().list(parameters ...)}
-             * </pre>
-             *
-             * @return the resource collection
-             */
-            public Versions versions() {
-              return new Versions();
-            }
-
-            /**
-             * The "versions" collection of methods.
-             */
-            public class Versions {
-
-              /**
-               * Gets details of a single connector version.
-               *
-               * Create a request for the method "versions.get".
-               *
-               * This request holds the parameters needed by the connectors server.  After setting any optional
-               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-               *
-               * @param name Required. Resource name of the form: `projects/locations/providers/connectors/versions`
-               * @return the request
-               */
-              public Get get(java.lang.String name) throws java.io.IOException {
-                Get result = new Get(name);
-                initialize(result);
-                return result;
-              }
-
-              public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ConnectorVersion> {
-
-                private static final String REST_PATH = "v1/{+name}";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
-
-                /**
-                 * Gets details of a single connector version.
-                 *
-                 * Create a request for the method "versions.get".
-                 *
-                 * This request holds the parameters needed by the the connectors server.  After setting any
-                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param name Required. Resource name of the form: `projects/locations/providers/connectors/versions`
-                 * @since 1.13
-                 */
-                protected Get(java.lang.String name) {
-                  super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ConnectorVersion.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public Get set$Xgafv(java.lang.String $Xgafv) {
-                  return (Get) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Get setAccessToken(java.lang.String accessToken) {
-                  return (Get) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Get setAlt(java.lang.String alt) {
-                  return (Get) super.setAlt(alt);
-                }
-
-                @Override
-                public Get setCallback(java.lang.String callback) {
-                  return (Get) super.setCallback(callback);
-                }
-
-                @Override
-                public Get setFields(java.lang.String fields) {
-                  return (Get) super.setFields(fields);
-                }
-
-                @Override
-                public Get setKey(java.lang.String key) {
-                  return (Get) super.setKey(key);
-                }
-
-                @Override
-                public Get setOauthToken(java.lang.String oauthToken) {
-                  return (Get) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Get) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Get setQuotaUser(java.lang.String quotaUser) {
-                  return (Get) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Get setUploadType(java.lang.String uploadType) {
-                  return (Get) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Get) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * Required. Resource name of the form:
-                 * `projects/locations/providers/connectors/versions`
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** Required. Resource name of the form: `projects/locations/providers/connectors/versions`
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /**
-                 * Required. Resource name of the form:
-                 * `projects/locations/providers/connectors/versions`
-                 */
-                public Get setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                /**
-                 * Specifies which fields of the ConnectorVersion are returned in the response.
-                 * Defaults to `CUSTOMER` view.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String view;
-
-                /** Specifies which fields of the ConnectorVersion are returned in the response. Defaults to `CUSTOMER`
-               view.
-                 */
-                public java.lang.String getView() {
-                  return view;
-                }
-
-                /**
-                 * Specifies which fields of the ConnectorVersion are returned in the response.
-                 * Defaults to `CUSTOMER` view.
-                 */
-                public Get setView(java.lang.String view) {
-                  this.view = view;
-                  return this;
-                }
-
-                @Override
-                public Get set(String parameterName, Object value) {
-                  return (Get) super.set(parameterName, value);
-                }
-              }
-              /**
-               * Lists Connector Versions in a given project and location.
-               *
-               * Create a request for the method "versions.list".
-               *
-               * This request holds the parameters needed by the connectors server.  After setting any optional
-               * parameters, call the {@link List#execute()} method to invoke the remote operation.
-               *
-               * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
-               * @return the request
-               */
-              public List list(java.lang.String parent) throws java.io.IOException {
-                List result = new List(parent);
-                initialize(result);
-                return result;
-              }
-
-              public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListConnectorVersionsResponse> {
-
-                private static final String REST_PATH = "v1/{+parent}/versions";
-
-                private final java.util.regex.Pattern PARENT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+$");
-
-                /**
-                 * Lists Connector Versions in a given project and location.
-                 *
-                 * Create a request for the method "versions.list".
-                 *
-                 * This request holds the parameters needed by the the connectors server.  After setting any
-                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
-                 * @since 1.13
-                 */
-                protected List(java.lang.String parent) {
-                  super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListConnectorVersionsResponse.class);
-                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public List set$Xgafv(java.lang.String $Xgafv) {
-                  return (List) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public List setAccessToken(java.lang.String accessToken) {
-                  return (List) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public List setAlt(java.lang.String alt) {
-                  return (List) super.setAlt(alt);
-                }
-
-                @Override
-                public List setCallback(java.lang.String callback) {
-                  return (List) super.setCallback(callback);
-                }
-
-                @Override
-                public List setFields(java.lang.String fields) {
-                  return (List) super.setFields(fields);
-                }
-
-                @Override
-                public List setKey(java.lang.String key) {
-                  return (List) super.setKey(key);
-                }
-
-                @Override
-                public List setOauthToken(java.lang.String oauthToken) {
-                  return (List) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (List) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public List setQuotaUser(java.lang.String quotaUser) {
-                  return (List) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public List setUploadType(java.lang.String uploadType) {
-                  return (List) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public List setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (List) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * Required. Parent resource of the connectors, of the form:
-                 * `projects/locations/providers/connectors`
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String parent;
-
-                /** Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
-                 */
-                public java.lang.String getParent() {
-                  return parent;
-                }
-
-                /**
-                 * Required. Parent resource of the connectors, of the form:
-                 * `projects/locations/providers/connectors`
-                 */
-                public List setParent(java.lang.String parent) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/global/providers/[^/]+/connectors/[^/]+$");
-                  }
-                  this.parent = parent;
-                  return this;
-                }
-
-                /** Page size. */
-                @com.google.api.client.util.Key
-                private java.lang.Integer pageSize;
-
-                /** Page size.
-                 */
-                public java.lang.Integer getPageSize() {
-                  return pageSize;
-                }
-
-                /** Page size. */
-                public List setPageSize(java.lang.Integer pageSize) {
-                  this.pageSize = pageSize;
-                  return this;
-                }
-
-                /** Page token. */
-                @com.google.api.client.util.Key
-                private java.lang.String pageToken;
-
-                /** Page token.
-                 */
-                public java.lang.String getPageToken() {
-                  return pageToken;
-                }
-
-                /** Page token. */
-                public List setPageToken(java.lang.String pageToken) {
-                  this.pageToken = pageToken;
-                  return this;
-                }
-
-                /**
-                 * Specifies which fields of the ConnectorVersion are returned in the response.
-                 * Defaults to `CUSTOMER` view.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String view;
-
-                /** Specifies which fields of the ConnectorVersion are returned in the response. Defaults to `CUSTOMER`
-               view.
-                 */
-                public java.lang.String getView() {
-                  return view;
-                }
-
-                /**
-                 * Specifies which fields of the ConnectorVersion are returned in the response.
-                 * Defaults to `CUSTOMER` view.
-                 */
-                public List setView(java.lang.String view) {
-                  this.view = view;
-                  return this;
-                }
-
-                @Override
-                public List set(String parameterName, Object value) {
-                  return (List) super.set(parameterName, value);
-                }
-              }
-
-            }
-          }
-        }
-      }
-      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -4343,6 +3268,153 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
       public class Providers {
 
         /**
+         * Gets details of a provider.
+         *
+         * Create a request for the method "providers.get".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the form: `projects/locations/providers` Only global location is
+         *        supported for Provider resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Provider> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+$");
+
+          /**
+           * Gets details of a provider.
+           *
+           * Create a request for the method "providers.get".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the form: `projects/locations/providers` Only global location is
+         *        supported for Provider resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.Provider.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/providers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the form: `projects/locations/providers` Only global
+           * location is supported for Provider resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the form: `projects/locations/providers` Only global location is
+         supported for Provider resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the form: `projects/locations/providers` Only global
+           * location is supported for Provider resource.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/providers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -4538,6 +3610,185 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Providers in a given project and location.
+         *
+         * Create a request for the method "providers.list".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource of the API, of the form: `projects/locations` Only global location is
+         *        supported for Provider resource.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListProvidersResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/providers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Providers in a given project and location.
+           *
+           * Create a request for the method "providers.list".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource of the API, of the form: `projects/locations` Only global location is
+         *        supported for Provider resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListProvidersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource of the API, of the form: `projects/locations` Only global
+           * location is supported for Provider resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource of the API, of the form: `projects/locations` Only global location is
+         supported for Provider resource.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource of the API, of the form: `projects/locations` Only global
+           * location is supported for Provider resource.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**
@@ -4839,6 +4090,754 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           }
         }
 
+        /**
+         * An accessor for creating requests from the ConnectorsOperations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Connectors connectors = new Connectors(...);}
+         *   {@code Connectors.ConnectorsOperations.List request = connectors.connectors().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ConnectorsOperations connectors() {
+          return new ConnectorsOperations();
+        }
+
+        /**
+         * The "connectors" collection of methods.
+         */
+        public class ConnectorsOperations {
+
+          /**
+           * Gets details of a single Connector.
+           *
+           * Create a request for the method "connectors.get".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/locations/providers/connectors` Only global location
+           *        is supported for Connector resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Connector> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+$");
+
+            /**
+             * Gets details of a single Connector.
+             *
+             * Create a request for the method "connectors.get".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/locations/providers/connectors` Only global location
+           *        is supported for Connector resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.Connector.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/locations/providers/connectors` Only
+             * global location is supported for Connector resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/locations/providers/connectors` Only global location
+           is supported for Connector resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/locations/providers/connectors` Only
+             * global location is supported for Connector resource.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Connectors in a given project and location.
+           *
+           * Create a request for the method "connectors.list".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers` Only global
+           *        location is supported for Connector resource.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListConnectorsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/connectors";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+$");
+
+            /**
+             * Lists Connectors in a given project and location.
+             *
+             * Create a request for the method "connectors.list".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers` Only global
+           *        location is supported for Connector resource.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListConnectorsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent resource of the connectors, of the form:
+             * `projects/locations/providers` Only global location is supported for Connector
+             * resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent resource of the connectors, of the form: `projects/locations/providers` Only
+           global location is supported for Connector resource.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent resource of the connectors, of the form:
+             * `projects/locations/providers` Only global location is supported for Connector
+             * resource.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/providers/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Versions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Connectors connectors = new Connectors(...);}
+           *   {@code Connectors.Versions.List request = connectors.versions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Versions versions() {
+            return new Versions();
+          }
+
+          /**
+           * The "versions" collection of methods.
+           */
+          public class Versions {
+
+            /**
+             * Gets details of a single connector version.
+             *
+             * Create a request for the method "versions.get".
+             *
+             * This request holds the parameters needed by the connectors server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Resource name of the form: `projects/locations/providers/connectors/versions` Only global
+             *        location is supported for ConnectorVersion resource.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ConnectorVersion> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+
+              /**
+               * Gets details of a single connector version.
+               *
+               * Create a request for the method "versions.get".
+               *
+               * This request holds the parameters needed by the the connectors server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Resource name of the form: `projects/locations/providers/connectors/versions` Only global
+             *        location is supported for ConnectorVersion resource.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ConnectorVersion.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Resource name of the form:
+               * `projects/locations/providers/connectors/versions` Only global location is
+               * supported for ConnectorVersion resource.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Resource name of the form: `projects/locations/providers/connectors/versions` Only global
+             location is supported for ConnectorVersion resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Resource name of the form:
+               * `projects/locations/providers/connectors/versions` Only global location is
+               * supported for ConnectorVersion resource.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Specifies which fields of the ConnectorVersion are returned in the response.
+               * Defaults to `CUSTOMER` view.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Specifies which fields of the ConnectorVersion are returned in the response. Defaults to `CUSTOMER`
+             view.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * Specifies which fields of the ConnectorVersion are returned in the response.
+               * Defaults to `CUSTOMER` view.
+               */
+              public Get setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists Connector Versions in a given project and location.
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the connectors server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
+             *        Only global location is supported for ConnectorVersion resource.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListConnectorVersionsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+$");
+
+              /**
+               * Lists Connector Versions in a given project and location.
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the the connectors server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
+             *        Only global location is supported for ConnectorVersion resource.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListConnectorVersionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent resource of the connectors, of the form:
+               * `projects/locations/providers/connectors` Only global location is supported for
+               * ConnectorVersion resource.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
+             Only global location is supported for ConnectorVersion resource.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Parent resource of the connectors, of the form:
+               * `projects/locations/providers/connectors` Only global location is supported for
+               * ConnectorVersion resource.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Page size. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Page size.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** Page size. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Page token. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Page token. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Specifies which fields of the ConnectorVersion are returned in the response.
+               * Defaults to `BASIC` view.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Specifies which fields of the ConnectorVersion are returned in the response. Defaults to `BASIC`
+             view.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * Specifies which fields of the ConnectorVersion are returned in the response.
+               * Defaults to `BASIC` view.
+               */
+              public List setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
       }
     }
   }

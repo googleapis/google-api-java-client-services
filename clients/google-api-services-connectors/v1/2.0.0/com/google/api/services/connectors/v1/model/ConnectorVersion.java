@@ -93,7 +93,8 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Resource name of the Version. Format: projects/{project}/locations/{location}/prov
-   * iders/{provider}/connectors/{connector}/versions/{version}
+   * iders/{provider}/connectors/{connector}/versions/{version} Only global location is supported
+   * for Connector resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,7 +258,8 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Resource name of the Version. Format: projects/{project}/locations/{location}/prov
-   * iders/{provider}/connectors/{connector}/versions/{version}
+   * iders/{provider}/connectors/{connector}/versions/{version} Only global location is supported
+   * for Connector resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -266,7 +268,8 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Resource name of the Version. Format: projects/{project}/locations/{location}/prov
-   * iders/{provider}/connectors/{connector}/versions/{version}
+   * iders/{provider}/connectors/{connector}/versions/{version} Only global location is supported
+   * for Connector resource.
    * @param name name or {@code null} for none
    */
   public ConnectorVersion setName(java.lang.String name) {

@@ -41,7 +41,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
    * description, transfer_spec, notification_config, logging_config, and status. An
    * `UpdateTransferJobRequest` that specifies other fields are rejected with the error
    * INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
-   * permissions.
+   * permission.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
    * description, transfer_spec, notification_config, logging_config, and status. An
    * `UpdateTransferJobRequest` that specifies other fields are rejected with the error
    * INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
-   * permissions.
+   * permission.
    * @return value or {@code null} for none
    */
   public TransferJob getTransferJob() {
@@ -92,7 +92,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
    * description, transfer_spec, notification_config, logging_config, and status. An
    * `UpdateTransferJobRequest` that specifies other fields are rejected with the error
    * INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
-   * permissions.
+   * permission.
    * @param transferJob transferJob or {@code null} for none
    */
   public UpdateTransferJobRequest setTransferJob(TransferJob transferJob) {

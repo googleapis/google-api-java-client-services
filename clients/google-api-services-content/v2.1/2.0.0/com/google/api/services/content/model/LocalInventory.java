@@ -40,6 +40,21 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.String availability;
 
   /**
+   * A list of custom (merchant-provided) attributes. Can also be used to submit any attribute of
+   * the feed specification in its generic form, for example, `{ "name": "size type", "value":
+   * "regular" }`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomAttribute> customAttributes;
+
+  static {
+    // hack to force ProGuard to consider CustomAttribute used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomAttribute.class);
+  }
+
+  /**
    * In-store product location.
    * The value may be {@code null}.
    */
@@ -123,6 +138,27 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
    */
   public LocalInventory setAvailability(java.lang.String availability) {
     this.availability = availability;
+    return this;
+  }
+
+  /**
+   * A list of custom (merchant-provided) attributes. Can also be used to submit any attribute of
+   * the feed specification in its generic form, for example, `{ "name": "size type", "value":
+   * "regular" }`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomAttribute> getCustomAttributes() {
+    return customAttributes;
+  }
+
+  /**
+   * A list of custom (merchant-provided) attributes. Can also be used to submit any attribute of
+   * the feed specification in its generic form, for example, `{ "name": "size type", "value":
+   * "regular" }`.
+   * @param customAttributes customAttributes or {@code null} for none
+   */
+  public LocalInventory setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {
+    this.customAttributes = customAttributes;
     return this;
   }
 

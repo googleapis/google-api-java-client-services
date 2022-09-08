@@ -2220,6 +2220,29 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
+        /**
+         * Device tier config (DTC) to be used for generating deliverables (APKs). Contains id of
+         * the DTC or "LATEST" for last uploaded DTC.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String deviceTierConfigId;
+
+        /** Device tier config (DTC) to be used for generating deliverables (APKs). Contains id of the DTC or
+       "LATEST" for last uploaded DTC.
+         */
+        public java.lang.String getDeviceTierConfigId() {
+          return deviceTierConfigId;
+        }
+
+        /**
+         * Device tier config (DTC) to be used for generating deliverables (APKs). Contains id of
+         * the DTC or "LATEST" for last uploaded DTC.
+         */
+        public Upload setDeviceTierConfigId(java.lang.String deviceTierConfigId) {
+          this.deviceTierConfigId = deviceTierConfigId;
+          return this;
+        }
+
         @Override
         public Upload set(String parameterName, Object value) {
           return (Upload) super.set(parameterName, value);

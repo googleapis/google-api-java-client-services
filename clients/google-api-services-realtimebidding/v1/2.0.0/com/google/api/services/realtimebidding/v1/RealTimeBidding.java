@@ -4007,15 +4007,15 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Order specification by which results should be sorted. If no sort order is specified, the
-         * results will be returned in an arbitrary order. Currently results can be sorted by
-         * `createTime`. Example: 'createTime DESC'.
+         * results will be returned in alphabetic order based on the publisher's publisher code.
+         * Results can be sorted by `createTime`. Example: 'createTime DESC'.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Order specification by which results should be sorted. If no sort order is specified, the results
-       will be returned in an arbitrary order. Currently results can be sorted by `createTime`. Example:
-       'createTime DESC'.
+       will be returned in alphabetic order based on the publisher's publisher code. Results can be sorted
+       by `createTime`. Example: 'createTime DESC'.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -4023,8 +4023,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Order specification by which results should be sorted. If no sort order is specified, the
-         * results will be returned in an arbitrary order. Currently results can be sorted by
-         * `createTime`. Example: 'createTime DESC'.
+         * results will be returned in alphabetic order based on the publisher's publisher code.
+         * Results can be sorted by `createTime`. Example: 'createTime DESC'.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;

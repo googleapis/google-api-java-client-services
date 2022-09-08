@@ -535,41 +535,39 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
       public class Queues {
 
         /**
-         * Note: This feature is in its experimental stage. You must request access to the API through the
-         * [Cloud Tasks BufferQueues Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8). Creates
-         * and buffers a new task without the need to explicitly define a Task message. The queue must be an
-         * http queue (i.e., must have HTTP target). This method is used for a simplified application of
-         * Cloud Tasks queues in buffer and rate limitting HTTP requests.
+         * Creates and buffers a new task without the need to explicitly define a Task message. The queue
+         * must have HTTP target. Note: This feature is in its experimental stage. You must request access
+         * to the API through the [Cloud Tasks BufferTasks Experiment Signup
+         * form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
          *
          * Create a request for the method "queues.buffer".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Buffer#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-         *        The queue must already exist.
-         * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest}
+         * @param queue Required. The parent queue name. For example:
+         *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+         * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest}
          * @return the request
          */
-        public Buffer buffer(java.lang.String name, com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest content) throws java.io.IOException {
-          Buffer result = new Buffer(name, content);
+        public Buffer buffer(java.lang.String queue, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) throws java.io.IOException {
+          Buffer result = new Buffer(queue, content);
           initialize(result);
           return result;
         }
 
-        public class Buffer extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.BufferQueueResponse> {
+        public class Buffer extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.BufferTaskResponse> {
 
-          private static final String REST_PATH = "v2beta2/{+name}:buffer";
+          private static final String REST_PATH = "v2beta2/{+queue}:buffer";
 
-          private final java.util.regex.Pattern NAME_PATTERN =
+          private final java.util.regex.Pattern QUEUE_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Note: This feature is in its experimental stage. You must request access to the API through the
-           * [Cloud Tasks BufferQueues Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8). Creates
-           * and buffers a new task without the need to explicitly define a Task message. The queue must be
-           * an http queue (i.e., must have HTTP target). This method is used for a simplified application
-           * of Cloud Tasks queues in buffer and rate limitting HTTP requests.
+           * Creates and buffers a new task without the need to explicitly define a Task message. The queue
+           * must have HTTP target. Note: This feature is in its experimental stage. You must request access
+           * to the API through the [Cloud Tasks BufferTasks Experiment Signup
+           * form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
            *
            * Create a request for the method "queues.buffer".
            *
@@ -579,17 +577,17 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Buffer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-         *        The queue must already exist.
-           * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest}
+           * @param queue Required. The parent queue name. For example:
+         *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+           * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest}
            * @since 1.13
            */
-          protected Buffer(java.lang.String name, com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest content) {
-            super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.BufferQueueResponse.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          protected Buffer(java.lang.String queue, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) {
+            super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskResponse.class);
+            this.queue = com.google.api.client.util.Preconditions.checkNotNull(queue, "Required parameter queue must be specified.");
             if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
+              com.google.api.client.util.Preconditions.checkArgument(QUEUE_PATTERN.matcher(queue).matches(),
+                  "Parameter queue must conform to the pattern " +
                   "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
             }
           }
@@ -650,32 +648,32 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The queue name. For example:
+           * Required. The parent queue name. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
            * exist.
            */
           @com.google.api.client.util.Key
-          private java.lang.String name;
+          private java.lang.String queue;
 
-          /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-         The queue must already exist.
+          /** Required. The parent queue name. For example:
+         `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
            */
-          public java.lang.String getName() {
-            return name;
+          public java.lang.String getQueue() {
+            return queue;
           }
 
           /**
-           * Required. The queue name. For example:
+           * Required. The parent queue name. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
            * exist.
            */
-          public Buffer setName(java.lang.String name) {
+          public Buffer setQueue(java.lang.String queue) {
             if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
+              com.google.api.client.util.Preconditions.checkArgument(QUEUE_PATTERN.matcher(queue).matches(),
+                  "Parameter queue must conform to the pattern " +
                   "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
             }
-            this.name = name;
+            this.queue = queue;
             return this;
           }
 

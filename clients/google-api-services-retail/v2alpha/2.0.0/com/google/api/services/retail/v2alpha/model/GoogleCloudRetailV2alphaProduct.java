@@ -81,7 +81,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.Integer availableQuantity;
 
   /**
-   * The timestamp when this Product becomes available for SearchService.Search.
+   * The timestamp when this Product becomes available for SearchService.Search. Note that this is
+   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,12 +160,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String description;
 
   /**
-   * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
-   * Product is not available for SearchService.Search after expire_time. However, the product can
-   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
-   * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
-   * thrown. Corresponding properties: Google Merchant Center property
-   * [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * The timestamp when this product becomes unavailable for SearchService.Search. Note that this is
+   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general,
+   * we suggest the users to delete the stale products explicitly, instead of using this field to
+   * determine staleness. If it is set, the Product is not available for SearchService.Search after
+   * expire_time. However, the product can still be retrieved by ProductService.GetProduct and
+   * ProductService.ListProducts. expire_time must be later than available_time and publish_time,
+   * otherwise an INVALID_ARGUMENT error is thrown. Corresponding properties: Google Merchant Center
+   * property [expiration_date](https://support.google.com/merchants/answer/6324499).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,8 +246,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Output only. A list of local inventories specific to different places. This is only available
-   * for users who have Retail Search enabled, and it can be managed by AddLocalInventories and
-   * RemoveLocalInventories APIs.
+   * for users who have Retail Search enabled, and it can be managed by
+   * ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -390,12 +393,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String title;
 
   /**
-   * Input only. The TTL (time to live) of the product. If it is set, it must be a non-negative
-   * value, and expire_time is set as current timestamp plus ttl. The derived expire_time is
-   * returned in the output and ttl is left blank when retrieving the Product. If it is set, the
-   * product is not available for SearchService.Search after current timestamp plus ttl. However,
-   * the product can still be retrieved by ProductService.GetProduct and
-   * ProductService.ListProducts.
+   * Input only. The TTL (time to live) of the product. Note that this is only applicable to
+   * Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general, we suggest the
+   * users to delete the stale products explicitly, instead of using this field to determine
+   * staleness. If it is set, it must be a non-negative value, and expire_time is set as current
+   * timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank
+   * when retrieving the Product. If it is set, the product is not available for
+   * SearchService.Search after current timestamp plus ttl. However, the product can still be
+   * retrieved by ProductService.GetProduct and ProductService.ListProducts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -534,7 +539,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The timestamp when this Product becomes available for SearchService.Search.
+   * The timestamp when this Product becomes available for SearchService.Search. Note that this is
+   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT.
    * @return value or {@code null} for none
    */
   public String getAvailableTime() {
@@ -542,7 +548,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The timestamp when this Product becomes available for SearchService.Search.
+   * The timestamp when this Product becomes available for SearchService.Search. Note that this is
+   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT.
    * @param availableTime availableTime or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setAvailableTime(String availableTime) {
@@ -711,12 +718,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
-   * Product is not available for SearchService.Search after expire_time. However, the product can
-   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
-   * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
-   * thrown. Corresponding properties: Google Merchant Center property
-   * [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * The timestamp when this product becomes unavailable for SearchService.Search. Note that this is
+   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general,
+   * we suggest the users to delete the stale products explicitly, instead of using this field to
+   * determine staleness. If it is set, the Product is not available for SearchService.Search after
+   * expire_time. However, the product can still be retrieved by ProductService.GetProduct and
+   * ProductService.ListProducts. expire_time must be later than available_time and publish_time,
+   * otherwise an INVALID_ARGUMENT error is thrown. Corresponding properties: Google Merchant Center
+   * property [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -724,12 +733,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
-   * Product is not available for SearchService.Search after expire_time. However, the product can
-   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
-   * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
-   * thrown. Corresponding properties: Google Merchant Center property
-   * [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * The timestamp when this product becomes unavailable for SearchService.Search. Note that this is
+   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general,
+   * we suggest the users to delete the stale products explicitly, instead of using this field to
+   * determine staleness. If it is set, the Product is not available for SearchService.Search after
+   * expire_time. However, the product can still be retrieved by ProductService.GetProduct and
+   * ProductService.ListProducts. expire_time must be later than available_time and publish_time,
+   * otherwise an INVALID_ARGUMENT error is thrown. Corresponding properties: Google Merchant Center
+   * property [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @param expireTime expireTime or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setExpireTime(String expireTime) {
@@ -872,8 +883,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Output only. A list of local inventories specific to different places. This is only available
-   * for users who have Retail Search enabled, and it can be managed by AddLocalInventories and
-   * RemoveLocalInventories APIs.
+   * for users who have Retail Search enabled, and it can be managed by
+   * ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaLocalInventory> getLocalInventories() {
@@ -882,8 +893,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Output only. A list of local inventories specific to different places. This is only available
-   * for users who have Retail Search enabled, and it can be managed by AddLocalInventories and
-   * RemoveLocalInventories APIs.
+   * for users who have Retail Search enabled, and it can be managed by
+   * ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs.
    * @param localInventories localInventories or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setLocalInventories(java.util.List<GoogleCloudRetailV2alphaLocalInventory> localInventories) {
@@ -1194,12 +1205,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Input only. The TTL (time to live) of the product. If it is set, it must be a non-negative
-   * value, and expire_time is set as current timestamp plus ttl. The derived expire_time is
-   * returned in the output and ttl is left blank when retrieving the Product. If it is set, the
-   * product is not available for SearchService.Search after current timestamp plus ttl. However,
-   * the product can still be retrieved by ProductService.GetProduct and
-   * ProductService.ListProducts.
+   * Input only. The TTL (time to live) of the product. Note that this is only applicable to
+   * Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general, we suggest the
+   * users to delete the stale products explicitly, instead of using this field to determine
+   * staleness. If it is set, it must be a non-negative value, and expire_time is set as current
+   * timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank
+   * when retrieving the Product. If it is set, the product is not available for
+   * SearchService.Search after current timestamp plus ttl. However, the product can still be
+   * retrieved by ProductService.GetProduct and ProductService.ListProducts.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -1207,12 +1220,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Input only. The TTL (time to live) of the product. If it is set, it must be a non-negative
-   * value, and expire_time is set as current timestamp plus ttl. The derived expire_time is
-   * returned in the output and ttl is left blank when retrieving the Product. If it is set, the
-   * product is not available for SearchService.Search after current timestamp plus ttl. However,
-   * the product can still be retrieved by ProductService.GetProduct and
-   * ProductService.ListProducts.
+   * Input only. The TTL (time to live) of the product. Note that this is only applicable to
+   * Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general, we suggest the
+   * users to delete the stale products explicitly, instead of using this field to determine
+   * staleness. If it is set, it must be a non-negative value, and expire_time is set as current
+   * timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank
+   * when retrieving the Product. If it is set, the product is not available for
+   * SearchService.Search after current timestamp plus ttl. However, the product can still be
+   * retrieved by ProductService.GetProduct and ProductService.ListProducts.
    * @param ttl ttl or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setTtl(String ttl) {

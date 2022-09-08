@@ -30,24 +30,25 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Catalog attributes that were deleted. Only attributes that are not in use by products can be
-   * deleted.
+   * Catalog attributes that were deleted. Only pre-loaded catalog attributes that are neither in
+   * use by products nor predefined can be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> deletedCatalogAttributes;
 
   /**
-   * Catalog attributes that were reset. Attributes that are in use by products cannot be deleted,
-   * however their configuration properties will reset to default values upon removal request.
+   * Catalog attributes that were reset. Catalog attributes that are either in use by products or
+   * are predefined attributes cannot be deleted; however, their configuration properties will reset
+   * to default values upon removal request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resetCatalogAttributes;
 
   /**
-   * Catalog attributes that were deleted. Only attributes that are not in use by products can be
-   * deleted.
+   * Catalog attributes that were deleted. Only pre-loaded catalog attributes that are neither in
+   * use by products nor predefined can be deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeletedCatalogAttributes() {
@@ -55,8 +56,8 @@ public final class GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse 
   }
 
   /**
-   * Catalog attributes that were deleted. Only attributes that are not in use by products can be
-   * deleted.
+   * Catalog attributes that were deleted. Only pre-loaded catalog attributes that are neither in
+   * use by products nor predefined can be deleted.
    * @param deletedCatalogAttributes deletedCatalogAttributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse setDeletedCatalogAttributes(java.util.List<java.lang.String> deletedCatalogAttributes) {
@@ -65,8 +66,9 @@ public final class GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse 
   }
 
   /**
-   * Catalog attributes that were reset. Attributes that are in use by products cannot be deleted,
-   * however their configuration properties will reset to default values upon removal request.
+   * Catalog attributes that were reset. Catalog attributes that are either in use by products or
+   * are predefined attributes cannot be deleted; however, their configuration properties will reset
+   * to default values upon removal request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResetCatalogAttributes() {
@@ -74,8 +76,9 @@ public final class GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse 
   }
 
   /**
-   * Catalog attributes that were reset. Attributes that are in use by products cannot be deleted,
-   * however their configuration properties will reset to default values upon removal request.
+   * Catalog attributes that were reset. Catalog attributes that are either in use by products or
+   * are predefined attributes cannot be deleted; however, their configuration properties will reset
+   * to default values upon removal request.
    * @param resetCatalogAttributes resetCatalogAttributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse setResetCatalogAttributes(java.util.List<java.lang.String> resetCatalogAttributes) {

@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class CollectionStatusDestinationStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is approved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> approvedCountries;
+
+  /**
    * The name of the destination
    * The value may be {@code null}.
    */
@@ -38,11 +45,42 @@ public final class CollectionStatusDestinationStatus extends com.google.api.clie
   private java.lang.String destination;
 
   /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is disapproved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> disapprovedCountries;
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is pending approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pendingCountries;
+
+  /**
    * The status for the specified destination in the collections target country.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is approved.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getApprovedCountries() {
+    return approvedCountries;
+  }
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is approved.
+   * @param approvedCountries approvedCountries or {@code null} for none
+   */
+  public CollectionStatusDestinationStatus setApprovedCountries(java.util.List<java.lang.String> approvedCountries) {
+    this.approvedCountries = approvedCountries;
+    return this;
+  }
 
   /**
    * The name of the destination
@@ -58,6 +96,40 @@ public final class CollectionStatusDestinationStatus extends com.google.api.clie
    */
   public CollectionStatusDestinationStatus setDestination(java.lang.String destination) {
     this.destination = destination;
+    return this;
+  }
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is disapproved.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDisapprovedCountries() {
+    return disapprovedCountries;
+  }
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is disapproved.
+   * @param disapprovedCountries disapprovedCountries or {@code null} for none
+   */
+  public CollectionStatusDestinationStatus setDisapprovedCountries(java.util.List<java.lang.String> disapprovedCountries) {
+    this.disapprovedCountries = disapprovedCountries;
+    return this;
+  }
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is pending approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPendingCountries() {
+    return pendingCountries;
+  }
+
+  /**
+   * Country codes (ISO 3166-1 alpha-2) where the collection is pending approval.
+   * @param pendingCountries pendingCountries or {@code null} for none
+   */
+  public CollectionStatusDestinationStatus setPendingCountries(java.util.List<java.lang.String> pendingCountries) {
+    this.pendingCountries = pendingCountries;
     return this;
   }
 

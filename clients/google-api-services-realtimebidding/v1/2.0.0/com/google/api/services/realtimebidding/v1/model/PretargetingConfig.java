@@ -207,6 +207,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    * protocol](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)
    * or the `BidRequest.site.publisher.id` / `BidRequest.app.publisher.id` field on the [OpenRTB
    * protocol](https://developers.google.com/authorized-buyers/rtb/downloads/openrtb-adx-proto).
+   * Publisher IDs will be returned in the order that they were entered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -630,6 +631,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    * protocol](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)
    * or the `BidRequest.site.publisher.id` / `BidRequest.app.publisher.id` field on the [OpenRTB
    * protocol](https://developers.google.com/authorized-buyers/rtb/downloads/openrtb-adx-proto).
+   * Publisher IDs will be returned in the order that they were entered.
    * @return value or {@code null} for none
    */
   public StringTargetingDimension getPublisherTargeting() {
@@ -646,6 +648,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    * protocol](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)
    * or the `BidRequest.site.publisher.id` / `BidRequest.app.publisher.id` field on the [OpenRTB
    * protocol](https://developers.google.com/authorized-buyers/rtb/downloads/openrtb-adx-proto).
+   * Publisher IDs will be returned in the order that they were entered.
    * @param publisherTargeting publisherTargeting or {@code null} for none
    */
   public PretargetingConfig setPublisherTargeting(StringTargetingDimension publisherTargeting) {

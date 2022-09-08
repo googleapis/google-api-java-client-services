@@ -50,6 +50,14 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private BinLogCoordinates binLogCoordinates;
 
   /**
+   * (SQL Server only) Clone only the specified databases from the source instance. Clone all
+   * databases if empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> databaseNames;
+
+  /**
    * Name of the Cloud SQL instance to be created as a clone.
    * The value may be {@code null}.
    */
@@ -120,6 +128,25 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
    */
   public CloneContext setBinLogCoordinates(BinLogCoordinates binLogCoordinates) {
     this.binLogCoordinates = binLogCoordinates;
+    return this;
+  }
+
+  /**
+   * (SQL Server only) Clone only the specified databases from the source instance. Clone all
+   * databases if empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDatabaseNames() {
+    return databaseNames;
+  }
+
+  /**
+   * (SQL Server only) Clone only the specified databases from the source instance. Clone all
+   * databases if empty.
+   * @param databaseNames databaseNames or {@code null} for none
+   */
+  public CloneContext setDatabaseNames(java.util.List<java.lang.String> databaseNames) {
+    this.databaseNames = databaseNames;
     return this;
   }
 

@@ -59,8 +59,8 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String platform;
 
   /**
-   * Output only. Resource URI for the artifact being deployed taken from the deployable field with
-   * the same name.
+   * Resource URI for the artifact being deployed taken from the deployable field with the same
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,8 +149,8 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource URI for the artifact being deployed taken from the deployable field with
-   * the same name.
+   * Resource URI for the artifact being deployed taken from the deployable field with the same
+   * name.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceUri() {
@@ -158,8 +158,8 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource URI for the artifact being deployed taken from the deployable field with
-   * the same name.
+   * Resource URI for the artifact being deployed taken from the deployable field with the same
+   * name.
    * @param resourceUri resourceUri or {@code null} for none
    */
   public Deployment setResourceUri(java.util.List<java.lang.String> resourceUri) {

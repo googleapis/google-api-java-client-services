@@ -6258,7 +6258,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
       }
       /**
-       * Lists publisher profiles
+       * Lists publisher profiles. The returned publisher profiles aren't in any defined order. The order
+       * of the results might change. A new publisher profile can appear in any place in the list of
+       * returned results.
        *
        * Create a request for the method "publisherProfiles.list".
        *
@@ -6283,7 +6285,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^buyers/[^/]+$");
 
         /**
-         * Lists publisher profiles
+         * Lists publisher profiles. The returned publisher profiles aren't in any defined order. The
+         * order of the results might change. A new publisher profile can appear in any place in the list
+         * of returned results.
          *
          * Create a request for the method "publisherProfiles.list".
          *

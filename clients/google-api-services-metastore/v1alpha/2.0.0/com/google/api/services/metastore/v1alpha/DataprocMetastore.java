@@ -3651,8 +3651,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the metastore server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The relative resource name of the metastore service, of the
-         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+         * @param name Immutable. The relative resource name of the metastore service, in the following
+         *        format:projects/{project_number}/locations/{location_id}/services/{service_id}.
          * @param content the {@link com.google.api.services.metastore.v1alpha.model.Service}
          * @return the request
          */
@@ -3680,8 +3680,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The relative resource name of the metastore service, of the
-         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+           * @param name Immutable. The relative resource name of the metastore service, in the following
+         *        format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            * @param content the {@link com.google.api.services.metastore.v1alpha.model.Service}
            * @since 1.13
            */
@@ -3751,22 +3751,22 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Immutable. The relative resource name of the metastore service, of the
-           * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+           * Immutable. The relative resource name of the metastore service, in the following
+           * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The relative resource name of the metastore service, of the
-         form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+          /** Immutable. The relative resource name of the metastore service, in the following
+         format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. The relative resource name of the metastore service, of the
-           * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+           * Immutable. The relative resource name of the metastore service, in the following
+           * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -106,8 +106,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private MetadataManagementActivity metadataManagementActivity;
 
   /**
-   * Immutable. The relative resource name of the metastore service, of the
-   * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+   * Immutable. The relative resource name of the metastore service, in the following
+   * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,8 +360,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The relative resource name of the metastore service, of the
-   * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+   * Immutable. The relative resource name of the metastore service, in the following
+   * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -369,8 +369,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The relative resource name of the metastore service, of the
-   * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+   * Immutable. The relative resource name of the metastore service, in the following
+   * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {

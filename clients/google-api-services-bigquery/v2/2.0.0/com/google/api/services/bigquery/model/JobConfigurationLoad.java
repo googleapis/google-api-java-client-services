@@ -64,6 +64,19 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private Clustering clustering;
 
   /**
+   * Connection properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConnectionProperty> connectionProperties;
+
+  static {
+    // hack to force ProGuard to consider ConnectionProperty used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConnectionProperty.class);
+  }
+
+  /**
    * [Optional] Specifies whether the job is allowed to create new tables. The following values are
    * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
@@ -414,6 +427,23 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setClustering(Clustering clustering) {
     this.clustering = clustering;
+    return this;
+  }
+
+  /**
+   * Connection properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConnectionProperty> getConnectionProperties() {
+    return connectionProperties;
+  }
+
+  /**
+   * Connection properties.
+   * @param connectionProperties connectionProperties or {@code null} for none
+   */
+  public JobConfigurationLoad setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
+    this.connectionProperties = connectionProperties;
     return this;
   }
 

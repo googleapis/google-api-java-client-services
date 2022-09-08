@@ -19,8 +19,8 @@ package com.google.api.services.bigquery.model;
 /**
  * The data type of a variable such as a function argument. Examples include: * INT64: `{"typeKind":
  * "INT64"}` * ARRAY: { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "STRING"} } * STRUCT>:
- * { "typeKind": "STRUCT", "structType": { "fields": [ { "name": "x", "type": {"typeKind: "STRING"}
- * }, { "name": "y", "type": { "typeKind": "ARRAY", "arrayElementType": {"typekind": "DATE"} } } ] }
+ * { "typeKind": "STRUCT", "structType": { "fields": [ { "name": "x", "type": {"typeKind": "STRING"}
+ * }, { "name": "y", "type": { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "DATE"} } } ] }
  * }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

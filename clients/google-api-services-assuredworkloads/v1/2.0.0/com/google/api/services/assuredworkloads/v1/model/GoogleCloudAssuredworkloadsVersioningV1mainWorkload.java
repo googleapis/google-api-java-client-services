@@ -31,7 +31,7 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. The billing account used for the resources which are direct children of workload.
+   * Optional. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
    * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
@@ -61,6 +61,16 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus complianceStatus;
+
+  /**
+   * Output only. Urls for services which are compliant for this Assured Workload, but which are
+   * currently disallowed by the ResourceUsageRestriction org policy. Invoke
+   * RestrictAllowedResources endpoint to allow your project developers to use these services in
+   * their environment."
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> compliantButDisallowedServices;
 
   /**
    * Output only. Immutable. The Workload creation timestamp.
@@ -184,7 +194,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
   private GoogleCloudAssuredworkloadsVersioningV1mainWorkloadSaaEnrollmentResponse saaEnrollmentResponse;
 
   /**
-   * Input only. The billing account used for the resources which are direct children of workload.
+   * Optional. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
    * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
@@ -196,7 +206,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
   }
 
   /**
-   * Input only. The billing account used for the resources which are direct children of workload.
+   * Optional. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
    * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
@@ -256,6 +266,29 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkload setComplianceStatus(GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus complianceStatus) {
     this.complianceStatus = complianceStatus;
+    return this;
+  }
+
+  /**
+   * Output only. Urls for services which are compliant for this Assured Workload, but which are
+   * currently disallowed by the ResourceUsageRestriction org policy. Invoke
+   * RestrictAllowedResources endpoint to allow your project developers to use these services in
+   * their environment."
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCompliantButDisallowedServices() {
+    return compliantButDisallowedServices;
+  }
+
+  /**
+   * Output only. Urls for services which are compliant for this Assured Workload, but which are
+   * currently disallowed by the ResourceUsageRestriction org policy. Invoke
+   * RestrictAllowedResources endpoint to allow your project developers to use these services in
+   * their environment."
+   * @param compliantButDisallowedServices compliantButDisallowedServices or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsVersioningV1mainWorkload setCompliantButDisallowedServices(java.util.List<java.lang.String> compliantButDisallowedServices) {
+    this.compliantButDisallowedServices = compliantButDisallowedServices;
     return this;
   }
 

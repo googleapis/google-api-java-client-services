@@ -31,6 +31,24 @@ package com.google.api.services.containeranalysis.v1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends com.google.api.client.json.GenericJson {
 
   /**
+   * Allow this build step to fail without failing the entire build if and only if the exit code is
+   * one of the specified codes. If allow_failure is also specified, this field will take
+   * precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> allowExitCodes;
+
+  /**
+   * Allow this build step to fail without failing the entire build. If false, the entire build will
+   * fail if this step fails. Otherwise, the build will succeed, but this step will still have a
+   * failure status. Error information will be reported in the failure_detail field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowFailure;
+
+  /**
    * A list of arguments that will be presented to the step when it is started. If the image used to
    * run the step's container has an entrypoint, the `args` are used as arguments to that
    * entrypoint. If the image does not define an entrypoint, the first element in args is used as
@@ -67,6 +85,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> env;
+
+  /**
+   * Output only. Return code from running the step.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer exitCode;
 
   /**
    * Unique identifier for this build step, used in `wait_for` to reference this build step as a
@@ -159,6 +184,48 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends 
   private java.util.List<java.lang.String> waitFor;
 
   /**
+   * Allow this build step to fail without failing the entire build if and only if the exit code is
+   * one of the specified codes. If allow_failure is also specified, this field will take
+   * precedence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getAllowExitCodes() {
+    return allowExitCodes;
+  }
+
+  /**
+   * Allow this build step to fail without failing the entire build if and only if the exit code is
+   * one of the specified codes. If allow_failure is also specified, this field will take
+   * precedence.
+   * @param allowExitCodes allowExitCodes or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep setAllowExitCodes(java.util.List<java.lang.Integer> allowExitCodes) {
+    this.allowExitCodes = allowExitCodes;
+    return this;
+  }
+
+  /**
+   * Allow this build step to fail without failing the entire build. If false, the entire build will
+   * fail if this step fails. Otherwise, the build will succeed, but this step will still have a
+   * failure status. Error information will be reported in the failure_detail field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowFailure() {
+    return allowFailure;
+  }
+
+  /**
+   * Allow this build step to fail without failing the entire build. If false, the entire build will
+   * fail if this step fails. Otherwise, the build will succeed, but this step will still have a
+   * failure status. Error information will be reported in the failure_detail field.
+   * @param allowFailure allowFailure or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep setAllowFailure(java.lang.Boolean allowFailure) {
+    this.allowFailure = allowFailure;
+    return this;
+  }
+
+  /**
    * A list of arguments that will be presented to the step when it is started. If the image used to
    * run the step's container has an entrypoint, the `args` are used as arguments to that
    * entrypoint. If the image does not define an entrypoint, the first element in args is used as
@@ -243,6 +310,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends 
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep setEnv(java.util.List<java.lang.String> env) {
     this.env = env;
+    return this;
+  }
+
+  /**
+   * Output only. Return code from running the step.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getExitCode() {
+    return exitCode;
+  }
+
+  /**
+   * Output only. Return code from running the step.
+   * @param exitCode exitCode or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep setExitCode(java.lang.Integer exitCode) {
+    this.exitCode = exitCode;
     return this;
   }
 

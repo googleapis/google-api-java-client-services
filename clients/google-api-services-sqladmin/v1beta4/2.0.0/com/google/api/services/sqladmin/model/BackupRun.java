@@ -132,6 +132,14 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * Backup time zone to prevent restores to an instance with a different time zone. Now relevant
+   * only for SQL Server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * The type of this run; can be either "AUTOMATED" or "ON_DEMAND" or "FINAL". This field defaults
    * to "ON_DEMAND" and is ignored, when specified for insert requests.
    * The value may be {@code null}.
@@ -390,6 +398,25 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
    */
   public BackupRun setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Backup time zone to prevent restores to an instance with a different time zone. Now relevant
+   * only for SQL Server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Backup time zone to prevent restores to an instance with a different time zone. Now relevant
+   * only for SQL Server.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public BackupRun setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

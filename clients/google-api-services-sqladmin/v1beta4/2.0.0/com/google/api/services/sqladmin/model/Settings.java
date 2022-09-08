@@ -80,9 +80,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String collation;
 
   /**
-   * Specifies if connections must use Cloud SQL connectors. Option values include the following: *
-   * `NOT_REQUIRED`: Cloud SQL instances can be connected without Cloud SQL Connectors. *
-   * `REQUIRED`: Only allow connections that use Cloud SQL Connectors. Note that using REQUIRED
+   * Specifies if connections must use Cloud SQL connectors. Option values include the following:
+   * `NOT_REQUIRED` (Cloud SQL instances can be connected without Cloud SQL Connectors) and
+   * `REQUIRED` (Only allow connections that use Cloud SQL Connectors) Note that using REQUIRED
    * disables all existing authorized networks. If this field is not specified when creating a new
    * instance, NOT_REQUIRED is used. If this field is not specified when patching or updating an
    * existing instance, it is left unchanged in the instance.
@@ -257,6 +257,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String tier;
 
   /**
+   * Server timezone, relevant only for Cloud SQL for SQL Server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * User-provided labels, represented as a dictionary where each label is a single key value pair.
    * The value may be {@code null}.
    */
@@ -382,9 +389,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies if connections must use Cloud SQL connectors. Option values include the following: *
-   * `NOT_REQUIRED`: Cloud SQL instances can be connected without Cloud SQL Connectors. *
-   * `REQUIRED`: Only allow connections that use Cloud SQL Connectors. Note that using REQUIRED
+   * Specifies if connections must use Cloud SQL connectors. Option values include the following:
+   * `NOT_REQUIRED` (Cloud SQL instances can be connected without Cloud SQL Connectors) and
+   * `REQUIRED` (Only allow connections that use Cloud SQL Connectors) Note that using REQUIRED
    * disables all existing authorized networks. If this field is not specified when creating a new
    * instance, NOT_REQUIRED is used. If this field is not specified when patching or updating an
    * existing instance, it is left unchanged in the instance.
@@ -395,9 +402,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies if connections must use Cloud SQL connectors. Option values include the following: *
-   * `NOT_REQUIRED`: Cloud SQL instances can be connected without Cloud SQL Connectors. *
-   * `REQUIRED`: Only allow connections that use Cloud SQL Connectors. Note that using REQUIRED
+   * Specifies if connections must use Cloud SQL connectors. Option values include the following:
+   * `NOT_REQUIRED` (Cloud SQL instances can be connected without Cloud SQL Connectors) and
+   * `REQUIRED` (Only allow connections that use Cloud SQL Connectors) Note that using REQUIRED
    * disables all existing authorized networks. If this field is not specified when creating a new
    * instance, NOT_REQUIRED is used. If this field is not specified when patching or updating an
    * existing instance, it is left unchanged in the instance.
@@ -771,6 +778,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setTier(java.lang.String tier) {
     this.tier = tier;
+    return this;
+  }
+
+  /**
+   * Server timezone, relevant only for Cloud SQL for SQL Server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Server timezone, relevant only for Cloud SQL for SQL Server.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public Settings setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

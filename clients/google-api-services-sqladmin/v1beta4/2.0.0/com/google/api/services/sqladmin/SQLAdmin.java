@@ -3838,7 +3838,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates settings of a Cloud SQL instance. This method supports patch semantics.
+     * Partially updates settings of a Cloud SQL instance by merging the request with the current
+     * configuration. This method supports patch semantics.
      *
      * Create a request for the method "instances.patch".
      *
@@ -3861,7 +3862,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
-       * Updates settings of a Cloud SQL instance. This method supports patch semantics.
+       * Partially updates settings of a Cloud SQL instance by merging the request with the current
+       * configuration. This method supports patch semantics.
        *
        * Create a request for the method "instances.patch".
        *

@@ -122,6 +122,13 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requireApproval;
 
   /**
+   * Information specifying a Cloud Run deployment target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunLocation run;
+
+  /**
    * Output only. Resource id of the `Target`.
    * The value may be {@code null}.
    */
@@ -337,6 +344,23 @@ public final class Target extends com.google.api.client.json.GenericJson {
    */
   public Target setRequireApproval(java.lang.Boolean requireApproval) {
     this.requireApproval = requireApproval;
+    return this;
+  }
+
+  /**
+   * Information specifying a Cloud Run deployment target.
+   * @return value or {@code null} for none
+   */
+  public CloudRunLocation getRun() {
+    return run;
+  }
+
+  /**
+   * Information specifying a Cloud Run deployment target.
+   * @param run run or {@code null} for none
+   */
+  public Target setRun(CloudRunLocation run) {
+    this.run = run;
     return this;
   }
 

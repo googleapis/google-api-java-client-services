@@ -39,6 +39,13 @@ public final class TargetRender extends com.google.api.client.json.GenericJson {
   private java.lang.String failureCause;
 
   /**
+   * Output only. Additional information about the render failure, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String failureMessage;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to render the
    * manifest for this target. Format is `projects/{project}/locations/{location}/builds/{build}`.
    * The value may be {@code null}.
@@ -69,6 +76,23 @@ public final class TargetRender extends com.google.api.client.json.GenericJson {
    */
   public TargetRender setFailureCause(java.lang.String failureCause) {
     this.failureCause = failureCause;
+    return this;
+  }
+
+  /**
+   * Output only. Additional information about the render failure, if available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFailureMessage() {
+    return failureMessage;
+  }
+
+  /**
+   * Output only. Additional information about the render failure, if available.
+   * @param failureMessage failureMessage or {@code null} for none
+   */
+  public TargetRender setFailureMessage(java.lang.String failureMessage) {
+    this.failureMessage = failureMessage;
     return this;
   }
 

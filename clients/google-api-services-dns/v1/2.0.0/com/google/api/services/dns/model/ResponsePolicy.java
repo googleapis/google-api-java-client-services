@@ -38,6 +38,13 @@ public final class ResponsePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * The list of Google Kubernetes Engine clusters to which this response policy is applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResponsePolicyGKECluster> gkeClusters;
+
+  /**
    * Unique identifier for the resource; defined by the server (output only).
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class ResponsePolicy extends com.google.api.client.json.GenericJson
    */
   public ResponsePolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The list of Google Kubernetes Engine clusters to which this response policy is applied.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResponsePolicyGKECluster> getGkeClusters() {
+    return gkeClusters;
+  }
+
+  /**
+   * The list of Google Kubernetes Engine clusters to which this response policy is applied.
+   * @param gkeClusters gkeClusters or {@code null} for none
+   */
+  public ResponsePolicy setGkeClusters(java.util.List<ResponsePolicyGKECluster> gkeClusters) {
+    this.gkeClusters = gkeClusters;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.dns.model;
 public final class ManagedZonePrivateVisibilityConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of Google Kubernetes Engine clusters that can see this zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ManagedZonePrivateVisibilityConfigGKECluster> gkeClusters;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +48,23 @@ public final class ManagedZonePrivateVisibilityConfig extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<ManagedZonePrivateVisibilityConfigNetwork> networks;
+
+  /**
+   * The list of Google Kubernetes Engine clusters that can see this zone.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ManagedZonePrivateVisibilityConfigGKECluster> getGkeClusters() {
+    return gkeClusters;
+  }
+
+  /**
+   * The list of Google Kubernetes Engine clusters that can see this zone.
+   * @param gkeClusters gkeClusters or {@code null} for none
+   */
+  public ManagedZonePrivateVisibilityConfig setGkeClusters(java.util.List<ManagedZonePrivateVisibilityConfigGKECluster> gkeClusters) {
+    this.gkeClusters = gkeClusters;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

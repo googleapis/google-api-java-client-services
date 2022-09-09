@@ -133,6 +133,13 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. Metadata contains information about the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Metadata metadata;
+
+  /**
    * Optional. Name of the `Rollout`. Format is projects/{project}/
    * locations/{location}/deliveryPipelines/{deliveryPipeline}/
    * releases/{release}/rollouts/a-z{0,62}.
@@ -400,6 +407,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata contains information about the rollout.
+   * @return value or {@code null} for none
+   */
+  public Metadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Metadata contains information about the rollout.
+   * @param metadata metadata or {@code null} for none
+   */
+  public Rollout setMetadata(Metadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

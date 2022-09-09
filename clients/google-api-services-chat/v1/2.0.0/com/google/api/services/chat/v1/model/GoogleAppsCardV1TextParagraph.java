@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A paragraph of text that supports formatting. See [Text formatting](workspace/add-
- * ons/concepts/widgets#text_formatting) for details.
+ * A paragraph of text that supports formatting. See [Text
+ * formatting](https://developers.google.com/workspace/add-ons/concepts/widgets#text_formatting) for
+ * details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

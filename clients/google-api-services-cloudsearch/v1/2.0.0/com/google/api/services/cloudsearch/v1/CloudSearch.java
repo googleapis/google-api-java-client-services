@@ -4309,9 +4309,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set
          * this field using the language set in browser or for the page. In the event that the
          * user's language preference is known, set this field to the known user language. When
-         * specified, the documents in search results are biased towards the specified language. The
-         * suggest API does not use this parameter. Instead, suggest autocompletes only based on
-         * characters in the query.
+         * specified, the documents in search results are biased towards the specified language.
+         * From Suggest API perspective, for 3p suggest this is used as a hint while making
+         * predictions to add language boosting.
          */
         @com.google.api.client.util.Key("requestOptions.languageCode")
         private java.lang.String requestOptionsLanguageCode;
@@ -4320,8 +4320,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this field
        using the language set in browser or for the page. In the event that the user's language preference
        is known, set this field to the known user language. When specified, the documents in search
-       results are biased towards the specified language. The suggest API does not use this parameter.
-       Instead, suggest autocompletes only based on characters in the query.
+       results are biased towards the specified language. From Suggest API perspective, for 3p suggest
+       this is used as a hint while making predictions to add language boosting.
          */
         public java.lang.String getRequestOptionsLanguageCode() {
           return requestOptionsLanguageCode;
@@ -4332,9 +4332,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set
          * this field using the language set in browser or for the page. In the event that the
          * user's language preference is known, set this field to the known user language. When
-         * specified, the documents in search results are biased towards the specified language. The
-         * suggest API does not use this parameter. Instead, suggest autocompletes only based on
-         * characters in the query.
+         * specified, the documents in search results are biased towards the specified language.
+         * From Suggest API perspective, for 3p suggest this is used as a hint while making
+         * predictions to add language boosting.
          */
         public List setRequestOptionsLanguageCode(java.lang.String requestOptionsLanguageCode) {
           this.requestOptionsLanguageCode = requestOptionsLanguageCode;

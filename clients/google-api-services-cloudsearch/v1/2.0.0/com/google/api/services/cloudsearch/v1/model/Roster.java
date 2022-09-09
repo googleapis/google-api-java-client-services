@@ -68,6 +68,13 @@ public final class Roster extends com.google.api.client.json.GenericJson {
   private java.lang.String rosterState;
 
   /**
+   * Roster membership count. May contain counts based on member type and membership state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedSegmentedMembershipCounts segmentedMembershipCounts;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getAvatarUrl() {
@@ -158,6 +165,23 @@ public final class Roster extends com.google.api.client.json.GenericJson {
    */
   public Roster setRosterState(java.lang.String rosterState) {
     this.rosterState = rosterState;
+    return this;
+  }
+
+  /**
+   * Roster membership count. May contain counts based on member type and membership state.
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedSegmentedMembershipCounts getSegmentedMembershipCounts() {
+    return segmentedMembershipCounts;
+  }
+
+  /**
+   * Roster membership count. May contain counts based on member type and membership state.
+   * @param segmentedMembershipCounts segmentedMembershipCounts or {@code null} for none
+   */
+  public Roster setSegmentedMembershipCounts(AppsDynamiteSharedSegmentedMembershipCounts segmentedMembershipCounts) {
+    this.segmentedMembershipCounts = segmentedMembershipCounts;
     return this;
   }
 

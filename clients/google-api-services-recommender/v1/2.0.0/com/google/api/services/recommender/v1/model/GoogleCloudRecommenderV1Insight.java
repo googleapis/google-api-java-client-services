@@ -18,7 +18,7 @@ package com.google.api.services.recommender.v1.model;
 
 /**
  * An insight along with the information used to derive the insight. The insight may have associated
- * recomendations as well.
+ * recommendations as well.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Recommender API. For a detailed explanation see:

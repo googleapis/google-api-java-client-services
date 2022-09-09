@@ -1736,7 +1736,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the batch resource to delete.
+         * @param name Required. The fully qualified name of the batch to retrieve in the format
+         *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1764,7 +1765,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the batch resource to delete.
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+         *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1832,17 +1834,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the batch resource to delete. */
+          /**
+           * Required. The fully qualified name of the batch to retrieve in the format
+           * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the batch resource to delete.
+          /** Required. The fully qualified name of the batch to retrieve in the format
+         "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the batch resource to delete. */
+          /**
+           * Required. The fully qualified name of the batch to retrieve in the format
+           * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1866,7 +1875,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the batch to retrieve.
+         * @param name Required. The fully qualified name of the batch to retrieve in the format
+         *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1892,7 +1902,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the batch to retrieve.
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+         *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1970,17 +1981,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the batch to retrieve. */
+          /**
+           * Required. The fully qualified name of the batch to retrieve in the format
+           * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the batch to retrieve.
+          /** Required. The fully qualified name of the batch to retrieve in the format
+         "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the batch to retrieve. */
+          /**
+           * Required. The fully qualified name of the batch to retrieve in the format
+           * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

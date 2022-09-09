@@ -127,7 +127,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * GTM ContainerVersions's API relative path.
+   * GTM Container Version's API relative path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,7 +375,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * GTM ContainerVersions's API relative path.
+   * GTM Container Version's API relative path.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -383,7 +383,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * GTM ContainerVersions's API relative path.
+   * GTM Container Version's API relative path.
    * @param path path or {@code null} for none
    */
   public ContainerVersion setPath(java.lang.String path) {

@@ -161,7 +161,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the tagmanager server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+     * @param path GTM Account's API relative path. Example: accounts/{account_id}
      * @return the request
      */
     public Get get(java.lang.String path) throws java.io.IOException {
@@ -187,7 +187,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+       * @param path GTM Account's API relative path. Example: accounts/{account_id}
        * @since 1.13
        */
       protected Get(java.lang.String path) {
@@ -265,17 +265,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. Example: accounts/{account_id} */
       @com.google.api.client.util.Key
       private java.lang.String path;
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id}
+      /** GTM Account's API relative path. Example: accounts/{account_id}
        */
       public java.lang.String getPath() {
         return path;
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. Example: accounts/{account_id} */
       public Get setPath(java.lang.String path) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -1195,6 +1195,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                 "Parameter path must conform to the pattern " +
                 "^accounts/[^/]+/containers/[^/]+$");
           }
+          checkRequiredParameter(content, "content");
+          checkRequiredParameter(content.getName(), "Container.getName()");
         }
 
         @Override

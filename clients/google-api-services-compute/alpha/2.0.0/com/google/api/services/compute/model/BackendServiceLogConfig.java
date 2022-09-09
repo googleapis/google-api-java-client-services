@@ -30,26 +30,45 @@ package com.google.api.services.compute.model;
 public final class BackendServiceLogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field denotes whether to enable logging for the load balancer traffic served by this
-   * backend service.
+   * Denotes whether to enable logging for the load balancer traffic served by this backend service.
+   * The default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enable;
 
   /**
+   * This field can only be specified if logging is enabled for this backend service. Configures
+   * whether all, none or a subset of optional fields should be added to the reported logs. One of
+   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optional;
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service and
+   * "logConfig.optional" was set to CUSTOM. Contains a list of optional fields you want to include
+   * in the logs. For example: serverInstance, serverGkeDetails.cluster,
+   * serverGkeDetails.pod.podNamespace
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> optionalFields;
+
+  /**
    * This field can only be specified if logging is enabled for this backend service. The value of
    * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
    * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
-   * The default value is 0.0.
+   * The default value is 1.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float sampleRate;
 
   /**
-   * This field denotes whether to enable logging for the load balancer traffic served by this
-   * backend service.
+   * Denotes whether to enable logging for the load balancer traffic served by this backend service.
+   * The default value is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnable() {
@@ -57,8 +76,8 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * This field denotes whether to enable logging for the load balancer traffic served by this
-   * backend service.
+   * Denotes whether to enable logging for the load balancer traffic served by this backend service.
+   * The default value is false.
    * @param enable enable or {@code null} for none
    */
   public BackendServiceLogConfig setEnable(java.lang.Boolean enable) {
@@ -67,10 +86,54 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * This field can only be specified if logging is enabled for this backend service. Configures
+   * whether all, none or a subset of optional fields should be added to the reported logs. One of
+   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptional() {
+    return optional;
+  }
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service. Configures
+   * whether all, none or a subset of optional fields should be added to the reported logs. One of
+   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * @param optional optional or {@code null} for none
+   */
+  public BackendServiceLogConfig setOptional(java.lang.String optional) {
+    this.optional = optional;
+    return this;
+  }
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service and
+   * "logConfig.optional" was set to CUSTOM. Contains a list of optional fields you want to include
+   * in the logs. For example: serverInstance, serverGkeDetails.cluster,
+   * serverGkeDetails.pod.podNamespace
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOptionalFields() {
+    return optionalFields;
+  }
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service and
+   * "logConfig.optional" was set to CUSTOM. Contains a list of optional fields you want to include
+   * in the logs. For example: serverInstance, serverGkeDetails.cluster,
+   * serverGkeDetails.pod.podNamespace
+   * @param optionalFields optionalFields or {@code null} for none
+   */
+  public BackendServiceLogConfig setOptionalFields(java.util.List<java.lang.String> optionalFields) {
+    this.optionalFields = optionalFields;
+    return this;
+  }
+
+  /**
    * This field can only be specified if logging is enabled for this backend service. The value of
    * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
    * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
-   * The default value is 0.0.
+   * The default value is 1.0.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSampleRate() {
@@ -81,7 +144,7 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
    * This field can only be specified if logging is enabled for this backend service. The value of
    * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
    * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
-   * The default value is 0.0.
+   * The default value is 1.0.
    * @param sampleRate sampleRate or {@code null} for none
    */
   public BackendServiceLogConfig setSampleRate(java.lang.Float sampleRate) {

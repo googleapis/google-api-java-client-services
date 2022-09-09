@@ -158,9 +158,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * unencrypted traffic. VMs are able to send traffic to, or receive traffic from, such a VLAN
    * attachment. - IPSEC - The VLAN attachment carries only encrypted traffic that is encrypted by
    * an IPsec device, such as an HA VPN gateway or third-party IPsec VPN. VMs cannot directly send
-   * traffic to, or receive traffic from, such a VLAN attachment. To use *IPsec-encrypted Cloud
-   * Interconnect*, the VLAN attachment must be created with this option. Not currently available
-   * publicly.
+   * traffic to, or receive traffic from, such a VLAN attachment. To use *HA VPN over Cloud
+   * Interconnect*, the VLAN attachment must be created with this option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -663,9 +662,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * unencrypted traffic. VMs are able to send traffic to, or receive traffic from, such a VLAN
    * attachment. - IPSEC - The VLAN attachment carries only encrypted traffic that is encrypted by
    * an IPsec device, such as an HA VPN gateway or third-party IPsec VPN. VMs cannot directly send
-   * traffic to, or receive traffic from, such a VLAN attachment. To use *IPsec-encrypted Cloud
-   * Interconnect*, the VLAN attachment must be created with this option. Not currently available
-   * publicly.
+   * traffic to, or receive traffic from, such a VLAN attachment. To use *HA VPN over Cloud
+   * Interconnect*, the VLAN attachment must be created with this option.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryption() {
@@ -679,9 +677,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * unencrypted traffic. VMs are able to send traffic to, or receive traffic from, such a VLAN
    * attachment. - IPSEC - The VLAN attachment carries only encrypted traffic that is encrypted by
    * an IPsec device, such as an HA VPN gateway or third-party IPsec VPN. VMs cannot directly send
-   * traffic to, or receive traffic from, such a VLAN attachment. To use *IPsec-encrypted Cloud
-   * Interconnect*, the VLAN attachment must be created with this option. Not currently available
-   * publicly.
+   * traffic to, or receive traffic from, such a VLAN attachment. To use *HA VPN over Cloud
+   * Interconnect*, the VLAN attachment must be created with this option.
    * @param encryption encryption or {@code null} for none
    */
   public InterconnectAttachment setEncryption(java.lang.String encryption) {

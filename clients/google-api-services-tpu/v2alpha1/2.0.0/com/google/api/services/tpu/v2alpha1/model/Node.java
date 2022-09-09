@@ -169,6 +169,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private ServiceAccount serviceAccount;
 
   /**
+   * Shielded Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
    * Output only. The current state for the TPU Node.
    * The value may be {@code null}.
    */
@@ -492,6 +499,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setServiceAccount(ServiceAccount serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public Node setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

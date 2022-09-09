@@ -18,7 +18,7 @@ package com.google.api.services.cloudsearch.v1.model;
 
 /**
  * The corpus specific metadata for office-type documents, from Google Docs and other sources. This
- * message is passed to the scorer and beyond. Next tag: 7
+ * message is passed to the scorer and beyond. Next tag: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -59,6 +59,20 @@ public final class GoogleDocsMetadata extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long lastContentModifiedTimestamp;
+
+  /**
+   * Contains number of subscribers for the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numSubscribers;
+
+  /**
+   * Size of untruncated viewers list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numViewers;
 
   /**
    * Additional per-result information, akin to Gmail's SingleThreadResponse. Note: GWS no longer
@@ -145,6 +159,40 @@ public final class GoogleDocsMetadata extends com.google.api.client.json.Generic
    */
   public GoogleDocsMetadata setLastContentModifiedTimestamp(java.lang.Long lastContentModifiedTimestamp) {
     this.lastContentModifiedTimestamp = lastContentModifiedTimestamp;
+    return this;
+  }
+
+  /**
+   * Contains number of subscribers for the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumSubscribers() {
+    return numSubscribers;
+  }
+
+  /**
+   * Contains number of subscribers for the document.
+   * @param numSubscribers numSubscribers or {@code null} for none
+   */
+  public GoogleDocsMetadata setNumSubscribers(java.lang.Integer numSubscribers) {
+    this.numSubscribers = numSubscribers;
+    return this;
+  }
+
+  /**
+   * Size of untruncated viewers list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumViewers() {
+    return numViewers;
+  }
+
+  /**
+   * Size of untruncated viewers list.
+   * @param numViewers numViewers or {@code null} for none
+   */
+  public GoogleDocsMetadata setNumViewers(java.lang.Integer numViewers) {
+    this.numViewers = numViewers;
     return this;
   }
 

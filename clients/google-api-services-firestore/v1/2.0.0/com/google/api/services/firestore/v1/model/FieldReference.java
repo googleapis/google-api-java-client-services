@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * A reference to a field, such as `max(messages.time) as max_time`.
+ * A reference to a field in a document, ex: `stats.operations`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -30,12 +30,16 @@ package com.google.api.services.firestore.v1.model;
 public final class FieldReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * The relative path of the document being referenced. Requires: * Conform to document field name
+   * limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldPath;
 
   /**
+   * The relative path of the document being referenced. Requires: * Conform to document field name
+   * limitations.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldPath() {
@@ -43,6 +47,8 @@ public final class FieldReference extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The relative path of the document being referenced. Requires: * Conform to document field name
+   * limitations.
    * @param fieldPath fieldPath or {@code null} for none
    */
   public FieldReference setFieldPath(java.lang.String fieldPath) {

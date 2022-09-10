@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebasedatabase</artifactId>
-  <version>v1beta-rev20220615-2.0.0</version>
-  <name>Firebase Realtime Database Management API v1beta-rev20220615-2.0.0</name>
+  <version>v1beta-rev20220908-2.0.0</version>
+  <name>Firebase Realtime Database API v1beta-rev20220908-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Firebase Realtime Database Management API ${project.version}</doctitle>
-          <windowtitle>Firebase Realtime Database Management API ${project.version}</windowtitle>
+          <doctitle>Firebase Realtime Database API ${project.version}</doctitle>
+          <windowtitle>Firebase Realtime Database API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.42.2/</link>

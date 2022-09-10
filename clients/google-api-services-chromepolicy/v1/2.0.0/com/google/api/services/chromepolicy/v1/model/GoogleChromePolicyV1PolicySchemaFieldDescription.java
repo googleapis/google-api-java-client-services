@@ -30,7 +30,7 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The description for the field.
+   * Deprecated. Use name and field_description instead. The description for the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,6 +58,13 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
+   * Output only. The description of the field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fieldDescription;
+
+  /**
    * Output only. Any input constraints associated on the values for the field.
    * The value may be {@code null}.
    */
@@ -71,6 +78,13 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleChromePolicyV1PolicySchemaFieldKnownValueDescription> knownValueDescriptions;
+
+  /**
+   * Output only. The name of the field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
 
   /**
    * Output only. Provides the description of the fields nested in this field, if the field is a
@@ -89,7 +103,7 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   private java.util.List<GoogleChromePolicyV1PolicySchemaRequiredItems> requiredItems;
 
   /**
-   * Output only. The description for the field.
+   * Deprecated. Use name and field_description instead. The description for the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -97,7 +111,7 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
-   * Output only. The description for the field.
+   * Deprecated. Use name and field_description instead. The description for the field.
    * @param description description or {@code null} for none
    */
   public GoogleChromePolicyV1PolicySchemaFieldDescription setDescription(java.lang.String description) {
@@ -142,6 +156,23 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
+   * Output only. The description of the field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFieldDescription() {
+    return fieldDescription;
+  }
+
+  /**
+   * Output only. The description of the field.
+   * @param fieldDescription fieldDescription or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchemaFieldDescription setFieldDescription(java.lang.String fieldDescription) {
+    this.fieldDescription = fieldDescription;
+    return this;
+  }
+
+  /**
    * Output only. Any input constraints associated on the values for the field.
    * @return value or {@code null} for none
    */
@@ -174,6 +205,23 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
    */
   public GoogleChromePolicyV1PolicySchemaFieldDescription setKnownValueDescriptions(java.util.List<GoogleChromePolicyV1PolicySchemaFieldKnownValueDescription> knownValueDescriptions) {
     this.knownValueDescriptions = knownValueDescriptions;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. The name of the field.
+   * @param name name or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchemaFieldDescription setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

@@ -58,7 +58,8 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   private java.lang.String projectId;
 
   /**
-   * Required. An ordered sequence of property names and their index attributes.
+   * Required. An ordered sequence of property names and their index attributes. Requires: * A
+   * maximum of 100 properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +141,8 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Required. An ordered sequence of property names and their index attributes.
+   * Required. An ordered sequence of property names and their index attributes. Requires: * A
+   * maximum of 100 properties.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleDatastoreAdminV1IndexedProperty> getProperties() {
@@ -148,7 +150,8 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Required. An ordered sequence of property names and their index attributes.
+   * Required. An ordered sequence of property names and their index attributes. Requires: * A
+   * maximum of 100 properties.
    * @param properties properties or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setProperties(java.util.List<GoogleDatastoreAdminV1IndexedProperty> properties) {

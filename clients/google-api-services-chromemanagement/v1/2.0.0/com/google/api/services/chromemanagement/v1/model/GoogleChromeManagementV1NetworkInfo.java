@@ -17,7 +17,13 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * Network devices info.
+ * Network device information. * This field provides device information, which is static and will
+ * not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfigu
+ * ration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data
+ * Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup -
+ * Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally,
+ * and will be reported when the device is next online: Yes * Reported for affiliated users only:
+ * N/A
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

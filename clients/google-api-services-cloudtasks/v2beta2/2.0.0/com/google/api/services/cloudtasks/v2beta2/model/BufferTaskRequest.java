@@ -30,23 +30,16 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class BufferTaskRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Body of the HTTP request. The body can take any generic value. The value will be written to the
-   * HttpRequest of the [Task].
+   * Optional. Body of the HTTP request. The body can take any generic value. The value will be
+   * written to the HttpRequest of the [Task].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HttpBody body;
 
   /**
-   * Optional. The user-specified ID for the task.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String taskId;
-
-  /**
-   * Body of the HTTP request. The body can take any generic value. The value will be written to the
-   * HttpRequest of the [Task].
+   * Optional. Body of the HTTP request. The body can take any generic value. The value will be
+   * written to the HttpRequest of the [Task].
    * @return value or {@code null} for none
    */
   public HttpBody getBody() {
@@ -54,29 +47,12 @@ public final class BufferTaskRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Body of the HTTP request. The body can take any generic value. The value will be written to the
-   * HttpRequest of the [Task].
+   * Optional. Body of the HTTP request. The body can take any generic value. The value will be
+   * written to the HttpRequest of the [Task].
    * @param body body or {@code null} for none
    */
   public BufferTaskRequest setBody(HttpBody body) {
     this.body = body;
-    return this;
-  }
-
-  /**
-   * Optional. The user-specified ID for the task.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTaskId() {
-    return taskId;
-  }
-
-  /**
-   * Optional. The user-specified ID for the task.
-   * @param taskId taskId or {@code null} for none
-   */
-  public BufferTaskRequest setTaskId(java.lang.String taskId) {
-    this.taskId = taskId;
     return this;
   }
 

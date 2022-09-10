@@ -17,7 +17,16 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * Memory information of a device.
+ * Memory information of a device. * This field has both telemetry and device information: -
+ * `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information -
+ * `totalMemoryEncryption` - Device information * Data for this field is controlled via policy:
+ * [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data
+ * Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes
+ * - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: -
+ * `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device
+ * startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored
+ * locally, and will be reported when the device is next online: only for `totalMemoryEncryption` *
+ * Reported for affiliated users only: N/A
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

@@ -17,7 +17,12 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * CPU specs for a CPU.
+ * CPU specifications for the device * This field provides device information, which is static and
+ * will not change over time. * Data for this field is controlled via policy:
+ * [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data
+ * Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy
+ * Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will
+ * be reported when the device is next online: No * Reported for affiliated users only: N/A
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation
@@ -31,7 +36,12 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1CpuInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The CPU architecture.
+   * Output only. Architecture type for the CPU. * This field provides device information, which is
+   * static and will not change over time. * Data for this field is controlled via policy:
+   * [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data
+   * Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy
+   * Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and
+   * will be reported when the device is next online: No * Reported for affiliated users only: N/A
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +77,12 @@ public final class GoogleChromeManagementV1CpuInfo extends com.google.api.client
   private java.lang.String model;
 
   /**
-   * Output only. The CPU architecture.
+   * Output only. Architecture type for the CPU. * This field provides device information, which is
+   * static and will not change over time. * Data for this field is controlled via policy:
+   * [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data
+   * Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy
+   * Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and
+   * will be reported when the device is next online: No * Reported for affiliated users only: N/A
    * @return value or {@code null} for none
    */
   public java.lang.String getArchitecture() {
@@ -75,7 +90,12 @@ public final class GoogleChromeManagementV1CpuInfo extends com.google.api.client
   }
 
   /**
-   * Output only. The CPU architecture.
+   * Output only. Architecture type for the CPU. * This field provides device information, which is
+   * static and will not change over time. * Data for this field is controlled via policy:
+   * [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data
+   * Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy
+   * Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and
+   * will be reported when the device is next online: No * Reported for affiliated users only: N/A
    * @param architecture architecture or {@code null} for none
    */
   public GoogleChromeManagementV1CpuInfo setArchitecture(java.lang.String architecture) {

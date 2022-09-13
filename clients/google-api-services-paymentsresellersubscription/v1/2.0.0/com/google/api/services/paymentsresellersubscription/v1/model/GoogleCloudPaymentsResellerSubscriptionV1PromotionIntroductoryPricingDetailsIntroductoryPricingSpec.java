@@ -31,11 +31,59 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The discount amount. The value is positive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1Amount discountAmount;
+
+  /**
+   * Output only. The discount percentage in micros. For example, 50,000 represents 5%.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long discountRatioMicros;
+
+  /**
    * Output only. Output Only. The duration of an introductory offer in billing cycles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer recurrenceCount;
+
+  /**
+   * Output only. The discount amount. The value is positive.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Amount getDiscountAmount() {
+    return discountAmount;
+  }
+
+  /**
+   * Output only. The discount amount. The value is positive.
+   * @param discountAmount discountAmount or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec setDiscountAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount discountAmount) {
+    this.discountAmount = discountAmount;
+    return this;
+  }
+
+  /**
+   * Output only. The discount percentage in micros. For example, 50,000 represents 5%.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiscountRatioMicros() {
+    return discountRatioMicros;
+  }
+
+  /**
+   * Output only. The discount percentage in micros. For example, 50,000 represents 5%.
+   * @param discountRatioMicros discountRatioMicros or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec setDiscountRatioMicros(java.lang.Long discountRatioMicros) {
+    this.discountRatioMicros = discountRatioMicros;
+    return this;
+  }
 
   /**
    * Output only. Output Only. The duration of an introductory offer in billing cycles.

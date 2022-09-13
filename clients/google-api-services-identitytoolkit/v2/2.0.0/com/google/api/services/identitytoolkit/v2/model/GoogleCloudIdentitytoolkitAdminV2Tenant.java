@@ -104,6 +104,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig mfaConfig;
 
   /**
+   * Configuration related to monitoring project activity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2MonitoringConfig monitoring;
+
+  /**
    * Output only. Resource name of a tenant. For example: "projects/{project-id}/tenants/{tenant-
    * id}"
    * The value may be {@code null}.
@@ -295,6 +302,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Tenant setMfaConfig(GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig mfaConfig) {
     this.mfaConfig = mfaConfig;
+    return this;
+  }
+
+  /**
+   * Configuration related to monitoring project activity.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2MonitoringConfig getMonitoring() {
+    return monitoring;
+  }
+
+  /**
+   * Configuration related to monitoring project activity.
+   * @param monitoring monitoring or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Tenant setMonitoring(GoogleCloudIdentitytoolkitAdminV2MonitoringConfig monitoring) {
+    this.monitoring = monitoring;
     return this;
   }
 

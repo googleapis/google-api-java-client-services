@@ -1652,8 +1652,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        *
        * @param name Required. User-provided name for this snapshot. If the name is not provided in the request, the
        *        server will assign a random name for this snapshot on the same project as the
-       *        subscription. Note that for REST API requests, you must specify a name. See the resource
-       *        name rules. Format is `projects/{project}/snapshots/{snap}`.
+       *        subscription. Note that for REST API requests, you must specify a name. See the [resource
+       *        name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
+       *        `projects/{project}/snapshots/{snap}`.
        * @param content the {@link com.google.api.services.pubsub.model.CreateSnapshotRequest}
        * @return the request
        */
@@ -1693,8 +1694,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          *
          * @param name Required. User-provided name for this snapshot. If the name is not provided in the request, the
        *        server will assign a random name for this snapshot on the same project as the
-       *        subscription. Note that for REST API requests, you must specify a name. See the resource
-       *        name rules. Format is `projects/{project}/snapshots/{snap}`.
+       *        subscription. Note that for REST API requests, you must specify a name. See the [resource
+       *        name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
+       *        `projects/{project}/snapshots/{snap}`.
          * @param content the {@link com.google.api.services.pubsub.model.CreateSnapshotRequest}
          * @since 1.13
          */
@@ -1767,14 +1769,16 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Required. User-provided name for this snapshot. If the name is not provided in the
          * request, the server will assign a random name for this snapshot on the same project as
          * the subscription. Note that for REST API requests, you must specify a name. See the
-         * resource name rules. Format is `projects/{project}/snapshots/{snap}`.
+         * [resource name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
+         * is `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. User-provided name for this snapshot. If the name is not provided in the request, the
        server will assign a random name for this snapshot on the same project as the subscription. Note
-       that for REST API requests, you must specify a name. See the resource name rules. Format is
+       that for REST API requests, you must specify a name. See the [resource name
+       rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
        `projects/{project}/snapshots/{snap}`.
          */
         public java.lang.String getName() {
@@ -1785,7 +1789,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Required. User-provided name for this snapshot. If the name is not provided in the
          * request, the server will assign a random name for this snapshot on the same project as
          * the subscription. Note that for REST API requests, you must specify a name. See the
-         * resource name rules. Format is `projects/{project}/snapshots/{snap}`.
+         * [resource name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
+         * is `projects/{project}/snapshots/{snap}`.
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

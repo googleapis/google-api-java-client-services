@@ -23,10 +23,10 @@ package com.google.api.services.servicemanagement.model;
  * quota.limits defines limits on the metrics, which will be used for quota checks at runtime. An
  * example quota configuration in yaml format: quota: limits: - name: apiWriteQpsPerProject metric:
  * library.googleapis.com/write_calls unit: "1/min/{project}" # rate limit for consumer projects
- * values: STANDARD: 10000 # The metric rules bind all methods to the read_calls metric, # except
- * for the UpdateBook and DeleteBook methods. These two methods # are mapped to the write_calls
- * metric, with the UpdateBook method # consuming at twice rate as the DeleteBook method.
- * metric_rules: - selector: "*" metric_costs: library.googleapis.com/read_calls: 1 - selector:
+ * values: STANDARD: 10000 (The metric rules bind all methods to the read_calls metric, except for
+ * the UpdateBook and DeleteBook methods. These two methods are mapped to the write_calls metric,
+ * with the UpdateBook method consuming at twice rate as the DeleteBook method.) metric_rules: -
+ * selector: "*" metric_costs: library.googleapis.com/read_calls: 1 - selector:
  * google.example.library.v1.LibraryService.UpdateBook metric_costs:
  * library.googleapis.com/write_calls: 2 - selector:
  * google.example.library.v1.LibraryService.DeleteBook metric_costs:
@@ -47,14 +47,14 @@ package com.google.api.services.servicemanagement.model;
 public final class Quota extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of `QuotaLimit` definitions for the service.
+   * List of QuotaLimit definitions for the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QuotaLimit> limits;
 
   /**
-   * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+   * List of MetricRule definitions, each one mapping a selected method to one or more metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `QuotaLimit` definitions for the service.
+   * List of QuotaLimit definitions for the service.
    * @return value or {@code null} for none
    */
   public java.util.List<QuotaLimit> getLimits() {
@@ -75,7 +75,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `QuotaLimit` definitions for the service.
+   * List of QuotaLimit definitions for the service.
    * @param limits limits or {@code null} for none
    */
   public Quota setLimits(java.util.List<QuotaLimit> limits) {
@@ -84,7 +84,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+   * List of MetricRule definitions, each one mapping a selected method to one or more metrics.
    * @return value or {@code null} for none
    */
   public java.util.List<MetricRule> getMetricRules() {
@@ -92,7 +92,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+   * List of MetricRule definitions, each one mapping a selected method to one or more metrics.
    * @param metricRules metricRules or {@code null} for none
    */
   public Quota setMetricRules(java.util.List<MetricRule> metricRules) {

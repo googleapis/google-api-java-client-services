@@ -18,6 +18,7 @@ package com.google.api.services.apigee.v1.model;
 
 /**
  * Key value map pair where the value represents the data associated with the corresponding key.
+ * **Note**: Supported for Apigee hybrid 1.8.x and higher.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:

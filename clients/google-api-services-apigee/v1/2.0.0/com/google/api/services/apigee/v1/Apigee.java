@@ -6679,7 +6679,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Creates key value entries in a key value map scoped to an organization, environment, or API
-           * proxy.
+           * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.create".
            *
@@ -6709,7 +6709,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Creates key value entries in a key value map scoped to an organization, environment, or API
-             * proxy.
+             * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.create".
              *
@@ -6835,8 +6835,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
           /**
            * Deletes a key value entry from a key value map scoped to an organization, environment, or API
-           * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
-           * continue to function with its cached values for a few minutes. This is expected behavior.
+           * proxy. **Notes:** * After you delete the key value entry, the policy consuming the entry will
+           * continue to function with its cached values for a few minutes. This is expected behavior. *
+           * Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.delete".
            *
@@ -6865,8 +6866,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Deletes a key value entry from a key value map scoped to an organization, environment, or API
-             * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
-             * continue to function with its cached values for a few minutes. This is expected behavior.
+             * proxy. **Notes:** * After you delete the key value entry, the policy consuming the entry will
+             * continue to function with its cached values for a few minutes. This is expected behavior. *
+             * Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.delete".
              *
@@ -6992,7 +6994,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Get the Key value entry value for org, env or apis scoped Key value map.
+           * Get the key value entry value for a key value map scoped to an organization, environment, or API
+           * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.get".
            *
@@ -7020,7 +7023,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
 
             /**
-             * Get the Key value entry value for org, env or apis scoped Key value map.
+             * Get the key value entry value for a key value map scoped to an organization, environment, or
+             * API proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.get".
              *
@@ -7157,6 +7161,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
           /**
            * Lists key value entries for key values maps scoped to an organization, environment, or API proxy.
+           * **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.list".
            *
@@ -7185,7 +7190,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Lists key value entries for key values maps scoped to an organization, environment, or API
-             * proxy.
+             * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.list".
              *
@@ -26957,7 +26962,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Creates key value entries in a key value map scoped to an organization, environment, or API
-           * proxy.
+           * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.create".
            *
@@ -26987,7 +26992,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Creates key value entries in a key value map scoped to an organization, environment, or API
-             * proxy.
+             * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.create".
              *
@@ -27113,8 +27118,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
           /**
            * Deletes a key value entry from a key value map scoped to an organization, environment, or API
-           * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
-           * continue to function with its cached values for a few minutes. This is expected behavior.
+           * proxy. **Notes:** * After you delete the key value entry, the policy consuming the entry will
+           * continue to function with its cached values for a few minutes. This is expected behavior. *
+           * Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.delete".
            *
@@ -27143,8 +27149,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Deletes a key value entry from a key value map scoped to an organization, environment, or API
-             * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
-             * continue to function with its cached values for a few minutes. This is expected behavior.
+             * proxy. **Notes:** * After you delete the key value entry, the policy consuming the entry will
+             * continue to function with its cached values for a few minutes. This is expected behavior. *
+             * Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.delete".
              *
@@ -27270,7 +27277,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Get the Key value entry value for org, env or apis scoped Key value map.
+           * Get the key value entry value for a key value map scoped to an organization, environment, or API
+           * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.get".
            *
@@ -27298,7 +27306,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
 
             /**
-             * Get the Key value entry value for org, env or apis scoped Key value map.
+             * Get the key value entry value for a key value map scoped to an organization, environment, or
+             * API proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.get".
              *
@@ -27435,6 +27444,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
           /**
            * Lists key value entries for key values maps scoped to an organization, environment, or API proxy.
+           * **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.list".
            *
@@ -27463,7 +27473,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Lists key value entries for key values maps scoped to an organization, environment, or API
-             * proxy.
+             * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
              *
              * Create a request for the method "entries.list".
              *
@@ -39702,7 +39712,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Creates key value entries in a key value map scoped to an organization, environment, or API
-         * proxy.
+         * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
          *
          * Create a request for the method "entries.create".
          *
@@ -39732,7 +39742,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Creates key value entries in a key value map scoped to an organization, environment, or API
-           * proxy.
+           * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.create".
            *
@@ -39858,8 +39868,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Deletes a key value entry from a key value map scoped to an organization, environment, or API
-         * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
-         * continue to function with its cached values for a few minutes. This is expected behavior.
+         * proxy. **Notes:** * After you delete the key value entry, the policy consuming the entry will
+         * continue to function with its cached values for a few minutes. This is expected behavior. *
+         * Supported for Apigee hybrid 1.8.x and higher.
          *
          * Create a request for the method "entries.delete".
          *
@@ -39888,8 +39899,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Deletes a key value entry from a key value map scoped to an organization, environment, or API
-           * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
-           * continue to function with its cached values for a few minutes. This is expected behavior.
+           * proxy. **Notes:** * After you delete the key value entry, the policy consuming the entry will
+           * continue to function with its cached values for a few minutes. This is expected behavior. *
+           * Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.delete".
            *
@@ -40015,7 +40027,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Get the Key value entry value for org, env or apis scoped Key value map.
+         * Get the key value entry value for a key value map scoped to an organization, environment, or API
+         * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
          *
          * Create a request for the method "entries.get".
          *
@@ -40043,7 +40056,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
 
           /**
-           * Get the Key value entry value for org, env or apis scoped Key value map.
+           * Get the key value entry value for a key value map scoped to an organization, environment, or
+           * API proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.get".
            *
@@ -40180,6 +40194,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Lists key value entries for key values maps scoped to an organization, environment, or API proxy.
+         * **Note**: Supported for Apigee hybrid 1.8.x and higher.
          *
          * Create a request for the method "entries.list".
          *
@@ -40208,7 +40223,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Lists key value entries for key values maps scoped to an organization, environment, or API
-           * proxy.
+           * proxy. **Note**: Supported for Apigee hybrid 1.8.x and higher.
            *
            * Create a request for the method "entries.list".
            *

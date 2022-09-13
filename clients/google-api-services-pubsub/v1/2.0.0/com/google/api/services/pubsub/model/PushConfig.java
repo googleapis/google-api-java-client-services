@@ -39,8 +39,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
    * value will not be changed. `GetSubscription` calls will always return a valid version, even if
    * the subscription was created without this attribute. The only supported values for the `x-goog-
    * version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. *
-   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: attributes
-   * { "x-goog-version": "v1" }
+   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: `attributes
+   * { "x-goog-version": "v1" }`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
    * value will not be changed. `GetSubscription` calls will always return a valid version, even if
    * the subscription was created without this attribute. The only supported values for the `x-goog-
    * version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. *
-   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: attributes
-   * { "x-goog-version": "v1" }
+   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: `attributes
+   * { "x-goog-version": "v1" }`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -90,8 +90,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
    * value will not be changed. `GetSubscription` calls will always return a valid version, even if
    * the subscription was created without this attribute. The only supported values for the `x-goog-
    * version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. *
-   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: attributes
-   * { "x-goog-version": "v1" }
+   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: `attributes
+   * { "x-goog-version": "v1" }`
    * @param attributes attributes or {@code null} for none
    */
   public PushConfig setAttributes(java.util.Map<String, java.lang.String> attributes) {

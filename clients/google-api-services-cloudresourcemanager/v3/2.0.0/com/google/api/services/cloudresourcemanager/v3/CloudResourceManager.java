@@ -5038,8 +5038,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * policy will fail. This restriction also applies to legacy projects that no longer have owners who
      * have accepted the ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting
      * owner is rectified. If the project is part of an organization, you can remove all owners,
-     * potentially making the organization inaccessible. + Calling this method requires enabling the App
-     * Engine Admin API.
+     * potentially making the organization inaccessible.
      *
      * Create a request for the method "projects.setIamPolicy".
      *
@@ -5088,8 +5087,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * the policy will fail. This restriction also applies to legacy projects that no longer have
        * owners who have accepted the ToS. Edits to IAM policies will be rejected until the lack of a
        * ToS-accepting owner is rectified. If the project is part of an organization, you can remove all
-       * owners, potentially making the organization inaccessible. + Calling this method requires
-       * enabling the App Engine Admin API.
+       * owners, potentially making the organization inaccessible.
        *
        * Create a request for the method "projects.setIamPolicy".
        *

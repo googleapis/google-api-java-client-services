@@ -33,7 +33,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
-   * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
+   * delivered and before it is acknowledged, it is considered to be _outstanding_. During that time
    * period, the message will not be redelivered (on a best-effort basis). For pull subscriptions,
    * this value is used as the initial value for the ack deadline. To override this value for a
    * given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
@@ -121,7 +121,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String filter;
 
   /**
-   * See Creating and managing labels.
+   * See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +207,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
-   * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
+   * delivered and before it is acknowledged, it is considered to be _outstanding_. During that time
    * period, the message will not be redelivered (on a best-effort basis). For pull subscriptions,
    * this value is used as the initial value for the ack deadline. To override this value for a
    * given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
@@ -226,7 +226,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
-   * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
+   * delivered and before it is acknowledged, it is considered to be _outstanding_. During that time
    * period, the message will not be redelivered (on a best-effort basis). For pull subscriptions,
    * this value is used as the initial value for the ack deadline. To override this value for a
    * given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
@@ -409,7 +409,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See Creating and managing labels.
+   * See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -417,7 +417,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See Creating and managing labels.
+   * See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public Subscription setLabels(java.util.Map<String, java.lang.String> labels) {

@@ -38,7 +38,8 @@ public final class ListFormResponsesResponse extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
-   * The returned responses.
+   * The returned form responses. Note: The `formId` field is not returned in the `FormResponse`
+   * object for list requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class ListFormResponsesResponse extends com.google.api.client.json.
   }
 
   /**
-   * The returned responses.
+   * The returned form responses. Note: The `formId` field is not returned in the `FormResponse`
+   * object for list requests.
    * @return value or {@code null} for none
    */
   public java.util.List<FormResponse> getResponses() {
@@ -78,7 +80,8 @@ public final class ListFormResponsesResponse extends com.google.api.client.json.
   }
 
   /**
-   * The returned responses.
+   * The returned form responses. Note: The `formId` field is not returned in the `FormResponse`
+   * object for list requests.
    * @param responses responses or {@code null} for none
    */
   public ListFormResponsesResponse setResponses(java.util.List<FormResponse> responses) {

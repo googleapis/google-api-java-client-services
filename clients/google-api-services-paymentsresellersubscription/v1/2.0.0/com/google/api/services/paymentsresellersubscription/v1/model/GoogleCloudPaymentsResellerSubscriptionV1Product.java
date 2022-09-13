@@ -39,6 +39,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   private java.lang.String name;
 
   /**
+   * Output only. Price configs for the product in the available regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig> priceConfigs;
+
+  /**
    * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refers
    * to: https://en.wikipedia.org/wiki/ISO_3166-1
    * The value may be {@code null}.
@@ -76,6 +83,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Product setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Price configs for the product in the available regions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig> getPriceConfigs() {
+    return priceConfigs;
+  }
+
+  /**
+   * Output only. Price configs for the product in the available regions.
+   * @param priceConfigs priceConfigs or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Product setPriceConfigs(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig> priceConfigs) {
+    this.priceConfigs = priceConfigs;
     return this;
   }
 

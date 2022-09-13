@@ -87,6 +87,14 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   private java.util.List<java.lang.String> resourceTypes;
 
   /**
+   * Output only. The last time this custom constraint was updated. This represents the last time
+   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Allow or deny type.
    * @return value or {@code null} for none
    */
@@ -212,6 +220,25 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
     this.resourceTypes = resourceTypes;
+    return this;
+  }
+
+  /**
+   * Output only. The last time this custom constraint was updated. This represents the last time
+   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The last time this custom constraint was updated. This represents the last time
+   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2CustomConstraint setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

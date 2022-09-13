@@ -30,9 +30,9 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ListTransferableSkusRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The super admin of the resold customer generates this token to authorize a reseller to access
-   * their Cloud Identity and purchase entitlements on their behalf. You can omit this token after
-   * authorization. See https://support.google.com/a/answer/7643790 for more details.
+   * Optional. The super admin of the resold customer generates this token to authorize a reseller
+   * to access their Cloud Identity and purchase entitlements on their behalf. You can omit this
+   * token after authorization. See https://support.google.com/a/answer/7643790 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +80,9 @@ public final class GoogleCloudChannelV1ListTransferableSkusRequest extends com.g
   private java.lang.String pageToken;
 
   /**
-   * The super admin of the resold customer generates this token to authorize a reseller to access
-   * their Cloud Identity and purchase entitlements on their behalf. You can omit this token after
-   * authorization. See https://support.google.com/a/answer/7643790 for more details.
+   * Optional. The super admin of the resold customer generates this token to authorize a reseller
+   * to access their Cloud Identity and purchase entitlements on their behalf. You can omit this
+   * token after authorization. See https://support.google.com/a/answer/7643790 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthToken() {
@@ -90,9 +90,9 @@ public final class GoogleCloudChannelV1ListTransferableSkusRequest extends com.g
   }
 
   /**
-   * The super admin of the resold customer generates this token to authorize a reseller to access
-   * their Cloud Identity and purchase entitlements on their behalf. You can omit this token after
-   * authorization. See https://support.google.com/a/answer/7643790 for more details.
+   * Optional. The super admin of the resold customer generates this token to authorize a reseller
+   * to access their Cloud Identity and purchase entitlements on their behalf. You can omit this
+   * token after authorization. See https://support.google.com/a/answer/7643790 for more details.
    * @param authToken authToken or {@code null} for none
    */
   public GoogleCloudChannelV1ListTransferableSkusRequest setAuthToken(java.lang.String authToken) {

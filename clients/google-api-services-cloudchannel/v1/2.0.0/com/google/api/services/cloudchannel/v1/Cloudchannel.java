@@ -513,9 +513,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
      * Use this method when a reseller gets the entitlement information of an unowned customer. The
      * reseller should provide the customer's Cloud Identity ID or Customer Name. Possible error codes:
      * * PERMISSION_DENIED: * The customer doesn't belong to the reseller and has no auth token. * The
-     * supplied auth token is invalid. * The reseller account making the request is different from the
-     * reseller account in the query. * INVALID_ARGUMENT: Required request parameters are missing or
-     * invalid. Return value: List of TransferableOffer for the given customer and SKU.
+     * customer provided incorrect reseller information when generating auth token. * The reseller
+     * account making the request is different from the reseller account in the query. *
+     * INVALID_ARGUMENT: Required request parameters are missing or invalid. Return value: List of
+     * TransferableOffer for the given customer and SKU.
      *
      * Create a request for the method "accounts.listTransferableOffers".
      *
@@ -545,10 +546,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
        * request. Use this method when a reseller gets the entitlement information of an unowned
        * customer. The reseller should provide the customer's Cloud Identity ID or Customer Name.
        * Possible error codes: * PERMISSION_DENIED: * The customer doesn't belong to the reseller and
-       * has no auth token. * The supplied auth token is invalid. * The reseller account making the
-       * request is different from the reseller account in the query. * INVALID_ARGUMENT: Required
-       * request parameters are missing or invalid. Return value: List of TransferableOffer for the
-       * given customer and SKU.
+       * has no auth token. * The customer provided incorrect reseller information when generating auth
+       * token. * The reseller account making the request is different from the reseller account in the
+       * query. * INVALID_ARGUMENT: Required request parameters are missing or invalid. Return value:
+       * List of TransferableOffer for the given customer and SKU.
        *
        * Create a request for the method "accounts.listTransferableOffers".
        *

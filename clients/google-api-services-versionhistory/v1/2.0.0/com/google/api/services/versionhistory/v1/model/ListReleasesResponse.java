@@ -20,7 +20,8 @@ package com.google.api.services.versionhistory.v1.model;
  * Response message for ListReleases.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Version History API. For a detailed explanation see:
+ * transmitted over HTTP when working with the versionhistory.googleapis.com API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

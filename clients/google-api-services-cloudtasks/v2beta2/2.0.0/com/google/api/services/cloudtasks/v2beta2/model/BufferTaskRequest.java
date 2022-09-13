@@ -30,16 +30,16 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class BufferTaskRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Body of the HTTP request. The body can take any generic value. The value will be
-   * written to the HttpRequest of the [Task].
+   * Optional. Body of the HTTP request. The body can take any generic value. The value is written
+   * to the HttpRequest of the [Task].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HttpBody body;
 
   /**
-   * Optional. Body of the HTTP request. The body can take any generic value. The value will be
-   * written to the HttpRequest of the [Task].
+   * Optional. Body of the HTTP request. The body can take any generic value. The value is written
+   * to the HttpRequest of the [Task].
    * @return value or {@code null} for none
    */
   public HttpBody getBody() {
@@ -47,8 +47,8 @@ public final class BufferTaskRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Body of the HTTP request. The body can take any generic value. The value will be
-   * written to the HttpRequest of the [Task].
+   * Optional. Body of the HTTP request. The body can take any generic value. The value is written
+   * to the HttpRequest of the [Task].
    * @param body body or {@code null} for none
    */
   public BufferTaskRequest setBody(HttpBody body) {

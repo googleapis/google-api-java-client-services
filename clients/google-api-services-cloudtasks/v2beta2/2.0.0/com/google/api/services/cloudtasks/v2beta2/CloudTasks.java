@@ -2528,9 +2528,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
           /**
            * Creates and buffers a new task without the need to explicitly define a Task message. The queue
-           * must have HTTP target. Note: This feature is in its experimental stage. You must request access
-           * to the API through the [Cloud Tasks BufferTasks Experiment Signup
-           * form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
+           * must have HTTP target. To create the task with a custom ID, use the following format and set
+           * TASK_ID to your desired ID:
+           * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer To create the task
+           * with an automatically generated ID, use the following format:
+           * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer. Note: This feature is in
+           * its experimental stage. You must request access to the API through the [Cloud Tasks BufferTask
+           * Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
            *
            * Create a request for the method "tasks.buffer".
            *
@@ -2539,27 +2543,33 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            *
            * @param parent Required. The parent queue name. For example:
            *        projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+           * @param taskId Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
+           *        task.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest}
            * @return the request
            */
-          public Buffer buffer(java.lang.String parent, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) throws java.io.IOException {
-            Buffer result = new Buffer(parent, content);
+          public Buffer buffer(java.lang.String parent, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) throws java.io.IOException {
+            Buffer result = new Buffer(parent, taskId, content);
             initialize(result);
             return result;
           }
 
           public class Buffer extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.BufferTaskResponse> {
 
-            private static final String REST_PATH = "v2beta2/{+parent}/tasks:buffer";
+            private static final String REST_PATH = "v2beta2/{+parent}/tasks/{taskId}:buffer";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
             /**
              * Creates and buffers a new task without the need to explicitly define a Task message. The queue
-             * must have HTTP target. Note: This feature is in its experimental stage. You must request access
-             * to the API through the [Cloud Tasks BufferTasks Experiment Signup
-             * form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
+             * must have HTTP target. To create the task with a custom ID, use the following format and set
+             * TASK_ID to your desired ID:
+             * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer To create the
+             * task with an automatically generated ID, use the following format:
+             * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer. Note: This feature is
+             * in its experimental stage. You must request access to the API through the [Cloud Tasks
+             * BufferTask Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
              *
              * Create a request for the method "tasks.buffer".
              *
@@ -2571,10 +2581,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              *
              * @param parent Required. The parent queue name. For example:
            *        projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+             * @param taskId Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
+           *        task.
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest}
              * @since 1.13
              */
-            protected Buffer(java.lang.String parent, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) {
+            protected Buffer(java.lang.String parent, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) {
               super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
@@ -2582,6 +2594,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
               }
+              this.taskId = com.google.api.client.util.Preconditions.checkNotNull(taskId, "Required parameter taskId must be specified.");
             }
 
             @Override
@@ -2666,6 +2679,29 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Task ID for the task being created. If not provided, a random task ID is
+             * assigned to the task.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String taskId;
+
+            /** Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
+           task.
+             */
+            public java.lang.String getTaskId() {
+              return taskId;
+            }
+
+            /**
+             * Optional. Task ID for the task being created. If not provided, a random task ID is
+             * assigned to the task.
+             */
+            public Buffer setTaskId(java.lang.String taskId) {
+              this.taskId = taskId;
               return this;
             }
 

@@ -262,6 +262,14 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
+   * Output only. The human readable display name of the finding source such as "Event Threat
+   * Detection" or "Security Health Analytics"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentDisplayName;
+
+  /**
    * Represents operating system processes associated with the Finding.
    * The value may be {@code null}.
    */
@@ -798,6 +806,25 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Output only. The human readable display name of the finding source such as "Event Threat
+   * Detection" or "Security Health Analytics"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentDisplayName() {
+    return parentDisplayName;
+  }
+
+  /**
+   * Output only. The human readable display name of the finding source such as "Event Threat
+   * Detection" or "Security Health Analytics"
+   * @param parentDisplayName parentDisplayName or {@code null} for none
+   */
+  public Finding setParentDisplayName(java.lang.String parentDisplayName) {
+    this.parentDisplayName = parentDisplayName;
     return this;
   }
 

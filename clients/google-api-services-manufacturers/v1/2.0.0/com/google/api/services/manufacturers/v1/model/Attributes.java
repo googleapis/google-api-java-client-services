@@ -137,7 +137,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String gender;
 
   /**
-   * Grocery Attributes. For more information, see go/mfc-nutrition-attributes.
+   * Grocery Attributes. See more at
+   * https://support.google.com/manufacturers/answer/12098458#grocery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +194,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String mpn;
 
   /**
-   * Nutrition Attributes. For more information, see go/mfc-nutrition-attributes.
+   * Nutrition Attributes. See more at https://support.google.com/manufacturers/answer/12098458
+   * #food-servings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -593,7 +595,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grocery Attributes. For more information, see go/mfc-nutrition-attributes.
+   * Grocery Attributes. See more at
+   * https://support.google.com/manufacturers/answer/12098458#grocery.
    * @return value or {@code null} for none
    */
   public Grocery getGrocery() {
@@ -601,7 +604,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grocery Attributes. For more information, see go/mfc-nutrition-attributes.
+   * Grocery Attributes. See more at
+   * https://support.google.com/manufacturers/answer/12098458#grocery.
    * @param grocery grocery or {@code null} for none
    */
   public Attributes setGrocery(Grocery grocery) {
@@ -726,7 +730,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Nutrition Attributes. For more information, see go/mfc-nutrition-attributes.
+   * Nutrition Attributes. See more at https://support.google.com/manufacturers/answer/12098458
+   * #food-servings.
    * @return value or {@code null} for none
    */
   public Nutrition getNutrition() {
@@ -734,7 +739,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Nutrition Attributes. For more information, see go/mfc-nutrition-attributes.
+   * Nutrition Attributes. See more at https://support.google.com/manufacturers/answer/12098458
+   * #food-servings.
    * @param nutrition nutrition or {@code null} for none
    */
   public Attributes setNutrition(Nutrition nutrition) {

@@ -17,7 +17,7 @@
 package com.google.api.services.manufacturers.v1.model;
 
 /**
- * Combination of float amout and unit.
+ * Combination of float amount and unit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Manufacturer Center API. For a detailed explanation

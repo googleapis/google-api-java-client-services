@@ -2541,24 +2541,24 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Buffer#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent queue name. For example:
+           * @param queue Required. The parent queue name. For example:
            *        projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
            * @param taskId Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
            *        task.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest}
            * @return the request
            */
-          public Buffer buffer(java.lang.String parent, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) throws java.io.IOException {
-            Buffer result = new Buffer(parent, taskId, content);
+          public Buffer buffer(java.lang.String queue, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) throws java.io.IOException {
+            Buffer result = new Buffer(queue, taskId, content);
             initialize(result);
             return result;
           }
 
           public class Buffer extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.BufferTaskResponse> {
 
-            private static final String REST_PATH = "v2beta2/{+parent}/tasks/{taskId}:buffer";
+            private static final String REST_PATH = "v2beta2/{+queue}/tasks/{taskId}:buffer";
 
-            private final java.util.regex.Pattern PARENT_PATTERN =
+            private final java.util.regex.Pattern QUEUE_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
             /**
@@ -2579,19 +2579,19 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * Buffer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent queue name. For example:
+             * @param queue Required. The parent queue name. For example:
            *        projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
              * @param taskId Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
            *        task.
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest}
              * @since 1.13
              */
-            protected Buffer(java.lang.String parent, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) {
+            protected Buffer(java.lang.String queue, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskRequest content) {
               super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.BufferTaskResponse.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              this.queue = com.google.api.client.util.Preconditions.checkNotNull(queue, "Required parameter queue must be specified.");
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(QUEUE_PATTERN.matcher(queue).matches(),
+                    "Parameter queue must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
               }
               this.taskId = com.google.api.client.util.Preconditions.checkNotNull(taskId, "Required parameter taskId must be specified.");
@@ -2658,13 +2658,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * exist.
              */
             @com.google.api.client.util.Key
-            private java.lang.String parent;
+            private java.lang.String queue;
 
             /** Required. The parent queue name. For example:
            projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
              */
-            public java.lang.String getParent() {
-              return parent;
+            public java.lang.String getQueue() {
+              return queue;
             }
 
             /**
@@ -2672,13 +2672,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
              * exist.
              */
-            public Buffer setParent(java.lang.String parent) {
+            public Buffer setQueue(java.lang.String queue) {
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(QUEUE_PATTERN.matcher(queue).matches(),
+                    "Parameter queue must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
               }
-              this.parent = parent;
+              this.queue = queue;
               return this;
             }
 

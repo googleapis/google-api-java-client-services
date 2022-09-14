@@ -49,6 +49,16 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String complianceRegime;
 
   /**
+   * Output only. Urls for services which are compliant for this Assured Workload, but which are
+   * currently disallowed by the ResourceUsageRestriction org policy. Invoke
+   * RestrictAllowedResources endpoint to allow your project developers to use these services in
+   * their environment."
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> compliantButDisallowedServices;
+
+  /**
    * Output only. Immutable. The Workload creation timestamp.
    * The value may be {@code null}.
    */
@@ -187,6 +197,29 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setComplianceRegime(java.lang.String complianceRegime) {
     this.complianceRegime = complianceRegime;
+    return this;
+  }
+
+  /**
+   * Output only. Urls for services which are compliant for this Assured Workload, but which are
+   * currently disallowed by the ResourceUsageRestriction org policy. Invoke
+   * RestrictAllowedResources endpoint to allow your project developers to use these services in
+   * their environment."
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCompliantButDisallowedServices() {
+    return compliantButDisallowedServices;
+  }
+
+  /**
+   * Output only. Urls for services which are compliant for this Assured Workload, but which are
+   * currently disallowed by the ResourceUsageRestriction org policy. Invoke
+   * RestrictAllowedResources endpoint to allow your project developers to use these services in
+   * their environment."
+   * @param compliantButDisallowedServices compliantButDisallowedServices or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setCompliantButDisallowedServices(java.util.List<java.lang.String> compliantButDisallowedServices) {
+    this.compliantButDisallowedServices = compliantButDisallowedServices;
     return this;
   }
 

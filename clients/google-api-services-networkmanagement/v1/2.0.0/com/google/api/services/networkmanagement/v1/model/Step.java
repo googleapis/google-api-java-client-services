@@ -46,7 +46,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean causesDrop;
 
   /**
-   * Display information of a Cloud function.
+   * Display information of a Cloud Function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display information of a Cloud function.
+   * Display information of a Cloud Function.
    * @return value or {@code null} for none
    */
   public CloudFunctionInfo getCloudFunction() {
@@ -223,7 +223,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display information of a Cloud function.
+   * Display information of a Cloud Function.
    * @param cloudFunction cloudFunction or {@code null} for none
    */
   public Step setCloudFunction(CloudFunctionInfo cloudFunction) {

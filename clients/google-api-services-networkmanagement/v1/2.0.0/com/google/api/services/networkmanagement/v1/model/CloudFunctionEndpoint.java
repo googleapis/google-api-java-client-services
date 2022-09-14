@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1.model;
 
 /**
- * Wrapper for cloud function attributes.
+ * Wrapper for Cloud Function attributes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class CloudFunctionEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * A [Cloud function](https://cloud.google.com/functions) name.
+   * A [Cloud Function](https://cloud.google.com/functions) name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * A [Cloud function](https://cloud.google.com/functions) name.
+   * A [Cloud Function](https://cloud.google.com/functions) name.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -46,7 +46,7 @@ public final class CloudFunctionEndpoint extends com.google.api.client.json.Gene
   }
 
   /**
-   * A [Cloud function](https://cloud.google.com/functions) name.
+   * A [Cloud Function](https://cloud.google.com/functions) name.
    * @param uri uri or {@code null} for none
    */
   public CloudFunctionEndpoint setUri(java.lang.String uri) {

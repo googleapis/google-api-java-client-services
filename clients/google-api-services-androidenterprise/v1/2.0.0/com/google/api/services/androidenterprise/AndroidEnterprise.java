@@ -2995,7 +2995,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   public class Entitlements {
 
     /**
-     * Removes an entitlement to an app for a user.
+     * Removes an entitlement to an app for a user. **Note:** This item has been deprecated. New
+     * integrations cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "entitlements.delete".
      *
@@ -3018,7 +3019,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
 
       /**
-       * Removes an entitlement to an app for a user.
+       * Removes an entitlement to an app for a user. **Note:** This item has been deprecated. New
+       * integrations cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "entitlements.delete".
        *
@@ -3149,7 +3151,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Retrieves details of an entitlement.
+     * Retrieves details of an entitlement. **Note:** This item has been deprecated. New integrations
+     * cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "entitlements.get".
      *
@@ -3172,7 +3175,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
 
       /**
-       * Retrieves details of an entitlement.
+       * Retrieves details of an entitlement. **Note:** This item has been deprecated. New integrations
+       * cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "entitlements.get".
        *
@@ -3313,7 +3317,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Lists all entitlements for the specified user. Only the ID is set.
+     * Lists all entitlements for the specified user. Only the ID is set. **Note:** This item has been
+     * deprecated. New integrations cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "entitlements.list".
      *
@@ -3335,7 +3340,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements";
 
       /**
-       * Lists all entitlements for the specified user. Only the ID is set.
+       * Lists all entitlements for the specified user. Only the ID is set. **Note:** This item has been
+       * deprecated. New integrations cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "entitlements.list".
        *
@@ -3458,7 +3464,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Adds or updates an entitlement to an app for a user.
+     * Adds or updates an entitlement to an app for a user. **Note:** This item has been deprecated. New
+     * integrations cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "entitlements.update".
      *
@@ -3482,7 +3489,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
 
       /**
-       * Adds or updates an entitlement to an app for a user.
+       * Adds or updates an entitlement to an app for a user. **Note:** This item has been deprecated.
+       * New integrations cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "entitlements.update".
        *
@@ -3663,7 +3671,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   public class Grouplicenses {
 
     /**
-     * Retrieves details of an enterprise's group license for a product.
+     * Retrieves details of an enterprise's group license for a product. **Note:** This item has been
+     * deprecated. New integrations cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "grouplicenses.get".
      *
@@ -3685,7 +3694,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}";
 
       /**
-       * Retrieves details of an enterprise's group license for a product.
+       * Retrieves details of an enterprise's group license for a product. **Note:** This item has been
+       * deprecated. New integrations cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "grouplicenses.get".
        *
@@ -3808,7 +3818,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Retrieves IDs of all products for which the enterprise has a group license.
+     * Retrieves IDs of all products for which the enterprise has a group license. **Note:** This item
+     * has been deprecated. New integrations cannot use this method and can refer to our new
+     * recommendations.
      *
      * Create a request for the method "grouplicenses.list".
      *
@@ -3829,7 +3841,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses";
 
       /**
-       * Retrieves IDs of all products for which the enterprise has a group license.
+       * Retrieves IDs of all products for which the enterprise has a group license. **Note:** This item
+       * has been deprecated. New integrations cannot use this method and can refer to our new
+       * recommendations.
        *
        * Create a request for the method "grouplicenses.list".
        *
@@ -3957,7 +3971,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   public class Grouplicenseusers {
 
     /**
-     * Retrieves the IDs of the users who have been granted entitlements under the license.
+     * Retrieves the IDs of the users who have been granted entitlements under the license. **Note:**
+     * This item has been deprecated. New integrations cannot use this method and can refer to our new
+     * recommendations.
      *
      * Create a request for the method "grouplicenseusers.list".
      *
@@ -3979,7 +3995,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}/users";
 
       /**
-       * Retrieves the IDs of the users who have been granted entitlements under the license.
+       * Retrieves the IDs of the users who have been granted entitlements under the license. **Note:**
+       * This item has been deprecated. New integrations cannot use this method and can refer to our new
+       * recommendations.
        *
        * Create a request for the method "grouplicenseusers.list".
        *
@@ -6550,7 +6568,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * Approves the specified product and the relevant app permissions, if any. The maximum number of
      * products that you can approve per enterprise customer is 1,000. To learn how to use managed
      * Google Play to design and create a store layout to display approved products to your users, see
-     * Store Layout Design.
+     * Store Layout Design. **Note:** This item has been deprecated. New integrations cannot use this
+     * method and can refer to our new recommendations.
      *
      * Create a request for the method "products.approve".
      *
@@ -6576,7 +6595,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * Approves the specified product and the relevant app permissions, if any. The maximum number of
        * products that you can approve per enterprise customer is 1,000. To learn how to use managed
        * Google Play to design and create a store layout to display approved products to your users, see
-       * Store Layout Design.
+       * Store Layout Design. **Note:** This item has been deprecated. New integrations cannot use this
+       * method and can refer to our new recommendations.
        *
        * Create a request for the method "products.approve".
        *
@@ -6695,7 +6715,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * organization in order to approve that product. Admins should accept the displayed permissions by
      * interacting with a separate UI element in the EMM console, which in turn should trigger the use
      * of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to approve the
-     * product. This URL can only be used to display permissions for up to 1 day.
+     * product. This URL can only be used to display permissions for up to 1 day. **Note:** This item
+     * has been deprecated. New integrations cannot use this method and can refer to our new
+     * recommendations.
      *
      * Create a request for the method "products.generateApprovalUrl".
      *
@@ -6724,6 +6746,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * by interacting with a separate UI element in the EMM console, which in turn should trigger the
        * use of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to
        * approve the product. This URL can only be used to display permissions for up to 1 day.
+       * **Note:** This item has been deprecated. New integrations cannot use this method and can refer
+       * to our new recommendations.
        *
        * Create a request for the method "products.generateApprovalUrl".
        *
@@ -7337,6 +7361,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     }
     /**
      * Finds approved products that match a query, or all approved products if there is no query.
+     * **Note:** This item has been deprecated. New integrations cannot use this method and can refer to
+     * our new recommendations.
      *
      * Create a request for the method "products.list".
      *
@@ -7358,6 +7384,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Finds approved products that match a query, or all approved products if there is no query.
+       * **Note:** This item has been deprecated. New integrations cannot use this method and can refer
+       * to our new recommendations.
        *
        * Create a request for the method "products.list".
        *
@@ -7580,7 +7608,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Unapproves the specified product (and the relevant app permissions, if any)
+     * Unapproves the specified product (and the relevant app permissions, if any) **Note:** This item
+     * has been deprecated. New integrations cannot use this method and can refer to our new
+     * recommendations.
      *
      * Create a request for the method "products.unapprove".
      *
@@ -7602,7 +7632,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/unapprove";
 
       /**
-       * Unapproves the specified product (and the relevant app permissions, if any)
+       * Unapproves the specified product (and the relevant app permissions, if any) **Note:** This item
+       * has been deprecated. New integrations cannot use this method and can refer to our new
+       * recommendations.
        *
        * Create a request for the method "products.unapprove".
        *
@@ -10045,7 +10077,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Retrieves the set of products a user is entitled to access.
+     * Retrieves the set of products a user is entitled to access. **Note:** This item has been
+     * deprecated. New integrations cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "users.getAvailableProductSet".
      *
@@ -10068,7 +10101,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet";
 
       /**
-       * Retrieves the set of products a user is entitled to access.
+       * Retrieves the set of products a user is entitled to access. **Note:** This item has been
+       * deprecated. New integrations cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "users.getAvailableProductSet".
        *
@@ -10610,7 +10644,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Modifies the set of products that a user is entitled to access (referred to as *whitelisted*
      * products). Only products that are approved or products that were previously approved (products
-     * with revoked approval) can be whitelisted.
+     * with revoked approval) can be whitelisted. **Note:** This item has been deprecated. New
+     * integrations cannot use this method and can refer to our new recommendations.
      *
      * Create a request for the method "users.setAvailableProductSet".
      *
@@ -10636,7 +10671,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Modifies the set of products that a user is entitled to access (referred to as *whitelisted*
        * products). Only products that are approved or products that were previously approved (products
-       * with revoked approval) can be whitelisted.
+       * with revoked approval) can be whitelisted. **Note:** This item has been deprecated. New
+       * integrations cannot use this method and can refer to our new recommendations.
        *
        * Create a request for the method "users.setAvailableProductSet".
        *

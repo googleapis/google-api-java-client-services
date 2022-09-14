@@ -67,7 +67,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long agencyId;
 
   /**
-   * Output only. The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative through the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,8 +208,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The granular status of this ad in specific contexts. A context here relates to
-   * where something ultimately serves (for example, a physical location, a platform, an HTTPS vs
-   * HTTP request, or the type of auction).
+   * where something ultimately serves (for example, a physical location, a platform, an HTTPS
+   * versus HTTP request, or the type of auction).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +325,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative through the API.
    * @return value or {@code null} for none
    */
   public String getApiUpdateTime() {
@@ -333,7 +333,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative through the API.
    * @param apiUpdateTime apiUpdateTime or {@code null} for none
    */
   public Creative setApiUpdateTime(String apiUpdateTime) {
@@ -645,8 +645,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The granular status of this ad in specific contexts. A context here relates to
-   * where something ultimately serves (for example, a physical location, a platform, an HTTPS vs
-   * HTTP request, or the type of auction).
+   * where something ultimately serves (for example, a physical location, a platform, an HTTPS
+   * versus HTTP request, or the type of auction).
    * @return value or {@code null} for none
    */
   public java.util.List<ServingRestriction> getServingRestrictions() {
@@ -655,8 +655,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The granular status of this ad in specific contexts. A context here relates to
-   * where something ultimately serves (for example, a physical location, a platform, an HTTPS vs
-   * HTTP request, or the type of auction).
+   * where something ultimately serves (for example, a physical location, a platform, an HTTPS
+   * versus HTTP request, or the type of auction).
    * @param servingRestrictions servingRestrictions or {@code null} for none
    */
   public Creative setServingRestrictions(java.util.List<ServingRestriction> servingRestrictions) {

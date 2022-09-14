@@ -19,7 +19,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 /**
  * A set of filters that is applied to a request for data. Within a filter set, an AND operation is
  * performed across the filters represented by each field. An OR operation is performed across the
- * filters represented by the multiple values of a repeated field, e.g., "format=VIDEO AND
+ * filters represented by the multiple values of a repeated field, for example, "format=VIDEO AND
  * deal_id=12 AND (seller_network_id=34 OR seller_network_id=56)".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -52,7 +52,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
-   * set that accesses account-level troubleshooting data, i.e., one whose name matches the
+   * set that accesses account-level troubleshooting data, for example, one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the deal on which to filter; optional. This field may be set only for a filter set
-   * that accesses account-level troubleshooting data, i.e., one whose name matches the
+   * that accesses account-level troubleshooting data, for example, one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * The value may be {@code null}.
    */
@@ -103,7 +103,8 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of platforms on which to filter; may be empty. The filters represented by multiple
-   * platforms are ORed together (i.e., if non-empty, results must match any one of the platforms).
+   * platforms are ORed together (for example, if non-empty, results must match any one of the
+   * platforms).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +136,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   /**
    * For Authorized Buyers only. The list of IDs of the seller (publisher) networks on which to
    * filter; may be empty. The filters represented by multiple seller network IDs are ORed together
-   * (i.e., if non-empty, results must match any one of the publisher networks). See [seller-
+   * (for example, if non-empty, results must match any one of the publisher networks). See [seller-
    * network-ids](https://developers.google.com/authorized-buyers/rtb/downloads/seller-network-ids)
    * file for the set of existing seller network IDs.
    * The value may be {@code null}.
@@ -144,7 +145,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> sellerNetworkIds;
 
   /**
-   * The granularity of time intervals if a time series breakdown is desired; optional.
+   * The granularity of time intervals if a time series breakdown is preferred; optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +193,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
-   * set that accesses account-level troubleshooting data, i.e., one whose name matches the
+   * set that accesses account-level troubleshooting data, for example, one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @return value or {@code null} for none
    */
@@ -202,7 +203,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
-   * set that accesses account-level troubleshooting data, i.e., one whose name matches the
+   * set that accesses account-level troubleshooting data, for example, one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @param creativeId creativeId or {@code null} for none
    */
@@ -213,7 +214,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the deal on which to filter; optional. This field may be set only for a filter set
-   * that accesses account-level troubleshooting data, i.e., one whose name matches the
+   * that accesses account-level troubleshooting data, for example, one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @return value or {@code null} for none
    */
@@ -223,7 +224,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the deal on which to filter; optional. This field may be set only for a filter set
-   * that accesses account-level troubleshooting data, i.e., one whose name matches the
+   * that accesses account-level troubleshooting data, for example, one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @param dealId dealId or {@code null} for none
    */
@@ -312,7 +313,8 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of platforms on which to filter; may be empty. The filters represented by multiple
-   * platforms are ORed together (i.e., if non-empty, results must match any one of the platforms).
+   * platforms are ORed together (for example, if non-empty, results must match any one of the
+   * platforms).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPlatforms() {
@@ -321,7 +323,8 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of platforms on which to filter; may be empty. The filters represented by multiple
-   * platforms are ORed together (i.e., if non-empty, results must match any one of the platforms).
+   * platforms are ORed together (for example, if non-empty, results must match any one of the
+   * platforms).
    * @param platforms platforms or {@code null} for none
    */
   public FilterSet setPlatforms(java.util.List<java.lang.String> platforms) {
@@ -387,7 +390,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   /**
    * For Authorized Buyers only. The list of IDs of the seller (publisher) networks on which to
    * filter; may be empty. The filters represented by multiple seller network IDs are ORed together
-   * (i.e., if non-empty, results must match any one of the publisher networks). See [seller-
+   * (for example, if non-empty, results must match any one of the publisher networks). See [seller-
    * network-ids](https://developers.google.com/authorized-buyers/rtb/downloads/seller-network-ids)
    * file for the set of existing seller network IDs.
    * @return value or {@code null} for none
@@ -399,7 +402,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   /**
    * For Authorized Buyers only. The list of IDs of the seller (publisher) networks on which to
    * filter; may be empty. The filters represented by multiple seller network IDs are ORed together
-   * (i.e., if non-empty, results must match any one of the publisher networks). See [seller-
+   * (for example, if non-empty, results must match any one of the publisher networks). See [seller-
    * network-ids](https://developers.google.com/authorized-buyers/rtb/downloads/seller-network-ids)
    * file for the set of existing seller network IDs.
    * @param sellerNetworkIds sellerNetworkIds or {@code null} for none
@@ -410,7 +413,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The granularity of time intervals if a time series breakdown is desired; optional.
+   * The granularity of time intervals if a time series breakdown is preferred; optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeSeriesGranularity() {
@@ -418,7 +421,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The granularity of time intervals if a time series breakdown is desired; optional.
+   * The granularity of time intervals if a time series breakdown is preferred; optional.
    * @param timeSeriesGranularity timeSeriesGranularity or {@code null} for none
    */
   public FilterSet setTimeSeriesGranularity(java.lang.String timeSeriesGranularity) {

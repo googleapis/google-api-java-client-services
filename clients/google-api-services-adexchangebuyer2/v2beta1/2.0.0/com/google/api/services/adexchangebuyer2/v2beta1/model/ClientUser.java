@@ -19,9 +19,9 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 /**
  * A client user is created under a client buyer and has restricted access to the Marketplace and
  * certain other sections of the Authorized Buyers UI based on the role granted to the associated
- * client buyer. The only way a new client user can be created is via accepting an email invitation
- * (see the accounts.clients.invitations.create method). All fields are required unless otherwise
- * specified.
+ * client buyer. The only way a new client user can be created is through accepting an email
+ * invitation (see the accounts.clients.invitations.create method). All fields are required unless
+ * otherwise specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

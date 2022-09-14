@@ -18,7 +18,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
  * A metric value, with an expected value and a variance; represents a count that may be either
- * exact or estimated (i.e. when sampled).
+ * exact or estimated (for example, when sampled).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
@@ -39,11 +39,11 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   private java.lang.Long value;
 
   /**
-   * The variance (i.e. square of the standard deviation) of the metric value. If value is exact,
-   * variance is 0. Can be used to calculate margin of error as a percentage of value, using the
-   * following formula, where Z is the standard constant that depends on the desired size of the
-   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645): marginOfError = 100 * Z
-   * * sqrt(variance) / value
+   * The variance (for example, square of the standard deviation) of the metric value. If value is
+   * exact, variance is 0. Can be used to calculate margin of error as a percentage of value, using
+   * the following formula, where Z is the standard constant that depends on the preferred size of
+   * the confidence interval (for example, for 90% confidence interval, use Z = 1.645):
+   * marginOfError = 100 * Z * sqrt(variance) / value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -67,11 +67,11 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The variance (i.e. square of the standard deviation) of the metric value. If value is exact,
-   * variance is 0. Can be used to calculate margin of error as a percentage of value, using the
-   * following formula, where Z is the standard constant that depends on the desired size of the
-   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645): marginOfError = 100 * Z
-   * * sqrt(variance) / value
+   * The variance (for example, square of the standard deviation) of the metric value. If value is
+   * exact, variance is 0. Can be used to calculate margin of error as a percentage of value, using
+   * the following formula, where Z is the standard constant that depends on the preferred size of
+   * the confidence interval (for example, for 90% confidence interval, use Z = 1.645):
+   * marginOfError = 100 * Z * sqrt(variance) / value
    * @return value or {@code null} for none
    */
   public java.lang.Long getVariance() {
@@ -79,11 +79,11 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The variance (i.e. square of the standard deviation) of the metric value. If value is exact,
-   * variance is 0. Can be used to calculate margin of error as a percentage of value, using the
-   * following formula, where Z is the standard constant that depends on the desired size of the
-   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645): marginOfError = 100 * Z
-   * * sqrt(variance) / value
+   * The variance (for example, square of the standard deviation) of the metric value. If value is
+   * exact, variance is 0. Can be used to calculate margin of error as a percentage of value, using
+   * the following formula, where Z is the standard constant that depends on the preferred size of
+   * the confidence interval (for example, for 90% confidence interval, use Z = 1.645):
+   * marginOfError = 100 * Z * sqrt(variance) / value
    * @param variance variance or {@code null} for none
    */
   public MetricValue setVariance(java.lang.Long variance) {

@@ -18,7 +18,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
  * The number of filtered bids with the specified dimension values, among those filtered due to the
- * requested filtering reason (i.e. creative status), that have the specified detail.
+ * requested filtering reason (for example, creative status), that have the specified detail.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

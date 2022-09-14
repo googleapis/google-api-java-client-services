@@ -31,7 +31,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class LocationContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * IDs representing the geo location for this context. Please refer to the [geo-
+   * IDs representing the geo location for this context. Refer to the [geo-
    * table.csv](https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv) file for
    * different geo criteria IDs.
    * The value may be {@code null}.
@@ -40,7 +40,7 @@ public final class LocationContext extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.Integer> geoCriteriaIds;
 
   /**
-   * IDs representing the geo location for this context. Please refer to the [geo-
+   * IDs representing the geo location for this context. Refer to the [geo-
    * table.csv](https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv) file for
    * different geo criteria IDs.
    * @return value or {@code null} for none
@@ -50,7 +50,7 @@ public final class LocationContext extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * IDs representing the geo location for this context. Please refer to the [geo-
+   * IDs representing the geo location for this context. Refer to the [geo-
    * table.csv](https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv) file for
    * different geo criteria IDs.
    * @param geoCriteriaIds geoCriteriaIds or {@code null} for none

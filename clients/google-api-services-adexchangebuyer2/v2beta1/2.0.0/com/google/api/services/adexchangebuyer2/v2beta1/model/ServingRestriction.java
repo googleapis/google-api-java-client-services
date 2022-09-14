@@ -19,7 +19,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 /**
  * Output only. A representation of the status of an ad in a specific context. A context here
  * relates to where something ultimately serves (for example, a user or publisher geo, a platform,
- * an HTTPS vs HTTP request, or the type of auction).
+ * an HTTPS versus HTTP request, or the type of auction).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
@@ -55,8 +55,7 @@ public final class ServingRestriction extends com.google.api.client.json.Generic
 
   /**
    * Any disapprovals bound to this restriction. Only present if status=DISAPPROVED. Can be used to
-   * filter the response of the creatives.list method. Deprecated; please use disapproval field
-   * instead.
+   * filter the response of the creatives.list method. Deprecated; use disapproval field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +113,7 @@ public final class ServingRestriction extends com.google.api.client.json.Generic
 
   /**
    * Any disapprovals bound to this restriction. Only present if status=DISAPPROVED. Can be used to
-   * filter the response of the creatives.list method. Deprecated; please use disapproval field
-   * instead.
+   * filter the response of the creatives.list method. Deprecated; use disapproval field instead.
    * @return value or {@code null} for none
    */
   public java.util.List<Disapproval> getDisapprovalReasons() {
@@ -124,8 +122,7 @@ public final class ServingRestriction extends com.google.api.client.json.Generic
 
   /**
    * Any disapprovals bound to this restriction. Only present if status=DISAPPROVED. Can be used to
-   * filter the response of the creatives.list method. Deprecated; please use disapproval field
-   * instead.
+   * filter the response of the creatives.list method. Deprecated; use disapproval field instead.
    * @param disapprovalReasons disapprovalReasons or {@code null} for none
    */
   public ServingRestriction setDisapprovalReasons(java.util.List<Disapproval> disapprovalReasons) {

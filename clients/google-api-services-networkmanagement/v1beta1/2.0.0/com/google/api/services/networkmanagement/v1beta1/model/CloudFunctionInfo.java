@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1beta1.model;
 
 /**
- * For display only. Metadata associated with a Cloud function.
+ * For display only. Metadata associated with a Cloud Function.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -31,35 +31,35 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class CloudFunctionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of a Cloud function.
+   * Name of a Cloud Function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Location in which the Cloud function is deployed.
+   * Location in which the Cloud Function is deployed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * URI of a Cloud function.
+   * URI of a Cloud Function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Latest successfully deployed version id of the Cloud function.
+   * Latest successfully deployed version id of the Cloud Function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long versionId;
 
   /**
-   * Name of a Cloud function.
+   * Name of a Cloud Function.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -67,7 +67,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of a Cloud function.
+   * Name of a Cloud Function.
    * @param displayName displayName or {@code null} for none
    */
   public CloudFunctionInfo setDisplayName(java.lang.String displayName) {
@@ -76,7 +76,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Location in which the Cloud function is deployed.
+   * Location in which the Cloud Function is deployed.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -84,7 +84,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Location in which the Cloud function is deployed.
+   * Location in which the Cloud Function is deployed.
    * @param location location or {@code null} for none
    */
   public CloudFunctionInfo setLocation(java.lang.String location) {
@@ -93,7 +93,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of a Cloud function.
+   * URI of a Cloud Function.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -101,7 +101,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of a Cloud function.
+   * URI of a Cloud Function.
    * @param uri uri or {@code null} for none
    */
   public CloudFunctionInfo setUri(java.lang.String uri) {
@@ -110,7 +110,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Latest successfully deployed version id of the Cloud function.
+   * Latest successfully deployed version id of the Cloud Function.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersionId() {
@@ -118,7 +118,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Latest successfully deployed version id of the Cloud function.
+   * Latest successfully deployed version id of the Cloud Function.
    * @param versionId versionId or {@code null} for none
    */
   public CloudFunctionInfo setVersionId(java.lang.Long versionId) {

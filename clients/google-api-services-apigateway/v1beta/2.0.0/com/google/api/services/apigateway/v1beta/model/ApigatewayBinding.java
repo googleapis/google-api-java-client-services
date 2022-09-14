@@ -45,10 +45,11 @@ public final class ApigatewayBinding extends com.google.api.client.json.GenericJ
    * Specifies the principals requesting access for a Google Cloud resource. `members` can have the
    * following values: * `allUsers`: A special identifier that represents anyone who is on the
    * internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier
-   * that represents anyone who is authenticated with a Google account or a service account. *
-   * `user:{emailid}`: An email address that represents a specific Google account. For example,
-   * `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a Google
-   * service account. For example, `my-other-app@appspot.gserviceaccount.com`. *
+   * that represents anyone who is authenticated with a Google account or a service account. Does
+   * not include identities that come from external identity providers (IdPs) through identity
+   * federation. * `user:{emailid}`: An email address that represents a specific Google account. For
+   * example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a
+   * Google service account. For example, `my-other-app@appspot.gserviceaccount.com`. *
    * `serviceAccount:{projectid}.svc.id.goog[{namespace}/{kubernetes-sa}]`: An identifier for a
    * [Kubernetes service account](https://cloud.google.com/kubernetes-engine/docs/how-to/kubernetes-
    * service-accounts). For example, `my-project.svc.id.goog[my-namespace/my-kubernetes-sa]`. *
@@ -111,10 +112,11 @@ public final class ApigatewayBinding extends com.google.api.client.json.GenericJ
    * Specifies the principals requesting access for a Google Cloud resource. `members` can have the
    * following values: * `allUsers`: A special identifier that represents anyone who is on the
    * internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier
-   * that represents anyone who is authenticated with a Google account or a service account. *
-   * `user:{emailid}`: An email address that represents a specific Google account. For example,
-   * `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a Google
-   * service account. For example, `my-other-app@appspot.gserviceaccount.com`. *
+   * that represents anyone who is authenticated with a Google account or a service account. Does
+   * not include identities that come from external identity providers (IdPs) through identity
+   * federation. * `user:{emailid}`: An email address that represents a specific Google account. For
+   * example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a
+   * Google service account. For example, `my-other-app@appspot.gserviceaccount.com`. *
    * `serviceAccount:{projectid}.svc.id.goog[{namespace}/{kubernetes-sa}]`: An identifier for a
    * [Kubernetes service account](https://cloud.google.com/kubernetes-engine/docs/how-to/kubernetes-
    * service-accounts). For example, `my-project.svc.id.goog[my-namespace/my-kubernetes-sa]`. *
@@ -143,10 +145,11 @@ public final class ApigatewayBinding extends com.google.api.client.json.GenericJ
    * Specifies the principals requesting access for a Google Cloud resource. `members` can have the
    * following values: * `allUsers`: A special identifier that represents anyone who is on the
    * internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier
-   * that represents anyone who is authenticated with a Google account or a service account. *
-   * `user:{emailid}`: An email address that represents a specific Google account. For example,
-   * `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a Google
-   * service account. For example, `my-other-app@appspot.gserviceaccount.com`. *
+   * that represents anyone who is authenticated with a Google account or a service account. Does
+   * not include identities that come from external identity providers (IdPs) through identity
+   * federation. * `user:{emailid}`: An email address that represents a specific Google account. For
+   * example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a
+   * Google service account. For example, `my-other-app@appspot.gserviceaccount.com`. *
    * `serviceAccount:{projectid}.svc.id.goog[{namespace}/{kubernetes-sa}]`: An identifier for a
    * [Kubernetes service account](https://cloud.google.com/kubernetes-engine/docs/how-to/kubernetes-
    * service-accounts). For example, `my-project.svc.id.goog[my-namespace/my-kubernetes-sa]`. *

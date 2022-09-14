@@ -17,8 +17,8 @@
 package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
- * Represents targeting about where the ads can appear, e.g., certain sites or mobile applications.
- * Different placement targeting types will be logically OR'ed.
+ * Represents targeting about where the ads can appear, for example, certain sites or mobile
+ * applications. Different placement targeting types will be logically OR'ed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

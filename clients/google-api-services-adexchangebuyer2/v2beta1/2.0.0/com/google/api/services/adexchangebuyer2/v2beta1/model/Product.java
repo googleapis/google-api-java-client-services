@@ -17,7 +17,7 @@
 package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
- * A product is a segment of inventory that a seller wishes to sell. It is associated with certain
+ * A product is a segment of inventory that a seller wants to sell. It is associated with certain
  * terms and targeting information which helps the buyer know more about the inventory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -31,7 +31,8 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class ListLosingBidsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of rows, with counts of losing bids aggregated by loss reason (i.e. creative status).
+   * List of rows, with counts of losing bids aggregated by loss reason (for example, creative
+   * status).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class ListLosingBidsResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * List of rows, with counts of losing bids aggregated by loss reason (i.e. creative status).
+   * List of rows, with counts of losing bids aggregated by loss reason (for example, creative
+   * status).
    * @return value or {@code null} for none
    */
   public java.util.List<CreativeStatusRow> getCreativeStatusRows() {
@@ -61,7 +63,8 @@ public final class ListLosingBidsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * List of rows, with counts of losing bids aggregated by loss reason (i.e. creative status).
+   * List of rows, with counts of losing bids aggregated by loss reason (for example, creative
+   * status).
    * @param creativeStatusRows creativeStatusRows or {@code null} for none
    */
   public ListLosingBidsResponse setCreativeStatusRows(java.util.List<CreativeStatusRow> creativeStatusRows) {

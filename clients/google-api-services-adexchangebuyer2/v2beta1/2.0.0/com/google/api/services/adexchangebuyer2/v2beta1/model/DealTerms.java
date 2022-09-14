@@ -18,7 +18,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
  * The deal terms specify the details of a Product/deal. They specify things like price per buyer,
- * the type of pricing model (e.g., fixed price, auction) and expected impressions from the
+ * the type of pricing model (for example, fixed price, auction) and expected impressions from the
  * publisher.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

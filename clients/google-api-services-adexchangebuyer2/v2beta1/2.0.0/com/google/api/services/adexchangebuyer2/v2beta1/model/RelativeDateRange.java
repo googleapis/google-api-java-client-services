@@ -18,8 +18,8 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
  * A relative date range, specified by an offset and a duration. The supported range of dates begins
- * 30 days before today and ends today, i.e., the limits for these values are: offset_days >= 0
- * duration_days >= 1 offset_days + duration_days <= 30
+ * 30 days before today and ends today, for example, the limits for these values are: offset_days >=
+ * 0 duration_days >= 1 offset_days + duration_days <= 30
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
@@ -33,24 +33,24 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class RelativeDateRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of days in the requested date range, e.g., for a range spanning today: 1. For a
-   * range spanning the last 7 days: 7.
+   * The number of days in the requested date range, for example, for a range spanning today: 1. For
+   * a range spanning the last 7 days: 7.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer durationDays;
 
   /**
-   * The end date of the filter set, specified as the number of days before today, e.g., for a range
-   * where the last date is today: 0.
+   * The end date of the filter set, specified as the number of days before today, for example, for
+   * a range where the last date is today: 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer offsetDays;
 
   /**
-   * The number of days in the requested date range, e.g., for a range spanning today: 1. For a
-   * range spanning the last 7 days: 7.
+   * The number of days in the requested date range, for example, for a range spanning today: 1. For
+   * a range spanning the last 7 days: 7.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDurationDays() {
@@ -58,8 +58,8 @@ public final class RelativeDateRange extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The number of days in the requested date range, e.g., for a range spanning today: 1. For a
-   * range spanning the last 7 days: 7.
+   * The number of days in the requested date range, for example, for a range spanning today: 1. For
+   * a range spanning the last 7 days: 7.
    * @param durationDays durationDays or {@code null} for none
    */
   public RelativeDateRange setDurationDays(java.lang.Integer durationDays) {
@@ -68,8 +68,8 @@ public final class RelativeDateRange extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The end date of the filter set, specified as the number of days before today, e.g., for a range
-   * where the last date is today: 0.
+   * The end date of the filter set, specified as the number of days before today, for example, for
+   * a range where the last date is today: 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOffsetDays() {
@@ -77,8 +77,8 @@ public final class RelativeDateRange extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The end date of the filter set, specified as the number of days before today, e.g., for a range
-   * where the last date is today: 0.
+   * The end date of the filter set, specified as the number of days before today, for example, for
+   * a range where the last date is today: 0.
    * @param offsetDays offsetDays or {@code null} for none
    */
   public RelativeDateRange setOffsetDays(java.lang.Integer offsetDays) {

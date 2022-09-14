@@ -42,8 +42,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Proposed flight start time of the deal. This will generally be stored in the
    * granularity of one second since deal serving starts at seconds boundary. Any time specified
-   * with more granularity (e.g., in milliseconds) will be truncated towards the start of time in
-   * seconds.
+   * with more granularity (for example, in milliseconds) will be truncated towards the start of
+   * time in seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.String creativePreApprovalPolicy;
 
   /**
-   * Output only. Restricitions about the creatives associated with the deal (i.e., size) This is
-   * available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
+   * Output only. Restricitions about the creatives associated with the deal (for example, size)
+   * This is available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,8 +249,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Proposed flight start time of the deal. This will generally be stored in the
    * granularity of one second since deal serving starts at seconds boundary. Any time specified
-   * with more granularity (e.g., in milliseconds) will be truncated towards the start of time in
-   * seconds.
+   * with more granularity (for example, in milliseconds) will be truncated towards the start of
+   * time in seconds.
    * @return value or {@code null} for none
    */
   public String getAvailableStartTime() {
@@ -260,8 +260,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Proposed flight start time of the deal. This will generally be stored in the
    * granularity of one second since deal serving starts at seconds boundary. Any time specified
-   * with more granularity (e.g., in milliseconds) will be truncated towards the start of time in
-   * seconds.
+   * with more granularity (for example, in milliseconds) will be truncated towards the start of
+   * time in seconds.
    * @param availableStartTime availableStartTime or {@code null} for none
    */
   public Deal setAvailableStartTime(String availableStartTime) {
@@ -363,8 +363,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Restricitions about the creatives associated with the deal (i.e., size) This is
-   * available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
+   * Output only. Restricitions about the creatives associated with the deal (for example, size)
+   * This is available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
    * @return value or {@code null} for none
    */
   public CreativeRestrictions getCreativeRestrictions() {
@@ -372,8 +372,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Restricitions about the creatives associated with the deal (i.e., size) This is
-   * available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
+   * Output only. Restricitions about the creatives associated with the deal (for example, size)
+   * This is available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
    * @param creativeRestrictions creativeRestrictions or {@code null} for none
    */
   public Deal setCreativeRestrictions(CreativeRestrictions creativeRestrictions) {

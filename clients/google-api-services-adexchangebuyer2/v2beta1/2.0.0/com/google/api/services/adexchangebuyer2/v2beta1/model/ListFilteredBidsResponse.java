@@ -31,8 +31,8 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class ListFilteredBidsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of rows, with counts of filtered bids aggregated by filtering reason (i.e. creative
-   * status).
+   * List of rows, with counts of filtered bids aggregated by filtering reason (for example,
+   * creative status).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class ListFilteredBidsResponse extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
-   * List of rows, with counts of filtered bids aggregated by filtering reason (i.e. creative
-   * status).
+   * List of rows, with counts of filtered bids aggregated by filtering reason (for example,
+   * creative status).
    * @return value or {@code null} for none
    */
   public java.util.List<CreativeStatusRow> getCreativeStatusRows() {
@@ -63,8 +63,8 @@ public final class ListFilteredBidsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * List of rows, with counts of filtered bids aggregated by filtering reason (i.e. creative
-   * status).
+   * List of rows, with counts of filtered bids aggregated by filtering reason (for example,
+   * creative status).
    * @param creativeStatusRows creativeStatusRows or {@code null} for none
    */
   public ListFilteredBidsResponse setCreativeStatusRows(java.util.List<CreativeStatusRow> creativeStatusRows) {

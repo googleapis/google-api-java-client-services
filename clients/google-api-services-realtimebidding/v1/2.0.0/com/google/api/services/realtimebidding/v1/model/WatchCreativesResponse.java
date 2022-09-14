@@ -34,8 +34,8 @@ public final class WatchCreativesResponse extends com.google.api.client.json.Gen
    * The Pub/Sub subscription that can be used to pull creative status notifications. This would be
    * of the format `projects/{project_id}/subscriptions/{subscription_id}`. Subscription is created
    * with pull delivery. All service accounts belonging to the bidder will have read access to this
-   * subscription. Subscriptions that are inactive for more than 90 days will be disabled. Please
-   * use watchCreatives to re-enable the subscription.
+   * subscription. Subscriptions that are inactive for more than 90 days will be disabled. Use
+   * watchCreatives to re-enable the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class WatchCreativesResponse extends com.google.api.client.json.Gen
    * The Pub/Sub subscription that can be used to pull creative status notifications. This would be
    * of the format `projects/{project_id}/subscriptions/{subscription_id}`. Subscription is created
    * with pull delivery. All service accounts belonging to the bidder will have read access to this
-   * subscription. Subscriptions that are inactive for more than 90 days will be disabled. Please
-   * use watchCreatives to re-enable the subscription.
+   * subscription. Subscriptions that are inactive for more than 90 days will be disabled. Use
+   * watchCreatives to re-enable the subscription.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscription() {
@@ -65,8 +65,8 @@ public final class WatchCreativesResponse extends com.google.api.client.json.Gen
    * The Pub/Sub subscription that can be used to pull creative status notifications. This would be
    * of the format `projects/{project_id}/subscriptions/{subscription_id}`. Subscription is created
    * with pull delivery. All service accounts belonging to the bidder will have read access to this
-   * subscription. Subscriptions that are inactive for more than 90 days will be disabled. Please
-   * use watchCreatives to re-enable the subscription.
+   * subscription. Subscriptions that are inactive for more than 90 days will be disabled. Use
+   * watchCreatives to re-enable the subscription.
    * @param subscription subscription or {@code null} for none
    */
   public WatchCreativesResponse setSubscription(java.lang.String subscription) {

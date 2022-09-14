@@ -61,7 +61,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long agencyId;
 
   /**
-   * Output only. The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative through the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,7 +262,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative through the API.
    * @return value or {@code null} for none
    */
   public String getApiUpdateTime() {
@@ -270,7 +270,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative through the API.
    * @param apiUpdateTime apiUpdateTime or {@code null} for none
    */
   public Creative setApiUpdateTime(String apiUpdateTime) {

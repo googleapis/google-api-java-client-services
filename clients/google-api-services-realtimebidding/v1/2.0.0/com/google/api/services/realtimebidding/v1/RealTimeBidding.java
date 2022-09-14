@@ -484,8 +484,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
        *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
        *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
-       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
-       *        `bidders/123`.
+       *        use `bidders/{bidderAccountId}`, for example, for all creatives pertaining to bidder
+       *        (`123`), use `bidders/123`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -523,8 +523,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
        *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
        *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
-       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
-       *        `bidders/123`.
+       *        use `bidders/{bidderAccountId}`, for example, for all creatives pertaining to bidder
+       *        (`123`), use `bidders/123`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -611,8 +611,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
          * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
          * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
-         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
-         * creatives pertaining to bidder (`123`), use `bidders/123`.
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, for example, for
+         * all creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -624,8 +624,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        pertaining to the child seat buyer (`456`) under bidder account (`123`), you would use the pattern:
        `buyers/456`. 3. The ID of the bidder itself. So for listing creatives pertaining to bidder
        (`123`), you would use `buyers/123`. If you want to access all creatives pertaining to both the
-       bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
-       creatives pertaining to bidder (`123`), use `bidders/123`.
+       bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, for example,
+       for all creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -640,8 +640,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
          * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
          * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
-         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
-         * creatives pertaining to bidder (`123`), use `bidders/123`.
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, for example, for
+         * all creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -681,14 +681,14 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Requested page size. The server may return fewer creatives than requested (due to timeout
-         * constraint) even if more are available via another call. If unspecified, server will pick
-         * an appropriate default. Acceptable values are 1 to 1000, inclusive.
+         * constraint) even if more are available through another call. If unspecified, server will
+         * pick an appropriate default. Acceptable values are 1 to 1000, inclusive.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Requested page size. The server may return fewer creatives than requested (due to timeout
-       constraint) even if more are available via another call. If unspecified, server will pick an
+       constraint) even if more are available through another call. If unspecified, server will pick an
        appropriate default. Acceptable values are 1 to 1000, inclusive.
          */
         public java.lang.Integer getPageSize() {
@@ -697,8 +697,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Requested page size. The server may return fewer creatives than requested (due to timeout
-         * constraint) even if more are available via another call. If unspecified, server will pick
-         * an appropriate default. Acceptable values are 1 to 1000, inclusive.
+         * constraint) even if more are available through another call. If unspecified, server will
+         * pick an appropriate default. Acceptable values are 1 to 1000, inclusive.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -4033,15 +4033,15 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Requested page size. The server may return fewer results than requested (due to timeout
-         * constraint) even if more are available via another call. If unspecified, the server will
-         * pick an appropriate default. Acceptable values are 1 to 5000, inclusive.
+         * constraint) even if more are available through another call. If unspecified, the server
+         * will pick an appropriate default. Acceptable values are 1 to 5000, inclusive.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Requested page size. The server may return fewer results than requested (due to timeout constraint)
-       even if more are available via another call. If unspecified, the server will pick an appropriate
-       default. Acceptable values are 1 to 5000, inclusive.
+       even if more are available through another call. If unspecified, the server will pick an
+       appropriate default. Acceptable values are 1 to 5000, inclusive.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -4049,8 +4049,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Requested page size. The server may return fewer results than requested (due to timeout
-         * constraint) even if more are available via another call. If unspecified, the server will
-         * pick an appropriate default. Acceptable values are 1 to 5000, inclusive.
+         * constraint) even if more are available through another call. If unspecified, the server
+         * will pick an appropriate default. Acceptable values are 1 to 5000, inclusive.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -4929,8 +4929,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
        *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
        *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
-       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
-       *        `bidders/123`.
+       *        use `bidders/{bidderAccountId}`, for example, for all creatives pertaining to bidder
+       *        (`123`), use `bidders/123`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4968,8 +4968,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
        *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
        *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
-       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
-       *        `bidders/123`.
+       *        use `bidders/{bidderAccountId}`, for example, for all creatives pertaining to bidder
+       *        (`123`), use `bidders/123`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5056,8 +5056,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
          * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
          * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
-         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
-         * creatives pertaining to bidder (`123`), use `bidders/123`.
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, for example, for
+         * all creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -5069,8 +5069,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        pertaining to the child seat buyer (`456`) under bidder account (`123`), you would use the pattern:
        `buyers/456`. 3. The ID of the bidder itself. So for listing creatives pertaining to bidder
        (`123`), you would use `buyers/123`. If you want to access all creatives pertaining to both the
-       bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
-       creatives pertaining to bidder (`123`), use `bidders/123`.
+       bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, for example,
+       for all creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -5085,8 +5085,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
          * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
          * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
-         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
-         * creatives pertaining to bidder (`123`), use `bidders/123`.
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, for example, for
+         * all creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5126,14 +5126,14 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Requested page size. The server may return fewer creatives than requested (due to timeout
-         * constraint) even if more are available via another call. If unspecified, server will pick
-         * an appropriate default. Acceptable values are 1 to 1000, inclusive.
+         * constraint) even if more are available through another call. If unspecified, server will
+         * pick an appropriate default. Acceptable values are 1 to 1000, inclusive.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Requested page size. The server may return fewer creatives than requested (due to timeout
-       constraint) even if more are available via another call. If unspecified, server will pick an
+       constraint) even if more are available through another call. If unspecified, server will pick an
        appropriate default. Acceptable values are 1 to 1000, inclusive.
          */
         public java.lang.Integer getPageSize() {
@@ -5142,8 +5142,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Requested page size. The server may return fewer creatives than requested (due to timeout
-         * constraint) even if more are available via another call. If unspecified, server will pick
-         * an appropriate default. Acceptable values are 1 to 1000, inclusive.
+         * constraint) even if more are available through another call. If unspecified, server will
+         * pick an appropriate default. Acceptable values are 1 to 1000, inclusive.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

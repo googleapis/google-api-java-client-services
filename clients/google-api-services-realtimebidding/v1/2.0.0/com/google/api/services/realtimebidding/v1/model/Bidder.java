@@ -31,11 +31,11 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class Bidder extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A flag to bypass pretargeting for private auctions and preferred deals. When true,
-   * bid requests from these nonguaranteed deals will always be sent. When false, bid requests will
-   * be subject to regular pretargeting configurations. Programmatic Guaranteed deals will always be
-   * sent to the bidder, regardless of the value for this flag. Auction packages are not impacted by
-   * this value and are subject to the regular pretargeting configurations.
+   * Output only. An option to bypass pretargeting for private auctions and preferred deals. When
+   * true, bid requests from these nonguaranteed deals will always be sent. When false, bid requests
+   * will be subject to regular pretargeting configurations. Programmatic Guaranteed deals will
+   * always be sent to the bidder, regardless of the value for this flag. Auction packages are not
+   * impacted by this value and are subject to the regular pretargeting configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,11 +77,11 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. A flag to bypass pretargeting for private auctions and preferred deals. When true,
-   * bid requests from these nonguaranteed deals will always be sent. When false, bid requests will
-   * be subject to regular pretargeting configurations. Programmatic Guaranteed deals will always be
-   * sent to the bidder, regardless of the value for this flag. Auction packages are not impacted by
-   * this value and are subject to the regular pretargeting configurations.
+   * Output only. An option to bypass pretargeting for private auctions and preferred deals. When
+   * true, bid requests from these nonguaranteed deals will always be sent. When false, bid requests
+   * will be subject to regular pretargeting configurations. Programmatic Guaranteed deals will
+   * always be sent to the bidder, regardless of the value for this flag. Auction packages are not
+   * impacted by this value and are subject to the regular pretargeting configurations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBypassNonguaranteedDealsPretargeting() {
@@ -89,11 +89,11 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A flag to bypass pretargeting for private auctions and preferred deals. When true,
-   * bid requests from these nonguaranteed deals will always be sent. When false, bid requests will
-   * be subject to regular pretargeting configurations. Programmatic Guaranteed deals will always be
-   * sent to the bidder, regardless of the value for this flag. Auction packages are not impacted by
-   * this value and are subject to the regular pretargeting configurations.
+   * Output only. An option to bypass pretargeting for private auctions and preferred deals. When
+   * true, bid requests from these nonguaranteed deals will always be sent. When false, bid requests
+   * will be subject to regular pretargeting configurations. Programmatic Guaranteed deals will
+   * always be sent to the bidder, regardless of the value for this flag. Auction packages are not
+   * impacted by this value and are subject to the regular pretargeting configurations.
    * @param bypassNonguaranteedDealsPretargeting bypassNonguaranteedDealsPretargeting or {@code null} for none
    */
   public Bidder setBypassNonguaranteedDealsPretargeting(java.lang.Boolean bypassNonguaranteedDealsPretargeting) {

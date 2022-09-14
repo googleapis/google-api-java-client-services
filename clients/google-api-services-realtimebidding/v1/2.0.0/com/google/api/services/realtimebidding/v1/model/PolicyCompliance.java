@@ -31,24 +31,25 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class PolicyCompliance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Serving status for the given transaction type (e.g., open auction, deals) or region (e.g.,
-   * China, Russia). Can be used to filter the response of the creatives.list method.
+   * Serving status for the given transaction type (for example, open auction, deals) or region (for
+   * example, China, Russia). Can be used to filter the response of the creatives.list method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Topics related to the policy compliance for this transaction type (e.g., open auction, deals)
-   * or region (e.g., China, Russia). Topics may be present only if status is DISAPPROVED.
+   * Topics related to the policy compliance for this transaction type (for example, open auction,
+   * deals) or region (for example, China, Russia). Topics may be present only if status is
+   * DISAPPROVED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PolicyTopicEntry> topics;
 
   /**
-   * Serving status for the given transaction type (e.g., open auction, deals) or region (e.g.,
-   * China, Russia). Can be used to filter the response of the creatives.list method.
+   * Serving status for the given transaction type (for example, open auction, deals) or region (for
+   * example, China, Russia). Can be used to filter the response of the creatives.list method.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -56,8 +57,8 @@ public final class PolicyCompliance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Serving status for the given transaction type (e.g., open auction, deals) or region (e.g.,
-   * China, Russia). Can be used to filter the response of the creatives.list method.
+   * Serving status for the given transaction type (for example, open auction, deals) or region (for
+   * example, China, Russia). Can be used to filter the response of the creatives.list method.
    * @param status status or {@code null} for none
    */
   public PolicyCompliance setStatus(java.lang.String status) {
@@ -66,8 +67,9 @@ public final class PolicyCompliance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Topics related to the policy compliance for this transaction type (e.g., open auction, deals)
-   * or region (e.g., China, Russia). Topics may be present only if status is DISAPPROVED.
+   * Topics related to the policy compliance for this transaction type (for example, open auction,
+   * deals) or region (for example, China, Russia). Topics may be present only if status is
+   * DISAPPROVED.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyTopicEntry> getTopics() {
@@ -75,8 +77,9 @@ public final class PolicyCompliance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Topics related to the policy compliance for this transaction type (e.g., open auction, deals)
-   * or region (e.g., China, Russia). Topics may be present only if status is DISAPPROVED.
+   * Topics related to the policy compliance for this transaction type (for example, open auction,
+   * deals) or region (for example, China, Russia). Topics may be present only if status is
+   * DISAPPROVED.
    * @param topics topics or {@code null} for none
    */
   public PolicyCompliance setTopics(java.util.List<PolicyTopicEntry> topics) {

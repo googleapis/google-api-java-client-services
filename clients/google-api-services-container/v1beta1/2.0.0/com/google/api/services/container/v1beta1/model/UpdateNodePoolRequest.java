@@ -101,6 +101,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> locations;
 
   /**
+   * Logging configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolLoggingConfig loggingConfig;
+
+  /**
    * The name (project, location, cluster, node pool) of the node pool to update. Specified in the
    * format `projects/locations/clusters/nodePools`.
    * The value may be {@code null}.
@@ -349,6 +356,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setLocations(java.util.List<java.lang.String> locations) {
     this.locations = locations;
+    return this;
+  }
+
+  /**
+   * Logging configuration.
+   * @return value or {@code null} for none
+   */
+  public NodePoolLoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Logging configuration.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setLoggingConfig(NodePoolLoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 

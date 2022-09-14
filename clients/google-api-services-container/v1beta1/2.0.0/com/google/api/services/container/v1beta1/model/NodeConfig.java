@@ -152,6 +152,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer localSsdCount;
 
   /**
+   * Logging configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolLoggingConfig loggingConfig;
+
+  /**
    * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
    * /machine-types). If unspecified, the default machine type is `e2-medium`.
    * The value may be {@code null}.
@@ -181,7 +188,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
    * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -552,6 +559,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Logging configuration.
+   * @return value or {@code null} for none
+   */
+  public NodePoolLoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Logging configuration.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public NodeConfig setLoggingConfig(NodePoolLoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
+    return this;
+  }
+
+  /**
    * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
    * /machine-types). If unspecified, the default machine type is `e2-medium`.
    * @return value or {@code null} for none
@@ -612,7 +636,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
    * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -624,7 +648,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
    * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public NodeConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {

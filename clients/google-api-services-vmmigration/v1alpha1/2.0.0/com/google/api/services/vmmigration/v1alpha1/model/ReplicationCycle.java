@@ -30,11 +30,25 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class ReplicationCycle extends com.google.api.client.json.GenericJson {
 
   /**
+   * The cycle's ordinal number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cycleNumber;
+
+  /**
    * The time the replication cycle has ended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * Provides details on the state of the cycle in case of an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status error;
 
   /**
    * The identifier of the ReplicationCycle.
@@ -65,6 +79,13 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String startTime;
 
   /**
+   * State of the MigratingVm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The cycle's steps list representing its progress.
    * The value may be {@code null}.
    */
@@ -85,6 +106,23 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String totalPauseDuration;
 
   /**
+   * The cycle's ordinal number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCycleNumber() {
+    return cycleNumber;
+  }
+
+  /**
+   * The cycle's ordinal number.
+   * @param cycleNumber cycleNumber or {@code null} for none
+   */
+  public ReplicationCycle setCycleNumber(java.lang.Integer cycleNumber) {
+    this.cycleNumber = cycleNumber;
+    return this;
+  }
+
+  /**
    * The time the replication cycle has ended.
    * @return value or {@code null} for none
    */
@@ -98,6 +136,23 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
    */
   public ReplicationCycle setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Provides details on the state of the cycle in case of an error.
+   * @return value or {@code null} for none
+   */
+  public Status getError() {
+    return error;
+  }
+
+  /**
+   * Provides details on the state of the cycle in case of an error.
+   * @param error error or {@code null} for none
+   */
+  public ReplicationCycle setError(Status error) {
+    this.error = error;
     return this;
   }
 
@@ -166,6 +221,23 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
    */
   public ReplicationCycle setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * State of the MigratingVm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * State of the MigratingVm.
+   * @param state state or {@code null} for none
+   */
+  public ReplicationCycle setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

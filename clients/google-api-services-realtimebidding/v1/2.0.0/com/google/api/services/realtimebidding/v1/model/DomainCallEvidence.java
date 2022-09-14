@@ -31,7 +31,7 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class DomainCallEvidence extends com.google.api.client.json.GenericJson {
 
   /**
-   * Breakdown of the most frequent domains called via HTTP by the creative.
+   * Breakdown of the most frequent domains called through HTTP by the creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class DomainCallEvidence extends com.google.api.client.json.Generic
   private java.lang.Integer totalHttpCallCount;
 
   /**
-   * Breakdown of the most frequent domains called via HTTP by the creative.
+   * Breakdown of the most frequent domains called through HTTP by the creative.
    * @return value or {@code null} for none
    */
   public java.util.List<DomainCalls> getTopHttpCallDomains() {
@@ -54,7 +54,7 @@ public final class DomainCallEvidence extends com.google.api.client.json.Generic
   }
 
   /**
-   * Breakdown of the most frequent domains called via HTTP by the creative.
+   * Breakdown of the most frequent domains called through HTTP by the creative.
    * @param topHttpCallDomains topHttpCallDomains or {@code null} for none
    */
   public DomainCallEvidence setTopHttpCallDomains(java.util.List<DomainCalls> topHttpCallDomains) {

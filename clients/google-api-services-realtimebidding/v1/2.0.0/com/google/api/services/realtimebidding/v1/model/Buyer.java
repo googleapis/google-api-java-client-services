@@ -31,8 +31,8 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class Buyer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of creatives that this buyer submitted via the API or bid with in the
-   * last 30 days. This is counted against the maximum number of active creatives.
+   * Output only. The number of creatives that this buyer submitted through the API or bid with in
+   * the last 30 days. This is counted against the maximum number of active creatives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -83,8 +83,8 @@ public final class Buyer extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The number of creatives that this buyer submitted via the API or bid with in the
-   * last 30 days. This is counted against the maximum number of active creatives.
+   * Output only. The number of creatives that this buyer submitted through the API or bid with in
+   * the last 30 days. This is counted against the maximum number of active creatives.
    * @return value or {@code null} for none
    */
   public java.lang.Long getActiveCreativeCount() {
@@ -92,8 +92,8 @@ public final class Buyer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The number of creatives that this buyer submitted via the API or bid with in the
-   * last 30 days. This is counted against the maximum number of active creatives.
+   * Output only. The number of creatives that this buyer submitted through the API or bid with in
+   * the last 30 days. This is counted against the maximum number of active creatives.
    * @param activeCreativeCount activeCreativeCount or {@code null} for none
    */
   public Buyer setActiveCreativeCount(java.lang.Long activeCreativeCount) {

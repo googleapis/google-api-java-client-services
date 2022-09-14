@@ -46,7 +46,7 @@ public final class DestinationNotWorkingEvidence extends com.google.api.client.j
   private java.lang.String expandedUrl;
 
   /**
-   * HTTP error code (e.g. 404 or 5xx)
+   * HTTP error code (for example, 404 or 5xx)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class DestinationNotWorkingEvidence extends com.google.api.client.j
   }
 
   /**
-   * HTTP error code (e.g. 404 or 5xx)
+   * HTTP error code (for example, 404 or 5xx)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpError() {
@@ -131,7 +131,7 @@ public final class DestinationNotWorkingEvidence extends com.google.api.client.j
   }
 
   /**
-   * HTTP error code (e.g. 404 or 5xx)
+   * HTTP error code (for example, 404 or 5xx)
    * @param httpError httpError or {@code null} for none
    */
   public DestinationNotWorkingEvidence setHttpError(java.lang.Integer httpError) {

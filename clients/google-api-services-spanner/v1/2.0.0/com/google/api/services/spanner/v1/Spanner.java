@@ -154,6 +154,309 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
   public class Projects {
 
     /**
+     * An accessor for creating requests from the InstanceConfigOperations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Spanner spanner = new Spanner(...);}
+     *   {@code Spanner.InstanceConfigOperations.List request = spanner.instanceConfigOperations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public InstanceConfigOperations instanceConfigOperations() {
+      return new InstanceConfigOperations();
+    }
+
+    /**
+     * The "instanceConfigOperations" collection of methods.
+     */
+    public class InstanceConfigOperations {
+
+      /**
+       * Lists the user-managed instance config long-running operations in the given project. An instance
+       * config operation has a name of the form `projects//instanceConfigs//operations/`. The long-
+       * running operation metadata field type `metadata.type_url` describes the type of the metadata.
+       * Operations returned include those that have completed/failed/canceled within the last 7 days, and
+       * pending operations. Operations returned are ordered by `operation.metadata.value.start_time` in
+       * descending order starting from the most recently started operation.
+       *
+       * Create a request for the method "instanceConfigOperations.list".
+       *
+       * This request holds the parameters needed by the spanner server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project of the instance config operations. Values are of the form `projects/`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListInstanceConfigOperationsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/instanceConfigOperations";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists the user-managed instance config long-running operations in the given project. An
+         * instance config operation has a name of the form `projects//instanceConfigs//operations/`. The
+         * long-running operation metadata field type `metadata.type_url` describes the type of the
+         * metadata. Operations returned include those that have completed/failed/canceled within the last
+         * 7 days, and pending operations. Operations returned are ordered by
+         * `operation.metadata.value.start_time` in descending order starting from the most recently
+         * started operation.
+         *
+         * Create a request for the method "instanceConfigOperations.list".
+         *
+         * This request holds the parameters needed by the the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project of the instance config operations. Values are of the form `projects/`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListInstanceConfigOperationsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project of the instance config operations. Values are of the form
+         * `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project of the instance config operations. Values are of the form `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project of the instance config operations. Values are of the form
+         * `projects/`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * An expression that filters the list of returned operations. A filter expression consists
+         * of a field name, a comparison operator, and a value for filtering. The value must be a
+         * string, a number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`,
+         * `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
+         * sensitive. The following fields in the Operation are eligible for filtering: * `name` -
+         * The name of the long-running operation * `done` - False if the operation is in progress,
+         * else true. * `metadata.@type` - the type of metadata. For example, the type string for
+         * CreateInstanceConfigMetadata is
+         * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata`. *
+         * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first, if
+         * filtering on metadata fields. * `error` - Error associated with the long-running
+         * operation. * `response.@type` - the type of response. * `response.` - any field in
+         * response.value. You can combine multiple expressions by enclosing each expression in
+         * parentheses. By default, expressions are combined with AND logic. However, you can
+         * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+         * operation is complete. * `(metadata.@type=` \
+         * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata) AND`
+         * \ `(metadata.instance_config.name:custom-config) AND` \ `(metadata.progress.start_time <
+         * \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's
+         * metadata type is CreateInstanceConfigMetadata. * The instance config name contains
+         * "custom-config". * The operation started before 2021-03-28T14:50:00Z. * The operation
+         * resulted in an error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** An expression that filters the list of returned operations. A filter expression consists of a field
+       name, a comparison operator, and a value for filtering. The value must be a string, a number, or a
+       boolean. The comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:`
+       is the contains operator. Filter rules are not case sensitive. The following fields in the
+       Operation are eligible for filtering: * `name` - The name of the long-running operation * `done` -
+       False if the operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+       example, the type string for CreateInstanceConfigMetadata is
+       `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata`. * `metadata.`
+       - any field in metadata.value. `metadata.@type` must be specified first, if filtering on metadata
+       fields. * `error` - Error associated with the long-running operation. * `response.@type` - the type
+       of response. * `response.` - any field in response.value. You can combine multiple expressions by
+       enclosing each expression in parentheses. By default, expressions are combined with AND logic.
+       However, you can specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true`
+       - The operation is complete. * `(metadata.@type=` \
+       `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata) AND` \
+       `(metadata.instance_config.name:custom-config) AND` \ `(metadata.progress.start_time <
+       \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's metadata
+       type is CreateInstanceConfigMetadata. * The instance config name contains "custom-config". * The
+       operation started before 2021-03-28T14:50:00Z. * The operation resulted in an error.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * An expression that filters the list of returned operations. A filter expression consists
+         * of a field name, a comparison operator, and a value for filtering. The value must be a
+         * string, a number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`,
+         * `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
+         * sensitive. The following fields in the Operation are eligible for filtering: * `name` -
+         * The name of the long-running operation * `done` - False if the operation is in progress,
+         * else true. * `metadata.@type` - the type of metadata. For example, the type string for
+         * CreateInstanceConfigMetadata is
+         * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata`. *
+         * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first, if
+         * filtering on metadata fields. * `error` - Error associated with the long-running
+         * operation. * `response.@type` - the type of response. * `response.` - any field in
+         * response.value. You can combine multiple expressions by enclosing each expression in
+         * parentheses. By default, expressions are combined with AND logic. However, you can
+         * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+         * operation is complete. * `(metadata.@type=` \
+         * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata) AND`
+         * \ `(metadata.instance_config.name:custom-config) AND` \ `(metadata.progress.start_time <
+         * \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's
+         * metadata type is CreateInstanceConfigMetadata. * The instance config name contains
+         * "custom-config". * The operation started before 2021-03-28T14:50:00Z. * The operation
+         * resulted in an error.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Number of operations to be returned in the response. If 0 or less, defaults to the
+         * server's maximum allowed page size.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Number of operations to be returned in the response. If 0 or less, defaults to the server's maximum
+       allowed page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Number of operations to be returned in the response. If 0 or less, defaults to the
+         * server's maximum allowed page size.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If non-empty, `page_token` should contain a next_page_token from a previous
+         * ListInstanceConfigOperationsResponse to the same `parent` and with the same `filter`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If non-empty, `page_token` should contain a next_page_token from a previous
+       ListInstanceConfigOperationsResponse to the same `parent` and with the same `filter`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If non-empty, `page_token` should contain a next_page_token from a previous
+         * ListInstanceConfigOperationsResponse to the same `parent` and with the same `filter`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the InstanceConfigs collection.
      *
      * <p>The typical use is:</p>
@@ -173,6 +476,367 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
      */
     public class InstanceConfigs {
 
+      /**
+       * Creates an instance config and begins preparing it to be used. The returned long-running
+       * operation can be used to track the progress of preparing the new instance config. The instance
+       * config name is assigned by the caller. If the named instance config already exists,
+       * `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns: * The
+       * instance config is readable via the API, with all requested attributes. The instance config's
+       * reconciling field is set to true. Its state is `CREATING`. While the operation is pending: *
+       * Cancelling the operation renders the instance config immediately unreadable via the API. * Except
+       * for deleting the creating resource, all other attempts to modify the instance config are
+       * rejected. Upon completion of the returned operation: * Instances can be created using the
+       * instance configuration. * The instance config's reconciling field becomes false. Its state
+       * becomes `READY`. The returned long-running operation will have a name of the format
+       * `/operations/` and can be used to track creation of the instance config. The metadata field type
+       * is CreateInstanceConfigMetadata. The response field type is InstanceConfig, if successful.
+       * Authorization requires `spanner.instanceConfigs.create` permission on the resource parent.
+       *
+       * Create a request for the method "instanceConfigs.create".
+       *
+       * This request holds the parameters needed by the spanner server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project in which to create the instance config. Values are of the form
+       *        `projects/`.
+       * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstanceConfigRequest}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.spanner.v1.model.CreateInstanceConfigRequest content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/instanceConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates an instance config and begins preparing it to be used. The returned long-running
+         * operation can be used to track the progress of preparing the new instance config. The instance
+         * config name is assigned by the caller. If the named instance config already exists,
+         * `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns: * The
+         * instance config is readable via the API, with all requested attributes. The instance config's
+         * reconciling field is set to true. Its state is `CREATING`. While the operation is pending: *
+         * Cancelling the operation renders the instance config immediately unreadable via the API. *
+         * Except for deleting the creating resource, all other attempts to modify the instance config are
+         * rejected. Upon completion of the returned operation: * Instances can be created using the
+         * instance configuration. * The instance config's reconciling field becomes false. Its state
+         * becomes `READY`. The returned long-running operation will have a name of the format
+         * `/operations/` and can be used to track creation of the instance config. The metadata field
+         * type is CreateInstanceConfigMetadata. The response field type is InstanceConfig, if successful.
+         * Authorization requires `spanner.instanceConfigs.create` permission on the resource parent.
+         *
+         * Create a request for the method "instanceConfigs.create".
+         *
+         * This request holds the parameters needed by the the spanner server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project in which to create the instance config. Values are of the form
+       *        `projects/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstanceConfigRequest}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.spanner.v1.model.CreateInstanceConfigRequest content) {
+          super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project in which to create the instance config. Values are of
+         * the form `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project in which to create the instance config. Values are of the form
+       `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project in which to create the instance config. Values are of
+         * the form `projects/`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the instance config. Deletion is only allowed when no instances are using the
+       * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user
+       * managed configurations can be deleted. Authorization requires `spanner.instanceConfigs.delete`
+       * permission on the resource name.
+       *
+       * Create a request for the method "instanceConfigs.delete".
+       *
+       * This request holds the parameters needed by the spanner server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the instance configuration to be deleted. Values are of the form
+       *        `projects//instanceConfigs/`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends SpannerRequest<com.google.api.services.spanner.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+$");
+
+        /**
+         * Deletes the instance config. Deletion is only allowed when no instances are using the
+         * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user
+         * managed configurations can be deleted. Authorization requires `spanner.instanceConfigs.delete`
+         * permission on the resource name.
+         *
+         * Create a request for the method "instanceConfigs.delete".
+         *
+         * This request holds the parameters needed by the the spanner server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the instance configuration to be deleted. Values are of the form
+       *        `projects//instanceConfigs/`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Spanner.this, "DELETE", REST_PATH, null, com.google.api.services.spanner.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instanceConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the instance configuration to be deleted. Values are of the form
+         * `projects//instanceConfigs/`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the instance configuration to be deleted. Values are of the form
+       `projects//instanceConfigs/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the instance configuration to be deleted. Values are of the form
+         * `projects//instanceConfigs/`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instanceConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Used for optimistic concurrency control as a way to help prevent simultaneous deletes of
+         * an instance config from overwriting each other. If not empty, the API only deletes the
+         * instance config when the etag provided matches the current status of the requested
+         * instance config. Otherwise, deletes the instance config without checking the current
+         * status of the requested instance config.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String etag;
+
+        /** Used for optimistic concurrency control as a way to help prevent simultaneous deletes of an
+       instance config from overwriting each other. If not empty, the API only deletes the instance config
+       when the etag provided matches the current status of the requested instance config. Otherwise,
+       deletes the instance config without checking the current status of the requested instance config.
+         */
+        public java.lang.String getEtag() {
+          return etag;
+        }
+
+        /**
+         * Used for optimistic concurrency control as a way to help prevent simultaneous deletes of
+         * an instance config from overwriting each other. If not empty, the API only deletes the
+         * instance config when the etag provided matches the current status of the requested
+         * instance config. Otherwise, deletes the instance config without checking the current
+         * status of the requested instance config.
+         */
+        public Delete setEtag(java.lang.String etag) {
+          this.etag = etag;
+          return this;
+        }
+
+        /**
+         * An option to validate, but not actually execute, a request, and provide the same
+         * response.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** An option to validate, but not actually execute, a request, and provide the same response.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /**
+         * An option to validate, but not actually execute, a request, and provide the same
+         * response.
+         */
+        public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
       /**
        * Gets information about a particular instance configuration.
        *
@@ -511,6 +1175,172 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an instance config. The returned long-running operation can be used to track the progress
+       * of updating the instance. If the named instance config does not exist, returns `NOT_FOUND`. Only
+       * user managed configurations can be updated. Immediately after the request returns: * The instance
+       * config's reconciling field is set to true. While the operation is pending: * Cancelling the
+       * operation sets its metadata's cancel_time. The operation is guaranteed to succeed at undoing all
+       * changes, after which point it terminates with a `CANCELLED` status. * All other attempts to
+       * modify the instance config are rejected. * Reading the instance config via the API continues to
+       * give the pre-request values. Upon completion of the returned operation: * Creating instances
+       * using the instance configuration uses the new values. * The instance config's new values are
+       * readable via the API. * The instance config's reconciling field becomes false. The returned long-
+       * running operation will have a name of the format `/operations/` and can be used to track the
+       * instance config modification. The metadata field type is UpdateInstanceConfigMetadata. The
+       * response field type is InstanceConfig, if successful. Authorization requires
+       * `spanner.instanceConfigs.update` permission on the resource name.
+       *
+       * Create a request for the method "instanceConfigs.patch".
+       *
+       * This request holds the parameters needed by the spanner server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name A unique identifier for the instance configuration. Values are of the form
+       *        `projects//instanceConfigs/a-z*`.
+       * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+$");
+
+        /**
+         * Updates an instance config. The returned long-running operation can be used to track the
+         * progress of updating the instance. If the named instance config does not exist, returns
+         * `NOT_FOUND`. Only user managed configurations can be updated. Immediately after the request
+         * returns: * The instance config's reconciling field is set to true. While the operation is
+         * pending: * Cancelling the operation sets its metadata's cancel_time. The operation is
+         * guaranteed to succeed at undoing all changes, after which point it terminates with a
+         * `CANCELLED` status. * All other attempts to modify the instance config are rejected. * Reading
+         * the instance config via the API continues to give the pre-request values. Upon completion of
+         * the returned operation: * Creating instances using the instance configuration uses the new
+         * values. * The instance config's new values are readable via the API. * The instance config's
+         * reconciling field becomes false. The returned long-running operation will have a name of the
+         * format `/operations/` and can be used to track the instance config modification. The metadata
+         * field type is UpdateInstanceConfigMetadata. The response field type is InstanceConfig, if
+         * successful. Authorization requires `spanner.instanceConfigs.update` permission on the resource
+         * name.
+         *
+         * Create a request for the method "instanceConfigs.patch".
+         *
+         * This request holds the parameters needed by the the spanner server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name A unique identifier for the instance configuration. Values are of the form
+       *        `projects//instanceConfigs/a-z*`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest content) {
+          super(Spanner.this, "PATCH", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instanceConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * A unique identifier for the instance configuration. Values are of the form
+         * `projects//instanceConfigs/a-z*`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** A unique identifier for the instance configuration. Values are of the form
+       `projects//instanceConfigs/a-z*`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * A unique identifier for the instance configuration. Values are of the form
+         * `projects//instanceConfigs/a-z*`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instanceConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 
@@ -2711,19 +3541,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Returns
            * operations where: * The operation's metadata type is CreateBackupMetadata. * The backup
            * name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
-           * The operation resulted in an error. * `(metadata.@type=type.googleapis.com/google.spann
-           * er.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test) AND` \
-           * `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns
-           * operations where: * The operation's metadata type is CopyBackupMetadata. * The source
-           * backup name contains the string "test". * The operation started before
-           * 2022-01-18T14:50:00Z. * The operation resulted in an error. * `((metadata.@type=type.go
-           * ogleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
-           * `(metadata.database:test_db)) OR` \ `((metadata.@type=type.googleapis.com/google.spanne
-           * r.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test_bkp)) AND`
-           * \ `(error:*)` - Returns operations where: * The operation's metadata matches either of
-           * criteria: * The operation's metadata type is CreateBackupMetadata AND the source
-           * database name of the backup contains the string "test_db" * The operation's metadata
-           * type is CopyBackupMetadata AND the source backup name contains the string "test_bkp" *
            * The operation resulted in an error.
            */
           @com.google.api.client.util.Key
@@ -2750,20 +3567,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          `(metadata.name:howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \
          `(error:*)` - Returns operations where: * The operation's metadata type is CreateBackupMetadata. *
          The backup name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
-         The operation resulted in an error. *
-         `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
-         `(metadata.source_backup:test) AND` \ `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\")
-         AND` \ `(error:*)` - Returns operations where: * The operation's metadata type is
-         CopyBackupMetadata. * The source backup name contains the string "test". * The operation started
-         before 2022-01-18T14:50:00Z. * The operation resulted in an error. *
-         `((metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
-         `(metadata.database:test_db)) OR` \
-         `((metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
-         `(metadata.source_backup:test_bkp)) AND` \ `(error:*)` - Returns operations where: * The
-         operation's metadata matches either of criteria: * The operation's metadata type is
-         CreateBackupMetadata AND the source database name of the backup contains the string "test_db" * The
-         operation's metadata type is CopyBackupMetadata AND the source backup name contains the string
-         "test_bkp" * The operation resulted in an error.
+         The operation resulted in an error.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -2793,19 +3597,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Returns
            * operations where: * The operation's metadata type is CreateBackupMetadata. * The backup
            * name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
-           * The operation resulted in an error. * `(metadata.@type=type.googleapis.com/google.spann
-           * er.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test) AND` \
-           * `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns
-           * operations where: * The operation's metadata type is CopyBackupMetadata. * The source
-           * backup name contains the string "test". * The operation started before
-           * 2022-01-18T14:50:00Z. * The operation resulted in an error. * `((metadata.@type=type.go
-           * ogleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
-           * `(metadata.database:test_db)) OR` \ `((metadata.@type=type.googleapis.com/google.spanne
-           * r.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test_bkp)) AND`
-           * \ `(error:*)` - Returns operations where: * The operation's metadata matches either of
-           * criteria: * The operation's metadata type is CreateBackupMetadata AND the source
-           * database name of the backup contains the string "test_db" * The operation's metadata
-           * type is CopyBackupMetadata AND the source backup name contains the string "test_bkp" *
            * The operation resulted in an error.
            */
           public List setFilter(java.lang.String filter) {

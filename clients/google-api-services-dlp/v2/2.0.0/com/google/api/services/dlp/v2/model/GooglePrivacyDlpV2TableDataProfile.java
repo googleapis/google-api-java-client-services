@@ -179,7 +179,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String resourceVisibility;
 
   /**
-   * Number of rows in the table when the profile was generated.
+   * Number of rows in the table when the profile was generated. This will not be populated for
+   * BigLake tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -550,7 +551,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * Number of rows in the table when the profile was generated.
+   * Number of rows in the table when the profile was generated. This will not be populated for
+   * BigLake tables.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRowCount() {
@@ -558,7 +560,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * Number of rows in the table when the profile was generated.
+   * Number of rows in the table when the profile was generated. This will not be populated for
+   * BigLake tables.
    * @param rowCount rowCount or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setRowCount(java.lang.Long rowCount) {

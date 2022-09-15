@@ -30,19 +30,21 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class Header extends com.google.api.client.json.GenericJson {
 
   /**
+   * The key of the header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
+   * The value of the header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * @see #decodeKey()
+   * The key of the header.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -50,18 +52,7 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-
-   * @see #getKey()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeKey() {
-    return com.google.api.client.util.Base64.decodeBase64(key);
-  }
-
-  /**
-   * @see #encodeKey()
+   * The key of the header.
    * @param key key or {@code null} for none
    */
   public Header setKey(java.lang.String key) {
@@ -70,22 +61,7 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-
-   * @see #setKey()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public Header encodeKey(byte[] key) {
-    this.key = com.google.api.client.util.Base64.encodeBase64URLSafeString(key);
-    return this;
-  }
-
-  /**
-   * @see #decodeValue()
+   * The value of the header.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -93,37 +69,11 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-
-   * @see #getValue()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeValue() {
-    return com.google.api.client.util.Base64.decodeBase64(value);
-  }
-
-  /**
-   * @see #encodeValue()
+   * The value of the header.
    * @param value value or {@code null} for none
    */
   public Header setValue(java.lang.String value) {
     this.value = value;
-    return this;
-  }
-
-  /**
-
-   * @see #setValue()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public Header encodeValue(byte[] value) {
-    this.value = com.google.api.client.util.Base64.encodeBase64URLSafeString(value);
     return this;
   }
 

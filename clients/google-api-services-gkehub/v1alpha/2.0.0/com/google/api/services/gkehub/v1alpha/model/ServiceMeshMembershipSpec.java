@@ -44,6 +44,13 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   private java.lang.String defaultChannel;
 
   /**
+   * Enables automatic Service Mesh management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String management;
+
+  /**
    * Enables automatic control plane management.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
    */
   public ServiceMeshMembershipSpec setDefaultChannel(java.lang.String defaultChannel) {
     this.defaultChannel = defaultChannel;
+    return this;
+  }
+
+  /**
+   * Enables automatic Service Mesh management.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagement() {
+    return management;
+  }
+
+  /**
+   * Enables automatic Service Mesh management.
+   * @param management management or {@code null} for none
+   */
+  public ServiceMeshMembershipSpec setManagement(java.lang.String management) {
+    this.management = management;
     return this;
   }
 

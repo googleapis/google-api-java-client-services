@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1beta.model;
+package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * Request message for the `GkeHub.ValidateCreateMembership` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class ValidateCreateMembershipRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * Required. Membership resource to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private Membership membership;
 
   /**
-   * Enables automatic Service Mesh management.
+   * Required. Client chosen membership id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String management;
+  private java.lang.String membershipId;
 
   /**
-   * Enables automatic control plane management.
+   * Required. Membership resource to be created.
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public Membership getMembership() {
+    return membership;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * Required. Membership resource to be created.
+   * @param membership membership or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public ValidateCreateMembershipRequest setMembership(Membership membership) {
+    this.membership = membership;
     return this;
   }
 
   /**
-   * Enables automatic Service Mesh management.
+   * Required. Client chosen membership id.
    * @return value or {@code null} for none
    */
-  public java.lang.String getManagement() {
-    return management;
+  public java.lang.String getMembershipId() {
+    return membershipId;
   }
 
   /**
-   * Enables automatic Service Mesh management.
-   * @param management management or {@code null} for none
+   * Required. Client chosen membership id.
+   * @param membershipId membershipId or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setManagement(java.lang.String management) {
-    this.management = management;
+  public ValidateCreateMembershipRequest setMembershipId(java.lang.String membershipId) {
+    this.membershipId = membershipId;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public ValidateCreateMembershipRequest set(String fieldName, Object value) {
+    return (ValidateCreateMembershipRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public ValidateCreateMembershipRequest clone() {
+    return (ValidateCreateMembershipRequest) super.clone();
   }
 
 }

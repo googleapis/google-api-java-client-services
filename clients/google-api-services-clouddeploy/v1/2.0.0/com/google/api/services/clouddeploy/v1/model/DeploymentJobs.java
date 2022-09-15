@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Metadata includes information associated with a `Rollout`.
+ * Deployment job composition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,40 +28,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Metadata extends com.google.api.client.json.GenericJson {
+public final class DeploymentJobs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Output only. The deploy Job. This is the first job run in the phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CloudRunMetadata cloudRun;
+  private Job deployJob;
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Output only. The verify Job. Runs after a deploy if the deploy succeeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Job verifyJob;
+
+  /**
+   * Output only. The deploy Job. This is the first job run in the phase.
    * @return value or {@code null} for none
    */
-  public CloudRunMetadata getCloudRun() {
-    return cloudRun;
+  public Job getDeployJob() {
+    return deployJob;
   }
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * @param cloudRun cloudRun or {@code null} for none
+   * Output only. The deploy Job. This is the first job run in the phase.
+   * @param deployJob deployJob or {@code null} for none
    */
-  public Metadata setCloudRun(CloudRunMetadata cloudRun) {
-    this.cloudRun = cloudRun;
+  public DeploymentJobs setDeployJob(Job deployJob) {
+    this.deployJob = deployJob;
+    return this;
+  }
+
+  /**
+   * Output only. The verify Job. Runs after a deploy if the deploy succeeds.
+   * @return value or {@code null} for none
+   */
+  public Job getVerifyJob() {
+    return verifyJob;
+  }
+
+  /**
+   * Output only. The verify Job. Runs after a deploy if the deploy succeeds.
+   * @param verifyJob verifyJob or {@code null} for none
+   */
+  public DeploymentJobs setVerifyJob(Job verifyJob) {
+    this.verifyJob = verifyJob;
     return this;
   }
 
   @Override
-  public Metadata set(String fieldName, Object value) {
-    return (Metadata) super.set(fieldName, value);
+  public DeploymentJobs set(String fieldName, Object value) {
+    return (DeploymentJobs) super.set(fieldName, value);
   }
 
   @Override
-  public Metadata clone() {
-    return (Metadata) super.clone();
+  public DeploymentJobs clone() {
+    return (DeploymentJobs) super.clone();
   }
 
 }

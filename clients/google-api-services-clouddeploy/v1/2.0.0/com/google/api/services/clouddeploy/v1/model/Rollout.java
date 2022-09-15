@@ -149,6 +149,19 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The phases that represent the workflows of this `Rollout`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Phase> phases;
+
+  static {
+    // hack to force ProGuard to consider Phase used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Phase.class);
+  }
+
+  /**
    * Output only. Current state of the `Rollout`.
    * The value may be {@code null}.
    */
@@ -445,6 +458,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The phases that represent the workflows of this `Rollout`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Phase> getPhases() {
+    return phases;
+  }
+
+  /**
+   * Output only. The phases that represent the workflows of this `Rollout`.
+   * @param phases phases or {@code null} for none
+   */
+  public Rollout setPhases(java.util.List<Phase> phases) {
+    this.phases = phases;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Metadata includes information associated with a `Rollout`.
+ * Strategy contains deployment strategy information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Metadata extends com.google.api.client.json.GenericJson {
+public final class Strategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CloudRunMetadata cloudRun;
+  private Standard standard;
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
    * @return value or {@code null} for none
    */
-  public CloudRunMetadata getCloudRun() {
-    return cloudRun;
+  public Standard getStandard() {
+    return standard;
   }
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * @param cloudRun cloudRun or {@code null} for none
+   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * @param standard standard or {@code null} for none
    */
-  public Metadata setCloudRun(CloudRunMetadata cloudRun) {
-    this.cloudRun = cloudRun;
+  public Strategy setStandard(Standard standard) {
+    this.standard = standard;
     return this;
   }
 
   @Override
-  public Metadata set(String fieldName, Object value) {
-    return (Metadata) super.set(fieldName, value);
+  public Strategy set(String fieldName, Object value) {
+    return (Strategy) super.set(fieldName, value);
   }
 
   @Override
-  public Metadata clone() {
-    return (Metadata) super.clone();
+  public Strategy clone() {
+    return (Strategy) super.clone();
   }
 
 }

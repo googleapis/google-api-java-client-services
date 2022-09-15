@@ -3850,7 +3850,560 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                 return (List) super.set(parameterName, value);
               }
             }
+            /**
+             * Retries the specified Job in a Rollout.
+             *
+             * Create a request for the method "rollouts.retryJob".
+             *
+             * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+             * parameters, call the {@link RetryJob#execute()} method to invoke the remote operation.
+             *
+             * @param rollout Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.RetryJobRequest}
+             * @return the request
+             */
+            public RetryJob retryJob(java.lang.String rollout, com.google.api.services.clouddeploy.v1.model.RetryJobRequest content) throws java.io.IOException {
+              RetryJob result = new RetryJob(rollout, content);
+              initialize(result);
+              return result;
+            }
 
+            public class RetryJob extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.RetryJobResponse> {
+
+              private static final String REST_PATH = "v1/{+rollout}:retryJob";
+
+              private final java.util.regex.Pattern ROLLOUT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+
+              /**
+               * Retries the specified Job in a Rollout.
+               *
+               * Create a request for the method "rollouts.retryJob".
+               *
+               * This request holds the parameters needed by the the clouddeploy server.  After setting any
+               * optional parameters, call the {@link RetryJob#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * RetryJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param rollout Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+               * @param content the {@link com.google.api.services.clouddeploy.v1.model.RetryJobRequest}
+               * @since 1.13
+               */
+              protected RetryJob(java.lang.String rollout, com.google.api.services.clouddeploy.v1.model.RetryJobRequest content) {
+                super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.RetryJobResponse.class);
+                this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+                      "Parameter rollout must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+              }
+
+              @Override
+              public RetryJob set$Xgafv(java.lang.String $Xgafv) {
+                return (RetryJob) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RetryJob setAccessToken(java.lang.String accessToken) {
+                return (RetryJob) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RetryJob setAlt(java.lang.String alt) {
+                return (RetryJob) super.setAlt(alt);
+              }
+
+              @Override
+              public RetryJob setCallback(java.lang.String callback) {
+                return (RetryJob) super.setCallback(callback);
+              }
+
+              @Override
+              public RetryJob setFields(java.lang.String fields) {
+                return (RetryJob) super.setFields(fields);
+              }
+
+              @Override
+              public RetryJob setKey(java.lang.String key) {
+                return (RetryJob) super.setKey(key);
+              }
+
+              @Override
+              public RetryJob setOauthToken(java.lang.String oauthToken) {
+                return (RetryJob) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RetryJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RetryJob) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RetryJob setQuotaUser(java.lang.String quotaUser) {
+                return (RetryJob) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RetryJob setUploadType(java.lang.String uploadType) {
+                return (RetryJob) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RetryJob setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RetryJob) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String rollout;
+
+              /** Required. Name of the Rollout. Format is
+             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             releases/{release}/rollouts/{rollout}.
+               */
+              public java.lang.String getRollout() {
+                return rollout;
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              public RetryJob setRollout(java.lang.String rollout) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+                      "Parameter rollout must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+                this.rollout = rollout;
+                return this;
+              }
+
+              @Override
+              public RetryJob set(String parameterName, Object value) {
+                return (RetryJob) super.set(parameterName, value);
+              }
+            }
+
+            /**
+             * An accessor for creating requests from the JobRuns collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code CloudDeploy clouddeploy = new CloudDeploy(...);}
+             *   {@code CloudDeploy.JobRuns.List request = clouddeploy.jobRuns().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public JobRuns jobRuns() {
+              return new JobRuns();
+            }
+
+            /**
+             * The "jobRuns" collection of methods.
+             */
+            public class JobRuns {
+
+              /**
+               * Gets details of a single JobRun.
+               *
+               * Create a request for the method "jobRuns.get".
+               *
+               * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{location_name}/deliv
+               *        eryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_
+               *        run_name}.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.JobRun> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+/jobRuns/[^/]+$");
+
+                /**
+                 * Gets details of a single JobRun.
+                 *
+                 * Create a request for the method "jobRuns.get".
+                 *
+                 * This request holds the parameters needed by the the clouddeploy server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{location_name}/deliv
+               *        eryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_
+               *        run_name}.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.JobRun.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+/jobRuns/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{l
+                 * ocation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/
+                 * {rollout_name}/jobRuns/{job_run_name}.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{location_name}/deli
+               veryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name
+               }.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{l
+                 * ocation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/
+                 * {rollout_name}/jobRuns/{job_run_name}.
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+/jobRuns/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Lists JobRuns in a given project and location.
+               *
+               * Create a request for the method "jobRuns.list".
+               *
+               * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The `Rollout` which owns this collection of `JobRun` objects.
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.ListJobRunsResponse> {
+
+                private static final String REST_PATH = "v1/{+parent}/jobRuns";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+
+                /**
+                 * Lists JobRuns in a given project and location.
+                 *
+                 * Create a request for the method "jobRuns.list".
+                 *
+                 * This request holds the parameters needed by the the clouddeploy server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The `Rollout` which owns this collection of `JobRun` objects.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.ListJobRunsResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. The `Rollout` which owns this collection of `JobRun` objects. */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The `Rollout` which owns this collection of `JobRun` objects.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /** Required. The `Rollout` which owns this collection of `JobRun` objects. */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. Filter results to be returned. See https://google.aip.dev/160 for more
+                 * details.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** Optional. Filter results to be returned. See https://google.aip.dev/160 for more details.
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /**
+                 * Optional. Filter results to be returned. See https://google.aip.dev/160 for more
+                 * details.
+                 */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /**
+                 * Optional. Field to sort by. See https://google.aip.dev/132#ordering for more
+                 * details.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String orderBy;
+
+                /** Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+                 */
+                public java.lang.String getOrderBy() {
+                  return orderBy;
+                }
+
+                /**
+                 * Optional. Field to sort by. See https://google.aip.dev/132#ordering for more
+                 * details.
+                 */
+                public List setOrderBy(java.lang.String orderBy) {
+                  this.orderBy = orderBy;
+                  return this;
+                }
+
+                /**
+                 * Optional. The maximum number of `JobRun` objects to return. The service may
+                 * return fewer than this value. If unspecified, at most 50 `JobRun` objects will be
+                 * returned. The maximum value is 1000; values above 1000 will be set to 1000.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Optional. The maximum number of `JobRun` objects to return. The service may return fewer than this
+               value. If unspecified, at most 50 `JobRun` objects will be returned. The maximum value is 1000;
+               values above 1000 will be set to 1000.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Optional. The maximum number of `JobRun` objects to return. The service may
+                 * return fewer than this value. If unspecified, at most 50 `JobRun` objects will be
+                 * returned. The maximum value is 1000; values above 1000 will be set to 1000.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * Optional. A page token, received from a previous `ListJobRuns` call. Provide this
+                 * to retrieve the subsequent page. When paginating, all other provided parameters
+                 * match the call that provided the page token.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** Optional. A page token, received from a previous `ListJobRuns` call. Provide this to retrieve the
+               subsequent page. When paginating, all other provided parameters match the call that provided the
+               page token.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * Optional. A page token, received from a previous `ListJobRuns` call. Provide this
+                 * to retrieve the subsequent page. When paginating, all other provided parameters
+                 * match the call that provided the page token.
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
           }
         }
       }

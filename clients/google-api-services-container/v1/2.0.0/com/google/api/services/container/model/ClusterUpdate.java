@@ -223,6 +223,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredNodePoolId;
 
   /**
+   * The desired node pool logging configuration defaults for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolLoggingConfig desiredNodePoolLoggingConfig;
+
+  /**
    * The Kubernetes version to change the nodes to (typically an upgrade). Users may specify either
    * explicit versions offered by Kubernetes Engine or version aliases, which have the following
    * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
@@ -748,6 +755,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNodePoolId(java.lang.String desiredNodePoolId) {
     this.desiredNodePoolId = desiredNodePoolId;
+    return this;
+  }
+
+  /**
+   * The desired node pool logging configuration defaults for the cluster.
+   * @return value or {@code null} for none
+   */
+  public NodePoolLoggingConfig getDesiredNodePoolLoggingConfig() {
+    return desiredNodePoolLoggingConfig;
+  }
+
+  /**
+   * The desired node pool logging configuration defaults for the cluster.
+   * @param desiredNodePoolLoggingConfig desiredNodePoolLoggingConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodePoolLoggingConfig(NodePoolLoggingConfig desiredNodePoolLoggingConfig) {
+    this.desiredNodePoolLoggingConfig = desiredNodePoolLoggingConfig;
     return this;
   }
 

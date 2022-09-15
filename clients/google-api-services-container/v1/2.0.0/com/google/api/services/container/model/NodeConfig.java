@@ -144,6 +144,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer localSsdCount;
 
   /**
+   * Logging configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolLoggingConfig loggingConfig;
+
+  /**
    * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
    * /machine-types) If unspecified, the default machine type is `e2-medium`.
    * The value may be {@code null}.
@@ -521,6 +528,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setLocalSsdCount(java.lang.Integer localSsdCount) {
     this.localSsdCount = localSsdCount;
+    return this;
+  }
+
+  /**
+   * Logging configuration.
+   * @return value or {@code null} for none
+   */
+  public NodePoolLoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Logging configuration.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public NodeConfig setLoggingConfig(NodePoolLoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 

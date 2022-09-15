@@ -5067,6 +5067,150 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             return (TestIamPermissions) super.set(parameterName, value);
           }
         }
+        /**
+         * ValidateCreateMembership is a preflight check for CreateMembership. It checks the following: 1.
+         * Caller has the required `gkehub.memberships.create` permission. 2. The membership_id is still
+         * available.
+         *
+         * Create a request for the method "memberships.validateCreate".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ValidateCreate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent (project and location) where the Memberships will be created. Specified in the
+         *        format `projects/locations`.
+         * @param content the {@link com.google.api.services.gkehub.v1alpha.model.ValidateCreateMembershipRequest}
+         * @return the request
+         */
+        public ValidateCreate validateCreate(java.lang.String parent, com.google.api.services.gkehub.v1alpha.model.ValidateCreateMembershipRequest content) throws java.io.IOException {
+          ValidateCreate result = new ValidateCreate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ValidateCreate extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.ValidateCreateMembershipResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/memberships:validateCreate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * ValidateCreateMembership is a preflight check for CreateMembership. It checks the following: 1.
+           * Caller has the required `gkehub.memberships.create` permission. 2. The membership_id is still
+           * available.
+           *
+           * Create a request for the method "memberships.validateCreate".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ValidateCreate#execute()} method to invoke the remote operation.
+           * <p> {@link ValidateCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param parent Required. The parent (project and location) where the Memberships will be created. Specified in the
+         *        format `projects/locations`.
+           * @param content the {@link com.google.api.services.gkehub.v1alpha.model.ValidateCreateMembershipRequest}
+           * @since 1.13
+           */
+          protected ValidateCreate(java.lang.String parent, com.google.api.services.gkehub.v1alpha.model.ValidateCreateMembershipRequest content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.ValidateCreateMembershipResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ValidateCreate set$Xgafv(java.lang.String $Xgafv) {
+            return (ValidateCreate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ValidateCreate setAccessToken(java.lang.String accessToken) {
+            return (ValidateCreate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ValidateCreate setAlt(java.lang.String alt) {
+            return (ValidateCreate) super.setAlt(alt);
+          }
+
+          @Override
+          public ValidateCreate setCallback(java.lang.String callback) {
+            return (ValidateCreate) super.setCallback(callback);
+          }
+
+          @Override
+          public ValidateCreate setFields(java.lang.String fields) {
+            return (ValidateCreate) super.setFields(fields);
+          }
+
+          @Override
+          public ValidateCreate setKey(java.lang.String key) {
+            return (ValidateCreate) super.setKey(key);
+          }
+
+          @Override
+          public ValidateCreate setOauthToken(java.lang.String oauthToken) {
+            return (ValidateCreate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ValidateCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ValidateCreate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ValidateCreate setQuotaUser(java.lang.String quotaUser) {
+            return (ValidateCreate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ValidateCreate setUploadType(java.lang.String uploadType) {
+            return (ValidateCreate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ValidateCreate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ValidateCreate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent (project and location) where the Memberships will be created.
+           * Specified in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent (project and location) where the Memberships will be created. Specified in the
+         format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent (project and location) where the Memberships will be created.
+           * Specified in the format `projects/locations`.
+           */
+          public ValidateCreate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ValidateCreate set(String parameterName, Object value) {
+            return (ValidateCreate) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

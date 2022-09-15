@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1beta.model;
+package com.google.api.services.gkehub.v1.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * Status of data plane management. Only reported per-member.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class ServiceMeshDataPlaneManagement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * Explanation of the status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private java.util.List<ServiceMeshStatusDetails> details;
 
   /**
-   * Enables automatic Service Mesh management.
+   * Lifecycle status of data plane management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String management;
+  private java.lang.String state;
 
   /**
-   * Enables automatic control plane management.
+   * Explanation of the status.
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public java.util.List<ServiceMeshStatusDetails> getDetails() {
+    return details;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * Explanation of the status.
+   * @param details details or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public ServiceMeshDataPlaneManagement setDetails(java.util.List<ServiceMeshStatusDetails> details) {
+    this.details = details;
     return this;
   }
 
   /**
-   * Enables automatic Service Mesh management.
+   * Lifecycle status of data plane management.
    * @return value or {@code null} for none
    */
-  public java.lang.String getManagement() {
-    return management;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Enables automatic Service Mesh management.
-   * @param management management or {@code null} for none
+   * Lifecycle status of data plane management.
+   * @param state state or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setManagement(java.lang.String management) {
-    this.management = management;
+  public ServiceMeshDataPlaneManagement setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public ServiceMeshDataPlaneManagement set(String fieldName, Object value) {
+    return (ServiceMeshDataPlaneManagement) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public ServiceMeshDataPlaneManagement clone() {
+    return (ServiceMeshDataPlaneManagement) super.clone();
   }
 
 }

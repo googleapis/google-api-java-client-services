@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementConfigSync extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowVerticalScale;
+
+  /**
    * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
    * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
    * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
@@ -67,6 +74,23 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceFormat;
+
+  /**
+   * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowVerticalScale() {
+    return allowVerticalScale;
+  }
+
+  /**
+   * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
+   * @param allowVerticalScale allowVerticalScale or {@code null} for none
+   */
+  public ConfigManagementConfigSync setAllowVerticalScale(java.lang.Boolean allowVerticalScale) {
+    this.allowVerticalScale = allowVerticalScale;
+    return this;
+  }
 
   /**
    * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created

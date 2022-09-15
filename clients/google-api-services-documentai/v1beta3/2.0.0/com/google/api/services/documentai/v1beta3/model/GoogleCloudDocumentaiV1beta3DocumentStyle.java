@@ -45,6 +45,14 @@ public final class GoogleCloudDocumentaiV1beta3DocumentStyle extends com.google.
   private GoogleTypeColor color;
 
   /**
+   * Font family such as "Arial", "Times New Roman". https://www.w3schools.com/cssref/pr_font_font-
+   * family.asp
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fontFamily;
+
+  /**
    * Font size.
    * The value may be {@code null}.
    */
@@ -113,6 +121,25 @@ public final class GoogleCloudDocumentaiV1beta3DocumentStyle extends com.google.
    */
   public GoogleCloudDocumentaiV1beta3DocumentStyle setColor(GoogleTypeColor color) {
     this.color = color;
+    return this;
+  }
+
+  /**
+   * Font family such as "Arial", "Times New Roman". https://www.w3schools.com/cssref/pr_font_font-
+   * family.asp
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFontFamily() {
+    return fontFamily;
+  }
+
+  /**
+   * Font family such as "Arial", "Times New Roman". https://www.w3schools.com/cssref/pr_font_font-
+   * family.asp
+   * @param fontFamily fontFamily or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentStyle setFontFamily(java.lang.String fontFamily) {
+    this.fontFamily = fontFamily;
     return this;
   }
 

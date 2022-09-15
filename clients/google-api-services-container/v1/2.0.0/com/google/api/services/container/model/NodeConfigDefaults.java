@@ -38,6 +38,13 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
   private GcfsConfig gcfsConfig;
 
   /**
+   * Logging configuration for node pools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolLoggingConfig loggingConfig;
+
+  /**
    * GCFS (Google Container File System, also known as Riptide) options.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
    */
   public NodeConfigDefaults setGcfsConfig(GcfsConfig gcfsConfig) {
     this.gcfsConfig = gcfsConfig;
+    return this;
+  }
+
+  /**
+   * Logging configuration for node pools.
+   * @return value or {@code null} for none
+   */
+  public NodePoolLoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Logging configuration for node pools.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public NodeConfigDefaults setLoggingConfig(NodePoolLoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 

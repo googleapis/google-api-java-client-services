@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Metadata includes information associated with a `Rollout`.
+ * RetryJobRequest is the request object used by `RetryJob`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,40 +28,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Metadata extends com.google.api.client.json.GenericJson {
+public final class RetryJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Required. The job ID for the Job to retry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CloudRunMetadata cloudRun;
+  private java.lang.String jobId;
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Required. The phase ID the Job to retry belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phaseId;
+
+  /**
+   * Required. The job ID for the Job to retry.
    * @return value or {@code null} for none
    */
-  public CloudRunMetadata getCloudRun() {
-    return cloudRun;
+  public java.lang.String getJobId() {
+    return jobId;
   }
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * @param cloudRun cloudRun or {@code null} for none
+   * Required. The job ID for the Job to retry.
+   * @param jobId jobId or {@code null} for none
    */
-  public Metadata setCloudRun(CloudRunMetadata cloudRun) {
-    this.cloudRun = cloudRun;
+  public RetryJobRequest setJobId(java.lang.String jobId) {
+    this.jobId = jobId;
+    return this;
+  }
+
+  /**
+   * Required. The phase ID the Job to retry belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhaseId() {
+    return phaseId;
+  }
+
+  /**
+   * Required. The phase ID the Job to retry belongs to.
+   * @param phaseId phaseId or {@code null} for none
+   */
+  public RetryJobRequest setPhaseId(java.lang.String phaseId) {
+    this.phaseId = phaseId;
     return this;
   }
 
   @Override
-  public Metadata set(String fieldName, Object value) {
-    return (Metadata) super.set(fieldName, value);
+  public RetryJobRequest set(String fieldName, Object value) {
+    return (RetryJobRequest) super.set(fieldName, value);
   }
 
   @Override
-  public Metadata clone() {
-    return (Metadata) super.clone();
+  public RetryJobRequest clone() {
+    return (RetryJobRequest) super.clone();
   }
 
 }

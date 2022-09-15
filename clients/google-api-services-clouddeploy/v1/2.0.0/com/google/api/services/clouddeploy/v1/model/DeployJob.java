@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Metadata includes information associated with a `Rollout`.
+ * A deploy Job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,40 +28,16 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Metadata extends com.google.api.client.json.GenericJson {
+public final class DeployJob extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CloudRunMetadata cloudRun;
-
-  /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * @return value or {@code null} for none
-   */
-  public CloudRunMetadata getCloudRun() {
-    return cloudRun;
-  }
-
-  /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * @param cloudRun cloudRun or {@code null} for none
-   */
-  public Metadata setCloudRun(CloudRunMetadata cloudRun) {
-    this.cloudRun = cloudRun;
-    return this;
+  @Override
+  public DeployJob set(String fieldName, Object value) {
+    return (DeployJob) super.set(fieldName, value);
   }
 
   @Override
-  public Metadata set(String fieldName, Object value) {
-    return (Metadata) super.set(fieldName, value);
-  }
-
-  @Override
-  public Metadata clone() {
-    return (Metadata) super.clone();
+  public DeployJob clone() {
+    return (DeployJob) super.clone();
   }
 
 }

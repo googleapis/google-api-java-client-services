@@ -38,6 +38,13 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> profiles;
 
   /**
+   * Optional. The strategy to use for a `Rollout` to this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Strategy strategy;
+
+  /**
    * The target_id to which this stage points. This field refers exclusively to the last segment of
    * a target name. For example, this field would just be `my-target` (rather than
    * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
@@ -61,6 +68,23 @@ public final class Stage extends com.google.api.client.json.GenericJson {
    */
   public Stage setProfiles(java.util.List<java.lang.String> profiles) {
     this.profiles = profiles;
+    return this;
+  }
+
+  /**
+   * Optional. The strategy to use for a `Rollout` to this stage.
+   * @return value or {@code null} for none
+   */
+  public Strategy getStrategy() {
+    return strategy;
+  }
+
+  /**
+   * Optional. The strategy to use for a `Rollout` to this stage.
+   * @param strategy strategy or {@code null} for none
+   */
+  public Stage setStrategy(Strategy strategy) {
+    this.strategy = strategy;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class CloudRunLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The location where the Cloud Run Service should be located. Format is
+   * Required. The location for the Cloud Run Service. Format must be
    * `projects/{project}/locations/{location}`.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class CloudRunLocation extends com.google.api.client.json.GenericJs
   private java.lang.String location;
 
   /**
-   * Required. The location where the Cloud Run Service should be located. Format is
+   * Required. The location for the Cloud Run Service. Format must be
    * `projects/{project}/locations/{location}`.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class CloudRunLocation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The location where the Cloud Run Service should be located. Format is
+   * Required. The location for the Cloud Run Service. Format must be
    * `projects/{project}/locations/{location}`.
    * @param location location or {@code null} for none
    */

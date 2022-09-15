@@ -30,6 +30,30 @@ package com.google.api.services.spanner.v1.model;
 @SuppressWarnings("javadoc")
 public final class ReadWrite extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Read lock mode for the transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readLockMode;
+
+  /**
+   * Read lock mode for the transaction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReadLockMode() {
+    return readLockMode;
+  }
+
+  /**
+   * Read lock mode for the transaction.
+   * @param readLockMode readLockMode or {@code null} for none
+   */
+  public ReadWrite setReadLockMode(java.lang.String readLockMode) {
+    this.readLockMode = readLockMode;
+    return this;
+  }
+
   @Override
   public ReadWrite set(String fieldName, Object value) {
     return (ReadWrite) super.set(fieldName, value);

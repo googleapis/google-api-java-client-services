@@ -79,8 +79,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String imagePullPolicy;
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,8 +286,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public Probe getLivenessProbe() {
@@ -296,8 +294,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Not supported by Cloud Run.
    * @param livenessProbe livenessProbe or {@code null} for none
    */
   public Container setLivenessProbe(Probe livenessProbe) {

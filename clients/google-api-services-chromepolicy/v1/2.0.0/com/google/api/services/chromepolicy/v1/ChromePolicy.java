@@ -1614,10 +1614,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
      * @param customer Required. The customer for which the file upload will apply.
-     * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest}
+     * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest}
      * @return the request
      */
-    public Upload upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content) throws java.io.IOException {
+    public Upload upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest content) throws java.io.IOException {
       Upload result = new Upload(customer, content);
       initialize(result);
       return result;
@@ -1637,18 +1637,18 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
      * </p>
      *
      * @param customer Required. The customer for which the file upload will apply.
-     * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest} media metadata or {@code null} if none
+     * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
-    public Upload upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+    public Upload upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
       Upload result = new Upload(customer, content, mediaContent);
       initialize(result);
       return result;
     }
 
-    public class Upload extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileResponse> {
+    public class Upload extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileResponse> {
 
       private static final String REST_PATH = "v1/{+customer}/policies/files:uploadPolicyFile";
 
@@ -1668,11 +1668,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param customer Required. The customer for which the file upload will apply.
-       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest}
+       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest}
        * @since 1.13
        */
-      protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content) {
-        super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileResponse.class);
+      protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest content) {
+        super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileResponse.class);
         this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
@@ -1698,12 +1698,12 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
        * </p>
        *
        * @param customer Required. The customer for which the file upload will apply.
-       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest} media metadata or {@code null} if none
+       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
        */
-      protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(ChromePolicy.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileResponse.class);
+      protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(ChromePolicy.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileResponse.class);
         this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
         initializeMediaUpload(mediaContent);
       }

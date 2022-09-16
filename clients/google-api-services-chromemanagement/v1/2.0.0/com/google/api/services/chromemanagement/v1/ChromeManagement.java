@@ -1362,6 +1362,182 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Counts of devices with a specific hardware specification from the requested hardware type (for
+       * example model name, processor type). Further information can be found here
+       * https://support.google.com/chrome/a/answer/10564947
+       *
+       * Create a request for the method "reports.countChromeHardwareFleetDevices".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeHardwareFleetDevices#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param customer Required. The customer ID or "my_customer".
+       * @return the request
+       */
+      public CountChromeHardwareFleetDevices countChromeHardwareFleetDevices(java.lang.String customer) throws java.io.IOException {
+        CountChromeHardwareFleetDevices result = new CountChromeHardwareFleetDevices(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeHardwareFleetDevices extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countChromeHardwareFleetDevices";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Counts of devices with a specific hardware specification from the requested hardware type (for
+         * example model name, processor type). Further information can be found here
+         * https://support.google.com/chrome/a/answer/10564947
+         *
+         * Create a request for the method "reports.countChromeHardwareFleetDevices".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeHardwareFleetDevices#execute()} method to
+         * invoke the remote operation. <p> {@link CountChromeHardwareFleetDevices#initialize(com.google.a
+         * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The customer ID or "my_customer".
+         * @since 1.13
+         */
+        protected CountChromeHardwareFleetDevices(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeHardwareFleetDevices) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setAccessToken(java.lang.String accessToken) {
+          return (CountChromeHardwareFleetDevices) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setAlt(java.lang.String alt) {
+          return (CountChromeHardwareFleetDevices) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setCallback(java.lang.String callback) {
+          return (CountChromeHardwareFleetDevices) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setFields(java.lang.String fields) {
+          return (CountChromeHardwareFleetDevices) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setKey(java.lang.String key) {
+          return (CountChromeHardwareFleetDevices) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeHardwareFleetDevices) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeHardwareFleetDevices) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeHardwareFleetDevices) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setUploadType(java.lang.String uploadType) {
+          return (CountChromeHardwareFleetDevices) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeHardwareFleetDevices) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The customer ID or "my_customer". */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The customer ID or "my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Required. The customer ID or "my_customer". */
+        public CountChromeHardwareFleetDevices setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned. */
+        public CountChromeHardwareFleetDevices setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /** Required. Mask of the fields that should be populated in the returned report. */
+        @com.google.api.client.util.Key
+        private String readMask;
+
+        /** Required. Mask of the fields that should be populated in the returned report.
+         */
+        public String getReadMask() {
+          return readMask;
+        }
+
+        /** Required. Mask of the fields that should be populated in the returned report. */
+        public CountChromeHardwareFleetDevices setReadMask(String readMask) {
+          this.readMask = readMask;
+          return this;
+        }
+
+        @Override
+        public CountChromeHardwareFleetDevices set(String parameterName, Object value) {
+          return (CountChromeHardwareFleetDevices) super.set(parameterName, value);
+        }
+      }
+      /**
        * Generate report of installed Chrome versions.
        *
        * Create a request for the method "reports.countChromeVersions".

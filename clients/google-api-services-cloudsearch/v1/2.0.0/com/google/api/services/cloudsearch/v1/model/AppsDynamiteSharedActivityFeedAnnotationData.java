@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Next Id: 6
+ * Next Id: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,6 +28,17 @@ package com.google.api.services.cloudsearch.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AppsDynamiteSharedActivityFeedAnnotationData extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Timestamp of when the Activity Feed message that contains this annotation was created. This is
+   * roughly when the activity happened, such as when a reaction happened, but will have at least
+   * some small delay, since the Activity Feed message is created asynchronously after. This
+   * timestamp should only be used for display when the activity create time is not available in the
+   * Chat UI, like the time of a reaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String activityFeedMessageCreateTime;
 
   /**
    * Unique id of the Activity Feed message used by clients to implement click-to-source. This is
@@ -56,6 +67,31 @@ public final class AppsDynamiteSharedActivityFeedAnnotationData extends com.goog
    */
   @com.google.api.client.util.Key
   private AppsDynamiteSharedActivityFeedAnnotationDataUserInfo userInfo;
+
+  /**
+   * Timestamp of when the Activity Feed message that contains this annotation was created. This is
+   * roughly when the activity happened, such as when a reaction happened, but will have at least
+   * some small delay, since the Activity Feed message is created asynchronously after. This
+   * timestamp should only be used for display when the activity create time is not available in the
+   * Chat UI, like the time of a reaction.
+   * @return value or {@code null} for none
+   */
+  public String getActivityFeedMessageCreateTime() {
+    return activityFeedMessageCreateTime;
+  }
+
+  /**
+   * Timestamp of when the Activity Feed message that contains this annotation was created. This is
+   * roughly when the activity happened, such as when a reaction happened, but will have at least
+   * some small delay, since the Activity Feed message is created asynchronously after. This
+   * timestamp should only be used for display when the activity create time is not available in the
+   * Chat UI, like the time of a reaction.
+   * @param activityFeedMessageCreateTime activityFeedMessageCreateTime or {@code null} for none
+   */
+  public AppsDynamiteSharedActivityFeedAnnotationData setActivityFeedMessageCreateTime(String activityFeedMessageCreateTime) {
+    this.activityFeedMessageCreateTime = activityFeedMessageCreateTime;
+    return this;
+  }
 
   /**
    * Unique id of the Activity Feed message used by clients to implement click-to-source. This is

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Contains info on membership count for member types: HUMAN_USER, BOT_USER & ROSTER_MEMBER
+ * Contains info on membership count for member types: HUMAN_USER, APP_USER & ROSTER_MEMBER
  * different states: INVITED, JOINED
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

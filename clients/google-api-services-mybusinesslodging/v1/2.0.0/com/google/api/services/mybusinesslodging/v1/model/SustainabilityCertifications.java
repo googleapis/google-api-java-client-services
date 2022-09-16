@@ -58,14 +58,16 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification.
+   * LEED certification. Deprecated: this field is no longer populated. LEED certification status is
+   * now provided directly by USGBC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String leedCertification;
 
   /**
-   * LEED certification exception.
+   * LEED certification exception. Deprecated: this field is no longer populated. LEED certification
+   * status is now provided directly by USGBC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +125,8 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification.
+   * LEED certification. Deprecated: this field is no longer populated. LEED certification status is
+   * now provided directly by USGBC.
    * @return value or {@code null} for none
    */
   public java.lang.String getLeedCertification() {
@@ -131,7 +134,8 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification.
+   * LEED certification. Deprecated: this field is no longer populated. LEED certification status is
+   * now provided directly by USGBC.
    * @param leedCertification leedCertification or {@code null} for none
    */
   public SustainabilityCertifications setLeedCertification(java.lang.String leedCertification) {
@@ -140,7 +144,8 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification exception.
+   * LEED certification exception. Deprecated: this field is no longer populated. LEED certification
+   * status is now provided directly by USGBC.
    * @return value or {@code null} for none
    */
   public java.lang.String getLeedCertificationException() {
@@ -148,7 +153,8 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification exception.
+   * LEED certification exception. Deprecated: this field is no longer populated. LEED certification
+   * status is now provided directly by USGBC.
    * @param leedCertificationException leedCertificationException or {@code null} for none
    */
   public SustainabilityCertifications setLeedCertificationException(java.lang.String leedCertificationException) {

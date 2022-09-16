@@ -52,6 +52,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long creationTime;
 
   /**
+   * [Output-only] Statistics for data masking. Present only for query and extract jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataMaskingStatistics dataMaskingStatistics;
+
+  /**
    * [Output-only] End time of this job, in milliseconds since the epoch. This field will be present
    * whenever a job is in the DONE state.
    * The value may be {@code null}.
@@ -225,6 +232,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setCreationTime(java.lang.Long creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * [Output-only] Statistics for data masking. Present only for query and extract jobs.
+   * @return value or {@code null} for none
+   */
+  public DataMaskingStatistics getDataMaskingStatistics() {
+    return dataMaskingStatistics;
+  }
+
+  /**
+   * [Output-only] Statistics for data masking. Present only for query and extract jobs.
+   * @param dataMaskingStatistics dataMaskingStatistics or {@code null} for none
+   */
+  public JobStatistics setDataMaskingStatistics(DataMaskingStatistics dataMaskingStatistics) {
+    this.dataMaskingStatistics = dataMaskingStatistics;
     return this;
   }
 

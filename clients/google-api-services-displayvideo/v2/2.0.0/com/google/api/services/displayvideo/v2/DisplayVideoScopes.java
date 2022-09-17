@@ -26,6 +26,12 @@ public class DisplayVideoScopes {
   /** Create, see, edit, and permanently delete your Display & Video 360 entities and reports. */
   public static final String DISPLAY_VIDEO = "https://www.googleapis.com/auth/display-video";
 
+  /** Create, see, and edit Display & Video 360 Campaign entities and see billing invoices. */
+  public static final String DISPLAY_VIDEO_MEDIAPLANNING = "https://www.googleapis.com/auth/display-video-mediaplanning";
+
+  /** Private Service: https://www.googleapis.com/auth/display-video-user-management. */
+  public static final String DISPLAY_VIDEO_USER_MANAGEMENT = "https://www.googleapis.com/auth/display-video-user-management";
+
   /** View and manage your reports in DoubleClick Bid Manager. */
   public static final String DOUBLECLICKBIDMANAGER = "https://www.googleapis.com/auth/doubleclickbidmanager";
 
@@ -37,6 +43,8 @@ public class DisplayVideoScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(DISPLAY_VIDEO);
+    set.add(DISPLAY_VIDEO_MEDIAPLANNING);
+    set.add(DISPLAY_VIDEO_USER_MANAGEMENT);
     set.add(DOUBLECLICKBIDMANAGER);
     return java.util.Collections.unmodifiableSet(set);
   }

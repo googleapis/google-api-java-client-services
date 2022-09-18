@@ -38,6 +38,7 @@ public final class ReconciliationOperationMetadata extends com.google.api.client
   private java.lang.Boolean deleteResource;
 
   /**
+   * Excluisive action returned by the CLH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,6 +62,7 @@ public final class ReconciliationOperationMetadata extends com.google.api.client
   }
 
   /**
+   * Excluisive action returned by the CLH.
    * @return value or {@code null} for none
    */
   public java.lang.String getExclusiveAction() {
@@ -68,6 +70,7 @@ public final class ReconciliationOperationMetadata extends com.google.api.client
   }
 
   /**
+   * Excluisive action returned by the CLH.
    * @param exclusiveAction exclusiveAction or {@code null} for none
    */
   public ReconciliationOperationMetadata setExclusiveAction(java.lang.String exclusiveAction) {

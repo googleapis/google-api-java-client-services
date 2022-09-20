@@ -600,22 +600,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. The job name. Optional. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Optional. The job name. Optional.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Optional. The job name. Optional. */
-        public Aggregated setName(java.lang.String name) {
-          this.name = name;
-          return this;
-        }
-
         /**
          * If there are many jobs, limit response to at most this many. The actual number of jobs
          * returned will be the lesser of max_responses and an unspecified server-defined limit.
@@ -1416,22 +1400,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          */
         public List setLocation(java.lang.String location) {
           this.location = location;
-          return this;
-        }
-
-        /** Optional. The job name. Optional. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Optional. The job name. Optional.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Optional. The job name. Optional. */
-        public List setName(java.lang.String name) {
-          this.name = name;
           return this;
         }
 
@@ -4039,22 +4007,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /** The kind of filter to use. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
-            return this;
-          }
-
-          /** Optional. The job name. Optional. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Optional. The job name. Optional.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** Optional. The job name. Optional. */
-          public List setName(java.lang.String name) {
-            this.name = name;
             return this;
           }
 

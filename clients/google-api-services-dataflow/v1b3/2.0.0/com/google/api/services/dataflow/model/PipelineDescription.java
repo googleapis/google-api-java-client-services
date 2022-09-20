@@ -65,13 +65,6 @@ public final class PipelineDescription extends com.google.api.client.json.Generi
   private java.util.List<TransformSummary> originalPipelineTransform;
 
   /**
-   * A hash value of the submitted pipeline portable graph step names if exists.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stepNamesHash;
-
-  /**
    * Pipeline level display data.
    * @return value or {@code null} for none
    */
@@ -119,23 +112,6 @@ public final class PipelineDescription extends com.google.api.client.json.Generi
    */
   public PipelineDescription setOriginalPipelineTransform(java.util.List<TransformSummary> originalPipelineTransform) {
     this.originalPipelineTransform = originalPipelineTransform;
-    return this;
-  }
-
-  /**
-   * A hash value of the submitted pipeline portable graph step names if exists.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStepNamesHash() {
-    return stepNamesHash;
-  }
-
-  /**
-   * A hash value of the submitted pipeline portable graph step names if exists.
-   * @param stepNamesHash stepNamesHash or {@code null} for none
-   */
-  public PipelineDescription setStepNamesHash(java.lang.String stepNamesHash) {
-    this.stepNamesHash = stepNamesHash;
     return this;
   }
 

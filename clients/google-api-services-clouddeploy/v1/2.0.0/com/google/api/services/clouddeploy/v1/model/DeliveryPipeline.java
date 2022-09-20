@@ -33,8 +33,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
 
   /**
    * User annotations. These attributes can only be set and used by the user, and not by Google
-   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
-   * size limitations.
+   * Cloud Deploy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +118,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
 
   /**
    * User annotations. These attributes can only be set and used by the user, and not by Google
-   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
-   * size limitations.
+   * Cloud Deploy.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -129,8 +127,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
 
   /**
    * User annotations. These attributes can only be set and used by the user, and not by Google
-   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
-   * size limitations.
+   * Cloud Deploy.
    * @param annotations annotations or {@code null} for none
    */
   public DeliveryPipeline setAnnotations(java.util.Map<String, java.lang.String> annotations) {

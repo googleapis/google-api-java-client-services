@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.assuredworkloads.v1;
+package com.google.api.services.assuredworkloads.v1beta1;
 
 /**
- * Service definition for Assuredworkloads (v1).
+ * Service definition for Assuredworkloads (v1beta1).
  *
  * <p>
  * 
@@ -211,9 +211,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           return result;
         }
 
-        public class Get extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningOperation> {
+        public class Get extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleLongrunningOperation> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -233,7 +233,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningOperation.class);
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleLongrunningOperation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -356,9 +356,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           return result;
         }
 
-        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningListOperationsResponse> {
+        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleLongrunningListOperationsResponse> {
 
-          private static final String REST_PATH = "v1/{+name}/operations";
+          private static final String REST_PATH = "v1beta1/{+name}/operations";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
@@ -383,7 +383,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * @since 1.13
            */
           protected List(java.lang.String name) {
-            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningListOperationsResponse.class);
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleLongrunningListOperationsResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -563,18 +563,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
          *
          * @param parent Required. The resource name of the new Workload's parent. Must be of the form
          *        `organizations/{org_id}/locations/{location_id}`.
-         * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload}
+         * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
-        public class Create extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningOperation> {
+        public class Create extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleLongrunningOperation> {
 
-          private static final String REST_PATH = "v1/{+parent}/workloads";
+          private static final String REST_PATH = "v1beta1/{+parent}/workloads";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
@@ -592,11 +592,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            *
            * @param parent Required. The resource name of the new Workload's parent. Must be of the form
          *        `organizations/{org_id}/locations/{location_id}`.
-           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload content) {
-            super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningOperation.class);
+          protected Create(java.lang.String parent, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload content) {
+            super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1beta1.model.GoogleLongrunningOperation.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -723,7 +723,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         }
         /**
          * Deletes the workload. Make sure that workload's direct children are already in a deleted state,
-         * otherwise the request will fail with a FAILED_PRECONDITION error.
+         * otherwise the request will fail with a FAILED_PRECONDITION error. In addition to
+         * assuredworkloads.workload.delete permission, the user should also have orgpolicy.policy.set
+         * permission on the deleted folder to remove Assured Workloads OrgPolicies.
          *
          * Create a request for the method "workloads.delete".
          *
@@ -740,16 +742,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           return result;
         }
 
-        public class Delete extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleProtobufEmpty> {
+        public class Delete extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleProtobufEmpty> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
 
           /**
            * Deletes the workload. Make sure that workload's direct children are already in a deleted state,
-           * otherwise the request will fail with a FAILED_PRECONDITION error.
+           * otherwise the request will fail with a FAILED_PRECONDITION error. In addition to
+           * assuredworkloads.workload.delete permission, the user should also have orgpolicy.policy.set
+           * permission on the deleted folder to remove Assured Workloads OrgPolicies.
            *
            * Create a request for the method "workloads.delete".
            *
@@ -764,7 +768,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(Assuredworkloads.this, "DELETE", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleProtobufEmpty.class);
+            super(Assuredworkloads.this, "DELETE", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleProtobufEmpty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -903,9 +907,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           return result;
         }
 
-        public class Get extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload> {
+        public class Get extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
@@ -927,7 +931,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload.class);
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1058,9 +1062,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           return result;
         }
 
-        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse> {
+        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse> {
 
-          private static final String REST_PATH = "v1/{+parent}/workloads";
+          private static final String REST_PATH = "v1beta1/{+parent}/workloads";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
@@ -1080,7 +1084,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
-            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListWorkloadsResponse.class);
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1261,18 +1265,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
          *
          * @param name Optional. The resource name of the workload. Format:
          *        organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
-         * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload}
+         * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload content) throws java.io.IOException {
+        public Patch patch(java.lang.String name, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload content) throws java.io.IOException {
           Patch result = new Patch(name, content);
           initialize(result);
           return result;
         }
 
-        public class Patch extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload> {
+        public class Patch extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
@@ -1292,11 +1296,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            *
            * @param name Optional. The resource name of the workload. Format:
          *        organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
-           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload content) {
-            super(Assuredworkloads.this, "PATCH", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload.class);
+          protected Patch(java.lang.String name, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload content) {
+            super(Assuredworkloads.this, "PATCH", REST_PATH, content, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1425,18 +1429,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
          *        formatted as
          *        "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
          *        example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
-         * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest}
+         * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1RestrictAllowedResourcesRequest}
          * @return the request
          */
-        public RestrictAllowedResources restrictAllowedResources(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest content) throws java.io.IOException {
+        public RestrictAllowedResources restrictAllowedResources(java.lang.String name, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1RestrictAllowedResourcesRequest content) throws java.io.IOException {
           RestrictAllowedResources result = new RestrictAllowedResources(name, content);
           initialize(result);
           return result;
         }
 
-        public class RestrictAllowedResources extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse> {
+        public class RestrictAllowedResources extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1RestrictAllowedResourcesResponse> {
 
-          private static final String REST_PATH = "v1/{+name}:restrictAllowedResources";
+          private static final String REST_PATH = "v1beta1/{+name}:restrictAllowedResources";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
@@ -1459,11 +1463,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
          *        formatted as
          *        "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
          *        example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
-           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1RestrictAllowedResourcesRequest}
            * @since 1.13
            */
-          protected RestrictAllowedResources(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest content) {
-            super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse.class);
+          protected RestrictAllowedResources(java.lang.String name, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1RestrictAllowedResourcesRequest content) {
+            super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1RestrictAllowedResourcesResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1567,6 +1571,314 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         }
 
         /**
+         * An accessor for creating requests from the Organizations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+         *   {@code Assuredworkloads.Organizations.List request = assuredworkloads.organizations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Organizations organizations() {
+          return new Organizations();
+        }
+
+        /**
+         * The "organizations" collection of methods.
+         */
+        public class Organizations {
+
+          /**
+           * An accessor for creating requests from the Locations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+           *   {@code Assuredworkloads.Locations.List request = assuredworkloads.locations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Locations locations() {
+            return new Locations();
+          }
+
+          /**
+           * The "locations" collection of methods.
+           */
+          public class Locations {
+
+            /**
+             * An accessor for creating requests from the Workloads collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+             *   {@code Assuredworkloads.Workloads.List request = assuredworkloads.workloads().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Workloads workloads() {
+              return new Workloads();
+            }
+
+            /**
+             * The "workloads" collection of methods.
+             */
+            public class Workloads {
+
+              /**
+               * Analyzes a hypothetical move of a source project or project-based workload to a target
+               * (destination) folder-based workload.
+               *
+               * Create a request for the method "workloads.analyzeWorkloadMove".
+               *
+               * This request holds the parameters needed by the assuredworkloads server.  After setting any
+               * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param source The source type is a project-based workload. Specify the workloads's relative resource name,
+               *        formatted as:
+               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+               * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
+               *        source project will hypothetically be moved to. Specify the workload's relative resource
+               *        name, formatted as:
+               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+               * @return the request
+               */
+              public AnalyzeWorkloadMove analyzeWorkloadMove(java.lang.String source, java.lang.String target) throws java.io.IOException {
+                AnalyzeWorkloadMove result = new AnalyzeWorkloadMove(source, target);
+                initialize(result);
+                return result;
+              }
+
+              public class AnalyzeWorkloadMove extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse> {
+
+                private static final String REST_PATH = "v1beta1/{+source}/{+target}:analyzeWorkloadMove";
+
+                private final java.util.regex.Pattern SOURCE_PATTERN =
+                    java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+                private final java.util.regex.Pattern TARGET_PATTERN =
+                    java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+                /**
+                 * Analyzes a hypothetical move of a source project or project-based workload to a target
+                 * (destination) folder-based workload.
+                 *
+                 * Create a request for the method "workloads.analyzeWorkloadMove".
+                 *
+                 * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+                 * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
+                 * operation. <p> {@link AnalyzeWorkloadMove#initialize(com.google.api.client.googleapis.services.
+                 * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+                 * invoking the constructor. </p>
+                 *
+                 * @param source The source type is a project-based workload. Specify the workloads's relative resource name,
+               *        formatted as:
+               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+                 * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
+               *        source project will hypothetically be moved to. Specify the workload's relative resource
+               *        name, formatted as:
+               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+                 * @since 1.13
+                 */
+                protected AnalyzeWorkloadMove(java.lang.String source, java.lang.String target) {
+                  super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse.class);
+                  this.source = com.google.api.client.util.Preconditions.checkNotNull(source, "Required parameter source must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(SOURCE_PATTERN.matcher(source).matches(),
+                        "Parameter source must conform to the pattern " +
+                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+                  }
+                  this.target = com.google.api.client.util.Preconditions.checkNotNull(target, "Required parameter target must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
+                        "Parameter target must conform to the pattern " +
+                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public AnalyzeWorkloadMove set$Xgafv(java.lang.String $Xgafv) {
+                  return (AnalyzeWorkloadMove) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setAccessToken(java.lang.String accessToken) {
+                  return (AnalyzeWorkloadMove) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setAlt(java.lang.String alt) {
+                  return (AnalyzeWorkloadMove) super.setAlt(alt);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setCallback(java.lang.String callback) {
+                  return (AnalyzeWorkloadMove) super.setCallback(callback);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setFields(java.lang.String fields) {
+                  return (AnalyzeWorkloadMove) super.setFields(fields);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setKey(java.lang.String key) {
+                  return (AnalyzeWorkloadMove) super.setKey(key);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setOauthToken(java.lang.String oauthToken) {
+                  return (AnalyzeWorkloadMove) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (AnalyzeWorkloadMove) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setQuotaUser(java.lang.String quotaUser) {
+                  return (AnalyzeWorkloadMove) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setUploadType(java.lang.String uploadType) {
+                  return (AnalyzeWorkloadMove) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public AnalyzeWorkloadMove setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (AnalyzeWorkloadMove) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * The source type is a project-based workload. Specify the workloads's relative
+                 * resource name, formatted as:
+                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String source;
+
+                /** The source type is a project-based workload. Specify the workloads's relative resource name,
+               formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+               example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+                 */
+                public java.lang.String getSource() {
+                  return source;
+                }
+
+                /**
+                 * The source type is a project-based workload. Specify the workloads's relative
+                 * resource name, formatted as:
+                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+                 */
+                public AnalyzeWorkloadMove setSource(java.lang.String source) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(SOURCE_PATTERN.matcher(source).matches(),
+                        "Parameter source must conform to the pattern " +
+                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+                  }
+                  this.source = source;
+                  return this;
+                }
+
+                /**
+                 * Required. The resource ID of the folder-based destination workload. This workload
+                 * is where the source project will hypothetically be moved to. Specify the
+                 * workload's relative resource name, formatted as:
+                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String target;
+
+                /** Required. The resource ID of the folder-based destination workload. This workload is where the
+               source project will hypothetically be moved to. Specify the workload's relative resource name,
+               formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+               example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+                 */
+                public java.lang.String getTarget() {
+                  return target;
+                }
+
+                /**
+                 * Required. The resource ID of the folder-based destination workload. This workload
+                 * is where the source project will hypothetically be moved to. Specify the
+                 * workload's relative resource name, formatted as:
+                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
+                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+                 */
+                public AnalyzeWorkloadMove setTarget(java.lang.String target) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
+                        "Parameter target must conform to the pattern " +
+                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+                  }
+                  this.target = target;
+                  return this;
+                }
+
+                /**
+                 * The source type is a project. Specify the project's relative resource name,
+                 * formatted as either a project number or a project ID: "projects/{PROJECT_NUMBER}"
+                 * or "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a
+                 * project number, or "projects/my-project-123" when specifying a project ID.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String project;
+
+                /** The source type is a project. Specify the project's relative resource name, formatted as either a
+               project number or a project ID: "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For example:
+               "projects/951040570662" when specifying a project number, or "projects/my-project-123" when
+               specifying a project ID.
+                 */
+                public java.lang.String getProject() {
+                  return project;
+                }
+
+                /**
+                 * The source type is a project. Specify the project's relative resource name,
+                 * formatted as either a project number or a project ID: "projects/{PROJECT_NUMBER}"
+                 * or "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a
+                 * project number, or "projects/my-project-123" when specifying a project ID.
+                 */
+                public AnalyzeWorkloadMove setProject(java.lang.String project) {
+                  this.project = project;
+                  return this;
+                }
+
+                @Override
+                public AnalyzeWorkloadMove set(String parameterName, Object value) {
+                  return (AnalyzeWorkloadMove) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+        }
+        /**
          * An accessor for creating requests from the Violations collection.
          *
          * <p>The typical use is:</p>
@@ -1600,18 +1912,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * @param name Required. The resource name of the Violation to acknowledge. Format:
            *        organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violati
            *        on}
-           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest}
            * @return the request
            */
-          public Acknowledge acknowledge(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest content) throws java.io.IOException {
+          public Acknowledge acknowledge(java.lang.String name, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest content) throws java.io.IOException {
             Acknowledge result = new Acknowledge(name, content);
             initialize(result);
             return result;
           }
 
-          public class Acknowledge extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationResponse> {
+          public class Acknowledge extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationResponse> {
 
-            private static final String REST_PATH = "v1/{+name}:acknowledge";
+            private static final String REST_PATH = "v1beta1/{+name}:acknowledge";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+/violations/[^/]+$");
@@ -1632,11 +1944,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * @param name Required. The resource name of the Violation to acknowledge. Format:
            *        organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violati
            *        on}
-             * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest}
+             * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest}
              * @since 1.13
              */
-            protected Acknowledge(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest content) {
-              super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationResponse.class);
+            protected Acknowledge(java.lang.String name, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest content) {
+              super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1752,9 +2064,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return result;
           }
 
-          public class Get extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Violation> {
+          public class Get extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Violation> {
 
-            private static final String REST_PATH = "v1/{+name}";
+            private static final String REST_PATH = "v1beta1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+/violations/[^/]+$");
@@ -1775,7 +2087,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Violation.class);
+              super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Violation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1905,9 +2217,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return result;
           }
 
-          public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListViolationsResponse> {
+          public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse> {
 
-            private static final String REST_PATH = "v1/{+parent}/violations";
+            private static final String REST_PATH = "v1beta1/{+parent}/violations";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
@@ -1930,7 +2242,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
-              super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListViolationsResponse.class);
+              super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2115,6 +2427,336 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+   *   {@code Assuredworkloads.Projects.List request = assuredworkloads.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Organizations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+     *   {@code Assuredworkloads.Organizations.List request = assuredworkloads.organizations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Organizations organizations() {
+      return new Organizations();
+    }
+
+    /**
+     * The "organizations" collection of methods.
+     */
+    public class Organizations {
+
+      /**
+       * An accessor for creating requests from the Locations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+       *   {@code Assuredworkloads.Locations.List request = assuredworkloads.locations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Locations locations() {
+        return new Locations();
+      }
+
+      /**
+       * The "locations" collection of methods.
+       */
+      public class Locations {
+
+        /**
+         * An accessor for creating requests from the Workloads collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+         *   {@code Assuredworkloads.Workloads.List request = assuredworkloads.workloads().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Workloads workloads() {
+          return new Workloads();
+        }
+
+        /**
+         * The "workloads" collection of methods.
+         */
+        public class Workloads {
+
+          /**
+           * Analyzes a hypothetical move of a source project or project-based workload to a target
+           * (destination) folder-based workload.
+           *
+           * Create a request for the method "workloads.analyzeWorkloadMove".
+           *
+           * This request holds the parameters needed by the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param project The source type is a project. Specify the project's relative resource name, formatted as either a
+           *        project number or a project ID: "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For
+           *        example: "projects/951040570662" when specifying a project number, or "projects/my-
+           *        project-123" when specifying a project ID.
+           * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
+           *        source project will hypothetically be moved to. Specify the workload's relative resource
+           *        name, formatted as:
+           *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+           *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+           * @return the request
+           */
+          public AnalyzeWorkloadMove analyzeWorkloadMove(java.lang.String project, java.lang.String target) throws java.io.IOException {
+            AnalyzeWorkloadMove result = new AnalyzeWorkloadMove(project, target);
+            initialize(result);
+            return result;
+          }
+
+          public class AnalyzeWorkloadMove extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+project}/{+target}:analyzeWorkloadMove";
+
+            private final java.util.regex.Pattern PROJECT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+            private final java.util.regex.Pattern TARGET_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+            /**
+             * Analyzes a hypothetical move of a source project or project-based workload to a target
+             * (destination) folder-based workload.
+             *
+             * Create a request for the method "workloads.analyzeWorkloadMove".
+             *
+             * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+             * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
+             * operation. <p> {@link AnalyzeWorkloadMove#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param project The source type is a project. Specify the project's relative resource name, formatted as either a
+           *        project number or a project ID: "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For
+           *        example: "projects/951040570662" when specifying a project number, or "projects/my-
+           *        project-123" when specifying a project ID.
+             * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
+           *        source project will hypothetically be moved to. Specify the workload's relative resource
+           *        name, formatted as:
+           *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+           *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+             * @since 1.13
+             */
+            protected AnalyzeWorkloadMove(java.lang.String project, java.lang.String target) {
+              super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse.class);
+              this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                    "Parameter project must conform to the pattern " +
+                    "^projects/[^/]+$");
+              }
+              this.target = com.google.api.client.util.Preconditions.checkNotNull(target, "Required parameter target must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
+                    "Parameter target must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AnalyzeWorkloadMove set$Xgafv(java.lang.String $Xgafv) {
+              return (AnalyzeWorkloadMove) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setAccessToken(java.lang.String accessToken) {
+              return (AnalyzeWorkloadMove) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setAlt(java.lang.String alt) {
+              return (AnalyzeWorkloadMove) super.setAlt(alt);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setCallback(java.lang.String callback) {
+              return (AnalyzeWorkloadMove) super.setCallback(callback);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setFields(java.lang.String fields) {
+              return (AnalyzeWorkloadMove) super.setFields(fields);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setKey(java.lang.String key) {
+              return (AnalyzeWorkloadMove) super.setKey(key);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setOauthToken(java.lang.String oauthToken) {
+              return (AnalyzeWorkloadMove) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AnalyzeWorkloadMove) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setQuotaUser(java.lang.String quotaUser) {
+              return (AnalyzeWorkloadMove) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setUploadType(java.lang.String uploadType) {
+              return (AnalyzeWorkloadMove) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AnalyzeWorkloadMove setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AnalyzeWorkloadMove) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The source type is a project. Specify the project's relative resource name, formatted
+             * as either a project number or a project ID: "projects/{PROJECT_NUMBER}" or
+             * "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a
+             * project number, or "projects/my-project-123" when specifying a project ID.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String project;
+
+            /** The source type is a project. Specify the project's relative resource name, formatted as either a
+           project number or a project ID: "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For example:
+           "projects/951040570662" when specifying a project number, or "projects/my-project-123" when
+           specifying a project ID.
+             */
+            public java.lang.String getProject() {
+              return project;
+            }
+
+            /**
+             * The source type is a project. Specify the project's relative resource name, formatted
+             * as either a project number or a project ID: "projects/{PROJECT_NUMBER}" or
+             * "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a
+             * project number, or "projects/my-project-123" when specifying a project ID.
+             */
+            public AnalyzeWorkloadMove setProject(java.lang.String project) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                    "Parameter project must conform to the pattern " +
+                    "^projects/[^/]+$");
+              }
+              this.project = project;
+              return this;
+            }
+
+            /**
+             * Required. The resource ID of the folder-based destination workload. This workload is
+             * where the source project will hypothetically be moved to. Specify the workload's
+             * relative resource name, formatted as:
+             * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+             * example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String target;
+
+            /** Required. The resource ID of the folder-based destination workload. This workload is where the
+           source project will hypothetically be moved to. Specify the workload's relative resource name,
+           formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+           example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+             */
+            public java.lang.String getTarget() {
+              return target;
+            }
+
+            /**
+             * Required. The resource ID of the folder-based destination workload. This workload is
+             * where the source project will hypothetically be moved to. Specify the workload's
+             * relative resource name, formatted as:
+             * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+             * example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+             */
+            public AnalyzeWorkloadMove setTarget(java.lang.String target) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
+                    "Parameter target must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+              }
+              this.target = target;
+              return this;
+            }
+
+            /**
+             * The source type is a project-based workload. Specify the workloads's relative
+             * resource name, formatted as:
+             * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+             * example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String source;
+
+            /** The source type is a project-based workload. Specify the workloads's relative resource name,
+           formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+           example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+             */
+            public java.lang.String getSource() {
+              return source;
+            }
+
+            /**
+             * The source type is a project-based workload. Specify the workloads's relative
+             * resource name, formatted as:
+             * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+             * example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+             */
+            public AnalyzeWorkloadMove setSource(java.lang.String source) {
+              this.source = source;
+              return this;
+            }
+
+            @Override
+            public AnalyzeWorkloadMove set(String parameterName, Object value) {
+              return (AnalyzeWorkloadMove) super.set(parameterName, value);
             }
           }
 

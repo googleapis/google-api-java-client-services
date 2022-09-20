@@ -87,7 +87,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Map containing the point of contacts for the given finding. The key represents the
+   * Output only. Map containing the points of contact for the given finding. The key represents the
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
    * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
@@ -263,7 +263,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics"
+   * Detection" or "Security Health Analytics".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -424,7 +424,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Map containing the point of contacts for the given finding. The key represents the
+   * Output only. Map containing the points of contact for the given finding. The key represents the
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
    * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
@@ -436,7 +436,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Map containing the point of contacts for the given finding. The key represents the
+   * Output only. Map containing the points of contact for the given finding. The key represents the
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
    * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
@@ -811,7 +811,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics"
+   * Detection" or "Security Health Analytics".
    * @return value or {@code null} for none
    */
   public java.lang.String getParentDisplayName() {
@@ -820,7 +820,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics"
+   * Detection" or "Security Health Analytics".
    * @param parentDisplayName parentDisplayName or {@code null} for none
    */
   public Finding setParentDisplayName(java.lang.String parentDisplayName) {

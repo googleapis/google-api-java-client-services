@@ -40,11 +40,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * Restricts predictions to products that do not have a stockState value of OUT_OF_STOCK.
    * Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
    * filterOutOfStockItems tag=(-"promotional") * filterOutOfStockItems If your filter blocks all
-   * prediction results, the API will return generic (unfiltered) popular products. If you only want
-   * results strictly matching the filters, set `strictFiltering` to True in `PredictRequest.params`
-   * to receive empty results instead. Note that the API will never return items with storageStatus
-   * of "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true
-   * under the `params` field, then attribute-based expressions are expected instead of the above
+   * prediction results, the API will return *no* results. If instead you want empty result sets to
+   * return generic (unfiltered) popular products, set `strictFiltering` to False in
+   * `PredictRequest.params`. Note that the API will never return items with storageStatus of
+   * "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true under
+   * the `params` field, then attribute-based expressions are expected instead of the above
    * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
    * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
    * ANY("Phones"))
@@ -140,11 +140,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * Restricts predictions to products that do not have a stockState value of OUT_OF_STOCK.
    * Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
    * filterOutOfStockItems tag=(-"promotional") * filterOutOfStockItems If your filter blocks all
-   * prediction results, the API will return generic (unfiltered) popular products. If you only want
-   * results strictly matching the filters, set `strictFiltering` to True in `PredictRequest.params`
-   * to receive empty results instead. Note that the API will never return items with storageStatus
-   * of "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true
-   * under the `params` field, then attribute-based expressions are expected instead of the above
+   * prediction results, the API will return *no* results. If instead you want empty result sets to
+   * return generic (unfiltered) popular products, set `strictFiltering` to False in
+   * `PredictRequest.params`. Note that the API will never return items with storageStatus of
+   * "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true under
+   * the `params` field, then attribute-based expressions are expected instead of the above
    * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
    * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
    * ANY("Phones"))
@@ -165,11 +165,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * Restricts predictions to products that do not have a stockState value of OUT_OF_STOCK.
    * Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
    * filterOutOfStockItems tag=(-"promotional") * filterOutOfStockItems If your filter blocks all
-   * prediction results, the API will return generic (unfiltered) popular products. If you only want
-   * results strictly matching the filters, set `strictFiltering` to True in `PredictRequest.params`
-   * to receive empty results instead. Note that the API will never return items with storageStatus
-   * of "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true
-   * under the `params` field, then attribute-based expressions are expected instead of the above
+   * prediction results, the API will return *no* results. If instead you want empty result sets to
+   * return generic (unfiltered) popular products, set `strictFiltering` to False in
+   * `PredictRequest.params`. Note that the API will never return items with storageStatus of
+   * "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true under
+   * the `params` field, then attribute-based expressions are expected instead of the above
    * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
    * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
    * ANY("Phones"))

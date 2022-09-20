@@ -30,7 +30,7 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The candidates to consider on the panel. Limit = 10.
+   * Required. The candidates to consider on the panel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel exte
   private java.lang.String displayName;
 
   /**
-   * Required. The candidates to consider on the panel. Limit = 10.
+   * Required. The candidates to consider on the panel.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate> getCandidates() {
@@ -66,7 +66,7 @@ public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel exte
   }
 
   /**
-   * Required. The candidates to consider on the panel. Limit = 10.
+   * Required. The candidates to consider on the panel.
    * @param candidates candidates or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel setCandidates(java.util.List<GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate> candidates) {

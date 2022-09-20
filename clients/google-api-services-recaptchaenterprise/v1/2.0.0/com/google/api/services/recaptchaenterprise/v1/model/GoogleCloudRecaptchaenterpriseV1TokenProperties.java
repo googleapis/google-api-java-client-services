@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   private String createTime;
 
   /**
-   * The hostname of the page on which the token was generated.
+   * The hostname of the page on which the token was generated (Web keys only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The hostname of the page on which the token was generated.
+   * The hostname of the page on which the token was generated (Web keys only).
    * @return value or {@code null} for none
    */
   public java.lang.String getHostname() {
@@ -111,7 +111,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The hostname of the page on which the token was generated.
+   * The hostname of the page on which the token was generated (Web keys only).
    * @param hostname hostname or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setHostname(java.lang.String hostname) {

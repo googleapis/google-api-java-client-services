@@ -52,6 +52,20 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
   private java.util.List<java.lang.String> destinations;
 
   /**
+   * Criteria for the Merchant Center feeds to be ingested via the link. All offers will be ingested
+   * if the list is empty. Otherwise the offers will be ingested from selected feeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaMerchantCenterFeedFilter> feeds;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2alphaMerchantCenterFeedFilter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaMerchantCenterFeedFilter.class);
+  }
+
+  /**
    * Language of the title/description and other string attributes. Use language tags defined by
    * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
    * of offers in Merchant Center that will be accepted. If empty no language filtering will be
@@ -125,6 +139,25 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
    */
   public GoogleCloudRetailV2alphaMerchantCenterLink setDestinations(java.util.List<java.lang.String> destinations) {
     this.destinations = destinations;
+    return this;
+  }
+
+  /**
+   * Criteria for the Merchant Center feeds to be ingested via the link. All offers will be ingested
+   * if the list is empty. Otherwise the offers will be ingested from selected feeds.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaMerchantCenterFeedFilter> getFeeds() {
+    return feeds;
+  }
+
+  /**
+   * Criteria for the Merchant Center feeds to be ingested via the link. All offers will be ingested
+   * if the list is empty. Otherwise the offers will be ingested from selected feeds.
+   * @param feeds feeds or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaMerchantCenterLink setFeeds(java.util.List<GoogleCloudRetailV2alphaMerchantCenterFeedFilter> feeds) {
+    this.feeds = feeds;
     return this;
   }
 

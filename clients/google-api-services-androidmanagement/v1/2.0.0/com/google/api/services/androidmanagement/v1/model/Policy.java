@@ -620,7 +620,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<SetupAction> setupActions;
 
   /**
-   * Whether location sharing is disabled.
+   * Whether location sharing is disabled. share_location_disabled is supported for both fully
+   * managed devices and personally owned work profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -745,9 +746,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean vpnConfigDisabled;
 
   /**
-   * Whether configuring Wi-Fi access points is disabled.Note: If a network connection can't be made
-   * at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in order
-   * to refresh the device policy (see networkEscapeHatchEnabled).
+   * Whether configuring Wi-Fi access points is disabled. Note: If a network connection can't be
+   * made at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in
+   * order to refresh the device policy (see networkEscapeHatchEnabled).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2063,7 +2064,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether location sharing is disabled.
+   * Whether location sharing is disabled. share_location_disabled is supported for both fully
+   * managed devices and personally owned work profiles.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShareLocationDisabled() {
@@ -2071,7 +2073,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether location sharing is disabled.
+   * Whether location sharing is disabled. share_location_disabled is supported for both fully
+   * managed devices and personally owned work profiles.
    * @param shareLocationDisabled shareLocationDisabled or {@code null} for none
    */
   public Policy setShareLocationDisabled(java.lang.Boolean shareLocationDisabled) {
@@ -2361,9 +2364,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring Wi-Fi access points is disabled.Note: If a network connection can't be made
-   * at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in order
-   * to refresh the device policy (see networkEscapeHatchEnabled).
+   * Whether configuring Wi-Fi access points is disabled. Note: If a network connection can't be
+   * made at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in
+   * order to refresh the device policy (see networkEscapeHatchEnabled).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWifiConfigDisabled() {
@@ -2371,9 +2374,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring Wi-Fi access points is disabled.Note: If a network connection can't be made
-   * at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in order
-   * to refresh the device policy (see networkEscapeHatchEnabled).
+   * Whether configuring Wi-Fi access points is disabled. Note: If a network connection can't be
+   * made at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in
+   * order to refresh the device policy (see networkEscapeHatchEnabled).
    * @param wifiConfigDisabled wifiConfigDisabled or {@code null} for none
    */
   public Policy setWifiConfigDisabled(java.lang.Boolean wifiConfigDisabled) {

@@ -52,13 +52,6 @@ public final class GoogleCloudDocumentaiV1EntityTypeMetadata extends com.google.
   private java.lang.Boolean inactive;
 
   /**
-   * If set, the properties of this entity type must be prefixed with the parents.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean prefixedNamingOnProperties;
-
-  /**
    * Human review labeling config on the property.
    * @return value or {@code null} for none
    */
@@ -106,23 +99,6 @@ public final class GoogleCloudDocumentaiV1EntityTypeMetadata extends com.google.
    */
   public GoogleCloudDocumentaiV1EntityTypeMetadata setInactive(java.lang.Boolean inactive) {
     this.inactive = inactive;
-    return this;
-  }
-
-  /**
-   * If set, the properties of this entity type must be prefixed with the parents.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPrefixedNamingOnProperties() {
-    return prefixedNamingOnProperties;
-  }
-
-  /**
-   * If set, the properties of this entity type must be prefixed with the parents.
-   * @param prefixedNamingOnProperties prefixedNamingOnProperties or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1EntityTypeMetadata setPrefixedNamingOnProperties(java.lang.Boolean prefixedNamingOnProperties) {
-    this.prefixedNamingOnProperties = prefixedNamingOnProperties;
     return this;
   }
 

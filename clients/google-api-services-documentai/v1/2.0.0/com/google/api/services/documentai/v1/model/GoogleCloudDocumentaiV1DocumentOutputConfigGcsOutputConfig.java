@@ -31,11 +31,35 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies which fields to include in the output documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String fieldMask;
+
+  /**
    * The Cloud Storage uri (a directory) of the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
+
+  /**
+   * Specifies which fields to include in the output documents.
+   * @return value or {@code null} for none
+   */
+  public String getFieldMask() {
+    return fieldMask;
+  }
+
+  /**
+   * Specifies which fields to include in the output documents.
+   * @param fieldMask fieldMask or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig setFieldMask(String fieldMask) {
+    this.fieldMask = fieldMask;
+    return this;
+  }
 
   /**
    * The Cloud Storage uri (a directory) of the output.

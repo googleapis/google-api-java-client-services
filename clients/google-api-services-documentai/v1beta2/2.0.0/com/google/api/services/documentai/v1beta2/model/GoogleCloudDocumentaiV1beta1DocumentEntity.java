@@ -53,8 +53,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   private java.lang.String mentionId;
 
   /**
-   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity is not
-   * present in the document, this field will be empty.
+   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,8 +164,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity is not
-   * present in the document, this field will be empty.
+   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMentionText() {
@@ -174,8 +172,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity is not
-   * present in the document, this field will be empty.
+   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
    * @param mentionText mentionText or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntity setMentionText(java.lang.String mentionText) {

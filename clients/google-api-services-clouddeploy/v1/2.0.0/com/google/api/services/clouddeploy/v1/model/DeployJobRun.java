@@ -54,6 +54,13 @@ public final class DeployJobRun extends com.google.api.client.json.GenericJson {
   private java.lang.String failureMessage;
 
   /**
+   * Output only. Metadata containing information about the deploy job run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeployJobRunMetadata metadata;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to deploy. Format
    * is projects/{project}/locations/{location}/builds/{build}.
    * @return value or {@code null} for none
@@ -105,6 +112,23 @@ public final class DeployJobRun extends com.google.api.client.json.GenericJson {
    */
   public DeployJobRun setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata containing information about the deploy job run.
+   * @return value or {@code null} for none
+   */
+  public DeployJobRunMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Metadata containing information about the deploy job run.
+   * @param metadata metadata or {@code null} for none
+   */
+  public DeployJobRun setMetadata(DeployJobRunMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

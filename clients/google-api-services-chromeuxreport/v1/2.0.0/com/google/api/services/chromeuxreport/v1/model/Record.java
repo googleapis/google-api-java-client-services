@@ -31,6 +31,13 @@ package com.google.api.services.chromeuxreport.v1.model;
 public final class Record extends com.google.api.client.json.GenericJson {
 
   /**
+   * The collection period indicates when the data reflected in this record was collected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CollectionPeriod collectionPeriod;
+
+  /**
    * Key defines all of the unique querying parameters needed to look up a user experience record.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class Record extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider Metric used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Metric.class);
+  }
+
+  /**
+   * The collection period indicates when the data reflected in this record was collected.
+   * @return value or {@code null} for none
+   */
+  public CollectionPeriod getCollectionPeriod() {
+    return collectionPeriod;
+  }
+
+  /**
+   * The collection period indicates when the data reflected in this record was collected.
+   * @param collectionPeriod collectionPeriod or {@code null} for none
+   */
+  public Record setCollectionPeriod(CollectionPeriod collectionPeriod) {
+    this.collectionPeriod = collectionPeriod;
+    return this;
   }
 
   /**

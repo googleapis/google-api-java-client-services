@@ -168,6 +168,16 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private NativeContent native__;
 
   /**
+   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
+   * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
+   * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
+   * groups") This should be unique among all creatives for a given creative.account_id
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String renderUrl;
+
+  /**
    * All restricted categories for the ads that may be shown from this creative.
    * The value may be {@code null}.
    */
@@ -511,6 +521,29 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setNative(NativeContent native__) {
     this.native__ = native__;
+    return this;
+  }
+
+  /**
+   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
+   * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
+   * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
+   * groups") This should be unique among all creatives for a given creative.account_id
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRenderUrl() {
+    return renderUrl;
+  }
+
+  /**
+   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
+   * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
+   * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
+   * groups") This should be unique among all creatives for a given creative.account_id
+   * @param renderUrl renderUrl or {@code null} for none
+   */
+  public Creative setRenderUrl(java.lang.String renderUrl) {
+    this.renderUrl = renderUrl;
     return this;
   }
 

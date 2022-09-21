@@ -45,6 +45,13 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Filter on a custom variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UvarFilter uvarFilter;
+
+  /**
    * The dimension filter contained within this EventFilter.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
    */
   public EventFilter setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Filter on a custom variable.
+   * @return value or {@code null} for none
+   */
+  public UvarFilter getUvarFilter() {
+    return uvarFilter;
+  }
+
+  /**
+   * Filter on a custom variable.
+   * @param uvarFilter uvarFilter or {@code null} for none
+   */
+  public EventFilter setUvarFilter(UvarFilter uvarFilter) {
+    this.uvarFilter = uvarFilter;
     return this;
   }
 

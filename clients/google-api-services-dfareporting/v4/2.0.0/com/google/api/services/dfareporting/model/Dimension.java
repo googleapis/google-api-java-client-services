@@ -38,7 +38,7 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The dimension name, e.g. dfa:advertiser
+   * The dimension name, e.g. advertiser
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimension name, e.g. dfa:advertiser
+   * The dimension name, e.g. advertiser
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +70,7 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimension name, e.g. dfa:advertiser
+   * The dimension name, e.g. advertiser
    * @param name name or {@code null} for none
    */
   public Dimension setName(java.lang.String name) {

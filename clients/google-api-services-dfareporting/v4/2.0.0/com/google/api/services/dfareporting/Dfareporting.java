@@ -29704,7 +29704,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the dfareporting server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param profileId The DFA user profile ID.
+     * @param profileId The Campaign Manager 360 user profile ID.
      * @param reportId The ID of the report.
      * @param content the {@link com.google.api.services.dfareporting.model.Report}
      * @return the request
@@ -29730,7 +29730,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param profileId The DFA user profile ID.
+       * @param profileId The Campaign Manager 360 user profile ID.
        * @param reportId The ID of the report.
        * @param content the {@link com.google.api.services.dfareporting.model.Report}
        * @since 1.13
@@ -29796,17 +29796,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The DFA user profile ID. */
+      /** The Campaign Manager 360 user profile ID. */
       @com.google.api.client.util.Key
       private java.lang.Long profileId;
 
-      /** The DFA user profile ID.
+      /** The Campaign Manager 360 user profile ID.
        */
       public java.lang.Long getProfileId() {
         return profileId;
       }
 
-      /** The DFA user profile ID. */
+      /** The Campaign Manager 360 user profile ID. */
       public Patch setProfileId(java.lang.Long profileId) {
         this.profileId = profileId;
         return this;

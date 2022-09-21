@@ -119,6 +119,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
   private java.lang.String name;
 
   /**
+   * Configures which regions are enabled for SMS verification code sending.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig smsRegionConfig;
+
+  /**
    * A map of pairs that can be used for MFA. The phone number should be in E.164 format
    * (https://www.itu.int/rec/T-REC-E.164/) and a maximum of 10 pairs can be added (error will be
    * thrown once exceeded).
@@ -338,6 +345,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Tenant setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configures which regions are enabled for SMS verification code sending.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig getSmsRegionConfig() {
+    return smsRegionConfig;
+  }
+
+  /**
+   * Configures which regions are enabled for SMS verification code sending.
+   * @param smsRegionConfig smsRegionConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Tenant setSmsRegionConfig(GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig smsRegionConfig) {
+    this.smsRegionConfig = smsRegionConfig;
     return this;
   }
 

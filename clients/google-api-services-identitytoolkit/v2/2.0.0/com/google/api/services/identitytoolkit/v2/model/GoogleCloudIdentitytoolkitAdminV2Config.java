@@ -108,6 +108,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2SignInConfig signIn;
 
   /**
+   * Configures which regions are enabled for SMS verification code sending.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig smsRegionConfig;
+
+  /**
    * Output only. The subtype of this config.
    * The value may be {@code null}.
    */
@@ -300,6 +307,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Config setSignIn(GoogleCloudIdentitytoolkitAdminV2SignInConfig signIn) {
     this.signIn = signIn;
+    return this;
+  }
+
+  /**
+   * Configures which regions are enabled for SMS verification code sending.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig getSmsRegionConfig() {
+    return smsRegionConfig;
+  }
+
+  /**
+   * Configures which regions are enabled for SMS verification code sending.
+   * @param smsRegionConfig smsRegionConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Config setSmsRegionConfig(GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig smsRegionConfig) {
+    this.smsRegionConfig = smsRegionConfig;
     return this;
   }
 

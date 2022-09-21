@@ -38,6 +38,13 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String destIpRange;
 
   /**
+   * Destination port ranges of the route. Policy based routes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destPortRanges;
+
+  /**
    * Name of a Compute Engine route.
    * The value may be {@code null}.
    */
@@ -80,11 +87,32 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Integer priority;
 
   /**
+   * Protocols of the route. Policy based routes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> protocols;
+
+  /**
    * Type of route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String routeType;
+
+  /**
+   * Source IP address range of the route. Policy based routes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String srcIpRange;
+
+  /**
+   * Source port ranges of the route. Policy based routes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcPortRanges;
 
   /**
    * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised
@@ -108,6 +136,23 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
    */
   public RouteInfo setDestIpRange(java.lang.String destIpRange) {
     this.destIpRange = destIpRange;
+    return this;
+  }
+
+  /**
+   * Destination port ranges of the route. Policy based routes only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestPortRanges() {
+    return destPortRanges;
+  }
+
+  /**
+   * Destination port ranges of the route. Policy based routes only.
+   * @param destPortRanges destPortRanges or {@code null} for none
+   */
+  public RouteInfo setDestPortRanges(java.util.List<java.lang.String> destPortRanges) {
+    this.destPortRanges = destPortRanges;
     return this;
   }
 
@@ -214,6 +259,23 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Protocols of the route. Policy based routes only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProtocols() {
+    return protocols;
+  }
+
+  /**
+   * Protocols of the route. Policy based routes only.
+   * @param protocols protocols or {@code null} for none
+   */
+  public RouteInfo setProtocols(java.util.List<java.lang.String> protocols) {
+    this.protocols = protocols;
+    return this;
+  }
+
+  /**
    * Type of route.
    * @return value or {@code null} for none
    */
@@ -227,6 +289,40 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
    */
   public RouteInfo setRouteType(java.lang.String routeType) {
     this.routeType = routeType;
+    return this;
+  }
+
+  /**
+   * Source IP address range of the route. Policy based routes only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSrcIpRange() {
+    return srcIpRange;
+  }
+
+  /**
+   * Source IP address range of the route. Policy based routes only.
+   * @param srcIpRange srcIpRange or {@code null} for none
+   */
+  public RouteInfo setSrcIpRange(java.lang.String srcIpRange) {
+    this.srcIpRange = srcIpRange;
+    return this;
+  }
+
+  /**
+   * Source port ranges of the route. Policy based routes only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcPortRanges() {
+    return srcPortRanges;
+  }
+
+  /**
+   * Source port ranges of the route. Policy based routes only.
+   * @param srcPortRanges srcPortRanges or {@code null} for none
+   */
+  public RouteInfo setSrcPortRanges(java.util.List<java.lang.String> srcPortRanges) {
+    this.srcPortRanges = srcPortRanges;
     return this;
   }
 

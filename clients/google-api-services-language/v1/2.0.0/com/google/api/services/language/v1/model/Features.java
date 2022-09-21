@@ -32,6 +32,14 @@ package com.google.api.services.language.v1.model;
 public final class Features extends com.google.api.client.json.GenericJson {
 
   /**
+   * The model options to use for classification. Defaults to v1 options if not specified. Only used
+   * if `classify_text` is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClassificationModelOptions classificationModelOptions;
+
+  /**
    * Classify the full document into categories.
    * The value may be {@code null}.
    */
@@ -65,6 +73,25 @@ public final class Features extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean extractSyntax;
+
+  /**
+   * The model options to use for classification. Defaults to v1 options if not specified. Only used
+   * if `classify_text` is set to true.
+   * @return value or {@code null} for none
+   */
+  public ClassificationModelOptions getClassificationModelOptions() {
+    return classificationModelOptions;
+  }
+
+  /**
+   * The model options to use for classification. Defaults to v1 options if not specified. Only used
+   * if `classify_text` is set to true.
+   * @param classificationModelOptions classificationModelOptions or {@code null} for none
+   */
+  public Features setClassificationModelOptions(ClassificationModelOptions classificationModelOptions) {
+    this.classificationModelOptions = classificationModelOptions;
+    return this;
+  }
 
   /**
    * Classify the full document into categories.

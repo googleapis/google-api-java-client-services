@@ -44,6 +44,13 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] The configuration of bundled local SSD for the machine type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BundledLocalSsds bundledLocalSsds;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -150,6 +157,23 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
    */
   public MachineType setAccelerators(java.util.List<Accelerators> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * [Output Only] The configuration of bundled local SSD for the machine type.
+   * @return value or {@code null} for none
+   */
+  public BundledLocalSsds getBundledLocalSsds() {
+    return bundledLocalSsds;
+  }
+
+  /**
+   * [Output Only] The configuration of bundled local SSD for the machine type.
+   * @param bundledLocalSsds bundledLocalSsds or {@code null} for none
+   */
+  public MachineType setBundledLocalSsds(BundledLocalSsds bundledLocalSsds) {
+    this.bundledLocalSsds = bundledLocalSsds;
     return this;
   }
 

@@ -299,6 +299,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Specifies values set for instance attributes as compared to the values requested
+   * by user in the corresponding input only field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatus resourceStatus;
+
+  /**
    * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
@@ -1088,6 +1096,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
     this.resourcePolicies = resourcePolicies;
+    return this;
+  }
+
+  /**
+   * [Output Only] Specifies values set for instance attributes as compared to the values requested
+   * by user in the corresponding input only field.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output Only] Specifies values set for instance attributes as compared to the values requested
+   * by user in the corresponding input only field.
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Instance setResourceStatus(ResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

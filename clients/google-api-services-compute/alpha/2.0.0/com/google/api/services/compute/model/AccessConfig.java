@@ -100,6 +100,13 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String publicPtrDomainName;
 
   /**
+   * [Output Only] The resource URL for the security policy associated with this access config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityPolicy;
+
+  /**
    * Specifies whether a public DNS 'A' record should be created for the external IP address of this
    * access configuration.
    * The value may be {@code null}.
@@ -282,6 +289,23 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
    */
   public AccessConfig setPublicPtrDomainName(java.lang.String publicPtrDomainName) {
     this.publicPtrDomainName = publicPtrDomainName;
+    return this;
+  }
+
+  /**
+   * [Output Only] The resource URL for the security policy associated with this access config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityPolicy() {
+    return securityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the security policy associated with this access config.
+   * @param securityPolicy securityPolicy or {@code null} for none
+   */
+  public AccessConfig setSecurityPolicy(java.lang.String securityPolicy) {
+    this.securityPolicy = securityPolicy;
     return this;
   }
 

@@ -88,6 +88,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String createDisposition;
 
   /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs the
+   * load job in non-session mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean createSession;
+
+  /**
    * [Optional] Defines the list of possible SQL data types to which the source decimal values are
    * converted. This list and the precision and the scale parameters of the decimal field determine
    * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
@@ -469,6 +478,27 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setCreateDisposition(java.lang.String createDisposition) {
     this.createDisposition = createDisposition;
+    return this;
+  }
+
+  /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs the
+   * load job in non-session mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCreateSession() {
+    return createSession;
+  }
+
+  /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs the
+   * load job in non-session mode.
+   * @param createSession createSession or {@code null} for none
+   */
+  public JobConfigurationLoad setCreateSession(java.lang.Boolean createSession) {
+    this.createSession = createSession;
     return this;
   }
 

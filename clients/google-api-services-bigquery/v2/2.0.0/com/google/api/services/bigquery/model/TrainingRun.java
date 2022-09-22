@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class TrainingRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * Global explanation contains the explanation of top features on the class level. Applies to
-   * classification models only.
+   * Output only. Global explanation contains the explanation of top features on the class level.
+   * Applies to classification models only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,29 +44,31 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data split result of the training run. Only set when the input data is actually split.
+   * Output only. Data split result of the training run. Only set when the input data is actually
+   * split.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DataSplitResult dataSplitResult;
 
   /**
-   * The evaluation metrics over training/eval data that were computed at the end of training.
+   * Output only. The evaluation metrics over training/eval data that were computed at the end of
+   * training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EvaluationMetrics evaluationMetrics;
 
   /**
-   * Global explanation contains the explanation of top features on the model level. Applies to both
-   * regression and classification models.
+   * Output only. Global explanation contains the explanation of top features on the model level.
+   * Applies to both regression and classification models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GlobalExplanation modelLevelGlobalExplanation;
 
   /**
-   * Output of each iteration run, results.size() <= max_iterations.
+   * Output only. Output of each iteration run, results.size() <= max_iterations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,22 +81,22 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of this training run.
+   * Output only. The start time of this training run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Options that were used for this training run, includes user specified and default options that
-   * were used.
+   * Output only. Options that were used for this training run, includes user specified and default
+   * options that were used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TrainingOptions trainingOptions;
 
   /**
-   * The start time of this training run, in milliseconds since epoch.
+   * Output only. The start time of this training run, in milliseconds since epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -108,15 +110,15 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   private java.lang.String vertexAiModelId;
 
   /**
-   * The model version in Vertex AI Model Registry for this training run
+   * Output only. The model version in Vertex AI Model Registry for this training run
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vertexAiModelVersion;
 
   /**
-   * Global explanation contains the explanation of top features on the class level. Applies to
-   * classification models only.
+   * Output only. Global explanation contains the explanation of top features on the class level.
+   * Applies to classification models only.
    * @return value or {@code null} for none
    */
   public java.util.List<GlobalExplanation> getClassLevelGlobalExplanations() {
@@ -124,8 +126,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global explanation contains the explanation of top features on the class level. Applies to
-   * classification models only.
+   * Output only. Global explanation contains the explanation of top features on the class level.
+   * Applies to classification models only.
    * @param classLevelGlobalExplanations classLevelGlobalExplanations or {@code null} for none
    */
   public TrainingRun setClassLevelGlobalExplanations(java.util.List<GlobalExplanation> classLevelGlobalExplanations) {
@@ -134,7 +136,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data split result of the training run. Only set when the input data is actually split.
+   * Output only. Data split result of the training run. Only set when the input data is actually
+   * split.
    * @return value or {@code null} for none
    */
   public DataSplitResult getDataSplitResult() {
@@ -142,7 +145,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data split result of the training run. Only set when the input data is actually split.
+   * Output only. Data split result of the training run. Only set when the input data is actually
+   * split.
    * @param dataSplitResult dataSplitResult or {@code null} for none
    */
   public TrainingRun setDataSplitResult(DataSplitResult dataSplitResult) {
@@ -151,7 +155,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The evaluation metrics over training/eval data that were computed at the end of training.
+   * Output only. The evaluation metrics over training/eval data that were computed at the end of
+   * training.
    * @return value or {@code null} for none
    */
   public EvaluationMetrics getEvaluationMetrics() {
@@ -159,7 +164,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The evaluation metrics over training/eval data that were computed at the end of training.
+   * Output only. The evaluation metrics over training/eval data that were computed at the end of
+   * training.
    * @param evaluationMetrics evaluationMetrics or {@code null} for none
    */
   public TrainingRun setEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
@@ -168,8 +174,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global explanation contains the explanation of top features on the model level. Applies to both
-   * regression and classification models.
+   * Output only. Global explanation contains the explanation of top features on the model level.
+   * Applies to both regression and classification models.
    * @return value or {@code null} for none
    */
   public GlobalExplanation getModelLevelGlobalExplanation() {
@@ -177,8 +183,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global explanation contains the explanation of top features on the model level. Applies to both
-   * regression and classification models.
+   * Output only. Global explanation contains the explanation of top features on the model level.
+   * Applies to both regression and classification models.
    * @param modelLevelGlobalExplanation modelLevelGlobalExplanation or {@code null} for none
    */
   public TrainingRun setModelLevelGlobalExplanation(GlobalExplanation modelLevelGlobalExplanation) {
@@ -187,7 +193,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output of each iteration run, results.size() <= max_iterations.
+   * Output only. Output of each iteration run, results.size() <= max_iterations.
    * @return value or {@code null} for none
    */
   public java.util.List<IterationResult> getResults() {
@@ -195,7 +201,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output of each iteration run, results.size() <= max_iterations.
+   * Output only. Output of each iteration run, results.size() <= max_iterations.
    * @param results results or {@code null} for none
    */
   public TrainingRun setResults(java.util.List<IterationResult> results) {
@@ -204,7 +210,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of this training run.
+   * Output only. The start time of this training run.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -212,7 +218,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of this training run.
+   * Output only. The start time of this training run.
    * @param startTime startTime or {@code null} for none
    */
   public TrainingRun setStartTime(String startTime) {
@@ -221,8 +227,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Options that were used for this training run, includes user specified and default options that
-   * were used.
+   * Output only. Options that were used for this training run, includes user specified and default
+   * options that were used.
    * @return value or {@code null} for none
    */
   public TrainingOptions getTrainingOptions() {
@@ -230,8 +236,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Options that were used for this training run, includes user specified and default options that
-   * were used.
+   * Output only. Options that were used for this training run, includes user specified and default
+   * options that were used.
    * @param trainingOptions trainingOptions or {@code null} for none
    */
   public TrainingRun setTrainingOptions(TrainingOptions trainingOptions) {
@@ -240,7 +246,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of this training run, in milliseconds since epoch.
+   * Output only. The start time of this training run, in milliseconds since epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTrainingStartTime() {
@@ -248,7 +254,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of this training run, in milliseconds since epoch.
+   * Output only. The start time of this training run, in milliseconds since epoch.
    * @param trainingStartTime trainingStartTime or {@code null} for none
    */
   public TrainingRun setTrainingStartTime(java.lang.Long trainingStartTime) {
@@ -274,7 +280,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The model version in Vertex AI Model Registry for this training run
+   * Output only. The model version in Vertex AI Model Registry for this training run
    * @return value or {@code null} for none
    */
   public java.lang.String getVertexAiModelVersion() {
@@ -282,7 +288,7 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The model version in Vertex AI Model Registry for this training run
+   * Output only. The model version in Vertex AI Model Registry for this training run
    * @param vertexAiModelVersion vertexAiModelVersion or {@code null} for none
    */
   public TrainingRun setVertexAiModelVersion(java.lang.String vertexAiModelVersion) {

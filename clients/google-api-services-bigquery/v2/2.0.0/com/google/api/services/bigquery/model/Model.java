@@ -181,7 +181,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> optimalTrialIds;
 
   /**
-   * Output only. Information for all training runs in increasing order of start_time.
+   * Information for all training runs in increasing order of start_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -532,7 +532,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information for all training runs in increasing order of start_time.
+   * Information for all training runs in increasing order of start_time.
    * @return value or {@code null} for none
    */
   public java.util.List<TrainingRun> getTrainingRuns() {
@@ -540,7 +540,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information for all training runs in increasing order of start_time.
+   * Information for all training runs in increasing order of start_time.
    * @param trainingRuns trainingRuns or {@code null} for none
    */
   public Model setTrainingRuns(java.util.List<TrainingRun> trainingRuns) {

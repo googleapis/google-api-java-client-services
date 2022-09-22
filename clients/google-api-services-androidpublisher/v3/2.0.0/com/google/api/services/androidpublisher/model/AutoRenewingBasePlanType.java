@@ -57,6 +57,16 @@ public final class AutoRenewingBasePlanType extends com.google.api.client.json.G
   private java.lang.Boolean legacyCompatible;
 
   /**
+   * Subscription offer id which is legacy compatible. The backward compatible subscription offer is
+   * returned by the Google Play Billing Library deprecated method querySkuDetailsAsync(). Only one
+   * subscription offer can be marked as legacy compatible for a given renewing base plan. To have
+   * no Subscription offer as legacy compatible set this field as empty string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String legacyCompatibleSubscriptionOfferId;
+
+  /**
    * The proration mode for the base plan determines what happens when a user switches to this plan
    * from another base plan. If unspecified, defaults to CHARGE_ON_NEXT_BILLING_DATE.
    * The value may be {@code null}.
@@ -130,6 +140,29 @@ public final class AutoRenewingBasePlanType extends com.google.api.client.json.G
    */
   public AutoRenewingBasePlanType setLegacyCompatible(java.lang.Boolean legacyCompatible) {
     this.legacyCompatible = legacyCompatible;
+    return this;
+  }
+
+  /**
+   * Subscription offer id which is legacy compatible. The backward compatible subscription offer is
+   * returned by the Google Play Billing Library deprecated method querySkuDetailsAsync(). Only one
+   * subscription offer can be marked as legacy compatible for a given renewing base plan. To have
+   * no Subscription offer as legacy compatible set this field as empty string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLegacyCompatibleSubscriptionOfferId() {
+    return legacyCompatibleSubscriptionOfferId;
+  }
+
+  /**
+   * Subscription offer id which is legacy compatible. The backward compatible subscription offer is
+   * returned by the Google Play Billing Library deprecated method querySkuDetailsAsync(). Only one
+   * subscription offer can be marked as legacy compatible for a given renewing base plan. To have
+   * no Subscription offer as legacy compatible set this field as empty string.
+   * @param legacyCompatibleSubscriptionOfferId legacyCompatibleSubscriptionOfferId or {@code null} for none
+   */
+  public AutoRenewingBasePlanType setLegacyCompatibleSubscriptionOfferId(java.lang.String legacyCompatibleSubscriptionOfferId) {
+    this.legacyCompatibleSubscriptionOfferId = legacyCompatibleSubscriptionOfferId;
     return this;
   }
 

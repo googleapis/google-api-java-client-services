@@ -45,7 +45,8 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * Output only. A list of GCLB targets which use this Certificate Map.
+   * Output only. A list of GCLB targets which use this Certificate Map. A Target Proxy is only
+   * present on this list if it's attached to a Forwarding Rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. A list of GCLB targets which use this Certificate Map.
+   * Output only. A list of GCLB targets which use this Certificate Map. A Target Proxy is only
+   * present on this list if it's attached to a Forwarding Rule.
    * @return value or {@code null} for none
    */
   public java.util.List<GclbTarget> getGclbTargets() {
@@ -116,7 +118,8 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. A list of GCLB targets which use this Certificate Map.
+   * Output only. A list of GCLB targets which use this Certificate Map. A Target Proxy is only
+   * present on this list if it's attached to a Forwarding Rule.
    * @param gclbTargets gclbTargets or {@code null} for none
    */
   public CertificateMap setGclbTargets(java.util.List<GclbTarget> gclbTargets) {

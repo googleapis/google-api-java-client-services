@@ -30,28 +30,28 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics2 extends com.google.api.client.json.GenericJson {
 
   /**
-   * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+   * BI Engine specific Statistics. [Output only] BI Engine specific Statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BiEngineStatistics biEngineStatistics;
 
   /**
-   * [Output-only] Billing tier for the job.
+   * [Output only] Billing tier for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer billingTier;
 
   /**
-   * [Output-only] Whether the query result was fetched from the query cache.
+   * [Output only] Whether the query result was fetched from the query cache.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cacheHit;
 
   /**
-   * [Output-only] [Preview] The number of row access policies affected by a DDL statement. Present
+   * [Output only] [Preview] The number of row access policies affected by a DDL statement. Present
    * only for DROP ALL ROW ACCESS POLICIES queries.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long ddlAffectedRowAccessPolicyCount;
 
   /**
-   * [Output-only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
+   * [Output only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
    * that ddl_target_table is used just for its type information.
    * The value may be {@code null}.
    */
@@ -79,7 +79,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.String ddlOperationPerformed;
 
   /**
-   * [Output-only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+   * [Output only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private RoutineReference ddlTargetRoutine;
 
   /**
-   * [Output-only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
+   * [Output only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
    * ACCESS POLICY queries.
    * The value may be {@code null}.
    */
@@ -101,7 +101,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private RowAccessPolicyReference ddlTargetRowAccessPolicy;
 
   /**
-   * [Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * [Output only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
    * ACCESS POLICIES queries.
    * The value may be {@code null}.
    */
@@ -109,7 +109,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableReference ddlTargetTable;
 
   /**
-   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * [Output only] Detailed statistics for DML statements Present only for DML statements INSERT,
    * UPDATE, DELETE or TRUNCATE.
    * The value may be {@code null}.
    */
@@ -117,42 +117,42 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private DmlStatistics dmlStats;
 
   /**
-   * [Output-only] The original estimate of bytes processed for the job.
+   * [Output only] The original estimate of bytes processed for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long estimatedBytesProcessed;
 
   /**
-   * [Output-only] Statistics of a BigQuery ML training job.
+   * [Output only] Statistics of a BigQuery ML training job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MlStatistics mlStatistics;
 
   /**
-   * [Output-only, Beta] Information about create model query job progress.
+   * [Output only, Beta] Information about create model query job progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BigQueryModelTraining modelTraining;
 
   /**
-   * [Output-only, Beta] Deprecated; do not use.
+   * [Output only, Beta] Deprecated; do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer modelTrainingCurrentIteration;
 
   /**
-   * [Output-only, Beta] Deprecated; do not use.
+   * [Output only, Beta] Deprecated; do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long modelTrainingExpectedTotalIteration;
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * [Output only] The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * The value may be {@code null}.
    */
@@ -160,7 +160,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long numDmlAffectedRows;
 
   /**
-   * [Output-only] Describes execution plan for the query.
+   * [Output only] Describes execution plan for the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Referenced routines (persistent user-defined functions and stored procedures) for
+   * [Output only] Referenced routines (persistent user-defined functions and stored procedures) for
    * the job.
    * The value may be {@code null}.
    */
@@ -181,7 +181,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.util.List<RoutineReference> referencedRoutines;
 
   /**
-   * [Output-only] Referenced tables for the job. Queries that reference more than 50 tables will
+   * [Output only] Referenced tables for the job. Queries that reference more than 50 tables will
    * not have a complete list.
    * The value may be {@code null}.
    */
@@ -189,7 +189,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.util.List<TableReference> referencedTables;
 
   /**
-   * [Output-only] Job resource usage breakdown by reservation.
+   * [Output only] Job resource usage breakdown by reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +202,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The schema of the results. Present only for successful dry run of non-legacy SQL
+   * [Output only] The schema of the results. Present only for successful dry run of non-legacy SQL
    * queries.
    * The value may be {@code null}.
    */
@@ -210,14 +210,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableSchema schema;
 
   /**
-   * [Output-only] Search query specific statistics.
+   * [Output only] Search query specific statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SearchStatistics searchStatistics;
 
   /**
-   * [Output-only] Statistics of a Spark procedure job.
+   * [Output only] Statistics of a Spark procedure job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,28 +244,28 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.String statementType;
 
   /**
-   * [Output-only] [Beta] Describes a timeline of job execution.
+   * [Output only] [Beta] Describes a timeline of job execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryTimelineSample> timeline;
 
   /**
-   * [Output-only] Total bytes billed for the job.
+   * [Output only] Total bytes billed for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBytesBilled;
 
   /**
-   * [Output-only] Total bytes processed for the job.
+   * [Output only] Total bytes processed for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBytesProcessed;
 
   /**
-   * [Output-only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
+   * [Output only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
    * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
@@ -275,7 +275,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.String totalBytesProcessedAccuracy;
 
   /**
-   * [Output-only] Total number of partitions processed from all partitioned tables referenced in
+   * [Output only] Total number of partitions processed from all partitioned tables referenced in
    * the job.
    * The value may be {@code null}.
    */
@@ -283,7 +283,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long totalPartitionsProcessed;
 
   /**
-   * [Output-only] Slot-milliseconds for the job.
+   * [Output only] Slot-milliseconds for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -297,7 +297,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.util.List<QueryParameter> undeclaredQueryParameters;
 
   /**
-   * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+   * BI Engine specific Statistics. [Output only] BI Engine specific Statistics.
    * @return value or {@code null} for none
    */
   public BiEngineStatistics getBiEngineStatistics() {
@@ -305,7 +305,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+   * BI Engine specific Statistics. [Output only] BI Engine specific Statistics.
    * @param biEngineStatistics biEngineStatistics or {@code null} for none
    */
   public JobStatistics2 setBiEngineStatistics(BiEngineStatistics biEngineStatistics) {
@@ -314,7 +314,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Billing tier for the job.
+   * [Output only] Billing tier for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBillingTier() {
@@ -322,7 +322,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Billing tier for the job.
+   * [Output only] Billing tier for the job.
    * @param billingTier billingTier or {@code null} for none
    */
   public JobStatistics2 setBillingTier(java.lang.Integer billingTier) {
@@ -331,7 +331,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Whether the query result was fetched from the query cache.
+   * [Output only] Whether the query result was fetched from the query cache.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCacheHit() {
@@ -339,7 +339,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Whether the query result was fetched from the query cache.
+   * [Output only] Whether the query result was fetched from the query cache.
    * @param cacheHit cacheHit or {@code null} for none
    */
   public JobStatistics2 setCacheHit(java.lang.Boolean cacheHit) {
@@ -348,7 +348,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] [Preview] The number of row access policies affected by a DDL statement. Present
+   * [Output only] [Preview] The number of row access policies affected by a DDL statement. Present
    * only for DROP ALL ROW ACCESS POLICIES queries.
    * @return value or {@code null} for none
    */
@@ -357,7 +357,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] [Preview] The number of row access policies affected by a DDL statement. Present
+   * [Output only] [Preview] The number of row access policies affected by a DDL statement. Present
    * only for DROP ALL ROW ACCESS POLICIES queries.
    * @param ddlAffectedRowAccessPolicyCount ddlAffectedRowAccessPolicyCount or {@code null} for none
    */
@@ -367,7 +367,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
+   * [Output only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
    * that ddl_target_table is used just for its type information.
    * @return value or {@code null} for none
    */
@@ -376,7 +376,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
+   * [Output only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
    * that ddl_target_table is used just for its type information.
    * @param ddlDestinationTable ddlDestinationTable or {@code null} for none
    */
@@ -413,7 +413,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+   * [Output only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
    * @return value or {@code null} for none
    */
   public DatasetReference getDdlTargetDataset() {
@@ -421,7 +421,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+   * [Output only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
    * @param ddlTargetDataset ddlTargetDataset or {@code null} for none
    */
   public JobStatistics2 setDdlTargetDataset(DatasetReference ddlTargetDataset) {
@@ -447,7 +447,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
+   * [Output only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
    * ACCESS POLICY queries.
    * @return value or {@code null} for none
    */
@@ -456,7 +456,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
+   * [Output only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
    * ACCESS POLICY queries.
    * @param ddlTargetRowAccessPolicy ddlTargetRowAccessPolicy or {@code null} for none
    */
@@ -466,7 +466,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * [Output only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
    * ACCESS POLICIES queries.
    * @return value or {@code null} for none
    */
@@ -475,7 +475,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * [Output only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
    * ACCESS POLICIES queries.
    * @param ddlTargetTable ddlTargetTable or {@code null} for none
    */
@@ -485,7 +485,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * [Output only] Detailed statistics for DML statements Present only for DML statements INSERT,
    * UPDATE, DELETE or TRUNCATE.
    * @return value or {@code null} for none
    */
@@ -494,7 +494,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * [Output only] Detailed statistics for DML statements Present only for DML statements INSERT,
    * UPDATE, DELETE or TRUNCATE.
    * @param dmlStats dmlStats or {@code null} for none
    */
@@ -504,7 +504,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The original estimate of bytes processed for the job.
+   * [Output only] The original estimate of bytes processed for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEstimatedBytesProcessed() {
@@ -512,7 +512,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The original estimate of bytes processed for the job.
+   * [Output only] The original estimate of bytes processed for the job.
    * @param estimatedBytesProcessed estimatedBytesProcessed or {@code null} for none
    */
   public JobStatistics2 setEstimatedBytesProcessed(java.lang.Long estimatedBytesProcessed) {
@@ -521,7 +521,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Statistics of a BigQuery ML training job.
+   * [Output only] Statistics of a BigQuery ML training job.
    * @return value or {@code null} for none
    */
   public MlStatistics getMlStatistics() {
@@ -529,7 +529,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Statistics of a BigQuery ML training job.
+   * [Output only] Statistics of a BigQuery ML training job.
    * @param mlStatistics mlStatistics or {@code null} for none
    */
   public JobStatistics2 setMlStatistics(MlStatistics mlStatistics) {
@@ -538,7 +538,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only, Beta] Information about create model query job progress.
+   * [Output only, Beta] Information about create model query job progress.
    * @return value or {@code null} for none
    */
   public BigQueryModelTraining getModelTraining() {
@@ -546,7 +546,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only, Beta] Information about create model query job progress.
+   * [Output only, Beta] Information about create model query job progress.
    * @param modelTraining modelTraining or {@code null} for none
    */
   public JobStatistics2 setModelTraining(BigQueryModelTraining modelTraining) {
@@ -555,7 +555,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only, Beta] Deprecated; do not use.
+   * [Output only, Beta] Deprecated; do not use.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getModelTrainingCurrentIteration() {
@@ -563,7 +563,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only, Beta] Deprecated; do not use.
+   * [Output only, Beta] Deprecated; do not use.
    * @param modelTrainingCurrentIteration modelTrainingCurrentIteration or {@code null} for none
    */
   public JobStatistics2 setModelTrainingCurrentIteration(java.lang.Integer modelTrainingCurrentIteration) {
@@ -572,7 +572,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only, Beta] Deprecated; do not use.
+   * [Output only, Beta] Deprecated; do not use.
    * @return value or {@code null} for none
    */
   public java.lang.Long getModelTrainingExpectedTotalIteration() {
@@ -580,7 +580,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only, Beta] Deprecated; do not use.
+   * [Output only, Beta] Deprecated; do not use.
    * @param modelTrainingExpectedTotalIteration modelTrainingExpectedTotalIteration or {@code null} for none
    */
   public JobStatistics2 setModelTrainingExpectedTotalIteration(java.lang.Long modelTrainingExpectedTotalIteration) {
@@ -589,7 +589,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * [Output only] The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @return value or {@code null} for none
    */
@@ -598,7 +598,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * [Output only] The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @param numDmlAffectedRows numDmlAffectedRows or {@code null} for none
    */
@@ -608,7 +608,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Describes execution plan for the query.
+   * [Output only] Describes execution plan for the query.
    * @return value or {@code null} for none
    */
   public java.util.List<ExplainQueryStage> getQueryPlan() {
@@ -616,7 +616,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Describes execution plan for the query.
+   * [Output only] Describes execution plan for the query.
    * @param queryPlan queryPlan or {@code null} for none
    */
   public JobStatistics2 setQueryPlan(java.util.List<ExplainQueryStage> queryPlan) {
@@ -625,7 +625,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Referenced routines (persistent user-defined functions and stored procedures) for
+   * [Output only] Referenced routines (persistent user-defined functions and stored procedures) for
    * the job.
    * @return value or {@code null} for none
    */
@@ -634,7 +634,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Referenced routines (persistent user-defined functions and stored procedures) for
+   * [Output only] Referenced routines (persistent user-defined functions and stored procedures) for
    * the job.
    * @param referencedRoutines referencedRoutines or {@code null} for none
    */
@@ -644,7 +644,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Referenced tables for the job. Queries that reference more than 50 tables will
+   * [Output only] Referenced tables for the job. Queries that reference more than 50 tables will
    * not have a complete list.
    * @return value or {@code null} for none
    */
@@ -653,7 +653,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Referenced tables for the job. Queries that reference more than 50 tables will
+   * [Output only] Referenced tables for the job. Queries that reference more than 50 tables will
    * not have a complete list.
    * @param referencedTables referencedTables or {@code null} for none
    */
@@ -663,7 +663,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Job resource usage breakdown by reservation.
+   * [Output only] Job resource usage breakdown by reservation.
    * @return value or {@code null} for none
    */
   public java.util.List<ReservationUsage> getReservationUsage() {
@@ -671,7 +671,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Job resource usage breakdown by reservation.
+   * [Output only] Job resource usage breakdown by reservation.
    * @param reservationUsage reservationUsage or {@code null} for none
    */
   public JobStatistics2 setReservationUsage(java.util.List<ReservationUsage> reservationUsage) {
@@ -680,7 +680,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The schema of the results. Present only for successful dry run of non-legacy SQL
+   * [Output only] The schema of the results. Present only for successful dry run of non-legacy SQL
    * queries.
    * @return value or {@code null} for none
    */
@@ -689,7 +689,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The schema of the results. Present only for successful dry run of non-legacy SQL
+   * [Output only] The schema of the results. Present only for successful dry run of non-legacy SQL
    * queries.
    * @param schema schema or {@code null} for none
    */
@@ -699,7 +699,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Search query specific statistics.
+   * [Output only] Search query specific statistics.
    * @return value or {@code null} for none
    */
   public SearchStatistics getSearchStatistics() {
@@ -707,7 +707,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Search query specific statistics.
+   * [Output only] Search query specific statistics.
    * @param searchStatistics searchStatistics or {@code null} for none
    */
   public JobStatistics2 setSearchStatistics(SearchStatistics searchStatistics) {
@@ -716,7 +716,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Statistics of a Spark procedure job.
+   * [Output only] Statistics of a Spark procedure job.
    * @return value or {@code null} for none
    */
   public SparkStatistics getSparkStatistics() {
@@ -724,7 +724,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Statistics of a Spark procedure job.
+   * [Output only] Statistics of a Spark procedure job.
    * @param sparkStatistics sparkStatistics or {@code null} for none
    */
   public JobStatistics2 setSparkStatistics(SparkStatistics sparkStatistics) {
@@ -776,7 +776,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] [Beta] Describes a timeline of job execution.
+   * [Output only] [Beta] Describes a timeline of job execution.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryTimelineSample> getTimeline() {
@@ -784,7 +784,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] [Beta] Describes a timeline of job execution.
+   * [Output only] [Beta] Describes a timeline of job execution.
    * @param timeline timeline or {@code null} for none
    */
   public JobStatistics2 setTimeline(java.util.List<QueryTimelineSample> timeline) {
@@ -793,7 +793,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total bytes billed for the job.
+   * [Output only] Total bytes billed for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalBytesBilled() {
@@ -801,7 +801,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total bytes billed for the job.
+   * [Output only] Total bytes billed for the job.
    * @param totalBytesBilled totalBytesBilled or {@code null} for none
    */
   public JobStatistics2 setTotalBytesBilled(java.lang.Long totalBytesBilled) {
@@ -810,7 +810,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total bytes processed for the job.
+   * [Output only] Total bytes processed for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalBytesProcessed() {
@@ -818,7 +818,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total bytes processed for the job.
+   * [Output only] Total bytes processed for the job.
    * @param totalBytesProcessed totalBytesProcessed or {@code null} for none
    */
   public JobStatistics2 setTotalBytesProcessed(java.lang.Long totalBytesProcessed) {
@@ -827,7 +827,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
+   * [Output only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
    * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
@@ -838,7 +838,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
+   * [Output only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
    * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
@@ -850,7 +850,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total number of partitions processed from all partitioned tables referenced in
+   * [Output only] Total number of partitions processed from all partitioned tables referenced in
    * the job.
    * @return value or {@code null} for none
    */
@@ -859,7 +859,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total number of partitions processed from all partitioned tables referenced in
+   * [Output only] Total number of partitions processed from all partitioned tables referenced in
    * the job.
    * @param totalPartitionsProcessed totalPartitionsProcessed or {@code null} for none
    */
@@ -869,7 +869,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Slot-milliseconds for the job.
+   * [Output only] Slot-milliseconds for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalSlotMs() {
@@ -877,7 +877,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Slot-milliseconds for the job.
+   * [Output only] Slot-milliseconds for the job.
    * @param totalSlotMs totalSlotMs or {@code null} for none
    */
   public JobStatistics2 setTotalSlotMs(java.lang.Long totalSlotMs) {
@@ -918,21 +918,21 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   public static final class ReservationUsage extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * [Output only] Reservation name or "unreserved" for on-demand resources usage.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String name;
 
     /**
-     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * [Output only] Slot-milliseconds the job spent in the given reservation.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long slotMs;
 
     /**
-     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * [Output only] Reservation name or "unreserved" for on-demand resources usage.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -940,7 +940,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * [Output only] Reservation name or "unreserved" for on-demand resources usage.
      * @param name name or {@code null} for none
      */
     public ReservationUsage setName(java.lang.String name) {
@@ -949,7 +949,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * [Output only] Slot-milliseconds the job spent in the given reservation.
      * @return value or {@code null} for none
      */
     public java.lang.Long getSlotMs() {
@@ -957,7 +957,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * [Output only] Slot-milliseconds the job spent in the given reservation.
      * @param slotMs slotMs or {@code null} for none
      */
     public ReservationUsage setSlotMs(java.lang.Long slotMs) {

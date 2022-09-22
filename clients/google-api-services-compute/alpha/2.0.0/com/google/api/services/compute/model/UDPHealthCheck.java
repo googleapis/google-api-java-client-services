@@ -30,15 +30,15 @@ package com.google.api.services.compute.model;
 public final class UDPHealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * The UDP port number for the health check request. Valid values are 1 through 65535.
+   * The UDP port number to which the health check prober sends packets. Valid values are 1 through
+   * 65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined,
-   * port takes precedence.
+   * Not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,8 @@ public final class UDPHealthCheck extends com.google.api.client.json.GenericJson
   private java.lang.String response;
 
   /**
-   * The UDP port number for the health check request. Valid values are 1 through 65535.
+   * The UDP port number to which the health check prober sends packets. Valid values are 1 through
+   * 65535.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -69,7 +70,8 @@ public final class UDPHealthCheck extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The UDP port number for the health check request. Valid values are 1 through 65535.
+   * The UDP port number to which the health check prober sends packets. Valid values are 1 through
+   * 65535.
    * @param port port or {@code null} for none
    */
   public UDPHealthCheck setPort(java.lang.Integer port) {
@@ -78,8 +80,7 @@ public final class UDPHealthCheck extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined,
-   * port takes precedence.
+   * Not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortName() {
@@ -87,8 +88,7 @@ public final class UDPHealthCheck extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined,
-   * port takes precedence.
+   * Not supported.
    * @param portName portName or {@code null} for none
    */
   public UDPHealthCheck setPortName(java.lang.String portName) {

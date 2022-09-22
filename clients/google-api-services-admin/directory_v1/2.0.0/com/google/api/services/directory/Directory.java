@@ -2675,6 +2675,1194 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
     public class Chrome {
 
       /**
+       * An accessor for creating requests from the PrintServers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Directory admin = new Directory(...);}
+       *   {@code Directory.PrintServers.List request = admin.printServers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PrintServers printServers() {
+        return new PrintServers();
+      }
+
+      /**
+       * The "printServers" collection of methods.
+       */
+      public class PrintServers {
+
+        /**
+         * Creates multiple print servers.
+         *
+         * Create a request for the method "printServers.batchCreatePrintServers".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link BatchCreatePrintServers#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+         * @param content the {@link com.google.api.services.directory.model.BatchCreatePrintServersRequest}
+         * @return the request
+         */
+        public BatchCreatePrintServers batchCreatePrintServers(java.lang.String parent, com.google.api.services.directory.model.BatchCreatePrintServersRequest content) throws java.io.IOException {
+          BatchCreatePrintServers result = new BatchCreatePrintServers(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchCreatePrintServers extends DirectoryRequest<com.google.api.services.directory.model.BatchCreatePrintServersResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printServers:batchCreatePrintServers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Creates multiple print servers.
+           *
+           * Create a request for the method "printServers.batchCreatePrintServers".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link BatchCreatePrintServers#execute()} method to invoke the remote
+           * operation. <p> {@link BatchCreatePrintServers#initialize(com.google.api.client.googleapis.servi
+           * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+           * @param content the {@link com.google.api.services.directory.model.BatchCreatePrintServersRequest}
+           * @since 1.13
+           */
+          protected BatchCreatePrintServers(java.lang.String parent, com.google.api.services.directory.model.BatchCreatePrintServersRequest content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.BatchCreatePrintServersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchCreatePrintServers set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchCreatePrintServers) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchCreatePrintServers setAccessToken(java.lang.String accessToken) {
+            return (BatchCreatePrintServers) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchCreatePrintServers setAlt(java.lang.String alt) {
+            return (BatchCreatePrintServers) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchCreatePrintServers setCallback(java.lang.String callback) {
+            return (BatchCreatePrintServers) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchCreatePrintServers setFields(java.lang.String fields) {
+            return (BatchCreatePrintServers) super.setFields(fields);
+          }
+
+          @Override
+          public BatchCreatePrintServers setKey(java.lang.String key) {
+            return (BatchCreatePrintServers) super.setKey(key);
+          }
+
+          @Override
+          public BatchCreatePrintServers setOauthToken(java.lang.String oauthToken) {
+            return (BatchCreatePrintServers) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchCreatePrintServers setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchCreatePrintServers) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchCreatePrintServers setQuotaUser(java.lang.String quotaUser) {
+            return (BatchCreatePrintServers) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchCreatePrintServers setUploadType(java.lang.String uploadType) {
+            return (BatchCreatePrintServers) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchCreatePrintServers setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchCreatePrintServers) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The [unique ID](https://developers.google.com/admin-
+         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
+         `customers/{id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          public BatchCreatePrintServers setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchCreatePrintServers set(String parameterName, Object value) {
+            return (BatchCreatePrintServers) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes multiple print servers.
+         *
+         * Create a request for the method "printServers.batchDeletePrintServers".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link BatchDeletePrintServers#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{customer.id}`
+         * @param content the {@link com.google.api.services.directory.model.BatchDeletePrintServersRequest}
+         * @return the request
+         */
+        public BatchDeletePrintServers batchDeletePrintServers(java.lang.String parent, com.google.api.services.directory.model.BatchDeletePrintServersRequest content) throws java.io.IOException {
+          BatchDeletePrintServers result = new BatchDeletePrintServers(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchDeletePrintServers extends DirectoryRequest<com.google.api.services.directory.model.BatchDeletePrintServersResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printServers:batchDeletePrintServers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Deletes multiple print servers.
+           *
+           * Create a request for the method "printServers.batchDeletePrintServers".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link BatchDeletePrintServers#execute()} method to invoke the remote
+           * operation. <p> {@link BatchDeletePrintServers#initialize(com.google.api.client.googleapis.servi
+           * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{customer.id}`
+           * @param content the {@link com.google.api.services.directory.model.BatchDeletePrintServersRequest}
+           * @since 1.13
+           */
+          protected BatchDeletePrintServers(java.lang.String parent, com.google.api.services.directory.model.BatchDeletePrintServersRequest content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.BatchDeletePrintServersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchDeletePrintServers set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchDeletePrintServers) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchDeletePrintServers setAccessToken(java.lang.String accessToken) {
+            return (BatchDeletePrintServers) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchDeletePrintServers setAlt(java.lang.String alt) {
+            return (BatchDeletePrintServers) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchDeletePrintServers setCallback(java.lang.String callback) {
+            return (BatchDeletePrintServers) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchDeletePrintServers setFields(java.lang.String fields) {
+            return (BatchDeletePrintServers) super.setFields(fields);
+          }
+
+          @Override
+          public BatchDeletePrintServers setKey(java.lang.String key) {
+            return (BatchDeletePrintServers) super.setKey(key);
+          }
+
+          @Override
+          public BatchDeletePrintServers setOauthToken(java.lang.String oauthToken) {
+            return (BatchDeletePrintServers) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchDeletePrintServers setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchDeletePrintServers) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchDeletePrintServers setQuotaUser(java.lang.String quotaUser) {
+            return (BatchDeletePrintServers) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchDeletePrintServers setUploadType(java.lang.String uploadType) {
+            return (BatchDeletePrintServers) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchDeletePrintServers setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchDeletePrintServers) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{customer.id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The [unique ID](https://developers.google.com/admin-
+         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
+         `customers/{customer.id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{customer.id}`
+           */
+          public BatchDeletePrintServers setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchDeletePrintServers set(String parameterName, Object value) {
+            return (BatchDeletePrintServers) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a print server.
+         *
+         * Create a request for the method "printServers.create".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+         * @param content the {@link com.google.api.services.directory.model.PrintServer}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.directory.model.PrintServer content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DirectoryRequest<com.google.api.services.directory.model.PrintServer> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printServers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Creates a print server.
+           *
+           * Create a request for the method "printServers.create".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+           * @param content the {@link com.google.api.services.directory.model.PrintServer}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.directory.model.PrintServer content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.PrintServer.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The [unique ID](https://developers.google.com/admin-
+         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
+         `customers/{id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a print server.
+         *
+         * Create a request for the method "printServers.delete".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the print server to be deleted. Format:
+         *        `customers/{customer.id}/chrome/printServers/{print_server.id}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DirectoryRequest<com.google.api.services.directory.model.Empty> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/chrome/printServers/[^/]+$");
+
+          /**
+           * Deletes a print server.
+           *
+           * Create a request for the method "printServers.delete".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the print server to be deleted. Format:
+         *        `customers/{customer.id}/chrome/printServers/{print_server.id}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Directory.this, "DELETE", REST_PATH, null, com.google.api.services.directory.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printServers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the print server to be deleted. Format:
+           * `customers/{customer.id}/chrome/printServers/{print_server.id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the print server to be deleted. Format:
+         `customers/{customer.id}/chrome/printServers/{print_server.id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the print server to be deleted. Format:
+           * `customers/{customer.id}/chrome/printServers/{print_server.id}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printServers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a print server's configuration.
+         *
+         * Create a request for the method "printServers.get".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DirectoryRequest<com.google.api.services.directory.model.PrintServer> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/chrome/printServers/[^/]+$");
+
+          /**
+           * Returns a print server's configuration.
+           *
+           * Create a request for the method "printServers.get".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Directory.this, "GET", REST_PATH, null, com.google.api.services.directory.model.PrintServer.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printServers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The [unique ID](https://developers.google.com/admin-
+         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
+         `customers/{id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printServers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists print server configurations.
+         *
+         * Create a request for the method "printServers.list".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DirectoryRequest<com.google.api.services.directory.model.ListPrintServersResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printServers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Lists print server configurations.
+           *
+           * Create a request for the method "printServers.list".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The [unique ID](https://developers.google.com/admin-
+         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+         *        Format: `customers/{id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Directory.this, "GET", REST_PATH, null, com.google.api.services.directory.model.ListPrintServersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The [unique ID](https://developers.google.com/admin-
+         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
+         `customers/{id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The [unique ID](https://developers.google.com/admin-
+           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
+           * Format: `customers/{id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Search query in [Common Expression Language syntax](https://github.com/google/cel-
+           * spec). Supported filters are `display_name`, `description`, and `uri`. Example:
+           * `printServer.displayName=='marketing-queue'`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Search query in [Common Expression Language syntax](https://github.com/google/cel-spec). Supported
+         filters are `display_name`, `description`, and `uri`. Example: `printServer.displayName
+         =='marketing-queue'`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Search query in [Common Expression Language syntax](https://github.com/google/cel-
+           * spec). Supported filters are `display_name`, `description`, and `uri`. Example:
+           * `printServer.displayName=='marketing-queue'`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Sort order for results. Supported values are `display_name`, `description`, or
+           * `create_time`. Default order is ascending, but descending order can be returned by
+           * appending "desc" to the `order_by` field. For instance, `orderBy=='description desc'`
+           * returns the print servers sorted by description in descending order.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Sort order for results. Supported values are `display_name`, `description`, or `create_time`.
+         Default order is ascending, but descending order can be returned by appending "desc" to the
+         `order_by` field. For instance, `orderBy=='description desc'` returns the print servers sorted by
+         description in descending order.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Sort order for results. Supported values are `display_name`, `description`, or
+           * `create_time`. Default order is ascending, but descending order can be returned by
+           * appending "desc" to the `order_by` field. For instance, `orderBy=='description desc'`
+           * returns the print servers sorted by description in descending order.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * If `org_unit_id` is present in the request, only print servers owned or inherited by
+           * the organizational unit (OU) are returned. If the `PrintServer` resource's
+           * `org_unit_id` matches the one in the request, the OU owns the server. If `org_unit_id`
+           * is not specified in the request, all print servers are returned or filtered against.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orgUnitId;
+
+          /** If `org_unit_id` is present in the request, only print servers owned or inherited by the
+         organizational unit (OU) are returned. If the `PrintServer` resource's `org_unit_id` matches the
+         one in the request, the OU owns the server. If `org_unit_id` is not specified in the request, all
+         print servers are returned or filtered against.
+           */
+          public java.lang.String getOrgUnitId() {
+            return orgUnitId;
+          }
+
+          /**
+           * If `org_unit_id` is present in the request, only print servers owned or inherited by
+           * the organizational unit (OU) are returned. If the `PrintServer` resource's
+           * `org_unit_id` matches the one in the request, the OU owns the server. If `org_unit_id`
+           * is not specified in the request, all print servers are returned or filtered against.
+           */
+          public List setOrgUnitId(java.lang.String orgUnitId) {
+            this.orgUnitId = orgUnitId;
+            return this;
+          }
+
+          /**
+           * The maximum number of objects to return (default `100`, max `100`). The service might
+           * return fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of objects to return (default `100`, max `100`). The service might return fewer
+         than this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of objects to return (default `100`, max `100`). The service might
+           * return fewer than this value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A generated token to paginate results (the `next_page_token` from a previous call).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A generated token to paginate results (the `next_page_token` from a previous call).
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A generated token to paginate results (the `next_page_token` from a previous call).
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a print server's configuration.
+         *
+         * Create a request for the method "printServers.patch".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. Resource name of the print server. Leave empty when creating. Format:
+         *        `customers/{customer.id}/printServers/{print_server.id}`
+         * @param content the {@link com.google.api.services.directory.model.PrintServer}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.directory.model.PrintServer content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DirectoryRequest<com.google.api.services.directory.model.PrintServer> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/chrome/printServers/[^/]+$");
+
+          /**
+           * Updates a print server's configuration.
+           *
+           * Create a request for the method "printServers.patch".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. Resource name of the print server. Leave empty when creating. Format:
+         *        `customers/{customer.id}/printServers/{print_server.id}`
+           * @param content the {@link com.google.api.services.directory.model.PrintServer}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.directory.model.PrintServer content) {
+            super(Directory.this, "PATCH", REST_PATH, content, com.google.api.services.directory.model.PrintServer.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printServers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. Resource name of the print server. Leave empty when creating. Format:
+           * `customers/{customer.id}/printServers/{print_server.id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. Resource name of the print server. Leave empty when creating. Format:
+         `customers/{customer.id}/printServers/{print_server.id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. Resource name of the print server. Leave empty when creating. Format:
+           * `customers/{customer.id}/printServers/{print_server.id}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printServers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The list of fields to update. Some fields are read-only and cannot be updated. Values
+           * for unspecified fields are patched.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to update. Some fields are read-only and cannot be updated. Values for
+         unspecified fields are patched.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The list of fields to update. Some fields are read-only and cannot be updated. Values
+           * for unspecified fields are patched.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Printers collection.
        *
        * <p>The typical use is:</p>

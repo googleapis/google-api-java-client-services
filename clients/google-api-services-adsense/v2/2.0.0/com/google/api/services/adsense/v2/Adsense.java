@@ -1317,6 +1317,152 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
       public class Adunits {
 
         /**
+         * Creates an ad unit. This method can only be used by projects enabled for the [AdSense for
+         * Platforms product](https://developers.google.com/adsense/platforms/). Note that ad units can only
+         * be created for ad clients with an "AFC" product code. For more info see the [AdClient
+         * resource](https://developers.google.com/adsense/management/reference/rest/v2/accounts.adclients).
+         * For now, this method can only be used to create `DISPLAY` ad units. See:
+         * https://support.google.com/adsense/answer/9183566
+         *
+         * Create a request for the method "adunits.create".
+         *
+         * This request holds the parameters needed by the adsense server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Ad client to create an ad unit under. Format: accounts/{account}/adclients/{adclient}
+         * @param content the {@link com.google.api.services.adsense.v2.model.AdUnit}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.adsense.v2.model.AdUnit content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AdsenseRequest<com.google.api.services.adsense.v2.model.AdUnit> {
+
+          private static final String REST_PATH = "v2/{+parent}/adunits";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+$");
+
+          /**
+           * Creates an ad unit. This method can only be used by projects enabled for the [AdSense for
+           * Platforms product](https://developers.google.com/adsense/platforms/). Note that ad units can
+           * only be created for ad clients with an "AFC" product code. For more info see the [AdClient reso
+           * urce](https://developers.google.com/adsense/management/reference/rest/v2/accounts.adclients).
+           * For now, this method can only be used to create `DISPLAY` ad units. See:
+           * https://support.google.com/adsense/answer/9183566
+           *
+           * Create a request for the method "adunits.create".
+           *
+           * This request holds the parameters needed by the the adsense server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Ad client to create an ad unit under. Format: accounts/{account}/adclients/{adclient}
+           * @param content the {@link com.google.api.services.adsense.v2.model.AdUnit}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.adsense.v2.model.AdUnit content) {
+            super(Adsense.this, "POST", REST_PATH, content, com.google.api.services.adsense.v2.model.AdUnit.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Ad client to create an ad unit under. Format:
+           * accounts/{account}/adclients/{adclient}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Ad client to create an ad unit under. Format: accounts/{account}/adclients/{adclient}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Ad client to create an ad unit under. Format:
+           * accounts/{account}/adclients/{adclient}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets an ad unit from a specified account and ad client.
          *
          * Create a request for the method "adunits.get".
@@ -2015,6 +2161,166 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
             return (ListLinkedCustomChannels) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates an ad unit. This method can only be used by projects enabled for the [AdSense for
+         * Platforms product](https://developers.google.com/adsense/platforms/). For now, this method can
+         * only be used to update `DISPLAY` ad units. See: https://support.google.com/adsense/answer/9183566
+         *
+         * Create a request for the method "adunits.patch".
+         *
+         * This request holds the parameters needed by the adsense server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the ad unit. Format:
+         *        accounts/{account}/adclients/{adclient}/adunits/{adunit}
+         * @param content the {@link com.google.api.services.adsense.v2.model.AdUnit}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.adsense.v2.model.AdUnit content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AdsenseRequest<com.google.api.services.adsense.v2.model.AdUnit> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+/adunits/[^/]+$");
+
+          /**
+           * Updates an ad unit. This method can only be used by projects enabled for the [AdSense for
+           * Platforms product](https://developers.google.com/adsense/platforms/). For now, this method can
+           * only be used to update `DISPLAY` ad units. See:
+           * https://support.google.com/adsense/answer/9183566
+           *
+           * Create a request for the method "adunits.patch".
+           *
+           * This request holds the parameters needed by the the adsense server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the ad unit. Format:
+         *        accounts/{account}/adclients/{adclient}/adunits/{adunit}
+           * @param content the {@link com.google.api.services.adsense.v2.model.AdUnit}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.adsense.v2.model.AdUnit content) {
+            super(Adsense.this, "PATCH", REST_PATH, content, com.google.api.services.adsense.v2.model.AdUnit.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/adunits/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the ad unit. Format:
+           * accounts/{account}/adclients/{adclient}/adunits/{adunit}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the ad unit. Format:
+         accounts/{account}/adclients/{adclient}/adunits/{adunit}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the ad unit. Format:
+           * accounts/{account}/adclients/{adclient}/adunits/{adunit}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/adunits/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to update. If empty, a full update is performed. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to update. If empty, a full update is performed.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to update. If empty, a full update is performed. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -2037,6 +2343,286 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
        */
       public class Customchannels {
 
+        /**
+         * Creates a custom channel. This method can only be used by projects enabled for the [AdSense for
+         * Platforms product](https://developers.google.com/adsense/platforms/).
+         *
+         * Create a request for the method "customchannels.create".
+         *
+         * This request holds the parameters needed by the adsense server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The ad client to create a custom channel under. Format:
+         *        accounts/{account}/adclients/{adclient}
+         * @param content the {@link com.google.api.services.adsense.v2.model.CustomChannel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.adsense.v2.model.CustomChannel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AdsenseRequest<com.google.api.services.adsense.v2.model.CustomChannel> {
+
+          private static final String REST_PATH = "v2/{+parent}/customchannels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+$");
+
+          /**
+           * Creates a custom channel. This method can only be used by projects enabled for the [AdSense for
+           * Platforms product](https://developers.google.com/adsense/platforms/).
+           *
+           * Create a request for the method "customchannels.create".
+           *
+           * This request holds the parameters needed by the the adsense server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The ad client to create a custom channel under. Format:
+         *        accounts/{account}/adclients/{adclient}
+           * @param content the {@link com.google.api.services.adsense.v2.model.CustomChannel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.adsense.v2.model.CustomChannel content) {
+            super(Adsense.this, "POST", REST_PATH, content, com.google.api.services.adsense.v2.model.CustomChannel.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ad client to create a custom channel under. Format:
+           * accounts/{account}/adclients/{adclient}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The ad client to create a custom channel under. Format:
+         accounts/{account}/adclients/{adclient}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The ad client to create a custom channel under. Format:
+           * accounts/{account}/adclients/{adclient}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a custom channel. This method can only be used by projects enabled for the [AdSense for
+         * Platforms product](https://developers.google.com/adsense/platforms/).
+         *
+         * Create a request for the method "customchannels.delete".
+         *
+         * This request holds the parameters needed by the adsense server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the custom channel to delete. Format:
+         *        accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AdsenseRequest<com.google.api.services.adsense.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+/customchannels/[^/]+$");
+
+          /**
+           * Deletes a custom channel. This method can only be used by projects enabled for the [AdSense for
+           * Platforms product](https://developers.google.com/adsense/platforms/).
+           *
+           * Create a request for the method "customchannels.delete".
+           *
+           * This request holds the parameters needed by the the adsense server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the custom channel to delete. Format:
+         *        accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Adsense.this, "DELETE", REST_PATH, null, com.google.api.services.adsense.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/customchannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the custom channel to delete. Format:
+           * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the custom channel to delete. Format:
+         accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the custom channel to delete. Format:
+           * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/customchannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets information about the selected custom channel.
          *
@@ -2581,6 +3167,163 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public ListLinkedAdUnits set(String parameterName, Object value) {
             return (ListLinkedAdUnits) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a custom channel. This method can only be used by projects enabled for the [AdSense for
+         * Platforms product](https://developers.google.com/adsense/platforms/).
+         *
+         * Create a request for the method "customchannels.patch".
+         *
+         * This request holds the parameters needed by the adsense server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the custom channel. Format:
+         *        accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+         * @param content the {@link com.google.api.services.adsense.v2.model.CustomChannel}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.adsense.v2.model.CustomChannel content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AdsenseRequest<com.google.api.services.adsense.v2.model.CustomChannel> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+/customchannels/[^/]+$");
+
+          /**
+           * Updates a custom channel. This method can only be used by projects enabled for the [AdSense for
+           * Platforms product](https://developers.google.com/adsense/platforms/).
+           *
+           * Create a request for the method "customchannels.patch".
+           *
+           * This request holds the parameters needed by the the adsense server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the custom channel. Format:
+         *        accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           * @param content the {@link com.google.api.services.adsense.v2.model.CustomChannel}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.adsense.v2.model.CustomChannel content) {
+            super(Adsense.this, "PATCH", REST_PATH, content, com.google.api.services.adsense.v2.model.CustomChannel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/customchannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the custom channel. Format:
+           * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the custom channel. Format:
+         accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the custom channel. Format:
+           * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/customchannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to update. If empty, a full update is performed. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to update. If empty, a full update is performed.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to update. If empty, a full update is performed. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 

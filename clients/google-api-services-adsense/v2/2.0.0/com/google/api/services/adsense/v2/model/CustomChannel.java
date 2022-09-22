@@ -31,6 +31,14 @@ package com.google.api.services.adsense.v2.model;
 public final class CustomChannel extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the custom channel is active and collecting data. See
+   * https://support.google.com/adsense/answer/10077192.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean active;
+
+  /**
    * Required. Display name of the custom channel.
    * The value may be {@code null}.
    */
@@ -52,6 +60,25 @@ public final class CustomChannel extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String reportingDimensionId;
+
+  /**
+   * Whether the custom channel is active and collecting data. See
+   * https://support.google.com/adsense/answer/10077192.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getActive() {
+    return active;
+  }
+
+  /**
+   * Whether the custom channel is active and collecting data. See
+   * https://support.google.com/adsense/answer/10077192.
+   * @param active active or {@code null} for none
+   */
+  public CustomChannel setActive(java.lang.Boolean active) {
+    this.active = active;
+    return this;
+  }
 
   /**
    * Required. Display name of the custom channel.

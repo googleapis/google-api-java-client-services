@@ -194,6 +194,352 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
       public class InsightTypes {
 
         /**
+         * Gets the requested InsightTypeConfig. There is only one instance of the config for each
+         * InsightType.
+         *
+         * Create a request for the method "insightTypes.getConfig".
+         *
+         * This request holds the parameters needed by the recommender server.  After setting any optional
+         * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` * `orga
+         *        nizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/
+         *        config`
+         * @return the request
+         */
+        public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
+          GetConfig result = new GetConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetConfig extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+/config$");
+
+          /**
+           * Gets the requested InsightTypeConfig. There is only one instance of the config for each
+           * InsightType.
+           *
+           * Create a request for the method "insightTypes.getConfig".
+           *
+           * This request holds the parameters needed by the the recommender server.  After setting any
+           * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` * `orga
+         *        nizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/
+         *        config`
+           * @since 1.13
+           */
+          protected GetConfig(java.lang.String name) {
+            super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+/config$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetConfig setAccessToken(java.lang.String accessToken) {
+            return (GetConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetConfig setAlt(java.lang.String alt) {
+            return (GetConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetConfig setCallback(java.lang.String callback) {
+            return (GetConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetConfig setFields(java.lang.String fields) {
+            return (GetConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetConfig setKey(java.lang.String key) {
+            return (GetConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetConfig setUploadType(java.lang.String uploadType) {
+            return (GetConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           * * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+           * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/co
+           * nfig` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGH
+           * T_TYPE_ID]/config`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the InsightTypeConfig to get. Acceptable formats: *
+         `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           * * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+           * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/co
+           * nfig` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGH
+           * T_TYPE_ID]/config`
+           */
+          public GetConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+/config$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetConfig set(String parameterName, Object value) {
+            return (GetConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an InsightTypeConfig change. This will create a new revision of the config.
+         *
+         * Create a request for the method "insightTypes.updateConfig".
+         *
+         * This request holds the parameters needed by the recommender server.  After setting any optional
+         * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Name of insight type config. Eg,
+         *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+         * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig}
+         * @return the request
+         */
+        public UpdateConfig updateConfig(java.lang.String name, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig content) throws java.io.IOException {
+          UpdateConfig result = new UpdateConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateConfig extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+/config$");
+
+          /**
+           * Updates an InsightTypeConfig change. This will create a new revision of the config.
+           *
+           * Create a request for the method "insightTypes.updateConfig".
+           *
+           * This request holds the parameters needed by the the recommender server.  After setting any
+           * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Name of insight type config. Eg,
+         *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+           * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig}
+           * @since 1.13
+           */
+          protected UpdateConfig(java.lang.String name, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig content) {
+            super(Recommender.this, "PATCH", REST_PATH, content, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1InsightTypeConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+/config$");
+            }
+          }
+
+          @Override
+          public UpdateConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateConfig setAlt(java.lang.String alt) {
+            return (UpdateConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateConfig setCallback(java.lang.String callback) {
+            return (UpdateConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateConfig setFields(java.lang.String fields) {
+            return (UpdateConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateConfig setKey(java.lang.String key) {
+            return (UpdateConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of insight type config. Eg,
+           * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Name of insight type config. Eg,
+         projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Name of insight type config. Eg,
+           * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+           */
+          public UpdateConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+/config$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. */
+          public UpdateConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * If true, validate the request and preview the change, but do not actually update it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** If true, validate the request and preview the change, but do not actually update it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * If true, validate the request and preview the change, but do not actually update it.
+           */
+          public UpdateConfig setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public UpdateConfig set(String parameterName, Object value) {
+            return (UpdateConfig) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Insights collection.
          *
          * <p>The typical use is:</p>
@@ -782,6 +1128,352 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
        * The "recommenders" collection of methods.
        */
       public class Recommenders {
+
+        /**
+         * Gets the requested Recommender Config. There is only one instance of the config for each
+         * Recommender.
+         *
+         * Create a request for the method "recommenders.getConfig".
+         *
+         * This request holds the parameters needed by the recommender server.  After setting any optional
+         * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/con
+         *        fig`
+         * @return the request
+         */
+        public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
+          GetConfig result = new GetConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetConfig extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/config$");
+
+          /**
+           * Gets the requested Recommender Config. There is only one instance of the config for each
+           * Recommender.
+           *
+           * Create a request for the method "recommenders.getConfig".
+           *
+           * This request holds the parameters needed by the the recommender server.  After setting any
+           * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/con
+         *        fig`
+           * @since 1.13
+           */
+          protected GetConfig(java.lang.String name) {
+            super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/config$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetConfig setAccessToken(java.lang.String accessToken) {
+            return (GetConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetConfig setAlt(java.lang.String alt) {
+            return (GetConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetConfig setCallback(java.lang.String callback) {
+            return (GetConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetConfig setFields(java.lang.String fields) {
+            return (GetConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetConfig setKey(java.lang.String key) {
+            return (GetConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetConfig setUploadType(java.lang.String uploadType) {
+            return (GetConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the Recommendation Config to get. Acceptable formats: *
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+           * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * ` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDE
+           * R_ID]/config`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the Recommendation Config to get. Acceptable formats: *
+         `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the Recommendation Config to get. Acceptable formats: *
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+           * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * ` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDE
+           * R_ID]/config`
+           */
+          public GetConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/config$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetConfig set(String parameterName, Object value) {
+            return (GetConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a Recommender Config. This will create a new revision of the config.
+         *
+         * Create a request for the method "recommenders.updateConfig".
+         *
+         * This request holds the parameters needed by the recommender server.  After setting any optional
+         * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Name of recommender config. Eg,
+         *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+         * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig}
+         * @return the request
+         */
+        public UpdateConfig updateConfig(java.lang.String name, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig content) throws java.io.IOException {
+          UpdateConfig result = new UpdateConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateConfig extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/config$");
+
+          /**
+           * Updates a Recommender Config. This will create a new revision of the config.
+           *
+           * Create a request for the method "recommenders.updateConfig".
+           *
+           * This request holds the parameters needed by the the recommender server.  After setting any
+           * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Name of recommender config. Eg,
+         *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig}
+           * @since 1.13
+           */
+          protected UpdateConfig(java.lang.String name, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig content) {
+            super(Recommender.this, "PATCH", REST_PATH, content, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1RecommenderConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/config$");
+            }
+          }
+
+          @Override
+          public UpdateConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateConfig setAlt(java.lang.String alt) {
+            return (UpdateConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateConfig setCallback(java.lang.String callback) {
+            return (UpdateConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateConfig setFields(java.lang.String fields) {
+            return (UpdateConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateConfig setKey(java.lang.String key) {
+            return (UpdateConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of recommender config. Eg,
+           * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Name of recommender config. Eg,
+         projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Name of recommender config. Eg,
+           * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           */
+          public UpdateConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/config$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. */
+          public UpdateConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * If true, validate the request and preview the change, but do not actually update it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** If true, validate the request and preview the change, but do not actually update it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * If true, validate the request and preview the change, but do not actually update it.
+           */
+          public UpdateConfig setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public UpdateConfig set(String parameterName, Object value) {
+            return (UpdateConfig) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Recommendations collection.
@@ -3219,9 +3911,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` * `orga
+         *        nizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/
+         *        config`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -3250,9 +3944,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` * `orga
+         *        nizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/
+         *        config`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -3332,17 +4028,20 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
-           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           * * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+           * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/co
+           * nfig` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGH
+           * T_TYPE_ID]/config`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-         `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -3350,9 +4049,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
-           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           * * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+           * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/co
+           * nfig` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGH
+           * T_TYPE_ID]/config`
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4148,7 +4849,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
          *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
-         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/con
+         *        fig`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -4179,7 +4882,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
          *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
-         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/con
+         *        fig`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -4262,7 +4967,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
            * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
            * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
-           * `
+           * ` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDE
+           * R_ID]/config`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -4270,7 +4976,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /** Required. Name of the Recommendation Config to get. Acceptable formats: *
          `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
          `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
-         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -4281,7 +4988,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
            * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
            * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
-           * `
+           * ` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDE
+           * R_ID]/config`
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5403,9 +6111,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` * `orga
+         *        nizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/
+         *        config`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -5434,9 +6144,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` * `orga
+         *        nizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/
+         *        config`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -5516,17 +6228,20 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
-           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           * * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+           * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/co
+           * nfig` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGH
+           * T_TYPE_ID]/config`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-         `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+         `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -5534,9 +6249,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
-           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+           * * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config` *
+           * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/co
+           * nfig` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGH
+           * T_TYPE_ID]/config`
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6332,7 +7049,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
          *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
-         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/con
+         *        fig`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -6363,7 +7082,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
          *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
-         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/con
+         *        fig`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -6446,7 +7167,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
            * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
            * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
-           * `
+           * ` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDE
+           * R_ID]/config`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -6454,7 +7176,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /** Required. Name of the Recommendation Config to get. Acceptable formats: *
          `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
          `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
-         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -6465,7 +7188,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
            * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
            * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
-           * `
+           * ` * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDE
+           * R_ID]/config`
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

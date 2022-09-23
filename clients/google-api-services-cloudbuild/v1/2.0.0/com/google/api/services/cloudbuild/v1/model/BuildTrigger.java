@@ -119,6 +119,14 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private GitHubEventsConfig github;
 
   /**
+   * GitLabEnterpriseEventsConfig describes the configuration of a trigger that creates a build
+   * whenever a GitLab Enterprise event is received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitLabEventsConfig gitlabEnterpriseEventsConfig;
+
+  /**
    * Output only. Unique identifier of the trigger.
    * The value may be {@code null}.
    */
@@ -445,6 +453,25 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setGithub(GitHubEventsConfig github) {
     this.github = github;
+    return this;
+  }
+
+  /**
+   * GitLabEnterpriseEventsConfig describes the configuration of a trigger that creates a build
+   * whenever a GitLab Enterprise event is received.
+   * @return value or {@code null} for none
+   */
+  public GitLabEventsConfig getGitlabEnterpriseEventsConfig() {
+    return gitlabEnterpriseEventsConfig;
+  }
+
+  /**
+   * GitLabEnterpriseEventsConfig describes the configuration of a trigger that creates a build
+   * whenever a GitLab Enterprise event is received.
+   * @param gitlabEnterpriseEventsConfig gitlabEnterpriseEventsConfig or {@code null} for none
+   */
+  public BuildTrigger setGitlabEnterpriseEventsConfig(GitLabEventsConfig gitlabEnterpriseEventsConfig) {
+    this.gitlabEnterpriseEventsConfig = gitlabEnterpriseEventsConfig;
     return this;
   }
 

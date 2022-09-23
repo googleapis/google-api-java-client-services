@@ -1318,7 +1318,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Creates an ad unit. This method can only be used by projects enabled for the [AdSense for
-         * Platforms product](https://developers.google.com/adsense/platforms/). Note that ad units can only
+         * Platforms](https://developers.google.com/adsense/platforms/) product. Note that ad units can only
          * be created for ad clients with an "AFC" product code. For more info see the [AdClient
          * resource](https://developers.google.com/adsense/management/reference/rest/v2/accounts.adclients).
          * For now, this method can only be used to create `DISPLAY` ad units. See:
@@ -1348,7 +1348,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Creates an ad unit. This method can only be used by projects enabled for the [AdSense for
-           * Platforms product](https://developers.google.com/adsense/platforms/). Note that ad units can
+           * Platforms](https://developers.google.com/adsense/platforms/) product. Note that ad units can
            * only be created for ad clients with an "AFC" product code. For more info see the [AdClient reso
            * urce](https://developers.google.com/adsense/management/reference/rest/v2/accounts.adclients).
            * For now, this method can only be used to create `DISPLAY` ad units. See:
@@ -2163,7 +2163,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Updates an ad unit. This method can only be used by projects enabled for the [AdSense for
-         * Platforms product](https://developers.google.com/adsense/platforms/). For now, this method can
+         * Platforms](https://developers.google.com/adsense/platforms/) product. For now, this method can
          * only be used to update `DISPLAY` ad units. See: https://support.google.com/adsense/answer/9183566
          *
          * Create a request for the method "adunits.patch".
@@ -2191,7 +2191,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Updates an ad unit. This method can only be used by projects enabled for the [AdSense for
-           * Platforms product](https://developers.google.com/adsense/platforms/). For now, this method can
+           * Platforms](https://developers.google.com/adsense/platforms/) product. For now, this method can
            * only be used to update `DISPLAY` ad units. See:
            * https://support.google.com/adsense/answer/9183566
            *
@@ -2345,7 +2345,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Creates a custom channel. This method can only be used by projects enabled for the [AdSense for
-         * Platforms product](https://developers.google.com/adsense/platforms/).
+         * Platforms](https://developers.google.com/adsense/platforms/) product.
          *
          * Create a request for the method "customchannels.create".
          *
@@ -2372,7 +2372,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Creates a custom channel. This method can only be used by projects enabled for the [AdSense for
-           * Platforms product](https://developers.google.com/adsense/platforms/).
+           * Platforms](https://developers.google.com/adsense/platforms/) product.
            *
            * Create a request for the method "customchannels.create".
            *
@@ -2486,7 +2486,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Deletes a custom channel. This method can only be used by projects enabled for the [AdSense for
-         * Platforms product](https://developers.google.com/adsense/platforms/).
+         * Platforms](https://developers.google.com/adsense/platforms/) product.
          *
          * Create a request for the method "customchannels.delete".
          *
@@ -2512,7 +2512,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Deletes a custom channel. This method can only be used by projects enabled for the [AdSense for
-           * Platforms product](https://developers.google.com/adsense/platforms/).
+           * Platforms](https://developers.google.com/adsense/platforms/) product.
            *
            * Create a request for the method "customchannels.delete".
            *
@@ -3171,7 +3171,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Updates a custom channel. This method can only be used by projects enabled for the [AdSense for
-         * Platforms product](https://developers.google.com/adsense/platforms/).
+         * Platforms](https://developers.google.com/adsense/platforms/) product.
          *
          * Create a request for the method "customchannels.patch".
          *
@@ -3198,7 +3198,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Updates a custom channel. This method can only be used by projects enabled for the [AdSense for
-           * Platforms product](https://developers.google.com/adsense/platforms/).
+           * Platforms](https://developers.google.com/adsense/platforms/) product.
            *
            * Create a request for the method "customchannels.patch".
            *

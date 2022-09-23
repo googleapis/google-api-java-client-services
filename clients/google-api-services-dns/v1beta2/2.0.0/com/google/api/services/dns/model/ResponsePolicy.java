@@ -58,6 +58,13 @@ public final class ResponsePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
+   * User labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * List of network names specifying networks to which this policy is applied.
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class ResponsePolicy extends com.google.api.client.json.GenericJson
    */
   public ResponsePolicy setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * User labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * User labels.
+   * @param labels labels or {@code null} for none
+   */
+  public ResponsePolicy setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

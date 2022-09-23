@@ -171,7 +171,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
    * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
    * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
-   * groups") This should be unique among all creatives for a given creative.account_id
+   * groups"). This should be unique among all creatives for a given `accountId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -528,7 +528,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
    * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
    * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
-   * groups") This should be unique among all creatives for a given creative.account_id
+   * groups"). This should be unique among all creatives for a given `accountId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRenderUrl() {
@@ -539,7 +539,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
    * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
    * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
-   * groups") This should be unique among all creatives for a given creative.account_id
+   * groups"). This should be unique among all creatives for a given `accountId`.
    * @param renderUrl renderUrl or {@code null} for none
    */
   public Creative setRenderUrl(java.lang.String renderUrl) {

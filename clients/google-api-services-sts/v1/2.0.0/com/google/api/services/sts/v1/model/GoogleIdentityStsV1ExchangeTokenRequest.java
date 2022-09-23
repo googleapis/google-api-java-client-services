@@ -32,8 +32,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The full resource name of the identity provider; for example:
-   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/`. Required
-   * when exchanging an external credential for a Google access token.
+   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/` for
+   * workload identity pool providers, or
+   * `//iam.googleapis.com/locations/global/workforcePools//providers/` for workforce pool
+   * providers. Required when exchanging an external credential for a Google access token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +94,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
    * specified in the allowed audiences for the workload identity pool provider, or one of the
    * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
-   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc Example header:
-   * ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
+   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce
+   * pools, this must match the client ID specified in the provider configuration. See
+   * https://cloud.google.com/iam/docs/reference/rest/v1/locations.workforcePools.providers#oidc.
+   * Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
    * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
@@ -153,8 +157,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The full resource name of the identity provider; for example:
-   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/`. Required
-   * when exchanging an external credential for a Google access token.
+   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/` for
+   * workload identity pool providers, or
+   * `//iam.googleapis.com/locations/global/workforcePools//providers/` for workforce pool
+   * providers. Required when exchanging an external credential for a Google access token.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -163,8 +169,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The full resource name of the identity provider; for example:
-   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/`. Required
-   * when exchanging an external credential for a Google access token.
+   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/` for
+   * workload identity pool providers, or
+   * `//iam.googleapis.com/locations/global/workforcePools//providers/` for workforce pool
+   * providers. Required when exchanging an external credential for a Google access token.
    * @param audience audience or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setAudience(java.lang.String audience) {
@@ -271,8 +279,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
    * specified in the allowed audiences for the workload identity pool provider, or one of the
    * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
-   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc Example header:
-   * ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
+   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce
+   * pools, this must match the client ID specified in the provider configuration. See
+   * https://cloud.google.com/iam/docs/reference/rest/v1/locations.workforcePools.providers#oidc.
+   * Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
    * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
@@ -340,8 +350,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
    * specified in the allowed audiences for the workload identity pool provider, or one of the
    * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
-   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc Example header:
-   * ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
+   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce
+   * pools, this must match the client ID specified in the provider configuration. See
+   * https://cloud.google.com/iam/docs/reference/rest/v1/locations.workforcePools.providers#oidc.
+   * Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
    * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":

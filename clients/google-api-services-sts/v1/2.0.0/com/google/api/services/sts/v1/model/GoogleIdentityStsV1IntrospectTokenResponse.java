@@ -87,7 +87,9 @@ public final class GoogleIdentityStsV1IntrospectTokenResponse extends com.google
    * The human-readable identifier for the token principal subject. For example, if the provided
    * token is associated with a workload identity pool, this field contains a value in the following
    * format:
-   * `principal://iam.googleapis.com/projects//locations/global/workloadIdentityPools//subject/`
+   * `principal://iam.googleapis.com/projects//locations/global/workloadIdentityPools//subject/`. If
+   * the provided token is associated with a workforce pool, this field contains a value in the
+   * following format: `principal://iam.googleapis.com/locations/global/workforcePools//subject/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +226,9 @@ public final class GoogleIdentityStsV1IntrospectTokenResponse extends com.google
    * The human-readable identifier for the token principal subject. For example, if the provided
    * token is associated with a workload identity pool, this field contains a value in the following
    * format:
-   * `principal://iam.googleapis.com/projects//locations/global/workloadIdentityPools//subject/`
+   * `principal://iam.googleapis.com/projects//locations/global/workloadIdentityPools//subject/`. If
+   * the provided token is associated with a workforce pool, this field contains a value in the
+   * following format: `principal://iam.googleapis.com/locations/global/workforcePools//subject/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -235,7 +239,9 @@ public final class GoogleIdentityStsV1IntrospectTokenResponse extends com.google
    * The human-readable identifier for the token principal subject. For example, if the provided
    * token is associated with a workload identity pool, this field contains a value in the following
    * format:
-   * `principal://iam.googleapis.com/projects//locations/global/workloadIdentityPools//subject/`
+   * `principal://iam.googleapis.com/projects//locations/global/workloadIdentityPools//subject/`. If
+   * the provided token is associated with a workforce pool, this field contains a value in the
+   * following format: `principal://iam.googleapis.com/locations/global/workforcePools//subject/`.
    * @param username username or {@code null} for none
    */
   public GoogleIdentityStsV1IntrospectTokenResponse setUsername(java.lang.String username) {

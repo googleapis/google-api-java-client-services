@@ -38,6 +38,13 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.lang.String cloudConsoleUri;
 
   /**
+   * Optional. The user-defined identifier of the provisioning config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customId;
+
+  /**
    * Email provided to send a confirmation with provisioning config to. Deprecated in favour of
    * email field in request messages.
    * The value may be {@code null}.
@@ -74,7 +81,8 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.lang.String location;
 
   /**
-   * Output only. The name of the provisioning config.
+   * Output only. The system-generated name of the provisioning config. This follows the UUID
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,6 +161,23 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
+   * Optional. The user-defined identifier of the provisioning config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomId() {
+    return customId;
+  }
+
+  /**
+   * Optional. The user-defined identifier of the provisioning config.
+   * @param customId customId or {@code null} for none
+   */
+  public ProvisioningConfig setCustomId(java.lang.String customId) {
+    this.customId = customId;
+    return this;
+  }
+
+  /**
    * Email provided to send a confirmation with provisioning config to. Deprecated in favour of
    * email field in request messages.
    * @return value or {@code null} for none
@@ -225,7 +250,8 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The name of the provisioning config.
+   * Output only. The system-generated name of the provisioning config. This follows the UUID
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -233,7 +259,8 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The name of the provisioning config.
+   * Output only. The system-generated name of the provisioning config. This follows the UUID
+   * format.
    * @param name name or {@code null} for none
    */
   public ProvisioningConfig setName(java.lang.String name) {

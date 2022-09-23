@@ -83,6 +83,13 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   private java.lang.Boolean enablePrivatelyUsedPublicIps;
 
   /**
+   * Optional. Configuration for the network connections configuration in the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkingConfig networkingConfig;
+
+  /**
    * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer
    * environment.
    * The value may be {@code null}.
@@ -228,6 +235,23 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    */
   public PrivateEnvironmentConfig setEnablePrivatelyUsedPublicIps(java.lang.Boolean enablePrivatelyUsedPublicIps) {
     this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the network connections configuration in the environment.
+   * @return value or {@code null} for none
+   */
+  public NetworkingConfig getNetworkingConfig() {
+    return networkingConfig;
+  }
+
+  /**
+   * Optional. Configuration for the network connections configuration in the environment.
+   * @param networkingConfig networkingConfig or {@code null} for none
+   */
+  public PrivateEnvironmentConfig setNetworkingConfig(NetworkingConfig networkingConfig) {
+    this.networkingConfig = networkingConfig;
     return this;
   }
 

@@ -80,6 +80,13 @@ public final class GoogleCloudDataplexV1Task extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
+   * Config related to running scheduled Notebooks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1TaskNotebookTaskConfig notebook;
+
+  /**
    * Config related to running custom Spark tasks.
    * The value may be {@code null}.
    */
@@ -233,6 +240,23 @@ public final class GoogleCloudDataplexV1Task extends com.google.api.client.json.
    */
   public GoogleCloudDataplexV1Task setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Config related to running scheduled Notebooks.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TaskNotebookTaskConfig getNotebook() {
+    return notebook;
+  }
+
+  /**
+   * Config related to running scheduled Notebooks.
+   * @param notebook notebook or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Task setNotebook(GoogleCloudDataplexV1TaskNotebookTaskConfig notebook) {
+    this.notebook = notebook;
     return this;
   }
 

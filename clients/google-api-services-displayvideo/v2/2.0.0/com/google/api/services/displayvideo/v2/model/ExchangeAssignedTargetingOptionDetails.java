@@ -32,14 +32,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class ExchangeAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Output only in v1. Required in v2.
+   * Required. The enum value for the exchange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exchange;
 
   /**
-   * Required. Output only in v1. Required in v2.
+   * Required. The enum value for the exchange.
    * @return value or {@code null} for none
    */
   public java.lang.String getExchange() {
@@ -47,7 +47,7 @@ public final class ExchangeAssignedTargetingOptionDetails extends com.google.api
   }
 
   /**
-   * Required. Output only in v1. Required in v2.
+   * Required. The enum value for the exchange.
    * @param exchange exchange or {@code null} for none
    */
   public ExchangeAssignedTargetingOptionDetails setExchange(java.lang.String exchange) {

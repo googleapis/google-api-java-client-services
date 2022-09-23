@@ -40,6 +40,13 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   private java.lang.String cryptoKey;
 
   /**
+   * KMS wrapped key. Must not be set if `crypto_key` is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KmsWrappedCryptoKey kmsWrapped;
+
+  /**
    * An AES 128/192/256 bit key. Causes the shift to be computed based on this key and the patient
    * ID. A default key is generated for each de-identification operation and is used when neither
    * `crypto_key` nor `kms_wrapped` is specified. Must not be set if `kms_wrapped` is set.
@@ -89,6 +96,23 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
    */
   public DateShiftConfig encodeCryptoKey(byte[] cryptoKey) {
     this.cryptoKey = com.google.api.client.util.Base64.encodeBase64URLSafeString(cryptoKey);
+    return this;
+  }
+
+  /**
+   * KMS wrapped key. Must not be set if `crypto_key` is set.
+   * @return value or {@code null} for none
+   */
+  public KmsWrappedCryptoKey getKmsWrapped() {
+    return kmsWrapped;
+  }
+
+  /**
+   * KMS wrapped key. Must not be set if `crypto_key` is set.
+   * @param kmsWrapped kmsWrapped or {@code null} for none
+   */
+  public DateShiftConfig setKmsWrapped(KmsWrappedCryptoKey kmsWrapped) {
+    this.kmsWrapped = kmsWrapped;
     return this;
   }
 

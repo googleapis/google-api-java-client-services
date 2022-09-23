@@ -41,6 +41,13 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
   private java.lang.String cryptoKey;
 
   /**
+   * KMS wrapped key. Must not be set if `crypto_key` is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KmsWrappedCryptoKey kmsWrapped;
+
+  /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
    * generated for each Deidentify operation and is used when neither `crypto_key` nor `kms_wrapped`
    * is specified. Must not be set if `kms_wrapped` is set.
@@ -90,6 +97,23 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
    */
   public CryptoHashConfig encodeCryptoKey(byte[] cryptoKey) {
     this.cryptoKey = com.google.api.client.util.Base64.encodeBase64URLSafeString(cryptoKey);
+    return this;
+  }
+
+  /**
+   * KMS wrapped key. Must not be set if `crypto_key` is set.
+   * @return value or {@code null} for none
+   */
+  public KmsWrappedCryptoKey getKmsWrapped() {
+    return kmsWrapped;
+  }
+
+  /**
+   * KMS wrapped key. Must not be set if `crypto_key` is set.
+   * @param kmsWrapped kmsWrapped or {@code null} for none
+   */
+  public CryptoHashConfig setKmsWrapped(KmsWrappedCryptoKey kmsWrapped) {
+    this.kmsWrapped = kmsWrapped;
     return this;
   }
 

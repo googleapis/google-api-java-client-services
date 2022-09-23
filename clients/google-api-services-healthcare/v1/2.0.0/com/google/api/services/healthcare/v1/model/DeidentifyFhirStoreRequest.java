@@ -68,6 +68,14 @@ public final class DeidentifyFhirStoreRequest extends com.google.api.client.json
   private FhirFilter resourceFilter;
 
   /**
+   * If true, skips resources that are created or modified after the de-identify operation is
+   * created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipModifiedResources;
+
+  /**
    * Deidentify configuration. Only one of `config` and `gcs_config_uri` can be specified.
    * @return value or {@code null} for none
    */
@@ -152,6 +160,25 @@ public final class DeidentifyFhirStoreRequest extends com.google.api.client.json
    */
   public DeidentifyFhirStoreRequest setResourceFilter(FhirFilter resourceFilter) {
     this.resourceFilter = resourceFilter;
+    return this;
+  }
+
+  /**
+   * If true, skips resources that are created or modified after the de-identify operation is
+   * created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipModifiedResources() {
+    return skipModifiedResources;
+  }
+
+  /**
+   * If true, skips resources that are created or modified after the de-identify operation is
+   * created.
+   * @param skipModifiedResources skipModifiedResources or {@code null} for none
+   */
+  public DeidentifyFhirStoreRequest setSkipModifiedResources(java.lang.Boolean skipModifiedResources) {
+    this.skipModifiedResources = skipModifiedResources;
     return this;
   }
 

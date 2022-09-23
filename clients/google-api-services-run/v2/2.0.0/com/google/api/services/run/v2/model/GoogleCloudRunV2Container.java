@@ -72,6 +72,15 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.lang.String image;
 
   /**
+   * Not Supported By Cloud Run. Periodic probe of container liveness. Container will be restarted
+   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2Probe livenessProbe;
+
+  /**
    * Name of the container specified as a DNS_LABEL.
    * The value may be {@code null}.
    */
@@ -95,6 +104,16 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2ResourceRequirements resources;
+
+  /**
+   * Startup probe of application within the container. All other probes are disabled if a startup
+   * probe is provided, until it succeeds. Container will not be added to service endpoints if the
+   * probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2Probe startupProbe;
 
   /**
    * Volume to mount into the container's filesystem.
@@ -204,6 +223,27 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
+   * Not Supported By Cloud Run. Periodic probe of container liveness. Container will be restarted
+   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2Probe getLivenessProbe() {
+    return livenessProbe;
+  }
+
+  /**
+   * Not Supported By Cloud Run. Periodic probe of container liveness. Container will be restarted
+   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
+   * @param livenessProbe livenessProbe or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setLivenessProbe(GoogleCloudRunV2Probe livenessProbe) {
+    this.livenessProbe = livenessProbe;
+    return this;
+  }
+
+  /**
    * Name of the container specified as a DNS_LABEL.
    * @return value or {@code null} for none
    */
@@ -259,6 +299,29 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setResources(GoogleCloudRunV2ResourceRequirements resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Startup probe of application within the container. All other probes are disabled if a startup
+   * probe is provided, until it succeeds. Container will not be added to service endpoints if the
+   * probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2Probe getStartupProbe() {
+    return startupProbe;
+  }
+
+  /**
+   * Startup probe of application within the container. All other probes are disabled if a startup
+   * probe is provided, until it succeeds. Container will not be added to service endpoints if the
+   * probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
+   * @param startupProbe startupProbe or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setStartupProbe(GoogleCloudRunV2Probe startupProbe) {
+    this.startupProbe = startupProbe;
     return this;
   }
 

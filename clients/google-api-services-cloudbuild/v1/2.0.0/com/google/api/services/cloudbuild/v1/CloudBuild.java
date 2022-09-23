@@ -5005,6 +5005,1314 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
       }
       /**
+       * An accessor for creating requests from the GitLabConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+       *   {@code CloudBuild.GitLabConfigs.List request = cloudbuild.gitLabConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public GitLabConfigs gitLabConfigs() {
+        return new GitLabConfigs();
+      }
+
+      /**
+       * The "gitLabConfigs" collection of methods.
+       */
+      public class GitLabConfigs {
+
+        /**
+         * Creates a new `GitLabConfig`. This API is experimental
+         *
+         * Create a request for the method "gitLabConfigs.create".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the parent resource.
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitLabConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.GitLabConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/gitLabConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new `GitLabConfig`. This API is experimental
+           *
+           * Create a request for the method "gitLabConfigs.create".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the parent resource.
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitLabConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.GitLabConfig content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the parent resource.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Name of the parent resource. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the GitLabConfig, which will become the final component of
+           * the GitLabConfig’s resource name. gitlab_config_id must meet the following
+           * requirements: + They must contain only alphanumeric characters and dashes. + They can
+           * be 1-64 characters long. + They must begin and end with an alphanumeric character
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String gitlabConfigId;
+
+          /** Optional. The ID to use for the GitLabConfig, which will become the final component of the
+         GitLabConfig’s resource name. gitlab_config_id must meet the following requirements: + They must
+         contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must
+         begin and end with an alphanumeric character
+           */
+          public java.lang.String getGitlabConfigId() {
+            return gitlabConfigId;
+          }
+
+          /**
+           * Optional. The ID to use for the GitLabConfig, which will become the final component of
+           * the GitLabConfig’s resource name. gitlab_config_id must meet the following
+           * requirements: + They must contain only alphanumeric characters and dashes. + They can
+           * be 1-64 characters long. + They must begin and end with an alphanumeric character
+           */
+          public Create setGitlabConfigId(java.lang.String gitlabConfigId) {
+            this.gitlabConfigId = gitlabConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a `GitLabConfig`. This API is experimental
+         *
+         * Create a request for the method "gitLabConfigs.delete".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The config resource name.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+
+          /**
+           * Delete a `GitLabConfig`. This API is experimental
+           *
+           * Create a request for the method "gitLabConfigs.delete".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The config resource name.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudBuild.this, "DELETE", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The config resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The config resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The config resource name. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a `GitLabConfig`. This API is experimental
+         *
+         * Create a request for the method "gitLabConfigs.get".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The config resource name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.GitLabConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+
+          /**
+           * Retrieves a `GitLabConfig`. This API is experimental
+           *
+           * Create a request for the method "gitLabConfigs.get".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The config resource name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.GitLabConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The config resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The config resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The config resource name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List all `GitLabConfigs` for a given project. This API is experimental
+         *
+         * Create a request for the method "gitLabConfigs.list".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the parent resource
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ListGitLabConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/gitLabConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List all `GitLabConfigs` for a given project. This API is experimental
+           *
+           * Create a request for the method "gitLabConfigs.list".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the parent resource
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.ListGitLabConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the parent resource */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the parent resource
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Name of the parent resource */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 50 configs will be returned. The maximum value is 1000;, values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of configs to return. The service may return fewer than this value. If
+         unspecified, at most 50 configs will be returned. The maximum value is 1000;, values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 50 configs will be returned. The maximum value is 1000;, values
+           * above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous ‘ListGitlabConfigsRequest’ call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ‘ListGitlabConfigsRequest’ must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous ‘ListGitlabConfigsRequest’ call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to ‘ListGitlabConfigsRequest’
+         must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous ‘ListGitlabConfigsRequest’ call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ‘ListGitlabConfigsRequest’ must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing `GitLabConfig`. This API is experimental
+         *
+         * Create a request for the method "gitLabConfigs.patch".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name for the config.
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitLabConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.cloudbuild.v1.model.GitLabConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+
+          /**
+           * Updates an existing `GitLabConfig`. This API is experimental
+           *
+           * Create a request for the method "gitLabConfigs.patch".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name for the config.
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitLabConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.cloudbuild.v1.model.GitLabConfig content) {
+            super(CloudBuild.this, "PATCH", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The resource name for the config. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name for the config.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The resource name for the config. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Update mask for the resource. If this is set, the server will only update the fields
+           * specified in the field mask. Otherwise, a full update of the mutable resource fields
+           * will be performed.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Update mask for the resource. If this is set, the server will only update the fields specified in
+         the field mask. Otherwise, a full update of the mutable resource fields will be performed.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Update mask for the resource. If this is set, the server will only update the fields
+           * specified in the field mask. Otherwise, a full update of the mutable resource fields
+           * will be performed.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Remove a GitLab repository from a given GitLabConfig's connected repositories. This API is
+         * experimental.
+         *
+         * Create a request for the method "gitLabConfigs.removeGitLabConnectedRepository".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link RemoveGitLabConnectedRepository#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param config Required. The name of the `GitLabConfig` to remove a connected repository. Format:
+         *        `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.RemoveGitLabConnectedRepositoryRequest}
+         * @return the request
+         */
+        public RemoveGitLabConnectedRepository removeGitLabConnectedRepository(java.lang.String config, com.google.api.services.cloudbuild.v1.model.RemoveGitLabConnectedRepositoryRequest content) throws java.io.IOException {
+          RemoveGitLabConnectedRepository result = new RemoveGitLabConnectedRepository(config, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveGitLabConnectedRepository extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+config}:removeGitLabConnectedRepository";
+
+          private final java.util.regex.Pattern CONFIG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+
+          /**
+           * Remove a GitLab repository from a given GitLabConfig's connected repositories. This API is
+           * experimental.
+           *
+           * Create a request for the method "gitLabConfigs.removeGitLabConnectedRepository".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link RemoveGitLabConnectedRepository#execute()} method to
+           * invoke the remote operation. <p> {@link RemoveGitLabConnectedRepository#initialize(com.google.a
+           * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param config Required. The name of the `GitLabConfig` to remove a connected repository. Format:
+         *        `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.RemoveGitLabConnectedRepositoryRequest}
+           * @since 1.13
+           */
+          protected RemoveGitLabConnectedRepository(java.lang.String config, com.google.api.services.cloudbuild.v1.model.RemoveGitLabConnectedRepositoryRequest content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Empty.class);
+            this.config = com.google.api.client.util.Preconditions.checkNotNull(config, "Required parameter config must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONFIG_PATTERN.matcher(config).matches(),
+                  "Parameter config must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveGitLabConnectedRepository) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setAccessToken(java.lang.String accessToken) {
+            return (RemoveGitLabConnectedRepository) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setAlt(java.lang.String alt) {
+            return (RemoveGitLabConnectedRepository) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setCallback(java.lang.String callback) {
+            return (RemoveGitLabConnectedRepository) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setFields(java.lang.String fields) {
+            return (RemoveGitLabConnectedRepository) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setKey(java.lang.String key) {
+            return (RemoveGitLabConnectedRepository) super.setKey(key);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setOauthToken(java.lang.String oauthToken) {
+            return (RemoveGitLabConnectedRepository) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveGitLabConnectedRepository) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveGitLabConnectedRepository) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setUploadType(java.lang.String uploadType) {
+            return (RemoveGitLabConnectedRepository) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveGitLabConnectedRepository) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `GitLabConfig` to remove a connected repository. Format:
+           * `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String config;
+
+          /** Required. The name of the `GitLabConfig` to remove a connected repository. Format:
+         `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+           */
+          public java.lang.String getConfig() {
+            return config;
+          }
+
+          /**
+           * Required. The name of the `GitLabConfig` to remove a connected repository. Format:
+           * `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+           */
+          public RemoveGitLabConnectedRepository setConfig(java.lang.String config) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONFIG_PATTERN.matcher(config).matches(),
+                  "Parameter config must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+            }
+            this.config = config;
+            return this;
+          }
+
+          @Override
+          public RemoveGitLabConnectedRepository set(String parameterName, Object value) {
+            return (RemoveGitLabConnectedRepository) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the ConnectedRepositories collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+         *   {@code CloudBuild.ConnectedRepositories.List request = cloudbuild.connectedRepositories().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ConnectedRepositories connectedRepositories() {
+          return new ConnectedRepositories();
+        }
+
+        /**
+         * The "connectedRepositories" collection of methods.
+         */
+        public class ConnectedRepositories {
+
+          /**
+           * Batch connecting GitLab repositories to Cloud Build. This API is experimental.
+           *
+           * Create a request for the method "connectedRepositories.batchCreate".
+           *
+           * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+           * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the `GitLabConfig` that adds connected repositories. Format:
+           *        `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.BatchCreateGitLabConnectedRepositoriesRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.BatchCreateGitLabConnectedRepositoriesRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/connectedRepositories:batchCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+
+            /**
+             * Batch connecting GitLab repositories to Cloud Build. This API is experimental.
+             *
+             * Create a request for the method "connectedRepositories.batchCreate".
+             *
+             * This request holds the parameters needed by the the cloudbuild server.  After setting any
+             * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the `GitLabConfig` that adds connected repositories. Format:
+           *        `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+             * @param content the {@link com.google.api.services.cloudbuild.v1.model.BatchCreateGitLabConnectedRepositoriesRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.BatchCreateGitLabConnectedRepositoriesRequest content) {
+              super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the `GitLabConfig` that adds connected repositories. Format:
+             * `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the `GitLabConfig` that adds connected repositories. Format:
+           `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The name of the `GitLabConfig` that adds connected repositories. Format:
+             * `projects/{project}/locations/{location}/gitLabConfigs/{config}`
+             */
+            public BatchCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Repos collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+         *   {@code CloudBuild.Repos.List request = cloudbuild.repos().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Repos repos() {
+          return new Repos();
+        }
+
+        /**
+         * The "repos" collection of methods.
+         */
+        public class Repos {
+
+          /**
+           * List all repositories for a given `GitLabConfig`. This API is experimental
+           *
+           * Create a request for the method "repos.list".
+           *
+           * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of the parent resource.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ListGitLabRepositoriesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/repos";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+
+            /**
+             * List all repositories for a given `GitLabConfig`. This API is experimental
+             *
+             * Create a request for the method "repos.list".
+             *
+             * This request holds the parameters needed by the the cloudbuild server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of the parent resource.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.ListGitLabRepositoriesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the parent resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of the parent resource.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Name of the parent resource. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of repositories to return. The service may return fewer than this
+             * value.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of repositories to return. The service may return fewer than this value.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of repositories to return. The service may return fewer than this
+             * value.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous ListGitLabRepositoriesRequest` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListGitLabRepositoriesRequest` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous ListGitLabRepositoriesRequest` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListGitLabRepositoriesRequest` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous ListGitLabRepositoriesRequest` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListGitLabRepositoriesRequest` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the GithubEnterpriseConfigs collection.
        *
        * <p>The typical use is:</p>

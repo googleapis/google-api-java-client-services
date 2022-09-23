@@ -960,6 +960,270 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Disable the interactive serial console feature on an instance.
+         *
+         * Create a request for the method "instances.disableInteractiveSerialConsole".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link DisableInteractiveSerialConsole#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.DisableInteractiveSerialConsoleRequest}
+         * @return the request
+         */
+        public DisableInteractiveSerialConsole disableInteractiveSerialConsole(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.DisableInteractiveSerialConsoleRequest content) throws java.io.IOException {
+          DisableInteractiveSerialConsole result = new DisableInteractiveSerialConsole(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DisableInteractiveSerialConsole extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:disableInteractiveSerialConsole";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Disable the interactive serial console feature on an instance.
+           *
+           * Create a request for the method "instances.disableInteractiveSerialConsole".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link DisableInteractiveSerialConsole#execute()} method to
+           * invoke the remote operation. <p> {@link DisableInteractiveSerialConsole#initialize(com.google.a
+           * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.DisableInteractiveSerialConsoleRequest}
+           * @since 1.13
+           */
+          protected DisableInteractiveSerialConsole(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.DisableInteractiveSerialConsoleRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole set$Xgafv(java.lang.String $Xgafv) {
+            return (DisableInteractiveSerialConsole) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setAccessToken(java.lang.String accessToken) {
+            return (DisableInteractiveSerialConsole) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setAlt(java.lang.String alt) {
+            return (DisableInteractiveSerialConsole) super.setAlt(alt);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setCallback(java.lang.String callback) {
+            return (DisableInteractiveSerialConsole) super.setCallback(callback);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setFields(java.lang.String fields) {
+            return (DisableInteractiveSerialConsole) super.setFields(fields);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setKey(java.lang.String key) {
+            return (DisableInteractiveSerialConsole) super.setKey(key);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setOauthToken(java.lang.String oauthToken) {
+            return (DisableInteractiveSerialConsole) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DisableInteractiveSerialConsole) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setQuotaUser(java.lang.String quotaUser) {
+            return (DisableInteractiveSerialConsole) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setUploadType(java.lang.String uploadType) {
+            return (DisableInteractiveSerialConsole) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DisableInteractiveSerialConsole) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public DisableInteractiveSerialConsole setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DisableInteractiveSerialConsole set(String parameterName, Object value) {
+            return (DisableInteractiveSerialConsole) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enable the interactive serial console feature on an instance.
+         *
+         * Create a request for the method "instances.enableInteractiveSerialConsole".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link EnableInteractiveSerialConsole#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EnableInteractiveSerialConsoleRequest}
+         * @return the request
+         */
+        public EnableInteractiveSerialConsole enableInteractiveSerialConsole(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EnableInteractiveSerialConsoleRequest content) throws java.io.IOException {
+          EnableInteractiveSerialConsole result = new EnableInteractiveSerialConsole(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableInteractiveSerialConsole extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:enableInteractiveSerialConsole";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Enable the interactive serial console feature on an instance.
+           *
+           * Create a request for the method "instances.enableInteractiveSerialConsole".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link EnableInteractiveSerialConsole#execute()} method to
+           * invoke the remote operation. <p> {@link EnableInteractiveSerialConsole#initialize(com.google.ap
+           * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EnableInteractiveSerialConsoleRequest}
+           * @since 1.13
+           */
+          protected EnableInteractiveSerialConsole(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EnableInteractiveSerialConsoleRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableInteractiveSerialConsole) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setAccessToken(java.lang.String accessToken) {
+            return (EnableInteractiveSerialConsole) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setAlt(java.lang.String alt) {
+            return (EnableInteractiveSerialConsole) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setCallback(java.lang.String callback) {
+            return (EnableInteractiveSerialConsole) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setFields(java.lang.String fields) {
+            return (EnableInteractiveSerialConsole) super.setFields(fields);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setKey(java.lang.String key) {
+            return (EnableInteractiveSerialConsole) super.setKey(key);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setOauthToken(java.lang.String oauthToken) {
+            return (EnableInteractiveSerialConsole) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableInteractiveSerialConsole) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setQuotaUser(java.lang.String quotaUser) {
+            return (EnableInteractiveSerialConsole) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setUploadType(java.lang.String uploadType) {
+            return (EnableInteractiveSerialConsole) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableInteractiveSerialConsole) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public EnableInteractiveSerialConsole setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableInteractiveSerialConsole set(String parameterName, Object value) {
+            return (EnableInteractiveSerialConsole) super.set(parameterName, value);
+          }
+        }
+        /**
          * Get details about a single server.
          *
          * Create a request for the method "instances.get".
@@ -2494,12 +2758,13 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
           /**
            * The list of fields to update. The only currently supported fields are: `labels`,
-           * `reservations`
+           * `reservations`, `vrf.vlan_attachments`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to update. The only currently supported fields are: `labels`, `reservations`
+          /** The list of fields to update. The only currently supported fields are: `labels`, `reservations`,
+         `vrf.vlan_attachments`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2507,7 +2772,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
           /**
            * The list of fields to update. The only currently supported fields are: `labels`,
-           * `reservations`
+           * `reservations`, `vrf.vlan_attachments`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3766,7 +4031,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the baremetalsolution server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The name of the provisioning config.
+         * @param name Output only. The system-generated name of the provisioning config. This follows the UUID format.
          * @param content the {@link com.google.api.services.baremetalsolution.v2.model.ProvisioningConfig}
          * @return the request
          */
@@ -3794,7 +4059,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The name of the provisioning config.
+           * @param name Output only. The system-generated name of the provisioning config. This follows the UUID format.
            * @param content the {@link com.google.api.services.baremetalsolution.v2.model.ProvisioningConfig}
            * @since 1.13
            */
@@ -3863,17 +4128,23 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The name of the provisioning config. */
+          /**
+           * Output only. The system-generated name of the provisioning config. This follows the
+           * UUID format.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The name of the provisioning config.
+          /** Output only. The system-generated name of the provisioning config. This follows the UUID format.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The name of the provisioning config. */
+          /**
+           * Output only. The system-generated name of the provisioning config. This follows the
+           * UUID format.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4247,6 +4518,504 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
 
           /** A token identifying a page of results from the server. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SshKeys collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
+       *   {@code Baremetalsolution.SshKeys.List request = baremetalsolution.sshKeys().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SshKeys sshKeys() {
+        return new SshKeys();
+      }
+
+      /**
+       * The "sshKeys" collection of methods.
+       */
+      public class SshKeys {
+
+        /**
+         * Register a public SSH key in the specified project for use with the interactive serial console
+         * feature.
+         *
+         * Create a request for the method "sshKeys.create".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent containing the SSH keys.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.SSHKey}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.baremetalsolution.v2.model.SSHKey content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.SSHKey> {
+
+          private static final String REST_PATH = "v2/{+parent}/sshKeys";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Register a public SSH key in the specified project for use with the interactive serial console
+           * feature.
+           *
+           * Create a request for the method "sshKeys.create".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent containing the SSH keys.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.SSHKey}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.baremetalsolution.v2.model.SSHKey content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.SSHKey.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent containing the SSH keys. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent containing the SSH keys.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent containing the SSH keys. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the key, which will become the final component of the key's
+           * resource name. This value must match the regex: [a-zA-Z0-9@.\-_]{1,64}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String sshKeyId;
+
+          /** Required. The ID to use for the key, which will become the final component of the key's resource
+         name. This value must match the regex: [a-zA-Z0-9@.\-_]{1,64}
+           */
+          public java.lang.String getSshKeyId() {
+            return sshKeyId;
+          }
+
+          /**
+           * Required. The ID to use for the key, which will become the final component of the key's
+           * resource name. This value must match the regex: [a-zA-Z0-9@.\-_]{1,64}
+           */
+          public Create setSshKeyId(java.lang.String sshKeyId) {
+            this.sshKeyId = sshKeyId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a public SSH key registered in the specified project.
+         *
+         * Create a request for the method "sshKeys.delete".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the SSH key to delete. Currently, the only valid value for the location is
+         *        "global".
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sshKeys/[^/]+$");
+
+          /**
+           * Deletes a public SSH key registered in the specified project.
+           *
+           * Create a request for the method "sshKeys.delete".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the SSH key to delete. Currently, the only valid value for the location is
+         *        "global".
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Baremetalsolution.this, "DELETE", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sshKeys/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the SSH key to delete. Currently, the only valid value for the
+           * location is "global".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the SSH key to delete. Currently, the only valid value for the location is
+         "global".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the SSH key to delete. Currently, the only valid value for the
+           * location is "global".
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sshKeys/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the public SSH keys registered for the specified project. These SSH keys are used only for
+         * the interactive serial console feature.
+         *
+         * Create a request for the method "sshKeys.list".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent containing the SSH keys. Currently, the only valid value for the location is
+         *        "global".
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.ListSSHKeysResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/sshKeys";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the public SSH keys registered for the specified project. These SSH keys are used only
+           * for the interactive serial console feature.
+           *
+           * Create a request for the method "sshKeys.list".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent containing the SSH keys. Currently, the only valid value for the location is
+         *        "global".
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.ListSSHKeysResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent containing the SSH keys. Currently, the only valid value for the
+           * location is "global".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent containing the SSH keys. Currently, the only valid value for the location is
+         "global".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent containing the SSH keys. Currently, the only valid value for the
+           * location is "global".
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The maximum number of items to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of items to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

@@ -54,8 +54,8 @@ public final class Peer extends com.google.api.client.json.GenericJson {
 
   /**
    * The identity of this peer. Similar to `Request.auth.principal`, but relative to the peer
-   * instead of the request. For example, the idenity associated with a load balancer that forwared
-   * the request.
+   * instead of the request. For example, the identity associated with a load balancer that
+   * forwarded the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +122,8 @@ public final class Peer extends com.google.api.client.json.GenericJson {
 
   /**
    * The identity of this peer. Similar to `Request.auth.principal`, but relative to the peer
-   * instead of the request. For example, the idenity associated with a load balancer that forwared
-   * the request.
+   * instead of the request. For example, the identity associated with a load balancer that
+   * forwarded the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -132,8 +132,8 @@ public final class Peer extends com.google.api.client.json.GenericJson {
 
   /**
    * The identity of this peer. Similar to `Request.auth.principal`, but relative to the peer
-   * instead of the request. For example, the idenity associated with a load balancer that forwared
-   * the request.
+   * instead of the request. For example, the identity associated with a load balancer that
+   * forwarded the request.
    * @param principal principal or {@code null} for none
    */
   public Peer setPrincipal(java.lang.String principal) {

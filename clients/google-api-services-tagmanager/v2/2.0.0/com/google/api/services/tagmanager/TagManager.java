@@ -421,7 +421,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the tagmanager server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+     * @param path GTM Account's API relative path. Example: accounts/{account_id}
      * @param content the {@link com.google.api.services.tagmanager.model.Account}
      * @return the request
      */
@@ -449,7 +449,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+       * @param path GTM Account's API relative path. Example: accounts/{account_id}
        * @param content the {@link com.google.api.services.tagmanager.model.Account}
        * @since 1.13
        */
@@ -518,17 +518,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. Example: accounts/{account_id} */
       @com.google.api.client.util.Key
       private java.lang.String path;
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id}
+      /** GTM Account's API relative path. Example: accounts/{account_id}
        */
       public java.lang.String getPath() {
         return path;
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. Example: accounts/{account_id} */
       public Update setPath(java.lang.String path) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -1001,7 +1001,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}.
+       * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1027,7 +1027,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}.
+         * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1105,17 +1105,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id}. */
+        /** GTM Account's API relative path. Example: accounts/{account_id}. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id}.
+        /** GTM Account's API relative path. Example: accounts/{account_id}.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id}. */
+        /** GTM Account's API relative path. Example: accounts/{account_id}. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13153,7 +13153,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}
+       * @param parent GTM Account's API relative path. Example: accounts/{account_id}
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -13180,7 +13180,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}
+         * @param parent GTM Account's API relative path. Example: accounts/{account_id}
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -13258,17 +13258,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+        /** GTM Account's API relative path. Example: accounts/{account_id} */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id}
+        /** GTM Account's API relative path. Example: accounts/{account_id}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+        /** GTM Account's API relative path. Example: accounts/{account_id} */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

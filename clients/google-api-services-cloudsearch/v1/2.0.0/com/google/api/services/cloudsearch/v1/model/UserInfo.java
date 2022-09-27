@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Contains info regarding the updater of an Activity Feed item. Next Id: 7
+ * Contains info regarding the updater of an Activity Feed item. Next Id: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,6 +28,17 @@ package com.google.api.services.cloudsearch.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class UserInfo extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Avatar url of the user who triggered the Drive Notification email. This field will be populated
+   * if we can extract such information from the Drive Notification email. This should only be used
+   * to fetch user avatars when updater_to_show_email is not populated. This field is not set for
+   * non-Drive Notification items. This is not the actual sender of the email, as the sender is
+   * always comments-noreply@docs.google.com.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String driveNotificationAvatarUrl;
 
   /**
    * Describes how updater_count_to_show should be used.
@@ -44,7 +55,10 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Integer updaterCountToShow;
 
   /**
-   * The email of the updater for clients to show used for Gmail items.
+   * The email of the updater for clients to show used for Gmail items. For Drive Notifications,
+   * this is the email of the user who triggered the Drive Notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. This is not the
+   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +73,12 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Long updaterToShowGaiaId;
 
   /**
-   * The display name of the updater for clients to show used for Gmail items. This (along with the
-   * updater fields above) will be populated in the thread pipeline (http://shortn/_rPS0GCp94Y) when
-   * converting Activity Feed message attributes into client-renderable Activity Feed items.
+   * The display name of the updater for clients to show used for Gmail items. For non-Drive
+   * Notification items, this field will always be populated. If the display name cannot be found
+   * for the user, the fallback string will be the email address. For Drive Notification items, this
+   * is the email of the user who triggered the Drive notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. This is not the
+   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +90,31 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UserId updaterToShowUserId;
+
+  /**
+   * Avatar url of the user who triggered the Drive Notification email. This field will be populated
+   * if we can extract such information from the Drive Notification email. This should only be used
+   * to fetch user avatars when updater_to_show_email is not populated. This field is not set for
+   * non-Drive Notification items. This is not the actual sender of the email, as the sender is
+   * always comments-noreply@docs.google.com.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDriveNotificationAvatarUrl() {
+    return driveNotificationAvatarUrl;
+  }
+
+  /**
+   * Avatar url of the user who triggered the Drive Notification email. This field will be populated
+   * if we can extract such information from the Drive Notification email. This should only be used
+   * to fetch user avatars when updater_to_show_email is not populated. This field is not set for
+   * non-Drive Notification items. This is not the actual sender of the email, as the sender is
+   * always comments-noreply@docs.google.com.
+   * @param driveNotificationAvatarUrl driveNotificationAvatarUrl or {@code null} for none
+   */
+  public UserInfo setDriveNotificationAvatarUrl(java.lang.String driveNotificationAvatarUrl) {
+    this.driveNotificationAvatarUrl = driveNotificationAvatarUrl;
+    return this;
+  }
 
   /**
    * Describes how updater_count_to_show should be used.
@@ -109,7 +151,10 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email of the updater for clients to show used for Gmail items.
+   * The email of the updater for clients to show used for Gmail items. For Drive Notifications,
+   * this is the email of the user who triggered the Drive Notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. This is not the
+   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdaterToShowEmail() {
@@ -117,7 +162,10 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email of the updater for clients to show used for Gmail items.
+   * The email of the updater for clients to show used for Gmail items. For Drive Notifications,
+   * this is the email of the user who triggered the Drive Notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. This is not the
+   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
    * @param updaterToShowEmail updaterToShowEmail or {@code null} for none
    */
   public UserInfo setUpdaterToShowEmail(java.lang.String updaterToShowEmail) {
@@ -145,9 +193,12 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the updater for clients to show used for Gmail items. This (along with the
-   * updater fields above) will be populated in the thread pipeline (http://shortn/_rPS0GCp94Y) when
-   * converting Activity Feed message attributes into client-renderable Activity Feed items.
+   * The display name of the updater for clients to show used for Gmail items. For non-Drive
+   * Notification items, this field will always be populated. If the display name cannot be found
+   * for the user, the fallback string will be the email address. For Drive Notification items, this
+   * is the email of the user who triggered the Drive notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. This is not the
+   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdaterToShowName() {
@@ -155,9 +206,12 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the updater for clients to show used for Gmail items. This (along with the
-   * updater fields above) will be populated in the thread pipeline (http://shortn/_rPS0GCp94Y) when
-   * converting Activity Feed message attributes into client-renderable Activity Feed items.
+   * The display name of the updater for clients to show used for Gmail items. For non-Drive
+   * Notification items, this field will always be populated. If the display name cannot be found
+   * for the user, the fallback string will be the email address. For Drive Notification items, this
+   * is the email of the user who triggered the Drive notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. This is not the
+   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
    * @param updaterToShowName updaterToShowName or {@code null} for none
    */
   public UserInfo setUpdaterToShowName(java.lang.String updaterToShowName) {

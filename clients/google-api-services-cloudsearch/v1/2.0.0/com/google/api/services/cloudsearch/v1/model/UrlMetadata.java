@@ -94,7 +94,7 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
    * Mime type of the content (Currently mapped from Page Render Service ItemType) Note that this is
    * not necessarily the mime type of the http resource. For example a text/html from youtube or
    * vimeo may actually be classified as a video type. Then we shall mark it as video since we don't
-   * know exactly what type of video it is. NEXT TAG : 16
+   * know exactly what type of video it is.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,6 +135,13 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SafeUrlProto url;
+
+  /**
+   * NEXT TAG : 17
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String urlSource;
 
   /**
    * Domain for this url. If it's an IP address the address is returned.
@@ -280,7 +287,7 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
    * Mime type of the content (Currently mapped from Page Render Service ItemType) Note that this is
    * not necessarily the mime type of the http resource. For example a text/html from youtube or
    * vimeo may actually be classified as a video type. Then we shall mark it as video since we don't
-   * know exactly what type of video it is. NEXT TAG : 16
+   * know exactly what type of video it is.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -291,7 +298,7 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
    * Mime type of the content (Currently mapped from Page Render Service ItemType) Note that this is
    * not necessarily the mime type of the http resource. For example a text/html from youtube or
    * vimeo may actually be classified as a video type. Then we shall mark it as video since we don't
-   * know exactly what type of video it is. NEXT TAG : 16
+   * know exactly what type of video it is.
    * @param mimeType mimeType or {@code null} for none
    */
   public UrlMetadata setMimeType(java.lang.String mimeType) {
@@ -383,6 +390,23 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
    */
   public UrlMetadata setUrl(SafeUrlProto url) {
     this.url = url;
+    return this;
+  }
+
+  /**
+   * NEXT TAG : 17
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrlSource() {
+    return urlSource;
+  }
+
+  /**
+   * NEXT TAG : 17
+   * @param urlSource urlSource or {@code null} for none
+   */
+  public UrlMetadata setUrlSource(java.lang.String urlSource) {
+    this.urlSource = urlSource;
     return this;
   }
 

@@ -54,7 +54,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean chatLock;
 
   /**
-   * Whether meeting artifacts will be shared with co-hosts.
+   * Whether meeting artifacts will be shared with cohosts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether meeting artifacts will be shared with co-hosts.
+   * Whether meeting artifacts will be shared with cohosts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCohostArtifactSharingEnabled() {
@@ -161,7 +161,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether meeting artifacts will be shared with co-hosts.
+   * Whether meeting artifacts will be shared with cohosts.
    * @param cohostArtifactSharingEnabled cohostArtifactSharingEnabled or {@code null} for none
    */
   public Settings setCohostArtifactSharingEnabled(java.lang.Boolean cohostArtifactSharingEnabled) {

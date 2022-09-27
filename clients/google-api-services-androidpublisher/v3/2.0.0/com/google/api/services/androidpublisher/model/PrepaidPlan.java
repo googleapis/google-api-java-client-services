@@ -31,16 +31,16 @@ package com.google.api.services.androidpublisher.model;
 public final class PrepaidPlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * After this time, the subscription is allowed for a new top-up purchase. Not present if the
-   * subscription is already extended by a top-up purchase.
+   * If present, this is the time after which top up purchases are allowed for the prepaid plan.
+   * Will not be present for expired prepaid plans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String allowExtendAfterTime;
 
   /**
-   * After this time, the subscription is allowed for a new top-up purchase. Not present if the
-   * subscription is already extended by a top-up purchase.
+   * If present, this is the time after which top up purchases are allowed for the prepaid plan.
+   * Will not be present for expired prepaid plans.
    * @return value or {@code null} for none
    */
   public String getAllowExtendAfterTime() {
@@ -48,8 +48,8 @@ public final class PrepaidPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * After this time, the subscription is allowed for a new top-up purchase. Not present if the
-   * subscription is already extended by a top-up purchase.
+   * If present, this is the time after which top up purchases are allowed for the prepaid plan.
+   * Will not be present for expired prepaid plans.
    * @param allowExtendAfterTime allowExtendAfterTime or {@code null} for none
    */
   public PrepaidPlan setAllowExtendAfterTime(String allowExtendAfterTime) {

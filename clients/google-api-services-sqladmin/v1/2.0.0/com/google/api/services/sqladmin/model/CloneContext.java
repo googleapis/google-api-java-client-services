@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class CloneContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-
+   * The name of the allocated ip range for the private ip Cloud SQL instance. For example: "google-
    * managed-services-default". If set, the cloned instance ip will be created in the allocated
    * range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035).
    * Specifically, the name must be 1-63 characters long and match the regular expression
@@ -86,7 +86,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private String pointInTime;
 
   /**
-   * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-
+   * The name of the allocated ip range for the private ip Cloud SQL instance. For example: "google-
    * managed-services-default". If set, the cloned instance ip will be created in the allocated
    * range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035).
    * Specifically, the name must be 1-63 characters long and match the regular expression
@@ -98,7 +98,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-
+   * The name of the allocated ip range for the private ip Cloud SQL instance. For example: "google-
    * managed-services-default". If set, the cloned instance ip will be created in the allocated
    * range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035).
    * Specifically, the name must be 1-63 characters long and match the regular expression

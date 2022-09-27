@@ -32,7 +32,7 @@ setup_environment_secrets
 create_settings_xml_file "settings.xml"
 
 # install docuploader package
-python3 -m pip install gcp-docuploader
+python3 -m pip install --require-hashes -r .kokoro/requirements.txt
 
 deploy_library() {
   SERVICE=$1

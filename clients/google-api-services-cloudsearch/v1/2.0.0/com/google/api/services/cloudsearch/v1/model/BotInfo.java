@@ -30,6 +30,12 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class BotInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appAllowlistStatus;
+
+  /**
    * Identifier of the application associated with the bot.
    * The value may be {@code null}.
    */
@@ -81,6 +87,13 @@ public final class BotInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * If the app supports a home screen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportHomeScreen;
+
+  /**
    * Urls with additional information related to the bot. This field should always be set even if
    * all the fields within it are empty, so that it is convenient for clients to work with this
    * field in javascript.
@@ -99,10 +112,19 @@ public final class BotInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> supportedUses;
 
   /**
-   * The value may be {@code null}.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String whitelistStatus;
+  public java.lang.String getAppAllowlistStatus() {
+    return appAllowlistStatus;
+  }
+
+  /**
+   * @param appAllowlistStatus appAllowlistStatus or {@code null} for none
+   */
+  public BotInfo setAppAllowlistStatus(java.lang.String appAllowlistStatus) {
+    this.appAllowlistStatus = appAllowlistStatus;
+    return this;
+  }
 
   /**
    * Identifier of the application associated with the bot.
@@ -228,6 +250,23 @@ public final class BotInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * If the app supports a home screen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportHomeScreen() {
+    return supportHomeScreen;
+  }
+
+  /**
+   * If the app supports a home screen.
+   * @param supportHomeScreen supportHomeScreen or {@code null} for none
+   */
+  public BotInfo setSupportHomeScreen(java.lang.Boolean supportHomeScreen) {
+    this.supportHomeScreen = supportHomeScreen;
+    return this;
+  }
+
+  /**
    * Urls with additional information related to the bot. This field should always be set even if
    * all the fields within it are empty, so that it is convenient for clients to work with this
    * field in javascript.
@@ -266,21 +305,6 @@ public final class BotInfo extends com.google.api.client.json.GenericJson {
    */
   public BotInfo setSupportedUses(java.util.List<java.lang.String> supportedUses) {
     this.supportedUses = supportedUses;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getWhitelistStatus() {
-    return whitelistStatus;
-  }
-
-  /**
-   * @param whitelistStatus whitelistStatus or {@code null} for none
-   */
-  public BotInfo setWhitelistStatus(java.lang.String whitelistStatus) {
-    this.whitelistStatus = whitelistStatus;
     return this;
   }
 

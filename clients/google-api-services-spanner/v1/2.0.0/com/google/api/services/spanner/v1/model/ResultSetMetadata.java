@@ -48,6 +48,17 @@ public final class ResultSetMetadata extends com.google.api.client.json.GenericJ
   private Transaction transaction;
 
   /**
+   * A SQL query can be parameterized. In PLAN mode, these parameters can be undeclared. This
+   * indicates the field names and types for those undeclared parameters in the SQL query. For
+   * example, a SQL query like `"SELECT * FROM Users where UserId = @userId and UserName = @userName
+   * "` could return a `undeclared_parameters` value like: "fields": [ { "name": "UserId", "type": {
+   * "code": "INT64" } }, { "name": "UserName", "type": { "code": "STRING" } }, ]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StructType undeclaredParameters;
+
+  /**
    * Indicates the field names and types for the rows in the result set. For example, a SQL query
    * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like: "fields": [ {
    * "name": "UserId", "type": { "code": "INT64" } }, { "name": "UserName", "type": { "code":
@@ -86,6 +97,31 @@ public final class ResultSetMetadata extends com.google.api.client.json.GenericJ
    */
   public ResultSetMetadata setTransaction(Transaction transaction) {
     this.transaction = transaction;
+    return this;
+  }
+
+  /**
+   * A SQL query can be parameterized. In PLAN mode, these parameters can be undeclared. This
+   * indicates the field names and types for those undeclared parameters in the SQL query. For
+   * example, a SQL query like `"SELECT * FROM Users where UserId = @userId and UserName = @userName
+   * "` could return a `undeclared_parameters` value like: "fields": [ { "name": "UserId", "type": {
+   * "code": "INT64" } }, { "name": "UserName", "type": { "code": "STRING" } }, ]
+   * @return value or {@code null} for none
+   */
+  public StructType getUndeclaredParameters() {
+    return undeclaredParameters;
+  }
+
+  /**
+   * A SQL query can be parameterized. In PLAN mode, these parameters can be undeclared. This
+   * indicates the field names and types for those undeclared parameters in the SQL query. For
+   * example, a SQL query like `"SELECT * FROM Users where UserId = @userId and UserName = @userName
+   * "` could return a `undeclared_parameters` value like: "fields": [ { "name": "UserId", "type": {
+   * "code": "INT64" } }, { "name": "UserName", "type": { "code": "STRING" } }, ]
+   * @param undeclaredParameters undeclaredParameters or {@code null} for none
+   */
+  public ResultSetMetadata setUndeclaredParameters(StructType undeclaredParameters) {
+    this.undeclaredParameters = undeclaredParameters;
     return this;
   }
 

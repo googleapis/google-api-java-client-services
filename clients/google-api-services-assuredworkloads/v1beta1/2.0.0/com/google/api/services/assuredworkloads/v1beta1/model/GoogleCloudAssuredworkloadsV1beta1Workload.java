@@ -158,6 +158,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String name;
 
   /**
+   * Optional. Compliance Regime associated with this workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partner;
+
+  /**
    * Input only. The parent resource for the resources managed by this Assured Workload. May be
    * either empty or a folder resource which is a child of the Workload parent. If not specified all
    * resources are created under the parent organization. Format: folders/{folder_id}
@@ -492,6 +499,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Compliance Regime associated with this workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartner() {
+    return partner;
+  }
+
+  /**
+   * Optional. Compliance Regime associated with this workload.
+   * @param partner partner or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setPartner(java.lang.String partner) {
+    this.partner = partner;
     return this;
   }
 

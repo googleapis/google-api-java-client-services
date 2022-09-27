@@ -48,7 +48,7 @@ public final class CreateInstanceConfigMetadata extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private OperationProgress progress;
+  private InstanceOperationProgress progress;
 
   /**
    * The time at which this operation was cancelled.
@@ -88,7 +88,7 @@ public final class CreateInstanceConfigMetadata extends com.google.api.client.js
    * The progress of the CreateInstanceConfig operation.
    * @return value or {@code null} for none
    */
-  public OperationProgress getProgress() {
+  public InstanceOperationProgress getProgress() {
     return progress;
   }
 
@@ -96,7 +96,7 @@ public final class CreateInstanceConfigMetadata extends com.google.api.client.js
    * The progress of the CreateInstanceConfig operation.
    * @param progress progress or {@code null} for none
    */
-  public CreateInstanceConfigMetadata setProgress(OperationProgress progress) {
+  public CreateInstanceConfigMetadata setProgress(InstanceOperationProgress progress) {
     this.progress = progress;
     return this;
   }

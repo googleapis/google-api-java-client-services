@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Merchant Center Feed filter criterrion.
+ * Merchant Center Feed filter criterion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaMerchantCenterFeedFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Merchant Center primary feed id.
+   * Merchant Center primary feed ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2alphaMerchantCenterFeedFilter extends com.
   private java.lang.String primaryFeedName;
 
   /**
-   * Merchant Center primary feed id.
+   * Merchant Center primary feed ID.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPrimaryFeedId() {
@@ -52,7 +52,7 @@ public final class GoogleCloudRetailV2alphaMerchantCenterFeedFilter extends com.
   }
 
   /**
-   * Merchant Center primary feed id.
+   * Merchant Center primary feed ID.
    * @param primaryFeedId primaryFeedId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaMerchantCenterFeedFilter setPrimaryFeedId(java.lang.Long primaryFeedId) {

@@ -33,7 +33,8 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * If DYNAMIC_FACETABLE_ENABLED, attribute values are available for dynamic facet. Could only be
    * DYNAMIC_FACETABLE_DISABLED if CatalogAttribute.indexable_option is INDEXABLE_DISABLED.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Must be specified, otherwise throws
+   * INVALID_FORMAT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
    * INDEXABLE_ENABLED attribute values are indexed so that it can be filtered, faceted, or boosted
-   * in SearchService.Search.
+   * in SearchService.Search. Must be specified, otherwise throws INVALID_FORMAT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +98,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    * SEARCHABLE_ENABLED, attribute values are searchable by text queries in SearchService.Search. If
    * SEARCHABLE_ENABLED but attribute type is numerical, attribute values will not be searchable by
    * text queries in SearchService.Search, as there are no text values associated to numerical
-   * attributes.
+   * attributes. Must be specified, otherwise throws INVALID_FORMAT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +115,8 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * If DYNAMIC_FACETABLE_ENABLED, attribute values are available for dynamic facet. Could only be
    * DYNAMIC_FACETABLE_DISABLED if CatalogAttribute.indexable_option is INDEXABLE_DISABLED.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Must be specified, otherwise throws
+   * INVALID_FORMAT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getDynamicFacetableOption() {
@@ -124,7 +126,8 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * If DYNAMIC_FACETABLE_ENABLED, attribute values are available for dynamic facet. Could only be
    * DYNAMIC_FACETABLE_DISABLED if CatalogAttribute.indexable_option is INDEXABLE_DISABLED.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Must be specified, otherwise throws
+   * INVALID_FORMAT error.
    * @param dynamicFacetableOption dynamicFacetableOption or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setDynamicFacetableOption(java.lang.String dynamicFacetableOption) {
@@ -189,7 +192,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
    * INDEXABLE_ENABLED attribute values are indexed so that it can be filtered, faceted, or boosted
-   * in SearchService.Search.
+   * in SearchService.Search. Must be specified, otherwise throws INVALID_FORMAT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndexableOption() {
@@ -199,7 +202,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
    * INDEXABLE_ENABLED attribute values are indexed so that it can be filtered, faceted, or boosted
-   * in SearchService.Search.
+   * in SearchService.Search. Must be specified, otherwise throws INVALID_FORMAT error.
    * @param indexableOption indexableOption or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setIndexableOption(java.lang.String indexableOption) {
@@ -258,7 +261,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    * SEARCHABLE_ENABLED, attribute values are searchable by text queries in SearchService.Search. If
    * SEARCHABLE_ENABLED but attribute type is numerical, attribute values will not be searchable by
    * text queries in SearchService.Search, as there are no text values associated to numerical
-   * attributes.
+   * attributes. Must be specified, otherwise throws INVALID_FORMAT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchableOption() {
@@ -270,7 +273,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    * SEARCHABLE_ENABLED, attribute values are searchable by text queries in SearchService.Search. If
    * SEARCHABLE_ENABLED but attribute type is numerical, attribute values will not be searchable by
    * text queries in SearchService.Search, as there are no text values associated to numerical
-   * attributes.
+   * attributes. Must be specified, otherwise throws INVALID_FORMAT error.
    * @param searchableOption searchableOption or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setSearchableOption(java.lang.String searchableOption) {

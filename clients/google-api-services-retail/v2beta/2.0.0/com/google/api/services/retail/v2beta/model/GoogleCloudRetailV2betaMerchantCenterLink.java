@@ -31,10 +31,10 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * The branch id (e.g. 0/1/2) within this catalog that products from merchant_center_account_id
+   * The branch ID (e.g. 0/1/2) within this catalog that products from merchant_center_account_id
    * are streamed to. When updating this field, an empty value will use the currently configured
    * default branch. However, changing the default branch later on won't change the linked branch
-   * here. A single branch id can only have one linked merchant center account id.
+   * here. A single branch ID can only have one linked merchant center account ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
   private java.lang.String languageCode;
 
   /**
-   * Required. The linked [Merchant center account id](https://developers.google.com/shopping-
+   * Required. The linked [Merchant center account ID](https://developers.google.com/shopping-
    * content/guides/accountstatuses). The account must be a standalone account or a sub-account of a
    * MCA.
    * The value may be {@code null}.
@@ -95,10 +95,10 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
   private java.lang.String regionCode;
 
   /**
-   * The branch id (e.g. 0/1/2) within this catalog that products from merchant_center_account_id
+   * The branch ID (e.g. 0/1/2) within this catalog that products from merchant_center_account_id
    * are streamed to. When updating this field, an empty value will use the currently configured
    * default branch. However, changing the default branch later on won't change the linked branch
-   * here. A single branch id can only have one linked merchant center account id.
+   * here. A single branch ID can only have one linked merchant center account ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getBranchId() {
@@ -106,10 +106,10 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
   }
 
   /**
-   * The branch id (e.g. 0/1/2) within this catalog that products from merchant_center_account_id
+   * The branch ID (e.g. 0/1/2) within this catalog that products from merchant_center_account_id
    * are streamed to. When updating this field, an empty value will use the currently configured
    * default branch. However, changing the default branch later on won't change the linked branch
-   * here. A single branch id can only have one linked merchant center account id.
+   * here. A single branch ID can only have one linked merchant center account ID.
    * @param branchId branchId or {@code null} for none
    */
   public GoogleCloudRetailV2betaMerchantCenterLink setBranchId(java.lang.String branchId) {
@@ -185,7 +185,7 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
   }
 
   /**
-   * Required. The linked [Merchant center account id](https://developers.google.com/shopping-
+   * Required. The linked [Merchant center account ID](https://developers.google.com/shopping-
    * content/guides/accountstatuses). The account must be a standalone account or a sub-account of a
    * MCA.
    * @return value or {@code null} for none
@@ -195,7 +195,7 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
   }
 
   /**
-   * Required. The linked [Merchant center account id](https://developers.google.com/shopping-
+   * Required. The linked [Merchant center account ID](https://developers.google.com/shopping-
    * content/guides/accountstatuses). The account must be a standalone account or a sub-account of a
    * MCA.
    * @param merchantCenterAccountId merchantCenterAccountId or {@code null} for none

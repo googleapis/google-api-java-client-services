@@ -303,7 +303,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean installUnknownSourcesAllowed;
 
   /**
-   * Whether the keyguard is disabled.
+   * If true, this disables the Lock Screen
+   * (https://source.android.com/docs/core/display/multi_display/lock-screen) for primary and/or
+   * secondary displays.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1367,7 +1369,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the keyguard is disabled.
+   * If true, this disables the Lock Screen
+   * (https://source.android.com/docs/core/display/multi_display/lock-screen) for primary and/or
+   * secondary displays.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKeyguardDisabled() {
@@ -1375,7 +1379,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the keyguard is disabled.
+   * If true, this disables the Lock Screen
+   * (https://source.android.com/docs/core/display/multi_display/lock-screen) for primary and/or
+   * secondary displays.
    * @param keyguardDisabled keyguardDisabled or {@code null} for none
    */
   public Policy setKeyguardDisabled(java.lang.Boolean keyguardDisabled) {

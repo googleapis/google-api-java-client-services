@@ -16,7 +16,7 @@
 EXIT_STATUS=0
 
 pushd $(dirname "$0")/..
-python2 -m pip install -e generator/ --user
+python2 -m pip install -e generator/ --user --require-hashes -r .kokoro/requirements.txt
 
 pushd generator
 for file in `find tests/ -name '*_test.py'`

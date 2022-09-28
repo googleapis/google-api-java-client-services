@@ -46,6 +46,13 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
   private java.lang.Boolean isCwsHosted;
 
   /**
+   * Output only. Whether an app supports policy for extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isExtensionPolicySupported;
+
+  /**
    * Output only. Whether the app is only for Kiosk mode on ChromeOS devices
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
    */
   public GoogleChromeManagementV1ChromeAppInfo setIsCwsHosted(java.lang.Boolean isCwsHosted) {
     this.isCwsHosted = isCwsHosted;
+    return this;
+  }
+
+  /**
+   * Output only. Whether an app supports policy for extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsExtensionPolicySupported() {
+    return isExtensionPolicySupported;
+  }
+
+  /**
+   * Output only. Whether an app supports policy for extensions.
+   * @param isExtensionPolicySupported isExtensionPolicySupported or {@code null} for none
+   */
+  public GoogleChromeManagementV1ChromeAppInfo setIsExtensionPolicySupported(java.lang.Boolean isExtensionPolicySupported) {
+    this.isExtensionPolicySupported = isExtensionPolicySupported;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.driveactivity.v2.model;
 public final class ActionDetail extends com.google.api.client.json.GenericJson {
 
   /**
+   * Label was changed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppliedLabelChange appliedLabelChange;
+
+  /**
    * A change about comments was made.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class ActionDetail extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SettingsChange settingsChange;
+
+  /**
+   * Label was changed.
+   * @return value or {@code null} for none
+   */
+  public AppliedLabelChange getAppliedLabelChange() {
+    return appliedLabelChange;
+  }
+
+  /**
+   * Label was changed.
+   * @param appliedLabelChange appliedLabelChange or {@code null} for none
+   */
+  public ActionDetail setAppliedLabelChange(AppliedLabelChange appliedLabelChange) {
+    this.appliedLabelChange = appliedLabelChange;
+    return this;
+  }
 
   /**
    * A change about comments was made.

@@ -112,15 +112,25 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> folders;
 
   /**
-   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
-   * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
-   * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
-   * only when the resource's Protobuf contains it. To search against the `kms_key`: * Use a field
-   * query. Example: `kmsKey:key` * Use a free text query. Example: `key`
+   * This field only presents for the purpose of backward-compatibility. Please use `kms_keys` field
+   * to retrieve KMS key information. This field will only be populated for the resource types
+   * included in this list for backward compatible purpose. To search against the `kms_key`: * Use a
+   * field query. Example: `kmsKey:key` * Use a free text query. Example: `key`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
+
+  /**
+   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
+   * s.keyRings.cryptoKeys) names or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/
+   * rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) names. This field is
+   * available only when the resource's Protobuf contains it. To search against the `kms_keys`: *
+   * Use a field query. Example: `kmsKeys:key` * Use a free text query. Example: `key`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> kmsKeys;
 
   /**
    * Labels associated with this resource. See [Labelling and grouping GCP
@@ -466,11 +476,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
-   * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
-   * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
-   * only when the resource's Protobuf contains it. To search against the `kms_key`: * Use a field
-   * query. Example: `kmsKey:key` * Use a free text query. Example: `key`
+   * This field only presents for the purpose of backward-compatibility. Please use `kms_keys` field
+   * to retrieve KMS key information. This field will only be populated for the resource types
+   * included in this list for backward compatible purpose. To search against the `kms_key`: * Use a
+   * field query. Example: `kmsKey:key` * Use a free text query. Example: `key`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -478,15 +487,39 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
-   * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
-   * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
-   * only when the resource's Protobuf contains it. To search against the `kms_key`: * Use a field
-   * query. Example: `kmsKey:key` * Use a free text query. Example: `key`
+   * This field only presents for the purpose of backward-compatibility. Please use `kms_keys` field
+   * to retrieve KMS key information. This field will only be populated for the resource types
+   * included in this list for backward compatible purpose. To search against the `kms_key`: * Use a
+   * field query. Example: `kmsKey:key` * Use a free text query. Example: `key`
    * @param kmsKey kmsKey or {@code null} for none
    */
   public ResourceSearchResult setKmsKey(java.lang.String kmsKey) {
     this.kmsKey = kmsKey;
+    return this;
+  }
+
+  /**
+   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
+   * s.keyRings.cryptoKeys) names or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/
+   * rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) names. This field is
+   * available only when the resource's Protobuf contains it. To search against the `kms_keys`: *
+   * Use a field query. Example: `kmsKeys:key` * Use a free text query. Example: `key`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getKmsKeys() {
+    return kmsKeys;
+  }
+
+  /**
+   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
+   * s.keyRings.cryptoKeys) names or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/
+   * rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) names. This field is
+   * available only when the resource's Protobuf contains it. To search against the `kms_keys`: *
+   * Use a field query. Example: `kmsKeys:key` * Use a free text query. Example: `key`
+   * @param kmsKeys kmsKeys or {@code null} for none
+   */
+  public ResourceSearchResult setKmsKeys(java.util.List<java.lang.String> kmsKeys) {
+    this.kmsKeys = kmsKeys;
     return this;
   }
 

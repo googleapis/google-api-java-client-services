@@ -44,6 +44,13 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
   private GoogleCloudRecommenderV1beta1CostProjection costProjection;
 
   /**
+   * Use with CategoryType.RELIABILITY
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecommenderV1beta1ReliabilityProjection reliabilityProjection;
+
+  /**
    * Use with CategoryType.SECURITY
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
    */
   public GoogleCloudRecommenderV1beta1Impact setCostProjection(GoogleCloudRecommenderV1beta1CostProjection costProjection) {
     this.costProjection = costProjection;
+    return this;
+  }
+
+  /**
+   * Use with CategoryType.RELIABILITY
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1ReliabilityProjection getReliabilityProjection() {
+    return reliabilityProjection;
+  }
+
+  /**
+   * Use with CategoryType.RELIABILITY
+   * @param reliabilityProjection reliabilityProjection or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Impact setReliabilityProjection(GoogleCloudRecommenderV1beta1ReliabilityProjection reliabilityProjection) {
+    this.reliabilityProjection = reliabilityProjection;
     return this;
   }
 

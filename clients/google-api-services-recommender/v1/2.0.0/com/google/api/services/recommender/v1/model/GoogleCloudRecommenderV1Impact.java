@@ -44,11 +44,25 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
   private GoogleCloudRecommenderV1CostProjection costProjection;
 
   /**
+   * Use with CategoryType.RELAIBILITY
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecommenderV1ReliabilityProjection reliabilityProjection;
+
+  /**
    * Use with CategoryType.SECURITY
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecommenderV1SecurityProjection securityProjection;
+
+  /**
+   * Use with CategoryType.SUSTAINABILITY
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecommenderV1SustainabilityProjection sustainabilityProjection;
 
   /**
    * Category that is being targeted.
@@ -85,6 +99,23 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
   }
 
   /**
+   * Use with CategoryType.RELAIBILITY
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1ReliabilityProjection getReliabilityProjection() {
+    return reliabilityProjection;
+  }
+
+  /**
+   * Use with CategoryType.RELAIBILITY
+   * @param reliabilityProjection reliabilityProjection or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1Impact setReliabilityProjection(GoogleCloudRecommenderV1ReliabilityProjection reliabilityProjection) {
+    this.reliabilityProjection = reliabilityProjection;
+    return this;
+  }
+
+  /**
    * Use with CategoryType.SECURITY
    * @return value or {@code null} for none
    */
@@ -98,6 +129,23 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
    */
   public GoogleCloudRecommenderV1Impact setSecurityProjection(GoogleCloudRecommenderV1SecurityProjection securityProjection) {
     this.securityProjection = securityProjection;
+    return this;
+  }
+
+  /**
+   * Use with CategoryType.SUSTAINABILITY
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1SustainabilityProjection getSustainabilityProjection() {
+    return sustainabilityProjection;
+  }
+
+  /**
+   * Use with CategoryType.SUSTAINABILITY
+   * @param sustainabilityProjection sustainabilityProjection or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1Impact setSustainabilityProjection(GoogleCloudRecommenderV1SustainabilityProjection sustainabilityProjection) {
+    this.sustainabilityProjection = sustainabilityProjection;
     return this;
   }
 

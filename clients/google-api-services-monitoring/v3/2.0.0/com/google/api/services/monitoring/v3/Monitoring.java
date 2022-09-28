@@ -1600,7 +1600,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class AlertPolicies {
 
       /**
-       * Creates a new alerting policy.
+       * Creates a new alerting policy.Design your application to single-thread API calls that modify the
+       * state of alerting policies in a single project. This includes calls to CreateAlertPolicy,
+       * DeleteAlertPolicy and UpdateAlertPolicy.
        *
        * Create a request for the method "alertPolicies.create".
        *
@@ -1631,7 +1633,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new alerting policy.
+         * Creates a new alerting policy.Design your application to single-thread API calls that modify
+         * the state of alerting policies in a single project. This includes calls to CreateAlertPolicy,
+         * DeleteAlertPolicy and UpdateAlertPolicy.
          *
          * Create a request for the method "alertPolicies.create".
          *
@@ -1767,7 +1771,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes an alerting policy.
+       * Deletes an alerting policy.Design your application to single-thread API calls that modify the
+       * state of alerting policies in a single project. This includes calls to CreateAlertPolicy,
+       * DeleteAlertPolicy and UpdateAlertPolicy.
        *
        * Create a request for the method "alertPolicies.delete".
        *
@@ -1793,7 +1799,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/alertPolicies/[^/]+$");
 
         /**
-         * Deletes an alerting policy.
+         * Deletes an alerting policy.Design your application to single-thread API calls that modify the
+         * state of alerting policies in a single project. This includes calls to CreateAlertPolicy,
+         * DeleteAlertPolicy and UpdateAlertPolicy.
          *
          * Create a request for the method "alertPolicies.delete".
          *
@@ -2315,7 +2323,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       /**
        * Updates an alerting policy. You can either replace the entire policy with a new one or replace
        * only certain fields in the current alerting policy by specifying the fields to be updated via
-       * updateMask. Returns the updated alerting policy.
+       * updateMask. Returns the updated alerting policy.Design your application to single-thread API
+       * calls that modify the state of alerting policies in a single project. This includes calls to
+       * CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
        *
        * Create a request for the method "alertPolicies.patch".
        *
@@ -2346,7 +2356,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Updates an alerting policy. You can either replace the entire policy with a new one or replace
          * only certain fields in the current alerting policy by specifying the fields to be updated via
-         * updateMask. Returns the updated alerting policy.
+         * updateMask. Returns the updated alerting policy.Design your application to single-thread API
+         * calls that modify the state of alerting policies in a single project. This includes calls to
+         * CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
          *
          * Create a request for the method "alertPolicies.patch".
          *
@@ -5369,7 +5381,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Creates a new notification channel, representing a single notification endpoint such as an email
-       * address, SMS number, or PagerDuty service.
+       * address, SMS number, or PagerDuty service.Design your application to single-thread API calls that
+       * modify the state of notification channels in a single project. This includes calls to
+       * CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
        *
        * Create a request for the method "notificationChannels.create".
        *
@@ -5399,7 +5413,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Creates a new notification channel, representing a single notification endpoint such as an
-         * email address, SMS number, or PagerDuty service.
+         * email address, SMS number, or PagerDuty service.Design your application to single-thread API
+         * calls that modify the state of notification channels in a single project. This includes calls
+         * to CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
          *
          * Create a request for the method "notificationChannels.create".
          *
@@ -5525,7 +5541,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes a notification channel.
+       * Deletes a notification channel.Design your application to single-thread API calls that modify the
+       * state of notification channels in a single project. This includes calls to
+       * CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
        *
        * Create a request for the method "notificationChannels.delete".
        *
@@ -5550,7 +5568,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/notificationChannels/[^/]+$");
 
         /**
-         * Deletes a notification channel.
+         * Deletes a notification channel.Design your application to single-thread API calls that modify
+         * the state of notification channels in a single project. This includes calls to
+         * CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
          *
          * Create a request for the method "notificationChannels.delete".
          *
@@ -6274,7 +6294,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates a notification channel. Fields not specified in the field mask remain unchanged.
+       * Updates a notification channel. Fields not specified in the field mask remain unchanged.Design
+       * your application to single-thread API calls that modify the state of notification channels in a
+       * single project. This includes calls to CreateNotificationChannel, DeleteNotificationChannel and
+       * UpdateNotificationChannel.
        *
        * Create a request for the method "notificationChannels.patch".
        *
@@ -6301,7 +6324,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/notificationChannels/[^/]+$");
 
         /**
-         * Updates a notification channel. Fields not specified in the field mask remain unchanged.
+         * Updates a notification channel. Fields not specified in the field mask remain unchanged.Design
+         * your application to single-thread API calls that modify the state of notification channels in a
+         * single project. This includes calls to CreateNotificationChannel, DeleteNotificationChannel and
+         * UpdateNotificationChannel.
          *
          * Create a request for the method "notificationChannels.patch".
          *

@@ -3021,17 +3021,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             @com.google.api.client.util.Key
             private java.lang.String viewId;
 
-            /** Required. The id to use for this view.
+            /** Required. A client-assigned identifier such as "my-view". Identifiers are limited to 100 characters
+           and can include only letters, digits, underscores, hyphens, and periods.
              */
             public java.lang.String getViewId() {
               return viewId;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             public Create setViewId(java.lang.String viewId) {
               this.viewId = viewId;
               return this;
@@ -10513,17 +10522,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             @com.google.api.client.util.Key
             private java.lang.String viewId;
 
-            /** Required. The id to use for this view.
+            /** Required. A client-assigned identifier such as "my-view". Identifiers are limited to 100 characters
+           and can include only letters, digits, underscores, hyphens, and periods.
              */
             public java.lang.String getViewId() {
               return viewId;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             public Create setViewId(java.lang.String viewId) {
               this.viewId = viewId;
               return this;
@@ -15234,17 +15252,24 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /** Required. The id to use for this view. */
+          /**
+           * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
           @com.google.api.client.util.Key
           private java.lang.String viewId;
 
-          /** Required. The id to use for this view.
+          /** Required. A client-assigned identifier such as "my-view". Identifiers are limited to 100 characters
+         and can include only letters, digits, underscores, hyphens, and periods.
            */
           public java.lang.String getViewId() {
             return viewId;
           }
 
-          /** Required. The id to use for this view. */
+          /**
+           * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
           public Create setViewId(java.lang.String viewId) {
             this.viewId = viewId;
             return this;
@@ -20326,17 +20351,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             @com.google.api.client.util.Key
             private java.lang.String viewId;
 
-            /** Required. The id to use for this view.
+            /** Required. A client-assigned identifier such as "my-view". Identifiers are limited to 100 characters
+           and can include only letters, digits, underscores, hyphens, and periods.
              */
             public java.lang.String getViewId() {
               return viewId;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             public Create setViewId(java.lang.String viewId) {
               this.viewId = viewId;
               return this;
@@ -26313,17 +26347,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             @com.google.api.client.util.Key
             private java.lang.String viewId;
 
-            /** Required. The id to use for this view.
+            /** Required. A client-assigned identifier such as "my-view". Identifiers are limited to 100 characters
+           and can include only letters, digits, underscores, hyphens, and periods.
              */
             public java.lang.String getViewId() {
               return viewId;
             }
 
-            /** Required. The id to use for this view. */
+            /**
+             * Required. A client-assigned identifier such as "my-view". Identifiers are limited to
+             * 100 characters and can include only letters, digits, underscores, hyphens, and
+             * periods.
+             */
             public Create setViewId(java.lang.String viewId) {
               this.viewId = viewId;
               return this;

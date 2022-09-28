@@ -1885,9 +1885,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Attempts to start a new TransferOperation for the current TransferJob. A TransferJob has a
-     * maximum of one active TransferOperation. If this method is called while a TransferOperation is
-     * active, an error will be returned.
+     * Starts a new operation for the specified transfer job. A `TransferJob` has a maximum of one
+     * active `TransferOperation`. If this method is called while a `TransferOperation` is active, an
+     * error is returned.
      *
      * Create a request for the method "transferJobs.run".
      *
@@ -1912,9 +1912,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
           java.util.regex.Pattern.compile("^transferJobs/.*$");
 
       /**
-       * Attempts to start a new TransferOperation for the current TransferJob. A TransferJob has a
-       * maximum of one active TransferOperation. If this method is called while a TransferOperation is
-       * active, an error will be returned.
+       * Starts a new operation for the specified transfer job. A `TransferJob` has a maximum of one
+       * active `TransferOperation`. If this method is called while a `TransferOperation` is active, an
+       * error is returned.
        *
        * Create a request for the method "transferJobs.run".
        *

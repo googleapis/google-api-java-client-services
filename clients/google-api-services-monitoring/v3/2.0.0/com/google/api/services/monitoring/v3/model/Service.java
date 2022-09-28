@@ -39,6 +39,15 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private AppEngine appEngine;
 
   /**
+   * Message that contains the service type and service labels of this service if it is a basic
+   * service. Documentation and examples here (https://cloud.google.com/stackdriver/docs/solutions
+   * /slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BasicService basicService;
+
+  /**
    * Type used for Cloud Endpoints services.
    * The value may be {@code null}.
    */
@@ -149,6 +158,27 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setAppEngine(AppEngine appEngine) {
     this.appEngine = appEngine;
+    return this;
+  }
+
+  /**
+   * Message that contains the service type and service labels of this service if it is a basic
+   * service. Documentation and examples here (https://cloud.google.com/stackdriver/docs/solutions
+   * /slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+   * @return value or {@code null} for none
+   */
+  public BasicService getBasicService() {
+    return basicService;
+  }
+
+  /**
+   * Message that contains the service type and service labels of this service if it is a basic
+   * service. Documentation and examples here (https://cloud.google.com/stackdriver/docs/solutions
+   * /slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+   * @param basicService basicService or {@code null} for none
+   */
+  public Service setBasicService(BasicService basicService) {
+    this.basicService = basicService;
     return this;
   }
 

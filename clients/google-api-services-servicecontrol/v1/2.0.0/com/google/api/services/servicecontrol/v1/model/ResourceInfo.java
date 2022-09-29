@@ -30,6 +30,13 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class ResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The resource permission required for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String permission;
+
+  /**
    * The identifier of the parent of this resource instance. Must be in one of the following
    * formats: - `projects/` - `folders/` - `organizations/`
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
+
+  /**
+   * The resource permission required for this request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPermission() {
+    return permission;
+  }
+
+  /**
+   * The resource permission required for this request.
+   * @param permission permission or {@code null} for none
+   */
+  public ResourceInfo setPermission(java.lang.String permission) {
+    this.permission = permission;
+    return this;
+  }
 
   /**
    * The identifier of the parent of this resource instance. Must be in one of the following

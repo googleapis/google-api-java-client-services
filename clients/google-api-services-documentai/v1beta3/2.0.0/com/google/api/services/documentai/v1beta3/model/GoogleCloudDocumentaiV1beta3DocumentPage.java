@@ -75,6 +75,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPage extends com.google.a
   private GoogleCloudDocumentaiV1beta3DocumentPageImage image;
 
   /**
+   * Image Quality Scores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentPageImageQualityScores imageQualityScores;
+
+  /**
    * Layout for the page.
    * The value may be {@code null}.
    */
@@ -250,6 +257,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPage extends com.google.a
    */
   public GoogleCloudDocumentaiV1beta3DocumentPage setImage(GoogleCloudDocumentaiV1beta3DocumentPageImage image) {
     this.image = image;
+    return this;
+  }
+
+  /**
+   * Image Quality Scores.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentPageImageQualityScores getImageQualityScores() {
+    return imageQualityScores;
+  }
+
+  /**
+   * Image Quality Scores.
+   * @param imageQualityScores imageQualityScores or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentPage setImageQualityScores(GoogleCloudDocumentaiV1beta3DocumentPageImageQualityScores imageQualityScores) {
+    this.imageQualityScores = imageQualityScores;
     return this;
   }
 

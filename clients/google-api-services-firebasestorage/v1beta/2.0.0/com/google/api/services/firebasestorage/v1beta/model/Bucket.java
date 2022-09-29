@@ -31,43 +31,11 @@ package com.google.api.services.firebasestorage.v1beta.model;
 public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Location of the storage bucket.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String location;
-
-  /**
    * Resource name of the bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Output only. Represents whether a bucket is being moved to a new location, in which case
-   * reconciling is set to true.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean reconciling;
-
-  /**
-   * Output only. Location of the storage bucket.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocation() {
-    return location;
-  }
-
-  /**
-   * Output only. Location of the storage bucket.
-   * @param location location or {@code null} for none
-   */
-  public Bucket setLocation(java.lang.String location) {
-    this.location = location;
-    return this;
-  }
 
   /**
    * Resource name of the bucket.
@@ -83,25 +51,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Output only. Represents whether a bucket is being moved to a new location, in which case
-   * reconciling is set to true.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getReconciling() {
-    return reconciling;
-  }
-
-  /**
-   * Output only. Represents whether a bucket is being moved to a new location, in which case
-   * reconciling is set to true.
-   * @param reconciling reconciling or {@code null} for none
-   */
-  public Bucket setReconciling(java.lang.Boolean reconciling) {
-    this.reconciling = reconciling;
     return this;
   }
 

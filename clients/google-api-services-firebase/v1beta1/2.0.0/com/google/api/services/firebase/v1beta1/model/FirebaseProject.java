@@ -76,18 +76,18 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Output only. A user-assigned unique identifier for the Project. This identifier may appear in
-   * URLs or names for some Firebase resources associated with the Project, but it should generally
-   * be treated as a convenience alias to reference the Project.
+   * Output only. Immutable. A user-assigned unique identifier for the Project. This identifier may
+   * appear in URLs or names for some Firebase resources associated with the Project, but it should
+   * generally be treated as a convenience alias to reference the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Output only. The globally unique, Google-assigned canonical identifier for the Project. Use
-   * this identifier when configuring integrations and/or making API calls to Firebase or third-
-   * party services.
+   * Output only. Immutable. The globally unique, Google-assigned canonical identifier for the
+   * Project. Use this identifier when configuring integrations and/or making API calls to Firebase
+   * or third-party services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -196,9 +196,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. A user-assigned unique identifier for the Project. This identifier may appear in
-   * URLs or names for some Firebase resources associated with the Project, but it should generally
-   * be treated as a convenience alias to reference the Project.
+   * Output only. Immutable. A user-assigned unique identifier for the Project. This identifier may
+   * appear in URLs or names for some Firebase resources associated with the Project, but it should
+   * generally be treated as a convenience alias to reference the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -206,9 +206,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. A user-assigned unique identifier for the Project. This identifier may appear in
-   * URLs or names for some Firebase resources associated with the Project, but it should generally
-   * be treated as a convenience alias to reference the Project.
+   * Output only. Immutable. A user-assigned unique identifier for the Project. This identifier may
+   * appear in URLs or names for some Firebase resources associated with the Project, but it should
+   * generally be treated as a convenience alias to reference the Project.
    * @param projectId projectId or {@code null} for none
    */
   public FirebaseProject setProjectId(java.lang.String projectId) {
@@ -217,9 +217,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The globally unique, Google-assigned canonical identifier for the Project. Use
-   * this identifier when configuring integrations and/or making API calls to Firebase or third-
-   * party services.
+   * Output only. Immutable. The globally unique, Google-assigned canonical identifier for the
+   * Project. Use this identifier when configuring integrations and/or making API calls to Firebase
+   * or third-party services.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -227,9 +227,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The globally unique, Google-assigned canonical identifier for the Project. Use
-   * this identifier when configuring integrations and/or making API calls to Firebase or third-
-   * party services.
+   * Output only. Immutable. The globally unique, Google-assigned canonical identifier for the
+   * Project. Use this identifier when configuring integrations and/or making API calls to Firebase
+   * or third-party services.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public FirebaseProject setProjectNumber(java.lang.Long projectNumber) {

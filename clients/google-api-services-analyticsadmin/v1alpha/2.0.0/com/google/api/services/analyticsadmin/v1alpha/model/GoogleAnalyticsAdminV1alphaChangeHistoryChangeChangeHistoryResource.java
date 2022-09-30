@@ -129,6 +129,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaProperty property;
 
   /**
+   * A snapshot of a SearchAds360Link resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaSearchAds360Link searchAds360Link;
+
+  /**
    * A snapshot of an Account resource in change history.
    * @return value or {@code null} for none
    */
@@ -363,6 +370,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setProperty(GoogleAnalyticsAdminV1alphaProperty property) {
     this.property = property;
+    return this;
+  }
+
+  /**
+   * A snapshot of a SearchAds360Link resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaSearchAds360Link getSearchAds360Link() {
+    return searchAds360Link;
+  }
+
+  /**
+   * A snapshot of a SearchAds360Link resource in change history.
+   * @param searchAds360Link searchAds360Link or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setSearchAds360Link(GoogleAnalyticsAdminV1alphaSearchAds360Link searchAds360Link) {
+    this.searchAds360Link = searchAds360Link;
     return this;
   }
 

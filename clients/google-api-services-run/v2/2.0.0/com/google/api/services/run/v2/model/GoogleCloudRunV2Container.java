@@ -72,9 +72,8 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.lang.String image;
 
   /**
-   * Not Supported By Cloud Run. Periodic probe of container liveness. Container will be restarted
-   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,9 +222,8 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Not Supported By Cloud Run. Periodic probe of container liveness. Container will be restarted
-   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2Probe getLivenessProbe() {
@@ -233,9 +231,8 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Not Supported By Cloud Run. Periodic probe of container liveness. Container will be restarted
-   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @param livenessProbe livenessProbe or {@code null} for none
    */
   public GoogleCloudRunV2Container setLivenessProbe(GoogleCloudRunV2Probe livenessProbe) {

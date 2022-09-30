@@ -193,8 +193,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
 
   /**
    * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the
-   * entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this
-   * field is optional and defaults to an empty timestamp.
+   * entry has a system listed in the `IntegratedSystem` enum. For entries with
+   * `user_specified_system`, this field is optional and defaults to an empty timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -608,8 +608,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
 
   /**
    * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the
-   * entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this
-   * field is optional and defaults to an empty timestamp.
+   * entry has a system listed in the `IntegratedSystem` enum. For entries with
+   * `user_specified_system`, this field is optional and defaults to an empty timestamp.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1SystemTimestamps getSourceSystemTimestamps() {
@@ -618,8 +618,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
 
   /**
    * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the
-   * entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this
-   * field is optional and defaults to an empty timestamp.
+   * entry has a system listed in the `IntegratedSystem` enum. For entries with
+   * `user_specified_system`, this field is optional and defaults to an empty timestamp.
    * @param sourceSystemTimestamps sourceSystemTimestamps or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setSourceSystemTimestamps(GoogleCloudDatacatalogV1SystemTimestamps sourceSystemTimestamps) {

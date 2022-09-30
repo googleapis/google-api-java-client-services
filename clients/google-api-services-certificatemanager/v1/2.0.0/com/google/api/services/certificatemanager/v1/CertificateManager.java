@@ -517,6 +517,701 @@ public class CertificateManager extends com.google.api.client.googleapis.service
       }
 
       /**
+       * An accessor for creating requests from the CertificateIssuanceConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CertificateManager certificatemanager = new CertificateManager(...);}
+       *   {@code CertificateManager.CertificateIssuanceConfigs.List request = certificatemanager.certificateIssuanceConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CertificateIssuanceConfigs certificateIssuanceConfigs() {
+        return new CertificateIssuanceConfigs();
+      }
+
+      /**
+       * The "certificateIssuanceConfigs" collection of methods.
+       */
+      public class CertificateIssuanceConfigs {
+
+        /**
+         * Creates a new CertificateIssuanceConfig in a given project and location.
+         *
+         * Create a request for the method "certificateIssuanceConfigs.create".
+         *
+         * This request holds the parameters needed by the certificatemanager server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the certificate issuance config. Must be in the format
+         *        `projects/locations`.
+         * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CertificateManagerRequest<com.google.api.services.certificatemanager.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/certificateIssuanceConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new CertificateIssuanceConfig in a given project and location.
+           *
+           * Create a request for the method "certificateIssuanceConfigs.create".
+           *
+           * This request holds the parameters needed by the the certificatemanager server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the certificate issuance config. Must be in the format
+         *        `projects/locations`.
+           * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig content) {
+            super(CertificateManager.this, "POST", REST_PATH, content, com.google.api.services.certificatemanager.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the certificate issuance config. Must be in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the certificate issuance config. Must be in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the certificate issuance config. Must be in the format
+           * `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. A user-provided name of the certificate config. */
+          @com.google.api.client.util.Key
+          private java.lang.String certificateIssuanceConfigId;
+
+          /** Required. A user-provided name of the certificate config.
+           */
+          public java.lang.String getCertificateIssuanceConfigId() {
+            return certificateIssuanceConfigId;
+          }
+
+          /** Required. A user-provided name of the certificate config. */
+          public Create setCertificateIssuanceConfigId(java.lang.String certificateIssuanceConfigId) {
+            this.certificateIssuanceConfigId = certificateIssuanceConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single CertificateIssuanceConfig.
+         *
+         * Create a request for the method "certificateIssuanceConfigs.delete".
+         *
+         * This request holds the parameters needed by the certificatemanager server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the certificate issuance config to delete. Must be in the format
+         *        `projects/locations/certificateIssuanceConfigs`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CertificateManagerRequest<com.google.api.services.certificatemanager.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+
+          /**
+           * Deletes a single CertificateIssuanceConfig.
+           *
+           * Create a request for the method "certificateIssuanceConfigs.delete".
+           *
+           * This request holds the parameters needed by the the certificatemanager server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the certificate issuance config to delete. Must be in the format
+         *        `projects/locations/certificateIssuanceConfigs`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CertificateManager.this, "DELETE", REST_PATH, null, com.google.api.services.certificatemanager.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the certificate issuance config to delete. Must be in the format
+           * `projects/locations/certificateIssuanceConfigs`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the certificate issuance config to delete. Must be in the format
+         `projects/locations/certificateIssuanceConfigs`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the certificate issuance config to delete. Must be in the format
+           * `projects/locations/certificateIssuanceConfigs`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single CertificateIssuanceConfig.
+         *
+         * Create a request for the method "certificateIssuanceConfigs.get".
+         *
+         * This request holds the parameters needed by the certificatemanager server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the certificate issuance config to describe. Must be in the format
+         *        `projects/locations/certificateIssuanceConfigs`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CertificateManagerRequest<com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+
+          /**
+           * Gets details of a single CertificateIssuanceConfig.
+           *
+           * Create a request for the method "certificateIssuanceConfigs.get".
+           *
+           * This request holds the parameters needed by the the certificatemanager server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the certificate issuance config to describe. Must be in the format
+         *        `projects/locations/certificateIssuanceConfigs`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CertificateManager.this, "GET", REST_PATH, null, com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the certificate issuance config to describe. Must be in the format
+           * `projects/locations/certificateIssuanceConfigs`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the certificate issuance config to describe. Must be in the format
+         `projects/locations/certificateIssuanceConfigs`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the certificate issuance config to describe. Must be in the format
+           * `projects/locations/certificateIssuanceConfigs`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists CertificateIssuanceConfigs in a given project and location.
+         *
+         * Create a request for the method "certificateIssuanceConfigs.list".
+         *
+         * This request holds the parameters needed by the certificatemanager server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the certificate should be listed, specified in the
+         *        format `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CertificateManagerRequest<com.google.api.services.certificatemanager.v1.model.ListCertificateIssuanceConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/certificateIssuanceConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists CertificateIssuanceConfigs in a given project and location.
+           *
+           * Create a request for the method "certificateIssuanceConfigs.list".
+           *
+           * This request holds the parameters needed by the the certificatemanager server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the certificate should be listed, specified in the
+         *        format `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CertificateManager.this, "GET", REST_PATH, null, com.google.api.services.certificatemanager.v1.model.ListCertificateIssuanceConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the certificate should be listed,
+           * specified in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the certificate should be listed, specified in the
+         format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the certificate should be listed,
+           * specified in the format `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Filter expression to restrict the Certificates Configs returned. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filter expression to restrict the Certificates Configs returned.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Filter expression to restrict the Certificates Configs returned. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * A list of Certificate Config field names used to specify the order of the returned
+           * results. The default sorting order is ascending. To specify descending order for a
+           * field, add a suffix " desc".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** A list of Certificate Config field names used to specify the order of the returned results. The
+         default sorting order is ascending. To specify descending order for a field, add a suffix " desc".
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * A list of Certificate Config field names used to specify the order of the returned
+           * results. The default sorting order is ascending. To specify descending order for a
+           * field, add a suffix " desc".
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Maximum number of certificate configs to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of certificate configs to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of certificate configs to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that
+           * this is a continuation of a prior `ListCertificateIssuanceConfigs` call, and that the
+           * system should return the next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that this is a
+         continuation of a prior `ListCertificateIssuanceConfigs` call, and that the system should return
+         the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that
+           * this is a continuation of a prior `ListCertificateIssuanceConfigs` call, and that the
+           * system should return the next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the CertificateMaps collection.
        *
        * <p>The typical use is:</p>

@@ -61,6 +61,16 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> domains;
 
   /**
+   * Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI
+   * certificates in the format `projects/locations/certificateIssuanceConfigs`. If this field is
+   * not set, the certificates will instead be publicly signed as documented at
+   * https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String issuanceConfig;
+
+  /**
    * Output only. Information about issues with provisioning a Managed Certificate.
    * The value may be {@code null}.
    */
@@ -126,6 +136,29 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
    */
   public ManagedCertificate setDomains(java.util.List<java.lang.String> domains) {
     this.domains = domains;
+    return this;
+  }
+
+  /**
+   * Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI
+   * certificates in the format `projects/locations/certificateIssuanceConfigs`. If this field is
+   * not set, the certificates will instead be publicly signed as documented at
+   * https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIssuanceConfig() {
+    return issuanceConfig;
+  }
+
+  /**
+   * Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI
+   * certificates in the format `projects/locations/certificateIssuanceConfigs`. If this field is
+   * not set, the certificates will instead be publicly signed as documented at
+   * https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
+   * @param issuanceConfig issuanceConfig or {@code null} for none
+   */
+  public ManagedCertificate setIssuanceConfig(java.lang.String issuanceConfig) {
+    this.issuanceConfig = issuanceConfig;
     return this;
   }
 

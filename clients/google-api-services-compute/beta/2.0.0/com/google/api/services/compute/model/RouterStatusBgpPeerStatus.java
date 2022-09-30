@@ -49,11 +49,25 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private BfdStatus bfdStatus;
 
   /**
+   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIpv6;
+
+  /**
    * IP address of the local BGP interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * IPv6 address of the local BGP interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6NexthopAddress;
 
   /**
    * URL of the VPN tunnel that this BGP peer controls.
@@ -89,6 +103,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerIpAddress;
+
+  /**
+   * IPv6 address of the remote BGP interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerIpv6NexthopAddress;
 
   /**
    * [Output only] URI of the VM instance that is used as third-party router appliances such as Next
@@ -169,6 +190,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
+   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIpv6() {
+    return enableIpv6;
+  }
+
+  /**
+   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * @param enableIpv6 enableIpv6 or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setEnableIpv6(java.lang.Boolean enableIpv6) {
+    this.enableIpv6 = enableIpv6;
+    return this;
+  }
+
+  /**
    * IP address of the local BGP interface.
    * @return value or {@code null} for none
    */
@@ -182,6 +220,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * IPv6 address of the local BGP interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6NexthopAddress() {
+    return ipv6NexthopAddress;
+  }
+
+  /**
+   * IPv6 address of the local BGP interface.
+   * @param ipv6NexthopAddress ipv6NexthopAddress or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setIpv6NexthopAddress(java.lang.String ipv6NexthopAddress) {
+    this.ipv6NexthopAddress = ipv6NexthopAddress;
     return this;
   }
 
@@ -267,6 +322,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setPeerIpAddress(java.lang.String peerIpAddress) {
     this.peerIpAddress = peerIpAddress;
+    return this;
+  }
+
+  /**
+   * IPv6 address of the remote BGP interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerIpv6NexthopAddress() {
+    return peerIpv6NexthopAddress;
+  }
+
+  /**
+   * IPv6 address of the remote BGP interface.
+   * @param peerIpv6NexthopAddress peerIpv6NexthopAddress or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setPeerIpv6NexthopAddress(java.lang.String peerIpv6NexthopAddress) {
+    this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
     return this;
   }
 

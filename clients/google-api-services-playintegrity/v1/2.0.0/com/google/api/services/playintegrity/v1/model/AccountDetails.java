@@ -31,6 +31,13 @@ package com.google.api.services.playintegrity.v1.model;
 public final class AccountDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Details about the account activity for the user in the scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccountActivity accountActivity;
+
+  /**
    * Details about the account risk for the user in the scope. This feature is available only to
    * selected developers.
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class AccountDetails extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String appLicensingVerdict;
+
+  /**
+   * Details about the account activity for the user in the scope.
+   * @return value or {@code null} for none
+   */
+  public AccountActivity getAccountActivity() {
+    return accountActivity;
+  }
+
+  /**
+   * Details about the account activity for the user in the scope.
+   * @param accountActivity accountActivity or {@code null} for none
+   */
+  public AccountDetails setAccountActivity(AccountActivity accountActivity) {
+    this.accountActivity = accountActivity;
+    return this;
+  }
 
   /**
    * Details about the account risk for the user in the scope. This feature is available only to

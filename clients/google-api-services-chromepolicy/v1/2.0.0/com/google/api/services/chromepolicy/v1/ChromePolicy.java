@@ -918,6 +918,552 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
 
       }
       /**
+       * An accessor for creating requests from the Networks collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChromePolicy chromepolicy = new ChromePolicy(...);}
+       *   {@code ChromePolicy.Networks.List request = chromepolicy.networks().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Networks networks() {
+        return new Networks();
+      }
+
+      /**
+       * The "networks" collection of methods.
+       */
+      public class Networks {
+
+        /**
+         * Creates a certificate at a specified OU for a customer.
+         *
+         * Create a request for the method "networks.defineCertificate".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link DefineCertificate#execute()} method to invoke the remote operation.
+         *
+         * @param customer Required. The customer for which the certificate will apply.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest}
+         * @return the request
+         */
+        public DefineCertificate defineCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest content) throws java.io.IOException {
+          DefineCertificate result = new DefineCertificate(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DefineCertificate extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/networks:defineCertificate";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Creates a certificate at a specified OU for a customer.
+           *
+           * Create a request for the method "networks.defineCertificate".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link DefineCertificate#execute()} method to invoke the remote
+           * operation. <p> {@link DefineCertificate#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param customer Required. The customer for which the certificate will apply.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest}
+           * @since 1.13
+           */
+          protected DefineCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public DefineCertificate set$Xgafv(java.lang.String $Xgafv) {
+            return (DefineCertificate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DefineCertificate setAccessToken(java.lang.String accessToken) {
+            return (DefineCertificate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DefineCertificate setAlt(java.lang.String alt) {
+            return (DefineCertificate) super.setAlt(alt);
+          }
+
+          @Override
+          public DefineCertificate setCallback(java.lang.String callback) {
+            return (DefineCertificate) super.setCallback(callback);
+          }
+
+          @Override
+          public DefineCertificate setFields(java.lang.String fields) {
+            return (DefineCertificate) super.setFields(fields);
+          }
+
+          @Override
+          public DefineCertificate setKey(java.lang.String key) {
+            return (DefineCertificate) super.setKey(key);
+          }
+
+          @Override
+          public DefineCertificate setOauthToken(java.lang.String oauthToken) {
+            return (DefineCertificate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DefineCertificate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DefineCertificate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DefineCertificate setQuotaUser(java.lang.String quotaUser) {
+            return (DefineCertificate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DefineCertificate setUploadType(java.lang.String uploadType) {
+            return (DefineCertificate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DefineCertificate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DefineCertificate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer for which the certificate will apply. */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer for which the certificate will apply.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer for which the certificate will apply. */
+          public DefineCertificate setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public DefineCertificate set(String parameterName, Object value) {
+            return (DefineCertificate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Define a new network.
+         *
+         * Create a request for the method "networks.defineNetwork".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link DefineNetwork#execute()} method to invoke the remote operation.
+         *
+         * @param customer Required. The customer who will own this new network.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest}
+         * @return the request
+         */
+        public DefineNetwork defineNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest content) throws java.io.IOException {
+          DefineNetwork result = new DefineNetwork(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DefineNetwork extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/networks:defineNetwork";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Define a new network.
+           *
+           * Create a request for the method "networks.defineNetwork".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link DefineNetwork#execute()} method to invoke the remote
+           * operation. <p> {@link DefineNetwork#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param customer Required. The customer who will own this new network.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest}
+           * @since 1.13
+           */
+          protected DefineNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public DefineNetwork set$Xgafv(java.lang.String $Xgafv) {
+            return (DefineNetwork) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DefineNetwork setAccessToken(java.lang.String accessToken) {
+            return (DefineNetwork) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DefineNetwork setAlt(java.lang.String alt) {
+            return (DefineNetwork) super.setAlt(alt);
+          }
+
+          @Override
+          public DefineNetwork setCallback(java.lang.String callback) {
+            return (DefineNetwork) super.setCallback(callback);
+          }
+
+          @Override
+          public DefineNetwork setFields(java.lang.String fields) {
+            return (DefineNetwork) super.setFields(fields);
+          }
+
+          @Override
+          public DefineNetwork setKey(java.lang.String key) {
+            return (DefineNetwork) super.setKey(key);
+          }
+
+          @Override
+          public DefineNetwork setOauthToken(java.lang.String oauthToken) {
+            return (DefineNetwork) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DefineNetwork setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DefineNetwork) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DefineNetwork setQuotaUser(java.lang.String quotaUser) {
+            return (DefineNetwork) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DefineNetwork setUploadType(java.lang.String uploadType) {
+            return (DefineNetwork) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DefineNetwork setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DefineNetwork) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer who will own this new network. */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer who will own this new network.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer who will own this new network. */
+          public DefineNetwork setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public DefineNetwork set(String parameterName, Object value) {
+            return (DefineNetwork) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Remove an existing certificate by guid.
+         *
+         * Create a request for the method "networks.removeCertificate".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link RemoveCertificate#execute()} method to invoke the remote operation.
+         *
+         * @param customer Required. The customer whose certificate will be removed.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest}
+         * @return the request
+         */
+        public RemoveCertificate removeCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest content) throws java.io.IOException {
+          RemoveCertificate result = new RemoveCertificate(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveCertificate extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/networks:removeCertificate";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Remove an existing certificate by guid.
+           *
+           * Create a request for the method "networks.removeCertificate".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link RemoveCertificate#execute()} method to invoke the remote
+           * operation. <p> {@link RemoveCertificate#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param customer Required. The customer whose certificate will be removed.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest}
+           * @since 1.13
+           */
+          protected RemoveCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemoveCertificate set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveCertificate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveCertificate setAccessToken(java.lang.String accessToken) {
+            return (RemoveCertificate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveCertificate setAlt(java.lang.String alt) {
+            return (RemoveCertificate) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveCertificate setCallback(java.lang.String callback) {
+            return (RemoveCertificate) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveCertificate setFields(java.lang.String fields) {
+            return (RemoveCertificate) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveCertificate setKey(java.lang.String key) {
+            return (RemoveCertificate) super.setKey(key);
+          }
+
+          @Override
+          public RemoveCertificate setOauthToken(java.lang.String oauthToken) {
+            return (RemoveCertificate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveCertificate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveCertificate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveCertificate setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveCertificate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveCertificate setUploadType(java.lang.String uploadType) {
+            return (RemoveCertificate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveCertificate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveCertificate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer whose certificate will be removed. */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer whose certificate will be removed.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer whose certificate will be removed. */
+          public RemoveCertificate setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public RemoveCertificate set(String parameterName, Object value) {
+            return (RemoveCertificate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Remove an existing network by guid.
+         *
+         * Create a request for the method "networks.removeNetwork".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link RemoveNetwork#execute()} method to invoke the remote operation.
+         *
+         * @param customer Required. The customer whose network will be removed.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest}
+         * @return the request
+         */
+        public RemoveNetwork removeNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest content) throws java.io.IOException {
+          RemoveNetwork result = new RemoveNetwork(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveNetwork extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/networks:removeNetwork";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Remove an existing network by guid.
+           *
+           * Create a request for the method "networks.removeNetwork".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link RemoveNetwork#execute()} method to invoke the remote
+           * operation. <p> {@link RemoveNetwork#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param customer Required. The customer whose network will be removed.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest}
+           * @since 1.13
+           */
+          protected RemoveNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemoveNetwork set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveNetwork) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveNetwork setAccessToken(java.lang.String accessToken) {
+            return (RemoveNetwork) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveNetwork setAlt(java.lang.String alt) {
+            return (RemoveNetwork) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveNetwork setCallback(java.lang.String callback) {
+            return (RemoveNetwork) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveNetwork setFields(java.lang.String fields) {
+            return (RemoveNetwork) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveNetwork setKey(java.lang.String key) {
+            return (RemoveNetwork) super.setKey(key);
+          }
+
+          @Override
+          public RemoveNetwork setOauthToken(java.lang.String oauthToken) {
+            return (RemoveNetwork) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveNetwork setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveNetwork) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveNetwork setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveNetwork) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveNetwork setUploadType(java.lang.String uploadType) {
+            return (RemoveNetwork) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveNetwork setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveNetwork) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer whose network will be removed. */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer whose network will be removed.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer whose network will be removed. */
+          public RemoveNetwork setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public RemoveNetwork set(String parameterName, Object value) {
+            return (RemoveNetwork) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Orgunits collection.
        *
        * <p>The typical use is:</p>
@@ -1266,7 +1812,7 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
         return result;
       }
 
-      public class Get extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1PolicySchema> {
+      public class Get extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1PolicySchema> {
 
         private static final String REST_PATH = "v1/{+name}";
 
@@ -1287,7 +1833,7 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * @since 1.13
          */
         protected Get(java.lang.String name) {
-          super(ChromePolicy.this, "GET", REST_PATH, null, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1PolicySchema.class);
+          super(ChromePolicy.this, "GET", REST_PATH, null, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1PolicySchema.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1404,7 +1950,7 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
         return result;
       }
 
-      public class List extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListPolicySchemasResponse> {
+      public class List extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListPolicySchemasResponse> {
 
         private static final String REST_PATH = "v1/{+parent}/policySchemas";
 
@@ -1425,7 +1971,7 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * @since 1.13
          */
         protected List(java.lang.String parent) {
-          super(ChromePolicy.this, "GET", REST_PATH, null, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListPolicySchemasResponse.class);
+          super(ChromePolicy.this, "GET", REST_PATH, null, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListPolicySchemasResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1543,17 +2089,23 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The maximum number of policy schemas to return. */
+        /**
+         * The maximum number of policy schemas to return, defaults to 100 and has a maximum of
+         * 1000.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of policy schemas to return.
+        /** The maximum number of policy schemas to return, defaults to 100 and has a maximum of 1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of policy schemas to return. */
+        /**
+         * The maximum number of policy schemas to return, defaults to 100 and has a maximum of
+         * 1000.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

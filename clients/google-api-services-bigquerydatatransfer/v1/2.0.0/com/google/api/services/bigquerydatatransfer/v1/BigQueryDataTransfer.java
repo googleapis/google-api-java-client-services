@@ -1985,25 +1985,24 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. This is
            * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
            * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-           * make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes
-           * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-           * client_id of the a data source as returned by ListDataSources method. *
-           * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-           * should not be set when `service_account_name` is used to create the transfer config.
+           * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauth
+           * z/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data
+           * _source_scopes * The client_id is the OAuth client_id of the a data source as returned
+           * by ListDataSources method. * data_source_scopes are the scopes returned by
+           * ListDataSources method. Note that this should not be set when `service_account_name` is
+           * used to create the transfer config.
            */
           @com.google.api.client.util.Key
           private java.lang.String authorizationCode;
 
           /** Optional OAuth2 authorization code to use with this transfer configuration. This is required only
          if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials are needed, as indicated
-         by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL:
-         https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-         _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth client_id of
-         the a data source as returned by ListDataSources method. * data_source_scopes are the scopes
-         returned by ListDataSources method. Note that this should not be set when `service_account_name` is
-         used to create the transfer config.
+         by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL: h
+         ttps://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type
+         =authorization_code_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+         data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
+         ListDataSources method. Note that this should not be set when `service_account_name` is used to
+         create the transfer config.
            */
           public java.lang.String getAuthorizationCode() {
             return authorizationCode;
@@ -2013,13 +2012,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. This is
            * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
            * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-           * make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes
-           * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-           * client_id of the a data source as returned by ListDataSources method. *
-           * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-           * should not be set when `service_account_name` is used to create the transfer config.
+           * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauth
+           * z/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data
+           * _source_scopes * The client_id is the OAuth client_id of the a data source as returned
+           * by ListDataSources method. * data_source_scopes are the scopes returned by
+           * ListDataSources method. Note that this should not be set when `service_account_name` is
+           * used to create the transfer config.
            */
           public Create setAuthorizationCode(java.lang.String authorizationCode) {
             this.authorizationCode = authorizationCode;
@@ -2063,25 +2061,23 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /**
            * Optional version info. This is required only if `transferConfig.dataSourceId` is not
            * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-           * order to obtain version info, make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info
-           * * The client_id is the OAuth client_id of the a data source as returned by
-           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
-           * method. Note that this should not be set when `service_account_name` is used to create
-           * the transfer config.
+           * order to obtain version info, make a request to the following URL: https://www.gstatic.
+           * com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=versio
+           * n_info_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+           * data source as returned by ListDataSources method. * data_source_scopes are the scopes
+           * returned by ListDataSources method. Note that this should not be set when
+           * `service_account_name` is used to create the transfer config.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionInfo;
 
           /** Optional version info. This is required only if `transferConfig.dataSourceId` is not
          'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to
-         obtain version info, make a request to the following URL:
-         https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-         _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info * The client_id is the OAuth client_id of the a
-         data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
-         ListDataSources method. Note that this should not be set when `service_account_name` is used to
-         create the transfer config.
+         obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatrans
+         fer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_info_id=client_id=data_source_s
+         copes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
+         method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this
+         should not be set when `service_account_name` is used to create the transfer config.
            */
           public java.lang.String getVersionInfo() {
             return versionInfo;
@@ -2090,13 +2086,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /**
            * Optional version info. This is required only if `transferConfig.dataSourceId` is not
            * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-           * order to obtain version info, make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info
-           * * The client_id is the OAuth client_id of the a data source as returned by
-           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
-           * method. Note that this should not be set when `service_account_name` is used to create
-           * the transfer config.
+           * order to obtain version info, make a request to the following URL: https://www.gstatic.
+           * com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=versio
+           * n_info_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+           * data source as returned by ListDataSources method. * data_source_scopes are the scopes
+           * returned by ListDataSources method. Note that this should not be set when
+           * `service_account_name` is used to create the transfer config.
            */
           public Create setVersionInfo(java.lang.String versionInfo) {
             this.versionInfo = versionInfo;
@@ -2761,25 +2756,24 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. This is
            * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
            * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-           * make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes
-           * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-           * client_id of the a data source as returned by ListDataSources method. *
-           * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-           * should not be set when `service_account_name` is used to update the transfer config.
+           * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauth
+           * z/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data
+           * _source_scopes * The client_id is the OAuth client_id of the a data source as returned
+           * by ListDataSources method. * data_source_scopes are the scopes returned by
+           * ListDataSources method. Note that this should not be set when `service_account_name` is
+           * used to update the transfer config.
            */
           @com.google.api.client.util.Key
           private java.lang.String authorizationCode;
 
           /** Optional OAuth2 authorization code to use with this transfer configuration. This is required only
          if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials are needed, as indicated
-         by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL:
-         https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-         _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth client_id of
-         the a data source as returned by ListDataSources method. * data_source_scopes are the scopes
-         returned by ListDataSources method. Note that this should not be set when `service_account_name` is
-         used to update the transfer config.
+         by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL: h
+         ttps://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type
+         =authorization_code_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+         data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
+         ListDataSources method. Note that this should not be set when `service_account_name` is used to
+         update the transfer config.
            */
           public java.lang.String getAuthorizationCode() {
             return authorizationCode;
@@ -2789,13 +2783,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. This is
            * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
            * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-           * make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes
-           * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-           * client_id of the a data source as returned by ListDataSources method. *
-           * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-           * should not be set when `service_account_name` is used to update the transfer config.
+           * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauth
+           * z/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data
+           * _source_scopes * The client_id is the OAuth client_id of the a data source as returned
+           * by ListDataSources method. * data_source_scopes are the scopes returned by
+           * ListDataSources method. Note that this should not be set when `service_account_name` is
+           * used to update the transfer config.
            */
           public Patch setAuthorizationCode(java.lang.String authorizationCode) {
             this.authorizationCode = authorizationCode;
@@ -2855,25 +2848,23 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /**
            * Optional version info. This is required only if `transferConfig.dataSourceId` is not
            * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-           * order to obtain version info, make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info
-           * * The client_id is the OAuth client_id of the a data source as returned by
-           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
-           * method. Note that this should not be set when `service_account_name` is used to update
-           * the transfer config.
+           * order to obtain version info, make a request to the following URL: https://www.gstatic.
+           * com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=versio
+           * n_info_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+           * data source as returned by ListDataSources method. * data_source_scopes are the scopes
+           * returned by ListDataSources method. Note that this should not be set when
+           * `service_account_name` is used to update the transfer config.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionInfo;
 
           /** Optional version info. This is required only if `transferConfig.dataSourceId` is not
          'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to
-         obtain version info, make a request to the following URL:
-         https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-         _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info * The client_id is the OAuth client_id of the a
-         data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
-         ListDataSources method. Note that this should not be set when `service_account_name` is used to
-         update the transfer config.
+         obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatrans
+         fer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_info_id=client_id=data_source_s
+         copes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
+         method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this
+         should not be set when `service_account_name` is used to update the transfer config.
            */
           public java.lang.String getVersionInfo() {
             return versionInfo;
@@ -2882,13 +2873,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /**
            * Optional version info. This is required only if `transferConfig.dataSourceId` is not
            * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-           * order to obtain version info, make a request to the following URL:
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-           * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info
-           * * The client_id is the OAuth client_id of the a data source as returned by
-           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
-           * method. Note that this should not be set when `service_account_name` is used to update
-           * the transfer config.
+           * order to obtain version info, make a request to the following URL: https://www.gstatic.
+           * com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=versio
+           * n_info_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+           * data source as returned by ListDataSources method. * data_source_scopes are the scopes
+           * returned by ListDataSources method. Note that this should not be set when
+           * `service_account_name` is used to update the transfer config.
            */
           public Patch setVersionInfo(java.lang.String versionInfo) {
             this.versionInfo = versionInfo;
@@ -4161,25 +4151,24 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. This is
          * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
          * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-         * make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes
-         * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-         * client_id of the a data source as returned by ListDataSources method. *
-         * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-         * should not be set when `service_account_name` is used to create the transfer config.
+         * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/
+         * auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data_sou
+         * rce_scopes * The client_id is the OAuth client_id of the a data source as returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. Note that this should not be set when `service_account_name` is used to create
+         * the transfer config.
          */
         @com.google.api.client.util.Key
         private java.lang.String authorizationCode;
 
         /** Optional OAuth2 authorization code to use with this transfer configuration. This is required only
        if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials are needed, as indicated
-       by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL:
-       https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-       _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth client_id of
-       the a data source as returned by ListDataSources method. * data_source_scopes are the scopes
-       returned by ListDataSources method. Note that this should not be set when `service_account_name` is
-       used to create the transfer config.
+       by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL: h
+       ttps://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type
+       =authorization_code_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+       data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
+       ListDataSources method. Note that this should not be set when `service_account_name` is used to
+       create the transfer config.
          */
         public java.lang.String getAuthorizationCode() {
           return authorizationCode;
@@ -4189,13 +4178,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. This is
          * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
          * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-         * make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes
-         * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-         * client_id of the a data source as returned by ListDataSources method. *
-         * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-         * should not be set when `service_account_name` is used to create the transfer config.
+         * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/
+         * auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data_sou
+         * rce_scopes * The client_id is the OAuth client_id of the a data source as returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. Note that this should not be set when `service_account_name` is used to create
+         * the transfer config.
          */
         public Create setAuthorizationCode(java.lang.String authorizationCode) {
           this.authorizationCode = authorizationCode;
@@ -4239,24 +4227,23 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /**
          * Optional version info. This is required only if `transferConfig.dataSourceId` is not
          * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-         * order to obtain version info, make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info *
-         * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
-         * method. * data_source_scopes are the scopes returned by ListDataSources method. Note that
-         * this should not be set when `service_account_name` is used to create the transfer config.
+         * order to obtain version info, make a request to the following URL: https://www.gstatic.co
+         * m/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_in
+         * fo_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a data
+         * source as returned by ListDataSources method. * data_source_scopes are the scopes
+         * returned by ListDataSources method. Note that this should not be set when
+         * `service_account_name` is used to create the transfer config.
          */
         @com.google.api.client.util.Key
         private java.lang.String versionInfo;
 
         /** Optional version info. This is required only if `transferConfig.dataSourceId` is not
        'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to
-       obtain version info, make a request to the following URL:
-       https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-       _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info * The client_id is the OAuth client_id of the a
-       data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
-       ListDataSources method. Note that this should not be set when `service_account_name` is used to
-       create the transfer config.
+       obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatrans
+       fer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_info_id=client_id=data_source_s
+       copes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
+       method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this
+       should not be set when `service_account_name` is used to create the transfer config.
          */
         public java.lang.String getVersionInfo() {
           return versionInfo;
@@ -4265,12 +4252,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /**
          * Optional version info. This is required only if `transferConfig.dataSourceId` is not
          * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-         * order to obtain version info, make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info *
-         * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
-         * method. * data_source_scopes are the scopes returned by ListDataSources method. Note that
-         * this should not be set when `service_account_name` is used to create the transfer config.
+         * order to obtain version info, make a request to the following URL: https://www.gstatic.co
+         * m/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_in
+         * fo_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a data
+         * source as returned by ListDataSources method. * data_source_scopes are the scopes
+         * returned by ListDataSources method. Note that this should not be set when
+         * `service_account_name` is used to create the transfer config.
          */
         public Create setVersionInfo(java.lang.String versionInfo) {
           this.versionInfo = versionInfo;
@@ -4935,25 +4922,24 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. This is
          * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
          * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-         * make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes
-         * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-         * client_id of the a data source as returned by ListDataSources method. *
-         * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-         * should not be set when `service_account_name` is used to update the transfer config.
+         * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/
+         * auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data_sou
+         * rce_scopes * The client_id is the OAuth client_id of the a data source as returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. Note that this should not be set when `service_account_name` is used to update
+         * the transfer config.
          */
         @com.google.api.client.util.Key
         private java.lang.String authorizationCode;
 
         /** Optional OAuth2 authorization code to use with this transfer configuration. This is required only
        if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials are needed, as indicated
-       by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL:
-       https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-       _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth client_id of
-       the a data source as returned by ListDataSources method. * data_source_scopes are the scopes
-       returned by ListDataSources method. Note that this should not be set when `service_account_name` is
-       used to update the transfer config.
+       by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL: h
+       ttps://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type
+       =authorization_code_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a
+       data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
+       ListDataSources method. Note that this should not be set when `service_account_name` is used to
+       update the transfer config.
          */
         public java.lang.String getAuthorizationCode() {
           return authorizationCode;
@@ -4963,13 +4949,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. This is
          * required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials
          * are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
-         * make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes
-         * _uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code * The client_id is the OAuth
-         * client_id of the a data source as returned by ListDataSources method. *
-         * data_source_scopes are the scopes returned by ListDataSources method. Note that this
-         * should not be set when `service_account_name` is used to update the transfer config.
+         * make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/
+         * auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=authorization_code_id=client_id=data_sou
+         * rce_scopes * The client_id is the OAuth client_id of the a data source as returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. Note that this should not be set when `service_account_name` is used to update
+         * the transfer config.
          */
         public Patch setAuthorizationCode(java.lang.String authorizationCode) {
           this.authorizationCode = authorizationCode;
@@ -5029,24 +5014,23 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /**
          * Optional version info. This is required only if `transferConfig.dataSourceId` is not
          * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-         * order to obtain version info, make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info *
-         * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
-         * method. * data_source_scopes are the scopes returned by ListDataSources method. Note that
-         * this should not be set when `service_account_name` is used to update the transfer config.
+         * order to obtain version info, make a request to the following URL: https://www.gstatic.co
+         * m/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_in
+         * fo_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a data
+         * source as returned by ListDataSources method. * data_source_scopes are the scopes
+         * returned by ListDataSources method. Note that this should not be set when
+         * `service_account_name` is used to update the transfer config.
          */
         @com.google.api.client.util.Key
         private java.lang.String versionInfo;
 
         /** Optional version info. This is required only if `transferConfig.dataSourceId` is not
        'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to
-       obtain version info, make a request to the following URL:
-       https://www.gstatic.com/bigquerydatatransfer/oauthz/auth? client_id=client_id=data_source_scopes
-       _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info * The client_id is the OAuth client_id of the a
-       data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by
-       ListDataSources method. Note that this should not be set when `service_account_name` is used to
-       update the transfer config.
+       obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatrans
+       fer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_info_id=client_id=data_source_s
+       copes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
+       method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this
+       should not be set when `service_account_name` is used to update the transfer config.
          */
         public java.lang.String getVersionInfo() {
           return versionInfo;
@@ -5055,12 +5039,12 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /**
          * Optional version info. This is required only if `transferConfig.dataSourceId` is not
          * 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In
-         * order to obtain version info, make a request to the following URL:
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?
-         * client_id=client_id=data_source_scopes _uri=urn:ietf:wg:oauth:2.0:oob_type=version_info *
-         * The client_id is the OAuth client_id of the a data source as returned by ListDataSources
-         * method. * data_source_scopes are the scopes returned by ListDataSources method. Note that
-         * this should not be set when `service_account_name` is used to update the transfer config.
+         * order to obtain version info, make a request to the following URL: https://www.gstatic.co
+         * m/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob_type=version_in
+         * fo_id=client_id=data_source_scopes * The client_id is the OAuth client_id of the a data
+         * source as returned by ListDataSources method. * data_source_scopes are the scopes
+         * returned by ListDataSources method. Note that this should not be set when
+         * `service_account_name` is used to update the transfer config.
          */
         public Patch setVersionInfo(java.lang.String versionInfo) {
           this.versionInfo = versionInfo;

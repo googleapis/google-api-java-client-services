@@ -17,7 +17,7 @@
 package com.google.api.services.chromepolicy.v1.model;
 
 /**
- * Request message for uploading a file for a policy. Next ID: 5
+ * Request message for uploading a file for a policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Policy API. For a detailed explanation see:

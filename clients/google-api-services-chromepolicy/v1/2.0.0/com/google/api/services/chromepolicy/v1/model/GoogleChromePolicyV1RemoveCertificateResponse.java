@@ -17,7 +17,7 @@
 package com.google.api.services.chromepolicy.v1.model;
 
 /**
- * Response message for downloading an uploaded file.
+ * Response object for removing a certificate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Policy API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.chromepolicy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChromePolicyVersionsV1UploadPolicyFileResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleChromePolicyV1RemoveCertificateResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The uri for end user to download the file.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String downloadUri;
-
-  /**
-   * The uri for end user to download the file.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDownloadUri() {
-    return downloadUri;
-  }
-
-  /**
-   * The uri for end user to download the file.
-   * @param downloadUri downloadUri or {@code null} for none
-   */
-  public GoogleChromePolicyVersionsV1UploadPolicyFileResponse setDownloadUri(java.lang.String downloadUri) {
-    this.downloadUri = downloadUri;
-    return this;
+  @Override
+  public GoogleChromePolicyV1RemoveCertificateResponse set(String fieldName, Object value) {
+    return (GoogleChromePolicyV1RemoveCertificateResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChromePolicyVersionsV1UploadPolicyFileResponse set(String fieldName, Object value) {
-    return (GoogleChromePolicyVersionsV1UploadPolicyFileResponse) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleChromePolicyVersionsV1UploadPolicyFileResponse clone() {
-    return (GoogleChromePolicyVersionsV1UploadPolicyFileResponse) super.clone();
+  public GoogleChromePolicyV1RemoveCertificateResponse clone() {
+    return (GoogleChromePolicyV1RemoveCertificateResponse) super.clone();
   }
 
 }

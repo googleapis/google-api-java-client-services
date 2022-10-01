@@ -74,11 +74,25 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maven artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UploadedMavenArtifact> mavenArtifacts;
+
+  /**
    * Number of artifacts uploaded. Only populated when artifacts are uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numArtifacts;
+
+  /**
+   * Python artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UploadedPythonPackage> pythonPackages;
 
   /**
    * Path to the artifact manifest. Only populated when artifacts are uploaded.
@@ -172,6 +186,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maven artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UploadedMavenArtifact> getMavenArtifacts() {
+    return mavenArtifacts;
+  }
+
+  /**
+   * Maven artifacts uploaded to Artifact Registry at the end of the build.
+   * @param mavenArtifacts mavenArtifacts or {@code null} for none
+   */
+  public Results setMavenArtifacts(java.util.List<UploadedMavenArtifact> mavenArtifacts) {
+    this.mavenArtifacts = mavenArtifacts;
+    return this;
+  }
+
+  /**
    * Number of artifacts uploaded. Only populated when artifacts are uploaded.
    * @return value or {@code null} for none
    */
@@ -185,6 +216,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
    */
   public Results setNumArtifacts(java.lang.Long numArtifacts) {
     this.numArtifacts = numArtifacts;
+    return this;
+  }
+
+  /**
+   * Python artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UploadedPythonPackage> getPythonPackages() {
+    return pythonPackages;
+  }
+
+  /**
+   * Python artifacts uploaded to Artifact Registry at the end of the build.
+   * @param pythonPackages pythonPackages or {@code null} for none
+   */
+  public Results setPythonPackages(java.util.List<UploadedPythonPackage> pythonPackages) {
+    this.pythonPackages = pythonPackages;
     return this;
   }
 

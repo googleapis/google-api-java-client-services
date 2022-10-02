@@ -290,6 +290,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long totalSlotMs;
 
   /**
+   * [Output-only] Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
+   * CREATE TABLE AS SELECT (CTAS).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long transferredBytes;
+
+  /**
    * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
    * The value may be {@code null}.
    */
@@ -882,6 +890,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setTotalSlotMs(java.lang.Long totalSlotMs) {
     this.totalSlotMs = totalSlotMs;
+    return this;
+  }
+
+  /**
+   * [Output-only] Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
+   * CREATE TABLE AS SELECT (CTAS).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTransferredBytes() {
+    return transferredBytes;
+  }
+
+  /**
+   * [Output-only] Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
+   * CREATE TABLE AS SELECT (CTAS).
+   * @param transferredBytes transferredBytes or {@code null} for none
+   */
+  public JobStatistics2 setTransferredBytes(java.lang.Long transferredBytes) {
+    this.transferredBytes = transferredBytes;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Custom view of service telemetry. Currently a place-holder pending final design.
+ * Use a custom service to designate a service that you want to monitor when none of the other
+ * service types (like App Engine, Cloud Run, or a GKE type) matches your intended service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

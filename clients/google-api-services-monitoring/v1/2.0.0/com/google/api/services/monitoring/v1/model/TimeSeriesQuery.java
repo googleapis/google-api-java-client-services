@@ -31,6 +31,13 @@ package com.google.api.services.monitoring.v1.model;
 public final class TimeSeriesQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * A query used to fetch time series with PromQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String prometheusQuery;
+
+  /**
    * Filter parameters to fetch time series.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String unitOverride;
+
+  /**
+   * A query used to fetch time series with PromQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrometheusQuery() {
+    return prometheusQuery;
+  }
+
+  /**
+   * A query used to fetch time series with PromQL.
+   * @param prometheusQuery prometheusQuery or {@code null} for none
+   */
+  public TimeSeriesQuery setPrometheusQuery(java.lang.String prometheusQuery) {
+    this.prometheusQuery = prometheusQuery;
+    return this;
+  }
 
   /**
    * Filter parameters to fetch time series.

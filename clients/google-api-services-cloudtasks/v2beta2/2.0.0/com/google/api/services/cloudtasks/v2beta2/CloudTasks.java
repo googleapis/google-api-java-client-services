@@ -134,6 +134,179 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Api collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudTasks cloudtasks = new CloudTasks(...);}
+   *   {@code CloudTasks.Api.List request = cloudtasks.api().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Api api() {
+    return new Api();
+  }
+
+  /**
+   * The "api" collection of methods.
+   */
+  public class Api {
+
+    /**
+     * An accessor for creating requests from the Queue collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudTasks cloudtasks = new CloudTasks(...);}
+     *   {@code CloudTasks.Queue.List request = cloudtasks.queue().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Queue queue() {
+      return new Queue();
+    }
+
+    /**
+     * The "queue" collection of methods.
+     */
+    public class Queue {
+
+      /**
+       * Update queue list by uploading a queue.yaml file. The queue.yaml file is supplied in the request
+       * body as a YAML encoded string. This method was added to support gcloud clients versions before
+       * 322.0.0. New clients should use CreateQueue instead of this method.
+       *
+       * Create a request for the method "queue.update".
+       *
+       * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       *
+       * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.HttpBody}
+       * @return the request
+       */
+      public Update update(com.google.api.services.cloudtasks.v2beta2.model.HttpBody content) throws java.io.IOException {
+        Update result = new Update(content);
+        initialize(result);
+        return result;
+      }
+
+      public class Update extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.Empty> {
+
+        private static final String REST_PATH = "api/queue/update";
+
+        /**
+         * Update queue list by uploading a queue.yaml file. The queue.yaml file is supplied in the
+         * request body as a YAML encoded string. This method was added to support gcloud clients versions
+         * before 322.0.0. New clients should use CreateQueue instead of this method.
+         *
+         * Create a request for the method "queue.update".
+         *
+         * This request holds the parameters needed by the the cloudtasks server.  After setting any
+         * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.HttpBody}
+         * @since 1.13
+         */
+        protected Update(com.google.api.services.cloudtasks.v2beta2.model.HttpBody content) {
+          super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.Empty.class);
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
+        }
+
+        @Override
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
+        }
+
+        @Override
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
+        }
+
+        @Override
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The App ID is supplied as an HTTP parameter. Unlike internal usage of App ID,
+         * it does not include a region prefix. Rather, the App ID represents the Project ID against
+         * which to make the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String appId;
+
+        /** Required. The App ID is supplied as an HTTP parameter. Unlike internal usage of App ID, it does not
+       include a region prefix. Rather, the App ID represents the Project ID against which to make the
+       request.
+         */
+        public java.lang.String getAppId() {
+          return appId;
+        }
+
+        /**
+         * Required. The App ID is supplied as an HTTP parameter. Unlike internal usage of App ID,
+         * it does not include a region prefix. Rather, the App ID represents the Project ID against
+         * which to make the request.
+         */
+        public Update setAppId(java.lang.String appId) {
+          this.appId = appId;
+          return this;
+        }
+
+        @Override
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>

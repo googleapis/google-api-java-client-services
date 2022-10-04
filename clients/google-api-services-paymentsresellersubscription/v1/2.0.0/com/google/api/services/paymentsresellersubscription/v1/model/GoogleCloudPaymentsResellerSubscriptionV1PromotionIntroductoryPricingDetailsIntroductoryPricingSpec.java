@@ -52,6 +52,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductor
   private java.lang.Integer recurrenceCount;
 
   /**
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
    * Output only. The discount amount. The value is positive.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductor
    */
   public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec setRecurrenceCount(java.lang.Integer recurrenceCount) {
     this.recurrenceCount = recurrenceCount;
+    return this;
+  }
+
+  /**
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US".
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

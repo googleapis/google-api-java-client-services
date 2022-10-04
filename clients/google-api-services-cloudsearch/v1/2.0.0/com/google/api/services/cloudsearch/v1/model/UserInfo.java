@@ -33,8 +33,7 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * Avatar url of the user who triggered the Drive Notification email. This field will be populated
    * if we can extract such information from the Drive Notification email. This should only be used
    * to fetch user avatars when updater_to_show_email is not populated. This field is not set for
-   * non-Drive Notification items. This is not the actual sender of the email, as the sender is
-   * always comments-noreply@docs.google.com.
+   * non-Drive Notification items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +75,11 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * The display name of the updater for clients to show used for Gmail items. For non-Drive
    * Notification items, this field will always be populated. If the display name cannot be found
    * for the user, the fallback string will be the email address. For Drive Notification items, this
-   * is the email of the user who triggered the Drive notification email. This field will be
-   * populated if we can extract such information from the Drive Notification email. This is not the
-   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
+   * is the name of the user who triggered the Drive notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. If the name
+   * cannot be extracted, then the email will be the fallback string, which is used as the display
+   * name text in the UI when needed. This is not the actual sender of the email, as the sender is
+   * always comments-noreply@docs.google.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +96,7 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * Avatar url of the user who triggered the Drive Notification email. This field will be populated
    * if we can extract such information from the Drive Notification email. This should only be used
    * to fetch user avatars when updater_to_show_email is not populated. This field is not set for
-   * non-Drive Notification items. This is not the actual sender of the email, as the sender is
-   * always comments-noreply@docs.google.com.
+   * non-Drive Notification items.
    * @return value or {@code null} for none
    */
   public java.lang.String getDriveNotificationAvatarUrl() {
@@ -107,8 +107,7 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * Avatar url of the user who triggered the Drive Notification email. This field will be populated
    * if we can extract such information from the Drive Notification email. This should only be used
    * to fetch user avatars when updater_to_show_email is not populated. This field is not set for
-   * non-Drive Notification items. This is not the actual sender of the email, as the sender is
-   * always comments-noreply@docs.google.com.
+   * non-Drive Notification items.
    * @param driveNotificationAvatarUrl driveNotificationAvatarUrl or {@code null} for none
    */
   public UserInfo setDriveNotificationAvatarUrl(java.lang.String driveNotificationAvatarUrl) {
@@ -196,9 +195,11 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * The display name of the updater for clients to show used for Gmail items. For non-Drive
    * Notification items, this field will always be populated. If the display name cannot be found
    * for the user, the fallback string will be the email address. For Drive Notification items, this
-   * is the email of the user who triggered the Drive notification email. This field will be
-   * populated if we can extract such information from the Drive Notification email. This is not the
-   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
+   * is the name of the user who triggered the Drive notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. If the name
+   * cannot be extracted, then the email will be the fallback string, which is used as the display
+   * name text in the UI when needed. This is not the actual sender of the email, as the sender is
+   * always comments-noreply@docs.google.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdaterToShowName() {
@@ -209,9 +210,11 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * The display name of the updater for clients to show used for Gmail items. For non-Drive
    * Notification items, this field will always be populated. If the display name cannot be found
    * for the user, the fallback string will be the email address. For Drive Notification items, this
-   * is the email of the user who triggered the Drive notification email. This field will be
-   * populated if we can extract such information from the Drive Notification email. This is not the
-   * actual sender of the email, as the sender is always comments-noreply@docs.google.com.
+   * is the name of the user who triggered the Drive notification email. This field will be
+   * populated if we can extract such information from the Drive Notification email. If the name
+   * cannot be extracted, then the email will be the fallback string, which is used as the display
+   * name text in the UI when needed. This is not the actual sender of the email, as the sender is
+   * always comments-noreply@docs.google.com.
    * @param updaterToShowName updaterToShowName or {@code null} for none
    */
   public UserInfo setUpdaterToShowName(java.lang.String updaterToShowName) {

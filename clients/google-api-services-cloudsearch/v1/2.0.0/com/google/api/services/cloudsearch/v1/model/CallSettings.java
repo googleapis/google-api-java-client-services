@@ -79,15 +79,6 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean presentLock;
 
   /**
-   * Indicates whether project Dino is currently on or off. WARNING: This is currently an
-   * experimental field. It should not be used without getting an explicit review and approval from
-   * the Meet team.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean projectDinoEnabled;
-
-  /**
    * Indicates whether the reactions lock is currently on or off.
    * The value may be {@code null}.
    */
@@ -217,27 +208,6 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
    */
   public CallSettings setPresentLock(java.lang.Boolean presentLock) {
     this.presentLock = presentLock;
-    return this;
-  }
-
-  /**
-   * Indicates whether project Dino is currently on or off. WARNING: This is currently an
-   * experimental field. It should not be used without getting an explicit review and approval from
-   * the Meet team.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getProjectDinoEnabled() {
-    return projectDinoEnabled;
-  }
-
-  /**
-   * Indicates whether project Dino is currently on or off. WARNING: This is currently an
-   * experimental field. It should not be used without getting an explicit review and approval from
-   * the Meet team.
-   * @param projectDinoEnabled projectDinoEnabled or {@code null} for none
-   */
-  public CallSettings setProjectDinoEnabled(java.lang.Boolean projectDinoEnabled) {
-    this.projectDinoEnabled = projectDinoEnabled;
     return this;
   }
 

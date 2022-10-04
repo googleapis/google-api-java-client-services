@@ -43,6 +43,17 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   private DataSource source;
 
   /**
+   * Update mask to control which fields to update. If update_mask is non-empty then only the fields
+   * specified in the update_mask are updated. If you specify a field in the update_mask, but don't
+   * specify its value in the source that field will be cleared. If the update_mask is not present
+   * or empty or has the value * then all fields will be updated. Some example field paths: name,
+   * display_name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
    * Common debug options.
    * @return value or {@code null} for none
    */
@@ -71,6 +82,31 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
    */
   public UpdateDataSourceRequest setSource(DataSource source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Update mask to control which fields to update. If update_mask is non-empty then only the fields
+   * specified in the update_mask are updated. If you specify a field in the update_mask, but don't
+   * specify its value in the source that field will be cleared. If the update_mask is not present
+   * or empty or has the value * then all fields will be updated. Some example field paths: name,
+   * display_name
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Update mask to control which fields to update. If update_mask is non-empty then only the fields
+   * specified in the update_mask are updated. If you specify a field in the update_mask, but don't
+   * specify its value in the source that field will be cleared. If the update_mask is not present
+   * or empty or has the value * then all fields will be updated. Some example field paths: name,
+   * display_name
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public UpdateDataSourceRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

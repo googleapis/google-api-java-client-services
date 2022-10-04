@@ -67,12 +67,27 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   private java.lang.String botAttachmentState;
 
   /**
+   * Output only. Time when the quoted message was posted in microseconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long createTimeMicros;
+
+  /**
    * Output only. ID of the User who posted the quoted message. This includes information to
    * identify if the quoted message was posted by an App on behalf of a user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserId creatorId;
+
+  /**
+   * Output only. Time when the quoted message was last edited by a user at the time when quoting
+   * action happens. Time is in microseconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long lastEditTimeMicros;
 
   /**
    * The `last_update_time` of the original message when the client initiated the quote creation.
@@ -114,7 +129,16 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   private java.lang.String textBody;
 
   /**
-   * Output only. Upload metadata of the quoted message. NEXT TAG: 11
+   * Output only. ID of the User who last updated (created/edited/deleted) the quoted message at the
+   * time when quoting action happens. This includes information to identify if the quoted message
+   * was posted by an App on behalf of a user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserId updaterId;
+
+  /**
+   * Output only. Upload metadata of the quoted message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,6 +198,23 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   }
 
   /**
+   * Output only. Time when the quoted message was posted in microseconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCreateTimeMicros() {
+    return createTimeMicros;
+  }
+
+  /**
+   * Output only. Time when the quoted message was posted in microseconds.
+   * @param createTimeMicros createTimeMicros or {@code null} for none
+   */
+  public QuotedMessageMetadata setCreateTimeMicros(java.lang.Long createTimeMicros) {
+    this.createTimeMicros = createTimeMicros;
+    return this;
+  }
+
+  /**
    * Output only. ID of the User who posted the quoted message. This includes information to
    * identify if the quoted message was posted by an App on behalf of a user.
    * @return value or {@code null} for none
@@ -189,6 +230,25 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
    */
   public QuotedMessageMetadata setCreatorId(UserId creatorId) {
     this.creatorId = creatorId;
+    return this;
+  }
+
+  /**
+   * Output only. Time when the quoted message was last edited by a user at the time when quoting
+   * action happens. Time is in microseconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLastEditTimeMicros() {
+    return lastEditTimeMicros;
+  }
+
+  /**
+   * Output only. Time when the quoted message was last edited by a user at the time when quoting
+   * action happens. Time is in microseconds.
+   * @param lastEditTimeMicros lastEditTimeMicros or {@code null} for none
+   */
+  public QuotedMessageMetadata setLastEditTimeMicros(java.lang.Long lastEditTimeMicros) {
+    this.lastEditTimeMicros = lastEditTimeMicros;
     return this;
   }
 
@@ -286,7 +346,28 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Upload metadata of the quoted message. NEXT TAG: 11
+   * Output only. ID of the User who last updated (created/edited/deleted) the quoted message at the
+   * time when quoting action happens. This includes information to identify if the quoted message
+   * was posted by an App on behalf of a user.
+   * @return value or {@code null} for none
+   */
+  public UserId getUpdaterId() {
+    return updaterId;
+  }
+
+  /**
+   * Output only. ID of the User who last updated (created/edited/deleted) the quoted message at the
+   * time when quoting action happens. This includes information to identify if the quoted message
+   * was posted by an App on behalf of a user.
+   * @param updaterId updaterId or {@code null} for none
+   */
+  public QuotedMessageMetadata setUpdaterId(UserId updaterId) {
+    this.updaterId = updaterId;
+    return this;
+  }
+
+  /**
+   * Output only. Upload metadata of the quoted message.
    * @return value or {@code null} for none
    */
   public java.util.List<UploadMetadata> getUploadMetadata() {
@@ -294,7 +375,7 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Upload metadata of the quoted message. NEXT TAG: 11
+   * Output only. Upload metadata of the quoted message.
    * @param uploadMetadata uploadMetadata or {@code null} for none
    */
   public QuotedMessageMetadata setUploadMetadata(java.util.List<UploadMetadata> uploadMetadata) {

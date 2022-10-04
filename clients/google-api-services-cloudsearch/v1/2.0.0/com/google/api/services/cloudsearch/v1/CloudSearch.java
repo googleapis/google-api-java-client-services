@@ -5417,6 +5417,38 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        /**
+         * Update mask to control which fields to update. If update_mask is non-empty then only the
+         * fields specified in the update_mask are updated. If you specify a field in the
+         * update_mask, but don't specify its value in the source that field will be cleared. If the
+         * update_mask is not present or empty or has the value * then all fields will be updated.
+         * Some example field paths: name, display_name
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Update mask to control which fields to update. If update_mask is non-empty then only the fields
+       specified in the update_mask are updated. If you specify a field in the update_mask, but don't
+       specify its value in the source that field will be cleared. If the update_mask is not present or
+       empty or has the value * then all fields will be updated. Some example field paths: name,
+       display_name
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Update mask to control which fields to update. If update_mask is non-empty then only the
+         * fields specified in the update_mask are updated. If you specify a field in the
+         * update_mask, but don't specify its value in the source that field will be cleared. If the
+         * update_mask is not present or empty or has the value * then all fields will be updated.
+         * Some example field paths: name, display_name
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
@@ -6290,6 +6322,40 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        /**
+         * Update mask to control which fields to update. If update_mask is non-empty then only the
+         * fields specified in the update_mask are updated. If you specify a field in the
+         * update_mask, but don't specify its value in the search_application then that field will
+         * be cleared. If the update_mask is not present or empty or has the value * then all fields
+         * will be updated. Some example field paths: search_application.name,
+         * search_application.display_name
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Update mask to control which fields to update. If update_mask is non-empty then only the fields
+       specified in the update_mask are updated. If you specify a field in the update_mask, but don't
+       specify its value in the search_application then that field will be cleared. If the update_mask is
+       not present or empty or has the value * then all fields will be updated. Some example field paths:
+       search_application.name, search_application.display_name
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Update mask to control which fields to update. If update_mask is non-empty then only the
+         * fields specified in the update_mask are updated. If you specify a field in the
+         * update_mask, but don't specify its value in the search_application then that field will
+         * be cleared. If the update_mask is not present or empty or has the value * then all fields
+         * will be updated. Some example field paths: search_application.name,
+         * search_application.display_name
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
@@ -6555,6 +6621,40 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
                 "^searchapplications/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Update mask to control which fields to update. If update_mask is non-empty then only the
+         * fields specified in the update_mask are updated. If you specify a field in the
+         * update_mask, but don't specify its value in the search_application then that field will
+         * be cleared. If the update_mask is not present or empty or has the value * then all fields
+         * will be updated. Some example field paths: search_application.name,
+         * search_application.display_name
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Update mask to control which fields to update. If update_mask is non-empty then only the fields
+       specified in the update_mask are updated. If you specify a field in the update_mask, but don't
+       specify its value in the search_application then that field will be cleared. If the update_mask is
+       not present or empty or has the value * then all fields will be updated. Some example field paths:
+       search_application.name, search_application.display_name
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Update mask to control which fields to update. If update_mask is non-empty then only the
+         * fields specified in the update_mask are updated. If you specify a field in the
+         * update_mask, but don't specify its value in the search_application then that field will
+         * be cleared. If the update_mask is not present or empty or has the value * then all fields
+         * will be updated. Some example field paths: search_application.name,
+         * search_application.display_name
+         */
+        public Update setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
           return this;
         }
 

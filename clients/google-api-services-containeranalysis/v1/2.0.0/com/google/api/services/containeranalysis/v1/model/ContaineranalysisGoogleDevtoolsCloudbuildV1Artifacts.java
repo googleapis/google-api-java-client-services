@@ -42,6 +42,16 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
   private java.util.List<java.lang.String> images;
 
   /**
+   * A list of Maven artifacts to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. Artifacts in the workspace matching specified paths globs will be uploaded to the
+   * specified Artifact Registry repository using the builder service account's credentials. If any
+   * artifacts fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact> mavenArtifacts;
+
+  /**
    * A list of objects to be uploaded to Cloud Storage upon successful completion of all build
    * steps. Files in the workspace matching specified paths globs will be uploaded to the specified
    * Cloud Storage location using the builder service account's credentials. The location and
@@ -51,6 +61,15 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
    */
   @com.google.api.client.util.Key
   private ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects objects;
+
+  /**
+   * A list of Python packages to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. The build service account credentials will be used to perform the upload. If any
+   * objects fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage> pythonPackages;
 
   /**
    * A list of images to be pushed upon the successful completion of all build steps. The images
@@ -76,6 +95,29 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
   }
 
   /**
+   * A list of Maven artifacts to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. Artifacts in the workspace matching specified paths globs will be uploaded to the
+   * specified Artifact Registry repository using the builder service account's credentials. If any
+   * artifacts fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact> getMavenArtifacts() {
+    return mavenArtifacts;
+  }
+
+  /**
+   * A list of Maven artifacts to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. Artifacts in the workspace matching specified paths globs will be uploaded to the
+   * specified Artifact Registry repository using the builder service account's credentials. If any
+   * artifacts fail to be pushed, the build is marked FAILURE.
+   * @param mavenArtifacts mavenArtifacts or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setMavenArtifacts(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact> mavenArtifacts) {
+    this.mavenArtifacts = mavenArtifacts;
+    return this;
+  }
+
+  /**
    * A list of objects to be uploaded to Cloud Storage upon successful completion of all build
    * steps. Files in the workspace matching specified paths globs will be uploaded to the specified
    * Cloud Storage location using the builder service account's credentials. The location and
@@ -97,6 +139,27 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setObjects(ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects objects) {
     this.objects = objects;
+    return this;
+  }
+
+  /**
+   * A list of Python packages to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. The build service account credentials will be used to perform the upload. If any
+   * objects fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage> getPythonPackages() {
+    return pythonPackages;
+  }
+
+  /**
+   * A list of Python packages to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. The build service account credentials will be used to perform the upload. If any
+   * objects fail to be pushed, the build is marked FAILURE.
+   * @param pythonPackages pythonPackages or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setPythonPackages(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage> pythonPackages) {
+    this.pythonPackages = pythonPackages;
     return this;
   }
 

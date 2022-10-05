@@ -53,6 +53,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> domainName;
 
   /**
+   * Read-only Container feature set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContainerFeatures features;
+
+  /**
    * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
    * whenever the account is modified.
    * The value may be {@code null}.
@@ -89,6 +96,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String publicId;
+
+  /**
+   * All Tag IDs that refer to this Container.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tagIds;
 
   /**
    * Auto generated link to the tag manager UI
@@ -155,6 +169,23 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   public Container setDomainName(java.util.List<java.lang.String> domainName) {
     this.domainName = domainName;
+    return this;
+  }
+
+  /**
+   * Read-only Container feature set.
+   * @return value or {@code null} for none
+   */
+  public ContainerFeatures getFeatures() {
+    return features;
+  }
+
+  /**
+   * Read-only Container feature set.
+   * @param features features or {@code null} for none
+   */
+  public Container setFeatures(ContainerFeatures features) {
+    this.features = features;
     return this;
   }
 
@@ -246,6 +277,23 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   public Container setPublicId(java.lang.String publicId) {
     this.publicId = publicId;
+    return this;
+  }
+
+  /**
+   * All Tag IDs that refer to this Container.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTagIds() {
+    return tagIds;
+  }
+
+  /**
+   * All Tag IDs that refer to this Container.
+   * @param tagIds tagIds or {@code null} for none
+   */
+  public Container setTagIds(java.util.List<java.lang.String> tagIds) {
+    this.tagIds = tagIds;
     return this;
   }
 

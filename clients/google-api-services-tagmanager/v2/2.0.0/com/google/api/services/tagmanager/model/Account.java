@@ -37,6 +37,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
+   * Read-only Account feature set
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccountFeatures features;
+
+  /**
    * The fingerprint of the GTM Account as computed at storage time. This value is recomputed
    * whenever the account is modified.
    * The value may be {@code null}.
@@ -90,6 +97,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setAccountId(java.lang.String accountId) {
     this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Read-only Account feature set
+   * @return value or {@code null} for none
+   */
+  public AccountFeatures getFeatures() {
+    return features;
+  }
+
+  /**
+   * Read-only Account feature set
+   * @param features features or {@code null} for none
+   */
+  public Account setFeatures(AccountFeatures features) {
+    this.features = features;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.metastore.v1alpha.model;
 
 /**
- * Contains information of the customer's network configurations.
+ * Contains information of the customer's network configurations.Next available ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -38,10 +38,10 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
   private java.lang.String endpointUri;
 
   /**
-   * The subnetwork of the customer project from which an IP address is reserved and used as the
-   * Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts
-   * in a subnet in the same region and same network. There must be at least one IP address
-   * available in the subnet's primary range. The subnet is specified in the following
+   * Immutable. The subnetwork of the customer project from which an IP address is reserved and used
+   * as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to
+   * all hosts in a subnet in the same region and same network. There must be at least one IP
+   * address available in the subnet's primary range. The subnet is specified in the following
    * form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
    * The value may be {@code null}.
    */
@@ -66,10 +66,10 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subnetwork of the customer project from which an IP address is reserved and used as the
-   * Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts
-   * in a subnet in the same region and same network. There must be at least one IP address
-   * available in the subnet's primary range. The subnet is specified in the following
+   * Immutable. The subnetwork of the customer project from which an IP address is reserved and used
+   * as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to
+   * all hosts in a subnet in the same region and same network. There must be at least one IP
+   * address available in the subnet's primary range. The subnet is specified in the following
    * form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
    * @return value or {@code null} for none
    */
@@ -78,10 +78,10 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subnetwork of the customer project from which an IP address is reserved and used as the
-   * Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts
-   * in a subnet in the same region and same network. There must be at least one IP address
-   * available in the subnet's primary range. The subnet is specified in the following
+   * Immutable. The subnetwork of the customer project from which an IP address is reserved and used
+   * as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to
+   * all hosts in a subnet in the same region and same network. There must be at least one IP
+   * address available in the subnet's primary range. The subnet is specified in the following
    * form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
    * @param subnetwork subnetwork or {@code null} for none
    */

@@ -392,6 +392,22 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Also retrieve accounts associated with Google Tag when true. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeGoogleTags;
+
+      /** Also retrieve accounts associated with Google Tag when true.
+       */
+      public java.lang.Boolean getIncludeGoogleTags() {
+        return includeGoogleTags;
+      }
+
+      /** Also retrieve accounts associated with Google Tag when true. */
+      public List setIncludeGoogleTags(java.lang.Boolean includeGoogleTags) {
+        this.includeGoogleTags = includeGoogleTags;
+        return this;
+      }
+
       /** Continuation token for fetching the next page of results. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
@@ -581,6 +597,199 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      */
     public class Containers {
 
+      /**
+       * Combines Containers.
+       *
+       * Create a request for the method "containers.combine".
+       *
+       * This request holds the parameters needed by the tagmanager server.  After setting any optional
+       * parameters, call the {@link Combine#execute()} method to invoke the remote operation.
+       *
+       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @return the request
+       */
+      public Combine combine(java.lang.String path) throws java.io.IOException {
+        Combine result = new Combine(path);
+        initialize(result);
+        return result;
+      }
+
+      public class Combine extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
+
+        private static final String REST_PATH = "tagmanager/v2/{+path}:combine";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
+
+        /**
+         * Combines Containers.
+         *
+         * Create a request for the method "containers.combine".
+         *
+         * This request holds the parameters needed by the the tagmanager server.  After setting any
+         * optional parameters, call the {@link Combine#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Combine#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @since 1.13
+         */
+        protected Combine(java.lang.String path) {
+          super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.Container.class);
+          this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Combine set$Xgafv(java.lang.String $Xgafv) {
+          return (Combine) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Combine setAccessToken(java.lang.String accessToken) {
+          return (Combine) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Combine setAlt(java.lang.String alt) {
+          return (Combine) super.setAlt(alt);
+        }
+
+        @Override
+        public Combine setCallback(java.lang.String callback) {
+          return (Combine) super.setCallback(callback);
+        }
+
+        @Override
+        public Combine setFields(java.lang.String fields) {
+          return (Combine) super.setFields(fields);
+        }
+
+        @Override
+        public Combine setKey(java.lang.String key) {
+          return (Combine) super.setKey(key);
+        }
+
+        @Override
+        public Combine setOauthToken(java.lang.String oauthToken) {
+          return (Combine) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Combine setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Combine) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Combine setQuotaUser(java.lang.String quotaUser) {
+          return (Combine) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Combine setUploadType(java.lang.String uploadType) {
+          return (Combine) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Combine setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Combine) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * GTM Container's API relative path. Example:
+         * accounts/{account_id}/containers/{container_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String path;
+
+        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         */
+        public java.lang.String getPath() {
+          return path;
+        }
+
+        /**
+         * GTM Container's API relative path. Example:
+         * accounts/{account_id}/containers/{container_id}
+         */
+        public Combine setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+          this.path = path;
+          return this;
+        }
+
+        /**
+         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
+         * Google product owned to GTM permission). If this operation causes an update but this bit
+         * is false, the operation will fail.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowUserPermissionFeatureUpdate;
+
+        /** Must be set to true to allow features.user_permissions to change from false to true (i.e. Google
+       product owned to GTM permission). If this operation causes an update but this bit is false, the
+       operation will fail.
+         */
+        public java.lang.Boolean getAllowUserPermissionFeatureUpdate() {
+          return allowUserPermissionFeatureUpdate;
+        }
+
+        /**
+         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
+         * Google product owned to GTM permission). If this operation causes an update but this bit
+         * is false, the operation will fail.
+         */
+        public Combine setAllowUserPermissionFeatureUpdate(java.lang.Boolean allowUserPermissionFeatureUpdate) {
+          this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
+          return this;
+        }
+
+        /** ID of container that will be merged into the current container. */
+        @com.google.api.client.util.Key
+        private java.lang.String containerId;
+
+        /** ID of container that will be merged into the current container.
+         */
+        public java.lang.String getContainerId() {
+          return containerId;
+        }
+
+        /** ID of container that will be merged into the current container. */
+        public Combine setContainerId(java.lang.String containerId) {
+          this.containerId = containerId;
+          return this;
+        }
+
+        /** Specify the source of config setting after combine */
+        @com.google.api.client.util.Key
+        private java.lang.String settingSource;
+
+        /** Specify the source of config setting after combine
+         */
+        public java.lang.String getSettingSource() {
+          return settingSource;
+        }
+
+        /** Specify the source of config setting after combine */
+        public Combine setSettingSource(java.lang.String settingSource) {
+          this.settingSource = settingSource;
+          return this;
+        }
+
+        @Override
+        public Combine set(String parameterName, Object value) {
+          return (Combine) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a Container.
        *
@@ -1148,6 +1357,532 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Looks up a Container by destination ID.
+       *
+       * Create a request for the method "containers.lookup".
+       *
+       * This request holds the parameters needed by the tagmanager server.  After setting any optional
+       * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+       *
+       * @return the request
+       */
+      public Lookup lookup() throws java.io.IOException {
+        Lookup result = new Lookup();
+        initialize(result);
+        return result;
+      }
+
+      public class Lookup extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
+
+        private static final String REST_PATH = "tagmanager/v2/accounts/containers:lookup";
+
+        /**
+         * Looks up a Container by destination ID.
+         *
+         * Create a request for the method "containers.lookup".
+         *
+         * This request holds the parameters needed by the the tagmanager server.  After setting any
+         * optional parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @since 1.13
+         */
+        protected Lookup() {
+          super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Container.class);
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Lookup set$Xgafv(java.lang.String $Xgafv) {
+          return (Lookup) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Lookup setAccessToken(java.lang.String accessToken) {
+          return (Lookup) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Lookup setAlt(java.lang.String alt) {
+          return (Lookup) super.setAlt(alt);
+        }
+
+        @Override
+        public Lookup setCallback(java.lang.String callback) {
+          return (Lookup) super.setCallback(callback);
+        }
+
+        @Override
+        public Lookup setFields(java.lang.String fields) {
+          return (Lookup) super.setFields(fields);
+        }
+
+        @Override
+        public Lookup setKey(java.lang.String key) {
+          return (Lookup) super.setKey(key);
+        }
+
+        @Override
+        public Lookup setOauthToken(java.lang.String oauthToken) {
+          return (Lookup) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Lookup setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Lookup) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Lookup setQuotaUser(java.lang.String quotaUser) {
+          return (Lookup) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Lookup setUploadType(java.lang.String uploadType) {
+          return (Lookup) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Lookup setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Lookup) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Measurement ID of destination linked to a GTM Container, e.g. AW-123456789. Example:
+         * accounts/containers:lookup?destination_id={destination_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String destinationId;
+
+        /** Measurement ID of destination linked to a GTM Container, e.g. AW-123456789. Example:
+       accounts/containers:lookup?destination_id={destination_id}.
+         */
+        public java.lang.String getDestinationId() {
+          return destinationId;
+        }
+
+        /**
+         * Measurement ID of destination linked to a GTM Container, e.g. AW-123456789. Example:
+         * accounts/containers:lookup?destination_id={destination_id}.
+         */
+        public Lookup setDestinationId(java.lang.String destinationId) {
+          this.destinationId = destinationId;
+          return this;
+        }
+
+        @Override
+        public Lookup set(String parameterName, Object value) {
+          return (Lookup) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Move Tag ID out of a Container.
+       *
+       * Create a request for the method "containers.move_tag_id".
+       *
+       * This request holds the parameters needed by the tagmanager server.  After setting any optional
+       * parameters, call the {@link MoveTagId#execute()} method to invoke the remote operation.
+       *
+       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @return the request
+       */
+      public MoveTagId moveTagId(java.lang.String path) throws java.io.IOException {
+        MoveTagId result = new MoveTagId(path);
+        initialize(result);
+        return result;
+      }
+
+      public class MoveTagId extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
+
+        private static final String REST_PATH = "tagmanager/v2/{+path}:move_tag_id";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
+
+        /**
+         * Move Tag ID out of a Container.
+         *
+         * Create a request for the method "containers.move_tag_id".
+         *
+         * This request holds the parameters needed by the the tagmanager server.  After setting any
+         * optional parameters, call the {@link MoveTagId#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * MoveTagId#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @since 1.13
+         */
+        protected MoveTagId(java.lang.String path) {
+          super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.Container.class);
+          this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+        }
+
+        @Override
+        public MoveTagId set$Xgafv(java.lang.String $Xgafv) {
+          return (MoveTagId) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public MoveTagId setAccessToken(java.lang.String accessToken) {
+          return (MoveTagId) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public MoveTagId setAlt(java.lang.String alt) {
+          return (MoveTagId) super.setAlt(alt);
+        }
+
+        @Override
+        public MoveTagId setCallback(java.lang.String callback) {
+          return (MoveTagId) super.setCallback(callback);
+        }
+
+        @Override
+        public MoveTagId setFields(java.lang.String fields) {
+          return (MoveTagId) super.setFields(fields);
+        }
+
+        @Override
+        public MoveTagId setKey(java.lang.String key) {
+          return (MoveTagId) super.setKey(key);
+        }
+
+        @Override
+        public MoveTagId setOauthToken(java.lang.String oauthToken) {
+          return (MoveTagId) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public MoveTagId setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (MoveTagId) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public MoveTagId setQuotaUser(java.lang.String quotaUser) {
+          return (MoveTagId) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public MoveTagId setUploadType(java.lang.String uploadType) {
+          return (MoveTagId) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public MoveTagId setUploadProtocol(java.lang.String uploadProtocol) {
+          return (MoveTagId) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * GTM Container's API relative path. Example:
+         * accounts/{account_id}/containers/{container_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String path;
+
+        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         */
+        public java.lang.String getPath() {
+          return path;
+        }
+
+        /**
+         * GTM Container's API relative path. Example:
+         * accounts/{account_id}/containers/{container_id}
+         */
+        public MoveTagId setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+          this.path = path;
+          return this;
+        }
+
+        /**
+         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
+         * Google product owned to GTM permission). If this operation causes an update but this bit
+         * is false, the operation will fail.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowUserPermissionFeatureUpdate;
+
+        /** Must be set to true to allow features.user_permissions to change from false to true (i.e. Google
+       product owned to GTM permission). If this operation causes an update but this bit is false, the
+       operation will fail.
+         */
+        public java.lang.Boolean getAllowUserPermissionFeatureUpdate() {
+          return allowUserPermissionFeatureUpdate;
+        }
+
+        /**
+         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
+         * Google product owned to GTM permission). If this operation causes an update but this bit
+         * is false, the operation will fail.
+         */
+        public MoveTagId setAllowUserPermissionFeatureUpdate(java.lang.Boolean allowUserPermissionFeatureUpdate) {
+          this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
+          return this;
+        }
+
+        /** Whether or not to copy tag settings from this tag to the new tag. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean copySettings;
+
+        /** Whether or not to copy tag settings from this tag to the new tag.
+         */
+        public java.lang.Boolean getCopySettings() {
+          return copySettings;
+        }
+
+        /** Whether or not to copy tag settings from this tag to the new tag. */
+        public MoveTagId setCopySettings(java.lang.Boolean copySettings) {
+          this.copySettings = copySettings;
+          return this;
+        }
+
+        /**
+         * Must be set to true to accept all terms of service agreements copied from the current tag
+         * to the newly created tag. If this bit is false, the operation will fail.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean copyTermsOfService;
+
+        /** Must be set to true to accept all terms of service agreements copied from the current tag to the
+       newly created tag. If this bit is false, the operation will fail.
+         */
+        public java.lang.Boolean getCopyTermsOfService() {
+          return copyTermsOfService;
+        }
+
+        /**
+         * Must be set to true to accept all terms of service agreements copied from the current tag
+         * to the newly created tag. If this bit is false, the operation will fail.
+         */
+        public MoveTagId setCopyTermsOfService(java.lang.Boolean copyTermsOfService) {
+          this.copyTermsOfService = copyTermsOfService;
+          return this;
+        }
+
+        /** Whether or not to copy users from this tag to the new tag. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean copyUsers;
+
+        /** Whether or not to copy users from this tag to the new tag.
+         */
+        public java.lang.Boolean getCopyUsers() {
+          return copyUsers;
+        }
+
+        /** Whether or not to copy users from this tag to the new tag. */
+        public MoveTagId setCopyUsers(java.lang.Boolean copyUsers) {
+          this.copyUsers = copyUsers;
+          return this;
+        }
+
+        /** Tag ID to be removed from the current Container. */
+        @com.google.api.client.util.Key
+        private java.lang.String tagId;
+
+        /** Tag ID to be removed from the current Container.
+         */
+        public java.lang.String getTagId() {
+          return tagId;
+        }
+
+        /** Tag ID to be removed from the current Container. */
+        public MoveTagId setTagId(java.lang.String tagId) {
+          this.tagId = tagId;
+          return this;
+        }
+
+        /** The name for the newly created tag. */
+        @com.google.api.client.util.Key
+        private java.lang.String tagName;
+
+        /** The name for the newly created tag.
+         */
+        public java.lang.String getTagName() {
+          return tagName;
+        }
+
+        /** The name for the newly created tag. */
+        public MoveTagId setTagName(java.lang.String tagName) {
+          this.tagName = tagName;
+          return this;
+        }
+
+        @Override
+        public MoveTagId set(String parameterName, Object value) {
+          return (MoveTagId) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the snippet of a Container.
+       *
+       * Create a request for the method "containers.snippet".
+       *
+       * This request holds the parameters needed by the tagmanager server.  After setting any optional
+       * parameters, call the {@link Snippet#execute()} method to invoke the remote operation.
+       *
+       * @param path Container snippet's API relative path. Example:
+       *        accounts/{account_id}/containers/{container_id}:snippet
+       * @return the request
+       */
+      public Snippet snippet(java.lang.String path) throws java.io.IOException {
+        Snippet result = new Snippet(path);
+        initialize(result);
+        return result;
+      }
+
+      public class Snippet extends TagManagerRequest<java.lang.String> {
+
+        private static final String REST_PATH = "tagmanager/v2/{+path}:snippet";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
+
+        /**
+         * Gets the snippet of a Container.
+         *
+         * Create a request for the method "containers.snippet".
+         *
+         * This request holds the parameters needed by the the tagmanager server.  After setting any
+         * optional parameters, call the {@link Snippet#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Snippet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param path Container snippet's API relative path. Example:
+       *        accounts/{account_id}/containers/{container_id}:snippet
+         * @since 1.13
+         */
+        protected Snippet(java.lang.String path) {
+          super(TagManager.this, "GET", REST_PATH, null, java.lang.String.class);
+          this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Snippet set$Xgafv(java.lang.String $Xgafv) {
+          return (Snippet) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Snippet setAccessToken(java.lang.String accessToken) {
+          return (Snippet) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Snippet setAlt(java.lang.String alt) {
+          return (Snippet) super.setAlt(alt);
+        }
+
+        @Override
+        public Snippet setCallback(java.lang.String callback) {
+          return (Snippet) super.setCallback(callback);
+        }
+
+        @Override
+        public Snippet setFields(java.lang.String fields) {
+          return (Snippet) super.setFields(fields);
+        }
+
+        @Override
+        public Snippet setKey(java.lang.String key) {
+          return (Snippet) super.setKey(key);
+        }
+
+        @Override
+        public Snippet setOauthToken(java.lang.String oauthToken) {
+          return (Snippet) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Snippet setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Snippet) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Snippet setQuotaUser(java.lang.String quotaUser) {
+          return (Snippet) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Snippet setUploadType(java.lang.String uploadType) {
+          return (Snippet) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Snippet setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Snippet) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Container snippet's API relative path. Example:
+         * accounts/{account_id}/containers/{container_id}:snippet
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String path;
+
+        /** Container snippet's API relative path. Example:
+       accounts/{account_id}/containers/{container_id}:snippet
+         */
+        public java.lang.String getPath() {
+          return path;
+        }
+
+        /**
+         * Container snippet's API relative path. Example:
+         * accounts/{account_id}/containers/{container_id}:snippet
+         */
+        public Snippet setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+          this.path = path;
+          return this;
+        }
+
+        @Override
+        public Snippet set(String parameterName, Object value) {
+          return (Snippet) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates a Container.
        *
        * Create a request for the method "containers.update".
@@ -1307,6 +2042,497 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
       }
 
+      /**
+       * An accessor for creating requests from the Destinations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code TagManager tagmanager = new TagManager(...);}
+       *   {@code TagManager.Destinations.List request = tagmanager.destinations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Destinations destinations() {
+        return new Destinations();
+      }
+
+      /**
+       * The "destinations" collection of methods.
+       */
+      public class Destinations {
+
+        /**
+         * Gets a Destination.
+         *
+         * Create a request for the method "destinations.get".
+         *
+         * This request holds the parameters needed by the tagmanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param path Google Tag Destination's API relative path. Example:
+         *        accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+         * @return the request
+         */
+        public Get get(java.lang.String path) throws java.io.IOException {
+          Get result = new Get(path);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Destination> {
+
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/destinations/[^/]+$");
+
+          /**
+           * Gets a Destination.
+           *
+           * Create a request for the method "destinations.get".
+           *
+           * This request holds the parameters needed by the the tagmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param path Google Tag Destination's API relative path. Example:
+         *        accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String path) {
+            super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Destination.class);
+            this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/destinations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Google Tag Destination's API relative path. Example:
+           * accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String path;
+
+          /** Google Tag Destination's API relative path. Example:
+         accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+           */
+          public java.lang.String getPath() {
+            return path;
+          }
+
+          /**
+           * Google Tag Destination's API relative path. Example:
+           * accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+           */
+          public Get setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/destinations/[^/]+$");
+            }
+            this.path = path;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Adds a Destination to this Container and removes it from the Container to which it is currently
+         * linked.
+         *
+         * Create a request for the method "destinations.link".
+         *
+         * This request holds the parameters needed by the tagmanager server.  After setting any optional
+         * parameters, call the {@link Link#execute()} method to invoke the remote operation.
+         *
+         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @return the request
+         */
+        public Link link(java.lang.String parent) throws java.io.IOException {
+          Link result = new Link(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Link extends TagManagerRequest<com.google.api.services.tagmanager.model.Destination> {
+
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/destinations:link";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
+
+          /**
+           * Adds a Destination to this Container and removes it from the Container to which it is currently
+           * linked.
+           *
+           * Create a request for the method "destinations.link".
+           *
+           * This request holds the parameters needed by the the tagmanager server.  After setting any
+           * optional parameters, call the {@link Link#execute()} method to invoke the remote operation. <p>
+           * {@link Link#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @since 1.13
+           */
+          protected Link(java.lang.String parent) {
+            super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.Destination.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Link set$Xgafv(java.lang.String $Xgafv) {
+            return (Link) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Link setAccessToken(java.lang.String accessToken) {
+            return (Link) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Link setAlt(java.lang.String alt) {
+            return (Link) super.setAlt(alt);
+          }
+
+          @Override
+          public Link setCallback(java.lang.String callback) {
+            return (Link) super.setCallback(callback);
+          }
+
+          @Override
+          public Link setFields(java.lang.String fields) {
+            return (Link) super.setFields(fields);
+          }
+
+          @Override
+          public Link setKey(java.lang.String key) {
+            return (Link) super.setKey(key);
+          }
+
+          @Override
+          public Link setOauthToken(java.lang.String oauthToken) {
+            return (Link) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Link setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Link) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Link setQuotaUser(java.lang.String quotaUser) {
+            return (Link) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Link setUploadType(java.lang.String uploadType) {
+            return (Link) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Link setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Link) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * GTM parent Container's API relative path. Example:
+           * accounts/{account_id}/containers/{container_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * GTM parent Container's API relative path. Example:
+           * accounts/{account_id}/containers/{container_id}
+           */
+          public Link setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Must be set to true to allow features.user_permissions to change from false to true
+           * (i.e. Google product owned to GTM permission). If this operation causes an update but
+           * this bit is false, the operation will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowUserPermissionFeatureUpdate;
+
+          /** Must be set to true to allow features.user_permissions to change from false to true (i.e. Google
+         product owned to GTM permission). If this operation causes an update but this bit is false, the
+         operation will fail.
+           */
+          public java.lang.Boolean getAllowUserPermissionFeatureUpdate() {
+            return allowUserPermissionFeatureUpdate;
+          }
+
+          /**
+           * Must be set to true to allow features.user_permissions to change from false to true
+           * (i.e. Google product owned to GTM permission). If this operation causes an update but
+           * this bit is false, the operation will fail.
+           */
+          public Link setAllowUserPermissionFeatureUpdate(java.lang.Boolean allowUserPermissionFeatureUpdate) {
+            this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
+            return this;
+          }
+
+          /** Destination ID to be linked to the current container. */
+          @com.google.api.client.util.Key
+          private java.lang.String destinationId;
+
+          /** Destination ID to be linked to the current container.
+           */
+          public java.lang.String getDestinationId() {
+            return destinationId;
+          }
+
+          /** Destination ID to be linked to the current container. */
+          public Link setDestinationId(java.lang.String destinationId) {
+            this.destinationId = destinationId;
+            return this;
+          }
+
+          @Override
+          public Link set(String parameterName, Object value) {
+            return (Link) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all Destinations linked to a GTM Container.
+         *
+         * Create a request for the method "destinations.list".
+         *
+         * This request holds the parameters needed by the tagmanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListDestinationsResponse> {
+
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/destinations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
+
+          /**
+           * Lists all Destinations linked to a GTM Container.
+           *
+           * Create a request for the method "destinations.list".
+           *
+           * This request holds the parameters needed by the the tagmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListDestinationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * GTM parent Container's API relative path. Example:
+           * accounts/{account_id}/containers/{container_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * GTM parent Container's API relative path. Example:
+           * accounts/{account_id}/containers/{container_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Environments collection.
        *
@@ -8003,6 +9229,776 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
             /**
              * When provided, this fingerprint must match the fingerprint of the folder in storage.
+             */
+            public Update setFingerprint(java.lang.String fingerprint) {
+              this.fingerprint = fingerprint;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the GtagConfig collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code TagManager tagmanager = new TagManager(...);}
+         *   {@code TagManager.GtagConfig.List request = tagmanager.gtagConfig().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public GtagConfig gtagConfig() {
+          return new GtagConfig();
+        }
+
+        /**
+         * The "gtag_config" collection of methods.
+         */
+        public class GtagConfig {
+
+          /**
+           * Creates a Google tag config.
+           *
+           * Create a request for the method "gtag_config.create".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.tagmanager.model.GtagConfig content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.GtagConfig> {
+
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/gtag_config";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Creates a Google tag config.
+             *
+             * Create a request for the method "gtag_config.create".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.GtagConfig content) {
+              super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.GtagConfig.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Workspace's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a Google tag config.
+           *
+           * Create a request for the method "gtag_config.delete".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
+           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String path) throws java.io.IOException {
+            Delete result = new Delete(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends TagManagerRequest<Void> {
+
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+
+            /**
+             * Deletes a Google tag config.
+             *
+             * Create a request for the method "gtag_config.delete".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
+           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String path) {
+              super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
+             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
+           kspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
+             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+              }
+              this.path = path;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a Google tag config.
+           *
+           * Create a request for the method "gtag_config.get".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
+           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+           * @return the request
+           */
+          public Get get(java.lang.String path) throws java.io.IOException {
+            Get result = new Get(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.GtagConfig> {
+
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+
+            /**
+             * Gets a Google tag config.
+             *
+             * Create a request for the method "gtag_config.get".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
+           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+             * @since 1.13
+             */
+            protected Get(java.lang.String path) {
+              super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.GtagConfig.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
+             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
+           kspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
+             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+              }
+              this.path = path;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all Google tag configs in a Container.
+           *
+           * Create a request for the method "gtag_config.list".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListGtagConfigResponse> {
+
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/gtag_config";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Lists all Google tag configs in a Container.
+             *
+             * Create a request for the method "gtag_config.list".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListGtagConfigResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Workspace's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Continuation token for fetching the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a Google tag config.
+           *
+           * Create a request for the method "gtag_config.update".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
+           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+           * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
+           * @return the request
+           */
+          public Update update(java.lang.String path, com.google.api.services.tagmanager.model.GtagConfig content) throws java.io.IOException {
+            Update result = new Update(path, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.GtagConfig> {
+
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+
+            /**
+             * Updates a Google tag config.
+             *
+             * Create a request for the method "gtag_config.update".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
+           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+             * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
+             * @since 1.13
+             */
+            protected Update(java.lang.String path, com.google.api.services.tagmanager.model.GtagConfig content) {
+              super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.GtagConfig.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
+             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
+           kspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
+             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
+             */
+            public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/gtag_config/[^/]+$");
+              }
+              this.path = path;
+              return this;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the config in storage.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String fingerprint;
+
+            /** When provided, this fingerprint must match the fingerprint of the config in storage.
+             */
+            public java.lang.String getFingerprint() {
+              return fingerprint;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the config in storage.
              */
             public Update setFingerprint(java.lang.String fingerprint) {
               this.fingerprint = fingerprint;

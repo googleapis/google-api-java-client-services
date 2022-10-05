@@ -79,6 +79,13 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   private java.lang.String numCustomTemplates;
 
   /**
+   * Number of Google tag configs in the container version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String numGtagConfigs;
+
+  /**
    * Number of macros in the container version.
    * The value may be {@code null}.
    */
@@ -243,6 +250,23 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
    */
   public ContainerVersionHeader setNumCustomTemplates(java.lang.String numCustomTemplates) {
     this.numCustomTemplates = numCustomTemplates;
+    return this;
+  }
+
+  /**
+   * Number of Google tag configs in the container version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNumGtagConfigs() {
+    return numGtagConfigs;
+  }
+
+  /**
+   * Number of Google tag configs in the container version.
+   * @param numGtagConfigs numGtagConfigs or {@code null} for none
+   */
+  public ContainerVersionHeader setNumGtagConfigs(java.lang.String numGtagConfigs) {
+    this.numGtagConfigs = numGtagConfigs;
     return this;
   }
 

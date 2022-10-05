@@ -120,6 +120,13 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.util.List<Folder> folder;
 
   /**
+   * The Google tag configs in the container that this version was taken from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GtagConfig> gtagConfig;
+
+  /**
    * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * The value may be {@code null}.
    */
@@ -354,6 +361,23 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
    */
   public ContainerVersion setFolder(java.util.List<Folder> folder) {
     this.folder = folder;
+    return this;
+  }
+
+  /**
+   * The Google tag configs in the container that this version was taken from.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GtagConfig> getGtagConfig() {
+    return gtagConfig;
+  }
+
+  /**
+   * The Google tag configs in the container that this version was taken from.
+   * @param gtagConfig gtagConfig or {@code null} for none
+   */
+  public ContainerVersion setGtagConfig(java.util.List<GtagConfig> gtagConfig) {
+    this.gtagConfig = gtagConfig;
     return this;
   }
 

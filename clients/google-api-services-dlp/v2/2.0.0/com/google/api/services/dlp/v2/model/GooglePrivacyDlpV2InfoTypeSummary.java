@@ -31,11 +31,35 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InfoTypeSummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * Not populated for predicted infotypes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer estimatedPrevalence;
+
+  /**
    * The infoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2InfoType infoType;
+
+  /**
+   * Not populated for predicted infotypes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getEstimatedPrevalence() {
+    return estimatedPrevalence;
+  }
+
+  /**
+   * Not populated for predicted infotypes.
+   * @param estimatedPrevalence estimatedPrevalence or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeSummary setEstimatedPrevalence(java.lang.Integer estimatedPrevalence) {
+    this.estimatedPrevalence = estimatedPrevalence;
+    return this;
+  }
 
   /**
    * The infoType.

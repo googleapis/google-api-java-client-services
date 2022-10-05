@@ -77,6 +77,15 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private java.lang.String description;
 
   /**
+   * Output only. Immutable. Audit Log link to find business justification provided for violation
+   * exception. Format: https://console.cloud.google.com/logs/query;query={logName}{protoPayload.res
+   * ourceName}{protoPayload.methodName}{timeRange}{organization}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exceptionAuditLogLink;
+
+  /**
    * Output only. Immutable. Name of the Violation. Format: organizations/{organization}/locations/{
    * location}/workloads/{workload_id}/violations/{violations_id}
    * The value may be {@code null}.
@@ -238,6 +247,27 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. Immutable. Audit Log link to find business justification provided for violation
+   * exception. Format: https://console.cloud.google.com/logs/query;query={logName}{protoPayload.res
+   * ourceName}{protoPayload.methodName}{timeRange}{organization}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExceptionAuditLogLink() {
+    return exceptionAuditLogLink;
+  }
+
+  /**
+   * Output only. Immutable. Audit Log link to find business justification provided for violation
+   * exception. Format: https://console.cloud.google.com/logs/query;query={logName}{protoPayload.res
+   * ourceName}{protoPayload.methodName}{timeRange}{organization}
+   * @param exceptionAuditLogLink exceptionAuditLogLink or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setExceptionAuditLogLink(java.lang.String exceptionAuditLogLink) {
+    this.exceptionAuditLogLink = exceptionAuditLogLink;
     return this;
   }
 

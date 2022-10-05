@@ -89,14 +89,16 @@ public final class Api extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The recommended deployment of the API. Format: `apis/{api}/deployments/{deployment}`
+   * The recommended deployment of the API. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recommendedDeployment;
 
   /**
-   * The recommended version of the API. Format: `apis/{api}/versions/{version}`
+   * The recommended version of the API. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +251,8 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended deployment of the API. Format: `apis/{api}/deployments/{deployment}`
+   * The recommended deployment of the API. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommendedDeployment() {
@@ -257,7 +260,8 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended deployment of the API. Format: `apis/{api}/deployments/{deployment}`
+   * The recommended deployment of the API. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}`
    * @param recommendedDeployment recommendedDeployment or {@code null} for none
    */
   public Api setRecommendedDeployment(java.lang.String recommendedDeployment) {
@@ -266,7 +270,8 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended version of the API. Format: `apis/{api}/versions/{version}`
+   * The recommended version of the API. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommendedVersion() {
@@ -274,7 +279,8 @@ public final class Api extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recommended version of the API. Format: `apis/{api}/versions/{version}`
+   * The recommended version of the API. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
    * @param recommendedVersion recommendedVersion or {@code null} for none
    */
   public Api setRecommendedVersion(java.lang.String recommendedVersion) {

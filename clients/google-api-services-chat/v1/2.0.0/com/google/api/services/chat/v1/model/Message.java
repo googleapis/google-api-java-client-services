@@ -70,9 +70,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rich, formatted and interactive cards that can be used to display UI elements such as:
-   * formatted texts, buttons, clickable images. Cards are normally displayed below the plain-text
-   * body of the message.
+   * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
+   * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
+   * displayed below the plain-text body of the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
    * `cardId` is a unique identifier among cards in the same message and for identifying user input
    * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
-   * `ButtonList`
+   * `ButtonList` - `Divider`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,9 +248,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rich, formatted and interactive cards that can be used to display UI elements such as:
-   * formatted texts, buttons, clickable images. Cards are normally displayed below the plain-text
-   * body of the message.
+   * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
+   * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
+   * displayed below the plain-text body of the message.
    * @return value or {@code null} for none
    */
   public java.util.List<Card> getCards() {
@@ -258,9 +258,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rich, formatted and interactive cards that can be used to display UI elements such as:
-   * formatted texts, buttons, clickable images. Cards are normally displayed below the plain-text
-   * body of the message.
+   * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
+   * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
+   * displayed below the plain-text body of the message.
    * @param cards cards or {@code null} for none
    */
   public Message setCards(java.util.List<Card> cards) {
@@ -275,7 +275,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
    * `cardId` is a unique identifier among cards in the same message and for identifying user input
    * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
-   * `ButtonList`
+   * `ButtonList` - `Divider`
    * @return value or {@code null} for none
    */
   public java.util.List<CardWithId> getCardsV2() {
@@ -289,7 +289,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
    * `cardId` is a unique identifier among cards in the same message and for identifying user input
    * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
-   * `ButtonList`
+   * `ButtonList` - `Divider`
    * @param cardsV2 cardsV2 or {@code null} for none
    */
   public Message setCardsV2(java.util.List<CardWithId> cardsV2) {

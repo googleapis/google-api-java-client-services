@@ -17,7 +17,7 @@
 package com.google.api.services.tagmanager.model;
 
 /**
- * Represents a Google Tag Destination
+ * Represents a Google Tag Destination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Tag Manager API. For a detailed explanation see:
@@ -44,7 +44,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private java.lang.String containerId;
 
   /**
-   * Measurement ID of destination linked to a GTM Container.
+   * Destination ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * Auto generated link to the tag manager UI
+   * Auto generated link to the tag manager UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Measurement ID of destination linked to a GTM Container.
+   * Destination ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationId() {
@@ -129,7 +129,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Measurement ID of destination linked to a GTM Container.
+   * Destination ID.
    * @param destinationId destinationId or {@code null} for none
    */
   public Destination setDestinationId(java.lang.String destinationId) {
@@ -208,7 +208,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Auto generated link to the tag manager UI
+   * Auto generated link to the tag manager UI.
    * @return value or {@code null} for none
    */
   public java.lang.String getTagManagerUrl() {
@@ -216,7 +216,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Auto generated link to the tag manager UI
+   * Auto generated link to the tag manager UI.
    * @param tagManagerUrl tagManagerUrl or {@code null} for none
    */
   public Destination setTagManagerUrl(java.lang.String tagManagerUrl) {

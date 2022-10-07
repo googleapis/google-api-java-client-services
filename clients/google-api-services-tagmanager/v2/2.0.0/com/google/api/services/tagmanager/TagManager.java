@@ -728,25 +728,22 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
-         * Google product owned to GTM permission). If this operation causes an update but this bit
-         * is false, the operation will fail.
+         * Must be set to true to allow features.user_permissions to change from false to true. If
+         * this operation causes an update but this bit is false, the operation will fail.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean allowUserPermissionFeatureUpdate;
 
-        /** Must be set to true to allow features.user_permissions to change from false to true (i.e. Google
-       product owned to GTM permission). If this operation causes an update but this bit is false, the
-       operation will fail.
+        /** Must be set to true to allow features.user_permissions to change from false to true. If this
+       operation causes an update but this bit is false, the operation will fail.
          */
         public java.lang.Boolean getAllowUserPermissionFeatureUpdate() {
           return allowUserPermissionFeatureUpdate;
         }
 
         /**
-         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
-         * Google product owned to GTM permission). If this operation causes an update but this bit
-         * is false, the operation will fail.
+         * Must be set to true to allow features.user_permissions to change from false to true. If
+         * this operation causes an update but this bit is false, the operation will fail.
          */
         public Combine setAllowUserPermissionFeatureUpdate(java.lang.Boolean allowUserPermissionFeatureUpdate) {
           this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
@@ -1459,13 +1456,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Measurement ID of destination linked to a GTM Container, e.g. AW-123456789. Example:
+         * Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
          * accounts/containers:lookup?destination_id={destination_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String destinationId;
 
-        /** Measurement ID of destination linked to a GTM Container, e.g. AW-123456789. Example:
+        /** Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
        accounts/containers:lookup?destination_id={destination_id}.
          */
         public java.lang.String getDestinationId() {
@@ -1473,7 +1470,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Measurement ID of destination linked to a GTM Container, e.g. AW-123456789. Example:
+         * Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
          * accounts/containers:lookup?destination_id={destination_id}.
          */
         public Lookup setDestinationId(java.lang.String destinationId) {
@@ -1617,25 +1614,22 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
-         * Google product owned to GTM permission). If this operation causes an update but this bit
-         * is false, the operation will fail.
+         * Must be set to true to allow features.user_permissions to change from false to true. If
+         * this operation causes an update but this bit is false, the operation will fail.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean allowUserPermissionFeatureUpdate;
 
-        /** Must be set to true to allow features.user_permissions to change from false to true (i.e. Google
-       product owned to GTM permission). If this operation causes an update but this bit is false, the
-       operation will fail.
+        /** Must be set to true to allow features.user_permissions to change from false to true. If this
+       operation causes an update but this bit is false, the operation will fail.
          */
         public java.lang.Boolean getAllowUserPermissionFeatureUpdate() {
           return allowUserPermissionFeatureUpdate;
         }
 
         /**
-         * Must be set to true to allow features.user_permissions to change from false to true (i.e.
-         * Google product owned to GTM permission). If this operation causes an update but this bit
-         * is false, the operation will fail.
+         * Must be set to true to allow features.user_permissions to change from false to true. If
+         * this operation causes an update but this bit is false, the operation will fail.
          */
         public MoveTagId setAllowUserPermissionFeatureUpdate(java.lang.Boolean allowUserPermissionFeatureUpdate) {
           this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
@@ -1735,7 +1729,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets the snippet of a Container.
+       * Gets the JavaScript snippet for a Container.
        *
        * Create a request for the method "containers.snippet".
        *
@@ -1760,7 +1754,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
         /**
-         * Gets the snippet of a Container.
+         * Gets the JavaScript snippet for a Container.
          *
          * Create a request for the method "containers.snippet".
          *

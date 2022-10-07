@@ -31,14 +31,15 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path to the artifact manifest. Only populated when artifacts are uploaded.
+   * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
+   * populated when artifacts are uploaded to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String artifactManifest;
 
   /**
-   * Time to push all non-container artifacts.
+   * Time to push all non-container artifacts to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,14 +76,30 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   }
 
   /**
-   * Number of artifacts uploaded. Only populated when artifacts are uploaded.
+   * Maven artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact> mavenArtifacts;
+
+  /**
+   * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
+   * uploaded to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numArtifacts;
 
   /**
-   * Path to the artifact manifest. Only populated when artifacts are uploaded.
+   * Python artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage> pythonPackages;
+
+  /**
+   * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
+   * populated when artifacts are uploaded to Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getArtifactManifest() {
@@ -90,7 +107,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   }
 
   /**
-   * Path to the artifact manifest. Only populated when artifacts are uploaded.
+   * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
+   * populated when artifacts are uploaded to Cloud Storage.
    * @param artifactManifest artifactManifest or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setArtifactManifest(java.lang.String artifactManifest) {
@@ -99,7 +117,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   }
 
   /**
-   * Time to push all non-container artifacts.
+   * Time to push all non-container artifacts to Cloud Storage.
    * @return value or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan getArtifactTiming() {
@@ -107,7 +125,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   }
 
   /**
-   * Time to push all non-container artifacts.
+   * Time to push all non-container artifacts to Cloud Storage.
    * @param artifactTiming artifactTiming or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setArtifactTiming(ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan artifactTiming) {
@@ -173,7 +191,25 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   }
 
   /**
-   * Number of artifacts uploaded. Only populated when artifacts are uploaded.
+   * Maven artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact> getMavenArtifacts() {
+    return mavenArtifacts;
+  }
+
+  /**
+   * Maven artifacts uploaded to Artifact Registry at the end of the build.
+   * @param mavenArtifacts mavenArtifacts or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setMavenArtifacts(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact> mavenArtifacts) {
+    this.mavenArtifacts = mavenArtifacts;
+    return this;
+  }
+
+  /**
+   * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
+   * uploaded to Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumArtifacts() {
@@ -181,11 +217,29 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   }
 
   /**
-   * Number of artifacts uploaded. Only populated when artifacts are uploaded.
+   * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
+   * uploaded to Cloud Storage.
    * @param numArtifacts numArtifacts or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setNumArtifacts(java.lang.Long numArtifacts) {
     this.numArtifacts = numArtifacts;
+    return this;
+  }
+
+  /**
+   * Python artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage> getPythonPackages() {
+    return pythonPackages;
+  }
+
+  /**
+   * Python artifacts uploaded to Artifact Registry at the end of the build.
+   * @param pythonPackages pythonPackages or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setPythonPackages(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage> pythonPackages) {
+    this.pythonPackages = pythonPackages;
     return this;
   }
 

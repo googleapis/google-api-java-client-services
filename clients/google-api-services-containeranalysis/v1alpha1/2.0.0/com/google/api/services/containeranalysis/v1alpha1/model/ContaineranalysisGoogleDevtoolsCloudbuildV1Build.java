@@ -249,9 +249,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
 
   /**
    * Output only. Stores timing information for phases of the build. Valid keys are: * BUILD: time
-   * to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to
-   * fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or
-   * images, these keys will not be included.
+   * to execute all build steps. * PUSH: time to push all artifacts including docker images and non
+   * docker artifacts. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If
+   * the build does not specify source or images, these keys will not be included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -763,9 +763,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
 
   /**
    * Output only. Stores timing information for phases of the build. Valid keys are: * BUILD: time
-   * to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to
-   * fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or
-   * images, these keys will not be included.
+   * to execute all build steps. * PUSH: time to push all artifacts including docker images and non
+   * docker artifacts. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If
+   * the build does not specify source or images, these keys will not be included.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan> getTiming() {
@@ -774,9 +774,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
 
   /**
    * Output only. Stores timing information for phases of the build. Valid keys are: * BUILD: time
-   * to execute all build steps. * PUSH: time to push all specified images. * FETCHSOURCE: time to
-   * fetch source. * SETUPBUILD: time to set up build. If the build does not specify source or
-   * images, these keys will not be included.
+   * to execute all build steps. * PUSH: time to push all artifacts including docker images and non
+   * docker artifacts. * FETCHSOURCE: time to fetch source. * SETUPBUILD: time to set up build. If
+   * the build does not specify source or images, these keys will not be included.
    * @param timing timing or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Build setTiming(java.util.Map<String, ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan> timing) {

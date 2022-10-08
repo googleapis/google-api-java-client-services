@@ -40,21 +40,22 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   private AnnotationConfig annotation;
 
   /**
-   * Configures de-id of application/DICOM content.
+   * Configures de-id of application/DICOM content. Deprecated. Use `dicom_tag_config` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DicomConfig dicom;
 
   /**
-   * Configures de-id of application/FHIR content.
+   * Configures de-id of application/FHIR content. Deprecated. Use `fhir_field_config` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FhirConfig fhir;
 
   /**
-   * Configures de-identification of image pixels wherever they are found in the source_dataset.
+   * Configures the de-identification of image pixels in the source_dataset. Deprecated. Use
+   * `dicom_tag_config.options.clean_image` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/DICOM content.
+   * Configures de-id of application/DICOM content. Deprecated. Use `dicom_tag_config` instead.
    * @return value or {@code null} for none
    */
   public DicomConfig getDicom() {
@@ -102,7 +103,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/DICOM content.
+   * Configures de-id of application/DICOM content. Deprecated. Use `dicom_tag_config` instead.
    * @param dicom dicom or {@code null} for none
    */
   public DeidentifyConfig setDicom(DicomConfig dicom) {
@@ -111,7 +112,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/FHIR content.
+   * Configures de-id of application/FHIR content. Deprecated. Use `fhir_field_config` instead.
    * @return value or {@code null} for none
    */
   public FhirConfig getFhir() {
@@ -119,7 +120,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/FHIR content.
+   * Configures de-id of application/FHIR content. Deprecated. Use `fhir_field_config` instead.
    * @param fhir fhir or {@code null} for none
    */
   public DeidentifyConfig setFhir(FhirConfig fhir) {
@@ -128,7 +129,8 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-identification of image pixels wherever they are found in the source_dataset.
+   * Configures the de-identification of image pixels in the source_dataset. Deprecated. Use
+   * `dicom_tag_config.options.clean_image` instead.
    * @return value or {@code null} for none
    */
   public ImageConfig getImage() {
@@ -136,7 +138,8 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-identification of image pixels wherever they are found in the source_dataset.
+   * Configures the de-identification of image pixels in the source_dataset. Deprecated. Use
+   * `dicom_tag_config.options.clean_image` instead.
    * @param image image or {@code null} for none
    */
   public DeidentifyConfig setImage(ImageConfig image) {

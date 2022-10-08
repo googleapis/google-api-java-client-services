@@ -51,8 +51,8 @@ public final class InfoTypeTransformation extends com.google.api.client.json.Gen
   private DateShiftConfig dateShiftConfig;
 
   /**
-   * InfoTypes to apply this transformation to. If this is not specified, this transformation
-   * becomes the default transformation, and is used for any info_type that is not specified in
+   * `InfoTypes` to apply this transformation to. If this is not specified, this transformation
+   * becomes the default transformation, and is used for any `info_type` that is not specified in
    * another transformation.
    * The value may be {@code null}.
    */
@@ -125,8 +125,8 @@ public final class InfoTypeTransformation extends com.google.api.client.json.Gen
   }
 
   /**
-   * InfoTypes to apply this transformation to. If this is not specified, this transformation
-   * becomes the default transformation, and is used for any info_type that is not specified in
+   * `InfoTypes` to apply this transformation to. If this is not specified, this transformation
+   * becomes the default transformation, and is used for any `info_type` that is not specified in
    * another transformation.
    * @return value or {@code null} for none
    */
@@ -135,8 +135,8 @@ public final class InfoTypeTransformation extends com.google.api.client.json.Gen
   }
 
   /**
-   * InfoTypes to apply this transformation to. If this is not specified, this transformation
-   * becomes the default transformation, and is used for any info_type that is not specified in
+   * `InfoTypes` to apply this transformation to. If this is not specified, this transformation
+   * becomes the default transformation, and is used for any `info_type` that is not specified in
    * another transformation.
    * @param infoTypes infoTypes or {@code null} for none
    */

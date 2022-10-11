@@ -30,7 +30,7 @@ package com.google.api.services.docs.v1.model;
 public final class SheetsChartReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the specific chart in the Google Sheets spreadsheet that is embedded.
+   * The ID of the specific chart in the Google Sheets spreadsheet that's embedded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SheetsChartReference extends com.google.api.client.json.Gener
   private java.lang.String spreadsheetId;
 
   /**
-   * The ID of the specific chart in the Google Sheets spreadsheet that is embedded.
+   * The ID of the specific chart in the Google Sheets spreadsheet that's embedded.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getChartId() {
@@ -52,7 +52,7 @@ public final class SheetsChartReference extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ID of the specific chart in the Google Sheets spreadsheet that is embedded.
+   * The ID of the specific chart in the Google Sheets spreadsheet that's embedded.
    * @param chartId chartId or {@code null} for none
    */
   public SheetsChartReference setChartId(java.lang.Integer chartId) {

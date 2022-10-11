@@ -38,7 +38,7 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> suggestedDeletionIds;
 
   /**
-   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   /**
    * The text style of this PageBreak. Similar to text content, like text runs and footnote
    * references, the text style of a page break can affect content layout as well as the styling of
-   * text inserted adjacent to it.
+   * text inserted next to it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @return value or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   /**
    * The text style of this PageBreak. Similar to text content, like text runs and footnote
    * references, the text style of a page break can affect content layout as well as the styling of
-   * text inserted adjacent to it.
+   * text inserted next to it.
    * @return value or {@code null} for none
    */
   public TextStyle getTextStyle() {
@@ -127,7 +127,7 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   /**
    * The text style of this PageBreak. Similar to text content, like text runs and footnote
    * references, the text style of a page break can affect content layout as well as the styling of
-   * text inserted adjacent to it.
+   * text inserted next to it.
    * @param textStyle textStyle or {@code null} for none
    */
   public PageBreak setTextStyle(TextStyle textStyle) {

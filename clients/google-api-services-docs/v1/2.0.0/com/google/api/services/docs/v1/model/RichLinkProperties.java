@@ -31,7 +31,7 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
 
   /**
    * Output only. The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the
-   * RichLink, if there is one (i.e., when it is a file in Drive).
+   * RichLink, if there's one (for example, when it's a file in Drive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
 
   /**
    * Output only. The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the
-   * RichLink, if there is one (i.e., when it is a file in Drive).
+   * RichLink, if there's one (for example, when it's a file in Drive).
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -64,7 +64,7 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
 
   /**
    * Output only. The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the
-   * RichLink, if there is one (i.e., when it is a file in Drive).
+   * RichLink, if there's one (for example, when it's a file in Drive).
    * @param mimeType mimeType or {@code null} for none
    */
   public RichLinkProperties setMimeType(java.lang.String mimeType) {

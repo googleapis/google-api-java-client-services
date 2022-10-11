@@ -17,7 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * A StructuralElement representing a section break. A section is a range of content which has the
+ * A StructuralElement representing a section break. A section is a range of content that has the
  * same SectionStyle. A section break represents the start of a new section, and the section style
  * applies to the section after the section break. The document body always begins with a section
  * break.
@@ -47,7 +47,7 @@ public final class SectionBreak extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> suggestedDeletionIds;
 
   /**
-   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class SectionBreak extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class SectionBreak extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */

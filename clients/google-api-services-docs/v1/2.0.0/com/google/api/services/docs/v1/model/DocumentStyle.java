@@ -37,7 +37,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private Background background;
 
   /**
-   * The ID of the default footer. If not set, there is no default footer. This property is read-
+   * The ID of the default footer. If not set, there's no default footer. This property is read-
    * only.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private java.lang.String defaultFooterId;
 
   /**
-   * The ID of the default header. If not set, there is no default header. This property is read-
+   * The ID of the default header. If not set, there's no default header. This property is read-
    * only.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
-   * not set, there is no even page footer. This property is read-only.
+   * not set, there's no even page footer. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_header_id or this value for the header on even pages. If
-   * not set, there is no even page header. This property is read-only.
+   * not set, there's no even page header. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for the first page. If not set then a unique footer for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
-   * the default_footer_id or this value for the footer on the first page. If not set, there is no
+   * the default_footer_id or this value for the footer on the first page. If not set, there's no
    * first page footer. This property is read-only.
    * The value may be {@code null}.
    */
@@ -83,7 +83,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for the first page. If not set then a unique header for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
-   * the default_header_id or this value for the header on the first page. If not set, there is no
+   * the default_header_id or this value for the header on the first page. If not set, there's no
    * first page header. This property is read-only.
    * The value may be {@code null}.
    */
@@ -191,7 +191,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default footer. If not set, there is no default footer. This property is read-
+   * The ID of the default footer. If not set, there's no default footer. This property is read-
    * only.
    * @return value or {@code null} for none
    */
@@ -200,7 +200,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default footer. If not set, there is no default footer. This property is read-
+   * The ID of the default footer. If not set, there's no default footer. This property is read-
    * only.
    * @param defaultFooterId defaultFooterId or {@code null} for none
    */
@@ -210,7 +210,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default header. If not set, there is no default header. This property is read-
+   * The ID of the default header. If not set, there's no default header. This property is read-
    * only.
    * @return value or {@code null} for none
    */
@@ -219,7 +219,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default header. If not set, there is no default header. This property is read-
+   * The ID of the default header. If not set, there's no default header. This property is read-
    * only.
    * @param defaultHeaderId defaultHeaderId or {@code null} for none
    */
@@ -231,7 +231,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
-   * not set, there is no even page footer. This property is read-only.
+   * not set, there's no even page footer. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvenPageFooterId() {
@@ -241,7 +241,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
-   * not set, there is no even page footer. This property is read-only.
+   * not set, there's no even page footer. This property is read-only.
    * @param evenPageFooterId evenPageFooterId or {@code null} for none
    */
   public DocumentStyle setEvenPageFooterId(java.lang.String evenPageFooterId) {
@@ -252,7 +252,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_header_id or this value for the header on even pages. If
-   * not set, there is no even page header. This property is read-only.
+   * not set, there's no even page header. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvenPageHeaderId() {
@@ -262,7 +262,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_header_id or this value for the header on even pages. If
-   * not set, there is no even page header. This property is read-only.
+   * not set, there's no even page header. This property is read-only.
    * @param evenPageHeaderId evenPageHeaderId or {@code null} for none
    */
   public DocumentStyle setEvenPageHeaderId(java.lang.String evenPageHeaderId) {
@@ -273,7 +273,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for the first page. If not set then a unique footer for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
-   * the default_footer_id or this value for the footer on the first page. If not set, there is no
+   * the default_footer_id or this value for the footer on the first page. If not set, there's no
    * first page footer. This property is read-only.
    * @return value or {@code null} for none
    */
@@ -284,7 +284,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for the first page. If not set then a unique footer for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
-   * the default_footer_id or this value for the footer on the first page. If not set, there is no
+   * the default_footer_id or this value for the footer on the first page. If not set, there's no
    * first page footer. This property is read-only.
    * @param firstPageFooterId firstPageFooterId or {@code null} for none
    */
@@ -296,7 +296,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for the first page. If not set then a unique header for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
-   * the default_header_id or this value for the header on the first page. If not set, there is no
+   * the default_header_id or this value for the header on the first page. If not set, there's no
    * first page header. This property is read-only.
    * @return value or {@code null} for none
    */
@@ -307,7 +307,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for the first page. If not set then a unique header for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
-   * the default_header_id or this value for the header on the first page. If not set, there is no
+   * the default_header_id or this value for the header on the first page. If not set, there's no
    * first page header. This property is read-only.
    * @param firstPageHeaderId firstPageHeaderId or {@code null} for none
    */

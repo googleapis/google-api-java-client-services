@@ -17,7 +17,9 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * The properties of an embedded drawing.
+ * The properties of an embedded drawing and used to differentiate the object type. An embedded
+ * drawing is one that's created and edited within a document. Note that extensive details are not
+ * supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

@@ -18,7 +18,7 @@ package com.google.api.services.docs.v1.model;
 
 /**
  * The document body. The body typically contains the full document contents except for headers,
- * footers and footnotes.
+ * footers, and footnotes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

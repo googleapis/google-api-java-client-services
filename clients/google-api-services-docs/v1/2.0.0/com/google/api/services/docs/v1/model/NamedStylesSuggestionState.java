@@ -31,8 +31,8 @@ public final class NamedStylesSuggestionState extends com.google.api.client.json
 
   /**
    * A mask that indicates which of the fields on the corresponding NamedStyle in styles have been
-   * changed in this suggestion. The order of these named style suggestion states match the order of
-   * the corresponding named style within the named styles suggestion.
+   * changed in this suggestion. The order of these named style suggestion states matches the order
+   * of the corresponding named style within the named styles suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class NamedStylesSuggestionState extends com.google.api.client.json
 
   /**
    * A mask that indicates which of the fields on the corresponding NamedStyle in styles have been
-   * changed in this suggestion. The order of these named style suggestion states match the order of
-   * the corresponding named style within the named styles suggestion.
+   * changed in this suggestion. The order of these named style suggestion states matches the order
+   * of the corresponding named style within the named styles suggestion.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedStyleSuggestionState> getStylesSuggestionStates() {
@@ -56,8 +56,8 @@ public final class NamedStylesSuggestionState extends com.google.api.client.json
 
   /**
    * A mask that indicates which of the fields on the corresponding NamedStyle in styles have been
-   * changed in this suggestion. The order of these named style suggestion states match the order of
-   * the corresponding named style within the named styles suggestion.
+   * changed in this suggestion. The order of these named style suggestion states matches the order
+   * of the corresponding named style within the named styles suggestion.
    * @param stylesSuggestionStates stylesSuggestionStates or {@code null} for none
    */
   public NamedStylesSuggestionState setStylesSuggestionStates(java.util.List<NamedStyleSuggestionState> stylesSuggestionStates) {

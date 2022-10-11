@@ -17,7 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * A ParagraphElement representing a spot in the text that is dynamically replaced with content that
+ * A ParagraphElement representing a spot in the text that's dynamically replaced with content that
  * can change over time, like a page number.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -38,7 +38,7 @@ public final class AutoText extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> suggestedDeletionIds;
 
   /**
-   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class AutoText extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @return value or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class AutoText extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */

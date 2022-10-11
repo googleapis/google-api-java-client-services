@@ -22,7 +22,7 @@ package com.google.api.services.docs.v1.model;
  * The TextStyle of text in a Paragraph inherits from the paragraph's corresponding named style
  * type. * The TextStyle on a named style inherits from the normal text named style. * The TextStyle
  * of the normal text named style inherits from the default text style in the Docs editor. * The
- * TextStyle on a Paragraph element that is contained in a table may inherit its text style from the
+ * TextStyle on a Paragraph element that's contained in a table may inherit its text style from the
  * table style. If the text style does not inherit from a parent, unsetting fields will revert the
  * style to a value matching the defaults in the Docs editor.
  *
@@ -47,7 +47,7 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   /**
    * The text's vertical offset from its normal position. Text with `SUPERSCRIPT` or `SUBSCRIPT`
    * baseline offsets is automatically rendered in a smaller font size, computed based on the
-   * `font_size` field. The `font_size` itself is not affected by changes in this field.
+   * `font_size` field. Changes in this field don't affect the `font_size`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean italic;
 
   /**
-   * The hyperlink destination of the text. If unset, there is no link. Links are not inherited from
+   * The hyperlink destination of the text. If unset, there's no link. Links are not inherited from
    * parent text. Changing the link in an update request causes some other changes to the text style
    * of the range: * When setting a link, the text foreground color will be updated to the default
    * link color and the text will be underlined. If these fields are modified in the same request,
@@ -154,7 +154,7 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   /**
    * The text's vertical offset from its normal position. Text with `SUPERSCRIPT` or `SUBSCRIPT`
    * baseline offsets is automatically rendered in a smaller font size, computed based on the
-   * `font_size` field. The `font_size` itself is not affected by changes in this field.
+   * `font_size` field. Changes in this field don't affect the `font_size`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaselineOffset() {
@@ -164,7 +164,7 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   /**
    * The text's vertical offset from its normal position. Text with `SUPERSCRIPT` or `SUBSCRIPT`
    * baseline offsets is automatically rendered in a smaller font size, computed based on the
-   * `font_size` field. The `font_size` itself is not affected by changes in this field.
+   * `font_size` field. Changes in this field don't affect the `font_size`.
    * @param baselineOffset baselineOffset or {@code null} for none
    */
   public TextStyle setBaselineOffset(java.lang.String baselineOffset) {
@@ -243,7 +243,7 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hyperlink destination of the text. If unset, there is no link. Links are not inherited from
+   * The hyperlink destination of the text. If unset, there's no link. Links are not inherited from
    * parent text. Changing the link in an update request causes some other changes to the text style
    * of the range: * When setting a link, the text foreground color will be updated to the default
    * link color and the text will be underlined. If these fields are modified in the same request,
@@ -262,7 +262,7 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hyperlink destination of the text. If unset, there is no link. Links are not inherited from
+   * The hyperlink destination of the text. If unset, there's no link. Links are not inherited from
    * parent text. Changing the link in an update request causes some other changes to the text style
    * of the range: * When setting a link, the text foreground color will be updated to the default
    * link color and the text will be underlined. If these fields are modified in the same request,

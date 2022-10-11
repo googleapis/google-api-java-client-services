@@ -31,8 +31,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
    * The section's columns properties. If empty, the section contains one column with the default
-   * properties in the Docs editor. A section can be updated to have no more than three columns.
-   * When updating this property, setting a concrete value is required. Unsetting this property will
+   * properties in the Docs editor. A section can be updated to have no more than 3 columns. When
+   * updating this property, setting a concrete value is required. Unsetting this property will
    * result in a 400 bad request error.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of column separators. This style can be set even when there is one column in the
+   * The style of column separators. This style can be set even when there's one column in the
    * section. When updating this property, setting a concrete value is required. Unsetting this
    * property results in a 400 bad request error.
    * The value may be {@code null}.
@@ -84,7 +84,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the footer used only for even pages. If the value of DocumentStyle's
    * use_even_page_header_footer is true, this value is used for the footers on even pages in the
-   * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
+   * section. If it is false, the footers on even pages use the default_footer_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
    * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id. This property is
    * read-only.
@@ -96,7 +96,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the header used only for even pages. If the value of DocumentStyle's
    * use_even_page_header_footer is true, this value is used for the headers on even pages in the
-   * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
+   * section. If it is false, the headers on even pages use the default_header_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
    * first SectionBreak, it inherits from DocumentStyle's even_page_header_id. This property is
    * read-only.
@@ -108,7 +108,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the footer used only for the first page of the section. If
    * use_first_page_header_footer is true, this value is used for the footer on the first page of
-   * the section. If it is false, the footer on the first page of the section uses the
+   * the section. If it's false, the footer on the first page of the section uses the
    * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
    * first_page_footer_id. This property is read-only.
@@ -120,7 +120,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the header used only for the first page of the section. If
    * use_first_page_header_footer is true, this value is used for the header on the first page of
-   * the section. If it is false, the header on the first page of the section uses the
+   * the section. If it's false, the header on the first page of the section uses the
    * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
    * first_page_header_id. This property is read-only.
@@ -130,60 +130,62 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   private java.lang.String firstPageHeaderId;
 
   /**
-   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle. When
-   * updating this property, setting a concrete value is required. Unsetting this property results
-   * in a 400 bad request error.
+   * The bottom page margin of the section. If unset, the value defaults to margin_bottom from
+   * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
+   * this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginBottom;
 
   /**
-   * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
-   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
-   * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
-   * respected for this section When updating this property, setting a concrete value is required.
-   * Unsetting this property results in a 400 bad request error.
+   * The footer margin of the section. If unset, the value defaults to margin_footer from
+   * DocumentStyle. If updated, use_custom_header_footer_margins is set to true on DocumentStyle.
+   * The value of use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is
+   * being respected for this section When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginFooter;
 
   /**
-   * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
-   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
-   * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
-   * respected for this section. When updating this property, setting a concrete value is required.
-   * Unsetting this property results in a 400 bad request error.
+   * The header margin of the section. If unset, the value defaults to margin_header from
+   * DocumentStyle. If updated, use_custom_header_footer_margins is set to true on DocumentStyle.
+   * The value of use_custom_header_footer_margins on DocumentStyle indicates if a header margin is
+   * being respected for this section. When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginHeader;
 
   /**
-   * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
-   * left margin causes columns in this section to resize. Since the margin affects column width, it
-   * is applied before column properties. When updating this property, setting a concrete value is
-   * required. Unsetting this property results in a 400 bad request error.
+   * The left page margin of the section. If unset, the value defaults to margin_left from
+   * DocumentStyle. Updating the left margin causes columns in this section to resize. Since the
+   * margin affects column width, it's applied before column properties. When updating this
+   * property, setting a concrete value is required. Unsetting this property results in a 400 bad
+   * request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginLeft;
 
   /**
-   * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
-   * right margin causes columns in this section to resize. Since the margin affects column width,
-   * it is applied before column properties. When updating this property, setting a concrete value
-   * is required. Unsetting this property results in a 400 bad request error.
+   * The right page margin of the section. If unset, the value defaults to margin_right from
+   * DocumentStyle. Updating the right margin causes columns in this section to resize. Since the
+   * margin affects column width, it's applied before column properties. When updating this
+   * property, setting a concrete value is required. Unsetting this property results in a 400 bad
+   * request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginRight;
 
   /**
-   * The top page margin of the section. If unset, uses margin_top from DocumentStyle. When updating
-   * this property, setting a concrete value is required. Unsetting this property results in a 400
-   * bad request error.
+   * The top page margin of the section. If unset, the value defaults to margin_top from
+   * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
+   * this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,8 +221,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
    * The section's columns properties. If empty, the section contains one column with the default
-   * properties in the Docs editor. A section can be updated to have no more than three columns.
-   * When updating this property, setting a concrete value is required. Unsetting this property will
+   * properties in the Docs editor. A section can be updated to have no more than 3 columns. When
+   * updating this property, setting a concrete value is required. Unsetting this property will
    * result in a 400 bad request error.
    * @return value or {@code null} for none
    */
@@ -230,8 +232,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
    * The section's columns properties. If empty, the section contains one column with the default
-   * properties in the Docs editor. A section can be updated to have no more than three columns.
-   * When updating this property, setting a concrete value is required. Unsetting this property will
+   * properties in the Docs editor. A section can be updated to have no more than 3 columns. When
+   * updating this property, setting a concrete value is required. Unsetting this property will
    * result in a 400 bad request error.
    * @param columnProperties columnProperties or {@code null} for none
    */
@@ -241,7 +243,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of column separators. This style can be set even when there is one column in the
+   * The style of column separators. This style can be set even when there's one column in the
    * section. When updating this property, setting a concrete value is required. Unsetting this
    * property results in a 400 bad request error.
    * @return value or {@code null} for none
@@ -251,7 +253,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of column separators. This style can be set even when there is one column in the
+   * The style of column separators. This style can be set even when there's one column in the
    * section. When updating this property, setting a concrete value is required. Unsetting this
    * property results in a 400 bad request error.
    * @param columnSeparatorStyle columnSeparatorStyle or {@code null} for none
@@ -327,7 +329,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the footer used only for even pages. If the value of DocumentStyle's
    * use_even_page_header_footer is true, this value is used for the footers on even pages in the
-   * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
+   * section. If it is false, the footers on even pages use the default_footer_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
    * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id. This property is
    * read-only.
@@ -340,7 +342,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the footer used only for even pages. If the value of DocumentStyle's
    * use_even_page_header_footer is true, this value is used for the footers on even pages in the
-   * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
+   * section. If it is false, the footers on even pages use the default_footer_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
    * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id. This property is
    * read-only.
@@ -354,7 +356,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the header used only for even pages. If the value of DocumentStyle's
    * use_even_page_header_footer is true, this value is used for the headers on even pages in the
-   * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
+   * section. If it is false, the headers on even pages use the default_header_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
    * first SectionBreak, it inherits from DocumentStyle's even_page_header_id. This property is
    * read-only.
@@ -367,7 +369,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the header used only for even pages. If the value of DocumentStyle's
    * use_even_page_header_footer is true, this value is used for the headers on even pages in the
-   * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
+   * section. If it is false, the headers on even pages use the default_header_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
    * first SectionBreak, it inherits from DocumentStyle's even_page_header_id. This property is
    * read-only.
@@ -381,7 +383,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the footer used only for the first page of the section. If
    * use_first_page_header_footer is true, this value is used for the footer on the first page of
-   * the section. If it is false, the footer on the first page of the section uses the
+   * the section. If it's false, the footer on the first page of the section uses the
    * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
    * first_page_footer_id. This property is read-only.
@@ -394,7 +396,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the footer used only for the first page of the section. If
    * use_first_page_header_footer is true, this value is used for the footer on the first page of
-   * the section. If it is false, the footer on the first page of the section uses the
+   * the section. If it's false, the footer on the first page of the section uses the
    * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
    * first_page_footer_id. This property is read-only.
@@ -408,7 +410,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the header used only for the first page of the section. If
    * use_first_page_header_footer is true, this value is used for the header on the first page of
-   * the section. If it is false, the header on the first page of the section uses the
+   * the section. If it's false, the header on the first page of the section uses the
    * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
    * first_page_header_id. This property is read-only.
@@ -421,7 +423,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the header used only for the first page of the section. If
    * use_first_page_header_footer is true, this value is used for the header on the first page of
-   * the section. If it is false, the header on the first page of the section uses the
+   * the section. If it's false, the header on the first page of the section uses the
    * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
    * first_page_header_id. This property is read-only.
@@ -433,9 +435,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle. When
-   * updating this property, setting a concrete value is required. Unsetting this property results
-   * in a 400 bad request error.
+   * The bottom page margin of the section. If unset, the value defaults to margin_bottom from
+   * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
+   * this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginBottom() {
@@ -443,9 +445,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle. When
-   * updating this property, setting a concrete value is required. Unsetting this property results
-   * in a 400 bad request error.
+   * The bottom page margin of the section. If unset, the value defaults to margin_bottom from
+   * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
+   * this property results in a 400 bad request error.
    * @param marginBottom marginBottom or {@code null} for none
    */
   public SectionStyle setMarginBottom(Dimension marginBottom) {
@@ -454,11 +456,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
-   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
-   * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
-   * respected for this section When updating this property, setting a concrete value is required.
-   * Unsetting this property results in a 400 bad request error.
+   * The footer margin of the section. If unset, the value defaults to margin_footer from
+   * DocumentStyle. If updated, use_custom_header_footer_margins is set to true on DocumentStyle.
+   * The value of use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is
+   * being respected for this section When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginFooter() {
@@ -466,11 +468,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
-   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
-   * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
-   * respected for this section When updating this property, setting a concrete value is required.
-   * Unsetting this property results in a 400 bad request error.
+   * The footer margin of the section. If unset, the value defaults to margin_footer from
+   * DocumentStyle. If updated, use_custom_header_footer_margins is set to true on DocumentStyle.
+   * The value of use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is
+   * being respected for this section When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * @param marginFooter marginFooter or {@code null} for none
    */
   public SectionStyle setMarginFooter(Dimension marginFooter) {
@@ -479,11 +481,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
-   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
-   * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
-   * respected for this section. When updating this property, setting a concrete value is required.
-   * Unsetting this property results in a 400 bad request error.
+   * The header margin of the section. If unset, the value defaults to margin_header from
+   * DocumentStyle. If updated, use_custom_header_footer_margins is set to true on DocumentStyle.
+   * The value of use_custom_header_footer_margins on DocumentStyle indicates if a header margin is
+   * being respected for this section. When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginHeader() {
@@ -491,11 +493,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
-   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
-   * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
-   * respected for this section. When updating this property, setting a concrete value is required.
-   * Unsetting this property results in a 400 bad request error.
+   * The header margin of the section. If unset, the value defaults to margin_header from
+   * DocumentStyle. If updated, use_custom_header_footer_margins is set to true on DocumentStyle.
+   * The value of use_custom_header_footer_margins on DocumentStyle indicates if a header margin is
+   * being respected for this section. When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * @param marginHeader marginHeader or {@code null} for none
    */
   public SectionStyle setMarginHeader(Dimension marginHeader) {
@@ -504,10 +506,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
-   * left margin causes columns in this section to resize. Since the margin affects column width, it
-   * is applied before column properties. When updating this property, setting a concrete value is
-   * required. Unsetting this property results in a 400 bad request error.
+   * The left page margin of the section. If unset, the value defaults to margin_left from
+   * DocumentStyle. Updating the left margin causes columns in this section to resize. Since the
+   * margin affects column width, it's applied before column properties. When updating this
+   * property, setting a concrete value is required. Unsetting this property results in a 400 bad
+   * request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginLeft() {
@@ -515,10 +518,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
-   * left margin causes columns in this section to resize. Since the margin affects column width, it
-   * is applied before column properties. When updating this property, setting a concrete value is
-   * required. Unsetting this property results in a 400 bad request error.
+   * The left page margin of the section. If unset, the value defaults to margin_left from
+   * DocumentStyle. Updating the left margin causes columns in this section to resize. Since the
+   * margin affects column width, it's applied before column properties. When updating this
+   * property, setting a concrete value is required. Unsetting this property results in a 400 bad
+   * request error.
    * @param marginLeft marginLeft or {@code null} for none
    */
   public SectionStyle setMarginLeft(Dimension marginLeft) {
@@ -527,10 +531,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
-   * right margin causes columns in this section to resize. Since the margin affects column width,
-   * it is applied before column properties. When updating this property, setting a concrete value
-   * is required. Unsetting this property results in a 400 bad request error.
+   * The right page margin of the section. If unset, the value defaults to margin_right from
+   * DocumentStyle. Updating the right margin causes columns in this section to resize. Since the
+   * margin affects column width, it's applied before column properties. When updating this
+   * property, setting a concrete value is required. Unsetting this property results in a 400 bad
+   * request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginRight() {
@@ -538,10 +543,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
-   * right margin causes columns in this section to resize. Since the margin affects column width,
-   * it is applied before column properties. When updating this property, setting a concrete value
-   * is required. Unsetting this property results in a 400 bad request error.
+   * The right page margin of the section. If unset, the value defaults to margin_right from
+   * DocumentStyle. Updating the right margin causes columns in this section to resize. Since the
+   * margin affects column width, it's applied before column properties. When updating this
+   * property, setting a concrete value is required. Unsetting this property results in a 400 bad
+   * request error.
    * @param marginRight marginRight or {@code null} for none
    */
   public SectionStyle setMarginRight(Dimension marginRight) {
@@ -550,9 +556,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The top page margin of the section. If unset, uses margin_top from DocumentStyle. When updating
-   * this property, setting a concrete value is required. Unsetting this property results in a 400
-   * bad request error.
+   * The top page margin of the section. If unset, the value defaults to margin_top from
+   * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
+   * this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginTop() {
@@ -560,9 +566,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The top page margin of the section. If unset, uses margin_top from DocumentStyle. When updating
-   * this property, setting a concrete value is required. Unsetting this property results in a 400
-   * bad request error.
+   * The top page margin of the section. If unset, the value defaults to margin_top from
+   * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
+   * this property results in a 400 bad request error.
    * @param marginTop marginTop or {@code null} for none
    */
   public SectionStyle setMarginTop(Dimension marginTop) {

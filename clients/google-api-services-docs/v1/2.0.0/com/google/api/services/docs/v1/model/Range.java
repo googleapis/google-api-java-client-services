@@ -39,7 +39,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   private java.lang.Integer endIndex;
 
   /**
-   * The ID of the header, footer or footnote that this range is contained in. An empty segment ID
+   * The ID of the header, footer, or footnote that this range is contained in. An empty segment ID
    * signifies the document's body.
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the header, footer or footnote that this range is contained in. An empty segment ID
+   * The ID of the header, footer, or footnote that this range is contained in. An empty segment ID
    * signifies the document's body.
    * @return value or {@code null} for none
    */
@@ -86,7 +86,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the header, footer or footnote that this range is contained in. An empty segment ID
+   * The ID of the header, footer, or footnote that this range is contained in. An empty segment ID
    * signifies the document's body.
    * @param segmentId segmentId or {@code null} for none
    */

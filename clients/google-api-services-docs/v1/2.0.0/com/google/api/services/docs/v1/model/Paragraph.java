@@ -17,8 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * A StructuralElement representing a paragraph. A paragraph is a range of content that is
- * terminated with a newline character.
+ * A StructuralElement representing a paragraph. A paragraph is a range of content that's terminated
+ * with a newline character.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   private Bullet bullet;
 
   /**
-   * The content of the paragraph broken down into its component parts.
+   * The content of the paragraph, broken down into its component parts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, SuggestedParagraphStyle> suggestedParagraphStyleChanges;
 
   /**
-   * The IDs of the positioned objects that are suggested to be attached to this paragraph, keyed by
+   * The IDs of the positioned objects suggested to be attached to this paragraph, keyed by
    * suggestion ID.
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the paragraph broken down into its component parts.
+   * The content of the paragraph, broken down into its component parts.
    * @return value or {@code null} for none
    */
   public java.util.List<ParagraphElement> getElements() {
@@ -112,7 +112,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the paragraph broken down into its component parts.
+   * The content of the paragraph, broken down into its component parts.
    * @param elements elements or {@code null} for none
    */
   public Paragraph setElements(java.util.List<ParagraphElement> elements) {
@@ -189,7 +189,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IDs of the positioned objects that are suggested to be attached to this paragraph, keyed by
+   * The IDs of the positioned objects suggested to be attached to this paragraph, keyed by
    * suggestion ID.
    * @return value or {@code null} for none
    */
@@ -198,7 +198,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IDs of the positioned objects that are suggested to be attached to this paragraph, keyed by
+   * The IDs of the positioned objects suggested to be attached to this paragraph, keyed by
    * suggestion ID.
    * @param suggestedPositionedObjectIds suggestedPositionedObjectIds or {@code null} for none
    */

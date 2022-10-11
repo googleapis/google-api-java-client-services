@@ -64,7 +64,7 @@ public final class TableCell extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> suggestedDeletionIds;
 
   /**
-   * The suggested insertion IDs. A TableCell may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A TableCell may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * The value may be {@code null}.
    */
@@ -160,7 +160,7 @@ public final class TableCell extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A TableCell may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A TableCell may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @return value or {@code null} for none
    */
@@ -169,7 +169,7 @@ public final class TableCell extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A TableCell may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A TableCell may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */

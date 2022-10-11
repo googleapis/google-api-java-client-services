@@ -31,7 +31,7 @@ package com.google.api.services.docs.v1.model;
 public final class NamedStyles extends com.google.api.client.json.GenericJson {
 
   /**
-   * The named styles. There is an entry for each of the possible named style types.
+   * The named styles. There's an entry for each of the possible named style types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class NamedStyles extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named styles. There is an entry for each of the possible named style types.
+   * The named styles. There's an entry for each of the possible named style types.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedStyle> getStyles() {
@@ -52,7 +52,7 @@ public final class NamedStyles extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named styles. There is an entry for each of the possible named style types.
+   * The named styles. There's an entry for each of the possible named style types.
    * @param styles styles or {@code null} for none
    */
   public NamedStyles setStyles(java.util.List<NamedStyle> styles) {

@@ -26,9 +26,6 @@ public class SmartDeviceManagementScopes {
   /** See and/or control the devices that you selected. */
   public static final String SDM_SERVICE = "https://www.googleapis.com/auth/sdm.service";
 
-  /** See and control the Nest thermostats that you select. */
-  public static final String SDM_THERMOSTAT_SERVICE = "https://www.googleapis.com/auth/sdm.thermostat.service";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -37,7 +34,6 @@ public class SmartDeviceManagementScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(SDM_SERVICE);
-    set.add(SDM_THERMOSTAT_SERVICE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

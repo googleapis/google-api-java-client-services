@@ -2112,6 +2112,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+         *
+         * Create a request for the method "instances.diagnose".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.DiagnoseInstanceRequest}
+         * @return the request
+         */
+        public Diagnose diagnose(java.lang.String name, com.google.api.services.notebooks.v1.model.DiagnoseInstanceRequest content) throws java.io.IOException {
+          Diagnose result = new Diagnose(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Diagnose extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:diagnose";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+           *
+           * Create a request for the method "instances.diagnose".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Diagnose#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.DiagnoseInstanceRequest}
+           * @since 1.13
+           */
+          protected Diagnose(java.lang.String name, com.google.api.services.notebooks.v1.model.DiagnoseInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Diagnose set$Xgafv(java.lang.String $Xgafv) {
+            return (Diagnose) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Diagnose setAccessToken(java.lang.String accessToken) {
+            return (Diagnose) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Diagnose setAlt(java.lang.String alt) {
+            return (Diagnose) super.setAlt(alt);
+          }
+
+          @Override
+          public Diagnose setCallback(java.lang.String callback) {
+            return (Diagnose) super.setCallback(callback);
+          }
+
+          @Override
+          public Diagnose setFields(java.lang.String fields) {
+            return (Diagnose) super.setFields(fields);
+          }
+
+          @Override
+          public Diagnose setKey(java.lang.String key) {
+            return (Diagnose) super.setKey(key);
+          }
+
+          @Override
+          public Diagnose setOauthToken(java.lang.String oauthToken) {
+            return (Diagnose) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Diagnose setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Diagnose) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Diagnose setQuotaUser(java.lang.String quotaUser) {
+            return (Diagnose) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Diagnose setUploadType(java.lang.String uploadType) {
+            return (Diagnose) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Diagnose setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Diagnose) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Diagnose setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Diagnose set(String parameterName, Object value) {
+            return (Diagnose) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single Instance.
          *
          * Create a request for the method "instances.get".
@@ -6101,6 +6236,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+         *
+         * Create a request for the method "runtimes.diagnose".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.DiagnoseRuntimeRequest}
+         * @return the request
+         */
+        public Diagnose diagnose(java.lang.String name, com.google.api.services.notebooks.v1.model.DiagnoseRuntimeRequest content) throws java.io.IOException {
+          Diagnose result = new Diagnose(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Diagnose extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:diagnose";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+
+          /**
+           * Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
+           *
+           * Create a request for the method "runtimes.diagnose".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Diagnose#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.DiagnoseRuntimeRequest}
+           * @since 1.13
+           */
+          protected Diagnose(java.lang.String name, com.google.api.services.notebooks.v1.model.DiagnoseRuntimeRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Diagnose set$Xgafv(java.lang.String $Xgafv) {
+            return (Diagnose) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Diagnose setAccessToken(java.lang.String accessToken) {
+            return (Diagnose) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Diagnose setAlt(java.lang.String alt) {
+            return (Diagnose) super.setAlt(alt);
+          }
+
+          @Override
+          public Diagnose setCallback(java.lang.String callback) {
+            return (Diagnose) super.setCallback(callback);
+          }
+
+          @Override
+          public Diagnose setFields(java.lang.String fields) {
+            return (Diagnose) super.setFields(fields);
+          }
+
+          @Override
+          public Diagnose setKey(java.lang.String key) {
+            return (Diagnose) super.setKey(key);
+          }
+
+          @Override
+          public Diagnose setOauthToken(java.lang.String oauthToken) {
+            return (Diagnose) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Diagnose setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Diagnose) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Diagnose setQuotaUser(java.lang.String quotaUser) {
+            return (Diagnose) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Diagnose setUploadType(java.lang.String uploadType) {
+            return (Diagnose) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Diagnose setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Diagnose) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtimes_id}`
+           */
+          public Diagnose setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Diagnose set(String parameterName, Object value) {
+            return (Diagnose) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single Runtime. The location must be a regional endpoint rather than zonal.
          *
          * Create a request for the method "runtimes.get".
@@ -7932,6 +8202,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Upgrades a Managed Notebook Runtime to the latest version.
+         *
+         * Create a request for the method "runtimes.upgrade".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.UpgradeRuntimeRequest}
+         * @return the request
+         */
+        public Upgrade upgrade(java.lang.String name, com.google.api.services.notebooks.v1.model.UpgradeRuntimeRequest content) throws java.io.IOException {
+          Upgrade result = new Upgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upgrade extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:upgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+
+          /**
+           * Upgrades a Managed Notebook Runtime to the latest version.
+           *
+           * Create a request for the method "runtimes.upgrade".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Upgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.UpgradeRuntimeRequest}
+           * @since 1.13
+           */
+          protected Upgrade(java.lang.String name, com.google.api.services.notebooks.v1.model.UpgradeRuntimeRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upgrade setAlt(java.lang.String alt) {
+            return (Upgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public Upgrade setCallback(java.lang.String callback) {
+            return (Upgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public Upgrade setFields(java.lang.String fields) {
+            return (Upgrade) super.setFields(fields);
+          }
+
+          @Override
+          public Upgrade setKey(java.lang.String key) {
+            return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upgrade setQuotaUser(java.lang.String quotaUser) {
+            return (Upgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upgrade setUploadType(java.lang.String uploadType) {
+            return (Upgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public Upgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upgrade set(String parameterName, Object value) {
+            return (Upgrade) super.set(parameterName, value);
           }
         }
 

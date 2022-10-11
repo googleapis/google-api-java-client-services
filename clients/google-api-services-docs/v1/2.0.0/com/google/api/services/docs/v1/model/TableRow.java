@@ -51,7 +51,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> suggestedDeletionIds;
 
   /**
-   * The suggested insertion IDs. A TableRow may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A TableRow may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents and style of each cell in this row. It is possible for a table to be non-
+   * The contents and style of each cell in this row. It's possible for a table to be non-
    * rectangular, so some rows may have a different number of cells than other rows in the same
    * table.
    * The value may be {@code null}.
@@ -145,7 +145,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A TableRow may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A TableRow may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @return value or {@code null} for none
    */
@@ -154,7 +154,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested insertion IDs. A TableRow may have multiple insertion IDs if it is a nested
+   * The suggested insertion IDs. A TableRow may have multiple insertion IDs if it's a nested
    * suggested change. If empty, then this is not a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */
@@ -181,7 +181,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents and style of each cell in this row. It is possible for a table to be non-
+   * The contents and style of each cell in this row. It's possible for a table to be non-
    * rectangular, so some rows may have a different number of cells than other rows in the same
    * table.
    * @return value or {@code null} for none
@@ -191,7 +191,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents and style of each cell in this row. It is possible for a table to be non-
+   * The contents and style of each cell in this row. It's possible for a table to be non-
    * rectangular, so some rows may have a different number of cells than other rows in the same
    * table.
    * @param tableCells tableCells or {@code null} for none

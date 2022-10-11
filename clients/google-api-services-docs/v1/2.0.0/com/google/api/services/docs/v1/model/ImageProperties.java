@@ -77,7 +77,7 @@ public final class ImageProperties extends com.google.api.client.json.GenericJso
 
   /**
    * The transparency effect of the image. The value should be in the interval [0.0, 1.0], where 0
-   * means no effect and 1 means completely transparent.
+   * means no effect and 1 means transparent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class ImageProperties extends com.google.api.client.json.GenericJso
 
   /**
    * The transparency effect of the image. The value should be in the interval [0.0, 1.0], where 0
-   * means no effect and 1 means completely transparent.
+   * means no effect and 1 means transparent.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTransparency() {
@@ -204,7 +204,7 @@ public final class ImageProperties extends com.google.api.client.json.GenericJso
 
   /**
    * The transparency effect of the image. The value should be in the interval [0.0, 1.0], where 0
-   * means no effect and 1 means completely transparent.
+   * means no effect and 1 means transparent.
    * @param transparency transparency or {@code null} for none
    */
   public ImageProperties setTransparency(java.lang.Float transparency) {

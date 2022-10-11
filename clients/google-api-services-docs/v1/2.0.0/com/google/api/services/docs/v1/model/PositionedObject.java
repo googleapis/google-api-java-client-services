@@ -17,7 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * An object that is tethered to a Paragraph and positioned relative to the beginning of the
+ * An object that's tethered to a Paragraph and positioned relative to the beginning of the
  * paragraph. A PositionedObject contains an EmbeddedObject such as an image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

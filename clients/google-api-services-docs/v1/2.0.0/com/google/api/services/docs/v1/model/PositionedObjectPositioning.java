@@ -18,7 +18,7 @@ package com.google.api.services.docs.v1.model;
 
 /**
  * The positioning of a PositionedObject. The positioned object is positioned relative to the
- * beginning of the Paragraph it is tethered to.
+ * beginning of the Paragraph it's tethered to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -39,7 +39,7 @@ public final class PositionedObjectPositioning extends com.google.api.client.jso
 
   /**
    * The offset of the left edge of the positioned object relative to the beginning of the Paragraph
-   * it is tethered to. The exact positioning of the object can depend on other content in the
+   * it's tethered to. The exact positioning of the object can depend on other content in the
    * document and the document's styling.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class PositionedObjectPositioning extends com.google.api.client.jso
 
   /**
    * The offset of the top edge of the positioned object relative to the beginning of the Paragraph
-   * it is tethered to. The exact positioning of the object can depend on other content in the
+   * it's tethered to. The exact positioning of the object can depend on other content in the
    * document and the document's styling.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class PositionedObjectPositioning extends com.google.api.client.jso
 
   /**
    * The offset of the left edge of the positioned object relative to the beginning of the Paragraph
-   * it is tethered to. The exact positioning of the object can depend on other content in the
+   * it's tethered to. The exact positioning of the object can depend on other content in the
    * document and the document's styling.
    * @return value or {@code null} for none
    */
@@ -84,7 +84,7 @@ public final class PositionedObjectPositioning extends com.google.api.client.jso
 
   /**
    * The offset of the left edge of the positioned object relative to the beginning of the Paragraph
-   * it is tethered to. The exact positioning of the object can depend on other content in the
+   * it's tethered to. The exact positioning of the object can depend on other content in the
    * document and the document's styling.
    * @param leftOffset leftOffset or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class PositionedObjectPositioning extends com.google.api.client.jso
 
   /**
    * The offset of the top edge of the positioned object relative to the beginning of the Paragraph
-   * it is tethered to. The exact positioning of the object can depend on other content in the
+   * it's tethered to. The exact positioning of the object can depend on other content in the
    * document and the document's styling.
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class PositionedObjectPositioning extends com.google.api.client.jso
 
   /**
    * The offset of the top edge of the positioned object relative to the beginning of the Paragraph
-   * it is tethered to. The exact positioning of the object can depend on other content in the
+   * it's tethered to. The exact positioning of the object can depend on other content in the
    * document and the document's styling.
    * @param topOffset topOffset or {@code null} for none
    */

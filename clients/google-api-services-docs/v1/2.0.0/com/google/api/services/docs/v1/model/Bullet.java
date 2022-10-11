@@ -44,7 +44,7 @@ public final class Bullet extends com.google.api.client.json.GenericJson {
   private java.lang.Integer nestingLevel;
 
   /**
-   * The paragraph specific text style applied to this bullet.
+   * The paragraph-specific text style applied to this bullet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class Bullet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The paragraph specific text style applied to this bullet.
+   * The paragraph-specific text style applied to this bullet.
    * @return value or {@code null} for none
    */
   public TextStyle getTextStyle() {
@@ -93,7 +93,7 @@ public final class Bullet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The paragraph specific text style applied to this bullet.
+   * The paragraph-specific text style applied to this bullet.
    * @param textStyle textStyle or {@code null} for none
    */
   public Bullet setTextStyle(TextStyle textStyle) {

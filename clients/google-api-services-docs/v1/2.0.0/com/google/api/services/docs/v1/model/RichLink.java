@@ -17,7 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * A link to a Google resource (e.g., a file in Drive, a YouTube video, a Calendar event, etc.).
+ * A link to a Google resource (such as a file in Drive, a YouTube video, or a Calendar event).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -45,7 +45,7 @@ public final class RichLink extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that remove this link from the document. A RichLink might have multiple
-   * deletion IDs if, for example, multiple users suggest to delete it. If empty, then this person
+   * deletion IDs if, for example, multiple users suggest deleting it. If empty, then this person
    * link isn't suggested for deletion.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class RichLink extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that insert this link into the document. A RichLink might have multiple
-   * insertion IDs if it is a nested suggested change (a suggestion within a suggestion made by a
+   * insertion IDs if it's a nested suggested change (a suggestion within a suggestion made by a
    * different user, for example). If empty, then this person link isn't a suggested insertion.
    * The value may be {@code null}.
    */
@@ -111,7 +111,7 @@ public final class RichLink extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that remove this link from the document. A RichLink might have multiple
-   * deletion IDs if, for example, multiple users suggest to delete it. If empty, then this person
+   * deletion IDs if, for example, multiple users suggest deleting it. If empty, then this person
    * link isn't suggested for deletion.
    * @return value or {@code null} for none
    */
@@ -121,7 +121,7 @@ public final class RichLink extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that remove this link from the document. A RichLink might have multiple
-   * deletion IDs if, for example, multiple users suggest to delete it. If empty, then this person
+   * deletion IDs if, for example, multiple users suggest deleting it. If empty, then this person
    * link isn't suggested for deletion.
    * @param suggestedDeletionIds suggestedDeletionIds or {@code null} for none
    */
@@ -132,7 +132,7 @@ public final class RichLink extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that insert this link into the document. A RichLink might have multiple
-   * insertion IDs if it is a nested suggested change (a suggestion within a suggestion made by a
+   * insertion IDs if it's a nested suggested change (a suggestion within a suggestion made by a
    * different user, for example). If empty, then this person link isn't a suggested insertion.
    * @return value or {@code null} for none
    */
@@ -142,7 +142,7 @@ public final class RichLink extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that insert this link into the document. A RichLink might have multiple
-   * insertion IDs if it is a nested suggested change (a suggestion within a suggestion made by a
+   * insertion IDs if it's a nested suggested change (a suggestion within a suggestion made by a
    * different user, for example). If empty, then this person link isn't a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */

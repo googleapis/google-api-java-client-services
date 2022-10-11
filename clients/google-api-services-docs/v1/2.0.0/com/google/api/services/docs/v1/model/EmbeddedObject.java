@@ -60,8 +60,8 @@ public final class EmbeddedObject extends com.google.api.client.json.GenericJson
 
   /**
    * A reference to the external linked source content. For example, it contains a reference to the
-   * source Sheets chart when the embedded object is a linked chart. If unset, then the embedded
-   * object is not linked.
+   * source Google Sheets chart when the embedded object is a linked chart. If unset, then the
+   * embedded object is not linked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,8 +182,8 @@ public final class EmbeddedObject extends com.google.api.client.json.GenericJson
 
   /**
    * A reference to the external linked source content. For example, it contains a reference to the
-   * source Sheets chart when the embedded object is a linked chart. If unset, then the embedded
-   * object is not linked.
+   * source Google Sheets chart when the embedded object is a linked chart. If unset, then the
+   * embedded object is not linked.
    * @return value or {@code null} for none
    */
   public LinkedContentReference getLinkedContentReference() {
@@ -192,8 +192,8 @@ public final class EmbeddedObject extends com.google.api.client.json.GenericJson
 
   /**
    * A reference to the external linked source content. For example, it contains a reference to the
-   * source Sheets chart when the embedded object is a linked chart. If unset, then the embedded
-   * object is not linked.
+   * source Google Sheets chart when the embedded object is a linked chart. If unset, then the
+   * embedded object is not linked.
    * @param linkedContentReference linkedContentReference or {@code null} for none
    */
   public EmbeddedObject setLinkedContentReference(LinkedContentReference linkedContentReference) {

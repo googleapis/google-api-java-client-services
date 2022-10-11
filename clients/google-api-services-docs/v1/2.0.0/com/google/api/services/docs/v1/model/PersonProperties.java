@@ -37,7 +37,7 @@ public final class PersonProperties extends com.google.api.client.json.GenericJs
   private java.lang.String email;
 
   /**
-   * Output only. The name of the person if it is displayed in the link text instead of the person's
+   * Output only. The name of the person if it's displayed in the link text instead of the person's
    * email address.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class PersonProperties extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the person if it is displayed in the link text instead of the person's
+   * Output only. The name of the person if it's displayed in the link text instead of the person's
    * email address.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class PersonProperties extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the person if it is displayed in the link text instead of the person's
+   * Output only. The name of the person if it's displayed in the link text instead of the person's
    * email address.
    * @param name name or {@code null} for none
    */

@@ -38,7 +38,7 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
 
   /**
    * The format string used by bullets at this level of nesting. The glyph format contains one or
-   * more placeholders, and these placeholder are replaced with the appropriate values depending on
+   * more placeholders, and these placeholders are replaced with the appropriate values depending on
    * the glyph_type or glyph_symbol. The placeholders follow the pattern `%[nesting_level]`.
    * Furthermore, placeholders can have prefixes and suffixes. Thus, the glyph format follows the
    * pattern `%[nesting_level]`. Note that the prefix and suffix are optional and can be arbitrary
@@ -96,9 +96,9 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of the first list item at this nesting level. A value of 0 is treated as a value of
-   * 1 for lettered lists and roman numeraled lists, i.e. for values of both 0 and 1, lettered and
-   * roman numeraled lists will begin at `a` and `i` respectively. This value is ignored for nesting
-   * levels with unordered glyphs.
+   * 1 for lettered lists and Roman numeral lists. For values of both 0 and 1, lettered and Roman
+   * numeral lists will begin at `a` and `i` respectively. This value is ignored for nesting levels
+   * with unordered glyphs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
 
   /**
    * The format string used by bullets at this level of nesting. The glyph format contains one or
-   * more placeholders, and these placeholder are replaced with the appropriate values depending on
+   * more placeholders, and these placeholders are replaced with the appropriate values depending on
    * the glyph_type or glyph_symbol. The placeholders follow the pattern `%[nesting_level]`.
    * Furthermore, placeholders can have prefixes and suffixes. Thus, the glyph format follows the
    * pattern `%[nesting_level]`. Note that the prefix and suffix are optional and can be arbitrary
@@ -152,7 +152,7 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
 
   /**
    * The format string used by bullets at this level of nesting. The glyph format contains one or
-   * more placeholders, and these placeholder are replaced with the appropriate values depending on
+   * more placeholders, and these placeholders are replaced with the appropriate values depending on
    * the glyph_type or glyph_symbol. The placeholders follow the pattern `%[nesting_level]`.
    * Furthermore, placeholders can have prefixes and suffixes. Thus, the glyph format follows the
    * pattern `%[nesting_level]`. Note that the prefix and suffix are optional and can be arbitrary
@@ -261,9 +261,9 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of the first list item at this nesting level. A value of 0 is treated as a value of
-   * 1 for lettered lists and roman numeraled lists, i.e. for values of both 0 and 1, lettered and
-   * roman numeraled lists will begin at `a` and `i` respectively. This value is ignored for nesting
-   * levels with unordered glyphs.
+   * 1 for lettered lists and Roman numeral lists. For values of both 0 and 1, lettered and Roman
+   * numeral lists will begin at `a` and `i` respectively. This value is ignored for nesting levels
+   * with unordered glyphs.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartNumber() {
@@ -272,9 +272,9 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of the first list item at this nesting level. A value of 0 is treated as a value of
-   * 1 for lettered lists and roman numeraled lists, i.e. for values of both 0 and 1, lettered and
-   * roman numeraled lists will begin at `a` and `i` respectively. This value is ignored for nesting
-   * levels with unordered glyphs.
+   * 1 for lettered lists and Roman numeral lists. For values of both 0 and 1, lettered and Roman
+   * numeral lists will begin at `a` and `i` respectively. This value is ignored for nesting levels
+   * with unordered glyphs.
    * @param startNumber startNumber or {@code null} for none
    */
   public NestingLevel setStartNumber(java.lang.Integer startNumber) {

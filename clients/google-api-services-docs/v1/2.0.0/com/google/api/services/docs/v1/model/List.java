@@ -18,7 +18,7 @@ package com.google.api.services.docs.v1.model;
 
 /**
  * A List represents the list attributes for a group of paragraphs that all belong to the same list.
- * A paragraph that is part of a list has a reference to the list's ID in its bullet.
+ * A paragraph that's part of a list has a reference to the list's ID in its bullet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

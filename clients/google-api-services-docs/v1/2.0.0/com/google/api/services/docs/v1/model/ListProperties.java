@@ -17,7 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * The properties of a list which describe the look and feel of bullets belonging to paragraphs
+ * The properties of a list that describe the look and feel of bullets belonging to paragraphs
  * associated with a list.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,8 +31,8 @@ package com.google.api.services.docs.v1.model;
 public final class ListProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Describes the properties of the bullets at the associated level. A list has at most nine levels
-   * of nesting with nesting level 0 corresponding to the top-most level and nesting level 8
+   * Describes the properties of the bullets at the associated level. A list has at most 9 levels of
+   * nesting with nesting level 0 corresponding to the top-most level and nesting level 8
    * corresponding to the most nested level. The nesting levels are returned in ascending order with
    * the least nested returned first.
    * The value may be {@code null}.
@@ -41,8 +41,8 @@ public final class ListProperties extends com.google.api.client.json.GenericJson
   private java.util.List<NestingLevel> nestingLevels;
 
   /**
-   * Describes the properties of the bullets at the associated level. A list has at most nine levels
-   * of nesting with nesting level 0 corresponding to the top-most level and nesting level 8
+   * Describes the properties of the bullets at the associated level. A list has at most 9 levels of
+   * nesting with nesting level 0 corresponding to the top-most level and nesting level 8
    * corresponding to the most nested level. The nesting levels are returned in ascending order with
    * the least nested returned first.
    * @return value or {@code null} for none
@@ -52,8 +52,8 @@ public final class ListProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Describes the properties of the bullets at the associated level. A list has at most nine levels
-   * of nesting with nesting level 0 corresponding to the top-most level and nesting level 8
+   * Describes the properties of the bullets at the associated level. A list has at most 9 levels of
+   * nesting with nesting level 0 corresponding to the top-most level and nesting level 8
    * corresponding to the most nested level. The nesting levels are returned in ascending order with
    * the least nested returned first.
    * @param nestingLevels nestingLevels or {@code null} for none

@@ -46,7 +46,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that remove this person link from the document. A Person might have
-   * multiple deletion IDs if, for example, multiple users suggest to delete it. If empty, then this
+   * multiple deletion IDs if, for example, multiple users suggest deleting it. If empty, then this
    * person link isn't suggested for deletion.
    * The value may be {@code null}.
    */
@@ -55,9 +55,8 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that insert this person link into the document. A Person might have
-   * multiple insertion IDs if it is a nested suggested change (a suggestion within a suggestion
-   * made by a different user, for example). If empty, then this person link isn't a suggested
-   * insertion.
+   * multiple insertion IDs if it's a nested suggested change (a suggestion within a suggestion made
+   * by a different user, for example). If empty, then this person link isn't a suggested insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +112,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that remove this person link from the document. A Person might have
-   * multiple deletion IDs if, for example, multiple users suggest to delete it. If empty, then this
+   * multiple deletion IDs if, for example, multiple users suggest deleting it. If empty, then this
    * person link isn't suggested for deletion.
    * @return value or {@code null} for none
    */
@@ -123,7 +122,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that remove this person link from the document. A Person might have
-   * multiple deletion IDs if, for example, multiple users suggest to delete it. If empty, then this
+   * multiple deletion IDs if, for example, multiple users suggest deleting it. If empty, then this
    * person link isn't suggested for deletion.
    * @param suggestedDeletionIds suggestedDeletionIds or {@code null} for none
    */
@@ -134,9 +133,8 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that insert this person link into the document. A Person might have
-   * multiple insertion IDs if it is a nested suggested change (a suggestion within a suggestion
-   * made by a different user, for example). If empty, then this person link isn't a suggested
-   * insertion.
+   * multiple insertion IDs if it's a nested suggested change (a suggestion within a suggestion made
+   * by a different user, for example). If empty, then this person link isn't a suggested insertion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSuggestedInsertionIds() {
@@ -145,9 +143,8 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs for suggestions that insert this person link into the document. A Person might have
-   * multiple insertion IDs if it is a nested suggested change (a suggestion within a suggestion
-   * made by a different user, for example). If empty, then this person link isn't a suggested
-   * insertion.
+   * multiple insertion IDs if it's a nested suggested change (a suggestion within a suggestion made
+   * by a different user, for example). If empty, then this person link isn't a suggested insertion.
    * @param suggestedInsertionIds suggestedInsertionIds or {@code null} for none
    */
   public Person setSuggestedInsertionIds(java.util.List<java.lang.String> suggestedInsertionIds) {

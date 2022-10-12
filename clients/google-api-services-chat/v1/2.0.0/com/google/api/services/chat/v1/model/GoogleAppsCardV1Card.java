@@ -17,21 +17,25 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A card is a UI element that can contain UI widgets such as text and images. For more information,
- * see Cards . For example, the following JSON creates a card that has a header with the name,
- * position, icons, and link for a contact, followed by a section with contact information like
- * email and phone number. ``` { "header": { "title": "Sasha", "subtitle": "Software Engineer",
- * "imageStyle": "ImageStyle.AVATAR", "imageUrl": "https://example.com/sasha.png", "imageAltText":
- * "Avatar for Sasha" }, "sections" : [ { "header": "Contact Info", "widgets": [ { "decorated_text":
- * { "icon": { "knownIcon": "EMAIL" }, "content": "sasha@example.com" } }, { "decoratedText": {
- * "icon": { "knownIcon": "PERSON" }, "content": "Online" } }, { "decoratedText": { "icon": {
- * "knownIcon": "PHONE" }, "content": "+1 (555) 555-1234" } }, { "buttons": [ { "textButton": {
- * "text": "Share", }, "onClick": { "openLink": { "url": "https://example.com/share" } } }, {
- * "textButton": { "text": "Edit", }, "onClick": { "action": { "function": "goToView", "parameters":
- * [ { "key": "viewType", "value": "EDIT" } ], "loadIndicator": "LoadIndicator.SPINNER" } } } ] } ],
- * "collapsible": true, "uncollapsibleWidgetsCount": 3 } ], "cardActions": [ { "actionLabel": "Send
- * Feedback", "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ], "name":
- * "contact-card-K3wB6arF2H9L" } ```
+ * Cards support a defined layout, interactive UI elements like buttons, and rich media like images.
+ * Use cards to present detailed information, gather information from users, and guide users to take
+ * a next step. In Google Chat, cards appear in several places: - As stand-alone messages. -
+ * Accompanying a text message, just beneath the text message. - As a
+ * [dialog](https://developers.google.com/chat/how-tos/dialogs). The following example JSON creates
+ * a "contact card" that features: - A header with the contact's name, job title, avatar picture. -
+ * A section with the contact information, including formatted text. - Buttons that users can click
+ * to share the contact or see more or less info. ![Example contact
+ * card](/chat/images/card_api_reference.png) ``` { "cardsV2": [ { "cardId": "unique-card-id",
+ * "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer", "imageUrl":
+ * "https://developers.google.com/chat/images/quickstart-app-avatar.png", "imageType": "CIRCLE",
+ * "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact Info", "collapsible":
+ * true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": { "startIcon": {
+ * "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": { "startIcon": {
+ * "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": { "startIcon": {
+ * "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": { "buttons": [ {
+ * "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", } } }, { "text":
+ * "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key": "viewType",
+ * "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -44,12 +48,12 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Card extends com.google.api.client.json.GenericJson {
 
   /**
-   * The card's actions. Actions are added to the card's generated toolbar menu. For example, the
-   * following JSON constructs a card action menu with Settings and Send Feedback options: ```
-   * "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName":
-   * "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
-   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
-   * "url": "https://example.com/feedback" } } } ] ```
+   * The card's actions. Actions are added to the card's generated toolbar menu. Not supported by
+   * Google Chat apps. For example, the following JSON constructs a card action menu with Settings
+   * and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": {
+   * "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING"
+   * } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback",
+   * "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,12 +104,12 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1Section> sections;
 
   /**
-   * The card's actions. Actions are added to the card's generated toolbar menu. For example, the
-   * following JSON constructs a card action menu with Settings and Send Feedback options: ```
-   * "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName":
-   * "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
-   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
-   * "url": "https://example.com/feedback" } } } ] ```
+   * The card's actions. Actions are added to the card's generated toolbar menu. Not supported by
+   * Google Chat apps. For example, the following JSON constructs a card action menu with Settings
+   * and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": {
+   * "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING"
+   * } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback",
+   * "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1CardAction> getCardActions() {
@@ -113,12 +117,12 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The card's actions. Actions are added to the card's generated toolbar menu. For example, the
-   * following JSON constructs a card action menu with Settings and Send Feedback options: ```
-   * "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName":
-   * "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
-   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
-   * "url": "https://example.com/feedback" } } } ] ```
+   * The card's actions. Actions are added to the card's generated toolbar menu. Not supported by
+   * Google Chat apps. For example, the following JSON constructs a card action menu with Settings
+   * and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": {
+   * "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING"
+   * } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback",
+   * "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
    * @param cardActions cardActions or {@code null} for none
    */
   public GoogleAppsCardV1Card setCardActions(java.util.List<GoogleAppsCardV1CardAction> cardActions) {

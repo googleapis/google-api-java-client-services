@@ -2157,7 +2157,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists human memberships in a space. Requires [service account
+       * Lists human memberships in a space for joined members. Requires [service account
        * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "members.list".
@@ -2183,7 +2183,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Lists human memberships in a space. Requires [service account
+         * Lists human memberships in a space for joined members. Requires [service account
          * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "members.list".

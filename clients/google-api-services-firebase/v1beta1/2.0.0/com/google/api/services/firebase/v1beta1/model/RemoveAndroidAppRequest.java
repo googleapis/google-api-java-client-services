@@ -47,6 +47,16 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
   private java.lang.String etag;
 
   /**
+   * Determines whether to _immediately_ delete the App. If set to true, the App is immediately
+   * deleted from the Project and cannot be restored to the Project. If not set, defaults to false,
+   * which means that the App may be restored to the Project within 30 days using
+   * UndeleteAndroidApp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean immediate;
+
+  /**
    * If set to true, the request is only validated. The App will _not_ be removed.
    * The value may be {@code null}.
    */
@@ -88,6 +98,29 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
    */
   public RemoveAndroidAppRequest setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Determines whether to _immediately_ delete the App. If set to true, the App is immediately
+   * deleted from the Project and cannot be restored to the Project. If not set, defaults to false,
+   * which means that the App may be restored to the Project within 30 days using
+   * UndeleteAndroidApp.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImmediate() {
+    return immediate;
+  }
+
+  /**
+   * Determines whether to _immediately_ delete the App. If set to true, the App is immediately
+   * deleted from the Project and cannot be restored to the Project. If not set, defaults to false,
+   * which means that the App may be restored to the Project within 30 days using
+   * UndeleteAndroidApp.
+   * @param immediate immediate or {@code null} for none
+   */
+  public RemoveAndroidAppRequest setImmediate(java.lang.Boolean immediate) {
+    this.immediate = immediate;
     return this;
   }
 

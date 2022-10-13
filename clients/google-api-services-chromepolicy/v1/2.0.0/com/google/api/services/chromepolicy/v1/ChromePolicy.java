@@ -182,16 +182,16 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
        *
        * @param customer ID of the G Suite account or literal "my_customer" for the customer associated to the request.
-       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ResolveRequest}
+       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ResolveRequest}
        * @return the request
        */
-      public Resolve resolve(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ResolveRequest content) throws java.io.IOException {
+      public Resolve resolve(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ResolveRequest content) throws java.io.IOException {
         Resolve result = new Resolve(customer, content);
         initialize(result);
         return result;
       }
 
-      public class Resolve extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ResolveResponse> {
+      public class Resolve extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ResolveResponse> {
 
         private static final String REST_PATH = "v1/{+customer}/policies:resolve";
 
@@ -210,11 +210,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param customer ID of the G Suite account or literal "my_customer" for the customer associated to the request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ResolveRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ResolveRequest}
          * @since 1.13
          */
-        protected Resolve(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ResolveRequest content) {
-          super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ResolveResponse.class);
+        protected Resolve(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ResolveRequest content) {
+          super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ResolveResponse.class);
           this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
@@ -344,10 +344,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          *
          * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
          *        request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest}
          * @return the request
          */
-        public BatchDelete batchDelete(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest content) throws java.io.IOException {
+        public BatchDelete batchDelete(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest content) throws java.io.IOException {
           BatchDelete result = new BatchDelete(customer, content);
           initialize(result);
           return result;
@@ -377,10 +377,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            *
            * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
          *        request.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest}
            * @since 1.13
            */
-          protected BatchDelete(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest content) {
+          protected BatchDelete(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest content) {
             super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -491,10 +491,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          *
          * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
          *        request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest}
          * @return the request
          */
-        public BatchModify batchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest content) throws java.io.IOException {
+        public BatchModify batchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest content) throws java.io.IOException {
           BatchModify result = new BatchModify(customer, content);
           initialize(result);
           return result;
@@ -524,10 +524,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            *
            * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
          *        request.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest}
            * @since 1.13
            */
-          protected BatchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest content) {
+          protected BatchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest content) {
             super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -638,16 +638,16 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          *
          * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
          *        the request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest}
          * @return the request
          */
-        public ListGroupPriorityOrdering listGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest content) throws java.io.IOException {
+        public ListGroupPriorityOrdering listGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest content) throws java.io.IOException {
           ListGroupPriorityOrdering result = new ListGroupPriorityOrdering(customer, content);
           initialize(result);
           return result;
         }
 
-        public class ListGroupPriorityOrdering extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingResponse> {
+        public class ListGroupPriorityOrdering extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse> {
 
           private static final String REST_PATH = "v1/{+customer}/policies/groups:listGroupPriorityOrdering";
 
@@ -669,11 +669,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            *
            * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
          *        the request.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest}
            * @since 1.13
            */
-          protected ListGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest content) {
-            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingResponse.class);
+          protected ListGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
@@ -783,10 +783,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          *
          * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
          *        the request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest}
          * @return the request
          */
-        public UpdateGroupPriorityOrdering updateGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest content) throws java.io.IOException {
+        public UpdateGroupPriorityOrdering updateGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest content) throws java.io.IOException {
           UpdateGroupPriorityOrdering result = new UpdateGroupPriorityOrdering(customer, content);
           initialize(result);
           return result;
@@ -814,10 +814,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            *
            * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
          *        the request.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest}
            * @since 1.13
            */
-          protected UpdateGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest content) {
+          protected UpdateGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest content) {
             super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -1496,10 +1496,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link BatchInherit#execute()} method to invoke the remote operation.
          *
          * @param customer ID of the G Suite account or literal "my_customer" for the customer associated to the request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchInheritOrgUnitPoliciesRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest}
          * @return the request
          */
-        public BatchInherit batchInherit(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchInheritOrgUnitPoliciesRequest content) throws java.io.IOException {
+        public BatchInherit batchInherit(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest content) throws java.io.IOException {
           BatchInherit result = new BatchInherit(customer, content);
           initialize(result);
           return result;
@@ -1528,10 +1528,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param customer ID of the G Suite account or literal "my_customer" for the customer associated to the request.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchInheritOrgUnitPoliciesRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest}
            * @since 1.13
            */
-          protected BatchInherit(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchInheritOrgUnitPoliciesRequest content) {
+          protected BatchInherit(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest content) {
             super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -1640,10 +1640,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link BatchModify#execute()} method to invoke the remote operation.
          *
          * @param customer ID of the G Suite account or literal "my_customer" for the customer associated to the request.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyOrgUnitPoliciesRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyOrgUnitPoliciesRequest}
          * @return the request
          */
-        public BatchModify batchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyOrgUnitPoliciesRequest content) throws java.io.IOException {
+        public BatchModify batchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyOrgUnitPoliciesRequest content) throws java.io.IOException {
           BatchModify result = new BatchModify(customer, content);
           initialize(result);
           return result;
@@ -1672,10 +1672,10 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param customer ID of the G Suite account or literal "my_customer" for the customer associated to the request.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyOrgUnitPoliciesRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyOrgUnitPoliciesRequest}
            * @since 1.13
            */
-          protected BatchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyOrgUnitPoliciesRequest content) {
+          protected BatchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1BatchModifyOrgUnitPoliciesRequest content) {
             super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {

@@ -4,10 +4,12 @@
 #
 #    pip-compile --generate-hashes test_requirements.in
 #
-cachetools==5.2.0 \
-    --hash=sha256:6a94c6402995a99c3970cc7e4884bb60b4a8639938157eeed436098bf9831757 \
-    --hash=sha256:f9f17d2aec496a9aa6b76f53e3b614c965223c061982d434d160f930c698a9db
-    # via google-auth
+cachetools==3.1.1 \
+    --hash=sha256:428266a1c0d36dc5aca63a2d7c5942e88c2c898d72139fca0e97fdd2380517ae \
+    --hash=sha256:8ea2d3ce97850f31e4a08b0e2b5e6c34997d7216a9d2c98e0f3978630d4da69a
+    # via
+    #   -r test_requirements.in
+    #   google-auth
 django==1.8.12 \
     --hash=sha256:9c60c4af02faffb6f1c2bc7c7a09169c59230fa06c30a552414b816ee79f0c2a \
     --hash=sha256:b68fa73d537f8362d73fec1aa2b7a1e8572349b12942ac756ec1041b6b0e7113

@@ -4,3 +4,5 @@ google-apputils==0.4.2
 python-gflags==3.1.2
 google-api-python-client==1.7.7
 cachetools==3.1.1
+pyparsing==2.4.7
+

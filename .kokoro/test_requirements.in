@@ -6,4 +6,4 @@ google-api-python-client==1.7.7
 cachetools==3.1.1
 pyparsing==2.4.7
 rsa==4.0.0
-
+enum34==1.1.10

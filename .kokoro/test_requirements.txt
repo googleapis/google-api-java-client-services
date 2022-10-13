@@ -14,6 +14,11 @@ django==1.8.12 \
     --hash=sha256:9c60c4af02faffb6f1c2bc7c7a09169c59230fa06c30a552414b816ee79f0c2a \
     --hash=sha256:b68fa73d537f8362d73fec1aa2b7a1e8572349b12942ac756ec1041b6b0e7113
     # via -r test_requirements.in
+enum34==1.1.10 \
+    --hash=sha256:a98a201d6de3f2ab3db284e70a33b0f896fbf35f8086594e8c9e74b909058d53 \
+    --hash=sha256:c3858660960c984d6ab0ebad691265180da2b43f07e061c0f8dca9ef3cffd328 \
+    --hash=sha256:cce6a7477ed816bd2542d03d53db9f0db935dd013b70f336a95c73979289f248
+    # via -r test_requirements.in
 google-api-python-client==1.7.7 \
     --hash=sha256:301e498ae5152250b7f3c2dc091ee383c2852ef90aeab12bb29767ef9981627c \
     --hash=sha256:9106e7d09d80f59a9472a91edd85c2d6ad420aef28c9440ce1691b4a19ba9ada

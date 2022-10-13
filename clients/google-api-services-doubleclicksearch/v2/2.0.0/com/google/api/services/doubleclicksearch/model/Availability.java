@@ -51,6 +51,13 @@ public final class Availability extends com.google.api.client.json.GenericJson {
   private java.lang.Long availabilityTimestamp;
 
   /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerId;
+
+  /**
    * The numeric segmentation identifier (for example, DoubleClick Search Floodlight activity ID).
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class Availability extends com.google.api.client.json.GenericJson {
    */
   public Availability setAvailabilityTimestamp(java.lang.Long availabilityTimestamp) {
     this.availabilityTimestamp = availabilityTimestamp;
+    return this;
+  }
+
+  /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerId() {
+    return customerId;
+  }
+
+  /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   * @param customerId customerId or {@code null} for none
+   */
+  public Availability setCustomerId(java.lang.String customerId) {
+    this.customerId = customerId;
     return this;
   }
 

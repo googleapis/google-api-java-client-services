@@ -148,6 +148,13 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.util.List<CustomMetric> customMetric;
 
   /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerId;
+
+  /**
    * The type of device on which the conversion occurred.
    * The value may be {@code null}.
    */
@@ -558,6 +565,23 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   public Conversion setCustomMetric(java.util.List<CustomMetric> customMetric) {
     this.customMetric = customMetric;
+    return this;
+  }
+
+  /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerId() {
+    return customerId;
+  }
+
+  /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   * @param customerId customerId or {@code null} for none
+   */
+  public Conversion setCustomerId(java.lang.String customerId) {
+    this.customerId = customerId;
     return this;
   }
 

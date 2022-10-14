@@ -94,6 +94,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal;
 
   /**
+   * A snapshot of an ExpandedDataSet resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaExpandedDataSet expandedDataSet;
+
+  /**
    * A snapshot of a FirebaseLink resource in change history.
    * The value may be {@code null}.
    */
@@ -285,6 +292,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDisplayVideo360AdvertiserLinkProposal(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal) {
     this.displayVideo360AdvertiserLinkProposal = displayVideo360AdvertiserLinkProposal;
+    return this;
+  }
+
+  /**
+   * A snapshot of an ExpandedDataSet resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaExpandedDataSet getExpandedDataSet() {
+    return expandedDataSet;
+  }
+
+  /**
+   * A snapshot of an ExpandedDataSet resource in change history.
+   * @param expandedDataSet expandedDataSet or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setExpandedDataSet(GoogleAnalyticsAdminV1alphaExpandedDataSet expandedDataSet) {
+    this.expandedDataSet = expandedDataSet;
     return this;
   }
 

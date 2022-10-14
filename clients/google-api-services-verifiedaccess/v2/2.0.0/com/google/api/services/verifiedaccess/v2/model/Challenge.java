@@ -17,7 +17,7 @@
 package com.google.api.services.verifiedaccess.v2.model;
 
 /**
- * Result message for VerifiedAccess.CreateChallenge.
+ * Result message for VerifiedAccess.GenerateChallenge.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Verified Access API. For a detailed

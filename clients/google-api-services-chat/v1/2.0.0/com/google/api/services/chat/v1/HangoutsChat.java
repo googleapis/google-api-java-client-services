@@ -280,6 +280,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageId;
+
+      /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+     contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+     field to get, update, or delete the message with the specified value. For example usage, see [Name
+     a created
+     message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+       */
+      public java.lang.String getMessageId() {
+        return messageId;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      public Messages setMessageId(java.lang.String messageId) {
+        this.messageId = messageId;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -459,6 +491,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^dms/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageId;
+
+      /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+     contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+     field to get, update, or delete the message with the specified value. For example usage, see [Name
+     a created
+     message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+       */
+      public java.lang.String getMessageId() {
+        return messageId;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      public Webhooks setMessageId(java.lang.String messageId) {
+        this.messageId = messageId;
         return this;
       }
 
@@ -663,6 +727,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^dms/[^/]+/conversations/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. A custom name for a Chat message assigned at creation. Must start with
+         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
+         * length. Specify this field to get, update, or delete the message with the specified
+         * value. For example usage, see [Name a created message](https://developers.google.com/chat
+         * /api/guides/crudl/messages#name_a_created_message).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String messageId;
+
+        /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+       contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+       field to get, update, or delete the message with the specified value. For example usage, see [Name
+       a created
+       message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+         */
+        public java.lang.String getMessageId() {
+          return messageId;
+        }
+
+        /**
+         * Optional. A custom name for a Chat message assigned at creation. Must start with
+         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
+         * length. Specify this field to get, update, or delete the message with the specified
+         * value. For example usage, see [Name a created message](https://developers.google.com/chat
+         * /api/guides/crudl/messages#name_a_created_message).
+         */
+        public Messages setMessageId(java.lang.String messageId) {
+          this.messageId = messageId;
           return this;
         }
 
@@ -1052,6 +1148,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageId;
+
+      /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+     contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+     field to get, update, or delete the message with the specified value. For example usage, see [Name
+     a created
+     message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+       */
+      public java.lang.String getMessageId() {
+        return messageId;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      public Messages setMessageId(java.lang.String messageId) {
+        this.messageId = messageId;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -1231,6 +1359,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^rooms/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageId;
+
+      /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+     contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+     field to get, update, or delete the message with the specified value. For example usage, see [Name
+     a created
+     message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+       */
+      public java.lang.String getMessageId() {
+        return messageId;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      public Webhooks setMessageId(java.lang.String messageId) {
+        this.messageId = messageId;
         return this;
       }
 
@@ -1435,6 +1595,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^rooms/[^/]+/conversations/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. A custom name for a Chat message assigned at creation. Must start with
+         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
+         * length. Specify this field to get, update, or delete the message with the specified
+         * value. For example usage, see [Name a created message](https://developers.google.com/chat
+         * /api/guides/crudl/messages#name_a_created_message).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String messageId;
+
+        /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+       contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+       field to get, update, or delete the message with the specified value. For example usage, see [Name
+       a created
+       message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+         */
+        public java.lang.String getMessageId() {
+          return messageId;
+        }
+
+        /**
+         * Optional. A custom name for a Chat message assigned at creation. Must start with
+         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
+         * length. Specify this field to get, update, or delete the message with the specified
+         * value. For example usage, see [Name a created message](https://developers.google.com/chat
+         * /api/guides/crudl/messages#name_a_created_message).
+         */
+        public Messages setMessageId(java.lang.String messageId) {
+          this.messageId = messageId;
           return this;
         }
 
@@ -1929,6 +2121,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^spaces/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageId;
+
+      /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+     contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+     field to get, update, or delete the message with the specified value. For example usage, see [Name
+     a created
+     message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+       */
+      public java.lang.String getMessageId() {
+        return messageId;
+      }
+
+      /**
+       * Optional. A custom name for a Chat message assigned at creation. Must start with `client-`
+       * and contain only lowercase letters, numbers, and hyphens up to 63 characters in length.
+       * Specify this field to get, update, or delete the message with the specified value. For
+       * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/c
+       * rudl/messages#name_a_created_message).
+       */
+      public Webhooks setMessageId(java.lang.String messageId) {
+        this.messageId = messageId;
         return this;
       }
 
@@ -2494,6 +2718,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. A custom name for a Chat message assigned at creation. Must start with
+         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
+         * length. Specify this field to get, update, or delete the message with the specified
+         * value. For example usage, see [Name a created message](https://developers.google.com/chat
+         * /api/guides/crudl/messages#name_a_created_message).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String messageId;
+
+        /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
+       contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
+       field to get, update, or delete the message with the specified value. For example usage, see [Name
+       a created
+       message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+         */
+        public java.lang.String getMessageId() {
+          return messageId;
+        }
+
+        /**
+         * Optional. A custom name for a Chat message assigned at creation. Must start with
+         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
+         * length. Specify this field to get, update, or delete the message with the specified
+         * value. For example usage, see [Name a created message](https://developers.google.com/chat
+         * /api/guides/crudl/messages#name_a_created_message).
+         */
+        public Create setMessageId(java.lang.String messageId) {
+          this.messageId = messageId;
+          return this;
+        }
+
+        /**
          * Optional. A unique request ID for this message. Specifying an existing request ID returns
          * the message created with that ID instead of creating a new message.
          */
@@ -2698,8 +2954,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
-       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+       * @param name Required. Resource name of the message to retrieve. Format: spaces/{space}/messages/{message} If the
+       *        message begins with `client-`, then it has a custom name assigned by a Chat app that
+       *        created it with the Chat REST API. That Chat app (but not others) can pass the custom name
+       *        to get, update, or delete the message. To learn more, see [create and name a message]
+       *        (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2726,8 +2985,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
-       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+         * @param name Required. Resource name of the message to retrieve. Format: spaces/{space}/messages/{message} If the
+       *        message begins with `client-`, then it has a custom name assigned by a Chat app that
+       *        created it with the Chat REST API. That Chat app (but not others) can pass the custom name
+       *        to get, update, or delete the message. To learn more, see [create and name a message]
+       *        (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2806,22 +3068,33 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+         * Required. Resource name of the message to retrieve. Format:
+         * spaces/{space}/messages/{message} If the message begins with `client-`, then it has a
+         * custom name assigned by a Chat app that created it with the Chat REST API. That Chat app
+         * (but not others) can pass the custom name to get, update, or delete the message. To learn
+         * more, see [create and name a message]
+         * (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
-       spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+        /** Required. Resource name of the message to retrieve. Format: spaces/{space}/messages/{message} If
+       the message begins with `client-`, then it has a custom name assigned by a Chat app that created it
+       with the Chat REST API. That Chat app (but not others) can pass the custom name to get, update, or
+       delete the message. To learn more, see [create and name a message]
+       (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+         * Required. Resource name of the message to retrieve. Format:
+         * spaces/{space}/messages/{message} If the message begins with `client-`, then it has a
+         * custom name assigned by a Chat app that created it with the Chat REST API. That Chat app
+         * (but not others) can pass the custom name to get, update, or delete the message. To learn
+         * more, see [create and name a message]
+         * (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2971,6 +3244,35 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^spaces/[^/]+/messages/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. If `true` and the message is not found, a new message is created and
+         * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
+         * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
+         * fails.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowMissing;
+
+        /** Optional. If `true` and the message is not found, a new message is created and `updateMask` is
+       ignored. The specified message ID must be [client-
+       assigned](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or
+       the request fails.
+         */
+        public java.lang.Boolean getAllowMissing() {
+          return allowMissing;
+        }
+
+        /**
+         * Optional. If `true` and the message is not found, a new message is created and
+         * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
+         * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
+         * fails.
+         */
+        public Update setAllowMissing(java.lang.Boolean allowMissing) {
+          this.allowMissing = allowMissing;
           return this;
         }
 

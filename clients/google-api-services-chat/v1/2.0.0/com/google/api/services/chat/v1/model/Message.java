@@ -104,6 +104,17 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
+   * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
+   * to get, update, or delete the message with the specified value. For example usage, see [Name a
+   * created
+   * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientAssignedMessageId;
+
+  /**
    * Output only. The time at which the message was created in Google Chat server.
    * The value may be {@code null}.
    */
@@ -294,6 +305,31 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setCardsV2(java.util.List<CardWithId> cardsV2) {
     this.cardsV2 = cardsV2;
+    return this;
+  }
+
+  /**
+   * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
+   * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
+   * to get, update, or delete the message with the specified value. For example usage, see [Name a
+   * created
+   * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientAssignedMessageId() {
+    return clientAssignedMessageId;
+  }
+
+  /**
+   * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
+   * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
+   * to get, update, or delete the message with the specified value. For example usage, see [Name a
+   * created
+   * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+   * @param clientAssignedMessageId clientAssignedMessageId or {@code null} for none
+   */
+  public Message setClientAssignedMessageId(java.lang.String clientAssignedMessageId) {
+    this.clientAssignedMessageId = clientAssignedMessageId;
     return this;
   }
 

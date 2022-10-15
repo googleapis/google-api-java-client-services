@@ -946,16 +946,16 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link DefineCertificate#execute()} method to invoke the remote operation.
          *
          * @param customer Required. The customer for which the certificate will apply.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineCertificateRequest}
          * @return the request
          */
-        public DefineCertificate defineCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest content) throws java.io.IOException {
+        public DefineCertificate defineCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineCertificateRequest content) throws java.io.IOException {
           DefineCertificate result = new DefineCertificate(customer, content);
           initialize(result);
           return result;
         }
 
-        public class DefineCertificate extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateResponse> {
+        public class DefineCertificate extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineCertificateResponse> {
 
           private static final String REST_PATH = "v1/{+customer}/policies/networks:defineCertificate";
 
@@ -974,11 +974,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * invoking the constructor. </p>
            *
            * @param customer Required. The customer for which the certificate will apply.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineCertificateRequest}
            * @since 1.13
            */
-          protected DefineCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateRequest content) {
-            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineCertificateResponse.class);
+          protected DefineCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineCertificateRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineCertificateResponse.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
@@ -1077,16 +1077,16 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link DefineNetwork#execute()} method to invoke the remote operation.
          *
          * @param customer Required. The customer who will own this new network.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineNetworkRequest}
          * @return the request
          */
-        public DefineNetwork defineNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest content) throws java.io.IOException {
+        public DefineNetwork defineNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineNetworkRequest content) throws java.io.IOException {
           DefineNetwork result = new DefineNetwork(customer, content);
           initialize(result);
           return result;
         }
 
-        public class DefineNetwork extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkResponse> {
+        public class DefineNetwork extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineNetworkResponse> {
 
           private static final String REST_PATH = "v1/{+customer}/policies/networks:defineNetwork";
 
@@ -1105,11 +1105,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * the constructor. </p>
            *
            * @param customer Required. The customer who will own this new network.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineNetworkRequest}
            * @since 1.13
            */
-          protected DefineNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkRequest content) {
-            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1DefineNetworkResponse.class);
+          protected DefineNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineNetworkRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1DefineNetworkResponse.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
@@ -1208,16 +1208,16 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link RemoveCertificate#execute()} method to invoke the remote operation.
          *
          * @param customer Required. The customer whose certificate will be removed.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveCertificateRequest}
          * @return the request
          */
-        public RemoveCertificate removeCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest content) throws java.io.IOException {
+        public RemoveCertificate removeCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveCertificateRequest content) throws java.io.IOException {
           RemoveCertificate result = new RemoveCertificate(customer, content);
           initialize(result);
           return result;
         }
 
-        public class RemoveCertificate extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateResponse> {
+        public class RemoveCertificate extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveCertificateResponse> {
 
           private static final String REST_PATH = "v1/{+customer}/policies/networks:removeCertificate";
 
@@ -1236,11 +1236,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * invoking the constructor. </p>
            *
            * @param customer Required. The customer whose certificate will be removed.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveCertificateRequest}
            * @since 1.13
            */
-          protected RemoveCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateRequest content) {
-            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveCertificateResponse.class);
+          protected RemoveCertificate(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveCertificateRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveCertificateResponse.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
@@ -1339,16 +1339,16 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link RemoveNetwork#execute()} method to invoke the remote operation.
          *
          * @param customer Required. The customer whose network will be removed.
-         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest}
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveNetworkRequest}
          * @return the request
          */
-        public RemoveNetwork removeNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest content) throws java.io.IOException {
+        public RemoveNetwork removeNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveNetworkRequest content) throws java.io.IOException {
           RemoveNetwork result = new RemoveNetwork(customer, content);
           initialize(result);
           return result;
         }
 
-        public class RemoveNetwork extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkResponse> {
+        public class RemoveNetwork extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveNetworkResponse> {
 
           private static final String REST_PATH = "v1/{+customer}/policies/networks:removeNetwork";
 
@@ -1367,11 +1367,11 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * the constructor. </p>
            *
            * @param customer Required. The customer whose network will be removed.
-           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest}
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveNetworkRequest}
            * @since 1.13
            */
-          protected RemoveNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkRequest content) {
-            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1RemoveNetworkResponse.class);
+          protected RemoveNetwork(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveNetworkRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1RemoveNetworkResponse.class);
             this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),

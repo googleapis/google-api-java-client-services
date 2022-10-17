@@ -16,6 +16,7 @@
 EXIT_STATUS=0
 
 pushd $(dirname "$0")/..
+python2 -m pip install --no-deps -r .kokoro/test_requirements_vcs.txt
 python2 -m pip install --require-hashes -r .kokoro/test_requirements.txt
 
 pushd generator

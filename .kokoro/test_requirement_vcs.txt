@@ -1,1 +1,0 @@
-git+https://github.com/googleapis/google-api-java-client-services.git@main#egg=gcp-generator&subdirectory=generator

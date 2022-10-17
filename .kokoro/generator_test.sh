@@ -19,7 +19,7 @@ pushd $(dirname "$0")/..
 python2 -m pip install --no-deps -e generator/ --user
 
 echo "AFTER DOWNLOADING PROJECT"
-python2 -m pip install --require-hashes -r .kokoro/test_requirements.txt
+python2 -m pip install --require-hashes -r .kokoro/test_requirements.txt --user
 
 echo "AFTER DOWNLOADING DEPS"
 pushd generator

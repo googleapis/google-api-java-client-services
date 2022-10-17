@@ -4,8 +4,8 @@
 #
 #    pip-compile --generate-hashes test_requirements.in
 #
-generator==1.4.2 \
-    git+https://github.com/googleapis/google-api-java-client-services.git@main#egg=gcp-generator\&subdirectory=generator
+git+https://github.com/googleapis/google-api-java-client-services.git@main#egg=gcp-generator\&subdirectory=generator
+
 cachetools==3.1.1 \
     --hash=sha256:428266a1c0d36dc5aca63a2d7c5942e88c2c898d72139fca0e97fdd2380517ae \
     --hash=sha256:8ea2d3ce97850f31e4a08b0e2b5e6c34997d7216a9d2c98e0f3978630d4da69a

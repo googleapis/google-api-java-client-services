@@ -17,11 +17,8 @@ EXIT_STATUS=0
 
 pushd $(dirname "$0")/..
 python2 -m pip install --no-deps -e generator/ --user
+#python2 -m pip install --require-hashes -r .kokoro/test_requirements.txt --user
 
-echo "AFTER DOWNLOADING PROJECT"
-python2 -m pip install --require-hashes -r .kokoro/test_requirements.txt --user
-
-echo "AFTER DOWNLOADING DEPS"
 pushd generator
 for file in `find tests/ -name '*_test.py'`
 do

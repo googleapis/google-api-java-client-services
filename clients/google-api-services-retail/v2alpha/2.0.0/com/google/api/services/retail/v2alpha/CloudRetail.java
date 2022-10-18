@@ -377,28 +377,30 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The device type context for completion suggestions. It is useful to apply different
-           * suggestions on different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the
-           * suggestions are across all device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` *
-           * `DESKTOP` * `MOBILE` * A customized string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
+           * The device type context for completion suggestions. We recommend that you leave this
+           * field empty. It can apply different suggestions on different device types, e.g.
+           * `DESKTOP`, `MOBILE`. If it is empty, the suggestions are across all device types.
+           * Supported formats: * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized string
+           * starts with `OTHER_`, e.g. `OTHER_IPHONE`.
            */
           @com.google.api.client.util.Key
           private java.lang.String deviceType;
 
-          /** The device type context for completion suggestions. It is useful to apply different suggestions on
-         different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the suggestions are across all
-         device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized
-         string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
+          /** The device type context for completion suggestions. We recommend that you leave this field empty.
+         It can apply different suggestions on different device types, e.g. `DESKTOP`, `MOBILE`. If it is
+         empty, the suggestions are across all device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` *
+         `DESKTOP` * `MOBILE` * A customized string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
            */
           public java.lang.String getDeviceType() {
             return deviceType;
           }
 
           /**
-           * The device type context for completion suggestions. It is useful to apply different
-           * suggestions on different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the
-           * suggestions are across all device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` *
-           * `DESKTOP` * `MOBILE` * A customized string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
+           * The device type context for completion suggestions. We recommend that you leave this
+           * field empty. It can apply different suggestions on different device types, e.g.
+           * `DESKTOP`, `MOBILE`. If it is empty, the suggestions are across all device types.
+           * Supported formats: * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized string
+           * starts with `OTHER_`, e.g. `OTHER_IPHONE`.
            */
           public CompleteQuery setDeviceType(java.lang.String deviceType) {
             this.deviceType = deviceType;
@@ -9477,6 +9479,55 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              */
             public Collect setEts(java.lang.Long ets) {
               this.ets = ets;
+              return this;
+            }
+
+            /**
+             * The prebuilt rule name that can convert a specific type of raw_json. For example:
+             * "default_schema/v1.0"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String prebuiltRule;
+
+            /** The prebuilt rule name that can convert a specific type of raw_json. For example:
+           "default_schema/v1.0"
+             */
+            public java.lang.String getPrebuiltRule() {
+              return prebuiltRule;
+            }
+
+            /**
+             * The prebuilt rule name that can convert a specific type of raw_json. For example:
+             * "default_schema/v1.0"
+             */
+            public Collect setPrebuiltRule(java.lang.String prebuiltRule) {
+              this.prebuiltRule = prebuiltRule;
+              return this;
+            }
+
+            /**
+             * An arbitrary serialized JSON string that contains necessary information that can
+             * comprise a user event. When this field is specified, the user_event field will be
+             * ignored. Note: line-delimited JSON is not supported, a single JSON only.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String rawJson;
+
+            /** An arbitrary serialized JSON string that contains necessary information that can comprise a user
+           event. When this field is specified, the user_event field will be ignored. Note: line-delimited
+           JSON is not supported, a single JSON only.
+             */
+            public java.lang.String getRawJson() {
+              return rawJson;
+            }
+
+            /**
+             * An arbitrary serialized JSON string that contains necessary information that can
+             * comprise a user event. When this field is specified, the user_event field will be
+             * ignored. Note: line-delimited JSON is not supported, a single JSON only.
+             */
+            public Collect setRawJson(java.lang.String rawJson) {
+              this.rawJson = rawJson;
               return this;
             }
 

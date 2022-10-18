@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Output result.
+ * Output result that stores the information about where the exported data is stored.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2betaOutputResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Export result in BigQuery.
+   * The BigQuery location where the result is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,20 @@ public final class GoogleCloudRetailV2betaOutputResult extends com.google.api.cl
   }
 
   /**
-   * Export result in BigQuery.
+   * The Google Cloud Storage location where the result is stored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2betaGcsOutputResult> gcsResult;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2betaGcsOutputResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2betaGcsOutputResult.class);
+  }
+
+  /**
+   * The BigQuery location where the result is stored.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2betaBigQueryOutputResult> getBigqueryResult() {
@@ -51,11 +64,28 @@ public final class GoogleCloudRetailV2betaOutputResult extends com.google.api.cl
   }
 
   /**
-   * Export result in BigQuery.
+   * The BigQuery location where the result is stored.
    * @param bigqueryResult bigqueryResult or {@code null} for none
    */
   public GoogleCloudRetailV2betaOutputResult setBigqueryResult(java.util.List<GoogleCloudRetailV2betaBigQueryOutputResult> bigqueryResult) {
     this.bigqueryResult = bigqueryResult;
+    return this;
+  }
+
+  /**
+   * The Google Cloud Storage location where the result is stored.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2betaGcsOutputResult> getGcsResult() {
+    return gcsResult;
+  }
+
+  /**
+   * The Google Cloud Storage location where the result is stored.
+   * @param gcsResult gcsResult or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaOutputResult setGcsResult(java.util.List<GoogleCloudRetailV2betaGcsOutputResult> gcsResult) {
+    this.gcsResult = gcsResult;
     return this;
   }
 

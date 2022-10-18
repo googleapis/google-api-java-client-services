@@ -30,6 +30,108 @@ package com.google.api.services.securitycenter.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudSecuritycenterV1ExposurePath extends com.google.api.client.json.GenericJson {
 
+  /**
+   * A list of the edges between nodes in this exposure path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Edge> edges;
+
+  static {
+    // hack to force ProGuard to consider Edge used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Edge.class);
+  }
+
+  /**
+   * The leaf node of this exposure path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV1ExposedResource exposedResource;
+
+  /**
+   * Exposure Path Name e.g.: `organizations/123/attackExposureResults/456/exposurePaths/789`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * A list of nodes that exist in this exposure path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PathNode> pathNodes;
+
+  /**
+   * A list of the edges between nodes in this exposure path.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Edge> getEdges() {
+    return edges;
+  }
+
+  /**
+   * A list of the edges between nodes in this exposure path.
+   * @param edges edges or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposurePath setEdges(java.util.List<Edge> edges) {
+    this.edges = edges;
+    return this;
+  }
+
+  /**
+   * The leaf node of this exposure path.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource getExposedResource() {
+    return exposedResource;
+  }
+
+  /**
+   * The leaf node of this exposure path.
+   * @param exposedResource exposedResource or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposurePath setExposedResource(GoogleCloudSecuritycenterV1ExposedResource exposedResource) {
+    this.exposedResource = exposedResource;
+    return this;
+  }
+
+  /**
+   * Exposure Path Name e.g.: `organizations/123/attackExposureResults/456/exposurePaths/789`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Exposure Path Name e.g.: `organizations/123/attackExposureResults/456/exposurePaths/789`
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposurePath setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * A list of nodes that exist in this exposure path.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PathNode> getPathNodes() {
+    return pathNodes;
+  }
+
+  /**
+   * A list of nodes that exist in this exposure path.
+   * @param pathNodes pathNodes or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposurePath setPathNodes(java.util.List<PathNode> pathNodes) {
+    this.pathNodes = pathNodes;
+    return this;
+  }
+
   @Override
   public GoogleCloudSecuritycenterV1ExposurePath set(String fieldName, Object value) {
     return (GoogleCloudSecuritycenterV1ExposurePath) super.set(fieldName, value);

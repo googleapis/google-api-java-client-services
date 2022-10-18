@@ -30,6 +30,156 @@ package com.google.api.services.securitycenter.v1beta2.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudSecuritycenterV1ExposedResource extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Human readable name of the resource that is exposed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * The ways in which this resource is exposed. Examples: Read, Write
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> methods;
+
+  /**
+   * Exposed Resource Name e.g.: `organizations/123/attackExposureResults/456/exposedResources/789`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * The name of the resource that is exposed. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resource;
+
+  /**
+   * The resource type of the exposed resource. See: https://cloud.google.com/asset-inventory/docs
+   * /supported-asset-types
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceType;
+
+  /**
+   * How valuable this resource is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceValue;
+
+  /**
+   * Human readable name of the resource that is exposed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Human readable name of the resource that is exposed.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The ways in which this resource is exposed. Examples: Read, Write
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMethods() {
+    return methods;
+  }
+
+  /**
+   * The ways in which this resource is exposed. Examples: Read, Write
+   * @param methods methods or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource setMethods(java.util.List<java.lang.String> methods) {
+    this.methods = methods;
+    return this;
+  }
+
+  /**
+   * Exposed Resource Name e.g.: `organizations/123/attackExposureResults/456/exposedResources/789`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Exposed Resource Name e.g.: `organizations/123/attackExposureResults/456/exposedResources/789`
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * The name of the resource that is exposed. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResource() {
+    return resource;
+  }
+
+  /**
+   * The name of the resource that is exposed. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * @param resource resource or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource setResource(java.lang.String resource) {
+    this.resource = resource;
+    return this;
+  }
+
+  /**
+   * The resource type of the exposed resource. See: https://cloud.google.com/asset-inventory/docs
+   * /supported-asset-types
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceType() {
+    return resourceType;
+  }
+
+  /**
+   * The resource type of the exposed resource. See: https://cloud.google.com/asset-inventory/docs
+   * /supported-asset-types
+   * @param resourceType resourceType or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource setResourceType(java.lang.String resourceType) {
+    this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
+   * How valuable this resource is.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceValue() {
+    return resourceValue;
+  }
+
+  /**
+   * How valuable this resource is.
+   * @param resourceValue resourceValue or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExposedResource setResourceValue(java.lang.String resourceValue) {
+    this.resourceValue = resourceValue;
+    return this;
+  }
+
   @Override
   public GoogleCloudSecuritycenterV1ExposedResource set(String fieldName, Object value) {
     return (GoogleCloudSecuritycenterV1ExposedResource) super.set(fieldName, value);

@@ -115,7 +115,7 @@ public final class Access extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String username;
+  private java.lang.String userName;
 
   /**
    * Caller's IP address, such as "1.1.1.1".
@@ -306,18 +306,18 @@ public final class Access extends com.google.api.client.json.GenericJson {
    * login user name, depending on the type of finding.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUsername() {
-    return username;
+  public java.lang.String getUserName() {
+    return userName;
   }
 
   /**
    * A string representing a username. This is likely not an IAM principal. For instance, this may
    * be the system user name if the finding is VM-related, or this may be some type of application
    * login user name, depending on the type of finding.
-   * @param username username or {@code null} for none
+   * @param userName userName or {@code null} for none
    */
-  public Access setUsername(java.lang.String username) {
-    this.username = username;
+  public Access setUserName(java.lang.String userName) {
+    this.userName = userName;
     return this;
   }
 

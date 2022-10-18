@@ -40,7 +40,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   private java.lang.String forwardingPath;
 
   /**
-   * IPv4 address to forward to.
+   * IPv4 address to forward queries to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   }
 
   /**
-   * IPv4 address to forward to.
+   * IPv4 address to forward queries to.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv4Address() {
@@ -91,7 +91,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   }
 
   /**
-   * IPv4 address to forward to.
+   * IPv4 address to forward queries to.
    * @param ipv4Address ipv4Address or {@code null} for none
    */
   public PolicyAlternativeNameServerConfigTargetNameServer setIpv4Address(java.lang.String ipv4Address) {

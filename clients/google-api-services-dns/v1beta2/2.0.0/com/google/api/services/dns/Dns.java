@@ -2745,7 +2745,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
     }
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-     * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+     * this returns an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
      * designed to be used for building permission-aware UIs and command-line tools, not for
      * authorization checking. This operation may "fail open" without warning.
      *
@@ -2775,9 +2775,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not
-       * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
-       * operation is designed to be used for building permission-aware UIs and command-line tools, not
-       * for authorization checking. This operation may "fail open" without warning.
+       * exist, this returns an empty set of permissions, not a `NOT_FOUND` error. Note: This operation
+       * is designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "managedZones.testIamPermissions".
        *
@@ -5902,7 +5902,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param responsePolicy User assigned name of the Respones Policy addressed by this request.
+     * @param responsePolicy User assigned name of the response policy addressed by this request.
      * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
      * @return the request
      */
@@ -5927,7 +5927,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param responsePolicy User assigned name of the Respones Policy addressed by this request.
+       * @param responsePolicy User assigned name of the response policy addressed by this request.
        * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
        * @since 1.13
        */
@@ -6008,17 +6008,17 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /** User assigned name of the Respones Policy addressed by this request. */
+      /** User assigned name of the response policy addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String responsePolicy;
 
-      /** User assigned name of the Respones Policy addressed by this request.
+      /** User assigned name of the response policy addressed by this request.
        */
       public java.lang.String getResponsePolicy() {
         return responsePolicy;
       }
 
-      /** User assigned name of the Respones Policy addressed by this request. */
+      /** User assigned name of the response policy addressed by this request. */
       public Patch setResponsePolicy(java.lang.String responsePolicy) {
         this.responsePolicy = responsePolicy;
         return this;

@@ -1168,7 +1168,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
     public class Devices {
 
       /**
-       * Deletes a device. This operation wipes the device.
+       * Deletes a device. This operation wipes the device. Deleted devices do not show up in
+       * enterprises.devices.list calls and a 404 is returned from enterprises.devices.get.
        *
        * Create a request for the method "devices.delete".
        *
@@ -1192,7 +1193,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+/devices/[^/]+$");
 
         /**
-         * Deletes a device. This operation wipes the device.
+         * Deletes a device. This operation wipes the device. Deleted devices do not show up in
+         * enterprises.devices.list calls and a 404 is returned from enterprises.devices.get.
          *
          * Create a request for the method "devices.delete".
          *
@@ -1338,7 +1340,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Gets a device.
+       * Gets a device. Deleted devices will respond with a 404 error.
        *
        * Create a request for the method "devices.get".
        *
@@ -1362,7 +1364,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+/devices/[^/]+$");
 
         /**
-         * Gets a device.
+         * Gets a device. Deleted devices will respond with a 404 error.
          *
          * Create a request for the method "devices.get".
          *
@@ -1611,7 +1613,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Lists devices for a given enterprise.
+       * Lists devices for a given enterprise. Deleted devices are not returned in the response.
        *
        * Create a request for the method "devices.list".
        *
@@ -1635,7 +1637,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+$");
 
         /**
-         * Lists devices for a given enterprise.
+         * Lists devices for a given enterprise. Deleted devices are not returned in the response.
          *
          * Create a request for the method "devices.list".
          *

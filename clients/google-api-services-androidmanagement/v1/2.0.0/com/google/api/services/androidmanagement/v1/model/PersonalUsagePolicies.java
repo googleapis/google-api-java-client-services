@@ -38,7 +38,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> accountTypesWithManagementDisabled;
 
   /**
-   * Whether camera is disabled.
+   * If true, the camera is disabled on the personal profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.lang.String personalPlayStoreMode;
 
   /**
-   * Whether screen capture is disabled.
+   * If true, screen capture is disabled for all users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether camera is disabled.
+   * If true, the camera is disabled on the personal profile.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCameraDisabled() {
@@ -105,7 +105,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether camera is disabled.
+   * If true, the camera is disabled on the personal profile.
    * @param cameraDisabled cameraDisabled or {@code null} for none
    */
   public PersonalUsagePolicies setCameraDisabled(java.lang.Boolean cameraDisabled) {
@@ -167,7 +167,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether screen capture is disabled.
+   * If true, screen capture is disabled for all users.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getScreenCaptureDisabled() {
@@ -175,7 +175,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether screen capture is disabled.
+   * If true, screen capture is disabled for all users.
    * @param screenCaptureDisabled screenCaptureDisabled or {@code null} for none
    */
   public PersonalUsagePolicies setScreenCaptureDisabled(java.lang.Boolean screenCaptureDisabled) {

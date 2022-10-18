@@ -1955,39 +1955,52 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Requested page size. The value is capped at 1000. Server may return fewer results
-       * than requested. If unspecified, server will default to 100.
+       * Optional. The maximum number of spaces to return. The service may return fewer than this
+       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
+       * above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. Requested page size. The value is capped at 1000. Server may return fewer results than
-     requested. If unspecified, server will default to 100.
+      /** Optional. The maximum number of spaces to return. The service may return fewer than this value. If
+     unspecified, at most 100 spaces are returned. The maximum value is 1000; values above 1000 are
+     coerced to 1000. Negative values return an INVALID_ARGUMENT error.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. Requested page size. The value is capped at 1000. Server may return fewer results
-       * than requested. If unspecified, server will default to 100.
+       * Optional. The maximum number of spaces to return. The service may return fewer than this
+       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
+       * above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** Optional. A token identifying a page of results the server should return. */
+      /**
+       * Optional. A page token, received from a previous list spaces call. Provide this to retrieve
+       * the subsequent page. When paginating, all other parameters provided must match the call
+       * that provided the page token.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A token identifying a page of results the server should return.
+      /** Optional. A page token, received from a previous list spaces call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided must match the call that provided
+     the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Optional. A token identifying a page of results the server should return. */
+      /**
+       * Optional. A page token, received from a previous list spaces call. Provide this to retrieve
+       * the subsequent page. When paginating, all other parameters provided must match the call
+       * that provided the page token.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -2525,39 +2538,52 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Requested page size. The value is capped at 1000. Server may return fewer results than
-         * requested. If unspecified, server will default to 100.
+         * The maximum number of memberships to return. The service may return fewer than this
+         * value. If unspecified, at most 100 memberships are returned. The maximum value is 1000;
+         * values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Requested page size. The value is capped at 1000. Server may return fewer results than requested.
-       If unspecified, server will default to 100.
+        /** The maximum number of memberships to return. The service may return fewer than this value. If
+       unspecified, at most 100 memberships are returned. The maximum value is 1000; values above 1000 are
+       coerced to 1000. Negative values return an INVALID_ARGUMENT error.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Requested page size. The value is capped at 1000. Server may return fewer results than
-         * requested. If unspecified, server will default to 100.
+         * The maximum number of memberships to return. The service may return fewer than this
+         * value. If unspecified, at most 100 memberships are returned. The maximum value is 1000;
+         * values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** A token identifying a page of results the server should return. */
+        /**
+         * A page token, received from a previous list memberships call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided must match the call
+         * that provided the page token.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A token identifying a page of results the server should return.
+        /** A page token, received from a previous list memberships call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided must match the call that provided
+       the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** A token identifying a page of results the server should return. */
+        /**
+         * A page token, received from a previous list memberships call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided must match the call
+         * that provided the page token.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;

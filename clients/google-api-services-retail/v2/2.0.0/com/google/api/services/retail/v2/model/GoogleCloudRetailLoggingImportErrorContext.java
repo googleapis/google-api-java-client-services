@@ -17,9 +17,9 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * The error payload that is populated on LRO import APIs. Including:
- * "google.cloud.retail.v2.ProductService.ImportProducts"
- * "google.cloud.retail.v2.EventService.ImportUserEvents"
+ * The error payload that is populated on LRO import APIs, including
+ * "google.cloud.retail.v2.ProductService.ImportProducts" and
+ * "google.cloud.retail.v2.EventService.ImportUserEvents".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -46,14 +46,6 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
   private java.lang.String gcsPath;
 
   /**
-   * The detailed content which caused the error on importing an inventory activity.
-   * http://cs/google3/google/cloud/retail/v2main/inventory_activity.proto
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String inventoryActivity;
-
-  /**
    * Line number of the content in file. Should be empty for permission or batch operation error.
    * The value may be {@code null}.
    */
@@ -66,46 +58,6 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String operationName;
-
-  /**
-   * The detailed content which caused the error on importing an order.
-   * http://cs/google3/google/cloud/retail/v2main/order.proto
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String order;
-
-  /**
-   * The detailed content which caused the error on importing a place.
-   * http://cs/google3/google/cloud/retail/v2main/place.proto
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String place;
-
-  /**
-   * The detailed content which caused the error on importing a place asset.
-   * http://cs/google3/google/cloud/retail/v2main/place_asset.proto
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String placeAsset;
-
-  /**
-   * The detailed content which caused the error on importing a place product price.
-   * http://cs/google3/google/cloud/retail/v2main/place_product_price.proto
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String placeProductPrice;
-
-  /**
-   * The detailed content which caused the error on importing a place product settings.
-   * http://cs/google3/google/cloud/retail/v2main/place_product_settings.proto
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String placeProductSettings;
 
   /**
    * The detailed content which caused the error on importing a product.
@@ -156,25 +108,6 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
   }
 
   /**
-   * The detailed content which caused the error on importing an inventory activity.
-   * http://cs/google3/google/cloud/retail/v2main/inventory_activity.proto
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInventoryActivity() {
-    return inventoryActivity;
-  }
-
-  /**
-   * The detailed content which caused the error on importing an inventory activity.
-   * http://cs/google3/google/cloud/retail/v2main/inventory_activity.proto
-   * @param inventoryActivity inventoryActivity or {@code null} for none
-   */
-  public GoogleCloudRetailLoggingImportErrorContext setInventoryActivity(java.lang.String inventoryActivity) {
-    this.inventoryActivity = inventoryActivity;
-    return this;
-  }
-
-  /**
    * Line number of the content in file. Should be empty for permission or batch operation error.
    * @return value or {@code null} for none
    */
@@ -205,101 +138,6 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
    */
   public GoogleCloudRetailLoggingImportErrorContext setOperationName(java.lang.String operationName) {
     this.operationName = operationName;
-    return this;
-  }
-
-  /**
-   * The detailed content which caused the error on importing an order.
-   * http://cs/google3/google/cloud/retail/v2main/order.proto
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getOrder() {
-    return order;
-  }
-
-  /**
-   * The detailed content which caused the error on importing an order.
-   * http://cs/google3/google/cloud/retail/v2main/order.proto
-   * @param order order or {@code null} for none
-   */
-  public GoogleCloudRetailLoggingImportErrorContext setOrder(java.lang.String order) {
-    this.order = order;
-    return this;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place.
-   * http://cs/google3/google/cloud/retail/v2main/place.proto
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPlace() {
-    return place;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place.
-   * http://cs/google3/google/cloud/retail/v2main/place.proto
-   * @param place place or {@code null} for none
-   */
-  public GoogleCloudRetailLoggingImportErrorContext setPlace(java.lang.String place) {
-    this.place = place;
-    return this;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place asset.
-   * http://cs/google3/google/cloud/retail/v2main/place_asset.proto
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPlaceAsset() {
-    return placeAsset;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place asset.
-   * http://cs/google3/google/cloud/retail/v2main/place_asset.proto
-   * @param placeAsset placeAsset or {@code null} for none
-   */
-  public GoogleCloudRetailLoggingImportErrorContext setPlaceAsset(java.lang.String placeAsset) {
-    this.placeAsset = placeAsset;
-    return this;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place product price.
-   * http://cs/google3/google/cloud/retail/v2main/place_product_price.proto
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPlaceProductPrice() {
-    return placeProductPrice;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place product price.
-   * http://cs/google3/google/cloud/retail/v2main/place_product_price.proto
-   * @param placeProductPrice placeProductPrice or {@code null} for none
-   */
-  public GoogleCloudRetailLoggingImportErrorContext setPlaceProductPrice(java.lang.String placeProductPrice) {
-    this.placeProductPrice = placeProductPrice;
-    return this;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place product settings.
-   * http://cs/google3/google/cloud/retail/v2main/place_product_settings.proto
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPlaceProductSettings() {
-    return placeProductSettings;
-  }
-
-  /**
-   * The detailed content which caused the error on importing a place product settings.
-   * http://cs/google3/google/cloud/retail/v2main/place_product_settings.proto
-   * @param placeProductSettings placeProductSettings or {@code null} for none
-   */
-  public GoogleCloudRetailLoggingImportErrorContext setPlaceProductSettings(java.lang.String placeProductSettings) {
-    this.placeProductSettings = placeProductSettings;
     return this;
   }
 

@@ -17,9 +17,8 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * A TagBinding represents a connection between a TagValue and a cloud resource (currently project,
- * folder, or organization). Once a TagBinding is created, the TagValue is applied to all the
- * descendants of the cloud resource.
+ * A TagBinding represents a connection between a TagValue and a cloud resource Once a TagBinding is
+ * created, the TagValue is applied to all the descendants of the Google Cloud resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

@@ -154,7 +154,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   public class EffectiveTags {
 
     /**
-     * Return a list of effective tags for the given cloud resource, as specified in `parent`.
+     * Return a list of effective tags for the given Google Cloud resource, as specified in `parent`.
      *
      * Create a request for the method "effectiveTags.list".
      *
@@ -174,7 +174,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v3/effectiveTags";
 
       /**
-       * Return a list of effective tags for the given cloud resource, as specified in `parent`.
+       * Return a list of effective tags for the given Google Cloud resource, as specified in `parent`.
        *
        * Create a request for the method "effectiveTags.list".
        *
@@ -5513,8 +5513,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   public class TagBindings {
 
     /**
-     * Creates a TagBinding between a TagValue and a cloud resource (currently project, folder, or
-     * organization).
+     * Creates a TagBinding between a TagValue and a Google Cloud resource.
      *
      * Create a request for the method "tagBindings.create".
      *
@@ -5535,8 +5534,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v3/tagBindings";
 
       /**
-       * Creates a TagBinding between a TagValue and a cloud resource (currently project, folder, or
-       * organization).
+       * Creates a TagBinding between a TagValue and a Google Cloud resource.
        *
        * Create a request for the method "tagBindings.create".
        *
@@ -5777,7 +5775,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Lists the TagBindings for the given cloud resource, as specified with `parent`. NOTE: The
+     * Lists the TagBindings for the given Google Cloud resource, as specified with `parent`. NOTE: The
      * `parent` field is expected to be a full resource name:
      * https://cloud.google.com/apis/design/resource_names#full_resource_name
      *
@@ -5799,8 +5797,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v3/tagBindings";
 
       /**
-       * Lists the TagBindings for the given cloud resource, as specified with `parent`. NOTE: The
-       * `parent` field is expected to be a full resource name:
+       * Lists the TagBindings for the given Google Cloud resource, as specified with `parent`. NOTE:
+       * The `parent` field is expected to be a full resource name:
        * https://cloud.google.com/apis/design/resource_names#full_resource_name
        *
        * Create a request for the method "tagBindings.list".

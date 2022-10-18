@@ -30,8 +30,8 @@ package com.google.api.services.webrisk.v1.model;
 public final class GoogleCloudWebriskV1Submission extends com.google.api.client.json.GenericJson {
 
   /**
-   * ThreatTypes found to be associated with the submitted URI after reviewing it. This may be empty
-   * if the URI was not added to any list.
+   * ThreatTypes found to be associated with the submitted URI after reviewing it. This might be
+   * empty if the URI was not added to any list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudWebriskV1Submission extends com.google.api.client.
   private java.lang.String uri;
 
   /**
-   * ThreatTypes found to be associated with the submitted URI after reviewing it. This may be empty
-   * if the URI was not added to any list.
+   * ThreatTypes found to be associated with the submitted URI after reviewing it. This might be
+   * empty if the URI was not added to any list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getThreatTypes() {
@@ -54,8 +54,8 @@ public final class GoogleCloudWebriskV1Submission extends com.google.api.client.
   }
 
   /**
-   * ThreatTypes found to be associated with the submitted URI after reviewing it. This may be empty
-   * if the URI was not added to any list.
+   * ThreatTypes found to be associated with the submitted URI after reviewing it. This might be
+   * empty if the URI was not added to any list.
    * @param threatTypes threatTypes or {@code null} for none
    */
   public GoogleCloudWebriskV1Submission setThreatTypes(java.util.List<java.lang.String> threatTypes) {

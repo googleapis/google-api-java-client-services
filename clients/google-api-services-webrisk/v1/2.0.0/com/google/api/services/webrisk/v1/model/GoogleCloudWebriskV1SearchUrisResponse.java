@@ -30,14 +30,14 @@ package com.google.api.services.webrisk.v1.model;
 public final class GoogleCloudWebriskV1SearchUrisResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The threat list matches. This may be empty if the URI is on no list.
+   * The threat list matches. This might be empty if the URI is on no list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudWebriskV1SearchUrisResponseThreatUri threat;
 
   /**
-   * The threat list matches. This may be empty if the URI is on no list.
+   * The threat list matches. This might be empty if the URI is on no list.
    * @return value or {@code null} for none
    */
   public GoogleCloudWebriskV1SearchUrisResponseThreatUri getThreat() {
@@ -45,7 +45,7 @@ public final class GoogleCloudWebriskV1SearchUrisResponse extends com.google.api
   }
 
   /**
-   * The threat list matches. This may be empty if the URI is on no list.
+   * The threat list matches. This might be empty if the URI is on no list.
    * @param threat threat or {@code null} for none
    */
   public GoogleCloudWebriskV1SearchUrisResponse setThreat(GoogleCloudWebriskV1SearchUrisResponseThreatUri threat) {

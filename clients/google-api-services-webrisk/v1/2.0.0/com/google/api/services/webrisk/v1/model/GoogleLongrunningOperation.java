@@ -45,14 +45,14 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   private GoogleRpcStatus error;
 
   /**
-   * This field will contain a `SubmitUriMetadata` object.
+   * Contains a `SubmitUriMetadata` object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * This will match the pattern `/v1/{project-name}/operations/{operation-id}`.
+   * Matches the `/v1/{project-name}/operations/{operation-id}` pattern.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * This field will contain a `SubmitUriMetadata` object.
+   * Contains a `SubmitUriMetadata` object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -115,7 +115,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * This field will contain a `SubmitUriMetadata` object.
+   * Contains a `SubmitUriMetadata` object.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleLongrunningOperation setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -124,7 +124,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * This will match the pattern `/v1/{project-name}/operations/{operation-id}`.
+   * Matches the `/v1/{project-name}/operations/{operation-id}` pattern.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -132,7 +132,7 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * This will match the pattern `/v1/{project-name}/operations/{operation-id}`.
+   * Matches the `/v1/{project-name}/operations/{operation-id}` pattern.
    * @param name name or {@code null} for none
    */
   public GoogleLongrunningOperation setName(java.lang.String name) {

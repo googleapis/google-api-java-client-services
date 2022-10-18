@@ -34,8 +34,9 @@ then
     DISCOVERY=${TEMP_DISCOVERY}
 fi
 
-# install the local generators
-python2 -m pip install -e ${GENERATOR_DIR} --user -q
+# Install the local generator without dependencies first and then install the dependencies with hash checking.
+python2 -m pip install --no-deps -e ${GENERATOR_DIR} --user -q
+python2 -m pip install --require-hashes -r generator_requirements.txt --user
 
 mkdir -p ${OUTPUT_DIR}
 

@@ -42,21 +42,22 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Org policy condition/expression. For example:
    * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
-   * `resource.management.auto_upgrade == true`
+   * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Detailed information about this custom policy constraint.
+   * Detailed information about this custom policy constraint. The max length of the description is
+   * 2000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * One line display name for the UI.
+   * One line display name for the UI. The max length of the display_name is 200 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,9 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
    * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example
-   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+   * characters and the min length is 1. Note that the prefix
+   * "organizations/{organization_id}/customConstraints/" is not counted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +117,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Org policy condition/expression. For example:
    * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
-   * `resource.management.auto_upgrade == true`
+   * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -124,7 +127,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Org policy condition/expression. For example:
    * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
-   * `resource.management.auto_upgrade == true`
+   * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setCondition(java.lang.String condition) {
@@ -133,7 +136,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Detailed information about this custom policy constraint.
+   * Detailed information about this custom policy constraint. The max length of the description is
+   * 2000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -141,7 +145,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Detailed information about this custom policy constraint.
+   * Detailed information about this custom policy constraint. The max length of the description is
+   * 2000 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setDescription(java.lang.String description) {
@@ -150,7 +155,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * One line display name for the UI.
+   * One line display name for the UI. The max length of the display_name is 200 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -158,7 +163,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * One line display name for the UI.
+   * One line display name for the UI. The max length of the display_name is 200 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setDisplayName(java.lang.String displayName) {
@@ -186,7 +191,9 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
    * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example
-   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+   * characters and the min length is 1. Note that the prefix
+   * "organizations/{organization_id}/customConstraints/" is not counted.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -196,7 +203,9 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
    * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example
-   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+   * characters and the min length is 1. Note that the prefix
+   * "organizations/{organization_id}/customConstraints/" is not counted.
    * @param name name or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setName(java.lang.String name) {

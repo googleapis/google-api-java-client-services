@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class ListSpacesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Continuation token to retrieve the next page of results. It will be empty for the last page of
-   * results. Tokens expire in an hour. An error is thrown if an expired token is passed.
+   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
+   * are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   private java.util.List<Space> spaces;
 
   /**
-   * Continuation token to retrieve the next page of results. It will be empty for the last page of
-   * results. Tokens expire in an hour. An error is thrown if an expired token is passed.
+   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
+   * are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Continuation token to retrieve the next page of results. It will be empty for the last page of
-   * results. Tokens expire in an hour. An error is thrown if an expired token is passed.
+   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
+   * are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSpacesResponse setNextPageToken(java.lang.String nextPageToken) {

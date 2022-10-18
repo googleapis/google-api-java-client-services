@@ -73,6 +73,15 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeBytes;
 
   /**
+   * Output only. Name of the backup from which this backup was copied. If a backup is not created
+   * by copying a backup, this field will be empty. Values are of the form:
+   * projects//instances//backups/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceBackup;
+
+  /**
    * Required. Immutable. Name of the table from which this backup was created. This needs to be in
    * the same instance as the backup. Values are of the form
    * `projects/{project}/instances/{instance}/tables/{source_table}`.
@@ -193,6 +202,27 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setSizeBytes(java.lang.Long sizeBytes) {
     this.sizeBytes = sizeBytes;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the backup from which this backup was copied. If a backup is not created
+   * by copying a backup, this field will be empty. Values are of the form:
+   * projects//instances//backups/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceBackup() {
+    return sourceBackup;
+  }
+
+  /**
+   * Output only. Name of the backup from which this backup was copied. If a backup is not created
+   * by copying a backup, this field will be empty. Values are of the form:
+   * projects//instances//backups/.
+   * @param sourceBackup sourceBackup or {@code null} for none
+   */
+  public Backup setSourceBackup(java.lang.String sourceBackup) {
+    this.sourceBackup = sourceBackup;
     return this;
   }
 

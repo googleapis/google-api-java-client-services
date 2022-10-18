@@ -4050,6 +4050,152 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
         public class Backups {
 
           /**
+           * Copy a Cloud Bigtable backup to a new backup in the destination cluster located in the
+           * destination instance and project.
+           *
+           * Create a request for the method "backups.copy".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link Copy#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the destination cluster that will contain the backup copy. The cluster must
+           *        already exists. Values are of the form:
+           *        `projects/{project}/instances/{instance}/clusters/{cluster}`.
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.CopyBackupRequest}
+           * @return the request
+           */
+          public Copy copy(java.lang.String parent, com.google.api.services.bigtableadmin.v2.model.CopyBackupRequest content) throws java.io.IOException {
+            Copy result = new Copy(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Copy extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+parent}/backups:copy";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Copy a Cloud Bigtable backup to a new backup in the destination cluster located in the
+             * destination instance and project.
+             *
+             * Create a request for the method "backups.copy".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link Copy#execute()} method to invoke the remote operation. <p>
+             * {@link Copy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the destination cluster that will contain the backup copy. The cluster must
+           *        already exists. Values are of the form:
+           *        `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             * @param content the {@link com.google.api.services.bigtableadmin.v2.model.CopyBackupRequest}
+             * @since 1.13
+             */
+            protected Copy(java.lang.String parent, com.google.api.services.bigtableadmin.v2.model.CopyBackupRequest content) {
+              super(BigtableAdmin.this, "POST", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public Copy set$Xgafv(java.lang.String $Xgafv) {
+              return (Copy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Copy setAccessToken(java.lang.String accessToken) {
+              return (Copy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Copy setAlt(java.lang.String alt) {
+              return (Copy) super.setAlt(alt);
+            }
+
+            @Override
+            public Copy setCallback(java.lang.String callback) {
+              return (Copy) super.setCallback(callback);
+            }
+
+            @Override
+            public Copy setFields(java.lang.String fields) {
+              return (Copy) super.setFields(fields);
+            }
+
+            @Override
+            public Copy setKey(java.lang.String key) {
+              return (Copy) super.setKey(key);
+            }
+
+            @Override
+            public Copy setOauthToken(java.lang.String oauthToken) {
+              return (Copy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Copy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Copy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Copy setQuotaUser(java.lang.String quotaUser) {
+              return (Copy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Copy setUploadType(java.lang.String uploadType) {
+              return (Copy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Copy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Copy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the destination cluster that will contain the backup copy. The
+             * cluster must already exists. Values are of the form:
+             * `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the destination cluster that will contain the backup copy. The cluster must
+           already exists. Values are of the form:
+           `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the destination cluster that will contain the backup copy. The
+             * cluster must already exists. Values are of the form:
+             * `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             */
+            public Copy setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Copy set(String parameterName, Object value) {
+              return (Copy) super.set(parameterName, value);
+            }
+          }
+          /**
            * Starts creating a new Cloud Bigtable Backup. The returned backup long-running operation can be
            * used to track creation of the backup. The metadata field type is CreateBackupMetadata. The
            * response field type is Backup, if successful. Cancelling the returned operation will stop the

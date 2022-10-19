@@ -255,6 +255,29 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * The project and location in which the application should be created, specified in the
+       * format projects/locations
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The project and location in which the application should be created, specified in the format
+     projects/locations
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The project and location in which the application should be created, specified in the
+       * format projects/locations
+       */
+      public Create setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
@@ -6514,6 +6537,1283 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
         }
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Appengine appengine = new Appengine(...);}
+   *   {@code Appengine.Projects.List request = appengine.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Appengine appengine = new Appengine(...);}
+     *   {@code Appengine.Locations.List request = appengine.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * Gets information about a location.
+       *
+       * Create a request for the method "locations.get".
+       *
+       * This request holds the parameters needed by the appengine server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param projectsId Part of `name`. Resource name for the location.
+       * @param locationsId Part of `name`. See documentation of `projectsId`.
+       * @return the request
+       */
+      public Get get(java.lang.String projectsId, java.lang.String locationsId) throws java.io.IOException {
+        Get result = new Get(projectsId, locationsId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AppengineRequest<com.google.api.services.appengine.model.Location> {
+
+        private static final String REST_PATH = "v1beta/projects/{projectsId}/locations/{locationsId}";
+
+        /**
+         * Gets information about a location.
+         *
+         * Create a request for the method "locations.get".
+         *
+         * This request holds the parameters needed by the the appengine server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectsId Part of `name`. Resource name for the location.
+         * @param locationsId Part of `name`. See documentation of `projectsId`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String projectsId, java.lang.String locationsId) {
+          super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.Location.class);
+          this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+          this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Part of `name`. Resource name for the location. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectsId;
+
+        /** Part of `name`. Resource name for the location.
+         */
+        public java.lang.String getProjectsId() {
+          return projectsId;
+        }
+
+        /** Part of `name`. Resource name for the location. */
+        public Get setProjectsId(java.lang.String projectsId) {
+          this.projectsId = projectsId;
+          return this;
+        }
+
+        /** Part of `name`. See documentation of `projectsId`. */
+        @com.google.api.client.util.Key
+        private java.lang.String locationsId;
+
+        /** Part of `name`. See documentation of `projectsId`.
+         */
+        public java.lang.String getLocationsId() {
+          return locationsId;
+        }
+
+        /** Part of `name`. See documentation of `projectsId`. */
+        public Get setLocationsId(java.lang.String locationsId) {
+          this.locationsId = locationsId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists information about the supported locations for this service.
+       *
+       * Create a request for the method "locations.list".
+       *
+       * This request holds the parameters needed by the appengine server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param projectsId Part of `name`. The resource that owns the locations collection, if applicable.
+       * @return the request
+       */
+      public List list(java.lang.String projectsId) throws java.io.IOException {
+        List result = new List(projectsId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AppengineRequest<com.google.api.services.appengine.model.ListLocationsResponse> {
+
+        private static final String REST_PATH = "v1beta/projects/{projectsId}/locations";
+
+        /**
+         * Lists information about the supported locations for this service.
+         *
+         * Create a request for the method "locations.list".
+         *
+         * This request holds the parameters needed by the the appengine server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectsId Part of `name`. The resource that owns the locations collection, if applicable.
+         * @since 1.13
+         */
+        protected List(java.lang.String projectsId) {
+          super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.ListLocationsResponse.class);
+          this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Part of `name`. The resource that owns the locations collection, if applicable. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectsId;
+
+        /** Part of `name`. The resource that owns the locations collection, if applicable.
+         */
+        public java.lang.String getProjectsId() {
+          return projectsId;
+        }
+
+        /** Part of `name`. The resource that owns the locations collection, if applicable. */
+        public List setProjectsId(java.lang.String projectsId) {
+          this.projectsId = projectsId;
+          return this;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in AIP-160
+         * (https://google.aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       "displayName=tokyo", and is documented in more detail in AIP-160 (https://google.aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in AIP-160
+         * (https://google.aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return. If not set, the service selects a default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token received from the next_page_token field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token received from the next_page_token field in the response. Send that page token to
+       receive the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token received from the next_page_token field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Applications collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Appengine appengine = new Appengine(...);}
+       *   {@code Appengine.Applications.List request = appengine.applications().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Applications applications() {
+        return new Applications();
+      }
+
+      /**
+       * The "applications" collection of methods.
+       */
+      public class Applications {
+
+        /**
+         * Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The
+         * ID of the target Cloud Platform project. location - The region
+         * (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application
+         * located.For more information about App Engine applications, see Managing Projects, Applications,
+         * and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
+         *
+         * Create a request for the method "applications.create".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `parent`. The project and location in which the application should be created, specified in
+         *        the format projects/locations
+         * @param locationsId Part of `parent`. See documentation of `projectsId`.
+         * @param content the {@link com.google.api.services.appengine.model.Application}
+         * @return the request
+         */
+        public Create create(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.appengine.model.Application content) throws java.io.IOException {
+          Create result = new Create(projectsId, locationsId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AppengineRequest<com.google.api.services.appengine.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/projects/{projectsId}/locations/{locationsId}/applications";
+
+          /**
+           * Creates an App Engine application for a Google Cloud Platform project. Required fields: id -
+           * The ID of the target Cloud Platform project. location - The region
+           * (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application
+           * located.For more information about App Engine applications, see Managing Projects,
+           * Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
+           *
+           * Create a request for the method "applications.create".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `parent`. The project and location in which the application should be created, specified in
+         *        the format projects/locations
+           * @param locationsId Part of `parent`. See documentation of `projectsId`.
+           * @param content the {@link com.google.api.services.appengine.model.Application}
+           * @since 1.13
+           */
+          protected Create(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.appengine.model.Application content) {
+            super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.model.Operation.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Part of `parent`. The project and location in which the application should be created,
+           * specified in the format projects/locations
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `parent`. The project and location in which the application should be created, specified in
+         the format projects/locations
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /**
+           * Part of `parent`. The project and location in which the application should be created,
+           * specified in the format projects/locations
+           */
+          public Create setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `parent`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `parent`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `parent`. See documentation of `projectsId`. */
+          public Create setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about an application.
+         *
+         * Create a request for the method "applications.get".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `name`. Name of the Application resource to get. Example: apps/myapp.
+         * @param locationsId Part of `name`. See documentation of `projectsId`.
+         * @param applicationsId Part of `name`. See documentation of `projectsId`.
+         * @return the request
+         */
+        public Get get(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId) throws java.io.IOException {
+          Get result = new Get(projectsId, locationsId, applicationsId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AppengineRequest<com.google.api.services.appengine.model.Application> {
+
+          private static final String REST_PATH = "v1beta/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}";
+
+          /**
+           * Gets information about an application.
+           *
+           * Create a request for the method "applications.get".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `name`. Name of the Application resource to get. Example: apps/myapp.
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param applicationsId Part of `name`. See documentation of `projectsId`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId) {
+            super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.Application.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+            this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Part of `name`. Name of the Application resource to get. Example: apps/myapp. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `name`. Name of the Application resource to get. Example: apps/myapp.
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /** Part of `name`. Name of the Application resource to get. Example: apps/myapp. */
+          public Get setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Get setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String applicationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getApplicationsId() {
+            return applicationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Get setApplicationsId(java.lang.String applicationsId) {
+            this.applicationsId = applicationsId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Recreates the required App Engine features for the specified App Engine application, for example
+         * a Cloud Storage bucket or App Engine service account. Use this method if you receive an error
+         * message about a missing feature, for example, Error retrieving the App Engine service account. If
+         * you have deleted your App Engine service account, this will not be able to recreate it. Instead,
+         * you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/refere
+         * nce/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAcco
+         * unts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be
+         * found in the Cloud Console Activity Log.
+         *
+         * Create a request for the method "applications.repair".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `name`. Name of the application to repair. Example: apps/myapp
+         * @param locationsId Part of `name`. See documentation of `projectsId`.
+         * @param applicationsId Part of `name`. See documentation of `projectsId`.
+         * @param content the {@link com.google.api.services.appengine.model.RepairApplicationRequest}
+         * @return the request
+         */
+        public Repair repair(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, com.google.api.services.appengine.model.RepairApplicationRequest content) throws java.io.IOException {
+          Repair result = new Repair(projectsId, locationsId, applicationsId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Repair extends AppengineRequest<com.google.api.services.appengine.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}:repair";
+
+          /**
+           * Recreates the required App Engine features for the specified App Engine application, for
+           * example a Cloud Storage bucket or App Engine service account. Use this method if you receive an
+           * error message about a missing feature, for example, Error retrieving the App Engine service
+           * account. If you have deleted your App Engine service account, this will not be able to recreate
+           * it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google
+           * .com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%
+           * 2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the
+           * numeric ID can be found in the Cloud Console Activity Log.
+           *
+           * Create a request for the method "applications.repair".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Repair#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `name`. Name of the application to repair. Example: apps/myapp
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param applicationsId Part of `name`. See documentation of `projectsId`.
+           * @param content the {@link com.google.api.services.appengine.model.RepairApplicationRequest}
+           * @since 1.13
+           */
+          protected Repair(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, com.google.api.services.appengine.model.RepairApplicationRequest content) {
+            super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.model.Operation.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+            this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+          }
+
+          @Override
+          public Repair set$Xgafv(java.lang.String $Xgafv) {
+            return (Repair) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Repair setAccessToken(java.lang.String accessToken) {
+            return (Repair) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Repair setAlt(java.lang.String alt) {
+            return (Repair) super.setAlt(alt);
+          }
+
+          @Override
+          public Repair setCallback(java.lang.String callback) {
+            return (Repair) super.setCallback(callback);
+          }
+
+          @Override
+          public Repair setFields(java.lang.String fields) {
+            return (Repair) super.setFields(fields);
+          }
+
+          @Override
+          public Repair setKey(java.lang.String key) {
+            return (Repair) super.setKey(key);
+          }
+
+          @Override
+          public Repair setOauthToken(java.lang.String oauthToken) {
+            return (Repair) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Repair setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Repair) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Repair setQuotaUser(java.lang.String quotaUser) {
+            return (Repair) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Repair setUploadType(java.lang.String uploadType) {
+            return (Repair) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Repair setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Repair) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Part of `name`. Name of the application to repair. Example: apps/myapp */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `name`. Name of the application to repair. Example: apps/myapp
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /** Part of `name`. Name of the application to repair. Example: apps/myapp */
+          public Repair setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Repair setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String applicationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getApplicationsId() {
+            return applicationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Repair setApplicationsId(java.lang.String applicationsId) {
+            this.applicationsId = applicationsId;
+            return this;
+          }
+
+          @Override
+          public Repair set(String parameterName, Object value) {
+            return (Repair) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Appengine appengine = new Appengine(...);}
+       *   {@code Appengine.Operations.List request = appengine.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `name`. The name of the operation resource.
+         * @param locationsId Part of `name`. See documentation of `projectsId`.
+         * @param operationsId Part of `name`. See documentation of `projectsId`.
+         * @return the request
+         */
+        public Get get(java.lang.String projectsId, java.lang.String locationsId, java.lang.String operationsId) throws java.io.IOException {
+          Get result = new Get(projectsId, locationsId, operationsId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AppengineRequest<com.google.api.services.appengine.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}";
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `name`. The name of the operation resource.
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param operationsId Part of `name`. See documentation of `projectsId`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String projectsId, java.lang.String locationsId, java.lang.String operationsId) {
+            super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.Operation.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+            this.operationsId = com.google.api.client.util.Preconditions.checkNotNull(operationsId, "Required parameter operationsId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Part of `name`. The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `name`. The name of the operation resource.
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /** Part of `name`. The name of the operation resource. */
+          public Get setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Get setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String operationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getOperationsId() {
+            return operationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Get setOperationsId(java.lang.String operationsId) {
+            this.operationsId = operationsId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
+         * binding to use different resource name schemes, such as users/operations. To override the
+         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `name`. The name of the operation's parent resource.
+         * @param locationsId Part of `name`. See documentation of `projectsId`.
+         * @return the request
+         */
+        public List list(java.lang.String projectsId, java.lang.String locationsId) throws java.io.IOException {
+          List result = new List(projectsId, locationsId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AppengineRequest<com.google.api.services.appengine.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v1beta/projects/{projectsId}/locations/{locationsId}/operations";
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
+           * the binding to use different resource name schemes, such as users/operations. To override the
+           * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `name`. The name of the operation's parent resource.
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @since 1.13
+           */
+          protected List(java.lang.String projectsId, java.lang.String locationsId) {
+            super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.ListOperationsResponse.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Part of `name`. The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `name`. The name of the operation's parent resource.
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /** Part of `name`. The name of the operation's parent resource. */
+          public List setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public List setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

@@ -38,6 +38,17 @@ public final class GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest
   private java.lang.String comment;
 
   /**
+   * Optional. This field is deprecated and will be removed in future version of the API. Name of
+   * the OrgPolicy which was modified with non-compliant change and resulted in this violation.
+   * Format: projects/{project_number}/policies/{constraint_name}
+   * folders/{folder_id}/policies/{constraint_name}
+   * organizations/{organization_id}/policies/{constraint_name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nonCompliantOrgPolicy;
+
+  /**
    * Required. Business justification explaining the need for violation acknowledgement
    * @return value or {@code null} for none
    */
@@ -51,6 +62,31 @@ public final class GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest
    */
   public GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest setComment(java.lang.String comment) {
     this.comment = comment;
+    return this;
+  }
+
+  /**
+   * Optional. This field is deprecated and will be removed in future version of the API. Name of
+   * the OrgPolicy which was modified with non-compliant change and resulted in this violation.
+   * Format: projects/{project_number}/policies/{constraint_name}
+   * folders/{folder_id}/policies/{constraint_name}
+   * organizations/{organization_id}/policies/{constraint_name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNonCompliantOrgPolicy() {
+    return nonCompliantOrgPolicy;
+  }
+
+  /**
+   * Optional. This field is deprecated and will be removed in future version of the API. Name of
+   * the OrgPolicy which was modified with non-compliant change and resulted in this violation.
+   * Format: projects/{project_number}/policies/{constraint_name}
+   * folders/{folder_id}/policies/{constraint_name}
+   * organizations/{organization_id}/policies/{constraint_name}
+   * @param nonCompliantOrgPolicy nonCompliantOrgPolicy or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest setNonCompliantOrgPolicy(java.lang.String nonCompliantOrgPolicy) {
+    this.nonCompliantOrgPolicy = nonCompliantOrgPolicy;
     return this;
   }
 

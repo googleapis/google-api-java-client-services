@@ -38,8 +38,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String authDomain;
 
   /**
-   * Google Cloud Storage bucket that can be used for storing files associated with this
-   * application. This bucket is associated with the application and can be used by the gcloud
+   * Output only. Google Cloud Storage bucket that can be used for storing files associated with
+   * this application. This bucket is associated with the application and can be used by the gcloud
    * deployment commands.@OutputOnly
    * The value may be {@code null}.
    */
@@ -54,7 +54,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseType;
 
   /**
-   * Google Cloud Storage bucket that can be used by this application to store content.@OutputOnly
+   * Output only. Google Cloud Storage bucket that can be used by this application to store
+   * content.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private String defaultCookieExpiration;
 
   /**
-   * Hostname used to reach this application, as resolved by App Engine.@OutputOnly
+   * Output only. Hostname used to reach this application, as resolved by App Engine.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +91,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private FeatureSettings featureSettings;
 
   /**
-   * The Google Container Registry domain used for storing managed build docker images for this
-   * application.
+   * Output only. The Google Container Registry domain used for storing managed build docker images
+   * for this application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +123,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String locationId;
 
   /**
-   * Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
+   * Output only. Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +164,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Cloud Storage bucket that can be used for storing files associated with this
-   * application. This bucket is associated with the application and can be used by the gcloud
+   * Output only. Google Cloud Storage bucket that can be used for storing files associated with
+   * this application. This bucket is associated with the application and can be used by the gcloud
    * deployment commands.@OutputOnly
    * @return value or {@code null} for none
    */
@@ -173,8 +174,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Cloud Storage bucket that can be used for storing files associated with this
-   * application. This bucket is associated with the application and can be used by the gcloud
+   * Output only. Google Cloud Storage bucket that can be used for storing files associated with
+   * this application. This bucket is associated with the application and can be used by the gcloud
    * deployment commands.@OutputOnly
    * @param codeBucket codeBucket or {@code null} for none
    */
@@ -201,7 +202,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Cloud Storage bucket that can be used by this application to store content.@OutputOnly
+   * Output only. Google Cloud Storage bucket that can be used by this application to store
+   * content.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBucket() {
@@ -209,7 +211,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Cloud Storage bucket that can be used by this application to store content.@OutputOnly
+   * Output only. Google Cloud Storage bucket that can be used by this application to store
+   * content.@OutputOnly
    * @param defaultBucket defaultBucket or {@code null} for none
    */
   public Application setDefaultBucket(java.lang.String defaultBucket) {
@@ -235,7 +238,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hostname used to reach this application, as resolved by App Engine.@OutputOnly
+   * Output only. Hostname used to reach this application, as resolved by App Engine.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultHostname() {
@@ -243,7 +246,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hostname used to reach this application, as resolved by App Engine.@OutputOnly
+   * Output only. Hostname used to reach this application, as resolved by App Engine.@OutputOnly
    * @param defaultHostname defaultHostname or {@code null} for none
    */
   public Application setDefaultHostname(java.lang.String defaultHostname) {
@@ -288,8 +291,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Container Registry domain used for storing managed build docker images for this
-   * application.
+   * Output only. The Google Container Registry domain used for storing managed build docker images
+   * for this application.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcrDomain() {
@@ -297,8 +300,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Container Registry domain used for storing managed build docker images for this
-   * application.
+   * Output only. The Google Container Registry domain used for storing managed build docker images
+   * for this application.
    * @param gcrDomain gcrDomain or {@code null} for none
    */
   public Application setGcrDomain(java.lang.String gcrDomain) {
@@ -364,7 +367,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
+   * Output only. Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -372,7 +375,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
+   * Output only. Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
    * @param name name or {@code null} for none
    */
   public Application setName(java.lang.String name) {

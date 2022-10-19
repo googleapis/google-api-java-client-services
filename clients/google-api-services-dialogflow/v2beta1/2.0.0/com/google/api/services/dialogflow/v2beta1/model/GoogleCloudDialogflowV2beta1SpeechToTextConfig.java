@@ -30,6 +30,16 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Which Speech model to select. Select the model best suited to your domain to get best results.
+   * If a model is not explicitly specified, then a default model is used. Refer to [Cloud Speech
+   * API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
    * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
    * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
@@ -39,6 +49,29 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String speechModelVariant;
+
+  /**
+   * Which Speech model to select. Select the model best suited to your domain to get best results.
+   * If a model is not explicitly specified, then a default model is used. Refer to [Cloud Speech
+   * API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Which Speech model to select. Select the model best suited to your domain to get best results.
+   * If a model is not explicitly specified, then a default model is used. Refer to [Cloud Speech
+   * API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
+   * details.
+   * @param model model or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SpeechToTextConfig setModel(java.lang.String model) {
+    this.model = model;
+    return this;
+  }
 
   /**
    * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,

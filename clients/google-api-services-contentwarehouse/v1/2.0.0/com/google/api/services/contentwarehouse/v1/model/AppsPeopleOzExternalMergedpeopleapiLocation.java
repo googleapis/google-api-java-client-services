@@ -60,12 +60,6 @@ public final class AppsPeopleOzExternalMergedpeopleapiLocation extends com.googl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsPeopleOzExternalMergedpeopleapiLocationExtendedData extendedData;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.String floorName;
 
   /**
@@ -171,21 +165,6 @@ public final class AppsPeopleOzExternalMergedpeopleapiLocation extends com.googl
    */
   public AppsPeopleOzExternalMergedpeopleapiLocation setDeskCode(java.lang.String deskCode) {
     this.deskCode = deskCode;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public AppsPeopleOzExternalMergedpeopleapiLocationExtendedData getExtendedData() {
-    return extendedData;
-  }
-
-  /**
-   * @param extendedData extendedData or {@code null} for none
-   */
-  public AppsPeopleOzExternalMergedpeopleapiLocation setExtendedData(AppsPeopleOzExternalMergedpeopleapiLocationExtendedData extendedData) {
-    this.extendedData = extendedData;
     return this;
   }
 

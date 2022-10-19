@@ -40,11 +40,17 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class IndexingDocjoinerDataVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo acceleratedShoppingSignal;
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo chromeCounts;
 
   /**
    * The value may be {@code null}.
@@ -121,7 +127,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private java.lang.String voltVersion;
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getAcceleratedShoppingSignal() {
@@ -129,11 +134,27 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
    * @param acceleratedShoppingSignal acceleratedShoppingSignal or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setAcceleratedShoppingSignal(IndexingDocjoinerDataVersionVersionInfo acceleratedShoppingSignal) {
     this.acceleratedShoppingSignal = acceleratedShoppingSignal;
+    return this;
+  }
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getChromeCounts() {
+    return chromeCounts;
+  }
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
+   * @param chromeCounts chromeCounts or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setChromeCounts(IndexingDocjoinerDataVersionVersionInfo chromeCounts) {
+    this.chromeCounts = chromeCounts;
     return this;
   }
 

@@ -57,7 +57,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPersonMetadata extends com
    * However, Person.name returns only explicit Name fields, but other fields maybe usable as a name
    * (for example: nicknames, file_as, ...). `best_display_name` will be calculated from all fields
    * in storage which are usable as a name, even fields which are not explicitly requested in the
-   * MergedPerson result. See PersonNameFormatter.java: go/lvztl.
+   * MergedPerson result. See go/javagoog/apps/tacotown/socialgraph/entity/PersonNameFormatter.java
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -293,7 +293,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPersonMetadata extends com
    * However, Person.name returns only explicit Name fields, but other fields maybe usable as a name
    * (for example: nicknames, file_as, ...). `best_display_name` will be calculated from all fields
    * in storage which are usable as a name, even fields which are not explicitly requested in the
-   * MergedPerson result. See PersonNameFormatter.java: go/lvztl.
+   * MergedPerson result. See go/javagoog/apps/tacotown/socialgraph/entity/PersonNameFormatter.java
    * @return value or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiBestDisplayName getBestDisplayName() {
@@ -306,7 +306,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPersonMetadata extends com
    * However, Person.name returns only explicit Name fields, but other fields maybe usable as a name
    * (for example: nicknames, file_as, ...). `best_display_name` will be calculated from all fields
    * in storage which are usable as a name, even fields which are not explicitly requested in the
-   * MergedPerson result. See PersonNameFormatter.java: go/lvztl.
+   * MergedPerson result. See go/javagoog/apps/tacotown/socialgraph/entity/PersonNameFormatter.java
    * @param bestDisplayName bestDisplayName or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPersonMetadata setBestDisplayName(AppsPeopleOzExternalMergedpeopleapiBestDisplayName bestDisplayName) {

@@ -44,8 +44,17 @@ public final class ScienceCitationFunding extends com.google.api.client.json.Gen
   private java.lang.String agencyName;
 
   /**
+   * Funding entries for the same agency and grant number can be merged during our extraction
+   * process so we maintain a record of all the deduped ExtractionInfo messages within the remaining
+   * entry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("DebugExtractionInfo")
+  private java.util.List<ScienceCitationFundingExtractionInfo> debugExtractionInfo;
+
+  /**
    * Text block from which the funding entry was extracted. Intended to be used for offline
-   * analysis.
+   * analysis. DEPRECATED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("DebugFundingTextBlock")
@@ -114,8 +123,29 @@ public final class ScienceCitationFunding extends com.google.api.client.json.Gen
   }
 
   /**
+   * Funding entries for the same agency and grant number can be merged during our extraction
+   * process so we maintain a record of all the deduped ExtractionInfo messages within the remaining
+   * entry.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ScienceCitationFundingExtractionInfo> getDebugExtractionInfo() {
+    return debugExtractionInfo;
+  }
+
+  /**
+   * Funding entries for the same agency and grant number can be merged during our extraction
+   * process so we maintain a record of all the deduped ExtractionInfo messages within the remaining
+   * entry.
+   * @param debugExtractionInfo debugExtractionInfo or {@code null} for none
+   */
+  public ScienceCitationFunding setDebugExtractionInfo(java.util.List<ScienceCitationFundingExtractionInfo> debugExtractionInfo) {
+    this.debugExtractionInfo = debugExtractionInfo;
+    return this;
+  }
+
+  /**
    * Text block from which the funding entry was extracted. Intended to be used for offline
-   * analysis.
+   * analysis. DEPRECATED
    * @return value or {@code null} for none
    */
   public java.lang.String getDebugFundingTextBlock() {
@@ -124,7 +154,7 @@ public final class ScienceCitationFunding extends com.google.api.client.json.Gen
 
   /**
    * Text block from which the funding entry was extracted. Intended to be used for offline
-   * analysis.
+   * analysis. DEPRECATED
    * @param debugFundingTextBlock debugFundingTextBlock or {@code null} for none
    */
   public ScienceCitationFunding setDebugFundingTextBlock(java.lang.String debugFundingTextBlock) {

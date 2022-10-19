@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * assistant.api.core_types.SurfaceType enum. A surface's capabilities can differ from the device's.
  * An example would be ANDROID_ALLO running on Pixel. Allo does not support AudioInput while the
  * Pixel does. In this case, audio_input will be set to false for Assistant Allo requests while it
- * might be set to true for OPA_NEXUS requests. Next ID: 32
+ * might be set to true for OPA_NEXUS requests. Next ID: 34
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -72,6 +72,13 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private AssistantApiCameraCapabilities camera;
+
+  /**
+   * UX restrictions for Auto.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> carUxRestrictions;
 
   /**
    * These capabilities are scoped to the cast abilities of this device.
@@ -189,6 +196,15 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private AssistantApiOutputRestrictions outputRestrictions;
+
+  /**
+   * Capability to support Pop on lockscreen. TODO(b/230626444) this is for short term workaround
+   * for TNG MA DF. Should be deprecated when long term solution is available. go/pop-on-lockscreen-
+   * for-tng-ma.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String popOnLockscreenCapability;
 
   /**
    * Indicates if the client has safety related restriction.
@@ -358,6 +374,23 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   public AssistantApiDeviceCapabilities setCamera(AssistantApiCameraCapabilities camera) {
     this.camera = camera;
+    return this;
+  }
+
+  /**
+   * UX restrictions for Auto.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCarUxRestrictions() {
+    return carUxRestrictions;
+  }
+
+  /**
+   * UX restrictions for Auto.
+   * @param carUxRestrictions carUxRestrictions or {@code null} for none
+   */
+  public AssistantApiDeviceCapabilities setCarUxRestrictions(java.util.List<java.lang.String> carUxRestrictions) {
+    this.carUxRestrictions = carUxRestrictions;
     return this;
   }
 
@@ -637,6 +670,27 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   public AssistantApiDeviceCapabilities setOutputRestrictions(AssistantApiOutputRestrictions outputRestrictions) {
     this.outputRestrictions = outputRestrictions;
+    return this;
+  }
+
+  /**
+   * Capability to support Pop on lockscreen. TODO(b/230626444) this is for short term workaround
+   * for TNG MA DF. Should be deprecated when long term solution is available. go/pop-on-lockscreen-
+   * for-tng-ma.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPopOnLockscreenCapability() {
+    return popOnLockscreenCapability;
+  }
+
+  /**
+   * Capability to support Pop on lockscreen. TODO(b/230626444) this is for short term workaround
+   * for TNG MA DF. Should be deprecated when long term solution is available. go/pop-on-lockscreen-
+   * for-tng-ma.
+   * @param popOnLockscreenCapability popOnLockscreenCapability or {@code null} for none
+   */
+  public AssistantApiDeviceCapabilities setPopOnLockscreenCapability(java.lang.String popOnLockscreenCapability) {
+    this.popOnLockscreenCapability = popOnLockscreenCapability;
     return this;
   }
 

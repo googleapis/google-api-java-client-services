@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 6
+ * Next ID: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -47,6 +47,14 @@ public final class NewsReconServiceLrsQ2lrs2EntryPayload extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPlannedMoment;
+
+  /**
+   * This is meant to hold `LongRunningStory.Type`s only, unfortunately adding an import here causes
+   * a circular dependency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> lrsTypes;
 
   /**
    * The value may be {@code null}.
@@ -106,6 +114,25 @@ public final class NewsReconServiceLrsQ2lrs2EntryPayload extends com.google.api.
    */
   public NewsReconServiceLrsQ2lrs2EntryPayload setIsPlannedMoment(java.lang.Boolean isPlannedMoment) {
     this.isPlannedMoment = isPlannedMoment;
+    return this;
+  }
+
+  /**
+   * This is meant to hold `LongRunningStory.Type`s only, unfortunately adding an import here causes
+   * a circular dependency.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getLrsTypes() {
+    return lrsTypes;
+  }
+
+  /**
+   * This is meant to hold `LongRunningStory.Type`s only, unfortunately adding an import here causes
+   * a circular dependency.
+   * @param lrsTypes lrsTypes or {@code null} for none
+   */
+  public NewsReconServiceLrsQ2lrs2EntryPayload setLrsTypes(java.util.List<java.lang.Integer> lrsTypes) {
+    this.lrsTypes = lrsTypes;
     return this;
   }
 

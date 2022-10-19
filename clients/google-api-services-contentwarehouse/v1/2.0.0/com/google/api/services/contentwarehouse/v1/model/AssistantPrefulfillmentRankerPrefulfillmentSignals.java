@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 25
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 30
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -31,19 +31,18 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends com.google.api.client.json.GenericJson {
 
   /**
+   * Assistant User Interaction Score for binding set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float bindingSetAuis;
+
+  /**
    * A parsing score that is independently calibrated by each parser/IG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double calibratedParsingScore;
-
-  /**
-   * Same semantics as 'calibrated_parsing_score' but in float form. Some RL models (such as
-   * decision tree) doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float calibratedParsingScoreFloat;
 
   /**
    * Indicates interpretation dominance predicted by KScorer
@@ -69,6 +68,15 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Double groundabilityScore;
+
+  /**
+   * Grounding Provider related ranking features, including general Grounding Provider ranking
+   * features(shared among multiple GPs) and specific Grounding Provider ranking features(provided
+   * by a specific GP).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantGroundingRankerGroundingProviderFeatures groundingProviderFeatures;
 
   /**
    * This is a cross-intent feature which is calculated by iterating all intent candidates. This
@@ -111,19 +119,18 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Boolean maskCandidateLevelFeatures;
 
   /**
+   * Number of alternative hypotheses from speech recognition(S3).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float numAlternativeHypothesis;
+
+  /**
    * Sum of the number of constraints used by the Grounding Box to ground each variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double numConstraints;
-
-  /**
-   * Same semantics as 'num_constraints' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numConstraintsFloat;
 
   /**
    * Sum of the number of constraints satisfied for each variable. Depending on the match score for
@@ -135,14 +142,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double numConstraintsSatisfied;
 
   /**
-   * Same semantics as 'num_constraints_satisfied' but in float form. Some RL models (such as
-   * decision tree) doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numConstraintsSatisfiedFloat;
-
-  /**
    * Number of groundable arguments the intent has, populated by the Grounding Box.
    * The value may be {@code null}.
    */
@@ -150,27 +149,11 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double numGroundableArgs;
 
   /**
-   * Same semantics as 'num_groundable_args' but in float form. Some RL models (such as decision
-   * tree) doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numGroundableArgsFloat;
-
-  /**
    * Number of grounded arguments the intent has, populated by the Grounding Box.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double numGroundedArgs;
-
-  /**
-   * Same semantics as 'num_grounded_args' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numGroundedArgsFloat;
 
   /**
    * Signals as proposed in go/improved-grounding-signals. Number of arguments, possibly nested,
@@ -181,28 +164,12 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double numVariables;
 
   /**
-   * Same semantics as 'num_variables' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numVariablesFloat;
-
-  /**
    * Number of arguments, possibly nested, that the Grounding Box was able to ground. This includes
    * ambiguously grounded arguments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double numVariablesGrounded;
-
-  /**
-   * Same semantics as 'num_variables_grounded' but in float form. Some RL models (such as decision
-   * tree) doesn't consume double input well.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numVariablesGroundedFloat;
 
   /**
    * Cosine similarity between predicted query-to-term model and assistant intent-type-based salient
@@ -222,6 +189,40 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double pq2tVsIbstCosine;
 
   /**
+   * Average of per-word confidence for top speech recognition hypothesis. The value is from
+   * RecognizerHypothesisLog:
+   * http://google3/logs/proto/speech/service/recognizer_log.proto?l=848=281400256
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float topHypothesisConfidence;
+
+  /**
+   * Horizontal feature that stores information about confidence scores for each resolution within
+   * the binding set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float verticalConfidenceScore;
+
+  /**
+   * Assistant User Interaction Score for binding set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getBindingSetAuis() {
+    return bindingSetAuis;
+  }
+
+  /**
+   * Assistant User Interaction Score for binding set.
+   * @param bindingSetAuis bindingSetAuis or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetAuis(java.lang.Float bindingSetAuis) {
+    this.bindingSetAuis = bindingSetAuis;
+    return this;
+  }
+
+  /**
    * A parsing score that is independently calibrated by each parser/IG.
    * @return value or {@code null} for none
    */
@@ -235,25 +236,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setCalibratedParsingScore(java.lang.Double calibratedParsingScore) {
     this.calibratedParsingScore = calibratedParsingScore;
-    return this;
-  }
-
-  /**
-   * Same semantics as 'calibrated_parsing_score' but in float form. Some RL models (such as
-   * decision tree) doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getCalibratedParsingScoreFloat() {
-    return calibratedParsingScoreFloat;
-  }
-
-  /**
-   * Same semantics as 'calibrated_parsing_score' but in float form. Some RL models (such as
-   * decision tree) doesn't consume double input well.
-   * @param calibratedParsingScoreFloat calibratedParsingScoreFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setCalibratedParsingScoreFloat(java.lang.Float calibratedParsingScoreFloat) {
-    this.calibratedParsingScoreFloat = calibratedParsingScoreFloat;
     return this;
   }
 
@@ -313,6 +295,27 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setGroundabilityScore(java.lang.Double groundabilityScore) {
     this.groundabilityScore = groundabilityScore;
+    return this;
+  }
+
+  /**
+   * Grounding Provider related ranking features, including general Grounding Provider ranking
+   * features(shared among multiple GPs) and specific Grounding Provider ranking features(provided
+   * by a specific GP).
+   * @return value or {@code null} for none
+   */
+  public AssistantGroundingRankerGroundingProviderFeatures getGroundingProviderFeatures() {
+    return groundingProviderFeatures;
+  }
+
+  /**
+   * Grounding Provider related ranking features, including general Grounding Provider ranking
+   * features(shared among multiple GPs) and specific Grounding Provider ranking features(provided
+   * by a specific GP).
+   * @param groundingProviderFeatures groundingProviderFeatures or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setGroundingProviderFeatures(AssistantGroundingRankerGroundingProviderFeatures groundingProviderFeatures) {
+    this.groundingProviderFeatures = groundingProviderFeatures;
     return this;
   }
 
@@ -412,6 +415,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Number of alternative hypotheses from speech recognition(S3).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getNumAlternativeHypothesis() {
+    return numAlternativeHypothesis;
+  }
+
+  /**
+   * Number of alternative hypotheses from speech recognition(S3).
+   * @param numAlternativeHypothesis numAlternativeHypothesis or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumAlternativeHypothesis(java.lang.Float numAlternativeHypothesis) {
+    this.numAlternativeHypothesis = numAlternativeHypothesis;
+    return this;
+  }
+
+  /**
    * Sum of the number of constraints used by the Grounding Box to ground each variable.
    * @return value or {@code null} for none
    */
@@ -425,25 +445,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumConstraints(java.lang.Double numConstraints) {
     this.numConstraints = numConstraints;
-    return this;
-  }
-
-  /**
-   * Same semantics as 'num_constraints' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumConstraintsFloat() {
-    return numConstraintsFloat;
-  }
-
-  /**
-   * Same semantics as 'num_constraints' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * @param numConstraintsFloat numConstraintsFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumConstraintsFloat(java.lang.Float numConstraintsFloat) {
-    this.numConstraintsFloat = numConstraintsFloat;
     return this;
   }
 
@@ -469,25 +470,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Same semantics as 'num_constraints_satisfied' but in float form. Some RL models (such as
-   * decision tree) doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumConstraintsSatisfiedFloat() {
-    return numConstraintsSatisfiedFloat;
-  }
-
-  /**
-   * Same semantics as 'num_constraints_satisfied' but in float form. Some RL models (such as
-   * decision tree) doesn't consume double input well.
-   * @param numConstraintsSatisfiedFloat numConstraintsSatisfiedFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumConstraintsSatisfiedFloat(java.lang.Float numConstraintsSatisfiedFloat) {
-    this.numConstraintsSatisfiedFloat = numConstraintsSatisfiedFloat;
-    return this;
-  }
-
-  /**
    * Number of groundable arguments the intent has, populated by the Grounding Box.
    * @return value or {@code null} for none
    */
@@ -505,25 +487,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Same semantics as 'num_groundable_args' but in float form. Some RL models (such as decision
-   * tree) doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumGroundableArgsFloat() {
-    return numGroundableArgsFloat;
-  }
-
-  /**
-   * Same semantics as 'num_groundable_args' but in float form. Some RL models (such as decision
-   * tree) doesn't consume double input well.
-   * @param numGroundableArgsFloat numGroundableArgsFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumGroundableArgsFloat(java.lang.Float numGroundableArgsFloat) {
-    this.numGroundableArgsFloat = numGroundableArgsFloat;
-    return this;
-  }
-
-  /**
    * Number of grounded arguments the intent has, populated by the Grounding Box.
    * @return value or {@code null} for none
    */
@@ -537,25 +500,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumGroundedArgs(java.lang.Double numGroundedArgs) {
     this.numGroundedArgs = numGroundedArgs;
-    return this;
-  }
-
-  /**
-   * Same semantics as 'num_grounded_args' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumGroundedArgsFloat() {
-    return numGroundedArgsFloat;
-  }
-
-  /**
-   * Same semantics as 'num_grounded_args' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * @param numGroundedArgsFloat numGroundedArgsFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumGroundedArgsFloat(java.lang.Float numGroundedArgsFloat) {
-    this.numGroundedArgsFloat = numGroundedArgsFloat;
     return this;
   }
 
@@ -579,25 +523,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Same semantics as 'num_variables' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumVariablesFloat() {
-    return numVariablesFloat;
-  }
-
-  /**
-   * Same semantics as 'num_variables' but in float form. Some RL models (such as decision tree)
-   * doesn't consume double input well.
-   * @param numVariablesFloat numVariablesFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumVariablesFloat(java.lang.Float numVariablesFloat) {
-    this.numVariablesFloat = numVariablesFloat;
-    return this;
-  }
-
-  /**
    * Number of arguments, possibly nested, that the Grounding Box was able to ground. This includes
    * ambiguously grounded arguments.
    * @return value or {@code null} for none
@@ -613,25 +538,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumVariablesGrounded(java.lang.Double numVariablesGrounded) {
     this.numVariablesGrounded = numVariablesGrounded;
-    return this;
-  }
-
-  /**
-   * Same semantics as 'num_variables_grounded' but in float form. Some RL models (such as decision
-   * tree) doesn't consume double input well.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumVariablesGroundedFloat() {
-    return numVariablesGroundedFloat;
-  }
-
-  /**
-   * Same semantics as 'num_variables_grounded' but in float form. Some RL models (such as decision
-   * tree) doesn't consume double input well.
-   * @param numVariablesGroundedFloat numVariablesGroundedFloat or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumVariablesGroundedFloat(java.lang.Float numVariablesGroundedFloat) {
-    this.numVariablesGroundedFloat = numVariablesGroundedFloat;
     return this;
   }
 
@@ -672,6 +578,46 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setPq2tVsIbstCosine(java.lang.Double pq2tVsIbstCosine) {
     this.pq2tVsIbstCosine = pq2tVsIbstCosine;
+    return this;
+  }
+
+  /**
+   * Average of per-word confidence for top speech recognition hypothesis. The value is from
+   * RecognizerHypothesisLog:
+   * http://google3/logs/proto/speech/service/recognizer_log.proto?l=848=281400256
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getTopHypothesisConfidence() {
+    return topHypothesisConfidence;
+  }
+
+  /**
+   * Average of per-word confidence for top speech recognition hypothesis. The value is from
+   * RecognizerHypothesisLog:
+   * http://google3/logs/proto/speech/service/recognizer_log.proto?l=848=281400256
+   * @param topHypothesisConfidence topHypothesisConfidence or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setTopHypothesisConfidence(java.lang.Float topHypothesisConfidence) {
+    this.topHypothesisConfidence = topHypothesisConfidence;
+    return this;
+  }
+
+  /**
+   * Horizontal feature that stores information about confidence scores for each resolution within
+   * the binding set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getVerticalConfidenceScore() {
+    return verticalConfidenceScore;
+  }
+
+  /**
+   * Horizontal feature that stores information about confidence scores for each resolution within
+   * the binding set.
+   * @param verticalConfidenceScore verticalConfidenceScore or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setVerticalConfidenceScore(java.lang.Float verticalConfidenceScore) {
+    this.verticalConfidenceScore = verticalConfidenceScore;
     return this;
   }
 

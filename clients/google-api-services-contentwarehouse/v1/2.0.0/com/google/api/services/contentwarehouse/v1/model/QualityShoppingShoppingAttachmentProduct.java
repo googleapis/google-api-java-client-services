@@ -50,12 +50,6 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.String encodedProductSalientTerms;
-
-  /**
-   * The value may be {@code null}.
-   */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger globalProductClusterId;
 
@@ -179,49 +173,6 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
    */
   public QualityShoppingShoppingAttachmentProduct setCatalogId(java.math.BigInteger catalogId) {
     this.catalogId = catalogId;
-    return this;
-  }
-
-  /**
-   * @see #decodeEncodedProductSalientTerms()
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEncodedProductSalientTerms() {
-    return encodedProductSalientTerms;
-  }
-
-  /**
-
-   * @see #getEncodedProductSalientTerms()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeEncodedProductSalientTerms() {
-    return com.google.api.client.util.Base64.decodeBase64(encodedProductSalientTerms);
-  }
-
-  /**
-   * @see #encodeEncodedProductSalientTerms()
-   * @param encodedProductSalientTerms encodedProductSalientTerms or {@code null} for none
-   */
-  public QualityShoppingShoppingAttachmentProduct setEncodedProductSalientTerms(java.lang.String encodedProductSalientTerms) {
-    this.encodedProductSalientTerms = encodedProductSalientTerms;
-    return this;
-  }
-
-  /**
-
-   * @see #setEncodedProductSalientTerms()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public QualityShoppingShoppingAttachmentProduct encodeEncodedProductSalientTerms(byte[] encodedProductSalientTerms) {
-    this.encodedProductSalientTerms = com.google.api.client.util.Base64.encodeBase64URLSafeString(encodedProductSalientTerms);
     return this;
   }
 

@@ -67,6 +67,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponse extends 
   /**
    * The total number of matched documents which is available only if the client set
    * SearchDocumentsRequest.require_total_size to `true`. Otherwise, the value will be `-1`.
+   * `total_size` will max at "100,000". If this is returned, then it can be assumed that the count
+   * is equal to or greater than 100,000. Typically a UI would handle this condition by displaying
+   * "of many", for example: "Displaying 10 of many".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +148,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponse extends 
   /**
    * The total number of matched documents which is available only if the client set
    * SearchDocumentsRequest.require_total_size to `true`. Otherwise, the value will be `-1`.
+   * `total_size` will max at "100,000". If this is returned, then it can be assumed that the count
+   * is equal to or greater than 100,000. Typically a UI would handle this condition by displaying
+   * "of many", for example: "Displaying 10 of many".
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -154,6 +160,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponse extends 
   /**
    * The total number of matched documents which is available only if the client set
    * SearchDocumentsRequest.require_total_size to `true`. Otherwise, the value will be `-1`.
+   * `total_size` will max at "100,000". If this is returned, then it can be assumed that the count
+   * is equal to or greater than 100,000. Typically a UI would handle this condition by displaying
+   * "of many", for example: "Displaying 10 of many".
    * @param totalSize totalSize or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsResponse setTotalSize(java.lang.Integer totalSize) {

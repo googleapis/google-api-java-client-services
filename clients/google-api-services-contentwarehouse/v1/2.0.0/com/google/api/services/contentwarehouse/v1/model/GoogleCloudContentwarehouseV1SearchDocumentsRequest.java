@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for GoogleCloudContentwarehouseV1SearchDocumentsRequest.
+ * Request message for DocumentService.SearchDocuments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -121,7 +121,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   /**
    * Optional. Controls if the search document request requires the return of a total size of
    * matched documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely
-   * impact performance. Defaults to false.
+   * impact performance. Hint: If this is used with pagination, set this flag on the initial query
+   * but set this to false on subsequent page calls (keep the total count locally). Defaults to
+   * false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,7 +322,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   /**
    * Optional. Controls if the search document request requires the return of a total size of
    * matched documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely
-   * impact performance. Defaults to false.
+   * impact performance. Hint: If this is used with pagination, set this flag on the initial query
+   * but set this to false on subsequent page calls (keep the total count locally). Defaults to
+   * false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireTotalSize() {
@@ -330,7 +334,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   /**
    * Optional. Controls if the search document request requires the return of a total size of
    * matched documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely
-   * impact performance. Defaults to false.
+   * impact performance. Hint: If this is used with pagination, set this flag on the initial query
+   * but set this to false on subsequent page calls (keep the total count locally). Defaults to
+   * false.
    * @param requireTotalSize requireTotalSize or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsRequest setRequireTotalSize(java.lang.Boolean requireTotalSize) {

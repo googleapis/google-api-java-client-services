@@ -43,7 +43,8 @@ public final class GeostoreTelephoneProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * Disambiguates between the types of information or service a caller might seek when contacting
+   * this phone number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,12 @@ public final class GeostoreTelephoneProto extends com.google.api.client.json.Gen
   private I18nPhonenumbersPhoneNumber phoneNumber;
 
   /**
-   * RESERVED
+   * The features from which this phone number can be called from. For instance, if a phone number
+   * can only be called from Europe, this field will contain a reference to the TYPE_CONTINENT
+   * feature of Europe. This field is analogous to
+   * http://kg/schema/common/phone_number/service_location. The only valid destination feature types
+   * are TYPE_CONTINENT and TYPE_POLITICAL. If empty, this phone number can be called from anywhere
+   * in Earth (this is the case for the majority of phones).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +151,8 @@ public final class GeostoreTelephoneProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * Disambiguates between the types of information or service a caller might seek when contacting
+   * this phone number.
    * @return value or {@code null} for none
    */
   public java.lang.String getContactCategory() {
@@ -153,7 +160,8 @@ public final class GeostoreTelephoneProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * Disambiguates between the types of information or service a caller might seek when contacting
+   * this phone number.
    * @param contactCategory contactCategory or {@code null} for none
    */
   public GeostoreTelephoneProto setContactCategory(java.lang.String contactCategory) {
@@ -289,7 +297,12 @@ public final class GeostoreTelephoneProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * The features from which this phone number can be called from. For instance, if a phone number
+   * can only be called from Europe, this field will contain a reference to the TYPE_CONTINENT
+   * feature of Europe. This field is analogous to
+   * http://kg/schema/common/phone_number/service_location. The only valid destination feature types
+   * are TYPE_CONTINENT and TYPE_POLITICAL. If empty, this phone number can be called from anywhere
+   * in Earth (this is the case for the majority of phones).
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreFeatureIdProto> getServiceLocationFeature() {
@@ -297,7 +310,12 @@ public final class GeostoreTelephoneProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * The features from which this phone number can be called from. For instance, if a phone number
+   * can only be called from Europe, this field will contain a reference to the TYPE_CONTINENT
+   * feature of Europe. This field is analogous to
+   * http://kg/schema/common/phone_number/service_location. The only valid destination feature types
+   * are TYPE_CONTINENT and TYPE_POLITICAL. If empty, this phone number can be called from anywhere
+   * in Earth (this is the case for the majority of phones).
    * @param serviceLocationFeature serviceLocationFeature or {@code null} for none
    */
   public GeostoreTelephoneProto setServiceLocationFeature(java.util.List<GeostoreFeatureIdProto> serviceLocationFeature) {

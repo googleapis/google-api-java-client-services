@@ -41,20 +41,6 @@ public final class RepositoryWebrefCategoryInfo extends com.google.api.client.js
   private java.util.List<RepositoryWebrefFreebaseType> allTypes;
 
   /**
-   * verticals4 categories that describe this entity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<RepositoryWebrefFatcatCategory> fatcatCategory;
-
-  /**
-   * verticals4 categories that describe the context of the entity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<RepositoryWebrefFatcatCategory> fatcatContext;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,40 +102,6 @@ public final class RepositoryWebrefCategoryInfo extends com.google.api.client.js
    */
   public RepositoryWebrefCategoryInfo setAllTypes(java.util.List<RepositoryWebrefFreebaseType> allTypes) {
     this.allTypes = allTypes;
-    return this;
-  }
-
-  /**
-   * verticals4 categories that describe this entity.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<RepositoryWebrefFatcatCategory> getFatcatCategory() {
-    return fatcatCategory;
-  }
-
-  /**
-   * verticals4 categories that describe this entity.
-   * @param fatcatCategory fatcatCategory or {@code null} for none
-   */
-  public RepositoryWebrefCategoryInfo setFatcatCategory(java.util.List<RepositoryWebrefFatcatCategory> fatcatCategory) {
-    this.fatcatCategory = fatcatCategory;
-    return this;
-  }
-
-  /**
-   * verticals4 categories that describe the context of the entity.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<RepositoryWebrefFatcatCategory> getFatcatContext() {
-    return fatcatContext;
-  }
-
-  /**
-   * verticals4 categories that describe the context of the entity.
-   * @param fatcatContext fatcatContext or {@code null} for none
-   */
-  public RepositoryWebrefCategoryInfo setFatcatContext(java.util.List<RepositoryWebrefFatcatCategory> fatcatContext) {
-    this.fatcatContext = fatcatContext;
     return this;
   }
 

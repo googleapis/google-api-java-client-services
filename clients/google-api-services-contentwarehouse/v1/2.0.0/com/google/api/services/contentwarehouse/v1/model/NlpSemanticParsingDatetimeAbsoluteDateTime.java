@@ -21,7 +21,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * It has a section for date and a section for time. The date section will always be filled; if the
  * time section is filled, hour is always filled; for (minute, second, partial_second), they are
  * optional with a zero default value. But if partial_second is filled, (minute, second) must be
- * filled, even they are 0s; if second is filled, minute must be filled. Next field#: 21.
+ * filled, even they are 0s; if second is filled, minute must be filled. Next field#: 22.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -71,6 +71,8 @@ public final class NlpSemanticParsingDatetimeAbsoluteDateTime extends com.google
   private java.lang.Integer hour;
 
   /**
+   * Note: This is marked as deprecated as we are moving into explicit parses using the `meridiem`
+   * field, and leave the inference over implicit parses to the grounding/resolution libraries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +85,15 @@ public final class NlpSemanticParsingDatetimeAbsoluteDateTime extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isBc;
+
+  /**
+   * For expressions such as "am", "pm". Note: the name "meridiem" has been taken by a field in
+   * message ResolutionProperties. Examples: * "9 am": point { hour: 9 meridiem: AM hour_state:
+   * UNAMBIGUOUS }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String meridiem;
 
   /**
    * The value may be {@code null}.
@@ -275,6 +286,8 @@ public final class NlpSemanticParsingDatetimeAbsoluteDateTime extends com.google
   }
 
   /**
+   * Note: This is marked as deprecated as we are moving into explicit parses using the `meridiem`
+   * field, and leave the inference over implicit parses to the grounding/resolution libraries.
    * @return value or {@code null} for none
    */
   public java.lang.String getHourState() {
@@ -282,6 +295,8 @@ public final class NlpSemanticParsingDatetimeAbsoluteDateTime extends com.google
   }
 
   /**
+   * Note: This is marked as deprecated as we are moving into explicit parses using the `meridiem`
+   * field, and leave the inference over implicit parses to the grounding/resolution libraries.
    * @param hourState hourState or {@code null} for none
    */
   public NlpSemanticParsingDatetimeAbsoluteDateTime setHourState(java.lang.String hourState) {
@@ -305,6 +320,27 @@ public final class NlpSemanticParsingDatetimeAbsoluteDateTime extends com.google
    */
   public NlpSemanticParsingDatetimeAbsoluteDateTime setIsBc(java.lang.Boolean isBc) {
     this.isBc = isBc;
+    return this;
+  }
+
+  /**
+   * For expressions such as "am", "pm". Note: the name "meridiem" has been taken by a field in
+   * message ResolutionProperties. Examples: * "9 am": point { hour: 9 meridiem: AM hour_state:
+   * UNAMBIGUOUS }
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMeridiem() {
+    return meridiem;
+  }
+
+  /**
+   * For expressions such as "am", "pm". Note: the name "meridiem" has been taken by a field in
+   * message ResolutionProperties. Examples: * "9 am": point { hour: 9 meridiem: AM hour_state:
+   * UNAMBIGUOUS }
+   * @param meridiem meridiem or {@code null} for none
+   */
+  public NlpSemanticParsingDatetimeAbsoluteDateTime setMeridiem(java.lang.String meridiem) {
+    this.meridiem = meridiem;
     return this;
   }
 

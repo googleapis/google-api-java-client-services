@@ -125,15 +125,6 @@ public final class RepositoryWebrefEntityJoin extends com.google.api.client.json
   private RepositoryWebrefPreprocessingNameSignals nameSignals;
 
   /**
-   * Deprecated id, only access through EntityJoinUtil::GetEntityId(), while we are migrating to
-   * annotated_entity_id. Setters should go through EntityJoinUtil::SetEntityId() during the
-   * transition period.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RepositoryWebrefAbsoluteLegacyId preprocessingId;
-
-  /**
    * Contains names and names metadata used by Refcon.
    * The value may be {@code null}.
    */
@@ -365,27 +356,6 @@ public final class RepositoryWebrefEntityJoin extends com.google.api.client.json
    */
   public RepositoryWebrefEntityJoin setNameSignals(RepositoryWebrefPreprocessingNameSignals nameSignals) {
     this.nameSignals = nameSignals;
-    return this;
-  }
-
-  /**
-   * Deprecated id, only access through EntityJoinUtil::GetEntityId(), while we are migrating to
-   * annotated_entity_id. Setters should go through EntityJoinUtil::SetEntityId() during the
-   * transition period.
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefAbsoluteLegacyId getPreprocessingId() {
-    return preprocessingId;
-  }
-
-  /**
-   * Deprecated id, only access through EntityJoinUtil::GetEntityId(), while we are migrating to
-   * annotated_entity_id. Setters should go through EntityJoinUtil::SetEntityId() during the
-   * transition period.
-   * @param preprocessingId preprocessingId or {@code null} for none
-   */
-  public RepositoryWebrefEntityJoin setPreprocessingId(RepositoryWebrefAbsoluteLegacyId preprocessingId) {
-    this.preprocessingId = preprocessingId;
     return this;
   }
 

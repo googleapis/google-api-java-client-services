@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for QualityNsrPQData.
+ * Next id: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -28,6 +28,13 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class QualityNsrPQData extends com.google.api.client.json.GenericJson {
+
+  /**
+   * URL-level chard prediction (encoded as an int).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer chard;
 
   /**
    * The value may be {@code null}.
@@ -46,6 +53,13 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Float deltaLinkOutgoing;
+
+  /**
+   * The delta score of the URL-level quality predictor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float deltaPageQuality;
 
   /**
    * Total deltaNSR adjustment based on subchunks. This is a page-level adjustment (subchunks are
@@ -68,6 +82,13 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
   private java.lang.Float linkOutgoing;
 
   /**
+   * The total number of offdomain anchors seen by the NSR pipeline for this page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float numOffdomainAnchors;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,10 +101,41 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
   private java.util.List<QualityNsrPQDataSubchunkData> subchunkData;
 
   /**
+   * URL-level tofu prediction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float tofu;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float urlAutopilotScore;
+
+  /**
+   * URL-level score of the VLQ model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float vlq;
+
+  /**
+   * URL-level chard prediction (encoded as an int).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getChard() {
+    return chard;
+  }
+
+  /**
+   * URL-level chard prediction (encoded as an int).
+   * @param chard chard or {@code null} for none
+   */
+  public QualityNsrPQData setChard(java.lang.Integer chard) {
+    this.chard = chard;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -127,6 +179,23 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   public QualityNsrPQData setDeltaLinkOutgoing(java.lang.Float deltaLinkOutgoing) {
     this.deltaLinkOutgoing = deltaLinkOutgoing;
+    return this;
+  }
+
+  /**
+   * The delta score of the URL-level quality predictor.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDeltaPageQuality() {
+    return deltaPageQuality;
+  }
+
+  /**
+   * The delta score of the URL-level quality predictor.
+   * @param deltaPageQuality deltaPageQuality or {@code null} for none
+   */
+  public QualityNsrPQData setDeltaPageQuality(java.lang.Float deltaPageQuality) {
+    this.deltaPageQuality = deltaPageQuality;
     return this;
   }
 
@@ -180,6 +249,23 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The total number of offdomain anchors seen by the NSR pipeline for this page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getNumOffdomainAnchors() {
+    return numOffdomainAnchors;
+  }
+
+  /**
+   * The total number of offdomain anchors seen by the NSR pipeline for this page.
+   * @param numOffdomainAnchors numOffdomainAnchors or {@code null} for none
+   */
+  public QualityNsrPQData setNumOffdomainAnchors(java.lang.Float numOffdomainAnchors) {
+    this.numOffdomainAnchors = numOffdomainAnchors;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Float getPage2vecLq() {
@@ -210,6 +296,23 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * URL-level tofu prediction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getTofu() {
+    return tofu;
+  }
+
+  /**
+   * URL-level tofu prediction.
+   * @param tofu tofu or {@code null} for none
+   */
+  public QualityNsrPQData setTofu(java.lang.Float tofu) {
+    this.tofu = tofu;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Float getUrlAutopilotScore() {
@@ -221,6 +324,23 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   public QualityNsrPQData setUrlAutopilotScore(java.lang.Float urlAutopilotScore) {
     this.urlAutopilotScore = urlAutopilotScore;
+    return this;
+  }
+
+  /**
+   * URL-level score of the VLQ model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getVlq() {
+    return vlq;
+  }
+
+  /**
+   * URL-level score of the VLQ model.
+   * @param vlq vlq or {@code null} for none
+   */
+  public QualityNsrPQData setVlq(java.lang.Float vlq) {
+    this.vlq = vlq;
     return this;
   }
 

@@ -56,10 +56,11 @@ public final class AppsPeopleOzExternalMergedpeopleapiSourceIdentity extends com
    * PersonFieldMetadata.encoded_container_id. The possible values of this `id` field are as follows
    * based on the value of the `container_type` field: CONTACT: Hex-encoded contact id. PROFILE:
    * DOMAIN_PROFILE: GOOGLE_GROUP: NAMED_CHAT_ROOM: Focus-obfuscated Gaia ID. DOMAIN_CONTACT:
-   * Synthetic-contact id representing the domain shared contact. PLACE: Encoded PlaceId, encoded
-   * using go/djlcf (PlaceIdEncoder.java) RAW_DEVICE_CONTACT: Pair of device_id and raw_contact_id,
-   * encoded as base64 serialized social.graph.peopleapi.proto.internal.RawDeviceContactId proto.
-   * CONTACT_ANNOTATION: Pair of annotation_id and event_timestamp, encoded as base64 serialized
+   * Synthetic-contact id representing the domain shared contact. PLACE: Encoded PlaceId
+   * (go/javagoog/maps/api/places/util/PlaceIdEncoder.java) RAW_DEVICE_CONTACT: Pair of device_id
+   * and raw_contact_id, encoded as base64 serialized
+   * social.graph.peopleapi.proto.internal.RawDeviceContactId proto. CONTACT_ANNOTATION: Pair of
+   * annotation_id and event_timestamp, encoded as base64 serialized
    * social.graph.peopleapi.proto.internal.ContactAnnotationId proto. -- DEPRECATED container types
    * -- If the container is CIRCLE, then the id is going to be the synthetic- contact id
    * representing the email-only circle member or gaia circle member for which the requester does
@@ -151,10 +152,11 @@ public final class AppsPeopleOzExternalMergedpeopleapiSourceIdentity extends com
    * PersonFieldMetadata.encoded_container_id. The possible values of this `id` field are as follows
    * based on the value of the `container_type` field: CONTACT: Hex-encoded contact id. PROFILE:
    * DOMAIN_PROFILE: GOOGLE_GROUP: NAMED_CHAT_ROOM: Focus-obfuscated Gaia ID. DOMAIN_CONTACT:
-   * Synthetic-contact id representing the domain shared contact. PLACE: Encoded PlaceId, encoded
-   * using go/djlcf (PlaceIdEncoder.java) RAW_DEVICE_CONTACT: Pair of device_id and raw_contact_id,
-   * encoded as base64 serialized social.graph.peopleapi.proto.internal.RawDeviceContactId proto.
-   * CONTACT_ANNOTATION: Pair of annotation_id and event_timestamp, encoded as base64 serialized
+   * Synthetic-contact id representing the domain shared contact. PLACE: Encoded PlaceId
+   * (go/javagoog/maps/api/places/util/PlaceIdEncoder.java) RAW_DEVICE_CONTACT: Pair of device_id
+   * and raw_contact_id, encoded as base64 serialized
+   * social.graph.peopleapi.proto.internal.RawDeviceContactId proto. CONTACT_ANNOTATION: Pair of
+   * annotation_id and event_timestamp, encoded as base64 serialized
    * social.graph.peopleapi.proto.internal.ContactAnnotationId proto. -- DEPRECATED container types
    * -- If the container is CIRCLE, then the id is going to be the synthetic- contact id
    * representing the email-only circle member or gaia circle member for which the requester does
@@ -170,10 +172,11 @@ public final class AppsPeopleOzExternalMergedpeopleapiSourceIdentity extends com
    * PersonFieldMetadata.encoded_container_id. The possible values of this `id` field are as follows
    * based on the value of the `container_type` field: CONTACT: Hex-encoded contact id. PROFILE:
    * DOMAIN_PROFILE: GOOGLE_GROUP: NAMED_CHAT_ROOM: Focus-obfuscated Gaia ID. DOMAIN_CONTACT:
-   * Synthetic-contact id representing the domain shared contact. PLACE: Encoded PlaceId, encoded
-   * using go/djlcf (PlaceIdEncoder.java) RAW_DEVICE_CONTACT: Pair of device_id and raw_contact_id,
-   * encoded as base64 serialized social.graph.peopleapi.proto.internal.RawDeviceContactId proto.
-   * CONTACT_ANNOTATION: Pair of annotation_id and event_timestamp, encoded as base64 serialized
+   * Synthetic-contact id representing the domain shared contact. PLACE: Encoded PlaceId
+   * (go/javagoog/maps/api/places/util/PlaceIdEncoder.java) RAW_DEVICE_CONTACT: Pair of device_id
+   * and raw_contact_id, encoded as base64 serialized
+   * social.graph.peopleapi.proto.internal.RawDeviceContactId proto. CONTACT_ANNOTATION: Pair of
+   * annotation_id and event_timestamp, encoded as base64 serialized
    * social.graph.peopleapi.proto.internal.ContactAnnotationId proto. -- DEPRECATED container types
    * -- If the container is CIRCLE, then the id is going to be the synthetic- contact id
    * representing the email-only circle member or gaia circle member for which the requester does

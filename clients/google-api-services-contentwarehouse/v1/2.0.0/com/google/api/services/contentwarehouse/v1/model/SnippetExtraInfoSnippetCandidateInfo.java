@@ -76,12 +76,6 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
   private java.util.List<java.lang.String> snippet;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String snippetSource;
-
-  /**
    * `snippet_text` will be filled by snippet brain flow in SR for model scoring and debugging
    * purpose.
    * The value may be {@code null}.
@@ -202,21 +196,6 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
    */
   public SnippetExtraInfoSnippetCandidateInfo setSnippet(java.util.List<java.lang.String> snippet) {
     this.snippet = snippet;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSnippetSource() {
-    return snippetSource;
-  }
-
-  /**
-   * @param snippetSource snippetSource or {@code null} for none
-   */
-  public SnippetExtraInfoSnippetCandidateInfo setSnippetSource(java.lang.String snippetSource) {
-    this.snippetSource = snippetSource;
     return this;
   }
 

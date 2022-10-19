@@ -52,6 +52,13 @@ public final class AssistantLogsDeviceInfoLog extends com.google.api.client.json
   private java.lang.String deviceId;
 
   /**
+   * The identification of the device. The logging version of the full DeviceId.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantLogsSettingsDeviceIdLog deviceIdLog;
+
+  /**
    * We index linked devices and log these index to avoid logging device_id. device_index should
    * always be a positive number or -1. -1 means this device is not in homegraph.
    * The value may be {@code null}.
@@ -180,6 +187,23 @@ public final class AssistantLogsDeviceInfoLog extends com.google.api.client.json
    */
   public AssistantLogsDeviceInfoLog setDeviceId(java.lang.String deviceId) {
     this.deviceId = deviceId;
+    return this;
+  }
+
+  /**
+   * The identification of the device. The logging version of the full DeviceId.
+   * @return value or {@code null} for none
+   */
+  public AssistantLogsSettingsDeviceIdLog getDeviceIdLog() {
+    return deviceIdLog;
+  }
+
+  /**
+   * The identification of the device. The logging version of the full DeviceId.
+   * @param deviceIdLog deviceIdLog or {@code null} for none
+   */
+  public AssistantLogsDeviceInfoLog setDeviceIdLog(AssistantLogsSettingsDeviceIdLog deviceIdLog) {
+    this.deviceIdLog = deviceIdLog;
     return this;
   }
 

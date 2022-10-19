@@ -36,6 +36,12 @@ public final class NlpSemanticParsingDatetimeEvent extends com.google.api.client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String holiday;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private NlpSemanticParsingDatetimeMoonEventInfo moonEvent;
 
   /**
@@ -49,6 +55,21 @@ public final class NlpSemanticParsingDatetimeEvent extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHoliday() {
+    return holiday;
+  }
+
+  /**
+   * @param holiday holiday or {@code null} for none
+   */
+  public NlpSemanticParsingDatetimeEvent setHoliday(java.lang.String holiday) {
+    this.holiday = holiday;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

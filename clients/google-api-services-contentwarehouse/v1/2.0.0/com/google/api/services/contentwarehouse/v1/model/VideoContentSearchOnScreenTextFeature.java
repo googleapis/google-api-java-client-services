@@ -243,6 +243,14 @@ public final class VideoContentSearchOnScreenTextFeature extends com.google.api.
   private java.lang.Integer mergedLineCount;
 
   /**
+   * # of OCR texts that appear in the same frame. If duration of this OCR text is not zero, the
+   * maximum number among multiple frames where this OCR text appears is set to this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer nTextsInSameFrame;
+
+  /**
    * The number of OCR texts that have the same text among temporally-merged OCR texts.
    * The value may be {@code null}.
    */
@@ -817,6 +825,25 @@ public final class VideoContentSearchOnScreenTextFeature extends com.google.api.
    */
   public VideoContentSearchOnScreenTextFeature setMergedLineCount(java.lang.Integer mergedLineCount) {
     this.mergedLineCount = mergedLineCount;
+    return this;
+  }
+
+  /**
+   * # of OCR texts that appear in the same frame. If duration of this OCR text is not zero, the
+   * maximum number among multiple frames where this OCR text appears is set to this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNTextsInSameFrame() {
+    return nTextsInSameFrame;
+  }
+
+  /**
+   * # of OCR texts that appear in the same frame. If duration of this OCR text is not zero, the
+   * maximum number among multiple frames where this OCR text appears is set to this field.
+   * @param nTextsInSameFrame nTextsInSameFrame or {@code null} for none
+   */
+  public VideoContentSearchOnScreenTextFeature setNTextsInSameFrame(java.lang.Integer nTextsInSameFrame) {
+    this.nTextsInSameFrame = nTextsInSameFrame;
     return this;
   }
 

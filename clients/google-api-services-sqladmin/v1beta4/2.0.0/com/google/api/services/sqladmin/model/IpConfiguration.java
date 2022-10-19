@@ -55,6 +55,13 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Controls connectivity to private IP instances from Google services, such as BigQuery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePrivatePathForGoogleCloudServices;
+
+  /**
    * Whether the instance is assigned a public IP address or not.
    * The value may be {@code null}.
    */
@@ -118,6 +125,23 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   public IpConfiguration setAuthorizedNetworks(java.util.List<AclEntry> authorizedNetworks) {
     this.authorizedNetworks = authorizedNetworks;
+    return this;
+  }
+
+  /**
+   * Controls connectivity to private IP instances from Google services, such as BigQuery.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePrivatePathForGoogleCloudServices() {
+    return enablePrivatePathForGoogleCloudServices;
+  }
+
+  /**
+   * Controls connectivity to private IP instances from Google services, such as BigQuery.
+   * @param enablePrivatePathForGoogleCloudServices enablePrivatePathForGoogleCloudServices or {@code null} for none
+   */
+  public IpConfiguration setEnablePrivatePathForGoogleCloudServices(java.lang.Boolean enablePrivatePathForGoogleCloudServices) {
+    this.enablePrivatePathForGoogleCloudServices = enablePrivatePathForGoogleCloudServices;
     return this;
   }
 

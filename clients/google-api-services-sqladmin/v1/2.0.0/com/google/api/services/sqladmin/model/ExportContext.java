@@ -30,6 +30,12 @@ package com.google.api.services.sqladmin.model;
 public final class ExportContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BakExportOptions bakExportOptions;
+
+  /**
    * Options for exporting data as CSV. `MySQL` and `PostgreSQL` instances only.
    * The value may be {@code null}.
    */
@@ -86,6 +92,21 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public BakExportOptions getBakExportOptions() {
+    return bakExportOptions;
+  }
+
+  /**
+   * @param bakExportOptions bakExportOptions or {@code null} for none
+   */
+  public ExportContext setBakExportOptions(BakExportOptions bakExportOptions) {
+    this.bakExportOptions = bakExportOptions;
+    return this;
+  }
 
   /**
    * Options for exporting data as CSV. `MySQL` and `PostgreSQL` instances only.
@@ -232,6 +253,65 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   @Override
   public ExportContext clone() {
     return (ExportContext) super.clone();
+  }
+
+  /**
+   * Model definition for ExportContextBakExportOptions.
+   */
+  public static final class BakExportOptions extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Integer stripeCount;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean striped;
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.lang.Integer getStripeCount() {
+      return stripeCount;
+    }
+
+    /**
+     * @param stripeCount stripeCount or {@code null} for none
+     */
+    public BakExportOptions setStripeCount(java.lang.Integer stripeCount) {
+      this.stripeCount = stripeCount;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getStriped() {
+      return striped;
+    }
+
+    /**
+     * @param striped striped or {@code null} for none
+     */
+    public BakExportOptions setStriped(java.lang.Boolean striped) {
+      this.striped = striped;
+      return this;
+    }
+
+    @Override
+    public BakExportOptions set(String fieldName, Object value) {
+      return (BakExportOptions) super.set(fieldName, value);
+    }
+
+    @Override
+    public BakExportOptions clone() {
+      return (BakExportOptions) super.clone();
+    }
+
   }
 
   /**

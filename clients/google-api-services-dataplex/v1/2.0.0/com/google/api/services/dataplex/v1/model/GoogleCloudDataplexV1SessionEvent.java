@@ -38,6 +38,14 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
   private java.lang.Boolean eventSucceeded;
 
   /**
+   * If the session is associated with an environment with fast startup enabled, and was created
+   * before being assigned to a user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fastStartupEnabled;
+
+  /**
    * The log message.
    * The value may be {@code null}.
    */
@@ -81,13 +89,6 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
   private java.lang.String userId;
 
   /**
-   * If the session is a warm pooled session.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean warmPoolEnabled;
-
-  /**
    * The status of the event.
    * @return value or {@code null} for none
    */
@@ -101,6 +102,25 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
    */
   public GoogleCloudDataplexV1SessionEvent setEventSucceeded(java.lang.Boolean eventSucceeded) {
     this.eventSucceeded = eventSucceeded;
+    return this;
+  }
+
+  /**
+   * If the session is associated with an environment with fast startup enabled, and was created
+   * before being assigned to a user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFastStartupEnabled() {
+    return fastStartupEnabled;
+  }
+
+  /**
+   * If the session is associated with an environment with fast startup enabled, and was created
+   * before being assigned to a user.
+   * @param fastStartupEnabled fastStartupEnabled or {@code null} for none
+   */
+  public GoogleCloudDataplexV1SessionEvent setFastStartupEnabled(java.lang.Boolean fastStartupEnabled) {
+    this.fastStartupEnabled = fastStartupEnabled;
     return this;
   }
 
@@ -205,23 +225,6 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
    */
   public GoogleCloudDataplexV1SessionEvent setUserId(java.lang.String userId) {
     this.userId = userId;
-    return this;
-  }
-
-  /**
-   * If the session is a warm pooled session.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getWarmPoolEnabled() {
-    return warmPoolEnabled;
-  }
-
-  /**
-   * If the session is a warm pooled session.
-   * @param warmPoolEnabled warmPoolEnabled or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SessionEvent setWarmPoolEnabled(java.lang.Boolean warmPoolEnabled) {
-    this.warmPoolEnabled = warmPoolEnabled;
     return this;
   }
 

@@ -30,15 +30,15 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. GCS URIs of archives to be extracted into the working directory of each executor.
-   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Optional. Cloud Storage URIs of archives to be extracted into the working directory of each
+   * executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> archiveUris;
 
   /**
-   * Optional. GCS URIs of files to be placed in the working directory of each executor.
+   * Optional. Cloud Storage URIs of files to be placed in the working directory of each executor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,16 +52,17 @@ public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.googl
   private GoogleCloudDataplexV1TaskInfrastructureSpec infrastructureSpec;
 
   /**
-   * Required. Path to input notebook. This can be the GCS URI of the notebook file or the path to a
-   * Notebook Content. The execution args are accessible as environment variables (TASK_key=value).
+   * Required. Path to input notebook. This can be the Cloud Storage URI of the notebook file or the
+   * path to a Notebook Content. The execution args are accessible as environment variables
+   * (TASK_key=value).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notebook;
 
   /**
-   * Optional. GCS URIs of archives to be extracted into the working directory of each executor.
-   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Optional. Cloud Storage URIs of archives to be extracted into the working directory of each
+   * executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArchiveUris() {
@@ -69,8 +70,8 @@ public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.googl
   }
 
   /**
-   * Optional. GCS URIs of archives to be extracted into the working directory of each executor.
-   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Optional. Cloud Storage URIs of archives to be extracted into the working directory of each
+   * executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
    * @param archiveUris archiveUris or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskNotebookTaskConfig setArchiveUris(java.util.List<java.lang.String> archiveUris) {
@@ -79,7 +80,7 @@ public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.googl
   }
 
   /**
-   * Optional. GCS URIs of files to be placed in the working directory of each executor.
+   * Optional. Cloud Storage URIs of files to be placed in the working directory of each executor.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileUris() {
@@ -87,7 +88,7 @@ public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.googl
   }
 
   /**
-   * Optional. GCS URIs of files to be placed in the working directory of each executor.
+   * Optional. Cloud Storage URIs of files to be placed in the working directory of each executor.
    * @param fileUris fileUris or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskNotebookTaskConfig setFileUris(java.util.List<java.lang.String> fileUris) {
@@ -113,8 +114,9 @@ public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.googl
   }
 
   /**
-   * Required. Path to input notebook. This can be the GCS URI of the notebook file or the path to a
-   * Notebook Content. The execution args are accessible as environment variables (TASK_key=value).
+   * Required. Path to input notebook. This can be the Cloud Storage URI of the notebook file or the
+   * path to a Notebook Content. The execution args are accessible as environment variables
+   * (TASK_key=value).
    * @return value or {@code null} for none
    */
   public java.lang.String getNotebook() {
@@ -122,8 +124,9 @@ public final class GoogleCloudDataplexV1TaskNotebookTaskConfig extends com.googl
   }
 
   /**
-   * Required. Path to input notebook. This can be the GCS URI of the notebook file or the path to a
-   * Notebook Content. The execution args are accessible as environment variables (TASK_key=value).
+   * Required. Path to input notebook. This can be the Cloud Storage URI of the notebook file or the
+   * path to a Notebook Content. The execution args are accessible as environment variables
+   * (TASK_key=value).
    * @param notebook notebook or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskNotebookTaskConfig setNotebook(java.lang.String notebook) {

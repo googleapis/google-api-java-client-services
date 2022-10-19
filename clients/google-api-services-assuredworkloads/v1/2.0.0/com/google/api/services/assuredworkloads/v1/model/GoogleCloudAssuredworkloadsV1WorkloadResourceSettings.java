@@ -49,7 +49,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettings extends
 
   /**
    * Indicates the type of resource. This field should be specified to correspond the id to the
-   * right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+   * right resource type (CONSUMER_FOLDER or ENCRYPTION_KEYS_PROJECT)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettings extends
 
   /**
    * Indicates the type of resource. This field should be specified to correspond the id to the
-   * right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+   * right resource type (CONSUMER_FOLDER or ENCRYPTION_KEYS_PROJECT)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -106,7 +106,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettings extends
 
   /**
    * Indicates the type of resource. This field should be specified to correspond the id to the
-   * right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+   * right resource type (CONSUMER_FOLDER or ENCRYPTION_KEYS_PROJECT)
    * @param resourceType resourceType or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1WorkloadResourceSettings setResourceType(java.lang.String resourceType) {

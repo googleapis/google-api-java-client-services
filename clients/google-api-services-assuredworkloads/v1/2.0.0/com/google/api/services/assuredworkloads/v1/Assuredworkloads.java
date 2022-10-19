@@ -25,7 +25,7 @@ package com.google.api.services.assuredworkloads.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/learnmoreurl" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -891,7 +891,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the Workload to fetch. This is the workloads's relative path in the
+         * @param name Required. The resource name of the Workload to fetch. This is the workload's relative path in the
          *        API, formatted as
          *        "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
          *        example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
@@ -920,7 +920,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the Workload to fetch. This is the workloads's relative path in the
+           * @param name Required. The resource name of the Workload to fetch. This is the workload's relative path in the
          *        API, formatted as
          *        "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
          *        example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
@@ -1002,7 +1002,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The resource name of the Workload to fetch. This is the workloads's relative
+           * Required. The resource name of the Workload to fetch. This is the workload's relative
            * path in the API, formatted as
            * "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
            * example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
@@ -1010,7 +1010,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the Workload to fetch. This is the workloads's relative path in the
+          /** Required. The resource name of the Workload to fetch. This is the workload's relative path in the
          API, formatted as
          "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For example,
          "organizations/123/locations/us-east1/workloads/assured-workload-1".
@@ -1020,7 +1020,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The resource name of the Workload to fetch. This is the workloads's relative
+           * Required. The resource name of the Workload to fetch. This is the workload's relative
            * path in the API, formatted as
            * "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
            * example, "organizations/123/locations/us-east1/workloads/assured-workload-1".

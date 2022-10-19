@@ -17,7 +17,9 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * Settings specific to the Key Management Service.
+ * Settings specific to the Key Management Service. This message is deprecated. In order to create a
+ * Keyring, callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in
+ * ResourceSettings.resource_type field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation

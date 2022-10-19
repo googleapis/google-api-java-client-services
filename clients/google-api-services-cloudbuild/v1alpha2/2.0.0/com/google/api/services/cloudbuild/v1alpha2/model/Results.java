@@ -30,14 +30,15 @@ package com.google.api.services.cloudbuild.v1alpha2.model;
 public final class Results extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path to the artifact manifest. Only populated when artifacts are uploaded.
+   * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
+   * populated when artifacts are uploaded to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String artifactManifest;
 
   /**
-   * Time to push all non-container artifacts.
+   * Time to push all non-container artifacts to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +82,8 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.util.List<UploadedMavenArtifact> mavenArtifacts;
 
   /**
-   * Number of artifacts uploaded. Only populated when artifacts are uploaded.
+   * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
+   * uploaded to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -95,7 +97,8 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.util.List<UploadedPythonPackage> pythonPackages;
 
   /**
-   * Path to the artifact manifest. Only populated when artifacts are uploaded.
+   * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
+   * populated when artifacts are uploaded to Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getArtifactManifest() {
@@ -103,7 +106,8 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path to the artifact manifest. Only populated when artifacts are uploaded.
+   * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
+   * populated when artifacts are uploaded to Cloud Storage.
    * @param artifactManifest artifactManifest or {@code null} for none
    */
   public Results setArtifactManifest(java.lang.String artifactManifest) {
@@ -112,7 +116,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time to push all non-container artifacts.
+   * Time to push all non-container artifacts to Cloud Storage.
    * @return value or {@code null} for none
    */
   public TimeSpan getArtifactTiming() {
@@ -120,7 +124,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time to push all non-container artifacts.
+   * Time to push all non-container artifacts to Cloud Storage.
    * @param artifactTiming artifactTiming or {@code null} for none
    */
   public Results setArtifactTiming(TimeSpan artifactTiming) {
@@ -203,7 +207,8 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of artifacts uploaded. Only populated when artifacts are uploaded.
+   * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
+   * uploaded to Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumArtifacts() {
@@ -211,7 +216,8 @@ public final class Results extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of artifacts uploaded. Only populated when artifacts are uploaded.
+   * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
+   * uploaded to Cloud Storage.
    * @param numArtifacts numArtifacts or {@code null} for none
    */
   public Results setNumArtifacts(java.lang.Long numArtifacts) {

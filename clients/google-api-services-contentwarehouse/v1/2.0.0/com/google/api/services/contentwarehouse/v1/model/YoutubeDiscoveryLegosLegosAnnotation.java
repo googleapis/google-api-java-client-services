@@ -17,9 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The annotation of a document by a given entity, for a given type of relationship. The annotation
- * should be valid for the complete annotated document, not simply a part of the document such as a
- * video segment.
+ * The annotation of a document by a given entity, for a given type of relationship.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -46,7 +44,17 @@ public final class YoutubeDiscoveryLegosLegosAnnotation extends com.google.api.c
   private YoutubeDiscoveryLegosLegosFormatRelationship format;
 
   /**
-   * The annotation is a semantic annotation, i.e. it tells what the document is about.
+   * The annotation is present in the video. Semantic Legos and Presence Legos naturally overlap and
+   * can contain the same entities. However, we do not enforce a strict subset relation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeDiscoveryLegosLegosPresentRelationship present;
+
+  /**
+   * The annotation is a semantic annotation, i.e. it tells what the document is about and what the
+   * reasons to watch the video are. The annotation should be valid for the complete annotated
+   * document, not simply a part of the document such as a video segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +103,28 @@ public final class YoutubeDiscoveryLegosLegosAnnotation extends com.google.api.c
   }
 
   /**
-   * The annotation is a semantic annotation, i.e. it tells what the document is about.
+   * The annotation is present in the video. Semantic Legos and Presence Legos naturally overlap and
+   * can contain the same entities. However, we do not enforce a strict subset relation.
+   * @return value or {@code null} for none
+   */
+  public YoutubeDiscoveryLegosLegosPresentRelationship getPresent() {
+    return present;
+  }
+
+  /**
+   * The annotation is present in the video. Semantic Legos and Presence Legos naturally overlap and
+   * can contain the same entities. However, we do not enforce a strict subset relation.
+   * @param present present or {@code null} for none
+   */
+  public YoutubeDiscoveryLegosLegosAnnotation setPresent(YoutubeDiscoveryLegosLegosPresentRelationship present) {
+    this.present = present;
+    return this;
+  }
+
+  /**
+   * The annotation is a semantic annotation, i.e. it tells what the document is about and what the
+   * reasons to watch the video are. The annotation should be valid for the complete annotated
+   * document, not simply a part of the document such as a video segment.
    * @return value or {@code null} for none
    */
   public YoutubeDiscoveryLegosLegosSemanticRelationship getSemantic() {
@@ -103,7 +132,9 @@ public final class YoutubeDiscoveryLegosLegosAnnotation extends com.google.api.c
   }
 
   /**
-   * The annotation is a semantic annotation, i.e. it tells what the document is about.
+   * The annotation is a semantic annotation, i.e. it tells what the document is about and what the
+   * reasons to watch the video are. The annotation should be valid for the complete annotated
+   * document, not simply a part of the document such as a video segment.
    * @param semantic semantic or {@code null} for none
    */
   public YoutubeDiscoveryLegosLegosAnnotation setSemantic(YoutubeDiscoveryLegosLegosSemanticRelationship semantic) {

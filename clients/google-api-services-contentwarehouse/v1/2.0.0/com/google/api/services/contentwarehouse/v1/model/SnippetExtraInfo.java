@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Extra snippet info used for snippet scoring / modification in superroot. Next ID: 11
+ * Model definition for SnippetExtraInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -64,6 +64,13 @@ public final class SnippetExtraInfo extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Integer snippetBrainSelectedCandidateIndex;
+
+  /**
+   * SnippetsBrain model information for snippets popup debug.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SnippetExtraInfoSnippetsBrainModelInfo snippetsbrainModelInfo;
 
   /**
    * Candidates are ordered by their id.
@@ -149,6 +156,23 @@ public final class SnippetExtraInfo extends com.google.api.client.json.GenericJs
    */
   public SnippetExtraInfo setSnippetBrainSelectedCandidateIndex(java.lang.Integer snippetBrainSelectedCandidateIndex) {
     this.snippetBrainSelectedCandidateIndex = snippetBrainSelectedCandidateIndex;
+    return this;
+  }
+
+  /**
+   * SnippetsBrain model information for snippets popup debug.
+   * @return value or {@code null} for none
+   */
+  public SnippetExtraInfoSnippetsBrainModelInfo getSnippetsbrainModelInfo() {
+    return snippetsbrainModelInfo;
+  }
+
+  /**
+   * SnippetsBrain model information for snippets popup debug.
+   * @param snippetsbrainModelInfo snippetsbrainModelInfo or {@code null} for none
+   */
+  public SnippetExtraInfo setSnippetsbrainModelInfo(SnippetExtraInfoSnippetsBrainModelInfo snippetsbrainModelInfo) {
+    this.snippetsbrainModelInfo = snippetsbrainModelInfo;
     return this;
   }
 

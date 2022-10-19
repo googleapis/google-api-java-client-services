@@ -57,6 +57,14 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
   private AssistantDevicesPlatformProtoDeviceModifySettingCapability deviceModifySetting;
 
   /**
+   * [device_take_photo] specifies the support for the device.TAKE_PHOTO clientop, and the
+   * corresponding device_take_photo field in assistant.embedded.v1.DeviceOp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoDeviceTakePhotoCapability deviceTakePhoto;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,6 +174,25 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setDeviceModifySetting(AssistantDevicesPlatformProtoDeviceModifySettingCapability deviceModifySetting) {
     this.deviceModifySetting = deviceModifySetting;
+    return this;
+  }
+
+  /**
+   * [device_take_photo] specifies the support for the device.TAKE_PHOTO clientop, and the
+   * corresponding device_take_photo field in assistant.embedded.v1.DeviceOp.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoDeviceTakePhotoCapability getDeviceTakePhoto() {
+    return deviceTakePhoto;
+  }
+
+  /**
+   * [device_take_photo] specifies the support for the device.TAKE_PHOTO clientop, and the
+   * corresponding device_take_photo field in assistant.embedded.v1.DeviceOp.
+   * @param deviceTakePhoto deviceTakePhoto or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setDeviceTakePhoto(AssistantDevicesPlatformProtoDeviceTakePhotoCapability deviceTakePhoto) {
+    this.deviceTakePhoto = deviceTakePhoto;
     return this;
   }
 

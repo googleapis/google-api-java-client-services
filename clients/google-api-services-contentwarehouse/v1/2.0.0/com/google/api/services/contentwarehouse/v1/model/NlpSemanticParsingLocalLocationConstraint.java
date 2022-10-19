@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * All the possible location constraints. This message is associated with a location and can be
  * nested accordingly. E.g., for a compound location the constraint may be associated with the
  * entire location or with either of the two internal locations (loc_1 and loc_2). There is an
- * implicit AND relation between the different constraints. Next ID: 23.
+ * implicit AND relation between the different constraints. Next ID: 24.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -64,6 +64,13 @@ public final class NlpSemanticParsingLocalLocationConstraint extends com.google.
    */
   @com.google.api.client.util.Key
   private NlpSemanticParsingLocalGcidConstraint gcidConstraint;
+
+  /**
+   * Used for health insurance filter populator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpSemanticParsingLocalHealthInsuranceConstraint healthInsurance;
 
   /**
    * Some constraints are also hyper-reliable, such as [brunch] and [coffee].
@@ -245,6 +252,23 @@ public final class NlpSemanticParsingLocalLocationConstraint extends com.google.
    */
   public NlpSemanticParsingLocalLocationConstraint setGcidConstraint(NlpSemanticParsingLocalGcidConstraint gcidConstraint) {
     this.gcidConstraint = gcidConstraint;
+    return this;
+  }
+
+  /**
+   * Used for health insurance filter populator.
+   * @return value or {@code null} for none
+   */
+  public NlpSemanticParsingLocalHealthInsuranceConstraint getHealthInsurance() {
+    return healthInsurance;
+  }
+
+  /**
+   * Used for health insurance filter populator.
+   * @param healthInsurance healthInsurance or {@code null} for none
+   */
+  public NlpSemanticParsingLocalLocationConstraint setHealthInsurance(NlpSemanticParsingLocalHealthInsuranceConstraint healthInsurance) {
+    this.healthInsurance = healthInsurance;
     return this;
   }
 

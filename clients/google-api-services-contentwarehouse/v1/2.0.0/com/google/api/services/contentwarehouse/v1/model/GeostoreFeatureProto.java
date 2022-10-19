@@ -412,7 +412,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreLocaleProto locale;
 
   /**
-   * RESERVED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1625,7 +1624,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @return value or {@code null} for none
    */
   public GeostoreLogicalBorderProto getLogicalBorder() {
@@ -1633,7 +1631,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @param logicalBorder logicalBorder or {@code null} for none
    */
   public GeostoreFeatureProto setLogicalBorder(GeostoreLogicalBorderProto logicalBorder) {

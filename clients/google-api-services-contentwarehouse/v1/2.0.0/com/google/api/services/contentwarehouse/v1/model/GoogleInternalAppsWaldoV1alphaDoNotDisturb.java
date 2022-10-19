@@ -30,6 +30,22 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleInternalAppsWaldoV1alphaDoNotDisturb extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time when the user will stop being committed, i.e., when their status will be neither of
+   * InMeeting, DoNotDisturb or OutOfOffice < Xh.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String committedUntil;
+
+  /**
+   * Whether the status of the user until committed_until has more than one status type (e.g.
+   * DoNotDisturb + InMeeting).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean committedUntilIsMixed;
+
+  /**
    * The next time when the user will be available, i.e., when their status will be neither
    * InMeeting, CalendarBusy, DoNotDisturb, OutsideWorkingHours, nor OutOfOffice.
    * The value may be {@code null}.
@@ -44,6 +60,44 @@ public final class GoogleInternalAppsWaldoV1alphaDoNotDisturb extends com.google
    */
   @com.google.api.client.util.Key
   private String occupiedUntil;
+
+  /**
+   * The time when the user will stop being committed, i.e., when their status will be neither of
+   * InMeeting, DoNotDisturb or OutOfOffice < Xh.
+   * @return value or {@code null} for none
+   */
+  public String getCommittedUntil() {
+    return committedUntil;
+  }
+
+  /**
+   * The time when the user will stop being committed, i.e., when their status will be neither of
+   * InMeeting, DoNotDisturb or OutOfOffice < Xh.
+   * @param committedUntil committedUntil or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaDoNotDisturb setCommittedUntil(String committedUntil) {
+    this.committedUntil = committedUntil;
+    return this;
+  }
+
+  /**
+   * Whether the status of the user until committed_until has more than one status type (e.g.
+   * DoNotDisturb + InMeeting).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCommittedUntilIsMixed() {
+    return committedUntilIsMixed;
+  }
+
+  /**
+   * Whether the status of the user until committed_until has more than one status type (e.g.
+   * DoNotDisturb + InMeeting).
+   * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaDoNotDisturb setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {
+    this.committedUntilIsMixed = committedUntilIsMixed;
+    return this;
+  }
 
   /**
    * The next time when the user will be available, i.e., when their status will be neither

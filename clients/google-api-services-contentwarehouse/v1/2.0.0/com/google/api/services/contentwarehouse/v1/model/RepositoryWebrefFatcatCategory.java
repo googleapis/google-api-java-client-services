@@ -30,14 +30,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefFatcatCategory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Category normalized name (for debug purposes). For example, for category "/Beauty & Fitness"
-   * the debug_id would be "beauty_and_fitness".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String debugId;
-
-  /**
    * The category ID from verticals4. See go/verticals4 and where we read them in
    * http://google3/repository/webref/preprocessing/fatcat-categories.cc
    * The value may be {@code null}.
@@ -51,25 +43,6 @@ public final class RepositoryWebrefFatcatCategory extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
-
-  /**
-   * Category normalized name (for debug purposes). For example, for category "/Beauty & Fitness"
-   * the debug_id would be "beauty_and_fitness".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDebugId() {
-    return debugId;
-  }
-
-  /**
-   * Category normalized name (for debug purposes). For example, for category "/Beauty & Fitness"
-   * the debug_id would be "beauty_and_fitness".
-   * @param debugId debugId or {@code null} for none
-   */
-  public RepositoryWebrefFatcatCategory setDebugId(java.lang.String debugId) {
-    this.debugId = debugId;
-    return this;
-  }
 
   /**
    * The category ID from verticals4. See go/verticals4 and where we read them in

@@ -415,7 +415,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   /**
    * Stores freshness and aging related data, such as time-related quality metrics predicted from
    * url-pattern level signals. Use the encoding decoding API in
-   * quality/freshness/docclassifier/aging/encoded-pattern-signals.h
+   * quality/freshness/docclassifier/aging/encoded-pattern-signals.h This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -1935,7 +1935,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   /**
    * Stores freshness and aging related data, such as time-related quality metrics predicted from
    * url-pattern level signals. Use the encoding decoding API in
-   * quality/freshness/docclassifier/aging/encoded-pattern-signals.h
+   * quality/freshness/docclassifier/aging/encoded-pattern-signals.h This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFreshnessEncodedSignals() {
@@ -1945,7 +1945,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   /**
    * Stores freshness and aging related data, such as time-related quality metrics predicted from
    * url-pattern level signals. Use the encoding decoding API in
-   * quality/freshness/docclassifier/aging/encoded-pattern-signals.h
+   * quality/freshness/docclassifier/aging/encoded-pattern-signals.h This field is deprecated.
    * @param freshnessEncodedSignals freshnessEncodedSignals or {@code null} for none
    */
   public PerDocData setFreshnessEncodedSignals(java.lang.Long freshnessEncodedSignals) {

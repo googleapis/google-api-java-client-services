@@ -59,8 +59,7 @@ public final class RepositoryWebrefClusterProtoRelationRule extends com.google.a
   private java.lang.String relation;
 
   /**
-   * Rule sequence id. The rule with the lowest sequence id in a cluster will contribute its id to
-   * the id of the cluster.
+   * No longer set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +127,7 @@ public final class RepositoryWebrefClusterProtoRelationRule extends com.google.a
   }
 
   /**
-   * Rule sequence id. The rule with the lowest sequence id in a cluster will contribute its id to
-   * the id of the cluster.
+   * No longer set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSequenceId() {
@@ -137,8 +135,7 @@ public final class RepositoryWebrefClusterProtoRelationRule extends com.google.a
   }
 
   /**
-   * Rule sequence id. The rule with the lowest sequence id in a cluster will contribute its id to
-   * the id of the cluster.
+   * No longer set.
    * @param sequenceId sequenceId or {@code null} for none
    */
   public RepositoryWebrefClusterProtoRelationRule setSequenceId(java.lang.Integer sequenceId) {

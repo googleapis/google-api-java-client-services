@@ -30,7 +30,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class NlpSemanticParsingDatetimeResolutionProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Simple enum container for exporting meridiem mentions.
+   * Simple enum container for exporting meridiem mentions. Note: this is marked as deprecated as we
+   * are moving to properly parse expressions with explicit meridiem information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class NlpSemanticParsingDatetimeResolutionProperties extends com.go
   private NlpSemanticParsingDatetimeRelativeDateTime relative;
 
   /**
-   * Simple enum container for exporting meridiem mentions.
+   * Simple enum container for exporting meridiem mentions. Note: this is marked as deprecated as we
+   * are moving to properly parse expressions with explicit meridiem information.
    * @return value or {@code null} for none
    */
   public java.lang.String getMeridiem() {
@@ -59,7 +61,8 @@ public final class NlpSemanticParsingDatetimeResolutionProperties extends com.go
   }
 
   /**
-   * Simple enum container for exporting meridiem mentions.
+   * Simple enum container for exporting meridiem mentions. Note: this is marked as deprecated as we
+   * are moving to properly parse expressions with explicit meridiem information.
    * @param meridiem meridiem or {@code null} for none
    */
   public NlpSemanticParsingDatetimeResolutionProperties setMeridiem(java.lang.String meridiem) {

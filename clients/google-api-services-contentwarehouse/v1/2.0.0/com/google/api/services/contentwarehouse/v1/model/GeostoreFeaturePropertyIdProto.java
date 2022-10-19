@@ -34,14 +34,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * field_type == ATTACHMENT
+   * Required when field_type == ATTACHMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger attachmentTypeId;
 
   /**
-   * field_type == FEATURE_ATTRIBUTE
+   * Required when field_type == FEATURE_ATTRIBUTE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +54,21 @@ public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.
   private java.lang.String fieldType;
 
   /**
-   * field_type == KNOWLEDGE_GRAPH_PROPERTY
+   * Required when field_type == KNOWLEDGE_GRAPH_PROPERTY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kgPropertyId;
 
   /**
-   * field_type == ATTACHMENT
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nameLanguage;
+
+  /**
+   * Required when field_type == ATTACHMENT.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getAttachmentTypeId() {
@@ -69,7 +76,7 @@ public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.
   }
 
   /**
-   * field_type == ATTACHMENT
+   * Required when field_type == ATTACHMENT.
    * @param attachmentTypeId attachmentTypeId or {@code null} for none
    */
   public GeostoreFeaturePropertyIdProto setAttachmentTypeId(java.math.BigInteger attachmentTypeId) {
@@ -78,7 +85,7 @@ public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.
   }
 
   /**
-   * field_type == FEATURE_ATTRIBUTE
+   * Required when field_type == FEATURE_ATTRIBUTE.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeId() {
@@ -86,7 +93,7 @@ public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.
   }
 
   /**
-   * field_type == FEATURE_ATTRIBUTE
+   * Required when field_type == FEATURE_ATTRIBUTE.
    * @param attributeId attributeId or {@code null} for none
    */
   public GeostoreFeaturePropertyIdProto setAttributeId(java.lang.String attributeId) {
@@ -110,7 +117,7 @@ public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.
   }
 
   /**
-   * field_type == KNOWLEDGE_GRAPH_PROPERTY
+   * Required when field_type == KNOWLEDGE_GRAPH_PROPERTY.
    * @return value or {@code null} for none
    */
   public java.lang.String getKgPropertyId() {
@@ -118,11 +125,28 @@ public final class GeostoreFeaturePropertyIdProto extends com.google.api.client.
   }
 
   /**
-   * field_type == KNOWLEDGE_GRAPH_PROPERTY
+   * Required when field_type == KNOWLEDGE_GRAPH_PROPERTY.
    * @param kgPropertyId kgPropertyId or {@code null} for none
    */
   public GeostoreFeaturePropertyIdProto setKgPropertyId(java.lang.String kgPropertyId) {
     this.kgPropertyId = kgPropertyId;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNameLanguage() {
+    return nameLanguage;
+  }
+
+  /**
+   * RESERVED
+   * @param nameLanguage nameLanguage or {@code null} for none
+   */
+  public GeostoreFeaturePropertyIdProto setNameLanguage(java.lang.String nameLanguage) {
+    this.nameLanguage = nameLanguage;
     return this;
   }
 

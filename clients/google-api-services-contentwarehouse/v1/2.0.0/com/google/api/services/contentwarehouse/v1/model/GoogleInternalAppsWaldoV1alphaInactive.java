@@ -29,6 +29,60 @@ package com.google.api.services.contentwarehouse.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleInternalAppsWaldoV1alphaInactive extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The status type of the next change which is considered a commitment. The status will be an
+   * empty instance of the corresponding type, no additional data will be provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleInternalAppsWaldoV1alphaUserStatus nextCommitmentStatus;
+
+  /**
+   * The time when the user will start having a status of InMeeting, DoNotDisturb or short
+   * OutOfOffice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String nextCommitmentTime;
+
+  /**
+   * The status type of the next change which is considered a commitment. The status will be an
+   * empty instance of the corresponding type, no additional data will be provided.
+   * @return value or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaUserStatus getNextCommitmentStatus() {
+    return nextCommitmentStatus;
+  }
+
+  /**
+   * The status type of the next change which is considered a commitment. The status will be an
+   * empty instance of the corresponding type, no additional data will be provided.
+   * @param nextCommitmentStatus nextCommitmentStatus or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaInactive setNextCommitmentStatus(GoogleInternalAppsWaldoV1alphaUserStatus nextCommitmentStatus) {
+    this.nextCommitmentStatus = nextCommitmentStatus;
+    return this;
+  }
+
+  /**
+   * The time when the user will start having a status of InMeeting, DoNotDisturb or short
+   * OutOfOffice.
+   * @return value or {@code null} for none
+   */
+  public String getNextCommitmentTime() {
+    return nextCommitmentTime;
+  }
+
+  /**
+   * The time when the user will start having a status of InMeeting, DoNotDisturb or short
+   * OutOfOffice.
+   * @param nextCommitmentTime nextCommitmentTime or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaInactive setNextCommitmentTime(String nextCommitmentTime) {
+    this.nextCommitmentTime = nextCommitmentTime;
+    return this;
+  }
+
   @Override
   public GoogleInternalAppsWaldoV1alphaInactive set(String fieldName, Object value) {
     return (GoogleInternalAppsWaldoV1alphaInactive) super.set(fieldName, value);

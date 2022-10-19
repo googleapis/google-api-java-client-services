@@ -47,6 +47,14 @@ public final class GeostoreFeatureMetadataProto extends com.google.api.client.js
   private java.lang.String coreVersionToken;
 
   /**
+   * Metadata for tracking when a feature is derived from or replaced by another feature or set of
+   * features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreFeatureReplacementInfoProto featureReplacementInfo;
+
+  /**
    * Metadata about certain repeated fields and their subfields, for which field type is not
    * granular enough.
    * The value may be {@code null}.
@@ -143,6 +151,25 @@ public final class GeostoreFeatureMetadataProto extends com.google.api.client.js
    */
   public GeostoreFeatureMetadataProto encodeCoreVersionToken(byte[] coreVersionToken) {
     this.coreVersionToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(coreVersionToken);
+    return this;
+  }
+
+  /**
+   * Metadata for tracking when a feature is derived from or replaced by another feature or set of
+   * features.
+   * @return value or {@code null} for none
+   */
+  public GeostoreFeatureReplacementInfoProto getFeatureReplacementInfo() {
+    return featureReplacementInfo;
+  }
+
+  /**
+   * Metadata for tracking when a feature is derived from or replaced by another feature or set of
+   * features.
+   * @param featureReplacementInfo featureReplacementInfo or {@code null} for none
+   */
+  public GeostoreFeatureMetadataProto setFeatureReplacementInfo(GeostoreFeatureReplacementInfoProto featureReplacementInfo) {
+    this.featureReplacementInfo = featureReplacementInfo;
     return this;
   }
 

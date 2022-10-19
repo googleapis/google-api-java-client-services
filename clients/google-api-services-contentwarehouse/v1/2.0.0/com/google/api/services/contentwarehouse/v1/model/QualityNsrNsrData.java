@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 31
+ * be updated. Next ID: 48
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -42,6 +42,19 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float articleScoreV2;
+
+  /**
+   * Site-level chard score: site quality predictor based on content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float chard;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float chardVariance;
 
   /**
    * An id for defining clusters of sites. Used in ecosystem experiments (project Tundra).
@@ -68,7 +81,40 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> clutterScores;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float directFrac;
+
+  /**
+   * Categorical signals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float healthScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String host;
+
+  /**
+   * Currently corresponds to i18n_g42_bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer i18nBucket;
+
+  /**
+   * Site-level impressions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float impressions;
 
   /**
    * Bit to determine whether the site has the local authority covid signal, as computed by go
@@ -94,6 +140,18 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isVideoFocusedSite;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer language;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer largeOrgId;
 
   /**
    * Locality score of the site, i.e. the locality component of the LocalAuthority signal (see go
@@ -148,12 +206,25 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   private java.lang.Boolean nsrdataFromFallbackPatternKey;
 
   /**
+   * Fractional signals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float pnav;
+
+  /**
    * Secondary NSR sitechunk. When present, it provides more granular chunking than primary
    * sitechunks (see quality/nsr/util/sitechunker.h for details).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondarySiteChunk;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float shoppingScore;
 
   /**
    * Aggregated value of url autopilot scores for this sitechunk.
@@ -218,6 +289,25 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> spambrainLavcScores;
+
+  /**
+   * Site-level tofu score: site quality predictor based on content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float tofu;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float ugcScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
@@ -234,11 +324,30 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float videoScore;
+
+  /**
+   * Score of the Video LQ model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float vlq;
+
+  /**
    * NSR from a headroom model targeting low-quality video sites.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float vlqNsr;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float ymylNewsV2Score;
 
   /**
    * Score from article classification of the site.
@@ -269,6 +378,38 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setArticleScoreV2(java.lang.Float articleScoreV2) {
     this.articleScoreV2 = articleScoreV2;
+    return this;
+  }
+
+  /**
+   * Site-level chard score: site quality predictor based on content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getChard() {
+    return chard;
+  }
+
+  /**
+   * Site-level chard score: site quality predictor based on content.
+   * @param chard chard or {@code null} for none
+   */
+  public QualityNsrNsrData setChard(java.lang.Float chard) {
+    this.chard = chard;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getChardVariance() {
+    return chardVariance;
+  }
+
+  /**
+   * @param chardVariance chardVariance or {@code null} for none
+   */
+  public QualityNsrNsrData setChardVariance(java.lang.Float chardVariance) {
+    this.chardVariance = chardVariance;
     return this;
   }
 
@@ -326,6 +467,53 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   /**
    * @return value or {@code null} for none
    */
+  public java.util.List<QualityNsrVersionedFloatSignal> getClutterScores() {
+    return clutterScores;
+  }
+
+  /**
+   * @param clutterScores clutterScores or {@code null} for none
+   */
+  public QualityNsrNsrData setClutterScores(java.util.List<QualityNsrVersionedFloatSignal> clutterScores) {
+    this.clutterScores = clutterScores;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDirectFrac() {
+    return directFrac;
+  }
+
+  /**
+   * @param directFrac directFrac or {@code null} for none
+   */
+  public QualityNsrNsrData setDirectFrac(java.lang.Float directFrac) {
+    this.directFrac = directFrac;
+    return this;
+  }
+
+  /**
+   * Categorical signals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getHealthScore() {
+    return healthScore;
+  }
+
+  /**
+   * Categorical signals.
+   * @param healthScore healthScore or {@code null} for none
+   */
+  public QualityNsrNsrData setHealthScore(java.lang.Float healthScore) {
+    this.healthScore = healthScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.String getHost() {
     return host;
   }
@@ -335,6 +523,40 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Currently corresponds to i18n_g42_bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getI18nBucket() {
+    return i18nBucket;
+  }
+
+  /**
+   * Currently corresponds to i18n_g42_bucket.
+   * @param i18nBucket i18nBucket or {@code null} for none
+   */
+  public QualityNsrNsrData setI18nBucket(java.lang.Integer i18nBucket) {
+    this.i18nBucket = i18nBucket;
+    return this;
+  }
+
+  /**
+   * Site-level impressions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getImpressions() {
+    return impressions;
+  }
+
+  /**
+   * Site-level impressions.
+   * @param impressions impressions or {@code null} for none
+   */
+  public QualityNsrNsrData setImpressions(java.lang.Float impressions) {
+    this.impressions = impressions;
     return this;
   }
 
@@ -394,6 +616,36 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setIsVideoFocusedSite(java.lang.Boolean isVideoFocusedSite) {
     this.isVideoFocusedSite = isVideoFocusedSite;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLanguage() {
+    return language;
+  }
+
+  /**
+   * @param language language or {@code null} for none
+   */
+  public QualityNsrNsrData setLanguage(java.lang.Integer language) {
+    this.language = language;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLargeOrgId() {
+    return largeOrgId;
+  }
+
+  /**
+   * @param largeOrgId largeOrgId or {@code null} for none
+   */
+  public QualityNsrNsrData setLargeOrgId(java.lang.Integer largeOrgId) {
+    this.largeOrgId = largeOrgId;
     return this;
   }
 
@@ -523,6 +775,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Fractional signals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPnav() {
+    return pnav;
+  }
+
+  /**
+   * Fractional signals.
+   * @param pnav pnav or {@code null} for none
+   */
+  public QualityNsrNsrData setPnav(java.lang.Float pnav) {
+    this.pnav = pnav;
+    return this;
+  }
+
+  /**
    * Secondary NSR sitechunk. When present, it provides more granular chunking than primary
    * sitechunks (see quality/nsr/util/sitechunker.h for details).
    * @return value or {@code null} for none
@@ -538,6 +807,21 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setSecondarySiteChunk(java.lang.String secondarySiteChunk) {
     this.secondarySiteChunk = secondarySiteChunk;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getShoppingScore() {
+    return shoppingScore;
+  }
+
+  /**
+   * @param shoppingScore shoppingScore or {@code null} for none
+   */
+  public QualityNsrNsrData setShoppingScore(java.lang.Float shoppingScore) {
+    this.shoppingScore = shoppingScore;
     return this;
   }
 
@@ -686,6 +970,53 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   /**
    * @return value or {@code null} for none
    */
+  public java.util.List<QualityNsrVersionedFloatSignal> getSpambrainLavcScores() {
+    return spambrainLavcScores;
+  }
+
+  /**
+   * @param spambrainLavcScores spambrainLavcScores or {@code null} for none
+   */
+  public QualityNsrNsrData setSpambrainLavcScores(java.util.List<QualityNsrVersionedFloatSignal> spambrainLavcScores) {
+    this.spambrainLavcScores = spambrainLavcScores;
+    return this;
+  }
+
+  /**
+   * Site-level tofu score: site quality predictor based on content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getTofu() {
+    return tofu;
+  }
+
+  /**
+   * Site-level tofu score: site quality predictor based on content.
+   * @param tofu tofu or {@code null} for none
+   */
+  public QualityNsrNsrData setTofu(java.lang.Float tofu) {
+    this.tofu = tofu;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getUgcScore() {
+    return ugcScore;
+  }
+
+  /**
+   * @param ugcScore ugcScore or {@code null} for none
+   */
+  public QualityNsrNsrData setUgcScore(java.lang.Float ugcScore) {
+    this.ugcScore = ugcScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.String getUrl() {
     return url;
   }
@@ -716,6 +1047,38 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getVideoScore() {
+    return videoScore;
+  }
+
+  /**
+   * @param videoScore videoScore or {@code null} for none
+   */
+  public QualityNsrNsrData setVideoScore(java.lang.Float videoScore) {
+    this.videoScore = videoScore;
+    return this;
+  }
+
+  /**
+   * Score of the Video LQ model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getVlq() {
+    return vlq;
+  }
+
+  /**
+   * Score of the Video LQ model.
+   * @param vlq vlq or {@code null} for none
+   */
+  public QualityNsrNsrData setVlq(java.lang.Float vlq) {
+    this.vlq = vlq;
+    return this;
+  }
+
+  /**
    * NSR from a headroom model targeting low-quality video sites.
    * @return value or {@code null} for none
    */
@@ -729,6 +1092,21 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setVlqNsr(java.lang.Float vlqNsr) {
     this.vlqNsr = vlqNsr;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getYmylNewsV2Score() {
+    return ymylNewsV2Score;
+  }
+
+  /**
+   * @param ymylNewsV2Score ymylNewsV2Score or {@code null} for none
+   */
+  public QualityNsrNsrData setYmylNewsV2Score(java.lang.Float ymylNewsV2Score) {
+    this.ymylNewsV2Score = ymylNewsV2Score;
     return this;
   }
 

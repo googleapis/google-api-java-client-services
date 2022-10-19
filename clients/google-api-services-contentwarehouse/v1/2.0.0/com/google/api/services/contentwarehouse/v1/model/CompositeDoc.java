@@ -22,7 +22,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * (e.g: pagerank, language)? - What does each field in CompositeDoc mean and who should I contact
  * if I have questions? To add a new field into CompositeDoc, or change existing field's size
  * significantly, please file a ticket at go/dj-new-field, fill in necessary information and get
- * approved by docjoin-access@ team. Next id: 190
+ * approved by docjoin-access@ team. Next id: 191
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -138,10 +138,10 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   private java.util.List<ImageRepositoryVideoProperties> docVideos;
 
   /**
-   * This messageset is used for data pushed into the index using the signals framework that is
+   * This message set is used for data pushed into the index using the signals framework that is
    * never to be used in Mustang or TG Continuum scoring/snippeting code. Any protocol buffer stored
-   * in this messageset is automatically returned in a docinfo response - it ends up in the "info"
-   * messageset in the WWWSnippetResponse, so it can be used in post-doc twiddlers and for display
+   * in this message set is automatically returned in a docinfo response - it ends up in the "info"
+   * message set in the WWWSnippetResponse, so it can be used in post-doc twiddlers and for display
    * in GWS with no code changes in Mustang or Teragoogle.
    * The value may be {@code null}.
    */
@@ -175,6 +175,13 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<CompositeDocIncludedContent> includedcontent;
+
+  /**
+   * Serialized indexing intermediate data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String indexingIntermediate;
 
   /**
    * The value may be {@code null}.
@@ -216,12 +223,6 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private CompositeDocLocalizedVariations localizedvariations;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ManyboxData manyboxData;
 
   /**
    * Only present in partial cdocs.
@@ -628,10 +629,10 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This messageset is used for data pushed into the index using the signals framework that is
+   * This message set is used for data pushed into the index using the signals framework that is
    * never to be used in Mustang or TG Continuum scoring/snippeting code. Any protocol buffer stored
-   * in this messageset is automatically returned in a docinfo response - it ends up in the "info"
-   * messageset in the WWWSnippetResponse, so it can be used in post-doc twiddlers and for display
+   * in this message set is automatically returned in a docinfo response - it ends up in the "info"
+   * message set in the WWWSnippetResponse, so it can be used in post-doc twiddlers and for display
    * in GWS with no code changes in Mustang or Teragoogle.
    * @return value or {@code null} for none
    */
@@ -640,10 +641,10 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This messageset is used for data pushed into the index using the signals framework that is
+   * This message set is used for data pushed into the index using the signals framework that is
    * never to be used in Mustang or TG Continuum scoring/snippeting code. Any protocol buffer stored
-   * in this messageset is automatically returned in a docinfo response - it ends up in the "info"
-   * messageset in the WWWSnippetResponse, so it can be used in post-doc twiddlers and for display
+   * in this message set is automatically returned in a docinfo response - it ends up in the "info"
+   * message set in the WWWSnippetResponse, so it can be used in post-doc twiddlers and for display
    * in GWS with no code changes in Mustang or Teragoogle.
    * @param docinfoPassthroughAttachments docinfoPassthroughAttachments or {@code null} for none
    */
@@ -717,6 +718,51 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
    */
   public CompositeDoc setIncludedcontent(java.util.List<CompositeDocIncludedContent> includedcontent) {
     this.includedcontent = includedcontent;
+    return this;
+  }
+
+  /**
+   * Serialized indexing intermediate data.
+   * @see #decodeIndexingIntermediate()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIndexingIntermediate() {
+    return indexingIntermediate;
+  }
+
+  /**
+   * Serialized indexing intermediate data.
+   * @see #getIndexingIntermediate()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeIndexingIntermediate() {
+    return com.google.api.client.util.Base64.decodeBase64(indexingIntermediate);
+  }
+
+  /**
+   * Serialized indexing intermediate data.
+   * @see #encodeIndexingIntermediate()
+   * @param indexingIntermediate indexingIntermediate or {@code null} for none
+   */
+  public CompositeDoc setIndexingIntermediate(java.lang.String indexingIntermediate) {
+    this.indexingIntermediate = indexingIntermediate;
+    return this;
+  }
+
+  /**
+   * Serialized indexing intermediate data.
+   * @see #setIndexingIntermediate()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public CompositeDoc encodeIndexingIntermediate(byte[] indexingIntermediate) {
+    this.indexingIntermediate = com.google.api.client.util.Base64.encodeBase64URLSafeString(indexingIntermediate);
     return this;
   }
 
@@ -817,21 +863,6 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
    */
   public CompositeDoc setLocalizedvariations(CompositeDocLocalizedVariations localizedvariations) {
     this.localizedvariations = localizedvariations;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ManyboxData getManyboxData() {
-    return manyboxData;
-  }
-
-  /**
-   * @param manyboxData manyboxData or {@code null} for none
-   */
-  public CompositeDoc setManyboxData(ManyboxData manyboxData) {
-    this.manyboxData = manyboxData;
     return this;
   }
 

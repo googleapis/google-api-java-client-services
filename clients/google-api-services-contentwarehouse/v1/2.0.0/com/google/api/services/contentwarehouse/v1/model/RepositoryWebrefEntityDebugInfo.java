@@ -35,14 +35,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefEntityDebugInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Internal flag to mark this data as restricted. This flag should never be set in data in the
-   * final entityjoins, it is only used during the preprocessing pipeline.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean containsRestrictedData;
-
-  /**
    * A human-readable description of the entity. This can range from brief, machine-generated notes
    * to lengthy human-written paragraphs from Wikipedia.
    * The value may be {@code null}.
@@ -79,25 +71,6 @@ public final class RepositoryWebrefEntityDebugInfo extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
-
-  /**
-   * Internal flag to mark this data as restricted. This flag should never be set in data in the
-   * final entityjoins, it is only used during the preprocessing pipeline.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getContainsRestrictedData() {
-    return containsRestrictedData;
-  }
-
-  /**
-   * Internal flag to mark this data as restricted. This flag should never be set in data in the
-   * final entityjoins, it is only used during the preprocessing pipeline.
-   * @param containsRestrictedData containsRestrictedData or {@code null} for none
-   */
-  public RepositoryWebrefEntityDebugInfo setContainsRestrictedData(java.lang.Boolean containsRestrictedData) {
-    this.containsRestrictedData = containsRestrictedData;
-    return this;
-  }
 
   /**
    * A human-readable description of the entity. This can range from brief, machine-generated notes

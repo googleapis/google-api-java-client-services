@@ -98,12 +98,12 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   private java.lang.String nonDisplayableCurrency;
 
   /**
-   * non_displayable_organic_mscore is a organic confidence score that a merchant will not cause
-   * financial or consumer trust damage. In range [0, 1]. See go/merchant-quality-score .
+   * Normalized riskiness score for Organic destinations. It's in range [0,1000] with 0 being the
+   * worst score and 1000 being the best.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float nonDisplayableOrganicMscore;
+  private java.lang.Integer nonDisplayableOrganicScoreMillis;
 
   /**
    * The value may be {@code null}.
@@ -290,21 +290,21 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   }
 
   /**
-   * non_displayable_organic_mscore is a organic confidence score that a merchant will not cause
-   * financial or consumer trust damage. In range [0, 1]. See go/merchant-quality-score .
+   * Normalized riskiness score for Organic destinations. It's in range [0,1000] with 0 being the
+   * worst score and 1000 being the best.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getNonDisplayableOrganicMscore() {
-    return nonDisplayableOrganicMscore;
+  public java.lang.Integer getNonDisplayableOrganicScoreMillis() {
+    return nonDisplayableOrganicScoreMillis;
   }
 
   /**
-   * non_displayable_organic_mscore is a organic confidence score that a merchant will not cause
-   * financial or consumer trust damage. In range [0, 1]. See go/merchant-quality-score .
-   * @param nonDisplayableOrganicMscore nonDisplayableOrganicMscore or {@code null} for none
+   * Normalized riskiness score for Organic destinations. It's in range [0,1000] with 0 being the
+   * worst score and 1000 being the best.
+   * @param nonDisplayableOrganicScoreMillis nonDisplayableOrganicScoreMillis or {@code null} for none
    */
-  public QualityShoppingShoppingAttachmentOffer setNonDisplayableOrganicMscore(java.lang.Float nonDisplayableOrganicMscore) {
-    this.nonDisplayableOrganicMscore = nonDisplayableOrganicMscore;
+  public QualityShoppingShoppingAttachmentOffer setNonDisplayableOrganicScoreMillis(java.lang.Integer nonDisplayableOrganicScoreMillis) {
+    this.nonDisplayableOrganicScoreMillis = nonDisplayableOrganicScoreMillis;
     return this;
   }
 

@@ -756,7 +756,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Deletes a document schema. Returns NOT_FOUND if the document schema does not exist.
+         * Deletes a document schema. Returns NOT_FOUND if the document schema does not exist. Returns
+         * BAD_REQUEST if the document schema has documents depending on it.
          *
          * Create a request for the method "documentSchemas.delete".
          *
@@ -780,7 +781,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/documentSchemas/[^/]+$");
 
           /**
-           * Deletes a document schema. Returns NOT_FOUND if the document schema does not exist.
+           * Deletes a document schema. Returns NOT_FOUND if the document schema does not exist. Returns
+           * BAD_REQUEST if the document schema has documents depending on it.
            *
            * Create a request for the method "documentSchemas.delete".
            *
@@ -1223,8 +1225,9 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
         }
         /**
          * Updates a Document Schema. Returns INVALID_ARGUMENT if the name of the Document Schema is non-
-         * empty and does not equal the existing name. Supports only appending new properties and updating
-         * existing properties will result into INVALID_ARGUMENT.
+         * empty and does not equal the existing name. Supports only appending new properties, adding new
+         * ENUM possible values, and updating the EnumTypeOptions.validation_check_disabled flag for ENUM
+         * possible values. Updating existing properties will result into INVALID_ARGUMENT.
          *
          * Create a request for the method "documentSchemas.patch".
          *
@@ -1251,8 +1254,9 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
 
           /**
            * Updates a Document Schema. Returns INVALID_ARGUMENT if the name of the Document Schema is non-
-           * empty and does not equal the existing name. Supports only appending new properties and updating
-           * existing properties will result into INVALID_ARGUMENT.
+           * empty and does not equal the existing name. Supports only appending new properties, adding new
+           * ENUM possible values, and updating the EnumTypeOptions.validation_check_disabled flag for ENUM
+           * possible values. Updating existing properties will result into INVALID_ARGUMENT.
            *
            * Create a request for the method "documentSchemas.patch".
            *

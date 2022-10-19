@@ -38,13 +38,6 @@ public final class ImageSafesearchContentOCRAnnotation extends com.google.api.cl
   private java.lang.Float ocrProminenceScore;
 
   /**
-   * The score produced by the sensitive_seti model.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float offensiveScore;
-
-  /**
    * Image OCR racyness/pornyness, computed by porn query classifier.
    * The value may be {@code null}.
    */
@@ -102,23 +95,6 @@ public final class ImageSafesearchContentOCRAnnotation extends com.google.api.cl
    */
   public ImageSafesearchContentOCRAnnotation setOcrProminenceScore(java.lang.Float ocrProminenceScore) {
     this.ocrProminenceScore = ocrProminenceScore;
-    return this;
-  }
-
-  /**
-   * The score produced by the sensitive_seti model.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getOffensiveScore() {
-    return offensiveScore;
-  }
-
-  /**
-   * The score produced by the sensitive_seti model.
-   * @param offensiveScore offensiveScore or {@code null} for none
-   */
-  public ImageSafesearchContentOCRAnnotation setOffensiveScore(java.lang.Float offensiveScore) {
-    this.offensiveScore = offensiveScore;
     return this;
   }
 

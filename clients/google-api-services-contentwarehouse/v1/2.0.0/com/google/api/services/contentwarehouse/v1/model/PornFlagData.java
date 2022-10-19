@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * A protocol buffer to store the url, referer and porn flag for a url. and an optional image score.
- * Next available tag id: 50.
+ * Next available tag id: 51.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -105,12 +105,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private java.lang.String finalViolenceScoreVersion;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float imageEntitiesViolenceScore;
-
-  /**
    * PornStatsImage is repeated even though we use only a single version, to help with rolling out
    * new versions with miminum risk. Multiple versions should exist only for a short window of time.
    * Once the new version is rolled out, the data for older versions should no longer be generated.
@@ -118,6 +112,15 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PornStatsImage> imageStats;
+
+  /**
+   * A proto that stores SafeSearch internal signals that are not exported to clients. SafeSearch
+   * team does not provide any guarantees about the presence or the semantics of these signals in
+   * the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SafesearchInternalImageSignals internalSignals;
 
   /**
    * largest face, scaled by 1000 This field is same as ImageData.largest_face_frac.
@@ -258,19 +261,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Float semanticSexualizationScore;
-
-  /**
-   * Additional SafeSearch signals that are used to compute final scores.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float starburstPornScore;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float starburstViolenceScore;
 
   /**
    * PornStatsText is repeated even though we use only a single version, to help with rolling out
@@ -459,21 +449,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getImageEntitiesViolenceScore() {
-    return imageEntitiesViolenceScore;
-  }
-
-  /**
-   * @param imageEntitiesViolenceScore imageEntitiesViolenceScore or {@code null} for none
-   */
-  public PornFlagData setImageEntitiesViolenceScore(java.lang.Float imageEntitiesViolenceScore) {
-    this.imageEntitiesViolenceScore = imageEntitiesViolenceScore;
-    return this;
-  }
-
-  /**
    * PornStatsImage is repeated even though we use only a single version, to help with rolling out
    * new versions with miminum risk. Multiple versions should exist only for a short window of time.
    * Once the new version is rolled out, the data for older versions should no longer be generated.
@@ -491,6 +466,27 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setImageStats(java.util.List<PornStatsImage> imageStats) {
     this.imageStats = imageStats;
+    return this;
+  }
+
+  /**
+   * A proto that stores SafeSearch internal signals that are not exported to clients. SafeSearch
+   * team does not provide any guarantees about the presence or the semantics of these signals in
+   * the future.
+   * @return value or {@code null} for none
+   */
+  public SafesearchInternalImageSignals getInternalSignals() {
+    return internalSignals;
+  }
+
+  /**
+   * A proto that stores SafeSearch internal signals that are not exported to clients. SafeSearch
+   * team does not provide any guarantees about the presence or the semantics of these signals in
+   * the future.
+   * @param internalSignals internalSignals or {@code null} for none
+   */
+  public PornFlagData setInternalSignals(SafesearchInternalImageSignals internalSignals) {
+    this.internalSignals = internalSignals;
     return this;
   }
 
@@ -860,38 +856,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setSemanticSexualizationScore(java.lang.Float semanticSexualizationScore) {
     this.semanticSexualizationScore = semanticSexualizationScore;
-    return this;
-  }
-
-  /**
-   * Additional SafeSearch signals that are used to compute final scores.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getStarburstPornScore() {
-    return starburstPornScore;
-  }
-
-  /**
-   * Additional SafeSearch signals that are used to compute final scores.
-   * @param starburstPornScore starburstPornScore or {@code null} for none
-   */
-  public PornFlagData setStarburstPornScore(java.lang.Float starburstPornScore) {
-    this.starburstPornScore = starburstPornScore;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getStarburstViolenceScore() {
-    return starburstViolenceScore;
-  }
-
-  /**
-   * @param starburstViolenceScore starburstViolenceScore or {@code null} for none
-   */
-  public PornFlagData setStarburstViolenceScore(java.lang.Float starburstViolenceScore) {
-    this.starburstViolenceScore = starburstViolenceScore;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 22
+ * Next ID: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -42,6 +42,13 @@ public final class VideoContentSearchVideoAnchor extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String anchorType;
+
+  /**
+   * Context text from ASR of long duration, used for longT5 models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contextText;
 
   /**
    * When set, this is the link that should be used when clicking on a video anchor. This should
@@ -215,6 +222,23 @@ public final class VideoContentSearchVideoAnchor extends com.google.api.client.j
    */
   public VideoContentSearchVideoAnchor setAnchorType(java.lang.String anchorType) {
     this.anchorType = anchorType;
+    return this;
+  }
+
+  /**
+   * Context text from ASR of long duration, used for longT5 models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContextText() {
+    return contextText;
+  }
+
+  /**
+   * Context text from ASR of long duration, used for longT5 models.
+   * @param contextText contextText or {@code null} for none
+   */
+  public VideoContentSearchVideoAnchor setContextText(java.lang.String contextText) {
+    this.contextText = contextText;
     return this;
   }
 

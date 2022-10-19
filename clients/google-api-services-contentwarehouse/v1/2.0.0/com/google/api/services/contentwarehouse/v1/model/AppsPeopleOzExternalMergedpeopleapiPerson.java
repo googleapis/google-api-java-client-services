@@ -165,6 +165,22 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * Reminder to connect with a Contact (part of go/people-prompts). Also contains contact-level
+   * prompts settings. Each Contact can have a single `connection_reminder` (but can have multiple
+   * Prompts inside of it). Field is repeated per PeopleAPI data model go/people-api-
+   * concepts#repeated. Only supported for CONTACT container.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppsPeopleOzExternalMergedpeopleapiConnectionReminder> connectionReminder;
+
+  static {
+    // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiConnectionReminder used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiConnectionReminder.class);
+  }
+
+  /**
    * Contact groups that this person is a member of.
    * The value may be {@code null}.
    */
@@ -566,7 +582,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   /**
    * The ID of the person. This is determined by the backend, is unstable, and may not be the same
    * as a user_id. Internally referred as 'personKey' to distinguish from the common PersonId pojo.
-   * See go/fwgau
+   * See go/people-api-concepts#person-id
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -922,6 +938,29 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setCommunicationEmail(java.util.List<AppsPeopleOzExternalMergedpeopleapiCommunicationEmail> communicationEmail) {
     this.communicationEmail = communicationEmail;
+    return this;
+  }
+
+  /**
+   * Reminder to connect with a Contact (part of go/people-prompts). Also contains contact-level
+   * prompts settings. Each Contact can have a single `connection_reminder` (but can have multiple
+   * Prompts inside of it). Field is repeated per PeopleAPI data model go/people-api-
+   * concepts#repeated. Only supported for CONTACT container.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppsPeopleOzExternalMergedpeopleapiConnectionReminder> getConnectionReminder() {
+    return connectionReminder;
+  }
+
+  /**
+   * Reminder to connect with a Contact (part of go/people-prompts). Also contains contact-level
+   * prompts settings. Each Contact can have a single `connection_reminder` (but can have multiple
+   * Prompts inside of it). Field is repeated per PeopleAPI data model go/people-api-
+   * concepts#repeated. Only supported for CONTACT container.
+   * @param connectionReminder connectionReminder or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPerson setConnectionReminder(java.util.List<AppsPeopleOzExternalMergedpeopleapiConnectionReminder> connectionReminder) {
+    this.connectionReminder = connectionReminder;
     return this;
   }
 
@@ -1504,7 +1543,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   /**
    * The ID of the person. This is determined by the backend, is unstable, and may not be the same
    * as a user_id. Internally referred as 'personKey' to distinguish from the common PersonId pojo.
-   * See go/fwgau
+   * See go/people-api-concepts#person-id
    * @return value or {@code null} for none
    */
   public java.lang.String getPersonId() {
@@ -1514,7 +1553,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   /**
    * The ID of the person. This is determined by the backend, is unstable, and may not be the same
    * as a user_id. Internally referred as 'personKey' to distinguish from the common PersonId pojo.
-   * See go/fwgau
+   * See go/people-api-concepts#person-id
    * @param personId personId or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setPersonId(java.lang.String personId) {

@@ -46,6 +46,14 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
   private java.lang.String alertDescriptor;
 
   /**
+   * Customizable text to display in the next steps section of the alert. Will be parsed as HTML to
+   * allow new paragraphs and hyperlinks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextSteps;
+
+  /**
    * Product that the abuse is originating from.
    * The value may be {@code null}.
    */
@@ -100,6 +108,25 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
    */
   public AbuseDetected setAlertDescriptor(java.lang.String alertDescriptor) {
     this.alertDescriptor = alertDescriptor;
+    return this;
+  }
+
+  /**
+   * Customizable text to display in the next steps section of the alert. Will be parsed as HTML to
+   * allow new paragraphs and hyperlinks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextSteps() {
+    return nextSteps;
+  }
+
+  /**
+   * Customizable text to display in the next steps section of the alert. Will be parsed as HTML to
+   * allow new paragraphs and hyperlinks.
+   * @param nextSteps nextSteps or {@code null} for none
+   */
+  public AbuseDetected setNextSteps(java.lang.String nextSteps) {
+    this.nextSteps = nextSteps;
     return this;
   }
 

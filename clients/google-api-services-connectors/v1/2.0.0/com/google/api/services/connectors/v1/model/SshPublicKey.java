@@ -37,13 +37,6 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String certType;
 
   /**
-   * This is an optional field used in case client has enabled multi-factor authentication
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Secret password;
-
-  /**
    * SSH Client Cert. It should contain both public and private key.
    * The value may be {@code null}.
    */
@@ -78,23 +71,6 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
    */
   public SshPublicKey setCertType(java.lang.String certType) {
     this.certType = certType;
-    return this;
-  }
-
-  /**
-   * This is an optional field used in case client has enabled multi-factor authentication
-   * @return value or {@code null} for none
-   */
-  public Secret getPassword() {
-    return password;
-  }
-
-  /**
-   * This is an optional field used in case client has enabled multi-factor authentication
-   * @param password password or {@code null} for none
-   */
-  public SshPublicKey setPassword(Secret password) {
-    this.password = password;
     return this;
   }
 

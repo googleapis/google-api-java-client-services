@@ -17,7 +17,8 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Metadata of connection schema.
+ * ConnectionSchemaMetadata is the singleton resource of each connection. It includes the entity and
+ * action names of runtime resources exposed by a connection backend.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -42,6 +43,35 @@ public final class ConnectionSchemaMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entities;
+
+  /**
+   * Output only. Resource name. Format:
+   * projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Output only. Timestamp when the connection runtime schema refresh was triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String refreshTime;
+
+  /**
+   * Output only. The current state of runtime schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Output only. Timestamp when the connection runtime schema was updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * Output only. List of actions.
@@ -74,6 +104,76 @@ public final class ConnectionSchemaMetadata extends com.google.api.client.json.G
    */
   public ConnectionSchemaMetadata setEntities(java.util.List<java.lang.String> entities) {
     this.entities = entities;
+    return this;
+  }
+
+  /**
+   * Output only. Resource name. Format:
+   * projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. Resource name. Format:
+   * projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
+   * @param name name or {@code null} for none
+   */
+  public ConnectionSchemaMetadata setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when the connection runtime schema refresh was triggered.
+   * @return value or {@code null} for none
+   */
+  public String getRefreshTime() {
+    return refreshTime;
+  }
+
+  /**
+   * Output only. Timestamp when the connection runtime schema refresh was triggered.
+   * @param refreshTime refreshTime or {@code null} for none
+   */
+  public ConnectionSchemaMetadata setRefreshTime(String refreshTime) {
+    this.refreshTime = refreshTime;
+    return this;
+  }
+
+  /**
+   * Output only. The current state of runtime schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The current state of runtime schema.
+   * @param state state or {@code null} for none
+   */
+  public ConnectionSchemaMetadata setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when the connection runtime schema was updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp when the connection runtime schema was updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public ConnectionSchemaMetadata setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

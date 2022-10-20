@@ -30,7 +30,7 @@ package com.google.api.services.directory.model;
 public final class DomainAliases extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of domain alias objects.
+   * A list of domain alias objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class DomainAliases extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
-   * List of domain alias objects.
+   * A list of domain alias objects.
    * @return value or {@code null} for none
    */
   public java.util.List<DomainAlias> getDomainAliases() {
@@ -65,7 +65,7 @@ public final class DomainAliases extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of domain alias objects.
+   * A list of domain alias objects.
    * @param domainAliases domainAliases or {@code null} for none
    */
   public DomainAliases setDomainAliases(java.util.List<DomainAlias> domainAliases) {

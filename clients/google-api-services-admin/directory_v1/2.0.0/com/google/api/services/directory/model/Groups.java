@@ -37,7 +37,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * List of group objects.
+   * A list of group objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of group objects.
+   * A list of group objects.
    * @return value or {@code null} for none
    */
   public java.util.List<Group> getGroups() {
@@ -89,7 +89,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of group objects.
+   * A list of group objects.
    * @param groups groups or {@code null} for none
    */
   public Groups setGroups(java.util.List<Group> groups) {

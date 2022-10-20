@@ -38,7 +38,7 @@ public final class Domains extends com.google.api.client.json.GenericJson {
   private java.lang.Long creationTime;
 
   /**
-   * List of domain alias objects. (Read-only)
+   * A list of domain alias objects. (Read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class Domains extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain alias objects. (Read-only)
+   * A list of domain alias objects. (Read-only)
    * @return value or {@code null} for none
    */
   public java.util.List<DomainAlias> getDomainAliases() {
@@ -113,7 +113,7 @@ public final class Domains extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain alias objects. (Read-only)
+   * A list of domain alias objects. (Read-only)
    * @param domainAliases domainAliases or {@code null} for none
    */
   public Domains setDomainAliases(java.util.List<DomainAlias> domainAliases) {

@@ -44,7 +44,7 @@ public final class Schemas extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * List of UserSchema objects.
+   * A list of UserSchema objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class Schemas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of UserSchema objects.
+   * A list of UserSchema objects.
    * @return value or {@code null} for none
    */
   public java.util.List<Schema> getSchemas() {
@@ -99,7 +99,7 @@ public final class Schemas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of UserSchema objects.
+   * A list of UserSchema objects.
    * @param schemas schemas or {@code null} for none
    */
   public Schemas setSchemas(java.util.List<Schema> schemas) {

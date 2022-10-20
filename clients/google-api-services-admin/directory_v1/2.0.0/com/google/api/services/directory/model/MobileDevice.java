@@ -121,10 +121,10 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   private java.lang.String devicePasswordStatus;
 
   /**
-   * List of owner's email addresses. If your application needs the current list of user emails, use
-   * the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For additional
-   * information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-users#get_user)
-   * method.
+   * The list of the owner's email addresses. If your application needs the current list of user
+   * emails, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-
+   * users#get_user) method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,7 +229,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   private java.lang.String model;
 
   /**
-   * List of the owner's user names. If your application needs the current list of device owner
+   * The list of the owner's user names. If your application needs the current list of device owner
    * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
    * information about retrieving mobile device user information, see the [Developer's Guide
    * ](/admin-sdk/directory/v1/guides/manage-users#get_user).
@@ -256,7 +256,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   private java.lang.String os;
 
   /**
-   * List of accounts added on device (Read-only)
+   * The list of accounts added on device (Read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -539,10 +539,10 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of owner's email addresses. If your application needs the current list of user emails, use
-   * the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For additional
-   * information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-users#get_user)
-   * method.
+   * The list of the owner's email addresses. If your application needs the current list of user
+   * emails, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-
+   * users#get_user) method.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEmail() {
@@ -550,10 +550,10 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of owner's email addresses. If your application needs the current list of user emails, use
-   * the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For additional
-   * information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-users#get_user)
-   * method.
+   * The list of the owner's email addresses. If your application needs the current list of user
+   * emails, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-
+   * users#get_user) method.
    * @param email email or {@code null} for none
    */
   public MobileDevice setEmail(java.util.List<java.lang.String> email) {
@@ -797,7 +797,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of the owner's user names. If your application needs the current list of device owner
+   * The list of the owner's user names. If your application needs the current list of device owner
    * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
    * information about retrieving mobile device user information, see the [Developer's Guide
    * ](/admin-sdk/directory/v1/guides/manage-users#get_user).
@@ -808,7 +808,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of the owner's user names. If your application needs the current list of device owner
+   * The list of the owner's user names. If your application needs the current list of device owner
    * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
    * information about retrieving mobile device user information, see the [Developer's Guide
    * ](/admin-sdk/directory/v1/guides/manage-users#get_user).
@@ -860,7 +860,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of accounts added on device (Read-only)
+   * The list of accounts added on device (Read-only)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOtherAccountsInfo() {
@@ -868,7 +868,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of accounts added on device (Read-only)
+   * The list of accounts added on device (Read-only)
    * @param otherAccountsInfo otherAccountsInfo or {@code null} for none
    */
   public MobileDevice setOtherAccountsInfo(java.util.List<java.lang.String> otherAccountsInfo) {

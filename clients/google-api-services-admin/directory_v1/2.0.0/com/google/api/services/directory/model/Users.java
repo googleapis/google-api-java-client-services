@@ -58,7 +58,7 @@ public final class Users extends com.google.api.client.json.GenericJson {
   private java.lang.String triggerEvent;
 
   /**
-   * List of user objects.
+   * A list of user objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class Users extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of user objects.
+   * A list of user objects.
    * @return value or {@code null} for none
    */
   public java.util.List<User> getUsers() {
@@ -147,7 +147,7 @@ public final class Users extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of user objects.
+   * A list of user objects.
    * @param users users or {@code null} for none
    */
   public Users setUsers(java.util.List<User> users) {

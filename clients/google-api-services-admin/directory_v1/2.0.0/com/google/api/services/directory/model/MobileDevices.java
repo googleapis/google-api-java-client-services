@@ -44,7 +44,7 @@ public final class MobileDevices extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
-   * List of Mobile Device objects.
+   * A list of Mobile Device objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class MobileDevices extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of Mobile Device objects.
+   * A list of Mobile Device objects.
    * @return value or {@code null} for none
    */
   public java.util.List<MobileDevice> getMobiledevices() {
@@ -106,7 +106,7 @@ public final class MobileDevices extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of Mobile Device objects.
+   * A list of Mobile Device objects.
    * @param mobiledevices mobiledevices or {@code null} for none
    */
   public MobileDevices setMobiledevices(java.util.List<MobileDevice> mobiledevices) {

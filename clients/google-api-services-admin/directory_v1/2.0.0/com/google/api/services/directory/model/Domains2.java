@@ -30,7 +30,7 @@ package com.google.api.services.directory.model;
 public final class Domains2 extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of domain objects.
+   * A list of domain objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class Domains2 extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * List of domain objects.
+   * A list of domain objects.
    * @return value or {@code null} for none
    */
   public java.util.List<Domains> getDomains() {
@@ -65,7 +65,7 @@ public final class Domains2 extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain objects.
+   * A list of domain objects.
    * @param domains domains or {@code null} for none
    */
   public Domains2 setDomains(java.util.List<Domains> domains) {

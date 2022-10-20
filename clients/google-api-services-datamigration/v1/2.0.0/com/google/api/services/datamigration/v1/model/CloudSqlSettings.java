@@ -150,7 +150,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> userLabels;
 
   /**
-   * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
+   * The Google Cloud Platform zone where your Cloud SQL database instance is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -440,7 +440,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
+   * The Google Cloud Platform zone where your Cloud SQL database instance is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -448,7 +448,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
+   * The Google Cloud Platform zone where your Cloud SQL database instance is located.
    * @param zone zone or {@code null} for none
    */
   public CloudSqlSettings setZone(java.lang.String zone) {

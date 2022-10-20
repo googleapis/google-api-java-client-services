@@ -31,10 +31,11 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a
-   * soft limit due to asynchronous nature of the system and various optimizations for small
-   * queries. Default value is 0 which means that concurrency will be automatically set based on the
-   * reservation size.
+   * Job concurrency target which sets a soft upper bound on the number of jobs that can run
+   * concurrently in this reservation. This is a soft target due to asynchronous nature of the
+   * system and various optimizations for small queries. Default value is 0 which means that
+   * concurrency target will be automatically computed by the system. NOTE: this field is exposed as
+   * `target_job_concurrency` in the Information Schema, DDL and BQ CLI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -96,10 +97,11 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a
-   * soft limit due to asynchronous nature of the system and various optimizations for small
-   * queries. Default value is 0 which means that concurrency will be automatically set based on the
-   * reservation size.
+   * Job concurrency target which sets a soft upper bound on the number of jobs that can run
+   * concurrently in this reservation. This is a soft target due to asynchronous nature of the
+   * system and various optimizations for small queries. Default value is 0 which means that
+   * concurrency target will be automatically computed by the system. NOTE: this field is exposed as
+   * `target_job_concurrency` in the Information Schema, DDL and BQ CLI.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConcurrency() {
@@ -107,10 +109,11 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a
-   * soft limit due to asynchronous nature of the system and various optimizations for small
-   * queries. Default value is 0 which means that concurrency will be automatically set based on the
-   * reservation size.
+   * Job concurrency target which sets a soft upper bound on the number of jobs that can run
+   * concurrently in this reservation. This is a soft target due to asynchronous nature of the
+   * system and various optimizations for small queries. Default value is 0 which means that
+   * concurrency target will be automatically computed by the system. NOTE: this field is exposed as
+   * `target_job_concurrency` in the Information Schema, DDL and BQ CLI.
    * @param concurrency concurrency or {@code null} for none
    */
   public Reservation setConcurrency(java.lang.Long concurrency) {

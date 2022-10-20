@@ -169,7 +169,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private SlashCommand slashCommand;
 
   /**
-   * The space the message belongs to.
+   * The space the message belongs to. When accessed with [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users), only the name of the
+   * Space is populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -463,7 +465,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space the message belongs to.
+   * The space the message belongs to. When accessed with [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users), only the name of the
+   * Space is populated.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -471,7 +475,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space the message belongs to.
+   * The space the message belongs to. When accessed with [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users), only the name of the
+   * Space is populated.
    * @param space space or {@code null} for none
    */
   public Message setSpace(Space space) {

@@ -2834,7 +2834,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
       /**
        * Deletes a message. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). [Developer
+       * Preview](https://developers.google.com/workspace/preview): Deletes a message. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) and the `chat.messages`
+       * authorization scope.
        *
        * Create a request for the method "messages.delete".
        *
@@ -2861,6 +2864,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Deletes a message. Requires [service account
          * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a message.
+         * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and
+         * the `chat.messages` authorization scope.
          *
          * Create a request for the method "messages.delete".
          *
@@ -2973,7 +2979,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
       /**
        * Returns a message. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). [Developer
+       * Preview](https://developers.google.com/workspace/preview): Returns a message. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) and the `chat.messages`
+       * or `chat.messages.readonly` authorization scope.
        *
        * Create a request for the method "messages.get".
        *
@@ -3003,6 +3012,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Returns a message. Requires [service account
          * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * [Developer Preview](https://developers.google.com/workspace/preview): Returns a message.
+         * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and
+         * the `chat.messages` or `chat.messages.readonly` authorization scope.
          *
          * Create a request for the method "messages.get".
          *

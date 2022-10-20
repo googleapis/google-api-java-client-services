@@ -33,7 +33,7 @@ package com.google.api.services.directory.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of the user's addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's addresses. The maximum allowed data size for this field is 10Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean agreedToTerms;
 
   /**
-   * Output only. A list of the user's alias email addresses.
+   * Output only. The list of the user's alias email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime deletionTime;
 
   /**
-   * A list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * A list of external IDs for the user, such as an employee or network ID. The maximum allowed
+   * The list of external IDs for the user, such as an employee or network ID. The maximum allowed
    * data size for this field is 2Kb.
    * The value may be {@code null}.
    */
@@ -151,9 +151,9 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The user's Instant Messenger (IM) accounts. A user account can have multiple ims properties.
-   * But, only one of these ims properties can be the primary IM contact. The maximum allowed data
-   * size for this field is 2Kb.
+   * The list of the user's Instant Messenger (IM) accounts. A user account can have multiple ims
+   * properties. But, only one of these ims properties can be the primary IM contact. The maximum
+   * allowed data size for this field is 2Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +220,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isMailboxSetup;
 
   /**
-   * The user's keywords. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's keywords. The maximum allowed data size for this field is 1Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,8 +268,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private UserName name;
 
   /**
-   * Output only. List of the user's non-editable alias email addresses. These are typically outside
-   * the account's primary domain or sub-domain.
+   * Output only. The list of the user's non-editable alias email addresses. These are typically
+   * outside the account's primary domain or sub-domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,7 +291,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String orgUnitPath;
 
   /**
-   * A list of organizations the user belongs to. The maximum allowed data size for this field is
+   * The list of organizations the user belongs to. The maximum allowed data size for this field is
    * 10Kb.
    * The value may be {@code null}.
    */
@@ -306,14 +306,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String password;
 
   /**
-   * A list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object phones;
 
   /**
-   * A list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
+   * The list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
    * for the user.
    * The value may be {@code null}.
    */
@@ -344,8 +344,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String recoveryPhone;
 
   /**
-   * A list of the user's relationships to other users. The maximum allowed data size for this field
-   * is 2Kb.
+   * The list of the user's relationships to other users. The maximum allowed data size for this
+   * field is 2Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,7 +396,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Object websites;
 
   /**
-   * A list of the user's addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's addresses. The maximum allowed data size for this field is 10Kb.
    * @return value or {@code null} for none
    */
   public java.lang.Object getAddresses() {
@@ -404,7 +404,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's addresses. The maximum allowed data size for this field is 10Kb.
    * @param addresses addresses or {@code null} for none
    */
   public User setAddresses(java.lang.Object addresses) {
@@ -432,7 +432,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of the user's alias email addresses.
+   * Output only. The list of the user's alias email addresses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAliases() {
@@ -440,7 +440,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of the user's alias email addresses.
+   * Output only. The list of the user's alias email addresses.
    * @param aliases aliases or {@code null} for none
    */
   public User setAliases(java.util.List<java.lang.String> aliases) {
@@ -563,7 +563,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
    * @return value or {@code null} for none
    */
   public java.lang.Object getEmails() {
@@ -571,7 +571,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
    * @param emails emails or {@code null} for none
    */
   public User setEmails(java.lang.Object emails) {
@@ -597,7 +597,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of external IDs for the user, such as an employee or network ID. The maximum allowed
+   * The list of external IDs for the user, such as an employee or network ID. The maximum allowed
    * data size for this field is 2Kb.
    * @return value or {@code null} for none
    */
@@ -606,7 +606,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of external IDs for the user, such as an employee or network ID. The maximum allowed
+   * The list of external IDs for the user, such as an employee or network ID. The maximum allowed
    * data size for this field is 2Kb.
    * @param externalIds externalIds or {@code null} for none
    */
@@ -677,9 +677,9 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's Instant Messenger (IM) accounts. A user account can have multiple ims properties.
-   * But, only one of these ims properties can be the primary IM contact. The maximum allowed data
-   * size for this field is 2Kb.
+   * The list of the user's Instant Messenger (IM) accounts. A user account can have multiple ims
+   * properties. But, only one of these ims properties can be the primary IM contact. The maximum
+   * allowed data size for this field is 2Kb.
    * @return value or {@code null} for none
    */
   public java.lang.Object getIms() {
@@ -687,9 +687,9 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's Instant Messenger (IM) accounts. A user account can have multiple ims properties.
-   * But, only one of these ims properties can be the primary IM contact. The maximum allowed data
-   * size for this field is 2Kb.
+   * The list of the user's Instant Messenger (IM) accounts. A user account can have multiple ims
+   * properties. But, only one of these ims properties can be the primary IM contact. The maximum
+   * allowed data size for this field is 2Kb.
    * @param ims ims or {@code null} for none
    */
   public User setIms(java.lang.Object ims) {
@@ -839,7 +839,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's keywords. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's keywords. The maximum allowed data size for this field is 1Kb.
    * @return value or {@code null} for none
    */
   public java.lang.Object getKeywords() {
@@ -847,7 +847,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's keywords. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's keywords. The maximum allowed data size for this field is 1Kb.
    * @param keywords keywords or {@code null} for none
    */
   public User setKeywords(java.lang.Object keywords) {
@@ -953,8 +953,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of the user's non-editable alias email addresses. These are typically outside
-   * the account's primary domain or sub-domain.
+   * Output only. The list of the user's non-editable alias email addresses. These are typically
+   * outside the account's primary domain or sub-domain.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNonEditableAliases() {
@@ -962,8 +962,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of the user's non-editable alias email addresses. These are typically outside
-   * the account's primary domain or sub-domain.
+   * Output only. The list of the user's non-editable alias email addresses. These are typically
+   * outside the account's primary domain or sub-domain.
    * @param nonEditableAliases nonEditableAliases or {@code null} for none
    */
   public User setNonEditableAliases(java.util.List<java.lang.String> nonEditableAliases) {
@@ -1008,7 +1008,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of organizations the user belongs to. The maximum allowed data size for this field is
+   * The list of organizations the user belongs to. The maximum allowed data size for this field is
    * 10Kb.
    * @return value or {@code null} for none
    */
@@ -1017,7 +1017,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of organizations the user belongs to. The maximum allowed data size for this field is
+   * The list of organizations the user belongs to. The maximum allowed data size for this field is
    * 10Kb.
    * @param organizations organizations or {@code null} for none
    */
@@ -1044,7 +1044,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
    * @return value or {@code null} for none
    */
   public java.lang.Object getPhones() {
@@ -1052,7 +1052,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
    * @param phones phones or {@code null} for none
    */
   public User setPhones(java.lang.Object phones) {
@@ -1061,7 +1061,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
+   * The list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
    * for the user.
    * @return value or {@code null} for none
    */
@@ -1070,7 +1070,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
+   * The list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
    * for the user.
    * @param posixAccounts posixAccounts or {@code null} for none
    */
@@ -1135,8 +1135,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's relationships to other users. The maximum allowed data size for this field
-   * is 2Kb.
+   * The list of the user's relationships to other users. The maximum allowed data size for this
+   * field is 2Kb.
    * @return value or {@code null} for none
    */
   public java.lang.Object getRelations() {
@@ -1144,8 +1144,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the user's relationships to other users. The maximum allowed data size for this field
-   * is 2Kb.
+   * The list of the user's relationships to other users. The maximum allowed data size for this
+   * field is 2Kb.
    * @param relations relations or {@code null} for none
    */
   public User setRelations(java.lang.Object relations) {

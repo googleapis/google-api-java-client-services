@@ -44,7 +44,7 @@ public final class OrgUnits extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * List of organizational unit objects.
+   * A list of organizational unit objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class OrgUnits extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of organizational unit objects.
+   * A list of organizational unit objects.
    * @return value or {@code null} for none
    */
   public java.util.List<OrgUnit> getOrganizationUnits() {
@@ -99,7 +99,7 @@ public final class OrgUnits extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of organizational unit objects.
+   * A list of organizational unit objects.
    * @param organizationUnits organizationUnits or {@code null} for none
    */
   public OrgUnits setOrganizationUnits(java.util.List<OrgUnit> organizationUnits) {

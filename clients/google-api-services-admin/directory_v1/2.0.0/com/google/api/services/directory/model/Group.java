@@ -39,7 +39,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adminCreated;
 
   /**
-   * Read-only. A list of a group's alias email addresses. To add, update, or remove a group's
+   * Read-only. The list of a group's alias email addresses. To add, update, or remove a group's
    * aliases, use the `groups.aliases` methods. If edited in a group's POST or PUT request, the edit
    * is ignored.
    * The value may be {@code null}.
@@ -105,7 +105,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Read-only. A list of the group's non-editable alias email addresses that are outside of the
+   * Read-only. The list of the group's non-editable alias email addresses that are outside of the
    * account's primary domain or subdomains. These are functioning email addresses used by the
    * group. This is a read-only property returned in the API's response for a group. If edited in a
    * group's POST or PUT request, the edit is ignored.
@@ -132,7 +132,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only. A list of a group's alias email addresses. To add, update, or remove a group's
+   * Read-only. The list of a group's alias email addresses. To add, update, or remove a group's
    * aliases, use the `groups.aliases` methods. If edited in a group's POST or PUT request, the edit
    * is ignored.
    * @return value or {@code null} for none
@@ -142,7 +142,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only. A list of a group's alias email addresses. To add, update, or remove a group's
+   * Read-only. The list of a group's alias email addresses. To add, update, or remove a group's
    * aliases, use the `groups.aliases` methods. If edited in a group's POST or PUT request, the edit
    * is ignored.
    * @param aliases aliases or {@code null} for none
@@ -288,7 +288,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only. A list of the group's non-editable alias email addresses that are outside of the
+   * Read-only. The list of the group's non-editable alias email addresses that are outside of the
    * account's primary domain or subdomains. These are functioning email addresses used by the
    * group. This is a read-only property returned in the API's response for a group. If edited in a
    * group's POST or PUT request, the edit is ignored.
@@ -299,7 +299,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only. A list of the group's non-editable alias email addresses that are outside of the
+   * Read-only. The list of the group's non-editable alias email addresses that are outside of the
    * account's primary domain or subdomains. These are functioning email addresses used by the
    * group. This is a read-only property returned in the API's response for a group. If edited in a
    * group's POST or PUT request, the edit is ignored.

@@ -17,7 +17,7 @@
 package com.google.api.services.directory.model;
 
 /**
- * JSON response template for List verification codes operation in Directory API.
+ * JSON response template for list verification codes operation in Directory API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:

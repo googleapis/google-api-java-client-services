@@ -30,7 +30,7 @@ package com.google.api.services.directory.model;
 public final class ChromeOsDevices extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Chrome OS Device objects.
+   * A list of Chrome OS Device objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class ChromeOsDevices extends com.google.api.client.json.GenericJso
   private java.lang.String nextPageToken;
 
   /**
-   * List of Chrome OS Device objects.
+   * A list of Chrome OS Device objects.
    * @return value or {@code null} for none
    */
   public java.util.List<ChromeOsDevice> getChromeosdevices() {
@@ -73,7 +73,7 @@ public final class ChromeOsDevices extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * List of Chrome OS Device objects.
+   * A list of Chrome OS Device objects.
    * @param chromeosdevices chromeosdevices or {@code null} for none
    */
   public ChromeOsDevices setChromeosdevices(java.util.List<ChromeOsDevice> chromeosdevices) {

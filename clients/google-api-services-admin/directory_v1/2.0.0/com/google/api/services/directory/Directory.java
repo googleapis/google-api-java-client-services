@@ -1224,12 +1224,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Return devices from all child orgunits, as well as the specified org unit. If this is set
-       * to true 'orgUnitPath' must be provided.
+       * to true, 'orgUnitPath' must be provided.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeChildOrgunits;
 
-      /** Return devices from all child orgunits, as well as the specified org unit. If this is set to true
+      /** Return devices from all child orgunits, as well as the specified org unit. If this is set to true,
      'orgUnitPath' must be provided.
        */
       public java.lang.Boolean getIncludeChildOrgunits() {
@@ -1238,7 +1238,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Return devices from all child orgunits, as well as the specified org unit. If this is set
-       * to true 'orgUnitPath' must be provided.
+       * to true, 'orgUnitPath' must be provided.
        */
       public List setIncludeChildOrgunits(java.lang.Boolean includeChildOrgunits) {
         this.includeChildOrgunits = includeChildOrgunits;

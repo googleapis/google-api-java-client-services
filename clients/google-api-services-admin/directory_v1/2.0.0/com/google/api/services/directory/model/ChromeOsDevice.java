@@ -32,7 +32,7 @@ package com.google.api.services.directory.model;
 public final class ChromeOsDevice extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of active time ranges (Read-only).
+   * A list of active time ranges (Read-only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of device files to download (Read-only)
+   * A list of device files to download (Read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +325,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String platformVersion;
 
   /**
-   * List of recent device users, in descending order, by last login time.
+   * A list of recent device users, in descending order, by last login time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,7 +338,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
+   * A list of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -408,7 +408,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.Boolean willAutoRenew;
 
   /**
-   * List of active time ranges (Read-only).
+   * A list of active time ranges (Read-only).
    * @return value or {@code null} for none
    */
   public java.util.List<ActiveTimeRanges> getActiveTimeRanges() {
@@ -416,7 +416,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of active time ranges (Read-only).
+   * A list of active time ranges (Read-only).
    * @param activeTimeRanges activeTimeRanges or {@code null} for none
    */
   public ChromeOsDevice setActiveTimeRanges(java.util.List<ActiveTimeRanges> activeTimeRanges) {
@@ -556,7 +556,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of device files to download (Read-only)
+   * A list of device files to download (Read-only)
    * @return value or {@code null} for none
    */
   public java.util.List<DeviceFiles> getDeviceFiles() {
@@ -564,7 +564,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of device files to download (Read-only)
+   * A list of device files to download (Read-only)
    * @param deviceFiles deviceFiles or {@code null} for none
    */
   public ChromeOsDevice setDeviceFiles(java.util.List<DeviceFiles> deviceFiles) {
@@ -1018,7 +1018,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of recent device users, in descending order, by last login time.
+   * A list of recent device users, in descending order, by last login time.
    * @return value or {@code null} for none
    */
   public java.util.List<RecentUsers> getRecentUsers() {
@@ -1026,7 +1026,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of recent device users, in descending order, by last login time.
+   * A list of recent device users, in descending order, by last login time.
    * @param recentUsers recentUsers or {@code null} for none
    */
   public ChromeOsDevice setRecentUsers(java.util.List<RecentUsers> recentUsers) {
@@ -1035,7 +1035,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
+   * A list of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
    * @return value or {@code null} for none
    */
   public java.util.List<ScreenshotFiles> getScreenshotFiles() {
@@ -1043,7 +1043,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
+   * A list of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
    * @param screenshotFiles screenshotFiles or {@code null} for none
    */
   public ChromeOsDevice setScreenshotFiles(java.util.List<ScreenshotFiles> screenshotFiles) {
@@ -1560,7 +1560,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   public static final class CpuStatusReports extends com.google.api.client.json.GenericJson {
 
     /**
-     * List of CPU temperature samples.
+     * A list of CPU temperature samples.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1586,7 +1586,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
     private com.google.api.client.util.DateTime reportTime;
 
     /**
-     * List of CPU temperature samples.
+     * A list of CPU temperature samples.
      * @return value or {@code null} for none
      */
     public java.util.List<CpuTemperatureInfo> getCpuTemperatureInfo() {
@@ -1594,7 +1594,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * List of CPU temperature samples.
+     * A list of CPU temperature samples.
      * @param cpuTemperatureInfo cpuTemperatureInfo or {@code null} for none
      */
     public CpuStatusReports setCpuTemperatureInfo(java.util.List<CpuTemperatureInfo> cpuTemperatureInfo) {
@@ -2024,7 +2024,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of recent device users, in descending order, by last login time.
+   * A list of recent device users, in descending order, by last login time.
    */
   public static final class RecentUsers extends com.google.api.client.json.GenericJson {
 

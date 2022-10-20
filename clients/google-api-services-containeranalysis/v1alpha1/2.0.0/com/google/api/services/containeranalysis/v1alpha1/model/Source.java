@@ -83,7 +83,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private RepoSource repoSource;
 
   /**
-   * If provided, get the source from this location in in Google Cloud Storage.
+   * If provided, get the source from this location in Google Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +185,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If provided, get the source from this location in in Google Cloud Storage.
+   * If provided, get the source from this location in Google Cloud Storage.
    * @return value or {@code null} for none
    */
   public StorageSource getStorageSource() {
@@ -193,7 +193,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If provided, get the source from this location in in Google Cloud Storage.
+   * If provided, get the source from this location in Google Cloud Storage.
    * @param storageSource storageSource or {@code null} for none
    */
   public Source setStorageSource(StorageSource storageSource) {

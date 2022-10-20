@@ -32,7 +32,7 @@ public final class GoogleCloudRecaptchaenterpriseV1ScoreMetrics extends com.goog
 
   /**
    * Action-based metrics. The map key is the action name which specified by the site owners at time
-   * of the "execute" client-side call. Populated only for SCORE keys.
+   * of the "execute" client-side call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudRecaptchaenterpriseV1ScoreMetrics extends com.goog
 
   /**
    * Action-based metrics. The map key is the action name which specified by the site owners at time
-   * of the "execute" client-side call. Populated only for SCORE keys.
+   * of the "execute" client-side call.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRecaptchaenterpriseV1ScoreDistribution> getActionMetrics() {
@@ -62,7 +62,7 @@ public final class GoogleCloudRecaptchaenterpriseV1ScoreMetrics extends com.goog
 
   /**
    * Action-based metrics. The map key is the action name which specified by the site owners at time
-   * of the "execute" client-side call. Populated only for SCORE keys.
+   * of the "execute" client-side call.
    * @param actionMetrics actionMetrics or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1ScoreMetrics setActionMetrics(java.util.Map<String, GoogleCloudRecaptchaenterpriseV1ScoreDistribution> actionMetrics) {

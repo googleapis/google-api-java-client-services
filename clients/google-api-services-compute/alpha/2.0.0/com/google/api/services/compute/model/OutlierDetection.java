@@ -40,7 +40,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
 
   /**
    * Number of errors before a host is ejected from the connection pool. When the backend host is
-   * accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.
+   * accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5. Not supported when
+   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +51,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The number of consecutive gateway failures (502, 503, 504 status or connection errors that are
    * mapped to one of those status codes) before a consecutive gateway failure ejection occurs.
-   * Defaults to 3.
+   * Defaults to 3. Not supported when the backend service is referenced by a URL map that is bound
+   * to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +61,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly.
-   * Defaults to 0.
+   * Defaults to 0. Not supported when the backend service is referenced by a URL map that is bound
+   * to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +71,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive gateway failures. This setting can be used to disable ejection or to ramp
-   * it up slowly. Defaults to 100.
+   * it up slowly. Defaults to 100. Not supported when the backend service is referenced by a URL
+   * map that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +154,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
 
   /**
    * Number of errors before a host is ejected from the connection pool. When the backend host is
-   * accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.
+   * accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5. Not supported when
+   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConsecutiveErrors() {
@@ -158,7 +165,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
 
   /**
    * Number of errors before a host is ejected from the connection pool. When the backend host is
-   * accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.
+   * accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5. Not supported when
+   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @param consecutiveErrors consecutiveErrors or {@code null} for none
    */
   public OutlierDetection setConsecutiveErrors(java.lang.Integer consecutiveErrors) {
@@ -169,7 +178,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The number of consecutive gateway failures (502, 503, 504 status or connection errors that are
    * mapped to one of those status codes) before a consecutive gateway failure ejection occurs.
-   * Defaults to 3.
+   * Defaults to 3. Not supported when the backend service is referenced by a URL map that is bound
+   * to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConsecutiveGatewayFailure() {
@@ -179,7 +189,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The number of consecutive gateway failures (502, 503, 504 status or connection errors that are
    * mapped to one of those status codes) before a consecutive gateway failure ejection occurs.
-   * Defaults to 3.
+   * Defaults to 3. Not supported when the backend service is referenced by a URL map that is bound
+   * to target gRPC proxy that has validateForProxyless field set to true.
    * @param consecutiveGatewayFailure consecutiveGatewayFailure or {@code null} for none
    */
   public OutlierDetection setConsecutiveGatewayFailure(java.lang.Integer consecutiveGatewayFailure) {
@@ -190,7 +201,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly.
-   * Defaults to 0.
+   * Defaults to 0. Not supported when the backend service is referenced by a URL map that is bound
+   * to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEnforcingConsecutiveErrors() {
@@ -200,7 +212,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly.
-   * Defaults to 0.
+   * Defaults to 0. Not supported when the backend service is referenced by a URL map that is bound
+   * to target gRPC proxy that has validateForProxyless field set to true.
    * @param enforcingConsecutiveErrors enforcingConsecutiveErrors or {@code null} for none
    */
   public OutlierDetection setEnforcingConsecutiveErrors(java.lang.Integer enforcingConsecutiveErrors) {
@@ -211,7 +224,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive gateway failures. This setting can be used to disable ejection or to ramp
-   * it up slowly. Defaults to 100.
+   * it up slowly. Defaults to 100. Not supported when the backend service is referenced by a URL
+   * map that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEnforcingConsecutiveGatewayFailure() {
@@ -221,7 +235,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive gateway failures. This setting can be used to disable ejection or to ramp
-   * it up slowly. Defaults to 100.
+   * it up slowly. Defaults to 100. Not supported when the backend service is referenced by a URL
+   * map that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param enforcingConsecutiveGatewayFailure enforcingConsecutiveGatewayFailure or {@code null} for none
    */
   public OutlierDetection setEnforcingConsecutiveGatewayFailure(java.lang.Integer enforcingConsecutiveGatewayFailure) {

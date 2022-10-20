@@ -122,6 +122,13 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private UsageExportLocation usageExportLocation;
 
   /**
+   * [Output Only] Default internal DNS setting used by VMs running in this project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmDnsSetting;
+
+  /**
    * [Output Only] The role this project has in a shared VPC configuration. Currently, only projects
    * with the host role, which is specified by the value HOST, are differentiated.
    * The value may be {@code null}.
@@ -344,6 +351,23 @@ public final class Project extends com.google.api.client.json.GenericJson {
    */
   public Project setUsageExportLocation(UsageExportLocation usageExportLocation) {
     this.usageExportLocation = usageExportLocation;
+    return this;
+  }
+
+  /**
+   * [Output Only] Default internal DNS setting used by VMs running in this project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmDnsSetting() {
+    return vmDnsSetting;
+  }
+
+  /**
+   * [Output Only] Default internal DNS setting used by VMs running in this project.
+   * @param vmDnsSetting vmDnsSetting or {@code null} for none
+   */
+  public Project setVmDnsSetting(java.lang.String vmDnsSetting) {
+    this.vmDnsSetting = vmDnsSetting;
     return this;
   }
 

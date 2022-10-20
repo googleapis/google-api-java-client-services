@@ -300,11 +300,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
    * backend service. If not set, this feature is considered disabled. This field is applicable to
-   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
-   * and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is
-   * referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field
-   * set to true.
+   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2, or
+   * GRPC, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
+   * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1036,11 +1034,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
    * backend service. If not set, this feature is considered disabled. This field is applicable to
-   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
-   * and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is
-   * referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field
-   * set to true.
+   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2, or
+   * GRPC, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
+   * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public OutlierDetection getOutlierDetection() {
@@ -1050,11 +1046,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
    * backend service. If not set, this feature is considered disabled. This field is applicable to
-   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
-   * and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is
-   * referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field
-   * set to true.
+   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2, or
+   * GRPC, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
+   * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    * @param outlierDetection outlierDetection or {@code null} for none
    */
   public BackendService setOutlierDetection(OutlierDetection outlierDetection) {

@@ -158,6 +158,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String stateMessage;
 
   /**
+   * The configuration specifying telemetry settings for the Dataproc Metastore service. If
+   * unspecified defaults to JSON.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TelemetryConfig telemetryConfig;
+
+  /**
    * The tier of the service.
    * The value may be {@code null}.
    */
@@ -480,6 +488,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setStateMessage(java.lang.String stateMessage) {
     this.stateMessage = stateMessage;
+    return this;
+  }
+
+  /**
+   * The configuration specifying telemetry settings for the Dataproc Metastore service. If
+   * unspecified defaults to JSON.
+   * @return value or {@code null} for none
+   */
+  public TelemetryConfig getTelemetryConfig() {
+    return telemetryConfig;
+  }
+
+  /**
+   * The configuration specifying telemetry settings for the Dataproc Metastore service. If
+   * unspecified defaults to JSON.
+   * @param telemetryConfig telemetryConfig or {@code null} for none
+   */
+  public Service setTelemetryConfig(TelemetryConfig telemetryConfig) {
+    this.telemetryConfig = telemetryConfig;
     return this;
   }
 

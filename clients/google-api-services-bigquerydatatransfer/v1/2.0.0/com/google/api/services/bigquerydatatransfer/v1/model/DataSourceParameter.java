@@ -73,7 +73,7 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
   private java.lang.Boolean immutable;
 
   /**
-   * For integer and double values specifies maxminum allowed value.
+   * For integer and double values specifies maximum allowed value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,7 +246,7 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
   }
 
   /**
-   * For integer and double values specifies maxminum allowed value.
+   * For integer and double values specifies maximum allowed value.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMaxValue() {
@@ -254,7 +254,7 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
   }
 
   /**
-   * For integer and double values specifies maxminum allowed value.
+   * For integer and double values specifies maximum allowed value.
    * @param maxValue maxValue or {@code null} for none
    */
   public DataSourceParameter setMaxValue(java.lang.Double maxValue) {

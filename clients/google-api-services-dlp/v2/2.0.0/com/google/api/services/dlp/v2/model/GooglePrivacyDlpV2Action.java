@@ -39,7 +39,9 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2Deidentify deidentify;
 
   /**
-   * Enable email notification for project owners and editors on job's completion/failure.
+   * Sends an email when the job completes. The email goes to IAM project owners and technical
+   * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * contacts).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +100,9 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Enable email notification for project owners and editors on job's completion/failure.
+   * Sends an email when the job completes. The email goes to IAM project owners and technical
+   * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * contacts).
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2JobNotificationEmails getJobNotificationEmails() {
@@ -106,7 +110,9 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Enable email notification for project owners and editors on job's completion/failure.
+   * Sends an email when the job completes. The email goes to IAM project owners and technical
+   * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * contacts).
    * @param jobNotificationEmails jobNotificationEmails or {@code null} for none
    */
   public GooglePrivacyDlpV2Action setJobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmails jobNotificationEmails) {

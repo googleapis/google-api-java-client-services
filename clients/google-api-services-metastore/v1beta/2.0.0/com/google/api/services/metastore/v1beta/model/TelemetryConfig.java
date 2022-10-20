@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.metastore.v1alpha.model;
+package com.google.api.services.metastore.v1beta.model;
 
 /**
- * Network configuration for the Dataproc Metastore service.
+ * Telemetry Configuration for the Dataproc Metastore service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -28,46 +28,37 @@ package com.google.api.services.metastore.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class NetworkConfig extends com.google.api.client.json.GenericJson {
+public final class TelemetryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Consumer> consumers;
-
-  static {
-    // hack to force ProGuard to consider Consumer used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Consumer.class);
-  }
+  private java.lang.String logFormat;
 
   /**
-   * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
    * @return value or {@code null} for none
    */
-  public java.util.List<Consumer> getConsumers() {
-    return consumers;
+  public java.lang.String getLogFormat() {
+    return logFormat;
   }
 
   /**
-   * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
-   * @param consumers consumers or {@code null} for none
+   * @param logFormat logFormat or {@code null} for none
    */
-  public NetworkConfig setConsumers(java.util.List<Consumer> consumers) {
-    this.consumers = consumers;
+  public TelemetryConfig setLogFormat(java.lang.String logFormat) {
+    this.logFormat = logFormat;
     return this;
   }
 
   @Override
-  public NetworkConfig set(String fieldName, Object value) {
-    return (NetworkConfig) super.set(fieldName, value);
+  public TelemetryConfig set(String fieldName, Object value) {
+    return (TelemetryConfig) super.set(fieldName, value);
   }
 
   @Override
-  public NetworkConfig clone() {
-    return (NetworkConfig) super.clone();
+  public TelemetryConfig clone() {
+    return (TelemetryConfig) super.clone();
   }
 
 }

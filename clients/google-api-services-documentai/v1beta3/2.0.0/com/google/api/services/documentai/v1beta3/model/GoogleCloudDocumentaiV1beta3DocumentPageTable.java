@@ -65,6 +65,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageTable extends com.goo
   private GoogleCloudDocumentaiV1beta3DocumentPageLayout layout;
 
   /**
+   * The history of this table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentProvenance provenance;
+
+  /**
    * Body rows of the table.
    * @return value or {@code null} for none
    */
@@ -129,6 +136,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageTable extends com.goo
    */
   public GoogleCloudDocumentaiV1beta3DocumentPageTable setLayout(GoogleCloudDocumentaiV1beta3DocumentPageLayout layout) {
     this.layout = layout;
+    return this;
+  }
+
+  /**
+   * The history of this table.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * The history of this table.
+   * @param provenance provenance or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentPageTable setProvenance(GoogleCloudDocumentaiV1beta3DocumentProvenance provenance) {
+    this.provenance = provenance;
     return this;
   }
 

@@ -31,7 +31,8 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies which fields to include in the output documents.
+   * Specifies which fields to include in the output documents. Only supports top level document and
+   * pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig ex
   private java.lang.String gcsUri;
 
   /**
-   * Specifies which fields to include in the output documents.
+   * Specifies which fields to include in the output documents. Only supports top level document and
+   * pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
    * @return value or {@code null} for none
    */
   public String getFieldMask() {
@@ -53,7 +55,8 @@ public final class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig ex
   }
 
   /**
-   * Specifies which fields to include in the output documents.
+   * Specifies which fields to include in the output documents. Only supports top level document and
+   * pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
    * @param fieldMask fieldMask or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig setFieldMask(String fieldMask) {

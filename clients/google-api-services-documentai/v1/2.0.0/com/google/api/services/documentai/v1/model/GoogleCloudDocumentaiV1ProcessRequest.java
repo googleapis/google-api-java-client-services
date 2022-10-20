@@ -31,7 +31,9 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies which fields to include in ProcessResponse's document.
+   * Specifies which fields to include in ProcessResponse's document. Only supports top level
+   * document and pages field so it must be in the form of `{document_field_name}` or
+   * `pages.{page_field_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +61,9 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   private java.lang.Boolean skipHumanReview;
 
   /**
-   * Specifies which fields to include in ProcessResponse's document.
+   * Specifies which fields to include in ProcessResponse's document. Only supports top level
+   * document and pages field so it must be in the form of `{document_field_name}` or
+   * `pages.{page_field_name}`.
    * @return value or {@code null} for none
    */
   public String getFieldMask() {
@@ -67,7 +71,9 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   }
 
   /**
-   * Specifies which fields to include in ProcessResponse's document.
+   * Specifies which fields to include in ProcessResponse's document. Only supports top level
+   * document and pages field so it must be in the form of `{document_field_name}` or
+   * `pages.{page_field_name}`.
    * @param fieldMask fieldMask or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessRequest setFieldMask(String fieldMask) {

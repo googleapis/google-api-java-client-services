@@ -32,13 +32,6 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1UsageSignal extends com.google.api.client.json.GenericJson {
 
   /**
-   * Favorite count in the source system.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long favoriteCount;
-
-  /**
    * The end timestamp of the duration of usage statistics.
    * The value may be {@code null}.
    */
@@ -52,23 +45,6 @@ public final class GoogleCloudDatacatalogV1UsageSignal extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDatacatalogV1UsageStats> usageWithinTimeRange;
-
-  /**
-   * Favorite count in the source system.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getFavoriteCount() {
-    return favoriteCount;
-  }
-
-  /**
-   * Favorite count in the source system.
-   * @param favoriteCount favoriteCount or {@code null} for none
-   */
-  public GoogleCloudDatacatalogV1UsageSignal setFavoriteCount(java.lang.Long favoriteCount) {
-    this.favoriteCount = favoriteCount;
-    return this;
-  }
 
   /**
    * The end timestamp of the duration of usage statistics.

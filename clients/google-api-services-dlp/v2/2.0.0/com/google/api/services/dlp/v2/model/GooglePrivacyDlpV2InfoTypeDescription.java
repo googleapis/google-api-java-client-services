@@ -65,6 +65,13 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   private java.lang.String name;
 
   /**
+   * The default sensitivity of the infoType.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
+
+  /**
    * Which parts of the API supports this InfoType.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   public GooglePrivacyDlpV2InfoTypeDescription setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The default sensitivity of the infoType.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2SensitivityScore getSensitivityScore() {
+    return sensitivityScore;
+  }
+
+  /**
+   * The default sensitivity of the infoType.
+   * @param sensitivityScore sensitivityScore or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setSensitivityScore(GooglePrivacyDlpV2SensitivityScore sensitivityScore) {
+    this.sensitivityScore = sensitivityScore;
     return this;
   }
 

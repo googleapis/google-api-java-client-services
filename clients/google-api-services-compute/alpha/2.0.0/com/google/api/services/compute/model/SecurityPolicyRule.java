@@ -103,12 +103,12 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * one or more ranges, prefixes, or exact values that are considered a match for the field. A
    * field value must be present in order to match a specified match field. If no match values are
    * specified for a match field, then any field value is considered to match it, and it's not
-   * required to be present. For a packet to match a rule, all specified match fields must match the
-   * corresponding field values derived from the packet. Example: networkMatch: srcIpRanges: -
-   * "192.0.2.0/24" - "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: -
-   * "1-0x1fff" The above match condition matches packets with a source IP in 192.0.2.0/24 or
-   * 198.51.100.0/24 and a user-defined field named "ipv4_fragment_offset" with a value between 1
-   * and 0x1fff inclusive.
+   * required to be present. For strings specifying '*' is also equivalent to match all. For a
+   * packet to match a rule, all specified match fields must match the corresponding field values
+   * derived from the packet. Example: networkMatch: srcIpRanges: - "192.0.2.0/24" -
+   * "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: - "1-0x1fff" The
+   * above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24 and a
+   * user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -355,12 +355,12 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * one or more ranges, prefixes, or exact values that are considered a match for the field. A
    * field value must be present in order to match a specified match field. If no match values are
    * specified for a match field, then any field value is considered to match it, and it's not
-   * required to be present. For a packet to match a rule, all specified match fields must match the
-   * corresponding field values derived from the packet. Example: networkMatch: srcIpRanges: -
-   * "192.0.2.0/24" - "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: -
-   * "1-0x1fff" The above match condition matches packets with a source IP in 192.0.2.0/24 or
-   * 198.51.100.0/24 and a user-defined field named "ipv4_fragment_offset" with a value between 1
-   * and 0x1fff inclusive.
+   * required to be present. For strings specifying '*' is also equivalent to match all. For a
+   * packet to match a rule, all specified match fields must match the corresponding field values
+   * derived from the packet. Example: networkMatch: srcIpRanges: - "192.0.2.0/24" -
+   * "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: - "1-0x1fff" The
+   * above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24 and a
+   * user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff inclusive.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleNetworkMatcher getNetworkMatch() {
@@ -378,12 +378,12 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * one or more ranges, prefixes, or exact values that are considered a match for the field. A
    * field value must be present in order to match a specified match field. If no match values are
    * specified for a match field, then any field value is considered to match it, and it's not
-   * required to be present. For a packet to match a rule, all specified match fields must match the
-   * corresponding field values derived from the packet. Example: networkMatch: srcIpRanges: -
-   * "192.0.2.0/24" - "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: -
-   * "1-0x1fff" The above match condition matches packets with a source IP in 192.0.2.0/24 or
-   * 198.51.100.0/24 and a user-defined field named "ipv4_fragment_offset" with a value between 1
-   * and 0x1fff inclusive.
+   * required to be present. For strings specifying '*' is also equivalent to match all. For a
+   * packet to match a rule, all specified match fields must match the corresponding field values
+   * derived from the packet. Example: networkMatch: srcIpRanges: - "192.0.2.0/24" -
+   * "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: - "1-0x1fff" The
+   * above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24 and a
+   * user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff inclusive.
    * @param networkMatch networkMatch or {@code null} for none
    */
   public SecurityPolicyRule setNetworkMatch(SecurityPolicyRuleNetworkMatcher networkMatch) {

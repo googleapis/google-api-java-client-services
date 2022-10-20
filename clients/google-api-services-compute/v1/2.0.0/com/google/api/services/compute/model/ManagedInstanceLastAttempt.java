@@ -258,6 +258,12 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
         private LocalizedMessage localizedMessage;
 
         /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private QuotaExceededInfo quotaInfo;
+
+        /**
          * @return value or {@code null} for none
          */
         public ErrorInfo getErrorInfo() {
@@ -299,6 +305,21 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
          */
         public ErrorDetails setLocalizedMessage(LocalizedMessage localizedMessage) {
           this.localizedMessage = localizedMessage;
+          return this;
+        }
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public QuotaExceededInfo getQuotaInfo() {
+          return quotaInfo;
+        }
+
+        /**
+         * @param quotaInfo quotaInfo or {@code null} for none
+         */
+        public ErrorDetails setQuotaInfo(QuotaExceededInfo quotaInfo) {
+          this.quotaInfo = quotaInfo;
           return this;
         }
 

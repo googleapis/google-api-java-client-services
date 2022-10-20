@@ -210,6 +210,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * The URL of the reserved internal range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservedInternalRange;
+
+  /**
    * The role of subnetwork. Currently, this field is only used when purpose =
    * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
    * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
@@ -707,6 +714,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * The URL of the reserved internal range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservedInternalRange() {
+    return reservedInternalRange;
+  }
+
+  /**
+   * The URL of the reserved internal range.
+   * @param reservedInternalRange reservedInternalRange or {@code null} for none
+   */
+  public Subnetwork setReservedInternalRange(java.lang.String reservedInternalRange) {
+    this.reservedInternalRange = reservedInternalRange;
     return this;
   }
 

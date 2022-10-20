@@ -39,16 +39,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   private java.lang.Integer failureThreshold;
 
   /**
-   * GRPC specifies an action involving a GRPC port. Exactly one of HTTPGet, TCPSocket, or GRPC must
-   * be specified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudRunV2GRPCAction grpc;
-
-  /**
-   * HTTPGet specifies the http request to perform. Exactly one of HTTPGet, TCPSocket, or gRPC must
-   * be specified.
+   * HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +66,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   private java.lang.Integer periodSeconds;
 
   /**
-   * TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet, TCPSocket, or gRPC
-   * must be specified. TCP hooks not yet supported
+   * TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,27 +102,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * GRPC specifies an action involving a GRPC port. Exactly one of HTTPGet, TCPSocket, or GRPC must
-   * be specified.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudRunV2GRPCAction getGrpc() {
-    return grpc;
-  }
-
-  /**
-   * GRPC specifies an action involving a GRPC port. Exactly one of HTTPGet, TCPSocket, or GRPC must
-   * be specified.
-   * @param grpc grpc or {@code null} for none
-   */
-  public GoogleCloudRunV2Probe setGrpc(GoogleCloudRunV2GRPCAction grpc) {
-    this.grpc = grpc;
-    return this;
-  }
-
-  /**
-   * HTTPGet specifies the http request to perform. Exactly one of HTTPGet, TCPSocket, or gRPC must
-   * be specified.
+   * HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be
+   * specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2HTTPGetAction getHttpGet() {
@@ -138,8 +111,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * HTTPGet specifies the http request to perform. Exactly one of HTTPGet, TCPSocket, or gRPC must
-   * be specified.
+   * HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be
+   * specified.
    * @param httpGet httpGet or {@code null} for none
    */
   public GoogleCloudRunV2Probe setHttpGet(GoogleCloudRunV2HTTPGetAction httpGet) {
@@ -192,8 +165,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet, TCPSocket, or gRPC
-   * must be specified. TCP hooks not yet supported
+   * TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be
+   * specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2TCPSocketAction getTcpSocket() {
@@ -201,8 +174,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet, TCPSocket, or gRPC
-   * must be specified. TCP hooks not yet supported
+   * TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be
+   * specified.
    * @param tcpSocket tcpSocket or {@code null} for none
    */
   public GoogleCloudRunV2Probe setTcpSocket(GoogleCloudRunV2TCPSocketAction tcpSocket) {

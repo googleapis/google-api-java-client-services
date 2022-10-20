@@ -30,14 +30,6 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders
-   * instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String host;
-
-  /**
    * Custom headers to set in the request. HTTP allows repeated headers.
    * The value may be {@code null}.
    */
@@ -50,32 +42,6 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
-
-  /**
-   * Scheme to use for connecting to the host. Defaults to HTTP.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String scheme;
-
-  /**
-   * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders
-   * instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHost() {
-    return host;
-  }
-
-  /**
-   * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders
-   * instead.
-   * @param host host or {@code null} for none
-   */
-  public GoogleCloudRunV2HTTPGetAction setHost(java.lang.String host) {
-    this.host = host;
-    return this;
-  }
 
   /**
    * Custom headers to set in the request. HTTP allows repeated headers.
@@ -108,23 +74,6 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
    */
   public GoogleCloudRunV2HTTPGetAction setPath(java.lang.String path) {
     this.path = path;
-    return this;
-  }
-
-  /**
-   * Scheme to use for connecting to the host. Defaults to HTTP.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getScheme() {
-    return scheme;
-  }
-
-  /**
-   * Scheme to use for connecting to the host. Defaults to HTTP.
-   * @param scheme scheme or {@code null} for none
-   */
-  public GoogleCloudRunV2HTTPGetAction setScheme(java.lang.String scheme) {
-    this.scheme = scheme;
     return this;
   }
 

@@ -30,42 +30,16 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2TCPSocketAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Host name to connect to, defaults to the pod IP.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String host;
-
-  /**
-   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
-   * proto's inability to properly support the IntOrString golang type.
+   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
+   * defaults to 8080.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * Host name to connect to, defaults to the pod IP.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHost() {
-    return host;
-  }
-
-  /**
-   * Host name to connect to, defaults to the pod IP.
-   * @param host host or {@code null} for none
-   */
-  public GoogleCloudRunV2TCPSocketAction setHost(java.lang.String host) {
-    this.host = host;
-    return this;
-  }
-
-  /**
-   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
-   * proto's inability to properly support the IntOrString golang type.
+   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
+   * defaults to 8080.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -73,9 +47,8 @@ public final class GoogleCloudRunV2TCPSocketAction extends com.google.api.client
   }
 
   /**
-   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
-   * proto's inability to properly support the IntOrString golang type.
+   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
+   * defaults to 8080.
    * @param port port or {@code null} for none
    */
   public GoogleCloudRunV2TCPSocketAction setPort(java.lang.Integer port) {

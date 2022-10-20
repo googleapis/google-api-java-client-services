@@ -72,11 +72,19 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maintenanceFreezeDurationHours;
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maintenanceInterval;
+
+  /**
+   * Specifies the max run duration for the given instance. If specified, the instance termination
+   * action will be performed at the end of the run duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration maxRunDuration;
 
   /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
@@ -118,6 +126,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String provisioningModel;
+
+  /**
+   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * specified, the instance termination action will be performed at the termination time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String terminationTime;
 
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
@@ -219,7 +235,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceInterval() {
@@ -227,11 +243,30 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * @param maintenanceInterval maintenanceInterval or {@code null} for none
    */
   public Scheduling setMaintenanceInterval(java.lang.String maintenanceInterval) {
     this.maintenanceInterval = maintenanceInterval;
+    return this;
+  }
+
+  /**
+   * Specifies the max run duration for the given instance. If specified, the instance termination
+   * action will be performed at the end of the run duration.
+   * @return value or {@code null} for none
+   */
+  public Duration getMaxRunDuration() {
+    return maxRunDuration;
+  }
+
+  /**
+   * Specifies the max run duration for the given instance. If specified, the instance termination
+   * action will be performed at the end of the run duration.
+   * @param maxRunDuration maxRunDuration or {@code null} for none
+   */
+  public Scheduling setMaxRunDuration(Duration maxRunDuration) {
+    this.maxRunDuration = maxRunDuration;
     return this;
   }
 
@@ -329,6 +364,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setProvisioningModel(java.lang.String provisioningModel) {
     this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
+   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * specified, the instance termination action will be performed at the termination time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTerminationTime() {
+    return terminationTime;
+  }
+
+  /**
+   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * specified, the instance termination action will be performed at the termination time.
+   * @param terminationTime terminationTime or {@code null} for none
+   */
+  public Scheduling setTerminationTime(java.lang.String terminationTime) {
+    this.terminationTime = terminationTime;
     return this;
   }
 

@@ -30,12 +30,6 @@ package com.google.api.services.compute.model;
 public final class QueuedResourceList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String etag;
-
-  /**
    * Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
@@ -91,21 +85,6 @@ public final class QueuedResourceList extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private Warning warning;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEtag() {
-    return etag;
-  }
-
-  /**
-   * @param etag etag or {@code null} for none
-   */
-  public QueuedResourceList setEtag(java.lang.String etag) {
-    this.etag = etag;
-    return this;
-  }
 
   /**
    * Unique identifier for the resource; defined by the server.

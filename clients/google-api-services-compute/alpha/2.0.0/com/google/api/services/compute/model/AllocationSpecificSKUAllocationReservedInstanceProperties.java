@@ -81,7 +81,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   private java.lang.Integer maintenanceFreezeDurationHours;
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,7 +188,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceInterval() {
@@ -196,7 +196,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * @param maintenanceInterval maintenanceInterval or {@code null} for none
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties setMaintenanceInterval(java.lang.String maintenanceInterval) {

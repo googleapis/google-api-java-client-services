@@ -66,12 +66,6 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Long currentMemoryMb;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SchedulingDynamicResizeProperties dynamicResizeProperties;
-
-  /**
    * Specify the time in seconds for host error detection, the value must be within the range of
    * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
    * be used.
@@ -113,7 +107,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maintenanceFreezeDurationHours;
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,21 +255,6 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public SchedulingDynamicResizeProperties getDynamicResizeProperties() {
-    return dynamicResizeProperties;
-  }
-
-  /**
-   * @param dynamicResizeProperties dynamicResizeProperties or {@code null} for none
-   */
-  public Scheduling setDynamicResizeProperties(SchedulingDynamicResizeProperties dynamicResizeProperties) {
-    this.dynamicResizeProperties = dynamicResizeProperties;
-    return this;
-  }
-
-  /**
    * Specify the time in seconds for host error detection, the value must be within the range of
    * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
    * be used.
@@ -373,7 +352,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceInterval() {
@@ -381,7 +360,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * Specifies the frequency of planned maintenance events. The accepted values are: `PERIODIC`.
    * @param maintenanceInterval maintenanceInterval or {@code null} for none
    */
   public Scheduling setMaintenanceInterval(java.lang.String maintenanceInterval) {

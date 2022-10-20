@@ -67,7 +67,11 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * the value is not a valid IP, the key defaults to the source IP address of the request i.e. key
    * type IP. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under
    * "enforce_on_key_name". The key value is truncated to the first 128 bytes of the cookie value.
-   * If no such cookie is present in the request, the key type defaults to ALL.
+   * If no such cookie is present in the request, the key type defaults to ALL. - HTTP_PATH: The URL
+   * path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name
+   * indication in the TLS session of the HTTPS request. The key value is truncated to the first 128
+   * bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from
+   * which the request originates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +184,11 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * the value is not a valid IP, the key defaults to the source IP address of the request i.e. key
    * type IP. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under
    * "enforce_on_key_name". The key value is truncated to the first 128 bytes of the cookie value.
-   * If no such cookie is present in the request, the key type defaults to ALL.
+   * If no such cookie is present in the request, the key type defaults to ALL. - HTTP_PATH: The URL
+   * path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name
+   * indication in the TLS session of the HTTPS request. The key value is truncated to the first 128
+   * bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from
+   * which the request originates.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnforceOnKey() {
@@ -199,7 +207,11 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * the value is not a valid IP, the key defaults to the source IP address of the request i.e. key
    * type IP. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under
    * "enforce_on_key_name". The key value is truncated to the first 128 bytes of the cookie value.
-   * If no such cookie is present in the request, the key type defaults to ALL.
+   * If no such cookie is present in the request, the key type defaults to ALL. - HTTP_PATH: The URL
+   * path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name
+   * indication in the TLS session of the HTTPS request. The key value is truncated to the first 128
+   * bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from
+   * which the request originates.
    * @param enforceOnKey enforceOnKey or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setEnforceOnKey(java.lang.String enforceOnKey) {

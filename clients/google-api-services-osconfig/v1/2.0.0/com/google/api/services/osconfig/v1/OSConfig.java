@@ -1559,7 +1559,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the osconfig server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name in the form: projects/{project}/locations/{location}
+         * @param parent Required. The parent resource name in the form: projects/{project}/locations/{location}. Note:
+         *        Specify the zone of your VMs as the location.
          * @param content the {@link com.google.api.services.osconfig.v1.model.OSPolicyAssignment}
          * @return the request
          */
@@ -1591,7 +1592,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name in the form: projects/{project}/locations/{location}
+           * @param parent Required. The parent resource name in the form: projects/{project}/locations/{location}. Note:
+         *        Specify the zone of your VMs as the location.
            * @param content the {@link com.google.api.services.osconfig.v1.model.OSPolicyAssignment}
            * @since 1.13
            */
@@ -1661,19 +1663,24 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The parent resource name in the form: projects/{project}/locations/{location}
+           * Required. The parent resource name in the form:
+           * projects/{project}/locations/{location}. Note: Specify the zone of your VMs as the
+           * location.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name in the form: projects/{project}/locations/{location}
+          /** Required. The parent resource name in the form: projects/{project}/locations/{location}. Note:
+         Specify the zone of your VMs as the location.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name in the form: projects/{project}/locations/{location}
+           * Required. The parent resource name in the form:
+           * projects/{project}/locations/{location}. Note: Specify the zone of your VMs as the
+           * location.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

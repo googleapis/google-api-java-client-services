@@ -21,9 +21,9 @@ package com.google.api.services.osconfig.v1.model;
  * dynamically targeted group of Compute Engine VM instances. An OS policy is used to define the
  * desired state configuration for a Compute Engine VM instance through a set of configuration
  * resources that provide capabilities such as installing or removing software packages, or
- * executing a script. For more information, see [OS policy and OS policy
- * assignment](https://cloud.google.com/compute/docs/os-configuration-management/working-with-os-
- * policies).
+ * executing a script. For more information about the OS policy resource definitions and examples,
+ * see [OS policy and OS policy assignment](https://cloud.google.com/compute/docs/os-configuration-
+ * management/working-with-os-policies).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:

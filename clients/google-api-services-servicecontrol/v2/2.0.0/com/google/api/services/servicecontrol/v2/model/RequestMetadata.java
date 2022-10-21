@@ -30,11 +30,13 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class RequestMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IP address of the caller. For caller from internet, this will be public IPv4 or IPv6
-   * address. For caller from a Compute Engine VM with external IP address, this will be the VM's
-   * external IP address. For caller from a Compute Engine VM without external IP address, if the VM
-   * is in the same organization (or project) as the accessed resource, `caller_ip` will be the VM's
-   * internal IPv4 address, otherwise the `caller_ip` will be redacted to "gce-internal-ip". See
+   * The IP address of the caller. For a caller from the internet, this will be the public IPv4 or
+   * IPv6 address. For calls made from inside Google's internal production network from one GCP
+   * service to another, `caller_ip` will be redacted to "private". For a caller from a Compute
+   * Engine VM with a external IP address, `caller_ip` will be the VM's external IP address. For a
+   * caller from a Compute Engine VM without a external IP address, if the VM is in the same
+   * organization (or project) as the accessed resource, `caller_ip` will be the VM's internal IPv4
+   * address, otherwise `caller_ip` will be redacted to "gce-internal-ip". See
    * https://cloud.google.com/compute/docs/vpc/ for more information.
    * The value may be {@code null}.
    */
@@ -58,7 +60,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * Google API client for Python. + `Cloud SDK Command Line Tool apitools-client/1.0
    * gcloud/0.9.62`: The request was made by the Google Cloud SDK CLI (gcloud). + `AppEngine-Google;
    * (+http://code.google.com/appengine; appid: s~my-project`: The request was made from the `my-
-   * project` App Engine app. NOLINT
+   * project` App Engine app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,11 +87,13 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   private Request requestAttributes;
 
   /**
-   * The IP address of the caller. For caller from internet, this will be public IPv4 or IPv6
-   * address. For caller from a Compute Engine VM with external IP address, this will be the VM's
-   * external IP address. For caller from a Compute Engine VM without external IP address, if the VM
-   * is in the same organization (or project) as the accessed resource, `caller_ip` will be the VM's
-   * internal IPv4 address, otherwise the `caller_ip` will be redacted to "gce-internal-ip". See
+   * The IP address of the caller. For a caller from the internet, this will be the public IPv4 or
+   * IPv6 address. For calls made from inside Google's internal production network from one GCP
+   * service to another, `caller_ip` will be redacted to "private". For a caller from a Compute
+   * Engine VM with a external IP address, `caller_ip` will be the VM's external IP address. For a
+   * caller from a Compute Engine VM without a external IP address, if the VM is in the same
+   * organization (or project) as the accessed resource, `caller_ip` will be the VM's internal IPv4
+   * address, otherwise `caller_ip` will be redacted to "gce-internal-ip". See
    * https://cloud.google.com/compute/docs/vpc/ for more information.
    * @return value or {@code null} for none
    */
@@ -98,11 +102,13 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The IP address of the caller. For caller from internet, this will be public IPv4 or IPv6
-   * address. For caller from a Compute Engine VM with external IP address, this will be the VM's
-   * external IP address. For caller from a Compute Engine VM without external IP address, if the VM
-   * is in the same organization (or project) as the accessed resource, `caller_ip` will be the VM's
-   * internal IPv4 address, otherwise the `caller_ip` will be redacted to "gce-internal-ip". See
+   * The IP address of the caller. For a caller from the internet, this will be the public IPv4 or
+   * IPv6 address. For calls made from inside Google's internal production network from one GCP
+   * service to another, `caller_ip` will be redacted to "private". For a caller from a Compute
+   * Engine VM with a external IP address, `caller_ip` will be the VM's external IP address. For a
+   * caller from a Compute Engine VM without a external IP address, if the VM is in the same
+   * organization (or project) as the accessed resource, `caller_ip` will be the VM's internal IPv4
+   * address, otherwise `caller_ip` will be redacted to "gce-internal-ip". See
    * https://cloud.google.com/compute/docs/vpc/ for more information.
    * @param callerIp callerIp or {@code null} for none
    */
@@ -142,7 +148,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * Google API client for Python. + `Cloud SDK Command Line Tool apitools-client/1.0
    * gcloud/0.9.62`: The request was made by the Google Cloud SDK CLI (gcloud). + `AppEngine-Google;
    * (+http://code.google.com/appengine; appid: s~my-project`: The request was made from the `my-
-   * project` App Engine app. NOLINT
+   * project` App Engine app.
    * @return value or {@code null} for none
    */
   public java.lang.String getCallerSuppliedUserAgent() {
@@ -155,7 +161,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * Google API client for Python. + `Cloud SDK Command Line Tool apitools-client/1.0
    * gcloud/0.9.62`: The request was made by the Google Cloud SDK CLI (gcloud). + `AppEngine-Google;
    * (+http://code.google.com/appengine; appid: s~my-project`: The request was made from the `my-
-   * project` App Engine app. NOLINT
+   * project` App Engine app.
    * @param callerSuppliedUserAgent callerSuppliedUserAgent or {@code null} for none
    */
   public RequestMetadata setCallerSuppliedUserAgent(java.lang.String callerSuppliedUserAgent) {

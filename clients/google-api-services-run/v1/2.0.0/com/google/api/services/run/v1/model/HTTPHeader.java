@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class HTTPHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * The header field name
+   * Required. The header field name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class HTTPHeader extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The header field name
+   * Required. The header field name
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +52,7 @@ public final class HTTPHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The header field name
+   * Required. The header field name
    * @param name name or {@code null} for none
    */
   public HTTPHeader setName(java.lang.String name) {

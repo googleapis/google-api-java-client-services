@@ -43,7 +43,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty.
+   * if RevisionName is empty; it must be false when RevisionName is non-empty in spec. When shown
+   * in status, this indicates that the RevisionName was resolved from a spec's ConfigurationName.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty.
+   * if RevisionName is empty; it must be false when RevisionName is non-empty in spec. When shown
+   * in status, this indicates that the RevisionName was resolved from a spec's ConfigurationName.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLatestRevision() {
@@ -119,7 +121,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty.
+   * if RevisionName is empty; it must be false when RevisionName is non-empty in spec. When shown
+   * in status, this indicates that the RevisionName was resolved from a spec's ConfigurationName.
    * @param latestRevision latestRevision or {@code null} for none
    */
   public TrafficTarget setLatestRevision(java.lang.Boolean latestRevision) {

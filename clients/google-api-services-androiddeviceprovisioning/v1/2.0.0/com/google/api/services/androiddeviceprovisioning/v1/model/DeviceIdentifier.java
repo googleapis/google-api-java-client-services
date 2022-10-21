@@ -33,6 +33,21 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class DeviceIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
+   * An identifier provided by OEMs, carried through the production and sales process. Only
+   * applicable to Chrome OS devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chromeOsAttestedDeviceId;
+
+  /**
+   * The type of the device
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceType;
+
+  /**
    * The device’s IMEI number. Validated on input.
    * The value may be {@code null}.
    */
@@ -41,7 +56,7 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
 
   /**
    * The device manufacturer’s name. Matches the device's built-in value returned from
-   * `android.os.Build.MANUFACTURER`. Allowed values are listed in [manufacturers](/zero-
+   * `android.os.Build.MANUFACTURER`. Allowed values are listed in [Android manufacturers](/zero-
    * touch/resources/manufacturer-names#manufacturers-names).
    * The value may be {@code null}.
    */
@@ -56,9 +71,9 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   private java.lang.String meid;
 
   /**
-   * The device model's name. Matches the device's built-in value returned from
-   * `android.os.Build.MODEL`. Allowed values are listed in [models](/zero-touch/resources
-   * /manufacturer-names#model-names).
+   * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
+   * /manufacturer-names#model-names) and [Chrome OS
+   * models](https://support.google.com/chrome/a/answer/10130175?hl=en#identify_compatible).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +86,42 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String serialNumber;
+
+  /**
+   * An identifier provided by OEMs, carried through the production and sales process. Only
+   * applicable to Chrome OS devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChromeOsAttestedDeviceId() {
+    return chromeOsAttestedDeviceId;
+  }
+
+  /**
+   * An identifier provided by OEMs, carried through the production and sales process. Only
+   * applicable to Chrome OS devices.
+   * @param chromeOsAttestedDeviceId chromeOsAttestedDeviceId or {@code null} for none
+   */
+  public DeviceIdentifier setChromeOsAttestedDeviceId(java.lang.String chromeOsAttestedDeviceId) {
+    this.chromeOsAttestedDeviceId = chromeOsAttestedDeviceId;
+    return this;
+  }
+
+  /**
+   * The type of the device
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceType() {
+    return deviceType;
+  }
+
+  /**
+   * The type of the device
+   * @param deviceType deviceType or {@code null} for none
+   */
+  public DeviceIdentifier setDeviceType(java.lang.String deviceType) {
+    this.deviceType = deviceType;
+    return this;
+  }
 
   /**
    * The device’s IMEI number. Validated on input.
@@ -91,7 +142,7 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
 
   /**
    * The device manufacturer’s name. Matches the device's built-in value returned from
-   * `android.os.Build.MANUFACTURER`. Allowed values are listed in [manufacturers](/zero-
+   * `android.os.Build.MANUFACTURER`. Allowed values are listed in [Android manufacturers](/zero-
    * touch/resources/manufacturer-names#manufacturers-names).
    * @return value or {@code null} for none
    */
@@ -101,7 +152,7 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
 
   /**
    * The device manufacturer’s name. Matches the device's built-in value returned from
-   * `android.os.Build.MANUFACTURER`. Allowed values are listed in [manufacturers](/zero-
+   * `android.os.Build.MANUFACTURER`. Allowed values are listed in [Android manufacturers](/zero-
    * touch/resources/manufacturer-names#manufacturers-names).
    * @param manufacturer manufacturer or {@code null} for none
    */
@@ -128,9 +179,9 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The device model's name. Matches the device's built-in value returned from
-   * `android.os.Build.MODEL`. Allowed values are listed in [models](/zero-touch/resources
-   * /manufacturer-names#model-names).
+   * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
+   * /manufacturer-names#model-names) and [Chrome OS
+   * models](https://support.google.com/chrome/a/answer/10130175?hl=en#identify_compatible).
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -138,9 +189,9 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The device model's name. Matches the device's built-in value returned from
-   * `android.os.Build.MODEL`. Allowed values are listed in [models](/zero-touch/resources
-   * /manufacturer-names#model-names).
+   * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
+   * /manufacturer-names#model-names) and [Chrome OS
+   * models](https://support.google.com/chrome/a/answer/10130175?hl=en#identify_compatible).
    * @param model model or {@code null} for none
    */
   public DeviceIdentifier setModel(java.lang.String model) {

@@ -49,7 +49,7 @@ public final class DevicesLongRunningOperationMetadata extends com.google.api.cl
 
   /**
    * The processing progress of the operation. Measured as a number from 0 to 100. A value of 10O
-   * doesnt always mean the operation completed—check for the inclusion of a `done` field.
+   * doesn't always mean the operation completed—check for the inclusion of a `done` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class DevicesLongRunningOperationMetadata extends com.google.api.cl
 
   /**
    * The processing progress of the operation. Measured as a number from 0 to 100. A value of 10O
-   * doesnt always mean the operation completed—check for the inclusion of a `done` field.
+   * doesn't always mean the operation completed—check for the inclusion of a `done` field.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProgress() {
@@ -102,7 +102,7 @@ public final class DevicesLongRunningOperationMetadata extends com.google.api.cl
 
   /**
    * The processing progress of the operation. Measured as a number from 0 to 100. A value of 10O
-   * doesnt always mean the operation completed—check for the inclusion of a `done` field.
+   * doesn't always mean the operation completed—check for the inclusion of a `done` field.
    * @param progress progress or {@code null} for none
    */
   public DevicesLongRunningOperationMetadata setProgress(java.lang.Integer progress) {

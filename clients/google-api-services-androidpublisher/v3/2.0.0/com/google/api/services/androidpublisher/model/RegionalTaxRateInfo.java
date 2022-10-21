@@ -39,6 +39,16 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
   private java.lang.Boolean eligibleForStreamingServiceTaxRate;
 
   /**
+   * To collect communications or amusement taxes in the United States, choose the appropriate tax
+   * category. By default Google will determine the collected rate based on the buyer ZIP code.
+   * [Learn more](https://support.google.com/googleplay/android-
+   * developer/answer/10463498#streaming_tax).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String streamingTaxType;
+
+  /**
    * Tax tier to specify reduced tax rate. Developers who sell digital news, magazines, newspapers,
    * books, or audiobooks in various regions may be eligible for reduced tax rates. [Learn
    * more](https://support.google.com/googleplay/android-developer/answer/10463498).
@@ -63,6 +73,29 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
    */
   public RegionalTaxRateInfo setEligibleForStreamingServiceTaxRate(java.lang.Boolean eligibleForStreamingServiceTaxRate) {
     this.eligibleForStreamingServiceTaxRate = eligibleForStreamingServiceTaxRate;
+    return this;
+  }
+
+  /**
+   * To collect communications or amusement taxes in the United States, choose the appropriate tax
+   * category. By default Google will determine the collected rate based on the buyer ZIP code.
+   * [Learn more](https://support.google.com/googleplay/android-
+   * developer/answer/10463498#streaming_tax).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStreamingTaxType() {
+    return streamingTaxType;
+  }
+
+  /**
+   * To collect communications or amusement taxes in the United States, choose the appropriate tax
+   * category. By default Google will determine the collected rate based on the buyer ZIP code.
+   * [Learn more](https://support.google.com/googleplay/android-
+   * developer/answer/10463498#streaming_tax).
+   * @param streamingTaxType streamingTaxType or {@code null} for none
+   */
+  public RegionalTaxRateInfo setStreamingTaxType(java.lang.String streamingTaxType) {
+    this.streamingTaxType = streamingTaxType;
     return this;
   }
 

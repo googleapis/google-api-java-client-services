@@ -80,8 +80,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report will include all
-   * usage for the billing account, regardless of which project the usage occurred on. Only zero or
-   * one project can be specified currently.
+   * usage for the billing account, regardless of which project the usage occurred on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,8 +219,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report will include all
-   * usage for the billing account, regardless of which project the usage occurred on. Only zero or
-   * one project can be specified currently.
+   * usage for the billing account, regardless of which project the usage occurred on.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjects() {
@@ -231,8 +229,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report will include all
-   * usage for the billing account, regardless of which project the usage occurred on. Only zero or
-   * one project can be specified currently.
+   * usage for the billing account, regardless of which project the usage occurred on.
    * @param projects projects or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1Filter setProjects(java.util.List<java.lang.String> projects) {

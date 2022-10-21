@@ -3214,7 +3214,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         }
       }
       /**
-       * Updates reseller metadata associated with the device.
+       * Updates reseller metadata associated with the device. Android devices only.
        *
        * Create a request for the method "devices.metadata".
        *
@@ -3244,7 +3244,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates reseller metadata associated with the device.
+         * Updates reseller metadata associated with the device. Android devices only.
          *
          * Create a request for the method "devices.metadata".
          *
@@ -3608,7 +3608,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
       /**
        * Updates the reseller metadata attached to a batch of devices. This method updates devices
        * asynchronously and returns an `Operation` that can be used to track progress. Read [Long‑running
-       * batch operations](/zero-touch/guides/how-it-works#operations).
+       * batch operations](/zero-touch/guides/how-it-works#operations). Android Devices only.
        *
        * Create a request for the method "devices.updateMetadataAsync".
        *
@@ -3636,7 +3636,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         /**
          * Updates the reseller metadata attached to a batch of devices. This method updates devices
          * asynchronously and returns an `Operation` that can be used to track progress. Read
-         * [Long‑running batch operations](/zero-touch/guides/how-it-works#operations).
+         * [Long‑running batch operations](/zero-touch/guides/how-it-works#operations). Android Devices
+         * only.
          *
          * Create a request for the method "devices.updateMetadataAsync".
          *

@@ -54,6 +54,14 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String companyName;
 
   /**
+   * Output only. The Google Workspace account associated with this customer. Only used for customer
+   * Companies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleWorkspaceAccount googleWorkspaceAccount;
+
+  /**
    * Input only. The preferred locale of the customer represented as a BCP47 language code. This
    * field is validated on input and requests containing unsupported language codes will be
    * rejected. Supported language codes: Arabic (ar) Chinese (Hong Kong) (zh-HK) Chinese
@@ -157,6 +165,25 @@ public final class Company extends com.google.api.client.json.GenericJson {
    */
   public Company setCompanyName(java.lang.String companyName) {
     this.companyName = companyName;
+    return this;
+  }
+
+  /**
+   * Output only. The Google Workspace account associated with this customer. Only used for customer
+   * Companies.
+   * @return value or {@code null} for none
+   */
+  public GoogleWorkspaceAccount getGoogleWorkspaceAccount() {
+    return googleWorkspaceAccount;
+  }
+
+  /**
+   * Output only. The Google Workspace account associated with this customer. Only used for customer
+   * Companies.
+   * @param googleWorkspaceAccount googleWorkspaceAccount or {@code null} for none
+   */
+  public Company setGoogleWorkspaceAccount(GoogleWorkspaceAccount googleWorkspaceAccount) {
+    this.googleWorkspaceAccount = googleWorkspaceAccount;
     return this;
   }
 

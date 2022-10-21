@@ -31,11 +31,18 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class FindDevicesByOwnerRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of customer IDs to search for.
+   * The list of customer IDs to search for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> customerId;
+
+  /**
+   * The list of IDs of Google Workspace accounts to search for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> googleWorkspaceCustomerId;
 
   /**
    * Required. The maximum number of devices to show in a page of results. Must be between 1 and 100
@@ -60,7 +67,7 @@ public final class FindDevicesByOwnerRequest extends com.google.api.client.json.
   private java.lang.String sectionType;
 
   /**
-   * Required. The list of customer IDs to search for.
+   * The list of customer IDs to search for.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getCustomerId() {
@@ -68,11 +75,28 @@ public final class FindDevicesByOwnerRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. The list of customer IDs to search for.
+   * The list of customer IDs to search for.
    * @param customerId customerId or {@code null} for none
    */
   public FindDevicesByOwnerRequest setCustomerId(java.util.List<java.lang.Long> customerId) {
     this.customerId = customerId;
+    return this;
+  }
+
+  /**
+   * The list of IDs of Google Workspace accounts to search for.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGoogleWorkspaceCustomerId() {
+    return googleWorkspaceCustomerId;
+  }
+
+  /**
+   * The list of IDs of Google Workspace accounts to search for.
+   * @param googleWorkspaceCustomerId googleWorkspaceCustomerId or {@code null} for none
+   */
+  public FindDevicesByOwnerRequest setGoogleWorkspaceCustomerId(java.util.List<java.lang.String> googleWorkspaceCustomerId) {
+    this.googleWorkspaceCustomerId = googleWorkspaceCustomerId;
     return this;
   }
 

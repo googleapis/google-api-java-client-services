@@ -31,7 +31,7 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class PartnerClaim extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of the customer for whom the device is being claimed.
+   * The ID of the customer for whom the device is being claimed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -52,6 +52,20 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   private DeviceMetadata deviceMetadata;
 
   /**
+   * The Google Workspace customer ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String googleWorkspaceCustomerId;
+
+  /**
+   * Optional. Must and can only be set for Chrome OS devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preProvisioningToken;
+
+  /**
    * Required. The section type of the device's provisioning record.
    * The value may be {@code null}.
    */
@@ -59,7 +73,7 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   private java.lang.String sectionType;
 
   /**
-   * Required. The ID of the customer for whom the device is being claimed.
+   * The ID of the customer for whom the device is being claimed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCustomerId() {
@@ -67,7 +81,7 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the customer for whom the device is being claimed.
+   * The ID of the customer for whom the device is being claimed.
    * @param customerId customerId or {@code null} for none
    */
   public PartnerClaim setCustomerId(java.lang.Long customerId) {
@@ -106,6 +120,40 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
    */
   public PartnerClaim setDeviceMetadata(DeviceMetadata deviceMetadata) {
     this.deviceMetadata = deviceMetadata;
+    return this;
+  }
+
+  /**
+   * The Google Workspace customer ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGoogleWorkspaceCustomerId() {
+    return googleWorkspaceCustomerId;
+  }
+
+  /**
+   * The Google Workspace customer ID.
+   * @param googleWorkspaceCustomerId googleWorkspaceCustomerId or {@code null} for none
+   */
+  public PartnerClaim setGoogleWorkspaceCustomerId(java.lang.String googleWorkspaceCustomerId) {
+    this.googleWorkspaceCustomerId = googleWorkspaceCustomerId;
+    return this;
+  }
+
+  /**
+   * Optional. Must and can only be set for Chrome OS devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreProvisioningToken() {
+    return preProvisioningToken;
+  }
+
+  /**
+   * Optional. Must and can only be set for Chrome OS devices.
+   * @param preProvisioningToken preProvisioningToken or {@code null} for none
+   */
+  public PartnerClaim setPreProvisioningToken(java.lang.String preProvisioningToken) {
+    this.preProvisioningToken = preProvisioningToken;
     return this;
   }
 

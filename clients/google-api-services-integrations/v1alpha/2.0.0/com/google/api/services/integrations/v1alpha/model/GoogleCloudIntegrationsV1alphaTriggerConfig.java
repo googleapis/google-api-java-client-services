@@ -47,6 +47,13 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   }
 
   /**
+   * Optional. Cloud Scheduler Trigger related metadata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaCloudSchedulerConfig cloudSchedulerConfig;
+
+  /**
    * Optional. User-provided description intended to give additional business context about the
    * task.
    * The value may be {@code null}.
@@ -134,6 +141,23 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   public GoogleCloudIntegrationsV1alphaTriggerConfig setAlertConfig(java.util.List<GoogleCloudIntegrationsV1alphaIntegrationAlertConfig> alertConfig) {
     this.alertConfig = alertConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Scheduler Trigger related metadata
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig getCloudSchedulerConfig() {
+    return cloudSchedulerConfig;
+  }
+
+  /**
+   * Optional. Cloud Scheduler Trigger related metadata
+   * @param cloudSchedulerConfig cloudSchedulerConfig or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setCloudSchedulerConfig(GoogleCloudIntegrationsV1alphaCloudSchedulerConfig cloudSchedulerConfig) {
+    this.cloudSchedulerConfig = cloudSchedulerConfig;
     return this;
   }
 

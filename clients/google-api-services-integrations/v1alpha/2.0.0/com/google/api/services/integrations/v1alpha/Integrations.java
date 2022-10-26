@@ -25,7 +25,7 @@ package com.google.api.services.integrations.v1alpha;
  *
  * <p>
  * For more information about this service, see the
- * <a href="http://www.google.com" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/application-integration" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -4059,22 +4059,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             /** List of possible task statuses. */
             public List setFilterParamsTaskStatuses(java.util.List<java.lang.String> filterParamsTaskStatuses) {
               this.filterParamsTaskStatuses = filterParamsTaskStatuses;
-              return this;
-            }
-
-            /** Trigger id. */
-            @com.google.api.client.util.Key("filterParams.triggerId")
-            private java.lang.String filterParamsTriggerId;
-
-            /** Trigger id.
-             */
-            public java.lang.String getFilterParamsTriggerId() {
-              return filterParamsTriggerId;
-            }
-
-            /** Trigger id. */
-            public List setFilterParamsTriggerId(java.lang.String filterParamsTriggerId) {
-              this.filterParamsTriggerId = filterParamsTriggerId;
               return this;
             }
 
@@ -9441,22 +9425,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               /** List of possible task statuses. */
               public List setFilterParamsTaskStatuses(java.util.List<java.lang.String> filterParamsTaskStatuses) {
                 this.filterParamsTaskStatuses = filterParamsTaskStatuses;
-                return this;
-              }
-
-              /** Trigger id. */
-              @com.google.api.client.util.Key("filterParams.triggerId")
-              private java.lang.String filterParamsTriggerId;
-
-              /** Trigger id.
-               */
-              public java.lang.String getFilterParamsTriggerId() {
-                return filterParamsTriggerId;
-              }
-
-              /** Trigger id. */
-              public List setFilterParamsTriggerId(java.lang.String filterParamsTriggerId) {
-                this.filterParamsTriggerId = filterParamsTriggerId;
                 return this;
               }
 

@@ -71,6 +71,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The globally unique identifier of the service in the UUID4 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Optional. Annotations for the service. This data can be consumed by service clients.
    * Restrictions: * The entire annotations dictionary may contain up to 2000 characters, spread
    * accoss all key-value pairs. Annotations that go beyond this limit are rejected * Valid
@@ -142,6 +149,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The globally unique identifier of the service in the UUID4 format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. The globally unique identifier of the service in the UUID4 format.
+   * @param uid uid or {@code null} for none
+   */
+  public Service setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

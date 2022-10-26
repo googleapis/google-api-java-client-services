@@ -133,6 +133,23 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.Integer maxBadRecords;
 
   /**
+   * [Optional] Metadata Cache Mode for the table. Set this to enable caching of metadata from
+   * external data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metadataCacheMode;
+
+  /**
+   * ObjectMetadata is used to create Object Tables. Object Tables contain a listing of objects
+   * (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format should
+   * be omitted. Currently SIMPLE is the only supported Object Metadata type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String objectMetadata;
+
+  /**
    * Additional properties to set if sourceFormat is set to Parquet.
    * The value may be {@code null}.
    */
@@ -413,6 +430,46 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setMaxBadRecords(java.lang.Integer maxBadRecords) {
     this.maxBadRecords = maxBadRecords;
+    return this;
+  }
+
+  /**
+   * [Optional] Metadata Cache Mode for the table. Set this to enable caching of metadata from
+   * external data source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetadataCacheMode() {
+    return metadataCacheMode;
+  }
+
+  /**
+   * [Optional] Metadata Cache Mode for the table. Set this to enable caching of metadata from
+   * external data source.
+   * @param metadataCacheMode metadataCacheMode or {@code null} for none
+   */
+  public ExternalDataConfiguration setMetadataCacheMode(java.lang.String metadataCacheMode) {
+    this.metadataCacheMode = metadataCacheMode;
+    return this;
+  }
+
+  /**
+   * ObjectMetadata is used to create Object Tables. Object Tables contain a listing of objects
+   * (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format should
+   * be omitted. Currently SIMPLE is the only supported Object Metadata type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObjectMetadata() {
+    return objectMetadata;
+  }
+
+  /**
+   * ObjectMetadata is used to create Object Tables. Object Tables contain a listing of objects
+   * (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format should
+   * be omitted. Currently SIMPLE is the only supported Object Metadata type.
+   * @param objectMetadata objectMetadata or {@code null} for none
+   */
+  public ExternalDataConfiguration setObjectMetadata(java.lang.String objectMetadata) {
+    this.objectMetadata = objectMetadata;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * An action to reset a fully managed device or delete a work profile. Note: blockAction must also
+ * An action to reset a company owned device or delete a work profile. Note: blockAction must also
  * be specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

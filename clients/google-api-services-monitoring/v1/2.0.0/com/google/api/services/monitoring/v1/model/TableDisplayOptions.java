@@ -29,6 +29,30 @@ package com.google.api.services.monitoring.v1.model;
 @SuppressWarnings("javadoc")
 public final class TableDisplayOptions extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> shownColumns;
+
+  /**
+   * Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getShownColumns() {
+    return shownColumns;
+  }
+
+  /**
+   * Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings
+   * @param shownColumns shownColumns or {@code null} for none
+   */
+  public TableDisplayOptions setShownColumns(java.util.List<java.lang.String> shownColumns) {
+    this.shownColumns = shownColumns;
+    return this;
+  }
+
   @Override
   public TableDisplayOptions set(String fieldName, Object value) {
     return (TableDisplayOptions) super.set(fieldName, value);

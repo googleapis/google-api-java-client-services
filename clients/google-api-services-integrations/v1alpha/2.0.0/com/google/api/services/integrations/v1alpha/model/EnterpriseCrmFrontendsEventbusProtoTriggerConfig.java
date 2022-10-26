@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1alpha.model;
 
 /**
- * Configuration detail of a trigger. Next available id: 16
+ * Configuration detail of a trigger. Next available id: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -45,6 +45,12 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(EnterpriseCrmEventbusProtoWorkflowAlertConfig.class);
   }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnterpriseCrmEventbusProtoCloudSchedulerConfig cloudSchedulerConfig;
 
   /**
    * User-provided description intended to give more business context about the task.
@@ -168,6 +174,21 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setAlertConfig(java.util.List<EnterpriseCrmEventbusProtoWorkflowAlertConfig> alertConfig) {
     this.alertConfig = alertConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoCloudSchedulerConfig getCloudSchedulerConfig() {
+    return cloudSchedulerConfig;
+  }
+
+  /**
+   * @param cloudSchedulerConfig cloudSchedulerConfig or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setCloudSchedulerConfig(EnterpriseCrmEventbusProtoCloudSchedulerConfig cloudSchedulerConfig) {
+    this.cloudSchedulerConfig = cloudSchedulerConfig;
     return this;
   }
 

@@ -30,13 +30,15 @@ package com.google.api.services.admob.v1beta.model;
 public final class AdUnit extends com.google.api.client.json.GenericJson {
 
   /**
-   * AdFormat of the ad unit. Possible values are as follows: "BANNER" - Banner ad format.
-   * "BANNER_INTERSTITIAL" - Legacy format that can be used as either banner or interstitial. This
-   * format can no longer be created but can be targeted by mediation groups. "INTERSTITIAL" - A
-   * full screen ad. Supported ad types are "RICH_MEDIA" and "VIDEO". "NATIVE" - Native ad format.
-   * "REWARDED" - An ad that, once viewed, gets a callback verifying the view so that a reward can
-   * be given to the user. Supported ad types are "RICH_MEDIA" (interactive) and video where video
-   * can not be excluded.
+   * AdFormat of the ad unit. Possible values are as follows: "APP_OPEN" - App Open ad format.
+   * "BANNER" - Banner ad format. "BANNER_INTERSTITIAL" - Legacy format that can be used as either
+   * banner or interstitial. This format can no longer be created but can be targeted by mediation
+   * groups. "INTERSTITIAL" - A full screen ad. Supported ad types are "RICH_MEDIA" and "VIDEO".
+   * "NATIVE" - Native ad format. "REWARDED" - An ad that, once viewed, gets a callback verifying
+   * the view so that a reward can be given to the user. Supported ad types are "RICH_MEDIA"
+   * (interactive) and video where video can not be excluded. "REWARDED_INTERSTITIAL" - Rewarded
+   * Interstitial ad format. Only supports video ad type. See
+   * https://support.google.com/admob/answer/9884467.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,13 +85,15 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * AdFormat of the ad unit. Possible values are as follows: "BANNER" - Banner ad format.
-   * "BANNER_INTERSTITIAL" - Legacy format that can be used as either banner or interstitial. This
-   * format can no longer be created but can be targeted by mediation groups. "INTERSTITIAL" - A
-   * full screen ad. Supported ad types are "RICH_MEDIA" and "VIDEO". "NATIVE" - Native ad format.
-   * "REWARDED" - An ad that, once viewed, gets a callback verifying the view so that a reward can
-   * be given to the user. Supported ad types are "RICH_MEDIA" (interactive) and video where video
-   * can not be excluded.
+   * AdFormat of the ad unit. Possible values are as follows: "APP_OPEN" - App Open ad format.
+   * "BANNER" - Banner ad format. "BANNER_INTERSTITIAL" - Legacy format that can be used as either
+   * banner or interstitial. This format can no longer be created but can be targeted by mediation
+   * groups. "INTERSTITIAL" - A full screen ad. Supported ad types are "RICH_MEDIA" and "VIDEO".
+   * "NATIVE" - Native ad format. "REWARDED" - An ad that, once viewed, gets a callback verifying
+   * the view so that a reward can be given to the user. Supported ad types are "RICH_MEDIA"
+   * (interactive) and video where video can not be excluded. "REWARDED_INTERSTITIAL" - Rewarded
+   * Interstitial ad format. Only supports video ad type. See
+   * https://support.google.com/admob/answer/9884467.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdFormat() {
@@ -97,13 +101,15 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AdFormat of the ad unit. Possible values are as follows: "BANNER" - Banner ad format.
-   * "BANNER_INTERSTITIAL" - Legacy format that can be used as either banner or interstitial. This
-   * format can no longer be created but can be targeted by mediation groups. "INTERSTITIAL" - A
-   * full screen ad. Supported ad types are "RICH_MEDIA" and "VIDEO". "NATIVE" - Native ad format.
-   * "REWARDED" - An ad that, once viewed, gets a callback verifying the view so that a reward can
-   * be given to the user. Supported ad types are "RICH_MEDIA" (interactive) and video where video
-   * can not be excluded.
+   * AdFormat of the ad unit. Possible values are as follows: "APP_OPEN" - App Open ad format.
+   * "BANNER" - Banner ad format. "BANNER_INTERSTITIAL" - Legacy format that can be used as either
+   * banner or interstitial. This format can no longer be created but can be targeted by mediation
+   * groups. "INTERSTITIAL" - A full screen ad. Supported ad types are "RICH_MEDIA" and "VIDEO".
+   * "NATIVE" - Native ad format. "REWARDED" - An ad that, once viewed, gets a callback verifying
+   * the view so that a reward can be given to the user. Supported ad types are "RICH_MEDIA"
+   * (interactive) and video where video can not be excluded. "REWARDED_INTERSTITIAL" - Rewarded
+   * Interstitial ad format. Only supports video ad type. See
+   * https://support.google.com/admob/answer/9884467.
    * @param adFormat adFormat or {@code null} for none
    */
   public AdUnit setAdFormat(java.lang.String adFormat) {

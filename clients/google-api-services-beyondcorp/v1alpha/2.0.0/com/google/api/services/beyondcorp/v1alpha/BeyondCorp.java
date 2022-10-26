@@ -1024,6 +1024,515 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
         }
 
       }
+      /**
+       * An accessor for creating requests from the Subscriptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
+       *   {@code BeyondCorp.Subscriptions.List request = beyondcorp.subscriptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Subscriptions subscriptions() {
+        return new Subscriptions();
+      }
+
+      /**
+       * The "subscriptions" collection of methods.
+       */
+      public class Subscriptions {
+
+        /**
+         * Creates a new BeyondCorp Enterprise Subscription in a given organization. Location will always be
+         * global as BeyondCorp subscriptions are per organization.
+         *
+         * Create a request for the method "subscriptions.create".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the subscription location using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+         * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new BeyondCorp Enterprise Subscription in a given organization. Location will always
+           * be global as BeyondCorp subscriptions are per organization.
+           *
+           * Create a request for the method "subscriptions.create".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the subscription location using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+           * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription content) {
+            super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the subscription location using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the subscription location using the form:
+         `organizations/{organization_id}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the subscription location using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single Subscription.
+         *
+         * Create a request for the method "subscriptions.get".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of Subscription using the form:
+         *        `organizations/{organization_id}/locations/{location}/subscriptions/{subscription_id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Gets details of a single Subscription.
+           *
+           * Create a request for the method "subscriptions.get".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of Subscription using the form:
+         *        `organizations/{organization_id}/locations/{location}/subscriptions/{subscription_id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of Subscription using the form:
+           * `organizations/{organization_id}/locations/{location}/subscriptions/{subscription_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of Subscription using the form:
+         `organizations/{organization_id}/locations/{location}/subscriptions/{subscription_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of Subscription using the form:
+           * `organizations/{organization_id}/locations/{location}/subscriptions/{subscription_id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Subscriptions in a given organization and location.
+         *
+         * Create a request for the method "subscriptions.list".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of Subscription using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaListSubscriptionsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Subscriptions in a given organization and location.
+           *
+           * Create a request for the method "subscriptions.list".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of Subscription using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaListSubscriptionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of Subscription using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of Subscription using the form:
+         `organizations/{organization_id}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of Subscription using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If not specified, a default value of
+           * 50 will be used by the service. Regardless of the page_size value, the response may
+           * include a partial list and a caller should only rely on response's next_page_token to
+           * determine if there are more instances left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If not specified, a default value of 50 will be
+         used by the service. Regardless of the page_size value, the response may include a partial list and
+         a caller should only rely on response's next_page_token to determine if there are more instances
+         left to be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If not specified, a default value of
+           * 50 will be used by the service. Regardless of the page_size value, the response may
+           * include a partial list and a caller should only rely on response's next_page_token to
+           * determine if there are more instances left to be queried.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The next_page_token value returned from a previous ListSubscriptionsRequest,
+           * if any.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous ListSubscriptionsRequest, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The next_page_token value returned from a previous ListSubscriptionsRequest,
+           * if any.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 
@@ -14285,586 +14794,6 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
       public class NetConnections {
 
         /**
-         * Creates a new NetConnection in a given project and location.
-         *
-         * Create a request for the method "netConnections.create".
-         *
-         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource project name of the NetConnection location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-         * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
-
-          private static final String REST_PATH = "v1alpha/{+parent}/netConnections";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Creates a new NetConnection in a given project and location.
-           *
-           * Create a request for the method "netConnections.create".
-           *
-           * This request holds the parameters needed by the the beyondcorp server.  After setting any
-           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource project name of the NetConnection location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-           * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection content) {
-            super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The resource project name of the NetConnection location using the form:
-           * `projects/{project_id}/locations/{location_id}`
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource project name of the NetConnection location using the form:
-         `projects/{project_id}/locations/{location_id}`
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The resource project name of the NetConnection location using the form:
-           * `projects/{project_id}/locations/{location_id}`
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Optional. User-settable NetConnection resource ID. * Must start with a letter. * Must
-           * contain between 4-63 characters from `/a-z-/`. * Must end with a number or a letter.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String netConnectionId;
-
-          /** Optional. User-settable NetConnection resource ID. * Must start with a letter. * Must contain
-         between 4-63 characters from `/a-z-/`. * Must end with a number or a letter.
-           */
-          public java.lang.String getNetConnectionId() {
-            return netConnectionId;
-          }
-
-          /**
-           * Optional. User-settable NetConnection resource ID. * Must start with a letter. * Must
-           * contain between 4-63 characters from `/a-z-/`. * Must end with a number or a letter.
-           */
-          public Create setNetConnectionId(java.lang.String netConnectionId) {
-            this.netConnectionId = netConnectionId;
-            return this;
-          }
-
-          /**
-           * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String requestId;
-
-          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          public java.lang.String getRequestId() {
-            return requestId;
-          }
-
-          /**
-           * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          public Create setRequestId(java.lang.String requestId) {
-            this.requestId = requestId;
-            return this;
-          }
-
-          /**
-           * Optional. If set, validates request by executing a dry-run which would not alter the
-           * resource in any way.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean validateOnly;
-
-          /** Optional. If set, validates request by executing a dry-run which would not alter the resource in
-         any way.
-           */
-          public java.lang.Boolean getValidateOnly() {
-            return validateOnly;
-          }
-
-          /**
-           * Optional. If set, validates request by executing a dry-run which would not alter the
-           * resource in any way.
-           */
-          public Create setValidateOnly(java.lang.Boolean validateOnly) {
-            this.validateOnly = validateOnly;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Deletes a single NetConnection.
-         *
-         * Create a request for the method "netConnections.delete".
-         *
-         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. BeyondCorp Connector name using the form:
-         *        `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
-
-          private static final String REST_PATH = "v1alpha/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-
-          /**
-           * Deletes a single NetConnection.
-           *
-           * Create a request for the method "netConnections.delete".
-           *
-           * This request holds the parameters needed by the the beyondcorp server.  After setting any
-           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. BeyondCorp Connector name using the form:
-         *        `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(BeyondCorp.this, "DELETE", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. BeyondCorp Connector name using the form:
-           * `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. BeyondCorp Connector name using the form:
-         `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. BeyondCorp Connector name using the form:
-           * `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /**
-           * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String requestId;
-
-          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes after the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          public java.lang.String getRequestId() {
-            return requestId;
-          }
-
-          /**
-           * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          public Delete setRequestId(java.lang.String requestId) {
-            this.requestId = requestId;
-            return this;
-          }
-
-          /**
-           * Optional. If set, validates request by executing a dry-run which would not alter the
-           * resource in any way.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean validateOnly;
-
-          /** Optional. If set, validates request by executing a dry-run which would not alter the resource in
-         any way.
-           */
-          public java.lang.Boolean getValidateOnly() {
-            return validateOnly;
-          }
-
-          /**
-           * Optional. If set, validates request by executing a dry-run which would not alter the
-           * resource in any way.
-           */
-          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
-            this.validateOnly = validateOnly;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Gets details of a single NetConnection.
-         *
-         * Create a request for the method "netConnections.get".
-         *
-         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. BeyondCorp NetConnection name using the form:
-         *        `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection> {
-
-          private static final String REST_PATH = "v1alpha/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-
-          /**
-           * Gets details of a single NetConnection.
-           *
-           * Create a request for the method "netConnections.get".
-           *
-           * This request holds the parameters needed by the the beyondcorp server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. BeyondCorp NetConnection name using the form:
-         *        `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. BeyondCorp NetConnection name using the form:
-           * `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. BeyondCorp NetConnection name using the form:
-         `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. BeyondCorp NetConnection name using the form:
-           * `projects/{project_id}/locations/{location_id}/netConnections/{net_connection_id}`
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -15060,493 +14989,6 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Lists NetConnections in a given project and location.
-         *
-         * Create a request for the method "netConnections.list".
-         *
-         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of the NetConnection location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaListNetConnectionsResponse> {
-
-          private static final String REST_PATH = "v1alpha/{+parent}/netConnections";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Lists NetConnections in a given project and location.
-           *
-           * Create a request for the method "netConnections.list".
-           *
-           * This request holds the parameters needed by the the beyondcorp server.  After setting any
-           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of the NetConnection location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaListNetConnectionsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The resource name of the NetConnection location using the form:
-           * `projects/{project_id}/locations/{location_id}`
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of the NetConnection location using the form:
-         `projects/{project_id}/locations/{location_id}`
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The resource name of the NetConnection location using the form:
-           * `projects/{project_id}/locations/{location_id}`
-           */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** Optional. A filter specifying constraints of a list operation. */
-          @com.google.api.client.util.Key
-          private java.lang.String filter;
-
-          /** Optional. A filter specifying constraints of a list operation.
-           */
-          public java.lang.String getFilter() {
-            return filter;
-          }
-
-          /** Optional. A filter specifying constraints of a list operation. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
-            return this;
-          }
-
-          /**
-           * Optional. Specifies the ordering of results. See [Sorting
-           * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
-           * information.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String orderBy;
-
-          /** Optional. Specifies the ordering of results. See [Sorting
-         order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more information.
-           */
-          public java.lang.String getOrderBy() {
-            return orderBy;
-          }
-
-          /**
-           * Optional. Specifies the ordering of results. See [Sorting
-           * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
-           * information.
-           */
-          public List setOrderBy(java.lang.String orderBy) {
-            this.orderBy = orderBy;
-            return this;
-          }
-
-          /**
-           * Optional. The maximum number of items to return. If not specified, a default value of
-           * 50 will be used by the service. Regardless of the page_size value, the response may
-           * include a partial list and a caller should only rely on response's next_page_token to
-           * determine if there are more instances left to be queried.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The maximum number of items to return. If not specified, a default value of 50 will be
-         used by the service. Regardless of the page_size value, the response may include a partial list and
-         a caller should only rely on response's next_page_token to determine if there are more instances
-         left to be queried.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Optional. The maximum number of items to return. If not specified, a default value of
-           * 50 will be used by the service. Regardless of the page_size value, the response may
-           * include a partial list and a caller should only rely on response's next_page_token to
-           * determine if there are more instances left to be queried.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * Optional. The next_page_token value returned from a previous ListNetConnectionsRequest,
-           * if any.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Optional. The next_page_token value returned from a previous ListNetConnectionsRequest, if any.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * Optional. The next_page_token value returned from a previous ListNetConnectionsRequest,
-           * if any.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Updates the parameters of a single NetConnection.
-         *
-         * Create a request for the method "netConnections.patch".
-         *
-         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. Unique resource name of the NetConnection. The name is ignored when creating a
-         *        NetConnection.
-         * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection}
-         * @return the request
-         */
-        public Patch patch(java.lang.String name, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection content) throws java.io.IOException {
-          Patch result = new Patch(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Patch extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
-
-          private static final String REST_PATH = "v1alpha/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-
-          /**
-           * Updates the parameters of a single NetConnection.
-           *
-           * Create a request for the method "netConnections.patch".
-           *
-           * This request holds the parameters needed by the the beyondcorp server.  After setting any
-           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. Unique resource name of the NetConnection. The name is ignored when creating a
-         *        NetConnection.
-           * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection}
-           * @since 1.13
-           */
-          protected Patch(java.lang.String name, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpNetconnectionsV1alphaNetConnection content) {
-            super(BeyondCorp.this, "PATCH", REST_PATH, content, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-            }
-          }
-
-          @Override
-          public Patch set$Xgafv(java.lang.String $Xgafv) {
-            return (Patch) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Patch setAlt(java.lang.String alt) {
-            return (Patch) super.setAlt(alt);
-          }
-
-          @Override
-          public Patch setCallback(java.lang.String callback) {
-            return (Patch) super.setCallback(callback);
-          }
-
-          @Override
-          public Patch setFields(java.lang.String fields) {
-            return (Patch) super.setFields(fields);
-          }
-
-          @Override
-          public Patch setKey(java.lang.String key) {
-            return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Patch) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Patch setQuotaUser(java.lang.String quotaUser) {
-            return (Patch) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Patch setUploadType(java.lang.String uploadType) {
-            return (Patch) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Patch) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Unique resource name of the NetConnection. The name is ignored when creating
-           * a NetConnection.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. Unique resource name of the NetConnection. The name is ignored when creating a
-         NetConnection.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. Unique resource name of the NetConnection. The name is ignored when creating
-           * a NetConnection.
-           */
-          public Patch setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/netConnections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /** Optional. If set as true, will create the resource if it is not found. */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean allowMissing;
-
-          /** Optional. If set as true, will create the resource if it is not found.
-           */
-          public java.lang.Boolean getAllowMissing() {
-            return allowMissing;
-          }
-
-          /** Optional. If set as true, will create the resource if it is not found. */
-          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
-            this.allowMissing = allowMissing;
-            return this;
-          }
-
-          /**
-           * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String requestId;
-
-          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          public java.lang.String getRequestId() {
-            return requestId;
-          }
-
-          /**
-           * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-           */
-          public Patch setRequestId(java.lang.String requestId) {
-            this.requestId = requestId;
-            return this;
-          }
-
-          /**
-           * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * The elements of the repeated paths field may only include these fields from
-           * [BeyondCorp.NetConnection]: * `labels` * `display_name`
-           */
-          @com.google.api.client.util.Key
-          private String updateMask;
-
-          /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
-         of the repeated paths field may only include these fields from [BeyondCorp.NetConnection]: *
-         `labels` * `display_name`
-           */
-          public String getUpdateMask() {
-            return updateMask;
-          }
-
-          /**
-           * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * The elements of the repeated paths field may only include these fields from
-           * [BeyondCorp.NetConnection]: * `labels` * `display_name`
-           */
-          public Patch setUpdateMask(String updateMask) {
-            this.updateMask = updateMask;
-            return this;
-          }
-
-          /**
-           * Optional. If set, validates request by executing a dry-run which would not alter the
-           * resource in any way.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean validateOnly;
-
-          /** Optional. If set, validates request by executing a dry-run which would not alter the resource in
-         any way.
-           */
-          public java.lang.Boolean getValidateOnly() {
-            return validateOnly;
-          }
-
-          /**
-           * Optional. If set, validates request by executing a dry-run which would not alter the
-           * resource in any way.
-           */
-          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
-            this.validateOnly = validateOnly;
-            return this;
-          }
-
-          @Override
-          public Patch set(String parameterName, Object value) {
-            return (Patch) super.set(parameterName, value);
           }
         }
         /**

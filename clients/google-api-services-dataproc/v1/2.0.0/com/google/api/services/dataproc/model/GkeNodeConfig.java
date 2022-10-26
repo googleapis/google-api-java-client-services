@@ -75,17 +75,22 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String minCpuPlatform;
 
   /**
-   * Optional. Whether the nodes are created as preemptible VM instances
-   * (https://cloud.google.com/compute/docs/instances/preemptible). Preemptible nodes cannot be used
-   * in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is
-   * not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+   * Optional. Whether the nodes are created as legacy preemptible VM instances
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Also see Spot VMs, preemptible
+   * VM instances without a maximum lifetime. Legacy and Spot preemptible nodes cannot be used in a
+   * node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is not
+   * assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preemptible;
 
   /**
-   * Optional. Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+   * Optional. Whether the nodes are created as Spot VM instances
+   * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the latest update to
+   * legacy preemptible VMs. Spot VMs do not have a maximum lifetime. Legacy and Spot preemptible
+   * nodes cannot be used in a node pool with the CONTROLLER role or in the DEFAULT node pool if the
+   * CONTROLLER role is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,10 +202,11 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Whether the nodes are created as preemptible VM instances
-   * (https://cloud.google.com/compute/docs/instances/preemptible). Preemptible nodes cannot be used
-   * in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is
-   * not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+   * Optional. Whether the nodes are created as legacy preemptible VM instances
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Also see Spot VMs, preemptible
+   * VM instances without a maximum lifetime. Legacy and Spot preemptible nodes cannot be used in a
+   * node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is not
+   * assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -208,10 +214,11 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Whether the nodes are created as preemptible VM instances
-   * (https://cloud.google.com/compute/docs/instances/preemptible). Preemptible nodes cannot be used
-   * in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is
-   * not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+   * Optional. Whether the nodes are created as legacy preemptible VM instances
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Also see Spot VMs, preemptible
+   * VM instances without a maximum lifetime. Legacy and Spot preemptible nodes cannot be used in a
+   * node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is not
+   * assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * @param preemptible preemptible or {@code null} for none
    */
   public GkeNodeConfig setPreemptible(java.lang.Boolean preemptible) {
@@ -220,7 +227,11 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+   * Optional. Whether the nodes are created as Spot VM instances
+   * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the latest update to
+   * legacy preemptible VMs. Spot VMs do not have a maximum lifetime. Legacy and Spot preemptible
+   * nodes cannot be used in a node pool with the CONTROLLER role or in the DEFAULT node pool if the
+   * CONTROLLER role is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSpot() {
@@ -228,7 +239,11 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+   * Optional. Whether the nodes are created as Spot VM instances
+   * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the latest update to
+   * legacy preemptible VMs. Spot VMs do not have a maximum lifetime. Legacy and Spot preemptible
+   * nodes cannot be used in a node pool with the CONTROLLER role or in the DEFAULT node pool if the
+   * CONTROLLER role is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * @param spot spot or {@code null} for none
    */
   public GkeNodeConfig setSpot(java.lang.Boolean spot) {

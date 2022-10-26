@@ -91,7 +91,7 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * `results.metadata` field in the prediction response. * `returnScore`: Boolean. If set to true,
    * the prediction 'score' corresponding to each returned product will be set in the
    * `results.metadata` field in the prediction response. The given 'score' indicates the
-   * probability of an product being clicked/purchased given the user's context and history. *
+   * probability of a product being clicked/purchased given the user's context and history. *
    * `strictFiltering`: Boolean. True by default. If set to false, the service will return generic
    * (unfiltered) popular products instead of empty if your filter blocks all prediction results. *
    * `priceRerankLevel`: String. Default empty. If set to be non-empty, then it needs to be one of
@@ -259,7 +259,7 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * `results.metadata` field in the prediction response. * `returnScore`: Boolean. If set to true,
    * the prediction 'score' corresponding to each returned product will be set in the
    * `results.metadata` field in the prediction response. The given 'score' indicates the
-   * probability of an product being clicked/purchased given the user's context and history. *
+   * probability of a product being clicked/purchased given the user's context and history. *
    * `strictFiltering`: Boolean. True by default. If set to false, the service will return generic
    * (unfiltered) popular products instead of empty if your filter blocks all prediction results. *
    * `priceRerankLevel`: String. Default empty. If set to be non-empty, then it needs to be one of
@@ -282,7 +282,7 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * `results.metadata` field in the prediction response. * `returnScore`: Boolean. If set to true,
    * the prediction 'score' corresponding to each returned product will be set in the
    * `results.metadata` field in the prediction response. The given 'score' indicates the
-   * probability of an product being clicked/purchased given the user's context and history. *
+   * probability of a product being clicked/purchased given the user's context and history. *
    * `strictFiltering`: Boolean. True by default. If set to false, the service will return generic
    * (unfiltered) popular products instead of empty if your filter blocks all prediction results. *
    * `priceRerankLevel`: String. Default empty. If set to be non-empty, then it needs to be one of

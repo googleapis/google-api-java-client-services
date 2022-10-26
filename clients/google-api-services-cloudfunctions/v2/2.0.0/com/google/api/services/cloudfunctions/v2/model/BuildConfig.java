@@ -37,10 +37,28 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String build;
 
   /**
-   * Optional. User managed repository created in Artifact Registry optionally with a customer
-   * managed encryption key. This is the repository to which the function docker image will be
-   * pushed after it is built by Cloud Build. If unspecified, GCF will create and use a repository
-   * named 'gcf-artifacts' for every deployed region. It must match the pattern
+   * Specifies one of the Google provided buildpack stacks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildpackStack;
+
+  /**
+   * Optional. Docker Registry to use for this deployment. This configuration is only applicable to
+   * 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository`
+   * field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If
+   * unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the
+   * backend for eligible deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dockerRegistry;
+
+  /**
+   * User managed repository created in Artifact Registry optionally with a customer managed
+   * encryption key. This is the repository to which the function docker image will be pushed after
+   * it is built by Cloud Build. If unspecified, GCF will create and use a repository named 'gcf-
+   * artifacts' for every deployed region. It must match the pattern
    * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
    * are not supported. Cross-location repositories are not supported. Repository format must be
    * 'DOCKER'.
@@ -120,10 +138,52 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User managed repository created in Artifact Registry optionally with a customer
-   * managed encryption key. This is the repository to which the function docker image will be
-   * pushed after it is built by Cloud Build. If unspecified, GCF will create and use a repository
-   * named 'gcf-artifacts' for every deployed region. It must match the pattern
+   * Specifies one of the Google provided buildpack stacks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildpackStack() {
+    return buildpackStack;
+  }
+
+  /**
+   * Specifies one of the Google provided buildpack stacks.
+   * @param buildpackStack buildpackStack or {@code null} for none
+   */
+  public BuildConfig setBuildpackStack(java.lang.String buildpackStack) {
+    this.buildpackStack = buildpackStack;
+    return this;
+  }
+
+  /**
+   * Optional. Docker Registry to use for this deployment. This configuration is only applicable to
+   * 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository`
+   * field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If
+   * unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the
+   * backend for eligible deployments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDockerRegistry() {
+    return dockerRegistry;
+  }
+
+  /**
+   * Optional. Docker Registry to use for this deployment. This configuration is only applicable to
+   * 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository`
+   * field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If
+   * unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the
+   * backend for eligible deployments.
+   * @param dockerRegistry dockerRegistry or {@code null} for none
+   */
+  public BuildConfig setDockerRegistry(java.lang.String dockerRegistry) {
+    this.dockerRegistry = dockerRegistry;
+    return this;
+  }
+
+  /**
+   * User managed repository created in Artifact Registry optionally with a customer managed
+   * encryption key. This is the repository to which the function docker image will be pushed after
+   * it is built by Cloud Build. If unspecified, GCF will create and use a repository named 'gcf-
+   * artifacts' for every deployed region. It must match the pattern
    * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
    * are not supported. Cross-location repositories are not supported. Repository format must be
    * 'DOCKER'.
@@ -134,10 +194,10 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User managed repository created in Artifact Registry optionally with a customer
-   * managed encryption key. This is the repository to which the function docker image will be
-   * pushed after it is built by Cloud Build. If unspecified, GCF will create and use a repository
-   * named 'gcf-artifacts' for every deployed region. It must match the pattern
+   * User managed repository created in Artifact Registry optionally with a customer managed
+   * encryption key. This is the repository to which the function docker image will be pushed after
+   * it is built by Cloud Build. If unspecified, GCF will create and use a repository named 'gcf-
+   * artifacts' for every deployed region. It must match the pattern
    * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
    * are not supported. Cross-location repositories are not supported. Repository format must be
    * 'DOCKER'.

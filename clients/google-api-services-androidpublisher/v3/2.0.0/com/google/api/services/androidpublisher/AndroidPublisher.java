@@ -20,7 +20,7 @@ package com.google.api.services.androidpublisher;
  * Service definition for AndroidPublisher (v3).
  *
  * <p>
- * Lets Android application developers access their Google Play accounts.
+ * Lets Android application developers access their Google Play accounts. At a high level, the expected workflow is to "insert" an Edit, make changes as necessary, and then "commit" it. 
  * </p>
  *
  * <p>

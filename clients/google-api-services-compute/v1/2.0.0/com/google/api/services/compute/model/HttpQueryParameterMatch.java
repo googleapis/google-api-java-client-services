@@ -57,8 +57,8 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
    * specified by regexMatch. For more information about regular expression syntax, see Syntax. Only
-   * one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the
-   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * one of presentMatch, exactMatch, or regexMatch must be set. Regular expressions can only be
+   * used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +126,8 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
    * specified by regexMatch. For more information about regular expression syntax, see Syntax. Only
-   * one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the
-   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * one of presentMatch, exactMatch, or regexMatch must be set. Regular expressions can only be
+   * used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -137,8 +137,8 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
    * specified by regexMatch. For more information about regular expression syntax, see Syntax. Only
-   * one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the
-   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * one of presentMatch, exactMatch, or regexMatch must be set. Regular expressions can only be
+   * used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpQueryParameterMatch setRegexMatch(java.lang.String regexMatch) {

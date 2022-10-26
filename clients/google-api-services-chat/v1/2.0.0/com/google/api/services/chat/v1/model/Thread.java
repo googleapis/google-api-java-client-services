@@ -30,14 +30,24 @@ package com.google.api.services.chat.v1.model;
 public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name, in the form "spaces/threads". Example: spaces/AAAAAAAAAAA/threads/TTTTTTTTTTT
+   * Resource name of the thread. Example: spaces/{space}/threads/{thread}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Resource name, in the form "spaces/threads". Example: spaces/AAAAAAAAAAA/threads/TTTTTTTTTTT
+   * Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread). For other
+   * requests, this is an output only field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String threadKey;
+
+  /**
+   * Resource name of the thread. Example: spaces/{space}/threads/{thread}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,11 +55,34 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name, in the form "spaces/threads". Example: spaces/AAAAAAAAAAA/threads/TTTTTTTTTTT
+   * Resource name of the thread. Example: spaces/{space}/threads/{thread}
    * @param name name or {@code null} for none
    */
   public Thread setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread). For other
+   * requests, this is an output only field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThreadKey() {
+    return threadKey;
+  }
+
+  /**
+   * Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread). For other
+   * requests, this is an output only field.
+   * @param threadKey threadKey or {@code null} for none
+   */
+  public Thread setThreadKey(java.lang.String threadKey) {
+    this.threadKey = threadKey;
     return this;
   }
 

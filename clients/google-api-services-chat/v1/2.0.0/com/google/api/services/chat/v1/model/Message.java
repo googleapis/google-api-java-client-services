@@ -186,11 +186,22 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * The thread the message belongs to.
+   * The thread the message belongs to. For example usage, see [Start or reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Thread thread;
+
+  /**
+   * Output only. When `true`, the message is a response in a reply thread. When `false`, the
+   * message is visible in the space's top-level conversation as either the first message of a
+   * thread or a message with no threaded replies. If the space doesn't support reply in threads,
+   * this field is always `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean threadReply;
 
   /**
    * Input only. Parameters that a Chat app can use to configure how its response is posted.
@@ -505,7 +516,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thread the message belongs to.
+   * The thread the message belongs to. For example usage, see [Start or reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
    * @return value or {@code null} for none
    */
   public Thread getThread() {
@@ -513,11 +525,35 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thread the message belongs to.
+   * The thread the message belongs to. For example usage, see [Start or reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
    * @param thread thread or {@code null} for none
    */
   public Message setThread(Thread thread) {
     this.thread = thread;
+    return this;
+  }
+
+  /**
+   * Output only. When `true`, the message is a response in a reply thread. When `false`, the
+   * message is visible in the space's top-level conversation as either the first message of a
+   * thread or a message with no threaded replies. If the space doesn't support reply in threads,
+   * this field is always `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getThreadReply() {
+    return threadReply;
+  }
+
+  /**
+   * Output only. When `true`, the message is a response in a reply thread. When `false`, the
+   * message is visible in the space's top-level conversation as either the first message of a
+   * thread or a message with no threaded replies. If the space doesn't support reply in threads,
+   * this field is always `false`.
+   * @param threadReply threadReply or {@code null} for none
+   */
+  public Message setThreadReply(java.lang.Boolean threadReply) {
+    this.threadReply = threadReply;
     return this;
   }
 

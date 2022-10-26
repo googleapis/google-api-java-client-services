@@ -32,7 +32,7 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class PolicyEnforcementRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * An action to block access to apps and data on a fully managed device or in a work profile. This
+   * An action to block access to apps and data on a company owned device or in a work profile. This
    * action also triggers a user-facing notification with information (where possible) on how to
    * correct the compliance issue. Note: wipeAction must also be specified.
    * The value may be {@code null}.
@@ -48,7 +48,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   private java.lang.String settingName;
 
   /**
-   * An action to reset a fully managed device or delete a work profile. Note: blockAction must also
+   * An action to reset a company owned device or delete a work profile. Note: blockAction must also
    * be specified.
    * The value may be {@code null}.
    */
@@ -56,7 +56,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   private WipeAction wipeAction;
 
   /**
-   * An action to block access to apps and data on a fully managed device or in a work profile. This
+   * An action to block access to apps and data on a company owned device or in a work profile. This
    * action also triggers a user-facing notification with information (where possible) on how to
    * correct the compliance issue. Note: wipeAction must also be specified.
    * @return value or {@code null} for none
@@ -66,7 +66,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   }
 
   /**
-   * An action to block access to apps and data on a fully managed device or in a work profile. This
+   * An action to block access to apps and data on a company owned device or in a work profile. This
    * action also triggers a user-facing notification with information (where possible) on how to
    * correct the compliance issue. Note: wipeAction must also be specified.
    * @param blockAction blockAction or {@code null} for none
@@ -94,7 +94,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   }
 
   /**
-   * An action to reset a fully managed device or delete a work profile. Note: blockAction must also
+   * An action to reset a company owned device or delete a work profile. Note: blockAction must also
    * be specified.
    * @return value or {@code null} for none
    */
@@ -103,7 +103,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   }
 
   /**
-   * An action to reset a fully managed device or delete a work profile. Note: blockAction must also
+   * An action to reset a company owned device or delete a work profile. Note: blockAction must also
    * be specified.
    * @param wipeAction wipeAction or {@code null} for none
    */

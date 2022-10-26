@@ -65,6 +65,14 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   private TranslateTextGlossaryConfig glossaryConfig;
 
   /**
+   * Optional. is_translate_native_pdf_only field for external customers. If true, the page limit of
+   * online native pdf translation is 300 and only native pdf pages will be translated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTranslateNativePdfOnly;
+
+  /**
    * Optional. The labels with user-defined metadata for the request. Label keys and values can be
    * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed. Label values are
@@ -182,6 +190,25 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
    */
   public TranslateDocumentRequest setGlossaryConfig(TranslateTextGlossaryConfig glossaryConfig) {
     this.glossaryConfig = glossaryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. is_translate_native_pdf_only field for external customers. If true, the page limit of
+   * online native pdf translation is 300 and only native pdf pages will be translated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTranslateNativePdfOnly() {
+    return isTranslateNativePdfOnly;
+  }
+
+  /**
+   * Optional. is_translate_native_pdf_only field for external customers. If true, the page limit of
+   * online native pdf translation is 300 and only native pdf pages will be translated.
+   * @param isTranslateNativePdfOnly isTranslateNativePdfOnly or {@code null} for none
+   */
+  public TranslateDocumentRequest setIsTranslateNativePdfOnly(java.lang.Boolean isTranslateNativePdfOnly) {
+    this.isTranslateNativePdfOnly = isTranslateNativePdfOnly;
     return this;
   }
 

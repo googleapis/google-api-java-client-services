@@ -1320,9 +1320,8 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
          * Creates an ad unit. This method can only be used by projects enabled for the [AdSense for
          * Platforms](https://developers.google.com/adsense/platforms/) product. Note that ad units can only
          * be created for ad clients with an "AFC" product code. For more info see the [AdClient
-         * resource](https://developers.google.com/adsense/management/reference/rest/v2/accounts.adclients).
-         * For now, this method can only be used to create `DISPLAY` ad units. See:
-         * https://support.google.com/adsense/answer/9183566
+         * resource](/adsense/management/reference/rest/v2/accounts.adclients). For now, this method can
+         * only be used to create `DISPLAY` ad units. See: https://support.google.com/adsense/answer/9183566
          *
          * Create a request for the method "adunits.create".
          *
@@ -1349,9 +1348,9 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Creates an ad unit. This method can only be used by projects enabled for the [AdSense for
            * Platforms](https://developers.google.com/adsense/platforms/) product. Note that ad units can
-           * only be created for ad clients with an "AFC" product code. For more info see the [AdClient reso
-           * urce](https://developers.google.com/adsense/management/reference/rest/v2/accounts.adclients).
-           * For now, this method can only be used to create `DISPLAY` ad units. See:
+           * only be created for ad clients with an "AFC" product code. For more info see the [AdClient
+           * resource](/adsense/management/reference/rest/v2/accounts.adclients). For now, this method can
+           * only be used to create `DISPLAY` ad units. See:
            * https://support.google.com/adsense/answer/9183566
            *
            * Create a request for the method "adunits.create".
@@ -4326,17 +4325,24 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
-        /** Filters to be run on the report. */
+        /**
+         * A list of [filters](/adsense/management/reporting/filtering) to apply to the report. All
+         * provided filters must match in order for the data to be included in the report.
+         */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> filters;
 
-        /** Filters to be run on the report.
+        /** A list of [filters](/adsense/management/reporting/filtering) to apply to the report. All provided
+       filters must match in order for the data to be included in the report.
          */
         public java.util.List<java.lang.String> getFilters() {
           return filters;
         }
 
-        /** Filters to be run on the report. */
+        /**
+         * A list of [filters](/adsense/management/reporting/filtering) to apply to the report. All
+         * provided filters must match in order for the data to be included in the report.
+         */
         public Generate setFilters(java.util.List<java.lang.String> filters) {
           this.filters = filters;
           return this;
@@ -4787,17 +4793,24 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
-        /** Filters to be run on the report. */
+        /**
+         * A list of [filters](/adsense/management/reporting/filtering) to apply to the report. All
+         * provided filters must match in order for the data to be included in the report.
+         */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> filters;
 
-        /** Filters to be run on the report.
+        /** A list of [filters](/adsense/management/reporting/filtering) to apply to the report. All provided
+       filters must match in order for the data to be included in the report.
          */
         public java.util.List<java.lang.String> getFilters() {
           return filters;
         }
 
-        /** Filters to be run on the report. */
+        /**
+         * A list of [filters](/adsense/management/reporting/filtering) to apply to the report. All
+         * provided filters must match in order for the data to be included in the report.
+         */
         public GenerateCsv setFilters(java.util.List<java.lang.String> filters) {
           this.filters = filters;
           return this;

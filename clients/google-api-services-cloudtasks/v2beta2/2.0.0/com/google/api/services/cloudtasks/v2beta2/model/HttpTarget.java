@@ -86,7 +86,7 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   private OidcToken oidcToken;
 
   /**
-   * Uri override. When specified modifies the execution Uri for all the tasks in the queue.
+   * Uri override. When specified, modifies the execution Uri for all the tasks in the queue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,7 +203,7 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uri override. When specified modifies the execution Uri for all the tasks in the queue.
+   * Uri override. When specified, modifies the execution Uri for all the tasks in the queue.
    * @return value or {@code null} for none
    */
   public UriOverride getUriOverride() {
@@ -211,7 +211,7 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uri override. When specified modifies the execution Uri for all the tasks in the queue.
+   * Uri override. When specified, modifies the execution Uri for all the tasks in the queue.
    * @param uriOverride uriOverride or {@code null} for none
    */
   public HttpTarget setUriOverride(UriOverride uriOverride) {

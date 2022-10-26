@@ -71,6 +71,13 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   private java.lang.String scheme;
 
   /**
+   * Uri Override Enforce Mode Determines the Target UriOverride mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uriOverrideEnforceMode;
+
+  /**
    * Host override. When specified, the host part of url will be overridden. For example, if the
    * original Uri is "https://www.google.com", and host is set to "example.net", the overridden Uri
    * will be "https://example.net".
@@ -162,6 +169,23 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
    */
   public UriOverride setScheme(java.lang.String scheme) {
     this.scheme = scheme;
+    return this;
+  }
+
+  /**
+   * Uri Override Enforce Mode Determines the Target UriOverride mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUriOverrideEnforceMode() {
+    return uriOverrideEnforceMode;
+  }
+
+  /**
+   * Uri Override Enforce Mode Determines the Target UriOverride mode.
+   * @param uriOverrideEnforceMode uriOverrideEnforceMode or {@code null} for none
+   */
+  public UriOverride setUriOverrideEnforceMode(java.lang.String uriOverrideEnforceMode) {
+    this.uriOverrideEnforceMode = uriOverrideEnforceMode;
     return this;
   }
 

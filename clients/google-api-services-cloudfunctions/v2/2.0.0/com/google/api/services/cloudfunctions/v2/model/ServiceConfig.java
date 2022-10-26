@@ -121,6 +121,15 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Security level configure whether the function only accepts https. This configuration
+   * is only applicable to 1st Gen functions with Http trigger. By default https is optional for 1st
+   * Gen functions; 2nd Gen functions are https ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityLevel;
+
+  /**
    * Output only. Name of the service associated with a Function. The format of this field is
    * `projects/{project}/locations/{region}/services/{service}`
    * The value may be {@code null}.
@@ -348,6 +357,27 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setSecretVolumes(java.util.List<SecretVolume> secretVolumes) {
     this.secretVolumes = secretVolumes;
+    return this;
+  }
+
+  /**
+   * Optional. Security level configure whether the function only accepts https. This configuration
+   * is only applicable to 1st Gen functions with Http trigger. By default https is optional for 1st
+   * Gen functions; 2nd Gen functions are https ONLY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityLevel() {
+    return securityLevel;
+  }
+
+  /**
+   * Optional. Security level configure whether the function only accepts https. This configuration
+   * is only applicable to 1st Gen functions with Http trigger. By default https is optional for 1st
+   * Gen functions; 2nd Gen functions are https ONLY.
+   * @param securityLevel securityLevel or {@code null} for none
+   */
+  public ServiceConfig setSecurityLevel(java.lang.String securityLevel) {
+    this.securityLevel = securityLevel;
     return this;
   }
 

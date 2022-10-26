@@ -3541,6 +3541,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Returns
            * operations where: * The operation's metadata type is CreateBackupMetadata. * The backup
            * name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
+           * The operation resulted in an error. * `(metadata.@type=type.googleapis.com/google.spann
+           * er.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test) AND` \
+           * `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns
+           * operations where: * The operation's metadata type is CopyBackupMetadata. * The source
+           * backup name contains the string "test". * The operation started before
+           * 2022-01-18T14:50:00Z. * The operation resulted in an error. * `((metadata.@type=type.go
+           * ogleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
+           * `(metadata.database:test_db)) OR` \ `((metadata.@type=type.googleapis.com/google.spanne
+           * r.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test_bkp)) AND`
+           * \ `(error:*)` - Returns operations where: * The operation's metadata matches either of
+           * criteria: * The operation's metadata type is CreateBackupMetadata AND the source
+           * database name of the backup contains the string "test_db" * The operation's metadata
+           * type is CopyBackupMetadata AND the source backup name contains the string "test_bkp" *
            * The operation resulted in an error.
            */
           @com.google.api.client.util.Key
@@ -3567,7 +3580,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          `(metadata.name:howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \
          `(error:*)` - Returns operations where: * The operation's metadata type is CreateBackupMetadata. *
          The backup name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
-         The operation resulted in an error.
+         The operation resulted in an error. *
+         `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
+         `(metadata.source_backup:test) AND` \ `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\")
+         AND` \ `(error:*)` - Returns operations where: * The operation's metadata type is
+         CopyBackupMetadata. * The source backup name contains the string "test". * The operation started
+         before 2022-01-18T14:50:00Z. * The operation resulted in an error. *
+         `((metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
+         `(metadata.database:test_db)) OR` \
+         `((metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
+         `(metadata.source_backup:test_bkp)) AND` \ `(error:*)` - Returns operations where: * The
+         operation's metadata matches either of criteria: * The operation's metadata type is
+         CreateBackupMetadata AND the source database name of the backup contains the string "test_db" * The
+         operation's metadata type is CopyBackupMetadata AND the source backup name contains the string
+         "test_bkp" * The operation resulted in an error.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -3597,6 +3623,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Returns
            * operations where: * The operation's metadata type is CreateBackupMetadata. * The backup
            * name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
+           * The operation resulted in an error. * `(metadata.@type=type.googleapis.com/google.spann
+           * er.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test) AND` \
+           * `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns
+           * operations where: * The operation's metadata type is CopyBackupMetadata. * The source
+           * backup name contains the string "test". * The operation started before
+           * 2022-01-18T14:50:00Z. * The operation resulted in an error. * `((metadata.@type=type.go
+           * ogleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
+           * `(metadata.database:test_db)) OR` \ `((metadata.@type=type.googleapis.com/google.spanne
+           * r.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test_bkp)) AND`
+           * \ `(error:*)` - Returns operations where: * The operation's metadata matches either of
+           * criteria: * The operation's metadata type is CreateBackupMetadata AND the source
+           * database name of the backup contains the string "test_db" * The operation's metadata
+           * type is CopyBackupMetadata AND the source backup name contains the string "test_bkp" *
            * The operation resulted in an error.
            */
           public List setFilter(java.lang.String filter) {

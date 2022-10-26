@@ -59,7 +59,15 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private SpaceDetails spaceDetails;
 
   /**
-   * Output only. Whether messages are threaded in this space.
+   * Output only. The threading state in the Chat space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spaceThreadingState;
+
+  /**
+   * Output only. Deprecated: Use `spaceThreadingState` instead. Whether messages are threaded in
+   * this space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +150,25 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether messages are threaded in this space.
+   * Output only. The threading state in the Chat space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpaceThreadingState() {
+    return spaceThreadingState;
+  }
+
+  /**
+   * Output only. The threading state in the Chat space.
+   * @param spaceThreadingState spaceThreadingState or {@code null} for none
+   */
+  public Space setSpaceThreadingState(java.lang.String spaceThreadingState) {
+    this.spaceThreadingState = spaceThreadingState;
+    return this;
+  }
+
+  /**
+   * Output only. Deprecated: Use `spaceThreadingState` instead. Whether messages are threaded in
+   * this space.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getThreaded() {
@@ -150,7 +176,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether messages are threaded in this space.
+   * Output only. Deprecated: Use `spaceThreadingState` instead. Whether messages are threaded in
+   * this space.
    * @param threaded threaded or {@code null} for none
    */
   public Space setThreaded(java.lang.Boolean threaded) {

@@ -312,6 +312,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageReplyOption;
+
+      /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+     spaces.
+       */
+      public java.lang.String getMessageReplyOption() {
+        return messageReplyOption;
+      }
+
+      /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      public Messages setMessageReplyOption(java.lang.String messageReplyOption) {
+        this.messageReplyOption = messageReplyOption;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -335,28 +358,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-     same thread.
+      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+     thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+     [Start or reply to a message
+     thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Messages setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -527,6 +550,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageReplyOption;
+
+      /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+     spaces.
+       */
+      public java.lang.String getMessageReplyOption() {
+        return messageReplyOption;
+      }
+
+      /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      public Webhooks setMessageReplyOption(java.lang.String messageReplyOption) {
+        this.messageReplyOption = messageReplyOption;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -550,28 +596,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-     same thread.
+      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+     thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+     [Start or reply to a message
+     thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -763,6 +809,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. Specifies whether a message starts a thread or replies to one. Only supported
+         * in named spaces.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String messageReplyOption;
+
+        /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+       spaces.
+         */
+        public java.lang.String getMessageReplyOption() {
+          return messageReplyOption;
+        }
+
+        /**
+         * Optional. Specifies whether a message starts a thread or replies to one. Only supported
+         * in named spaces.
+         */
+        public Messages setMessageReplyOption(java.lang.String messageReplyOption) {
+          this.messageReplyOption = messageReplyOption;
+          return this;
+        }
+
+        /**
          * Optional. A unique request ID for this message. Specifying an existing request ID returns
          * the message created with that ID instead of creating a new message.
          */
@@ -786,28 +855,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-         * same `threadKey` post into the same thread.
+         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
+         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
+         * usage, see [Start or reply to a message
+         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-       `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-       given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-       same thread.
+        /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+       thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+       [Start or reply to a message
+       thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-         * same `threadKey` post into the same thread.
+         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
+         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
+         * usage, see [Start or reply to a message
+         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1180,6 +1249,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageReplyOption;
+
+      /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+     spaces.
+       */
+      public java.lang.String getMessageReplyOption() {
+        return messageReplyOption;
+      }
+
+      /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      public Messages setMessageReplyOption(java.lang.String messageReplyOption) {
+        this.messageReplyOption = messageReplyOption;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -1203,28 +1295,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-     same thread.
+      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+     thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+     [Start or reply to a message
+     thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Messages setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -1395,6 +1487,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageReplyOption;
+
+      /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+     spaces.
+       */
+      public java.lang.String getMessageReplyOption() {
+        return messageReplyOption;
+      }
+
+      /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      public Webhooks setMessageReplyOption(java.lang.String messageReplyOption) {
+        this.messageReplyOption = messageReplyOption;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -1418,28 +1533,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-     same thread.
+      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+     thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+     [Start or reply to a message
+     thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -1631,6 +1746,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. Specifies whether a message starts a thread or replies to one. Only supported
+         * in named spaces.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String messageReplyOption;
+
+        /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+       spaces.
+         */
+        public java.lang.String getMessageReplyOption() {
+          return messageReplyOption;
+        }
+
+        /**
+         * Optional. Specifies whether a message starts a thread or replies to one. Only supported
+         * in named spaces.
+         */
+        public Messages setMessageReplyOption(java.lang.String messageReplyOption) {
+          this.messageReplyOption = messageReplyOption;
+          return this;
+        }
+
+        /**
          * Optional. A unique request ID for this message. Specifying an existing request ID returns
          * the message created with that ID instead of creating a new message.
          */
@@ -1654,28 +1792,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-         * same `threadKey` post into the same thread.
+         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
+         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
+         * usage, see [Start or reply to a message
+         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-       `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-       given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-       same thread.
+        /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+       thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+       [Start or reply to a message
+       thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-         * same `threadKey` post into the same thread.
+         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
+         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
+         * usage, see [Start or reply to a message
+         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -2170,6 +2308,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String messageReplyOption;
+
+      /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+     spaces.
+       */
+      public java.lang.String getMessageReplyOption() {
+        return messageReplyOption;
+      }
+
+      /**
+       * Optional. Specifies whether a message starts a thread or replies to one. Only supported in
+       * named spaces.
+       */
+      public Webhooks setMessageReplyOption(java.lang.String messageReplyOption) {
+        this.messageReplyOption = messageReplyOption;
+        return this;
+      }
+
+      /**
        * Optional. A unique request ID for this message. Specifying an existing request ID returns
        * the message created with that ID instead of creating a new message.
        */
@@ -2193,28 +2354,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-     same thread.
+      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+     thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+     [Start or reply to a message
+     thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-       * same `threadKey` post into the same thread.
+       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
+       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
+       * see [Start or reply to a message
+       * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -2617,8 +2778,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Messages {
 
       /**
-       * Creates a message. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a message. Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth).
        *
        * Create a request for the method "messages.create".
        *
@@ -2643,8 +2804,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Creates a message. Requires [service account
-         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a message.
+         * Requires [authentication](https://developers.google.com/chat/api/guides/auth).
          *
          * Create a request for the method "messages.create".
          *
@@ -2776,6 +2937,29 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. Specifies whether a message starts a thread or replies to one. Only supported
+         * in named spaces.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String messageReplyOption;
+
+        /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
+       spaces.
+         */
+        public java.lang.String getMessageReplyOption() {
+          return messageReplyOption;
+        }
+
+        /**
+         * Optional. Specifies whether a message starts a thread or replies to one. Only supported
+         * in named spaces.
+         */
+        public Create setMessageReplyOption(java.lang.String messageReplyOption) {
+          this.messageReplyOption = messageReplyOption;
+          return this;
+        }
+
+        /**
          * Optional. A unique request ID for this message. Specifying an existing request ID returns
          * the message created with that ID instead of creating a new message.
          */
@@ -2799,28 +2983,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-         * same `threadKey` post into the same thread.
+         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
+         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
+         * usage, see [Start or reply to a message
+         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-       `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
-       given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
-       same thread.
+        /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+       thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
+       [Start or reply to a message
+       thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
-         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
-         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
-         * same `threadKey` post into the same thread.
+         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
+         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
+         * usage, see [Start or reply to a message
+         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -2982,7 +3166,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). [Developer
        * Preview](https://developers.google.com/workspace/preview): Returns a message. Requires [user
        * authentication](https://developers.google.com/chat/api/guides/auth/users) and the `chat.messages`
-       * or `chat.messages.readonly` authorization scope.
+       * or `chat.messages.readonly` authorization scope. Messages from a blocked member or messages from
+       * a blocked space can also be fetched.
        *
        * Create a request for the method "messages.get".
        *
@@ -3014,7 +3199,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          * [Developer Preview](https://developers.google.com/workspace/preview): Returns a message.
          * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and
-         * the `chat.messages` or `chat.messages.readonly` authorization scope.
+         * the `chat.messages` or `chat.messages.readonly` authorization scope. Messages from a blocked
+         * member or messages from a blocked space can also be fetched.
          *
          * Create a request for the method "messages.get".
          *

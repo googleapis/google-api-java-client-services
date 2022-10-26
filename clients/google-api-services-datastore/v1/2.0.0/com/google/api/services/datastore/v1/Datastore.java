@@ -1116,6 +1116,124 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
+     * Runs an aggregation query.
+     *
+     * Create a request for the method "projects.runAggregationQuery".
+     *
+     * This request holds the parameters needed by the datastore server.  After setting any optional
+     * parameters, call the {@link RunAggregationQuery#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. The ID of the project against which to make the request.
+     * @param content the {@link com.google.api.services.datastore.v1.model.RunAggregationQueryRequest}
+     * @return the request
+     */
+    public RunAggregationQuery runAggregationQuery(java.lang.String projectId, com.google.api.services.datastore.v1.model.RunAggregationQueryRequest content) throws java.io.IOException {
+      RunAggregationQuery result = new RunAggregationQuery(projectId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RunAggregationQuery extends DatastoreRequest<com.google.api.services.datastore.v1.model.RunAggregationQueryResponse> {
+
+      private static final String REST_PATH = "v1/projects/{projectId}:runAggregationQuery";
+
+      /**
+       * Runs an aggregation query.
+       *
+       * Create a request for the method "projects.runAggregationQuery".
+       *
+       * This request holds the parameters needed by the the datastore server.  After setting any
+       * optional parameters, call the {@link RunAggregationQuery#execute()} method to invoke the remote
+       * operation. <p> {@link RunAggregationQuery#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param projectId Required. The ID of the project against which to make the request.
+       * @param content the {@link com.google.api.services.datastore.v1.model.RunAggregationQueryRequest}
+       * @since 1.13
+       */
+      protected RunAggregationQuery(java.lang.String projectId, com.google.api.services.datastore.v1.model.RunAggregationQueryRequest content) {
+        super(Datastore.this, "POST", REST_PATH, content, com.google.api.services.datastore.v1.model.RunAggregationQueryResponse.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+      }
+
+      @Override
+      public RunAggregationQuery set$Xgafv(java.lang.String $Xgafv) {
+        return (RunAggregationQuery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RunAggregationQuery setAccessToken(java.lang.String accessToken) {
+        return (RunAggregationQuery) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RunAggregationQuery setAlt(java.lang.String alt) {
+        return (RunAggregationQuery) super.setAlt(alt);
+      }
+
+      @Override
+      public RunAggregationQuery setCallback(java.lang.String callback) {
+        return (RunAggregationQuery) super.setCallback(callback);
+      }
+
+      @Override
+      public RunAggregationQuery setFields(java.lang.String fields) {
+        return (RunAggregationQuery) super.setFields(fields);
+      }
+
+      @Override
+      public RunAggregationQuery setKey(java.lang.String key) {
+        return (RunAggregationQuery) super.setKey(key);
+      }
+
+      @Override
+      public RunAggregationQuery setOauthToken(java.lang.String oauthToken) {
+        return (RunAggregationQuery) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RunAggregationQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RunAggregationQuery) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RunAggregationQuery setQuotaUser(java.lang.String quotaUser) {
+        return (RunAggregationQuery) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RunAggregationQuery setUploadType(java.lang.String uploadType) {
+        return (RunAggregationQuery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RunAggregationQuery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RunAggregationQuery) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the project against which to make the request. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. The ID of the project against which to make the request.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. The ID of the project against which to make the request. */
+      public RunAggregationQuery setProjectId(java.lang.String projectId) {
+        this.projectId = projectId;
+        return this;
+      }
+
+      @Override
+      public RunAggregationQuery set(String parameterName, Object value) {
+        return (RunAggregationQuery) super.set(parameterName, value);
+      }
+    }
+    /**
      * Queries for entities.
      *
      * Create a request for the method "projects.runQuery".

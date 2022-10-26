@@ -2226,7 +2226,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        *
        * @param name Immutable. Name of the constraint. This is unique within the organization. Format of the name should
        *        be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
-       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
        *        characters and the min length is 1. Note that the prefix
        *        "organizations/{organization_id}/customConstraints/" is not counted.
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
@@ -2260,7 +2260,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          *
          * @param name Immutable. Name of the constraint. This is unique within the organization. Format of the name should
        *        be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
-       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
        *        characters and the min length is 1. Note that the prefix
        *        "organizations/{organization_id}/customConstraints/" is not counted.
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
@@ -2335,7 +2335,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. Name of the constraint. This is unique within the organization. Format of the
          * name should be *
          * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
-         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
          * characters and the min length is 1. Note that the prefix
          * "organizations/{organization_id}/customConstraints/" is not counted.
          */
@@ -2344,7 +2344,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /** Immutable. Name of the constraint. This is unique within the organization. Format of the name
        should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
-       "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100 characters
+       "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70 characters
        and the min length is 1. Note that the prefix "organizations/{organization_id}/customConstraints/"
        is not counted.
          */
@@ -2356,7 +2356,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. Name of the constraint. This is unique within the organization. Format of the
          * name should be *
          * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
-         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 100
+         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
          * characters and the min length is 1. Note that the prefix
          * "organizations/{organization_id}/customConstraints/" is not counted.
          */

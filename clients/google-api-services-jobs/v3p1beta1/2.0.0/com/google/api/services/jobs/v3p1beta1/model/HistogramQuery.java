@@ -46,10 +46,10 @@ public final class HistogramQuery extends com.google.api.client.json.GenericJson
    * is exclusive. For example, bucket(1, MAX, "positive number") or bucket(1, 10). Job histogram
    * facets: * company_id: histogram by [Job.distributor_company_id. * company_display_name:
    * histogram by Job.company_display_name. * employment_type: histogram by Job.employment_types.
-   * For example, "FULL_TIME", "PART_TIME". * company_size: histogram by CompanySize, for example,
-   * "SMALL", "MEDIUM", "BIG". * publish_time_in_day: histogram by the Job.publish_time in days.
-   * Must specify list of numeric buckets in spec. * publish_time_in_month: histogram by the
-   * Job.publish_time in months. Must specify list of numeric buckets in spec. *
+   * For example, "FULL_TIME", "PART_TIME". * company_size (DEPRECATED): histogram by CompanySize,
+   * for example, "SMALL", "MEDIUM", "BIG". * publish_time_in_day: histogram by the Job.publish_time
+   * in days. Must specify list of numeric buckets in spec. * publish_time_in_month: histogram by
+   * the Job.publish_time in months. Must specify list of numeric buckets in spec. *
    * publish_time_in_year: histogram by the Job.publish_time in years. Must specify list of numeric
    * buckets in spec. * degree_type: histogram by the Job.degree_type. For example, "Bachelors",
    * "Masters". * job_level: histogram by the Job.job_level. For example, "Entry Level". * country:
@@ -99,10 +99,10 @@ public final class HistogramQuery extends com.google.api.client.json.GenericJson
    * is exclusive. For example, bucket(1, MAX, "positive number") or bucket(1, 10). Job histogram
    * facets: * company_id: histogram by [Job.distributor_company_id. * company_display_name:
    * histogram by Job.company_display_name. * employment_type: histogram by Job.employment_types.
-   * For example, "FULL_TIME", "PART_TIME". * company_size: histogram by CompanySize, for example,
-   * "SMALL", "MEDIUM", "BIG". * publish_time_in_day: histogram by the Job.publish_time in days.
-   * Must specify list of numeric buckets in spec. * publish_time_in_month: histogram by the
-   * Job.publish_time in months. Must specify list of numeric buckets in spec. *
+   * For example, "FULL_TIME", "PART_TIME". * company_size (DEPRECATED): histogram by CompanySize,
+   * for example, "SMALL", "MEDIUM", "BIG". * publish_time_in_day: histogram by the Job.publish_time
+   * in days. Must specify list of numeric buckets in spec. * publish_time_in_month: histogram by
+   * the Job.publish_time in months. Must specify list of numeric buckets in spec. *
    * publish_time_in_year: histogram by the Job.publish_time in years. Must specify list of numeric
    * buckets in spec. * degree_type: histogram by the Job.degree_type. For example, "Bachelors",
    * "Masters". * job_level: histogram by the Job.job_level. For example, "Entry Level". * country:
@@ -153,10 +153,10 @@ public final class HistogramQuery extends com.google.api.client.json.GenericJson
    * is exclusive. For example, bucket(1, MAX, "positive number") or bucket(1, 10). Job histogram
    * facets: * company_id: histogram by [Job.distributor_company_id. * company_display_name:
    * histogram by Job.company_display_name. * employment_type: histogram by Job.employment_types.
-   * For example, "FULL_TIME", "PART_TIME". * company_size: histogram by CompanySize, for example,
-   * "SMALL", "MEDIUM", "BIG". * publish_time_in_day: histogram by the Job.publish_time in days.
-   * Must specify list of numeric buckets in spec. * publish_time_in_month: histogram by the
-   * Job.publish_time in months. Must specify list of numeric buckets in spec. *
+   * For example, "FULL_TIME", "PART_TIME". * company_size (DEPRECATED): histogram by CompanySize,
+   * for example, "SMALL", "MEDIUM", "BIG". * publish_time_in_day: histogram by the Job.publish_time
+   * in days. Must specify list of numeric buckets in spec. * publish_time_in_month: histogram by
+   * the Job.publish_time in months. Must specify list of numeric buckets in spec. *
    * publish_time_in_year: histogram by the Job.publish_time in years. Must specify list of numeric
    * buckets in spec. * degree_type: histogram by the Job.degree_type. For example, "Bachelors",
    * "Masters". * job_level: histogram by the Job.job_level. For example, "Entry Level". * country:

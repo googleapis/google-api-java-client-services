@@ -94,11 +94,12 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String imageUri;
 
   /**
-   * A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are
-   * used in keyword searches. Jobs with `string_values` under these specified field keys are
-   * returned if any of the values match the search keyword. Custom field values with parenthesis,
-   * brackets and special symbols are not searchable as-is, and those keyword queries must be
-   * surrounded by quotes.
+   * This field is deprecated. Please set the searchability of the custom attribute in the
+   * Job.custom_attributes going forward. A list of keys of filterable Job.custom_attributes, whose
+   * corresponding `string_values` are used in keyword searches. Jobs with `string_values` under
+   * these specified field keys are returned if any of the values match the search keyword. Custom
+   * field values with parenthesis, brackets and special symbols are not searchable as-is, and those
+   * keyword queries must be surrounded by quotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,11 +287,12 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are
-   * used in keyword searches. Jobs with `string_values` under these specified field keys are
-   * returned if any of the values match the search keyword. Custom field values with parenthesis,
-   * brackets and special symbols are not searchable as-is, and those keyword queries must be
-   * surrounded by quotes.
+   * This field is deprecated. Please set the searchability of the custom attribute in the
+   * Job.custom_attributes going forward. A list of keys of filterable Job.custom_attributes, whose
+   * corresponding `string_values` are used in keyword searches. Jobs with `string_values` under
+   * these specified field keys are returned if any of the values match the search keyword. Custom
+   * field values with parenthesis, brackets and special symbols are not searchable as-is, and those
+   * keyword queries must be surrounded by quotes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKeywordSearchableJobCustomAttributes() {
@@ -298,11 +300,12 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are
-   * used in keyword searches. Jobs with `string_values` under these specified field keys are
-   * returned if any of the values match the search keyword. Custom field values with parenthesis,
-   * brackets and special symbols are not searchable as-is, and those keyword queries must be
-   * surrounded by quotes.
+   * This field is deprecated. Please set the searchability of the custom attribute in the
+   * Job.custom_attributes going forward. A list of keys of filterable Job.custom_attributes, whose
+   * corresponding `string_values` are used in keyword searches. Jobs with `string_values` under
+   * these specified field keys are returned if any of the values match the search keyword. Custom
+   * field values with parenthesis, brackets and special symbols are not searchable as-is, and those
+   * keyword queries must be surrounded by quotes.
    * @param keywordSearchableJobCustomAttributes keywordSearchableJobCustomAttributes or {@code null} for none
    */
   public Company setKeywordSearchableJobCustomAttributes(java.util.List<java.lang.String> keywordSearchableJobCustomAttributes) {

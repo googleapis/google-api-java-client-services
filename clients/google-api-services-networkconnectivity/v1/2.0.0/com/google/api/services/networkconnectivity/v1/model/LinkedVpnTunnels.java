@@ -49,6 +49,13 @@ public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> uris;
 
   /**
+   * Output only. The VPC network where these VPN tunnels are located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpcNetwork;
+
+  /**
    * A value that controls whether site-to-site data transfer is enabled for these resources. Data
    * transfer is available only in [supported locations](https://cloud.google.com/network-
    * connectivity/docs/network-connectivity-center/concepts/locations).
@@ -83,6 +90,23 @@ public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJs
    */
   public LinkedVpnTunnels setUris(java.util.List<java.lang.String> uris) {
     this.uris = uris;
+    return this;
+  }
+
+  /**
+   * Output only. The VPC network where these VPN tunnels are located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpcNetwork() {
+    return vpcNetwork;
+  }
+
+  /**
+   * Output only. The VPC network where these VPN tunnels are located.
+   * @param vpcNetwork vpcNetwork or {@code null} for none
+   */
+  public LinkedVpnTunnels setVpcNetwork(java.lang.String vpcNetwork) {
+    this.vpcNetwork = vpcNetwork;
     return this;
   }
 

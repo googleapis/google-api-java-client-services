@@ -47,6 +47,13 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The globally unique identifier of the namespace in the UUID4 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Optional. Resource labels associated with this namespace. No more than 64 user labels can be
    * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * @return value or {@code null} for none
@@ -79,6 +86,23 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
    */
   public Namespace setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The globally unique identifier of the namespace in the UUID4 format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. The globally unique identifier of the namespace in the UUID4 format.
+   * @param uid uid or {@code null} for none
+   */
+  public Namespace setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

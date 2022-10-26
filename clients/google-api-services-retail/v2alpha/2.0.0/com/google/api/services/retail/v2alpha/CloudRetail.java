@@ -407,6 +407,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
+          /** If true, attribute suggestions are enabled and provided in response. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean enableAttributeSuggestions;
+
+          /** If true, attribute suggestions are enabled and provided in response.
+           */
+          public java.lang.Boolean getEnableAttributeSuggestions() {
+            return enableAttributeSuggestions;
+          }
+
+          /** If true, attribute suggestions are enabled and provided in response. */
+          public CompleteQuery setEnableAttributeSuggestions(java.lang.Boolean enableAttributeSuggestions) {
+            this.enableAttributeSuggestions = enableAttributeSuggestions;
+            return this;
+          }
+
           /**
            * Note that this field applies for `user-data` dataset only. For requests with `cloud-
            * retail` dataset, setting this field has no effect. The language filters applied to the

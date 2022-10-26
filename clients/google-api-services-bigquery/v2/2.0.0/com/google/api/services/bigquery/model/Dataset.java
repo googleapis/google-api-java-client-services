@@ -196,6 +196,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * [Optional] Storage billing model to be used for all tables in the dataset. Can be set to
+   * PHYSICAL. Default is LOGICAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageBillingModel;
+
+  /**
    * [Optional]The tags associated with this dataset. Tag keys are globally unique.
    * The value may be {@code null}.
    */
@@ -582,6 +590,25 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Optional] Storage billing model to be used for all tables in the dataset. Can be set to
+   * PHYSICAL. Default is LOGICAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageBillingModel() {
+    return storageBillingModel;
+  }
+
+  /**
+   * [Optional] Storage billing model to be used for all tables in the dataset. Can be set to
+   * PHYSICAL. Default is LOGICAL.
+   * @param storageBillingModel storageBillingModel or {@code null} for none
+   */
+  public Dataset setStorageBillingModel(java.lang.String storageBillingModel) {
+    this.storageBillingModel = storageBillingModel;
     return this;
   }
 

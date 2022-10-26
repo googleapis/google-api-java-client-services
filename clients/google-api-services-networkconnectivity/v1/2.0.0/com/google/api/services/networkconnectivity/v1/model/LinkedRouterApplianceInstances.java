@@ -49,6 +49,13 @@ public final class LinkedRouterApplianceInstances extends com.google.api.client.
   private java.lang.Boolean siteToSiteDataTransfer;
 
   /**
+   * Output only. The VPC network where these router appliance instances are located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpcNetwork;
+
+  /**
    * The list of router appliance instances.
    * @return value or {@code null} for none
    */
@@ -83,6 +90,23 @@ public final class LinkedRouterApplianceInstances extends com.google.api.client.
    */
   public LinkedRouterApplianceInstances setSiteToSiteDataTransfer(java.lang.Boolean siteToSiteDataTransfer) {
     this.siteToSiteDataTransfer = siteToSiteDataTransfer;
+    return this;
+  }
+
+  /**
+   * Output only. The VPC network where these router appliance instances are located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpcNetwork() {
+    return vpcNetwork;
+  }
+
+  /**
+   * Output only. The VPC network where these router appliance instances are located.
+   * @param vpcNetwork vpcNetwork or {@code null} for none
+   */
+  public LinkedRouterApplianceInstances setVpcNetwork(java.lang.String vpcNetwork) {
+    this.vpcNetwork = vpcNetwork;
     return this;
   }
 

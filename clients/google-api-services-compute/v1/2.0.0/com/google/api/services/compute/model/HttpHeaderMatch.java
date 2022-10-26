@@ -94,8 +94,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * information about regular expression syntax, see Syntax. For matching against a port specified
    * in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression
    * that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. regexMatch only applies to
-   * load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Regular expressions can only
+   * be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,8 +252,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * information about regular expression syntax, see Syntax. For matching against a port specified
    * in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression
    * that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. regexMatch only applies to
-   * load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Regular expressions can only
+   * be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -265,8 +265,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * information about regular expression syntax, see Syntax. For matching against a port specified
    * in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression
    * that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. regexMatch only applies to
-   * load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Regular expressions can only
+   * be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpHeaderMatch setRegexMatch(java.lang.String regexMatch) {

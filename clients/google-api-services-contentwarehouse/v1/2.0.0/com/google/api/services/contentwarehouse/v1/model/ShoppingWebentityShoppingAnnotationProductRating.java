@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Information about a rating provided for a product. This can represent an aggregated rating if
- * count is set. Next Id: 4
+ * count is set. Next Id: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -42,6 +42,21 @@ public final class ShoppingWebentityShoppingAnnotationProductRating extends com.
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxValueMillis;
+
+  /**
+   * The lower and upper bounds of the rating values that could be submitted for the product. (Note
+   * that it is not the min/max ratings submitted for the product, it is the min/max that can
+   * hypothetically be submitted.)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minValueMillis;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
@@ -51,6 +66,13 @@ public final class ShoppingWebentityShoppingAnnotationProductRating extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Double value;
+
+  /**
+   * The non-normalized aggregated value of the ratings for this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long valueMillis;
 
   /**
    * Number of ratings/reviews aggregated to create this product rating. If there are no ratings
@@ -70,6 +92,42 @@ public final class ShoppingWebentityShoppingAnnotationProductRating extends com.
    */
   public ShoppingWebentityShoppingAnnotationProductRating setCount(java.lang.Long count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxValueMillis() {
+    return maxValueMillis;
+  }
+
+  /**
+   * @param maxValueMillis maxValueMillis or {@code null} for none
+   */
+  public ShoppingWebentityShoppingAnnotationProductRating setMaxValueMillis(java.lang.Long maxValueMillis) {
+    this.maxValueMillis = maxValueMillis;
+    return this;
+  }
+
+  /**
+   * The lower and upper bounds of the rating values that could be submitted for the product. (Note
+   * that it is not the min/max ratings submitted for the product, it is the min/max that can
+   * hypothetically be submitted.)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinValueMillis() {
+    return minValueMillis;
+  }
+
+  /**
+   * The lower and upper bounds of the rating values that could be submitted for the product. (Note
+   * that it is not the min/max ratings submitted for the product, it is the min/max that can
+   * hypothetically be submitted.)
+   * @param minValueMillis minValueMillis or {@code null} for none
+   */
+  public ShoppingWebentityShoppingAnnotationProductRating setMinValueMillis(java.lang.Long minValueMillis) {
+    this.minValueMillis = minValueMillis;
     return this;
   }
 
@@ -102,6 +160,23 @@ public final class ShoppingWebentityShoppingAnnotationProductRating extends com.
    */
   public ShoppingWebentityShoppingAnnotationProductRating setValue(java.lang.Double value) {
     this.value = value;
+    return this;
+  }
+
+  /**
+   * The non-normalized aggregated value of the ratings for this product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getValueMillis() {
+    return valueMillis;
+  }
+
+  /**
+   * The non-normalized aggregated value of the ratings for this product.
+   * @param valueMillis valueMillis or {@code null} for none
+   */
+  public ShoppingWebentityShoppingAnnotationProductRating setValueMillis(java.lang.Long valueMillis) {
+    this.valueMillis = valueMillis;
     return this;
   }
 

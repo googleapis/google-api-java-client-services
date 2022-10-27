@@ -30,6 +30,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class SocialGraphApiProtoPrompt extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates if this prompt is active regardless of its reccurrence date, dismiss date or
+   * notification triggers. This is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activeState;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,6 +87,25 @@ public final class SocialGraphApiProtoPrompt extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String uniquePromptId;
+
+  /**
+   * Indicates if this prompt is active regardless of its reccurrence date, dismiss date or
+   * notification triggers. This is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActiveState() {
+    return activeState;
+  }
+
+  /**
+   * Indicates if this prompt is active regardless of its reccurrence date, dismiss date or
+   * notification triggers. This is required.
+   * @param activeState activeState or {@code null} for none
+   */
+  public SocialGraphApiProtoPrompt setActiveState(java.lang.String activeState) {
+    this.activeState = activeState;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

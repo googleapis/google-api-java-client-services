@@ -38,6 +38,13 @@ public final class GoogleInternalAppsWaldoV1alphaUserContext extends com.google.
   private GoogleInternalAppsWaldoV1alphaLocalTimeContext localTime;
 
   /**
+   * Information about upcoming events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext upcomingCommitmentContext;
+
+  /**
    * Set if user has upcoming OOO.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class GoogleInternalAppsWaldoV1alphaUserContext extends com.google.
    */
   public GoogleInternalAppsWaldoV1alphaUserContext setLocalTime(GoogleInternalAppsWaldoV1alphaLocalTimeContext localTime) {
     this.localTime = localTime;
+    return this;
+  }
+
+  /**
+   * Information about upcoming events.
+   * @return value or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext getUpcomingCommitmentContext() {
+    return upcomingCommitmentContext;
+  }
+
+  /**
+   * Information about upcoming events.
+   * @param upcomingCommitmentContext upcomingCommitmentContext or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaUserContext setUpcomingCommitmentContext(GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext upcomingCommitmentContext) {
+    this.upcomingCommitmentContext = upcomingCommitmentContext;
     return this;
   }
 

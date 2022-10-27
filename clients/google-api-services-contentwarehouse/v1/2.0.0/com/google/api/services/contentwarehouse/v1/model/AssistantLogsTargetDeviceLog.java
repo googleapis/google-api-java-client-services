@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Represents the case where the library successfully selects the target device. It could be one or
- * multiple devices. Next ID: 3
+ * multiple devices. Next ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -46,6 +46,12 @@ public final class AssistantLogsTargetDeviceLog extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String lowConfidenceReason;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String resultConfidenceLevel;
 
   /**
@@ -60,6 +66,21 @@ public final class AssistantLogsTargetDeviceLog extends com.google.api.client.js
    */
   public AssistantLogsTargetDeviceLog setDevices(java.util.List<AssistantLogsDeviceInfoLog> devices) {
     this.devices = devices;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLowConfidenceReason() {
+    return lowConfidenceReason;
+  }
+
+  /**
+   * @param lowConfidenceReason lowConfidenceReason or {@code null} for none
+   */
+  public AssistantLogsTargetDeviceLog setLowConfidenceReason(java.lang.String lowConfidenceReason) {
+    this.lowConfidenceReason = lowConfidenceReason;
     return this;
   }
 

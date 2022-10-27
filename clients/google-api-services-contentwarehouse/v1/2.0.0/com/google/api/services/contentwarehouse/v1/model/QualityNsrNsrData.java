@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 48
+ * be updated. Next ID: 50
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -48,7 +48,7 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float chard;
+  private java.lang.Integer chardEncoded;
 
   /**
    * The value may be {@code null}.
@@ -211,6 +211,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float pnav;
+
+  /**
+   * NSR - prior. Estimate of whether the site is above/below average NSR in its slice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> relativeNsr;
 
   /**
    * Secondary NSR sitechunk. When present, it provides more granular chunking than primary
@@ -385,16 +392,16 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * Site-level chard score: site quality predictor based on content.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getChard() {
-    return chard;
+  public java.lang.Integer getChardEncoded() {
+    return chardEncoded;
   }
 
   /**
    * Site-level chard score: site quality predictor based on content.
-   * @param chard chard or {@code null} for none
+   * @param chardEncoded chardEncoded or {@code null} for none
    */
-  public QualityNsrNsrData setChard(java.lang.Float chard) {
-    this.chard = chard;
+  public QualityNsrNsrData setChardEncoded(java.lang.Integer chardEncoded) {
+    this.chardEncoded = chardEncoded;
     return this;
   }
 
@@ -788,6 +795,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setPnav(java.lang.Float pnav) {
     this.pnav = pnav;
+    return this;
+  }
+
+  /**
+   * NSR - prior. Estimate of whether the site is above/below average NSR in its slice.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getRelativeNsr() {
+    return relativeNsr;
+  }
+
+  /**
+   * NSR - prior. Estimate of whether the site is above/below average NSR in its slice.
+   * @param relativeNsr relativeNsr or {@code null} for none
+   */
+  public QualityNsrNsrData setRelativeNsr(java.util.List<QualityNsrVersionedFloatSignal> relativeNsr) {
+    this.relativeNsr = relativeNsr;
     return this;
   }
 

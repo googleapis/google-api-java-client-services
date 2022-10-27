@@ -17,8 +17,9 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This field should hold all new quality online signals (after 02/05/10). Quality offline signals,
- * which are loaded by Signal API, should be stored in doc_attachments.
+ * Note: This is a misleading name as of 2022/10/14. The field is still set and has meaningful data,
+ * but no longer holds quality signals. All the data are freshness-related and they're not
+ * particularly sensitive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:

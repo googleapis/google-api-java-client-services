@@ -124,7 +124,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by
-   * the client when the VPN tunnel is created.
+   * the client when the VPN tunnel is created. Possible values are: `0`, `1`, `2`, `3`. The number
+   * of IDs in use depends on the external VPN gateway redundancy type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,7 +234,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String vpnGateway;
 
   /**
-   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+   * The interface ID of the VPN gateway with which this VPN tunnel is associated. Possible values
+   * are: `0`, `1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -496,7 +498,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by
-   * the client when the VPN tunnel is created.
+   * the client when the VPN tunnel is created. Possible values are: `0`, `1`, `2`, `3`. The number
+   * of IDs in use depends on the external VPN gateway redundancy type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeerExternalGatewayInterface() {
@@ -505,7 +508,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by
-   * the client when the VPN tunnel is created.
+   * the client when the VPN tunnel is created. Possible values are: `0`, `1`, `2`, `3`. The number
+   * of IDs in use depends on the external VPN gateway redundancy type.
    * @param peerExternalGatewayInterface peerExternalGatewayInterface or {@code null} for none
    */
   public VpnTunnel setPeerExternalGatewayInterface(java.lang.Integer peerExternalGatewayInterface) {
@@ -751,7 +755,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+   * The interface ID of the VPN gateway with which this VPN tunnel is associated. Possible values
+   * are: `0`, `1`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVpnGatewayInterface() {
@@ -759,7 +764,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+   * The interface ID of the VPN gateway with which this VPN tunnel is associated. Possible values
+   * are: `0`, `1`.
    * @param vpnGatewayInterface vpnGatewayInterface or {@code null} for none
    */
   public VpnTunnel setVpnGatewayInterface(java.lang.Integer vpnGatewayInterface) {

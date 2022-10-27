@@ -52,6 +52,13 @@ public final class GoogleCloudDocumentaiV1PropertyMetadata extends com.google.ap
   private java.lang.Boolean inactive;
 
   /**
+   * Schema mutability metadata on the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1SchemaMutabilityMetadata schemaMutabilityMetadata;
+
+  /**
    * Human review labeling config on the property.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class GoogleCloudDocumentaiV1PropertyMetadata extends com.google.ap
    */
   public GoogleCloudDocumentaiV1PropertyMetadata setInactive(java.lang.Boolean inactive) {
     this.inactive = inactive;
+    return this;
+  }
+
+  /**
+   * Schema mutability metadata on the property.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1SchemaMutabilityMetadata getSchemaMutabilityMetadata() {
+    return schemaMutabilityMetadata;
+  }
+
+  /**
+   * Schema mutability metadata on the property.
+   * @param schemaMutabilityMetadata schemaMutabilityMetadata or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1PropertyMetadata setSchemaMutabilityMetadata(GoogleCloudDocumentaiV1SchemaMutabilityMetadata schemaMutabilityMetadata) {
+    this.schemaMutabilityMetadata = schemaMutabilityMetadata;
     return this;
   }
 

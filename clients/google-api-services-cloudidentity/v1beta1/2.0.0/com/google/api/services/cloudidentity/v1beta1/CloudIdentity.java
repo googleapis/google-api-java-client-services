@@ -7696,17 +7696,19 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A CEL expression to filter the results. The only currently-supported filter is filtering by
-       * customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a
-       * filter of `customer==customers/my_customer` will return the profiles for the customer that
-       * the caller (authenticated user) belongs to.
+       * A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
+       * results. The only currently-supported filter is filtering by customer. For example:
+       * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
+       * `customer=="customers/my_customer"` will return the profiles for the customer that the
+       * caller (authenticated user) belongs to.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** A CEL expression to filter the results. The only currently-supported filter is filtering by
-     customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a filter
-     of `customer==customers/my_customer` will return the profiles for the customer that the caller
+      /** A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
+     results. The only currently-supported filter is filtering by customer. For example:
+     `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
+     `customer=="customers/my_customer"` will return the profiles for the customer that the caller
      (authenticated user) belongs to.
        */
       public java.lang.String getFilter() {
@@ -7714,10 +7716,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A CEL expression to filter the results. The only currently-supported filter is filtering by
-       * customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a
-       * filter of `customer==customers/my_customer` will return the profiles for the customer that
-       * the caller (authenticated user) belongs to.
+       * A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
+       * results. The only currently-supported filter is filtering by customer. For example:
+       * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
+       * `customer=="customers/my_customer"` will return the profiles for the customer that the
+       * caller (authenticated user) belongs to.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -7727,17 +7730,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * The maximum number of InboundSamlSsoProfiles to return. The service may return fewer than
        * this value. If omitted (or defaulted to zero) the server will use a sensible default. This
-       * default may change over time. The maximum allowed value is 100, though requests with
-       * page_size greater than that will be silently interpreted as having this maximum value. This
-       * may increase in the futue.
+       * default may change over time. The maximum allowed value is 100. Requests with page_size
+       * greater than that will be silently interpreted as having this maximum value.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** The maximum number of InboundSamlSsoProfiles to return. The service may return fewer than this
      value. If omitted (or defaulted to zero) the server will use a sensible default. This default may
-     change over time. The maximum allowed value is 100, though requests with page_size greater than
-     that will be silently interpreted as having this maximum value. This may increase in the futue.
+     change over time. The maximum allowed value is 100. Requests with page_size greater than that will
+     be silently interpreted as having this maximum value.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -7746,9 +7748,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * The maximum number of InboundSamlSsoProfiles to return. The service may return fewer than
        * this value. If omitted (or defaulted to zero) the server will use a sensible default. This
-       * default may change over time. The maximum allowed value is 100, though requests with
-       * page_size greater than that will be silently interpreted as having this maximum value. This
-       * may increase in the futue.
+       * default may change over time. The maximum allowed value is 100. Requests with page_size
+       * greater than that will be silently interpreted as having this maximum value.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

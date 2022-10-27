@@ -31,14 +31,14 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class AddIdpCredentialRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * PEM encoded x509 certificate containing the public signing key.
+   * PEM encoded x509 certificate containing the public key for verifying IdP signatures.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pemData;
 
   /**
-   * PEM encoded x509 certificate containing the public signing key.
+   * PEM encoded x509 certificate containing the public key for verifying IdP signatures.
    * @return value or {@code null} for none
    */
   public java.lang.String getPemData() {
@@ -46,7 +46,7 @@ public final class AddIdpCredentialRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * PEM encoded x509 certificate containing the public signing key.
+   * PEM encoded x509 certificate containing the public key for verifying IdP signatures.
    * @param pemData pemData or {@code null} for none
    */
   public AddIdpCredentialRequest setPemData(java.lang.String pemData) {

@@ -75,14 +75,14 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String hashDigest;
 
   /**
-   * The OS affected by a vulnerability This field is deprecated and the information is in cpe_uri
+   * The OS affected by a vulnerability Used to generate the cpe_uri for OS packages
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String os;
 
   /**
-   * The version of the OS This field is deprecated and the information is in cpe_uri
+   * The version of the OS Used to generate the cpe_uri for OS packages
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +199,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The OS affected by a vulnerability This field is deprecated and the information is in cpe_uri
+   * The OS affected by a vulnerability Used to generate the cpe_uri for OS packages
    * @return value or {@code null} for none
    */
   public java.lang.String getOs() {
@@ -207,7 +207,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The OS affected by a vulnerability This field is deprecated and the information is in cpe_uri
+   * The OS affected by a vulnerability Used to generate the cpe_uri for OS packages
    * @param os os or {@code null} for none
    */
   public PackageData setOs(java.lang.String os) {
@@ -216,7 +216,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the OS This field is deprecated and the information is in cpe_uri
+   * The version of the OS Used to generate the cpe_uri for OS packages
    * @return value or {@code null} for none
    */
   public java.lang.String getOsVersion() {
@@ -224,7 +224,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the OS This field is deprecated and the information is in cpe_uri
+   * The version of the OS Used to generate the cpe_uri for OS packages
    * @param osVersion osVersion or {@code null} for none
    */
   public PackageData setOsVersion(java.lang.String osVersion) {

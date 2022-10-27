@@ -1643,6 +1643,164 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return (UpdateLabelCopyMode) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
+     * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
+     * Label resource as a whole, are not revisioned, and do not require publishing.
+     *
+     * Create a request for the method "labels.updatePermissions".
+     *
+     * This request holds the parameters needed by the drivelabels server.  After setting any optional
+     * parameters, call the {@link UpdatePermissions#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The parent Label resource name.
+     * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission}
+     * @return the request
+     */
+    public UpdatePermissions updatePermissions(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) throws java.io.IOException {
+      UpdatePermissions result = new UpdatePermissions(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdatePermissions extends DriveLabelsRequest<com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission> {
+
+      private static final String REST_PATH = "v2beta/{+parent}/permissions";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^labels/[^/]+$");
+
+      /**
+       * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
+       * Label Permission is created, otherwise the existing permission is updated. Permissions affect
+       * the Label resource as a whole, are not revisioned, and do not require publishing.
+       *
+       * Create a request for the method "labels.updatePermissions".
+       *
+       * This request holds the parameters needed by the the drivelabels server.  After setting any
+       * optional parameters, call the {@link UpdatePermissions#execute()} method to invoke the remote
+       * operation. <p> {@link UpdatePermissions#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param parent Required. The parent Label resource name.
+       * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission}
+       * @since 1.13
+       */
+      protected UpdatePermissions(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) {
+        super(DriveLabels.this, "PATCH", REST_PATH, content, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^labels/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdatePermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdatePermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdatePermissions setAccessToken(java.lang.String accessToken) {
+        return (UpdatePermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdatePermissions setAlt(java.lang.String alt) {
+        return (UpdatePermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdatePermissions setCallback(java.lang.String callback) {
+        return (UpdatePermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdatePermissions setFields(java.lang.String fields) {
+        return (UpdatePermissions) super.setFields(fields);
+      }
+
+      @Override
+      public UpdatePermissions setKey(java.lang.String key) {
+        return (UpdatePermissions) super.setKey(key);
+      }
+
+      @Override
+      public UpdatePermissions setOauthToken(java.lang.String oauthToken) {
+        return (UpdatePermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdatePermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdatePermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdatePermissions setQuotaUser(java.lang.String quotaUser) {
+        return (UpdatePermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdatePermissions setUploadType(java.lang.String uploadType) {
+        return (UpdatePermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdatePermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdatePermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The parent Label resource name. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent Label resource name.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. The parent Label resource name. */
+      public UpdatePermissions setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^labels/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Set to `true` in order to use the user's admin credentials. The server will verify the user
+       * is an admin for the Label before allowing access.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useAdminAccess;
+
+      /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
+     admin for the Label before allowing access.
+       */
+      public java.lang.Boolean getUseAdminAccess() {
+        return useAdminAccess;
+      }
+
+      /**
+       * Set to `true` in order to use the user's admin credentials. The server will verify the user
+       * is an admin for the Label before allowing access.
+       */
+      public UpdatePermissions setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
+        return this;
+      }
+
+      @Override
+      public UpdatePermissions set(String parameterName, Object value) {
+        return (UpdatePermissions) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Locks collection.
@@ -1865,19 +2023,24 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
        *
-       * @param labelsId
+       * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
+       *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+       *        messages must either be empty or match this field.
        * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest}
        * @return the request
        */
-      public BatchDelete batchDelete(java.lang.String labelsId, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) throws java.io.IOException {
-        BatchDelete result = new BatchDelete(labelsId, content);
+      public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) throws java.io.IOException {
+        BatchDelete result = new BatchDelete(parent, content);
         initialize(result);
         return result;
       }
 
       public class BatchDelete extends DriveLabelsRequest<com.google.api.services.drivelabels.v2beta.model.GoogleProtobufEmpty> {
 
-        private static final String REST_PATH = "v2beta/labels/{labelsId}/permissions:batchDelete";
+        private static final String REST_PATH = "v2beta/{+parent}/permissions:batchDelete";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
          * Deletes Label permissions. Permissions affect the Label resource as a whole, are not
@@ -1891,13 +2054,20 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param labelsId
+         * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
+       *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+       *        messages must either be empty or match this field.
          * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest}
          * @since 1.13
          */
-        protected BatchDelete(java.lang.String labelsId, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) {
+        protected BatchDelete(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) {
           super(DriveLabels.this, "POST", REST_PATH, content, com.google.api.services.drivelabels.v2beta.model.GoogleProtobufEmpty.class);
-          this.labelsId = com.google.api.client.util.Preconditions.checkNotNull(labelsId, "Required parameter labelsId must be specified.");
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^labels/[^/]+$");
+          }
         }
 
         @Override
@@ -1955,18 +2125,34 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           return (BatchDelete) super.setUploadProtocol(uploadProtocol);
         }
 
-        @com.google.api.client.util.Key
-        private java.lang.String labelsId;
-
         /**
-
+         * Required. The parent Label resource name shared by all permissions being deleted. Format:
+         * labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * messages must either be empty or match this field.
          */
-        public java.lang.String getLabelsId() {
-          return labelsId;
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent Label resource name shared by all permissions being deleted. Format:
+       labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must
+       either be empty or match this field.
+         */
+        public java.lang.String getParent() {
+          return parent;
         }
 
-        public BatchDelete setLabelsId(java.lang.String labelsId) {
-          this.labelsId = labelsId;
+        /**
+         * Required. The parent Label resource name shared by all permissions being deleted. Format:
+         * labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * messages must either be empty or match this field.
+         */
+        public BatchDelete setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^labels/[^/]+$");
+          }
+          this.parent = parent;
           return this;
         }
 
@@ -2644,113 +2830,135 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           return (List) super.set(parameterName, value);
         }
       }
+
+    }
+    /**
+     * An accessor for creating requests from the Revisions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DriveLabels drivelabels = new DriveLabels(...);}
+     *   {@code DriveLabels.Revisions.List request = drivelabels.revisions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Revisions revisions() {
+      return new Revisions();
+    }
+
+    /**
+     * The "revisions" collection of methods.
+     */
+    public class Revisions {
+
       /**
        * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
        * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
        * Label resource as a whole, are not revisioned, and do not require publishing.
        *
-       * Create a request for the method "permissions.patch".
+       * Create a request for the method "revisions.updatePermissions".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
-       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * parameters, call the {@link UpdatePermissions#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent Label resource name.
        * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission}
        * @return the request
        */
-      public Patch patch(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) throws java.io.IOException {
-        Patch result = new Patch(parent, content);
+      public UpdatePermissions updatePermissions(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) throws java.io.IOException {
+        UpdatePermissions result = new UpdatePermissions(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Patch extends DriveLabelsRequest<com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission> {
+      public class UpdatePermissions extends DriveLabelsRequest<com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission> {
 
-        private static final String REST_PATH = "v2beta/{+parent}";
+        private static final String REST_PATH = "v2beta/{+parent}/permissions";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^labels/[^/]+/permissions/[^/]+$");
+            java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
         /**
          * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
          * Label Permission is created, otherwise the existing permission is updated. Permissions affect
          * the Label resource as a whole, are not revisioned, and do not require publishing.
          *
-         * Create a request for the method "permissions.patch".
+         * Create a request for the method "revisions.updatePermissions".
          *
          * This request holds the parameters needed by the the drivelabels server.  After setting any
-         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
+         * optional parameters, call the {@link UpdatePermissions#execute()} method to invoke the remote
+         * operation. <p> {@link UpdatePermissions#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
          *
          * @param parent Required. The parent Label resource name.
          * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission}
          * @since 1.13
          */
-        protected Patch(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) {
+        protected UpdatePermissions(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) {
           super(DriveLabels.this, "PATCH", REST_PATH, content, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
-                "^labels/[^/]+/permissions/[^/]+$");
+                "^labels/[^/]+/revisions/[^/]+$");
           }
         }
 
         @Override
-        public Patch set$Xgafv(java.lang.String $Xgafv) {
-          return (Patch) super.set$Xgafv($Xgafv);
+        public UpdatePermissions set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdatePermissions) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
+        public UpdatePermissions setAccessToken(java.lang.String accessToken) {
+          return (UpdatePermissions) super.setAccessToken(accessToken);
         }
 
         @Override
-        public Patch setAlt(java.lang.String alt) {
-          return (Patch) super.setAlt(alt);
+        public UpdatePermissions setAlt(java.lang.String alt) {
+          return (UpdatePermissions) super.setAlt(alt);
         }
 
         @Override
-        public Patch setCallback(java.lang.String callback) {
-          return (Patch) super.setCallback(callback);
+        public UpdatePermissions setCallback(java.lang.String callback) {
+          return (UpdatePermissions) super.setCallback(callback);
         }
 
         @Override
-        public Patch setFields(java.lang.String fields) {
-          return (Patch) super.setFields(fields);
+        public UpdatePermissions setFields(java.lang.String fields) {
+          return (UpdatePermissions) super.setFields(fields);
         }
 
         @Override
-        public Patch setKey(java.lang.String key) {
-          return (Patch) super.setKey(key);
+        public UpdatePermissions setKey(java.lang.String key) {
+          return (UpdatePermissions) super.setKey(key);
         }
 
         @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
+        public UpdatePermissions setOauthToken(java.lang.String oauthToken) {
+          return (UpdatePermissions) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Patch) super.setPrettyPrint(prettyPrint);
+        public UpdatePermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdatePermissions) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public Patch setQuotaUser(java.lang.String quotaUser) {
-          return (Patch) super.setQuotaUser(quotaUser);
+        public UpdatePermissions setQuotaUser(java.lang.String quotaUser) {
+          return (UpdatePermissions) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public Patch setUploadType(java.lang.String uploadType) {
-          return (Patch) super.setUploadType(uploadType);
+        public UpdatePermissions setUploadType(java.lang.String uploadType) {
+          return (UpdatePermissions) super.setUploadType(uploadType);
         }
 
         @Override
-        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Patch) super.setUploadProtocol(uploadProtocol);
+        public UpdatePermissions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdatePermissions) super.setUploadProtocol(uploadProtocol);
         }
 
         /** Required. The parent Label resource name. */
@@ -2764,11 +2972,11 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
 
         /** Required. The parent Label resource name. */
-        public Patch setParent(java.lang.String parent) {
+        public UpdatePermissions setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
-                "^labels/[^/]+/permissions/[^/]+$");
+                "^labels/[^/]+/revisions/[^/]+$");
           }
           this.parent = parent;
           return this;
@@ -2792,37 +3000,16 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * Set to `true` in order to use the user's admin credentials. The server will verify the
          * user is an admin for the Label before allowing access.
          */
-        public Patch setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        public UpdatePermissions setUseAdminAccess(java.lang.Boolean useAdminAccess) {
           this.useAdminAccess = useAdminAccess;
           return this;
         }
 
         @Override
-        public Patch set(String parameterName, Object value) {
-          return (Patch) super.set(parameterName, value);
+        public UpdatePermissions set(String parameterName, Object value) {
+          return (UpdatePermissions) super.set(parameterName, value);
         }
       }
-
-    }
-    /**
-     * An accessor for creating requests from the Revisions collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code DriveLabels drivelabels = new DriveLabels(...);}
-     *   {@code DriveLabels.Revisions.List request = drivelabels.revisions().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Revisions revisions() {
-      return new Revisions();
-    }
-
-    /**
-     * The "revisions" collection of methods.
-     */
-    public class Revisions {
 
       /**
        * An accessor for creating requests from the Locks collection.
@@ -3045,20 +3232,24 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
          *
-         * @param labelsId
-         * @param revisionsId
+         * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
+         *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         *        messages must either be empty or match this field.
          * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest}
          * @return the request
          */
-        public BatchDelete batchDelete(java.lang.String labelsId, java.lang.String revisionsId, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) throws java.io.IOException {
-          BatchDelete result = new BatchDelete(labelsId, revisionsId, content);
+        public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) throws java.io.IOException {
+          BatchDelete result = new BatchDelete(parent, content);
           initialize(result);
           return result;
         }
 
         public class BatchDelete extends DriveLabelsRequest<com.google.api.services.drivelabels.v2beta.model.GoogleProtobufEmpty> {
 
-          private static final String REST_PATH = "v2beta/labels/{labelsId}/revisions/{revisionsId}/permissions:batchDelete";
+          private static final String REST_PATH = "v2beta/{+parent}/permissions:batchDelete";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
            * Deletes Label permissions. Permissions affect the Label resource as a whole, are not
@@ -3072,15 +3263,20 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param labelsId
-           * @param revisionsId
+           * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
+         *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         *        messages must either be empty or match this field.
            * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest}
            * @since 1.13
            */
-          protected BatchDelete(java.lang.String labelsId, java.lang.String revisionsId, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) {
+          protected BatchDelete(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest content) {
             super(DriveLabels.this, "POST", REST_PATH, content, com.google.api.services.drivelabels.v2beta.model.GoogleProtobufEmpty.class);
-            this.labelsId = com.google.api.client.util.Preconditions.checkNotNull(labelsId, "Required parameter labelsId must be specified.");
-            this.revisionsId = com.google.api.client.util.Preconditions.checkNotNull(revisionsId, "Required parameter revisionsId must be specified.");
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^labels/[^/]+/revisions/[^/]+$");
+            }
           }
 
           @Override
@@ -3138,33 +3334,34 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             return (BatchDelete) super.setUploadProtocol(uploadProtocol);
           }
 
+          /**
+           * Required. The parent Label resource name shared by all permissions being deleted.
+           * Format: labels/{label} If this is set, the parent field in the
+           * UpdateLabelPermissionRequest messages must either be empty or match this field.
+           */
           @com.google.api.client.util.Key
-          private java.lang.String labelsId;
+          private java.lang.String parent;
+
+          /** Required. The parent Label resource name shared by all permissions being deleted. Format:
+         labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must
+         either be empty or match this field.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
 
           /**
-
+           * Required. The parent Label resource name shared by all permissions being deleted.
+           * Format: labels/{label} If this is set, the parent field in the
+           * UpdateLabelPermissionRequest messages must either be empty or match this field.
            */
-          public java.lang.String getLabelsId() {
-            return labelsId;
-          }
-
-          public BatchDelete setLabelsId(java.lang.String labelsId) {
-            this.labelsId = labelsId;
-            return this;
-          }
-
-          @com.google.api.client.util.Key
-          private java.lang.String revisionsId;
-
-          /**
-
-           */
-          public java.lang.String getRevisionsId() {
-            return revisionsId;
-          }
-
-          public BatchDelete setRevisionsId(java.lang.String revisionsId) {
-            this.revisionsId = revisionsId;
+          public BatchDelete setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^labels/[^/]+/revisions/[^/]+$");
+            }
+            this.parent = parent;
             return this;
           }
 
@@ -3840,164 +4037,6 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-         * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
-         * Label resource as a whole, are not revisioned, and do not require publishing.
-         *
-         * Create a request for the method "permissions.patch".
-         *
-         * This request holds the parameters needed by the drivelabels server.  After setting any optional
-         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The parent Label resource name.
-         * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission}
-         * @return the request
-         */
-        public Patch patch(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) throws java.io.IOException {
-          Patch result = new Patch(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Patch extends DriveLabelsRequest<com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission> {
-
-          private static final String REST_PATH = "v2beta/{+parent}";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
-
-          /**
-           * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-           * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-           * the Label resource as a whole, are not revisioned, and do not require publishing.
-           *
-           * Create a request for the method "permissions.patch".
-           *
-           * This request holds the parameters needed by the the drivelabels server.  After setting any
-           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The parent Label resource name.
-           * @param content the {@link com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission}
-           * @since 1.13
-           */
-          protected Patch(java.lang.String parent, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission content) {
-            super(DriveLabels.this, "PATCH", REST_PATH, content, com.google.api.services.drivelabels.v2beta.model.GoogleAppsDriveLabelsV2betaLabelPermission.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
-            }
-          }
-
-          @Override
-          public Patch set$Xgafv(java.lang.String $Xgafv) {
-            return (Patch) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Patch setAlt(java.lang.String alt) {
-            return (Patch) super.setAlt(alt);
-          }
-
-          @Override
-          public Patch setCallback(java.lang.String callback) {
-            return (Patch) super.setCallback(callback);
-          }
-
-          @Override
-          public Patch setFields(java.lang.String fields) {
-            return (Patch) super.setFields(fields);
-          }
-
-          @Override
-          public Patch setKey(java.lang.String key) {
-            return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Patch) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Patch setQuotaUser(java.lang.String quotaUser) {
-            return (Patch) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Patch setUploadType(java.lang.String uploadType) {
-            return (Patch) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Patch) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The parent Label resource name. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The parent Label resource name.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The parent Label resource name. */
-          public Patch setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean useAdminAccess;
-
-          /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-         admin for the Label before allowing access.
-           */
-          public java.lang.Boolean getUseAdminAccess() {
-            return useAdminAccess;
-          }
-
-          /**
-           * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
-           */
-          public Patch setUseAdminAccess(java.lang.Boolean useAdminAccess) {
-            this.useAdminAccess = useAdminAccess;
-            return this;
-          }
-
-          @Override
-          public Patch set(String parameterName, Object value) {
-            return (Patch) super.set(parameterName, value);
           }
         }
 

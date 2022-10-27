@@ -49,6 +49,13 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String complianceRegime;
 
   /**
+   * Output only. Count of active Violations in the Workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus complianceStatus;
+
+  /**
    * Output only. Urls for services which are compliant for this Assured Workload, but which are
    * currently disallowed by the ResourceUsageRestriction org policy. Invoke
    * RestrictAllowedResources endpoint to allow your project developers to use these services in
@@ -204,6 +211,23 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setComplianceRegime(java.lang.String complianceRegime) {
     this.complianceRegime = complianceRegime;
+    return this;
+  }
+
+  /**
+   * Output only. Count of active Violations in the Workload.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus getComplianceStatus() {
+    return complianceStatus;
+  }
+
+  /**
+   * Output only. Count of active Violations in the Workload.
+   * @param complianceStatus complianceStatus or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setComplianceStatus(GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus complianceStatus) {
+    this.complianceStatus = complianceStatus;
     return this;
   }
 

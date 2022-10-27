@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AppsPeopleOzExternalMergedpeopleapiConnectionReminder extends com.google.api.client.json.GenericJson {
 
   /**
+   * Contains the Contact level settings that will affect all reminders.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SocialGraphApiProtoContactPromptSettings contactPromptSettings;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +49,23 @@ public final class AppsPeopleOzExternalMergedpeopleapiConnectionReminder extends
    */
   @com.google.api.client.util.Key
   private java.util.List<SocialGraphApiProtoPrompt> prompt;
+
+  /**
+   * Contains the Contact level settings that will affect all reminders.
+   * @return value or {@code null} for none
+   */
+  public SocialGraphApiProtoContactPromptSettings getContactPromptSettings() {
+    return contactPromptSettings;
+  }
+
+  /**
+   * Contains the Contact level settings that will affect all reminders.
+   * @param contactPromptSettings contactPromptSettings or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiConnectionReminder setContactPromptSettings(SocialGraphApiProtoContactPromptSettings contactPromptSettings) {
+    this.contactPromptSettings = contactPromptSettings;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

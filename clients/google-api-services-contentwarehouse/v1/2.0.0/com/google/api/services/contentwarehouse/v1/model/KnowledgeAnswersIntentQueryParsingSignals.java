@@ -21,7 +21,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * message. Each domain should create their own extension for anything that they need to propagate
  * down stream from AQUA. Note that this proto is not the same as the Superroot proto ParsingSignals
  * (http://google3/knowledge/proto/scoring-signals.proto), which is a Superroot-specific signal used
- * in Scoring. Next ID: 4
+ * in Scoring. Next ID: 5
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -49,6 +49,15 @@ public final class KnowledgeAnswersIntentQueryParsingSignals extends com.google.
    */
   @com.google.api.client.util.Key
   private NlpLoggingQRewriteClientCallPathInfo qrewriteCallPathInfo;
+
+  /**
+   * This proto holds the fingerprint of the call path info of QRewrite client (e.g. the QUS's phase
+   * like "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
+   * "FuzzyMatcher").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger qrewriteCallPathInfoFingerprint;
 
   /**
    * The parser that calibrated the parsing score below.
@@ -94,6 +103,27 @@ public final class KnowledgeAnswersIntentQueryParsingSignals extends com.google.
    */
   public KnowledgeAnswersIntentQueryParsingSignals setQrewriteCallPathInfo(NlpLoggingQRewriteClientCallPathInfo qrewriteCallPathInfo) {
     this.qrewriteCallPathInfo = qrewriteCallPathInfo;
+    return this;
+  }
+
+  /**
+   * This proto holds the fingerprint of the call path info of QRewrite client (e.g. the QUS's phase
+   * like "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
+   * "FuzzyMatcher").
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getQrewriteCallPathInfoFingerprint() {
+    return qrewriteCallPathInfoFingerprint;
+  }
+
+  /**
+   * This proto holds the fingerprint of the call path info of QRewrite client (e.g. the QUS's phase
+   * like "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
+   * "FuzzyMatcher").
+   * @param qrewriteCallPathInfoFingerprint qrewriteCallPathInfoFingerprint or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryParsingSignals setQrewriteCallPathInfoFingerprint(java.math.BigInteger qrewriteCallPathInfoFingerprint) {
+    this.qrewriteCallPathInfoFingerprint = qrewriteCallPathInfoFingerprint;
     return this;
   }
 

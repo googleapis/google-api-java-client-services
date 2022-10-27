@@ -17,8 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Used in PeopleAPI layers + FBS/ContactsService (not in ProfileService) and in Custard response to
- * client apps that read Prompts.
+ * Model definition for SocialGraphApiProtoContactPromptSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -28,40 +27,43 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SocialGraphApiProtoPromptContent extends com.google.api.client.json.GenericJson {
+public final class SocialGraphApiProtoContactPromptSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Title of prompt/spark being sent.
+   * Indicates if any reminders are active for entire contact. This will affect both connection
+   * reminders and date reminders such as birthday reminders. This is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String title;
+  private java.lang.String contactActiveState;
 
   /**
-   * Title of prompt/spark being sent.
+   * Indicates if any reminders are active for entire contact. This will affect both connection
+   * reminders and date reminders such as birthday reminders. This is required.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTitle() {
-    return title;
+  public java.lang.String getContactActiveState() {
+    return contactActiveState;
   }
 
   /**
-   * Title of prompt/spark being sent.
-   * @param title title or {@code null} for none
+   * Indicates if any reminders are active for entire contact. This will affect both connection
+   * reminders and date reminders such as birthday reminders. This is required.
+   * @param contactActiveState contactActiveState or {@code null} for none
    */
-  public SocialGraphApiProtoPromptContent setTitle(java.lang.String title) {
-    this.title = title;
+  public SocialGraphApiProtoContactPromptSettings setContactActiveState(java.lang.String contactActiveState) {
+    this.contactActiveState = contactActiveState;
     return this;
   }
 
   @Override
-  public SocialGraphApiProtoPromptContent set(String fieldName, Object value) {
-    return (SocialGraphApiProtoPromptContent) super.set(fieldName, value);
+  public SocialGraphApiProtoContactPromptSettings set(String fieldName, Object value) {
+    return (SocialGraphApiProtoContactPromptSettings) super.set(fieldName, value);
   }
 
   @Override
-  public SocialGraphApiProtoPromptContent clone() {
-    return (SocialGraphApiProtoPromptContent) super.clone();
+  public SocialGraphApiProtoContactPromptSettings clone() {
+    return (SocialGraphApiProtoContactPromptSettings) super.clone();
   }
 
 }

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Data which is produced for logging and debugging. Servers MUST NOT use this for any other
- * purposes, such as branching on it.
+ * purposes, such as branching on it. Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -37,6 +37,15 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String acpVersion;
+
+  /**
+   * Random identifier assigned to Android mobile devices. Older logs may have previously stored
+   * other kinds of android IDs in this field, but all current logs should use the GServices Id. See
+   * go/androidids.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long androidId;
 
   /**
    * A user-readable string describing the version of the client app used by the user to originate
@@ -137,6 +146,27 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
    */
   public AssistantApiLoggingOnlyData setAcpVersion(java.lang.String acpVersion) {
     this.acpVersion = acpVersion;
+    return this;
+  }
+
+  /**
+   * Random identifier assigned to Android mobile devices. Older logs may have previously stored
+   * other kinds of android IDs in this field, but all current logs should use the GServices Id. See
+   * go/androidids.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAndroidId() {
+    return androidId;
+  }
+
+  /**
+   * Random identifier assigned to Android mobile devices. Older logs may have previously stored
+   * other kinds of android IDs in this field, but all current logs should use the GServices Id. See
+   * go/androidids.
+   * @param androidId androidId or {@code null} for none
+   */
+  public AssistantApiLoggingOnlyData setAndroidId(java.lang.Long androidId) {
+    this.androidId = androidId;
     return this;
   }
 

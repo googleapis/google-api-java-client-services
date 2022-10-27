@@ -62,6 +62,13 @@ public final class LongRunningRecognizeResponse extends com.google.api.client.js
   private java.util.List<SpeechRecognitionResult> results;
 
   /**
+   * Provides information on speech adaptation behavior in response
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeechAdaptationInfo speechAdaptationInfo;
+
+  /**
    * When available, billed audio seconds for the corresponding request.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class LongRunningRecognizeResponse extends com.google.api.client.js
    */
   public LongRunningRecognizeResponse setResults(java.util.List<SpeechRecognitionResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * Provides information on speech adaptation behavior in response
+   * @return value or {@code null} for none
+   */
+  public SpeechAdaptationInfo getSpeechAdaptationInfo() {
+    return speechAdaptationInfo;
+  }
+
+  /**
+   * Provides information on speech adaptation behavior in response
+   * @param speechAdaptationInfo speechAdaptationInfo or {@code null} for none
+   */
+  public LongRunningRecognizeResponse setSpeechAdaptationInfo(SpeechAdaptationInfo speechAdaptationInfo) {
+    this.speechAdaptationInfo = speechAdaptationInfo;
     return this;
   }
 

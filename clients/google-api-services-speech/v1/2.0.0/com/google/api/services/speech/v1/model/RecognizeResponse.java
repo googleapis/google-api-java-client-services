@@ -46,6 +46,13 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
   private java.util.List<SpeechRecognitionResult> results;
 
   /**
+   * Provides information on adaptation behavior in response
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeechAdaptationInfo speechAdaptationInfo;
+
+  /**
    * When available, billed audio seconds for the corresponding request.
    * The value may be {@code null}.
    */
@@ -83,6 +90,23 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
    */
   public RecognizeResponse setResults(java.util.List<SpeechRecognitionResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * Provides information on adaptation behavior in response
+   * @return value or {@code null} for none
+   */
+  public SpeechAdaptationInfo getSpeechAdaptationInfo() {
+    return speechAdaptationInfo;
+  }
+
+  /**
+   * Provides information on adaptation behavior in response
+   * @param speechAdaptationInfo speechAdaptationInfo or {@code null} for none
+   */
+  public RecognizeResponse setSpeechAdaptationInfo(SpeechAdaptationInfo speechAdaptationInfo) {
+    this.speechAdaptationInfo = speechAdaptationInfo;
     return this;
   }
 

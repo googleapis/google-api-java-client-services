@@ -56,11 +56,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
-   * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
-   * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
-   * defaults to one channel (mono). Note: We only recognize the first channel by default. To
-   * perform independent recognition on each channel set `enable_separate_recognition_per_channel`
-   * to 'true'.
+   * Valid values for LINEAR16, OGG_OPUS and FLAC are `1`-`8`. Valid value for MULAW, AMR, AMR_WB
+   * and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted, defaults to one channel (mono).
+   * Note: We only recognize the first channel by default. To perform independent recognition on
+   * each channel set `enable_separate_recognition_per_channel` to 'true'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,11 +311,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
-   * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
-   * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
-   * defaults to one channel (mono). Note: We only recognize the first channel by default. To
-   * perform independent recognition on each channel set `enable_separate_recognition_per_channel`
-   * to 'true'.
+   * Valid values for LINEAR16, OGG_OPUS and FLAC are `1`-`8`. Valid value for MULAW, AMR, AMR_WB
+   * and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted, defaults to one channel (mono).
+   * Note: We only recognize the first channel by default. To perform independent recognition on
+   * each channel set `enable_separate_recognition_per_channel` to 'true'.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAudioChannelCount() {
@@ -325,11 +323,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
-   * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
-   * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
-   * defaults to one channel (mono). Note: We only recognize the first channel by default. To
-   * perform independent recognition on each channel set `enable_separate_recognition_per_channel`
-   * to 'true'.
+   * Valid values for LINEAR16, OGG_OPUS and FLAC are `1`-`8`. Valid value for MULAW, AMR, AMR_WB
+   * and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted, defaults to one channel (mono).
+   * Note: We only recognize the first channel by default. To perform independent recognition on
+   * each channel set `enable_separate_recognition_per_channel` to 'true'.
    * @param audioChannelCount audioChannelCount or {@code null} for none
    */
   public RecognitionConfig setAudioChannelCount(java.lang.Integer audioChannelCount) {

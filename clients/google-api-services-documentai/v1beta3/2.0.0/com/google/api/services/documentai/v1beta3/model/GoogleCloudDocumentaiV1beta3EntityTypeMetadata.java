@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human review labeling config on the property.
+   * Human review labeling config on the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3HumanReviewLabelingMetadata humanReviewLabelingMetadata;
 
   /**
-   * Human review config on the entity type.
+   * Human review config on the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,14 @@ public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.go
   private java.lang.Boolean inactive;
 
   /**
-   * Human review labeling config on the property.
+   * Schema mutability metadata on the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3SchemaMutabilityMetadata schemaMutabilityMetadata;
+
+  /**
+   * Human review labeling config on the entity.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3HumanReviewLabelingMetadata getHumanReviewLabelingMetadata() {
@@ -60,7 +67,7 @@ public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.go
   }
 
   /**
-   * Human review labeling config on the property.
+   * Human review labeling config on the entity.
    * @param humanReviewLabelingMetadata humanReviewLabelingMetadata or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3EntityTypeMetadata setHumanReviewLabelingMetadata(GoogleCloudDocumentaiV1beta3HumanReviewLabelingMetadata humanReviewLabelingMetadata) {
@@ -69,7 +76,7 @@ public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.go
   }
 
   /**
-   * Human review config on the entity type.
+   * Human review config on the entity.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3HumanReviewValidationMetadata getHumanReviewMetadata() {
@@ -77,7 +84,7 @@ public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.go
   }
 
   /**
-   * Human review config on the entity type.
+   * Human review config on the entity.
    * @param humanReviewMetadata humanReviewMetadata or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3EntityTypeMetadata setHumanReviewMetadata(GoogleCloudDocumentaiV1beta3HumanReviewValidationMetadata humanReviewMetadata) {
@@ -99,6 +106,23 @@ public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.go
    */
   public GoogleCloudDocumentaiV1beta3EntityTypeMetadata setInactive(java.lang.Boolean inactive) {
     this.inactive = inactive;
+    return this;
+  }
+
+  /**
+   * Schema mutability metadata on the entity.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3SchemaMutabilityMetadata getSchemaMutabilityMetadata() {
+    return schemaMutabilityMetadata;
+  }
+
+  /**
+   * Schema mutability metadata on the entity.
+   * @param schemaMutabilityMetadata schemaMutabilityMetadata or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3EntityTypeMetadata setSchemaMutabilityMetadata(GoogleCloudDocumentaiV1beta3SchemaMutabilityMetadata schemaMutabilityMetadata) {
+    this.schemaMutabilityMetadata = schemaMutabilityMetadata;
     return this;
   }
 

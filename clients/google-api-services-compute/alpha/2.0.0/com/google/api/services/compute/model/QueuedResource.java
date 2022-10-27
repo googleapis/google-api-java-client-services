@@ -84,15 +84,6 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private QueuingPolicy queuingPolicy;
 
   /**
-   * [Output Only] URL of the region where the resource resides. Only applicable for regional
-   * resources. You must specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String region;
-
-  /**
    * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -253,27 +244,6 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   public QueuedResource setQueuingPolicy(QueuingPolicy queuingPolicy) {
     this.queuingPolicy = queuingPolicy;
-    return this;
-  }
-
-  /**
-   * [Output Only] URL of the region where the resource resides. Only applicable for regional
-   * resources. You must specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRegion() {
-    return region;
-  }
-
-  /**
-   * [Output Only] URL of the region where the resource resides. Only applicable for regional
-   * resources. You must specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
-   * @param region region or {@code null} for none
-   */
-  public QueuedResource setRegion(java.lang.String region) {
-    this.region = region;
     return this;
   }
 

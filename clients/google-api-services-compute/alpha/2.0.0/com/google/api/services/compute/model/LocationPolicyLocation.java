@@ -37,6 +37,14 @@ public final class LocationPolicyLocation extends com.google.api.client.json.Gen
   private LocationPolicyLocationConstraints constraints;
 
   /**
+   * Names of resources to be put in the location. Must contain unique, correct resource names. If
+   * used, targetShape must be left unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> names;
+
+  /**
    * Preference for a given location. Set to either ALLOW or DENY.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class LocationPolicyLocation extends com.google.api.client.json.Gen
    */
   public LocationPolicyLocation setConstraints(LocationPolicyLocationConstraints constraints) {
     this.constraints = constraints;
+    return this;
+  }
+
+  /**
+   * Names of resources to be put in the location. Must contain unique, correct resource names. If
+   * used, targetShape must be left unset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNames() {
+    return names;
+  }
+
+  /**
+   * Names of resources to be put in the location. Must contain unique, correct resource names. If
+   * used, targetShape must be left unset.
+   * @param names names or {@code null} for none
+   */
+  public LocationPolicyLocation setNames(java.util.List<java.lang.String> names) {
+    this.names = names;
     return this;
   }
 

@@ -114,8 +114,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * The stack type for this VPN gateway to identify the IP protocols that are enabled. If not
-   * specified, IPV4_ONLY will be used.
+   * The stack type for this VPN gateway to identify the IP protocols that are enabled. Possible
+   * values are: IPV4_ONLY, IPV4_IPV6. If not specified, IPV4_ONLY will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -359,8 +359,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack type for this VPN gateway to identify the IP protocols that are enabled. If not
-   * specified, IPV4_ONLY will be used.
+   * The stack type for this VPN gateway to identify the IP protocols that are enabled. Possible
+   * values are: IPV4_ONLY, IPV4_IPV6. If not specified, IPV4_ONLY will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getStackType() {
@@ -368,8 +368,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack type for this VPN gateway to identify the IP protocols that are enabled. If not
-   * specified, IPV4_ONLY will be used.
+   * The stack type for this VPN gateway to identify the IP protocols that are enabled. Possible
+   * values are: IPV4_ONLY, IPV4_IPV6. If not specified, IPV4_ONLY will be used.
    * @param stackType stackType or {@code null} for none
    */
   public VpnGateway setStackType(java.lang.String stackType) {

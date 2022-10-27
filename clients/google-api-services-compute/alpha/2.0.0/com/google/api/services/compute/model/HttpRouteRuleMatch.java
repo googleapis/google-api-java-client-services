@@ -119,8 +119,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * For satisfying the matchRule condition, the path of the request must satisfy the regular
    * expression specified in regexMatch after removing any query parameters and anchor supplied with
    * the original URL. For more information about regular expression syntax, see Syntax. Only one of
-   * prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load
-   * balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * prefixMatch, fullPathMatch or regexMatch must be specified. Regular expressions can only be
+   * used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,8 +297,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * For satisfying the matchRule condition, the path of the request must satisfy the regular
    * expression specified in regexMatch after removing any query parameters and anchor supplied with
    * the original URL. For more information about regular expression syntax, see Syntax. Only one of
-   * prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load
-   * balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * prefixMatch, fullPathMatch or regexMatch must be specified. Regular expressions can only be
+   * used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -309,8 +309,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * For satisfying the matchRule condition, the path of the request must satisfy the regular
    * expression specified in regexMatch after removing any query parameters and anchor supplied with
    * the original URL. For more information about regular expression syntax, see Syntax. Only one of
-   * prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load
-   * balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * prefixMatch, fullPathMatch or regexMatch must be specified. Regular expressions can only be
+   * used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setRegexMatch(java.lang.String regexMatch) {

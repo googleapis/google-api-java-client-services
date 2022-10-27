@@ -40,8 +40,8 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `ProductView`. `product_view` field is available only to allowlisted users who
-   * can query the `ProductView` table.
+   * merchant queries `ProductView`. Available only to selected merchants. Submit the [interest
+   * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `ProductView`. `product_view` field is available only to allowlisted users who
-   * can query the `ProductView` table.
+   * merchant queries `ProductView`. Available only to selected merchants. Submit the [interest
+   * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
    * @return value or {@code null} for none
    */
   public ProductView getProductView() {
@@ -86,8 +86,8 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `ProductView`. `product_view` field is available only to allowlisted users who
-   * can query the `ProductView` table.
+   * merchant queries `ProductView`. Available only to selected merchants. Submit the [interest
+   * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
    * @param productView productView or {@code null} for none
    */
   public ReportRow setProductView(ProductView productView) {

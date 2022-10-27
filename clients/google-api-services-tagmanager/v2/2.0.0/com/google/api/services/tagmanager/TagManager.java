@@ -1729,7 +1729,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets the JavaScript snippet for a Container.
+       * Gets the tagging snippet for a Container.
        *
        * Create a request for the method "containers.snippet".
        *
@@ -1746,7 +1746,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return result;
       }
 
-      public class Snippet extends TagManagerRequest<java.lang.String> {
+      public class Snippet extends TagManagerRequest<com.google.api.services.tagmanager.model.GetContainerSnippetResponse> {
 
         private static final String REST_PATH = "tagmanager/v2/{+path}:snippet";
 
@@ -1754,7 +1754,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
         /**
-         * Gets the JavaScript snippet for a Container.
+         * Gets the tagging snippet for a Container.
          *
          * Create a request for the method "containers.snippet".
          *
@@ -1769,7 +1769,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * @since 1.13
          */
         protected Snippet(java.lang.String path) {
-          super(TagManager.this, "GET", REST_PATH, null, java.lang.String.class);
+          super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.GetContainerSnippetResponse.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -2335,25 +2335,22 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Must be set to true to allow features.user_permissions to change from false to true
-           * (i.e. Google product owned to GTM permission). If this operation causes an update but
-           * this bit is false, the operation will fail.
+           * Must be set to true to allow features.user_permissions to change from false to true. If
+           * this operation causes an update but this bit is false, the operation will fail.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowUserPermissionFeatureUpdate;
 
-          /** Must be set to true to allow features.user_permissions to change from false to true (i.e. Google
-         product owned to GTM permission). If this operation causes an update but this bit is false, the
-         operation will fail.
+          /** Must be set to true to allow features.user_permissions to change from false to true. If this
+         operation causes an update but this bit is false, the operation will fail.
            */
           public java.lang.Boolean getAllowUserPermissionFeatureUpdate() {
             return allowUserPermissionFeatureUpdate;
           }
 
           /**
-           * Must be set to true to allow features.user_permissions to change from false to true
-           * (i.e. Google product owned to GTM permission). If this operation causes an update but
-           * this bit is false, the operation will fail.
+           * Must be set to true to allow features.user_permissions to change from false to true. If
+           * this operation causes an update but this bit is false, the operation will fail.
            */
           public Link setAllowUserPermissionFeatureUpdate(java.lang.Boolean allowUserPermissionFeatureUpdate) {
             this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;

@@ -52,7 +52,8 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   private java.lang.String publication;
 
   /**
-   * Required. The name of the logical replication slot that's configured with the pgoutput plugin.
+   * Required. Immutable. The name of the logical replication slot that's configured with the
+   * pgoutput plugin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The name of the logical replication slot that's configured with the pgoutput plugin.
+   * Required. Immutable. The name of the logical replication slot that's configured with the
+   * pgoutput plugin.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplicationSlot() {
@@ -120,7 +122,8 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The name of the logical replication slot that's configured with the pgoutput plugin.
+   * Required. Immutable. The name of the logical replication slot that's configured with the
+   * pgoutput plugin.
    * @param replicationSlot replicationSlot or {@code null} for none
    */
   public PostgresqlSourceConfig setReplicationSlot(java.lang.String replicationSlot) {

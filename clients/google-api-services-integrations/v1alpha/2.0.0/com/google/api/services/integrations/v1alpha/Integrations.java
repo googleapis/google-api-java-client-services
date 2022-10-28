@@ -4252,7 +4252,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
            *
            * @param name Required. The version to archive. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
            * @return the request
            */
@@ -4287,7 +4287,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The version to archive. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
              * @since 1.13
              */
@@ -4358,13 +4358,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to archive. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The version to archive. Format:
-           projects/{project}/integrations/{integration}/versions/{version}
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public java.lang.String getName() {
               return name;
@@ -4372,7 +4372,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to archive. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public Archive setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4398,7 +4398,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent resource where this version will be created. Format:
-           *        projects/{project}/integrations/{integration}
+           *        projects/{project}/locations/{location}/integrations/{integration}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaIntegrationVersion}
            * @return the request
            */
@@ -4427,7 +4427,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent resource where this version will be created. Format:
-           *        projects/{project}/integrations/{integration}
+           *        projects/{project}/locations/{location}/integrations/{integration}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaIntegrationVersion}
              * @since 1.13
              */
@@ -4498,13 +4498,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource where this version will be created. Format:
-             * projects/{project}/integrations/{integration}
+             * projects/{project}/locations/{location}/integrations/{integration}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource where this version will be created. Format:
-           projects/{project}/integrations/{integration}
+           projects/{project}/locations/{location}/integrations/{integration}
              */
             public java.lang.String getParent() {
               return parent;
@@ -4512,7 +4512,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource where this version will be created. Format:
-             * projects/{project}/integrations/{integration}
+             * projects/{project}/locations/{location}/integrations/{integration}
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4569,7 +4569,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
            *
            * @param name Required. The version to deactivate. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
            * @return the request
            */
@@ -4601,7 +4601,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The version to deactivate. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
              * @since 1.13
              */
@@ -4672,13 +4672,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to deactivate. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The version to deactivate. Format:
-           projects/{project}/integrations/{integration}/versions/{version}
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public java.lang.String getName() {
               return name;
@@ -4686,7 +4686,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to deactivate. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public Deactivate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4712,7 +4712,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The version to retrieve. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -4739,7 +4739,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The version to retrieve. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -4819,13 +4819,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to retrieve. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The version to retrieve. Format:
-           projects/{project}/integrations/{integration}/versions/{version}
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public java.lang.String getName() {
               return name;
@@ -4833,7 +4833,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to retrieve. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4859,11 +4859,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent resource where this version will be created. Format:
-           *        projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-           *        projects//locations//integrations/, Meaning: "List versions (with filter) for a particular
-           *        integration". 2. projects//locations//integrations/- Meaning: "List versions (with filter)
-           *        for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
-           *        "List versions (with filter) for a client".
+           *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
+           *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
+           *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
+           *        "List versions (with filter) for a client within a particular region". 3.
+           *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4890,11 +4890,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent resource where this version will be created. Format:
-           *        projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-           *        projects//locations//integrations/, Meaning: "List versions (with filter) for a particular
-           *        integration". 2. projects//locations//integrations/- Meaning: "List versions (with filter)
-           *        for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
-           *        "List versions (with filter) for a client".
+           *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
+           *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
+           *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
+           *        "List versions (with filter) for a client within a particular region". 3.
+           *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4974,10 +4974,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource where this version will be created. Format:
-             * projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-             * projects//locations//integrations/, Meaning: "List versions (with filter) for a
-             * particular integration". 2. projects//locations//integrations/- Meaning: "List
-             * versions (with filter) for a client within a particular region". 3.
+             * projects/{project}/locations/{location}/integrations/{integration} Specifically, when
+             * parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
+             * filter) for a particular integration". 2. projects//locations//integrations/-
+             * Meaning: "List versions (with filter) for a client within a particular region". 3.
              * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
              * client".
              */
@@ -4985,11 +4985,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             private java.lang.String parent;
 
             /** Required. The parent resource where this version will be created. Format:
-           projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-           projects//locations//integrations/, Meaning: "List versions (with filter) for a particular
-           integration". 2. projects//locations//integrations/- Meaning: "List versions (with filter) for a
-           client within a particular region". 3. projects//locations/-/integrations/- Meaning: "List versions
-           (with filter) for a client".
+           projects/{project}/locations/{location}/integrations/{integration} Specifically, when parent
+           equals: 1. projects//locations//integrations/, Meaning: "List versions (with filter) for a
+           particular integration". 2. projects//locations//integrations/- Meaning: "List versions (with
+           filter) for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
+           "List versions (with filter) for a client".
              */
             public java.lang.String getParent() {
               return parent;
@@ -4997,10 +4997,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource where this version will be created. Format:
-             * projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-             * projects//locations//integrations/, Meaning: "List versions (with filter) for a
-             * particular integration". 2. projects//locations//integrations/- Meaning: "List
-             * versions (with filter) for a client within a particular region". 3.
+             * projects/{project}/locations/{location}/integrations/{integration} Specifically, when
+             * parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
+             * filter) for a particular integration". 2. projects//locations//integrations/-
+             * Meaning: "List versions (with filter) for a client within a particular region". 3.
              * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
              * client".
              */
@@ -5314,7 +5314,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
            *
            * @param name Required. The version to publish. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest}
            * @return the request
            */
@@ -5347,7 +5347,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The version to publish. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest}
              * @since 1.13
              */
@@ -5418,13 +5418,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to publish. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The version to publish. Format:
-           projects/{project}/integrations/{integration}/versions/{version}
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public java.lang.String getName() {
               return name;
@@ -5432,7 +5432,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to publish. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public Publish setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5466,7 +5466,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link TakeoverEditLock#execute()} method to invoke the remote operation.
            *
            * @param integrationVersion Required. The version to take over edit lock. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest}
            * @return the request
            */
@@ -5503,7 +5503,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * invoking the constructor. </p>
              *
              * @param integrationVersion Required. The version to take over edit lock. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest}
              * @since 1.13
              */
@@ -5574,13 +5574,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to take over edit lock. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             @com.google.api.client.util.Key
             private java.lang.String integrationVersion;
 
             /** Required. The version to take over edit lock. Format:
-           projects/{project}/integrations/{integration}/versions/{version}
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public java.lang.String getIntegrationVersion() {
               return integrationVersion;
@@ -5588,7 +5588,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to take over edit lock. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public TakeoverEditLock setIntegrationVersion(java.lang.String integrationVersion) {
               if (!getSuppressPatternChecks()) {
@@ -5616,7 +5616,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
            *
            * @param name Required. The version to validate. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
            * @return the request
            */
@@ -5647,7 +5647,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The version to validate. Format:
-           *        projects/{project}/integrations/{integration}/versions/{version}
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
              * @since 1.13
              */
@@ -5718,13 +5718,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to validate. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The version to validate. Format:
-           projects/{project}/integrations/{integration}/versions/{version}
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public java.lang.String getName() {
               return name;
@@ -5732,7 +5732,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The version to validate. Format:
-             * projects/{project}/integrations/{integration}/versions/{version}
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              */
             public Validate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8000,7 +8000,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the integrations server.  After setting any optional
            * parameters, call the {@link ArchiveBundle#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The bundle to archive. Format: projects/{project}/integrations/{integration}
+           * @param name Required. The bundle to archive. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}
            * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaArchiveBundleRequest}
            * @return the request
            */
@@ -8029,7 +8030,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Required. The bundle to archive. Format: projects/{project}/integrations/{integration}
+             * @param name Required. The bundle to archive. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaArchiveBundleRequest}
              * @since 1.13
              */
@@ -8100,12 +8102,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The bundle to archive. Format:
-             * projects/{project}/integrations/{integration}
+             * projects/{project}/locations/{location}/integrations/{integration}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The bundle to archive. Format: projects/{project}/integrations/{integration}
+            /** Required. The bundle to archive. Format:
+           projects/{project}/locations/{location}/integrations/{integration}
              */
             public java.lang.String getName() {
               return name;
@@ -8113,7 +8116,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The bundle to archive. Format:
-             * projects/{project}/integrations/{integration}
+             * projects/{project}/locations/{location}/integrations/{integration}
              */
             public ArchiveBundle setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -10377,7 +10380,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
              *
              * @param name Required. The version to archive. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
              * @return the request
              */
@@ -10412,7 +10415,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The version to archive. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
                * @since 1.13
                */
@@ -10482,22 +10485,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to archive. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to archive. Format: projects/{project}/locations/{location}/i
+               * ntegrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The version to archive. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The version to archive. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to archive. Format: projects/{project}/locations/{location}/i
+               * ntegrations/{integration}/versions/{version}
                */
               public Archive setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10523,7 +10526,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The parent resource where this version will be created. Format:
-             *        projects/{project}/integrations/{integration}
+             *        projects/{project}/locations/{location}/integrations/{integration}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaIntegrationVersion}
              * @return the request
              */
@@ -10552,7 +10555,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The parent resource where this version will be created. Format:
-             *        projects/{project}/integrations/{integration}
+             *        projects/{project}/locations/{location}/integrations/{integration}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaIntegrationVersion}
                * @since 1.13
                */
@@ -10623,13 +10626,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The parent resource where this version will be created. Format:
-               * projects/{project}/integrations/{integration}
+               * projects/{project}/locations/{location}/integrations/{integration}
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The parent resource where this version will be created. Format:
-             projects/{project}/integrations/{integration}
+             projects/{project}/locations/{location}/integrations/{integration}
                */
               public java.lang.String getParent() {
                 return parent;
@@ -10637,7 +10640,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The parent resource where this version will be created. Format:
-               * projects/{project}/integrations/{integration}
+               * projects/{project}/locations/{location}/integrations/{integration}
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -10694,7 +10697,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
              *
              * @param name Required. The version to deactivate. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
              * @return the request
              */
@@ -10726,7 +10729,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The version to deactivate. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
                * @since 1.13
                */
@@ -10796,22 +10799,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to deactivate. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to deactivate. Format: projects/{project}/locations/{location
+               * }/integrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The version to deactivate. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The version to deactivate. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to deactivate. Format: projects/{project}/locations/{location
+               * }/integrations/{integration}/versions/{version}
                */
               public Deactivate setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10838,7 +10841,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Download#execute()} method to invoke the remote operation.
              *
              * @param name Required. The version to download. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @return the request
              */
             public Download download(java.lang.String name) throws java.io.IOException {
@@ -10867,7 +10870,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The version to download. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @since 1.13
                */
               protected Download(java.lang.String name) {
@@ -10946,22 +10949,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to download. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to download. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The version to download. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The version to download. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to download. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{version}
                */
               public Download setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -11003,7 +11006,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The version to retrieve. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -11030,7 +11033,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The version to retrieve. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -11109,22 +11112,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to retrieve. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to retrieve. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The version to retrieve. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The version to retrieve. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to retrieve. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{version}
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -11291,11 +11294,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The parent resource where this version will be created. Format:
-             *        projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-             *        projects//locations//integrations/, Meaning: "List versions (with filter) for a particular
-             *        integration". 2. projects//locations//integrations/- Meaning: "List versions (with filter)
-             *        for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
-             *        "List versions (with filter) for a client".
+             *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
+             *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
+             *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
+             *        "List versions (with filter) for a client within a particular region". 3.
+             *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -11322,11 +11325,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The parent resource where this version will be created. Format:
-             *        projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-             *        projects//locations//integrations/, Meaning: "List versions (with filter) for a particular
-             *        integration". 2. projects//locations//integrations/- Meaning: "List versions (with filter)
-             *        for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
-             *        "List versions (with filter) for a client".
+             *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
+             *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
+             *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
+             *        "List versions (with filter) for a client within a particular region". 3.
+             *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -11406,10 +11409,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The parent resource where this version will be created. Format:
-               * projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-               * projects//locations//integrations/, Meaning: "List versions (with filter) for a
-               * particular integration". 2. projects//locations//integrations/- Meaning: "List
-               * versions (with filter) for a client within a particular region". 3.
+               * projects/{project}/locations/{location}/integrations/{integration} Specifically,
+               * when parent equals: 1. projects//locations//integrations/, Meaning: "List versions
+               * (with filter) for a particular integration". 2. projects//locations//integrations/-
+               * Meaning: "List versions (with filter) for a client within a particular region". 3.
                * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
                * client".
                */
@@ -11417,11 +11420,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               private java.lang.String parent;
 
               /** Required. The parent resource where this version will be created. Format:
-             projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-             projects//locations//integrations/, Meaning: "List versions (with filter) for a particular
-             integration". 2. projects//locations//integrations/- Meaning: "List versions (with filter) for a
-             client within a particular region". 3. projects//locations/-/integrations/- Meaning: "List versions
-             (with filter) for a client".
+             projects/{project}/locations/{location}/integrations/{integration} Specifically, when parent
+             equals: 1. projects//locations//integrations/, Meaning: "List versions (with filter) for a
+             particular integration". 2. projects//locations//integrations/- Meaning: "List versions (with
+             filter) for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
+             "List versions (with filter) for a client".
                */
               public java.lang.String getParent() {
                 return parent;
@@ -11429,10 +11432,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The parent resource where this version will be created. Format:
-               * projects/{project}/integrations/{integration} Specifically, when parent equals: 1.
-               * projects//locations//integrations/, Meaning: "List versions (with filter) for a
-               * particular integration". 2. projects//locations//integrations/- Meaning: "List
-               * versions (with filter) for a client within a particular region". 3.
+               * projects/{project}/locations/{location}/integrations/{integration} Specifically,
+               * when parent equals: 1. projects//locations//integrations/, Meaning: "List versions
+               * (with filter) for a particular integration". 2. projects//locations//integrations/-
+               * Meaning: "List versions (with filter) for a client within a particular region". 3.
                * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
                * client".
                */
@@ -11748,7 +11751,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
              *
              * @param name Required. The version to publish. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest}
              * @return the request
              */
@@ -11781,7 +11784,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The version to publish. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest}
                * @since 1.13
                */
@@ -11851,22 +11854,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to publish. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to publish. Format: projects/{project}/locations/{location}/i
+               * ntegrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The version to publish. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The version to publish. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to publish. Format: projects/{project}/locations/{location}/i
+               * ntegrations/{integration}/versions/{version}
                */
               public Publish setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -11900,7 +11903,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link TakeoverEditLock#execute()} method to invoke the remote operation.
              *
              * @param integrationVersion Required. The version to take over edit lock. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest}
              * @return the request
              */
@@ -11937,7 +11940,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * invoking the constructor. </p>
                *
                * @param integrationVersion Required. The version to take over edit lock. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest}
                * @since 1.13
                */
@@ -12007,22 +12010,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to take over edit lock. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to take over edit lock. Format: projects/{project}/locations/
+               * {location}/integrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String integrationVersion;
 
               /** Required. The version to take over edit lock. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getIntegrationVersion() {
                 return integrationVersion;
               }
 
               /**
-               * Required. The version to take over edit lock. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to take over edit lock. Format: projects/{project}/locations/
+               * {location}/integrations/{integration}/versions/{version}
                */
               public TakeoverEditLock setIntegrationVersion(java.lang.String integrationVersion) {
                 if (!getSuppressPatternChecks()) {
@@ -12180,7 +12183,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * This request holds the parameters needed by the integrations server.  After setting any optional
              * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The version to upload. Format: projects/{project}/integrations/{integration}
+             * @param parent Required. The version to upload. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest}
              * @return the request
              */
@@ -12210,7 +12214,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The version to upload. Format: projects/{project}/integrations/{integration}
+               * @param parent Required. The version to upload. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest}
                * @since 1.13
                */
@@ -12281,12 +12286,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The version to upload. Format:
-               * projects/{project}/integrations/{integration}
+               * projects/{project}/locations/{location}/integrations/{integration}
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The version to upload. Format: projects/{project}/integrations/{integration}
+              /** Required. The version to upload. Format:
+             projects/{project}/locations/{location}/integrations/{integration}
                */
               public java.lang.String getParent() {
                 return parent;
@@ -12294,7 +12300,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The version to upload. Format:
-               * projects/{project}/integrations/{integration}
+               * projects/{project}/locations/{location}/integrations/{integration}
                */
               public Upload setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -12322,7 +12328,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
              *
              * @param name Required. The version to validate. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
              * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
              * @return the request
              */
@@ -12353,7 +12359,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The version to validate. Format:
-             *        projects/{project}/integrations/{integration}/versions/{version}
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
                * @since 1.13
                */
@@ -12423,22 +12429,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Required. The version to validate. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to validate. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{version}
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The version to validate. Format:
-             projects/{project}/integrations/{integration}/versions/{version}
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The version to validate. Format:
-               * projects/{project}/integrations/{integration}/versions/{version}
+               * Required. The version to validate. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{version}
                */
               public Validate setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

@@ -37,6 +37,14 @@ public final class AppsDynamiteSharedOnClick extends com.google.api.client.json.
   private AppsDynamiteSharedAction action;
 
   /**
+   * Triggers host app action on click directly without invoking form actions. This is currently not
+   * available to end-users and is used internal only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostAppActionMarkup hostAppAction;
+
+  /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * open_link above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
@@ -66,6 +74,25 @@ public final class AppsDynamiteSharedOnClick extends com.google.api.client.json.
    */
   public AppsDynamiteSharedOnClick setAction(AppsDynamiteSharedAction action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Triggers host app action on click directly without invoking form actions. This is currently not
+   * available to end-users and is used internal only.
+   * @return value or {@code null} for none
+   */
+  public HostAppActionMarkup getHostAppAction() {
+    return hostAppAction;
+  }
+
+  /**
+   * Triggers host app action on click directly without invoking form actions. This is currently not
+   * available to end-users and is used internal only.
+   * @param hostAppAction hostAppAction or {@code null} for none
+   */
+  public AppsDynamiteSharedOnClick setHostAppAction(HostAppActionMarkup hostAppAction) {
+    this.hostAppAction = hostAppAction;
     return this;
   }
 

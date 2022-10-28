@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Debugging information about the response.
+ * Model definition for DriveClientActionMarkup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,40 +27,37 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResponseDebugInfo extends com.google.api.client.json.GenericJson {
+public final class DriveClientActionMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * General debug info formatted for display.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String formattedDebugInfo;
+  private RequestFileScope requestFileScope;
 
   /**
-   * General debug info formatted for display.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFormattedDebugInfo() {
-    return formattedDebugInfo;
+  public RequestFileScope getRequestFileScope() {
+    return requestFileScope;
   }
 
   /**
-   * General debug info formatted for display.
-   * @param formattedDebugInfo formattedDebugInfo or {@code null} for none
+   * @param requestFileScope requestFileScope or {@code null} for none
    */
-  public ResponseDebugInfo setFormattedDebugInfo(java.lang.String formattedDebugInfo) {
-    this.formattedDebugInfo = formattedDebugInfo;
+  public DriveClientActionMarkup setRequestFileScope(RequestFileScope requestFileScope) {
+    this.requestFileScope = requestFileScope;
     return this;
   }
 
   @Override
-  public ResponseDebugInfo set(String fieldName, Object value) {
-    return (ResponseDebugInfo) super.set(fieldName, value);
+  public DriveClientActionMarkup set(String fieldName, Object value) {
+    return (DriveClientActionMarkup) super.set(fieldName, value);
   }
 
   @Override
-  public ResponseDebugInfo clone() {
-    return (ResponseDebugInfo) super.clone();
+  public DriveClientActionMarkup clone() {
+    return (DriveClientActionMarkup) super.clone();
   }
 
 }

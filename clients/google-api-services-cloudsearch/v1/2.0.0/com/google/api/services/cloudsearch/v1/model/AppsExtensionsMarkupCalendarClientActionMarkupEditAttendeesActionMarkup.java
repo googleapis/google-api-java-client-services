@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Debugging information about the response.
+ * Model definition for AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResponseDebugInfo extends com.google.api.client.json.GenericJson {
+public final class AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * General debug info formatted for display.
+   * A list of attendees to add to the Google Calendar event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String formattedDebugInfo;
+  private java.util.List<java.lang.String> addAttendeeEmails;
 
   /**
-   * General debug info formatted for display.
+   * A list of attendees to add to the Google Calendar event.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFormattedDebugInfo() {
-    return formattedDebugInfo;
+  public java.util.List<java.lang.String> getAddAttendeeEmails() {
+    return addAttendeeEmails;
   }
 
   /**
-   * General debug info formatted for display.
-   * @param formattedDebugInfo formattedDebugInfo or {@code null} for none
+   * A list of attendees to add to the Google Calendar event.
+   * @param addAttendeeEmails addAttendeeEmails or {@code null} for none
    */
-  public ResponseDebugInfo setFormattedDebugInfo(java.lang.String formattedDebugInfo) {
-    this.formattedDebugInfo = formattedDebugInfo;
+  public AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup setAddAttendeeEmails(java.util.List<java.lang.String> addAttendeeEmails) {
+    this.addAttendeeEmails = addAttendeeEmails;
     return this;
   }
 
   @Override
-  public ResponseDebugInfo set(String fieldName, Object value) {
-    return (ResponseDebugInfo) super.set(fieldName, value);
+  public AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup set(String fieldName, Object value) {
+    return (AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup) super.set(fieldName, value);
   }
 
   @Override
-  public ResponseDebugInfo clone() {
-    return (ResponseDebugInfo) super.clone();
+  public AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup clone() {
+    return (AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup) super.clone();
   }
 
 }

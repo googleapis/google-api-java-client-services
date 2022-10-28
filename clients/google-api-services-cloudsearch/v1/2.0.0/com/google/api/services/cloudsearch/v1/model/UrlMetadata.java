@@ -91,6 +91,13 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.Integer intImageWidth;
 
   /**
+   * NEXT TAG : 18
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String linkType;
+
+  /**
    * Mime type of the content (Currently mapped from Page Render Service ItemType) Note that this is
    * not necessarily the mime type of the http resource. For example a text/html from youtube or
    * vimeo may actually be classified as a video type. Then we shall mark it as video since we don't
@@ -137,7 +144,6 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
   private SafeUrlProto url;
 
   /**
-   * NEXT TAG : 17
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,6 +290,23 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * NEXT TAG : 18
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLinkType() {
+    return linkType;
+  }
+
+  /**
+   * NEXT TAG : 18
+   * @param linkType linkType or {@code null} for none
+   */
+  public UrlMetadata setLinkType(java.lang.String linkType) {
+    this.linkType = linkType;
+    return this;
+  }
+
+  /**
    * Mime type of the content (Currently mapped from Page Render Service ItemType) Note that this is
    * not necessarily the mime type of the http resource. For example a text/html from youtube or
    * vimeo may actually be classified as a video type. Then we shall mark it as video since we don't
@@ -394,7 +417,6 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NEXT TAG : 17
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlSource() {
@@ -402,7 +424,6 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NEXT TAG : 17
    * @param urlSource urlSource or {@code null} for none
    */
   public UrlMetadata setUrlSource(java.lang.String urlSource) {

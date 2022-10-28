@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Annotation metadata to display system messages for membership changes.
+ * Annotation metadata to display system messages for membership changes. Next Tag: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -80,6 +80,13 @@ public final class MembershipChangedMetadata extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private User initiatorProfile;
+
+  /**
+   * The type of the user who initiated this membership change.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String initiatorType;
 
   /**
    * The value may be {@code null}.
@@ -167,6 +174,23 @@ public final class MembershipChangedMetadata extends com.google.api.client.json.
    */
   public MembershipChangedMetadata setInitiatorProfile(User initiatorProfile) {
     this.initiatorProfile = initiatorProfile;
+    return this;
+  }
+
+  /**
+   * The type of the user who initiated this membership change.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInitiatorType() {
+    return initiatorType;
+  }
+
+  /**
+   * The type of the user who initiated this membership change.
+   * @param initiatorType initiatorType or {@code null} for none
+   */
+  public MembershipChangedMetadata setInitiatorType(java.lang.String initiatorType) {
+    this.initiatorType = initiatorType;
     return this;
   }
 

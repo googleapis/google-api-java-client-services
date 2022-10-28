@@ -17,7 +17,7 @@
 package com.google.api.services.certificatemanager.v1.model;
 
 /**
- * Describes a Target Proxy which uses this Certificate Map.
+ * Describes a Target Proxy that uses this Certificate Map.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Certificate Manager API. For a detailed explanation

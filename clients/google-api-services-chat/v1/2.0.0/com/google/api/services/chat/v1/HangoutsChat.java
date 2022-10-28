@@ -161,7 +161,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+     * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -189,7 +189,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -258,17 +258,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Messages) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+      /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       public Messages setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -358,15 +364,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+      /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
      thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
      [Start or reply to a message
      thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -376,9 +382,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Messages setThreadKey(java.lang.String threadKey) {
@@ -399,7 +405,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+     * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -427,7 +433,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -496,17 +502,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Webhooks) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+      /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       public Webhooks setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -596,15 +608,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+      /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
      thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
      [Start or reply to a message
      thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -614,9 +626,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
@@ -658,7 +670,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -686,7 +698,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+         * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -755,17 +767,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Messages) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+        /**
+         * Required. The resource name of the space in which to create a message. Format:
+         * spaces/{space}
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+        /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+        /**
+         * Required. The resource name of the space in which to create a message. Format:
+         * spaces/{space}
+         */
         public Messages setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -855,15 +873,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
-         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
-         * usage, see [Start or reply to a message
+         * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
+         * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
+         * example usage, see [Start or reply to a message
          * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+        /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
        thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
        [Start or reply to a message
        thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -873,9 +891,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
-         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
-         * usage, see [Start or reply to a message
+         * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
+         * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
+         * example usage, see [Start or reply to a message
          * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Messages setThreadKey(java.lang.String threadKey) {
@@ -1098,7 +1116,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+     * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -1126,7 +1144,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -1195,17 +1213,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Messages) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+      /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       public Messages setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1295,15 +1319,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+      /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
      thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
      [Start or reply to a message
      thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -1313,9 +1337,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Messages setThreadKey(java.lang.String threadKey) {
@@ -1336,7 +1360,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+     * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -1364,7 +1388,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -1433,17 +1457,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Webhooks) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+      /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       public Webhooks setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1533,15 +1563,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+      /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
      thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
      [Start or reply to a message
      thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -1551,9 +1581,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
@@ -1595,7 +1625,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -1623,7 +1653,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+         * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -1692,17 +1722,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Messages) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+        /**
+         * Required. The resource name of the space in which to create a message. Format:
+         * spaces/{space}
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+        /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+        /**
+         * Required. The resource name of the space in which to create a message. Format:
+         * spaces/{space}
+         */
         public Messages setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1792,15 +1828,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
-         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
-         * usage, see [Start or reply to a message
+         * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
+         * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
+         * example usage, see [Start or reply to a message
          * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+        /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
        thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
        [Start or reply to a message
        thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -1810,9 +1846,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
-         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
-         * usage, see [Start or reply to a message
+         * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
+         * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
+         * example usage, see [Start or reply to a message
          * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Messages setThreadKey(java.lang.String threadKey) {
@@ -2157,7 +2193,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+     * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -2185,7 +2221,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -2254,17 +2290,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Webhooks) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+      /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+      /**
+       * Required. The resource name of the space in which to create a message. Format:
+       * spaces/{space}
+       */
       public Webhooks setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2354,15 +2396,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+      /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
      thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
      [Start or reply to a message
      thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -2372,9 +2414,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to
-       * a thread, create a message and specify a `threadKey` or the thread.name. For example usage,
-       * see [Start or reply to a message
+       * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or
+       * add to a thread, create a message and specify a `threadKey` or the thread.name. For example
+       * usage, see [Start or reply to a message
        * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
@@ -2778,15 +2820,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Messages {
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a message. Requires
-       * [authentication](https://developers.google.com/chat/api/guides/auth).
+       * Creates a message. For example usage, see [Create a
+       * message](https://developers.google.com/chat/api/guides/crudl/messages#create_a_message). Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.messages` or `chat.messages.create` authorization scope.
        *
        * Create a request for the method "messages.create".
        *
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -2804,8 +2853,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a message.
-         * Requires [authentication](https://developers.google.com/chat/api/guides/auth).
+         * Creates a message. For example usage, see [Create a
+         * message](https://developers.google.com/chat/api/guides/crudl/messages#create_a_message).
+         * Requires [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports
+         * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+         * accounts). Supports [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+         * which grants early access to certain features. [User
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+         * `chat.messages` or `chat.messages.create` authorization scope.
          *
          * Create a request for the method "messages.create".
          *
@@ -2814,7 +2871,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+         * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -2883,17 +2940,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+        /**
+         * Required. The resource name of the space in which to create a message. Format:
+         * spaces/{space}
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
+        /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
+        /**
+         * Required. The resource name of the space in which to create a message. Format:
+         * spaces/{space}
+         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2983,15 +3046,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
-         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
-         * usage, see [Start or reply to a message
+         * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
+         * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
+         * example usage, see [Start or reply to a message
          * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add to a
+        /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
        thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
        [Start or reply to a message
        thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
@@ -3001,9 +3064,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Deprecated: Use thread_key instead. Opaque thread identifier. To start or add
-         * to a thread, create a message and specify a `threadKey` or the thread.name. For example
-         * usage, see [Start or reply to a message
+         * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
+         * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
+         * example usage, see [Start or reply to a message
          * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Create setThreadKey(java.lang.String threadKey) {
@@ -3017,11 +3080,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes a message. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). [Developer
-       * Preview](https://developers.google.com/workspace/preview): Deletes a message. Requires [user
-       * authentication](https://developers.google.com/chat/api/guides/auth/users) and the `chat.messages`
-       * authorization scope.
+       * Deletes a message. For example usage, see [Delete a
+       * message](https://developers.google.com/chat/api/guides/crudl/messages#delete_a_message). Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.messages` authorization scope.
        *
        * Create a request for the method "messages.delete".
        *
@@ -3046,11 +3113,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
         /**
-         * Deletes a message. Requires [service account
-         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
-         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a message.
-         * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and
-         * the `chat.messages` authorization scope.
+         * Deletes a message. For example usage, see [Delete a
+         * message](https://developers.google.com/chat/api/guides/crudl/messages#delete_a_message).
+         * Requires [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports
+         * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+         * accounts). Supports [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+         * which grants early access to certain features. [User
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+         * `chat.messages` authorization scope.
          *
          * Create a request for the method "messages.delete".
          *
@@ -3162,12 +3234,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Returns a message. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). [Developer
-       * Preview](https://developers.google.com/workspace/preview): Returns a message. Requires [user
-       * authentication](https://developers.google.com/chat/api/guides/auth/users) and the `chat.messages`
-       * or `chat.messages.readonly` authorization scope. Messages from a blocked member or messages from
-       * a blocked space can also be fetched.
+       * Returns a message. For example usage, see [Read a
+       * message](https://developers.google.com/chat/api/guides/crudl/messages#read_a_message). Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [Service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.messages` or `chat.messages.readonly` authorization scope. Note: Might return
+       * a message from a blocked member or space.
        *
        * Create a request for the method "messages.get".
        *
@@ -3195,12 +3271,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
         /**
-         * Returns a message. Requires [service account
-         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
-         * [Developer Preview](https://developers.google.com/workspace/preview): Returns a message.
-         * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and
-         * the `chat.messages` or `chat.messages.readonly` authorization scope. Messages from a blocked
-         * member or messages from a blocked space can also be fetched.
+         * Returns a message. For example usage, see [Read a
+         * message](https://developers.google.com/chat/api/guides/crudl/messages#read_a_message). Requires
+         * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [Service
+         * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as
+         * part of the [Google Workspace Developer Preview
+         * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+         * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+         * requires the `chat.messages` or `chat.messages.readonly` authorization scope. Note: Might
+         * return a message from a blocked member or space.
          *
          * Create a request for the method "messages.get".
          *
@@ -3336,8 +3416,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates a message. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Updates a message. For example usage, see [Update a
+       * message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires
+       * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+       * accounts).
        *
        * Create a request for the method "messages.update".
        *
@@ -3363,8 +3445,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
         /**
-         * Updates a message. Requires [service account
-         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * Updates a message. For example usage, see [Update a
+         * message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message).
+         * Requires [service account authentication](https://developers.google.com/chat/api/guides/auth
+         * /service-accounts).
          *
          * Create a request for the method "messages.update".
          *

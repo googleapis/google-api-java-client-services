@@ -7235,6 +7235,500 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         public class AssignedTargetingOptions {
 
           /**
+           * Assigns a targeting option to an insertion order. Returns the assigned targeting option if
+           * successful. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` *
+           * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_VIEWABILITY`
+           *
+           * Create a request for the method "assignedTargetingOptions.create".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+           * @param insertionOrderId Required. The ID of the insertion order the assigned targeting option will belong to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           *        `TARGETING_TYPE_VIEWABILITY`
+           * @param content the {@link com.google.api.services.displayvideo.v2.model.AssignedTargetingOption}
+           * @return the request
+           */
+          public Create create(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType, com.google.api.services.displayvideo.v2.model.AssignedTargetingOption content) throws java.io.IOException {
+            Create result = new Create(advertiserId, insertionOrderId, targetingType, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.AssignedTargetingOption> {
+
+            private static final String REST_PATH = "v2/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern INSERTION_ORDER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Assigns a targeting option to an insertion order. Returns the assigned targeting option if
+             * successful. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER`
+             * * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+             * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+             * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+             * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+             * `TARGETING_TYPE_VIEWABILITY`
+             *
+             * Create a request for the method "assignedTargetingOptions.create".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+             * @param insertionOrderId Required. The ID of the insertion order the assigned targeting option will belong to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           *        `TARGETING_TYPE_VIEWABILITY`
+             * @param content the {@link com.google.api.services.displayvideo.v2.model.AssignedTargetingOption}
+             * @since 1.13
+             */
+            protected Create(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType, com.google.api.services.displayvideo.v2.model.AssignedTargetingOption content) {
+              super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v2.model.AssignedTargetingOption.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.insertionOrderId = com.google.api.client.util.Preconditions.checkNotNull(insertionOrderId, "Required parameter insertionOrderId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the insertion order belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            public Create setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the insertion order the assigned targeting option will belong to.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Long insertionOrderId;
+
+            /** Required. The ID of the insertion order the assigned targeting option will belong to.
+             */
+            public java.lang.Long getInsertionOrderId() {
+              return insertionOrderId;
+            }
+
+            /**
+             * Required. The ID of the insertion order the assigned targeting option will belong to.
+             */
+            public Create setInsertionOrderId(java.lang.Long insertionOrderId) {
+              this.insertionOrderId = insertionOrderId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` *
+             * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`
+             * * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` *
+             * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           `TARGETING_TYPE_VIEWABILITY`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` *
+             * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`
+             * * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` *
+             * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            public Create setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an assigned targeting option from an insertion order. Supported targeting types: *
+           * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_VIEWABILITY`
+           *
+           * Create a request for the method "assignedTargetingOptions.delete".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+           * @param insertionOrderId Required. The ID of the insertion order the assigned targeting option belongs to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           *        `TARGETING_TYPE_VIEWABILITY`
+           * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+            Delete result = new Delete(advertiserId, insertionOrderId, targetingType, assignedTargetingOptionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.Empty> {
+
+            private static final String REST_PATH = "v2/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern INSERTION_ORDER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Deletes an assigned targeting option from an insertion order. Supported targeting types: *
+             * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+             * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+             * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+             * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+             * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+             * `TARGETING_TYPE_VIEWABILITY`
+             *
+             * Create a request for the method "assignedTargetingOptions.delete".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+             * @param insertionOrderId Required. The ID of the insertion order the assigned targeting option belongs to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           *        `TARGETING_TYPE_VIEWABILITY`
+             * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+              super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v2.model.Empty.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.insertionOrderId = com.google.api.client.util.Preconditions.checkNotNull(insertionOrderId, "Required parameter insertionOrderId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the insertion order belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            public Delete setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the insertion order the assigned targeting option belongs to.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Long insertionOrderId;
+
+            /** Required. The ID of the insertion order the assigned targeting option belongs to.
+             */
+            public java.lang.Long getInsertionOrderId() {
+              return insertionOrderId;
+            }
+
+            /**
+             * Required. The ID of the insertion order the assigned targeting option belongs to.
+             */
+            public Delete setInsertionOrderId(java.lang.Long insertionOrderId) {
+              this.insertionOrderId = insertionOrderId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` *
+             * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`
+             * * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` *
+             * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` *
+           `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` *
+           `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` *
+           `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           `TARGETING_TYPE_VIEWABILITY`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` *
+             * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`
+             * * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` *
+             * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            public Delete setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /** Required. The ID of the assigned targeting option to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String assignedTargetingOptionId;
+
+            /** Required. The ID of the assigned targeting option to delete.
+             */
+            public java.lang.String getAssignedTargetingOptionId() {
+              return assignedTargetingOptionId;
+            }
+
+            /** Required. The ID of the assigned targeting option to delete. */
+            public Delete setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = assignedTargetingOptionId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets a single targeting option assigned to an insertion order.
            *
            * Create a request for the method "assignedTargetingOptions.get".
@@ -8977,6 +9471,149 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Duplicates a line item. Returns the newly created line item id if successful.
+       *
+       * Create a request for the method "lineItems.duplicate".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Duplicate#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this line item belongs to.
+       * @param lineItemId Required. The ID of the line item to duplicate.
+       * @param content the {@link com.google.api.services.displayvideo.v2.model.DuplicateLineItemRequest}
+       * @return the request
+       */
+      public Duplicate duplicate(java.lang.Long advertiserId, java.lang.Long lineItemId, com.google.api.services.displayvideo.v2.model.DuplicateLineItemRequest content) throws java.io.IOException {
+        Duplicate result = new Duplicate(advertiserId, lineItemId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Duplicate extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.DuplicateLineItemResponse> {
+
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/lineItems/{+lineItemId}:duplicate";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern LINE_ITEM_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Duplicates a line item. Returns the newly created line item id if successful.
+         *
+         * Create a request for the method "lineItems.duplicate".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Duplicate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Duplicate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this line item belongs to.
+         * @param lineItemId Required. The ID of the line item to duplicate.
+         * @param content the {@link com.google.api.services.displayvideo.v2.model.DuplicateLineItemRequest}
+         * @since 1.13
+         */
+        protected Duplicate(java.lang.Long advertiserId, java.lang.Long lineItemId, com.google.api.services.displayvideo.v2.model.DuplicateLineItemRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v2.model.DuplicateLineItemResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.lineItemId = com.google.api.client.util.Preconditions.checkNotNull(lineItemId, "Required parameter lineItemId must be specified.");
+        }
+
+        @Override
+        public Duplicate set$Xgafv(java.lang.String $Xgafv) {
+          return (Duplicate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Duplicate setAccessToken(java.lang.String accessToken) {
+          return (Duplicate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Duplicate setAlt(java.lang.String alt) {
+          return (Duplicate) super.setAlt(alt);
+        }
+
+        @Override
+        public Duplicate setCallback(java.lang.String callback) {
+          return (Duplicate) super.setCallback(callback);
+        }
+
+        @Override
+        public Duplicate setFields(java.lang.String fields) {
+          return (Duplicate) super.setFields(fields);
+        }
+
+        @Override
+        public Duplicate setKey(java.lang.String key) {
+          return (Duplicate) super.setKey(key);
+        }
+
+        @Override
+        public Duplicate setOauthToken(java.lang.String oauthToken) {
+          return (Duplicate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Duplicate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Duplicate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Duplicate setQuotaUser(java.lang.String quotaUser) {
+          return (Duplicate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Duplicate setUploadType(java.lang.String uploadType) {
+          return (Duplicate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Duplicate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Duplicate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this line item belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this line item belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this line item belongs to. */
+        public Duplicate setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the line item to duplicate. */
+        @com.google.api.client.util.Key
+        private java.lang.Long lineItemId;
+
+        /** Required. The ID of the line item to duplicate.
+         */
+        public java.lang.Long getLineItemId() {
+          return lineItemId;
+        }
+
+        /** Required. The ID of the line item to duplicate. */
+        public Duplicate setLineItemId(java.lang.Long lineItemId) {
+          this.lineItemId = lineItemId;
+          return this;
+        }
+
+        @Override
+        public Duplicate set(String parameterName, Object value) {
+          return (Duplicate) super.set(parameterName, value);
         }
       }
       /**

@@ -78,6 +78,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. If set, the repository satisfies physical zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The size, in bytes, of all artifact storage in this repository. Repositories that
    * are generally available or in public preview use this to calculate storage costs.
    * The value may be {@code null}.
@@ -201,6 +208,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. If set, the repository satisfies physical zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. If set, the repository satisfies physical zone separation.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Repository setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

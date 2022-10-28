@@ -37,6 +37,20 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean accessLock;
 
   /**
+   * The current access type of the conference.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessType;
+
+  /**
+   * Whether users can join this conference before a host (Host or Cohost).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowJoiningBeforeHost;
+
+  /**
    * Indicates whether the attendance report is currently enabled or disabled.
    * The value may be {@code null}.
    */
@@ -65,7 +79,7 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean cseEnabled;
 
   /**
-   * Indicates whether the current call is moderated.
+   * Indicates whether moderation is currently on or off.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,6 +120,40 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
    */
   public CallSettings setAccessLock(java.lang.Boolean accessLock) {
     this.accessLock = accessLock;
+    return this;
+  }
+
+  /**
+   * The current access type of the conference.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessType() {
+    return accessType;
+  }
+
+  /**
+   * The current access type of the conference.
+   * @param accessType accessType or {@code null} for none
+   */
+  public CallSettings setAccessType(java.lang.String accessType) {
+    this.accessType = accessType;
+    return this;
+  }
+
+  /**
+   * Whether users can join this conference before a host (Host or Cohost).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowJoiningBeforeHost() {
+    return allowJoiningBeforeHost;
+  }
+
+  /**
+   * Whether users can join this conference before a host (Host or Cohost).
+   * @param allowJoiningBeforeHost allowJoiningBeforeHost or {@code null} for none
+   */
+  public CallSettings setAllowJoiningBeforeHost(java.lang.Boolean allowJoiningBeforeHost) {
+    this.allowJoiningBeforeHost = allowJoiningBeforeHost;
     return this;
   }
 
@@ -178,7 +226,7 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the current call is moderated.
+   * Indicates whether moderation is currently on or off.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getModerationEnabled() {
@@ -186,7 +234,7 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the current call is moderated.
+   * Indicates whether moderation is currently on or off.
    * @param moderationEnabled moderationEnabled or {@code null} for none
    */
   public CallSettings setModerationEnabled(java.lang.Boolean moderationEnabled) {

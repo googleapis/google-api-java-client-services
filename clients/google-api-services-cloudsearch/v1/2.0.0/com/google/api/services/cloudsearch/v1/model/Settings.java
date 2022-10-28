@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Settings of a meeting space that can be viewed and edited by users with permissions. These
- * settings are always populated for output.
+ * Settings of a meeting space that can be edited by users with corresponding manage privilege.
+ * These settings are always populated in responses.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -31,12 +31,25 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access lock of the meeting space that lets owner control who can join the meeting. True if
-   * the access lock feature is enabled for the meeting space.
+   * The access lock of the meeting space that lets hosts control who can join the meeting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean accessLock;
+
+  /**
+   * The access type of the meeting space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessType;
+
+  /**
+   * Whether users can join before host in the conferences of this meeting space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowJoiningBeforeHost;
 
   /**
    * Whether attendance report is enabled for the meeting space.
@@ -47,7 +60,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The chat lock of the meeting space that lets owner control whether the participants can send
-   * chat messages. True if the chat lock feature is enabled for the meeting space.
+   * chat messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +96,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The present lock of the meeting space that lets owner control whether the participants can
-   * present their screen. True if the present lock feature is enabled for the meeting space.
+   * present their screen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,15 +104,14 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The reactions lock of the meeting space that lets owner control whether the participants can
-   * send reactions. True if the reactions lock feature is enabled for the meeting space.
+   * send reactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reactionsLock;
 
   /**
-   * The access lock of the meeting space that lets owner control who can join the meeting. True if
-   * the access lock feature is enabled for the meeting space.
+   * The access lock of the meeting space that lets hosts control who can join the meeting.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAccessLock() {
@@ -107,12 +119,45 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The access lock of the meeting space that lets owner control who can join the meeting. True if
-   * the access lock feature is enabled for the meeting space.
+   * The access lock of the meeting space that lets hosts control who can join the meeting.
    * @param accessLock accessLock or {@code null} for none
    */
   public Settings setAccessLock(java.lang.Boolean accessLock) {
     this.accessLock = accessLock;
+    return this;
+  }
+
+  /**
+   * The access type of the meeting space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessType() {
+    return accessType;
+  }
+
+  /**
+   * The access type of the meeting space.
+   * @param accessType accessType or {@code null} for none
+   */
+  public Settings setAccessType(java.lang.String accessType) {
+    this.accessType = accessType;
+    return this;
+  }
+
+  /**
+   * Whether users can join before host in the conferences of this meeting space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowJoiningBeforeHost() {
+    return allowJoiningBeforeHost;
+  }
+
+  /**
+   * Whether users can join before host in the conferences of this meeting space.
+   * @param allowJoiningBeforeHost allowJoiningBeforeHost or {@code null} for none
+   */
+  public Settings setAllowJoiningBeforeHost(java.lang.Boolean allowJoiningBeforeHost) {
+    this.allowJoiningBeforeHost = allowJoiningBeforeHost;
     return this;
   }
 
@@ -135,7 +180,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The chat lock of the meeting space that lets owner control whether the participants can send
-   * chat messages. True if the chat lock feature is enabled for the meeting space.
+   * chat messages.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getChatLock() {
@@ -144,7 +189,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The chat lock of the meeting space that lets owner control whether the participants can send
-   * chat messages. True if the chat lock feature is enabled for the meeting space.
+   * chat messages.
    * @param chatLock chatLock or {@code null} for none
    */
   public Settings setChatLock(java.lang.Boolean chatLock) {
@@ -222,7 +267,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The present lock of the meeting space that lets owner control whether the participants can
-   * present their screen. True if the present lock feature is enabled for the meeting space.
+   * present their screen.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPresentLock() {
@@ -231,7 +276,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The present lock of the meeting space that lets owner control whether the participants can
-   * present their screen. True if the present lock feature is enabled for the meeting space.
+   * present their screen.
    * @param presentLock presentLock or {@code null} for none
    */
   public Settings setPresentLock(java.lang.Boolean presentLock) {
@@ -241,7 +286,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The reactions lock of the meeting space that lets owner control whether the participants can
-   * send reactions. True if the reactions lock feature is enabled for the meeting space.
+   * send reactions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReactionsLock() {
@@ -250,7 +295,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The reactions lock of the meeting space that lets owner control whether the participants can
-   * send reactions. True if the reactions lock feature is enabled for the meeting space.
+   * send reactions.
    * @param reactionsLock reactionsLock or {@code null} for none
    */
   public Settings setReactionsLock(java.lang.Boolean reactionsLock) {

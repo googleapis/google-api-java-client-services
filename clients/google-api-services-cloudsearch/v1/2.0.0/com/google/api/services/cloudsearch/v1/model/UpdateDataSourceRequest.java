@@ -43,11 +43,12 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   private DataSource source;
 
   /**
-   * Update mask to control which fields to update. If update_mask is non-empty then only the fields
-   * specified in the update_mask are updated. If you specify a field in the update_mask, but don't
-   * specify its value in the source that field will be cleared. If the update_mask is not present
-   * or empty or has the value * then all fields will be updated. Some example field paths: name,
-   * display_name
+   * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields
+   * to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then
+   * only the fields specified in the `update_mask` are updated. * If you specify a field in the
+   * `update_mask`, but don't specify its value in the source, that field is cleared. * If the
+   * `update_mask` is not present or empty or has the value `*`, then all fields are updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,11 +87,12 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Update mask to control which fields to update. If update_mask is non-empty then only the fields
-   * specified in the update_mask are updated. If you specify a field in the update_mask, but don't
-   * specify its value in the source that field will be cleared. If the update_mask is not present
-   * or empty or has the value * then all fields will be updated. Some example field paths: name,
-   * display_name
+   * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields
+   * to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then
+   * only the fields specified in the `update_mask` are updated. * If you specify a field in the
+   * `update_mask`, but don't specify its value in the source, that field is cleared. * If the
+   * `update_mask` is not present or empty or has the value `*`, then all fields are updated.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -98,11 +100,12 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Update mask to control which fields to update. If update_mask is non-empty then only the fields
-   * specified in the update_mask are updated. If you specify a field in the update_mask, but don't
-   * specify its value in the source that field will be cleared. If the update_mask is not present
-   * or empty or has the value * then all fields will be updated. Some example field paths: name,
-   * display_name
+   * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields
+   * to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then
+   * only the fields specified in the `update_mask` are updated. * If you specify a field in the
+   * `update_mask`, but don't specify its value in the source, that field is cleared. * If the
+   * `update_mask` is not present or empty or has the value `*`, then all fields are updated.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdateDataSourceRequest setUpdateMask(String updateMask) {

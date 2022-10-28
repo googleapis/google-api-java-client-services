@@ -42,6 +42,13 @@ public final class Roster extends com.google.api.client.json.GenericJson {
   private RosterId id;
 
   /**
+   * Whether caller has visibility into members of the roster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMembershipVisibleToCaller;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,6 +108,23 @@ public final class Roster extends com.google.api.client.json.GenericJson {
    */
   public Roster setId(RosterId id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Whether caller has visibility into members of the roster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMembershipVisibleToCaller() {
+    return isMembershipVisibleToCaller;
+  }
+
+  /**
+   * Whether caller has visibility into members of the roster.
+   * @param isMembershipVisibleToCaller isMembershipVisibleToCaller or {@code null} for none
+   */
+  public Roster setIsMembershipVisibleToCaller(java.lang.Boolean isMembershipVisibleToCaller) {
+    this.isMembershipVisibleToCaller = isMembershipVisibleToCaller;
     return this;
   }
 

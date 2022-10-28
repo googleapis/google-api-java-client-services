@@ -30,6 +30,13 @@ package com.google.api.services.dataproc.model;
 public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Approximate workload resource usage calculated after workload finishes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UsageMetrics approximateUsage;
+
+  /**
    * Output only. A URI pointing to the location of the diagnostics tarball.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String outputUri;
+
+  /**
+   * Output only. Approximate workload resource usage calculated after workload finishes.
+   * @return value or {@code null} for none
+   */
+  public UsageMetrics getApproximateUsage() {
+    return approximateUsage;
+  }
+
+  /**
+   * Output only. Approximate workload resource usage calculated after workload finishes.
+   * @param approximateUsage approximateUsage or {@code null} for none
+   */
+  public RuntimeInfo setApproximateUsage(UsageMetrics approximateUsage) {
+    this.approximateUsage = approximateUsage;
+    return this;
+  }
 
   /**
    * Output only. A URI pointing to the location of the diagnostics tarball.

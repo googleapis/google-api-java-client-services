@@ -530,34 +530,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * If set to true, the Job and its Executions will be deleted no matter whether any
-           * Executions are still running or not. If set to false or unset, the Job and its
-           * Executions can only be deleted if there are no running Executions. Any running
-           * Execution will fail the deletion.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean force;
-
-          /** If set to true, the Job and its Executions will be deleted no matter whether any Executions are
-         still running or not. If set to false or unset, the Job and its Executions can only be deleted if
-         there are no running Executions. Any running Execution will fail the deletion.
-           */
-          public java.lang.Boolean getForce() {
-            return force;
-          }
-
-          /**
-           * If set to true, the Job and its Executions will be deleted no matter whether any
-           * Executions are still running or not. If set to false or unset, the Job and its
-           * Executions can only be deleted if there are no running Executions. Any running
-           * Execution will fail the deletion.
-           */
-          public Delete setForce(java.lang.Boolean force) {
-            this.force = force;
-            return this;
-          }
-
-          /**
            * Indicates that the request should be validated without actually deleting any resources.
            */
           @com.google.api.client.util.Key

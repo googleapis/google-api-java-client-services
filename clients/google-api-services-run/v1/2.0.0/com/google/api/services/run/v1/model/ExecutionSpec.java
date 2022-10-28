@@ -50,7 +50,7 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   private java.lang.Integer taskCount;
 
   /**
-   * Optional. Describes the task(s) that will be created when executing an execution.
+   * Optional. The template used to create tasks for this execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Describes the task(s) that will be created when executing an execution.
+   * Optional. The template used to create tasks for this execution.
    * @return value or {@code null} for none
    */
   public TaskTemplateSpec getTemplate() {
@@ -111,7 +111,7 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Describes the task(s) that will be created when executing an execution.
+   * Optional. The template used to create tasks for this execution.
    * @param template template or {@code null} for none
    */
   public ExecutionSpec setTemplate(TaskTemplateSpec template) {

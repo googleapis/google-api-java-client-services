@@ -201,7 +201,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private java.lang.Integer taskCount;
 
   /**
-   * Output only. Describes the task(s) that will be created when executing an execution.
+   * Output only. The template used to create tasks for this execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -611,7 +611,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Describes the task(s) that will be created when executing an execution.
+   * Output only. The template used to create tasks for this execution.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate getTemplate() {
@@ -619,7 +619,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Describes the task(s) that will be created when executing an execution.
+   * Output only. The template used to create tasks for this execution.
    * @param template template or {@code null} for none
    */
   public GoogleCloudRunV2Execution setTemplate(GoogleCloudRunV2TaskTemplate template) {

@@ -60,8 +60,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. null The criteria by which events are filtered. Only events that match with this
-   * criteria will be sent to the destination.
+   * Required. Unordered list. The criteria by which events are filtered. Only events that match
+   * with this criteria will be sent to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,8 +185,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. null The criteria by which events are filtered. Only events that match with this
-   * criteria will be sent to the destination.
+   * Required. Unordered list. The criteria by which events are filtered. Only events that match
+   * with this criteria will be sent to the destination.
    * @return value or {@code null} for none
    */
   public java.util.List<MatchingCriteria> getMatchingCriteria() {
@@ -194,8 +194,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. null The criteria by which events are filtered. Only events that match with this
-   * criteria will be sent to the destination.
+   * Required. Unordered list. The criteria by which events are filtered. Only events that match
+   * with this criteria will be sent to the destination.
    * @param matchingCriteria matchingCriteria or {@code null} for none
    */
   public Trigger setMatchingCriteria(java.util.List<MatchingCriteria> matchingCriteria) {

@@ -75,8 +75,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Required. null The list of filters that applies to event attributes. Only events that match all
-   * the provided filters are sent to the destination.
+   * Required. Unordered list. The list of filters that applies to event attributes. Only events
+   * that match all the provided filters are sent to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,8 +236,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. null The list of filters that applies to event attributes. Only events that match all
-   * the provided filters are sent to the destination.
+   * Required. Unordered list. The list of filters that applies to event attributes. Only events
+   * that match all the provided filters are sent to the destination.
    * @return value or {@code null} for none
    */
   public java.util.List<EventFilter> getEventFilters() {
@@ -245,8 +245,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. null The list of filters that applies to event attributes. Only events that match all
-   * the provided filters are sent to the destination.
+   * Required. Unordered list. The list of filters that applies to event attributes. Only events
+   * that match all the provided filters are sent to the destination.
    * @param eventFilters eventFilters or {@code null} for none
    */
   public Trigger setEventFilters(java.util.List<EventFilter> eventFilters) {

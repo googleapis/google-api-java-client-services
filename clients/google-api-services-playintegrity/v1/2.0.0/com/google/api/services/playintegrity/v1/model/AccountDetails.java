@@ -38,14 +38,6 @@ public final class AccountDetails extends com.google.api.client.json.GenericJson
   private AccountActivity accountActivity;
 
   /**
-   * Details about the account risk for the user in the scope. This feature is available only to
-   * selected developers.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AccountRiskVerdict accountRiskVerdict;
-
-  /**
    * Required. Details about the licensing status of the user for the app in the scope.
    * The value may be {@code null}.
    */
@@ -66,25 +58,6 @@ public final class AccountDetails extends com.google.api.client.json.GenericJson
    */
   public AccountDetails setAccountActivity(AccountActivity accountActivity) {
     this.accountActivity = accountActivity;
-    return this;
-  }
-
-  /**
-   * Details about the account risk for the user in the scope. This feature is available only to
-   * selected developers.
-   * @return value or {@code null} for none
-   */
-  public AccountRiskVerdict getAccountRiskVerdict() {
-    return accountRiskVerdict;
-  }
-
-  /**
-   * Details about the account risk for the user in the scope. This feature is available only to
-   * selected developers.
-   * @param accountRiskVerdict accountRiskVerdict or {@code null} for none
-   */
-  public AccountDetails setAccountRiskVerdict(AccountRiskVerdict accountRiskVerdict) {
-    this.accountRiskVerdict = accountRiskVerdict;
     return this;
   }
 

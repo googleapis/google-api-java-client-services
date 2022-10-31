@@ -2,7 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "ignorePaths": [".kokoro/requirements.txt"],
+  "ignorePaths": [".kokoro/requirements.txt", "generator/generator_requirements.txt"],
   "enabledManagers": ["regex"],
   "regexManagers": [
     {

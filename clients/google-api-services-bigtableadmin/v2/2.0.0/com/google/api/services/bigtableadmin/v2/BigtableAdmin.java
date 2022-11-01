@@ -7284,18 +7284,197 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Create a new table by restoring from a completed backup. The new table must be in the same
-         * project as the instance containing the backup. The returned table long-running operation can be
-         * used to track the progress of the operation, and to cancel it. The metadata field type is
-         * RestoreTableMetadata. The response type is Table, if successful.
+         * Updates a specified table.
+         *
+         * Create a request for the method "tables.patch".
+         *
+         * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables
+         *        /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+         * @param content the {@link com.google.api.services.bigtableadmin.v2.model.Table}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.Table content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+
+          /**
+           * Updates a specified table.
+           *
+           * Create a request for the method "tables.patch".
+           *
+           * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables
+         *        /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.Table}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.Table content) {
+            super(BigtableAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The unique name of the table. Values are of the form
+           * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
+           * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The unique name of the table. Values are of the form
+         `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`,
+         `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The unique name of the table. Values are of the form
+           * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
+           * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. The list of fields to update. A mask specifying which fields (e.g.
+           * `change_stream_config`) in the `table` field should be updated. This mask is relative
+           * to the `table` field, not to the request message. The wildcard (*) path is currently
+           * not supported. Currently UpdateTable is only supported for the following fields: *
+           * `change_stream_config` * `change_stream_config.retention_period` *
+           * `deletion_protection` If `column_families` is set in `update_mask`, it will return an
+           * UNIMPLEMENTED error.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update. A mask specifying which fields (e.g.
+         `change_stream_config`) in the `table` field should be updated. This mask is relative to the
+         `table` field, not to the request message. The wildcard (*) path is currently not supported.
+         Currently UpdateTable is only supported for the following fields: * `change_stream_config` *
+         `change_stream_config.retention_period` * `deletion_protection` If `column_families` is set in
+         `update_mask`, it will return an UNIMPLEMENTED error.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. The list of fields to update. A mask specifying which fields (e.g.
+           * `change_stream_config`) in the `table` field should be updated. This mask is relative
+           * to the `table` field, not to the request message. The wildcard (*) path is currently
+           * not supported. Currently UpdateTable is only supported for the following fields: *
+           * `change_stream_config` * `change_stream_config.retention_period` *
+           * `deletion_protection` If `column_families` is set in `update_mask`, it will return an
+           * UNIMPLEMENTED error.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Create a new table by restoring from a completed backup. The returned table long-running
+         * operation can be used to track the progress of the operation, and to cancel it. The metadata
+         * field type is RestoreTableMetadata. The response type is Table, if successful.
          *
          * Create a request for the method "tables.restore".
          *
          * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
          * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the instance in which to create the restored table. This instance must be in
-         *        the same project as the source backup. Values are of the form `projects//instances/`.
+         * @param parent Required. The name of the instance in which to create the restored table. Values are of the form
+         *        `projects//instances/`.
          * @param content the {@link com.google.api.services.bigtableadmin.v2.model.RestoreTableRequest}
          * @return the request
          */
@@ -7313,10 +7492,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
 
           /**
-           * Create a new table by restoring from a completed backup. The new table must be in the same
-           * project as the instance containing the backup. The returned table long-running operation can be
-           * used to track the progress of the operation, and to cancel it. The metadata field type is
-           * RestoreTableMetadata. The response type is Table, if successful.
+           * Create a new table by restoring from a completed backup. The returned table long-running
+           * operation can be used to track the progress of the operation, and to cancel it. The metadata
+           * field type is RestoreTableMetadata. The response type is Table, if successful.
            *
            * Create a request for the method "tables.restore".
            *
@@ -7326,8 +7504,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the instance in which to create the restored table. This instance must be in
-         *        the same project as the source backup. Values are of the form `projects//instances/`.
+           * @param parent Required. The name of the instance in which to create the restored table. Values are of the form
+         *        `projects//instances/`.
            * @param content the {@link com.google.api.services.bigtableadmin.v2.model.RestoreTableRequest}
            * @since 1.13
            */
@@ -7397,24 +7575,22 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the instance in which to create the restored table. This instance
-           * must be in the same project as the source backup. Values are of the form
-           * `projects//instances/`.
+           * Required. The name of the instance in which to create the restored table. Values are of
+           * the form `projects//instances/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The name of the instance in which to create the restored table. This instance must be in
-         the same project as the source backup. Values are of the form `projects//instances/`.
+          /** Required. The name of the instance in which to create the restored table. Values are of the form
+         `projects//instances/`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The name of the instance in which to create the restored table. This instance
-           * must be in the same project as the source backup. Values are of the form
-           * `projects//instances/`.
+           * Required. The name of the instance in which to create the restored table. Values are of
+           * the form `projects//instances/`.
            */
           public Restore setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

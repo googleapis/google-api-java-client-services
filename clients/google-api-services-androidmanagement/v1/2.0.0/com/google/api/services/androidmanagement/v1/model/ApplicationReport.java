@@ -45,7 +45,7 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * List of app events. The most recent 20 events are stored in the list.
+   * The list of app events which have occurred in the last 30 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +152,7 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of app events. The most recent 20 events are stored in the list.
+   * The list of app events which have occurred in the last 30 hours.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationEvent> getEvents() {
@@ -160,7 +160,7 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of app events. The most recent 20 events are stored in the list.
+   * The list of app events which have occurred in the last 30 hours.
    * @param events events or {@code null} for none
    */
   public ApplicationReport setEvents(java.util.List<ApplicationEvent> events) {

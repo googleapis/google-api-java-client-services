@@ -70,8 +70,8 @@ public final class GoogleAnalyticsAdminV1alphaAudience extends com.google.api.cl
   private java.lang.String exclusionDurationMode;
 
   /**
-   * Required. Immutable. null Filter clauses that define the Audience. All clauses will be AND’ed
-   * together.
+   * Required. Immutable. Unordered list. Filter clauses that define the Audience. All clauses will
+   * be AND’ed together.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +187,8 @@ public final class GoogleAnalyticsAdminV1alphaAudience extends com.google.api.cl
   }
 
   /**
-   * Required. Immutable. null Filter clauses that define the Audience. All clauses will be AND’ed
-   * together.
+   * Required. Immutable. Unordered list. Filter clauses that define the Audience. All clauses will
+   * be AND’ed together.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAnalyticsAdminV1alphaAudienceFilterClause> getFilterClauses() {
@@ -196,8 +196,8 @@ public final class GoogleAnalyticsAdminV1alphaAudience extends com.google.api.cl
   }
 
   /**
-   * Required. Immutable. null Filter clauses that define the Audience. All clauses will be AND’ed
-   * together.
+   * Required. Immutable. Unordered list. Filter clauses that define the Audience. All clauses will
+   * be AND’ed together.
    * @param filterClauses filterClauses or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAudience setFilterClauses(java.util.List<GoogleAnalyticsAdminV1alphaAudienceFilterClause> filterClauses) {

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for AssistantApiAppControlSupport.
+ * Model definition for RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -27,37 +27,40 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssistantApiAppControlSupport extends com.google.api.client.json.GenericJson {
+public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Top level app category type (GAME or APPLICATION). Copied from playwright.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String enabled;
+  private java.lang.String playStoreAppType;
 
   /**
+   * Top level app category type (GAME or APPLICATION). Copied from playwright.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEnabled() {
-    return enabled;
+  public java.lang.String getPlayStoreAppType() {
+    return playStoreAppType;
   }
 
   /**
-   * @param enabled enabled or {@code null} for none
+   * Top level app category type (GAME or APPLICATION). Copied from playwright.
+   * @param playStoreAppType playStoreAppType or {@code null} for none
    */
-  public AssistantApiAppControlSupport setEnabled(java.lang.String enabled) {
-    this.enabled = enabled;
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData setPlayStoreAppType(java.lang.String playStoreAppType) {
+    this.playStoreAppType = playStoreAppType;
     return this;
   }
 
   @Override
-  public AssistantApiAppControlSupport set(String fieldName, Object value) {
-    return (AssistantApiAppControlSupport) super.set(fieldName, value);
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData set(String fieldName, Object value) {
+    return (RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData) super.set(fieldName, value);
   }
 
   @Override
-  public AssistantApiAppControlSupport clone() {
-    return (AssistantApiAppControlSupport) super.clone();
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData clone() {
+    return (RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData) super.clone();
   }
 
 }

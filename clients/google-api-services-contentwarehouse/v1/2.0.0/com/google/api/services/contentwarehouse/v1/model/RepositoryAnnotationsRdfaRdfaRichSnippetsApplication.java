@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This structure holds data for application information for rich snippets Next ID: 48
+ * This structure holds data for application information for rich snippets Next ID: 51
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -28,6 +28,12 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData appTypeData;
 
   /**
    * Fields for internal use
@@ -159,6 +165,13 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
   private java.lang.String lastUpdated;
 
   /**
+   * Unified proto for android LiveOps and iOS LiveEvents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityCalypsoAppsUniversalAuLiveOpsDetailInfo liveOpDetails;
+
+  /**
    * Market Android or itunes
    * The value may be {@code null}.
    */
@@ -221,6 +234,12 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
    */
   @com.google.api.client.util.Key
   private java.lang.String price;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationRankData rankData;
 
   /**
    * Ratings and reviews Either for this version only or for all versions to be displayed.
@@ -337,6 +356,21 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData getAppTypeData() {
+    return appTypeData;
+  }
+
+  /**
+   * @param appTypeData appTypeData or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setAppTypeData(RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData appTypeData) {
+    this.appTypeData = appTypeData;
+    return this;
+  }
 
   /**
    * Fields for internal use
@@ -654,6 +688,23 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
   }
 
   /**
+   * Unified proto for android LiveOps and iOS LiveEvents.
+   * @return value or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalAuLiveOpsDetailInfo getLiveOpDetails() {
+    return liveOpDetails;
+  }
+
+  /**
+   * Unified proto for android LiveOps and iOS LiveEvents.
+   * @param liveOpDetails liveOpDetails or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setLiveOpDetails(QualityCalypsoAppsUniversalAuLiveOpsDetailInfo liveOpDetails) {
+    this.liveOpDetails = liveOpDetails;
+    return this;
+  }
+
+  /**
    * Market Android or itunes
    * @return value or {@code null} for none
    */
@@ -808,6 +859,21 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
    */
   public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setPrice(java.lang.String price) {
     this.price = price;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationRankData getRankData() {
+    return rankData;
+  }
+
+  /**
+   * @param rankData rankData or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setRankData(RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationRankData rankData) {
+    this.rankData = rankData;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Under development. Represents a hosted S/MIME certificate config for use with Gmail. See
+ * Represents a hosted S/MIME certificate config for use with Gmail. See
  * //caribou/smime/proto/certificate_status.proto. There can be zero or more certificates associated
  * with an email address, be it profile email or contact email.
  *

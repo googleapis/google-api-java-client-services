@@ -39,6 +39,24 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
   private String comeBackTime;
 
   /**
+   * The time when the user will stop being committed, i.e., when their status will be neither of
+   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that if this OOO block is large (>Xh),
+   * committed_until will be the end of this block, not including any meetings or focus time
+   * following it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String committedUntil;
+
+  /**
+   * Whether the status of the user until committed_until has more than one status type (e.g.
+   * DoNotDisturb + InMeeting).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean committedUntilIsMixed;
+
+  /**
    * The summary of the corresponding OOO block in Calendar. This is entered by the user, so we
    * return it "as is" - no i18n.
    * The value may be {@code null}.
@@ -64,6 +82,48 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
    */
   public GoogleInternalAppsWaldoV1alphaOutOfOffice setComeBackTime(String comeBackTime) {
     this.comeBackTime = comeBackTime;
+    return this;
+  }
+
+  /**
+   * The time when the user will stop being committed, i.e., when their status will be neither of
+   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that if this OOO block is large (>Xh),
+   * committed_until will be the end of this block, not including any meetings or focus time
+   * following it.
+   * @return value or {@code null} for none
+   */
+  public String getCommittedUntil() {
+    return committedUntil;
+  }
+
+  /**
+   * The time when the user will stop being committed, i.e., when their status will be neither of
+   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that if this OOO block is large (>Xh),
+   * committed_until will be the end of this block, not including any meetings or focus time
+   * following it.
+   * @param committedUntil committedUntil or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntil(String committedUntil) {
+    this.committedUntil = committedUntil;
+    return this;
+  }
+
+  /**
+   * Whether the status of the user until committed_until has more than one status type (e.g.
+   * DoNotDisturb + InMeeting).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCommittedUntilIsMixed() {
+    return committedUntilIsMixed;
+  }
+
+  /**
+   * Whether the status of the user until committed_until has more than one status type (e.g.
+   * DoNotDisturb + InMeeting).
+   * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {
+    this.committedUntilIsMixed = committedUntilIsMixed;
     return this;
   }
 

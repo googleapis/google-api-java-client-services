@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The android app information of the provider. Like, Spotify. Next ID: 15 LINT.IfChange
+ * The android app information of the provider. Like, Spotify. Next ID: 16 LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -139,6 +139,14 @@ public final class AssistantApiCoreTypesAndroidAppInfo extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String shortcutId;
+
+  /**
+   * The fully qualified target class name of the provider, like
+   * "com.example.myapp.GetOrderService".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetClass;
 
   /**
    * The android app version name, like "4.1.091.05.40d", "11.2.7.21.alpha". Android Docs:
@@ -406,6 +414,25 @@ public final class AssistantApiCoreTypesAndroidAppInfo extends com.google.api.cl
    */
   public AssistantApiCoreTypesAndroidAppInfo setShortcutId(java.lang.String shortcutId) {
     this.shortcutId = shortcutId;
+    return this;
+  }
+
+  /**
+   * The fully qualified target class name of the provider, like
+   * "com.example.myapp.GetOrderService".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetClass() {
+    return targetClass;
+  }
+
+  /**
+   * The fully qualified target class name of the provider, like
+   * "com.example.myapp.GetOrderService".
+   * @param targetClass targetClass or {@code null} for none
+   */
+  public AssistantApiCoreTypesAndroidAppInfo setTargetClass(java.lang.String targetClass) {
+    this.targetClass = targetClass;
     return this;
   }
 

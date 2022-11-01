@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Contact metadata Next Id: 35
+ * Contact metadata Next Id: 36
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -144,6 +144,12 @@ public final class QualityQrewritePersonalContactData extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isVisibleToGuestsRelationship;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lookupNameSource;
 
   /**
    * Populate only if AlternateSource is not NONE.
@@ -531,6 +537,21 @@ public final class QualityQrewritePersonalContactData extends com.google.api.cli
    */
   public QualityQrewritePersonalContactData setIsVisibleToGuestsRelationship(java.lang.Boolean isVisibleToGuestsRelationship) {
     this.isVisibleToGuestsRelationship = isVisibleToGuestsRelationship;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLookupNameSource() {
+    return lookupNameSource;
+  }
+
+  /**
+   * @param lookupNameSource lookupNameSource or {@code null} for none
+   */
+  public QualityQrewritePersonalContactData setLookupNameSource(java.lang.String lookupNameSource) {
+    this.lookupNameSource = lookupNameSource;
     return this;
   }
 

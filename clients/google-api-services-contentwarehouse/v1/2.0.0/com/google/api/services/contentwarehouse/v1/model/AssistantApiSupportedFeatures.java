@@ -368,7 +368,7 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   private AssistantApiSignInMethod signInMethod;
 
   /**
-   * Whether the client can monitor sleep. This allows us to show sleep CUJ realted information:
+   * Whether the client can monitor sleep. This allows us to show sleep CUJ related information:
    * go/TwilightDesign Use for development only, see the same field in
    * DeviceCapabilities.SoftwareCapabilities.SelinaCapabilities.
    * The value may be {@code null}.
@@ -1325,7 +1325,7 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   }
 
   /**
-   * Whether the client can monitor sleep. This allows us to show sleep CUJ realted information:
+   * Whether the client can monitor sleep. This allows us to show sleep CUJ related information:
    * go/TwilightDesign Use for development only, see the same field in
    * DeviceCapabilities.SoftwareCapabilities.SelinaCapabilities.
    * @return value or {@code null} for none
@@ -1335,7 +1335,7 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   }
 
   /**
-   * Whether the client can monitor sleep. This allows us to show sleep CUJ realted information:
+   * Whether the client can monitor sleep. This allows us to show sleep CUJ related information:
    * go/TwilightDesign Use for development only, see the same field in
    * DeviceCapabilities.SoftwareCapabilities.SelinaCapabilities.
    * @param sleepSensingSupported sleepSensingSupported or {@code null} for none

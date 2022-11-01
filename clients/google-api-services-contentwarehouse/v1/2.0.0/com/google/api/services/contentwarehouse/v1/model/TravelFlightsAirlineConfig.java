@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 26
+ * Next ID: 27
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -137,6 +137,13 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private TravelFlightsNameCatalogProto names;
+
+  /**
+   * Default url for passenger assistance information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TravelFlightsNameCatalogProto passengerAssistanceUrls;
 
   /**
    * Number of flights with this airline over the next 180 days.
@@ -432,6 +439,23 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    */
   public TravelFlightsAirlineConfig setNames(TravelFlightsNameCatalogProto names) {
     this.names = names;
+    return this;
+  }
+
+  /**
+   * Default url for passenger assistance information.
+   * @return value or {@code null} for none
+   */
+  public TravelFlightsNameCatalogProto getPassengerAssistanceUrls() {
+    return passengerAssistanceUrls;
+  }
+
+  /**
+   * Default url for passenger assistance information.
+   * @param passengerAssistanceUrls passengerAssistanceUrls or {@code null} for none
+   */
+  public TravelFlightsAirlineConfig setPassengerAssistanceUrls(TravelFlightsNameCatalogProto passengerAssistanceUrls) {
+    this.passengerAssistanceUrls = passengerAssistanceUrls;
     return this;
   }
 

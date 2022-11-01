@@ -56,8 +56,7 @@ public final class RepositoryWebrefPreprocessingNameEntityMetadata extends com.g
   private java.lang.Boolean isCompoundName;
 
   /**
-   * Indicates special compound retrieval keys, like "Compound $mid1 $mid2", see
-   * repository/webref/universal/util/compound-retrieval.h
+   * Indicates special compound retrieval keys, like "Compound $mid1 $mid2"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,8 +238,7 @@ public final class RepositoryWebrefPreprocessingNameEntityMetadata extends com.g
   }
 
   /**
-   * Indicates special compound retrieval keys, like "Compound $mid1 $mid2", see
-   * repository/webref/universal/util/compound-retrieval.h
+   * Indicates special compound retrieval keys, like "Compound $mid1 $mid2"
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsCompoundRetrievalKey() {
@@ -248,8 +246,7 @@ public final class RepositoryWebrefPreprocessingNameEntityMetadata extends com.g
   }
 
   /**
-   * Indicates special compound retrieval keys, like "Compound $mid1 $mid2", see
-   * repository/webref/universal/util/compound-retrieval.h
+   * Indicates special compound retrieval keys, like "Compound $mid1 $mid2"
    * @param isCompoundRetrievalKey isCompoundRetrievalKey or {@code null} for none
    */
   public RepositoryWebrefPreprocessingNameEntityMetadata setIsCompoundRetrievalKey(java.lang.Boolean isCompoundRetrievalKey) {

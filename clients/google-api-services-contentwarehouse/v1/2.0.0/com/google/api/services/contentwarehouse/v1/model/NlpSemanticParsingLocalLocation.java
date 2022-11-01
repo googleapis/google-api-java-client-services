@@ -25,7 +25,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * 94040"). Note that the definition is recursive, e.g., "Parking garage near Target in Mountain
  * View". - Vicinity location: indicates an area around a certain location. The area can be defined
  * by time or space. E.g., "within 1 hour of Palo Alto", "10 blocks from Union Square", "a few miles
- * from here". Next ID: 14
+ * from here". Next ID: 14 LINT.IfChange()
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:

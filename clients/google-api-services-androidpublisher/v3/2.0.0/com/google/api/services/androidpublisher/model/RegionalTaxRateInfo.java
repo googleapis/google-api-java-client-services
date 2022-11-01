@@ -40,8 +40,7 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
 
   /**
    * To collect communications or amusement taxes in the United States, choose the appropriate tax
-   * category. By default Google will determine the collected rate based on the buyer ZIP code.
-   * [Learn more](https://support.google.com/googleplay/android-
+   * category. [Learn more](https://support.google.com/googleplay/android-
    * developer/answer/10463498#streaming_tax).
    * The value may be {@code null}.
    */
@@ -78,8 +77,7 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
 
   /**
    * To collect communications or amusement taxes in the United States, choose the appropriate tax
-   * category. By default Google will determine the collected rate based on the buyer ZIP code.
-   * [Learn more](https://support.google.com/googleplay/android-
+   * category. [Learn more](https://support.google.com/googleplay/android-
    * developer/answer/10463498#streaming_tax).
    * @return value or {@code null} for none
    */
@@ -89,8 +87,7 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
 
   /**
    * To collect communications or amusement taxes in the United States, choose the appropriate tax
-   * category. By default Google will determine the collected rate based on the buyer ZIP code.
-   * [Learn more](https://support.google.com/googleplay/android-
+   * category. [Learn more](https://support.google.com/googleplay/android-
    * developer/answer/10463498#streaming_tax).
    * @param streamingTaxType streamingTaxType or {@code null} for none
    */

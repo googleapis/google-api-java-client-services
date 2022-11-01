@@ -70,6 +70,13 @@ public final class QualityNavboostCrapsCrapsClickSignals extends com.google.api.
   private java.lang.Double lastLongestClicks;
 
   /**
+   * The subset of clicks that are associated with an event from a Unicorn user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double unicornClicks;
+
+  /**
    * This is not being populated for the current format - instead two instances of CrapsClickSignals
    * (squashed/unsquashed) are used. We are migrating to the new format where this field will be
    * populated.
@@ -186,6 +193,23 @@ public final class QualityNavboostCrapsCrapsClickSignals extends com.google.api.
    */
   public QualityNavboostCrapsCrapsClickSignals setLastLongestClicks(java.lang.Double lastLongestClicks) {
     this.lastLongestClicks = lastLongestClicks;
+    return this;
+  }
+
+  /**
+   * The subset of clicks that are associated with an event from a Unicorn user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUnicornClicks() {
+    return unicornClicks;
+  }
+
+  /**
+   * The subset of clicks that are associated with an event from a Unicorn user.
+   * @param unicornClicks unicornClicks or {@code null} for none
+   */
+  public QualityNavboostCrapsCrapsClickSignals setUnicornClicks(java.lang.Double unicornClicks) {
+    this.unicornClicks = unicornClicks;
     return this;
   }
 

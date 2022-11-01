@@ -217,7 +217,7 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<QualityNsrVersionedFloatSignal> relativeNsr;
+  private java.util.List<QualityNsrVersionedFloatSignal> priorAdjustedNsr;
 
   /**
    * Secondary NSR sitechunk. When present, it provides more granular chunking than primary
@@ -802,16 +802,16 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * NSR - prior. Estimate of whether the site is above/below average NSR in its slice.
    * @return value or {@code null} for none
    */
-  public java.util.List<QualityNsrVersionedFloatSignal> getRelativeNsr() {
-    return relativeNsr;
+  public java.util.List<QualityNsrVersionedFloatSignal> getPriorAdjustedNsr() {
+    return priorAdjustedNsr;
   }
 
   /**
    * NSR - prior. Estimate of whether the site is above/below average NSR in its slice.
-   * @param relativeNsr relativeNsr or {@code null} for none
+   * @param priorAdjustedNsr priorAdjustedNsr or {@code null} for none
    */
-  public QualityNsrNsrData setRelativeNsr(java.util.List<QualityNsrVersionedFloatSignal> relativeNsr) {
-    this.relativeNsr = relativeNsr;
+  public QualityNsrNsrData setPriorAdjustedNsr(java.util.List<QualityNsrVersionedFloatSignal> priorAdjustedNsr) {
+    this.priorAdjustedNsr = priorAdjustedNsr;
     return this;
   }
 

@@ -30,24 +30,25 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status type of the next change which is considered a commitment. The status will be an
-   * empty instance of the corresponding type, no additional data will be provided.
+   * The status type of the commitment above. The status will be an empty instance of the
+   * corresponding type, no additional data will be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleInternalAppsWaldoV1alphaUserStatus nextCommitmentStatus;
 
   /**
-   * The time when the user will start having a status of InMeeting, DoNotDisturb or short
-   * OutOfOffice.
+   * The most relevant upcoming commitment (InMeeting, DoNotDisturb or OutOfOffice). In most cases
+   * this will be the next closest commitment event, but if there is a large OOO in less than 24h it
+   * will take precedence over earlier events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String nextCommitmentTime;
 
   /**
-   * The status type of the next change which is considered a commitment. The status will be an
-   * empty instance of the corresponding type, no additional data will be provided.
+   * The status type of the commitment above. The status will be an empty instance of the
+   * corresponding type, no additional data will be provided.
    * @return value or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaUserStatus getNextCommitmentStatus() {
@@ -55,8 +56,8 @@ public final class GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext exten
   }
 
   /**
-   * The status type of the next change which is considered a commitment. The status will be an
-   * empty instance of the corresponding type, no additional data will be provided.
+   * The status type of the commitment above. The status will be an empty instance of the
+   * corresponding type, no additional data will be provided.
    * @param nextCommitmentStatus nextCommitmentStatus or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext setNextCommitmentStatus(GoogleInternalAppsWaldoV1alphaUserStatus nextCommitmentStatus) {
@@ -65,8 +66,9 @@ public final class GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext exten
   }
 
   /**
-   * The time when the user will start having a status of InMeeting, DoNotDisturb or short
-   * OutOfOffice.
+   * The most relevant upcoming commitment (InMeeting, DoNotDisturb or OutOfOffice). In most cases
+   * this will be the next closest commitment event, but if there is a large OOO in less than 24h it
+   * will take precedence over earlier events.
    * @return value or {@code null} for none
    */
   public String getNextCommitmentTime() {
@@ -74,8 +76,9 @@ public final class GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext exten
   }
 
   /**
-   * The time when the user will start having a status of InMeeting, DoNotDisturb or short
-   * OutOfOffice.
+   * The most relevant upcoming commitment (InMeeting, DoNotDisturb or OutOfOffice). In most cases
+   * this will be the next closest commitment event, but if there is a large OOO in less than 24h it
+   * will take precedence over earlier events.
    * @param nextCommitmentTime nextCommitmentTime or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext setNextCommitmentTime(String nextCommitmentTime) {

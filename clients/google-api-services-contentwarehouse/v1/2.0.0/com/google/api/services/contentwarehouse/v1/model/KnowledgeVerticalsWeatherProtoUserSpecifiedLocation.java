@@ -52,6 +52,13 @@ public final class KnowledgeVerticalsWeatherProtoUserSpecifiedLocation extends c
   private java.lang.String locationName;
 
   /**
+   * MID corresponding to the location from feature_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mid;
+
+  /**
    * The timezone to display the current conditions observation time. Optional and will override the
    * timezone of "feature_id".
    * The value may be {@code null}.
@@ -107,6 +114,23 @@ public final class KnowledgeVerticalsWeatherProtoUserSpecifiedLocation extends c
    */
   public KnowledgeVerticalsWeatherProtoUserSpecifiedLocation setLocationName(java.lang.String locationName) {
     this.locationName = locationName;
+    return this;
+  }
+
+  /**
+   * MID corresponding to the location from feature_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMid() {
+    return mid;
+  }
+
+  /**
+   * MID corresponding to the location from feature_id.
+   * @param mid mid or {@code null} for none
+   */
+  public KnowledgeVerticalsWeatherProtoUserSpecifiedLocation setMid(java.lang.String mid) {
+    this.mid = mid;
     return this;
   }
 

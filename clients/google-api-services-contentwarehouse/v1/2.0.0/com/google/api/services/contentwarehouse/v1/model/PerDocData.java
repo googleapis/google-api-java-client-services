@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for
  * protocols used during search and/or docinfo. Next available tag deprecated, use this (and look
  * for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \
- * indexer/perdocdata/perdocdata.proto Next tag: 217
+ * indexer/perdocdata/perdocdata.proto Next tag: 218
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -826,6 +826,13 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SpamMuppetjoinsMuppetSignals spamMuppetSignals;
+
+  /**
+   * The document total spam score identified by spambrain, going from 0 to 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float spambrainTotalDocSpamScore;
 
   /**
    * The spamrank measures the likelihood that this document links to known spammers. Its value is
@@ -2921,6 +2928,23 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   public PerDocData setSpamMuppetSignals(SpamMuppetjoinsMuppetSignals spamMuppetSignals) {
     this.spamMuppetSignals = spamMuppetSignals;
+    return this;
+  }
+
+  /**
+   * The document total spam score identified by spambrain, going from 0 to 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSpambrainTotalDocSpamScore() {
+    return spambrainTotalDocSpamScore;
+  }
+
+  /**
+   * The document total spam score identified by spambrain, going from 0 to 1.
+   * @param spambrainTotalDocSpamScore spambrainTotalDocSpamScore or {@code null} for none
+   */
+  public PerDocData setSpambrainTotalDocSpamScore(java.lang.Float spambrainTotalDocSpamScore) {
+    this.spambrainTotalDocSpamScore = spambrainTotalDocSpamScore;
     return this;
   }
 

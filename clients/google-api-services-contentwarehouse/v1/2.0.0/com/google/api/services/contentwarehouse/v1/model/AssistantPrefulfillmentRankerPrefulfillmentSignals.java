@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 30
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 33
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -109,6 +109,15 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double intentNameAuisScoreExp;
 
   /**
+   * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
+   * interpretation, if any, gets a rank of 0. The remaining N interpretations get a rank of 1
+   * through N.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer kscorerRank;
+
+  /**
    * This feature is always false / no-op in serving time. In training time, this feature may be set
    * true on specific examples for weighted training where when this signal is true, only cross-
    * intent level features are used for training and other candidate level features are masked (set
@@ -187,6 +196,21 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Double pq2tVsIbstCosine;
+
+  /**
+   * Intent confidence predicted by the AssistantVerticalClassifier QRewrite servlet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float predictedIntentConfidence;
+
+  /**
+   * The determination made by the SearchDispatchingConfig as to whether and how this interpretation
+   * should be dispatched to Search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String searchDispatch;
 
   /**
    * Average of per-word confidence for top speech recognition hypothesis. The value is from
@@ -392,6 +416,27 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
+   * interpretation, if any, gets a rank of 0. The remaining N interpretations get a rank of 1
+   * through N.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getKscorerRank() {
+    return kscorerRank;
+  }
+
+  /**
+   * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
+   * interpretation, if any, gets a rank of 0. The remaining N interpretations get a rank of 1
+   * through N.
+   * @param kscorerRank kscorerRank or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setKscorerRank(java.lang.Integer kscorerRank) {
+    this.kscorerRank = kscorerRank;
+    return this;
+  }
+
+  /**
    * This feature is always false / no-op in serving time. In training time, this feature may be set
    * true on specific examples for weighted training where when this signal is true, only cross-
    * intent level features are used for training and other candidate level features are masked (set
@@ -578,6 +623,42 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setPq2tVsIbstCosine(java.lang.Double pq2tVsIbstCosine) {
     this.pq2tVsIbstCosine = pq2tVsIbstCosine;
+    return this;
+  }
+
+  /**
+   * Intent confidence predicted by the AssistantVerticalClassifier QRewrite servlet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPredictedIntentConfidence() {
+    return predictedIntentConfidence;
+  }
+
+  /**
+   * Intent confidence predicted by the AssistantVerticalClassifier QRewrite servlet.
+   * @param predictedIntentConfidence predictedIntentConfidence or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setPredictedIntentConfidence(java.lang.Float predictedIntentConfidence) {
+    this.predictedIntentConfidence = predictedIntentConfidence;
+    return this;
+  }
+
+  /**
+   * The determination made by the SearchDispatchingConfig as to whether and how this interpretation
+   * should be dispatched to Search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSearchDispatch() {
+    return searchDispatch;
+  }
+
+  /**
+   * The determination made by the SearchDispatchingConfig as to whether and how this interpretation
+   * should be dispatched to Search.
+   * @param searchDispatch searchDispatch or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setSearchDispatch(java.lang.String searchDispatch) {
+    this.searchDispatch = searchDispatch;
     return this;
   }
 

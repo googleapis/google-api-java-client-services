@@ -21,7 +21,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * metadata. If any attribute is not set, then there's no specific restrictions associated with the
  * missing attribute. For example, if `availability_start_timestamp` is not set, the data won't be
  * embargoed automatically; if `availability_end_timestamp` is not set, they won't expire
- * automatically. Next ID: 8 LINT.IfChange
+ * automatically. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -85,6 +85,50 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(KeGovernanceTypedRegions.class);
   }
+
+  /**
+   * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
+   * online-restrictions for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lmsIsEditorial;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KeGovernanceTypedRegions lmsRegionsAllowed;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KeGovernanceTypedRegions lmsRegionsDisallowed;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lmsRequiresAttribution;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lmsRequiresFirstPartyOnly;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lmsRequiresLink;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lmsRequiresShareAlike;
 
   /**
    * Policy metadata are VERTICAL by default. Vertical policy makers / providers does not need to
@@ -185,6 +229,115 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   public StorageGraphBfgPolicyMetadata setLegalRemovalRegions(java.util.List<KeGovernanceTypedRegions> legalRemovalRegions) {
     this.legalRemovalRegions = legalRemovalRegions;
+    return this;
+  }
+
+  /**
+   * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
+   * online-restrictions for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLmsIsEditorial() {
+    return lmsIsEditorial;
+  }
+
+  /**
+   * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
+   * online-restrictions for details.
+   * @param lmsIsEditorial lmsIsEditorial or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsIsEditorial(java.lang.Boolean lmsIsEditorial) {
+    this.lmsIsEditorial = lmsIsEditorial;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public KeGovernanceTypedRegions getLmsRegionsAllowed() {
+    return lmsRegionsAllowed;
+  }
+
+  /**
+   * @param lmsRegionsAllowed lmsRegionsAllowed or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsRegionsAllowed(KeGovernanceTypedRegions lmsRegionsAllowed) {
+    this.lmsRegionsAllowed = lmsRegionsAllowed;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public KeGovernanceTypedRegions getLmsRegionsDisallowed() {
+    return lmsRegionsDisallowed;
+  }
+
+  /**
+   * @param lmsRegionsDisallowed lmsRegionsDisallowed or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsRegionsDisallowed(KeGovernanceTypedRegions lmsRegionsDisallowed) {
+    this.lmsRegionsDisallowed = lmsRegionsDisallowed;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLmsRequiresAttribution() {
+    return lmsRequiresAttribution;
+  }
+
+  /**
+   * @param lmsRequiresAttribution lmsRequiresAttribution or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsRequiresAttribution(java.lang.Boolean lmsRequiresAttribution) {
+    this.lmsRequiresAttribution = lmsRequiresAttribution;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLmsRequiresFirstPartyOnly() {
+    return lmsRequiresFirstPartyOnly;
+  }
+
+  /**
+   * @param lmsRequiresFirstPartyOnly lmsRequiresFirstPartyOnly or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsRequiresFirstPartyOnly(java.lang.Boolean lmsRequiresFirstPartyOnly) {
+    this.lmsRequiresFirstPartyOnly = lmsRequiresFirstPartyOnly;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLmsRequiresLink() {
+    return lmsRequiresLink;
+  }
+
+  /**
+   * @param lmsRequiresLink lmsRequiresLink or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsRequiresLink(java.lang.Boolean lmsRequiresLink) {
+    this.lmsRequiresLink = lmsRequiresLink;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLmsRequiresShareAlike() {
+    return lmsRequiresShareAlike;
+  }
+
+  /**
+   * @param lmsRequiresShareAlike lmsRequiresShareAlike or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsRequiresShareAlike(java.lang.Boolean lmsRequiresShareAlike) {
+    this.lmsRequiresShareAlike = lmsRequiresShareAlike;
     return this;
   }
 

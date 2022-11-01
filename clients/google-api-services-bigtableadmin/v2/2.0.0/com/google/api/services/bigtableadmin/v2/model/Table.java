@@ -49,7 +49,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * The column families configured for this table, mapped by column family ID. Views:
-   * `SCHEMA_VIEW`, `FULL`
+   * `SCHEMA_VIEW`, `STATS_VIEW`, `FULL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +60,16 @@ public final class Table extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ColumnFamily.class);
   }
+
+  /**
+   * Set to true to make the table protected against data loss. i.e. deleting the following
+   * resources through Admin APIs are prohibited: - The table. - The column families in the table. -
+   * The instance containing the table. Note one can still delete the data stored in the table
+   * through Data APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deletionProtection;
 
   /**
    * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
@@ -73,7 +83,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   /**
    * The unique name of the table. Values are of the form
    * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
-   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,6 +96,15 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private RestoreInfo restoreInfo;
+
+  /**
+   * Only available with STATS_VIEW, this includes summary statistics about the entire table
+   * contents. For statistics about a specific column family, see ColumnFamilyStats in the mapped
+   * ColumnFamily collection above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableStats stats;
 
   /**
    * Output only. Map from cluster ID to per-cluster table state. If it could not be determined
@@ -112,7 +131,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * The column families configured for this table, mapped by column family ID. Views:
-   * `SCHEMA_VIEW`, `FULL`
+   * `SCHEMA_VIEW`, `STATS_VIEW`, `FULL`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ColumnFamily> getColumnFamilies() {
@@ -121,11 +140,34 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * The column families configured for this table, mapped by column family ID. Views:
-   * `SCHEMA_VIEW`, `FULL`
+   * `SCHEMA_VIEW`, `STATS_VIEW`, `FULL`
    * @param columnFamilies columnFamilies or {@code null} for none
    */
   public Table setColumnFamilies(java.util.Map<String, ColumnFamily> columnFamilies) {
     this.columnFamilies = columnFamilies;
+    return this;
+  }
+
+  /**
+   * Set to true to make the table protected against data loss. i.e. deleting the following
+   * resources through Admin APIs are prohibited: - The table. - The column families in the table. -
+   * The instance containing the table. Note one can still delete the data stored in the table
+   * through Data APIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionProtection() {
+    return deletionProtection;
+  }
+
+  /**
+   * Set to true to make the table protected against data loss. i.e. deleting the following
+   * resources through Admin APIs are prohibited: - The table. - The column families in the table. -
+   * The instance containing the table. Note one can still delete the data stored in the table
+   * through Data APIs.
+   * @param deletionProtection deletionProtection or {@code null} for none
+   */
+  public Table setDeletionProtection(java.lang.Boolean deletionProtection) {
+    this.deletionProtection = deletionProtection;
     return this;
   }
 
@@ -153,7 +195,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   /**
    * The unique name of the table. Values are of the form
    * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
-   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -163,7 +205,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   /**
    * The unique name of the table. Values are of the form
    * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
-   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
    * @param name name or {@code null} for none
    */
   public Table setName(java.lang.String name) {
@@ -187,6 +229,27 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setRestoreInfo(RestoreInfo restoreInfo) {
     this.restoreInfo = restoreInfo;
+    return this;
+  }
+
+  /**
+   * Only available with STATS_VIEW, this includes summary statistics about the entire table
+   * contents. For statistics about a specific column family, see ColumnFamilyStats in the mapped
+   * ColumnFamily collection above.
+   * @return value or {@code null} for none
+   */
+  public TableStats getStats() {
+    return stats;
+  }
+
+  /**
+   * Only available with STATS_VIEW, this includes summary statistics about the entire table
+   * contents. For statistics about a specific column family, see ColumnFamilyStats in the mapped
+   * ColumnFamily collection above.
+   * @param stats stats or {@code null} for none
+   */
+  public Table setStats(TableStats stats) {
+    this.stats = stats;
     return this;
   }
 

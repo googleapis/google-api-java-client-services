@@ -40,6 +40,14 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   private GcRule gcRule;
 
   /**
+   * Only available with STATS_VIEW, this includes summary statistics about column family contents.
+   * For statistics over an entire table, see TableStats above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColumnFamilyStats stats;
+
+  /**
    * Garbage collection rule specified as a protobuf. Must serialize to at most 500 bytes. NOTE:
    * Garbage collection executes opportunistically in the background, and so it's possible for reads
    * to return a cell even if it matches the active GC expression for its family.
@@ -57,6 +65,25 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
    */
   public ColumnFamily setGcRule(GcRule gcRule) {
     this.gcRule = gcRule;
+    return this;
+  }
+
+  /**
+   * Only available with STATS_VIEW, this includes summary statistics about column family contents.
+   * For statistics over an entire table, see TableStats above.
+   * @return value or {@code null} for none
+   */
+  public ColumnFamilyStats getStats() {
+    return stats;
+  }
+
+  /**
+   * Only available with STATS_VIEW, this includes summary statistics about column family contents.
+   * For statistics over an entire table, see TableStats above.
+   * @param stats stats or {@code null} for none
+   */
+  public ColumnFamily setStats(ColumnFamilyStats stats) {
+    this.stats = stats;
     return this;
   }
 

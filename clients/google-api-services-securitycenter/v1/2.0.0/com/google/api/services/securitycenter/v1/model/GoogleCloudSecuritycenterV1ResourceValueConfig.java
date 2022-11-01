@@ -39,11 +39,28 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private java.lang.String name;
 
   /**
+   * Apply resource_value only to resources that match resource_type. resource_type will be checked
+   * with "AND" of other resources. E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH"
+   * will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceType;
+
+  /**
    * Required. Resource value level this expression represents
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceValue;
+
+  /**
+   * Project or folder to scope this config to. For example, "project/456" would apply this config
+   * only to resources in "project/456" scope will be checked with "AND" of other resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scope;
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
@@ -72,6 +89,27 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
+   * Apply resource_value only to resources that match resource_type. resource_type will be checked
+   * with "AND" of other resources. E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH"
+   * will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceType() {
+    return resourceType;
+  }
+
+  /**
+   * Apply resource_value only to resources that match resource_type. resource_type will be checked
+   * with "AND" of other resources. E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH"
+   * will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+   * @param resourceType resourceType or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setResourceType(java.lang.String resourceType) {
+    this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
    * Required. Resource value level this expression represents
    * @return value or {@code null} for none
    */
@@ -85,6 +123,25 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setResourceValue(java.lang.String resourceValue) {
     this.resourceValue = resourceValue;
+    return this;
+  }
+
+  /**
+   * Project or folder to scope this config to. For example, "project/456" would apply this config
+   * only to resources in "project/456" scope will be checked with "AND" of other resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScope() {
+    return scope;
+  }
+
+  /**
+   * Project or folder to scope this config to. For example, "project/456" would apply this config
+   * only to resources in "project/456" scope will be checked with "AND" of other resources.
+   * @param scope scope or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setScope(java.lang.String scope) {
+    this.scope = scope;
     return this;
   }
 

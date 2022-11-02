@@ -39,6 +39,14 @@ public final class GooglePrivacyDlpV2ExclusionRule extends com.google.api.client
   private GooglePrivacyDlpV2Dictionary dictionary;
 
   /**
+   * Drop if the hotword rule is contained in the proximate context. For tabular data, the context
+   * includes the column name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2ExcludeByHotword excludeByHotword;
+
+  /**
    * Set of infoTypes for which findings would affect this rule.
    * The value may be {@code null}.
    */
@@ -73,6 +81,25 @@ public final class GooglePrivacyDlpV2ExclusionRule extends com.google.api.client
    */
   public GooglePrivacyDlpV2ExclusionRule setDictionary(GooglePrivacyDlpV2Dictionary dictionary) {
     this.dictionary = dictionary;
+    return this;
+  }
+
+  /**
+   * Drop if the hotword rule is contained in the proximate context. For tabular data, the context
+   * includes the column name.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ExcludeByHotword getExcludeByHotword() {
+    return excludeByHotword;
+  }
+
+  /**
+   * Drop if the hotword rule is contained in the proximate context. For tabular data, the context
+   * includes the column name.
+   * @param excludeByHotword excludeByHotword or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ExclusionRule setExcludeByHotword(GooglePrivacyDlpV2ExcludeByHotword excludeByHotword) {
+    this.excludeByHotword = excludeByHotword;
     return this;
   }
 

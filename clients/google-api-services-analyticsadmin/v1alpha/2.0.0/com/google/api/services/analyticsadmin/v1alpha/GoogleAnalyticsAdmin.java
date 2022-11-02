@@ -3133,7 +3133,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * If the properties are not restored before the expiration time, the Property and all child
      * resources (eg: GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
      * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not found,
-     * or is not an GA4 Property.
+     * or is not a GA4 Property.
      *
      * Create a request for the method "properties.delete".
      *
@@ -3163,7 +3163,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * UI. If the properties are not restored before the expiration time, the Property and all child
        * resources (eg: GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
        * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not
-       * found, or is not an GA4 Property.
+       * found, or is not a GA4 Property.
        *
        * Create a request for the method "properties.delete".
        *

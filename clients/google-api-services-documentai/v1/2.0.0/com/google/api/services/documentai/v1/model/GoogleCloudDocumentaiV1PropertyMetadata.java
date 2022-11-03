@@ -31,66 +31,11 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1PropertyMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human review labeling config on the property.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1HumanReviewLabelingMetadata humanReviewLabelingMetadata;
-
-  /**
-   * Human review validation config on the property.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1HumanReviewValidationMetadata humanReviewMetadata;
-
-  /**
    * Whether the property should be considered as "inactive".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean inactive;
-
-  /**
-   * Schema mutability metadata on the property.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1SchemaMutabilityMetadata schemaMutabilityMetadata;
-
-  /**
-   * Human review labeling config on the property.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1HumanReviewLabelingMetadata getHumanReviewLabelingMetadata() {
-    return humanReviewLabelingMetadata;
-  }
-
-  /**
-   * Human review labeling config on the property.
-   * @param humanReviewLabelingMetadata humanReviewLabelingMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1PropertyMetadata setHumanReviewLabelingMetadata(GoogleCloudDocumentaiV1HumanReviewLabelingMetadata humanReviewLabelingMetadata) {
-    this.humanReviewLabelingMetadata = humanReviewLabelingMetadata;
-    return this;
-  }
-
-  /**
-   * Human review validation config on the property.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1HumanReviewValidationMetadata getHumanReviewMetadata() {
-    return humanReviewMetadata;
-  }
-
-  /**
-   * Human review validation config on the property.
-   * @param humanReviewMetadata humanReviewMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1PropertyMetadata setHumanReviewMetadata(GoogleCloudDocumentaiV1HumanReviewValidationMetadata humanReviewMetadata) {
-    this.humanReviewMetadata = humanReviewMetadata;
-    return this;
-  }
 
   /**
    * Whether the property should be considered as "inactive".
@@ -106,23 +51,6 @@ public final class GoogleCloudDocumentaiV1PropertyMetadata extends com.google.ap
    */
   public GoogleCloudDocumentaiV1PropertyMetadata setInactive(java.lang.Boolean inactive) {
     this.inactive = inactive;
-    return this;
-  }
-
-  /**
-   * Schema mutability metadata on the property.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1SchemaMutabilityMetadata getSchemaMutabilityMetadata() {
-    return schemaMutabilityMetadata;
-  }
-
-  /**
-   * Schema mutability metadata on the property.
-   * @param schemaMutabilityMetadata schemaMutabilityMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1PropertyMetadata setSchemaMutabilityMetadata(GoogleCloudDocumentaiV1SchemaMutabilityMetadata schemaMutabilityMetadata) {
-    this.schemaMutabilityMetadata = schemaMutabilityMetadata;
     return this;
   }
 

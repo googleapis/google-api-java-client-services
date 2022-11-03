@@ -55,6 +55,13 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * The schema of the processor version. Describes the output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1DocumentSchema documentSchema;
+
+  /**
    * Denotes that this ProcessorVersion is managed by google.
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The schema of the processor version. Describes the output.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentSchema getDocumentSchema() {
+    return documentSchema;
+  }
+
+  /**
+   * The schema of the processor version. Describes the output.
+   * @param documentSchema documentSchema or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessorVersion setDocumentSchema(GoogleCloudDocumentaiV1DocumentSchema documentSchema) {
+    this.documentSchema = documentSchema;
     return this;
   }
 

@@ -74,7 +74,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableFlowLogs;
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * The external IPv6 address range that is owned by this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -362,7 +362,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * The external IPv6 address range that is owned by this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIpv6Prefix() {
@@ -370,7 +370,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * The external IPv6 address range that is owned by this subnetwork.
    * @param externalIpv6Prefix externalIpv6Prefix or {@code null} for none
    */
   public Subnetwork setExternalIpv6Prefix(java.lang.String externalIpv6Prefix) {

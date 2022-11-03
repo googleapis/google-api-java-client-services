@@ -45,13 +45,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Google APIs bundle, you must specify an IPAddress. Otherwise, you can optionally specify an IP
    * address that references an existing static (reserved) IP address resource. When omitted, Google
    * Cloud assigns an ephemeral IP address. Use one of the following formats to specify an IP
-   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * Full
-   * resource URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region
-   * /addresses/address-name * Partial URL or by name, as in: -
-   * projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-
-   * name - global/addresses/address-name - address-name The forwarding rule's target or
-   * backendService, and in most cases, also the loadBalancingScheme, determine the type of IP
-   * address that you can use. For detailed information, see [IP address
+   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * IPv6 address
+   * range, as in `2600:1234::/96` * Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/ project_id/regions/region/addresses/address-
+   * name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-
+   * name - regions/region/addresses/address-name - global/addresses/address-name - address-name The
+   * forwarding rule's target or backendService, and in most cases, also the loadBalancingScheme,
+   * determine the type of IP address that you can use. For detailed information, see [IP address
    * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
    * concepts#ip_address_specifications). When reading an IPAddress, the API always returns the IP
    * address number.
@@ -374,13 +374,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Google APIs bundle, you must specify an IPAddress. Otherwise, you can optionally specify an IP
    * address that references an existing static (reserved) IP address resource. When omitted, Google
    * Cloud assigns an ephemeral IP address. Use one of the following formats to specify an IP
-   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * Full
-   * resource URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region
-   * /addresses/address-name * Partial URL or by name, as in: -
-   * projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-
-   * name - global/addresses/address-name - address-name The forwarding rule's target or
-   * backendService, and in most cases, also the loadBalancingScheme, determine the type of IP
-   * address that you can use. For detailed information, see [IP address
+   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * IPv6 address
+   * range, as in `2600:1234::/96` * Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/ project_id/regions/region/addresses/address-
+   * name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-
+   * name - regions/region/addresses/address-name - global/addresses/address-name - address-name The
+   * forwarding rule's target or backendService, and in most cases, also the loadBalancingScheme,
+   * determine the type of IP address that you can use. For detailed information, see [IP address
    * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
    * concepts#ip_address_specifications). When reading an IPAddress, the API always returns the IP
    * address number.
@@ -399,13 +399,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Google APIs bundle, you must specify an IPAddress. Otherwise, you can optionally specify an IP
    * address that references an existing static (reserved) IP address resource. When omitted, Google
    * Cloud assigns an ephemeral IP address. Use one of the following formats to specify an IP
-   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * Full
-   * resource URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region
-   * /addresses/address-name * Partial URL or by name, as in: -
-   * projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-
-   * name - global/addresses/address-name - address-name The forwarding rule's target or
-   * backendService, and in most cases, also the loadBalancingScheme, determine the type of IP
-   * address that you can use. For detailed information, see [IP address
+   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * IPv6 address
+   * range, as in `2600:1234::/96` * Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/ project_id/regions/region/addresses/address-
+   * name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-
+   * name - regions/region/addresses/address-name - global/addresses/address-name - address-name The
+   * forwarding rule's target or backendService, and in most cases, also the loadBalancingScheme,
+   * determine the type of IP address that you can use. For detailed information, see [IP address
    * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
    * concepts#ip_address_specifications). When reading an IPAddress, the API always returns the IP
    * address number.

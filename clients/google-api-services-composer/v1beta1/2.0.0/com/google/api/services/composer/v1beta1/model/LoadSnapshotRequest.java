@@ -30,6 +30,27 @@ package com.google.api.services.composer.v1beta1.model;
 public final class LoadSnapshotRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether or not to skip setting Airflow overrides when loading the environment's state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipAirflowOverridesSetting;
+
+  /**
+   * Whether or not to skip setting environment variables when loading the environment's state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipEnvironmentVariablesSetting;
+
+  /**
+   * Whether or not to skip copying Cloud Storage data when loading the environment's state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipGcsDataCopying;
+
+  /**
    * Whether or not to skip installing Pypi packages when loading the environment's state.
    * The value may be {@code null}.
    */
@@ -43,6 +64,57 @@ public final class LoadSnapshotRequest extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String snapshotPath;
+
+  /**
+   * Whether or not to skip setting Airflow overrides when loading the environment's state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipAirflowOverridesSetting() {
+    return skipAirflowOverridesSetting;
+  }
+
+  /**
+   * Whether or not to skip setting Airflow overrides when loading the environment's state.
+   * @param skipAirflowOverridesSetting skipAirflowOverridesSetting or {@code null} for none
+   */
+  public LoadSnapshotRequest setSkipAirflowOverridesSetting(java.lang.Boolean skipAirflowOverridesSetting) {
+    this.skipAirflowOverridesSetting = skipAirflowOverridesSetting;
+    return this;
+  }
+
+  /**
+   * Whether or not to skip setting environment variables when loading the environment's state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipEnvironmentVariablesSetting() {
+    return skipEnvironmentVariablesSetting;
+  }
+
+  /**
+   * Whether or not to skip setting environment variables when loading the environment's state.
+   * @param skipEnvironmentVariablesSetting skipEnvironmentVariablesSetting or {@code null} for none
+   */
+  public LoadSnapshotRequest setSkipEnvironmentVariablesSetting(java.lang.Boolean skipEnvironmentVariablesSetting) {
+    this.skipEnvironmentVariablesSetting = skipEnvironmentVariablesSetting;
+    return this;
+  }
+
+  /**
+   * Whether or not to skip copying Cloud Storage data when loading the environment's state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipGcsDataCopying() {
+    return skipGcsDataCopying;
+  }
+
+  /**
+   * Whether or not to skip copying Cloud Storage data when loading the environment's state.
+   * @param skipGcsDataCopying skipGcsDataCopying or {@code null} for none
+   */
+  public LoadSnapshotRequest setSkipGcsDataCopying(java.lang.Boolean skipGcsDataCopying) {
+    this.skipGcsDataCopying = skipGcsDataCopying;
+    return this;
+  }
 
   /**
    * Whether or not to skip installing Pypi packages when loading the environment's state.

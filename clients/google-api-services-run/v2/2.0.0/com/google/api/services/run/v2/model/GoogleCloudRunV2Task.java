@@ -168,15 +168,6 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private GoogleCloudRunV2TaskAttemptResult lastAttemptResult;
 
   /**
-   * Set the launch stage to a preview stage on write to allow use of preview features in that
-   * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String launchStage;
-
-  /**
    * Number of retries allowed per Task, before marking this Task failed.
    * The value may be {@code null}.
    */
@@ -567,27 +558,6 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setLastAttemptResult(GoogleCloudRunV2TaskAttemptResult lastAttemptResult) {
     this.lastAttemptResult = lastAttemptResult;
-    return this;
-  }
-
-  /**
-   * Set the launch stage to a preview stage on write to allow use of preview features in that
-   * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLaunchStage() {
-    return launchStage;
-  }
-
-  /**
-   * Set the launch stage to a preview stage on write to allow use of preview features in that
-   * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
-   * @param launchStage launchStage or {@code null} for none
-   */
-  public GoogleCloudRunV2Task setLaunchStage(java.lang.String launchStage) {
-    this.launchStage = launchStage;
     return this;
   }
 

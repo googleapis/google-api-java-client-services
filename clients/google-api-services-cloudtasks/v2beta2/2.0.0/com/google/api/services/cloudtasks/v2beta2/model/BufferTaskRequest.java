@@ -17,7 +17,7 @@
 package com.google.api.services.cloudtasks.v2beta2.model;
 
 /**
- * LINT.IfChange Request message for BufferTask.
+ * Request message for BufferTask.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tasks API. For a detailed explanation see:

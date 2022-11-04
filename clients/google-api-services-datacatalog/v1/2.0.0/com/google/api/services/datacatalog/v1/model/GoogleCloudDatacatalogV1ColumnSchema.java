@@ -47,6 +47,14 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
   private java.lang.String description;
 
   /**
+   * Optional. Garbage collection policy for the column or column family. Applies to systems like
+   * Cloud Bigtable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcRule;
+
+  /**
    * Optional. A column's mode indicates whether values in this column are required, nullable, or
    * repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is
    * `NULLABLE`.
@@ -104,6 +112,25 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
    */
   public GoogleCloudDatacatalogV1ColumnSchema setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Garbage collection policy for the column or column family. Applies to systems like
+   * Cloud Bigtable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcRule() {
+    return gcRule;
+  }
+
+  /**
+   * Optional. Garbage collection policy for the column or column family. Applies to systems like
+   * Cloud Bigtable.
+   * @param gcRule gcRule or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setGcRule(java.lang.String gcRule) {
+    this.gcRule = gcRule;
     return this;
   }
 

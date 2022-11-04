@@ -30,6 +30,13 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1Index extends com.google.api.client.json.GenericJson {
 
   /**
+   * The API scope supported by this index.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiScope;
+
+  /**
    * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a
    * maximum of 100 fields. The last field entry is always for the field path `__name__`. If, on
    * creation, `__name__` was not specified as the last field, it will be added automatically with
@@ -68,6 +75,23 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * The API scope supported by this index.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiScope() {
+    return apiScope;
+  }
+
+  /**
+   * The API scope supported by this index.
+   * @param apiScope apiScope or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Index setApiScope(java.lang.String apiScope) {
+    this.apiScope = apiScope;
+    return this;
+  }
 
   /**
    * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a

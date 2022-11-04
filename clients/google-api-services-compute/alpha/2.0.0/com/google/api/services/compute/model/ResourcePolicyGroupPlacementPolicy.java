@@ -67,6 +67,13 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String style;
 
   /**
+   * Specifies the shape of the TPU slice
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuTopology;
+
+  /**
    * Number of VMs in this placement group. Google does not recommend that you use this field unless
    * you use a compact policy and you want your policy to work only if it contains this exact number
    * of VMs.
@@ -159,6 +166,23 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setStyle(java.lang.String style) {
     this.style = style;
+    return this;
+  }
+
+  /**
+   * Specifies the shape of the TPU slice
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuTopology() {
+    return tpuTopology;
+  }
+
+  /**
+   * Specifies the shape of the TPU slice
+   * @param tpuTopology tpuTopology or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setTpuTopology(java.lang.String tpuTopology) {
+    this.tpuTopology = tpuTopology;
     return this;
   }
 

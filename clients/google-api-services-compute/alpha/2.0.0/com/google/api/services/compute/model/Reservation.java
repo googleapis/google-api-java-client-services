@@ -114,7 +114,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * Share-settings for shared-reservation
+   * Specify share-settings to create a shared reservation. This property is optional. For more
+   * information about the syntax and options for this field and its subfields, see the guide for
+   * creating a shared reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -351,7 +353,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Share-settings for shared-reservation
+   * Specify share-settings to create a shared reservation. This property is optional. For more
+   * information about the syntax and options for this field and its subfields, see the guide for
+   * creating a shared reservation.
    * @return value or {@code null} for none
    */
   public ShareSettings getShareSettings() {
@@ -359,7 +363,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Share-settings for shared-reservation
+   * Specify share-settings to create a shared reservation. This property is optional. For more
+   * information about the syntax and options for this field and its subfields, see the guide for
+   * creating a shared reservation.
    * @param shareSettings shareSettings or {@code null} for none
    */
   public Reservation setShareSettings(ShareSettings shareSettings) {

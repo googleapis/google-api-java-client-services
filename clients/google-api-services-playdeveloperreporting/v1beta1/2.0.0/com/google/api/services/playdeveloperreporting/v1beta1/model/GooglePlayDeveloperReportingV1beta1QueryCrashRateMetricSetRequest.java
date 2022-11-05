@@ -66,17 +66,25 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
 
   /**
    * Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`): Percentage
-   * of distinct users in the aggregation period that experienced at least one crash. If your app
-   * exhibits a crash rate equal to or higher than the threshold, it's in the bottom 25% of the top
-   * 1,000 apps on Google Play (by number of installs). * `crashRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `crashRate` in the last 7 days. The daily
-   * values are weighted by the count of distinct users for the day. * `crashRate28dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `crashRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. * `distinctUsers`
-   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
-   * normalization value for the `crashRate` metric. A user is counted in this metric if they used
-   * the app in the foreground during the aggregation period. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times.
+   * of distinct users in the aggregation period that experienced at least one crash. *
+   * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
+   * last 7 days. The daily values are weighted by the count of distinct users for the day. *
+   * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage of distinct users in the
+   * aggregation period that experienced at least one crash while they were actively using your app
+   * (a user-perceived crash). An app is considered to be in active use if it is displaying any
+   * activity or executing any foreground service. * `userPerceivedCrashRate7dUserWeighted`
+   * (`google.type.Decimal`): Rolling average value of `userPerceivedCrashRate` in the last 7 days.
+   * The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedCrashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedCrashRate` in the last 28 days. The daily values are weighted by the count of
+   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
+   * in the aggregation period that were used as normalization value for the `crashRate` and
+   * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
+   * actively during the aggregation period. An app is considered to be in active use if it is
+   * displaying any activity or executing any foreground service. Care must be taken not to
+   * aggregate this count further, as it may result in users being counted multiple times.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,17 +192,25 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
 
   /**
    * Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`): Percentage
-   * of distinct users in the aggregation period that experienced at least one crash. If your app
-   * exhibits a crash rate equal to or higher than the threshold, it's in the bottom 25% of the top
-   * 1,000 apps on Google Play (by number of installs). * `crashRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `crashRate` in the last 7 days. The daily
-   * values are weighted by the count of distinct users for the day. * `crashRate28dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `crashRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. * `distinctUsers`
-   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
-   * normalization value for the `crashRate` metric. A user is counted in this metric if they used
-   * the app in the foreground during the aggregation period. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times.
+   * of distinct users in the aggregation period that experienced at least one crash. *
+   * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
+   * last 7 days. The daily values are weighted by the count of distinct users for the day. *
+   * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage of distinct users in the
+   * aggregation period that experienced at least one crash while they were actively using your app
+   * (a user-perceived crash). An app is considered to be in active use if it is displaying any
+   * activity or executing any foreground service. * `userPerceivedCrashRate7dUserWeighted`
+   * (`google.type.Decimal`): Rolling average value of `userPerceivedCrashRate` in the last 7 days.
+   * The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedCrashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedCrashRate` in the last 28 days. The daily values are weighted by the count of
+   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
+   * in the aggregation period that were used as normalization value for the `crashRate` and
+   * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
+   * actively during the aggregation period. An app is considered to be in active use if it is
+   * displaying any activity or executing any foreground service. Care must be taken not to
+   * aggregate this count further, as it may result in users being counted multiple times.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -203,17 +219,25 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
 
   /**
    * Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`): Percentage
-   * of distinct users in the aggregation period that experienced at least one crash. If your app
-   * exhibits a crash rate equal to or higher than the threshold, it's in the bottom 25% of the top
-   * 1,000 apps on Google Play (by number of installs). * `crashRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `crashRate` in the last 7 days. The daily
-   * values are weighted by the count of distinct users for the day. * `crashRate28dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `crashRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. * `distinctUsers`
-   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
-   * normalization value for the `crashRate` metric. A user is counted in this metric if they used
-   * the app in the foreground during the aggregation period. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times.
+   * of distinct users in the aggregation period that experienced at least one crash. *
+   * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
+   * last 7 days. The daily values are weighted by the count of distinct users for the day. *
+   * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage of distinct users in the
+   * aggregation period that experienced at least one crash while they were actively using your app
+   * (a user-perceived crash). An app is considered to be in active use if it is displaying any
+   * activity or executing any foreground service. * `userPerceivedCrashRate7dUserWeighted`
+   * (`google.type.Decimal`): Rolling average value of `userPerceivedCrashRate` in the last 7 days.
+   * The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedCrashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedCrashRate` in the last 28 days. The daily values are weighted by the count of
+   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
+   * in the aggregation period that were used as normalization value for the `crashRate` and
+   * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
+   * actively during the aggregation period. An app is considered to be in active use if it is
+   * displaying any activity or executing any foreground service. Care must be taken not to
+   * aggregate this count further, as it may result in users being counted multiple times.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {

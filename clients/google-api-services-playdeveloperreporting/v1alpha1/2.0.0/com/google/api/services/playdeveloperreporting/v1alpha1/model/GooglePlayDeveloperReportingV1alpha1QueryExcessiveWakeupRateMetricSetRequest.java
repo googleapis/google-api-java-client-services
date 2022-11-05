@@ -67,9 +67,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateM
   /**
    * Metrics to aggregate. **Supported metrics:** * `excessiveWakeupRate` (`google.type.Decimal`):
    * Percentage of distinct users in the aggregation period that had more than 10 wakeups per hour.
-   * If your app exhibits an excessive wakeup rate equal to or higher than the threshold, it's in
-   * the bottom 25% of the top 1,000 apps on Google Play (by number of installs). *
-   * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
    * `excessiveWakeupRate` in the last 7 days. The daily values are weighted by the count of
    * distinct users for the day. * `excessiveWakeupRate28dUserWeighted` (`google.type.Decimal`):
    * Rolling average value of `excessiveWakeupRate` in the last 28 days. The daily values are
@@ -187,9 +185,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateM
   /**
    * Metrics to aggregate. **Supported metrics:** * `excessiveWakeupRate` (`google.type.Decimal`):
    * Percentage of distinct users in the aggregation period that had more than 10 wakeups per hour.
-   * If your app exhibits an excessive wakeup rate equal to or higher than the threshold, it's in
-   * the bottom 25% of the top 1,000 apps on Google Play (by number of installs). *
-   * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
    * `excessiveWakeupRate` in the last 7 days. The daily values are weighted by the count of
    * distinct users for the day. * `excessiveWakeupRate28dUserWeighted` (`google.type.Decimal`):
    * Rolling average value of `excessiveWakeupRate` in the last 28 days. The daily values are
@@ -208,9 +204,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateM
   /**
    * Metrics to aggregate. **Supported metrics:** * `excessiveWakeupRate` (`google.type.Decimal`):
    * Percentage of distinct users in the aggregation period that had more than 10 wakeups per hour.
-   * If your app exhibits an excessive wakeup rate equal to or higher than the threshold, it's in
-   * the bottom 25% of the top 1,000 apps on Google Play (by number of installs). *
-   * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
    * `excessiveWakeupRate` in the last 7 days. The daily values are weighted by the count of
    * distinct users for the day. * `excessiveWakeupRate28dUserWeighted` (`google.type.Decimal`):
    * Rolling average value of `excessiveWakeupRate` in the last 28 days. The daily values are

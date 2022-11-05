@@ -22,9 +22,7 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
  * independent of user counts. **Supported aggregation periods:** * DAILY: metrics are aggregated in
  * calendar date intervals. Due to historical constraints, the only supported timezone is
  * `America/Los_Angeles`. **Supported metrics:** * `excessiveWakeupRate` (`google.type.Decimal`):
- * Percentage of distinct users in the aggregation period that had more than 10 wakeups per hour. If
- * your app exhibits an excessive wakeup rate equal to or higher than the threshold, it's in the
- * bottom 25% of the top 1,000 apps on Google Play (by number of installs). *
+ * Percentage of distinct users in the aggregation period that had more than 10 wakeups per hour. *
  * `excessiveWakeupRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
  * `excessiveWakeupRate` in the last 7 days. The daily values are weighted by the count of distinct
  * users for the day. * `excessiveWakeupRate28dUserWeighted` (`google.type.Decimal`): Rolling

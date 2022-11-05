@@ -66,17 +66,23 @@ public final class GooglePlayDeveloperReportingV1beta1QueryAnrRateMetricSetReque
 
   /**
    * Metrics to aggregate. **Supported metrics:** * `anrRate` (`google.type.Decimal`): Percentage of
-   * distinct users in the aggregation period that experienced at least one ANR. If your app
-   * exhibits an ANR rate equal to or higher than the threshold, it's in the bottom 25% of the top
-   * 1,000 apps on Google Play (by number of installs). * `anrRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `anrRate` in the last 7 days. The daily
-   * values are weighted by the count of distinct users for the day. * `anrRate28dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `anrRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. * `distinctUsers`
-   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
-   * normalization value for the `anrRate` metric. A user is counted in this metric if they used the
-   * app in the foreground during the aggregation period. Care must be taken not to aggregate this
-   * count further, as it may result in users being counted multiple times.
+   * distinct users in the aggregation period that experienced at least one ANR. *
+   * `anrRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `anrRate` in the last
+   * 7 days. The daily values are weighted by the count of distinct users for the day. *
+   * `anrRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `anrRate` in the
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedAnrRate` (`google.type.Decimal`): Percentage of distinct users in the aggregation
+   * period that experienced at least one user-perceived ANR. User-perceived ANRs are currently
+   * those of 'Input dispatching' type. * `userPerceivedAnrRate7dUserWeighted`
+   * (`google.type.Decimal`): Rolling average value of `userPerceivedAnrRate` in the last 7 days.
+   * The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedAnrRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedAnrRate` in the last 28 days. The daily values are weighted by the count of
+   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
+   * in the aggregation period that were used as normalization value for the `anrRate` and
+   * `userPerceivedAnrRate` metrics. A user is counted in this metric if they used the app in the
+   * foreground during the aggregation period. Care must be taken not to aggregate this count
+   * further, as it may result in users being counted multiple times.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,17 +190,23 @@ public final class GooglePlayDeveloperReportingV1beta1QueryAnrRateMetricSetReque
 
   /**
    * Metrics to aggregate. **Supported metrics:** * `anrRate` (`google.type.Decimal`): Percentage of
-   * distinct users in the aggregation period that experienced at least one ANR. If your app
-   * exhibits an ANR rate equal to or higher than the threshold, it's in the bottom 25% of the top
-   * 1,000 apps on Google Play (by number of installs). * `anrRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `anrRate` in the last 7 days. The daily
-   * values are weighted by the count of distinct users for the day. * `anrRate28dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `anrRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. * `distinctUsers`
-   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
-   * normalization value for the `anrRate` metric. A user is counted in this metric if they used the
-   * app in the foreground during the aggregation period. Care must be taken not to aggregate this
-   * count further, as it may result in users being counted multiple times.
+   * distinct users in the aggregation period that experienced at least one ANR. *
+   * `anrRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `anrRate` in the last
+   * 7 days. The daily values are weighted by the count of distinct users for the day. *
+   * `anrRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `anrRate` in the
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedAnrRate` (`google.type.Decimal`): Percentage of distinct users in the aggregation
+   * period that experienced at least one user-perceived ANR. User-perceived ANRs are currently
+   * those of 'Input dispatching' type. * `userPerceivedAnrRate7dUserWeighted`
+   * (`google.type.Decimal`): Rolling average value of `userPerceivedAnrRate` in the last 7 days.
+   * The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedAnrRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedAnrRate` in the last 28 days. The daily values are weighted by the count of
+   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
+   * in the aggregation period that were used as normalization value for the `anrRate` and
+   * `userPerceivedAnrRate` metrics. A user is counted in this metric if they used the app in the
+   * foreground during the aggregation period. Care must be taken not to aggregate this count
+   * further, as it may result in users being counted multiple times.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -203,17 +215,23 @@ public final class GooglePlayDeveloperReportingV1beta1QueryAnrRateMetricSetReque
 
   /**
    * Metrics to aggregate. **Supported metrics:** * `anrRate` (`google.type.Decimal`): Percentage of
-   * distinct users in the aggregation period that experienced at least one ANR. If your app
-   * exhibits an ANR rate equal to or higher than the threshold, it's in the bottom 25% of the top
-   * 1,000 apps on Google Play (by number of installs). * `anrRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `anrRate` in the last 7 days. The daily
-   * values are weighted by the count of distinct users for the day. * `anrRate28dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `anrRate` in the last 28 days. The daily
-   * values are weighted by the count of distinct users for the day. * `distinctUsers`
-   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
-   * normalization value for the `anrRate` metric. A user is counted in this metric if they used the
-   * app in the foreground during the aggregation period. Care must be taken not to aggregate this
-   * count further, as it may result in users being counted multiple times.
+   * distinct users in the aggregation period that experienced at least one ANR. *
+   * `anrRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `anrRate` in the last
+   * 7 days. The daily values are weighted by the count of distinct users for the day. *
+   * `anrRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `anrRate` in the
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedAnrRate` (`google.type.Decimal`): Percentage of distinct users in the aggregation
+   * period that experienced at least one user-perceived ANR. User-perceived ANRs are currently
+   * those of 'Input dispatching' type. * `userPerceivedAnrRate7dUserWeighted`
+   * (`google.type.Decimal`): Rolling average value of `userPerceivedAnrRate` in the last 7 days.
+   * The daily values are weighted by the count of distinct users for the day. *
+   * `userPerceivedAnrRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedAnrRate` in the last 28 days. The daily values are weighted by the count of
+   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
+   * in the aggregation period that were used as normalization value for the `anrRate` and
+   * `userPerceivedAnrRate` metrics. A user is counted in this metric if they used the app in the
+   * foreground during the aggregation period. Care must be taken not to aggregate this count
+   * further, as it may result in users being counted multiple times.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryAnrRateMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {

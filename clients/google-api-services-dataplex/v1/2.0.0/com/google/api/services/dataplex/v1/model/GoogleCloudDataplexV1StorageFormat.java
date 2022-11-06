@@ -62,7 +62,8 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
   /**
    * Required. The mime type descriptor for the data. Must match the pattern {type}/{subtype}.
    * Supported values: application/x-parquet application/x-avro application/x-orc
-   * application/x-tfrecord application/json application/{subtypes} text/csv text/ image/{image
+   * application/x-tfrecord application/x-parquet+iceberg application/x-avro+iceberg
+   * application/x-orc+iceberg application/json application/{subtypes} text/csv text/ image/{image
    * subtype} video/{video subtype} audio/{audio subtype}
    * The value may be {@code null}.
    */
@@ -144,7 +145,8 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
   /**
    * Required. The mime type descriptor for the data. Must match the pattern {type}/{subtype}.
    * Supported values: application/x-parquet application/x-avro application/x-orc
-   * application/x-tfrecord application/json application/{subtypes} text/csv text/ image/{image
+   * application/x-tfrecord application/x-parquet+iceberg application/x-avro+iceberg
+   * application/x-orc+iceberg application/json application/{subtypes} text/csv text/ image/{image
    * subtype} video/{video subtype} audio/{audio subtype}
    * @return value or {@code null} for none
    */
@@ -155,7 +157,8 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
   /**
    * Required. The mime type descriptor for the data. Must match the pattern {type}/{subtype}.
    * Supported values: application/x-parquet application/x-avro application/x-orc
-   * application/x-tfrecord application/json application/{subtypes} text/csv text/ image/{image
+   * application/x-tfrecord application/x-parquet+iceberg application/x-avro+iceberg
+   * application/x-orc+iceberg application/json application/{subtypes} text/csv text/ image/{image
    * subtype} video/{video subtype} audio/{audio subtype}
    * @param mimeType mimeType or {@code null} for none
    */

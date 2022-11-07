@@ -234,12 +234,6 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     private EncryptionOptions encryptionOptions;
 
     /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean striped;
-
-    /**
      * @return value or {@code null} for none
      */
     public EncryptionOptions getEncryptionOptions() {
@@ -251,21 +245,6 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
      */
     public BakImportOptions setEncryptionOptions(EncryptionOptions encryptionOptions) {
       this.encryptionOptions = encryptionOptions;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getStriped() {
-      return striped;
-    }
-
-    /**
-     * @param striped striped or {@code null} for none
-     */
-    public BakImportOptions setStriped(java.lang.Boolean striped) {
-      this.striped = striped;
       return this;
     }
 

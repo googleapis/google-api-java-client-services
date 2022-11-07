@@ -70,6 +70,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean enableL4ilbSubsetting;
 
   /**
+   * GatewayAPIConfig contains the desired config of Gateway API on this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GatewayAPIConfig gatewayApiConfig;
+
+  /**
    * Output only. The relative name of the Google Compute Engine
    * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
    * cluster is connected. Example: projects/my-project/global/networks/my-network
@@ -192,6 +199,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setEnableL4ilbSubsetting(java.lang.Boolean enableL4ilbSubsetting) {
     this.enableL4ilbSubsetting = enableL4ilbSubsetting;
+    return this;
+  }
+
+  /**
+   * GatewayAPIConfig contains the desired config of Gateway API on this cluster.
+   * @return value or {@code null} for none
+   */
+  public GatewayAPIConfig getGatewayApiConfig() {
+    return gatewayApiConfig;
+  }
+
+  /**
+   * GatewayAPIConfig contains the desired config of Gateway API on this cluster.
+   * @param gatewayApiConfig gatewayApiConfig or {@code null} for none
+   */
+  public NetworkConfig setGatewayApiConfig(GatewayAPIConfig gatewayApiConfig) {
+    this.gatewayApiConfig = gatewayApiConfig;
     return this;
   }
 

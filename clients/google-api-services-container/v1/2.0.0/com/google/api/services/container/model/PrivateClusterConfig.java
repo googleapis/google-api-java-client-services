@@ -76,6 +76,14 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.String privateEndpoint;
 
   /**
+   * Subnet to provision the master's private endpoint during cluster creation. Specified in
+   * projects/regions/subnetworks format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateEndpointSubnetwork;
+
+  /**
    * Output only. The external IP address of this cluster's master endpoint.
    * The value may be {@code null}.
    */
@@ -187,6 +195,25 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
    */
   public PrivateClusterConfig setPrivateEndpoint(java.lang.String privateEndpoint) {
     this.privateEndpoint = privateEndpoint;
+    return this;
+  }
+
+  /**
+   * Subnet to provision the master's private endpoint during cluster creation. Specified in
+   * projects/regions/subnetworks format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateEndpointSubnetwork() {
+    return privateEndpointSubnetwork;
+  }
+
+  /**
+   * Subnet to provision the master's private endpoint during cluster creation. Specified in
+   * projects/regions/subnetworks format.
+   * @param privateEndpointSubnetwork privateEndpointSubnetwork or {@code null} for none
+   */
+  public PrivateClusterConfig setPrivateEndpointSubnetwork(java.lang.String privateEndpointSubnetwork) {
+    this.privateEndpointSubnetwork = privateEndpointSubnetwork;
     return this;
   }
 

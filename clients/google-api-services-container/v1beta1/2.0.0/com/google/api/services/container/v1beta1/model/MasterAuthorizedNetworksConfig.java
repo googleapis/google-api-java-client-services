@@ -54,6 +54,13 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   private java.lang.Boolean enabled;
 
   /**
+   * Whether master is accessbile via Google Compute Engine Public IP addresses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gcpPublicCidrsAccessEnabled;
+
+  /**
    * cidr_blocks define up to 10 external networks that could access Kubernetes master through
    * HTTPS.
    * @return value or {@code null} for none
@@ -86,6 +93,23 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
    */
   public MasterAuthorizedNetworksConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Whether master is accessbile via Google Compute Engine Public IP addresses.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGcpPublicCidrsAccessEnabled() {
+    return gcpPublicCidrsAccessEnabled;
+  }
+
+  /**
+   * Whether master is accessbile via Google Compute Engine Public IP addresses.
+   * @param gcpPublicCidrsAccessEnabled gcpPublicCidrsAccessEnabled or {@code null} for none
+   */
+  public MasterAuthorizedNetworksConfig setGcpPublicCidrsAccessEnabled(java.lang.Boolean gcpPublicCidrsAccessEnabled) {
+    this.gcpPublicCidrsAccessEnabled = gcpPublicCidrsAccessEnabled;
     return this;
   }
 

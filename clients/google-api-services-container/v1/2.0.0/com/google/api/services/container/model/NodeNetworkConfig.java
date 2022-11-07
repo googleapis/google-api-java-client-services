@@ -43,6 +43,14 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean createPodRange;
 
   /**
+   * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
+   * the value is derived from cluster.privateClusterConfig.enablePrivateNodes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePrivateNodes;
+
+  /**
    * Network bandwidth tier configuration.
    * The value may be {@code null}.
    */
@@ -95,6 +103,25 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setCreatePodRange(java.lang.Boolean createPodRange) {
     this.createPodRange = createPodRange;
+    return this;
+  }
+
+  /**
+   * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
+   * the value is derived from cluster.privateClusterConfig.enablePrivateNodes
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePrivateNodes() {
+    return enablePrivateNodes;
+  }
+
+  /**
+   * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
+   * the value is derived from cluster.privateClusterConfig.enablePrivateNodes
+   * @param enablePrivateNodes enablePrivateNodes or {@code null} for none
+   */
+  public NodeNetworkConfig setEnablePrivateNodes(java.lang.Boolean enablePrivateNodes) {
+    this.enablePrivateNodes = enablePrivateNodes;
     return this;
   }
 

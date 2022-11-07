@@ -73,6 +73,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String buildNumber;
 
   /**
+   * List of the clients the device is reporting to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> clientTypes;
+
+  /**
    * Output only. Represents whether the Device is compromised.
    * The value may be {@code null}.
    */
@@ -127,6 +134,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes;
+
+  /**
+   * Host name of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hostname;
 
   /**
    * Output only. IMEI number of device if GSM device; empty otherwise.
@@ -347,6 +361,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * List of the clients the device is reporting to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getClientTypes() {
+    return clientTypes;
+  }
+
+  /**
+   * List of the clients the device is reporting to.
+   * @param clientTypes clientTypes or {@code null} for none
+   */
+  public Device setClientTypes(java.util.List<java.lang.String> clientTypes) {
+    this.clientTypes = clientTypes;
+    return this;
+  }
+
+  /**
    * Output only. Represents whether the Device is compromised.
    * @return value or {@code null} for none
    */
@@ -479,6 +510,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setEndpointVerificationSpecificAttributes(EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes) {
     this.endpointVerificationSpecificAttributes = endpointVerificationSpecificAttributes;
+    return this;
+  }
+
+  /**
+   * Host name of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHostname() {
+    return hostname;
+  }
+
+  /**
+   * Host name of the device.
+   * @param hostname hostname or {@code null} for none
+   */
+  public Device setHostname(java.lang.String hostname) {
+    this.hostname = hostname;
     return this;
   }
 

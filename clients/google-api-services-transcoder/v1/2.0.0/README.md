@@ -1,6 +1,6 @@
 # Transcoder API Client Library for Java
 
-This API converts video files into formats suitable for consumer distribution. 
+This API converts video files into formats suitable for consumer distribution. For more information, see the Transcoder API overview. 
 
 This page contains information about getting started with the Transcoder API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-transcoder</artifactId>
-      <version>v1-rev20220811-2.0.0</version>
+      <version>v1-rev20221027-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-transcoder:v1-rev20220811-2.0.0'
+  implementation 'com.google.apis:google-api-services-transcoder:v1-rev20221027-2.0.0'
 }
 ```
 

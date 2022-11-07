@@ -37,6 +37,13 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private AppDevExperienceFeatureState appdevexperience;
 
   /**
+   * FleetObservability feature state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityFeatureState fleetobservability;
+
+  /**
    * Output only. The "running state" of the Feature in this Hub.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   public CommonFeatureState setAppdevexperience(AppDevExperienceFeatureState appdevexperience) {
     this.appdevexperience = appdevexperience;
+    return this;
+  }
+
+  /**
+   * FleetObservability feature state.
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityFeatureState getFleetobservability() {
+    return fleetobservability;
+  }
+
+  /**
+   * FleetObservability feature state.
+   * @param fleetobservability fleetobservability or {@code null} for none
+   */
+  public CommonFeatureState setFleetobservability(FleetObservabilityFeatureState fleetobservability) {
+    this.fleetobservability = fleetobservability;
     return this;
   }
 

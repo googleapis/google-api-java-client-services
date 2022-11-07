@@ -31,31 +31,32 @@ package com.google.api.services.essentialcontacts.v1.model;
 public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The email address to send notifications to. This does not need to be a Google
-   * account.
+   * Required. The email address to send notifications to. The email address does not need to be a
+   * Google Account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * The preferred language for notifications, as a ISO 639-1 language code. See [Supported
-   * languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts
-   * #supported-languages) for a list of supported languages.
+   * Required. The preferred language for notifications, as a ISO 639-1 language code. See
+   * [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * contacts#supported-languages) for a list of supported languages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageTag;
 
   /**
-   * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+   * Output only. The identifier for the contact. Format:
+   * {resource_type}/{resource_id}/contacts/{contact_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The categories of notifications that the contact will receive communications for.
+   * Required. The categories of notifications that the contact will receive communications for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +79,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   private java.lang.String validationState;
 
   /**
-   * Required. The email address to send notifications to. This does not need to be a Google
-   * account.
+   * Required. The email address to send notifications to. The email address does not need to be a
+   * Google Account.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -87,8 +88,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * Required. The email address to send notifications to. This does not need to be a Google
-   * account.
+   * Required. The email address to send notifications to. The email address does not need to be a
+   * Google Account.
    * @param email email or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1Contact setEmail(java.lang.String email) {
@@ -97,9 +98,9 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The preferred language for notifications, as a ISO 639-1 language code. See [Supported
-   * languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts
-   * #supported-languages) for a list of supported languages.
+   * Required. The preferred language for notifications, as a ISO 639-1 language code. See
+   * [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * contacts#supported-languages) for a list of supported languages.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageTag() {
@@ -107,9 +108,9 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The preferred language for notifications, as a ISO 639-1 language code. See [Supported
-   * languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts
-   * #supported-languages) for a list of supported languages.
+   * Required. The preferred language for notifications, as a ISO 639-1 language code. See
+   * [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * contacts#supported-languages) for a list of supported languages.
    * @param languageTag languageTag or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1Contact setLanguageTag(java.lang.String languageTag) {
@@ -118,7 +119,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+   * Output only. The identifier for the contact. Format:
+   * {resource_type}/{resource_id}/contacts/{contact_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -126,7 +128,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+   * Output only. The identifier for the contact. Format:
+   * {resource_type}/{resource_id}/contacts/{contact_id}
    * @param name name or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1Contact setName(java.lang.String name) {
@@ -135,7 +138,7 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The categories of notifications that the contact will receive communications for.
+   * Required. The categories of notifications that the contact will receive communications for.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotificationCategorySubscriptions() {
@@ -143,7 +146,7 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The categories of notifications that the contact will receive communications for.
+   * Required. The categories of notifications that the contact will receive communications for.
    * @param notificationCategorySubscriptions notificationCategorySubscriptions or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1Contact setNotificationCategorySubscriptions(java.util.List<java.lang.String> notificationCategorySubscriptions) {

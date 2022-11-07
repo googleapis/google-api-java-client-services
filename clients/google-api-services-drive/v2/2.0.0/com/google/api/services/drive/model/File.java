@@ -118,7 +118,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Short lived download URL for the file. This field is only populated for files with content
-   * stored in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +169,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * The final component of fullFileExtension with trailing text that does not appear to be part of
    * the extension removed. This field is only populated for files with content stored in Google
-   * Drive; it is not populated for Docs Editors or shortcut files.
+   * Drive; it isn't populated for Docs Editors or shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The size of the file in bytes. This field is populated for files with content stored in Google
-   * Drive and for files in Docs Editors; it is not populated for shortcut files.
+   * Drive and for files in Docs Editors; it isn't populated for shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -196,8 +196,8 @@ public final class File extends com.google.api.client.json.GenericJson {
    * The full file extension; extracted from the title. May contain multiple concatenated
    * extensions, such as "tar.gz". Removing an extension from the title does not clear this field;
    * however, changing the extension on the title does update this field. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it isn't populated for Docs Editors or
+   * shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,7 +221,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the file's head revision. This field is only populated for files with content stored
-   * in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +250,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private ImageMediaMetadata imageMediaMetadata;
 
   /**
-   * Indexable text attributes for the file (can only be written)
+   * Indexable text attributes for the file (can only be written). For more information, see Manage
+   * file metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +322,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * An MD5 checksum for the content of this file. This field is only populated for files with
-   * content stored in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -446,7 +447,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The SHA1 checksum associated with this file, if available. This field is only populated for
-   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut
    * files.
    * The value may be {@code null}.
    */
@@ -455,7 +456,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The SHA256 checksum associated with this file, if available. This field is only populated for
-   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut
    * files.
    * The value may be {@code null}.
    */
@@ -804,7 +805,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Short lived download URL for the file. This field is only populated for files with content
-   * stored in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadUrl() {
@@ -813,7 +814,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Short lived download URL for the file. This field is only populated for files with content
-   * stored in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * @param downloadUrl downloadUrl or {@code null} for none
    */
   public File setDownloadUrl(java.lang.String downloadUrl) {
@@ -926,7 +927,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * The final component of fullFileExtension with trailing text that does not appear to be part of
    * the extension removed. This field is only populated for files with content stored in Google
-   * Drive; it is not populated for Docs Editors or shortcut files.
+   * Drive; it isn't populated for Docs Editors or shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileExtension() {
@@ -936,7 +937,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * The final component of fullFileExtension with trailing text that does not appear to be part of
    * the extension removed. This field is only populated for files with content stored in Google
-   * Drive; it is not populated for Docs Editors or shortcut files.
+   * Drive; it isn't populated for Docs Editors or shortcut files.
    * @param fileExtension fileExtension or {@code null} for none
    */
   public File setFileExtension(java.lang.String fileExtension) {
@@ -946,7 +947,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The size of the file in bytes. This field is populated for files with content stored in Google
-   * Drive and for files in Docs Editors; it is not populated for shortcut files.
+   * Drive and for files in Docs Editors; it isn't populated for shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFileSize() {
@@ -955,7 +956,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The size of the file in bytes. This field is populated for files with content stored in Google
-   * Drive and for files in Docs Editors; it is not populated for shortcut files.
+   * Drive and for files in Docs Editors; it isn't populated for shortcut files.
    * @param fileSize fileSize or {@code null} for none
    */
   public File setFileSize(java.lang.Long fileSize) {
@@ -988,8 +989,8 @@ public final class File extends com.google.api.client.json.GenericJson {
    * The full file extension; extracted from the title. May contain multiple concatenated
    * extensions, such as "tar.gz". Removing an extension from the title does not clear this field;
    * however, changing the extension on the title does update this field. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it isn't populated for Docs Editors or
+   * shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullFileExtension() {
@@ -1000,8 +1001,8 @@ public final class File extends com.google.api.client.json.GenericJson {
    * The full file extension; extracted from the title. May contain multiple concatenated
    * extensions, such as "tar.gz". Removing an extension from the title does not clear this field;
    * however, changing the extension on the title does update this field. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it isn't populated for Docs Editors or
+   * shortcut files.
    * @param fullFileExtension fullFileExtension or {@code null} for none
    */
   public File setFullFileExtension(java.lang.String fullFileExtension) {
@@ -1049,7 +1050,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the file's head revision. This field is only populated for files with content stored
-   * in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadRevisionId() {
@@ -1058,7 +1059,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the file's head revision. This field is only populated for files with content stored
-   * in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * @param headRevisionId headRevisionId or {@code null} for none
    */
   public File setHeadRevisionId(java.lang.String headRevisionId) {
@@ -1120,7 +1121,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indexable text attributes for the file (can only be written)
+   * Indexable text attributes for the file (can only be written). For more information, see Manage
+   * file metadata.
    * @return value or {@code null} for none
    */
   public IndexableText getIndexableText() {
@@ -1128,7 +1130,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indexable text attributes for the file (can only be written)
+   * Indexable text attributes for the file (can only be written). For more information, see Manage
+   * file metadata.
    * @param indexableText indexableText or {@code null} for none
    */
   public File setIndexableText(IndexableText indexableText) {
@@ -1291,7 +1294,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * An MD5 checksum for the content of this file. This field is only populated for files with
-   * content stored in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getMd5Checksum() {
@@ -1300,7 +1303,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * An MD5 checksum for the content of this file. This field is only populated for files with
-   * content stored in Google Drive; it is not populated for Docs Editors or shortcut files.
+   * content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
    * @param md5Checksum md5Checksum or {@code null} for none
    */
   public File setMd5Checksum(java.lang.String md5Checksum) {
@@ -1589,7 +1592,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The SHA1 checksum associated with this file, if available. This field is only populated for
-   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut
    * files.
    * @return value or {@code null} for none
    */
@@ -1599,7 +1602,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The SHA1 checksum associated with this file, if available. This field is only populated for
-   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut
    * files.
    * @param sha1Checksum sha1Checksum or {@code null} for none
    */
@@ -1610,7 +1613,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The SHA256 checksum associated with this file, if available. This field is only populated for
-   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut
    * files.
    * @return value or {@code null} for none
    */
@@ -1620,7 +1623,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The SHA256 checksum associated with this file, if available. This field is only populated for
-   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut
    * files.
    * @param sha256Checksum sha256Checksum or {@code null} for none
    */
@@ -2214,7 +2217,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can read the revisions resource of this file. For a shared drive item,
-     * whether revisions of non-folder descendants of this item, or this item itself if it is not a
+     * whether revisions of non-folder descendants of this item, or this item itself if it isn't a
      * folder, can be read.
      * The value may be {@code null}.
      */
@@ -2810,7 +2813,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can read the revisions resource of this file. For a shared drive item,
-     * whether revisions of non-folder descendants of this item, or this item itself if it is not a
+     * whether revisions of non-folder descendants of this item, or this item itself if it isn't a
      * folder, can be read.
      * @return value or {@code null} for none
      */
@@ -2820,7 +2823,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can read the revisions resource of this file. For a shared drive item,
-     * whether revisions of non-folder descendants of this item, or this item itself if it is not a
+     * whether revisions of non-folder descendants of this item, or this item itself if it isn't a
      * folder, can be read.
      * @param canReadRevisions canReadRevisions or {@code null} for none
      */
@@ -3596,7 +3599,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indexable text attributes for the file (can only be written)
+   * Indexable text attributes for the file (can only be written). For more information, see Manage
+   * file metadata.
    */
   public static final class IndexableText extends com.google.api.client.json.GenericJson {
 

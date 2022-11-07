@@ -1823,7 +1823,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
     public class Locks {
 
       /**
-       * Lists the Locks on a Label.
+       * Lists the LabelLocks on a Label.
        *
        * Create a request for the method "locks.list".
        *
@@ -1847,7 +1847,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
-         * Lists the Locks on a Label.
+         * Lists the LabelLocks on a Label.
          *
          * Create a request for the method "locks.list".
          *
@@ -3032,7 +3032,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       public class Locks {
 
         /**
-         * Lists the Locks on a Label.
+         * Lists the LabelLocks on a Label.
          *
          * Create a request for the method "locks.list".
          *
@@ -3056,7 +3056,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
-           * Lists the Locks on a Label.
+           * Lists the LabelLocks on a Label.
            *
            * Create a request for the method "locks.list".
            *

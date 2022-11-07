@@ -92,6 +92,30 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   private FeatureResourceState resourceState;
 
   /**
+   * Optional. Scope-specific configuration for this Feature. If this Feature does not support any
+   * per-Scope configuration, this field may be unused. The keys indicate which Scope the
+   * configuration is for, in the form: `projects/{p}/locations/global/scopes/{s}` Where {p} is the
+   * project, {s} is a valid Scope in this project. {p} WILL match the Feature's project. {p} will
+   * always be returned as the project number, but the project ID is also accepted during input. If
+   * the same Scope is specified in the map twice (using the project ID form, and the project number
+   * form), exactly ONE of the entries will be saved, with no guarantees as to which. For this
+   * reason, it is recommended the same format be used for all entries when mutating a Feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ScopeFeatureSpec> scopeSpecs;
+
+  /**
+   * Output only. Scope-specific Feature status. If this Feature does report any per-Scope status,
+   * this field may be unused. The keys indicate which Scope the state is for, in the form:
+   * `projects/{p}/locations/global/scopes/{s}` Where {p} is the project, {s} is a valid Scope in
+   * this project. {p} WILL match the Feature's project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ScopeFeatureState> scopeStates;
+
+  /**
    * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide
    * configuration, this field may be unused.
    * The value may be {@code null}.
@@ -255,6 +279,60 @@ public final class Feature extends com.google.api.client.json.GenericJson {
    */
   public Feature setResourceState(FeatureResourceState resourceState) {
     this.resourceState = resourceState;
+    return this;
+  }
+
+  /**
+   * Optional. Scope-specific configuration for this Feature. If this Feature does not support any
+   * per-Scope configuration, this field may be unused. The keys indicate which Scope the
+   * configuration is for, in the form: `projects/{p}/locations/global/scopes/{s}` Where {p} is the
+   * project, {s} is a valid Scope in this project. {p} WILL match the Feature's project. {p} will
+   * always be returned as the project number, but the project ID is also accepted during input. If
+   * the same Scope is specified in the map twice (using the project ID form, and the project number
+   * form), exactly ONE of the entries will be saved, with no guarantees as to which. For this
+   * reason, it is recommended the same format be used for all entries when mutating a Feature.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ScopeFeatureSpec> getScopeSpecs() {
+    return scopeSpecs;
+  }
+
+  /**
+   * Optional. Scope-specific configuration for this Feature. If this Feature does not support any
+   * per-Scope configuration, this field may be unused. The keys indicate which Scope the
+   * configuration is for, in the form: `projects/{p}/locations/global/scopes/{s}` Where {p} is the
+   * project, {s} is a valid Scope in this project. {p} WILL match the Feature's project. {p} will
+   * always be returned as the project number, but the project ID is also accepted during input. If
+   * the same Scope is specified in the map twice (using the project ID form, and the project number
+   * form), exactly ONE of the entries will be saved, with no guarantees as to which. For this
+   * reason, it is recommended the same format be used for all entries when mutating a Feature.
+   * @param scopeSpecs scopeSpecs or {@code null} for none
+   */
+  public Feature setScopeSpecs(java.util.Map<String, ScopeFeatureSpec> scopeSpecs) {
+    this.scopeSpecs = scopeSpecs;
+    return this;
+  }
+
+  /**
+   * Output only. Scope-specific Feature status. If this Feature does report any per-Scope status,
+   * this field may be unused. The keys indicate which Scope the state is for, in the form:
+   * `projects/{p}/locations/global/scopes/{s}` Where {p} is the project, {s} is a valid Scope in
+   * this project. {p} WILL match the Feature's project.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ScopeFeatureState> getScopeStates() {
+    return scopeStates;
+  }
+
+  /**
+   * Output only. Scope-specific Feature status. If this Feature does report any per-Scope status,
+   * this field may be unused. The keys indicate which Scope the state is for, in the form:
+   * `projects/{p}/locations/global/scopes/{s}` Where {p} is the project, {s} is a valid Scope in
+   * this project. {p} WILL match the Feature's project.
+   * @param scopeStates scopeStates or {@code null} for none
+   */
+  public Feature setScopeStates(java.util.Map<String, ScopeFeatureState> scopeStates) {
+    this.scopeStates = scopeStates;
     return this;
   }
 

@@ -30,13 +30,6 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class MembershipFeatureState extends com.google.api.client.json.GenericJson {
 
   /**
-   * AnthosVM state.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnthosVMMembershipState anthosvm;
-
-  /**
    * Appdevexperience specific state.
    * The value may be {@code null}.
    */
@@ -49,6 +42,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private ConfigManagementMembershipState configmanagement;
+
+  /**
+   * Fleet observability membership state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityMembershipState fleetobservability;
 
   /**
    * Identity Service-specific state.
@@ -86,23 +86,6 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private FeatureState state;
 
   /**
-   * AnthosVM state.
-   * @return value or {@code null} for none
-   */
-  public AnthosVMMembershipState getAnthosvm() {
-    return anthosvm;
-  }
-
-  /**
-   * AnthosVM state.
-   * @param anthosvm anthosvm or {@code null} for none
-   */
-  public MembershipFeatureState setAnthosvm(AnthosVMMembershipState anthosvm) {
-    this.anthosvm = anthosvm;
-    return this;
-  }
-
-  /**
    * Appdevexperience specific state.
    * @return value or {@code null} for none
    */
@@ -133,6 +116,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setConfigmanagement(ConfigManagementMembershipState configmanagement) {
     this.configmanagement = configmanagement;
+    return this;
+  }
+
+  /**
+   * Fleet observability membership state.
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityMembershipState getFleetobservability() {
+    return fleetobservability;
+  }
+
+  /**
+   * Fleet observability membership state.
+   * @param fleetobservability fleetobservability or {@code null} for none
+   */
+  public MembershipFeatureState setFleetobservability(FleetObservabilityMembershipState fleetobservability) {
+    this.fleetobservability = fleetobservability;
     return this;
   }
 

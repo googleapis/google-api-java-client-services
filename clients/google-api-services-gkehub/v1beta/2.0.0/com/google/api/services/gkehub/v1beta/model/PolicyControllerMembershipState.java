@@ -30,15 +30,6 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class PolicyControllerMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
-   * should match Membership's membership_name, unless the user installed PC on the cluster manually
-   * prior to enabling the PC hub feature. Unique within a Policy Controller installation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String clusterName;
-
-  /**
    * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
    * "constraint template library"
    * The value may be {@code null}.
@@ -52,27 +43,6 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
-
-  /**
-   * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
-   * should match Membership's membership_name, unless the user installed PC on the cluster manually
-   * prior to enabling the PC hub feature. Unique within a Policy Controller installation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getClusterName() {
-    return clusterName;
-  }
-
-  /**
-   * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
-   * should match Membership's membership_name, unless the user installed PC on the cluster manually
-   * prior to enabling the PC hub feature. Unique within a Policy Controller installation.
-   * @param clusterName clusterName or {@code null} for none
-   */
-  public PolicyControllerMembershipState setClusterName(java.lang.String clusterName) {
-    this.clusterName = clusterName;
-    return this;
-  }
 
   /**
    * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.

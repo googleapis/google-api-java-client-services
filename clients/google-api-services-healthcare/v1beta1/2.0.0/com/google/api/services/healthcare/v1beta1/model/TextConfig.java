@@ -30,6 +30,33 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class TextConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional transformations to apply to the detected data, overriding `profile`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InfoTypeTransformation> additionalTransformations;
+
+  static {
+    // hack to force ProGuard to consider InfoTypeTransformation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InfoTypeTransformation.class);
+  }
+
+  /**
+   * InfoTypes to skip transforming, overriding `profile`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeInfoTypes;
+
+  /**
+   * Base profile type for text transformation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String profileType;
+
+  /**
    * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
    * instead.
    * The value may be {@code null}.
@@ -41,6 +68,57 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider InfoTypeTransformation used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(InfoTypeTransformation.class);
+  }
+
+  /**
+   * Additional transformations to apply to the detected data, overriding `profile`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InfoTypeTransformation> getAdditionalTransformations() {
+    return additionalTransformations;
+  }
+
+  /**
+   * Additional transformations to apply to the detected data, overriding `profile`.
+   * @param additionalTransformations additionalTransformations or {@code null} for none
+   */
+  public TextConfig setAdditionalTransformations(java.util.List<InfoTypeTransformation> additionalTransformations) {
+    this.additionalTransformations = additionalTransformations;
+    return this;
+  }
+
+  /**
+   * InfoTypes to skip transforming, overriding `profile`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeInfoTypes() {
+    return excludeInfoTypes;
+  }
+
+  /**
+   * InfoTypes to skip transforming, overriding `profile`.
+   * @param excludeInfoTypes excludeInfoTypes or {@code null} for none
+   */
+  public TextConfig setExcludeInfoTypes(java.util.List<java.lang.String> excludeInfoTypes) {
+    this.excludeInfoTypes = excludeInfoTypes;
+    return this;
+  }
+
+  /**
+   * Base profile type for text transformation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProfileType() {
+    return profileType;
+  }
+
+  /**
+   * Base profile type for text transformation.
+   * @param profileType profileType or {@code null} for none
+   */
+  public TextConfig setProfileType(java.lang.String profileType) {
+    this.profileType = profileType;
+    return this;
   }
 
   /**

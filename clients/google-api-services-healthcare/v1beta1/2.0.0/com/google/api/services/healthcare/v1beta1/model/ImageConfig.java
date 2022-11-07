@@ -30,11 +30,74 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ImageConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional InfoTypes to redact in the images in addition to those used by
+   * `text_redaction_mode`. Can only be used when `text_redaction_mode` is set to
+   * `REDACT_SENSITIVE_TEXT`, `REDACT_SENSITIVE_TEXT_CLEAN_DESCRIPTORS` or
+   * `TEXT_REDACTION_MODE_UNSPECIFIED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> additionalInfoTypes;
+
+  /**
+   * InfoTypes to skip redacting, overriding those used by `text_redaction_mode`. Can only be used
+   * when `text_redaction_mode` is set to `REDACT_SENSITIVE_TEXT` or
+   * `REDACT_SENSITIVE_TEXT_CLEAN_DESCRIPTORS`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeInfoTypes;
+
+  /**
    * Determines how to redact text from image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textRedactionMode;
+
+  /**
+   * Additional InfoTypes to redact in the images in addition to those used by
+   * `text_redaction_mode`. Can only be used when `text_redaction_mode` is set to
+   * `REDACT_SENSITIVE_TEXT`, `REDACT_SENSITIVE_TEXT_CLEAN_DESCRIPTORS` or
+   * `TEXT_REDACTION_MODE_UNSPECIFIED`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdditionalInfoTypes() {
+    return additionalInfoTypes;
+  }
+
+  /**
+   * Additional InfoTypes to redact in the images in addition to those used by
+   * `text_redaction_mode`. Can only be used when `text_redaction_mode` is set to
+   * `REDACT_SENSITIVE_TEXT`, `REDACT_SENSITIVE_TEXT_CLEAN_DESCRIPTORS` or
+   * `TEXT_REDACTION_MODE_UNSPECIFIED`.
+   * @param additionalInfoTypes additionalInfoTypes or {@code null} for none
+   */
+  public ImageConfig setAdditionalInfoTypes(java.util.List<java.lang.String> additionalInfoTypes) {
+    this.additionalInfoTypes = additionalInfoTypes;
+    return this;
+  }
+
+  /**
+   * InfoTypes to skip redacting, overriding those used by `text_redaction_mode`. Can only be used
+   * when `text_redaction_mode` is set to `REDACT_SENSITIVE_TEXT` or
+   * `REDACT_SENSITIVE_TEXT_CLEAN_DESCRIPTORS`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeInfoTypes() {
+    return excludeInfoTypes;
+  }
+
+  /**
+   * InfoTypes to skip redacting, overriding those used by `text_redaction_mode`. Can only be used
+   * when `text_redaction_mode` is set to `REDACT_SENSITIVE_TEXT` or
+   * `REDACT_SENSITIVE_TEXT_CLEAN_DESCRIPTORS`.
+   * @param excludeInfoTypes excludeInfoTypes or {@code null} for none
+   */
+  public ImageConfig setExcludeInfoTypes(java.util.List<java.lang.String> excludeInfoTypes) {
+    this.excludeInfoTypes = excludeInfoTypes;
+    return this;
+  }
 
   /**
    * Determines how to redact text from image.

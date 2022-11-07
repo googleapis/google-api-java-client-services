@@ -227,6 +227,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private ReservationAffinity reservationAffinity;
 
   /**
+   * The resource labels for the node pool to use to annotate any related Google Compute Engine
+   * resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceLabels;
+
+  /**
    * Sandbox configuration for this node.
    * The value may be {@code null}.
    */
@@ -718,6 +726,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
     this.reservationAffinity = reservationAffinity;
+    return this;
+  }
+
+  /**
+   * The resource labels for the node pool to use to annotate any related Google Compute Engine
+   * resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceLabels() {
+    return resourceLabels;
+  }
+
+  /**
+   * The resource labels for the node pool to use to annotate any related Google Compute Engine
+   * resources.
+   * @param resourceLabels resourceLabels or {@code null} for none
+   */
+  public NodeConfig setResourceLabels(java.util.Map<String, java.lang.String> resourceLabels) {
+    this.resourceLabels = resourceLabels;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.container.model;
 public final class LinuxNodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * cgroup_mode specifies the cgroup mode to be used on the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cgroupMode;
+
+  /**
    * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max
@@ -40,6 +47,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> sysctls;
+
+  /**
+   * cgroup_mode specifies the cgroup mode to be used on the node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCgroupMode() {
+    return cgroupMode;
+  }
+
+  /**
+   * cgroup_mode specifies the cgroup mode to be used on the node.
+   * @param cgroupMode cgroupMode or {@code null} for none
+   */
+  public LinuxNodeConfig setCgroupMode(java.lang.String cgroupMode) {
+    this.cgroupMode = cgroupMode;
+    return this;
+  }
 
   /**
    * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The

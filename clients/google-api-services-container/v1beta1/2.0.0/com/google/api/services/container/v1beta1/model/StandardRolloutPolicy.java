@@ -38,7 +38,7 @@ public final class StandardRolloutPolicy extends com.google.api.client.json.Gene
   private java.lang.Integer batchNodeCount;
 
   /**
-   * Percentage of the bool pool nodes to drain in a batch. The range of this field should be (0.0,
+   * Percentage of the blue pool nodes to drain in a batch. The range of this field should be (0.0,
    * 1.0].
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class StandardRolloutPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Percentage of the bool pool nodes to drain in a batch. The range of this field should be (0.0,
+   * Percentage of the blue pool nodes to drain in a batch. The range of this field should be (0.0,
    * 1.0].
    * @return value or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class StandardRolloutPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Percentage of the bool pool nodes to drain in a batch. The range of this field should be (0.0,
+   * Percentage of the blue pool nodes to drain in a batch. The range of this field should be (0.0,
    * 1.0].
    * @param batchPercentage batchPercentage or {@code null} for none
    */

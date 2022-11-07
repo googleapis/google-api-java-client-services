@@ -102,6 +102,20 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DNSConfig desiredDnsConfig;
 
   /**
+   * Enable/Disable private endpoint for the cluster's master.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredEnablePrivateEndpoint;
+
+  /**
+   * The desired config of Gateway API on this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GatewayAPIConfig desiredGatewayApiConfig;
+
+  /**
    * The desired GCFS config for the cluster.
    * The value may be {@code null}.
    */
@@ -528,6 +542,40 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDnsConfig(DNSConfig desiredDnsConfig) {
     this.desiredDnsConfig = desiredDnsConfig;
+    return this;
+  }
+
+  /**
+   * Enable/Disable private endpoint for the cluster's master.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredEnablePrivateEndpoint() {
+    return desiredEnablePrivateEndpoint;
+  }
+
+  /**
+   * Enable/Disable private endpoint for the cluster's master.
+   * @param desiredEnablePrivateEndpoint desiredEnablePrivateEndpoint or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnablePrivateEndpoint(java.lang.Boolean desiredEnablePrivateEndpoint) {
+    this.desiredEnablePrivateEndpoint = desiredEnablePrivateEndpoint;
+    return this;
+  }
+
+  /**
+   * The desired config of Gateway API on this cluster.
+   * @return value or {@code null} for none
+   */
+  public GatewayAPIConfig getDesiredGatewayApiConfig() {
+    return desiredGatewayApiConfig;
+  }
+
+  /**
+   * The desired config of Gateway API on this cluster.
+   * @param desiredGatewayApiConfig desiredGatewayApiConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredGatewayApiConfig(GatewayAPIConfig desiredGatewayApiConfig) {
+    this.desiredGatewayApiConfig = desiredGatewayApiConfig;
     return this;
   }
 

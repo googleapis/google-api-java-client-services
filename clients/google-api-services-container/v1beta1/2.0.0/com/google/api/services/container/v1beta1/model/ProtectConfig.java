@@ -38,6 +38,13 @@ public final class ProtectConfig extends com.google.api.client.json.GenericJson 
   private WorkloadConfig workloadConfig;
 
   /**
+   * Sets which mode to use for Protect workload vulnerability scanning feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workloadVulnerabilityMode;
+
+  /**
    * WorkloadConfig defines which actions are enabled for a cluster's workload configurations.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class ProtectConfig extends com.google.api.client.json.GenericJson 
    */
   public ProtectConfig setWorkloadConfig(WorkloadConfig workloadConfig) {
     this.workloadConfig = workloadConfig;
+    return this;
+  }
+
+  /**
+   * Sets which mode to use for Protect workload vulnerability scanning feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkloadVulnerabilityMode() {
+    return workloadVulnerabilityMode;
+  }
+
+  /**
+   * Sets which mode to use for Protect workload vulnerability scanning feature.
+   * @param workloadVulnerabilityMode workloadVulnerabilityMode or {@code null} for none
+   */
+  public ProtectConfig setWorkloadVulnerabilityMode(java.lang.String workloadVulnerabilityMode) {
+    this.workloadVulnerabilityMode = workloadVulnerabilityMode;
     return this;
   }
 

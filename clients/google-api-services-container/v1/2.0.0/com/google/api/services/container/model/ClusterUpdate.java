@@ -60,6 +60,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterAutoscaling desiredClusterAutoscaling;
 
   /**
+   * The desired configuration for the fine-grained cost management feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CostManagementConfig desiredCostManagementConfig;
+
+  /**
    * Configuration of etcd encryption.
    * The value may be {@code null}.
    */
@@ -86,6 +93,20 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private DNSConfig desiredDnsConfig;
+
+  /**
+   * Enable/Disable private endpoint for the cluster's master.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredEnablePrivateEndpoint;
+
+  /**
+   * The desired config of Gateway API on this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GatewayAPIConfig desiredGatewayApiConfig;
 
   /**
    * The desired GCFS config for the cluster
@@ -373,6 +394,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The desired configuration for the fine-grained cost management feature.
+   * @return value or {@code null} for none
+   */
+  public CostManagementConfig getDesiredCostManagementConfig() {
+    return desiredCostManagementConfig;
+  }
+
+  /**
+   * The desired configuration for the fine-grained cost management feature.
+   * @param desiredCostManagementConfig desiredCostManagementConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredCostManagementConfig(CostManagementConfig desiredCostManagementConfig) {
+    this.desiredCostManagementConfig = desiredCostManagementConfig;
+    return this;
+  }
+
+  /**
    * Configuration of etcd encryption.
    * @return value or {@code null} for none
    */
@@ -437,6 +475,40 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDnsConfig(DNSConfig desiredDnsConfig) {
     this.desiredDnsConfig = desiredDnsConfig;
+    return this;
+  }
+
+  /**
+   * Enable/Disable private endpoint for the cluster's master.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredEnablePrivateEndpoint() {
+    return desiredEnablePrivateEndpoint;
+  }
+
+  /**
+   * Enable/Disable private endpoint for the cluster's master.
+   * @param desiredEnablePrivateEndpoint desiredEnablePrivateEndpoint or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnablePrivateEndpoint(java.lang.Boolean desiredEnablePrivateEndpoint) {
+    this.desiredEnablePrivateEndpoint = desiredEnablePrivateEndpoint;
+    return this;
+  }
+
+  /**
+   * The desired config of Gateway API on this cluster.
+   * @return value or {@code null} for none
+   */
+  public GatewayAPIConfig getDesiredGatewayApiConfig() {
+    return desiredGatewayApiConfig;
+  }
+
+  /**
+   * The desired config of Gateway API on this cluster.
+   * @param desiredGatewayApiConfig desiredGatewayApiConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredGatewayApiConfig(GatewayAPIConfig desiredGatewayApiConfig) {
+    this.desiredGatewayApiConfig = desiredGatewayApiConfig;
     return this;
   }
 

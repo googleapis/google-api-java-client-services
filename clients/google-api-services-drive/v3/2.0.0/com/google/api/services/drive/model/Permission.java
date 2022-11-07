@@ -72,8 +72,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which this permission will expire (RFC 3339 date-time). Expiration times have the
-   * following restrictions: - They can only be set on user and group permissions  - The time must
-   * be in the future  - The time cannot be more than a year in the future
+   * following restrictions: - They cannot be set on shared drive items  - They can only be set on
+   * user and group permissions  - The time must be in the future  - The time cannot be more than a
+   * year in the future
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,8 +261,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which this permission will expire (RFC 3339 date-time). Expiration times have the
-   * following restrictions: - They can only be set on user and group permissions  - The time must
-   * be in the future  - The time cannot be more than a year in the future
+   * following restrictions: - They cannot be set on shared drive items  - They can only be set on
+   * user and group permissions  - The time must be in the future  - The time cannot be more than a
+   * year in the future
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getExpirationTime() {
@@ -270,8 +272,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which this permission will expire (RFC 3339 date-time). Expiration times have the
-   * following restrictions: - They can only be set on user and group permissions  - The time must
-   * be in the future  - The time cannot be more than a year in the future
+   * following restrictions: - They cannot be set on shared drive items  - They can only be set on
+   * user and group permissions  - The time must be in the future  - The time cannot be more than a
+   * year in the future
    * @param expirationTime expirationTime or {@code null} for none
    */
   public Permission setExpirationTime(com.google.api.client.util.DateTime expirationTime) {

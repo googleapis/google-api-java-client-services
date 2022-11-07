@@ -79,8 +79,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    * The time at which this permission will expire (RFC 3339 date-time). Expiration dates have the
    * following restrictions: - They cannot be set on shared drive items  - They can only be set on
    * user and group permissions  - The date must be in the future  - The date cannot be more than a
-   * year in the future  - The date can only be set on drive.permissions.update or
-   * drive.permissions.patch requests
+   * year in the future
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,8 +312,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    * The time at which this permission will expire (RFC 3339 date-time). Expiration dates have the
    * following restrictions: - They cannot be set on shared drive items  - They can only be set on
    * user and group permissions  - The date must be in the future  - The date cannot be more than a
-   * year in the future  - The date can only be set on drive.permissions.update or
-   * drive.permissions.patch requests
+   * year in the future
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getExpirationDate() {
@@ -325,8 +323,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    * The time at which this permission will expire (RFC 3339 date-time). Expiration dates have the
    * following restrictions: - They cannot be set on shared drive items  - They can only be set on
    * user and group permissions  - The date must be in the future  - The date cannot be more than a
-   * year in the future  - The date can only be set on drive.permissions.update or
-   * drive.permissions.patch requests
+   * year in the future
    * @param expirationDate expirationDate or {@code null} for none
    */
   public Permission setExpirationDate(com.google.api.client.util.DateTime expirationDate) {

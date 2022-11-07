@@ -26,6 +26,15 @@ public class HangoutsChatScopes {
   /** View, add, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
+  /** View, compose, send, update, and delete messages, and add, view, and delete reactions to messages.. */
+  public static final String CHAT_MESSAGES = "https://www.googleapis.com/auth/chat.messages";
+
+  /** Compose and send messages in Google Chat. */
+  public static final String CHAT_MESSAGES_CREATE = "https://www.googleapis.com/auth/chat.messages.create";
+
+  /** view messages and reactions in Google Chat. */
+  public static final String CHAT_MESSAGES_READONLY = "https://www.googleapis.com/auth/chat.messages.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +43,9 @@ public class HangoutsChatScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CHAT_MEMBERSHIPS);
+    set.add(CHAT_MESSAGES);
+    set.add(CHAT_MESSAGES_CREATE);
+    set.add(CHAT_MESSAGES_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

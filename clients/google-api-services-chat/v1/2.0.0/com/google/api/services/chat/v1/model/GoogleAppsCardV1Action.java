@@ -38,6 +38,20 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   private java.lang.String function;
 
   /**
+   * Optional. Required when opening a [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * What to do in response to an interaction with a user, such as a user clicking button on a card
+   * message. If unspecified, the app responds by executing an `action` - like opening a link or
+   * running a function - as normal. By specifying an `interaction`, the app can respond in special
+   * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
+   * indicator is not shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
+   * for an add-on, the entire card is stripped and nothing is shown in the client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String interaction;
+
+  /**
    * Specifies the loading indicator that the action displays while making the call to the action.
    * The value may be {@code null}.
    */
@@ -82,6 +96,37 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    */
   public GoogleAppsCardV1Action setFunction(java.lang.String function) {
     this.function = function;
+    return this;
+  }
+
+  /**
+   * Optional. Required when opening a [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * What to do in response to an interaction with a user, such as a user clicking button on a card
+   * message. If unspecified, the app responds by executing an `action` - like opening a link or
+   * running a function - as normal. By specifying an `interaction`, the app can respond in special
+   * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
+   * indicator is not shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
+   * for an add-on, the entire card is stripped and nothing is shown in the client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInteraction() {
+    return interaction;
+  }
+
+  /**
+   * Optional. Required when opening a [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * What to do in response to an interaction with a user, such as a user clicking button on a card
+   * message. If unspecified, the app responds by executing an `action` - like opening a link or
+   * running a function - as normal. By specifying an `interaction`, the app can respond in special
+   * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
+   * indicator is not shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
+   * for an add-on, the entire card is stripped and nothing is shown in the client.
+   * @param interaction interaction or {@code null} for none
+   */
+  public GoogleAppsCardV1Action setInteraction(java.lang.String interaction) {
+    this.interaction = interaction;
     return this;
   }
 

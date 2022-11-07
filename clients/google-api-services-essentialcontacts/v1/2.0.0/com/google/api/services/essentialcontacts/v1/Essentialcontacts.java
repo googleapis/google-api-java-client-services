@@ -1042,7 +1042,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+       * @param name Output only. The identifier for the contact. Format:
+       *        {resource_type}/{resource_id}/contacts/{contact_id}
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
        * @return the request
        */
@@ -1070,7 +1071,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+         * @param name Output only. The identifier for the contact. Format:
+       *        {resource_type}/{resource_id}/contacts/{contact_id}
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
          * @since 1.13
          */
@@ -1140,20 +1142,21 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The identifier for the contact. Format:
+         * Output only. The identifier for the contact. Format:
          * {resource_type}/{resource_id}/contacts/{contact_id}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+        /** Output only. The identifier for the contact. Format:
+       {resource_type}/{resource_id}/contacts/{contact_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The identifier for the contact. Format:
+         * Output only. The identifier for the contact. Format:
          * {resource_type}/{resource_id}/contacts/{contact_id}
          */
         public Patch setName(java.lang.String name) {
@@ -2257,7 +2260,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+       * @param name Output only. The identifier for the contact. Format:
+       *        {resource_type}/{resource_id}/contacts/{contact_id}
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
        * @return the request
        */
@@ -2285,7 +2289,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+         * @param name Output only. The identifier for the contact. Format:
+       *        {resource_type}/{resource_id}/contacts/{contact_id}
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
          * @since 1.13
          */
@@ -2355,20 +2360,21 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The identifier for the contact. Format:
+         * Output only. The identifier for the contact. Format:
          * {resource_type}/{resource_id}/contacts/{contact_id}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+        /** Output only. The identifier for the contact. Format:
+       {resource_type}/{resource_id}/contacts/{contact_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The identifier for the contact. Format:
+         * Output only. The identifier for the contact. Format:
          * {resource_type}/{resource_id}/contacts/{contact_id}
          */
         public Patch setName(java.lang.String name) {
@@ -3472,7 +3478,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+       * @param name Output only. The identifier for the contact. Format:
+       *        {resource_type}/{resource_id}/contacts/{contact_id}
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
        * @return the request
        */
@@ -3500,7 +3507,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+         * @param name Output only. The identifier for the contact. Format:
+       *        {resource_type}/{resource_id}/contacts/{contact_id}
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
          * @since 1.13
          */
@@ -3570,20 +3578,21 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The identifier for the contact. Format:
+         * Output only. The identifier for the contact. Format:
          * {resource_type}/{resource_id}/contacts/{contact_id}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+        /** Output only. The identifier for the contact. Format:
+       {resource_type}/{resource_id}/contacts/{contact_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The identifier for the contact. Format:
+         * Output only. The identifier for the contact. Format:
          * {resource_type}/{resource_id}/contacts/{contact_id}
          */
         public Patch setName(java.lang.String name) {

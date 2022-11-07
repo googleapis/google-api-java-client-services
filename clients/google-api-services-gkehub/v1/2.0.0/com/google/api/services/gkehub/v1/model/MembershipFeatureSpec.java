@@ -30,18 +30,18 @@ package com.google.api.services.gkehub.v1.model;
 public final class MembershipFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * AnthosVM spec.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnthosVMMembershipSpec anthosvm;
-
-  /**
    * Config Management-specific spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementMembershipSpec configmanagement;
+
+  /**
+   * Fleet observability membership spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityMembershipSpec fleetobservability;
 
   /**
    * Identity Service-specific spec.
@@ -58,23 +58,6 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private ServiceMeshMembershipSpec mesh;
 
   /**
-   * AnthosVM spec.
-   * @return value or {@code null} for none
-   */
-  public AnthosVMMembershipSpec getAnthosvm() {
-    return anthosvm;
-  }
-
-  /**
-   * AnthosVM spec.
-   * @param anthosvm anthosvm or {@code null} for none
-   */
-  public MembershipFeatureSpec setAnthosvm(AnthosVMMembershipSpec anthosvm) {
-    this.anthosvm = anthosvm;
-    return this;
-  }
-
-  /**
    * Config Management-specific spec.
    * @return value or {@code null} for none
    */
@@ -88,6 +71,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
     this.configmanagement = configmanagement;
+    return this;
+  }
+
+  /**
+   * Fleet observability membership spec
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityMembershipSpec getFleetobservability() {
+    return fleetobservability;
+  }
+
+  /**
+   * Fleet observability membership spec
+   * @param fleetobservability fleetobservability or {@code null} for none
+   */
+  public MembershipFeatureSpec setFleetobservability(FleetObservabilityMembershipSpec fleetobservability) {
+    this.fleetobservability = fleetobservability;
     return this;
   }
 

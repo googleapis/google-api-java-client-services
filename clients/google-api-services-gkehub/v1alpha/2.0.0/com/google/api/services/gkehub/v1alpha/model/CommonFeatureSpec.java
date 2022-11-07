@@ -51,6 +51,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private CloudAuditLoggingFeatureSpec cloudauditlogging;
 
   /**
+   * FleetObservability feature spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityFeatureSpec fleetobservability;
+
+  /**
    * Multicluster Ingress-specific spec.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setCloudauditlogging(CloudAuditLoggingFeatureSpec cloudauditlogging) {
     this.cloudauditlogging = cloudauditlogging;
+    return this;
+  }
+
+  /**
+   * FleetObservability feature spec.
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityFeatureSpec getFleetobservability() {
+    return fleetobservability;
+  }
+
+  /**
+   * FleetObservability feature spec.
+   * @param fleetobservability fleetobservability or {@code null} for none
+   */
+  public CommonFeatureSpec setFleetobservability(FleetObservabilityFeatureSpec fleetobservability) {
+    this.fleetobservability = fleetobservability;
     return this;
   }
 

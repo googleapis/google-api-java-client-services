@@ -20,7 +20,7 @@ package com.google.api.services.transcoder.v1;
  * Service definition for Transcoder (v1).
  *
  * <p>
- * This API converts video files into formats suitable for consumer distribution. 
+ * This API converts video files into formats suitable for consumer distribution. For more information, see the Transcoder API overview. 
  * </p>
  *
  * <p>

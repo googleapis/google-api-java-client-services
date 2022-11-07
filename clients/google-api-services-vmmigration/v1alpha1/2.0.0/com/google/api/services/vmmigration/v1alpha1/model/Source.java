@@ -32,6 +32,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
+   * AWS type source details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsSourceDetails aws;
+
+  /**
    * Output only. The create time timestamp.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VmwareSourceDetails vmware;
+
+  /**
+   * AWS type source details.
+   * @return value or {@code null} for none
+   */
+  public AwsSourceDetails getAws() {
+    return aws;
+  }
+
+  /**
+   * AWS type source details.
+   * @param aws aws or {@code null} for none
+   */
+  public Source setAws(AwsSourceDetails aws) {
+    this.aws = aws;
+    return this;
+  }
 
   /**
    * Output only. The create time timestamp.

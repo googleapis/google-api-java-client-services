@@ -96,6 +96,13 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
   private String stateTime;
 
   /**
+   * Output only. The cutover steps list representing its progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CutoverStep> steps;
+
+  /**
    * Output only. Details of the target VM in Compute Engine.
    * @return value or {@code null} for none
    */
@@ -247,6 +254,23 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
    */
   public CutoverJob setStateTime(String stateTime) {
     this.stateTime = stateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The cutover steps list representing its progress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CutoverStep> getSteps() {
+    return steps;
+  }
+
+  /**
+   * Output only. The cutover steps list representing its progress.
+   * @param steps steps or {@code null} for none
+   */
+  public CutoverJob setSteps(java.util.List<CutoverStep> steps) {
+    this.steps = steps;
     return this;
   }
 

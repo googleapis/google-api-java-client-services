@@ -82,13 +82,6 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   private java.lang.String name;
 
   /**
-   * Output only. A URI referring to the policy that created this Lock.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String policyUri;
-
-  /**
    * Output only. This LabelLock's state.
    * The value may be {@code null}.
    */
@@ -217,23 +210,6 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Output only. A URI referring to the policy that created this Lock.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPolicyUri() {
-    return policyUri;
-  }
-
-  /**
-   * Output only. A URI referring to the policy that created this Lock.
-   * @param policyUri policyUri or {@code null} for none
-   */
-  public GoogleAppsDriveLabelsV2betaLabelLock setPolicyUri(java.lang.String policyUri) {
-    this.policyUri = policyUri;
     return this;
   }
 

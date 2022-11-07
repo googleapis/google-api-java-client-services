@@ -31,7 +31,36 @@ package com.google.api.services.vmmigration.v1.model;
 public final class ReplicationCycle extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current progress in percentage of this cycle.
+   * The cycle's ordinal number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cycleNumber;
+
+  /**
+   * The time the replication cycle has ended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
+   * Provides details on the state of the cycle in case of an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status error;
+
+  /**
+   * The identifier of the ReplicationCycle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * The current progress in percentage of this cycle. Was replaced by 'steps' field, which breaks
+   * down the cycle progression more accurately.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +74,103 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String startTime;
 
   /**
-   * The current progress in percentage of this cycle.
+   * State of the ReplicationCycle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * The cycle's steps list representing its progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CycleStep> steps;
+
+  static {
+    // hack to force ProGuard to consider CycleStep used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CycleStep.class);
+  }
+
+  /**
+   * The accumulated duration the replication cycle was paused.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String totalPauseDuration;
+
+  /**
+   * The cycle's ordinal number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCycleNumber() {
+    return cycleNumber;
+  }
+
+  /**
+   * The cycle's ordinal number.
+   * @param cycleNumber cycleNumber or {@code null} for none
+   */
+  public ReplicationCycle setCycleNumber(java.lang.Integer cycleNumber) {
+    this.cycleNumber = cycleNumber;
+    return this;
+  }
+
+  /**
+   * The time the replication cycle has ended.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * The time the replication cycle has ended.
+   * @param endTime endTime or {@code null} for none
+   */
+  public ReplicationCycle setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Provides details on the state of the cycle in case of an error.
+   * @return value or {@code null} for none
+   */
+  public Status getError() {
+    return error;
+  }
+
+  /**
+   * Provides details on the state of the cycle in case of an error.
+   * @param error error or {@code null} for none
+   */
+  public ReplicationCycle setError(Status error) {
+    this.error = error;
+    return this;
+  }
+
+  /**
+   * The identifier of the ReplicationCycle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The identifier of the ReplicationCycle.
+   * @param name name or {@code null} for none
+   */
+  public ReplicationCycle setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * The current progress in percentage of this cycle. Was replaced by 'steps' field, which breaks
+   * down the cycle progression more accurately.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProgressPercent() {
@@ -53,7 +178,8 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current progress in percentage of this cycle.
+   * The current progress in percentage of this cycle. Was replaced by 'steps' field, which breaks
+   * down the cycle progression more accurately.
    * @param progressPercent progressPercent or {@code null} for none
    */
   public ReplicationCycle setProgressPercent(java.lang.Integer progressPercent) {
@@ -75,6 +201,57 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
    */
   public ReplicationCycle setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * State of the ReplicationCycle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * State of the ReplicationCycle.
+   * @param state state or {@code null} for none
+   */
+  public ReplicationCycle setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * The cycle's steps list representing its progress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CycleStep> getSteps() {
+    return steps;
+  }
+
+  /**
+   * The cycle's steps list representing its progress.
+   * @param steps steps or {@code null} for none
+   */
+  public ReplicationCycle setSteps(java.util.List<CycleStep> steps) {
+    this.steps = steps;
+    return this;
+  }
+
+  /**
+   * The accumulated duration the replication cycle was paused.
+   * @return value or {@code null} for none
+   */
+  public String getTotalPauseDuration() {
+    return totalPauseDuration;
+  }
+
+  /**
+   * The accumulated duration the replication cycle was paused.
+   * @param totalPauseDuration totalPauseDuration or {@code null} for none
+   */
+  public ReplicationCycle setTotalPauseDuration(String totalPauseDuration) {
+    this.totalPauseDuration = totalPauseDuration;
     return this;
   }
 

@@ -47,11 +47,25 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   private DicomConfig dicom;
 
   /**
+   * Configures de-id of application/DICOM content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DicomTagConfig dicomTagConfig;
+
+  /**
    * Configures de-id of application/FHIR content. Deprecated. Use `fhir_field_config` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FhirConfig fhir;
+
+  /**
+   * Configures de-id of application/FHIR content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FhirFieldConfig fhirFieldConfig;
 
   /**
    * Configures the de-identification of image pixels in the source_dataset. Deprecated. Use
@@ -112,6 +126,23 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Configures de-id of application/DICOM content.
+   * @return value or {@code null} for none
+   */
+  public DicomTagConfig getDicomTagConfig() {
+    return dicomTagConfig;
+  }
+
+  /**
+   * Configures de-id of application/DICOM content.
+   * @param dicomTagConfig dicomTagConfig or {@code null} for none
+   */
+  public DeidentifyConfig setDicomTagConfig(DicomTagConfig dicomTagConfig) {
+    this.dicomTagConfig = dicomTagConfig;
+    return this;
+  }
+
+  /**
    * Configures de-id of application/FHIR content. Deprecated. Use `fhir_field_config` instead.
    * @return value or {@code null} for none
    */
@@ -125,6 +156,23 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
    */
   public DeidentifyConfig setFhir(FhirConfig fhir) {
     this.fhir = fhir;
+    return this;
+  }
+
+  /**
+   * Configures de-id of application/FHIR content.
+   * @return value or {@code null} for none
+   */
+  public FhirFieldConfig getFhirFieldConfig() {
+    return fhirFieldConfig;
+  }
+
+  /**
+   * Configures de-id of application/FHIR content.
+   * @param fhirFieldConfig fhirFieldConfig or {@code null} for none
+   */
+  public DeidentifyConfig setFhirFieldConfig(FhirFieldConfig fhirFieldConfig) {
+    this.fhirFieldConfig = fhirFieldConfig;
     return this;
   }
 

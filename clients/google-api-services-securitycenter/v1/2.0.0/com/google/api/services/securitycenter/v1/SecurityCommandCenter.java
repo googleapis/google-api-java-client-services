@@ -4741,9 +4741,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -4773,9 +4773,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -4847,18 +4847,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -4867,9 +4867,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4896,7 +4896,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -4926,7 +4926,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -4998,14 +4998,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -5014,7 +5014,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12198,9 +12198,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -12230,9 +12230,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -12304,18 +12304,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -12324,9 +12324,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12353,7 +12353,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -12383,7 +12383,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -12455,14 +12455,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -12471,7 +12471,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -17499,9 +17499,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -17531,9 +17531,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -17605,18 +17605,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -17625,9 +17625,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -17654,7 +17654,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -17684,7 +17684,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -17756,14 +17756,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -17772,7 +17772,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

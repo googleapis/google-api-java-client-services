@@ -5,6 +5,6 @@ python-gflags==3.1.2
 google-api-python-client==1.7.7
 cachetools==3.1.1
 pyparsing==2.4.7
-rsa==4.0.0
+rsa==4.7
 enum34==1.1.10
 google-auth==2.14.1

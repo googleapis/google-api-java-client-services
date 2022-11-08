@@ -174,6 +174,19 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String externalUri;
 
   /**
+   * File associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<File> files;
+
+  static {
+    // hack to force ProGuard to consider File used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(File.class);
+  }
+
+  /**
    * The class of the finding.
    * The value may be {@code null}.
    */
@@ -597,6 +610,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setExternalUri(java.lang.String externalUri) {
     this.externalUri = externalUri;
+    return this;
+  }
+
+  /**
+   * File associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<File> getFiles() {
+    return files;
+  }
+
+  /**
+   * File associated with the finding.
+   * @param files files or {@code null} for none
+   */
+  public Finding setFiles(java.util.List<File> files) {
+    this.files = files;
     return this;
   }
 

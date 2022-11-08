@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * Creates a set of terms that will be treated as synonyms of each other. Example: synonyms of
- * "sneakers" and "shoes". * "sneakers" will use a synonym of "shoes". * "shoes" will use a synonym
+ * "sneakers" and "shoes": * "sneakers" will use a synonym of "shoes". * "shoes" will use a synonym
  * of "sneakers".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

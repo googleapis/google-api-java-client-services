@@ -66,7 +66,8 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private java.lang.Integer progress;
 
   /**
-   * The current progress in percentage of this cycle.
+   * The current progress in percentage of this cycle. Was replaced by 'steps' field, which breaks
+   * down the cycle progression more accurately.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String startTime;
 
   /**
-   * State of the MigratingVm.
+   * State of the ReplicationCycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +193,8 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current progress in percentage of this cycle.
+   * The current progress in percentage of this cycle. Was replaced by 'steps' field, which breaks
+   * down the cycle progression more accurately.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProgressPercent() {
@@ -200,7 +202,8 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current progress in percentage of this cycle.
+   * The current progress in percentage of this cycle. Was replaced by 'steps' field, which breaks
+   * down the cycle progression more accurately.
    * @param progressPercent progressPercent or {@code null} for none
    */
   public ReplicationCycle setProgressPercent(java.lang.Integer progressPercent) {
@@ -226,7 +229,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * State of the MigratingVm.
+   * State of the ReplicationCycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -234,7 +237,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * State of the MigratingVm.
+   * State of the ReplicationCycle.
    * @param state state or {@code null} for none
    */
   public ReplicationCycle setState(java.lang.String state) {

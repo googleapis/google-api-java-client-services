@@ -31,6 +31,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The CPU architecture.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * The VM Boot Option.
    * The value may be {@code null}.
    */
@@ -128,6 +135,13 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> tags;
 
   /**
+   * The virtualization type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String virtualizationType;
+
+  /**
    * The VM ID in AWS.
    * The value may be {@code null}.
    */
@@ -147,6 +161,23 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * The CPU architecture.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * The CPU architecture.
+   * @param architecture architecture or {@code null} for none
+   */
+  public AwsVmDetails setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
 
   /**
    * The VM Boot Option.
@@ -366,6 +397,23 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
    */
   public AwsVmDetails setTags(java.util.Map<String, java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * The virtualization type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVirtualizationType() {
+    return virtualizationType;
+  }
+
+  /**
+   * The virtualization type.
+   * @param virtualizationType virtualizationType or {@code null} for none
+   */
+  public AwsVmDetails setVirtualizationType(java.lang.String virtualizationType) {
+    this.virtualizationType = virtualizationType;
     return this;
   }
 

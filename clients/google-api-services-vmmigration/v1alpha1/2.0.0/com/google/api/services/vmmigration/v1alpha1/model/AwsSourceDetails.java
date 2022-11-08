@@ -59,7 +59,8 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> inventorySecurityGroupNames;
 
   /**
-   * AWS resource tags to limit the scope of the source inventory.
+   * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
+   * inventory_tag_list instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +166,8 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * AWS resource tags to limit the scope of the source inventory.
+   * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
+   * inventory_tag_list instead.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getInventoryTags() {
@@ -173,7 +175,8 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * AWS resource tags to limit the scope of the source inventory.
+   * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
+   * inventory_tag_list instead.
    * @param inventoryTags inventoryTags or {@code null} for none
    */
   public AwsSourceDetails setInventoryTags(java.util.Map<String, java.lang.String> inventoryTags) {

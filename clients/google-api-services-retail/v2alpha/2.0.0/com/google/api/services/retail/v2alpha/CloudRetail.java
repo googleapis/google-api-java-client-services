@@ -407,17 +407,24 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /** If true, attribute suggestions are enabled and provided in response. */
+          /**
+           * If true, attribute suggestions are enabled and provided in response. This field is only
+           * available for "cloud-retail" dataset.
+           */
           @com.google.api.client.util.Key
           private java.lang.Boolean enableAttributeSuggestions;
 
-          /** If true, attribute suggestions are enabled and provided in response.
+          /** If true, attribute suggestions are enabled and provided in response. This field is only available
+         for "cloud-retail" dataset.
            */
           public java.lang.Boolean getEnableAttributeSuggestions() {
             return enableAttributeSuggestions;
           }
 
-          /** If true, attribute suggestions are enabled and provided in response. */
+          /**
+           * If true, attribute suggestions are enabled and provided in response. This field is only
+           * available for "cloud-retail" dataset.
+           */
           public CompleteQuery setEnableAttributeSuggestions(java.lang.Boolean enableAttributeSuggestions) {
             this.enableAttributeSuggestions = enableAttributeSuggestions;
             return this;

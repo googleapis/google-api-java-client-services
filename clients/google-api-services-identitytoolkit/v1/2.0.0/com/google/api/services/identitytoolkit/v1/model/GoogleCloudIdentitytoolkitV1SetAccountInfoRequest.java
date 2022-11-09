@@ -52,7 +52,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * JSON formatted custom attributes to be stored in the Identity Platform ID token. Specifying
-   * this field requires a Google OAuth 2.0 credential with proper permissions
+   * this field requires a Google OAuth 2.0 credential with proper [permissions]
    * (https://cloud.google.com/identity-platform/docs/access-control).
    * The value may be {@code null}.
    */
@@ -105,7 +105,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * Whether the user's email has been verified. Specifying this field requires a Google OAuth 2.0
-   * credential with proper permissions (https://cloud.google.com/identity-platform/docs/access-
+   * credential with proper [permissions] (https://cloud.google.com/identity-platform/docs/access-
    * control).
    * The value may be {@code null}.
    */
@@ -135,8 +135,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The provider to be linked to the user's account. Specifying this field requires a Google OAuth
-   * 2.0 credential with proper permissions (https://cloud.google.com/identity-platform/docs/access-
-   * control).
+   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
+   * /access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +144,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The ID of the user. Specifying this field requires a Google OAuth 2.0 credential with proper
-   * permissions (https://cloud.google.com/identity-platform/docs/access-control). For requests from
-   * end-users, an ID token should be passed instead.
+   * [permissions] (https://cloud.google.com/identity-platform/docs/access-control). For requests
+   * from end-users, an ID token should be passed instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The multi-factor authentication related information to be set on the user's account. This will
    * overwrite any previous multi-factor related information on the account. Specifying this field
-   * requires a Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
+   * requires a Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
    * /identity-platform/docs/access-control).
    * The value may be {@code null}.
    */
@@ -209,7 +209,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The project ID for the project that the account belongs to. Specifying this field requires
-   * Google OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+   * Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
    * platform/docs/access-control). Requests from end users should pass an Identity Platform ID
    * token instead.
    * The value may be {@code null}.
@@ -293,7 +293,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * JSON formatted custom attributes to be stored in the Identity Platform ID token. Specifying
-   * this field requires a Google OAuth 2.0 credential with proper permissions
+   * this field requires a Google OAuth 2.0 credential with proper [permissions]
    * (https://cloud.google.com/identity-platform/docs/access-control).
    * @return value or {@code null} for none
    */
@@ -303,7 +303,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * JSON formatted custom attributes to be stored in the Identity Platform ID token. Specifying
-   * this field requires a Google OAuth 2.0 credential with proper permissions
+   * this field requires a Google OAuth 2.0 credential with proper [permissions]
    * (https://cloud.google.com/identity-platform/docs/access-control).
    * @param customAttributes customAttributes or {@code null} for none
    */
@@ -420,7 +420,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * Whether the user's email has been verified. Specifying this field requires a Google OAuth 2.0
-   * credential with proper permissions (https://cloud.google.com/identity-platform/docs/access-
+   * credential with proper [permissions] (https://cloud.google.com/identity-platform/docs/access-
    * control).
    * @return value or {@code null} for none
    */
@@ -430,7 +430,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * Whether the user's email has been verified. Specifying this field requires a Google OAuth 2.0
-   * credential with proper permissions (https://cloud.google.com/identity-platform/docs/access-
+   * credential with proper [permissions] (https://cloud.google.com/identity-platform/docs/access-
    * control).
    * @param emailVerified emailVerified or {@code null} for none
    */
@@ -492,8 +492,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The provider to be linked to the user's account. Specifying this field requires a Google OAuth
-   * 2.0 credential with proper permissions (https://cloud.google.com/identity-platform/docs/access-
-   * control).
+   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
+   * /access-control).
    * @return value or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1ProviderUserInfo getLinkProviderUserInfo() {
@@ -502,8 +502,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The provider to be linked to the user's account. Specifying this field requires a Google OAuth
-   * 2.0 credential with proper permissions (https://cloud.google.com/identity-platform/docs/access-
-   * control).
+   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
+   * /access-control).
    * @param linkProviderUserInfo linkProviderUserInfo or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setLinkProviderUserInfo(GoogleCloudIdentitytoolkitV1ProviderUserInfo linkProviderUserInfo) {
@@ -513,8 +513,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The ID of the user. Specifying this field requires a Google OAuth 2.0 credential with proper
-   * permissions (https://cloud.google.com/identity-platform/docs/access-control). For requests from
-   * end-users, an ID token should be passed instead.
+   * [permissions] (https://cloud.google.com/identity-platform/docs/access-control). For requests
+   * from end-users, an ID token should be passed instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalId() {
@@ -523,8 +523,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The ID of the user. Specifying this field requires a Google OAuth 2.0 credential with proper
-   * permissions (https://cloud.google.com/identity-platform/docs/access-control). For requests from
-   * end-users, an ID token should be passed instead.
+   * [permissions] (https://cloud.google.com/identity-platform/docs/access-control). For requests
+   * from end-users, an ID token should be passed instead.
    * @param localId localId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setLocalId(java.lang.String localId) {
@@ -535,7 +535,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The multi-factor authentication related information to be set on the user's account. This will
    * overwrite any previous multi-factor related information on the account. Specifying this field
-   * requires a Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
+   * requires a Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
    * /identity-platform/docs/access-control).
    * @return value or {@code null} for none
    */
@@ -546,7 +546,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The multi-factor authentication related information to be set on the user's account. This will
    * overwrite any previous multi-factor related information on the account. Specifying this field
-   * requires a Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
+   * requires a Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
    * /identity-platform/docs/access-control).
    * @param mfa mfa or {@code null} for none
    */
@@ -667,7 +667,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The project ID for the project that the account belongs to. Specifying this field requires
-   * Google OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+   * Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
    * platform/docs/access-control). Requests from end users should pass an Identity Platform ID
    * token instead.
    * @return value or {@code null} for none
@@ -678,7 +678,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The project ID for the project that the account belongs to. Specifying this field requires
-   * Google OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+   * Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
    * platform/docs/access-control). Requests from end users should pass an Identity Platform ID
    * token instead.
    * @param targetProjectId targetProjectId or {@code null} for none

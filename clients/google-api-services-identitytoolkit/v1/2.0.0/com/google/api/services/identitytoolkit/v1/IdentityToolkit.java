@@ -1738,7 +1738,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Verifies an iOS client is a real iOS device. If the request is valid, a reciept will be sent in
+     * Verifies an iOS client is a real iOS device. If the request is valid, a receipt will be sent in
      * the response and a secret will be sent via Apple Push Notification Service. The client should
      * send both of them back to certain Identity Platform APIs in a later call (for example,
      * /accounts:sendVerificationCode), in order to verify the client. The bundle ID is required in the
@@ -1766,7 +1766,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/accounts:verifyIosClient";
 
       /**
-       * Verifies an iOS client is a real iOS device. If the request is valid, a reciept will be sent in
+       * Verifies an iOS client is a real iOS device. If the request is valid, a receipt will be sent in
        * the response and a secret will be sent via Apple Push Notification Service. The client should
        * send both of them back to certain Identity Platform APIs in a later call (for example,
        * /accounts:sendVerificationCode), in order to verify the client. The bundle ID is required in
@@ -2462,8 +2462,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       /**
        * Batch deletes multiple accounts. For accounts that fail to be deleted, error info is contained in
        * the response. The method ignores accounts that do not exist or are duplicated in the request.
-       * This method requires a Google OAuth 2.0 credential with proper permissions.
-       * (https://cloud.google.com/identity-platform/docs/access-control)
+       * This method requires a Google OAuth 2.0 credential with proper [permissions]
+       * (https://cloud.google.com/identity-platform/docs/access-control).
        *
        * Create a request for the method "accounts.batchDelete".
        *
@@ -2492,8 +2492,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         /**
          * Batch deletes multiple accounts. For accounts that fail to be deleted, error info is contained
          * in the response. The method ignores accounts that do not exist or are duplicated in the
-         * request. This method requires a Google OAuth 2.0 credential with proper permissions.
-         * (https://cloud.google.com/identity-platform/docs/access-control)
+         * request. This method requires a Google OAuth 2.0 credential with proper [permissions]
+         * (https://cloud.google.com/identity-platform/docs/access-control).
          *
          * Create a request for the method "accounts.batchDelete".
          *
@@ -3426,7 +3426,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param targetProjectId The project ID for the project that the account belongs to. Specifying this field requires Google
-       *        OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+       *        OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
        *        platform/docs/access-control). Requests from end users should pass an Identity Platform ID
        *        token instead.
        * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SetAccountInfoRequest}
@@ -3458,7 +3458,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param targetProjectId The project ID for the project that the account belongs to. Specifying this field requires Google
-       *        OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+       *        OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
        *        platform/docs/access-control). Requests from end users should pass an Identity Platform ID
        *        token instead.
          * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SetAccountInfoRequest}
@@ -3531,7 +3531,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
         /**
          * The project ID for the project that the account belongs to. Specifying this field
-         * requires Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
+         * requires Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
          * /identity-platform/docs/access-control). Requests from end users should pass an Identity
          * Platform ID token instead.
          */
@@ -3539,7 +3539,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         private java.lang.String targetProjectId;
 
         /** The project ID for the project that the account belongs to. Specifying this field requires Google
-       OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-platform/docs
+       OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
        /access-control). Requests from end users should pass an Identity Platform ID token instead.
          */
         public java.lang.String getTargetProjectId() {
@@ -3548,7 +3548,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
         /**
          * The project ID for the project that the account belongs to. Specifying this field
-         * requires Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
+         * requires Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
          * /identity-platform/docs/access-control). Requests from end users should pass an Identity
          * Platform ID token instead.
          */
@@ -4152,8 +4152,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         /**
          * Batch deletes multiple accounts. For accounts that fail to be deleted, error info is contained in
          * the response. The method ignores accounts that do not exist or are duplicated in the request.
-         * This method requires a Google OAuth 2.0 credential with proper permissions.
-         * (https://cloud.google.com/identity-platform/docs/access-control)
+         * This method requires a Google OAuth 2.0 credential with proper [permissions]
+         * (https://cloud.google.com/identity-platform/docs/access-control).
          *
          * Create a request for the method "accounts.batchDelete".
          *
@@ -4187,8 +4187,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
           /**
            * Batch deletes multiple accounts. For accounts that fail to be deleted, error info is contained
            * in the response. The method ignores accounts that do not exist or are duplicated in the
-           * request. This method requires a Google OAuth 2.0 credential with proper permissions.
-           * (https://cloud.google.com/identity-platform/docs/access-control)
+           * request. This method requires a Google OAuth 2.0 credential with proper [permissions]
+           * (https://cloud.google.com/identity-platform/docs/access-control).
            *
            * Create a request for the method "accounts.batchDelete".
            *
@@ -5326,7 +5326,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param targetProjectId The project ID for the project that the account belongs to. Specifying this field requires Google
-         *        OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+         *        OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
          *        platform/docs/access-control). Requests from end users should pass an Identity Platform ID
          *        token instead.
          * @param tenantId The tenant ID of the Identity Platform tenant that the account belongs to. Requests from end users
@@ -5363,7 +5363,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param targetProjectId The project ID for the project that the account belongs to. Specifying this field requires Google
-         *        OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-
+         *        OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
          *        platform/docs/access-control). Requests from end users should pass an Identity Platform ID
          *        token instead.
            * @param tenantId The tenant ID of the Identity Platform tenant that the account belongs to. Requests from end users
@@ -5444,15 +5444,15 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
           /**
            * The project ID for the project that the account belongs to. Specifying this field
-           * requires Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
-           * /identity-platform/docs/access-control). Requests from end users should pass an
-           * Identity Platform ID token instead.
+           * requires Google OAuth 2.0 credential with proper [permissions]
+           * (https://cloud.google.com/identity-platform/docs/access-control). Requests from end
+           * users should pass an Identity Platform ID token instead.
            */
           @com.google.api.client.util.Key
           private java.lang.String targetProjectId;
 
           /** The project ID for the project that the account belongs to. Specifying this field requires Google
-         OAuth 2.0 credential with proper permissions (https://cloud.google.com/identity-platform/docs
+         OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
          /access-control). Requests from end users should pass an Identity Platform ID token instead.
            */
           public java.lang.String getTargetProjectId() {
@@ -5461,9 +5461,9 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
           /**
            * The project ID for the project that the account belongs to. Specifying this field
-           * requires Google OAuth 2.0 credential with proper permissions (https://cloud.google.com
-           * /identity-platform/docs/access-control). Requests from end users should pass an
-           * Identity Platform ID token instead.
+           * requires Google OAuth 2.0 credential with proper [permissions]
+           * (https://cloud.google.com/identity-platform/docs/access-control). Requests from end
+           * users should pass an Identity Platform ID token instead.
            */
           public Update setTargetProjectId(java.lang.String targetProjectId) {
             if (!getSuppressPatternChecks()) {

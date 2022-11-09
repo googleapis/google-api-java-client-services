@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Intended to be simpler to work with than the ExportedStanza it's derived from See documentation: 
  * https://g3doc.corp.google.com/company/teams/youtube/community_intelligence/eng_resources/data_sou
- * rces.md#ministanza Next available: 74
+ * rces.md#ministanza Next available: 75
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -455,6 +455,14 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation textQualityScores;
+
+  /**
+   * Predicted probability of the comment being flagged based on the text. For testing the new
+   * annotation process only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation textQualityScores2;
 
   /**
    * The video this comment belongs to.
@@ -1498,6 +1506,25 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setTextQualityScores(YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation textQualityScores) {
     this.textQualityScores = textQualityScores;
+    return this;
+  }
+
+  /**
+   * Predicted probability of the comment being flagged based on the text. For testing the new
+   * annotation process only.
+   * @return value or {@code null} for none
+   */
+  public YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation getTextQualityScores2() {
+    return textQualityScores2;
+  }
+
+  /**
+   * Predicted probability of the comment being flagged based on the text. For testing the new
+   * annotation process only.
+   * @param textQualityScores2 textQualityScores2 or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setTextQualityScores2(YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation textQualityScores2) {
+    this.textQualityScores2 = textQualityScores2;
     return this;
   }
 

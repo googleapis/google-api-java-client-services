@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This defines the per-doc data which is extracted from thumbnails and propagated over to indexing.
- * It contains all information that can be used for restricts. Next tag id: 127
+ * It contains all information that can be used for restricts. Next tag id: 128
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -172,6 +172,13 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeepCropIndexing deepCrop;
+
+  /**
+   * Productionized Deep Image Engagingness score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageRepositoryDeepImageEngagingnessOutput deepImageEngagingness;
 
   /**
    * VSS generated deep tags for shopping images.
@@ -1028,6 +1035,23 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   public ImageData setDeepCrop(DeepCropIndexing deepCrop) {
     this.deepCrop = deepCrop;
+    return this;
+  }
+
+  /**
+   * Productionized Deep Image Engagingness score.
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryDeepImageEngagingnessOutput getDeepImageEngagingness() {
+    return deepImageEngagingness;
+  }
+
+  /**
+   * Productionized Deep Image Engagingness score.
+   * @param deepImageEngagingness deepImageEngagingness or {@code null} for none
+   */
+  public ImageData setDeepImageEngagingness(ImageRepositoryDeepImageEngagingnessOutput deepImageEngagingness) {
+    this.deepImageEngagingness = deepImageEngagingness;
     return this;
   }
 

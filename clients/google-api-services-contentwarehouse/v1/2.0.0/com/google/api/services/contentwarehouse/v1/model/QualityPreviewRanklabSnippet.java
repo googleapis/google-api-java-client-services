@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Snippet candidate related information and signal scores.
+ * Snippet candidate related information and signal scores. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -48,6 +48,27 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   private QualityPreviewSnippetExperimentalFeatures experimentalFeatures;
 
   /**
+   * The final score of this candidate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float finalScore;
+
+  /**
+   * Is this the candidate chosen by Muppet scorer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMuppetSelectedSnippet;
+
+  /**
+   * Query term (original terms only) coverage features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityPreviewSnippetQueryTermCoverageFeatures originalQueryTermCoverageFeatures;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,6 +82,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   private QualityPreviewSnippetQueryFeatures queryFeatures;
 
   /**
+   * Query term (including synonyms) coverage features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,6 +141,57 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   }
 
   /**
+   * The final score of this candidate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFinalScore() {
+    return finalScore;
+  }
+
+  /**
+   * The final score of this candidate.
+   * @param finalScore finalScore or {@code null} for none
+   */
+  public QualityPreviewRanklabSnippet setFinalScore(java.lang.Float finalScore) {
+    this.finalScore = finalScore;
+    return this;
+  }
+
+  /**
+   * Is this the candidate chosen by Muppet scorer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMuppetSelectedSnippet() {
+    return isMuppetSelectedSnippet;
+  }
+
+  /**
+   * Is this the candidate chosen by Muppet scorer.
+   * @param isMuppetSelectedSnippet isMuppetSelectedSnippet or {@code null} for none
+   */
+  public QualityPreviewRanklabSnippet setIsMuppetSelectedSnippet(java.lang.Boolean isMuppetSelectedSnippet) {
+    this.isMuppetSelectedSnippet = isMuppetSelectedSnippet;
+    return this;
+  }
+
+  /**
+   * Query term (original terms only) coverage features.
+   * @return value or {@code null} for none
+   */
+  public QualityPreviewSnippetQueryTermCoverageFeatures getOriginalQueryTermCoverageFeatures() {
+    return originalQueryTermCoverageFeatures;
+  }
+
+  /**
+   * Query term (original terms only) coverage features.
+   * @param originalQueryTermCoverageFeatures originalQueryTermCoverageFeatures or {@code null} for none
+   */
+  public QualityPreviewRanklabSnippet setOriginalQueryTermCoverageFeatures(QualityPreviewSnippetQueryTermCoverageFeatures originalQueryTermCoverageFeatures) {
+    this.originalQueryTermCoverageFeatures = originalQueryTermCoverageFeatures;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public QualityPreviewSnippetQualityFeatures getQualityFeatures() {
@@ -151,6 +224,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   }
 
   /**
+   * Query term (including synonyms) coverage features.
    * @return value or {@code null} for none
    */
   public QualityPreviewSnippetQueryTermCoverageFeatures getQueryTermCoverageFeatures() {
@@ -158,6 +232,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   }
 
   /**
+   * Query term (including synonyms) coverage features.
    * @param queryTermCoverageFeatures queryTermCoverageFeatures or {@code null} for none
    */
   public QualityPreviewRanklabSnippet setQueryTermCoverageFeatures(QualityPreviewSnippetQueryTermCoverageFeatures queryTermCoverageFeatures) {

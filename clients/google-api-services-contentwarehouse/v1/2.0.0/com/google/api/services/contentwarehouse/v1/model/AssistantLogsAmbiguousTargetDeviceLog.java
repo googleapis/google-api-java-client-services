@@ -41,6 +41,18 @@ public final class AssistantLogsAmbiguousTargetDeviceLog extends com.google.api.
   private java.util.List<java.lang.Integer> ambiguousDeviceIndex;
 
   /**
+   * DeviceInfo for devices after the filters and promoters. - When device targeting is only
+   * configured for single target, these are ambiguous devices that would have been the output of
+   * Lumos. Downstream may perform extra check before disambiguation dialog. For example, Media
+   * Initiation checks playability for devices. The output here is before the check. - When
+   * configured for multi-target, these are just the target devices. For privacy consideration, we
+   * may only log device id field inside.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AssistantLogsDeviceInfoLog> devicesAfterPromoters;
+
+  /**
    * the final targeted device selected by playability filter or DeviceSelectionDialog
    * The value may be {@code null}.
    */
@@ -88,6 +100,33 @@ public final class AssistantLogsAmbiguousTargetDeviceLog extends com.google.api.
    */
   public AssistantLogsAmbiguousTargetDeviceLog setAmbiguousDeviceIndex(java.util.List<java.lang.Integer> ambiguousDeviceIndex) {
     this.ambiguousDeviceIndex = ambiguousDeviceIndex;
+    return this;
+  }
+
+  /**
+   * DeviceInfo for devices after the filters and promoters. - When device targeting is only
+   * configured for single target, these are ambiguous devices that would have been the output of
+   * Lumos. Downstream may perform extra check before disambiguation dialog. For example, Media
+   * Initiation checks playability for devices. The output here is before the check. - When
+   * configured for multi-target, these are just the target devices. For privacy consideration, we
+   * may only log device id field inside.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssistantLogsDeviceInfoLog> getDevicesAfterPromoters() {
+    return devicesAfterPromoters;
+  }
+
+  /**
+   * DeviceInfo for devices after the filters and promoters. - When device targeting is only
+   * configured for single target, these are ambiguous devices that would have been the output of
+   * Lumos. Downstream may perform extra check before disambiguation dialog. For example, Media
+   * Initiation checks playability for devices. The output here is before the check. - When
+   * configured for multi-target, these are just the target devices. For privacy consideration, we
+   * may only log device id field inside.
+   * @param devicesAfterPromoters devicesAfterPromoters or {@code null} for none
+   */
+  public AssistantLogsAmbiguousTargetDeviceLog setDevicesAfterPromoters(java.util.List<AssistantLogsDeviceInfoLog> devicesAfterPromoters) {
+    this.devicesAfterPromoters = devicesAfterPromoters;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * To indicate whether the image or video is to be deleted from the repository due to legal reasons
- * or hidden from search results.
+ * Model definition for ImageRepositoryDeepImageEngagingnessOutput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -28,58 +27,40 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ImageRepositoryUnwantedContent extends com.google.api.client.json.GenericJson {
+public final class ImageRepositoryDeepImageEngagingnessOutput extends com.google.api.client.json.GenericJson {
 
   /**
+   * DeepImageEngagingness score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String deletionReason;
+  private java.lang.Float score;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String hideReason;
-
-  /**
+   * DeepImageEngagingness score.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDeletionReason() {
-    return deletionReason;
+  public java.lang.Float getScore() {
+    return score;
   }
 
   /**
-   * @param deletionReason deletionReason or {@code null} for none
+   * DeepImageEngagingness score.
+   * @param score score or {@code null} for none
    */
-  public ImageRepositoryUnwantedContent setDeletionReason(java.lang.String deletionReason) {
-    this.deletionReason = deletionReason;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHideReason() {
-    return hideReason;
-  }
-
-  /**
-   * @param hideReason hideReason or {@code null} for none
-   */
-  public ImageRepositoryUnwantedContent setHideReason(java.lang.String hideReason) {
-    this.hideReason = hideReason;
+  public ImageRepositoryDeepImageEngagingnessOutput setScore(java.lang.Float score) {
+    this.score = score;
     return this;
   }
 
   @Override
-  public ImageRepositoryUnwantedContent set(String fieldName, Object value) {
-    return (ImageRepositoryUnwantedContent) super.set(fieldName, value);
+  public ImageRepositoryDeepImageEngagingnessOutput set(String fieldName, Object value) {
+    return (ImageRepositoryDeepImageEngagingnessOutput) super.set(fieldName, value);
   }
 
   @Override
-  public ImageRepositoryUnwantedContent clone() {
-    return (ImageRepositoryUnwantedContent) super.clone();
+  public ImageRepositoryDeepImageEngagingnessOutput clone() {
+    return (ImageRepositoryDeepImageEngagingnessOutput) super.clone();
   }
 
 }

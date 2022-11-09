@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Contains the format information for a single LiveOp/LiveEvent. Next ID: 8
+ * Contains the format information for a single LiveOp/LiveEvent. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -42,7 +42,7 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
   private java.lang.String description;
 
   /**
-   * iOS only
+   * iOS only, kind of event type
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +53,19 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUrl;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String squareImageUrl;
+
+  /**
+   * iOS only, sort of start schedule
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
 
   /**
    * The value may be {@code null}.
@@ -103,7 +116,7 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
   }
 
   /**
-   * iOS only
+   * iOS only, kind of event type
    * @return value or {@code null} for none
    */
   public java.lang.String getEyebrow() {
@@ -111,7 +124,7 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
   }
 
   /**
-   * iOS only
+   * iOS only, kind of event type
    * @param eyebrow eyebrow or {@code null} for none
    */
   public QualityCalypsoAppsUniversalAuLiveOpFormat setEyebrow(java.lang.String eyebrow) {
@@ -131,6 +144,38 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
    */
   public QualityCalypsoAppsUniversalAuLiveOpFormat setImageUrl(java.lang.String imageUrl) {
     this.imageUrl = imageUrl;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSquareImageUrl() {
+    return squareImageUrl;
+  }
+
+  /**
+   * @param squareImageUrl squareImageUrl or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalAuLiveOpFormat setSquareImageUrl(java.lang.String squareImageUrl) {
+    this.squareImageUrl = squareImageUrl;
+    return this;
+  }
+
+  /**
+   * iOS only, sort of start schedule
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * iOS only, sort of start schedule
+   * @param status status or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalAuLiveOpFormat setStatus(java.lang.String status) {
+    this.status = status;
     return this;
   }
 

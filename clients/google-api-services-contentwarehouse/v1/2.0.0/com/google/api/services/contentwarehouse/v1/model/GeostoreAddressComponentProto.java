@@ -70,18 +70,18 @@ public final class GeostoreAddressComponentProto extends com.google.api.client.j
    * depends on where in the Geo/Google stack you are reading a feature: 1. When an address is
    * initially parsed via a feed or other raw input and structured as an AddressProto, parsed_name
    * should contain the set of names that corresponds to the (possibly normalized) raw text from the
-   * raw input. In MapFacts, the address component may be linked to an actual feature via
+   * raw input. 2. In MapFacts, the address component may be linked to an actual feature via
    * feature_id. Any address formatting directly from MapFacts should follow links to retrieve names
    * when possible. The parsed_name contents may be formatted directly if the address component is
    * unlinked following the same rules as selecting and formatting the name of a feature. The cached
    * parsed_name is regularly refreshed from the linked feature with the minimal set of names for
-   * address components (usually just a single, preferred name, in the local language). 2. In
-   * serving systems, the names of linked features may be denormalized into the parsed_name field to
-   * facilitate quicker address formatting or for simple data filtering (e.g. finding all geocodes
-   * in California by name). If reading a feature from such a system, the parsed_name field could
-   * contain multiple names in multiple languages that reflect a cached copy of the names associated
-   * with the linked features. Formatting of such names should follow the same rules as selecting
-   * and formatting the name of a feature itself.
+   * address components (usually just a single, preferred name, in the local language, plus a Latin-
+   * script name: go/story-of-ac-names). 3. In serving systems, the names of linked features may be
+   * denormalized into the parsed_name field to facilitate quicker address formatting or for simple
+   * data filtering (e.g. finding all geocodes in California by name). If reading a feature from
+   * such a system, the parsed_name field could contain multiple names in multiple languages that
+   * reflect a cached copy of the names associated with the linked features. Formatting of such
+   * names should follow the same rules as selecting and formatting the name of a feature itself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,18 +211,18 @@ public final class GeostoreAddressComponentProto extends com.google.api.client.j
    * depends on where in the Geo/Google stack you are reading a feature: 1. When an address is
    * initially parsed via a feed or other raw input and structured as an AddressProto, parsed_name
    * should contain the set of names that corresponds to the (possibly normalized) raw text from the
-   * raw input. In MapFacts, the address component may be linked to an actual feature via
+   * raw input. 2. In MapFacts, the address component may be linked to an actual feature via
    * feature_id. Any address formatting directly from MapFacts should follow links to retrieve names
    * when possible. The parsed_name contents may be formatted directly if the address component is
    * unlinked following the same rules as selecting and formatting the name of a feature. The cached
    * parsed_name is regularly refreshed from the linked feature with the minimal set of names for
-   * address components (usually just a single, preferred name, in the local language). 2. In
-   * serving systems, the names of linked features may be denormalized into the parsed_name field to
-   * facilitate quicker address formatting or for simple data filtering (e.g. finding all geocodes
-   * in California by name). If reading a feature from such a system, the parsed_name field could
-   * contain multiple names in multiple languages that reflect a cached copy of the names associated
-   * with the linked features. Formatting of such names should follow the same rules as selecting
-   * and formatting the name of a feature itself.
+   * address components (usually just a single, preferred name, in the local language, plus a Latin-
+   * script name: go/story-of-ac-names). 3. In serving systems, the names of linked features may be
+   * denormalized into the parsed_name field to facilitate quicker address formatting or for simple
+   * data filtering (e.g. finding all geocodes in California by name). If reading a feature from
+   * such a system, the parsed_name field could contain multiple names in multiple languages that
+   * reflect a cached copy of the names associated with the linked features. Formatting of such
+   * names should follow the same rules as selecting and formatting the name of a feature itself.
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreNameProto> getParsedName() {
@@ -234,18 +234,18 @@ public final class GeostoreAddressComponentProto extends com.google.api.client.j
    * depends on where in the Geo/Google stack you are reading a feature: 1. When an address is
    * initially parsed via a feed or other raw input and structured as an AddressProto, parsed_name
    * should contain the set of names that corresponds to the (possibly normalized) raw text from the
-   * raw input. In MapFacts, the address component may be linked to an actual feature via
+   * raw input. 2. In MapFacts, the address component may be linked to an actual feature via
    * feature_id. Any address formatting directly from MapFacts should follow links to retrieve names
    * when possible. The parsed_name contents may be formatted directly if the address component is
    * unlinked following the same rules as selecting and formatting the name of a feature. The cached
    * parsed_name is regularly refreshed from the linked feature with the minimal set of names for
-   * address components (usually just a single, preferred name, in the local language). 2. In
-   * serving systems, the names of linked features may be denormalized into the parsed_name field to
-   * facilitate quicker address formatting or for simple data filtering (e.g. finding all geocodes
-   * in California by name). If reading a feature from such a system, the parsed_name field could
-   * contain multiple names in multiple languages that reflect a cached copy of the names associated
-   * with the linked features. Formatting of such names should follow the same rules as selecting
-   * and formatting the name of a feature itself.
+   * address components (usually just a single, preferred name, in the local language, plus a Latin-
+   * script name: go/story-of-ac-names). 3. In serving systems, the names of linked features may be
+   * denormalized into the parsed_name field to facilitate quicker address formatting or for simple
+   * data filtering (e.g. finding all geocodes in California by name). If reading a feature from
+   * such a system, the parsed_name field could contain multiple names in multiple languages that
+   * reflect a cached copy of the names associated with the linked features. Formatting of such
+   * names should follow the same rules as selecting and formatting the name of a feature itself.
    * @param parsedName parsedName or {@code null} for none
    */
   public GeostoreAddressComponentProto setParsedName(java.util.List<GeostoreNameProto> parsedName) {

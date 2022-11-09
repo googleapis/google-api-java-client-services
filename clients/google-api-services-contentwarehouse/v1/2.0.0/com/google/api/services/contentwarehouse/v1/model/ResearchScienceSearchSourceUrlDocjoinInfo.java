@@ -51,14 +51,6 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
   private java.math.BigInteger docid;
 
   /**
-   * A set of entities from /collection/field_of_studies in knowledge graph schema
-   * (http://shortn/_ldBsa14lo8).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo> fieldOfStudyEntity;
-
-  /**
    * Index tiers (BASE, UNIFIED_ZEPPELIN, etc) that the document belongs to. NOTE: Each document may
    * belong to multiple tiers. NOTE: The original data type is an enum CompositeDoc::SubIndexType.
    * However we don't want to depend on segindexer/compositedoc.proto because the proto is too
@@ -168,6 +160,13 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
   private java.lang.String url;
 
   /**
+   * A set of entities copied from WebRefEntities on cDoc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo> webrefEntity;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSource() {
@@ -213,25 +212,6 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
    */
   public ResearchScienceSearchSourceUrlDocjoinInfo setDocid(java.math.BigInteger docid) {
     this.docid = docid;
-    return this;
-  }
-
-  /**
-   * A set of entities from /collection/field_of_studies in knowledge graph schema
-   * (http://shortn/_ldBsa14lo8).
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo> getFieldOfStudyEntity() {
-    return fieldOfStudyEntity;
-  }
-
-  /**
-   * A set of entities from /collection/field_of_studies in knowledge graph schema
-   * (http://shortn/_ldBsa14lo8).
-   * @param fieldOfStudyEntity fieldOfStudyEntity or {@code null} for none
-   */
-  public ResearchScienceSearchSourceUrlDocjoinInfo setFieldOfStudyEntity(java.util.List<ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo> fieldOfStudyEntity) {
-    this.fieldOfStudyEntity = fieldOfStudyEntity;
     return this;
   }
 
@@ -462,6 +442,23 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
    */
   public ResearchScienceSearchSourceUrlDocjoinInfo setUrl(java.lang.String url) {
     this.url = url;
+    return this;
+  }
+
+  /**
+   * A set of entities copied from WebRefEntities on cDoc.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo> getWebrefEntity() {
+    return webrefEntity;
+  }
+
+  /**
+   * A set of entities copied from WebRefEntities on cDoc.
+   * @param webrefEntity webrefEntity or {@code null} for none
+   */
+  public ResearchScienceSearchSourceUrlDocjoinInfo setWebrefEntity(java.util.List<ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo> webrefEntity) {
+    this.webrefEntity = webrefEntity;
     return this;
   }
 

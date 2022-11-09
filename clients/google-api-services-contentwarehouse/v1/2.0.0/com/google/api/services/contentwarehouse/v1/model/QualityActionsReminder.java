@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next id: 30
+ * Next id: 32
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -152,6 +152,18 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityActionsReminderDocument documentAssignmentSource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityActionsReminderDynamiteGroup dynamiteGroupAssignmentSource;
 
   /**
    * DEPRECATED. Use `client_id` or `server_id` instead.
@@ -506,6 +518,36 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
    */
   public QualityActionsReminder setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public QualityActionsReminderDocument getDocumentAssignmentSource() {
+    return documentAssignmentSource;
+  }
+
+  /**
+   * @param documentAssignmentSource documentAssignmentSource or {@code null} for none
+   */
+  public QualityActionsReminder setDocumentAssignmentSource(QualityActionsReminderDocument documentAssignmentSource) {
+    this.documentAssignmentSource = documentAssignmentSource;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public QualityActionsReminderDynamiteGroup getDynamiteGroupAssignmentSource() {
+    return dynamiteGroupAssignmentSource;
+  }
+
+  /**
+   * @param dynamiteGroupAssignmentSource dynamiteGroupAssignmentSource or {@code null} for none
+   */
+  public QualityActionsReminder setDynamiteGroupAssignmentSource(QualityActionsReminderDynamiteGroup dynamiteGroupAssignmentSource) {
+    this.dynamiteGroupAssignmentSource = dynamiteGroupAssignmentSource;
     return this;
   }
 

@@ -31,27 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class PornFlagData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Content score - computed on the image pixel data only. Additionally, we store a version and
-   * minor version number of the model which was used to compute this score. Note: these fields are
-   * copies of adaboost_image_feature_porn* in ImageData.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float adaboostContentScore;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer adaboostContentScoreMinorVersion;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer adaboostContentScoreVersion;
-
-  /**
    * Aggregated brain_porn_scores for navboost co-clicked images. Historical: this signal is
    * deprecated and no longer populated as of 2020-12-01. Refer to b/172897542 for more information.
    * The value may be {@code null}.
@@ -105,15 +84,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private java.lang.String finalViolenceScoreVersion;
 
   /**
-   * PornStatsImage is repeated even though we use only a single version, to help with rolling out
-   * new versions with miminum risk. Multiple versions should exist only for a short window of time.
-   * Once the new version is rolled out, the data for older versions should no longer be generated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<PornStatsImage> imageStats;
-
-  /**
    * A proto that stores SafeSearch internal signals that are not exported to clients. SafeSearch
    * team does not provide any guarantees about the presence or the semantics of these signals in
    * the future.
@@ -121,19 +91,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SafesearchInternalImageSignals internalSignals;
-
-  /**
-   * largest face, scaled by 1000 This field is same as ImageData.largest_face_frac.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float largestFaceFrac;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer largestFaceFraction;
 
   /**
    * number of faces
@@ -166,13 +123,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private ImageSafesearchContentOffensiveSymbolDetection offensiveSymbolDetection;
 
   /**
-   * Overall porn score that determines the porn restricts used during image search retrieval.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float overallPornScore;
-
-  /**
    * Binary version of the PhotoDNA hash (144 bytes long). If not set (has_photodna_hash() == false)
    * it means that it was not computed, if empty (has_photodna_hash() == true && photodna_hash() ==
    * "") it means that the computation failed (cannot be computed for images smaller than 50 x 50).
@@ -189,26 +139,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean pornWithHighConfidence;
-
-  /**
-   * OR of the prop_porn_flag and prop_softporn_flag.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean propAnyPornFlag;
-
-  /**
-   * Text classifier properties for the referrer page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean propPornFlag;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean propSoftpornFlag;
 
   /**
    * QBST-based image offensive score, Navboost based
@@ -263,15 +193,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private java.lang.Float semanticSexualizationScore;
 
   /**
-   * PornStatsText is repeated even though we use only a single version, to help with rolling out
-   * new versions with miminum risk. Multiple versions should exist only for a short window of time.
-   * Once the new version is rolled out, the data for older versions should no longer be generated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<PornStatsText> textStats;
-
-  /**
    * url of the image
    * The value may be {@code null}.
    */
@@ -284,57 +205,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ClassifierPornAggregatedUrlPornScores urlPornScores;
-
-  /**
-   * Content score - computed on the image pixel data only. Additionally, we store a version and
-   * minor version number of the model which was used to compute this score. Note: these fields are
-   * copies of adaboost_image_feature_porn* in ImageData.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getAdaboostContentScore() {
-    return adaboostContentScore;
-  }
-
-  /**
-   * Content score - computed on the image pixel data only. Additionally, we store a version and
-   * minor version number of the model which was used to compute this score. Note: these fields are
-   * copies of adaboost_image_feature_porn* in ImageData.
-   * @param adaboostContentScore adaboostContentScore or {@code null} for none
-   */
-  public PornFlagData setAdaboostContentScore(java.lang.Float adaboostContentScore) {
-    this.adaboostContentScore = adaboostContentScore;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getAdaboostContentScoreMinorVersion() {
-    return adaboostContentScoreMinorVersion;
-  }
-
-  /**
-   * @param adaboostContentScoreMinorVersion adaboostContentScoreMinorVersion or {@code null} for none
-   */
-  public PornFlagData setAdaboostContentScoreMinorVersion(java.lang.Integer adaboostContentScoreMinorVersion) {
-    this.adaboostContentScoreMinorVersion = adaboostContentScoreMinorVersion;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getAdaboostContentScoreVersion() {
-    return adaboostContentScoreVersion;
-  }
-
-  /**
-   * @param adaboostContentScoreVersion adaboostContentScoreVersion or {@code null} for none
-   */
-  public PornFlagData setAdaboostContentScoreVersion(java.lang.Integer adaboostContentScoreVersion) {
-    this.adaboostContentScoreVersion = adaboostContentScoreVersion;
-    return this;
-  }
 
   /**
    * Aggregated brain_porn_scores for navboost co-clicked images. Historical: this signal is
@@ -449,27 +319,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PornStatsImage is repeated even though we use only a single version, to help with rolling out
-   * new versions with miminum risk. Multiple versions should exist only for a short window of time.
-   * Once the new version is rolled out, the data for older versions should no longer be generated.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<PornStatsImage> getImageStats() {
-    return imageStats;
-  }
-
-  /**
-   * PornStatsImage is repeated even though we use only a single version, to help with rolling out
-   * new versions with miminum risk. Multiple versions should exist only for a short window of time.
-   * Once the new version is rolled out, the data for older versions should no longer be generated.
-   * @param imageStats imageStats or {@code null} for none
-   */
-  public PornFlagData setImageStats(java.util.List<PornStatsImage> imageStats) {
-    this.imageStats = imageStats;
-    return this;
-  }
-
-  /**
    * A proto that stores SafeSearch internal signals that are not exported to clients. SafeSearch
    * team does not provide any guarantees about the presence or the semantics of these signals in
    * the future.
@@ -487,38 +336,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setInternalSignals(SafesearchInternalImageSignals internalSignals) {
     this.internalSignals = internalSignals;
-    return this;
-  }
-
-  /**
-   * largest face, scaled by 1000 This field is same as ImageData.largest_face_frac.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getLargestFaceFrac() {
-    return largestFaceFrac;
-  }
-
-  /**
-   * largest face, scaled by 1000 This field is same as ImageData.largest_face_frac.
-   * @param largestFaceFrac largestFaceFrac or {@code null} for none
-   */
-  public PornFlagData setLargestFaceFrac(java.lang.Float largestFaceFrac) {
-    this.largestFaceFrac = largestFaceFrac;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getLargestFaceFraction() {
-    return largestFaceFraction;
-  }
-
-  /**
-   * @param largestFaceFraction largestFaceFraction or {@code null} for none
-   */
-  public PornFlagData setLargestFaceFraction(java.lang.Integer largestFaceFraction) {
-    this.largestFaceFraction = largestFaceFraction;
     return this;
   }
 
@@ -595,23 +412,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overall porn score that determines the porn restricts used during image search retrieval.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getOverallPornScore() {
-    return overallPornScore;
-  }
-
-  /**
-   * Overall porn score that determines the porn restricts used during image search retrieval.
-   * @param overallPornScore overallPornScore or {@code null} for none
-   */
-  public PornFlagData setOverallPornScore(java.lang.Float overallPornScore) {
-    this.overallPornScore = overallPornScore;
-    return this;
-  }
-
-  /**
    * Binary version of the PhotoDNA hash (144 bytes long). If not set (has_photodna_hash() == false)
    * it means that it was not computed, if empty (has_photodna_hash() == true && photodna_hash() ==
    * "") it means that the computation failed (cannot be computed for images smaller than 50 x 50).
@@ -682,55 +482,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setPornWithHighConfidence(java.lang.Boolean pornWithHighConfidence) {
     this.pornWithHighConfidence = pornWithHighConfidence;
-    return this;
-  }
-
-  /**
-   * OR of the prop_porn_flag and prop_softporn_flag.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPropAnyPornFlag() {
-    return propAnyPornFlag;
-  }
-
-  /**
-   * OR of the prop_porn_flag and prop_softporn_flag.
-   * @param propAnyPornFlag propAnyPornFlag or {@code null} for none
-   */
-  public PornFlagData setPropAnyPornFlag(java.lang.Boolean propAnyPornFlag) {
-    this.propAnyPornFlag = propAnyPornFlag;
-    return this;
-  }
-
-  /**
-   * Text classifier properties for the referrer page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPropPornFlag() {
-    return propPornFlag;
-  }
-
-  /**
-   * Text classifier properties for the referrer page.
-   * @param propPornFlag propPornFlag or {@code null} for none
-   */
-  public PornFlagData setPropPornFlag(java.lang.Boolean propPornFlag) {
-    this.propPornFlag = propPornFlag;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPropSoftpornFlag() {
-    return propSoftpornFlag;
-  }
-
-  /**
-   * @param propSoftpornFlag propSoftpornFlag or {@code null} for none
-   */
-  public PornFlagData setPropSoftpornFlag(java.lang.Boolean propSoftpornFlag) {
-    this.propSoftpornFlag = propSoftpornFlag;
     return this;
   }
 
@@ -856,27 +607,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setSemanticSexualizationScore(java.lang.Float semanticSexualizationScore) {
     this.semanticSexualizationScore = semanticSexualizationScore;
-    return this;
-  }
-
-  /**
-   * PornStatsText is repeated even though we use only a single version, to help with rolling out
-   * new versions with miminum risk. Multiple versions should exist only for a short window of time.
-   * Once the new version is rolled out, the data for older versions should no longer be generated.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<PornStatsText> getTextStats() {
-    return textStats;
-  }
-
-  /**
-   * PornStatsText is repeated even though we use only a single version, to help with rolling out
-   * new versions with miminum risk. Multiple versions should exist only for a short window of time.
-   * Once the new version is rolled out, the data for older versions should no longer be generated.
-   * @param textStats textStats or {@code null} for none
-   */
-  public PornFlagData setTextStats(java.util.List<PornStatsText> textStats) {
-    this.textStats = textStats;
     return this;
   }
 

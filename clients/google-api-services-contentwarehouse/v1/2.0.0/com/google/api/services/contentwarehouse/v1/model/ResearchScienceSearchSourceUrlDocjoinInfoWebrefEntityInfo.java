@@ -37,6 +37,12 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
   private java.lang.String description;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entityType;
+
+  /**
    * The KG identifier of the WebrefEntity.
    * The value may be {@code null}.
    */
@@ -57,6 +63,21 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
    */
   public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntityType() {
+    return entityType;
+  }
+
+  /**
+   * @param entityType entityType or {@code null} for none
+   */
+  public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setEntityType(java.lang.String entityType) {
+    this.entityType = entityType;
     return this;
   }
 

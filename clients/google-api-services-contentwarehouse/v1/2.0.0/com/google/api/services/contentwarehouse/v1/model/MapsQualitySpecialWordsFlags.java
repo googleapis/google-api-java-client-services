@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Flags that describe the information about a special word. If you add another flag please add it
  * to the special words implemenation in google3/maps/quality/internal/special_words.cc. -- Next
- * available id: 20 --
+ * available id: 21 --
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -52,6 +52,13 @@ public final class MapsQualitySpecialWordsFlags extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isDirectionalModifier;
+
+  /**
+   * An affix that indicates distance marker on a route, e.g., 'km'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDistanceMarker;
 
   /**
    * Whether geo paths are forbidden to contain this word.
@@ -216,6 +223,23 @@ public final class MapsQualitySpecialWordsFlags extends com.google.api.client.js
    */
   public MapsQualitySpecialWordsFlags setIsDirectionalModifier(java.lang.Boolean isDirectionalModifier) {
     this.isDirectionalModifier = isDirectionalModifier;
+    return this;
+  }
+
+  /**
+   * An affix that indicates distance marker on a route, e.g., 'km'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDistanceMarker() {
+    return isDistanceMarker;
+  }
+
+  /**
+   * An affix that indicates distance marker on a route, e.g., 'km'.
+   * @param isDistanceMarker isDistanceMarker or {@code null} for none
+   */
+  public MapsQualitySpecialWordsFlags setIsDistanceMarker(java.lang.Boolean isDistanceMarker) {
+    this.isDistanceMarker = isDistanceMarker;
     return this;
   }
 

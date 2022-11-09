@@ -44,6 +44,13 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
   private GoogleCloudDocumentaiV1Document cloudAiDocument;
 
   /**
+   * Indicates the category (image, audio, video etc.) of the original content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentCategory;
+
+  /**
    * Output only. The time when the document is created.
    * The value may be {@code null}.
    */
@@ -201,6 +208,23 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
    */
   public GoogleCloudContentwarehouseV1Document setCloudAiDocument(GoogleCloudDocumentaiV1Document cloudAiDocument) {
     this.cloudAiDocument = cloudAiDocument;
+    return this;
+  }
+
+  /**
+   * Indicates the category (image, audio, video etc.) of the original content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentCategory() {
+    return contentCategory;
+  }
+
+  /**
+   * Indicates the category (image, audio, video etc.) of the original content.
+   * @param contentCategory contentCategory or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1Document setContentCategory(java.lang.String contentCategory) {
+    this.contentCategory = contentCategory;
     return this;
   }
 

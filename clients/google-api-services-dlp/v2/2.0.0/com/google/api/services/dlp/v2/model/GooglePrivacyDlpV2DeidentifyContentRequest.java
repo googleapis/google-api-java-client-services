@@ -67,7 +67,8 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   private java.lang.String inspectTemplateName;
 
   /**
-   * The item to de-identify. Will be treated as text.
+   * The item to de-identify. Will be treated as text. This value must be of type Table if your
+   * deidentify_config is a RecordTransformations object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +166,8 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   }
 
   /**
-   * The item to de-identify. Will be treated as text.
+   * The item to de-identify. Will be treated as text. This value must be of type Table if your
+   * deidentify_config is a RecordTransformations object.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2ContentItem getItem() {
@@ -173,7 +175,8 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   }
 
   /**
-   * The item to de-identify. Will be treated as text.
+   * The item to de-identify. Will be treated as text. This value must be of type Table if your
+   * deidentify_config is a RecordTransformations object.
    * @param item item or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyContentRequest setItem(GooglePrivacyDlpV2ContentItem item) {

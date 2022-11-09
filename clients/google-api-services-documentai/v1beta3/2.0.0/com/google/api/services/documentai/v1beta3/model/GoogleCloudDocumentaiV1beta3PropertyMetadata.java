@@ -31,11 +31,59 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3PropertyMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Human review labeling config on the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3HumanReviewLabelingMetadata humanReviewLabelingMetadata;
+
+  /**
+   * Human review validation config on the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3HumanReviewValidationMetadata humanReviewMetadata;
+
+  /**
    * Whether the property should be considered as "inactive".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean inactive;
+
+  /**
+   * Human review labeling config on the property.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3HumanReviewLabelingMetadata getHumanReviewLabelingMetadata() {
+    return humanReviewLabelingMetadata;
+  }
+
+  /**
+   * Human review labeling config on the property.
+   * @param humanReviewLabelingMetadata humanReviewLabelingMetadata or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3PropertyMetadata setHumanReviewLabelingMetadata(GoogleCloudDocumentaiV1beta3HumanReviewLabelingMetadata humanReviewLabelingMetadata) {
+    this.humanReviewLabelingMetadata = humanReviewLabelingMetadata;
+    return this;
+  }
+
+  /**
+   * Human review validation config on the property.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3HumanReviewValidationMetadata getHumanReviewMetadata() {
+    return humanReviewMetadata;
+  }
+
+  /**
+   * Human review validation config on the property.
+   * @param humanReviewMetadata humanReviewMetadata or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3PropertyMetadata setHumanReviewMetadata(GoogleCloudDocumentaiV1beta3HumanReviewValidationMetadata humanReviewMetadata) {
+    this.humanReviewMetadata = humanReviewMetadata;
+    return this;
+  }
 
   /**
    * Whether the property should be considered as "inactive".

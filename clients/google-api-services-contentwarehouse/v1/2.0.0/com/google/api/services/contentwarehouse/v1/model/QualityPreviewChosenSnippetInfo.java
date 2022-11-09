@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Information for chosen snippet. Next ID: 7
+ * Information for chosen snippet. Next ID: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -43,6 +43,13 @@ public final class QualityPreviewChosenSnippetInfo extends com.google.api.client
   private java.lang.String leadingTextType;
 
   /**
+   * The rendered snippet html.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snippetHtml;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +58,7 @@ public final class QualityPreviewChosenSnippetInfo extends com.google.api.client
   /**
    * Source of the chosen snippet, decided in PORC. String value of
    * quality.porc.TextSnippetCandidate.TextSnippetSource defined at
-   * google3/quality/porc/proto/text_snippet.proto Note: This field is only populated and used in
-   * offline pipeline.
+   * google3/quality/porc/proto/text_snippet.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,6 +110,23 @@ public final class QualityPreviewChosenSnippetInfo extends com.google.api.client
   }
 
   /**
+   * The rendered snippet html.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnippetHtml() {
+    return snippetHtml;
+  }
+
+  /**
+   * The rendered snippet html.
+   * @param snippetHtml snippetHtml or {@code null} for none
+   */
+  public QualityPreviewChosenSnippetInfo setSnippetHtml(java.lang.String snippetHtml) {
+    this.snippetHtml = snippetHtml;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getSnippetType() {
@@ -121,8 +144,7 @@ public final class QualityPreviewChosenSnippetInfo extends com.google.api.client
   /**
    * Source of the chosen snippet, decided in PORC. String value of
    * quality.porc.TextSnippetCandidate.TextSnippetSource defined at
-   * google3/quality/porc/proto/text_snippet.proto Note: This field is only populated and used in
-   * offline pipeline.
+   * google3/quality/porc/proto/text_snippet.proto
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -132,8 +154,7 @@ public final class QualityPreviewChosenSnippetInfo extends com.google.api.client
   /**
    * Source of the chosen snippet, decided in PORC. String value of
    * quality.porc.TextSnippetCandidate.TextSnippetSource defined at
-   * google3/quality/porc/proto/text_snippet.proto Note: This field is only populated and used in
-   * offline pipeline.
+   * google3/quality/porc/proto/text_snippet.proto
    * @param source source or {@code null} for none
    */
   public QualityPreviewChosenSnippetInfo setSource(java.lang.String source) {

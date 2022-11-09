@@ -53,11 +53,26 @@ public final class MustangReposWwwSnippetsSnippetsRanklabFeatures extends com.go
   }
 
   /**
+   * Snippet features for the final chosen snippet. This field is firstly populated by Muppet, and
+   * then overwriten by Superroot if SnippetBrain is triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityPreviewRanklabSnippet displaySnippet;
+
+  /**
    * locale of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentLanguage;
+
+  /**
+   * Original query term coverage in titles and / or snippets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityPreviewSnippetQueryTermCoverageFeatures originalQueryTermCoverages;
 
   /**
    * locale of the query,
@@ -81,8 +96,8 @@ public final class MustangReposWwwSnippetsSnippetsRanklabFeatures extends com.go
   private java.lang.Float snippetQueryTermCoverage;
 
   /**
-   * Snippet features for ranklab models, generated only by snippets scorer v2. In production, only
-   * the data for chosen snippet will be recorded.
+   * Snippet features for Muppet snippet candidates. In production, only the data for chosen snippet
+   * will be recorded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,6 +169,25 @@ public final class MustangReposWwwSnippetsSnippetsRanklabFeatures extends com.go
   }
 
   /**
+   * Snippet features for the final chosen snippet. This field is firstly populated by Muppet, and
+   * then overwriten by Superroot if SnippetBrain is triggered.
+   * @return value or {@code null} for none
+   */
+  public QualityPreviewRanklabSnippet getDisplaySnippet() {
+    return displaySnippet;
+  }
+
+  /**
+   * Snippet features for the final chosen snippet. This field is firstly populated by Muppet, and
+   * then overwriten by Superroot if SnippetBrain is triggered.
+   * @param displaySnippet displaySnippet or {@code null} for none
+   */
+  public MustangReposWwwSnippetsSnippetsRanklabFeatures setDisplaySnippet(QualityPreviewRanklabSnippet displaySnippet) {
+    this.displaySnippet = displaySnippet;
+    return this;
+  }
+
+  /**
    * locale of the document.
    * @return value or {@code null} for none
    */
@@ -167,6 +201,23 @@ public final class MustangReposWwwSnippetsSnippetsRanklabFeatures extends com.go
    */
   public MustangReposWwwSnippetsSnippetsRanklabFeatures setDocumentLanguage(java.lang.String documentLanguage) {
     this.documentLanguage = documentLanguage;
+    return this;
+  }
+
+  /**
+   * Original query term coverage in titles and / or snippets.
+   * @return value or {@code null} for none
+   */
+  public QualityPreviewSnippetQueryTermCoverageFeatures getOriginalQueryTermCoverages() {
+    return originalQueryTermCoverages;
+  }
+
+  /**
+   * Original query term coverage in titles and / or snippets.
+   * @param originalQueryTermCoverages originalQueryTermCoverages or {@code null} for none
+   */
+  public MustangReposWwwSnippetsSnippetsRanklabFeatures setOriginalQueryTermCoverages(QualityPreviewSnippetQueryTermCoverageFeatures originalQueryTermCoverages) {
+    this.originalQueryTermCoverages = originalQueryTermCoverages;
     return this;
   }
 
@@ -222,8 +273,8 @@ public final class MustangReposWwwSnippetsSnippetsRanklabFeatures extends com.go
   }
 
   /**
-   * Snippet features for ranklab models, generated only by snippets scorer v2. In production, only
-   * the data for chosen snippet will be recorded.
+   * Snippet features for Muppet snippet candidates. In production, only the data for chosen snippet
+   * will be recorded.
    * @return value or {@code null} for none
    */
   public java.util.List<QualityPreviewRanklabSnippet> getSnippets() {
@@ -231,8 +282,8 @@ public final class MustangReposWwwSnippetsSnippetsRanklabFeatures extends com.go
   }
 
   /**
-   * Snippet features for ranklab models, generated only by snippets scorer v2. In production, only
-   * the data for chosen snippet will be recorded.
+   * Snippet features for Muppet snippet candidates. In production, only the data for chosen snippet
+   * will be recorded.
    * @param snippets snippets or {@code null} for none
    */
   public MustangReposWwwSnippetsSnippetsRanklabFeatures setSnippets(java.util.List<QualityPreviewRanklabSnippet> snippets) {

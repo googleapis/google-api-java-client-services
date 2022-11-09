@@ -44,6 +44,13 @@ public final class VideoContentSearchVideoAnchorRatingScore extends com.google.a
   private java.lang.Float averageDescriptionQuality;
 
   /**
+   * Furball URL(s) of the rating score (may have been rated more than once)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> furballUrl;
+
+  /**
    * Average score of bookmark usefulness.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class VideoContentSearchVideoAnchorRatingScore extends com.google.a
    */
   public VideoContentSearchVideoAnchorRatingScore setAverageDescriptionQuality(java.lang.Float averageDescriptionQuality) {
     this.averageDescriptionQuality = averageDescriptionQuality;
+    return this;
+  }
+
+  /**
+   * Furball URL(s) of the rating score (may have been rated more than once)
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFurballUrl() {
+    return furballUrl;
+  }
+
+  /**
+   * Furball URL(s) of the rating score (may have been rated more than once)
+   * @param furballUrl furballUrl or {@code null} for none
+   */
+  public VideoContentSearchVideoAnchorRatingScore setFurballUrl(java.util.List<java.lang.String> furballUrl) {
+    this.furballUrl = furballUrl;
     return this;
   }
 

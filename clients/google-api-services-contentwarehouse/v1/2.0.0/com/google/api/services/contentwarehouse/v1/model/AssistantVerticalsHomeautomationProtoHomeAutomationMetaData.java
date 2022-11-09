@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 40
+ * Next ID: 42
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -176,6 +176,14 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
   }
 
   /**
+   * Additional device sources. This can be the result of the device being merged with other devices
+   * with a different source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> otherDeviceSources;
+
+  /**
    * LINT.IfChange(home_graph_single_parent) At the moment, we just have a single string. In future
    * this will expand with additional metadata from client or cloud execution data store. In today's
    * 'tree' HomeGraph each object has a single parent. In the future this may have a mesh for
@@ -304,6 +312,15 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.Map<String, java.lang.Long> targetDeviceSignalStrengths;
+
+  /**
+   * The timestamp at which the TDSS map was last updated. This information is used to help
+   * determine which hub would be preferred if multiple hubs report the same reach-ability for a
+   * device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String tdssUpdateTimestamp;
 
   /**
    * For SHED devices, some traits can only be executed on 3P cloud, e.g.
@@ -695,6 +712,25 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
   }
 
   /**
+   * Additional device sources. This can be the result of the device being merged with other devices
+   * with a different source.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOtherDeviceSources() {
+    return otherDeviceSources;
+  }
+
+  /**
+   * Additional device sources. This can be the result of the device being merged with other devices
+   * with a different source.
+   * @param otherDeviceSources otherDeviceSources or {@code null} for none
+   */
+  public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setOtherDeviceSources(java.util.List<java.lang.String> otherDeviceSources) {
+    this.otherDeviceSources = otherDeviceSources;
+    return this;
+  }
+
+  /**
    * LINT.IfChange(home_graph_single_parent) At the moment, we just have a single string. In future
    * this will expand with additional metadata from client or cloud execution data store. In today's
    * 'tree' HomeGraph each object has a single parent. In the future this may have a mesh for
@@ -996,6 +1032,27 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setTargetDeviceSignalStrengths(java.util.Map<String, java.lang.Long> targetDeviceSignalStrengths) {
     this.targetDeviceSignalStrengths = targetDeviceSignalStrengths;
+    return this;
+  }
+
+  /**
+   * The timestamp at which the TDSS map was last updated. This information is used to help
+   * determine which hub would be preferred if multiple hubs report the same reach-ability for a
+   * device.
+   * @return value or {@code null} for none
+   */
+  public String getTdssUpdateTimestamp() {
+    return tdssUpdateTimestamp;
+  }
+
+  /**
+   * The timestamp at which the TDSS map was last updated. This information is used to help
+   * determine which hub would be preferred if multiple hubs report the same reach-ability for a
+   * device.
+   * @param tdssUpdateTimestamp tdssUpdateTimestamp or {@code null} for none
+   */
+  public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setTdssUpdateTimestamp(String tdssUpdateTimestamp) {
+    this.tdssUpdateTimestamp = tdssUpdateTimestamp;
     return this;
   }
 

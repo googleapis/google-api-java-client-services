@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Specifies the allowed type(s) that a value can have, e.g. for a Slot. For example, having both
  * entity_type and string_type present in a ValueType field of a Slot means that the Slot can take
  * _either_ an an EntityType _or_ StringType as a value, and nothing else. It may be helpful to
- * think of this proto as being called something like AllAllowedValueTypes. Next tag id: 24
+ * think of this proto as being called something like AllAllowedValueTypes. Next tag id: 25
  * LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -94,6 +94,14 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersEntityType entityType;
+
+  /**
+   * When specified on a slot's type, restricts composition based on the enum value. This does not
+   * mean anything when the value type is to be interpreted as an output_type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inputCompositionConfig;
 
   /**
    * The value may be {@code null}.
@@ -334,6 +342,25 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   public KnowledgeAnswersValueType setEntityType(KnowledgeAnswersEntityType entityType) {
     this.entityType = entityType;
+    return this;
+  }
+
+  /**
+   * When specified on a slot's type, restricts composition based on the enum value. This does not
+   * mean anything when the value type is to be interpreted as an output_type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInputCompositionConfig() {
+    return inputCompositionConfig;
+  }
+
+  /**
+   * When specified on a slot's type, restricts composition based on the enum value. This does not
+   * mean anything when the value type is to be interpreted as an output_type.
+   * @param inputCompositionConfig inputCompositionConfig or {@code null} for none
+   */
+  public KnowledgeAnswersValueType setInputCompositionConfig(java.lang.String inputCompositionConfig) {
+    this.inputCompositionConfig = inputCompositionConfig;
     return this;
   }
 

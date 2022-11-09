@@ -130,6 +130,14 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   private java.lang.Boolean requireTotalSize;
 
   /**
+   * Optional. Controls if the search document request requires the return of a total size of
+   * matched documents. See SearchDocumentsResponse.total_size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String totalResultSize;
+
+  /**
    * Query used to search against documents (keyword, filters, etc.).
    * @return value or {@code null} for none
    */
@@ -341,6 +349,25 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsRequest setRequireTotalSize(java.lang.Boolean requireTotalSize) {
     this.requireTotalSize = requireTotalSize;
+    return this;
+  }
+
+  /**
+   * Optional. Controls if the search document request requires the return of a total size of
+   * matched documents. See SearchDocumentsResponse.total_size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTotalResultSize() {
+    return totalResultSize;
+  }
+
+  /**
+   * Optional. Controls if the search document request requires the return of a total size of
+   * matched documents. See SearchDocumentsResponse.total_size.
+   * @param totalResultSize totalResultSize or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1SearchDocumentsRequest setTotalResultSize(java.lang.String totalResultSize) {
+    this.totalResultSize = totalResultSize;
     return this;
   }
 

@@ -21,7 +21,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * deep copy of protos defined in ShoppingAnnotation so that we can control individual fields that
  * will sit in Muppet. Data here will be used for scoring organic shopping web results and previews.
  * Many shopping related signals, e.g., product review score, are also served from this attachment.
- * Next ID: 20
+ * Next ID: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -32,6 +32,13 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class QualityShoppingShoppingAttachment extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Score from the blockbert article classifier model. go/article-understanding-project
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer datasetModelArticleScore;
 
   /**
    * The value may be {@code null}.
@@ -154,6 +161,23 @@ public final class QualityShoppingShoppingAttachment extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.Integer singleProductScore;
+
+  /**
+   * Score from the blockbert article classifier model. go/article-understanding-project
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDatasetModelArticleScore() {
+    return datasetModelArticleScore;
+  }
+
+  /**
+   * Score from the blockbert article classifier model. go/article-understanding-project
+   * @param datasetModelArticleScore datasetModelArticleScore or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachment setDatasetModelArticleScore(java.lang.Integer datasetModelArticleScore) {
+    this.datasetModelArticleScore = datasetModelArticleScore;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

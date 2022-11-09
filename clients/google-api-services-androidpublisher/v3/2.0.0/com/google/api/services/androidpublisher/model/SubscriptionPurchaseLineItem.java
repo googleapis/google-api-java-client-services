@@ -46,6 +46,13 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
   private String expiryTime;
 
   /**
+   * The offer details for this item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OfferDetails offerDetails;
+
+  /**
    * The item is prepaid.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
    */
   public SubscriptionPurchaseLineItem setExpiryTime(String expiryTime) {
     this.expiryTime = expiryTime;
+    return this;
+  }
+
+  /**
+   * The offer details for this item.
+   * @return value or {@code null} for none
+   */
+  public OfferDetails getOfferDetails() {
+    return offerDetails;
+  }
+
+  /**
+   * The offer details for this item.
+   * @param offerDetails offerDetails or {@code null} for none
+   */
+  public SubscriptionPurchaseLineItem setOfferDetails(OfferDetails offerDetails) {
+    this.offerDetails = offerDetails;
     return this;
   }
 

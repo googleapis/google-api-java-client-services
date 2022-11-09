@@ -39,6 +39,13 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
   private java.lang.Boolean autoRenewEnabled;
 
   /**
+   * The information of the last price change for the item since subscription signup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubscriptionItemPriceChangeDetails priceChangeDetails;
+
+  /**
    * If the subscription is currently set to auto-renew, e.g. the user has not canceled the
    * subscription
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
    */
   public AutoRenewingPlan setAutoRenewEnabled(java.lang.Boolean autoRenewEnabled) {
     this.autoRenewEnabled = autoRenewEnabled;
+    return this;
+  }
+
+  /**
+   * The information of the last price change for the item since subscription signup.
+   * @return value or {@code null} for none
+   */
+  public SubscriptionItemPriceChangeDetails getPriceChangeDetails() {
+    return priceChangeDetails;
+  }
+
+  /**
+   * The information of the last price change for the item since subscription signup.
+   * @param priceChangeDetails priceChangeDetails or {@code null} for none
+   */
+  public AutoRenewingPlan setPriceChangeDetails(SubscriptionItemPriceChangeDetails priceChangeDetails) {
+    this.priceChangeDetails = priceChangeDetails;
     return this;
   }
 

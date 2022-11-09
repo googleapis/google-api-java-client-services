@@ -38,8 +38,9 @@ public final class DatafeedstatusesCustomBatchRequestEntry extends com.google.ap
   private java.lang.Long batchId;
 
   /**
-   * The country for which to get the datafeed status. If this parameter is provided then language
-   * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * Deprecated. Use `feedLabel` instead. The country to get the datafeed status for. If this
+   * parameter is provided, then `language` must also be provided. Note that for multi-target
+   * datafeeds this parameter is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,16 @@ public final class DatafeedstatusesCustomBatchRequestEntry extends com.google.ap
   private java.math.BigInteger datafeedId;
 
   /**
-   * The language for which to get the datafeed status. If this parameter is provided then country
+   * The feed label to get the datafeed status for. If this parameter is provided, then `language`
    * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feedLabel;
+
+  /**
+   * The language to get the datafeed status for. If this parameter is provided then `country` must
+   * also be provided. Note that for multi-target datafeeds this parameter is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +101,9 @@ public final class DatafeedstatusesCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The country for which to get the datafeed status. If this parameter is provided then language
-   * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * Deprecated. Use `feedLabel` instead. The country to get the datafeed status for. If this
+   * parameter is provided, then `language` must also be provided. Note that for multi-target
+   * datafeeds this parameter is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -101,8 +111,9 @@ public final class DatafeedstatusesCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The country for which to get the datafeed status. If this parameter is provided then language
-   * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * Deprecated. Use `feedLabel` instead. The country to get the datafeed status for. If this
+   * parameter is provided, then `language` must also be provided. Note that for multi-target
+   * datafeeds this parameter is required.
    * @param country country or {@code null} for none
    */
   public DatafeedstatusesCustomBatchRequestEntry setCountry(java.lang.String country) {
@@ -128,8 +139,27 @@ public final class DatafeedstatusesCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The language for which to get the datafeed status. If this parameter is provided then country
+   * The feed label to get the datafeed status for. If this parameter is provided, then `language`
    * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeedLabel() {
+    return feedLabel;
+  }
+
+  /**
+   * The feed label to get the datafeed status for. If this parameter is provided, then `language`
+   * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * @param feedLabel feedLabel or {@code null} for none
+   */
+  public DatafeedstatusesCustomBatchRequestEntry setFeedLabel(java.lang.String feedLabel) {
+    this.feedLabel = feedLabel;
+    return this;
+  }
+
+  /**
+   * The language to get the datafeed status for. If this parameter is provided then `country` must
+   * also be provided. Note that for multi-target datafeeds this parameter is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -137,8 +167,8 @@ public final class DatafeedstatusesCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The language for which to get the datafeed status. If this parameter is provided then country
-   * must also be provided. Note that for multi-target datafeeds this parameter is required.
+   * The language to get the datafeed status for. If this parameter is provided then `country` must
+   * also be provided. Note that for multi-target datafeeds this parameter is required.
    * @param language language or {@code null} for none
    */
   public DatafeedstatusesCustomBatchRequestEntry setLanguage(java.lang.String language) {

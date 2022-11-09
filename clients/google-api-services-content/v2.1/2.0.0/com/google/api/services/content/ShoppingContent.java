@@ -8258,25 +8258,28 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The country for which to get the datafeed status. If this parameter is provided then
-       * language must also be provided. Note that this parameter is required for feeds targeting
-       * multiple countries and languages, since a feed may have a different status for each target.
+       * Deprecated. Use `feedLabel` instead. The country to get the datafeed status for. If this
+       * parameter is provided then `language` must also be provided. Note that this parameter is
+       * required for feeds targeting multiple countries and languages, since a feed may have a
+       * different status for each target.
        */
       @com.google.api.client.util.Key
       private java.lang.String country;
 
-      /** The country for which to get the datafeed status. If this parameter is provided then language must
-     also be provided. Note that this parameter is required for feeds targeting multiple countries and
-     languages, since a feed may have a different status for each target.
+      /** Deprecated. Use `feedLabel` instead. The country to get the datafeed status for. If this parameter
+     is provided then `language` must also be provided. Note that this parameter is required for feeds
+     targeting multiple countries and languages, since a feed may have a different status for each
+     target.
        */
       public java.lang.String getCountry() {
         return country;
       }
 
       /**
-       * The country for which to get the datafeed status. If this parameter is provided then
-       * language must also be provided. Note that this parameter is required for feeds targeting
-       * multiple countries and languages, since a feed may have a different status for each target.
+       * Deprecated. Use `feedLabel` instead. The country to get the datafeed status for. If this
+       * parameter is provided then `language` must also be provided. Note that this parameter is
+       * required for feeds targeting multiple countries and languages, since a feed may have a
+       * different status for each target.
        */
       public Get setCountry(java.lang.String country) {
         this.country = country;
@@ -8284,15 +8287,41 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The language for which to get the datafeed status. If this parameter is provided then
-       * country must also be provided. Note that this parameter is required for feeds targeting
+       * The feed label to get the datafeed status for. If this parameter is provided then
+       * `language` must also be provided. Note that this parameter is required for feeds targeting
        * multiple countries and languages, since a feed may have a different status for each target.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String feedLabel;
+
+      /** The feed label to get the datafeed status for. If this parameter is provided then `language` must
+     also be provided. Note that this parameter is required for feeds targeting multiple countries and
+     languages, since a feed may have a different status for each target.
+       */
+      public java.lang.String getFeedLabel() {
+        return feedLabel;
+      }
+
+      /**
+       * The feed label to get the datafeed status for. If this parameter is provided then
+       * `language` must also be provided. Note that this parameter is required for feeds targeting
+       * multiple countries and languages, since a feed may have a different status for each target.
+       */
+      public Get setFeedLabel(java.lang.String feedLabel) {
+        this.feedLabel = feedLabel;
+        return this;
+      }
+
+      /**
+       * The language to get the datafeed status for. If this parameter is provided then `country`
+       * must also be provided. Note that this parameter is required for feeds targeting multiple
+       * countries and languages, since a feed may have a different status for each target.
        */
       @com.google.api.client.util.Key
       private java.lang.String language;
 
-      /** The language for which to get the datafeed status. If this parameter is provided then country must
-     also be provided. Note that this parameter is required for feeds targeting multiple countries and
+      /** The language to get the datafeed status for. If this parameter is provided then `country` must also
+     be provided. Note that this parameter is required for feeds targeting multiple countries and
      languages, since a feed may have a different status for each target.
        */
       public java.lang.String getLanguage() {
@@ -8300,9 +8329,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The language for which to get the datafeed status. If this parameter is provided then
-       * country must also be provided. Note that this parameter is required for feeds targeting
-       * multiple countries and languages, since a feed may have a different status for each target.
+       * The language to get the datafeed status for. If this parameter is provided then `country`
+       * must also be provided. Note that this parameter is required for feeds targeting multiple
+       * countries and languages, since a feed may have a different status for each target.
        */
       public Get setLanguage(java.lang.String language) {
         this.language = language;
@@ -18202,17 +18231,18 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
        * Attributes specified in the update mask without a value specified in the body will be
-       * deleted from the product. Only top-level product attributes can be updated. If not defined,
-       * product attributes with set values will be updated and other attributes will stay
-       * unchanged.
+       * deleted from the product. *You must specify the update mask to delete attributes.* Only
+       * top-level product attributes can be updated. If not defined, product attributes with set
+       * values will be updated and other attributes will stay unchanged.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
      Attributes specified in the update mask without a value specified in the body will be deleted from
-     the product. Only top-level product attributes can be updated. If not defined, product attributes
-     with set values will be updated and other attributes will stay unchanged.
+     the product. *You must specify the update mask to delete attributes.* Only top-level product
+     attributes can be updated. If not defined, product attributes with set values will be updated and
+     other attributes will stay unchanged.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -18221,9 +18251,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
        * Attributes specified in the update mask without a value specified in the body will be
-       * deleted from the product. Only top-level product attributes can be updated. If not defined,
-       * product attributes with set values will be updated and other attributes will stay
-       * unchanged.
+       * deleted from the product. *You must specify the update mask to delete attributes.* Only
+       * top-level product attributes can be updated. If not defined, product attributes with set
+       * values will be updated and other attributes will stay unchanged.
        */
       public Update setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

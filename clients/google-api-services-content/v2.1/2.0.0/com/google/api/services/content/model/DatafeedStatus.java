@@ -53,6 +53,13 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
   private java.util.List<DatafeedStatusError> errors;
 
   /**
+   * The feed label status is reported for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feedLabel;
+
+  /**
    * The number of items in the feed that were processed.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
    */
   public DatafeedStatus setErrors(java.util.List<DatafeedStatusError> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * The feed label status is reported for.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeedLabel() {
+    return feedLabel;
+  }
+
+  /**
+   * The feed label status is reported for.
+   * @param feedLabel feedLabel or {@code null} for none
+   */
+  public DatafeedStatus setFeedLabel(java.lang.String feedLabel) {
+    this.feedLabel = feedLabel;
     return this;
   }
 

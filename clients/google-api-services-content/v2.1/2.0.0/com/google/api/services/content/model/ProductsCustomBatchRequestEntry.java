@@ -81,9 +81,9 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
    * Attributes specified in the update mask without a value specified in the body will be deleted
-   * from the product. Only top-level product attributes can be updated. If not defined, product
-   * attributes with set values will be updated and other attributes will stay unchanged. Only
-   * defined if the method is `update`.
+   * from the product. *You must specify the update mask to delete attributes.* Only top-level
+   * product attributes can be updated. If not defined, product attributes with set values will be
+   * updated and other attributes will stay unchanged. Only defined if the method is `update`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,9 +206,9 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
    * Attributes specified in the update mask without a value specified in the body will be deleted
-   * from the product. Only top-level product attributes can be updated. If not defined, product
-   * attributes with set values will be updated and other attributes will stay unchanged. Only
-   * defined if the method is `update`.
+   * from the product. *You must specify the update mask to delete attributes.* Only top-level
+   * product attributes can be updated. If not defined, product attributes with set values will be
+   * updated and other attributes will stay unchanged. Only defined if the method is `update`.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -218,9 +218,9 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
    * Attributes specified in the update mask without a value specified in the body will be deleted
-   * from the product. Only top-level product attributes can be updated. If not defined, product
-   * attributes with set values will be updated and other attributes will stay unchanged. Only
-   * defined if the method is `update`.
+   * from the product. *You must specify the update mask to delete attributes.* Only top-level
+   * product attributes can be updated. If not defined, product attributes with set values will be
+   * updated and other attributes will stay unchanged. Only defined if the method is `update`.
    * @param updateMask updateMask or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setUpdateMask(String updateMask) {

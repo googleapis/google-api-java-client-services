@@ -59,8 +59,7 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * The budget segment description. It can be used to enter Purchase Order information for each
-   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded with a
-   * length of no more than 80 characters.
+   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +130,7 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * The budget segment description. It can be used to enter Purchase Order information for each
-   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded with a
-   * length of no more than 80 characters.
+   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -141,8 +139,7 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * The budget segment description. It can be used to enter Purchase Order information for each
-   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded with a
-   * length of no more than 80 characters.
+   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded.
    * @param description description or {@code null} for none
    */
   public InsertionOrderBudgetSegment setDescription(java.lang.String description) {

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * Response message for LineItemService.DuplicateLineItem.
+ * Model definition for DuplicateLineItemResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class DuplicateLineItemResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the successfully created line item.
+   * The ID of the created line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long duplicateLineItemId;
 
   /**
-   * The ID of the successfully created line item.
+   * The ID of the created line item.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDuplicateLineItemId() {
@@ -46,7 +46,7 @@ public final class DuplicateLineItemResponse extends com.google.api.client.json.
   }
 
   /**
-   * The ID of the successfully created line item.
+   * The ID of the created line item.
    * @param duplicateLineItemId duplicateLineItemId or {@code null} for none
    */
   public DuplicateLineItemResponse setDuplicateLineItemId(java.lang.Long duplicateLineItemId) {

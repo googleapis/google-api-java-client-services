@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * Request message for LineItemService.DuplicateLineItem.
+ * Billing related settings of an advertiser.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -28,40 +28,16 @@ package com.google.api.services.displayvideo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DuplicateLineItemRequest extends com.google.api.client.json.GenericJson {
+public final class AdvertiserBillingConfig extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The display name of the new line item. Must be UTF-8 encoded with a maximum size of 240 bytes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String targetDisplayName;
-
-  /**
-   * The display name of the new line item. Must be UTF-8 encoded with a maximum size of 240 bytes.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTargetDisplayName() {
-    return targetDisplayName;
-  }
-
-  /**
-   * The display name of the new line item. Must be UTF-8 encoded with a maximum size of 240 bytes.
-   * @param targetDisplayName targetDisplayName or {@code null} for none
-   */
-  public DuplicateLineItemRequest setTargetDisplayName(java.lang.String targetDisplayName) {
-    this.targetDisplayName = targetDisplayName;
-    return this;
+  @Override
+  public AdvertiserBillingConfig set(String fieldName, Object value) {
+    return (AdvertiserBillingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public DuplicateLineItemRequest set(String fieldName, Object value) {
-    return (DuplicateLineItemRequest) super.set(fieldName, value);
-  }
-
-  @Override
-  public DuplicateLineItemRequest clone() {
-    return (DuplicateLineItemRequest) super.clone();
+  public AdvertiserBillingConfig clone() {
+    return (AdvertiserBillingConfig) super.clone();
   }
 
 }

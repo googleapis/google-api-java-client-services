@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class DatafeedTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * The country where the items in the feed will be included in the search index, represented as a
-   * CLDR territory code.
+   * Deprecated. Use `feedLabel` instead. The country where the items in the feed will be included
+   * in the search index, represented as a CLDR territory code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +45,14 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedDestinations;
+
+  /**
+   * Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both
+   * `feedLabel` and `country` is specified, the values must match.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feedLabel;
 
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
@@ -64,8 +72,16 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   private java.lang.String language;
 
   /**
-   * The country where the items in the feed will be included in the search index, represented as a
-   * CLDR territory code.
+   * The countries where the items may be displayed. Represented as a CLDR territory code. Will be
+   * ignored for "product inventory" feeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetCountries;
+
+  /**
+   * Deprecated. Use `feedLabel` instead. The country where the items in the feed will be included
+   * in the search index, represented as a CLDR territory code.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -73,8 +89,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The country where the items in the feed will be included in the search index, represented as a
-   * CLDR territory code.
+   * Deprecated. Use `feedLabel` instead. The country where the items in the feed will be included
+   * in the search index, represented as a CLDR territory code.
    * @param country country or {@code null} for none
    */
   public DatafeedTarget setCountry(java.lang.String country) {
@@ -98,6 +114,25 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
    */
   public DatafeedTarget setExcludedDestinations(java.util.List<java.lang.String> excludedDestinations) {
     this.excludedDestinations = excludedDestinations;
+    return this;
+  }
+
+  /**
+   * Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both
+   * `feedLabel` and `country` is specified, the values must match.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeedLabel() {
+    return feedLabel;
+  }
+
+  /**
+   * Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both
+   * `feedLabel` and `country` is specified, the values must match.
+   * @param feedLabel feedLabel or {@code null} for none
+   */
+  public DatafeedTarget setFeedLabel(java.lang.String feedLabel) {
+    this.feedLabel = feedLabel;
     return this;
   }
 
@@ -138,6 +173,25 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
    */
   public DatafeedTarget setLanguage(java.lang.String language) {
     this.language = language;
+    return this;
+  }
+
+  /**
+   * The countries where the items may be displayed. Represented as a CLDR territory code. Will be
+   * ignored for "product inventory" feeds.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetCountries() {
+    return targetCountries;
+  }
+
+  /**
+   * The countries where the items may be displayed. Represented as a CLDR territory code. Will be
+   * ignored for "product inventory" feeds.
+   * @param targetCountries targetCountries or {@code null} for none
+   */
+  public DatafeedTarget setTargetCountries(java.util.List<java.lang.String> targetCountries) {
+    this.targetCountries = targetCountries;
     return this;
   }
 

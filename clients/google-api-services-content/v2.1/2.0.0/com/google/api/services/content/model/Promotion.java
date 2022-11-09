@@ -272,6 +272,15 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String promotionId;
 
   /**
+   * URL to the page on the merchant's site where the promotion shows. Local Inventory ads
+   * promotions throw an error if no promo url is included. URL is used to confirm that the
+   * promotion is valid and can be redeemed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String promotionUrl;
+
+  /**
    * Required. Redemption channel for the promotion. At least one channel is required.
    * The value may be {@code null}.
    */
@@ -284,6 +293,30 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> shippingServiceNames;
+
+  /**
+   * Whether the promotion applies to all stores, or only specified stores. Local Inventory ads
+   * promotions throw an error if no store applicability is included. An INVALID_ARGUMENT error is
+   * thrown if store_applicability is set to ALL_STORES and store_code or score_code_exclusion is
+   * set to a value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storeApplicability;
+
+  /**
+   * Store codes to include for the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> storeCode;
+
+  /**
+   * Store codes to exclude for the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> storeCodeExclusion;
 
   /**
    * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
@@ -869,6 +902,27 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * URL to the page on the merchant's site where the promotion shows. Local Inventory ads
+   * promotions throw an error if no promo url is included. URL is used to confirm that the
+   * promotion is valid and can be redeemed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPromotionUrl() {
+    return promotionUrl;
+  }
+
+  /**
+   * URL to the page on the merchant's site where the promotion shows. Local Inventory ads
+   * promotions throw an error if no promo url is included. URL is used to confirm that the
+   * promotion is valid and can be redeemed.
+   * @param promotionUrl promotionUrl or {@code null} for none
+   */
+  public Promotion setPromotionUrl(java.lang.String promotionUrl) {
+    this.promotionUrl = promotionUrl;
+    return this;
+  }
+
+  /**
    * Required. Redemption channel for the promotion. At least one channel is required.
    * @return value or {@code null} for none
    */
@@ -899,6 +953,63 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setShippingServiceNames(java.util.List<java.lang.String> shippingServiceNames) {
     this.shippingServiceNames = shippingServiceNames;
+    return this;
+  }
+
+  /**
+   * Whether the promotion applies to all stores, or only specified stores. Local Inventory ads
+   * promotions throw an error if no store applicability is included. An INVALID_ARGUMENT error is
+   * thrown if store_applicability is set to ALL_STORES and store_code or score_code_exclusion is
+   * set to a value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoreApplicability() {
+    return storeApplicability;
+  }
+
+  /**
+   * Whether the promotion applies to all stores, or only specified stores. Local Inventory ads
+   * promotions throw an error if no store applicability is included. An INVALID_ARGUMENT error is
+   * thrown if store_applicability is set to ALL_STORES and store_code or score_code_exclusion is
+   * set to a value.
+   * @param storeApplicability storeApplicability or {@code null} for none
+   */
+  public Promotion setStoreApplicability(java.lang.String storeApplicability) {
+    this.storeApplicability = storeApplicability;
+    return this;
+  }
+
+  /**
+   * Store codes to include for the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStoreCode() {
+    return storeCode;
+  }
+
+  /**
+   * Store codes to include for the promotion.
+   * @param storeCode storeCode or {@code null} for none
+   */
+  public Promotion setStoreCode(java.util.List<java.lang.String> storeCode) {
+    this.storeCode = storeCode;
+    return this;
+  }
+
+  /**
+   * Store codes to exclude for the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStoreCodeExclusion() {
+    return storeCodeExclusion;
+  }
+
+  /**
+   * Store codes to exclude for the promotion.
+   * @param storeCodeExclusion storeCodeExclusion or {@code null} for none
+   */
+  public Promotion setStoreCodeExclusion(java.util.List<java.lang.String> storeCodeExclusion) {
+    this.storeCodeExclusion = storeCodeExclusion;
     return this;
   }
 

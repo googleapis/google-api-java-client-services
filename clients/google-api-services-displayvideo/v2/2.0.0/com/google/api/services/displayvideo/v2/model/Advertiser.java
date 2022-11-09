@@ -45,6 +45,13 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private java.lang.Long advertiserId;
 
   /**
+   * Billing related settings of the advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvertiserBillingConfig billingConfig;
+
+  /**
    * Required. Creative related settings of the advertiser.
    * The value may be {@code null}.
    */
@@ -163,6 +170,23 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    */
   public Advertiser setAdvertiserId(java.lang.Long advertiserId) {
     this.advertiserId = advertiserId;
+    return this;
+  }
+
+  /**
+   * Billing related settings of the advertiser.
+   * @return value or {@code null} for none
+   */
+  public AdvertiserBillingConfig getBillingConfig() {
+    return billingConfig;
+  }
+
+  /**
+   * Billing related settings of the advertiser.
+   * @param billingConfig billingConfig or {@code null} for none
+   */
+  public Advertiser setBillingConfig(AdvertiserBillingConfig billingConfig) {
+    this.billingConfig = billingConfig;
     return this;
   }
 

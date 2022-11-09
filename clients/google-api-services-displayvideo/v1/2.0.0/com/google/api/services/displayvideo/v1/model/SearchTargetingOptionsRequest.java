@@ -54,7 +54,7 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
   private GeoRegionSearchTerms geoRegionSearchTerms;
 
   /**
-   * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+   * Requested page size. Must be between `1` and `200`. If unspecified will default to `100`.
    * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
   }
 
   /**
-   * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+   * Requested page size. Must be between `1` and `200`. If unspecified will default to `100`.
    * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
   }
 
   /**
-   * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+   * Requested page size. Must be between `1` and `200`. If unspecified will default to `100`.
    * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
    * @param pageSize pageSize or {@code null} for none
    */

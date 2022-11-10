@@ -51,6 +51,15 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.Boolean autoStorageIncrease;
 
   /**
+   * Optional. Availability type. Potential values: * `ZONAL`: The instance serves data from only
+   * one zone. Outages in that zone affect data availability. * `REGIONAL`: The instance can serve
+   * data from more than one zone in a region (it is highly available).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String availabilityType;
+
+  /**
    * The KMS key name used for the csql instance.
    * The value may be {@code null}.
    */
@@ -114,6 +123,15 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean rootPasswordSet;
+
+  /**
+   * Optional. The Google Cloud Platform zone where the failover Cloud SQL database instance is
+   * located. Used when the Cloud SQL database availability type is REGIONAL (i.e. multiple zones /
+   * highly available).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondaryZone;
 
   /**
    * The Database Migration Service source connection profile ID, in the format:
@@ -199,6 +217,27 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
    */
   public CloudSqlSettings setAutoStorageIncrease(java.lang.Boolean autoStorageIncrease) {
     this.autoStorageIncrease = autoStorageIncrease;
+    return this;
+  }
+
+  /**
+   * Optional. Availability type. Potential values: * `ZONAL`: The instance serves data from only
+   * one zone. Outages in that zone affect data availability. * `REGIONAL`: The instance can serve
+   * data from more than one zone in a region (it is highly available).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAvailabilityType() {
+    return availabilityType;
+  }
+
+  /**
+   * Optional. Availability type. Potential values: * `ZONAL`: The instance serves data from only
+   * one zone. Outages in that zone affect data availability. * `REGIONAL`: The instance can serve
+   * data from more than one zone in a region (it is highly available).
+   * @param availabilityType availabilityType or {@code null} for none
+   */
+  public CloudSqlSettings setAvailabilityType(java.lang.String availabilityType) {
+    this.availabilityType = availabilityType;
     return this;
   }
 
@@ -356,6 +395,27 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
    */
   public CloudSqlSettings setRootPasswordSet(java.lang.Boolean rootPasswordSet) {
     this.rootPasswordSet = rootPasswordSet;
+    return this;
+  }
+
+  /**
+   * Optional. The Google Cloud Platform zone where the failover Cloud SQL database instance is
+   * located. Used when the Cloud SQL database availability type is REGIONAL (i.e. multiple zones /
+   * highly available).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondaryZone() {
+    return secondaryZone;
+  }
+
+  /**
+   * Optional. The Google Cloud Platform zone where the failover Cloud SQL database instance is
+   * located. Used when the Cloud SQL database availability type is REGIONAL (i.e. multiple zones /
+   * highly available).
+   * @param secondaryZone secondaryZone or {@code null} for none
+   */
+  public CloudSqlSettings setSecondaryZone(java.lang.String secondaryZone) {
+    this.secondaryZone = secondaryZone;
     return this;
   }
 

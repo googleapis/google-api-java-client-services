@@ -32,6 +32,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class CloudSqlConnectionProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The Cloud SQL database instance's additional (outgoing) public IP. Used when the
+   * Cloud SQL database availability type is REGIONAL (i.e. multiple zones / highly available).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String additionalPublicIp;
+
+  /**
    * Output only. The Cloud SQL instance ID that this connection profile is associated with.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class CloudSqlConnectionProfile extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private CloudSqlSettings settings;
+
+  /**
+   * Output only. The Cloud SQL database instance's additional (outgoing) public IP. Used when the
+   * Cloud SQL database availability type is REGIONAL (i.e. multiple zones / highly available).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdditionalPublicIp() {
+    return additionalPublicIp;
+  }
+
+  /**
+   * Output only. The Cloud SQL database instance's additional (outgoing) public IP. Used when the
+   * Cloud SQL database availability type is REGIONAL (i.e. multiple zones / highly available).
+   * @param additionalPublicIp additionalPublicIp or {@code null} for none
+   */
+  public CloudSqlConnectionProfile setAdditionalPublicIp(java.lang.String additionalPublicIp) {
+    this.additionalPublicIp = additionalPublicIp;
+    return this;
+  }
 
   /**
    * Output only. The Cloud SQL instance ID that this connection profile is associated with.

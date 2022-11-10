@@ -80,6 +80,22 @@ public final class Families extends com.google.api.client.json.GenericJson {
   private java.lang.String kidsClubException;
 
   /**
+   * Kids friendly. The hotel has one or more special features for families with children, such as
+   * reduced rates, child-sized beds, kids' club, babysitting service, or suitable place to play on
+   * premises.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean kidsFriendly;
+
+  /**
+   * Kids friendly exception.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kidsFriendlyException;
+
+  /**
    * Babysitting. Child care that is offered by hotel staffers or coordinated by hotel staffers with
    * local child care professionals. Can be free or for a fee.
    * @return value or {@code null} for none
@@ -192,6 +208,44 @@ public final class Families extends com.google.api.client.json.GenericJson {
    */
   public Families setKidsClubException(java.lang.String kidsClubException) {
     this.kidsClubException = kidsClubException;
+    return this;
+  }
+
+  /**
+   * Kids friendly. The hotel has one or more special features for families with children, such as
+   * reduced rates, child-sized beds, kids' club, babysitting service, or suitable place to play on
+   * premises.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKidsFriendly() {
+    return kidsFriendly;
+  }
+
+  /**
+   * Kids friendly. The hotel has one or more special features for families with children, such as
+   * reduced rates, child-sized beds, kids' club, babysitting service, or suitable place to play on
+   * premises.
+   * @param kidsFriendly kidsFriendly or {@code null} for none
+   */
+  public Families setKidsFriendly(java.lang.Boolean kidsFriendly) {
+    this.kidsFriendly = kidsFriendly;
+    return this;
+  }
+
+  /**
+   * Kids friendly exception.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKidsFriendlyException() {
+    return kidsFriendlyException;
+  }
+
+  /**
+   * Kids friendly exception.
+   * @param kidsFriendlyException kidsFriendlyException or {@code null} for none
+   */
+  public Families setKidsFriendlyException(java.lang.String kidsFriendlyException) {
+    this.kidsFriendlyException = kidsFriendlyException;
     return this;
   }
 

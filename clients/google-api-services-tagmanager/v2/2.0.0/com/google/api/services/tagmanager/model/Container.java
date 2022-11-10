@@ -112,8 +112,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String tagManagerUrl;
 
   /**
-   * The URLs of the cloud environment for the GTM Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of server-side container URLs for the Container. If multiple URLs are provided, all URL
+   * paths must match. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -323,8 +324,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URLs of the cloud environment for the GTM Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of server-side container URLs for the Container. If multiple URLs are provided, all URL
+   * paths must match. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTaggingServerUrls() {
@@ -332,8 +334,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URLs of the cloud environment for the GTM Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of server-side container URLs for the Container. If multiple URLs are provided, all URL
+   * paths must match. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * @param taggingServerUrls taggingServerUrls or {@code null} for none
    */
   public Container setTaggingServerUrls(java.util.List<java.lang.String> taggingServerUrls) {

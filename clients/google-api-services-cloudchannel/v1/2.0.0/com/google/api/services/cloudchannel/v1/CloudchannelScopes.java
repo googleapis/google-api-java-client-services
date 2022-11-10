@@ -26,6 +26,9 @@ public class CloudchannelScopes {
   /** Manage users on your domain. */
   public static final String APPS_ORDER = "https://www.googleapis.com/auth/apps.order";
 
+  /** View usage reports for your G Suite domain. */
+  public static final String APPS_REPORTS_USAGE_READONLY = "https://www.googleapis.com/auth/apps.reports.usage.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class CloudchannelScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(APPS_ORDER);
+    set.add(APPS_REPORTS_USAGE_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

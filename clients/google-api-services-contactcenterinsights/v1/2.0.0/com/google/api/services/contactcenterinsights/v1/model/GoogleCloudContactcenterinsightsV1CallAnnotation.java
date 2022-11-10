@@ -81,6 +81,13 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotation extends com.
   private GoogleCloudContactcenterinsightsV1InterruptionData interruptionData;
 
   /**
+   * Data specifying an issue match.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1IssueMatchData issueMatchData;
+
+  /**
    * Data specifying a phrase match.
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotation extends com.
    */
   public GoogleCloudContactcenterinsightsV1CallAnnotation setInterruptionData(GoogleCloudContactcenterinsightsV1InterruptionData interruptionData) {
     this.interruptionData = interruptionData;
+    return this;
+  }
+
+  /**
+   * Data specifying an issue match.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IssueMatchData getIssueMatchData() {
+    return issueMatchData;
+  }
+
+  /**
+   * Data specifying an issue match.
+   * @param issueMatchData issueMatchData or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1CallAnnotation setIssueMatchData(GoogleCloudContactcenterinsightsV1IssueMatchData issueMatchData) {
+    this.issueMatchData = issueMatchData;
     return this;
   }
 

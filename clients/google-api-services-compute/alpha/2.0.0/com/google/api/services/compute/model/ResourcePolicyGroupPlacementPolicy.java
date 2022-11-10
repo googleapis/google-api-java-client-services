@@ -53,6 +53,13 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String locality;
 
   /**
+   * Specifies the number of max logical switches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxDistance;
+
+  /**
    * Scope specifies the availability domain to which the VMs should be spread.
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setLocality(java.lang.String locality) {
     this.locality = locality;
+    return this;
+  }
+
+  /**
+   * Specifies the number of max logical switches.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxDistance() {
+    return maxDistance;
+  }
+
+  /**
+   * Specifies the number of max logical switches.
+   * @param maxDistance maxDistance or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setMaxDistance(java.lang.Integer maxDistance) {
+    this.maxDistance = maxDistance;
     return this;
   }
 

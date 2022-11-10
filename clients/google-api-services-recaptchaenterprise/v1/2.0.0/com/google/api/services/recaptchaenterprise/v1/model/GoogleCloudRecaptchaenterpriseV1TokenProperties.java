@@ -38,6 +38,13 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   private java.lang.String action;
 
   /**
+   * The name of the Android package with which the token was generated (Android keys only).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String androidPackageName;
+
+  /**
    * The timestamp corresponding to the generation of the token.
    * The value may be {@code null}.
    */
@@ -57,6 +64,13 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String invalidReason;
+
+  /**
+   * The ID of the iOS bundle with which the token was generated (iOS keys only).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iosBundleId;
 
   /**
    * Whether the provided user response token is valid. When valid = false, the reason could be
@@ -82,6 +96,23 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * The name of the Android package with which the token was generated (Android keys only).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAndroidPackageName() {
+    return androidPackageName;
+  }
+
+  /**
+   * The name of the Android package with which the token was generated (Android keys only).
+   * @param androidPackageName androidPackageName or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1TokenProperties setAndroidPackageName(java.lang.String androidPackageName) {
+    this.androidPackageName = androidPackageName;
     return this;
   }
 
@@ -133,6 +164,23 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setInvalidReason(java.lang.String invalidReason) {
     this.invalidReason = invalidReason;
+    return this;
+  }
+
+  /**
+   * The ID of the iOS bundle with which the token was generated (iOS keys only).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIosBundleId() {
+    return iosBundleId;
+  }
+
+  /**
+   * The ID of the iOS bundle with which the token was generated (iOS keys only).
+   * @param iosBundleId iosBundleId or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1TokenProperties setIosBundleId(java.lang.String iosBundleId) {
+    this.iosBundleId = iosBundleId;
     return this;
   }
 

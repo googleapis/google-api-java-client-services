@@ -156,339 +156,6 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
     /**
      * Retrieves a list of conversions from a DoubleClick Search engine account.
      *
-     * Create a request for the method "conversion.GetCustomerId".
-     *
-     * This request holds the parameters needed by the doubleclicksearch server.  After setting any
-     * optional parameters, call the {@link GetCustomerId#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param customerId Customer ID of a client account in the new Search Ads 360 experience.
-     * @param endDate Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-    [minimum: 20091101]
-     *        [maximum: 99991231]
-     * @param rowCount The number of conversions to return per call.
-    [minimum: 1]
-    [maximum: 1000]
-     * @param startDate First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-    [minimum: 20091101]
-     *        [maximum: 99991231]
-     * @param startRow The 0-based starting index for retrieving conversions results.
-     * @return the request
-     */
-    public GetCustomerId getCustomerId(java.lang.String customerId, java.lang.Integer endDate, java.lang.Integer rowCount, java.lang.Integer startDate, java.lang.Long startRow) throws java.io.IOException {
-      GetCustomerId result = new GetCustomerId(customerId, endDate, rowCount, startDate, startRow);
-      initialize(result);
-      return result;
-    }
-
-    public class GetCustomerId extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.ConversionList> {
-
-      private static final String REST_PATH = "doubleclicksearch/v2/customer/{customerId}/conversion";
-
-      /**
-       * Retrieves a list of conversions from a DoubleClick Search engine account.
-       *
-       * Create a request for the method "conversion.GetCustomerId".
-       *
-       * This request holds the parameters needed by the the doubleclicksearch server.  After setting
-       * any optional parameters, call the {@link GetCustomerId#execute()} method to invoke the remote
-       * operation. <p> {@link GetCustomerId#initialize(com.google.api.client.googleapis.services.Abstra
-       * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-       * the constructor. </p>
-       *
-       * @param customerId Customer ID of a client account in the new Search Ads 360 experience.
-       * @param endDate Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-    [minimum: 20091101]
-     *        [maximum: 99991231]
-       * @param rowCount The number of conversions to return per call.
-    [minimum: 1]
-    [maximum: 1000]
-       * @param startDate First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-    [minimum: 20091101]
-     *        [maximum: 99991231]
-       * @param startRow The 0-based starting index for retrieving conversions results.
-       * @since 1.13
-       */
-      protected GetCustomerId(java.lang.String customerId, java.lang.Integer endDate, java.lang.Integer rowCount, java.lang.Integer startDate, java.lang.Long startRow) {
-        super(Doubleclicksearch.this, "GET", REST_PATH, null, com.google.api.services.doubleclicksearch.model.ConversionList.class);
-        this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
-        this.endDate = com.google.api.client.util.Preconditions.checkNotNull(endDate, "Required parameter endDate must be specified.");
-        this.rowCount = com.google.api.client.util.Preconditions.checkNotNull(rowCount, "Required parameter rowCount must be specified.");
-        this.startDate = com.google.api.client.util.Preconditions.checkNotNull(startDate, "Required parameter startDate must be specified.");
-        this.startRow = com.google.api.client.util.Preconditions.checkNotNull(startRow, "Required parameter startRow must be specified.");
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetCustomerId set$Xgafv(java.lang.String $Xgafv) {
-        return (GetCustomerId) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetCustomerId setAccessToken(java.lang.String accessToken) {
-        return (GetCustomerId) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetCustomerId setAlt(java.lang.String alt) {
-        return (GetCustomerId) super.setAlt(alt);
-      }
-
-      @Override
-      public GetCustomerId setCallback(java.lang.String callback) {
-        return (GetCustomerId) super.setCallback(callback);
-      }
-
-      @Override
-      public GetCustomerId setFields(java.lang.String fields) {
-        return (GetCustomerId) super.setFields(fields);
-      }
-
-      @Override
-      public GetCustomerId setKey(java.lang.String key) {
-        return (GetCustomerId) super.setKey(key);
-      }
-
-      @Override
-      public GetCustomerId setOauthToken(java.lang.String oauthToken) {
-        return (GetCustomerId) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetCustomerId setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetCustomerId) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetCustomerId setQuotaUser(java.lang.String quotaUser) {
-        return (GetCustomerId) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetCustomerId setUploadType(java.lang.String uploadType) {
-        return (GetCustomerId) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetCustomerId setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetCustomerId) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Customer ID of a client account in the new Search Ads 360 experience. */
-      @com.google.api.client.util.Key
-      private java.lang.String customerId;
-
-      /** Customer ID of a client account in the new Search Ads 360 experience.
-       */
-      public java.lang.String getCustomerId() {
-        return customerId;
-      }
-
-      /** Customer ID of a client account in the new Search Ads 360 experience. */
-      public GetCustomerId setCustomerId(java.lang.String customerId) {
-        this.customerId = customerId;
-        return this;
-      }
-
-      /** Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer endDate;
-
-      /** Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-
-     [minimum: 20091101] [maximum: 99991231]
-       */
-      public java.lang.Integer getEndDate() {
-        return endDate;
-      }
-
-      /** Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
-      public GetCustomerId setEndDate(java.lang.Integer endDate) {
-        this.endDate = endDate;
-        return this;
-      }
-
-      /** The number of conversions to return per call. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer rowCount;
-
-      /** The number of conversions to return per call.
-
-     [minimum: 1] [maximum: 1000]
-       */
-      public java.lang.Integer getRowCount() {
-        return rowCount;
-      }
-
-      /** The number of conversions to return per call. */
-      public GetCustomerId setRowCount(java.lang.Integer rowCount) {
-        this.rowCount = rowCount;
-        return this;
-      }
-
-      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer startDate;
-
-      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-
-     [minimum: 20091101] [maximum: 99991231]
-       */
-      public java.lang.Integer getStartDate() {
-        return startDate;
-      }
-
-      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
-      public GetCustomerId setStartDate(java.lang.Integer startDate) {
-        this.startDate = startDate;
-        return this;
-      }
-
-      /** The 0-based starting index for retrieving conversions results. */
-      @com.google.api.client.util.Key
-      private java.lang.Long startRow;
-
-      /** The 0-based starting index for retrieving conversions results.
-       */
-      public java.lang.Long getStartRow() {
-        return startRow;
-      }
-
-      /** The 0-based starting index for retrieving conversions results. */
-      public GetCustomerId setStartRow(java.lang.Long startRow) {
-        this.startRow = startRow;
-        return this;
-      }
-
-      /** Numeric ID of the ad group. */
-      @com.google.api.client.util.Key
-      private java.lang.Long adGroupId;
-
-      /** Numeric ID of the ad group.
-       */
-      public java.lang.Long getAdGroupId() {
-        return adGroupId;
-      }
-
-      /** Numeric ID of the ad group. */
-      public GetCustomerId setAdGroupId(java.lang.Long adGroupId) {
-        this.adGroupId = adGroupId;
-        return this;
-      }
-
-      /** Numeric ID of the ad. */
-      @com.google.api.client.util.Key
-      private java.lang.Long adId;
-
-      /** Numeric ID of the ad.
-       */
-      public java.lang.Long getAdId() {
-        return adId;
-      }
-
-      /** Numeric ID of the ad. */
-      public GetCustomerId setAdId(java.lang.Long adId) {
-        this.adId = adId;
-        return this;
-      }
-
-      /** Numeric ID of the advertiser. */
-      @com.google.api.client.util.Key
-      private java.lang.Long advertiserId;
-
-      /** Numeric ID of the advertiser.
-       */
-      public java.lang.Long getAdvertiserId() {
-        return advertiserId;
-      }
-
-      /** Numeric ID of the advertiser. */
-      public GetCustomerId setAdvertiserId(java.lang.Long advertiserId) {
-        this.advertiserId = advertiserId;
-        return this;
-      }
-
-      /** Numeric ID of the agency. */
-      @com.google.api.client.util.Key
-      private java.lang.Long agencyId;
-
-      /** Numeric ID of the agency.
-       */
-      public java.lang.Long getAgencyId() {
-        return agencyId;
-      }
-
-      /** Numeric ID of the agency. */
-      public GetCustomerId setAgencyId(java.lang.Long agencyId) {
-        this.agencyId = agencyId;
-        return this;
-      }
-
-      /** Numeric ID of the campaign. */
-      @com.google.api.client.util.Key
-      private java.lang.Long campaignId;
-
-      /** Numeric ID of the campaign.
-       */
-      public java.lang.Long getCampaignId() {
-        return campaignId;
-      }
-
-      /** Numeric ID of the campaign. */
-      public GetCustomerId setCampaignId(java.lang.Long campaignId) {
-        this.campaignId = campaignId;
-        return this;
-      }
-
-      /** Numeric ID of the criterion. */
-      @com.google.api.client.util.Key
-      private java.lang.Long criterionId;
-
-      /** Numeric ID of the criterion.
-       */
-      public java.lang.Long getCriterionId() {
-        return criterionId;
-      }
-
-      /** Numeric ID of the criterion. */
-      public GetCustomerId setCriterionId(java.lang.Long criterionId) {
-        this.criterionId = criterionId;
-        return this;
-      }
-
-      /** Numeric ID of the engine account. */
-      @com.google.api.client.util.Key
-      private java.lang.Long engineAccountId;
-
-      /** Numeric ID of the engine account.
-       */
-      public java.lang.Long getEngineAccountId() {
-        return engineAccountId;
-      }
-
-      /** Numeric ID of the engine account. */
-      public GetCustomerId setEngineAccountId(java.lang.Long engineAccountId) {
-        this.engineAccountId = engineAccountId;
-        return this;
-      }
-
-      @Override
-      public GetCustomerId set(String parameterName, Object value) {
-        return (GetCustomerId) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Retrieves a list of conversions from a DoubleClick Search engine account.
-     *
      * Create a request for the method "conversion.get".
      *
      * This request holds the parameters needed by the doubleclicksearch server.  After setting any
@@ -822,6 +489,339 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of conversions from a DoubleClick Search engine account.
+     *
+     * Create a request for the method "conversion.getByCustomerId".
+     *
+     * This request holds the parameters needed by the doubleclicksearch server.  After setting any
+     * optional parameters, call the {@link GetByCustomerId#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param customerId Customer ID of a client account in the new Search Ads 360 experience.
+     * @param endDate Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+    [minimum: 20091101]
+     *        [maximum: 99991231]
+     * @param rowCount The number of conversions to return per call.
+    [minimum: 1]
+    [maximum: 1000]
+     * @param startDate First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+    [minimum: 20091101]
+     *        [maximum: 99991231]
+     * @param startRow The 0-based starting index for retrieving conversions results.
+     * @return the request
+     */
+    public GetByCustomerId getByCustomerId(java.lang.String customerId, java.lang.Integer endDate, java.lang.Integer rowCount, java.lang.Integer startDate, java.lang.Long startRow) throws java.io.IOException {
+      GetByCustomerId result = new GetByCustomerId(customerId, endDate, rowCount, startDate, startRow);
+      initialize(result);
+      return result;
+    }
+
+    public class GetByCustomerId extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.ConversionList> {
+
+      private static final String REST_PATH = "doubleclicksearch/v2/customer/{customerId}/conversion";
+
+      /**
+       * Retrieves a list of conversions from a DoubleClick Search engine account.
+       *
+       * Create a request for the method "conversion.getByCustomerId".
+       *
+       * This request holds the parameters needed by the the doubleclicksearch server.  After setting
+       * any optional parameters, call the {@link GetByCustomerId#execute()} method to invoke the remote
+       * operation. <p> {@link GetByCustomerId#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param customerId Customer ID of a client account in the new Search Ads 360 experience.
+       * @param endDate Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+    [minimum: 20091101]
+     *        [maximum: 99991231]
+       * @param rowCount The number of conversions to return per call.
+    [minimum: 1]
+    [maximum: 1000]
+       * @param startDate First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+    [minimum: 20091101]
+     *        [maximum: 99991231]
+       * @param startRow The 0-based starting index for retrieving conversions results.
+       * @since 1.13
+       */
+      protected GetByCustomerId(java.lang.String customerId, java.lang.Integer endDate, java.lang.Integer rowCount, java.lang.Integer startDate, java.lang.Long startRow) {
+        super(Doubleclicksearch.this, "GET", REST_PATH, null, com.google.api.services.doubleclicksearch.model.ConversionList.class);
+        this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+        this.endDate = com.google.api.client.util.Preconditions.checkNotNull(endDate, "Required parameter endDate must be specified.");
+        this.rowCount = com.google.api.client.util.Preconditions.checkNotNull(rowCount, "Required parameter rowCount must be specified.");
+        this.startDate = com.google.api.client.util.Preconditions.checkNotNull(startDate, "Required parameter startDate must be specified.");
+        this.startRow = com.google.api.client.util.Preconditions.checkNotNull(startRow, "Required parameter startRow must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetByCustomerId set$Xgafv(java.lang.String $Xgafv) {
+        return (GetByCustomerId) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetByCustomerId setAccessToken(java.lang.String accessToken) {
+        return (GetByCustomerId) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetByCustomerId setAlt(java.lang.String alt) {
+        return (GetByCustomerId) super.setAlt(alt);
+      }
+
+      @Override
+      public GetByCustomerId setCallback(java.lang.String callback) {
+        return (GetByCustomerId) super.setCallback(callback);
+      }
+
+      @Override
+      public GetByCustomerId setFields(java.lang.String fields) {
+        return (GetByCustomerId) super.setFields(fields);
+      }
+
+      @Override
+      public GetByCustomerId setKey(java.lang.String key) {
+        return (GetByCustomerId) super.setKey(key);
+      }
+
+      @Override
+      public GetByCustomerId setOauthToken(java.lang.String oauthToken) {
+        return (GetByCustomerId) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetByCustomerId setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetByCustomerId) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetByCustomerId setQuotaUser(java.lang.String quotaUser) {
+        return (GetByCustomerId) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetByCustomerId setUploadType(java.lang.String uploadType) {
+        return (GetByCustomerId) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetByCustomerId setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetByCustomerId) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Customer ID of a client account in the new Search Ads 360 experience. */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Customer ID of a client account in the new Search Ads 360 experience.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /** Customer ID of a client account in the new Search Ads 360 experience. */
+      public GetByCustomerId setCustomerId(java.lang.String customerId) {
+        this.customerId = customerId;
+        return this;
+      }
+
+      /** Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer endDate;
+
+      /** Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+
+     [minimum: 20091101] [maximum: 99991231]
+       */
+      public java.lang.Integer getEndDate() {
+        return endDate;
+      }
+
+      /** Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
+      public GetByCustomerId setEndDate(java.lang.Integer endDate) {
+        this.endDate = endDate;
+        return this;
+      }
+
+      /** The number of conversions to return per call. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer rowCount;
+
+      /** The number of conversions to return per call.
+
+     [minimum: 1] [maximum: 1000]
+       */
+      public java.lang.Integer getRowCount() {
+        return rowCount;
+      }
+
+      /** The number of conversions to return per call. */
+      public GetByCustomerId setRowCount(java.lang.Integer rowCount) {
+        this.rowCount = rowCount;
+        return this;
+      }
+
+      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer startDate;
+
+      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+
+     [minimum: 20091101] [maximum: 99991231]
+       */
+      public java.lang.Integer getStartDate() {
+        return startDate;
+      }
+
+      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
+      public GetByCustomerId setStartDate(java.lang.Integer startDate) {
+        this.startDate = startDate;
+        return this;
+      }
+
+      /** The 0-based starting index for retrieving conversions results. */
+      @com.google.api.client.util.Key
+      private java.lang.Long startRow;
+
+      /** The 0-based starting index for retrieving conversions results.
+       */
+      public java.lang.Long getStartRow() {
+        return startRow;
+      }
+
+      /** The 0-based starting index for retrieving conversions results. */
+      public GetByCustomerId setStartRow(java.lang.Long startRow) {
+        this.startRow = startRow;
+        return this;
+      }
+
+      /** Numeric ID of the ad group. */
+      @com.google.api.client.util.Key
+      private java.lang.Long adGroupId;
+
+      /** Numeric ID of the ad group.
+       */
+      public java.lang.Long getAdGroupId() {
+        return adGroupId;
+      }
+
+      /** Numeric ID of the ad group. */
+      public GetByCustomerId setAdGroupId(java.lang.Long adGroupId) {
+        this.adGroupId = adGroupId;
+        return this;
+      }
+
+      /** Numeric ID of the ad. */
+      @com.google.api.client.util.Key
+      private java.lang.Long adId;
+
+      /** Numeric ID of the ad.
+       */
+      public java.lang.Long getAdId() {
+        return adId;
+      }
+
+      /** Numeric ID of the ad. */
+      public GetByCustomerId setAdId(java.lang.Long adId) {
+        this.adId = adId;
+        return this;
+      }
+
+      /** Numeric ID of the advertiser. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** Numeric ID of the advertiser.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** Numeric ID of the advertiser. */
+      public GetByCustomerId setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** Numeric ID of the agency. */
+      @com.google.api.client.util.Key
+      private java.lang.Long agencyId;
+
+      /** Numeric ID of the agency.
+       */
+      public java.lang.Long getAgencyId() {
+        return agencyId;
+      }
+
+      /** Numeric ID of the agency. */
+      public GetByCustomerId setAgencyId(java.lang.Long agencyId) {
+        this.agencyId = agencyId;
+        return this;
+      }
+
+      /** Numeric ID of the campaign. */
+      @com.google.api.client.util.Key
+      private java.lang.Long campaignId;
+
+      /** Numeric ID of the campaign.
+       */
+      public java.lang.Long getCampaignId() {
+        return campaignId;
+      }
+
+      /** Numeric ID of the campaign. */
+      public GetByCustomerId setCampaignId(java.lang.Long campaignId) {
+        this.campaignId = campaignId;
+        return this;
+      }
+
+      /** Numeric ID of the criterion. */
+      @com.google.api.client.util.Key
+      private java.lang.Long criterionId;
+
+      /** Numeric ID of the criterion.
+       */
+      public java.lang.Long getCriterionId() {
+        return criterionId;
+      }
+
+      /** Numeric ID of the criterion. */
+      public GetByCustomerId setCriterionId(java.lang.Long criterionId) {
+        this.criterionId = criterionId;
+        return this;
+      }
+
+      /** Numeric ID of the engine account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long engineAccountId;
+
+      /** Numeric ID of the engine account.
+       */
+      public java.lang.Long getEngineAccountId() {
+        return engineAccountId;
+      }
+
+      /** Numeric ID of the engine account. */
+      public GetByCustomerId setEngineAccountId(java.lang.Long engineAccountId) {
+        this.engineAccountId = engineAccountId;
+        return this;
+      }
+
+      @Override
+      public GetByCustomerId set(String parameterName, Object value) {
+        return (GetByCustomerId) super.set(parameterName, value);
       }
     }
     /**

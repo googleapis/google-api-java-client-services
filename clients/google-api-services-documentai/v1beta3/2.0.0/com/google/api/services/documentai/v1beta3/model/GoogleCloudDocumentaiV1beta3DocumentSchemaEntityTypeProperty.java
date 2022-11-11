@@ -45,13 +45,6 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty 
   private java.lang.String occurrenceType;
 
   /**
-   * Any additional metadata about the property can be added here.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3PropertyMetadata propertyMetadata;
-
-  /**
    * A reference to the value type of the property. This type is subject to the same conventions as
    * the `Entity.base_types` field.
    * The value may be {@code null}.
@@ -90,23 +83,6 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty 
    */
   public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty setOccurrenceType(java.lang.String occurrenceType) {
     this.occurrenceType = occurrenceType;
-    return this;
-  }
-
-  /**
-   * Any additional metadata about the property can be added here.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata getPropertyMetadata() {
-    return propertyMetadata;
-  }
-
-  /**
-   * Any additional metadata about the property can be added here.
-   * @param propertyMetadata propertyMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty setPropertyMetadata(GoogleCloudDocumentaiV1beta3PropertyMetadata propertyMetadata) {
-    this.propertyMetadata = propertyMetadata;
     return this;
   }
 

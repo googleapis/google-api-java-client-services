@@ -1473,8 +1473,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
-     *        recommend you use your account's time zone for this.
+     * @param date Represents the date the usage occurred, based on PST time zone. The timestamp is in the [ISO 8601
+     *        format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
      * @return the request
      */
     public Get get(java.lang.String date) throws java.io.IOException {
@@ -1508,8 +1508,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
-     *        recommend you use your account's time zone for this.
+       * @param date Represents the date the usage occurred, based on PST time zone. The timestamp is in the [ISO 8601
+     *        format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
        * @since 1.13
        */
       protected Get(java.lang.String date) {
@@ -1588,22 +1588,22 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
-       * dd. We recommend you use your account's time zone for this.
+       * Represents the date the usage occurred, based on PST time zone. The timestamp is in the
+       * [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
        */
       @com.google.api.client.util.Key
       private java.lang.String date;
 
-      /** Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
-     recommend you use your account's time zone for this.
+      /** Represents the date the usage occurred, based on PST time zone. The timestamp is in the [ISO 8601
+     format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
        */
       public java.lang.String getDate() {
         return date;
       }
 
       /**
-       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
-       * dd. We recommend you use your account's time zone for this.
+       * Represents the date the usage occurred, based on PST time zone. The timestamp is in the
+       * [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
        */
       public Get setDate(java.lang.String date) {
         if (!getSuppressPatternChecks()) {
@@ -2204,8 +2204,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
      *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
      *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
-     * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
-     *        recommend you use your account's time zone for this.
+     * @param date Represents the date the usage occurred, based on GMT-7:00 (Pacific Standard Time). The timestamp is
+     *        in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
      * @return the request
      */
     public Get get(java.lang.String userKey, java.lang.String date) throws java.io.IOException {
@@ -2252,8 +2252,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
      *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
      *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
-       * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
-     *        recommend you use your account's time zone for this.
+       * @param date Represents the date the usage occurred, based on GMT-7:00 (Pacific Standard Time). The timestamp is
+     *        in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
        * @since 1.13
        */
       protected Get(java.lang.String userKey, java.lang.String date) {
@@ -2364,22 +2364,24 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
-       * dd. We recommend you use your account's time zone for this.
+       * Represents the date the usage occurred, based on GMT-7:00 (Pacific Standard Time). The
+       * timestamp is in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-
+       * dd`.
        */
       @com.google.api.client.util.Key
       private java.lang.String date;
 
-      /** Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
-     recommend you use your account's time zone for this.
+      /** Represents the date the usage occurred, based on GMT-7:00 (Pacific Standard Time). The timestamp is
+     in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
        */
       public java.lang.String getDate() {
         return date;
       }
 
       /**
-       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
-       * dd. We recommend you use your account's time zone for this.
+       * Represents the date the usage occurred, based on GMT-7:00 (Pacific Standard Time). The
+       * timestamp is in the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-
+       * dd`.
        */
       public Get setDate(java.lang.String date) {
         if (!getSuppressPatternChecks()) {

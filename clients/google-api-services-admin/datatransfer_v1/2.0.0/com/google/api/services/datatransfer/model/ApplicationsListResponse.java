@@ -30,7 +30,7 @@ package com.google.api.services.datatransfer.model;
 public final class ApplicationsListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of applications that support data transfer and are also installed for the customer.
+   * The list of applications that support data transfer and are also installed for the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,14 +57,14 @@ public final class ApplicationsListResponse extends com.google.api.client.json.G
   private java.lang.String kind;
 
   /**
-   * Continuation token which will be used to specify next page in list API.
+   * Token to specify the next page in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of applications that support data transfer and are also installed for the customer.
+   * The list of applications that support data transfer and are also installed for the customer.
    * @return value or {@code null} for none
    */
   public java.util.List<Application> getApplications() {
@@ -72,7 +72,7 @@ public final class ApplicationsListResponse extends com.google.api.client.json.G
   }
 
   /**
-   * List of applications that support data transfer and are also installed for the customer.
+   * The list of applications that support data transfer and are also installed for the customer.
    * @param applications applications or {@code null} for none
    */
   public ApplicationsListResponse setApplications(java.util.List<Application> applications) {
@@ -115,7 +115,7 @@ public final class ApplicationsListResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Continuation token which will be used to specify next page in list API.
+   * Token to specify the next page in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -123,7 +123,7 @@ public final class ApplicationsListResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Continuation token which will be used to specify next page in list API.
+   * Token to specify the next page in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ApplicationsListResponse setNextPageToken(java.lang.String nextPageToken) {

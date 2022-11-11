@@ -30,10 +30,9 @@ package com.google.api.services.datatransfer.model;
 public final class DataTransfer extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of per application data transfer resources. It contains data transfer details of the
-   * applications associated with this transfer resource. Note that this list is also used to
-   * specify the applications for which data transfer has to be done at the time of the transfer
-   * resource creation.
+   * The list of per-application data transfer resources. It contains details of the applications
+   * associated with this transfer resource, and also specifies the applications for which data
+   * transfer has to be done at the time of the transfer resource creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +52,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The transfer's ID (Read-only).
+   * Read-only. The transfer's ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,24 +80,23 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   private java.lang.String oldOwnerUserId;
 
   /**
-   * Overall transfer status (Read-only).
+   * Read-only. Overall transfer status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String overallTransferStatusCode;
 
   /**
-   * The time at which the data transfer was requested (Read-only).
+   * Read-only. The time at which the data transfer was requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime requestTime;
 
   /**
-   * List of per application data transfer resources. It contains data transfer details of the
-   * applications associated with this transfer resource. Note that this list is also used to
-   * specify the applications for which data transfer has to be done at the time of the transfer
-   * resource creation.
+   * The list of per-application data transfer resources. It contains details of the applications
+   * associated with this transfer resource, and also specifies the applications for which data
+   * transfer has to be done at the time of the transfer resource creation.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationDataTransfer> getApplicationDataTransfers() {
@@ -106,10 +104,9 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of per application data transfer resources. It contains data transfer details of the
-   * applications associated with this transfer resource. Note that this list is also used to
-   * specify the applications for which data transfer has to be done at the time of the transfer
-   * resource creation.
+   * The list of per-application data transfer resources. It contains details of the applications
+   * associated with this transfer resource, and also specifies the applications for which data
+   * transfer has to be done at the time of the transfer resource creation.
    * @param applicationDataTransfers applicationDataTransfers or {@code null} for none
    */
   public DataTransfer setApplicationDataTransfers(java.util.List<ApplicationDataTransfer> applicationDataTransfers) {
@@ -135,7 +132,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transfer's ID (Read-only).
+   * Read-only. The transfer's ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -143,7 +140,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transfer's ID (Read-only).
+   * Read-only. The transfer's ID.
    * @param id id or {@code null} for none
    */
   public DataTransfer setId(java.lang.String id) {
@@ -203,7 +200,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overall transfer status (Read-only).
+   * Read-only. Overall transfer status.
    * @return value or {@code null} for none
    */
   public java.lang.String getOverallTransferStatusCode() {
@@ -211,7 +208,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overall transfer status (Read-only).
+   * Read-only. Overall transfer status.
    * @param overallTransferStatusCode overallTransferStatusCode or {@code null} for none
    */
   public DataTransfer setOverallTransferStatusCode(java.lang.String overallTransferStatusCode) {
@@ -220,7 +217,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the data transfer was requested (Read-only).
+   * Read-only. The time at which the data transfer was requested.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getRequestTime() {
@@ -228,7 +225,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the data transfer was requested (Read-only).
+   * Read-only. The time at which the data transfer was requested.
    * @param requestTime requestTime or {@code null} for none
    */
   public DataTransfer setRequestTime(com.google.api.client.util.DateTime requestTime) {

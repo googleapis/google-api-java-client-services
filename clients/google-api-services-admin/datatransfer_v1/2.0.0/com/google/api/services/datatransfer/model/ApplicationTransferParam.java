@@ -30,21 +30,21 @@ package com.google.api.services.datatransfer.model;
 public final class ApplicationTransferParam extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the transfer parameter. eg: 'PRIVACY_LEVEL'
+   * The type of the transfer parameter, such as `PRIVACY_LEVEL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * The value of the corresponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
+   * The value of the transfer parameter, such as `PRIVATE` or `SHARED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> value;
 
   /**
-   * The type of the transfer parameter. eg: 'PRIVACY_LEVEL'
+   * The type of the transfer parameter, such as `PRIVACY_LEVEL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -52,7 +52,7 @@ public final class ApplicationTransferParam extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the transfer parameter. eg: 'PRIVACY_LEVEL'
+   * The type of the transfer parameter, such as `PRIVACY_LEVEL`.
    * @param key key or {@code null} for none
    */
   public ApplicationTransferParam setKey(java.lang.String key) {
@@ -61,7 +61,7 @@ public final class ApplicationTransferParam extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the corresponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
+   * The value of the transfer parameter, such as `PRIVATE` or `SHARED`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValue() {
@@ -69,7 +69,7 @@ public final class ApplicationTransferParam extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the corresponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
+   * The value of the transfer parameter, such as `PRIVATE` or `SHARED`.
    * @param value value or {@code null} for none
    */
   public ApplicationTransferParam setValue(java.util.List<java.lang.String> value) {

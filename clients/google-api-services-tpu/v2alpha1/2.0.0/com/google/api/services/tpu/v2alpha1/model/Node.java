@@ -147,6 +147,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The qualified name of the QueuedResource that requested this Node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queuedResource;
+
+  /**
    * Required. The runtime version running in the Node.
    * The value may be {@code null}.
    */
@@ -446,6 +453,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setNetworkEndpoints(java.util.List<NetworkEndpoint> networkEndpoints) {
     this.networkEndpoints = networkEndpoints;
+    return this;
+  }
+
+  /**
+   * Output only. The qualified name of the QueuedResource that requested this Node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueuedResource() {
+    return queuedResource;
+  }
+
+  /**
+   * Output only. The qualified name of the QueuedResource that requested this Node.
+   * @param queuedResource queuedResource or {@code null} for none
+   */
+  public Node setQueuedResource(java.lang.String queuedResource) {
+    this.queuedResource = queuedResource;
     return this;
   }
 

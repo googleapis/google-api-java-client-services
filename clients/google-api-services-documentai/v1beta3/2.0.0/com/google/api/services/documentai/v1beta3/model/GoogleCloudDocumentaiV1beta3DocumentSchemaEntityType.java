@@ -47,13 +47,6 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
   private java.lang.String displayName;
 
   /**
-   * Metadata for the entity type.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3EntityTypeMetadata entityTypeMetadata;
-
-  /**
    * If specified, lists all the possible values for this entity. This should not be more than a
    * handful of values. If the number of values is >10 or could change frequently use the
    * `EntityType.value_ontology` field and specify a list of all possible values in a value ontology
@@ -114,23 +107,6 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
    */
   public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Metadata for the entity type.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3EntityTypeMetadata getEntityTypeMetadata() {
-    return entityTypeMetadata;
-  }
-
-  /**
-   * Metadata for the entity type.
-   * @param entityTypeMetadata entityTypeMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType setEntityTypeMetadata(GoogleCloudDocumentaiV1beta3EntityTypeMetadata entityTypeMetadata) {
-    this.entityTypeMetadata = entityTypeMetadata;
     return this;
   }
 

@@ -3284,6 +3284,147 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
+           *
+           * Create a request for the method "processorVersions.evaluateProcessorVersion".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link EvaluateProcessorVersion#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param processorVersion Required. The resource name of the ProcessorVersion to evaluate. `projects/{project}/locations/{loca
+           *        tion}/processors/{processor}/processorVersions/{processorVersion}`
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest}
+           * @return the request
+           */
+          public EvaluateProcessorVersion evaluateProcessorVersion(java.lang.String processorVersion, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest content) throws java.io.IOException {
+            EvaluateProcessorVersion result = new EvaluateProcessorVersion(processorVersion, content);
+            initialize(result);
+            return result;
+          }
+
+          public class EvaluateProcessorVersion extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta3/{+processorVersion}:evaluateProcessorVersion";
+
+            private final java.util.regex.Pattern PROCESSOR_VERSION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+
+            /**
+             * Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
+             *
+             * Create a request for the method "processorVersions.evaluateProcessorVersion".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link EvaluateProcessorVersion#execute()} method to invoke the
+             * remote operation. <p> {@link EvaluateProcessorVersion#initialize(com.google.api.client.googleap
+             * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param processorVersion Required. The resource name of the ProcessorVersion to evaluate. `projects/{project}/locations/{loca
+           *        tion}/processors/{processor}/processorVersions/{processorVersion}`
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest}
+             * @since 1.13
+             */
+            protected EvaluateProcessorVersion(java.lang.String processorVersion, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+              this.processorVersion = com.google.api.client.util.Preconditions.checkNotNull(processorVersion, "Required parameter processorVersion must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PROCESSOR_VERSION_PATTERN.matcher(processorVersion).matches(),
+                    "Parameter processorVersion must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public EvaluateProcessorVersion set$Xgafv(java.lang.String $Xgafv) {
+              return (EvaluateProcessorVersion) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setAccessToken(java.lang.String accessToken) {
+              return (EvaluateProcessorVersion) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setAlt(java.lang.String alt) {
+              return (EvaluateProcessorVersion) super.setAlt(alt);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setCallback(java.lang.String callback) {
+              return (EvaluateProcessorVersion) super.setCallback(callback);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setFields(java.lang.String fields) {
+              return (EvaluateProcessorVersion) super.setFields(fields);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setKey(java.lang.String key) {
+              return (EvaluateProcessorVersion) super.setKey(key);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setOauthToken(java.lang.String oauthToken) {
+              return (EvaluateProcessorVersion) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (EvaluateProcessorVersion) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setQuotaUser(java.lang.String quotaUser) {
+              return (EvaluateProcessorVersion) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setUploadType(java.lang.String uploadType) {
+              return (EvaluateProcessorVersion) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public EvaluateProcessorVersion setUploadProtocol(java.lang.String uploadProtocol) {
+              return (EvaluateProcessorVersion) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the ProcessorVersion to evaluate. `projects/{project}/
+             * locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String processorVersion;
+
+            /** Required. The resource name of the ProcessorVersion to evaluate. `projects/{project}/locations/{loc
+           ation}/processors/{processor}/processorVersions/{processorVersion}`
+             */
+            public java.lang.String getProcessorVersion() {
+              return processorVersion;
+            }
+
+            /**
+             * Required. The resource name of the ProcessorVersion to evaluate. `projects/{project}/
+             * locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+             */
+            public EvaluateProcessorVersion setProcessorVersion(java.lang.String processorVersion) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PROCESSOR_VERSION_PATTERN.matcher(processorVersion).matches(),
+                    "Parameter processorVersion must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+              }
+              this.processorVersion = processorVersion;
+              return this;
+            }
+
+            @Override
+            public EvaluateProcessorVersion set(String parameterName, Object value) {
+              return (EvaluateProcessorVersion) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets a processor version detail.
            *
            * Create a request for the method "processorVersions.get".
@@ -3769,6 +3910,148 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Trains a new processor version. Operation metadata is returned as
+           * cloud_documentai_core.TrainProcessorVersionMetadata.
+           *
+           * Create a request for the method "processorVersions.train".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link Train#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent (project, location and processor) to create the new version for. Format:
+           *        `projects/{project}/locations/{location}/processors/{processor}`.
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest}
+           * @return the request
+           */
+          public Train train(java.lang.String parent, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest content) throws java.io.IOException {
+            Train result = new Train(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Train extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta3/{+parent}/processorVersions:train";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+$");
+
+            /**
+             * Trains a new processor version. Operation metadata is returned as
+             * cloud_documentai_core.TrainProcessorVersionMetadata.
+             *
+             * Create a request for the method "processorVersions.train".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link Train#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Train#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent (project, location and processor) to create the new version for. Format:
+           *        `projects/{project}/locations/{location}/processors/{processor}`.
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest}
+             * @since 1.13
+             */
+            protected Train(java.lang.String parent, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+$");
+              }
+            }
+
+            @Override
+            public Train set$Xgafv(java.lang.String $Xgafv) {
+              return (Train) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Train setAccessToken(java.lang.String accessToken) {
+              return (Train) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Train setAlt(java.lang.String alt) {
+              return (Train) super.setAlt(alt);
+            }
+
+            @Override
+            public Train setCallback(java.lang.String callback) {
+              return (Train) super.setCallback(callback);
+            }
+
+            @Override
+            public Train setFields(java.lang.String fields) {
+              return (Train) super.setFields(fields);
+            }
+
+            @Override
+            public Train setKey(java.lang.String key) {
+              return (Train) super.setKey(key);
+            }
+
+            @Override
+            public Train setOauthToken(java.lang.String oauthToken) {
+              return (Train) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Train setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Train) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Train setQuotaUser(java.lang.String quotaUser) {
+              return (Train) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Train setUploadType(java.lang.String uploadType) {
+              return (Train) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Train setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Train) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent (project, location and processor) to create the new version for.
+             * Format: `projects/{project}/locations/{location}/processors/{processor}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent (project, location and processor) to create the new version for. Format:
+           `projects/{project}/locations/{location}/processors/{processor}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent (project, location and processor) to create the new version for.
+             * Format: `projects/{project}/locations/{location}/processors/{processor}`.
+             */
+            public Train setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Train set(String parameterName, Object value) {
+              return (Train) super.set(parameterName, value);
+            }
+          }
+          /**
            * Undeploys the processor version.
            *
            * Create a request for the method "processorVersions.undeploy".
@@ -3900,6 +4183,372 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
           }
 
+          /**
+           * An accessor for creating requests from the Evaluations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Document documentai = new Document(...);}
+           *   {@code Document.Evaluations.List request = documentai.evaluations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Evaluations evaluations() {
+            return new Evaluations();
+          }
+
+          /**
+           * The "evaluations" collection of methods.
+           */
+          public class Evaluations {
+
+            /**
+             * Retrieves a specific evaluation.
+             *
+             * Create a request for the method "evaluations.get".
+             *
+             * This request holds the parameters needed by the documentai server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Evaluation to get. `projects/{project}/locations/{location}/proce
+             *        ssors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3Evaluation> {
+
+              private static final String REST_PATH = "v1beta3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+/evaluations/[^/]+$");
+
+              /**
+               * Retrieves a specific evaluation.
+               *
+               * Create a request for the method "evaluations.get".
+               *
+               * This request holds the parameters needed by the the documentai server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Evaluation to get. `projects/{project}/locations/{location}/proce
+             *        ssors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Document.this, "GET", REST_PATH, null, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3Evaluation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+/evaluations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Evaluation to get. `projects/{project}/locations
+               * /{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations
+               * /{evaluation}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Evaluation to get. `projects/{project}/locations/{location}/proc
+             essors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Evaluation to get. `projects/{project}/locations
+               * /{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations
+               * /{evaluation}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+/evaluations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves a set of evaluations for a given processor version.
+             *
+             * Create a request for the method "evaluations.list".
+             *
+             * This request holds the parameters needed by the documentai server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the ProcessorVersion to list evaluations for. `projects/{project}/loc
+             *        ations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListEvaluationsResponse> {
+
+              private static final String REST_PATH = "v1beta3/{+parent}/evaluations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+
+              /**
+               * Retrieves a set of evaluations for a given processor version.
+               *
+               * Create a request for the method "evaluations.list".
+               *
+               * This request holds the parameters needed by the the documentai server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the ProcessorVersion to list evaluations for. `projects/{project}/loc
+             *        ations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Document.this, "GET", REST_PATH, null, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListEvaluationsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the ProcessorVersion to list evaluations for. `proje
+               * cts/{project}/locations/{location}/processors/{processor}/processorVersions/{proces
+               * sorVersion}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the ProcessorVersion to list evaluations for. `projects/{project}/lo
+             cations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the ProcessorVersion to list evaluations for. `proje
+               * cts/{project}/locations/{location}/processors/{processor}/processorVersions/{proces
+               * sorVersion}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The standard list page size. If unspecified, at most 5 evaluations will be
+               * returned. The maximum value is 100; values above 100 will be coerced to 100.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The standard list page size. If unspecified, at most 5 evaluations will be returned. The maximum
+             value is 100; values above 100 will be coerced to 100.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * The standard list page size. If unspecified, at most 5 evaluations will be
+               * returned. The maximum value is 100; values above 100 will be coerced to 100.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token, received from a previous `ListEvaluations` call. Provide this to
+               * retrieve the subsequent page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token, received from a previous `ListEvaluations` call. Provide this to retrieve the
+             subsequent page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token, received from a previous `ListEvaluations` call. Provide this to
+               * retrieve the subsequent page.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
     }

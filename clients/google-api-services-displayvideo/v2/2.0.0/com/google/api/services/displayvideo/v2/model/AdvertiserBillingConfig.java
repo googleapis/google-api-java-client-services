@@ -30,6 +30,30 @@ package com.google.api.services.displayvideo.v2.model;
 @SuppressWarnings("javadoc")
 public final class AdvertiserBillingConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The ID of a billing profile assigned to the advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long billingProfileId;
+
+  /**
+   * The ID of a billing profile assigned to the advertiser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getBillingProfileId() {
+    return billingProfileId;
+  }
+
+  /**
+   * The ID of a billing profile assigned to the advertiser.
+   * @param billingProfileId billingProfileId or {@code null} for none
+   */
+  public AdvertiserBillingConfig setBillingProfileId(java.lang.Long billingProfileId) {
+    this.billingProfileId = billingProfileId;
+    return this;
+  }
+
   @Override
   public AdvertiserBillingConfig set(String fieldName, Object value) {
     return (AdvertiserBillingConfig) super.set(fieldName, value);

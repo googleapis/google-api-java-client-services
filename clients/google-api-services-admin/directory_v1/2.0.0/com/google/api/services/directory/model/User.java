@@ -33,7 +33,7 @@ package com.google.api.services.directory.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of the user's addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's addresses. The maximum allowed data size for this field is 10KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime deletionTime;
 
   /**
-   * The list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's email addresses. The maximum allowed data size for this field is 10KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,14 +118,14 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of external IDs for the user, such as an employee or network ID. The maximum allowed
-   * data size for this field is 2Kb.
+   * data size for this field is 2KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object externalIds;
 
   /**
-   * The user's gender. The maximum allowed data size for this field is 1Kb.
+   * The user's gender. The maximum allowed data size for this field is 1KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * The list of the user's Instant Messenger (IM) accounts. A user account can have multiple ims
    * properties. But, only one of these ims properties can be the primary IM contact. The maximum
-   * allowed data size for this field is 2Kb.
+   * allowed data size for this field is 2KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +220,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isMailboxSetup;
 
   /**
-   * The list of the user's keywords. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's keywords. The maximum allowed data size for this field is 1KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,7 +235,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The user's languages. The maximum allowed data size for this field is 1Kb.
+   * The user's languages. The maximum allowed data size for this field is 1KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +249,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime lastLoginTime;
 
   /**
-   * The user's locations. The maximum allowed data size for this field is 10Kb.
+   * The user's locations. The maximum allowed data size for this field is 10KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,7 +261,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * values support unicode/UTF-8 characters, and can contain spaces, letters (a-z), numbers (0-9),
    * dashes (-), forward slashes (/), and periods (.). For more information about character usage
    * rules, see the [administration help center](https://support.google.com/a/answer/9193374).
-   * Maximum allowed data size for this field is 1Kb.
+   * Maximum allowed data size for this field is 1KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,7 +292,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of organizations the user belongs to. The maximum allowed data size for this field is
-   * 10Kb.
+   * 10KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,7 +306,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String password;
 
   /**
-   * The list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's phone numbers. The maximum allowed data size for this field is 1KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -345,7 +345,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the user's relationships to other users. The maximum allowed data size for this
-   * field is 2Kb.
+   * field is 2KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,14 +389,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String thumbnailPhotoUrl;
 
   /**
-   * The user's websites. The maximum allowed data size for this field is 2Kb.
+   * The user's websites. The maximum allowed data size for this field is 2KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object websites;
 
   /**
-   * The list of the user's addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's addresses. The maximum allowed data size for this field is 10KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getAddresses() {
@@ -404,7 +404,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's addresses. The maximum allowed data size for this field is 10KB.
    * @param addresses addresses or {@code null} for none
    */
   public User setAddresses(java.lang.Object addresses) {
@@ -563,7 +563,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's email addresses. The maximum allowed data size for this field is 10KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getEmails() {
@@ -571,7 +571,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's email addresses. The maximum allowed data size for this field is 10Kb.
+   * The list of the user's email addresses. The maximum allowed data size for this field is 10KB.
    * @param emails emails or {@code null} for none
    */
   public User setEmails(java.lang.Object emails) {
@@ -598,7 +598,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of external IDs for the user, such as an employee or network ID. The maximum allowed
-   * data size for this field is 2Kb.
+   * data size for this field is 2KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getExternalIds() {
@@ -607,7 +607,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of external IDs for the user, such as an employee or network ID. The maximum allowed
-   * data size for this field is 2Kb.
+   * data size for this field is 2KB.
    * @param externalIds externalIds or {@code null} for none
    */
   public User setExternalIds(java.lang.Object externalIds) {
@@ -616,7 +616,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's gender. The maximum allowed data size for this field is 1Kb.
+   * The user's gender. The maximum allowed data size for this field is 1KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getGender() {
@@ -624,7 +624,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's gender. The maximum allowed data size for this field is 1Kb.
+   * The user's gender. The maximum allowed data size for this field is 1KB.
    * @param gender gender or {@code null} for none
    */
   public User setGender(java.lang.Object gender) {
@@ -679,7 +679,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * The list of the user's Instant Messenger (IM) accounts. A user account can have multiple ims
    * properties. But, only one of these ims properties can be the primary IM contact. The maximum
-   * allowed data size for this field is 2Kb.
+   * allowed data size for this field is 2KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getIms() {
@@ -689,7 +689,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * The list of the user's Instant Messenger (IM) accounts. A user account can have multiple ims
    * properties. But, only one of these ims properties can be the primary IM contact. The maximum
-   * allowed data size for this field is 2Kb.
+   * allowed data size for this field is 2KB.
    * @param ims ims or {@code null} for none
    */
   public User setIms(java.lang.Object ims) {
@@ -839,7 +839,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's keywords. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's keywords. The maximum allowed data size for this field is 1KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getKeywords() {
@@ -847,7 +847,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's keywords. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's keywords. The maximum allowed data size for this field is 1KB.
    * @param keywords keywords or {@code null} for none
    */
   public User setKeywords(java.lang.Object keywords) {
@@ -875,7 +875,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's languages. The maximum allowed data size for this field is 1Kb.
+   * The user's languages. The maximum allowed data size for this field is 1KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getLanguages() {
@@ -883,7 +883,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's languages. The maximum allowed data size for this field is 1Kb.
+   * The user's languages. The maximum allowed data size for this field is 1KB.
    * @param languages languages or {@code null} for none
    */
   public User setLanguages(java.lang.Object languages) {
@@ -909,7 +909,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's locations. The maximum allowed data size for this field is 10Kb.
+   * The user's locations. The maximum allowed data size for this field is 10KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getLocations() {
@@ -917,7 +917,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's locations. The maximum allowed data size for this field is 10Kb.
+   * The user's locations. The maximum allowed data size for this field is 10KB.
    * @param locations locations or {@code null} for none
    */
   public User setLocations(java.lang.Object locations) {
@@ -931,7 +931,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * values support unicode/UTF-8 characters, and can contain spaces, letters (a-z), numbers (0-9),
    * dashes (-), forward slashes (/), and periods (.). For more information about character usage
    * rules, see the [administration help center](https://support.google.com/a/answer/9193374).
-   * Maximum allowed data size for this field is 1Kb.
+   * Maximum allowed data size for this field is 1KB.
    * @return value or {@code null} for none
    */
   public UserName getName() {
@@ -944,7 +944,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * values support unicode/UTF-8 characters, and can contain spaces, letters (a-z), numbers (0-9),
    * dashes (-), forward slashes (/), and periods (.). For more information about character usage
    * rules, see the [administration help center](https://support.google.com/a/answer/9193374).
-   * Maximum allowed data size for this field is 1Kb.
+   * Maximum allowed data size for this field is 1KB.
    * @param name name or {@code null} for none
    */
   public User setName(UserName name) {
@@ -1009,7 +1009,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of organizations the user belongs to. The maximum allowed data size for this field is
-   * 10Kb.
+   * 10KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getOrganizations() {
@@ -1018,7 +1018,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of organizations the user belongs to. The maximum allowed data size for this field is
-   * 10Kb.
+   * 10KB.
    * @param organizations organizations or {@code null} for none
    */
   public User setOrganizations(java.lang.Object organizations) {
@@ -1044,7 +1044,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's phone numbers. The maximum allowed data size for this field is 1KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getPhones() {
@@ -1052,7 +1052,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of the user's phone numbers. The maximum allowed data size for this field is 1Kb.
+   * The list of the user's phone numbers. The maximum allowed data size for this field is 1KB.
    * @param phones phones or {@code null} for none
    */
   public User setPhones(java.lang.Object phones) {
@@ -1136,7 +1136,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the user's relationships to other users. The maximum allowed data size for this
-   * field is 2Kb.
+   * field is 2KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getRelations() {
@@ -1145,7 +1145,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the user's relationships to other users. The maximum allowed data size for this
-   * field is 2Kb.
+   * field is 2KB.
    * @param relations relations or {@code null} for none
    */
   public User setRelations(java.lang.Object relations) {
@@ -1243,7 +1243,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's websites. The maximum allowed data size for this field is 2Kb.
+   * The user's websites. The maximum allowed data size for this field is 2KB.
    * @return value or {@code null} for none
    */
   public java.lang.Object getWebsites() {
@@ -1251,7 +1251,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's websites. The maximum allowed data size for this field is 2Kb.
+   * The user's websites. The maximum allowed data size for this field is 2KB.
    * @param websites websites or {@code null} for none
    */
   public User setWebsites(java.lang.Object websites) {

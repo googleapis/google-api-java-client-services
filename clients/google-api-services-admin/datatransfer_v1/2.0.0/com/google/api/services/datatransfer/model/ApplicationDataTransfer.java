@@ -38,14 +38,16 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
 
   /**
    * The transfer parameters for the application. These parameters are used to select the data which
-   * will get transferred in context of this application.
+   * will get transferred in context of this application. For more information about the specific
+   * values available for each application, see the [Transfer parameters](/admin-sdk/data-
+   * transfer/v1/parameters) reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ApplicationTransferParam> applicationTransferParams;
 
   /**
-   * Current status of transfer for this application. (Read-only)
+   * Read-only. Current status of transfer for this application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +72,9 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
 
   /**
    * The transfer parameters for the application. These parameters are used to select the data which
-   * will get transferred in context of this application.
+   * will get transferred in context of this application. For more information about the specific
+   * values available for each application, see the [Transfer parameters](/admin-sdk/data-
+   * transfer/v1/parameters) reference.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationTransferParam> getApplicationTransferParams() {
@@ -79,7 +83,9 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
 
   /**
    * The transfer parameters for the application. These parameters are used to select the data which
-   * will get transferred in context of this application.
+   * will get transferred in context of this application. For more information about the specific
+   * values available for each application, see the [Transfer parameters](/admin-sdk/data-
+   * transfer/v1/parameters) reference.
    * @param applicationTransferParams applicationTransferParams or {@code null} for none
    */
   public ApplicationDataTransfer setApplicationTransferParams(java.util.List<ApplicationTransferParam> applicationTransferParams) {
@@ -88,7 +94,7 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
   }
 
   /**
-   * Current status of transfer for this application. (Read-only)
+   * Read-only. Current status of transfer for this application.
    * @return value or {@code null} for none
    */
   public java.lang.String getApplicationTransferStatus() {
@@ -96,7 +102,7 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
   }
 
   /**
-   * Current status of transfer for this application. (Read-only)
+   * Read-only. Current status of transfer for this application.
    * @param applicationTransferStatus applicationTransferStatus or {@code null} for none
    */
   public ApplicationDataTransfer setApplicationTransferStatus(java.lang.String applicationTransferStatus) {

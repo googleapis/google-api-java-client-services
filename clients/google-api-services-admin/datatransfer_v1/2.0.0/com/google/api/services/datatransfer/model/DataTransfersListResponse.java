@@ -57,7 +57,7 @@ public final class DataTransfersListResponse extends com.google.api.client.json.
   private java.lang.String kind;
 
   /**
-   * Continuation token which will be used to specify next page in list API.
+   * Token to specify the next page in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class DataTransfersListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Continuation token which will be used to specify next page in list API.
+   * Token to specify the next page in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -123,7 +123,7 @@ public final class DataTransfersListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Continuation token which will be used to specify next page in list API.
+   * Token to specify the next page in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public DataTransfersListResponse setNextPageToken(java.lang.String nextPageToken) {

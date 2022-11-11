@@ -17,7 +17,7 @@
 package com.google.api.services.datatransfer.model;
 
 /**
- * Applications resources represent applications installed on the domain that support transferring
+ * Application resources represent applications installed on the domain that support transferring
  * ownership of user data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -38,7 +38,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The application's ID.
+   * The application's ID. Retrievable by using the [`applications.list()`](/admin-sdk/data-
+   * transfer/reference/rest/v1/applications/list) method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,8 +60,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The list of all possible transfer parameters for this application. These parameters can be used
-   * to select the data of the user in this application to be transferred.
+   * The list of all possible transfer parameters for this application. These parameters select
+   * which categories of the user's data to transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The application's ID.
+   * The application's ID. Retrievable by using the [`applications.list()`](/admin-sdk/data-
+   * transfer/reference/rest/v1/applications/list) method.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -92,7 +94,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The application's ID.
+   * The application's ID. Retrievable by using the [`applications.list()`](/admin-sdk/data-
+   * transfer/reference/rest/v1/applications/list) method.
    * @param id id or {@code null} for none
    */
   public Application setId(java.lang.Long id) {
@@ -135,8 +138,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of all possible transfer parameters for this application. These parameters can be used
-   * to select the data of the user in this application to be transferred.
+   * The list of all possible transfer parameters for this application. These parameters select
+   * which categories of the user's data to transfer.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationTransferParam> getTransferParams() {
@@ -144,8 +147,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of all possible transfer parameters for this application. These parameters can be used
-   * to select the data of the user in this application to be transferred.
+   * The list of all possible transfer parameters for this application. These parameters select
+   * which categories of the user's data to transfer.
    * @param transferParams transferParams or {@code null} for none
    */
   public Application setTransferParams(java.util.List<ApplicationTransferParam> transferParams) {

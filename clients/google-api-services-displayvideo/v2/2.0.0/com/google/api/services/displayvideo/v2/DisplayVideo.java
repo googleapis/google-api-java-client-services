@@ -8689,7 +8689,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Bulk edits targeting options under multiple line items. The operation will delete the assigned
        * targeting options provided in BulkEditAssignedTargetingOptionsRequest.delete_requests and then
        * create the assigned targeting options provided in
-       * BulkEditAssignedTargetingOptionsRequest.create_requests .
+       * BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be made
+       * concurrently with the following requests updating the same line item: * BulkUpdate *
+       * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
        *
        * Create a request for the method "lineItems.bulkEditAssignedTargetingOptions".
        *
@@ -8718,7 +8720,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Bulk edits targeting options under multiple line items. The operation will delete the assigned
          * targeting options provided in BulkEditAssignedTargetingOptionsRequest.delete_requests and then
          * create the assigned targeting options provided in
-         * BulkEditAssignedTargetingOptionsRequest.create_requests .
+         * BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be
+         * made concurrently with the following requests updating the same line item: * BulkUpdate *
+         * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
          *
          * Create a request for the method "lineItems.bulkEditAssignedTargetingOptions".
          *
@@ -9091,7 +9095,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates multiple line items.
+       * Updates multiple line items. Requests to this endpoint cannot be made concurrently with the
+       * following requests updating the same line item: * BulkEditAssignedTargetingOptions *
+       * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
        *
        * Create a request for the method "lineItems.bulkUpdate".
        *
@@ -9113,7 +9119,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         private static final String REST_PATH = "v2/advertisers/{advertisersId}/lineItems:bulkUpdate";
 
         /**
-         * Updates multiple line items.
+         * Updates multiple line items. Requests to this endpoint cannot be made concurrently with the
+         * following requests updating the same line item: * BulkEditAssignedTargetingOptions *
+         * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
          *
          * Create a request for the method "lineItems.bulkUpdate".
          *
@@ -10194,8 +10202,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Updates an existing line item. Returns the updated line item if successful. Requests to this
        * endpoint cannot be made concurrently with the following requests updating the same line item: *
-       * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption
-       * * DeleteLineItemAssignedTargetingOption
+       * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption *
+       * DeleteLineItemAssignedTargetingOption
        *
        * Create a request for the method "lineItems.patch".
        *
@@ -10226,8 +10234,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Updates an existing line item. Returns the updated line item if successful. Requests to this
          * endpoint cannot be made concurrently with the following requests updating the same line item: *
-         * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem *
-         * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+         * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption
+         * * DeleteLineItemAssignedTargetingOption
          *
          * Create a request for the method "lineItems.patch".
          *
@@ -10400,8 +10408,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Assigns a targeting option to a line item. Returns the assigned targeting option if successful.
            * Requests to this endpoint cannot be made concurrently with the following requests updating the
-           * same line item: * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem *
-           * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+           * same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
+           * DeleteLineItemAssignedTargetingOption
            *
            * Create a request for the method "assignedTargetingOptions.create".
            *
@@ -10436,8 +10444,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /**
              * Assigns a targeting option to a line item. Returns the assigned targeting option if successful.
              * Requests to this endpoint cannot be made concurrently with the following requests updating the
-             * same line item: * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem *
-             * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+             * same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
+             * DeleteLineItemAssignedTargetingOption
              *
              * Create a request for the method "assignedTargetingOptions.create".
              *
@@ -10581,8 +10589,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made
            * concurrently with the following requests updating the same line item: *
-           * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption
-           * * DeleteLineItemAssignedTargetingOption
+           * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
+           * CreateLineItemAssignedTargetingOption
            *
            * Create a request for the method "assignedTargetingOptions.delete".
            *
@@ -10620,8 +10628,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /**
              * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made
              * concurrently with the following requests updating the same line item: *
-             * BulkEditLineItemAssignedTargetingOptions * UpdateLineItem *
-             * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+             * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
+             * CreateLineItemAssignedTargetingOption
              *
              * Create a request for the method "assignedTargetingOptions.delete".
              *

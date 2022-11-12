@@ -30,7 +30,8 @@ package com.google.api.services.dataproc.model;
 public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Approximate workload resource usage calculated after workload finishes.
+   * Output only. Approximate workload resource usage calculated after workload finishes (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,8 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String outputUri;
 
   /**
-   * Output only. Approximate workload resource usage calculated after workload finishes.
+   * Output only. Approximate workload resource usage calculated after workload finishes (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * @return value or {@code null} for none
    */
   public UsageMetrics getApproximateUsage() {
@@ -66,7 +68,8 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Approximate workload resource usage calculated after workload finishes.
+   * Output only. Approximate workload resource usage calculated after workload finishes (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * @param approximateUsage approximateUsage or {@code null} for none
    */
   public RuntimeInfo setApproximateUsage(UsageMetrics approximateUsage) {

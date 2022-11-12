@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Usage metrics represent total resources consumed by a workload.
+ * Usage metrics represent approximate total resources consumed by a workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -30,21 +30,24 @@ package com.google.api.services.dataproc.model;
 public final class UsageMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. DCU usage in milliDCU*seconds.
+   * Optional. DCU (Dataproc Compute Units) usage in (milliDCU x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long milliDcuSeconds;
 
   /**
-   * Optional. Shuffle storage usage in GB*Seconds
+   * Optional. Shuffle storage usage in (GB x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long shuffleStorageGbSeconds;
 
   /**
-   * Optional. DCU usage in milliDCU*seconds.
+   * Optional. DCU (Dataproc Compute Units) usage in (milliDCU x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMilliDcuSeconds() {
@@ -52,7 +55,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. DCU usage in milliDCU*seconds.
+   * Optional. DCU (Dataproc Compute Units) usage in (milliDCU x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * @param milliDcuSeconds milliDcuSeconds or {@code null} for none
    */
   public UsageMetrics setMilliDcuSeconds(java.lang.Long milliDcuSeconds) {
@@ -61,7 +65,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Shuffle storage usage in GB*Seconds
+   * Optional. Shuffle storage usage in (GB x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).
    * @return value or {@code null} for none
    */
   public java.lang.Long getShuffleStorageGbSeconds() {
@@ -69,7 +74,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Shuffle storage usage in GB*Seconds
+   * Optional. Shuffle storage usage in (GB x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).
    * @param shuffleStorageGbSeconds shuffleStorageGbSeconds or {@code null} for none
    */
   public UsageMetrics setShuffleStorageGbSeconds(java.lang.Long shuffleStorageGbSeconds) {

@@ -121,8 +121,9 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   /**
    * Retains data in interaction logging for the specified number of days. This does not apply to
    * Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than
-   * Dialogflow's default 365d TTL (time to live). Setting a value higher than that has no effect. A
-   * missing value or setting to 0 also means we use Dialogflow's default TTL.
+   * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
+   * and use default. Setting a value higher than that has no effect. A missing value or setting to
+   * 0 also means we use default TTL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,8 +333,9 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   /**
    * Retains data in interaction logging for the specified number of days. This does not apply to
    * Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than
-   * Dialogflow's default 365d TTL (time to live). Setting a value higher than that has no effect. A
-   * missing value or setting to 0 also means we use Dialogflow's default TTL.
+   * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
+   * and use default. Setting a value higher than that has no effect. A missing value or setting to
+   * 0 also means we use default TTL.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetentionWindowDays() {
@@ -343,8 +345,9 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   /**
    * Retains data in interaction logging for the specified number of days. This does not apply to
    * Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than
-   * Dialogflow's default 365d TTL (time to live). Setting a value higher than that has no effect. A
-   * missing value or setting to 0 also means we use Dialogflow's default TTL.
+   * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
+   * and use default. Setting a value higher than that has no effect. A missing value or setting to
+   * 0 also means we use default TTL.
    * @param retentionWindowDays retentionWindowDays or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettings setRetentionWindowDays(java.lang.Integer retentionWindowDays) {

@@ -54,7 +54,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseDialect;
 
   /**
-   * Output only. Output only. The encryption information for the backup. .
+   * Output only. The encryption information for the backup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output only. The encryption information for the backup. .
+   * Output only. The encryption information for the backup.
    * @return value or {@code null} for none
    */
   public EncryptionInfo getEncryptionInfo() {
@@ -203,7 +203,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output only. The encryption information for the backup. .
+   * Output only. The encryption information for the backup.
    * @param encryptionInfo encryptionInfo or {@code null} for none
    */
   public Backup setEncryptionInfo(EncryptionInfo encryptionInfo) {

@@ -45,6 +45,14 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   private java.lang.String automatedAgentReplyType;
 
   /**
+   * The unique identifier of the current Dialogflow CX conversation page. Format:
+   * `projects//locations//agents//flows//pages/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cxCurrentPage;
+
+  /**
    * The collection of current Dialogflow CX agent session parameters at the time of this response.
    * Deprecated: Use `parameters` instead.
    * The value may be {@code null}.
@@ -132,6 +140,25 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setAutomatedAgentReplyType(java.lang.String automatedAgentReplyType) {
     this.automatedAgentReplyType = automatedAgentReplyType;
+    return this;
+  }
+
+  /**
+   * The unique identifier of the current Dialogflow CX conversation page. Format:
+   * `projects//locations//agents//flows//pages/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCxCurrentPage() {
+    return cxCurrentPage;
+  }
+
+  /**
+   * The unique identifier of the current Dialogflow CX conversation page. Format:
+   * `projects//locations//agents//flows//pages/`.
+   * @param cxCurrentPage cxCurrentPage or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AutomatedAgentReply setCxCurrentPage(java.lang.String cxCurrentPage) {
+    this.cxCurrentPage = cxCurrentPage;
     return this;
   }
 

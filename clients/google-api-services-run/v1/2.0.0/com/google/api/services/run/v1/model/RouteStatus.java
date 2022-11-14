@@ -54,7 +54,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
    * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
    * Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation and the Ready condition's status is True or False. Note that providing a
-   * trafficTarget that only has a configurationName will result in a Route that does not increment
+   * TrafficTarget that has latest_revision=True will result in a Route that does not increment
    * either its metadata.generation or its observedGeneration, as new "latest ready" revisions from
    * the Configuration are processed without an update to the Route's spec.
    * The value may be {@code null}.
@@ -119,7 +119,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
    * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
    * Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation and the Ready condition's status is True or False. Note that providing a
-   * trafficTarget that only has a configurationName will result in a Route that does not increment
+   * TrafficTarget that has latest_revision=True will result in a Route that does not increment
    * either its metadata.generation or its observedGeneration, as new "latest ready" revisions from
    * the Configuration are processed without an update to the Route's spec.
    * @return value or {@code null} for none
@@ -132,7 +132,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
    * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
    * Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation and the Ready condition's status is True or False. Note that providing a
-   * trafficTarget that only has a configurationName will result in a Route that does not increment
+   * TrafficTarget that has latest_revision=True will result in a Route that does not increment
    * either its metadata.generation or its observedGeneration, as new "latest ready" revisions from
    * the Configuration are processed without an update to the Route's spec.
    * @param observedGeneration observedGeneration or {@code null} for none

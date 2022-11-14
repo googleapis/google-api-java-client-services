@@ -39,8 +39,8 @@ public final class GoogleCloudRunV2SecretKeySelector extends com.google.api.clie
   private java.lang.String secret;
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest version, an integer for
+   * a specific version, or a version alias.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class GoogleCloudRunV2SecretKeySelector extends com.google.api.clie
   }
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest version, an integer for
+   * a specific version, or a version alias.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -77,8 +77,8 @@ public final class GoogleCloudRunV2SecretKeySelector extends com.google.api.clie
   }
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest version, an integer for
+   * a specific version, or a version alias.
    * @param version version or {@code null} for none
    */
   public GoogleCloudRunV2SecretKeySelector setVersion(java.lang.String version) {

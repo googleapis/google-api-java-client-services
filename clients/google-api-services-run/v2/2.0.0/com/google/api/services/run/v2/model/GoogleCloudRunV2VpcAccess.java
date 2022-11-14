@@ -34,7 +34,8 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
 
   /**
    * VPC Access connector name. Format:
-   * projects/{project}/locations/{location}/connectors/{connector}
+   * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
+   * id or number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +50,8 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
 
   /**
    * VPC Access connector name. Format:
-   * projects/{project}/locations/{location}/connectors/{connector}
+   * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
+   * id or number.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnector() {
@@ -58,7 +60,8 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
 
   /**
    * VPC Access connector name. Format:
-   * projects/{project}/locations/{location}/connectors/{connector}
+   * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
+   * id or number.
    * @param connector connector or {@code null} for none
    */
   public GoogleCloudRunV2VpcAccess setConnector(java.lang.String connector) {

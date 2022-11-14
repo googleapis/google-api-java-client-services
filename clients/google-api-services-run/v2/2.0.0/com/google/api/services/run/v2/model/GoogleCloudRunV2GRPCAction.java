@@ -30,7 +30,8 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Port number of the gRPC service. Number must be in the range 1 to 65535.
+   * Port number of the gRPC service. Number must be in the range 1 to 65535. If not specified,
+   * defaults to 8080.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   private java.lang.String service;
 
   /**
-   * Port number of the gRPC service. Number must be in the range 1 to 65535.
+   * Port number of the gRPC service. Number must be in the range 1 to 65535. If not specified,
+   * defaults to 8080.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -54,7 +56,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   }
 
   /**
-   * Port number of the gRPC service. Number must be in the range 1 to 65535.
+   * Port number of the gRPC service. Number must be in the range 1 to 65535. If not specified,
+   * defaults to 8080.
    * @param port port or {@code null} for none
    */
   public GoogleCloudRunV2GRPCAction setPort(java.lang.Integer port) {

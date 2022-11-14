@@ -52,8 +52,8 @@ public final class GoogleCloudRunV2VersionToPath extends com.google.api.client.j
   private java.lang.String path;
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value, or an integer or
+   * a secret alias for a specific version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,8 +108,8 @@ public final class GoogleCloudRunV2VersionToPath extends com.google.api.client.j
   }
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value, or an integer or
+   * a secret alias for a specific version.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -117,8 +117,8 @@ public final class GoogleCloudRunV2VersionToPath extends com.google.api.client.j
   }
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value, or an integer or
+   * a secret alias for a specific version.
    * @param version version or {@code null} for none
    */
   public GoogleCloudRunV2VersionToPath setVersion(java.lang.String version) {

@@ -30,9 +30,9 @@ package com.google.api.services.run.v1.model;
 public final class SecretKeySelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an
-   * integer for a specific version. The key of the secret to select from. Must be a valid secret
-   * key.
+   * Required. A Cloud Secret Manager secret version. Must be 'latest' for the latest version, an
+   * integer for a specific version, or a version alias. The key of the secret to select from. Must
+   * be a valid secret key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +66,9 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   private java.lang.Boolean optional;
 
   /**
-   * Required. A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an
-   * integer for a specific version. The key of the secret to select from. Must be a valid secret
-   * key.
+   * Required. A Cloud Secret Manager secret version. Must be 'latest' for the latest version, an
+   * integer for a specific version, or a version alias. The key of the secret to select from. Must
+   * be a valid secret key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -76,9 +76,9 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an
-   * integer for a specific version. The key of the secret to select from. Must be a valid secret
-   * key.
+   * Required. A Cloud Secret Manager secret version. Must be 'latest' for the latest version, an
+   * integer for a specific version, or a version alias. The key of the secret to select from. Must
+   * be a valid secret key.
    * @param key key or {@code null} for none
    */
   public SecretKeySelector setKey(java.lang.String key) {

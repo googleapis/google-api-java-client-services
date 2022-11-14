@@ -37,10 +37,10 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   private java.lang.Boolean cpuIdle;
 
   /**
-   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and
-   * '4'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the
-   * 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/ap
-   * imachinery/pkg/api/resource/quantity.go
+   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4',
+   * and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of
+   * the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.i
+   * o/apimachinery/pkg/api/resource/quantity.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +64,10 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   }
 
   /**
-   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and
-   * '4'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the
-   * 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/ap
-   * imachinery/pkg/api/resource/quantity.go
+   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4',
+   * and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of
+   * the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.i
+   * o/apimachinery/pkg/api/resource/quantity.go
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLimits() {
@@ -75,10 +75,10 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   }
 
   /**
-   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and
-   * '4'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the
-   * 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/ap
-   * imachinery/pkg/api/resource/quantity.go
+   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4',
+   * and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of
+   * the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.i
+   * o/apimachinery/pkg/api/resource/quantity.go
    * @param limits limits or {@code null} for none
    */
   public GoogleCloudRunV2ResourceRequirements setLimits(java.util.Map<String, java.lang.String> limits) {

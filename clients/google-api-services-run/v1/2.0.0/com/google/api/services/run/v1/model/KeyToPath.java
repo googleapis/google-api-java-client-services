@@ -30,8 +30,8 @@ package com.google.api.services.run.v1.model;
 public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version. The key to project.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value, or an integer or
+   * a secret alias for a specific version. The key to project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,8 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version. The key to project.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value, or an integer or
+   * a secret alias for a specific version. The key to project.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -69,8 +69,8 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
-   * a specific version. The key to project.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value, or an integer or
+   * a secret alias for a specific version. The key to project.
    * @param key key or {@code null} for none
    */
   public KeyToPath setKey(java.lang.String key) {

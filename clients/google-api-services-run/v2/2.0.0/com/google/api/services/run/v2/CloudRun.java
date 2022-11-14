@@ -194,7 +194,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       public class Jobs {
 
         /**
-         * Create a Job.
+         * Creates a Job.
          *
          * Create a request for the method "jobs.create".
          *
@@ -202,7 +202,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project in which this Job should be created. Format:
-         *        projects/{project}/locations/{location}
+         *        projects/{project}/locations/{location}, where {project} can be project id or number.
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Job}
          * @return the request
          */
@@ -220,7 +220,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a Job.
+           * Creates a Job.
            *
            * Create a request for the method "jobs.create".
            *
@@ -230,7 +230,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project in which this Job should be created. Format:
-         *        projects/{project}/locations/{location}
+         *        projects/{project}/locations/{location}, where {project} can be project id or number.
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Job}
            * @since 1.13
            */
@@ -301,13 +301,13 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this Job should be created. Format:
-           * projects/{project}/locations/{location}
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project in which this Job should be created. Format:
-         projects/{project}/locations/{location}
+         projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           public java.lang.String getParent() {
             return parent;
@@ -315,7 +315,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this Job should be created. Format:
-           * projects/{project}/locations/{location}
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -385,7 +385,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+         * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         *        where {project} can be project id or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -411,7 +412,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+           * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         *        where {project} can be project id or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -481,12 +483,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Job. Format:
-           * projects/{project}/locations/{location}/jobs/{job}
+           * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+           * or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+          /** Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         where {project} can be project id or number.
            */
           public java.lang.String getName() {
             return name;
@@ -494,7 +498,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Job. Format:
-           * projects/{project}/locations/{location}/jobs/{job}
+           * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+           * or number.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -562,7 +567,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+         * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         *        where {project} can be project id or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -588,7 +594,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+           * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         *        where {project} can be project id or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -668,12 +675,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Job. Format:
-           * projects/{project}/locations/{location}/jobs/{job}
+           * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+           * or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+          /** Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         where {project} can be project id or number.
            */
           public java.lang.String getName() {
             return name;
@@ -681,7 +690,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Job. Format:
-           * projects/{project}/locations/{location}/jobs/{job}
+           * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+           * or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -699,7 +709,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Get the IAM Access Control policy currently in effect for the given Job. This result does not
+         * Gets the IAM Access Control policy currently in effect for the given Job. This result does not
          * include any inherited policies.
          *
          * Create a request for the method "jobs.getIamPolicy".
@@ -726,7 +736,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
 
           /**
-           * Get the IAM Access Control policy currently in effect for the given Job. This result does not
+           * Gets the IAM Access Control policy currently in effect for the given Job. This result does not
            * include any inherited policies.
            *
            * Create a request for the method "jobs.getIamPolicy".
@@ -897,7 +907,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List Jobs.
+         * Lists Jobs.
          *
          * Create a request for the method "jobs.list".
          *
@@ -905,7 +915,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project to list resources on. Format:
-         *        projects/{project}/locations/{location}
+         *        projects/{project}/locations/{location}, where {project} can be project id or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -922,7 +932,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List Jobs.
+           * Lists Jobs.
            *
            * Create a request for the method "jobs.list".
            *
@@ -932,7 +942,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project to list resources on. Format:
-         *        projects/{project}/locations/{location}
+         *        projects/{project}/locations/{location}, where {project} can be project id or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1012,13 +1022,13 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project to list resources on. Format:
-           * projects/{project}/locations/{location}
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project to list resources on. Format:
-         projects/{project}/locations/{location}
+         projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1026,7 +1036,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project to list resources on. Format:
-           * projects/{project}/locations/{location}
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1287,7 +1297,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Run#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+         * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         *        where {project} can be project id or number.
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2RunJobRequest}
          * @return the request
          */
@@ -1314,7 +1325,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+           * @param name Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         *        where {project} can be project id or number.
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2RunJobRequest}
            * @since 1.13
            */
@@ -1385,12 +1397,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Job. Format:
-           * projects/{project}/locations/{location}/jobs/{job}
+           * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+           * or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job}
+          /** Required. The full name of the Job. Format: projects/{project}/locations/{location}/jobs/{job},
+         where {project} can be project id or number.
            */
           public java.lang.String getName() {
             return name;
@@ -1398,7 +1412,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Job. Format:
-           * projects/{project}/locations/{location}/jobs/{job}
+           * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+           * or number.
            */
           public Run setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1729,7 +1744,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         public class Executions {
 
           /**
-           * Delete an Execution.
+           * Deletes an Execution.
            *
            * Create a request for the method "executions.delete".
            *
@@ -1737,7 +1752,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the Execution to delete. Format:
-           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project}
+           *        can be project id or number.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1754,7 +1770,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
 
             /**
-             * Delete an Execution.
+             * Deletes an Execution.
              *
              * Create a request for the method "executions.delete".
              *
@@ -1764,7 +1780,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the Execution to delete. Format:
-           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project}
+           *        can be project id or number.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -1834,13 +1851,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The name of the Execution to delete. Format:
-             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where
+             * {project} can be project id or number.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the Execution to delete. Format:
-           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project} can be
+           project id or number.
              */
             public java.lang.String getName() {
               return name;
@@ -1848,7 +1867,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The name of the Execution to delete. Format:
-             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where
+             * {project} can be project id or number.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1911,7 +1931,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Gets information about a Execution.
+           * Gets information about an Execution.
            *
            * Create a request for the method "executions.get".
            *
@@ -1919,7 +1939,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The full name of the Execution. Format:
-           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project}
+           *        can be project id or number.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -1936,7 +1957,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
 
             /**
-             * Gets information about a Execution.
+             * Gets information about an Execution.
              *
              * Create a request for the method "executions.get".
              *
@@ -1946,7 +1967,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The full name of the Execution. Format:
-           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project}
+           *        can be project id or number.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2026,13 +2048,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The full name of the Execution. Format:
-             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where
+             * {project} can be project id or number.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The full name of the Execution. Format:
-           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project} can be
+           project id or number.
              */
             public java.lang.String getName() {
               return name;
@@ -2040,7 +2064,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The full name of the Execution. Format:
-             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where
+             * {project} can be project id or number.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2058,7 +2083,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * List Executions from a Job.
+           * Lists Executions from a Job.
            *
            * Create a request for the method "executions.list".
            *
@@ -2067,7 +2092,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param parent Required. The Execution from which the Executions should be listed. To list all Executions across
            *        Jobs, use "-" instead of Job name. Format:
-           *        projects/{project}/locations/{location}/jobs/{job}
+           *        projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id or
+           *        number.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2084,7 +2110,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
 
             /**
-             * List Executions from a Job.
+             * Lists Executions from a Job.
              *
              * Create a request for the method "executions.list".
              *
@@ -2095,7 +2121,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              *
              * @param parent Required. The Execution from which the Executions should be listed. To list all Executions across
            *        Jobs, use "-" instead of Job name. Format:
-           *        projects/{project}/locations/{location}/jobs/{job}
+           *        projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id or
+           *        number.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2176,13 +2203,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The Execution from which the Executions should be listed. To list all
              * Executions across Jobs, use "-" instead of Job name. Format:
-             * projects/{project}/locations/{location}/jobs/{job}
+             * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+             * or number.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The Execution from which the Executions should be listed. To list all Executions across
-           Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job}
+           Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job},
+           where {project} can be project id or number.
              */
             public java.lang.String getParent() {
               return parent;
@@ -2191,7 +2220,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The Execution from which the Executions should be listed. To list all
              * Executions across Jobs, use "-" instead of Job name. Format:
-             * projects/{project}/locations/{location}/jobs/{job}
+             * projects/{project}/locations/{location}/jobs/{job}, where {project} can be project id
+             * or number.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2431,7 +2461,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * List Tasks from an Execution of a Job.
+             * Lists Tasks from an Execution of a Job.
              *
              * Create a request for the method "tasks.list".
              *
@@ -2458,7 +2488,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
 
               /**
-               * List Tasks from an Execution of a Job.
+               * Lists Tasks from an Execution of a Job.
                *
                * Create a request for the method "tasks.list".
                *
@@ -3193,7 +3223,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project in which this service should be created. Format:
-         *        projects/{project}/locations/{location} Only lowercase characters, digits, and hyphens.
+         *        projects/{project}/locations/{location}, where {project} can be project id or number. Only
+         *        lowercase characters, digits, and hyphens.
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
          * @return the request
          */
@@ -3221,7 +3252,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project in which this service should be created. Format:
-         *        projects/{project}/locations/{location} Only lowercase characters, digits, and hyphens.
+         *        projects/{project}/locations/{location}, where {project} can be project id or number. Only
+         *        lowercase characters, digits, and hyphens.
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
            * @since 1.13
            */
@@ -3292,13 +3324,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this service should be created. Format:
-           * projects/{project}/locations/{location} Only lowercase characters, digits, and hyphens.
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
+           * Only lowercase characters, digits, and hyphens.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project in which this service should be created. Format:
-         projects/{project}/locations/{location} Only lowercase characters, digits, and hyphens.
+         projects/{project}/locations/{location}, where {project} can be project id or number. Only
+         lowercase characters, digits, and hyphens.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3306,7 +3340,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this service should be created. Format:
-           * projects/{project}/locations/{location} Only lowercase characters, digits, and hyphens.
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
+           * Only lowercase characters, digits, and hyphens.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3319,14 +3354,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The unique identifier for the Service. It must begin with letter, and may not
+           * Required. The unique identifier for the Service. It must begin with letter, and cannot
            * end with hyphen; must contain fewer than 50 characters. The name of the service becomes
            * {parent}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String serviceId;
 
-          /** Required. The unique identifier for the Service. It must begin with letter, and may not end with
+          /** Required. The unique identifier for the Service. It must begin with letter, and cannot end with
          hyphen; must contain fewer than 50 characters. The name of the service becomes
          {parent}/services/{service_id}.
            */
@@ -3335,7 +3370,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The unique identifier for the Service. It must begin with letter, and may not
+           * Required. The unique identifier for the Service. It must begin with letter, and cannot
            * end with hyphen; must contain fewer than 50 characters. The name of the service becomes
            * {parent}/services/{service_id}.
            */
@@ -3382,7 +3417,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The full name of the Service. Format:
-         *        projects/{project}/locations/{location}/services/{service}
+         *        projects/{project}/locations/{location}/services/{service}, where {project} can be project
+         *        id or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3410,7 +3446,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The full name of the Service. Format:
-         *        projects/{project}/locations/{location}/services/{service}
+         *        projects/{project}/locations/{location}/services/{service}, where {project} can be project
+         *        id or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3480,13 +3517,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Service. Format:
-           * projects/{project}/locations/{location}/services/{service}
+           * projects/{project}/locations/{location}/services/{service}, where {project} can be
+           * project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The full name of the Service. Format:
-         projects/{project}/locations/{location}/services/{service}
+         projects/{project}/locations/{location}/services/{service}, where {project} can be project id or
+         number.
            */
           public java.lang.String getName() {
             return name;
@@ -3494,7 +3533,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Service. Format:
-           * projects/{project}/locations/{location}/services/{service}
+           * projects/{project}/locations/{location}/services/{service}, where {project} can be
+           * project id or number.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3563,7 +3603,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The full name of the Service. Format:
-         *        projects/{project}/locations/{location}/services/{service}
+         *        projects/{project}/locations/{location}/services/{service}, where {project} can be project
+         *        id or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3590,7 +3631,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The full name of the Service. Format:
-         *        projects/{project}/locations/{location}/services/{service}
+         *        projects/{project}/locations/{location}/services/{service}, where {project} can be project
+         *        id or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3670,13 +3712,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Service. Format:
-           * projects/{project}/locations/{location}/services/{service}
+           * projects/{project}/locations/{location}/services/{service}, where {project} can be
+           * project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The full name of the Service. Format:
-         projects/{project}/locations/{location}/services/{service}
+         projects/{project}/locations/{location}/services/{service}, where {project} can be project id or
+         number.
            */
           public java.lang.String getName() {
             return name;
@@ -3684,7 +3728,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the Service. Format:
-           * projects/{project}/locations/{location}/services/{service}
+           * projects/{project}/locations/{location}/services/{service}, where {project} can be
+           * project id or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3702,7 +3747,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Get the IAM Access Control policy currently in effect for the given Cloud Run Service. This
+         * Gets the IAM Access Control policy currently in effect for the given Cloud Run Service. This
          * result does not include any inherited policies.
          *
          * Create a request for the method "services.getIamPolicy".
@@ -3729,7 +3774,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Get the IAM Access Control policy currently in effect for the given Cloud Run Service. This
+           * Gets the IAM Access Control policy currently in effect for the given Cloud Run Service. This
            * result does not include any inherited policies.
            *
            * Create a request for the method "services.getIamPolicy".
@@ -3900,7 +3945,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List Services.
+         * Lists Services.
          *
          * Create a request for the method "services.list".
          *
@@ -3908,7 +3953,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project to list resources on. Location must be a valid GCP region, and
-         *        may not be the "-" wildcard. Format: projects/{project}/locations/{location}
+         *        cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where
+         *        {project} can be project id or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3925,7 +3971,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List Services.
+           * Lists Services.
            *
            * Create a request for the method "services.list".
            *
@@ -3935,7 +3981,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project to list resources on. Location must be a valid GCP region, and
-         *        may not be the "-" wildcard. Format: projects/{project}/locations/{location}
+         *        cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where
+         *        {project} can be project id or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4015,14 +4062,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project to list resources on. Location must be a valid GCP
-           * region, and may not be the "-" wildcard. Format:
-           * projects/{project}/locations/{location}
+           * region, and cannot be the "-" wildcard. Format:
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project to list resources on. Location must be a valid GCP region, and
-         may not be the "-" wildcard. Format: projects/{project}/locations/{location}
+         cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where {project} can be
+         project id or number.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4030,8 +4078,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project to list resources on. Location must be a valid GCP
-           * region, and may not be the "-" wildcard. Format:
-           * projects/{project}/locations/{location}
+           * region, and cannot be the "-" wildcard. Format:
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4608,7 +4656,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         public class Revisions {
 
           /**
-           * Delete a Revision.
+           * Deletes a Revision.
            *
            * Create a request for the method "revisions.delete".
            *
@@ -4633,7 +4681,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/revisions/[^/]+$");
 
             /**
-             * Delete a Revision.
+             * Deletes a Revision.
              *
              * Create a request for the method "revisions.delete".
              *
@@ -4937,7 +4985,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * List Revisions from a given Service, or from a given location.
+           * Lists Revisions from a given Service, or from a given location.
            *
            * Create a request for the method "revisions.list".
            *
@@ -4963,7 +5011,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
             /**
-             * List Revisions from a given Service, or from a given location.
+             * Lists Revisions from a given Service, or from a given location.
              *
              * Create a request for the method "revisions.list".
              *

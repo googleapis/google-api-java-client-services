@@ -30,21 +30,18 @@ package com.google.api.services.run.v1.model;
 public final class TrafficTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * ConfigurationName of a configuration to whose latest revision which will be sent this portion
-   * of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes,
-   * traffic will automatically migrate from the prior "latest ready" revision to the new one. This
-   * field is never set in Route's status, only its spec. This is mutually exclusive with
-   * RevisionName. Cloud Run currently supports a single ConfigurationName.
+   * [Deprecated] Not supported in Cloud Run. It must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String configurationName;
 
   /**
-   * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
-   * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty in spec. When shown
-   * in status, this indicates that the RevisionName was resolved from a spec's ConfigurationName.
+   * Uses the "status.latestReadyRevisionName" of the Service to determine the traffic target. When
+   * it changes, traffic will automatically migrate from the prior "latest ready" revision to the
+   * new one. This field must be false if RevisionName is set. This field defaults to true
+   * otherwise. If the field is set to true on Status, this means that the Revision was resolved
+   * from the Service's latest ready revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,15 +56,15 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.Integer percent;
 
   /**
-   * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName.
+   * Points this traffic target to a specific Revision. This field is mutually exclusive with
+   * latest_revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revisionName;
 
   /**
-   * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+   * Tag is used to expose a dedicated url for referencing this target exclusively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,11 +80,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String url;
 
   /**
-   * ConfigurationName of a configuration to whose latest revision which will be sent this portion
-   * of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes,
-   * traffic will automatically migrate from the prior "latest ready" revision to the new one. This
-   * field is never set in Route's status, only its spec. This is mutually exclusive with
-   * RevisionName. Cloud Run currently supports a single ConfigurationName.
+   * [Deprecated] Not supported in Cloud Run. It must be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigurationName() {
@@ -95,11 +88,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * ConfigurationName of a configuration to whose latest revision which will be sent this portion
-   * of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes,
-   * traffic will automatically migrate from the prior "latest ready" revision to the new one. This
-   * field is never set in Route's status, only its spec. This is mutually exclusive with
-   * RevisionName. Cloud Run currently supports a single ConfigurationName.
+   * [Deprecated] Not supported in Cloud Run. It must be empty.
    * @param configurationName configurationName or {@code null} for none
    */
   public TrafficTarget setConfigurationName(java.lang.String configurationName) {
@@ -108,10 +97,11 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
-   * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty in spec. When shown
-   * in status, this indicates that the RevisionName was resolved from a spec's ConfigurationName.
+   * Uses the "status.latestReadyRevisionName" of the Service to determine the traffic target. When
+   * it changes, traffic will automatically migrate from the prior "latest ready" revision to the
+   * new one. This field must be false if RevisionName is set. This field defaults to true
+   * otherwise. If the field is set to true on Status, this means that the Revision was resolved
+   * from the Service's latest ready revision.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLatestRevision() {
@@ -119,10 +109,11 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
-   * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty in spec. When shown
-   * in status, this indicates that the RevisionName was resolved from a spec's ConfigurationName.
+   * Uses the "status.latestReadyRevisionName" of the Service to determine the traffic target. When
+   * it changes, traffic will automatically migrate from the prior "latest ready" revision to the
+   * new one. This field must be false if RevisionName is set. This field defaults to true
+   * otherwise. If the field is set to true on Status, this means that the Revision was resolved
+   * from the Service's latest ready revision.
    * @param latestRevision latestRevision or {@code null} for none
    */
   public TrafficTarget setLatestRevision(java.lang.Boolean latestRevision) {
@@ -150,8 +141,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName.
+   * Points this traffic target to a specific Revision. This field is mutually exclusive with
+   * latest_revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionName() {
@@ -159,8 +150,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName.
+   * Points this traffic target to a specific Revision. This field is mutually exclusive with
+   * latest_revision.
    * @param revisionName revisionName or {@code null} for none
    */
   public TrafficTarget setRevisionName(java.lang.String revisionName) {
@@ -169,7 +160,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+   * Tag is used to expose a dedicated url for referencing this target exclusively.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -177,7 +168,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+   * Tag is used to expose a dedicated url for referencing this target exclusively.
    * @param tag tag or {@code null} for none
    */
   public TrafficTarget setTag(java.lang.String tag) {

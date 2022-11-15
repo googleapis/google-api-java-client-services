@@ -8530,7 +8530,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Freelistingsprogram {
 
     /**
-     * Retrieves the status and review eligibility for the free listing program.
+     * Retrieves the status and review eligibility for the free listing program. Returns errors and
+     * warnings if they require action to resolve, will become disapprovals, or impact impressions. Use
+     * `accountstatuses` to view all issues for an account.
      *
      * Create a request for the method "freelistingsprogram.get".
      *
@@ -8551,7 +8553,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/freelistingsprogram";
 
       /**
-       * Retrieves the status and review eligibility for the free listing program.
+       * Retrieves the status and review eligibility for the free listing program. Returns errors and
+       * warnings if they require action to resolve, will become disapprovals, or impact impressions.
+       * Use `accountstatuses` to view all issues for an account.
        *
        * Create a request for the method "freelistingsprogram.get".
        *
@@ -25670,7 +25674,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Shoppingadsprogram {
 
     /**
-     * Retrieves the status and review eligibility for the Shopping Ads program.
+     * Retrieves the status and review eligibility for the Shopping Ads program. Returns errors and
+     * warnings if they require action to resolve, will become disapprovals, or impact impressions. Use
+     * `accountstatuses` to view all issues for an account.
      *
      * Create a request for the method "shoppingadsprogram.get".
      *
@@ -25691,7 +25697,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/shoppingadsprogram";
 
       /**
-       * Retrieves the status and review eligibility for the Shopping Ads program.
+       * Retrieves the status and review eligibility for the Shopping Ads program. Returns errors and
+       * warnings if they require action to resolve, will become disapprovals, or impact impressions.
+       * Use `accountstatuses` to view all issues for an account.
        *
        * Create a request for the method "shoppingadsprogram.get".
        *

@@ -31,12 +31,52 @@ package com.google.api.services.content.model;
 public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
+   * Best Sellers fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `BestSellersProductClusterView` or `BestSellersBrandView`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BestSellers bestSellers;
+
+  /**
+   * Brand fields requested by the merchant in the query. Field values are only set if the merchant
+   * queries `BestSellersBrandView`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Brand brand;
+
+  /**
    * Metrics requested by the merchant in the query. Metric values are only set for metrics
    * requested explicitly in the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Metrics metrics;
+
+  /**
+   * Price Competitiveness fields requested by the merchant in the query. Field values are only set
+   * if the merchant queries `PriceCompetitivenessProductView`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PriceCompetitiveness priceCompetitiveness;
+
+  /**
+   * Price Insights fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `PriceInsightsProductView`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PriceInsights priceInsights;
+
+  /**
+   * Product cluster fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `BestSellersProductClusterView`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductCluster productCluster;
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
@@ -56,6 +96,44 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   private Segments segments;
 
   /**
+   * Best Sellers fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `BestSellersProductClusterView` or `BestSellersBrandView`.
+   * @return value or {@code null} for none
+   */
+  public BestSellers getBestSellers() {
+    return bestSellers;
+  }
+
+  /**
+   * Best Sellers fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `BestSellersProductClusterView` or `BestSellersBrandView`.
+   * @param bestSellers bestSellers or {@code null} for none
+   */
+  public ReportRow setBestSellers(BestSellers bestSellers) {
+    this.bestSellers = bestSellers;
+    return this;
+  }
+
+  /**
+   * Brand fields requested by the merchant in the query. Field values are only set if the merchant
+   * queries `BestSellersBrandView`.
+   * @return value or {@code null} for none
+   */
+  public Brand getBrand() {
+    return brand;
+  }
+
+  /**
+   * Brand fields requested by the merchant in the query. Field values are only set if the merchant
+   * queries `BestSellersBrandView`.
+   * @param brand brand or {@code null} for none
+   */
+  public ReportRow setBrand(Brand brand) {
+    this.brand = brand;
+    return this;
+  }
+
+  /**
    * Metrics requested by the merchant in the query. Metric values are only set for metrics
    * requested explicitly in the query.
    * @return value or {@code null} for none
@@ -71,6 +149,63 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
    */
   public ReportRow setMetrics(Metrics metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * Price Competitiveness fields requested by the merchant in the query. Field values are only set
+   * if the merchant queries `PriceCompetitivenessProductView`.
+   * @return value or {@code null} for none
+   */
+  public PriceCompetitiveness getPriceCompetitiveness() {
+    return priceCompetitiveness;
+  }
+
+  /**
+   * Price Competitiveness fields requested by the merchant in the query. Field values are only set
+   * if the merchant queries `PriceCompetitivenessProductView`.
+   * @param priceCompetitiveness priceCompetitiveness or {@code null} for none
+   */
+  public ReportRow setPriceCompetitiveness(PriceCompetitiveness priceCompetitiveness) {
+    this.priceCompetitiveness = priceCompetitiveness;
+    return this;
+  }
+
+  /**
+   * Price Insights fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `PriceInsightsProductView`.
+   * @return value or {@code null} for none
+   */
+  public PriceInsights getPriceInsights() {
+    return priceInsights;
+  }
+
+  /**
+   * Price Insights fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `PriceInsightsProductView`.
+   * @param priceInsights priceInsights or {@code null} for none
+   */
+  public ReportRow setPriceInsights(PriceInsights priceInsights) {
+    this.priceInsights = priceInsights;
+    return this;
+  }
+
+  /**
+   * Product cluster fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `BestSellersProductClusterView`.
+   * @return value or {@code null} for none
+   */
+  public ProductCluster getProductCluster() {
+    return productCluster;
+  }
+
+  /**
+   * Product cluster fields requested by the merchant in the query. Field values are only set if the
+   * merchant queries `BestSellersProductClusterView`.
+   * @param productCluster productCluster or {@code null} for none
+   */
+  public ReportRow setProductCluster(ProductCluster productCluster) {
+    this.productCluster = productCluster;
     return this;
   }
 

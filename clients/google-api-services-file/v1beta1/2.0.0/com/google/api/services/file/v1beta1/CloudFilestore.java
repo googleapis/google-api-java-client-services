@@ -559,8 +559,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The backup's project and location, in the format
-         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP
-         *        regions, for example **us-west1**.
+         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to Google
+         *        Cloud regions, for example **us-west1**.
          * @param content the {@link com.google.api.services.file.v1beta1.model.Backup}
          * @return the request
          */
@@ -588,8 +588,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The backup's project and location, in the format
-         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP
-         *        regions, for example **us-west1**.
+         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to Google
+         *        Cloud regions, for example **us-west1**.
            * @param content the {@link com.google.api.services.file.v1beta1.model.Backup}
            * @since 1.13
            */
@@ -660,15 +660,15 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Required. The backup's project and location, in the format
-           * `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP
-           * regions, for example **us-west1**.
+           * `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to
+           * Google Cloud regions, for example **us-west1**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The backup's project and location, in the format
-         `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP regions,
-         for example **us-west1**.
+         `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to Google Cloud
+         regions, for example **us-west1**.
            */
           public java.lang.String getParent() {
             return parent;
@@ -676,8 +676,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Required. The backup's project and location, in the format
-           * `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP
-           * regions, for example **us-west1**.
+           * `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to
+           * Google Cloud regions, for example **us-west1**.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1013,9 +1013,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location for which to retrieve backup information, in the format
-         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP
-         *        regions, for example **us-west1**. To retrieve backup information for all locations, use
-         *        "-" for the `{location}` value.
+         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to Google
+         *        Cloud regions, for example **us-west1**. To retrieve backup information for all locations,
+         *        use "-" for the `{location}` value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1042,9 +1042,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location for which to retrieve backup information, in the format
-         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP
-         *        regions, for example **us-west1**. To retrieve backup information for all locations, use
-         *        "-" for the `{location}` value.
+         *        `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to Google
+         *        Cloud regions, for example **us-west1**. To retrieve backup information for all locations,
+         *        use "-" for the `{location}` value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1125,16 +1125,16 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Required. The project and location for which to retrieve backup information, in the
            * format `projects/{project_id}/locations/{location}`. In Filestore, backup locations map
-           * to GCP regions, for example **us-west1**. To retrieve backup information for all
-           * locations, use "-" for the `{location}` value.
+           * to Google Cloud regions, for example **us-west1**. To retrieve backup information for
+           * all locations, use "-" for the `{location}` value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location for which to retrieve backup information, in the format
-         `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to GCP regions,
-         for example **us-west1**. To retrieve backup information for all locations, use "-" for the
-         `{location}` value.
+         `projects/{project_id}/locations/{location}`. In Filestore, backup locations map to Google Cloud
+         regions, for example **us-west1**. To retrieve backup information for all locations, use "-" for
+         the `{location}` value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1143,8 +1143,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Required. The project and location for which to retrieve backup information, in the
            * format `projects/{project_id}/locations/{location}`. In Filestore, backup locations map
-           * to GCP regions, for example **us-west1**. To retrieve backup information for all
-           * locations, use "-" for the `{location}` value.
+           * to Google Cloud regions, for example **us-west1**. To retrieve backup information for
+           * all locations, use "-" for the `{location}` value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1423,8 +1423,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The instance's project and location, in the format
-         *        `projects/{project_id}/locations/{location}`. In Filestore, locations map to GCP zones,
-         *        for example **us-west1-b**.
+         *        `projects/{project_id}/locations/{location}`. In Filestore, locations map to Google Cloud
+         *        zones, for example **us-west1-b**.
          * @param content the {@link com.google.api.services.file.v1beta1.model.Instance}
          * @return the request
          */
@@ -1454,8 +1454,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The instance's project and location, in the format
-         *        `projects/{project_id}/locations/{location}`. In Filestore, locations map to GCP zones,
-         *        for example **us-west1-b**.
+         *        `projects/{project_id}/locations/{location}`. In Filestore, locations map to Google Cloud
+         *        zones, for example **us-west1-b**.
            * @param content the {@link com.google.api.services.file.v1beta1.model.Instance}
            * @since 1.13
            */
@@ -1526,15 +1526,15 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Required. The instance's project and location, in the format
-           * `projects/{project_id}/locations/{location}`. In Filestore, locations map to GCP zones,
-           * for example **us-west1-b**.
+           * `projects/{project_id}/locations/{location}`. In Filestore, locations map to Google
+           * Cloud zones, for example **us-west1-b**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The instance's project and location, in the format
-         `projects/{project_id}/locations/{location}`. In Filestore, locations map to GCP zones, for example
-         **us-west1-b**.
+         `projects/{project_id}/locations/{location}`. In Filestore, locations map to Google Cloud zones,
+         for example **us-west1-b**.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1542,8 +1542,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Required. The instance's project and location, in the format
-           * `projects/{project_id}/locations/{location}`. In Filestore, locations map to GCP zones,
-           * for example **us-west1-b**.
+           * `projects/{project_id}/locations/{location}`. In Filestore, locations map to Google
+           * Cloud zones, for example **us-west1-b**.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1902,9 +1902,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location for which to retrieve instance information, in the format
-         *        `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map to GCP
-         *        zones, for example **us-west1-b**. To retrieve instance information for all locations, use
-         *        "-" for the `{location}` value.
+         *        `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map to Google
+         *        Cloud zones, for example **us-west1-b**. To retrieve instance information for all
+         *        locations, use "-" for the `{location}` value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1931,9 +1931,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location for which to retrieve instance information, in the format
-         *        `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map to GCP
-         *        zones, for example **us-west1-b**. To retrieve instance information for all locations, use
-         *        "-" for the `{location}` value.
+         *        `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map to Google
+         *        Cloud zones, for example **us-west1-b**. To retrieve instance information for all
+         *        locations, use "-" for the `{location}` value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2014,16 +2014,16 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Required. The project and location for which to retrieve instance information, in the
            * format `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map
-           * to GCP zones, for example **us-west1-b**. To retrieve instance information for all
-           * locations, use "-" for the `{location}` value.
+           * to Google Cloud zones, for example **us-west1-b**. To retrieve instance information for
+           * all locations, use "-" for the `{location}` value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location for which to retrieve instance information, in the format
-         `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map to GCP zones, for
-         example **us-west1-b**. To retrieve instance information for all locations, use "-" for the
-         `{location}` value.
+         `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map to Google Cloud
+         zones, for example **us-west1-b**. To retrieve instance information for all locations, use "-" for
+         the `{location}` value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2032,8 +2032,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Required. The project and location for which to retrieve instance information, in the
            * format `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations map
-           * to GCP zones, for example **us-west1-b**. To retrieve instance information for all
-           * locations, use "-" for the `{location}` value.
+           * to Google Cloud zones, for example **us-west1-b**. To retrieve instance information for
+           * all locations, use "-" for the `{location}` value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

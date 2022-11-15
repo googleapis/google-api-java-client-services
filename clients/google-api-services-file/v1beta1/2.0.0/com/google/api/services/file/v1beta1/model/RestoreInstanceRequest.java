@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * RestoreInstanceRequest restores an existing instance's file share from a snapshot or backup.
+ * RestoreInstanceRequest restores an existing instance's file share from a backup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.file.v1beta1.model;
 public final class RestoreInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the file share in the Filestore instance that the snapshot is being restored
+   * Required. Name of the file share in the Filestore instance that the backup is being restored
    * to.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
   private java.lang.String sourceSnapshot;
 
   /**
-   * Required. Name of the file share in the Filestore instance that the snapshot is being restored
+   * Required. Name of the file share in the Filestore instance that the backup is being restored
    * to.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Name of the file share in the Filestore instance that the snapshot is being restored
+   * Required. Name of the file share in the Filestore instance that the backup is being restored
    * to.
    * @param fileShare fileShare or {@code null} for none
    */

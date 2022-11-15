@@ -95,6 +95,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private EphemeralStorageConfig ephemeralStorageConfig;
 
   /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FastSocket fastSocket;
+
+  /**
    * GCFS (Google Container File System) configs.
    * The value may be {@code null}.
    */
@@ -428,6 +435,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setEphemeralStorageConfig(EphemeralStorageConfig ephemeralStorageConfig) {
     this.ephemeralStorageConfig = ephemeralStorageConfig;
+    return this;
+  }
+
+  /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * @return value or {@code null} for none
+   */
+  public FastSocket getFastSocket() {
+    return fastSocket;
+  }
+
+  /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * @param fastSocket fastSocket or {@code null} for none
+   */
+  public NodeConfig setFastSocket(FastSocket fastSocket) {
+    this.fastSocket = fastSocket;
     return this;
   }
 

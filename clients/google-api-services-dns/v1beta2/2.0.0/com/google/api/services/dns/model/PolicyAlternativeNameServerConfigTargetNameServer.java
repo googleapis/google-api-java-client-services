@@ -47,7 +47,8 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   private java.lang.String ipv4Address;
 
   /**
-   * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+   * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated. Public
+   * preview as of November 2022.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +101,8 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   }
 
   /**
-   * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+   * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated. Public
+   * preview as of November 2022.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6Address() {
@@ -108,7 +110,8 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   }
 
   /**
-   * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+   * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated. Public
+   * preview as of November 2022.
    * @param ipv6Address ipv6Address or {@code null} for none
    */
   public PolicyAlternativeNameServerConfigTargetNameServer setIpv6Address(java.lang.String ipv6Address) {

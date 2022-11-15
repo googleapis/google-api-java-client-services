@@ -94,6 +94,13 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   private java.lang.String recommendationsFilteringOption;
 
   /**
+   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String retrievableOption;
+
+  /**
    * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
    * SEARCHABLE_ENABLED, attribute values are searchable by text queries in SearchService.Search. If
    * SEARCHABLE_ENABLED but attribute type is numerical, attribute values will not be searchable by
@@ -253,6 +260,23 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setRecommendationsFilteringOption(java.lang.String recommendationsFilteringOption) {
     this.recommendationsFilteringOption = recommendationsFilteringOption;
+    return this;
+  }
+
+  /**
+   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRetrievableOption() {
+    return retrievableOption;
+  }
+
+  /**
+   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * @param retrievableOption retrievableOption or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCatalogAttribute setRetrievableOption(java.lang.String retrievableOption) {
+    this.retrievableOption = retrievableOption;
     return this;
   }
 

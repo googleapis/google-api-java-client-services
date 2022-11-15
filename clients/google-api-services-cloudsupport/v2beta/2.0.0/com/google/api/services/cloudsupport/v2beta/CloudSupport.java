@@ -154,7 +154,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   public class Attachments {
 
     /**
-     * Create a file attachment on a case or Cloud resource.
+     * Create a file attachment on a case or Cloud resource. The attachment object must have the
+     * following fields set: filename.
      *
      * Create a request for the method "attachments.create".
      *
@@ -179,7 +180,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Create a file attachment on a case or Cloud resource.
+       * Create a file attachment on a case or Cloud resource. The attachment object must have the
+       * following fields set: filename.
        *
        * Create a request for the method "attachments.create".
        *
@@ -634,7 +636,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Create a new case and associate it with the given Cloud resource.
+     * Create a new case and associate it with the given Cloud resource. The case object must have the
+     * following fields set: display_name, description, classification, and severity.
      *
      * Create a request for the method "cases.create".
      *
@@ -659,7 +662,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Create a new case and associate it with the given Cloud resource.
+       * Create a new case and associate it with the given Cloud resource. The case object must have the
+       * following fields set: display_name, description, classification, and severity.
        *
        * Create a request for the method "cases.create".
        *
@@ -1876,7 +1880,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     public class Comments {
 
       /**
-       * Add a new comment to the specified Case.
+       * Add a new comment to the specified Case. The comment object must have the following fields set:
+       * body.
        *
        * Create a request for the method "comments.create".
        *
@@ -1901,7 +1906,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
         /**
-         * Add a new comment to the specified Case.
+         * Add a new comment to the specified Case. The comment object must have the following fields set:
+         * body.
          *
          * Create a request for the method "comments.create".
          *
@@ -2370,7 +2376,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Create a file attachment on a case or Cloud resource.
+     * Create a file attachment on a case or Cloud resource. The attachment object must have the
+     * following fields set: filename.
      *
      * Create a request for the method "media.upload".
      *
@@ -2388,7 +2395,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     }
 
     /**
-     * Create a file attachment on a case or Cloud resource.
+     * Create a file attachment on a case or Cloud resource. The attachment object must have the
+     * following fields set: filename.
      *
      * Create a request for the method "media.upload".
      *
@@ -2419,7 +2427,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Create a file attachment on a case or Cloud resource.
+       * Create a file attachment on a case or Cloud resource. The attachment object must have the
+       * following fields set: filename.
        *
        * Create a request for the method "media.upload".
        *
@@ -2444,7 +2453,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Create a file attachment on a case or Cloud resource.
+       * Create a file attachment on a case or Cloud resource. The attachment object must have the
+       * following fields set: filename.
        *
        * Create a request for the method "media.upload".
        *

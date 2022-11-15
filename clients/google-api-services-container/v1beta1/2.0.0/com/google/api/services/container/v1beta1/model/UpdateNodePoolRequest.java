@@ -46,6 +46,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FastSocket fastSocket;
+
+  /**
    * GCFS config.
    * The value may be {@code null}.
    */
@@ -233,6 +240,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * @return value or {@code null} for none
+   */
+  public FastSocket getFastSocket() {
+    return fastSocket;
+  }
+
+  /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * @param fastSocket fastSocket or {@code null} for none
+   */
+  public UpdateNodePoolRequest setFastSocket(FastSocket fastSocket) {
+    this.fastSocket = fastSocket;
     return this;
   }
 

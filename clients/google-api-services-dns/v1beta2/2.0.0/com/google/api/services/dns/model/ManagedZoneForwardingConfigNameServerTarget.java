@@ -48,7 +48,7 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
 
   /**
    * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being
-   * populated.
+   * populated. Public preview as of November 2022.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
 
   /**
    * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being
-   * populated.
+   * populated. Public preview as of November 2022.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6Address() {
@@ -111,7 +111,7 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
 
   /**
    * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being
-   * populated.
+   * populated. Public preview as of November 2022.
    * @param ipv6Address ipv6Address or {@code null} for none
    */
   public ManagedZoneForwardingConfigNameServerTarget setIpv6Address(java.lang.String ipv6Address) {

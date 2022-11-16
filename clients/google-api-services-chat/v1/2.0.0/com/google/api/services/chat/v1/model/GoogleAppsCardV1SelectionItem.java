@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A selectable item in the switch control.
+ * A selectable item in a selection input, such as a check box or a switch.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,30 +30,32 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * If more than one item is selected for `RADIO_BUTTON` and `DROPDOWN`, the first selected item is
-   * treated as selected and the ones after are ignored.
+   * When `true`, more than one item is selected. If more than one item is selected for radio
+   * buttons and dropdown menus, the first selected item is received and the ones after are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean selected;
 
   /**
-   * The text to be displayed.
+   * The text displayed to users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The value associated with this item. The client should use this as a form input value.
+   * The value associated with this item. The client should use this as a form input value. For
+   * details about working with form inputs, see [Receive form
+   * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * If more than one item is selected for `RADIO_BUTTON` and `DROPDOWN`, the first selected item is
-   * treated as selected and the ones after are ignored.
+   * When `true`, more than one item is selected. If more than one item is selected for radio
+   * buttons and dropdown menus, the first selected item is received and the ones after are ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSelected() {
@@ -61,8 +63,8 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * If more than one item is selected for `RADIO_BUTTON` and `DROPDOWN`, the first selected item is
-   * treated as selected and the ones after are ignored.
+   * When `true`, more than one item is selected. If more than one item is selected for radio
+   * buttons and dropdown menus, the first selected item is received and the ones after are ignored.
    * @param selected selected or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setSelected(java.lang.Boolean selected) {
@@ -71,7 +73,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * The text to be displayed.
+   * The text displayed to users.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -79,7 +81,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * The text to be displayed.
+   * The text displayed to users.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setText(java.lang.String text) {
@@ -88,7 +90,9 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * The value associated with this item. The client should use this as a form input value.
+   * The value associated with this item. The client should use this as a form input value. For
+   * details about working with form inputs, see [Receive form
+   * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -96,7 +100,9 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * The value associated with this item. The client should use this as a form input value.
+   * The value associated with this item. The client should use this as a form input value. For
+   * details about working with form inputs, see [Receive form
+   * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setValue(java.lang.String value) {

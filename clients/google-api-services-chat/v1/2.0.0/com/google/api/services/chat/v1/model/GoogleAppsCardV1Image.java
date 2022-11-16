@@ -37,14 +37,15 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   private java.lang.String altText;
 
   /**
-   * An image URL.
+   * The `https` URL that hosts the image. For example: ```
+   * https://developers.google.com/chat/images/quickstart-app-avatar.png ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUrl;
 
   /**
-   * The action triggered by an `onClick` event.
+   * When a user clicks on the image, the click triggers this action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * An image URL.
+   * The `https` URL that hosts the image. For example: ```
+   * https://developers.google.com/chat/images/quickstart-app-avatar.png ```
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUrl() {
@@ -76,7 +78,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * An image URL.
+   * The `https` URL that hosts the image. For example: ```
+   * https://developers.google.com/chat/images/quickstart-app-avatar.png ```
    * @param imageUrl imageUrl or {@code null} for none
    */
   public GoogleAppsCardV1Image setImageUrl(java.lang.String imageUrl) {
@@ -85,7 +88,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The action triggered by an `onClick` event.
+   * When a user clicks on the image, the click triggers this action.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -93,7 +96,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The action triggered by an `onClick` event.
+   * When a user clicks on the image, the click triggers this action.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1Image setOnClick(GoogleAppsCardV1OnClick onClick) {

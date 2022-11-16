@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents the crop style applied to an image.
+ * Represents the crop style applied to an image. For example, here's how to apply a 16 by 9 aspect
+ * ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,7 +31,9 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1ImageCropStyle extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`.
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For example, here's how to
+   * apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
+   * ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +47,9 @@ public final class GoogleAppsCardV1ImageCropStyle extends com.google.api.client.
   private java.lang.String type;
 
   /**
-   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`.
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For example, here's how to
+   * apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
+   * ```
    * @return value or {@code null} for none
    */
   public java.lang.Double getAspectRatio() {
@@ -52,7 +57,9 @@ public final class GoogleAppsCardV1ImageCropStyle extends com.google.api.client.
   }
 
   /**
-   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`.
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For example, here's how to
+   * apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
+   * ```
    * @param aspectRatio aspectRatio or {@code null} for none
    */
   public GoogleAppsCardV1ImageCropStyle setAspectRatio(java.lang.Double aspectRatio) {

@@ -59,13 +59,6 @@ public final class GoogleAppsCardV1GridItem extends com.google.api.client.json.G
   private java.lang.String subtitle;
 
   /**
-   * The horizontal alignment of the grid item's text.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String textAlignment;
-
-  /**
    * The grid item's title.
    * The value may be {@code null}.
    */
@@ -139,23 +132,6 @@ public final class GoogleAppsCardV1GridItem extends com.google.api.client.json.G
    */
   public GoogleAppsCardV1GridItem setSubtitle(java.lang.String subtitle) {
     this.subtitle = subtitle;
-    return this;
-  }
-
-  /**
-   * The horizontal alignment of the grid item's text.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTextAlignment() {
-    return textAlignment;
-  }
-
-  /**
-   * The horizontal alignment of the grid item's text.
-   * @param textAlignment textAlignment or {@code null} for none
-   */
-  public GoogleAppsCardV1GridItem setTextAlignment(java.lang.String textAlignment) {
-    this.textAlignment = textAlignment;
     return this;
   }
 

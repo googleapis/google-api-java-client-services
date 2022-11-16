@@ -19,7 +19,9 @@ package com.google.api.services.chat.v1.model;
 /**
  * List of string parameters to supply when the action method is invoked. For example, consider
  * three snooze buttons: snooze now, snooze 1 day, snooze next week. You might use action method =
- * snooze(), passing the snooze type and snooze time in the list of string parameters.
+ * snooze(), passing the snooze type and snooze time in the list of string parameters. To learn
+ * more, see [CommonEventObject](https://developers.google.com/chat/api/reference/rest/v1/Event#comm
+ * oneventobject).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

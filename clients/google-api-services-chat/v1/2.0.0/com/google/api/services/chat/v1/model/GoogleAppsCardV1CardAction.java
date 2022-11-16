@@ -19,7 +19,7 @@ package com.google.api.services.chat.v1.model;
 /**
  * A card action is the action associated with the card. For example, an invoice card might include
  * actions such as delete invoice, email invoice, or open the invoice in a browser. Not supported by
- * Google Chat apps.
+ * Chat apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

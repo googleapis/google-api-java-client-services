@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents the response to an `onClick` event.
+ * Represents how to respond when users click an interactive element on a card, such as a button.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -37,7 +37,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   private GoogleAppsCardV1Action action;
 
   /**
-   * A new card is pushed to the card stack after clicking if specified.
+   * A new card is pushed to the card stack after clicking if specified. Supported by Google
+   * Workspace Add-ons, but not Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * A new card is pushed to the card stack after clicking if specified.
+   * A new card is pushed to the card stack after clicking if specified. Supported by Google
+   * Workspace Add-ons, but not Chat apps.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getCard() {
@@ -85,7 +87,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * A new card is pushed to the card stack after clicking if specified.
+   * A new card is pushed to the card stack after clicking if specified. Supported by Google
+   * Workspace Add-ons, but not Chat apps.
    * @param card card or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setCard(GoogleAppsCardV1Card card) {

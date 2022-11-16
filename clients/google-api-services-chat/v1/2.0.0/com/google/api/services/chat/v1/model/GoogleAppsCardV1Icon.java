@@ -17,7 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Model definition for GoogleAppsCardV1Icon.
+ * An icon displayed in a widget on a card. Supports
+ * [standard](https://developers.google.com/chat/api/guides/message-formats/cards) and
+ * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons) icons.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,15 +32,23 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Icon extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of the icon, used for accessibility. The default value is provided if you don't
-   * specify one.
+   * Optional. A description of the icon used for accessibility. If unspecified, a default value is
+   * provided. As a best practice, you should set a helpful description. For example, if an icon
+   * displays a user's account portrait, you could describe it as "A user's account portrait." If
+   * the icon displays in a Button, this alt text takes precedence and overwrites the button's alt
+   * text, so you should write alt text for the button: Set descriptive text that lets users know
+   * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
+   * browser tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String altText;
 
   /**
-   * The icon specified by a URL.
+   * Display a custom icon hosted at an HTTPS URL. For example: ``` "iconUrl":
+   * "https://developers.google.com/chat/images/quickstart-app-avatar.png" ``` Supported file types
+   * include `.png` and `.jpg`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,15 +63,24 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   private java.lang.String imageType;
 
   /**
-   * The icon specified by the string name of a list of known icons.
+   * Display one of the standard icons provided by Google Workspace. For example, to display an
+   * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
+   * icons, see [standard icons](https://developers.google.com/chat/api/guides/message-
+   * formats/cards).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String knownIcon;
 
   /**
-   * The description of the icon, used for accessibility. The default value is provided if you don't
-   * specify one.
+   * Optional. A description of the icon used for accessibility. If unspecified, a default value is
+   * provided. As a best practice, you should set a helpful description. For example, if an icon
+   * displays a user's account portrait, you could describe it as "A user's account portrait." If
+   * the icon displays in a Button, this alt text takes precedence and overwrites the button's alt
+   * text, so you should write alt text for the button: Set descriptive text that lets users know
+   * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
+   * browser tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat".
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -69,8 +88,14 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The description of the icon, used for accessibility. The default value is provided if you don't
-   * specify one.
+   * Optional. A description of the icon used for accessibility. If unspecified, a default value is
+   * provided. As a best practice, you should set a helpful description. For example, if an icon
+   * displays a user's account portrait, you could describe it as "A user's account portrait." If
+   * the icon displays in a Button, this alt text takes precedence and overwrites the button's alt
+   * text, so you should write alt text for the button: Set descriptive text that lets users know
+   * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
+   * browser tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat".
    * @param altText altText or {@code null} for none
    */
   public GoogleAppsCardV1Icon setAltText(java.lang.String altText) {
@@ -79,7 +104,9 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon specified by a URL.
+   * Display a custom icon hosted at an HTTPS URL. For example: ``` "iconUrl":
+   * "https://developers.google.com/chat/images/quickstart-app-avatar.png" ``` Supported file types
+   * include `.png` and `.jpg`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIconUrl() {
@@ -87,7 +114,9 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon specified by a URL.
+   * Display a custom icon hosted at an HTTPS URL. For example: ``` "iconUrl":
+   * "https://developers.google.com/chat/images/quickstart-app-avatar.png" ``` Supported file types
+   * include `.png` and `.jpg`.
    * @param iconUrl iconUrl or {@code null} for none
    */
   public GoogleAppsCardV1Icon setIconUrl(java.lang.String iconUrl) {
@@ -115,7 +144,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon specified by the string name of a list of known icons.
+   * Display one of the standard icons provided by Google Workspace. For example, to display an
+   * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
+   * icons, see [standard icons](https://developers.google.com/chat/api/guides/message-
+   * formats/cards).
    * @return value or {@code null} for none
    */
   public java.lang.String getKnownIcon() {
@@ -123,7 +155,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon specified by the string name of a list of known icons.
+   * Display one of the standard icons provided by Google Workspace. For example, to display an
+   * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
+   * icons, see [standard icons](https://developers.google.com/chat/api/guides/message-
+   * formats/cards).
    * @param knownIcon knownIcon or {@code null} for none
    */
   public GoogleAppsCardV1Icon setKnownIcon(java.lang.String knownIcon) {

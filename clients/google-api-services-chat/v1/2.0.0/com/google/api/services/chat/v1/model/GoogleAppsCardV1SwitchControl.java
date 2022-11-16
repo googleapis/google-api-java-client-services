@@ -17,7 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Either a toggle-style switch or a checkbox.
+ * Either a toggle-style switch or a checkbox inside a `decoratedText` widget. Only supported on the
+ * `decoratedText` widget. Currently supported in [dialogs](https://developers.google.com/chat/how-
+ * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides/message-
+ * formats/cards) is coming soon.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,42 +33,46 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * The control type, either switch or checkbox.
+   * How the switch appears in the user interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String controlType;
 
   /**
-   * The name of the switch widget that's used in `formInput`.
+   * The name by which the switch widget is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The action when the switch state is changed.
+   * The action to perform when the switch state is changed, such as what function to run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Action onChangeAction;
 
   /**
-   * If the switch is selected.
+   * When `true`, the switch is selected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean selected;
 
   /**
-   * The value is what is passed back in the callback.
+   * The value entered by a user, returned as part of a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The control type, either switch or checkbox.
+   * How the switch appears in the user interface.
    * @return value or {@code null} for none
    */
   public java.lang.String getControlType() {
@@ -73,7 +80,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The control type, either switch or checkbox.
+   * How the switch appears in the user interface.
    * @param controlType controlType or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setControlType(java.lang.String controlType) {
@@ -82,7 +89,9 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The name of the switch widget that's used in `formInput`.
+   * The name by which the switch widget is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -90,7 +99,9 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The name of the switch widget that's used in `formInput`.
+   * The name by which the switch widget is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setName(java.lang.String name) {
@@ -99,7 +110,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The action when the switch state is changed.
+   * The action to perform when the switch state is changed, such as what function to run.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -107,7 +118,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The action when the switch state is changed.
+   * The action to perform when the switch state is changed, such as what function to run.
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
@@ -116,7 +127,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * If the switch is selected.
+   * When `true`, the switch is selected.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSelected() {
@@ -124,7 +135,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * If the switch is selected.
+   * When `true`, the switch is selected.
    * @param selected selected or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setSelected(java.lang.Boolean selected) {
@@ -133,7 +144,9 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The value is what is passed back in the callback.
+   * The value entered by a user, returned as part of a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -141,7 +154,9 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The value is what is passed back in the callback.
+   * The value entered by a user, returned as part of a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setValue(java.lang.String value) {

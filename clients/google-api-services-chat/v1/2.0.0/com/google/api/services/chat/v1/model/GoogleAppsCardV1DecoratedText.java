@@ -31,7 +31,8 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.json.GenericJson {
 
   /**
-   * The formatted text label that shows below the main text.
+   * The text that appears below `text`. Always truncates. Supports simple formatting. See Text
+   * formatting for formatting details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +46,24 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Button button;
 
   /**
-   * An icon displayed after the text.
+   * An icon displayed after the text. Supports
+   * [standard](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons)
+   * and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
+   * icons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Icon endIcon;
 
   /**
-   * Deprecated in favor of start_icon.
+   * Deprecated in favor of `startIcon`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Icon icon;
 
   /**
-   * Only the top and bottom label and content region are clickable.
+   * When users click on `topLabel` or `bottomLabel`, this action triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,36 +77,41 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Icon startIcon;
 
   /**
-   * A switch widget can be clicked to change its state or trigger an action.
+   * A switch widget can be clicked to change its state and trigger an action. Currently supported
+   * in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1SwitchControl switchControl;
 
   /**
-   * Required. The main widget formatted text. See Text formatting for details.
+   * Required. The primary text. Supports simple formatting. See Text formatting for formatting
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The formatted text label that shows above the main text.
+   * The text that appears above `text`. Always truncates. Supports simple formatting. See Text
+   * formatting for formatting details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topLabel;
 
   /**
-   * The wrap text setting. If `true`, the text is wrapped and displayed in multiline. Otherwise,
-   * the text is truncated.
+   * The wrap text setting. If `true`, the text wraps and displays on multiple lines. Otherwise, the
+   * text is truncated. Only applies to `text`, not `topLabel` and `bottomLabel`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean wrapText;
 
   /**
-   * The formatted text label that shows below the main text.
+   * The text that appears below `text`. Always truncates. Supports simple formatting. See Text
+   * formatting for formatting details.
    * @return value or {@code null} for none
    */
   public java.lang.String getBottomLabel() {
@@ -110,7 +119,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The formatted text label that shows below the main text.
+   * The text that appears below `text`. Always truncates. Supports simple formatting. See Text
+   * formatting for formatting details.
    * @param bottomLabel bottomLabel or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setBottomLabel(java.lang.String bottomLabel) {
@@ -136,7 +146,10 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * An icon displayed after the text.
+   * An icon displayed after the text. Supports
+   * [standard](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons)
+   * and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
+   * icons.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Icon getEndIcon() {
@@ -144,7 +157,10 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * An icon displayed after the text.
+   * An icon displayed after the text. Supports
+   * [standard](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons)
+   * and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
+   * icons.
    * @param endIcon endIcon or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setEndIcon(GoogleAppsCardV1Icon endIcon) {
@@ -153,7 +169,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Deprecated in favor of start_icon.
+   * Deprecated in favor of `startIcon`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Icon getIcon() {
@@ -161,7 +177,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Deprecated in favor of start_icon.
+   * Deprecated in favor of `startIcon`.
    * @param icon icon or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setIcon(GoogleAppsCardV1Icon icon) {
@@ -170,7 +186,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Only the top and bottom label and content region are clickable.
+   * When users click on `topLabel` or `bottomLabel`, this action triggers.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -178,7 +194,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Only the top and bottom label and content region are clickable.
+   * When users click on `topLabel` or `bottomLabel`, this action triggers.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setOnClick(GoogleAppsCardV1OnClick onClick) {
@@ -204,7 +220,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A switch widget can be clicked to change its state or trigger an action.
+   * A switch widget can be clicked to change its state and trigger an action. Currently supported
+   * in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl getSwitchControl() {
@@ -212,7 +230,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A switch widget can be clicked to change its state or trigger an action.
+   * A switch widget can be clicked to change its state and trigger an action. Currently supported
+   * in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
    * @param switchControl switchControl or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setSwitchControl(GoogleAppsCardV1SwitchControl switchControl) {
@@ -221,7 +241,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Required. The main widget formatted text. See Text formatting for details.
+   * Required. The primary text. Supports simple formatting. See Text formatting for formatting
+   * details.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -229,7 +250,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Required. The main widget formatted text. See Text formatting for details.
+   * Required. The primary text. Supports simple formatting. See Text formatting for formatting
+   * details.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setText(java.lang.String text) {
@@ -238,7 +260,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The formatted text label that shows above the main text.
+   * The text that appears above `text`. Always truncates. Supports simple formatting. See Text
+   * formatting for formatting details.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopLabel() {
@@ -246,7 +269,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The formatted text label that shows above the main text.
+   * The text that appears above `text`. Always truncates. Supports simple formatting. See Text
+   * formatting for formatting details.
    * @param topLabel topLabel or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setTopLabel(java.lang.String topLabel) {
@@ -255,8 +279,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The wrap text setting. If `true`, the text is wrapped and displayed in multiline. Otherwise,
-   * the text is truncated.
+   * The wrap text setting. If `true`, the text wraps and displays on multiple lines. Otherwise, the
+   * text is truncated. Only applies to `text`, not `topLabel` and `bottomLabel`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWrapText() {
@@ -264,8 +288,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The wrap text setting. If `true`, the text is wrapped and displayed in multiline. Otherwise,
-   * the text is truncated.
+   * The wrap text setting. If `true`, the text wraps and displays on multiple lines. Otherwise, the
+   * text is truncated. Only applies to `text`, not `topLabel` and `bottomLabel`.
    * @param wrapText wrapText or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setWrapText(java.lang.Boolean wrapText) {

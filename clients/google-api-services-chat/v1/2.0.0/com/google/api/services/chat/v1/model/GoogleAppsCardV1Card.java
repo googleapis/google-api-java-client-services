@@ -25,17 +25,17 @@ package com.google.api.services.chat.v1.model;
  * a "contact card" that features: - A header with the contact's name, job title, avatar picture. -
  * A section with the contact information, including formatted text. - Buttons that users can click
  * to share the contact or see more or less info. ![Example contact
- * card](/chat/images/card_api_reference.png) ``` { "cardsV2": [ { "cardId": "unique-card-id",
- * "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer", "imageUrl":
- * "https://developers.google.com/chat/images/quickstart-app-avatar.png", "imageType": "CIRCLE",
- * "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact Info", "collapsible":
- * true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": { "startIcon": {
- * "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": { "startIcon": {
- * "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": { "startIcon": {
- * "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": { "buttons": [ {
- * "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", } } }, { "text":
- * "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key": "viewType",
- * "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
+ * card](https://developers.google.com/chat/images/card_api_reference.png) ``` { "cardsV2": [ {
+ * "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software
+ * Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
+ * "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact
+ * Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": {
+ * "startIcon": { "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": {
+ * "startIcon": { "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": {
+ * "startIcon": { "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": {
+ * "buttons": [ { "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", }
+ * } }, { "text": "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key":
+ * "viewType", "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -48,40 +48,47 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Card extends com.google.api.client.json.GenericJson {
 
   /**
-   * The card's actions. Actions are added to the card's generated toolbar menu. Not supported by
-   * Google Chat apps. For example, the following JSON constructs a card action menu with Settings
-   * and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": {
-   * "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING"
-   * } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback",
-   * "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
+   * no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON
+   * constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ {
+   * "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [
+   * { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, {
+   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
+   * "https://example.com/feedback" } } } ] ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsCardV1CardAction> cardActions;
 
   /**
-   * The `peekCardHeader` display style for. Not supported by Google Chat apps.
+   * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported
+   * by Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayStyle;
 
   /**
-   * The fixed footer shown at the bottom of this card.
+   * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
+   * `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1CardFixedFooter fixedFooter;
 
   /**
-   * The header of the card. A header usually contains a title and an image.
+   * The header of the card. A header usually contains a leading image and a title. Headers always
+   * appear at the top of a card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1CardHeader header;
 
   /**
-   * Name of the card. Used as a card identifier in card navigation.
+   * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support
+   * card navigation, they ignore this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,27 +96,29 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards. Not supported by
-   * Google Chat apps.
+   * can navigate forward between the homepage cards and the contextual cards. Not supported by Chat
+   * apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1CardHeader peekCardHeader;
 
   /**
-   * Sections are separated by a line divider.
+   * Contains a collection of widgets. Each section has its own, optional header. Sections are
+   * visually separated by a line divider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsCardV1Section> sections;
 
   /**
-   * The card's actions. Actions are added to the card's generated toolbar menu. Not supported by
-   * Google Chat apps. For example, the following JSON constructs a card action menu with Settings
-   * and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": {
-   * "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING"
-   * } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback",
-   * "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
+   * no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON
+   * constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ {
+   * "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [
+   * { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, {
+   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
+   * "https://example.com/feedback" } } } ] ```
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1CardAction> getCardActions() {
@@ -117,12 +126,13 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The card's actions. Actions are added to the card's generated toolbar menu. Not supported by
-   * Google Chat apps. For example, the following JSON constructs a card action menu with Settings
-   * and Send Feedback options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": {
-   * "action": { "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING"
-   * } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback",
-   * "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
+   * no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON
+   * constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ {
+   * "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [
+   * { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, {
+   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
+   * "https://example.com/feedback" } } } ] ```
    * @param cardActions cardActions or {@code null} for none
    */
   public GoogleAppsCardV1Card setCardActions(java.util.List<GoogleAppsCardV1CardAction> cardActions) {
@@ -131,7 +141,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The `peekCardHeader` display style for. Not supported by Google Chat apps.
+   * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported
+   * by Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayStyle() {
@@ -139,7 +150,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The `peekCardHeader` display style for. Not supported by Google Chat apps.
+   * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported
+   * by Chat apps.
    * @param displayStyle displayStyle or {@code null} for none
    */
   public GoogleAppsCardV1Card setDisplayStyle(java.lang.String displayStyle) {
@@ -148,7 +160,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The fixed footer shown at the bottom of this card.
+   * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
+   * `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardFixedFooter getFixedFooter() {
@@ -156,7 +171,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The fixed footer shown at the bottom of this card.
+   * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
+   * `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
    * @param fixedFooter fixedFooter or {@code null} for none
    */
   public GoogleAppsCardV1Card setFixedFooter(GoogleAppsCardV1CardFixedFooter fixedFooter) {
@@ -165,7 +183,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The header of the card. A header usually contains a title and an image.
+   * The header of the card. A header usually contains a leading image and a title. Headers always
+   * appear at the top of a card.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader getHeader() {
@@ -173,7 +192,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The header of the card. A header usually contains a title and an image.
+   * The header of the card. A header usually contains a leading image and a title. Headers always
+   * appear at the top of a card.
    * @param header header or {@code null} for none
    */
   public GoogleAppsCardV1Card setHeader(GoogleAppsCardV1CardHeader header) {
@@ -182,7 +202,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the card. Used as a card identifier in card navigation.
+   * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support
+   * card navigation, they ignore this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -190,7 +211,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the card. Used as a card identifier in card navigation.
+   * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support
+   * card navigation, they ignore this field.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1Card setName(java.lang.String name) {
@@ -200,8 +222,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards. Not supported by
-   * Google Chat apps.
+   * can navigate forward between the homepage cards and the contextual cards. Not supported by Chat
+   * apps.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader getPeekCardHeader() {
@@ -210,8 +232,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards. Not supported by
-   * Google Chat apps.
+   * can navigate forward between the homepage cards and the contextual cards. Not supported by Chat
+   * apps.
    * @param peekCardHeader peekCardHeader or {@code null} for none
    */
   public GoogleAppsCardV1Card setPeekCardHeader(GoogleAppsCardV1CardHeader peekCardHeader) {
@@ -220,7 +242,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Sections are separated by a line divider.
+   * Contains a collection of widgets. Each section has its own, optional header. Sections are
+   * visually separated by a line divider.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Section> getSections() {
@@ -228,7 +251,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Sections are separated by a line divider.
+   * Contains a collection of widgets. Each section has its own, optional header. Sections are
+   * visually separated by a line divider.
    * @param sections sections or {@code null} for none
    */
   public GoogleAppsCardV1Card setSections(java.util.List<GoogleAppsCardV1Section> sections) {

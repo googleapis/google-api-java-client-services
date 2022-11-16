@@ -17,7 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A persistent (sticky) footer that is added to the bottom of the card.
+ * A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter`
+ * without specifying a `primaryButton` or a `secondaryButton` causes an error. Chat apps support
+ * `fixedFooter` in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+ * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

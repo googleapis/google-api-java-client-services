@@ -1050,6 +1050,491 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class DataScans {
 
         /**
+         * Creates a dataScan resource.
+         *
+         * Create a request for the method "dataScans.create".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
+         *        {project} refers to a project_id or project_number and location_id refers to a GCP region.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/dataScans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a dataScan resource.
+           *
+           * Create a request for the method "dataScans.create".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
+         *        {project} refers to a project_id or project_number and location_id refers to a GCP region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the parent location:
+           * projects/{project}/locations/{location_id} where {project} refers to a project_id or
+           * project_number and location_id refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
+         where {project} refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the parent location:
+           * projects/{project}/locations/{location_id} where {project} refers to a project_id or
+           * project_number and location_id refers to a GCP region.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. DataScan identifier. * Must contain only lowercase letters, numbers and
+           * hyphens. * Must start with a letter. * Must end with a number or a letter. * Must be
+           * between 1-63 characters. * Must be unique within the customer project / location.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataScanId;
+
+          /** Required. DataScan identifier. * Must contain only lowercase letters, numbers and hyphens. * Must
+         start with a letter. * Must end with a number or a letter. * Must be between 1-63 characters. *
+         Must be unique within the customer project / location.
+           */
+          public java.lang.String getDataScanId() {
+            return dataScanId;
+          }
+
+          /**
+           * Required. DataScan identifier. * Must contain only lowercase letters, numbers and
+           * hyphens. * Must start with a letter. * Must end with a number or a letter. * Must be
+           * between 1-63 characters. * Must be unique within the customer project / location.
+           */
+          public Create setDataScanId(java.lang.String dataScanId) {
+            this.dataScanId = dataScanId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete the dataScan resource.
+         *
+         * Create a request for the method "dataScans.delete".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the dataScan:
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        to a project_id or project_number and location_id refers to a GCP region.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+
+          /**
+           * Delete the dataScan resource.
+           *
+           * Create a request for the method "dataScans.delete".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the dataScan:
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        to a project_id or project_number and location_id refers to a GCP region.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the dataScan:
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the dataScan:
+         projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers to a
+         project_id or project_number and location_id refers to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the dataScan:
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get dataScan resource.
+         *
+         * Create a request for the method "dataScans.get".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the dataScan:
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        to a project_id or project_number and location_id refers to a GCP region.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+
+          /**
+           * Get dataScan resource.
+           *
+           * Create a request for the method "dataScans.get".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the dataScan:
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        to a project_id or project_number and location_id refers to a GCP region.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the dataScan:
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the dataScan:
+         projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers to a
+         project_id or project_number and location_id refers to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the dataScan:
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Used to select the subset of DataScan information to return. Defaults to
+           * BASIC.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Used to select the subset of DataScan information to return. Defaults to BASIC.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. Used to select the subset of DataScan information to return. Defaults to
+           * BASIC.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -1244,6 +1729,554 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists dataScans.
+         *
+         * Create a request for the method "dataScans.list".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. projects/{project}/locations/{location_id} where {project} refers to a project_id or
+         *        project_number and location_id refers to a GCP region.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListDataScansResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dataScans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists dataScans.
+           *
+           * Create a request for the method "dataScans.list".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. projects/{project}/locations/{location_id} where {project} refers to a project_id or
+         *        project_number and location_id refers to a GCP region.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListDataScansResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. projects/{project}/locations/{location_id} where {project} refers to a
+           * project_id or project_number and location_id refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. projects/{project}/locations/{location_id} where {project} refers to a project_id or
+         project_number and location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. projects/{project}/locations/{location_id} where {project} refers to a
+           * project_id or project_number and location_id refers to a GCP region.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filter request. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter request.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filter request. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * ordering is undefined.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order by fields (name or create_time) for the result. If not specified, the ordering is
+         undefined.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * ordering is undefined.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of dataScans to return. The service may return fewer than this
+           * value. If unspecified, at most 10 scans will be returned. The maximum value is 1000;
+           * values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of dataScans to return. The service may return fewer than this value. If
+         unspecified, at most 10 scans will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of dataScans to return. The service may return fewer than this
+           * value. If unspecified, at most 10 scans will be returned. The maximum value is 1000;
+           * values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListDataScans call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListDataScans must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous ListDataScans call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to ListDataScans must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListDataScans call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListDataScans must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update the dataScan resource.
+         *
+         * Create a request for the method "dataScans.patch".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The relative resource name of the scan, of the form:
+         *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers
+         *        to a project_id or project_number and location_id refers to a GCP region.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+
+          /**
+           * Update the dataScan resource.
+           *
+           * Create a request for the method "dataScans.patch".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The relative resource name of the scan, of the form:
+         *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers
+         *        to a project_id or project_number and location_id refers to a GCP region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan content) {
+            super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The relative resource name of the scan, of the form:
+           * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The relative resource name of the scan, of the form:
+         projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers to a
+         project_id or project_number and location_id refers to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The relative resource name of the scan, of the form:
+           * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Mask of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. Mask of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Run an on demand execution of a DataScan.
+         *
+         * Create a request for the method "dataScans.run".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Run#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the DataScan:
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
+         *        refers to a project_id or project_number and location_id refers to a GCP region. Only on-
+         *        demand DataScans are allowed.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
+         * @return the request
+         */
+        public Run run(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest content) throws java.io.IOException {
+          Run result = new Run(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Run extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:run";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+
+          /**
+           * Run an on demand execution of a DataScan.
+           *
+           * Create a request for the method "dataScans.run".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+           * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the DataScan:
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
+         *        refers to a project_id or project_number and location_id refers to a GCP region. Only on-
+         *        demand DataScans are allowed.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
+           * @since 1.13
+           */
+          protected Run(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+          }
+
+          @Override
+          public Run set$Xgafv(java.lang.String $Xgafv) {
+            return (Run) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Run setAccessToken(java.lang.String accessToken) {
+            return (Run) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Run setAlt(java.lang.String alt) {
+            return (Run) super.setAlt(alt);
+          }
+
+          @Override
+          public Run setCallback(java.lang.String callback) {
+            return (Run) super.setCallback(callback);
+          }
+
+          @Override
+          public Run setFields(java.lang.String fields) {
+            return (Run) super.setFields(fields);
+          }
+
+          @Override
+          public Run setKey(java.lang.String key) {
+            return (Run) super.setKey(key);
+          }
+
+          @Override
+          public Run setOauthToken(java.lang.String oauthToken) {
+            return (Run) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Run) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Run setQuotaUser(java.lang.String quotaUser) {
+            return (Run) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Run setUploadType(java.lang.String uploadType) {
+            return (Run) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Run setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Run) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the DataScan:
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region. Only
+           * on-demand DataScans are allowed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the DataScan:
+         projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project} refers to a
+         project_id or project_number and location_id refers to a GCP region. Only on-demand DataScans are
+         allowed.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the DataScan:
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
+           * refers to a project_id or project_number and location_id refers to a GCP region. Only
+           * on-demand DataScans are allowed.
+           */
+          public Run setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Run set(String parameterName, Object value) {
+            return (Run) super.set(parameterName, value);
           }
         }
         /**
@@ -1543,6 +2576,408 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
 
+        /**
+         * An accessor for creating requests from the Jobs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudDataplex dataplex = new CloudDataplex(...);}
+         *   {@code CloudDataplex.Jobs.List request = dataplex.jobs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Jobs jobs() {
+          return new Jobs();
+        }
+
+        /**
+         * The "jobs" collection of methods.
+         */
+        public class Jobs {
+
+          /**
+           * Get DataScanJob resource.
+           *
+           * Create a request for the method "jobs.get".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the DataScanJob:
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_sca
+           *        n_job_id} where {project} refers to a project_id or project_number and location_id refers
+           *        to a GCP region.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScanJob> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+
+            /**
+             * Get DataScanJob resource.
+             *
+             * Create a request for the method "jobs.get".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the DataScanJob:
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_sca
+           *        n_job_id} where {project} refers to a project_id or project_number and location_id refers
+           *        to a GCP region.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScanJob.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
+             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where {project} refers
+             * to a project_id or project_number and location_id refers to a GCP region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the DataScanJob:
+           projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
+           where {project} refers to a project_id or project_number and location_id refers to a GCP region.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
+             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where {project} refers
+             * to a project_id or project_number and location_id refers to a GCP region.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Used to select the subset of DataScan information to return. Defaults to
+             * BASIC.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. Used to select the subset of DataScan information to return. Defaults to BASIC.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. Used to select the subset of DataScan information to return. Defaults to
+             * BASIC.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists DataScanJobs under the given dataScan.
+           *
+           * Create a request for the method "jobs.list".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent environment:
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+           *        to a project_id or project_number and location_id refers to a GCP region.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListDataScanJobsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/jobs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+
+            /**
+             * Lists DataScanJobs under the given dataScan.
+             *
+             * Create a request for the method "jobs.list".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent environment:
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+           *        to a project_id or project_number and location_id refers to a GCP region.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListDataScanJobsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent environment:
+             * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+             * refers to a project_id or project_number and location_id refers to a GCP region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent environment:
+           projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers to a
+           project_id or project_number and location_id refers to a GCP region.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent environment:
+             * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+             * refers to a project_id or project_number and location_id refers to a GCP region.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of DataScanJobs to return. The service may return fewer than
+             * this value. If unspecified, at most 10 DataScanJobs will be returned. The maximum
+             * value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of DataScanJobs to return. The service may return fewer than this value.
+           If unspecified, at most 10 DataScanJobs will be returned. The maximum value is 1000; values above
+           1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of DataScanJobs to return. The service may return fewer than
+             * this value. If unspecified, at most 10 DataScanJobs will be returned. The maximum
+             * value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Page token received from a previous ListDataScanJobs call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * ListDataScanJobs must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page token received from a previous ListDataScanJobs call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to ListDataScanJobs must match the
+           call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Page token received from a previous ListDataScanJobs call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * ListDataScanJobs must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the DataTaxonomies collection.

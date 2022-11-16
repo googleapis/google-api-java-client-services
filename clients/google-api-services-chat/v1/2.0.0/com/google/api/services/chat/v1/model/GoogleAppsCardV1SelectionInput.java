@@ -17,7 +17,14 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A widget that creates a UI item with options for users to select. For example, a dropdown menu.
+ * A widget that creates a UI item with options for users to select. For example, a dropdown menu or
+ * check list. Chat apps receive and can process the value of entered text during form input events.
+ * For details about working with form inputs, see [Receive form
+ * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When
+ * you need to collect data from users that matches options you set, use a selection input. To
+ * collect abstract data from users, use the text input widget instead. Only supported in
+ * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+ * messages](https://developers.google.com/chat/api/guides/message-formats/cards) coming soon.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,21 +37,26 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of the selected items.
+   * An array of the selected items. For example, all the selected check boxes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsCardV1SelectionItem> items;
 
   /**
-   * The label displayed ahead of the switch control.
+   * The text that appears above the selection input field in the user interface. Specify text that
+   * helps the user enter the information your app needs. For example, if users are selecting the
+   * urgency of a work ticket from a drop-down menu, the label might be "Urgency" or "Select
+   * urgency".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * The name of the text input which is used in `formInput`.
+   * The name by which the selection input is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,21 +64,26 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
-   * specify a separate button.
+   * specify a separate button that submits the form. For details about working with form inputs,
+   * see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Action onChangeAction;
 
   /**
-   * The type of the selection.
+   * The way that an option appears to users. Different options support different types of
+   * interactions. For example, users can enable multiple check boxes, but can only select one value
+   * from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes
+   * and switches, for example, is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * An array of the selected items.
+   * An array of the selected items. For example, all the selected check boxes.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1SelectionItem> getItems() {
@@ -74,7 +91,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * An array of the selected items.
+   * An array of the selected items. For example, all the selected check boxes.
    * @param items items or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setItems(java.util.List<GoogleAppsCardV1SelectionItem> items) {
@@ -83,7 +100,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The label displayed ahead of the switch control.
+   * The text that appears above the selection input field in the user interface. Specify text that
+   * helps the user enter the information your app needs. For example, if users are selecting the
+   * urgency of a work ticket from a drop-down menu, the label might be "Urgency" or "Select
+   * urgency".
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -91,7 +111,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The label displayed ahead of the switch control.
+   * The text that appears above the selection input field in the user interface. Specify text that
+   * helps the user enter the information your app needs. For example, if users are selecting the
+   * urgency of a work ticket from a drop-down menu, the label might be "Urgency" or "Select
+   * urgency".
    * @param label label or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setLabel(java.lang.String label) {
@@ -100,7 +123,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The name of the text input which is used in `formInput`.
+   * The name by which the selection input is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +133,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The name of the text input which is used in `formInput`.
+   * The name by which the selection input is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setName(java.lang.String name) {
@@ -118,7 +145,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
-   * specify a separate button.
+   * specify a separate button that submits the form. For details about working with form inputs,
+   * see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -127,7 +156,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
-   * specify a separate button.
+   * specify a separate button that submits the form. For details about working with form inputs,
+   * see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
@@ -136,7 +167,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The type of the selection.
+   * The way that an option appears to users. Different options support different types of
+   * interactions. For example, users can enable multiple check boxes, but can only select one value
+   * from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes
+   * and switches, for example, is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -144,7 +178,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The type of the selection.
+   * The way that an option appears to users. Different options support different types of
+   * interactions. For example, users can enable multiple check boxes, but can only select one value
+   * from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes
+   * and switches, for example, is not supported.
    * @param type type or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setType(java.lang.String type) {

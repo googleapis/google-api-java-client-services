@@ -17,7 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The widget that lets users to specify a date and time. Not supported by Google Chat apps.
+ * Lets users specify a date, a time, or both a date and a time. Accepts text input from users, but
+ * features an interactive date and time selector that helps users enter correctly-formatted dates
+ * and times. If users enter a date or time incorrectly, the widget shows an error that prompts
+ * users to enter the correct format. Not supported by Chat apps. Support by Chat apps coming soon.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,22 +33,25 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.json.GenericJson {
 
   /**
-   * The label for the field that displays to the user.
+   * The text that prompts users to enter a date, time, or datetime. Specify text that helps the
+   * user enter the information your app needs. For example, if users are setting an appointment,
+   * then a label like "Appointment date" or "Appointment date and time" might work well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * The name of the text input that's used in `formInput`, and uniquely identifies this input.
+   * The name by which the datetime picker is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Triggered when the user clicks Save or Clear from the date/time picker dialog. This is only
-   * triggered if the value changed as a result of the Save/Clear operation.
+   * Triggered when the user clicks **Save** or **Clear** from the datetime picker interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,25 +67,27 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   private java.lang.Integer timezoneOffsetDate;
 
   /**
-   * The type of the date/time picker.
+   * What kind of date and time input the datetime picker supports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The value to display as the default value before user input or previous user input. It is
-   * represented in milliseconds (Epoch time). For `DATE_AND_TIME` type, the full epoch value is
-   * used. For `DATE_ONLY` type, only date of the epoch time is used. For `TIME_ONLY` type, only
-   * time of the epoch time is used. For example, you can set epoch time to `3 * 60 * 60 * 1000` to
-   * represent 3am.
+   * The value displayed as the default value before user input or previous user input, represented
+   * in milliseconds ([Epoch time](https://en.wikipedia.org/wiki/Unix_time)). For `DATE_AND_TIME`
+   * type, the full epoch value is used. For `DATE_ONLY` type, only date of the epoch time is used.
+   * For `TIME_ONLY` type, only time of the epoch time is used. For example, to represent 3:00 AM,
+   * set epoch time to `3 * 60 * 60 * 1000`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long valueMsEpoch;
 
   /**
-   * The label for the field that displays to the user.
+   * The text that prompts users to enter a date, time, or datetime. Specify text that helps the
+   * user enter the information your app needs. For example, if users are setting an appointment,
+   * then a label like "Appointment date" or "Appointment date and time" might work well.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -87,7 +95,9 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The label for the field that displays to the user.
+   * The text that prompts users to enter a date, time, or datetime. Specify text that helps the
+   * user enter the information your app needs. For example, if users are setting an appointment,
+   * then a label like "Appointment date" or "Appointment date and time" might work well.
    * @param label label or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setLabel(java.lang.String label) {
@@ -96,7 +106,9 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The name of the text input that's used in `formInput`, and uniquely identifies this input.
+   * The name by which the datetime picker is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -104,7 +116,9 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The name of the text input that's used in `formInput`, and uniquely identifies this input.
+   * The name by which the datetime picker is identified in a form input event. For details about
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setName(java.lang.String name) {
@@ -113,8 +127,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * Triggered when the user clicks Save or Clear from the date/time picker dialog. This is only
-   * triggered if the value changed as a result of the Save/Clear operation.
+   * Triggered when the user clicks **Save** or **Clear** from the datetime picker interface.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -122,8 +135,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * Triggered when the user clicks Save or Clear from the date/time picker dialog. This is only
-   * triggered if the value changed as a result of the Save/Clear operation.
+   * Triggered when the user clicks **Save** or **Clear** from the datetime picker interface.
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
@@ -153,7 +165,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The type of the date/time picker.
+   * What kind of date and time input the datetime picker supports.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -161,7 +173,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The type of the date/time picker.
+   * What kind of date and time input the datetime picker supports.
    * @param type type or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setType(java.lang.String type) {
@@ -170,11 +182,11 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The value to display as the default value before user input or previous user input. It is
-   * represented in milliseconds (Epoch time). For `DATE_AND_TIME` type, the full epoch value is
-   * used. For `DATE_ONLY` type, only date of the epoch time is used. For `TIME_ONLY` type, only
-   * time of the epoch time is used. For example, you can set epoch time to `3 * 60 * 60 * 1000` to
-   * represent 3am.
+   * The value displayed as the default value before user input or previous user input, represented
+   * in milliseconds ([Epoch time](https://en.wikipedia.org/wiki/Unix_time)). For `DATE_AND_TIME`
+   * type, the full epoch value is used. For `DATE_ONLY` type, only date of the epoch time is used.
+   * For `TIME_ONLY` type, only time of the epoch time is used. For example, to represent 3:00 AM,
+   * set epoch time to `3 * 60 * 60 * 1000`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getValueMsEpoch() {
@@ -182,11 +194,11 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The value to display as the default value before user input or previous user input. It is
-   * represented in milliseconds (Epoch time). For `DATE_AND_TIME` type, the full epoch value is
-   * used. For `DATE_ONLY` type, only date of the epoch time is used. For `TIME_ONLY` type, only
-   * time of the epoch time is used. For example, you can set epoch time to `3 * 60 * 60 * 1000` to
-   * represent 3am.
+   * The value displayed as the default value before user input or previous user input, represented
+   * in milliseconds ([Epoch time](https://en.wikipedia.org/wiki/Unix_time)). For `DATE_AND_TIME`
+   * type, the full epoch value is used. For `DATE_ONLY` type, only date of the epoch time is used.
+   * For `TIME_ONLY` type, only time of the epoch time is used. For example, to represent 3:00 AM,
+   * set epoch time to `3 * 60 * 60 * 1000`.
    * @param valueMsEpoch valueMsEpoch or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setValueMsEpoch(java.lang.Long valueMsEpoch) {

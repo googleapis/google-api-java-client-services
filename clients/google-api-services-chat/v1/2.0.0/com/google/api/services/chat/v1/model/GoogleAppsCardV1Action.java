@@ -31,7 +31,9 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Action extends com.google.api.client.json.GenericJson {
 
   /**
-   * Apps Script function to invoke when the containing element is clicked/activated.
+   * A custom function to invoke when the containing element is clicked or othrwise activated. For
+   * example usage, see [Create interactive cards](https://developers.google.com/chat/how-tos/cards-
+   * onclick).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +78,16 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * recommended that the card use [LoadIndicator.SPINNER](https://developers.google.com/workspace
    * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) for all actions, as this locks the UI
    * to ensure no changes are made by the user while the action is being processed. Not supported by
-   * Google Chat apps.
+   * Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean persistValues;
 
   /**
-   * Apps Script function to invoke when the containing element is clicked/activated.
+   * A custom function to invoke when the containing element is clicked or othrwise activated. For
+   * example usage, see [Create interactive cards](https://developers.google.com/chat/how-tos/cards-
+   * onclick).
    * @return value or {@code null} for none
    */
   public java.lang.String getFunction() {
@@ -91,7 +95,9 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   }
 
   /**
-   * Apps Script function to invoke when the containing element is clicked/activated.
+   * A custom function to invoke when the containing element is clicked or othrwise activated. For
+   * example usage, see [Create interactive cards](https://developers.google.com/chat/how-tos/cards-
+   * onclick).
    * @param function function or {@code null} for none
    */
   public GoogleAppsCardV1Action setFunction(java.lang.String function) {
@@ -175,7 +181,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * recommended that the card use [LoadIndicator.SPINNER](https://developers.google.com/workspace
    * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) for all actions, as this locks the UI
    * to ensure no changes are made by the user while the action is being processed. Not supported by
-   * Google Chat apps.
+   * Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPersistValues() {
@@ -193,7 +199,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * recommended that the card use [LoadIndicator.SPINNER](https://developers.google.com/workspace
    * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) for all actions, as this locks the UI
    * to ensure no changes are made by the user while the action is being processed. Not supported by
-   * Google Chat apps.
+   * Chat apps.
    * @param persistValues persistValues or {@code null} for none
    */
   public GoogleAppsCardV1Action setPersistValues(java.lang.Boolean persistValues) {

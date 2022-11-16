@@ -18,8 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A section contains a collection of widgets that are rendered vertically in the order that they
- * are specified. Across all platforms, cards have a narrow fixed width, so there is currently no
- * need for layout properties, for example, float.
+ * are specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,40 +31,45 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Section extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether this section is collapsible. If a section is collapsible, the description
-   * must be given.
+   * Indicates whether this section is collapsible. Collapsible sections hide some or all widgets,
+   * but users can expand the section to reveal the hidden widgets by clicking **Show more**. Users
+   * can hide the widgets again by clicking **Show less**. To determine which widgets are hidden,
+   * specify `uncollapsibleWidgetsCount`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean collapsible;
 
   /**
-   * The header of the section. Formatted text is supported.
+   * Text that appears at the top of a section. Supports [simple HTML formatted
+   * text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String header;
 
   /**
-   * The number of uncollapsible widgets. For example, when a section contains five widgets and the
-   * `uncollapsibleWidgetsCount` is set to `2`, the first two widgets are always shown and the last
-   * three are collapsed as default. The `uncollapsibleWidgetsCount` is taken into account only when
-   * `collapsible` is `true`.
+   * The number of uncollapsible widgets which remain visible even when a section is collapsed. For
+   * example, when a section contains five widgets and the `uncollapsibleWidgetsCount` is set to
+   * `2`, the first two widgets are always shown and the last three are collapsed by default. The
+   * `uncollapsibleWidgetsCount` is taken into account only when `collapsible` is `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer uncollapsibleWidgetsCount;
 
   /**
-   * A section must contain at least 1 widget.
+   * All the widgets in the section. Must contain at least 1 widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsCardV1Widget> widgets;
 
   /**
-   * Indicates whether this section is collapsible. If a section is collapsible, the description
-   * must be given.
+   * Indicates whether this section is collapsible. Collapsible sections hide some or all widgets,
+   * but users can expand the section to reveal the hidden widgets by clicking **Show more**. Users
+   * can hide the widgets again by clicking **Show less**. To determine which widgets are hidden,
+   * specify `uncollapsibleWidgetsCount`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCollapsible() {
@@ -73,8 +77,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * Indicates whether this section is collapsible. If a section is collapsible, the description
-   * must be given.
+   * Indicates whether this section is collapsible. Collapsible sections hide some or all widgets,
+   * but users can expand the section to reveal the hidden widgets by clicking **Show more**. Users
+   * can hide the widgets again by clicking **Show less**. To determine which widgets are hidden,
+   * specify `uncollapsibleWidgetsCount`.
    * @param collapsible collapsible or {@code null} for none
    */
   public GoogleAppsCardV1Section setCollapsible(java.lang.Boolean collapsible) {
@@ -83,7 +89,8 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * The header of the section. Formatted text is supported.
+   * Text that appears at the top of a section. Supports [simple HTML formatted
+   * text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -91,7 +98,8 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * The header of the section. Formatted text is supported.
+   * Text that appears at the top of a section. Supports [simple HTML formatted
+   * text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @param header header or {@code null} for none
    */
   public GoogleAppsCardV1Section setHeader(java.lang.String header) {
@@ -100,10 +108,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * The number of uncollapsible widgets. For example, when a section contains five widgets and the
-   * `uncollapsibleWidgetsCount` is set to `2`, the first two widgets are always shown and the last
-   * three are collapsed as default. The `uncollapsibleWidgetsCount` is taken into account only when
-   * `collapsible` is `true`.
+   * The number of uncollapsible widgets which remain visible even when a section is collapsed. For
+   * example, when a section contains five widgets and the `uncollapsibleWidgetsCount` is set to
+   * `2`, the first two widgets are always shown and the last three are collapsed by default. The
+   * `uncollapsibleWidgetsCount` is taken into account only when `collapsible` is `true`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUncollapsibleWidgetsCount() {
@@ -111,10 +119,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * The number of uncollapsible widgets. For example, when a section contains five widgets and the
-   * `uncollapsibleWidgetsCount` is set to `2`, the first two widgets are always shown and the last
-   * three are collapsed as default. The `uncollapsibleWidgetsCount` is taken into account only when
-   * `collapsible` is `true`.
+   * The number of uncollapsible widgets which remain visible even when a section is collapsed. For
+   * example, when a section contains five widgets and the `uncollapsibleWidgetsCount` is set to
+   * `2`, the first two widgets are always shown and the last three are collapsed by default. The
+   * `uncollapsibleWidgetsCount` is taken into account only when `collapsible` is `true`.
    * @param uncollapsibleWidgetsCount uncollapsibleWidgetsCount or {@code null} for none
    */
   public GoogleAppsCardV1Section setUncollapsibleWidgetsCount(java.lang.Integer uncollapsibleWidgetsCount) {
@@ -123,7 +131,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * A section must contain at least 1 widget.
+   * All the widgets in the section. Must contain at least 1 widget.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Widget> getWidgets() {
@@ -131,7 +139,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * A section must contain at least 1 widget.
+   * All the widgets in the section. Must contain at least 1 widget.
    * @param widgets widgets or {@code null} for none
    */
   public GoogleAppsCardV1Section setWidgets(java.util.List<GoogleAppsCardV1Widget> widgets) {

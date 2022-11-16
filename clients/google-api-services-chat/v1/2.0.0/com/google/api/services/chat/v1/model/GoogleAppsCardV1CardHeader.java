@@ -37,21 +37,21 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   private java.lang.String imageAltText;
 
   /**
-   * The image's type.
+   * The shape used to crop the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageType;
 
   /**
-   * The URL of the image in the card header.
+   * The HTTPS URL of the image in the card header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUrl;
 
   /**
-   * The subtitle of the card header.
+   * The subtitle of the card header. If specified, appears on its own line below the `title`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The image's type.
+   * The shape used to crop the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -92,7 +92,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The image's type.
+   * The shape used to crop the image.
    * @param imageType imageType or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader setImageType(java.lang.String imageType) {
@@ -101,7 +101,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The URL of the image in the card header.
+   * The HTTPS URL of the image in the card header.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUrl() {
@@ -109,7 +109,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The URL of the image in the card header.
+   * The HTTPS URL of the image in the card header.
    * @param imageUrl imageUrl or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader setImageUrl(java.lang.String imageUrl) {
@@ -118,7 +118,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The subtitle of the card header.
+   * The subtitle of the card header. If specified, appears on its own line below the `title`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtitle() {
@@ -126,7 +126,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The subtitle of the card header.
+   * The subtitle of the card header. If specified, appears on its own line below the `title`.
    * @param subtitle subtitle or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader setSubtitle(java.lang.String subtitle) {

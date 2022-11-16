@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A widget is a UI element that presents texts, images, etc.
+ * Each card is made up of widgets. A widget is a composite object that can represent one of text,
+ * images, buttons, and other object types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,47 +31,54 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Widget extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of buttons. For example, the following JSON creates two buttons. The first is a filled
+   * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ "button": { "text": "Edit", "Color": { "Red": 255 "Green": 255 "Blue": 255 } "disabled": true
-   * }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" }, "onClick": {
-   * "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
+   * [ "button": { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }
+   * "disabled": true }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" },
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1ButtonList buttonList;
 
   /**
-   * Displays a selection/input widget for date/time. For example, the following JSON creates a
-   * date/time picker for an appointment time: ``` "date_time_picker": { "name": "appointment_time",
-   * "label": "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME",
-   * "valueMsEpoch": "796435200000" } ```
+   * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
+   * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
+   * to schedule an appointment: ``` "date_time_picker": { "name": "appointment_time", "label":
+   * "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME", "valueMsEpoch":
+   * "796435200000" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1DateTimePicker dateTimePicker;
 
   /**
-   * Displays a decorated text item in this widget. For example, the following JSON creates a
-   * decorated text widget showing email address: ``` "decoratedText": { "icon": { "knownIcon":
-   * "EMAIL" }, "topLabel": "Email Address", "content": "sasha@example.com", "bottomLabel": "This is
-   * a new Email address!", "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected":
-   * false, "controlType": "ControlType.CHECKBOX" } } ```
+   * Displays a decorated text item. For example, the following JSON creates a decorated text widget
+   * showing email address: ``` "decoratedText": { "icon": { "knownIcon": "EMAIL" }, "topLabel":
+   * "Email Address", "text": "sasha@example.com", "bottomLabel": "This is a new Email address!",
+   * "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
+   * "ControlType.CHECKBOX" } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1DecoratedText decoratedText;
 
   /**
-   * Displays a divider. For example, the following JSON creates a divider: ``` "divider": { } ```
+   * Displays a horizontal line divider between widgets. For example, the following JSON creates a
+   * divider: ``` "divider": { } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Divider divider;
 
   /**
-   * Displays a grid with a collection of items. For example, the following JSON creates a 2 column
-   * grid with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
+   * Displays a grid with a collection of items. A grid supports any number of columns and items.
+   * The number of rows is determined by the upper bounds of the number items divided by the number
+   * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
+   * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
+   * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
+   * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
+   * with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
    * "borderStyle": { "type": "STROKE", "cornerRadius": 4.0 }, "items": [ "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
    * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" ], "onClick": { "openLink":
@@ -81,58 +89,59 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1Grid grid;
 
   /**
-   * The horizontal alignment of this widget.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String horizontalAlignment;
-
-  /**
-   * Displays an image in this widget. For example, the following JSON creates an image with
-   * alternative text: ``` "image": { "imageUrl": "https://example.com/sasha.png" "altText": "Avatar
-   * for Sasha" } ```
+   * Displays an image. For example, the following JSON creates an image with alternative text: ```
+   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+   * "altText": "Chat app avatar" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Image image;
 
   /**
-   * Displays a switch control in this widget. For example, the following JSON creates a dropdown
-   * selection for size: ``` "switchControl": { "name": "size", "label": "Size" "type":
-   * "SelectionType.DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
-   * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
-   * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
+   * Displays a selection control that lets users select items. Selection controls can be check
+   * boxes, radio buttons, switches, or dropdown menus. Currently supported in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
+   * "selectionInput": { "name": "size", "label": "Size" "type": "SelectionType.DROPDOWN", "items":
+   * [ { "text": "S", "value": "small", "selected": false }, { "text": "M", "value": "medium",
+   * "selected": true }, { "text": "L", "value": "large", "selected": false }, { "text": "XL",
+   * "value": "extra_large", "selected": false } ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1SelectionInput selectionInput;
 
   /**
-   * Displays a text input in this widget. For example, the following JSON creates a text input for
-   * mail address: ``` "textInput": { "name": "mailing_address", "label": "Mailing Address" } ``` As
-   * another example, the following JSON creates a text input for programming language with static
-   * suggestions: ``` "textInput": { "name": "preferred_programing_language", "label": "Preferred
-   * Language", "initialSuggestions": { "items": [ { "text": "C++" }, { "text": "Java" }, { "text":
-   * "JavaScript" }, { "text": "Python" } ] } } ```
+   * Displays a text box that users can type into. Currently supported in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * For example, the following JSON creates a text input for an email address: ``` "textInput": {
+   * "name": "mailing_address", "label": "Mailing Address" } ``` As another example, the following
+   * JSON creates a text input for a programming language with static suggestions: ``` "textInput":
+   * { "name": "preferred_programing_language", "label": "Preferred Language", "initialSuggestions":
+   * { "items": [ { "text": "C++" }, { "text": "Java" }, { "text": "JavaScript" }, { "text":
+   * "Python" } ] } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1TextInput textInput;
 
   /**
-   * Displays a text paragraph in this widget. For example, the following JSON creates a bolded
-   * text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * Displays a text paragraph. Supports [simple HTML formatted text](https://developers.google.com
+   * /apps-script/add-ons/concepts/widgets#text_formatting). For example, the following JSON creates
+   * a bolded text: ``` "textParagraph": { "text": " *bold text*" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1TextParagraph textParagraph;
 
   /**
-   * A list of buttons. For example, the following JSON creates two buttons. The first is a filled
+   * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ "button": { "text": "Edit", "Color": { "Red": 255 "Green": 255 "Blue": 255 } "disabled": true
-   * }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" }, "onClick": {
-   * "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
+   * [ "button": { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }
+   * "disabled": true }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" },
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1ButtonList getButtonList() {
@@ -140,11 +149,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of buttons. For example, the following JSON creates two buttons. The first is a filled
+   * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ "button": { "text": "Edit", "Color": { "Red": 255 "Green": 255 "Blue": 255 } "disabled": true
-   * }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" }, "onClick": {
-   * "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
+   * [ "button": { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }
+   * "disabled": true }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" },
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
    * @param buttonList buttonList or {@code null} for none
    */
   public GoogleAppsCardV1Widget setButtonList(GoogleAppsCardV1ButtonList buttonList) {
@@ -153,10 +162,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a selection/input widget for date/time. For example, the following JSON creates a
-   * date/time picker for an appointment time: ``` "date_time_picker": { "name": "appointment_time",
-   * "label": "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME",
-   * "valueMsEpoch": "796435200000" } ```
+   * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
+   * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
+   * to schedule an appointment: ``` "date_time_picker": { "name": "appointment_time", "label":
+   * "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME", "valueMsEpoch":
+   * "796435200000" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker getDateTimePicker() {
@@ -164,10 +174,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a selection/input widget for date/time. For example, the following JSON creates a
-   * date/time picker for an appointment time: ``` "date_time_picker": { "name": "appointment_time",
-   * "label": "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME",
-   * "valueMsEpoch": "796435200000" } ```
+   * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
+   * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
+   * to schedule an appointment: ``` "date_time_picker": { "name": "appointment_time", "label":
+   * "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME", "valueMsEpoch":
+   * "796435200000" } ```
    * @param dateTimePicker dateTimePicker or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDateTimePicker(GoogleAppsCardV1DateTimePicker dateTimePicker) {
@@ -176,11 +187,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a decorated text item in this widget. For example, the following JSON creates a
-   * decorated text widget showing email address: ``` "decoratedText": { "icon": { "knownIcon":
-   * "EMAIL" }, "topLabel": "Email Address", "content": "sasha@example.com", "bottomLabel": "This is
-   * a new Email address!", "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected":
-   * false, "controlType": "ControlType.CHECKBOX" } } ```
+   * Displays a decorated text item. For example, the following JSON creates a decorated text widget
+   * showing email address: ``` "decoratedText": { "icon": { "knownIcon": "EMAIL" }, "topLabel":
+   * "Email Address", "text": "sasha@example.com", "bottomLabel": "This is a new Email address!",
+   * "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
+   * "ControlType.CHECKBOX" } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText getDecoratedText() {
@@ -188,11 +199,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a decorated text item in this widget. For example, the following JSON creates a
-   * decorated text widget showing email address: ``` "decoratedText": { "icon": { "knownIcon":
-   * "EMAIL" }, "topLabel": "Email Address", "content": "sasha@example.com", "bottomLabel": "This is
-   * a new Email address!", "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected":
-   * false, "controlType": "ControlType.CHECKBOX" } } ```
+   * Displays a decorated text item. For example, the following JSON creates a decorated text widget
+   * showing email address: ``` "decoratedText": { "icon": { "knownIcon": "EMAIL" }, "topLabel":
+   * "Email Address", "text": "sasha@example.com", "bottomLabel": "This is a new Email address!",
+   * "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
+   * "ControlType.CHECKBOX" } } ```
    * @param decoratedText decoratedText or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDecoratedText(GoogleAppsCardV1DecoratedText decoratedText) {
@@ -201,7 +212,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a divider. For example, the following JSON creates a divider: ``` "divider": { } ```
+   * Displays a horizontal line divider between widgets. For example, the following JSON creates a
+   * divider: ``` "divider": { } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Divider getDivider() {
@@ -209,7 +221,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a divider. For example, the following JSON creates a divider: ``` "divider": { } ```
+   * Displays a horizontal line divider between widgets. For example, the following JSON creates a
+   * divider: ``` "divider": { } ```
    * @param divider divider or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDivider(GoogleAppsCardV1Divider divider) {
@@ -218,8 +231,13 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a grid with a collection of items. For example, the following JSON creates a 2 column
-   * grid with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
+   * Displays a grid with a collection of items. A grid supports any number of columns and items.
+   * The number of rows is determined by the upper bounds of the number items divided by the number
+   * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
+   * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
+   * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
+   * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
+   * with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
    * "borderStyle": { "type": "STROKE", "cornerRadius": 4.0 }, "items": [ "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
    * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" ], "onClick": { "openLink":
@@ -231,8 +249,13 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a grid with a collection of items. For example, the following JSON creates a 2 column
-   * grid with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
+   * Displays a grid with a collection of items. A grid supports any number of columns and items.
+   * The number of rows is determined by the upper bounds of the number items divided by the number
+   * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
+   * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
+   * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
+   * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
+   * with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
    * "borderStyle": { "type": "STROKE", "cornerRadius": 4.0 }, "items": [ "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
    * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" ], "onClick": { "openLink":
@@ -245,26 +268,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * The horizontal alignment of this widget.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHorizontalAlignment() {
-    return horizontalAlignment;
-  }
-
-  /**
-   * The horizontal alignment of this widget.
-   * @param horizontalAlignment horizontalAlignment or {@code null} for none
-   */
-  public GoogleAppsCardV1Widget setHorizontalAlignment(java.lang.String horizontalAlignment) {
-    this.horizontalAlignment = horizontalAlignment;
-    return this;
-  }
-
-  /**
-   * Displays an image in this widget. For example, the following JSON creates an image with
-   * alternative text: ``` "image": { "imageUrl": "https://example.com/sasha.png" "altText": "Avatar
-   * for Sasha" } ```
+   * Displays an image. For example, the following JSON creates an image with alternative text: ```
+   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+   * "altText": "Chat app avatar" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Image getImage() {
@@ -272,9 +278,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays an image in this widget. For example, the following JSON creates an image with
-   * alternative text: ``` "image": { "imageUrl": "https://example.com/sasha.png" "altText": "Avatar
-   * for Sasha" } ```
+   * Displays an image. For example, the following JSON creates an image with alternative text: ```
+   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+   * "altText": "Chat app avatar" } ```
    * @param image image or {@code null} for none
    */
   public GoogleAppsCardV1Widget setImage(GoogleAppsCardV1Image image) {
@@ -283,11 +289,15 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a switch control in this widget. For example, the following JSON creates a dropdown
-   * selection for size: ``` "switchControl": { "name": "size", "label": "Size" "type":
-   * "SelectionType.DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
-   * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
-   * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
+   * Displays a selection control that lets users select items. Selection controls can be check
+   * boxes, radio buttons, switches, or dropdown menus. Currently supported in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
+   * "selectionInput": { "name": "size", "label": "Size" "type": "SelectionType.DROPDOWN", "items":
+   * [ { "text": "S", "value": "small", "selected": false }, { "text": "M", "value": "medium",
+   * "selected": true }, { "text": "L", "value": "large", "selected": false }, { "text": "XL",
+   * "value": "extra_large", "selected": false } ] } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput getSelectionInput() {
@@ -295,11 +305,15 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a switch control in this widget. For example, the following JSON creates a dropdown
-   * selection for size: ``` "switchControl": { "name": "size", "label": "Size" "type":
-   * "SelectionType.DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
-   * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
-   * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
+   * Displays a selection control that lets users select items. Selection controls can be check
+   * boxes, radio buttons, switches, or dropdown menus. Currently supported in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
+   * "selectionInput": { "name": "size", "label": "Size" "type": "SelectionType.DROPDOWN", "items":
+   * [ { "text": "S", "value": "small", "selected": false }, { "text": "M", "value": "medium",
+   * "selected": true }, { "text": "L", "value": "large", "selected": false }, { "text": "XL",
+   * "value": "extra_large", "selected": false } ] } ```
    * @param selectionInput selectionInput or {@code null} for none
    */
   public GoogleAppsCardV1Widget setSelectionInput(GoogleAppsCardV1SelectionInput selectionInput) {
@@ -308,12 +322,15 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text input in this widget. For example, the following JSON creates a text input for
-   * mail address: ``` "textInput": { "name": "mailing_address", "label": "Mailing Address" } ``` As
-   * another example, the following JSON creates a text input for programming language with static
-   * suggestions: ``` "textInput": { "name": "preferred_programing_language", "label": "Preferred
-   * Language", "initialSuggestions": { "items": [ { "text": "C++" }, { "text": "Java" }, { "text":
-   * "JavaScript" }, { "text": "Python" } ] } } ```
+   * Displays a text box that users can type into. Currently supported in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * For example, the following JSON creates a text input for an email address: ``` "textInput": {
+   * "name": "mailing_address", "label": "Mailing Address" } ``` As another example, the following
+   * JSON creates a text input for a programming language with static suggestions: ``` "textInput":
+   * { "name": "preferred_programing_language", "label": "Preferred Language", "initialSuggestions":
+   * { "items": [ { "text": "C++" }, { "text": "Java" }, { "text": "JavaScript" }, { "text":
+   * "Python" } ] } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1TextInput getTextInput() {
@@ -321,12 +338,15 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text input in this widget. For example, the following JSON creates a text input for
-   * mail address: ``` "textInput": { "name": "mailing_address", "label": "Mailing Address" } ``` As
-   * another example, the following JSON creates a text input for programming language with static
-   * suggestions: ``` "textInput": { "name": "preferred_programing_language", "label": "Preferred
-   * Language", "initialSuggestions": { "items": [ { "text": "C++" }, { "text": "Java" }, { "text":
-   * "JavaScript" }, { "text": "Python" } ] } } ```
+   * Displays a text box that users can type into. Currently supported in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * For example, the following JSON creates a text input for an email address: ``` "textInput": {
+   * "name": "mailing_address", "label": "Mailing Address" } ``` As another example, the following
+   * JSON creates a text input for a programming language with static suggestions: ``` "textInput":
+   * { "name": "preferred_programing_language", "label": "Preferred Language", "initialSuggestions":
+   * { "items": [ { "text": "C++" }, { "text": "Java" }, { "text": "JavaScript" }, { "text":
+   * "Python" } ] } } ```
    * @param textInput textInput or {@code null} for none
    */
   public GoogleAppsCardV1Widget setTextInput(GoogleAppsCardV1TextInput textInput) {
@@ -335,8 +355,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text paragraph in this widget. For example, the following JSON creates a bolded
-   * text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * Displays a text paragraph. Supports [simple HTML formatted text](https://developers.google.com
+   * /apps-script/add-ons/concepts/widgets#text_formatting). For example, the following JSON creates
+   * a bolded text: ``` "textParagraph": { "text": " *bold text*" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1TextParagraph getTextParagraph() {
@@ -344,8 +365,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text paragraph in this widget. For example, the following JSON creates a bolded
-   * text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * Displays a text paragraph. Supports [simple HTML formatted text](https://developers.google.com
+   * /apps-script/add-ons/concepts/widgets#text_formatting). For example, the following JSON creates
+   * a bolded text: ``` "textParagraph": { "text": " *bold text*" } ```
    * @param textParagraph textParagraph or {@code null} for none
    */
   public GoogleAppsCardV1Widget setTextParagraph(GoogleAppsCardV1TextParagraph textParagraph) {

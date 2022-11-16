@@ -17,8 +17,14 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A container wrapping elements necessary for showing suggestion items used in text input
- * autocomplete.
+ * Suggested values that users can enter. These values appear when users click inside the text input
+ * field. As users type, the suggested values dynamically filter to match what the users have typed.
+ * For example, a text input field for programming language might suggest Java, JavaScript, Python,
+ * and C++. When users start typing "Jav", the list of suggestions filters to show just Java and
+ * JavaScript. Suggested values help guide users to enter values that your app can make sense of.
+ * When referring to JavaScript, some users might enter "javascript" and others "java script".
+ * Suggesting "JavaScript" can standardize how users interact with your app. When specified,
+ * `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,7 +37,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Suggestions extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of suggestions used for autocomplete recommendations.
+   * A list of suggestions used for autocomplete recommendations in text input fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +50,7 @@ public final class GoogleAppsCardV1Suggestions extends com.google.api.client.jso
   }
 
   /**
-   * A list of suggestions used for autocomplete recommendations.
+   * A list of suggestions used for autocomplete recommendations in text input fields.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1SuggestionItem> getItems() {
@@ -52,7 +58,7 @@ public final class GoogleAppsCardV1Suggestions extends com.google.api.client.jso
   }
 
   /**
-   * A list of suggestions used for autocomplete recommendations.
+   * A list of suggestions used for autocomplete recommendations in text input fields.
    * @param items items or {@code null} for none
    */
   public GoogleAppsCardV1Suggestions setItems(java.util.List<GoogleAppsCardV1SuggestionItem> items) {

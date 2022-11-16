@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A button. Can be a text button or an image button.
+ * A text, icon, or text + icon button that users can click. To make an image a clickable button,
+ * specify an Image (not an ImageComponent) and set an `onClick` action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,51 +31,69 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Button extends com.google.api.client.json.GenericJson {
 
   /**
-   * The alternative text used for accessibility. Has no effect when an icon is set; use
-   * `icon.alt_text` instead.
+   * The alternative text used for accessibility. Set descriptive text that lets users know what the
+   * button does. For example, if a button opens a hyperlink, you might write: "Opens a new browser
+   * tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat". Has no effect when an icon is set; use `icon.alt_text`
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String altText;
 
   /**
-   * If set, the button is filled with a solid background.
+   * If set, the button is filled with a solid background color and the font color changes to
+   * maintain contrast with the background color. For example, setting a blue background will likely
+   * result in white text. If unset, the image background is white and the font color is blue. For
+   * red, green and blue, the value of each field is a `float` number that can be expressed in
+   * either of two ways: as a number between 0 and 255 divided by 255 (153/255) or as a value
+   * between 0 and 1 (0.6). 0 represents the absence of a color and 1 or 255/255 represent the full
+   * presence of that color on the RGB scale. Optionally set alpha, which sets a level of
+   * transparency using this equation: ``` pixel color = alpha * (this color) + (1.0 - alpha) *
+   * (background color) ``` For alpha, a value of 1 corresponds with a solid color, and a value of 0
+   * corresponds with a completely transparent color. For example, the following color represents a
+   * half transparent red: ``` "color": { "red": 1, "green": 0, "blue": 0, "alpha": 0.5 } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color color;
 
   /**
-   * If `true`, the button is displayed in a disabled state and doesn't respond to user actions.
+   * If `true`, the button is displayed in an inactive state and doesn't respond to user actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * The icon image.
+   * The icon image. If both `icon` and `text` are set, then the icon appears in place of the text.
+   * Support for both an icon and text is coming soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Icon icon;
 
   /**
-   * The action to perform when the button is clicked.
+   * The action to perform when the button is clicked, such as opening a hyperlink or running a
+   * custom function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1OnClick onClick;
 
   /**
-   * The text of the button.
+   * The text displayed inside the button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The alternative text used for accessibility. Has no effect when an icon is set; use
-   * `icon.alt_text` instead.
+   * The alternative text used for accessibility. Set descriptive text that lets users know what the
+   * button does. For example, if a button opens a hyperlink, you might write: "Opens a new browser
+   * tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat". Has no effect when an icon is set; use `icon.alt_text`
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -82,8 +101,11 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The alternative text used for accessibility. Has no effect when an icon is set; use
-   * `icon.alt_text` instead.
+   * The alternative text used for accessibility. Set descriptive text that lets users know what the
+   * button does. For example, if a button opens a hyperlink, you might write: "Opens a new browser
+   * tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat". Has no effect when an icon is set; use `icon.alt_text`
+   * instead.
    * @param altText altText or {@code null} for none
    */
   public GoogleAppsCardV1Button setAltText(java.lang.String altText) {
@@ -92,7 +114,17 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * If set, the button is filled with a solid background.
+   * If set, the button is filled with a solid background color and the font color changes to
+   * maintain contrast with the background color. For example, setting a blue background will likely
+   * result in white text. If unset, the image background is white and the font color is blue. For
+   * red, green and blue, the value of each field is a `float` number that can be expressed in
+   * either of two ways: as a number between 0 and 255 divided by 255 (153/255) or as a value
+   * between 0 and 1 (0.6). 0 represents the absence of a color and 1 or 255/255 represent the full
+   * presence of that color on the RGB scale. Optionally set alpha, which sets a level of
+   * transparency using this equation: ``` pixel color = alpha * (this color) + (1.0 - alpha) *
+   * (background color) ``` For alpha, a value of 1 corresponds with a solid color, and a value of 0
+   * corresponds with a completely transparent color. For example, the following color represents a
+   * half transparent red: ``` "color": { "red": 1, "green": 0, "blue": 0, "alpha": 0.5 } ```
    * @return value or {@code null} for none
    */
   public Color getColor() {
@@ -100,7 +132,17 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * If set, the button is filled with a solid background.
+   * If set, the button is filled with a solid background color and the font color changes to
+   * maintain contrast with the background color. For example, setting a blue background will likely
+   * result in white text. If unset, the image background is white and the font color is blue. For
+   * red, green and blue, the value of each field is a `float` number that can be expressed in
+   * either of two ways: as a number between 0 and 255 divided by 255 (153/255) or as a value
+   * between 0 and 1 (0.6). 0 represents the absence of a color and 1 or 255/255 represent the full
+   * presence of that color on the RGB scale. Optionally set alpha, which sets a level of
+   * transparency using this equation: ``` pixel color = alpha * (this color) + (1.0 - alpha) *
+   * (background color) ``` For alpha, a value of 1 corresponds with a solid color, and a value of 0
+   * corresponds with a completely transparent color. For example, the following color represents a
+   * half transparent red: ``` "color": { "red": 1, "green": 0, "blue": 0, "alpha": 0.5 } ```
    * @param color color or {@code null} for none
    */
   public GoogleAppsCardV1Button setColor(Color color) {
@@ -109,7 +151,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * If `true`, the button is displayed in a disabled state and doesn't respond to user actions.
+   * If `true`, the button is displayed in an inactive state and doesn't respond to user actions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -117,7 +159,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * If `true`, the button is displayed in a disabled state and doesn't respond to user actions.
+   * If `true`, the button is displayed in an inactive state and doesn't respond to user actions.
    * @param disabled disabled or {@code null} for none
    */
   public GoogleAppsCardV1Button setDisabled(java.lang.Boolean disabled) {
@@ -126,7 +168,8 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The icon image.
+   * The icon image. If both `icon` and `text` are set, then the icon appears in place of the text.
+   * Support for both an icon and text is coming soon.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Icon getIcon() {
@@ -134,7 +177,8 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The icon image.
+   * The icon image. If both `icon` and `text` are set, then the icon appears in place of the text.
+   * Support for both an icon and text is coming soon.
    * @param icon icon or {@code null} for none
    */
   public GoogleAppsCardV1Button setIcon(GoogleAppsCardV1Icon icon) {
@@ -143,7 +187,8 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The action to perform when the button is clicked.
+   * The action to perform when the button is clicked, such as opening a hyperlink or running a
+   * custom function.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -151,7 +196,8 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The action to perform when the button is clicked.
+   * The action to perform when the button is clicked, such as opening a hyperlink or running a
+   * custom function.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1Button setOnClick(GoogleAppsCardV1OnClick onClick) {
@@ -160,7 +206,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The text of the button.
+   * The text displayed inside the button.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -168,7 +214,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The text of the button.
+   * The text displayed inside the button.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1Button setText(java.lang.String text) {

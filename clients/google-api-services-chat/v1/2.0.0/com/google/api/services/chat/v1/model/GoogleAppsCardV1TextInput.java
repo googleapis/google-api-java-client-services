@@ -17,8 +17,13 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A text input is a UI item where users can input text. A text input can also have an onChange
- * action and suggestions.
+ * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps
+ * receive and can process the value of entered text during form input events. For details about
+ * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+ * tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users,
+ * use a text input. To collect defined data from users, use the selection input widget instead.
+ * Only supported in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for
+ * [card messages](https://developers.google.com/chat/api/guides/message-formats/cards) coming soon.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,65 +36,91 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The refresh function that returns suggestions based on the user's input text. If the callback
-   * is not specified, autocomplete is done in client side based on the initial suggestion items.
+   * Optional. Specify what action to take when the text input field provides suggestions to users
+   * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
+   * processed by the client. If specified, the app takes the action specified here, such as running
+   * a custom function. Supported by Google Workspace Add-ons, but not Chat apps. Support by Chat
+   * apps coming soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Action autoCompleteAction;
 
   /**
-   * The hint text.
+   * Text that appears inside the text input field meant to assist users by prompting them to enter
+   * a certain value. This text is not visible after users begin typing. Required if `label` is
+   * unspecified. Otherwise, optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hintText;
 
   /**
-   * The initial suggestions made before any user input.
+   * Suggested values that users can enter. These values appear when users click inside the text
+   * input field. As users type, the suggested values dynamically filter to match what the users
+   * have typed. For example, a text input field for programming language might suggest Java,
+   * JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to
+   * show just Java and JavaScript. Suggested values help guide users to enter values that your app
+   * can make sense of. When referring to JavaScript, some users might enter "javascript" and others
+   * "java script". Suggesting "JavaScript" can standardize how users interact with your app. When
+   * specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Suggestions initialSuggestions;
 
   /**
-   * At least one of label and hintText must be specified.
+   * The text that appears above the text input field in the user interface. Specify text that helps
+   * the user enter the information your app needs. For example, if you are asking someone's name,
+   * but specifically need their surname, write "surname" instead of "name". Required if `hintText`
+   * is unspecified. Otherwise, optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * The name of the text input which is used in `formInput`.
+   * The name by which the text input is identified in a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The onChange action, for example, invoke a function.
+   * What to do when a change occurs in the text input field. Examples of changes include a user
+   * adding to the field, or deleting text. Examples of actions to take include running a custom
+   * function or opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google
+   * Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Action onChangeAction;
 
   /**
-   * The style of the text, for example, a single line or multiple lines.
+   * How a text input field appears in the user interface. For example, whether the field is single
+   * or multi-line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The default value when there is no input from the user.
+   * The value entered by a user, returned as part of a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The refresh function that returns suggestions based on the user's input text. If the callback
-   * is not specified, autocomplete is done in client side based on the initial suggestion items.
+   * Optional. Specify what action to take when the text input field provides suggestions to users
+   * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
+   * processed by the client. If specified, the app takes the action specified here, such as running
+   * a custom function. Supported by Google Workspace Add-ons, but not Chat apps. Support by Chat
+   * apps coming soon.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getAutoCompleteAction() {
@@ -97,8 +128,11 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The refresh function that returns suggestions based on the user's input text. If the callback
-   * is not specified, autocomplete is done in client side based on the initial suggestion items.
+   * Optional. Specify what action to take when the text input field provides suggestions to users
+   * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
+   * processed by the client. If specified, the app takes the action specified here, such as running
+   * a custom function. Supported by Google Workspace Add-ons, but not Chat apps. Support by Chat
+   * apps coming soon.
    * @param autoCompleteAction autoCompleteAction or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setAutoCompleteAction(GoogleAppsCardV1Action autoCompleteAction) {
@@ -107,7 +141,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The hint text.
+   * Text that appears inside the text input field meant to assist users by prompting them to enter
+   * a certain value. This text is not visible after users begin typing. Required if `label` is
+   * unspecified. Otherwise, optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getHintText() {
@@ -115,7 +151,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The hint text.
+   * Text that appears inside the text input field meant to assist users by prompting them to enter
+   * a certain value. This text is not visible after users begin typing. Required if `label` is
+   * unspecified. Otherwise, optional.
    * @param hintText hintText or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setHintText(java.lang.String hintText) {
@@ -124,7 +162,14 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The initial suggestions made before any user input.
+   * Suggested values that users can enter. These values appear when users click inside the text
+   * input field. As users type, the suggested values dynamically filter to match what the users
+   * have typed. For example, a text input field for programming language might suggest Java,
+   * JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to
+   * show just Java and JavaScript. Suggested values help guide users to enter values that your app
+   * can make sense of. When referring to JavaScript, some users might enter "javascript" and others
+   * "java script". Suggesting "JavaScript" can standardize how users interact with your app. When
+   * specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Suggestions getInitialSuggestions() {
@@ -132,7 +177,14 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The initial suggestions made before any user input.
+   * Suggested values that users can enter. These values appear when users click inside the text
+   * input field. As users type, the suggested values dynamically filter to match what the users
+   * have typed. For example, a text input field for programming language might suggest Java,
+   * JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to
+   * show just Java and JavaScript. Suggested values help guide users to enter values that your app
+   * can make sense of. When referring to JavaScript, some users might enter "javascript" and others
+   * "java script". Suggesting "JavaScript" can standardize how users interact with your app. When
+   * specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
    * @param initialSuggestions initialSuggestions or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setInitialSuggestions(GoogleAppsCardV1Suggestions initialSuggestions) {
@@ -141,7 +193,10 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * At least one of label and hintText must be specified.
+   * The text that appears above the text input field in the user interface. Specify text that helps
+   * the user enter the information your app needs. For example, if you are asking someone's name,
+   * but specifically need their surname, write "surname" instead of "name". Required if `hintText`
+   * is unspecified. Otherwise, optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -149,7 +204,10 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * At least one of label and hintText must be specified.
+   * The text that appears above the text input field in the user interface. Specify text that helps
+   * the user enter the information your app needs. For example, if you are asking someone's name,
+   * but specifically need their surname, write "surname" instead of "name". Required if `hintText`
+   * is unspecified. Otherwise, optional.
    * @param label label or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setLabel(java.lang.String label) {
@@ -158,7 +216,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The name of the text input which is used in `formInput`.
+   * The name by which the text input is identified in a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,7 +226,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The name of the text input which is used in `formInput`.
+   * The name by which the text input is identified in a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setName(java.lang.String name) {
@@ -175,7 +237,10 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The onChange action, for example, invoke a function.
+   * What to do when a change occurs in the text input field. Examples of changes include a user
+   * adding to the field, or deleting text. Examples of actions to take include running a custom
+   * function or opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google
+   * Chat.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -183,7 +248,10 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The onChange action, for example, invoke a function.
+   * What to do when a change occurs in the text input field. Examples of changes include a user
+   * adding to the field, or deleting text. Examples of actions to take include running a custom
+   * function or opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google
+   * Chat.
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
@@ -192,7 +260,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The style of the text, for example, a single line or multiple lines.
+   * How a text input field appears in the user interface. For example, whether the field is single
+   * or multi-line.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -200,7 +269,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The style of the text, for example, a single line or multiple lines.
+   * How a text input field appears in the user interface. For example, whether the field is single
+   * or multi-line.
    * @param type type or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setType(java.lang.String type) {
@@ -209,7 +279,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The default value when there is no input from the user.
+   * The value entered by a user, returned as part of a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -217,7 +289,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The default value when there is no input from the user.
+   * The value entered by a user, returned as part of a form input event. For details about working
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
+   * tos/dialogs#receive_form_data_from_dialogs).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setValue(java.lang.String value) {

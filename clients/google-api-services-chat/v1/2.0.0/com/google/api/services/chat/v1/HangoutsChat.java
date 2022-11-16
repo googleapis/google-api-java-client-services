@@ -1886,8 +1886,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   public class Spaces {
 
     /**
-     * Returns a space. Requires [service account
-     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+     * Returns a space. Requires [authentication](https://developers.google.com/chat/api/guides/auth).
+     * Fully supports [service account
+     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports
+     * [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+     * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+     * which grants early access to certain features. [User
+     * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+     * `chat.spaces` or `chat.spaces.readonly` authorization scope.
      *
      * Create a request for the method "spaces.get".
      *
@@ -1911,8 +1917,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
       /**
-       * Returns a space. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Returns a space. Requires [authentication](https://developers.google.com/chat/api/guides/auth).
+       * Fully supports [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+       * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+       * which grants early access to certain features. [User
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+       * `chat.spaces` or `chat.spaces.readonly` authorization scope.
        *
        * Create a request for the method "spaces.get".
        *
@@ -2026,8 +2038,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists spaces the caller is a member of. Requires [service account
-     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+     * Lists spaces the caller is a member of. Requires
+     * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
+     * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+     * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+     * of the [Google Workspace Developer Preview
+     * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+     * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+     * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope. Lists spaces visible to
+     * the caller or authenticated user. Group chats and DMs aren't listed until the first message is
+     * sent.
      *
      * Create a request for the method "spaces.list".
      *
@@ -2047,8 +2067,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces";
 
       /**
-       * Lists spaces the caller is a member of. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Lists spaces the caller is a member of. Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as
+       * part of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope. Lists spaces visible
+       * to the caller or authenticated user. Group chats and DMs aren't listed until the first message
+       * is sent.
        *
        * Create a request for the method "spaces.list".
        *

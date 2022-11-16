@@ -40,8 +40,7 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
-   * Mode of operation for binauthz policy evaluation. Currently the only options are equivalent to
-   * enable/disable. If unspecified, defaults to DISABLED.
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +68,7 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   }
 
   /**
-   * Mode of operation for binauthz policy evaluation. Currently the only options are equivalent to
-   * enable/disable. If unspecified, defaults to DISABLED.
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluationMode() {
@@ -78,8 +76,7 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   }
 
   /**
-   * Mode of operation for binauthz policy evaluation. Currently the only options are equivalent to
-   * enable/disable. If unspecified, defaults to DISABLED.
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED.
    * @param evaluationMode evaluationMode or {@code null} for none
    */
   public BinaryAuthorization setEvaluationMode(java.lang.String evaluationMode) {

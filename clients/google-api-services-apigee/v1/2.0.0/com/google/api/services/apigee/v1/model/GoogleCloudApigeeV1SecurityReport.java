@@ -110,7 +110,7 @@ public final class GoogleCloudApigeeV1SecurityReport extends com.google.api.clie
   private java.lang.String self;
 
   /**
-   * Query state could be "enqueued", "running", "completed", "failed".
+   * Query state could be "enqueued", "running", "completed", "expired" and "failed".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,7 +317,7 @@ public final class GoogleCloudApigeeV1SecurityReport extends com.google.api.clie
   }
 
   /**
-   * Query state could be "enqueued", "running", "completed", "failed".
+   * Query state could be "enqueued", "running", "completed", "expired" and "failed".
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -325,7 +325,7 @@ public final class GoogleCloudApigeeV1SecurityReport extends com.google.api.clie
   }
 
   /**
-   * Query state could be "enqueued", "running", "completed", "failed".
+   * Query state could be "enqueued", "running", "completed", "expired" and "failed".
    * @param state state or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityReport setState(java.lang.String state) {

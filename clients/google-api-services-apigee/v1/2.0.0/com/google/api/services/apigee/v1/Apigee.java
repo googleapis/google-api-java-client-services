@@ -18497,6 +18497,161 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Gets the API Security runtime configuration for an environment. This named
+       * ApiSecurityRuntimeConfig to prevent conflicts with ApiSecurityConfig from addon config.
+       *
+       * Create a request for the method "environments.getApiSecurityRuntimeConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetApiSecurityRuntimeConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Name of the environment API Security Runtime configuration resource. Use the following
+       *        structure in your request:
+       *        `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
+       * @return the request
+       */
+      public GetApiSecurityRuntimeConfig getApiSecurityRuntimeConfig(java.lang.String name) throws java.io.IOException {
+        GetApiSecurityRuntimeConfig result = new GetApiSecurityRuntimeConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetApiSecurityRuntimeConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiSecurityRuntimeConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/apiSecurityRuntimeConfig$");
+
+        /**
+         * Gets the API Security runtime configuration for an environment. This named
+         * ApiSecurityRuntimeConfig to prevent conflicts with ApiSecurityConfig from addon config.
+         *
+         * Create a request for the method "environments.getApiSecurityRuntimeConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetApiSecurityRuntimeConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetApiSecurityRuntimeConfig#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the environment API Security Runtime configuration resource. Use the following
+       *        structure in your request:
+       *        `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
+         * @since 1.13
+         */
+        protected GetApiSecurityRuntimeConfig(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiSecurityRuntimeConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/apiSecurityRuntimeConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetApiSecurityRuntimeConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setAccessToken(java.lang.String accessToken) {
+          return (GetApiSecurityRuntimeConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setAlt(java.lang.String alt) {
+          return (GetApiSecurityRuntimeConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setCallback(java.lang.String callback) {
+          return (GetApiSecurityRuntimeConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setFields(java.lang.String fields) {
+          return (GetApiSecurityRuntimeConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setKey(java.lang.String key) {
+          return (GetApiSecurityRuntimeConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetApiSecurityRuntimeConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetApiSecurityRuntimeConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetApiSecurityRuntimeConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setUploadType(java.lang.String uploadType) {
+          return (GetApiSecurityRuntimeConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetApiSecurityRuntimeConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the environment API Security Runtime configuration resource. Use the
+         * following structure in your request:
+         * `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the environment API Security Runtime configuration resource. Use the following
+       structure in your request: `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the environment API Security Runtime configuration resource. Use the
+         * following structure in your request:
+         * `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
+         */
+        public GetApiSecurityRuntimeConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/apiSecurityRuntimeConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetApiSecurityRuntimeConfig set(String parameterName, Object value) {
+          return (GetApiSecurityRuntimeConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the debug mask singleton resource for an environment.
        *
        * Create a request for the method "environments.getDebugmask".

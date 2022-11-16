@@ -51,6 +51,13 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxSdkVersion;
 
   /**
+   * Meta-data tags defined in the manifest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Metadata> metadata;
+
+  /**
    * Minimum API level required for the application to run.
    * The value may be {@code null}.
    */
@@ -70,6 +77,13 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetSdkVersion;
+
+  /**
+   * Feature usage tags defined in the manifest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UsesFeature> usesFeature;
 
   /**
    * Permissions declared to be used by the application
@@ -142,6 +156,23 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Meta-data tags defined in the manifest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Metadata> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Meta-data tags defined in the manifest.
+   * @param metadata metadata or {@code null} for none
+   */
+  public ApkManifest setMetadata(java.util.List<Metadata> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  /**
    * Minimum API level required for the application to run.
    * @return value or {@code null} for none
    */
@@ -189,6 +220,23 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
    */
   public ApkManifest setTargetSdkVersion(java.lang.Integer targetSdkVersion) {
     this.targetSdkVersion = targetSdkVersion;
+    return this;
+  }
+
+  /**
+   * Feature usage tags defined in the manifest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UsesFeature> getUsesFeature() {
+    return usesFeature;
+  }
+
+  /**
+   * Feature usage tags defined in the manifest.
+   * @param usesFeature usesFeature or {@code null} for none
+   */
+  public ApkManifest setUsesFeature(java.util.List<UsesFeature> usesFeature) {
+    this.usesFeature = usesFeature;
     return this;
   }
 

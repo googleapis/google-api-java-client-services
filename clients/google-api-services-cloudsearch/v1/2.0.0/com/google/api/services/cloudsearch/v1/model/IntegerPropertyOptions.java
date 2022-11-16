@@ -30,6 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class IntegerPropertyOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set, describes integer faceting options for the given integer property. The corresponding
+   * integer property should be marked isFacetable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IntegerFacetingOptions integerFacetingOptions;
+
+  /**
    * The maximum value of the property. The minimum and maximum values for the property are used to
    * rank results according to the ordered ranking. Indexing requests with values greater than the
    * maximum are accepted and ranked with the same weight as items indexed with the maximum value.
@@ -60,6 +68,25 @@ public final class IntegerPropertyOptions extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String orderedRanking;
+
+  /**
+   * If set, describes integer faceting options for the given integer property. The corresponding
+   * integer property should be marked isFacetable.
+   * @return value or {@code null} for none
+   */
+  public IntegerFacetingOptions getIntegerFacetingOptions() {
+    return integerFacetingOptions;
+  }
+
+  /**
+   * If set, describes integer faceting options for the given integer property. The corresponding
+   * integer property should be marked isFacetable.
+   * @param integerFacetingOptions integerFacetingOptions or {@code null} for none
+   */
+  public IntegerPropertyOptions setIntegerFacetingOptions(IntegerFacetingOptions integerFacetingOptions) {
+    this.integerFacetingOptions = integerFacetingOptions;
+    return this;
+  }
 
   /**
    * The maximum value of the property. The minimum and maximum values for the property are used to

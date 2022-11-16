@@ -95,6 +95,13 @@ public final class UploadMetadata extends com.google.api.client.json.GenericJson
   private AppsDynamiteSharedDlpMetricsMetadata dlpMetricsMetadata;
 
   /**
+   * The timestamp of the most recent virus scan completed (in microseconds).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long latestVirusScanTimestamp;
+
+  /**
    * A copy of the LocalId in Annotation. This field is supposed to be filled by server only.
    * The value may be {@code null}.
    */
@@ -274,6 +281,23 @@ public final class UploadMetadata extends com.google.api.client.json.GenericJson
    */
   public UploadMetadata setDlpMetricsMetadata(AppsDynamiteSharedDlpMetricsMetadata dlpMetricsMetadata) {
     this.dlpMetricsMetadata = dlpMetricsMetadata;
+    return this;
+  }
+
+  /**
+   * The timestamp of the most recent virus scan completed (in microseconds).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLatestVirusScanTimestamp() {
+    return latestVirusScanTimestamp;
+  }
+
+  /**
+   * The timestamp of the most recent virus scan completed (in microseconds).
+   * @param latestVirusScanTimestamp latestVirusScanTimestamp or {@code null} for none
+   */
+  public UploadMetadata setLatestVirusScanTimestamp(java.lang.Long latestVirusScanTimestamp) {
+    this.latestVirusScanTimestamp = latestVirusScanTimestamp;
     return this;
   }
 

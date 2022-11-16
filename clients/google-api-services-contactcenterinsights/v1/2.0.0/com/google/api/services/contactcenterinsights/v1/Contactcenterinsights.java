@@ -492,6 +492,138 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
       public class Conversations {
 
         /**
+         * Analyzes multiple conversations in a single request.
+         *
+         * Create a request for the method "conversations.bulkAnalyze".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent resource to create analyses in.
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
+         * @return the request
+         */
+        public BulkAnalyze bulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) throws java.io.IOException {
+          BulkAnalyze result = new BulkAnalyze(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkAnalyze extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/conversations:bulkAnalyze";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Analyzes multiple conversations in a single request.
+           *
+           * Create a request for the method "conversations.bulkAnalyze".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the
+           * remote operation. <p> {@link
+           * BulkAnalyze#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource to create analyses in.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
+           * @since 1.13
+           */
+          protected BulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BulkAnalyze set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkAnalyze) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkAnalyze setAccessToken(java.lang.String accessToken) {
+            return (BulkAnalyze) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkAnalyze setAlt(java.lang.String alt) {
+            return (BulkAnalyze) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkAnalyze setCallback(java.lang.String callback) {
+            return (BulkAnalyze) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkAnalyze setFields(java.lang.String fields) {
+            return (BulkAnalyze) super.setFields(fields);
+          }
+
+          @Override
+          public BulkAnalyze setKey(java.lang.String key) {
+            return (BulkAnalyze) super.setKey(key);
+          }
+
+          @Override
+          public BulkAnalyze setOauthToken(java.lang.String oauthToken) {
+            return (BulkAnalyze) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkAnalyze setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkAnalyze) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkAnalyze setQuotaUser(java.lang.String quotaUser) {
+            return (BulkAnalyze) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkAnalyze setUploadType(java.lang.String uploadType) {
+            return (BulkAnalyze) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkAnalyze setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkAnalyze) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource to create analyses in. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource to create analyses in.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource to create analyses in. */
+          public BulkAnalyze setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BulkAnalyze set(String parameterName, Object value) {
+            return (BulkAnalyze) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets conversation statistics.
          *
          * Create a request for the method "conversations.calculateStats".
@@ -1118,6 +1250,137 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Imports conversations and processes them according to the user's configuration.
+         *
+         * Create a request for the method "conversations.ingest".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Ingest#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource for new conversations.
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1IngestConversationsRequest}
+         * @return the request
+         */
+        public Ingest ingest(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1IngestConversationsRequest content) throws java.io.IOException {
+          Ingest result = new Ingest(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Ingest extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/conversations:ingest";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Imports conversations and processes them according to the user's configuration.
+           *
+           * Create a request for the method "conversations.ingest".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Ingest#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Ingest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource for new conversations.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1IngestConversationsRequest}
+           * @since 1.13
+           */
+          protected Ingest(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1IngestConversationsRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Ingest set$Xgafv(java.lang.String $Xgafv) {
+            return (Ingest) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Ingest setAccessToken(java.lang.String accessToken) {
+            return (Ingest) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Ingest setAlt(java.lang.String alt) {
+            return (Ingest) super.setAlt(alt);
+          }
+
+          @Override
+          public Ingest setCallback(java.lang.String callback) {
+            return (Ingest) super.setCallback(callback);
+          }
+
+          @Override
+          public Ingest setFields(java.lang.String fields) {
+            return (Ingest) super.setFields(fields);
+          }
+
+          @Override
+          public Ingest setKey(java.lang.String key) {
+            return (Ingest) super.setKey(key);
+          }
+
+          @Override
+          public Ingest setOauthToken(java.lang.String oauthToken) {
+            return (Ingest) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Ingest setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Ingest) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Ingest setQuotaUser(java.lang.String quotaUser) {
+            return (Ingest) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Ingest setUploadType(java.lang.String uploadType) {
+            return (Ingest) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Ingest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Ingest) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource for new conversations. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource for new conversations.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource for new conversations. */
+          public Ingest setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Ingest set(String parameterName, Object value) {
+            return (Ingest) super.set(parameterName, value);
           }
         }
         /**

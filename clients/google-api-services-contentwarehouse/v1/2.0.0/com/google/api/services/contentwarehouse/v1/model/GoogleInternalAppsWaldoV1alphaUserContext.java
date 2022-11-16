@@ -52,7 +52,7 @@ public final class GoogleInternalAppsWaldoV1alphaUserContext extends com.google.
   private GoogleInternalAppsWaldoV1alphaUpcomingOooContext upcomingOoo;
 
   /**
-   * Set if the user is working remotely.
+   * Set if the user has a working location. Not just elsewhere (legacy name).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class GoogleInternalAppsWaldoV1alphaUserContext extends com.google.
   }
 
   /**
-   * Set if the user is working remotely.
+   * Set if the user has a working location. Not just elsewhere (legacy name).
    * @return value or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext getWorkingElsewhere() {
@@ -118,7 +118,7 @@ public final class GoogleInternalAppsWaldoV1alphaUserContext extends com.google.
   }
 
   /**
-   * Set if the user is working remotely.
+   * Set if the user has a working location. Not just elsewhere (legacy name).
    * @param workingElsewhere workingElsewhere or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaUserContext setWorkingElsewhere(GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext workingElsewhere) {

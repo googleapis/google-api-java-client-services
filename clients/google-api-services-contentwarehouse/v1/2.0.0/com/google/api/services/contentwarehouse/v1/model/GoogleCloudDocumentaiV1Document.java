@@ -99,7 +99,7 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   private java.lang.String text;
 
   /**
-   * Placeholder. A list of text corrections made to [Document.text]. This is usually used for
+   * Placeholder. A list of text corrections made to Document.text. This is usually used for
    * annotating corrections to OCR mistakes. Text changes for a given revision may not overlap with
    * each other.
    * The value may be {@code null}.
@@ -315,7 +315,7 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   }
 
   /**
-   * Placeholder. A list of text corrections made to [Document.text]. This is usually used for
+   * Placeholder. A list of text corrections made to Document.text. This is usually used for
    * annotating corrections to OCR mistakes. Text changes for a given revision may not overlap with
    * each other.
    * @return value or {@code null} for none
@@ -325,7 +325,7 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   }
 
   /**
-   * Placeholder. A list of text corrections made to [Document.text]. This is usually used for
+   * Placeholder. A list of text corrections made to Document.text. This is usually used for
    * annotating corrections to OCR mistakes. Text changes for a given revision may not overlap with
    * each other.
    * @param textChanges textChanges or {@code null} for none

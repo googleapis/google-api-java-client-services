@@ -56,6 +56,13 @@ public final class AppsPeopleOzExternalMergedpeopleapiEvent extends com.google.a
   private AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata metadata;
 
   /**
+   * People Prompts settings for contact event data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SocialGraphApiProtoPrompt prompt;
+
+  /**
    * Clients are recommended to read the calendar_day field instead of timestamp_millis. When
    * writing events, new clients must set calendar_day instead of timestamp_millis. Events are
    * currently represented as timestamp values, although the interpretation of these timestamp
@@ -133,6 +140,23 @@ public final class AppsPeopleOzExternalMergedpeopleapiEvent extends com.google.a
    */
   public AppsPeopleOzExternalMergedpeopleapiEvent setMetadata(AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * People Prompts settings for contact event data.
+   * @return value or {@code null} for none
+   */
+  public SocialGraphApiProtoPrompt getPrompt() {
+    return prompt;
+  }
+
+  /**
+   * People Prompts settings for contact event data.
+   * @param prompt prompt or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiEvent setPrompt(SocialGraphApiProtoPrompt prompt) {
+    this.prompt = prompt;
     return this;
   }
 

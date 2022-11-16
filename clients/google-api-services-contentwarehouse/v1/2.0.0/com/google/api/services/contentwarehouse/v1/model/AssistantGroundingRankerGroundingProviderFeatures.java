@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 3
+ * Next ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -40,6 +40,12 @@ public final class AssistantGroundingRankerGroundingProviderFeatures extends com
    */
   @com.google.api.client.util.Key
   private AssistantGroundingRankerMediaGroundingProviderFeatures mediaGroundingProviderFeatures;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantGroundingRankerProviderGroundingProviderFeatures providerGroundingProviderFeatures;
 
   /**
    * @return value or {@code null} for none
@@ -68,6 +74,21 @@ public final class AssistantGroundingRankerGroundingProviderFeatures extends com
    */
   public AssistantGroundingRankerGroundingProviderFeatures setMediaGroundingProviderFeatures(AssistantGroundingRankerMediaGroundingProviderFeatures mediaGroundingProviderFeatures) {
     this.mediaGroundingProviderFeatures = mediaGroundingProviderFeatures;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AssistantGroundingRankerProviderGroundingProviderFeatures getProviderGroundingProviderFeatures() {
+    return providerGroundingProviderFeatures;
+  }
+
+  /**
+   * @param providerGroundingProviderFeatures providerGroundingProviderFeatures or {@code null} for none
+   */
+  public AssistantGroundingRankerGroundingProviderFeatures setProviderGroundingProviderFeatures(AssistantGroundingRankerProviderGroundingProviderFeatures providerGroundingProviderFeatures) {
+    this.providerGroundingProviderFeatures = providerGroundingProviderFeatures;
     return this;
   }
 

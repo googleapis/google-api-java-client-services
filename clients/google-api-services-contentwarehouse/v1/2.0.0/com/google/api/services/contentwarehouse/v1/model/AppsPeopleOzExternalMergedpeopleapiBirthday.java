@@ -124,6 +124,13 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   private AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata metadata;
 
   /**
+   * People Prompts settings for contact birthday data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SocialGraphApiProtoPrompt prompt;
+
+  /**
    * Actual value entered. Allows unstructured values.
    * The value may be {@code null}.
    */
@@ -298,6 +305,23 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
    */
   public AppsPeopleOzExternalMergedpeopleapiBirthday setMetadata(AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * People Prompts settings for contact birthday data.
+   * @return value or {@code null} for none
+   */
+  public SocialGraphApiProtoPrompt getPrompt() {
+    return prompt;
+  }
+
+  /**
+   * People Prompts settings for contact birthday data.
+   * @param prompt prompt or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiBirthday setPrompt(SocialGraphApiProtoPrompt prompt) {
+    this.prompt = prompt;
     return this;
   }
 

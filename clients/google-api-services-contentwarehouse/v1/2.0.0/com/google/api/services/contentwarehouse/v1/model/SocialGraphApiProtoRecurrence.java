@@ -67,7 +67,7 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * The start of the recurrence can be represented as a DateTime. This is ignored for a
-   * SingleRecurrence and YearlyRecurrence.
+   * SingleRecurrence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +178,7 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * The start of the recurrence can be represented as a DateTime. This is ignored for a
-   * SingleRecurrence and YearlyRecurrence.
+   * SingleRecurrence.
    * @return value or {@code null} for none
    */
   public GoogleTypeDateTime getRecurrenceStart() {
@@ -187,7 +187,7 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * The start of the recurrence can be represented as a DateTime. This is ignored for a
-   * SingleRecurrence and YearlyRecurrence.
+   * SingleRecurrence.
    * @param recurrenceStart recurrenceStart or {@code null} for none
    */
   public SocialGraphApiProtoRecurrence setRecurrenceStart(GoogleTypeDateTime recurrenceStart) {

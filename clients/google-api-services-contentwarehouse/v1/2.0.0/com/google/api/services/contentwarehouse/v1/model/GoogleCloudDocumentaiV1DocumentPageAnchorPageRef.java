@@ -37,7 +37,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends com.
   private GoogleCloudDocumentaiV1BoundingPoly boundingPoly;
 
   /**
-   * Optional. Confidence of detected page element, if applicable. Range [0, 1].
+   * Optional. Confidence of detected page element, if applicable. Range `[0, 1]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends com.
   }
 
   /**
-   * Optional. Confidence of detected page element, if applicable. Range [0, 1].
+   * Optional. Confidence of detected page element, if applicable. Range `[0, 1]`.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -92,7 +92,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends com.
   }
 
   /**
-   * Optional. Confidence of detected page element, if applicable. Range [0, 1].
+   * Optional. Confidence of detected page element, if applicable. Range `[0, 1]`.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageAnchorPageRef setConfidence(java.lang.Float confidence) {

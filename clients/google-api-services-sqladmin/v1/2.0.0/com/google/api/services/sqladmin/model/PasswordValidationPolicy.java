@@ -59,7 +59,7 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
 
   /**
    * Minimum interval after which the password can be changed. This flag is only supported for
-   * PostgresSQL.
+   * PostgreSQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
 
   /**
    * Minimum interval after which the password can be changed. This flag is only supported for
-   * PostgresSQL.
+   * PostgreSQL.
    * @return value or {@code null} for none
    */
   public String getPasswordChangeInterval() {
@@ -151,7 +151,7 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
 
   /**
    * Minimum interval after which the password can be changed. This flag is only supported for
-   * PostgresSQL.
+   * PostgreSQL.
    * @param passwordChangeInterval passwordChangeInterval or {@code null} for none
    */
   public PasswordValidationPolicy setPasswordChangeInterval(String passwordChangeInterval) {

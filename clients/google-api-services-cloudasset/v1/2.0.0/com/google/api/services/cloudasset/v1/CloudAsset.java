@@ -3590,6 +3590,783 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
+     * Analyzes organization policies under a scope.
+     *
+     * Create a request for the method "v1.analyzeOrgPolicies".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link AnalyzeOrgPolicies#execute()} method to invoke the remote operation.
+     *
+     * @param scope Required. The organization to scope the request. Only organization policies within the scope will be
+     *        analyzed. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     * @return the request
+     */
+    public AnalyzeOrgPolicies analyzeOrgPolicies(java.lang.String scope) throws java.io.IOException {
+      AnalyzeOrgPolicies result = new AnalyzeOrgPolicies(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class AnalyzeOrgPolicies extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.AnalyzeOrgPoliciesResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:analyzeOrgPolicies";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Analyzes organization policies under a scope.
+       *
+       * Create a request for the method "v1.analyzeOrgPolicies".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link AnalyzeOrgPolicies#execute()} method to invoke the remote
+       * operation. <p> {@link AnalyzeOrgPolicies#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param scope Required. The organization to scope the request. Only organization policies within the scope will be
+     *        analyzed. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * @since 1.13
+       */
+      protected AnalyzeOrgPolicies(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.AnalyzeOrgPoliciesResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AnalyzeOrgPolicies set$Xgafv(java.lang.String $Xgafv) {
+        return (AnalyzeOrgPolicies) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setAccessToken(java.lang.String accessToken) {
+        return (AnalyzeOrgPolicies) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setAlt(java.lang.String alt) {
+        return (AnalyzeOrgPolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setCallback(java.lang.String callback) {
+        return (AnalyzeOrgPolicies) super.setCallback(callback);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setFields(java.lang.String fields) {
+        return (AnalyzeOrgPolicies) super.setFields(fields);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setKey(java.lang.String key) {
+        return (AnalyzeOrgPolicies) super.setKey(key);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setOauthToken(java.lang.String oauthToken) {
+        return (AnalyzeOrgPolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnalyzeOrgPolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setQuotaUser(java.lang.String quotaUser) {
+        return (AnalyzeOrgPolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setUploadType(java.lang.String uploadType) {
+        return (AnalyzeOrgPolicies) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnalyzeOrgPolicies setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnalyzeOrgPolicies) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The organization to scope the request. Only organization policies within the
+       * scope will be analyzed. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+       * "organizations/123456")
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. The organization to scope the request. Only organization policies within the scope will
+     be analyzed. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. The organization to scope the request. Only organization policies within the
+       * scope will be analyzed. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+       * "organizations/123456")
+       */
+      public AnalyzeOrgPolicies setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Required. The name of the constraint to analyze organization policies for. The response
+       * only contains analyzed organization policies for the provided constraint.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String constraint;
+
+      /** Required. The name of the constraint to analyze organization policies for. The response only
+     contains analyzed organization policies for the provided constraint.
+       */
+      public java.lang.String getConstraint() {
+        return constraint;
+      }
+
+      /**
+       * Required. The name of the constraint to analyze organization policies for. The response
+       * only contains analyzed organization policies for the provided constraint.
+       */
+      public AnalyzeOrgPolicies setConstraint(java.lang.String constraint) {
+        this.constraint = constraint;
+        return this;
+      }
+
+      /**
+       * The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. The only supported
+       * field is `consolidated_policy.attached_resource`, and the only supported operator is `=`.
+       * Example:
+       * consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
+       * will return the org policy results of"folders/001".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. The only supported field is
+     `consolidated_policy.attached_resource`, and the only supported operator is `=`. Example:
+     consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001" will
+     return the org policy results of"folders/001".
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. The only supported
+       * field is `consolidated_policy.attached_resource`, and the only supported operator is `=`.
+       * Example:
+       * consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
+       * will return the org policy results of"folders/001".
+       */
+      public AnalyzeOrgPolicies setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of items to return per page. If unspecified,
+       * AnalyzeOrgPoliciesResponse.org_policy_results will contain 20 items with a maximum of 200.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of items to return per page. If unspecified,
+     AnalyzeOrgPoliciesResponse.org_policy_results will contain 20 items with a maximum of 200.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of items to return per page. If unspecified,
+       * AnalyzeOrgPoliciesResponse.org_policy_results will contain 20 items with a maximum of 200.
+       */
+      public AnalyzeOrgPolicies setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The pagination token to retrieve the next page. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The pagination token to retrieve the next page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The pagination token to retrieve the next page. */
+      public AnalyzeOrgPolicies setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public AnalyzeOrgPolicies set(String parameterName, Object value) {
+        return (AnalyzeOrgPolicies) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Analyzes organization policies governed assets (GCP resources or policies) under a scope. This
+     * RPC supports custom constraints and the following 10 canned constraints: *
+     * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation *
+     * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess *
+     * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects
+     * * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
+     * compute.disableNestedVirtualization This RPC only returns either: * resources of types supported
+     * by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+     * types#searchable_asset_types), or * IAM policies.
+     *
+     * Create a request for the method "v1.analyzeOrgPolicyGovernedAssets".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link AnalyzeOrgPolicyGovernedAssets#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param scope Required. The organization to scope the request. Only organization policies within the scope will be
+     *        analyzed. The output assets will also be limited to the ones governed by those in-scope
+     *        organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+     *        "organizations/123456")
+     * @return the request
+     */
+    public AnalyzeOrgPolicyGovernedAssets analyzeOrgPolicyGovernedAssets(java.lang.String scope) throws java.io.IOException {
+      AnalyzeOrgPolicyGovernedAssets result = new AnalyzeOrgPolicyGovernedAssets(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class AnalyzeOrgPolicyGovernedAssets extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.AnalyzeOrgPolicyGovernedAssetsResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:analyzeOrgPolicyGovernedAssets";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Analyzes organization policies governed assets (GCP resources or policies) under a scope. This
+       * RPC supports custom constraints and the following 10 canned constraints: *
+       * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation *
+       * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess *
+       * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations *
+       * compute.trustedImageProjects * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
+       * compute.disableNestedVirtualization This RPC only returns either: * resources of types
+       * supported by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types), or * IAM policies.
+       *
+       * Create a request for the method "v1.analyzeOrgPolicyGovernedAssets".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link AnalyzeOrgPolicyGovernedAssets#execute()} method to invoke
+       * the remote operation. <p> {@link AnalyzeOrgPolicyGovernedAssets#initialize(com.google.api.clien
+       * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param scope Required. The organization to scope the request. Only organization policies within the scope will be
+     *        analyzed. The output assets will also be limited to the ones governed by those in-scope
+     *        organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+     *        "organizations/123456")
+       * @since 1.13
+       */
+      protected AnalyzeOrgPolicyGovernedAssets(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.AnalyzeOrgPolicyGovernedAssetsResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets set$Xgafv(java.lang.String $Xgafv) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setAccessToken(java.lang.String accessToken) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setAlt(java.lang.String alt) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setAlt(alt);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setCallback(java.lang.String callback) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setCallback(callback);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setFields(java.lang.String fields) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setFields(fields);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setKey(java.lang.String key) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setKey(key);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setOauthToken(java.lang.String oauthToken) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setQuotaUser(java.lang.String quotaUser) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setUploadType(java.lang.String uploadType) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The organization to scope the request. Only organization policies within the
+       * scope will be analyzed. The output assets will also be limited to the ones governed by
+       * those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+       * "organizations/123456")
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. The organization to scope the request. Only organization policies within the scope will
+     be analyzed. The output assets will also be limited to the ones governed by those in-scope
+     organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. The organization to scope the request. Only organization policies within the
+       * scope will be analyzed. The output assets will also be limited to the ones governed by
+       * those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+       * "organizations/123456")
+       */
+      public AnalyzeOrgPolicyGovernedAssets setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Required. The name of the constraint to analyze governed assets for. The analysis only
+       * contains analyzed organization policies for the provided constraint.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String constraint;
+
+      /** Required. The name of the constraint to analyze governed assets for. The analysis only contains
+     analyzed organization policies for the provided constraint.
+       */
+      public java.lang.String getConstraint() {
+        return constraint;
+      }
+
+      /**
+       * Required. The name of the constraint to analyze governed assets for. The analysis only
+       * contains analyzed organization policies for the provided constraint.
+       */
+      public AnalyzeOrgPolicyGovernedAssets setConstraint(java.lang.String constraint) {
+        this.constraint = constraint;
+        return this;
+      }
+
+      /**
+       * The expression to filter the governed assets in result. The only supported fields for
+       * governed resources are `governed_resource.project` and `governed_resource.folders`. The
+       * only supported fields for governed iam policies are `governed_iam_policy.project` and
+       * `governed_iam_policy.folders`. The only supported operator is `=`. Example 1:
+       * governed_resource.project="projects/12345678" filter will return all governed resources
+       * under projects/12345678 including the project ifself, if applicable. Example 2:
+       * governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies
+       * under folders/12345678, if applicable.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The expression to filter the governed assets in result. The only supported fields for governed
+     resources are `governed_resource.project` and `governed_resource.folders`. The only supported
+     fields for governed iam policies are `governed_iam_policy.project` and
+     `governed_iam_policy.folders`. The only supported operator is `=`. Example 1:
+     governed_resource.project="projects/12345678" filter will return all governed resources under
+     projects/12345678 including the project ifself, if applicable. Example 2:
+     governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies under
+     folders/12345678, if applicable.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * The expression to filter the governed assets in result. The only supported fields for
+       * governed resources are `governed_resource.project` and `governed_resource.folders`. The
+       * only supported fields for governed iam policies are `governed_iam_policy.project` and
+       * `governed_iam_policy.folders`. The only supported operator is `=`. Example 1:
+       * governed_resource.project="projects/12345678" filter will return all governed resources
+       * under projects/12345678 including the project ifself, if applicable. Example 2:
+       * governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies
+       * under folders/12345678, if applicable.
+       */
+      public AnalyzeOrgPolicyGovernedAssets setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of items to return per page. If unspecified,
+       * AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets will contain 100 items with a
+       * maximum of 200.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of items to return per page. If unspecified,
+     AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets will contain 100 items with a maximum of
+     200.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of items to return per page. If unspecified,
+       * AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets will contain 100 items with a
+       * maximum of 200.
+       */
+      public AnalyzeOrgPolicyGovernedAssets setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The pagination token to retrieve the next page. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The pagination token to retrieve the next page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The pagination token to retrieve the next page. */
+      public AnalyzeOrgPolicyGovernedAssets setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedAssets set(String parameterName, Object value) {
+        return (AnalyzeOrgPolicyGovernedAssets) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Analyzes organization policies governed containers (projects, folders or organization) under a
+     * scope.
+     *
+     * Create a request for the method "v1.analyzeOrgPolicyGovernedContainers".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link AnalyzeOrgPolicyGovernedContainers#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param scope Required. The organization to scope the request. Only organization policies within the scope will be
+     *        analyzed. The output containers will also be limited to the ones governed by those in-
+     *        scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+     *        "organizations/123456")
+     * @return the request
+     */
+    public AnalyzeOrgPolicyGovernedContainers analyzeOrgPolicyGovernedContainers(java.lang.String scope) throws java.io.IOException {
+      AnalyzeOrgPolicyGovernedContainers result = new AnalyzeOrgPolicyGovernedContainers(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class AnalyzeOrgPolicyGovernedContainers extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.AnalyzeOrgPolicyGovernedContainersResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:analyzeOrgPolicyGovernedContainers";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Analyzes organization policies governed containers (projects, folders or organization) under a
+       * scope.
+       *
+       * Create a request for the method "v1.analyzeOrgPolicyGovernedContainers".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link AnalyzeOrgPolicyGovernedContainers#execute()} method to
+       * invoke the remote operation. <p> {@link AnalyzeOrgPolicyGovernedContainers#initialize(com.googl
+       * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+       * this instance immediately after invoking the constructor. </p>
+       *
+       * @param scope Required. The organization to scope the request. Only organization policies within the scope will be
+     *        analyzed. The output containers will also be limited to the ones governed by those in-
+     *        scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+     *        "organizations/123456")
+       * @since 1.13
+       */
+      protected AnalyzeOrgPolicyGovernedContainers(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.AnalyzeOrgPolicyGovernedContainersResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers set$Xgafv(java.lang.String $Xgafv) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setAccessToken(java.lang.String accessToken) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setAlt(java.lang.String alt) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setAlt(alt);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setCallback(java.lang.String callback) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setCallback(callback);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setFields(java.lang.String fields) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setFields(fields);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setKey(java.lang.String key) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setKey(key);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setOauthToken(java.lang.String oauthToken) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setQuotaUser(java.lang.String quotaUser) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setUploadType(java.lang.String uploadType) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The organization to scope the request. Only organization policies within the
+       * scope will be analyzed. The output containers will also be limited to the ones governed by
+       * those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+       * "organizations/123456")
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. The organization to scope the request. Only organization policies within the scope will
+     be analyzed. The output containers will also be limited to the ones governed by those in-scope
+     organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. The organization to scope the request. Only organization policies within the
+       * scope will be analyzed. The output containers will also be limited to the ones governed by
+       * those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+       * "organizations/123456")
+       */
+      public AnalyzeOrgPolicyGovernedContainers setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Required. The name of the constraint to analyze governed containers for. The analysis only
+       * contains organization policies for the provided constraint.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String constraint;
+
+      /** Required. The name of the constraint to analyze governed containers for. The analysis only contains
+     organization policies for the provided constraint.
+       */
+      public java.lang.String getConstraint() {
+        return constraint;
+      }
+
+      /**
+       * Required. The name of the constraint to analyze governed containers for. The analysis only
+       * contains organization policies for the provided constraint.
+       */
+      public AnalyzeOrgPolicyGovernedContainers setConstraint(java.lang.String constraint) {
+        this.constraint = constraint;
+        return this;
+      }
+
+      /**
+       * The expression to filter the governed containers in result. The only supported field is
+       * `parent`, and the only supported operator is `=`. Example:
+       * parent="//cloudresourcemanager.googleapis.com/folders/001" will return all containers under
+       * "folders/001".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The expression to filter the governed containers in result. The only supported field is `parent`,
+     and the only supported operator is `=`. Example:
+     parent="//cloudresourcemanager.googleapis.com/folders/001" will return all containers under
+     "folders/001".
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * The expression to filter the governed containers in result. The only supported field is
+       * `parent`, and the only supported operator is `=`. Example:
+       * parent="//cloudresourcemanager.googleapis.com/folders/001" will return all containers under
+       * "folders/001".
+       */
+      public AnalyzeOrgPolicyGovernedContainers setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of items to return per page. If unspecified,
+       * AnalyzeOrgPolicyGovernedContainersResponse.governed_containers will contain 100 items with
+       * a maximum of 200.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of items to return per page. If unspecified,
+     AnalyzeOrgPolicyGovernedContainersResponse.governed_containers will contain 100 items with a
+     maximum of 200.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of items to return per page. If unspecified,
+       * AnalyzeOrgPolicyGovernedContainersResponse.governed_containers will contain 100 items with
+       * a maximum of 200.
+       */
+      public AnalyzeOrgPolicyGovernedContainers setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The pagination token to retrieve the next page. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The pagination token to retrieve the next page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The pagination token to retrieve the next page. */
+      public AnalyzeOrgPolicyGovernedContainers setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public AnalyzeOrgPolicyGovernedContainers set(String parameterName, Object value) {
+        return (AnalyzeOrgPolicyGovernedContainers) super.set(parameterName, value);
+      }
+    }
+    /**
      * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this
      * API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps
      * in the output history. Otherwise, this API outputs history with asset in both non-delete or
@@ -4035,6 +4812,170 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       @Override
       public ExportAssets set(String parameterName, Object value) {
         return (ExportAssets) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Issue a job that queries assets using a SQL statement compatible with [BigQuery Standard
+     * SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql). If the query
+     * execution finishes within timeout and there's no pagination, the full query results will be
+     * returned in the `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing
+     * extra requests with the `job_reference` from the a previous `QueryAssets` call. Note, the query
+     * result has approximately 10 GB limitation enforced by BigQuery
+     * https://cloud.google.com/bigquery/docs/best-practices-performance-output, queries return larger
+     * results will result in errors.
+     *
+     * Create a request for the method "v1.queryAssets".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link QueryAssets#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123"). Only assets
+     *        belonging to the `parent` will be returned.
+     * @param content the {@link com.google.api.services.cloudasset.v1.model.QueryAssetsRequest}
+     * @return the request
+     */
+    public QueryAssets queryAssets(java.lang.String parent, com.google.api.services.cloudasset.v1.model.QueryAssetsRequest content) throws java.io.IOException {
+      QueryAssets result = new QueryAssets(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class QueryAssets extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.QueryAssetsResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}:queryAssets";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Issue a job that queries assets using a SQL statement compatible with [BigQuery Standard
+       * SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql). If the query
+       * execution finishes within timeout and there's no pagination, the full query results will be
+       * returned in the `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing
+       * extra requests with the `job_reference` from the a previous `QueryAssets` call. Note, the query
+       * result has approximately 10 GB limitation enforced by BigQuery
+       * https://cloud.google.com/bigquery/docs/best-practices-performance-output, queries return larger
+       * results will result in errors.
+       *
+       * Create a request for the method "v1.queryAssets".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link QueryAssets#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * QueryAssets#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123"). Only assets
+     *        belonging to the `parent` will be returned.
+       * @param content the {@link com.google.api.services.cloudasset.v1.model.QueryAssetsRequest}
+       * @since 1.13
+       */
+      protected QueryAssets(java.lang.String parent, com.google.api.services.cloudasset.v1.model.QueryAssetsRequest content) {
+        super(CloudAsset.this, "POST", REST_PATH, content, com.google.api.services.cloudasset.v1.model.QueryAssetsResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public QueryAssets set$Xgafv(java.lang.String $Xgafv) {
+        return (QueryAssets) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public QueryAssets setAccessToken(java.lang.String accessToken) {
+        return (QueryAssets) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public QueryAssets setAlt(java.lang.String alt) {
+        return (QueryAssets) super.setAlt(alt);
+      }
+
+      @Override
+      public QueryAssets setCallback(java.lang.String callback) {
+        return (QueryAssets) super.setCallback(callback);
+      }
+
+      @Override
+      public QueryAssets setFields(java.lang.String fields) {
+        return (QueryAssets) super.setFields(fields);
+      }
+
+      @Override
+      public QueryAssets setKey(java.lang.String key) {
+        return (QueryAssets) super.setKey(key);
+      }
+
+      @Override
+      public QueryAssets setOauthToken(java.lang.String oauthToken) {
+        return (QueryAssets) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public QueryAssets setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (QueryAssets) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public QueryAssets setQuotaUser(java.lang.String quotaUser) {
+        return (QueryAssets) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public QueryAssets setUploadType(java.lang.String uploadType) {
+        return (QueryAssets) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public QueryAssets setUploadProtocol(java.lang.String uploadProtocol) {
+        return (QueryAssets) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative name of the root asset. This can only be an organization number
+       * (such as "organizations/123"), a project ID (such as "projects/my-project-id"), or a
+       * project number (such as "projects/12345"), or a folder number (such as "folders/123"). Only
+       * assets belonging to the `parent` will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The relative name of the root asset. This can only be an organization number (such as
+     "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number (such as
+     "projects/12345"), or a folder number (such as "folders/123"). Only assets belonging to the
+     `parent` will be returned.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The relative name of the root asset. This can only be an organization number
+       * (such as "organizations/123"), a project ID (such as "projects/my-project-id"), or a
+       * project number (such as "projects/12345"), or a folder number (such as "folders/123"). Only
+       * assets belonging to the `parent` will be returned.
+       */
+      public QueryAssets setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public QueryAssets set(String parameterName, Object value) {
+        return (QueryAssets) super.set(parameterName, value);
       }
     }
     /**

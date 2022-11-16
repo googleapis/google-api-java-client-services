@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * User-defined documentation of the generated notification.
+ * A content string and a MIME type that describes the content string's format.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.monitoring.v3.model;
 public final class Documentation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The body of the notification, interpreted according to mime_type. The content may not exceed
+   * The body of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
    * format, whichever is smaller. This text can be templatized by using variables
    * (https://cloud.google.com/monitoring/alerts/doc-variables).
@@ -48,15 +48,7 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   private java.lang.String mimeType;
 
   /**
-   * A public comment for an internal field, because the linter insists that all fields must have a
-   * comment. Sigh.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String subject;
-
-  /**
-   * The body of the notification, interpreted according to mime_type. The content may not exceed
+   * The body of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
    * format, whichever is smaller. This text can be templatized by using variables
    * (https://cloud.google.com/monitoring/alerts/doc-variables).
@@ -67,7 +59,7 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The body of the notification, interpreted according to mime_type. The content may not exceed
+   * The body of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
    * format, whichever is smaller. This text can be templatized by using variables
    * (https://cloud.google.com/monitoring/alerts/doc-variables).
@@ -94,25 +86,6 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    */
   public Documentation setMimeType(java.lang.String mimeType) {
     this.mimeType = mimeType;
-    return this;
-  }
-
-  /**
-   * A public comment for an internal field, because the linter insists that all fields must have a
-   * comment. Sigh.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSubject() {
-    return subject;
-  }
-
-  /**
-   * A public comment for an internal field, because the linter insists that all fields must have a
-   * comment. Sigh.
-   * @param subject subject or {@code null} for none
-   */
-  public Documentation setSubject(java.lang.String subject) {
-    this.subject = subject;
     return this;
   }
 

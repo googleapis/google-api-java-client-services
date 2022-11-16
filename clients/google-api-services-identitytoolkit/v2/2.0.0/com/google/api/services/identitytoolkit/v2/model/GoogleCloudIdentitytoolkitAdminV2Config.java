@@ -58,6 +58,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2ClientConfig client;
 
   /**
+   * Configuration for settings related to email privacy and public visibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig emailPrivacyConfig;
+
+  /**
    * Configuration for this project's multi-factor authentication, including whether it is active
    * and what factors can be used for the second factor
    * The value may be {@code null}.
@@ -186,6 +193,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Config setClient(GoogleCloudIdentitytoolkitAdminV2ClientConfig client) {
     this.client = client;
+    return this;
+  }
+
+  /**
+   * Configuration for settings related to email privacy and public visibility.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig getEmailPrivacyConfig() {
+    return emailPrivacyConfig;
+  }
+
+  /**
+   * Configuration for settings related to email privacy and public visibility.
+   * @param emailPrivacyConfig emailPrivacyConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Config setEmailPrivacyConfig(GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig emailPrivacyConfig) {
+    this.emailPrivacyConfig = emailPrivacyConfig;
     return this;
   }
 

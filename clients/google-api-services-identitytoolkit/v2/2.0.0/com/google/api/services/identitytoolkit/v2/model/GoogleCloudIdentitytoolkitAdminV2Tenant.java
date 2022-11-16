@@ -66,6 +66,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * Configuration for settings related to email privacy and public visibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig emailPrivacyConfig;
+
+  /**
    * Whether to enable anonymous user authentication.
    * The value may be {@code null}.
    */
@@ -218,6 +225,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Tenant setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Configuration for settings related to email privacy and public visibility.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig getEmailPrivacyConfig() {
+    return emailPrivacyConfig;
+  }
+
+  /**
+   * Configuration for settings related to email privacy and public visibility.
+   * @param emailPrivacyConfig emailPrivacyConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Tenant setEmailPrivacyConfig(GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig emailPrivacyConfig) {
+    this.emailPrivacyConfig = emailPrivacyConfig;
     return this;
   }
 

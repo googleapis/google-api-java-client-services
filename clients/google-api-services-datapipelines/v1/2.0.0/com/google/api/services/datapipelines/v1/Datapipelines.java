@@ -174,6 +174,179 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
     public class Locations {
 
       /**
+       * Computes the schema for the transform. Computation from `raw_schema` will always occur if it is
+       * set. This requires that the transform supports that encoding. If no raw schema is provided and if
+       * the transform is for an IO, then this will attempt to connect to the resource using the details
+       * provided in `config` and infer the schema from that. If the transform is not an IO, is a sink
+       * that doesn't exist yet, or is a sink with no schema requirement, then this will fall back to
+       * basing the schema off the one provided in `input_schemas`. The computed schema will be validated.
+       *
+       * Create a request for the method "locations.computeSchema".
+       *
+       * This request holds the parameters needed by the datapipelines server.  After setting any optional
+       * parameters, call the {@link ComputeSchema#execute()} method to invoke the remote operation.
+       *
+       * @param location Required. The full location formatted as "projects/{your-project}/locations/{google-cloud-region}".
+       *        If attempting to infer the schema from an existing Google Cloud resource, the default Data
+       *        Pipelines service account for this project will be used in making requests for the
+       *        resource. If the region given for "{google-cloud-region}" is different than the region
+       *        where the resource is stored, then the data will be transferred to and processed in the
+       *        region specified here, but it will not be persistently stored in this region.
+       * @param content the {@link com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1ComputeSchemaRequest}
+       * @return the request
+       */
+      public ComputeSchema computeSchema(java.lang.String location, com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1ComputeSchemaRequest content) throws java.io.IOException {
+        ComputeSchema result = new ComputeSchema(location, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ComputeSchema extends DatapipelinesRequest<com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1Schema> {
+
+        private static final String REST_PATH = "v1/{+location}:computeSchema";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Computes the schema for the transform. Computation from `raw_schema` will always occur if it is
+         * set. This requires that the transform supports that encoding. If no raw schema is provided and
+         * if the transform is for an IO, then this will attempt to connect to the resource using the
+         * details provided in `config` and infer the schema from that. If the transform is not an IO, is
+         * a sink that doesn't exist yet, or is a sink with no schema requirement, then this will fall
+         * back to basing the schema off the one provided in `input_schemas`. The computed schema will be
+         * validated.
+         *
+         * Create a request for the method "locations.computeSchema".
+         *
+         * This request holds the parameters needed by the the datapipelines server.  After setting any
+         * optional parameters, call the {@link ComputeSchema#execute()} method to invoke the remote
+         * operation. <p> {@link ComputeSchema#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param location Required. The full location formatted as "projects/{your-project}/locations/{google-cloud-region}".
+       *        If attempting to infer the schema from an existing Google Cloud resource, the default Data
+       *        Pipelines service account for this project will be used in making requests for the
+       *        resource. If the region given for "{google-cloud-region}" is different than the region
+       *        where the resource is stored, then the data will be transferred to and processed in the
+       *        region specified here, but it will not be persistently stored in this region.
+         * @param content the {@link com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1ComputeSchemaRequest}
+         * @since 1.13
+         */
+        protected ComputeSchema(java.lang.String location, com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1ComputeSchemaRequest content) {
+          super(Datapipelines.this, "POST", REST_PATH, content, com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1Schema.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public ComputeSchema set$Xgafv(java.lang.String $Xgafv) {
+          return (ComputeSchema) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ComputeSchema setAccessToken(java.lang.String accessToken) {
+          return (ComputeSchema) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ComputeSchema setAlt(java.lang.String alt) {
+          return (ComputeSchema) super.setAlt(alt);
+        }
+
+        @Override
+        public ComputeSchema setCallback(java.lang.String callback) {
+          return (ComputeSchema) super.setCallback(callback);
+        }
+
+        @Override
+        public ComputeSchema setFields(java.lang.String fields) {
+          return (ComputeSchema) super.setFields(fields);
+        }
+
+        @Override
+        public ComputeSchema setKey(java.lang.String key) {
+          return (ComputeSchema) super.setKey(key);
+        }
+
+        @Override
+        public ComputeSchema setOauthToken(java.lang.String oauthToken) {
+          return (ComputeSchema) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ComputeSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ComputeSchema) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ComputeSchema setQuotaUser(java.lang.String quotaUser) {
+          return (ComputeSchema) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ComputeSchema setUploadType(java.lang.String uploadType) {
+          return (ComputeSchema) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ComputeSchema setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ComputeSchema) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full location formatted as "projects/{your-project}/locations/{google-
+         * cloud-region}". If attempting to infer the schema from an existing Google Cloud resource,
+         * the default Data Pipelines service account for this project will be used in making
+         * requests for the resource. If the region given for "{google-cloud-region}" is different
+         * than the region where the resource is stored, then the data will be transferred to and
+         * processed in the region specified here, but it will not be persistently stored in this
+         * region.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. The full location formatted as "projects/{your-project}/locations/{google-cloud-region}".
+       If attempting to infer the schema from an existing Google Cloud resource, the default Data
+       Pipelines service account for this project will be used in making requests for the resource. If the
+       region given for "{google-cloud-region}" is different than the region where the resource is stored,
+       then the data will be transferred to and processed in the region specified here, but it will not be
+       persistently stored in this region.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. The full location formatted as "projects/{your-project}/locations/{google-
+         * cloud-region}". If attempting to infer the schema from an existing Google Cloud resource,
+         * the default Data Pipelines service account for this project will be used in making
+         * requests for the resource. If the region given for "{google-cloud-region}" is different
+         * than the region where the resource is stored, then the data will be transferred to and
+         * processed in the region specified here, but it will not be persistently stored in this
+         * region.
+         */
+        public ComputeSchema setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public ComputeSchema set(String parameterName, Object value) {
+          return (ComputeSchema) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
        *
        * Create a request for the method "locations.listPipelines".
@@ -1563,6 +1736,351 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the TransformDescriptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Datapipelines datapipelines = new Datapipelines(...);}
+       *   {@code Datapipelines.TransformDescriptions.List request = datapipelines.transformDescriptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TransformDescriptions transformDescriptions() {
+        return new TransformDescriptions();
+      }
+
+      /**
+       * The "transformDescriptions" collection of methods.
+       */
+      public class TransformDescriptions {
+
+        /**
+         * Gets transform descriptions in a batch, associated with a list of provided uniform resource
+         * names.
+         *
+         * Create a request for the method "transformDescriptions.batchGet".
+         *
+         * This request holds the parameters needed by the datapipelines server.  After setting any optional
+         * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location shared by all transform descriptions being retrieved, formatted
+         *        as "projects/{project}/locations/{location}".
+         * @return the request
+         */
+        public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+          BatchGet result = new BatchGet(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchGet extends DatapipelinesRequest<com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1BatchGetTransformDescriptionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/transformDescriptions:batchGet";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Gets transform descriptions in a batch, associated with a list of provided uniform resource
+           * names.
+           *
+           * Create a request for the method "transformDescriptions.batchGet".
+           *
+           * This request holds the parameters needed by the the datapipelines server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location shared by all transform descriptions being retrieved, formatted
+         *        as "projects/{project}/locations/{location}".
+           * @since 1.13
+           */
+          protected BatchGet(java.lang.String parent) {
+            super(Datapipelines.this, "GET", REST_PATH, null, com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1BatchGetTransformDescriptionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchGet) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchGet setAccessToken(java.lang.String accessToken) {
+            return (BatchGet) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchGet setAlt(java.lang.String alt) {
+            return (BatchGet) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchGet setCallback(java.lang.String callback) {
+            return (BatchGet) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchGet setFields(java.lang.String fields) {
+            return (BatchGet) super.setFields(fields);
+          }
+
+          @Override
+          public BatchGet setKey(java.lang.String key) {
+            return (BatchGet) super.setKey(key);
+          }
+
+          @Override
+          public BatchGet setOauthToken(java.lang.String oauthToken) {
+            return (BatchGet) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchGet) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchGet setQuotaUser(java.lang.String quotaUser) {
+            return (BatchGet) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchGet setUploadType(java.lang.String uploadType) {
+            return (BatchGet) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchGet) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location shared by all transform descriptions being
+           * retrieved, formatted as "projects/{project}/locations/{location}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location shared by all transform descriptions being retrieved, formatted
+         as "projects/{project}/locations/{location}".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location shared by all transform descriptions being
+           * retrieved, formatted as "projects/{project}/locations/{location}".
+           */
+          public BatchGet setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The names of the transform descriptions being retrieved, formatted as "projec
+           * ts/{project}/locations/{location}/transformdescriptions/{transform_description}". If no
+           * name is provided, all of the transform descriptions will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> names;
+
+          /** Optional. The names of the transform descriptions being retrieved, formatted as
+         "projects/{project}/locations/{location}/transformdescriptions/{transform_description}". If no name
+         is provided, all of the transform descriptions will be returned.
+           */
+          public java.util.List<java.lang.String> getNames() {
+            return names;
+          }
+
+          /**
+           * Optional. The names of the transform descriptions being retrieved, formatted as "projec
+           * ts/{project}/locations/{location}/transformdescriptions/{transform_description}". If no
+           * name is provided, all of the transform descriptions will be returned.
+           */
+          public BatchGet setNames(java.util.List<java.lang.String> names) {
+            this.names = names;
+            return this;
+          }
+
+          @Override
+          public BatchGet set(String parameterName, Object value) {
+            return (BatchGet) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the transform description associated with the provided uniform resource name.
+         *
+         * Create a request for the method "transformDescriptions.get".
+         *
+         * This request holds the parameters needed by the datapipelines server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full name formatted as "projects/{your-project}/locations/{google-cloud-
+         *        region}/transformdescriptions/{uniform-resource-name}".
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DatapipelinesRequest<com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1TransformDescription> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/transformDescriptions/[^/]+$");
+
+          /**
+           * Gets the transform description associated with the provided uniform resource name.
+           *
+           * Create a request for the method "transformDescriptions.get".
+           *
+           * This request holds the parameters needed by the the datapipelines server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full name formatted as "projects/{your-project}/locations/{google-cloud-
+         *        region}/transformdescriptions/{uniform-resource-name}".
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Datapipelines.this, "GET", REST_PATH, null, com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1TransformDescription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/transformDescriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full name formatted as "projects/{your-project}/locations/{google-cloud-
+           * region}/transformdescriptions/{uniform-resource-name}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full name formatted as "projects/{your-project}/locations/{google-cloud-
+         region}/transformdescriptions/{uniform-resource-name}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full name formatted as "projects/{your-project}/locations/{google-cloud-
+           * region}/transformdescriptions/{uniform-resource-name}".
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/transformDescriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

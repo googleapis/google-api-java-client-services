@@ -7124,8 +7124,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Database instance ID. This does not include the project ID.
-     * @param name User of the instance. If the database user has a host, this is specified as {username}@{host} else
-     *        as {username}.
+     * @param name User of the instance.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String instance, java.lang.String name) throws java.io.IOException {
@@ -7150,8 +7149,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Database instance ID. This does not include the project ID.
-       * @param name User of the instance. If the database user has a host, this is specified as {username}@{host} else
-     *        as {username}.
+       * @param name User of the instance.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String instance, java.lang.String name) {
@@ -7258,26 +7256,35 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * User of the instance. If the database user has a host, this is specified as
-       * {username}@{host} else as {username}.
-       */
+      /** User of the instance. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** User of the instance. If the database user has a host, this is specified as {username}@{host} else
-     as {username}.
+      /** User of the instance.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * User of the instance. If the database user has a host, this is specified as
-       * {username}@{host} else as {username}.
-       */
+      /** User of the instance. */
       public Get setName(java.lang.String name) {
         this.name = name;
+        return this;
+      }
+
+      /** Host of a user of the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String host;
+
+      /** Host of a user of the instance.
+       */
+      public java.lang.String getHost() {
+        return host;
+      }
+
+      /** Host of a user of the instance. */
+      public Get setHost(java.lang.String host) {
+        this.host = host;
         return this;
       }
 

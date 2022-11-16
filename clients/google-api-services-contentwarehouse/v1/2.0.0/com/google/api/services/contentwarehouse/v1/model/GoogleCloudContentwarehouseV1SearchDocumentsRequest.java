@@ -41,9 +41,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    * an aggregation function call with histogram facets and other options. The following aggregation
    * functions are supported: * `count(string_histogram_facet)`: Count the number of matching
    * entities for each distinct attribute value. Data types: * Histogram facet (aka filterable
-   * properties): Facet names with format .. Facets will have the format of: a-zA-Z. If the facet is
-   * a child facet, then the parent hierarchy needs to be specified separated by dots in the prefix
-   * after the schema id. Thus, the format for a multi- level facet is: .. . Example:
+   * properties): Facet names with format .. Facets will have the format of: `a-zA-Z`. If the facet
+   * is a child facet, then the parent hierarchy needs to be specified separated by dots in the
+   * prefix after the schema id. Thus, the format for a multi- level facet is: .. . Example:
    * schema123.root_parent_facet.middle_facet.child_facet * DocumentSchemaId: (with no schema id
    * prefix) to get histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123). Example expression: * Document type
@@ -159,9 +159,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    * an aggregation function call with histogram facets and other options. The following aggregation
    * functions are supported: * `count(string_histogram_facet)`: Count the number of matching
    * entities for each distinct attribute value. Data types: * Histogram facet (aka filterable
-   * properties): Facet names with format .. Facets will have the format of: a-zA-Z. If the facet is
-   * a child facet, then the parent hierarchy needs to be specified separated by dots in the prefix
-   * after the schema id. Thus, the format for a multi- level facet is: .. . Example:
+   * properties): Facet names with format .. Facets will have the format of: `a-zA-Z`. If the facet
+   * is a child facet, then the parent hierarchy needs to be specified separated by dots in the
+   * prefix after the schema id. Thus, the format for a multi- level facet is: .. . Example:
    * schema123.root_parent_facet.middle_facet.child_facet * DocumentSchemaId: (with no schema id
    * prefix) to get histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123). Example expression: * Document type
@@ -178,9 +178,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    * an aggregation function call with histogram facets and other options. The following aggregation
    * functions are supported: * `count(string_histogram_facet)`: Count the number of matching
    * entities for each distinct attribute value. Data types: * Histogram facet (aka filterable
-   * properties): Facet names with format .. Facets will have the format of: a-zA-Z. If the facet is
-   * a child facet, then the parent hierarchy needs to be specified separated by dots in the prefix
-   * after the schema id. Thus, the format for a multi- level facet is: .. . Example:
+   * properties): Facet names with format .. Facets will have the format of: `a-zA-Z`. If the facet
+   * is a child facet, then the parent hierarchy needs to be specified separated by dots in the
+   * prefix after the schema id. Thus, the format for a multi- level facet is: .. . Example:
    * schema123.root_parent_facet.middle_facet.child_facet * DocumentSchemaId: (with no schema id
    * prefix) to get histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123). Example expression: * Document type

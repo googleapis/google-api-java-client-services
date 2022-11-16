@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A rule that defines a Cluster based on a relation. Given a relation (a link type) R, then: For
  * each entity B that has incoming links of type R This defines an instance of this rule, with
  * argument=B We create a Set S We make B a child of S For each entity A that has a link R to B, we
- * make A a child of S
+ * make A a child of S Next available tag: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -33,23 +33,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefClusterProtoRelationRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, cluster global names and links will be extracted from the target of the property. If
-   * false, all members of the cluster will be considered sources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isCollapsible;
-
-  /**
-   * Whether the target of the relation is an intermediate (CVT) node in KG: - if it is not:
-   * generate external_id for the cluster - if it is: - CVT should not be /common/topic otherwise
-   * rule will not be created - cluster will reuse CVT mid as its own
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isCvtRule;
-
-  /**
    * The topic_property_name for the link that defines the relation, e.g.
    * "/tv/tv_series_episode/series". Can start with a "!" to indicate that this link is reversed
    * during extraction and we want the reversed case. Required.
@@ -57,53 +40,6 @@ public final class RepositoryWebrefClusterProtoRelationRule extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String relation;
-
-  /**
-   * No longer set.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer sequenceId;
-
-  /**
-   * If true, cluster global names and links will be extracted from the target of the property. If
-   * false, all members of the cluster will be considered sources.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsCollapsible() {
-    return isCollapsible;
-  }
-
-  /**
-   * If true, cluster global names and links will be extracted from the target of the property. If
-   * false, all members of the cluster will be considered sources.
-   * @param isCollapsible isCollapsible or {@code null} for none
-   */
-  public RepositoryWebrefClusterProtoRelationRule setIsCollapsible(java.lang.Boolean isCollapsible) {
-    this.isCollapsible = isCollapsible;
-    return this;
-  }
-
-  /**
-   * Whether the target of the relation is an intermediate (CVT) node in KG: - if it is not:
-   * generate external_id for the cluster - if it is: - CVT should not be /common/topic otherwise
-   * rule will not be created - cluster will reuse CVT mid as its own
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsCvtRule() {
-    return isCvtRule;
-  }
-
-  /**
-   * Whether the target of the relation is an intermediate (CVT) node in KG: - if it is not:
-   * generate external_id for the cluster - if it is: - CVT should not be /common/topic otherwise
-   * rule will not be created - cluster will reuse CVT mid as its own
-   * @param isCvtRule isCvtRule or {@code null} for none
-   */
-  public RepositoryWebrefClusterProtoRelationRule setIsCvtRule(java.lang.Boolean isCvtRule) {
-    this.isCvtRule = isCvtRule;
-    return this;
-  }
 
   /**
    * The topic_property_name for the link that defines the relation, e.g.
@@ -123,23 +59,6 @@ public final class RepositoryWebrefClusterProtoRelationRule extends com.google.a
    */
   public RepositoryWebrefClusterProtoRelationRule setRelation(java.lang.String relation) {
     this.relation = relation;
-    return this;
-  }
-
-  /**
-   * No longer set.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getSequenceId() {
-    return sequenceId;
-  }
-
-  /**
-   * No longer set.
-   * @param sequenceId sequenceId or {@code null} for none
-   */
-  public RepositoryWebrefClusterProtoRelationRule setSequenceId(java.lang.Integer sequenceId) {
-    this.sequenceId = sequenceId;
     return this;
   }
 

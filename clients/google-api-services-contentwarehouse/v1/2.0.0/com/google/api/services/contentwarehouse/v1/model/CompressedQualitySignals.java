@@ -161,7 +161,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
 
   /**
    * S2V low quality score: converted from quality_nsr.NsrData, applied in Qstar. See
-   * NsrUtil::ConvertNsrDataToLowQuality.
+   * quality_nsr::util::ConvertNsrDataToLowQuality.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -604,7 +604,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
 
   /**
    * S2V low quality score: converted from quality_nsr.NsrData, applied in Qstar. See
-   * NsrUtil::ConvertNsrDataToLowQuality.
+   * quality_nsr::util::ConvertNsrDataToLowQuality.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLowQuality() {
@@ -613,7 +613,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
 
   /**
    * S2V low quality score: converted from quality_nsr.NsrData, applied in Qstar. See
-   * NsrUtil::ConvertNsrDataToLowQuality.
+   * quality_nsr::util::ConvertNsrDataToLowQuality.
    * @param lowQuality lowQuality or {@code null} for none
    */
   public CompressedQualitySignals setLowQuality(java.lang.Long lowQuality) {

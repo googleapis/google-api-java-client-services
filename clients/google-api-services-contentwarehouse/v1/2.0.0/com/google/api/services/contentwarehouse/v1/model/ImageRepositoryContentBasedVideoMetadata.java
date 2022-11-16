@@ -63,7 +63,8 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
    * Video Understanding Golden features. (go/amarna-video-signals#golden-signals) Note: Golden6
    * features (names matching "video_*") are DEPRECATED. Please migrate to Golden7
    * ("VideoFeatures.*"). For more context, see go/golden7/migrating-from-golden6 and go/amarna-
-   * golden-feature-tracker.
+   * golden-feature-tracker. Signals popluated in Raffia cdoc.doc_videos are configured in
+   * cs/symbol:AMARNA_EXPORTED_GOLDEN7_FEATURES.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -382,7 +383,8 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
    * Video Understanding Golden features. (go/amarna-video-signals#golden-signals) Note: Golden6
    * features (names matching "video_*") are DEPRECATED. Please migrate to Golden7
    * ("VideoFeatures.*"). For more context, see go/golden7/migrating-from-golden6 and go/amarna-
-   * golden-feature-tracker.
+   * golden-feature-tracker. Signals popluated in Raffia cdoc.doc_videos are configured in
+   * cs/symbol:AMARNA_EXPORTED_GOLDEN7_FEATURES.
    * @return value or {@code null} for none
    */
   public DrishtiFeatureSetData getFeatureSetData() {
@@ -393,7 +395,8 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
    * Video Understanding Golden features. (go/amarna-video-signals#golden-signals) Note: Golden6
    * features (names matching "video_*") are DEPRECATED. Please migrate to Golden7
    * ("VideoFeatures.*"). For more context, see go/golden7/migrating-from-golden6 and go/amarna-
-   * golden-feature-tracker.
+   * golden-feature-tracker. Signals popluated in Raffia cdoc.doc_videos are configured in
+   * cs/symbol:AMARNA_EXPORTED_GOLDEN7_FEATURES.
    * @param featureSetData featureSetData or {@code null} for none
    */
   public ImageRepositoryContentBasedVideoMetadata setFeatureSetData(DrishtiFeatureSetData featureSetData) {

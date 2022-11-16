@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 33
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 34
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -107,6 +107,14 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Double intentNameAuisScoreExp;
+
+  /**
+   * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
+   * playability. More details: go/hgr-feasibility-feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isFeasible;
 
   /**
    * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
@@ -412,6 +420,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIntentNameAuisScoreExp(java.lang.Double intentNameAuisScoreExp) {
     this.intentNameAuisScoreExp = intentNameAuisScoreExp;
+    return this;
+  }
+
+  /**
+   * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
+   * playability. More details: go/hgr-feasibility-feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsFeasible() {
+    return isFeasible;
+  }
+
+  /**
+   * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
+   * playability. More details: go/hgr-feasibility-feature.
+   * @param isFeasible isFeasible or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsFeasible(java.lang.Boolean isFeasible) {
+    this.isFeasible = isFeasible;
     return this;
   }
 

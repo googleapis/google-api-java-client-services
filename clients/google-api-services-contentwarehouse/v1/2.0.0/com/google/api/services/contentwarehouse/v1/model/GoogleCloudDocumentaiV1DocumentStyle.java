@@ -44,7 +44,7 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   private GoogleTypeColor color;
 
   /**
-   * Font family such as "Arial", "Times New Roman". https://www.w3schools.com/cssref/pr_font_font-
+   * Font family such as `Arial`, `Times New Roman`. https://www.w3schools.com/cssref/pr_font_font-
    * family.asp
    * The value may be {@code null}.
    */
@@ -124,7 +124,7 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Font family such as "Arial", "Times New Roman". https://www.w3schools.com/cssref/pr_font_font-
+   * Font family such as `Arial`, `Times New Roman`. https://www.w3schools.com/cssref/pr_font_font-
    * family.asp
    * @return value or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Font family such as "Arial", "Times New Roman". https://www.w3schools.com/cssref/pr_font_font-
+   * Font family such as `Arial`, `Times New Roman`. https://www.w3schools.com/cssref/pr_font_font-
    * family.asp
    * @param fontFamily fontFamily or {@code null} for none
    */

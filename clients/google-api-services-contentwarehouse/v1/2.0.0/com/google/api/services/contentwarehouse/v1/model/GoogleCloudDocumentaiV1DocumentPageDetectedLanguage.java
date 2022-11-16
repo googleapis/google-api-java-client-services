@@ -30,14 +30,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentPageDetectedLanguage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence of detected language. Range [0, 1].
+   * Confidence of detected language. Range `[0, 1]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
    * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageDetectedLanguage extends c
   private java.lang.String languageCode;
 
   /**
-   * Confidence of detected language. Range [0, 1].
+   * Confidence of detected language. Range `[0, 1]`.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageDetectedLanguage extends c
   }
 
   /**
-   * Confidence of detected language. Range [0, 1].
+   * Confidence of detected language. Range `[0, 1]`.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageDetectedLanguage setConfidence(java.lang.Float confidence) {
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageDetectedLanguage extends c
   }
 
   /**
-   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
    * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageDetectedLanguage extends c
   }
 
   /**
-   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
    * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
    * @param languageCode languageCode or {@code null} for none
    */

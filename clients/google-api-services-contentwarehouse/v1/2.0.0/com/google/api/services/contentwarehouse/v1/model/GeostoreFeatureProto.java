@@ -435,7 +435,10 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private java.util.List<GeostoreNameProto> name;
 
   /**
-   * RESERVED
+   * Information about this feature's operations, e.g. when this feature is temporarily closed.
+   * NOTE: for legacy reasons, some closure-specifc information (e.g. permanent closure reason)
+   * lives in ExistenceProto instead. In the future, such information should move here in
+   * OperationsProto.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1679,7 +1682,10 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Information about this feature's operations, e.g. when this feature is temporarily closed.
+   * NOTE: for legacy reasons, some closure-specifc information (e.g. permanent closure reason)
+   * lives in ExistenceProto instead. In the future, such information should move here in
+   * OperationsProto.
    * @return value or {@code null} for none
    */
   public GeostoreOperationsProto getOperations() {
@@ -1687,7 +1693,10 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Information about this feature's operations, e.g. when this feature is temporarily closed.
+   * NOTE: for legacy reasons, some closure-specifc information (e.g. permanent closure reason)
+   * lives in ExistenceProto instead. In the future, such information should move here in
+   * OperationsProto.
    * @param operations operations or {@code null} for none
    */
   public GeostoreFeatureProto setOperations(GeostoreOperationsProto operations) {

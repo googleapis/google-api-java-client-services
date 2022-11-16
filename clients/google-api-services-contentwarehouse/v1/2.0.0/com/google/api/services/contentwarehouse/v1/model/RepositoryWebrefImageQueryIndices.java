@@ -32,21 +32,82 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefImageQueryIndices extends com.google.api.client.json.GenericJson {
 
   /**
-   * / The index of the source image in CompositeDoc::doc_images.
+   * The (canonical) image docid of the ImageData this image query is part of. Useful for
+   * identifying the ImageData even after doc_images are updated in between Webref annotation runs.
+   * Use docid only when canonical_docid == 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger canonicalDocid;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger docid;
+
+  /**
+   * WARNING: The doc_images in docjoins are subject to updates including non-deterministic
+   * reordering of doc_images and their image_nb_data extensions. This means that without re-running
+   * WebrefAnnotator one cannot rely on the accuracy or even consistency of either image_index or
+   * query_index when parsing a cdoc from docjoins. In those situations one ought to rely on
+   * canonical_docid (or docid when canonical_docid is absent viz. 0). The index of the source image
+   * in CompositeDoc::doc_images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer imageIndex;
 
   /**
-   * / Queries index in ImageData::image_data_navboost.
+   * Queries index in ImageData::image_data_navboost.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RepositoryWebrefQueryIndices queryIndex;
 
   /**
-   * / The index of the source image in CompositeDoc::doc_images.
+   * The (canonical) image docid of the ImageData this image query is part of. Useful for
+   * identifying the ImageData even after doc_images are updated in between Webref annotation runs.
+   * Use docid only when canonical_docid == 0.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getCanonicalDocid() {
+    return canonicalDocid;
+  }
+
+  /**
+   * The (canonical) image docid of the ImageData this image query is part of. Useful for
+   * identifying the ImageData even after doc_images are updated in between Webref annotation runs.
+   * Use docid only when canonical_docid == 0.
+   * @param canonicalDocid canonicalDocid or {@code null} for none
+   */
+  public RepositoryWebrefImageQueryIndices setCanonicalDocid(java.math.BigInteger canonicalDocid) {
+    this.canonicalDocid = canonicalDocid;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getDocid() {
+    return docid;
+  }
+
+  /**
+   * @param docid docid or {@code null} for none
+   */
+  public RepositoryWebrefImageQueryIndices setDocid(java.math.BigInteger docid) {
+    this.docid = docid;
+    return this;
+  }
+
+  /**
+   * WARNING: The doc_images in docjoins are subject to updates including non-deterministic
+   * reordering of doc_images and their image_nb_data extensions. This means that without re-running
+   * WebrefAnnotator one cannot rely on the accuracy or even consistency of either image_index or
+   * query_index when parsing a cdoc from docjoins. In those situations one ought to rely on
+   * canonical_docid (or docid when canonical_docid is absent viz. 0). The index of the source image
+   * in CompositeDoc::doc_images.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getImageIndex() {
@@ -54,7 +115,12 @@ public final class RepositoryWebrefImageQueryIndices extends com.google.api.clie
   }
 
   /**
-   * / The index of the source image in CompositeDoc::doc_images.
+   * WARNING: The doc_images in docjoins are subject to updates including non-deterministic
+   * reordering of doc_images and their image_nb_data extensions. This means that without re-running
+   * WebrefAnnotator one cannot rely on the accuracy or even consistency of either image_index or
+   * query_index when parsing a cdoc from docjoins. In those situations one ought to rely on
+   * canonical_docid (or docid when canonical_docid is absent viz. 0). The index of the source image
+   * in CompositeDoc::doc_images.
    * @param imageIndex imageIndex or {@code null} for none
    */
   public RepositoryWebrefImageQueryIndices setImageIndex(java.lang.Integer imageIndex) {
@@ -63,7 +129,7 @@ public final class RepositoryWebrefImageQueryIndices extends com.google.api.clie
   }
 
   /**
-   * / Queries index in ImageData::image_data_navboost.
+   * Queries index in ImageData::image_data_navboost.
    * @return value or {@code null} for none
    */
   public RepositoryWebrefQueryIndices getQueryIndex() {
@@ -71,7 +137,7 @@ public final class RepositoryWebrefImageQueryIndices extends com.google.api.clie
   }
 
   /**
-   * / Queries index in ImageData::image_data_navboost.
+   * Queries index in ImageData::image_data_navboost.
    * @param queryIndex queryIndex or {@code null} for none
    */
   public RepositoryWebrefImageQueryIndices setQueryIndex(RepositoryWebrefQueryIndices queryIndex) {

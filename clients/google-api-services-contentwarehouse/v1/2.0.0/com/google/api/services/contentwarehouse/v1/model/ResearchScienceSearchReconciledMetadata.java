@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 69
+ * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 70
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -262,6 +262,14 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> isBasedOn;
+
+  /**
+   * Indicates whether the metadata was inferred using an ML model rather than from the schema.org
+   * fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isInferred;
 
   /**
    * Keywords describing the dataset.
@@ -993,6 +1001,25 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   public ResearchScienceSearchReconciledMetadata setIsBasedOn(java.util.List<java.lang.String> isBasedOn) {
     this.isBasedOn = isBasedOn;
+    return this;
+  }
+
+  /**
+   * Indicates whether the metadata was inferred using an ML model rather than from the schema.org
+   * fields.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsInferred() {
+    return isInferred;
+  }
+
+  /**
+   * Indicates whether the metadata was inferred using an ML model rather than from the schema.org
+   * fields.
+   * @param isInferred isInferred or {@code null} for none
+   */
+  public ResearchScienceSearchReconciledMetadata setIsInferred(java.lang.Boolean isInferred) {
+    this.isInferred = isInferred;
     return this;
   }
 

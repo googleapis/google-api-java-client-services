@@ -39,7 +39,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageLayout extends com.google.
   /**
    * Confidence of the current Layout within context of the object this layout is for. e.g.
    * confidence can be for a single token, a table, a visual element, etc. depending on context.
-   * Range [0, 1].
+   * Range `[0, 1]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageLayout extends com.google.
   /**
    * Confidence of the current Layout within context of the object this layout is for. e.g.
    * confidence can be for a single token, a table, a visual element, etc. depending on context.
-   * Range [0, 1].
+   * Range `[0, 1]`.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -89,7 +89,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageLayout extends com.google.
   /**
    * Confidence of the current Layout within context of the object this layout is for. e.g.
    * confidence can be for a single token, a table, a visual element, etc. depending on context.
-   * Range [0, 1].
+   * Range `[0, 1]`.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageLayout setConfidence(java.lang.Float confidence) {

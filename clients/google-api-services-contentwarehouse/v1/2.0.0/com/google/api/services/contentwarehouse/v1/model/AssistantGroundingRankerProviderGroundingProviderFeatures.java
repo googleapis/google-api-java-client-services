@@ -17,9 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The context providing the User Location (not just Elsewhere). This is a legacy name from when it
- * was only set for users working remotely, now it is also set when the user is working from the
- * office.
+ * Features to be extracted from Provider GP for ranking in HGR. Next ID: 2
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -29,40 +27,43 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext extends com.google.api.client.json.GenericJson {
+public final class AssistantGroundingRankerProviderGroundingProviderFeatures extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new location of the user. Might represent home, office, or a custom address on the map.
+   * Provider quality score in the range [0,1] that can be used for ranking providers. Incorporates
+   * both policy rules and quality considerations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleInternalAppsWaldoV1alphaUserLocation location;
+  private java.lang.Float pslScore;
 
   /**
-   * The new location of the user. Might represent home, office, or a custom address on the map.
+   * Provider quality score in the range [0,1] that can be used for ranking providers. Incorporates
+   * both policy rules and quality considerations.
    * @return value or {@code null} for none
    */
-  public GoogleInternalAppsWaldoV1alphaUserLocation getLocation() {
-    return location;
+  public java.lang.Float getPslScore() {
+    return pslScore;
   }
 
   /**
-   * The new location of the user. Might represent home, office, or a custom address on the map.
-   * @param location location or {@code null} for none
+   * Provider quality score in the range [0,1] that can be used for ranking providers. Incorporates
+   * both policy rules and quality considerations.
+   * @param pslScore pslScore or {@code null} for none
    */
-  public GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext setLocation(GoogleInternalAppsWaldoV1alphaUserLocation location) {
-    this.location = location;
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setPslScore(java.lang.Float pslScore) {
+    this.pslScore = pslScore;
     return this;
   }
 
   @Override
-  public GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext set(String fieldName, Object value) {
-    return (GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext) super.set(fieldName, value);
+  public AssistantGroundingRankerProviderGroundingProviderFeatures set(String fieldName, Object value) {
+    return (AssistantGroundingRankerProviderGroundingProviderFeatures) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext clone() {
-    return (GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext) super.clone();
+  public AssistantGroundingRankerProviderGroundingProviderFeatures clone() {
+    return (AssistantGroundingRankerProviderGroundingProviderFeatures) super.clone();
   }
 
 }

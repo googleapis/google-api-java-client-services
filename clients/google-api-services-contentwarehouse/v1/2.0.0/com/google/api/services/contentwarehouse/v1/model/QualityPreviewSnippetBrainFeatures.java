@@ -30,12 +30,38 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityPreviewSnippetBrainFeatures extends com.google.api.client.json.GenericJson {
 
   /**
+   * Is the bolding triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSnippetBrainBoldingTriggered;
+
+  /**
+   * The score by SnippetBrain model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float modelScore;
 
   /**
+   * Is the bolding triggered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSnippetBrainBoldingTriggered() {
+    return isSnippetBrainBoldingTriggered;
+  }
+
+  /**
+   * Is the bolding triggered.
+   * @param isSnippetBrainBoldingTriggered isSnippetBrainBoldingTriggered or {@code null} for none
+   */
+  public QualityPreviewSnippetBrainFeatures setIsSnippetBrainBoldingTriggered(java.lang.Boolean isSnippetBrainBoldingTriggered) {
+    this.isSnippetBrainBoldingTriggered = isSnippetBrainBoldingTriggered;
+    return this;
+  }
+
+  /**
+   * The score by SnippetBrain model.
    * @return value or {@code null} for none
    */
   public java.lang.Float getModelScore() {
@@ -43,6 +69,7 @@ public final class QualityPreviewSnippetBrainFeatures extends com.google.api.cli
   }
 
   /**
+   * The score by SnippetBrain model.
    * @param modelScore modelScore or {@code null} for none
    */
   public QualityPreviewSnippetBrainFeatures setModelScore(java.lang.Float modelScore) {

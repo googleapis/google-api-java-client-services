@@ -37,7 +37,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScores extends
   private java.util.List<GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect> detectedDefects;
 
   /**
-   * The overall quality score. Range [0, 1] where 1 is perfect quality.
+   * The overall quality score. Range `[0, 1]` where 1 is perfect quality.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScores extends
   }
 
   /**
-   * The overall quality score. Range [0, 1] where 1 is perfect quality.
+   * The overall quality score. Range `[0, 1]` where 1 is perfect quality.
    * @return value or {@code null} for none
    */
   public java.lang.Float getQualityScore() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScores extends
   }
 
   /**
-   * The overall quality score. Range [0, 1] where 1 is perfect quality.
+   * The overall quality score. Range `[0, 1]` where 1 is perfect quality.
    * @param qualityScore qualityScore or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageImageQualityScores setQualityScore(java.lang.Float qualityScore) {

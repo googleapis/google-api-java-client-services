@@ -87,12 +87,26 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> lmsClientIdsAllowed;
+
+  /**
    * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
    * online-restrictions for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean lmsIsEditorial;
+
+  /**
+   * Int values corresponds to the values of image_repository.licensed.api.restrictions.Modification
+   * enum.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> lmsModificationsAllowed;
 
   /**
    * The value may be {@code null}.
@@ -137,6 +151,14 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String policySourceType;
+
+  /**
+   * Policy metadata fields for UMP data. Only expected to be used by UMP providers -- please
+   * consult ke-data-governance@ before populating this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageGraphBfgUmpPolicyMetadata umpPolicyMetadata;
 
   /**
    * Timestamp after which data with this policy cannot be used. This value must be strictly
@@ -233,6 +255,21 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLmsClientIdsAllowed() {
+    return lmsClientIdsAllowed;
+  }
+
+  /**
+   * @param lmsClientIdsAllowed lmsClientIdsAllowed or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsClientIdsAllowed(java.util.List<java.lang.String> lmsClientIdsAllowed) {
+    this.lmsClientIdsAllowed = lmsClientIdsAllowed;
+    return this;
+  }
+
+  /**
    * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
    * online-restrictions for details.
    * @return value or {@code null} for none
@@ -248,6 +285,25 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   public StorageGraphBfgPolicyMetadata setLmsIsEditorial(java.lang.Boolean lmsIsEditorial) {
     this.lmsIsEditorial = lmsIsEditorial;
+    return this;
+  }
+
+  /**
+   * Int values corresponds to the values of image_repository.licensed.api.restrictions.Modification
+   * enum.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getLmsModificationsAllowed() {
+    return lmsModificationsAllowed;
+  }
+
+  /**
+   * Int values corresponds to the values of image_repository.licensed.api.restrictions.Modification
+   * enum.
+   * @param lmsModificationsAllowed lmsModificationsAllowed or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLmsModificationsAllowed(java.util.List<java.lang.Long> lmsModificationsAllowed) {
+    this.lmsModificationsAllowed = lmsModificationsAllowed;
     return this;
   }
 
@@ -357,6 +413,25 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   public StorageGraphBfgPolicyMetadata setPolicySourceType(java.lang.String policySourceType) {
     this.policySourceType = policySourceType;
+    return this;
+  }
+
+  /**
+   * Policy metadata fields for UMP data. Only expected to be used by UMP providers -- please
+   * consult ke-data-governance@ before populating this field.
+   * @return value or {@code null} for none
+   */
+  public StorageGraphBfgUmpPolicyMetadata getUmpPolicyMetadata() {
+    return umpPolicyMetadata;
+  }
+
+  /**
+   * Policy metadata fields for UMP data. Only expected to be used by UMP providers -- please
+   * consult ke-data-governance@ before populating this field.
+   * @param umpPolicyMetadata umpPolicyMetadata or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setUmpPolicyMetadata(StorageGraphBfgUmpPolicyMetadata umpPolicyMetadata) {
+    this.umpPolicyMetadata = umpPolicyMetadata;
     return this;
   }
 

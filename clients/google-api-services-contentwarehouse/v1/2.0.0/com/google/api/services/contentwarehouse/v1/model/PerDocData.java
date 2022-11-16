@@ -466,7 +466,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * Site rank computed for host-level sitechunks. This value encodes nsr, site_pr and new_nsr. See
-   * NsrUtil::ConvertNsrDataToHostNsr and go/nsr.
+   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -599,8 +599,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    * SiteChunk computed for nsr. It some cases it can use more information than just url (e.g.
    * youtube channels). See NsrAnnotator for details. If sitechunk is longer than
    * --populate_nsr_sitechunk_max_length (default=100), it will not get populated. This field might
-   * be compressed and needs to be decoded with NsrUtil::DecodeNsrSitechunk. See go/nsr-chunks for
-   * more details. This field contains only nontrivial primary chunks.
+   * be compressed and needs to be decoded with quality_nsr::util::DecodeNsrSitechunk. See go/nsr-
+   * chunks for more details. This field contains only nontrivial primary chunks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2063,7 +2063,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * Site rank computed for host-level sitechunks. This value encodes nsr, site_pr and new_nsr. See
-   * NsrUtil::ConvertNsrDataToHostNsr and go/nsr.
+   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr.
    * @return value or {@code null} for none
    */
   public java.lang.Long getHostNsr() {
@@ -2072,7 +2072,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * Site rank computed for host-level sitechunks. This value encodes nsr, site_pr and new_nsr. See
-   * NsrUtil::ConvertNsrDataToHostNsr and go/nsr.
+   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr.
    * @param hostNsr hostNsr or {@code null} for none
    */
   public PerDocData setHostNsr(java.lang.Long hostNsr) {
@@ -2378,8 +2378,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    * SiteChunk computed for nsr. It some cases it can use more information than just url (e.g.
    * youtube channels). See NsrAnnotator for details. If sitechunk is longer than
    * --populate_nsr_sitechunk_max_length (default=100), it will not get populated. This field might
-   * be compressed and needs to be decoded with NsrUtil::DecodeNsrSitechunk. See go/nsr-chunks for
-   * more details. This field contains only nontrivial primary chunks.
+   * be compressed and needs to be decoded with quality_nsr::util::DecodeNsrSitechunk. See go/nsr-
+   * chunks for more details. This field contains only nontrivial primary chunks.
    * @return value or {@code null} for none
    */
   public java.lang.String getNsrSitechunk() {
@@ -2390,8 +2390,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    * SiteChunk computed for nsr. It some cases it can use more information than just url (e.g.
    * youtube channels). See NsrAnnotator for details. If sitechunk is longer than
    * --populate_nsr_sitechunk_max_length (default=100), it will not get populated. This field might
-   * be compressed and needs to be decoded with NsrUtil::DecodeNsrSitechunk. See go/nsr-chunks for
-   * more details. This field contains only nontrivial primary chunks.
+   * be compressed and needs to be decoded with quality_nsr::util::DecodeNsrSitechunk. See go/nsr-
+   * chunks for more details. This field contains only nontrivial primary chunks.
    * @param nsrSitechunk nsrSitechunk or {@code null} for none
    */
   public PerDocData setNsrSitechunk(java.lang.String nsrSitechunk) {

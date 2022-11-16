@@ -49,8 +49,8 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
   private String committedUntil;
 
   /**
-   * Whether the status of the user until committed_until has more than one status type (e.g.
-   * DoNotDisturb + InMeeting).
+   * Whether the status of the user from this status's start to committed_until has more than one
+   * status type (e.g. DoNotDisturb + InMeeting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +109,8 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
   }
 
   /**
-   * Whether the status of the user until committed_until has more than one status type (e.g.
-   * DoNotDisturb + InMeeting).
+   * Whether the status of the user from this status's start to committed_until has more than one
+   * status type (e.g. DoNotDisturb + InMeeting).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCommittedUntilIsMixed() {
@@ -118,8 +118,8 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
   }
 
   /**
-   * Whether the status of the user until committed_until has more than one status type (e.g.
-   * DoNotDisturb + InMeeting).
+   * Whether the status of the user from this status's start to committed_until has more than one
+   * status type (e.g. DoNotDisturb + InMeeting).
    * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {

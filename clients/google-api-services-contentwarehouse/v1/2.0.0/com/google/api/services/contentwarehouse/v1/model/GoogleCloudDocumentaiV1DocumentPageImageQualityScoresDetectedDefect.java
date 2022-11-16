@@ -30,7 +30,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence of detected defect. Range [0, 1] where 1 indicates strong confidence of that the
+   * Confidence of detected defect. Range `[0, 1]` where 1 indicates strong confidence of that the
    * defect exists.
    * The value may be {@code null}.
    */
@@ -38,16 +38,17 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetected
   private java.lang.Float confidence;
 
   /**
-   * Name of the defect type. Supported values are "quality/defect_blurry", "quality/defect_noisy",
-   * "quality/defect_dark", "quality/defect_faint", "quality/defect_text_too_small",
-   * "quality/defect_document_cutoff", "quality/defect_text_cutoff", "quality/defect_glare"
+   * Name of the defect type. Supported values are: - `quality/defect_blurry` -
+   * `quality/defect_noisy` - `quality/defect_dark` - `quality/defect_faint` -
+   * `quality/defect_text_too_small` - `quality/defect_document_cutoff` -
+   * `quality/defect_text_cutoff` - `quality/defect_glare`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Confidence of detected defect. Range [0, 1] where 1 indicates strong confidence of that the
+   * Confidence of detected defect. Range `[0, 1]` where 1 indicates strong confidence of that the
    * defect exists.
    * @return value or {@code null} for none
    */
@@ -56,7 +57,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetected
   }
 
   /**
-   * Confidence of detected defect. Range [0, 1] where 1 indicates strong confidence of that the
+   * Confidence of detected defect. Range `[0, 1]` where 1 indicates strong confidence of that the
    * defect exists.
    * @param confidence confidence or {@code null} for none
    */
@@ -66,9 +67,10 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetected
   }
 
   /**
-   * Name of the defect type. Supported values are "quality/defect_blurry", "quality/defect_noisy",
-   * "quality/defect_dark", "quality/defect_faint", "quality/defect_text_too_small",
-   * "quality/defect_document_cutoff", "quality/defect_text_cutoff", "quality/defect_glare"
+   * Name of the defect type. Supported values are: - `quality/defect_blurry` -
+   * `quality/defect_noisy` - `quality/defect_dark` - `quality/defect_faint` -
+   * `quality/defect_text_too_small` - `quality/defect_document_cutoff` -
+   * `quality/defect_text_cutoff` - `quality/defect_glare`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -76,9 +78,10 @@ public final class GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetected
   }
 
   /**
-   * Name of the defect type. Supported values are "quality/defect_blurry", "quality/defect_noisy",
-   * "quality/defect_dark", "quality/defect_faint", "quality/defect_text_too_small",
-   * "quality/defect_document_cutoff", "quality/defect_text_cutoff", "quality/defect_glare"
+   * Name of the defect type. Supported values are: - `quality/defect_blurry` -
+   * `quality/defect_noisy` - `quality/defect_dark` - `quality/defect_faint` -
+   * `quality/defect_text_too_small` - `quality/defect_document_cutoff` -
+   * `quality/defect_text_cutoff` - `quality/defect_glare`
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect setType(java.lang.String type) {

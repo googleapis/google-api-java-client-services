@@ -43,6 +43,13 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
   private java.lang.Integer count;
 
   /**
+   * Filter to be passed in the search request if the corresponding bucket is selected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Filter filter;
+
+  /**
    * Percent of results that match the bucket value. The returned value is between (0-100], and is
    * rounded down to an integer if fractional. If the value is not explicitly returned, it
    * represents a percentage value that rounds to 0. Percentages are returned for all searches, but
@@ -81,6 +88,23 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
    */
   public FacetBucket setCount(java.lang.Integer count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Filter to be passed in the search request if the corresponding bucket is selected.
+   * @return value or {@code null} for none
+   */
+  public Filter getFilter() {
+    return filter;
+  }
+
+  /**
+   * Filter to be passed in the search request if the corresponding bucket is selected.
+   * @param filter filter or {@code null} for none
+   */
+  public FacetBucket setFilter(Filter filter) {
+    this.filter = filter;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Private message information specific to a given user.
+ * Private message information specific to a given user. DEPRECATED: Use the privateMessageViewer
+ * field in CreateMessageInfo instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

@@ -87,6 +87,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FastSocket fastSocket;
+
+  /**
    * Google Container File System (image streaming) configs.
    * The value may be {@code null}.
    */
@@ -401,6 +408,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * @return value or {@code null} for none
+   */
+  public FastSocket getFastSocket() {
+    return fastSocket;
+  }
+
+  /**
+   * Enable or disable NCCL fast socket for the node pool.
+   * @param fastSocket fastSocket or {@code null} for none
+   */
+  public NodeConfig setFastSocket(FastSocket fastSocket) {
+    this.fastSocket = fastSocket;
     return this;
   }
 

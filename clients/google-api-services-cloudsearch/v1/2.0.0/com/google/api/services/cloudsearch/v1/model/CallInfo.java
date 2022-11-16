@@ -79,13 +79,6 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String calendarEventId;
 
   /**
-   * Configuration for the chat for this conference.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ChatConfig chatConfig;
-
-  /**
    * The current co-activity session, or unset if there is none in progress. A co-activity session
    * can be initiated by devices in JOINED state . Initiator of the co-activity is expected to
    * populate this field to start the session. Once clients detect that the co-activity has
@@ -129,7 +122,8 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    * meeting space. The media backend information will only be filled in for clients that are
    * supposed to present the information. The information should be displayed in a debug panel and
    * is only intended for internal debugging purposes. If the string is empty nothing should be
-   * displayed about the media backend.
+   * displayed about the media backend. Deprecated because media backend is always MEDIA_ROUTER
+   * since Dec 2018.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -335,23 +329,6 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the chat for this conference.
-   * @return value or {@code null} for none
-   */
-  public ChatConfig getChatConfig() {
-    return chatConfig;
-  }
-
-  /**
-   * Configuration for the chat for this conference.
-   * @param chatConfig chatConfig or {@code null} for none
-   */
-  public CallInfo setChatConfig(ChatConfig chatConfig) {
-    this.chatConfig = chatConfig;
-    return this;
-  }
-
-  /**
    * The current co-activity session, or unset if there is none in progress. A co-activity session
    * can be initiated by devices in JOINED state . Initiator of the co-activity is expected to
    * populate this field to start the session. Once clients detect that the co-activity has
@@ -446,7 +423,8 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    * meeting space. The media backend information will only be filled in for clients that are
    * supposed to present the information. The information should be displayed in a debug panel and
    * is only intended for internal debugging purposes. If the string is empty nothing should be
-   * displayed about the media backend.
+   * displayed about the media backend. Deprecated because media backend is always MEDIA_ROUTER
+   * since Dec 2018.
    * @return value or {@code null} for none
    */
   public java.lang.String getMediaBackendInfo() {
@@ -458,7 +436,8 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    * meeting space. The media backend information will only be filled in for clients that are
    * supposed to present the information. The information should be displayed in a debug panel and
    * is only intended for internal debugging purposes. If the string is empty nothing should be
-   * displayed about the media backend.
+   * displayed about the media backend. Deprecated because media backend is always MEDIA_ROUTER
+   * since Dec 2018.
    * @param mediaBackendInfo mediaBackendInfo or {@code null} for none
    */
   public CallInfo setMediaBackendInfo(java.lang.String mediaBackendInfo) {

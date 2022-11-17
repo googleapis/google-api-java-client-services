@@ -62,14 +62,14 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
 
   /**
    * The resource name of the processor type. Format:
-   * projects/{project}/processorTypes/{processor_type}
+   * `projects/{project}/processorTypes/{processor_type}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The type of the processor, e.g., "invoice_parsing".
+   * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
 
   /**
    * The resource name of the processor type. Format:
-   * projects/{project}/processorTypes/{processor_type}
+   * `projects/{project}/processorTypes/{processor_type}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -156,7 +156,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
 
   /**
    * The resource name of the processor type. Format:
-   * projects/{project}/processorTypes/{processor_type}
+   * `projects/{project}/processorTypes/{processor_type}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorType setName(java.lang.String name) {
@@ -165,7 +165,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
   }
 
   /**
-   * The type of the processor, e.g., "invoice_parsing".
+   * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -173,7 +173,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
   }
 
   /**
-   * The type of the processor, e.g., "invoice_parsing".
+   * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorType setType(java.lang.String type) {

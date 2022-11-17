@@ -32,7 +32,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Confidence of detected Schema entity. Range [0, 1].
+   * Optional. Confidence of detected Schema entity. Range `[0, 1]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   private java.lang.String type;
 
   /**
-   * Optional. Confidence of detected Schema entity. Range [0, 1].
+   * Optional. Confidence of detected Schema entity. Range `[0, 1]`.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -121,7 +121,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Confidence of detected Schema entity. Range [0, 1].
+   * Optional. Confidence of detected Schema entity. Range `[0, 1]`.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntity setConfidence(java.lang.Float confidence) {

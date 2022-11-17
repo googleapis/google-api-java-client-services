@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig extends
   private GoogleCloudDocumentaiV1beta3GcsDocuments gcsDocuments;
 
   /**
-   * The set of documents that match the specified Cloud Storage [gcs_prefix].
+   * The set of documents that match the specified Cloud Storage `gcs_prefix`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig extends
   }
 
   /**
-   * The set of documents that match the specified Cloud Storage [gcs_prefix].
+   * The set of documents that match the specified Cloud Storage `gcs_prefix`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3GcsPrefix getGcsPrefix() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig extends
   }
 
   /**
-   * The set of documents that match the specified Cloud Storage [gcs_prefix].
+   * The set of documents that match the specified Cloud Storage `gcs_prefix`.
    * @param gcsPrefix gcsPrefix or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig setGcsPrefix(GoogleCloudDocumentaiV1beta3GcsPrefix gcsPrefix) {

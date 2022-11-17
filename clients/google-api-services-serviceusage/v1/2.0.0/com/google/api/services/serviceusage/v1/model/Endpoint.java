@@ -39,6 +39,15 @@ package com.google.api.services.serviceusage.v1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Unimplemented. Dot not use. DEPRECATED: This field is no longer supported. Instead of using
+   * aliases, please specify multiple google.api.Endpoint for each of the intended aliases.
+   * Additional names that this endpoint will be hosted on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> aliases;
+
+  /**
    * Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain
    * traffic, would allow the backends served from this endpoint to receive and respond to HTTP
    * OPTIONS requests. The response will be used by the browser to determine whether the subsequent
@@ -64,6 +73,27 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
+
+  /**
+   * Unimplemented. Dot not use. DEPRECATED: This field is no longer supported. Instead of using
+   * aliases, please specify multiple google.api.Endpoint for each of the intended aliases.
+   * Additional names that this endpoint will be hosted on.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAliases() {
+    return aliases;
+  }
+
+  /**
+   * Unimplemented. Dot not use. DEPRECATED: This field is no longer supported. Instead of using
+   * aliases, please specify multiple google.api.Endpoint for each of the intended aliases.
+   * Additional names that this endpoint will be hosted on.
+   * @param aliases aliases or {@code null} for none
+   */
+  public Endpoint setAliases(java.util.List<java.lang.String> aliases) {
+    this.aliases = aliases;
+    return this;
+  }
 
   /**
    * Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain

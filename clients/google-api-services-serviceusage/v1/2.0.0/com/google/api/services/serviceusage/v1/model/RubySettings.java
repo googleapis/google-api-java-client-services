@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.serviceusage.v1beta1.model;
+package com.google.api.services.serviceusage.v1.model;
 
 /**
- * Selects and configures the service controller used by the service. Example: control: environment:
- * servicecontrol.googleapis.com
+ * Settings for Ruby client libraries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -28,46 +27,40 @@ package com.google.api.services.serviceusage.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Control extends com.google.api.client.json.GenericJson {
+public final class RubySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * Some settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String environment;
+  private CommonLanguageSettings common;
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * Some settings.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEnvironment() {
-    return environment;
+  public CommonLanguageSettings getCommon() {
+    return common;
   }
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
-   * @param environment environment or {@code null} for none
+   * Some settings.
+   * @param common common or {@code null} for none
    */
-  public Control setEnvironment(java.lang.String environment) {
-    this.environment = environment;
+  public RubySettings setCommon(CommonLanguageSettings common) {
+    this.common = common;
     return this;
   }
 
   @Override
-  public Control set(String fieldName, Object value) {
-    return (Control) super.set(fieldName, value);
+  public RubySettings set(String fieldName, Object value) {
+    return (RubySettings) super.set(fieldName, value);
   }
 
   @Override
-  public Control clone() {
-    return (Control) super.clone();
+  public RubySettings clone() {
+    return (RubySettings) super.clone();
   }
 
 }

@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta3RawDocument extends com.google.ap
   private java.lang.String content;
 
   /**
-   * An IANA MIME type (RFC6838) indicating the nature and format of the [content].
+   * An IANA MIME type (RFC6838) indicating the nature and format of the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudDocumentaiV1beta3RawDocument extends com.google.ap
   }
 
   /**
-   * An IANA MIME type (RFC6838) indicating the nature and format of the [content].
+   * An IANA MIME type (RFC6838) indicating the nature and format of the content.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -98,7 +98,7 @@ public final class GoogleCloudDocumentaiV1beta3RawDocument extends com.google.ap
   }
 
   /**
-   * An IANA MIME type (RFC6838) indicating the nature and format of the [content].
+   * An IANA MIME type (RFC6838) indicating the nature and format of the content.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3RawDocument setMimeType(java.lang.String mimeType) {

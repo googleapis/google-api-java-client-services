@@ -18,8 +18,8 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * The rule to exclude findings based on a hotword. For record inspection of tables, column names
- * are considered hotwords. An example of this is to exclude a finding if a BigQuery column matches
- * a specific pattern.
+ * are considered hotwords. An example of this is to exclude a finding if it belongs to a BigQuery
+ * column that matches a specific pattern.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

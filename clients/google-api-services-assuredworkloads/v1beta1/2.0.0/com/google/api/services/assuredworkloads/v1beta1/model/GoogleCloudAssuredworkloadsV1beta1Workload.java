@@ -158,7 +158,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String name;
 
   /**
-   * Optional. Compliance Regime associated with this workload.
+   * Optional. Partner regime associated with this workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -503,7 +503,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Optional. Compliance Regime associated with this workload.
+   * Optional. Partner regime associated with this workload.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartner() {
@@ -511,7 +511,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Optional. Compliance Regime associated with this workload.
+   * Optional. Partner regime associated with this workload.
    * @param partner partner or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setPartner(java.lang.String partner) {

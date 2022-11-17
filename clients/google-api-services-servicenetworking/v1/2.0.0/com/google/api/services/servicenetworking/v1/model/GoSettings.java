@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.servicenetworking.v1beta.model;
+package com.google.api.services.servicenetworking.v1.model;
 
 /**
- * Selects and configures the service controller used by the service. Example: control: environment:
- * servicecontrol.googleapis.com
+ * Settings for Go client libraries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -29,46 +28,40 @@ package com.google.api.services.servicenetworking.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Control extends com.google.api.client.json.GenericJson {
+public final class GoSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * Some settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String environment;
+  private CommonLanguageSettings common;
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * Some settings.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEnvironment() {
-    return environment;
+  public CommonLanguageSettings getCommon() {
+    return common;
   }
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
-   * @param environment environment or {@code null} for none
+   * Some settings.
+   * @param common common or {@code null} for none
    */
-  public Control setEnvironment(java.lang.String environment) {
-    this.environment = environment;
+  public GoSettings setCommon(CommonLanguageSettings common) {
+    this.common = common;
     return this;
   }
 
   @Override
-  public Control set(String fieldName, Object value) {
-    return (Control) super.set(fieldName, value);
+  public GoSettings set(String fieldName, Object value) {
+    return (GoSettings) super.set(fieldName, value);
   }
 
   @Override
-  public Control clone() {
-    return (Control) super.clone();
+  public GoSettings clone() {
+    return (GoSettings) super.clone();
   }
 
 }

@@ -44,9 +44,10 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String description;
 
   /**
-   * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
-   * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
+   * Resource name for the `ServicePerimeter`. Format:
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
+   * component must begin with a letter, followed by alphanumeric characters or `_`. After you
+   * create a `ServicePerimeter`, you cannot change its `name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +119,10 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
-   * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
+   * Resource name for the `ServicePerimeter`. Format:
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
+   * component must begin with a letter, followed by alphanumeric characters or `_`. After you
+   * create a `ServicePerimeter`, you cannot change its `name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -128,9 +130,10 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
-   * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
+   * Resource name for the `ServicePerimeter`. Format:
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
+   * component must begin with a letter, followed by alphanumeric characters or `_`. After you
+   * create a `ServicePerimeter`, you cannot change its `name`.
    * @param name name or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setName(java.lang.String name) {

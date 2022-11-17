@@ -52,10 +52,10 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   private java.lang.String description;
 
   /**
-   * Required. Resource name for the Access Level. The `short_name` component must begin with a
-   * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the
-   * `access_level` component is 50 characters.
+   * Resource name for the `AccessLevel`. Format:
+   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
+   * begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
+   * characters. After you create an `AccessLevel`, you cannot change its `name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,10 +120,10 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   }
 
   /**
-   * Required. Resource name for the Access Level. The `short_name` component must begin with a
-   * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the
-   * `access_level` component is 50 characters.
+   * Resource name for the `AccessLevel`. Format:
+   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
+   * begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
+   * characters. After you create an `AccessLevel`, you cannot change its `name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -131,10 +131,10 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   }
 
   /**
-   * Required. Resource name for the Access Level. The `short_name` component must begin with a
-   * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the
-   * `access_level` component is 50 characters.
+   * Resource name for the `AccessLevel`. Format:
+   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
+   * begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
+   * characters. After you create an `AccessLevel`, you cannot change its `name`.
    * @param name name or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AccessLevel setName(java.lang.String name) {

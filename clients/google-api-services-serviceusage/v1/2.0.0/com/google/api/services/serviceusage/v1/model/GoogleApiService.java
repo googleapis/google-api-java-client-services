@@ -211,6 +211,14 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   private java.lang.String producerProjectId;
 
   /**
+   * Settings for [Google Cloud Client libraries](https://cloud.google.com/apis/docs/cloud-client-
+   * libraries) generated from APIs defined as protocol buffers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Publishing publishing;
+
+  /**
    * Quota configuration.
    * The value may be {@code null}.
    */
@@ -628,6 +636,25 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    */
   public GoogleApiService setProducerProjectId(java.lang.String producerProjectId) {
     this.producerProjectId = producerProjectId;
+    return this;
+  }
+
+  /**
+   * Settings for [Google Cloud Client libraries](https://cloud.google.com/apis/docs/cloud-client-
+   * libraries) generated from APIs defined as protocol buffers.
+   * @return value or {@code null} for none
+   */
+  public Publishing getPublishing() {
+    return publishing;
+  }
+
+  /**
+   * Settings for [Google Cloud Client libraries](https://cloud.google.com/apis/docs/cloud-client-
+   * libraries) generated from APIs defined as protocol buffers.
+   * @param publishing publishing or {@code null} for none
+   */
+  public GoogleApiService setPublishing(Publishing publishing) {
+    this.publishing = publishing;
     return this;
   }
 

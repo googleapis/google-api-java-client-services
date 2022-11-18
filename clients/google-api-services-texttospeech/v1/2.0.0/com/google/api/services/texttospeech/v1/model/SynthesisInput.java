@@ -18,8 +18,7 @@ package com.google.api.services.texttospeech.v1.model;
 
 /**
  * Contains text input to be synthesized. Either `text` or `ssml` must be supplied. Supplying both
- * or neither returns google.rpc.Code.INVALID_ARGUMENT. The input size is limited to 5000
- * characters.
+ * or neither returns google.rpc.Code.INVALID_ARGUMENT. The input size is limited to 5000 bytes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Text-to-Speech API. For a detailed explanation

@@ -44,7 +44,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   private Environment environment;
 
   /**
-   * Environment variables to set before running the Task. You can set up to 100 environments.
+   * Deprecated: please use environment(non-plural) instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables to set before running the Task. You can set up to 100 environments.
+   * Deprecated: please use environment(non-plural) instead.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnvironments() {
@@ -154,7 +154,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables to set before running the Task. You can set up to 100 environments.
+   * Deprecated: please use environment(non-plural) instead.
    * @param environments environments or {@code null} for none
    */
   public TaskSpec setEnvironments(java.util.Map<String, java.lang.String> environments) {

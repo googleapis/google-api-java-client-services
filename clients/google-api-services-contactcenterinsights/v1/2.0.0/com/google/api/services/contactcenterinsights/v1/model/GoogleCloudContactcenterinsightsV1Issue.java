@@ -53,6 +53,13 @@ public final class GoogleCloudContactcenterinsightsV1Issue extends com.google.ap
   private java.lang.String name;
 
   /**
+   * Output only. Resource names of the sample representative utterances that match to this issue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sampleUtterances;
+
+  /**
    * Output only. The most recent time that this issue was updated.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class GoogleCloudContactcenterinsightsV1Issue extends com.google.ap
    */
   public GoogleCloudContactcenterinsightsV1Issue setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Resource names of the sample representative utterances that match to this issue.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSampleUtterances() {
+    return sampleUtterances;
+  }
+
+  /**
+   * Output only. Resource names of the sample representative utterances that match to this issue.
+   * @param sampleUtterances sampleUtterances or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Issue setSampleUtterances(java.util.List<java.lang.String> sampleUtterances) {
+    this.sampleUtterances = sampleUtterances;
     return this;
   }
 

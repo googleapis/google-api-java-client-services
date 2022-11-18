@@ -18,7 +18,8 @@ package com.google.api.services.dialogflow.v3.model;
 
 /**
  * The sentiment, such as positive/negative feeling or association, for a unit of analysis, such as
- * the query text.
+ * the query text. See: https://cloud.google.com/natural-
+ * language/docs/basics#interpreting_sentiment_analysis_values for how to interpret the result.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

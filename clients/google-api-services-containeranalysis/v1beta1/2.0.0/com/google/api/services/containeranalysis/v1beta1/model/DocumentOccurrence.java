@@ -18,7 +18,7 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
  * DocumentOccurrence represents an SPDX Document Creation Information section:
- * https://spdx.github.io/spdx-spec/2-document-creation-information/
+ * https://spdx.github.io/spdx-spec/v2.3/document-creation-information/
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

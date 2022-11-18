@@ -45,6 +45,13 @@ public final class AssociatedFinding extends com.google.api.client.json.GenericJ
   private java.lang.String findingCategory;
 
   /**
+   * Full resource name of the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Canonical name of the associated findings. Example: organizations/123/sources/456/findings/789
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class AssociatedFinding extends com.google.api.client.json.GenericJ
    */
   public AssociatedFinding setFindingCategory(java.lang.String findingCategory) {
     this.findingCategory = findingCategory;
+    return this;
+  }
+
+  /**
+   * Full resource name of the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Full resource name of the finding.
+   * @param name name or {@code null} for none
+   */
+  public AssociatedFinding setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

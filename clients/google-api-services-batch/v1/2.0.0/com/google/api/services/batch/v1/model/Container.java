@@ -70,7 +70,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional password for logging in to a docker registry. If password matches
-   * "projects/secrets/versions" then Batch will read the password from the Secret Manager;
+   * `projects/secrets/versions` then Batch will read the password from the Secret Manager;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional username for logging in to a docker registry. If username matches
-   * "projects/secrets/versions" then Batch will read the username from the Secret Manager.
+   * `projects/secrets/versions` then Batch will read the username from the Secret Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional password for logging in to a docker registry. If password matches
-   * "projects/secrets/versions" then Batch will read the password from the Secret Manager;
+   * `projects/secrets/versions` then Batch will read the password from the Secret Manager;
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -196,7 +196,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional password for logging in to a docker registry. If password matches
-   * "projects/secrets/versions" then Batch will read the password from the Secret Manager;
+   * `projects/secrets/versions` then Batch will read the password from the Secret Manager;
    * @param password password or {@code null} for none
    */
   public Container setPassword(java.lang.String password) {
@@ -206,7 +206,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional username for logging in to a docker registry. If username matches
-   * "projects/secrets/versions" then Batch will read the username from the Secret Manager.
+   * `projects/secrets/versions` then Batch will read the username from the Secret Manager.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -215,7 +215,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional username for logging in to a docker registry. If username matches
-   * "projects/secrets/versions" then Batch will read the username from the Secret Manager.
+   * `projects/secrets/versions` then Batch will read the username from the Secret Manager.
    * @param username username or {@code null} for none
    */
   public Container setUsername(java.lang.String username) {

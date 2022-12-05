@@ -8354,6 +8354,319 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
 
+        /**
+         * An accessor for creating requests from the NodeGroups collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dataproc dataproc = new Dataproc(...);}
+         *   {@code Dataproc.NodeGroups.List request = dataproc.nodeGroups().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public NodeGroups nodeGroups() {
+          return new NodeGroups();
+        }
+
+        /**
+         * The "nodeGroups" collection of methods.
+         */
+        public class NodeGroups {
+
+          /**
+           * Gets the resource representation for a node group in a cluster.
+           *
+           * Create a request for the method "nodeGroups.get".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the node group to retrieve. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DataprocRequest<com.google.api.services.dataproc.model.NodeGroup> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+
+            /**
+             * Gets the resource representation for a node group in a cluster.
+             *
+             * Create a request for the method "nodeGroups.get".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the node group to retrieve. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.NodeGroup.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the node group to retrieve. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the node group to retrieve. Format:
+           projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the node group to retrieve. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Resizes a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata
+           * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperation
+           * metadata).
+           *
+           * Create a request for the method "nodeGroups.resize".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Resize#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the node group to resize. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+           * @param content the {@link com.google.api.services.dataproc.model.ResizeNodeGroupRequest}
+           * @return the request
+           */
+          public Resize resize(java.lang.String name, com.google.api.services.dataproc.model.ResizeNodeGroupRequest content) throws java.io.IOException {
+            Resize result = new Resize(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Resize extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:resize";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+
+            /**
+             * Resizes a node group in a cluster. The returned Operation.metadata is
+             * NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.d
+             * ataproc.v1#nodegroupoperationmetadata).
+             *
+             * Create a request for the method "nodeGroups.resize".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Resize#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Resize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the node group to resize. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             * @param content the {@link com.google.api.services.dataproc.model.ResizeNodeGroupRequest}
+             * @since 1.13
+             */
+            protected Resize(java.lang.String name, com.google.api.services.dataproc.model.ResizeNodeGroupRequest content) {
+              super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Resize set$Xgafv(java.lang.String $Xgafv) {
+              return (Resize) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Resize setAccessToken(java.lang.String accessToken) {
+              return (Resize) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Resize setAlt(java.lang.String alt) {
+              return (Resize) super.setAlt(alt);
+            }
+
+            @Override
+            public Resize setCallback(java.lang.String callback) {
+              return (Resize) super.setCallback(callback);
+            }
+
+            @Override
+            public Resize setFields(java.lang.String fields) {
+              return (Resize) super.setFields(fields);
+            }
+
+            @Override
+            public Resize setKey(java.lang.String key) {
+              return (Resize) super.setKey(key);
+            }
+
+            @Override
+            public Resize setOauthToken(java.lang.String oauthToken) {
+              return (Resize) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Resize setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Resize) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Resize setQuotaUser(java.lang.String quotaUser) {
+              return (Resize) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Resize setUploadType(java.lang.String uploadType) {
+              return (Resize) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Resize setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Resize) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the node group to resize. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the node group to resize. Format:
+           projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the node group to resize. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            public Resize setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Resize set(String parameterName, Object value) {
+              return (Resize) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Jobs collection.

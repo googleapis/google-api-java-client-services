@@ -38,6 +38,13 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   private UsageMetrics approximateUsage;
 
   /**
+   * Output only. Snapshot of current workload resource usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UsageSnapshot currentUsage;
+
+  /**
    * Output only. A URI pointing to the location of the diagnostics tarball.
    * The value may be {@code null}.
    */
@@ -74,6 +81,23 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
    */
   public RuntimeInfo setApproximateUsage(UsageMetrics approximateUsage) {
     this.approximateUsage = approximateUsage;
+    return this;
+  }
+
+  /**
+   * Output only. Snapshot of current workload resource usage.
+   * @return value or {@code null} for none
+   */
+  public UsageSnapshot getCurrentUsage() {
+    return currentUsage;
+  }
+
+  /**
+   * Output only. Snapshot of current workload resource usage.
+   * @param currentUsage currentUsage or {@code null} for none
+   */
+  public RuntimeInfo setCurrentUsage(UsageSnapshot currentUsage) {
+    this.currentUsage = currentUsage;
     return this;
   }
 

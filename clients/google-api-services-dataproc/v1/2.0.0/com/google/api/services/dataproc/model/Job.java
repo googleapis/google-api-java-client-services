@@ -55,6 +55,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String driverOutputResourceUri;
 
   /**
+   * Optional. Driver scheduling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DriverSchedulingConfig driverSchedulingConfig;
+
+  /**
    * Optional. Job is a Hadoop job.
    * The value may be {@code null}.
    */
@@ -237,6 +244,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setDriverOutputResourceUri(java.lang.String driverOutputResourceUri) {
     this.driverOutputResourceUri = driverOutputResourceUri;
+    return this;
+  }
+
+  /**
+   * Optional. Driver scheduling configuration.
+   * @return value or {@code null} for none
+   */
+  public DriverSchedulingConfig getDriverSchedulingConfig() {
+    return driverSchedulingConfig;
+  }
+
+  /**
+   * Optional. Driver scheduling configuration.
+   * @param driverSchedulingConfig driverSchedulingConfig or {@code null} for none
+   */
+  public Job setDriverSchedulingConfig(DriverSchedulingConfig driverSchedulingConfig) {
+    this.driverSchedulingConfig = driverSchedulingConfig;
     return this;
   }
 

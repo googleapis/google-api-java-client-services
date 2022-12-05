@@ -42,7 +42,9 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   /**
    * The relative resource name of this notification config. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +93,9 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   /**
    * The relative resource name of this notification config. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +105,9 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   /**
    * The relative resource name of this notification config. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * @param name name or {@code null} for none
    */
   public NotificationConfig setName(java.lang.String name) {

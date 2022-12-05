@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaImportErrorConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
+   * Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
    * directory. Import errors will be written to sharded files in this directory, one per line, as a
    * JSON-encoded `google.rpc.Status` message.
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportErrorConfig extends co
   private java.lang.String gcsPrefix;
 
   /**
-   * Google Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
+   * Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
    * directory. Import errors will be written to sharded files in this directory, one per line, as a
    * JSON-encoded `google.rpc.Status` message.
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportErrorConfig extends co
   }
 
   /**
-   * Google Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
+   * Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
    * directory. Import errors will be written to sharded files in this directory, one per line, as a
    * JSON-encoded `google.rpc.Status` message.
    * @param gcsPrefix gcsPrefix or {@code null} for none

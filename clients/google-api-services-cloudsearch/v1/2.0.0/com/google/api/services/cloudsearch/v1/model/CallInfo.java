@@ -118,18 +118,6 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxJoinedDevices;
 
   /**
-   * Output only. Information about the media backend for the currently ongoing conference in the
-   * meeting space. The media backend information will only be filled in for clients that are
-   * supposed to present the information. The information should be displayed in a debug panel and
-   * is only intended for internal debugging purposes. If the string is empty nothing should be
-   * displayed about the media backend. Deprecated because media backend is always MEDIA_ROUTER
-   * since Dec 2018.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String mediaBackendInfo;
-
-  /**
    * Output only. The name or description of the organization or domain that the organizer belongs
    * to. The expected use of this in clients is to present messages like "John Doe (outside of
    * Google.com) is trying to join this call", where "Google.com" is the organization name. The
@@ -415,33 +403,6 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    */
   public CallInfo setMaxJoinedDevices(java.lang.Integer maxJoinedDevices) {
     this.maxJoinedDevices = maxJoinedDevices;
-    return this;
-  }
-
-  /**
-   * Output only. Information about the media backend for the currently ongoing conference in the
-   * meeting space. The media backend information will only be filled in for clients that are
-   * supposed to present the information. The information should be displayed in a debug panel and
-   * is only intended for internal debugging purposes. If the string is empty nothing should be
-   * displayed about the media backend. Deprecated because media backend is always MEDIA_ROUTER
-   * since Dec 2018.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMediaBackendInfo() {
-    return mediaBackendInfo;
-  }
-
-  /**
-   * Output only. Information about the media backend for the currently ongoing conference in the
-   * meeting space. The media backend information will only be filled in for clients that are
-   * supposed to present the information. The information should be displayed in a debug panel and
-   * is only intended for internal debugging purposes. If the string is empty nothing should be
-   * displayed about the media backend. Deprecated because media backend is always MEDIA_ROUTER
-   * since Dec 2018.
-   * @param mediaBackendInfo mediaBackendInfo or {@code null} for none
-   */
-  public CallInfo setMediaBackendInfo(java.lang.String mediaBackendInfo) {
-    this.mediaBackendInfo = mediaBackendInfo;
     return this;
   }
 

@@ -2184,15 +2184,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. A page token, received from a previous list spaces call. Provide this to retrieve
-       * the subsequent page. When paginating, all other parameters provided must match the call
-       * that provided the page token.
+       * the subsequent page. When paginating, the filter value should match the call that provided
+       * the page token. Passing a different value may lead to unexpected results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** Optional. A page token, received from a previous list spaces call. Provide this to retrieve the
-     subsequent page. When paginating, all other parameters provided must match the call that provided
-     the page token.
+     subsequent page. When paginating, the filter value should match the call that provided the page
+     token. Passing a different value may lead to unexpected results.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -2200,8 +2200,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. A page token, received from a previous list spaces call. Provide this to retrieve
-       * the subsequent page. When paginating, all other parameters provided must match the call
-       * that provided the page token.
+       * the subsequent page. When paginating, the filter value should match the call that provided
+       * the page token. Passing a different value may lead to unexpected results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -2479,8 +2479,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Members {
 
       /**
-       * Returns a membership. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * [Developer Preview](https://developers.google.com/workspace/preview): Returns a membership.
+       * Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports
+       * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+       * accounts). Supports [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google
+       * Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which
+       * grants early access to certain features. [User
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+       * `chat.memberships` or `chat.memberships.readonly` authorization scope.
        *
        * Create a request for the method "members.get".
        *
@@ -2504,8 +2511,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/members/[^/]+$");
 
         /**
-         * Returns a membership. Requires [service account
-         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * [Developer Preview](https://developers.google.com/workspace/preview): Returns a membership.
+         * Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports
+         * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+         * accounts). Supports [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+         * which grants early access to certain features. [User
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+         * `chat.memberships` or `chat.memberships.readonly` authorization scope.
          *
          * Create a request for the method "members.get".
          *
@@ -2625,8 +2639,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists memberships in a space. Requires [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * [Developer Preview](https://developers.google.com/workspace/preview): Lists memberships in a
+       * space. Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+       * supports [service account authentication](https://developers.google.com/chat/api/guides/auth
+       * /service-accounts). Supports [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google
+       * Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which
+       * grants early access to certain features. [User
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+       * `chat.memberships` or `chat.memberships.readonly` authorization scope.
        *
        * Create a request for the method "members.list".
        *
@@ -2651,8 +2672,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Lists memberships in a space. Requires [service account
-         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * [Developer Preview](https://developers.google.com/workspace/preview): Lists memberships in a
+         * space. Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+         * supports [service account authentication](https://developers.google.com/chat/api/guides/auth
+         * /service-accounts). Supports [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+         * which grants early access to certain features. [User
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+         * `chat.memberships` or `chat.memberships.readonly` authorization scope.
          *
          * Create a request for the method "members.list".
          *
@@ -2796,15 +2824,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * A page token, received from a previous list memberships call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided must match the call
-         * that provided the page token.
+         * the subsequent page. When paginating, all other parameters provided should match the call
+         * that provided the page token. Passing different values to the other parameters may lead
+         * to unexpected results.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** A page token, received from a previous list memberships call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided must match the call that provided
-       the page token.
+       subsequent page. When paginating, all other parameters provided should match the call that provided
+       the page token. Passing different values to the other parameters may lead to unexpected results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -2812,8 +2841,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * A page token, received from a previous list memberships call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided must match the call
-         * that provided the page token.
+         * the subsequent page. When paginating, all other parameters provided should match the call
+         * that provided the page token. Passing different values to the other parameters may lead
+         * to unexpected results.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -3446,8 +3476,224 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /**
        * Updates a message. For example usage, see [Update a
        * message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires
-       * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
-       * accounts).
+       * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.messages` authorization scope.
+       *
+       * Create a request for the method "messages.patch".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name in the form `spaces/messages`. Example:
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
+
+        /**
+         * Updates a message. For example usage, see [Update a
+         * message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message).
+         * Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports
+         * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+         * accounts). Supports [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+         * which grants early access to certain features. [User
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+         * `chat.messages` authorization scope.
+         *
+         * Create a request for the method "messages.patch".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name in the form `spaces/messages`. Example:
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * @param content the {@link com.google.api.services.chat.v1.model.Message}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.chat.v1.model.Message content) {
+          super(HangoutsChat.this, "PATCH", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/messages/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name in the form `spaces/messages`. Example:
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name in the form `spaces/messages`. Example:
+       `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name in the form `spaces/messages`. Example:
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/messages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. If `true` and the message is not found, a new message is created and
+         * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
+         * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
+         * fails.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowMissing;
+
+        /** Optional. If `true` and the message is not found, a new message is created and `updateMask` is
+       ignored. The specified message ID must be [client-
+       assigned](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or
+       the request fails.
+         */
+        public java.lang.Boolean getAllowMissing() {
+          return allowMissing;
+        }
+
+        /**
+         * Optional. If `true` and the message is not found, a new message is created and
+         * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
+         * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
+         * fails.
+         */
+        public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+          this.allowMissing = allowMissing;
+          return this;
+        }
+
+        /**
+         * Required. The field paths to update. Separate multiple values with commas. Currently
+         * supported field paths: - text - cards (Requires [service account
+         * authentication](/chat/api/guides/auth/service-accounts).) - cards_v2
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The field paths to update. Separate multiple values with commas. Currently supported
+       field paths: - text - cards (Requires [service account authentication](/chat/api/guides/auth
+       /service-accounts).) - cards_v2
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The field paths to update. Separate multiple values with commas. Currently
+         * supported field paths: - text - cards (Requires [service account
+         * authentication](/chat/api/guides/auth/service-accounts).) - cards_v2
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a message. For example usage, see [Update a
+       * message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.messages` authorization scope.
        *
        * Create a request for the method "messages.update".
        *
@@ -3475,8 +3721,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Updates a message. For example usage, see [Update a
          * message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message).
-         * Requires [service account authentication](https://developers.google.com/chat/api/guides/auth
-         * /service-accounts).
+         * Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports
+         * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+         * accounts). Supports [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
+         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
+         * which grants early access to certain features. [User
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
+         * `chat.messages` authorization scope.
          *
          * Create a request for the method "messages.update".
          *

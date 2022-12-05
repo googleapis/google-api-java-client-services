@@ -84,8 +84,9 @@ public final class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest exte
   private java.lang.String requestId;
 
   /**
-   * Optional. Matched against all {@link TriggerConfig}s across all integrations. i.e.
-   * TriggerConfig.trigger_id.equals(trigger_id)
+   * Required. Matched against all {@link TriggerConfig}s across all integrations. i.e.
+   * TriggerConfig.trigger_id.equals(trigger_id). The trigger_id is in the format of
+   * `api_trigger/TRIGGER_NAME`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,8 +205,9 @@ public final class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest exte
   }
 
   /**
-   * Optional. Matched against all {@link TriggerConfig}s across all integrations. i.e.
-   * TriggerConfig.trigger_id.equals(trigger_id)
+   * Required. Matched against all {@link TriggerConfig}s across all integrations. i.e.
+   * TriggerConfig.trigger_id.equals(trigger_id). The trigger_id is in the format of
+   * `api_trigger/TRIGGER_NAME`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerId() {
@@ -213,8 +215,9 @@ public final class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest exte
   }
 
   /**
-   * Optional. Matched against all {@link TriggerConfig}s across all integrations. i.e.
-   * TriggerConfig.trigger_id.equals(trigger_id)
+   * Required. Matched against all {@link TriggerConfig}s across all integrations. i.e.
+   * TriggerConfig.trigger_id.equals(trigger_id). The trigger_id is in the format of
+   * `api_trigger/TRIGGER_NAME`.
    * @param triggerId triggerId or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest setTriggerId(java.lang.String triggerId) {

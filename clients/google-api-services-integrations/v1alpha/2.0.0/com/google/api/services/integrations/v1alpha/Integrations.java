@@ -3720,7 +3720,9 @@ public class Integrations extends com.google.api.client.googleapis.services.json
         public class Executions {
 
           /**
-           * Lists the status of the integration executions.
+           * Lists the results of all the integration executions. The response includes the same information
+           * as the [execution log](https://cloud.google.com/application-integration/docs/viewing-logs) in the
+           * Integration UI.
            *
            * Create a request for the method "executions.list".
            *
@@ -3744,7 +3746,9 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
 
             /**
-             * Lists the status of the integration executions.
+             * Lists the results of all the integration executions. The response includes the same information
+             * as the [execution log](https://cloud.google.com/application-integration/docs/viewing-logs) in
+             * the Integration UI.
              *
              * Create a request for the method "executions.list".
              *
@@ -9089,7 +9093,9 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
             }
             /**
-             * Lists the status of the integration executions.
+             * Lists the results of all the integration executions. The response includes the same information
+             * as the [execution log](https://cloud.google.com/application-integration/docs/viewing-logs) in the
+             * Integration UI.
              *
              * Create a request for the method "executions.list".
              *
@@ -9113,7 +9119,9 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
 
               /**
-               * Lists the status of the integration executions.
+               * Lists the results of all the integration executions. The response includes the same information
+               * as the [execution log](https://cloud.google.com/application-integration/docs/viewing-logs) in
+               * the Integration UI.
                *
                * Create a request for the method "executions.list".
                *

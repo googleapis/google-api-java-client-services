@@ -168,6 +168,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<Volume> volumes;
 
   /**
+   * The workload profile for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workloadProfile;
+
+  /**
    * Output only. Create a time stamp.
    * @return value or {@code null} for none
    */
@@ -477,6 +484,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setVolumes(java.util.List<Volume> volumes) {
     this.volumes = volumes;
+    return this;
+  }
+
+  /**
+   * The workload profile for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkloadProfile() {
+    return workloadProfile;
+  }
+
+  /**
+   * The workload profile for the instance.
+   * @param workloadProfile workloadProfile or {@code null} for none
+   */
+  public Instance setWorkloadProfile(java.lang.String workloadProfile) {
+    this.workloadProfile = workloadProfile;
     return this;
   }
 

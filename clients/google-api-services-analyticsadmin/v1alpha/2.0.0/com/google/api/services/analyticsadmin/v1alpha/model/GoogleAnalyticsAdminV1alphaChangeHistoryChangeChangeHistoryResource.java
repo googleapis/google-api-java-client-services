@@ -45,6 +45,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings;
 
   /**
+   * A snapshot of a BigQuery link resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaBigQueryLink bigqueryLink;
+
+  /**
    * A snapshot of a ConversionEvent resource in change history.
    * The value may be {@code null}.
    */
@@ -173,6 +180,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAttributionSettings(GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings) {
     this.attributionSettings = attributionSettings;
+    return this;
+  }
+
+  /**
+   * A snapshot of a BigQuery link resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaBigQueryLink getBigqueryLink() {
+    return bigqueryLink;
+  }
+
+  /**
+   * A snapshot of a BigQuery link resource in change history.
+   * @param bigqueryLink bigqueryLink or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setBigqueryLink(GoogleAnalyticsAdminV1alphaBigQueryLink bigqueryLink) {
+    this.bigqueryLink = bigqueryLink;
     return this;
   }
 

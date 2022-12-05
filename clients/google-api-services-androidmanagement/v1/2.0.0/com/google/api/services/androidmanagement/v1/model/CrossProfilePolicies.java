@@ -56,6 +56,15 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   private java.lang.String showWorkContactsInPersonalProfile;
 
   /**
+   * Specifies the default behaviour for work profile widgets. If the policy does not specify
+   * work_profile_widgets for a specific application, it will behave according to the value
+   * specified here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workProfileWidgetsDefault;
+
+  /**
    * Whether text copied from one profile (personal or work) can be pasted in the other profile.
    * @return value or {@code null} for none
    */
@@ -111,6 +120,27 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
    */
   public CrossProfilePolicies setShowWorkContactsInPersonalProfile(java.lang.String showWorkContactsInPersonalProfile) {
     this.showWorkContactsInPersonalProfile = showWorkContactsInPersonalProfile;
+    return this;
+  }
+
+  /**
+   * Specifies the default behaviour for work profile widgets. If the policy does not specify
+   * work_profile_widgets for a specific application, it will behave according to the value
+   * specified here.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkProfileWidgetsDefault() {
+    return workProfileWidgetsDefault;
+  }
+
+  /**
+   * Specifies the default behaviour for work profile widgets. If the policy does not specify
+   * work_profile_widgets for a specific application, it will behave according to the value
+   * specified here.
+   * @param workProfileWidgetsDefault workProfileWidgetsDefault or {@code null} for none
+   */
+  public CrossProfilePolicies setWorkProfileWidgetsDefault(java.lang.String workProfileWidgetsDefault) {
+    this.workProfileWidgetsDefault = workProfileWidgetsDefault;
     return this;
   }
 

@@ -124,6 +124,14 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private PrivateEnvironmentConfig privateEnvironmentConfig;
 
   /**
+   * Optional. The Recovery settings configuration of an environment. This field is supported for
+   * Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RecoveryConfig recoveryConfig;
+
+  /**
    * The configuration settings for software inside the environment.
    * The value may be {@code null}.
    */
@@ -373,6 +381,25 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setPrivateEnvironmentConfig(PrivateEnvironmentConfig privateEnvironmentConfig) {
     this.privateEnvironmentConfig = privateEnvironmentConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The Recovery settings configuration of an environment. This field is supported for
+   * Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public RecoveryConfig getRecoveryConfig() {
+    return recoveryConfig;
+  }
+
+  /**
+   * Optional. The Recovery settings configuration of an environment. This field is supported for
+   * Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+   * @param recoveryConfig recoveryConfig or {@code null} for none
+   */
+  public EnvironmentConfig setRecoveryConfig(RecoveryConfig recoveryConfig) {
+    this.recoveryConfig = recoveryConfig;
     return this;
   }
 

@@ -169,7 +169,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeInGlobalAddressList;
 
   /**
-   * If `true`, the user's IP address is [whitelisted](https://support.google.com/a/answer/60752).
+   * If `true`, the user's IP address is subject to a deprecated IP address
+   * [`allowlist`](https://support.google.com/a/answer/60752) configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -719,7 +720,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If `true`, the user's IP address is [whitelisted](https://support.google.com/a/answer/60752).
+   * If `true`, the user's IP address is subject to a deprecated IP address
+   * [`allowlist`](https://support.google.com/a/answer/60752) configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIpWhitelisted() {
@@ -727,7 +729,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If `true`, the user's IP address is [whitelisted](https://support.google.com/a/answer/60752).
+   * If `true`, the user's IP address is subject to a deprecated IP address
+   * [`allowlist`](https://support.google.com/a/answer/60752) configuration.
    * @param ipWhitelisted ipWhitelisted or {@code null} for none
    */
   public User setIpWhitelisted(java.lang.Boolean ipWhitelisted) {

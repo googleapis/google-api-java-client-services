@@ -10,7 +10,7 @@ jobs:
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
 
   generate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: discovery
     strategy:
       fail-fast: false
@@ -28,9 +28,11 @@ jobs:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v3
         with:
           python-version: 2.7.18
+          architecture: x64
+          platform: linux
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - uses: googleapis/code-suggester@v2 # takes the changes from git directory
         env:

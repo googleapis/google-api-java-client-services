@@ -1,0 +1,24 @@
+on:
+  pull_request:
+
+name: check-python-version
+
+jobs:
+  generate:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo generating ${{ matrix.service }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          path: google-api-java-client-services
+      - uses: actions/checkout@v2
+        with:
+          repository: googleapis/discovery-artifact-manager
+          fetch-depth: 1
+          path: discovery-artifact-manager
+      - uses: actions/setup-python@v3
+        with:
+          python-version: 2.7.18
+          architecture: x64
+          platform: linux

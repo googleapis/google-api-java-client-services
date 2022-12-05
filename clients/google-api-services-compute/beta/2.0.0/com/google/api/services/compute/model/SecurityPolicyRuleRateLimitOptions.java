@@ -78,6 +78,16 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   private java.lang.String enforceOnKey;
 
   /**
+   * If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated
+   * as the key on which ratelimit threshold/action is enforced. You can specify up to 3
+   * enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must not be
+   * specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig> enforceOnKeyConfigs;
+
+  /**
    * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the
    * HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose
    * value is taken as the key value.
@@ -216,6 +226,29 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    */
   public SecurityPolicyRuleRateLimitOptions setEnforceOnKey(java.lang.String enforceOnKey) {
     this.enforceOnKey = enforceOnKey;
+    return this;
+  }
+
+  /**
+   * If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated
+   * as the key on which ratelimit threshold/action is enforced. You can specify up to 3
+   * enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must not be
+   * specified.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig> getEnforceOnKeyConfigs() {
+    return enforceOnKeyConfigs;
+  }
+
+  /**
+   * If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated
+   * as the key on which ratelimit threshold/action is enforced. You can specify up to 3
+   * enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must not be
+   * specified.
+   * @param enforceOnKeyConfigs enforceOnKeyConfigs or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptions setEnforceOnKeyConfigs(java.util.List<SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig> enforceOnKeyConfigs) {
+    this.enforceOnKeyConfigs = enforceOnKeyConfigs;
     return this;
   }
 

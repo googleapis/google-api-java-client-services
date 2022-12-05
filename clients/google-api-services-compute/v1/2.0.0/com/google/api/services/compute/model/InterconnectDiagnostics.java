@@ -40,6 +40,20 @@ public final class InterconnectDiagnostics extends com.google.api.client.json.Ge
   private java.util.List<InterconnectDiagnosticsARPEntry> arpCaches;
 
   /**
+   * The aggregation type of the bundle interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bundleAggregationType;
+
+  /**
+   * The operational status of the bundle interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bundleOperationalStatus;
+
+  /**
    * A list of InterconnectDiagnostics.LinkStatus objects, describing the status for each link on
    * the Interconnect.
    * The value may be {@code null}.
@@ -72,6 +86,40 @@ public final class InterconnectDiagnostics extends com.google.api.client.json.Ge
    */
   public InterconnectDiagnostics setArpCaches(java.util.List<InterconnectDiagnosticsARPEntry> arpCaches) {
     this.arpCaches = arpCaches;
+    return this;
+  }
+
+  /**
+   * The aggregation type of the bundle interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBundleAggregationType() {
+    return bundleAggregationType;
+  }
+
+  /**
+   * The aggregation type of the bundle interface.
+   * @param bundleAggregationType bundleAggregationType or {@code null} for none
+   */
+  public InterconnectDiagnostics setBundleAggregationType(java.lang.String bundleAggregationType) {
+    this.bundleAggregationType = bundleAggregationType;
+    return this;
+  }
+
+  /**
+   * The operational status of the bundle interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBundleOperationalStatus() {
+    return bundleOperationalStatus;
+  }
+
+  /**
+   * The operational status of the bundle interface.
+   * @param bundleOperationalStatus bundleOperationalStatus or {@code null} for none
+   */
+  public InterconnectDiagnostics setBundleOperationalStatus(java.lang.String bundleOperationalStatus) {
+    this.bundleOperationalStatus = bundleOperationalStatus;
     return this;
   }
 

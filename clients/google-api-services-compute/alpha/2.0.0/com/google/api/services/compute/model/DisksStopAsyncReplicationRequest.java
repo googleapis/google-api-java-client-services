@@ -30,26 +30,16 @@ package com.google.api.services.compute.model;
 public final class DisksStopAsyncReplicationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The secondary disk to stop asynchronous replication to. Supplied if and only if the target disk
-   * is a primary disk in an asynchronously replicated pair. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk -
-   * projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk -
-   * zones/zone/disks/disk - regions/region/disks/disk
+   * [Deprecated] The secondary disk to stop asynchronous replication to. This field will not be
+   * included in the beta or v1 APIs and will be removed from the alpha API in the near future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String asyncSecondaryDisk;
 
   /**
-   * The secondary disk to stop asynchronous replication to. Supplied if and only if the target disk
-   * is a primary disk in an asynchronously replicated pair. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk -
-   * projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk -
-   * zones/zone/disks/disk - regions/region/disks/disk
+   * [Deprecated] The secondary disk to stop asynchronous replication to. This field will not be
+   * included in the beta or v1 APIs and will be removed from the alpha API in the near future.
    * @return value or {@code null} for none
    */
   public java.lang.String getAsyncSecondaryDisk() {
@@ -57,13 +47,8 @@ public final class DisksStopAsyncReplicationRequest extends com.google.api.clien
   }
 
   /**
-   * The secondary disk to stop asynchronous replication to. Supplied if and only if the target disk
-   * is a primary disk in an asynchronously replicated pair. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk -
-   * projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk -
-   * zones/zone/disks/disk - regions/region/disks/disk
+   * [Deprecated] The secondary disk to stop asynchronous replication to. This field will not be
+   * included in the beta or v1 APIs and will be removed from the alpha API in the near future.
    * @param asyncSecondaryDisk asyncSecondaryDisk or {@code null} for none
    */
   public DisksStopAsyncReplicationRequest setAsyncSecondaryDisk(java.lang.String asyncSecondaryDisk) {

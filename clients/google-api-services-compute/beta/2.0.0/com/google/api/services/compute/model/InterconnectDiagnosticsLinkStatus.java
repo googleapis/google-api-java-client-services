@@ -64,6 +64,13 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   private InterconnectDiagnosticsLinkLACPStatus lacpStatus;
 
   /**
+   * The operational status of the link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operationalStatus;
+
+  /**
    * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
    * the received light level.
    * The value may be {@code null}.
@@ -144,6 +151,23 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
    */
   public InterconnectDiagnosticsLinkStatus setLacpStatus(InterconnectDiagnosticsLinkLACPStatus lacpStatus) {
     this.lacpStatus = lacpStatus;
+    return this;
+  }
+
+  /**
+   * The operational status of the link.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperationalStatus() {
+    return operationalStatus;
+  }
+
+  /**
+   * The operational status of the link.
+   * @param operationalStatus operationalStatus or {@code null} for none
+   */
+  public InterconnectDiagnosticsLinkStatus setOperationalStatus(java.lang.String operationalStatus) {
+    this.operationalStatus = operationalStatus;
     return this;
   }
 

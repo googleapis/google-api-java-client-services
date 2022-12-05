@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defines behaviour for all instance or failures
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultActionOnFailure;
+
+  /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
    * VM. Valid options are: - NO (default): If configuration updates are available, they are not
    * forcefully applied during repair. Instead, configuration updates are applied according to the
@@ -53,6 +60,23 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal metadataBasedReadinessSignal;
+
+  /**
+   * Defines behaviour for all instance or failures
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultActionOnFailure() {
+    return defaultActionOnFailure;
+  }
+
+  /**
+   * Defines behaviour for all instance or failures
+   * @param defaultActionOnFailure defaultActionOnFailure or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceLifecyclePolicy setDefaultActionOnFailure(java.lang.String defaultActionOnFailure) {
+    this.defaultActionOnFailure = defaultActionOnFailure;
+    return this;
+  }
 
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a

@@ -41,6 +41,16 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean allTrafficOnLatestRevision;
 
   /**
+   * The number of CPUs used in a single container instance. Default value is calculated from
+   * available memory. Supports the same values as Cloud Run, see
+   * https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1"
+   * indicates 1 vCPU
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String availableCpu;
+
+  /**
    * The amount of memory available for a function. Defaults to 256M. Supported units are k, M, G,
    * Mi, Gi. If no unit is supplied the value is interpreted as bytes. See https://github.com/kubern
    * etes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go a full
@@ -75,6 +85,13 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxInstanceCount;
+
+  /**
+   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceRequestConcurrency;
 
   /**
    * The limit on the minimum number of function instances that may coexist at a given time.
@@ -122,9 +139,9 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Security level configure whether the function only accepts https. This configuration
-   * is only applicable to 1st Gen functions with Http trigger. By default https is optional for 1st
-   * Gen functions; 2nd Gen functions are https ONLY.
+   * Security level configure whether the function only accepts https. This configuration is only
+   * applicable to 1st Gen functions with Http trigger. By default https is optional for 1st Gen
+   * functions; 2nd Gen functions are https ONLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,6 +213,29 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setAllTrafficOnLatestRevision(java.lang.Boolean allTrafficOnLatestRevision) {
     this.allTrafficOnLatestRevision = allTrafficOnLatestRevision;
+    return this;
+  }
+
+  /**
+   * The number of CPUs used in a single container instance. Default value is calculated from
+   * available memory. Supports the same values as Cloud Run, see
+   * https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1"
+   * indicates 1 vCPU
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAvailableCpu() {
+    return availableCpu;
+  }
+
+  /**
+   * The number of CPUs used in a single container instance. Default value is calculated from
+   * available memory. Supports the same values as Cloud Run, see
+   * https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1"
+   * indicates 1 vCPU
+   * @param availableCpu availableCpu or {@code null} for none
+   */
+  public ServiceConfig setAvailableCpu(java.lang.String availableCpu) {
+    this.availableCpu = availableCpu;
     return this;
   }
 
@@ -284,6 +324,23 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceRequestConcurrency() {
+    return maxInstanceRequestConcurrency;
+  }
+
+  /**
+   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+   * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
+   */
+  public ServiceConfig setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
+    this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
+    return this;
+  }
+
+  /**
    * The limit on the minimum number of function instances that may coexist at a given time.
    * Function instances are kept in idle state for a short period after they finished executing the
    * request to reduce cold start time for subsequent requests. Setting a minimum instance count
@@ -362,9 +419,9 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Security level configure whether the function only accepts https. This configuration
-   * is only applicable to 1st Gen functions with Http trigger. By default https is optional for 1st
-   * Gen functions; 2nd Gen functions are https ONLY.
+   * Security level configure whether the function only accepts https. This configuration is only
+   * applicable to 1st Gen functions with Http trigger. By default https is optional for 1st Gen
+   * functions; 2nd Gen functions are https ONLY.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityLevel() {
@@ -372,9 +429,9 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Security level configure whether the function only accepts https. This configuration
-   * is only applicable to 1st Gen functions with Http trigger. By default https is optional for 1st
-   * Gen functions; 2nd Gen functions are https ONLY.
+   * Security level configure whether the function only accepts https. This configuration is only
+   * applicable to 1st Gen functions with Http trigger. By default https is optional for 1st Gen
+   * functions; 2nd Gen functions are https ONLY.
    * @param securityLevel securityLevel or {@code null} for none
    */
   public ServiceConfig setSecurityLevel(java.lang.String securityLevel) {

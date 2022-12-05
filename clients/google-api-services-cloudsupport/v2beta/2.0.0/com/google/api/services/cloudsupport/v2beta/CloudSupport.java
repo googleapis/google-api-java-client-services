@@ -162,7 +162,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The resource name of the case to which attachment should be attached.
+     * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest}
      * @return the request
      */
@@ -191,7 +191,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The resource name of the case to which attachment should be attached.
+       * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest}
        * @since 1.13
        */
@@ -260,17 +260,24 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the case to which attachment should be attached. */
+      /**
+       * Required. The resource name of the case (or case parent) to which the attachment should be
+       * attached.
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name of the case to which attachment should be attached.
+      /** Required. The resource name of the case (or case parent) to which the attachment should be
+     attached.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. The resource name of the case to which attachment should be attached. */
+      /**
+       * Required. The resource name of the case (or case parent) to which the attachment should be
+       * attached.
+       */
       public Create setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2384,7 +2391,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The resource name of the case to which attachment should be attached.
+     * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest}
      * @return the request
      */
@@ -2407,7 +2414,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param parent Required. The resource name of the case to which attachment should be attached.
+     * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
@@ -2438,7 +2445,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The resource name of the case to which attachment should be attached.
+       * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest}
        * @since 1.13
        */
@@ -2468,7 +2475,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param parent Required. The resource name of the case to which attachment should be attached.
+       * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
@@ -2534,17 +2541,24 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Upload) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the case to which attachment should be attached. */
+      /**
+       * Required. The resource name of the case (or case parent) to which the attachment should be
+       * attached.
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name of the case to which attachment should be attached.
+      /** Required. The resource name of the case (or case parent) to which the attachment should be
+     attached.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. The resource name of the case to which attachment should be attached. */
+      /**
+       * Required. The resource name of the case (or case parent) to which the attachment should be
+       * attached.
+       */
       public Upload setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

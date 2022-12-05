@@ -45,6 +45,14 @@ public final class Type extends com.google.api.client.json.GenericJson {
   private java.lang.String code;
 
   /**
+   * If code == PROTO or code == ENUM, then `proto_type_fqn` is the fully qualified name of the
+   * proto type representing the proto/enum definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protoTypeFqn;
+
+  /**
    * If code == STRUCT, then `struct_type` provides type information for the struct's fields.
    * The value may be {@code null}.
    */
@@ -93,6 +101,25 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   public Type setCode(java.lang.String code) {
     this.code = code;
+    return this;
+  }
+
+  /**
+   * If code == PROTO or code == ENUM, then `proto_type_fqn` is the fully qualified name of the
+   * proto type representing the proto/enum definition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtoTypeFqn() {
+    return protoTypeFqn;
+  }
+
+  /**
+   * If code == PROTO or code == ENUM, then `proto_type_fqn` is the fully qualified name of the
+   * proto type representing the proto/enum definition.
+   * @param protoTypeFqn protoTypeFqn or {@code null} for none
+   */
+  public Type setProtoTypeFqn(java.lang.String protoTypeFqn) {
+    this.protoTypeFqn = protoTypeFqn;
     return this;
   }
 

@@ -64,6 +64,21 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> extraStatements;
 
   /**
+   * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements in 'extra_statements'
+   * above. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet](https://github.com/pr
+   * otocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run  $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto  For more details, see protobuffer
+   * [self description](https://developers.google.com/protocol-buffers/docs/techniques#self-
+   * description).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protoDescriptors;
+
+  /**
    * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database. The
    * database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30
    * characters in length. If the database ID is a reserved word or if it contains a hyphen, the
@@ -140,6 +155,83 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    */
   public CreateDatabaseRequest setExtraStatements(java.util.List<java.lang.String> extraStatements) {
     this.extraStatements = extraStatements;
+    return this;
+  }
+
+  /**
+   * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements in 'extra_statements'
+   * above. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet](https://github.com/pr
+   * otocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run  $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto  For more details, see protobuffer
+   * [self description](https://developers.google.com/protocol-buffers/docs/techniques#self-
+   * description).
+   * @see #decodeProtoDescriptors()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtoDescriptors() {
+    return protoDescriptors;
+  }
+
+  /**
+   * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements in 'extra_statements'
+   * above. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet](https://github.com/pr
+   * otocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run  $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto  For more details, see protobuffer
+   * [self description](https://developers.google.com/protocol-buffers/docs/techniques#self-
+   * description).
+   * @see #getProtoDescriptors()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeProtoDescriptors() {
+    return com.google.api.client.util.Base64.decodeBase64(protoDescriptors);
+  }
+
+  /**
+   * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements in 'extra_statements'
+   * above. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet](https://github.com/pr
+   * otocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run  $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto  For more details, see protobuffer
+   * [self description](https://developers.google.com/protocol-buffers/docs/techniques#self-
+   * description).
+   * @see #encodeProtoDescriptors()
+   * @param protoDescriptors protoDescriptors or {@code null} for none
+   */
+  public CreateDatabaseRequest setProtoDescriptors(java.lang.String protoDescriptors) {
+    this.protoDescriptors = protoDescriptors;
+    return this;
+  }
+
+  /**
+   * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements in 'extra_statements'
+   * above. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet](https://github.com/pr
+   * otocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run  $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto  For more details, see protobuffer
+   * [self description](https://developers.google.com/protocol-buffers/docs/techniques#self-
+   * description).
+   * @see #setProtoDescriptors()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public CreateDatabaseRequest encodeProtoDescriptors(byte[] protoDescriptors) {
+    this.protoDescriptors = com.google.api.client.util.Base64.encodeBase64URLSafeString(protoDescriptors);
     return this;
   }
 

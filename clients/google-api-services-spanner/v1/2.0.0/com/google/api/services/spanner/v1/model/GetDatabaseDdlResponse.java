@@ -30,12 +30,79 @@ package com.google.api.services.spanner.v1.model;
 public final class GetDatabaseDdlResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
+   * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
+   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
+   * /protocol-buffers/docs/techniques#self-description).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protoDescriptors;
+
+  /**
    * A list of formatted DDL statements defining the schema of the database specified in the
    * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> statements;
+
+  /**
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
+   * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
+   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
+   * /protocol-buffers/docs/techniques#self-description).
+   * @see #decodeProtoDescriptors()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtoDescriptors() {
+    return protoDescriptors;
+  }
+
+  /**
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
+   * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
+   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
+   * /protocol-buffers/docs/techniques#self-description).
+   * @see #getProtoDescriptors()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeProtoDescriptors() {
+    return com.google.api.client.util.Base64.decodeBase64(protoDescriptors);
+  }
+
+  /**
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
+   * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
+   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
+   * /protocol-buffers/docs/techniques#self-description).
+   * @see #encodeProtoDescriptors()
+   * @param protoDescriptors protoDescriptors or {@code null} for none
+   */
+  public GetDatabaseDdlResponse setProtoDescriptors(java.lang.String protoDescriptors) {
+    this.protoDescriptors = protoDescriptors;
+    return this;
+  }
+
+  /**
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
+   * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
+   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
+   * /protocol-buffers/docs/techniques#self-description).
+   * @see #setProtoDescriptors()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GetDatabaseDdlResponse encodeProtoDescriptors(byte[] protoDescriptors) {
+    this.protoDescriptors = com.google.api.client.util.Base64.encodeBase64URLSafeString(protoDescriptors);
+    return this;
+  }
 
   /**
    * A list of formatted DDL statements defining the schema of the database specified in the

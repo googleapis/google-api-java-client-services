@@ -1977,7 +1977,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name This field should contain the name of the enterprise config resource. For example:
-       *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2005,7 +2005,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name This field should contain the name of the enterprise config resource. For example:
-       *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2075,13 +2075,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * This field should contain the name of the enterprise config resource. For example:
-         * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** This field should contain the name of the enterprise config resource. For example:
-       "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public java.lang.String getName() {
           return name;
@@ -2089,7 +2089,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * This field should contain the name of the enterprise config resource. For example:
-         * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2147,7 +2147,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name This field should contain the name of the enterprise config resource. For example:
-       *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2174,7 +2174,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name This field should contain the name of the enterprise config resource. For example:
-       *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2254,13 +2254,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * This field should contain the name of the enterprise config resource. For example:
-         * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** This field should contain the name of the enterprise config resource. For example:
-       "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public java.lang.String getName() {
           return name;
@@ -2268,7 +2268,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * This field should contain the name of the enterprise config resource. For example:
-         * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2486,7 +2486,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
-       *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
        * @return the request
        */
@@ -2515,7 +2515,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
-       *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
          * @since 1.13
          */
@@ -2586,13 +2586,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-         * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Optional. The full resource name for the GitHubEnterpriseConfig For example:
-       "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+       "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public java.lang.String getName() {
           return name;
@@ -2600,7 +2600,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-         * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6525,7 +6525,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name This field should contain the name of the enterprise config resource. For example:
-         *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6553,7 +6553,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name This field should contain the name of the enterprise config resource. For example:
-         *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6623,13 +6623,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * This field should contain the name of the enterprise config resource. For example:
-           * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+           * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** This field should contain the name of the enterprise config resource. For example:
-         "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public java.lang.String getName() {
             return name;
@@ -6637,7 +6637,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * This field should contain the name of the enterprise config resource. For example:
-           * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+           * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6695,7 +6695,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name This field should contain the name of the enterprise config resource. For example:
-         *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6722,7 +6722,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name This field should contain the name of the enterprise config resource. For example:
-         *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6802,13 +6802,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * This field should contain the name of the enterprise config resource. For example:
-           * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+           * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** This field should contain the name of the enterprise config resource. For example:
-         "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public java.lang.String getName() {
             return name;
@@ -6816,7 +6816,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * This field should contain the name of the enterprise config resource. For example:
-           * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+           * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7034,7 +7034,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
-         *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
          * @return the request
          */
@@ -7063,7 +7063,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
-         *        "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
            * @since 1.13
            */
@@ -7134,13 +7134,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-           * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+           * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Optional. The full resource name for the GitHubEnterpriseConfig For example:
-         "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+         "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public java.lang.String getName() {
             return name;
@@ -7148,7 +7148,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-           * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+           * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -8390,8 +8390,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
-         * the POST request that includes the location endpoint in the path. The POST request that does not
-         * include the location endpoint in the path can only be used when running global triggers.
+         * the POST request that includes the location endpoint in the path (ex.
+         * v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The POST request that does
+         * not include the location endpoint in the path can only be used when running global triggers.
          *
          * Create a request for the method "triggers.run".
          *
@@ -8418,8 +8419,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
-           * the POST request that includes the location endpoint in the path. The POST request that does
-           * not include the location endpoint in the path can only be used when running global triggers.
+           * the POST request that includes the location endpoint in the path (ex.
+           * v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The POST request that
+           * does not include the location endpoint in the path can only be used when running global
+           * triggers.
            *
            * Create a request for the method "triggers.run".
            *
@@ -10465,8 +10468,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
-       * the POST request that includes the location endpoint in the path. The POST request that does not
-       * include the location endpoint in the path can only be used when running global triggers.
+       * the POST request that includes the location endpoint in the path (ex.
+       * v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The POST request that does
+       * not include the location endpoint in the path can only be used when running global triggers.
        *
        * Create a request for the method "triggers.run".
        *
@@ -10490,8 +10494,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
-         * the POST request that includes the location endpoint in the path. The POST request that does
-         * not include the location endpoint in the path can only be used when running global triggers.
+         * the POST request that includes the location endpoint in the path (ex.
+         * v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The POST request that
+         * does not include the location endpoint in the path can only be used when running global
+         * triggers.
          *
          * Create a request for the method "triggers.run".
          *

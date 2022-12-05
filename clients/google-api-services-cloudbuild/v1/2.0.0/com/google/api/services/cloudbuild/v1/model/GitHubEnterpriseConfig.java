@@ -59,7 +59,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-   * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+   * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +169,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-   * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+   * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -178,7 +178,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. The full resource name for the GitHubEnterpriseConfig For example:
-   * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+   * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @param name name or {@code null} for none
    */
   public GitHubEnterpriseConfig setName(java.lang.String name) {

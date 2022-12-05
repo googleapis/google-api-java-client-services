@@ -49,6 +49,18 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String peeredNetwork;
 
   /**
+   * Immutable. Subnet IP range within the peered network. This is specified in CIDR notation. The
+   * IP and prefix size are both optional. If unspecified, the default value for IP is blank (will
+   * use an automatic value from the peered network), and the prefix size will default to 24 bits.
+   * e.g. `192.168.0.0/30` would specify a subnet mask of 192.168.0.0 with a prefix size of 30 bits.
+   * `192.168.0.0` would specify a subnet mask of 192.168.0.0 with a prefix size of 24 bits (the
+   * default prefix size). `/16` would specify a prefix size of 16 bits, with an unspecified IP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peeredNetworkIpRange;
+
+  /**
    * Option to configure network egress for the workers.
    * @return value or {@code null} for none
    */
@@ -89,6 +101,33 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setPeeredNetwork(java.lang.String peeredNetwork) {
     this.peeredNetwork = peeredNetwork;
+    return this;
+  }
+
+  /**
+   * Immutable. Subnet IP range within the peered network. This is specified in CIDR notation. The
+   * IP and prefix size are both optional. If unspecified, the default value for IP is blank (will
+   * use an automatic value from the peered network), and the prefix size will default to 24 bits.
+   * e.g. `192.168.0.0/30` would specify a subnet mask of 192.168.0.0 with a prefix size of 30 bits.
+   * `192.168.0.0` would specify a subnet mask of 192.168.0.0 with a prefix size of 24 bits (the
+   * default prefix size). `/16` would specify a prefix size of 16 bits, with an unspecified IP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeeredNetworkIpRange() {
+    return peeredNetworkIpRange;
+  }
+
+  /**
+   * Immutable. Subnet IP range within the peered network. This is specified in CIDR notation. The
+   * IP and prefix size are both optional. If unspecified, the default value for IP is blank (will
+   * use an automatic value from the peered network), and the prefix size will default to 24 bits.
+   * e.g. `192.168.0.0/30` would specify a subnet mask of 192.168.0.0 with a prefix size of 30 bits.
+   * `192.168.0.0` would specify a subnet mask of 192.168.0.0 with a prefix size of 24 bits (the
+   * default prefix size). `/16` would specify a prefix size of 16 bits, with an unspecified IP.
+   * @param peeredNetworkIpRange peeredNetworkIpRange or {@code null} for none
+   */
+  public NetworkConfig setPeeredNetworkIpRange(java.lang.String peeredNetworkIpRange) {
+    this.peeredNetworkIpRange = peeredNetworkIpRange;
     return this;
   }
 

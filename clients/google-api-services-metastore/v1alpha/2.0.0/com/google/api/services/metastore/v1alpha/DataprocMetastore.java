@@ -2530,6 +2530,152 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
       public class Services {
 
         /**
+         * Alter metadata resource location. The metadata resource can be a database, table, or partition.
+         * This functionality only updates the parent directory for the respective metadata resource and
+         * does not transfer any existing data to the new location.
+         *
+         * Create a request for the method "services.alterLocation".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link AlterLocation#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to mutate metadata, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.AlterMetadataResourceLocationRequest}
+         * @return the request
+         */
+        public AlterLocation alterLocation(java.lang.String service, com.google.api.services.metastore.v1alpha.model.AlterMetadataResourceLocationRequest content) throws java.io.IOException {
+          AlterLocation result = new AlterLocation(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AlterLocation extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+service}:alterLocation";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Alter metadata resource location. The metadata resource can be a database, table, or partition.
+           * This functionality only updates the parent directory for the respective metadata resource and
+           * does not transfer any existing data to the new location.
+           *
+           * Create a request for the method "services.alterLocation".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link AlterLocation#execute()} method to invoke the remote
+           * operation. <p> {@link AlterLocation#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to mutate metadata, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.AlterMetadataResourceLocationRequest}
+           * @since 1.13
+           */
+          protected AlterLocation(java.lang.String service, com.google.api.services.metastore.v1alpha.model.AlterMetadataResourceLocationRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public AlterLocation set$Xgafv(java.lang.String $Xgafv) {
+            return (AlterLocation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AlterLocation setAccessToken(java.lang.String accessToken) {
+            return (AlterLocation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AlterLocation setAlt(java.lang.String alt) {
+            return (AlterLocation) super.setAlt(alt);
+          }
+
+          @Override
+          public AlterLocation setCallback(java.lang.String callback) {
+            return (AlterLocation) super.setCallback(callback);
+          }
+
+          @Override
+          public AlterLocation setFields(java.lang.String fields) {
+            return (AlterLocation) super.setFields(fields);
+          }
+
+          @Override
+          public AlterLocation setKey(java.lang.String key) {
+            return (AlterLocation) super.setKey(key);
+          }
+
+          @Override
+          public AlterLocation setOauthToken(java.lang.String oauthToken) {
+            return (AlterLocation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AlterLocation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AlterLocation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AlterLocation setQuotaUser(java.lang.String quotaUser) {
+            return (AlterLocation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AlterLocation setUploadType(java.lang.String uploadType) {
+            return (AlterLocation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AlterLocation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AlterLocation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to mutate metadata, in
+           * the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to mutate metadata, in the following
+         format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to mutate metadata, in
+           * the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public AlterLocation setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public AlterLocation set(String parameterName, Object value) {
+            return (AlterLocation) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a metastore service in a project and location.
          *
          * Create a request for the method "services.create".
@@ -3644,6 +3790,148 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Move a table to another database.
+         *
+         * Create a request for the method "services.moveTableToDatabase".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link MoveTableToDatabase#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to mutate metadata, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.MoveTableToDatabaseRequest}
+         * @return the request
+         */
+        public MoveTableToDatabase moveTableToDatabase(java.lang.String service, com.google.api.services.metastore.v1alpha.model.MoveTableToDatabaseRequest content) throws java.io.IOException {
+          MoveTableToDatabase result = new MoveTableToDatabase(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MoveTableToDatabase extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+service}:moveTableToDatabase";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Move a table to another database.
+           *
+           * Create a request for the method "services.moveTableToDatabase".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link MoveTableToDatabase#execute()} method to invoke the remote
+           * operation. <p> {@link MoveTableToDatabase#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to mutate metadata, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.MoveTableToDatabaseRequest}
+           * @since 1.13
+           */
+          protected MoveTableToDatabase(java.lang.String service, com.google.api.services.metastore.v1alpha.model.MoveTableToDatabaseRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public MoveTableToDatabase set$Xgafv(java.lang.String $Xgafv) {
+            return (MoveTableToDatabase) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MoveTableToDatabase setAccessToken(java.lang.String accessToken) {
+            return (MoveTableToDatabase) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MoveTableToDatabase setAlt(java.lang.String alt) {
+            return (MoveTableToDatabase) super.setAlt(alt);
+          }
+
+          @Override
+          public MoveTableToDatabase setCallback(java.lang.String callback) {
+            return (MoveTableToDatabase) super.setCallback(callback);
+          }
+
+          @Override
+          public MoveTableToDatabase setFields(java.lang.String fields) {
+            return (MoveTableToDatabase) super.setFields(fields);
+          }
+
+          @Override
+          public MoveTableToDatabase setKey(java.lang.String key) {
+            return (MoveTableToDatabase) super.setKey(key);
+          }
+
+          @Override
+          public MoveTableToDatabase setOauthToken(java.lang.String oauthToken) {
+            return (MoveTableToDatabase) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MoveTableToDatabase setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MoveTableToDatabase) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MoveTableToDatabase setQuotaUser(java.lang.String quotaUser) {
+            return (MoveTableToDatabase) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MoveTableToDatabase setUploadType(java.lang.String uploadType) {
+            return (MoveTableToDatabase) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MoveTableToDatabase setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MoveTableToDatabase) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to mutate metadata, in
+           * the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to mutate metadata, in the following
+         format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to mutate metadata, in
+           * the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public MoveTableToDatabase setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public MoveTableToDatabase set(String parameterName, Object value) {
+            return (MoveTableToDatabase) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates the parameters of a single service.
          *
          * Create a request for the method "services.patch".
@@ -3847,6 +4135,146 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Query DPMS metadata.
+         *
+         * Create a request for the method "services.queryMetadata".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link QueryMetadata#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to query metadata, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.QueryMetadataRequest}
+         * @return the request
+         */
+        public QueryMetadata queryMetadata(java.lang.String service, com.google.api.services.metastore.v1alpha.model.QueryMetadataRequest content) throws java.io.IOException {
+          QueryMetadata result = new QueryMetadata(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryMetadata extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+service}:queryMetadata";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Query DPMS metadata.
+           *
+           * Create a request for the method "services.queryMetadata".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link QueryMetadata#execute()} method to invoke the remote
+           * operation. <p> {@link QueryMetadata#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to query metadata, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.QueryMetadataRequest}
+           * @since 1.13
+           */
+          protected QueryMetadata(java.lang.String service, com.google.api.services.metastore.v1alpha.model.QueryMetadataRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public QueryMetadata set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryMetadata) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryMetadata setAccessToken(java.lang.String accessToken) {
+            return (QueryMetadata) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryMetadata setAlt(java.lang.String alt) {
+            return (QueryMetadata) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryMetadata setCallback(java.lang.String callback) {
+            return (QueryMetadata) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryMetadata setFields(java.lang.String fields) {
+            return (QueryMetadata) super.setFields(fields);
+          }
+
+          @Override
+          public QueryMetadata setKey(java.lang.String key) {
+            return (QueryMetadata) super.setKey(key);
+          }
+
+          @Override
+          public QueryMetadata setOauthToken(java.lang.String oauthToken) {
+            return (QueryMetadata) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryMetadata) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryMetadata setQuotaUser(java.lang.String quotaUser) {
+            return (QueryMetadata) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryMetadata setUploadType(java.lang.String uploadType) {
+            return (QueryMetadata) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryMetadata) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to query metadata, in the
+           * following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to query metadata, in the following
+         format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to query metadata, in the
+           * following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public QueryMetadata setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public QueryMetadata set(String parameterName, Object value) {
+            return (QueryMetadata) super.set(parameterName, value);
           }
         }
         /**

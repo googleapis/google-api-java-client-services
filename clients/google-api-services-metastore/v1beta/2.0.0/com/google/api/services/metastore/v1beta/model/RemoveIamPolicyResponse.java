@@ -31,14 +31,14 @@ package com.google.api.services.metastore.v1beta.model;
 public final class RemoveIamPolicyResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * whether related policies are removed
+   * True if the policy is successfully removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean success;
 
   /**
-   * whether related policies are removed
+   * True if the policy is successfully removed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSuccess() {
@@ -46,7 +46,7 @@ public final class RemoveIamPolicyResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * whether related policies are removed
+   * True if the policy is successfully removed.
    * @param success success or {@code null} for none
    */
   public RemoveIamPolicyResponse setSuccess(java.lang.Boolean success) {

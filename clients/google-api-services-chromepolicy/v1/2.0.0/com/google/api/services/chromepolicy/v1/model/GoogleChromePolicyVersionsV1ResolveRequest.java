@@ -56,8 +56,7 @@ public final class GoogleChromePolicyVersionsV1ResolveRequest extends com.google
   private java.lang.String policySchemaFilter;
 
   /**
-   * Required. The key of the target resource on which the policies should be resolved. The target
-   * resource must point to an Org Unit.
+   * Required. The key of the target resource on which the policies should be resolved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +124,7 @@ public final class GoogleChromePolicyVersionsV1ResolveRequest extends com.google
   }
 
   /**
-   * Required. The key of the target resource on which the policies should be resolved. The target
-   * resource must point to an Org Unit.
+   * Required. The key of the target resource on which the policies should be resolved.
    * @return value or {@code null} for none
    */
   public GoogleChromePolicyVersionsV1PolicyTargetKey getPolicyTargetKey() {
@@ -134,8 +132,7 @@ public final class GoogleChromePolicyVersionsV1ResolveRequest extends com.google
   }
 
   /**
-   * Required. The key of the target resource on which the policies should be resolved. The target
-   * resource must point to an Org Unit.
+   * Required. The key of the target resource on which the policies should be resolved.
    * @param policyTargetKey policyTargetKey or {@code null} for none
    */
   public GoogleChromePolicyVersionsV1ResolveRequest setPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey) {

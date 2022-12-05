@@ -98,6 +98,13 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private GoogleCloudDataplexV1DataScanExecutionSpec executionSpec;
 
   /**
+   * Output only. Status of the data scan execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanExecutionStatus executionStatus;
+
+  /**
    * Optional. User-defined labels for the scan.
    * The value may be {@code null}.
    */
@@ -294,6 +301,23 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1DataScan setExecutionSpec(GoogleCloudDataplexV1DataScanExecutionSpec executionSpec) {
     this.executionSpec = executionSpec;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the data scan execution.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanExecutionStatus getExecutionStatus() {
+    return executionStatus;
+  }
+
+  /**
+   * Output only. Status of the data scan execution.
+   * @param executionStatus executionStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setExecutionStatus(GoogleCloudDataplexV1DataScanExecutionStatus executionStatus) {
+    this.executionStatus = executionStatus;
     return this;
   }
 

@@ -53,6 +53,13 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
   private java.lang.String format;
 
   /**
+   * Optional. Additional information about iceberg tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1StorageFormatIcebergOptions iceberg;
+
+  /**
    * Optional. Additional information about CSV formatted data.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
    */
   public GoogleCloudDataplexV1StorageFormat setFormat(java.lang.String format) {
     this.format = format;
+    return this;
+  }
+
+  /**
+   * Optional. Additional information about iceberg tables.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1StorageFormatIcebergOptions getIceberg() {
+    return iceberg;
+  }
+
+  /**
+   * Optional. Additional information about iceberg tables.
+   * @param iceberg iceberg or {@code null} for none
+   */
+  public GoogleCloudDataplexV1StorageFormat setIceberg(GoogleCloudDataplexV1StorageFormatIcebergOptions iceberg) {
+    this.iceberg = iceberg;
     return this;
   }
 

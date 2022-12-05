@@ -31,6 +31,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class AwsSourceDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * AWS Credentials using access key id and secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccessKeyCredentials accessKeyCreds;
+
+  /**
    * AWS access key ID.
    * The value may be {@code null}.
    */
@@ -57,6 +64,13 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inventorySecurityGroupNames;
+
+  /**
+   * AWS resource tags to limit the scope of the source inventory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Tag> inventoryTagList;
 
   /**
    * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
@@ -96,6 +110,23 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * AWS Credentials using access key id and secret.
+   * @return value or {@code null} for none
+   */
+  public AccessKeyCredentials getAccessKeyCreds() {
+    return accessKeyCreds;
+  }
+
+  /**
+   * AWS Credentials using access key id and secret.
+   * @param accessKeyCreds accessKeyCreds or {@code null} for none
+   */
+  public AwsSourceDetails setAccessKeyCreds(AccessKeyCredentials accessKeyCreds) {
+    this.accessKeyCreds = accessKeyCreds;
+    return this;
+  }
 
   /**
    * AWS access key ID.
@@ -162,6 +193,23 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   public AwsSourceDetails setInventorySecurityGroupNames(java.util.List<java.lang.String> inventorySecurityGroupNames) {
     this.inventorySecurityGroupNames = inventorySecurityGroupNames;
+    return this;
+  }
+
+  /**
+   * AWS resource tags to limit the scope of the source inventory.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Tag> getInventoryTagList() {
+    return inventoryTagList;
+  }
+
+  /**
+   * AWS resource tags to limit the scope of the source inventory.
+   * @param inventoryTagList inventoryTagList or {@code null} for none
+   */
+  public AwsSourceDetails setInventoryTagList(java.util.List<Tag> inventoryTagList) {
+    this.inventoryTagList = inventoryTagList;
     return this;
   }
 

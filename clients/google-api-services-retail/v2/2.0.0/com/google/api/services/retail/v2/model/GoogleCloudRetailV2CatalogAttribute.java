@@ -84,7 +84,7 @@ public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.cl
   private java.lang.String key;
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +231,7 @@ public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.cl
   }
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetrievableOption() {
@@ -239,7 +239,7 @@ public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.cl
   }
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
    * @param retrievableOption retrievableOption or {@code null} for none
    */
   public GoogleCloudRetailV2CatalogAttribute setRetrievableOption(java.lang.String retrievableOption) {

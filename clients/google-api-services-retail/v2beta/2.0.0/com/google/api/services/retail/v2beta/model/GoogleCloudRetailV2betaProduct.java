@@ -347,7 +347,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * default: * name For Type.VARIANT, the following fields are always returned in by default: *
    * name * color_info The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
    * returned. Note: Returning more fields in SearchResponse can increase response payload size and
-   * serving latency.
+   * serving latency. This field is deprecated. Use the retrievable site-wide control instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1091,7 +1091,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * default: * name For Type.VARIANT, the following fields are always returned in by default: *
    * name * color_info The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
    * returned. Note: Returning more fields in SearchResponse can increase response payload size and
-   * serving latency.
+   * serving latency. This field is deprecated. Use the retrievable site-wide control instead.
    * @return value or {@code null} for none
    */
   public String getRetrievableFields() {
@@ -1109,7 +1109,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * default: * name For Type.VARIANT, the following fields are always returned in by default: *
    * name * color_info The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
    * returned. Note: Returning more fields in SearchResponse can increase response payload size and
-   * serving latency.
+   * serving latency. This field is deprecated. Use the retrievable site-wide control instead.
    * @param retrievableFields retrievableFields or {@code null} for none
    */
   public GoogleCloudRetailV2betaProduct setRetrievableFields(String retrievableFields) {

@@ -94,7 +94,7 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
   private java.lang.String recommendationsFilteringOption;
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,7 +264,7 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
   }
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetrievableOption() {
@@ -272,7 +272,7 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
   }
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values will be retrievabled in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
    * @param retrievableOption retrievableOption or {@code null} for none
    */
   public GoogleCloudRetailV2betaCatalogAttribute setRetrievableOption(java.lang.String retrievableOption) {

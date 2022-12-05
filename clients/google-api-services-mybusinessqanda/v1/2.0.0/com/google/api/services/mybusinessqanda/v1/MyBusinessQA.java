@@ -20,7 +20,7 @@ package com.google.api.services.mybusinessqanda.v1;
  * Service definition for MyBusinessQA (v1).
  *
  * <p>
- * The My Business Q API allows questions and answers to be posted for specific listings.
+ * The My Business Q API allows questions and answers to be posted for specific listings. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
  * </p>
  *
  * <p>

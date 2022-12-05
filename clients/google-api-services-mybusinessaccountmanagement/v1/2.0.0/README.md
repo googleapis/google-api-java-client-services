@@ -1,6 +1,6 @@
 # My Business Account Management API Client Library for Java
 
-The My Business Account Management API provides an interface for managing access to a location on Google.
+The My Business Account Management API provides an interface for managing access to a location on Google. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
 
 This page contains information about getting started with the My Business Account Management API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-mybusinessaccountmanagement</artifactId>
-      <version>v1-rev20220727-2.0.0</version>
+      <version>v1-rev20221124-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-mybusinessaccountmanagement:v1-rev20220727-2.0.0'
+  implementation 'com.google.apis:google-api-services-mybusinessaccountmanagement:v1-rev20221124-2.0.0'
 }
 ```
 

@@ -17,8 +17,8 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Job represents the configuration of a single job. A job an immutable resource that references a
- * container image which is run to completion.
+ * Job represents the configuration of a single job, which references a container image that is run
+ * to completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -33,9 +33,11 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   /**
    * KRM-style annotations for the resource. Unstructured key value map that may be set by external
    * tools to store and arbitrary metadata. They are not queryable and should be preserved when
-   * modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or
-   * 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing,
-   * limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`,
+   * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and
+   * they will be rejected. All system annotations in v1 now have a corresponding field in v2 Job.
+   * This field follows Kubernetes annotations' namespacing, limits, and rules. More info:
+   * https://kubernetes.io/docs/user-guide/annotations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +135,9 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    * system, so they can be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit https://cloud.google.com/resource-
    * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev'
-   * namespaces. Those labels are read-only, and user changes will not be preserved.
+   * Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
+   * system labels in v1 now have a corresponding field in v2 Job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,9 +234,11 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   /**
    * KRM-style annotations for the resource. Unstructured key value map that may be set by external
    * tools to store and arbitrary metadata. They are not queryable and should be preserved when
-   * modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or
-   * 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing,
-   * limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`,
+   * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and
+   * they will be rejected. All system annotations in v1 now have a corresponding field in v2 Job.
+   * This field follows Kubernetes annotations' namespacing, limits, and rules. More info:
+   * https://kubernetes.io/docs/user-guide/annotations
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -243,9 +248,11 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   /**
    * KRM-style annotations for the resource. Unstructured key value map that may be set by external
    * tools to store and arbitrary metadata. They are not queryable and should be preserved when
-   * modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or
-   * 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing,
-   * limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`,
+   * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and
+   * they will be rejected. All system annotations in v1 now have a corresponding field in v2 Job.
+   * This field follows Kubernetes annotations' namespacing, limits, and rules. More info:
+   * https://kubernetes.io/docs/user-guide/annotations
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunV2Job setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -453,8 +460,9 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    * system, so they can be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit https://cloud.google.com/resource-
    * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev'
-   * namespaces. Those labels are read-only, and user changes will not be preserved.
+   * Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
+   * system labels in v1 now have a corresponding field in v2 Job.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -466,8 +474,9 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    * system, so they can be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit https://cloud.google.com/resource-
    * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev'
-   * namespaces. Those labels are read-only, and user changes will not be preserved.
+   * Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
+   * system labels in v1 now have a corresponding field in v2 Job.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRunV2Job setLabels(java.util.Map<String, java.lang.String> labels) {

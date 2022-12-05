@@ -153,8 +153,6 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    * system, so they can be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit https://cloud.google.com/resource-
    * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev'
-   * namespaces. Those labels are read-only, and user changes will not be preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -522,8 +520,6 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    * system, so they can be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit https://cloud.google.com/resource-
    * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev'
-   * namespaces. Those labels are read-only, and user changes will not be preserved.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -535,8 +531,6 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    * system, so they can be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit https://cloud.google.com/resource-
    * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev'
-   * namespaces. Those labels are read-only, and user changes will not be preserved.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRunV2Task setLabels(java.util.Map<String, java.lang.String> labels) {

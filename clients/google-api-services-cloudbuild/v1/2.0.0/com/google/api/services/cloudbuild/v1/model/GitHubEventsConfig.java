@@ -32,7 +32,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
 
   /**
    * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+   * installation. For example:
+   * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
 
   /**
    * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+   * installation. For example:
+   * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getEnterpriseConfigResourceName() {
@@ -86,7 +88,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
 
   /**
    * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+   * installation. For example:
+   * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @param enterpriseConfigResourceName enterpriseConfigResourceName or {@code null} for none
    */
   public GitHubEventsConfig setEnterpriseConfigResourceName(java.lang.String enterpriseConfigResourceName) {

@@ -44,6 +44,13 @@ public final class SupportUrls extends com.google.api.client.json.GenericJson {
   private java.lang.String deletionPolicyUrl;
 
   /**
+   * Link to GWM page of the app. May be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gwmUrl;
+
+  /**
    * Link to the privacy policy webpage for the bot. May be empty.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class SupportUrls extends com.google.api.client.json.GenericJson {
    */
   public SupportUrls setDeletionPolicyUrl(java.lang.String deletionPolicyUrl) {
     this.deletionPolicyUrl = deletionPolicyUrl;
+    return this;
+  }
+
+  /**
+   * Link to GWM page of the app. May be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGwmUrl() {
+    return gwmUrl;
+  }
+
+  /**
+   * Link to GWM page of the app. May be empty.
+   * @param gwmUrl gwmUrl or {@code null} for none
+   */
+  public SupportUrls setGwmUrl(java.lang.String gwmUrl) {
+    this.gwmUrl = gwmUrl;
     return this;
   }
 

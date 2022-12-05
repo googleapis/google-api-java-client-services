@@ -91,13 +91,6 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.Integer intImageWidth;
 
   /**
-   * NEXT TAG : 18
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String linkType;
-
-  /**
    * Mime type of the content (Currently mapped from Page Render Service ItemType) Note that this is
    * not necessarily the mime type of the http resource. For example a text/html from youtube or
    * vimeo may actually be classified as a video type. Then we shall mark it as video since we don't
@@ -286,23 +279,6 @@ public final class UrlMetadata extends com.google.api.client.json.GenericJson {
    */
   public UrlMetadata setIntImageWidth(java.lang.Integer intImageWidth) {
     this.intImageWidth = intImageWidth;
-    return this;
-  }
-
-  /**
-   * NEXT TAG : 18
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLinkType() {
-    return linkType;
-  }
-
-  /**
-   * NEXT TAG : 18
-   * @param linkType linkType or {@code null} for none
-   */
-  public UrlMetadata setLinkType(java.lang.String linkType) {
-    this.linkType = linkType;
     return this;
   }
 

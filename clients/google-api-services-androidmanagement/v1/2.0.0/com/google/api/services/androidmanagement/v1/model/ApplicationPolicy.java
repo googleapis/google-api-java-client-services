@@ -110,7 +110,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Whether the app is allowed to lock itself in full-screen mode. DEPRECATED. Use InstallType
-   * KIOSK or kioskCustomLauncherEnabled to to configure a dedicated device.
+   * KIOSK or kioskCustomLauncherEnabled to configure a dedicated device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,6 +160,14 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<PermissionGrant> permissionGrants;
+
+  /**
+   * Specifies whether the app installed in the work profile is allowed to add widgets to the home
+   * screen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workProfileWidgets;
 
   /**
    * List of the app’s track IDs that a device belonging to the enterprise can access. If the list
@@ -346,7 +354,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Whether the app is allowed to lock itself in full-screen mode. DEPRECATED. Use InstallType
-   * KIOSK or kioskCustomLauncherEnabled to to configure a dedicated device.
+   * KIOSK or kioskCustomLauncherEnabled to configure a dedicated device.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLockTaskAllowed() {
@@ -355,7 +363,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Whether the app is allowed to lock itself in full-screen mode. DEPRECATED. Use InstallType
-   * KIOSK or kioskCustomLauncherEnabled to to configure a dedicated device.
+   * KIOSK or kioskCustomLauncherEnabled to configure a dedicated device.
    * @param lockTaskAllowed lockTaskAllowed or {@code null} for none
    */
   public ApplicationPolicy setLockTaskAllowed(java.lang.Boolean lockTaskAllowed) {
@@ -465,6 +473,25 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setPermissionGrants(java.util.List<PermissionGrant> permissionGrants) {
     this.permissionGrants = permissionGrants;
+    return this;
+  }
+
+  /**
+   * Specifies whether the app installed in the work profile is allowed to add widgets to the home
+   * screen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkProfileWidgets() {
+    return workProfileWidgets;
+  }
+
+  /**
+   * Specifies whether the app installed in the work profile is allowed to add widgets to the home
+   * screen.
+   * @param workProfileWidgets workProfileWidgets or {@code null} for none
+   */
+  public ApplicationPolicy setWorkProfileWidgets(java.lang.String workProfileWidgets) {
+    this.workProfileWidgets = workProfileWidgets;
     return this;
   }
 

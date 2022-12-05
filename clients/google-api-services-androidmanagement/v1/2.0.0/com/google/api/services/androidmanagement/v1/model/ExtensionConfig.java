@@ -18,7 +18,13 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * Configuration to enable an app as an extension app, with the capability of interacting with
- * Android Device Policy offline.
+ * Android Device Policy offline. For Android versions 13 and above, extension apps are exempt from
+ * battery restrictions so will not be placed into the restricted App Standby Bucket
+ * (https://developer.android.com/topic/performance/appstandby#restricted-bucket). Extensions apps
+ * are also protected against users clearing their data or force-closing the application, although
+ * admins can continue to use the clear app data command (https://developer.android.com/management/r
+ * eference/rest/v1/enterprises.devices/issueCommand#CommandType) on extension apps if needed for
+ * Android 13 and above.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

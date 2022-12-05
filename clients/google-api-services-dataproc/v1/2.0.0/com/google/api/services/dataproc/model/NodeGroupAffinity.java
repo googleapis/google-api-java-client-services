@@ -17,7 +17,8 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Node Group Affinity for clusters using sole-tenant node groups.
+ * Node Group Affinity for clusters using sole-tenant node groups. The Dataproc NodeGroupAffinity
+ * resource is not related to the Dataproc NodeGroup resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

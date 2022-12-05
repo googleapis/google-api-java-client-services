@@ -32,21 +32,21 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Maximum number of times per hour a driver may be restarted as a result of driver
    * exiting with non-zero code before job is reported failed.A job may be reported as thrashing if
-   * driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note:
-   * Currently, this restartable job option is not supported in Dataproc workflow template
+   * the driver exits with a non-zero code four times within a 10-minute window.Maximum value is
+   * 10.Note: This restartable job option is not supported in Dataproc workflow templates
    * (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
-   * workflows#adding_jobs_to_a_template) jobs.
+   * workflows#adding_jobs_to_a_template).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxFailuresPerHour;
 
   /**
-   * Optional. Maximum number of times in total a driver may be restarted as a result of driver
-   * exiting with non-zero code before job is reported failed. Maximum value is 240.Note: Currently,
-   * this restartable job option is not supported in Dataproc workflow template
-   * (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
-   * workflows#adding_jobs_to_a_template) jobs.
+   * Optional. Maximum total number of times a driver may be restarted as a result of the driver
+   * exiting with a non-zero code. After the maximum number is reached, the job will be reported as
+   * failed.Maximum value is 240.Note: Currently, this restartable job option is not supported in
+   * Dataproc workflow templates (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
+   * workflows#adding_jobs_to_a_template).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +55,10 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Maximum number of times per hour a driver may be restarted as a result of driver
    * exiting with non-zero code before job is reported failed.A job may be reported as thrashing if
-   * driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note:
-   * Currently, this restartable job option is not supported in Dataproc workflow template
+   * the driver exits with a non-zero code four times within a 10-minute window.Maximum value is
+   * 10.Note: This restartable job option is not supported in Dataproc workflow templates
    * (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
-   * workflows#adding_jobs_to_a_template) jobs.
+   * workflows#adding_jobs_to_a_template).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFailuresPerHour() {
@@ -68,10 +68,10 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Maximum number of times per hour a driver may be restarted as a result of driver
    * exiting with non-zero code before job is reported failed.A job may be reported as thrashing if
-   * driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note:
-   * Currently, this restartable job option is not supported in Dataproc workflow template
+   * the driver exits with a non-zero code four times within a 10-minute window.Maximum value is
+   * 10.Note: This restartable job option is not supported in Dataproc workflow templates
    * (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
-   * workflows#adding_jobs_to_a_template) jobs.
+   * workflows#adding_jobs_to_a_template).
    * @param maxFailuresPerHour maxFailuresPerHour or {@code null} for none
    */
   public JobScheduling setMaxFailuresPerHour(java.lang.Integer maxFailuresPerHour) {
@@ -80,11 +80,11 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Maximum number of times in total a driver may be restarted as a result of driver
-   * exiting with non-zero code before job is reported failed. Maximum value is 240.Note: Currently,
-   * this restartable job option is not supported in Dataproc workflow template
-   * (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
-   * workflows#adding_jobs_to_a_template) jobs.
+   * Optional. Maximum total number of times a driver may be restarted as a result of the driver
+   * exiting with a non-zero code. After the maximum number is reached, the job will be reported as
+   * failed.Maximum value is 240.Note: Currently, this restartable job option is not supported in
+   * Dataproc workflow templates (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
+   * workflows#adding_jobs_to_a_template).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFailuresTotal() {
@@ -92,11 +92,11 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Maximum number of times in total a driver may be restarted as a result of driver
-   * exiting with non-zero code before job is reported failed. Maximum value is 240.Note: Currently,
-   * this restartable job option is not supported in Dataproc workflow template
-   * (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
-   * workflows#adding_jobs_to_a_template) jobs.
+   * Optional. Maximum total number of times a driver may be restarted as a result of the driver
+   * exiting with a non-zero code. After the maximum number is reached, the job will be reported as
+   * failed.Maximum value is 240.Note: Currently, this restartable job option is not supported in
+   * Dataproc workflow templates (https://cloud.google.com/dataproc/docs/concepts/workflows/using-
+   * workflows#adding_jobs_to_a_template).
    * @param maxFailuresTotal maxFailuresTotal or {@code null} for none
    */
   public JobScheduling setMaxFailuresTotal(java.lang.Integer maxFailuresTotal) {

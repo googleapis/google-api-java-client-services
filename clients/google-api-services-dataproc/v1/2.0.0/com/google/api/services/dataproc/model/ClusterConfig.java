@@ -38,6 +38,19 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private AutoscalingConfig autoscalingConfig;
 
   /**
+   * Optional. The node group settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AuxiliaryNodeGroup> auxiliaryNodeGroups;
+
+  static {
+    // hack to force ProGuard to consider AuxiliaryNodeGroup used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AuxiliaryNodeGroup.class);
+  }
+
+  /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
@@ -179,6 +192,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setAutoscalingConfig(AutoscalingConfig autoscalingConfig) {
     this.autoscalingConfig = autoscalingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The node group settings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AuxiliaryNodeGroup> getAuxiliaryNodeGroups() {
+    return auxiliaryNodeGroups;
+  }
+
+  /**
+   * Optional. The node group settings.
+   * @param auxiliaryNodeGroups auxiliaryNodeGroups or {@code null} for none
+   */
+  public ClusterConfig setAuxiliaryNodeGroups(java.util.List<AuxiliaryNodeGroup> auxiliaryNodeGroups) {
+    this.auxiliaryNodeGroups = auxiliaryNodeGroups;
     return this;
   }
 

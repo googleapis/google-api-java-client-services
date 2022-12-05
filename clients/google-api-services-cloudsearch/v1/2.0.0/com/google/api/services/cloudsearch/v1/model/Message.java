@@ -350,6 +350,15 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private AppsDynamiteSharedRetentionSettings retentionSettings;
 
   /**
+   * Used by clients to correctly log format type for message creation due to complexity with client
+   * side optimistic update (see go/content-metric-post-send-logging for details). Currently, only
+   * set by server in the message or topic creation path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String richTextFormattingType;
+
+  /**
    * A client-specified string that can be used to uniquely identify a message in a space, in lieu
    * of `id.message_id`.
    * The value may be {@code null}.
@@ -1049,6 +1058,27 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setRetentionSettings(AppsDynamiteSharedRetentionSettings retentionSettings) {
     this.retentionSettings = retentionSettings;
+    return this;
+  }
+
+  /**
+   * Used by clients to correctly log format type for message creation due to complexity with client
+   * side optimistic update (see go/content-metric-post-send-logging for details). Currently, only
+   * set by server in the message or topic creation path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRichTextFormattingType() {
+    return richTextFormattingType;
+  }
+
+  /**
+   * Used by clients to correctly log format type for message creation due to complexity with client
+   * side optimistic update (see go/content-metric-post-send-logging for details). Currently, only
+   * set by server in the message or topic creation path.
+   * @param richTextFormattingType richTextFormattingType or {@code null} for none
+   */
+  public Message setRichTextFormattingType(java.lang.String richTextFormattingType) {
+    this.richTextFormattingType = richTextFormattingType;
     return this;
   }
 

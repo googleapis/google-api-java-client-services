@@ -31,7 +31,7 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class PerDeviceStatusInBatch extends com.google.api.client.json.GenericJson {
 
   /**
-   * If processing succeeds, the device ID of the Android device.
+   * If processing succeeds, the device ID of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,7 +59,7 @@ public final class PerDeviceStatusInBatch extends com.google.api.client.json.Gen
   private java.lang.String status;
 
   /**
-   * If processing succeeds, the device ID of the Android device.
+   * If processing succeeds, the device ID of the device.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDeviceId() {
@@ -67,7 +67,7 @@ public final class PerDeviceStatusInBatch extends com.google.api.client.json.Gen
   }
 
   /**
-   * If processing succeeds, the device ID of the Android device.
+   * If processing succeeds, the device ID of the device.
    * @param deviceId deviceId or {@code null} for none
    */
   public PerDeviceStatusInBatch setDeviceId(java.lang.Long deviceId) {

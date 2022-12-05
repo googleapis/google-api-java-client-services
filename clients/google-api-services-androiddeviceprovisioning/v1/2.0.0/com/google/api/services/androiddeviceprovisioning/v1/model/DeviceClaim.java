@@ -47,7 +47,7 @@ public final class DeviceClaim extends com.google.api.client.json.GenericJson {
   private java.lang.String googleWorkspaceCustomerId;
 
   /**
-   * The ID of the Customer that purchased the Android device.
+   * The ID of the Customer that purchased the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -118,7 +118,7 @@ public final class DeviceClaim extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Customer that purchased the Android device.
+   * The ID of the Customer that purchased the device.
    * @return value or {@code null} for none
    */
   public java.lang.Long getOwnerCompanyId() {
@@ -126,7 +126,7 @@ public final class DeviceClaim extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Customer that purchased the Android device.
+   * The ID of the Customer that purchased the device.
    * @param ownerCompanyId ownerCompanyId or {@code null} for none
    */
   public DeviceClaim setOwnerCompanyId(java.lang.Long ownerCompanyId) {

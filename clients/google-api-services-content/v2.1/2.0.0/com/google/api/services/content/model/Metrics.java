@@ -40,12 +40,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Double aos;
 
   /**
-   * Average order value - the average value (total price of items) of all placed orders. The
-   * currency of the returned value is stored in the currency_code segment. If this metric is
-   * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
-   * query (unless it is explicitly selected by the user) and the currency_code segment is populated
-   * in the response. **This metric cannot be segmented by product dimensions and
-   * customer_country_code.**
+   * Average order value in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) - the
+   * average value (total price of items) of all placed orders. The currency of the returned value
+   * is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
+   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
+   * by the user) and the currency_code segment is populated in the response. **This metric cannot
+   * be segmented by product dimensions and customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,12 +67,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Double conversionRate;
 
   /**
-   * Value of conversions in micros attributed to the product, reported on the conversion date. The
-   * metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the
-   * returned value is stored in the currency_code segment. If this metric is selected,
-   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
-   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
-   * the response.
+   * Value of conversions in micros (1 millionth of a standard unit, 1 USD = 1000000 micros)
+   * attributed to the product, reported on the conversion date. The metric is currently available
+   * only for the FREE_PRODUCT_LISTING program. The currency of the returned value is stored in the
+   * currency_code segment. If this metric is selected, 'segments.currency_code' is automatically
+   * added to the SELECT clause in the search query (unless it is explicitly selected by the user)
+   * and the currency_code segment is populated in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -131,12 +131,13 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Double itemFillRate;
 
   /**
-   * Total price of ordered items. Excludes shipping, taxes (US only), and customer cancellations
-   * that happened within 30 minutes of placing the order. The currency of the returned value is
-   * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
-   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
-   * by the user) and the currency_code segment is populated in the response. **This metric cannot
-   * be segmented by customer_country_code.**
+   * Total price of ordered items in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros). Excludes shipping, taxes (US only), and customer cancellations that happened within 30
+   * minutes of placing the order. The currency of the returned value is stored in the currency_code
+   * segment. If this metric is selected, 'segments.currency_code' is automatically added to the
+   * SELECT clause in the search query (unless it is explicitly selected by the user) and the
+   * currency_code segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -187,23 +188,24 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Long returnedItems;
 
   /**
-   * Total price of ordered items sent back for return, reported on the date when the merchant
-   * accepted the return. The currency of the returned value is stored in the currency_code segment.
-   * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
-   * clause in the search query (unless it is explicitly selected by the user) and the currency_code
-   * segment is populated in the response. **This metric cannot be segmented by
-   * customer_country_code.**
+   * Total price of ordered items sent back for return in micros (1 millionth of a standard unit, 1
+   * USD = 1000000 micros), reported on the date when the merchant accepted the return. The currency
+   * of the returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response. **This metric cannot be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long returnsMicros;
 
   /**
-   * Total price of shipped items, reported on the order date. Excludes shipping and taxes (US
-   * only). The currency of the returned value is stored in the currency_code segment. If this
-   * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
-   * search query (unless it is explicitly selected by the user) and the currency_code segment is
-   * populated in the response. **This metric cannot be segmented by customer_country_code.**
+   * Total price of shipped items in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros), reported on the order date. Excludes shipping and taxes (US only). The currency of the
+   * returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response. **This metric cannot be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -265,12 +267,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average order value - the average value (total price of items) of all placed orders. The
-   * currency of the returned value is stored in the currency_code segment. If this metric is
-   * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
-   * query (unless it is explicitly selected by the user) and the currency_code segment is populated
-   * in the response. **This metric cannot be segmented by product dimensions and
-   * customer_country_code.**
+   * Average order value in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) - the
+   * average value (total price of items) of all placed orders. The currency of the returned value
+   * is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
+   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
+   * by the user) and the currency_code segment is populated in the response. **This metric cannot
+   * be segmented by product dimensions and customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getAovMicros() {
@@ -278,12 +280,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average order value - the average value (total price of items) of all placed orders. The
-   * currency of the returned value is stored in the currency_code segment. If this metric is
-   * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
-   * query (unless it is explicitly selected by the user) and the currency_code segment is populated
-   * in the response. **This metric cannot be segmented by product dimensions and
-   * customer_country_code.**
+   * Average order value in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) - the
+   * average value (total price of items) of all placed orders. The currency of the returned value
+   * is stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
+   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
+   * by the user) and the currency_code segment is populated in the response. **This metric cannot
+   * be segmented by product dimensions and customer_country_code.**
    * @param aovMicros aovMicros or {@code null} for none
    */
   public Metrics setAovMicros(java.lang.Double aovMicros) {
@@ -328,12 +330,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of conversions in micros attributed to the product, reported on the conversion date. The
-   * metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the
-   * returned value is stored in the currency_code segment. If this metric is selected,
-   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
-   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
-   * the response.
+   * Value of conversions in micros (1 millionth of a standard unit, 1 USD = 1000000 micros)
+   * attributed to the product, reported on the conversion date. The metric is currently available
+   * only for the FREE_PRODUCT_LISTING program. The currency of the returned value is stored in the
+   * currency_code segment. If this metric is selected, 'segments.currency_code' is automatically
+   * added to the SELECT clause in the search query (unless it is explicitly selected by the user)
+   * and the currency_code segment is populated in the response.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConversionValueMicros() {
@@ -341,12 +343,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of conversions in micros attributed to the product, reported on the conversion date. The
-   * metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the
-   * returned value is stored in the currency_code segment. If this metric is selected,
-   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
-   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
-   * the response.
+   * Value of conversions in micros (1 millionth of a standard unit, 1 USD = 1000000 micros)
+   * attributed to the product, reported on the conversion date. The metric is currently available
+   * only for the FREE_PRODUCT_LISTING program. The currency of the returned value is stored in the
+   * currency_code segment. If this metric is selected, 'segments.currency_code' is automatically
+   * added to the SELECT clause in the search query (unless it is explicitly selected by the user)
+   * and the currency_code segment is populated in the response.
    * @param conversionValueMicros conversionValueMicros or {@code null} for none
    */
   public Metrics setConversionValueMicros(java.lang.Long conversionValueMicros) {
@@ -477,12 +479,13 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total price of ordered items. Excludes shipping, taxes (US only), and customer cancellations
-   * that happened within 30 minutes of placing the order. The currency of the returned value is
-   * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
-   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
-   * by the user) and the currency_code segment is populated in the response. **This metric cannot
-   * be segmented by customer_country_code.**
+   * Total price of ordered items in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros). Excludes shipping, taxes (US only), and customer cancellations that happened within 30
+   * minutes of placing the order. The currency of the returned value is stored in the currency_code
+   * segment. If this metric is selected, 'segments.currency_code' is automatically added to the
+   * SELECT clause in the search query (unless it is explicitly selected by the user) and the
+   * currency_code segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getOrderedItemSalesMicros() {
@@ -490,12 +493,13 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total price of ordered items. Excludes shipping, taxes (US only), and customer cancellations
-   * that happened within 30 minutes of placing the order. The currency of the returned value is
-   * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
-   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
-   * by the user) and the currency_code segment is populated in the response. **This metric cannot
-   * be segmented by customer_country_code.**
+   * Total price of ordered items in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros). Excludes shipping, taxes (US only), and customer cancellations that happened within 30
+   * minutes of placing the order. The currency of the returned value is stored in the currency_code
+   * segment. If this metric is selected, 'segments.currency_code' is automatically added to the
+   * SELECT clause in the search query (unless it is explicitly selected by the user) and the
+   * currency_code segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * @param orderedItemSalesMicros orderedItemSalesMicros or {@code null} for none
    */
   public Metrics setOrderedItemSalesMicros(java.lang.Long orderedItemSalesMicros) {
@@ -607,12 +611,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total price of ordered items sent back for return, reported on the date when the merchant
-   * accepted the return. The currency of the returned value is stored in the currency_code segment.
-   * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
-   * clause in the search query (unless it is explicitly selected by the user) and the currency_code
-   * segment is populated in the response. **This metric cannot be segmented by
-   * customer_country_code.**
+   * Total price of ordered items sent back for return in micros (1 millionth of a standard unit, 1
+   * USD = 1000000 micros), reported on the date when the merchant accepted the return. The currency
+   * of the returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response. **This metric cannot be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getReturnsMicros() {
@@ -620,12 +624,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total price of ordered items sent back for return, reported on the date when the merchant
-   * accepted the return. The currency of the returned value is stored in the currency_code segment.
-   * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
-   * clause in the search query (unless it is explicitly selected by the user) and the currency_code
-   * segment is populated in the response. **This metric cannot be segmented by
-   * customer_country_code.**
+   * Total price of ordered items sent back for return in micros (1 millionth of a standard unit, 1
+   * USD = 1000000 micros), reported on the date when the merchant accepted the return. The currency
+   * of the returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response. **This metric cannot be segmented by customer_country_code.**
    * @param returnsMicros returnsMicros or {@code null} for none
    */
   public Metrics setReturnsMicros(java.lang.Long returnsMicros) {
@@ -634,11 +638,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total price of shipped items, reported on the order date. Excludes shipping and taxes (US
-   * only). The currency of the returned value is stored in the currency_code segment. If this
-   * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
-   * search query (unless it is explicitly selected by the user) and the currency_code segment is
-   * populated in the response. **This metric cannot be segmented by customer_country_code.**
+   * Total price of shipped items in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros), reported on the order date. Excludes shipping and taxes (US only). The currency of the
+   * returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response. **This metric cannot be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getShippedItemSalesMicros() {
@@ -646,11 +651,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total price of shipped items, reported on the order date. Excludes shipping and taxes (US
-   * only). The currency of the returned value is stored in the currency_code segment. If this
-   * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
-   * search query (unless it is explicitly selected by the user) and the currency_code segment is
-   * populated in the response. **This metric cannot be segmented by customer_country_code.**
+   * Total price of shipped items in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros), reported on the order date. Excludes shipping and taxes (US only). The currency of the
+   * returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response. **This metric cannot be segmented by customer_country_code.**
    * @param shippedItemSalesMicros shippedItemSalesMicros or {@code null} for none
    */
   public Metrics setShippedItemSalesMicros(java.lang.Long shippedItemSalesMicros) {

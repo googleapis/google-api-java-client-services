@@ -134,6 +134,202 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+   *   {@code Texttospeech.Projects.List request = texttospeech.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+     *   {@code Texttospeech.Locations.List request = texttospeech.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Voices collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+       *   {@code Texttospeech.Voices.List request = texttospeech.voices().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Voices voices() {
+        return new Voices();
+      }
+
+      /**
+       * The "voices" collection of methods.
+       */
+      public class Voices {
+
+        /**
+         * Synthesizes long form text asynchronously.
+         *
+         * Create a request for the method "voices.synthesizeLongAudio".
+         *
+         * This request holds the parameters needed by the texttospeech server.  After setting any optional
+         * parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote operation.
+         *
+         * @param parent The resource states of the request in the form of projects/locations/voices.
+         * @param content the {@link com.google.api.services.texttospeech.v1beta1.model.SynthesizeLongAudioRequest}
+         * @return the request
+         */
+        public SynthesizeLongAudio synthesizeLongAudio(java.lang.String parent, com.google.api.services.texttospeech.v1beta1.model.SynthesizeLongAudioRequest content) throws java.io.IOException {
+          SynthesizeLongAudio result = new SynthesizeLongAudio(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SynthesizeLongAudio extends TexttospeechRequest<com.google.api.services.texttospeech.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}:SynthesizeLongAudio";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+
+          /**
+           * Synthesizes long form text asynchronously.
+           *
+           * Create a request for the method "voices.synthesizeLongAudio".
+           *
+           * This request holds the parameters needed by the the texttospeech server.  After setting any
+           * optional parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote
+           * operation. <p> {@link SynthesizeLongAudio#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent The resource states of the request in the form of projects/locations/voices.
+           * @param content the {@link com.google.api.services.texttospeech.v1beta1.model.SynthesizeLongAudioRequest}
+           * @since 1.13
+           */
+          protected SynthesizeLongAudio(java.lang.String parent, com.google.api.services.texttospeech.v1beta1.model.SynthesizeLongAudioRequest content) {
+            super(Texttospeech.this, "POST", REST_PATH, content, com.google.api.services.texttospeech.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+            }
+          }
+
+          @Override
+          public SynthesizeLongAudio set$Xgafv(java.lang.String $Xgafv) {
+            return (SynthesizeLongAudio) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SynthesizeLongAudio setAccessToken(java.lang.String accessToken) {
+            return (SynthesizeLongAudio) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SynthesizeLongAudio setAlt(java.lang.String alt) {
+            return (SynthesizeLongAudio) super.setAlt(alt);
+          }
+
+          @Override
+          public SynthesizeLongAudio setCallback(java.lang.String callback) {
+            return (SynthesizeLongAudio) super.setCallback(callback);
+          }
+
+          @Override
+          public SynthesizeLongAudio setFields(java.lang.String fields) {
+            return (SynthesizeLongAudio) super.setFields(fields);
+          }
+
+          @Override
+          public SynthesizeLongAudio setKey(java.lang.String key) {
+            return (SynthesizeLongAudio) super.setKey(key);
+          }
+
+          @Override
+          public SynthesizeLongAudio setOauthToken(java.lang.String oauthToken) {
+            return (SynthesizeLongAudio) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SynthesizeLongAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SynthesizeLongAudio) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SynthesizeLongAudio setQuotaUser(java.lang.String quotaUser) {
+            return (SynthesizeLongAudio) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SynthesizeLongAudio setUploadType(java.lang.String uploadType) {
+            return (SynthesizeLongAudio) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SynthesizeLongAudio setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SynthesizeLongAudio) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The resource states of the request in the form of projects/locations/voices. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The resource states of the request in the form of projects/locations/voices.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** The resource states of the request in the form of projects/locations/voices. */
+          public SynthesizeLongAudio setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public SynthesizeLongAudio set(String parameterName, Object value) {
+            return (SynthesizeLongAudio) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Text collection.
    *
    * <p>The typical use is:</p>

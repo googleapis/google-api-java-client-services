@@ -4826,8 +4826,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
-       *        `namespaces/{project_id_or_number}/services/{service_name}` *
-       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @return the request
        */
@@ -4856,8 +4856,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
-       *        `namespaces/{project_id_or_number}/services/{service_name}` *
-       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @since 1.13
          */
@@ -4928,7 +4928,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The fully qualified name of the service to delete. It can be any of the
-         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when
+         * the `endpoint` is regional) *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -4936,8 +4937,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         private java.lang.String name;
 
         /** Required. The fully qualified name of the service to delete. It can be any of the following forms:
-       * `namespaces/{project_id_or_number}/services/{service_name}` *
-       `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public java.lang.String getName() {
@@ -4946,7 +4947,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The fully qualified name of the service to delete. It can be any of the
-         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when
+         * the `endpoint` is regional) *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5045,8 +5047,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
-       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @return the request
        */
@@ -5074,8 +5076,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
-       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @since 1.13
          */
@@ -5156,7 +5158,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The fully qualified name of the service to retrieve. It can be any of the
-         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when
+         * the `endpoint` is regional) *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5164,8 +5167,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         private java.lang.String name;
 
         /** Required. The fully qualified name of the service to retrieve. It can be any of the following
-       forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
-       `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public java.lang.String getName() {
@@ -5174,7 +5177,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The fully qualified name of the service to retrieve. It can be any of the
-         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when
+         * the `endpoint` is regional) *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5483,8 +5487,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
        *
        * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
-       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
@@ -5517,8 +5521,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * constructor. </p>
          *
          * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
-       *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
@@ -5590,7 +5594,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The fully qualified name of the service to replace. It can be any of the
-         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when
+         * the `endpoint` is regional) *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -5598,8 +5603,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         private java.lang.String name;
 
         /** Required. The fully qualified name of the service to replace. It can be any of the following forms:
-       * `namespaces/{project_id_or_number}/services/{service_name}` *
-       `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+       regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public java.lang.String getName() {
@@ -5608,7 +5613,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The fully qualified name of the service to replace. It can be any of the
-         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when
+         * the `endpoint` is regional) *
          * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
@@ -9905,8 +9911,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
-         *        `namespaces/{project_id_or_number}/services/{service_name}` *
-         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @return the request
          */
@@ -9935,8 +9941,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The fully qualified name of the service to delete. It can be any of the following forms: *
-         *        `namespaces/{project_id_or_number}/services/{service_name}` *
-         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @since 1.13
            */
@@ -10007,7 +10013,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The fully qualified name of the service to delete. It can be any of the
-           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only
+           * when the `endpoint` is regional) *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10015,8 +10022,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.String name;
 
           /** Required. The fully qualified name of the service to delete. It can be any of the following forms:
-         * `namespaces/{project_id_or_number}/services/{service_name}` *
-         `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public java.lang.String getName() {
@@ -10025,7 +10032,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The fully qualified name of the service to delete. It can be any of the
-           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only
+           * when the `endpoint` is regional) *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10124,8 +10132,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
-         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @return the request
          */
@@ -10153,8 +10161,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The fully qualified name of the service to retrieve. It can be any of the following forms:
-         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @since 1.13
            */
@@ -10235,7 +10243,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The fully qualified name of the service to retrieve. It can be any of the
-           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only
+           * when the `endpoint` is regional) *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10243,8 +10252,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.String name;
 
           /** Required. The fully qualified name of the service to retrieve. It can be any of the following
-         forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
-         `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public java.lang.String getName() {
@@ -10253,7 +10262,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The fully qualified name of the service to retrieve. It can be any of the
-           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only
+           * when the `endpoint` is regional) *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10760,8 +10770,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
          *
          * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
-         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
@@ -10794,8 +10804,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * constructor. </p>
            *
            * @param name Required. The fully qualified name of the service to replace. It can be any of the following forms:
-         *        * `namespaces/{project_id_or_number}/services/{service_name}` *
-         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         *        regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
@@ -10867,7 +10877,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The fully qualified name of the service to replace. It can be any of the
-           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only
+           * when the `endpoint` is regional) *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
@@ -10875,8 +10886,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.String name;
 
           /** Required. The fully qualified name of the service to replace. It can be any of the following forms:
-         * `namespaces/{project_id_or_number}/services/{service_name}` *
-         `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `namespaces/{project_id_or_number}/services/{service_name}` (only when the `endpoint` is
+         regional) * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
          `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public java.lang.String getName() {
@@ -10885,7 +10896,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The fully qualified name of the service to replace. It can be any of the
-           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * following forms: * `namespaces/{project_id_or_number}/services/{service_name}` (only
+           * when the `endpoint` is regional) *
            * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
            * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */

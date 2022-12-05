@@ -30,14 +30,20 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * KRM-style annotations for the resource.
+   * KRM-style annotations for the resource. Cloud Run API v2 does not support annotations with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1
+   * now have a corresponding field in v2 ExecutionTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * KRM-style labels for the resource.
+   * KRM-style labels for the resource. Cloud Run API v2 does not support labels with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
+   * have a corresponding field in v2 ExecutionTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +77,10 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   private GoogleCloudRunV2TaskTemplate template;
 
   /**
-   * KRM-style annotations for the resource.
+   * KRM-style annotations for the resource. Cloud Run API v2 does not support annotations with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1
+   * now have a corresponding field in v2 ExecutionTemplate.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -79,7 +88,10 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   }
 
   /**
-   * KRM-style annotations for the resource.
+   * KRM-style annotations for the resource. Cloud Run API v2 does not support annotations with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1
+   * now have a corresponding field in v2 ExecutionTemplate.
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunV2ExecutionTemplate setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -88,7 +100,10 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   }
 
   /**
-   * KRM-style labels for the resource.
+   * KRM-style labels for the resource. Cloud Run API v2 does not support labels with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
+   * have a corresponding field in v2 ExecutionTemplate.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -96,7 +111,10 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   }
 
   /**
-   * KRM-style labels for the resource.
+   * KRM-style labels for the resource. Cloud Run API v2 does not support labels with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
+   * have a corresponding field in v2 ExecutionTemplate.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRunV2ExecutionTemplate setLabels(java.util.Map<String, java.lang.String> labels) {

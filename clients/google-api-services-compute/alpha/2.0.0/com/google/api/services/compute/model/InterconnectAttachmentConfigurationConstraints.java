@@ -54,14 +54,6 @@ public final class InterconnectAttachmentConfigurationConstraints extends com.go
   private java.util.List<InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange> bgpPeerAsnRanges;
 
   /**
-   * [Output Only] Network Connectivity Center constraints, which can take one of the following
-   * values: NCC_UNCONSTRAINED, NCC_SPOKE_REQUIRED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String networkConnectivityCenter;
-
-  /**
    * [Output Only] Whether the attachment's BGP session requires/allows/disallows BGP MD5
    * authentication. This can take one of the following values: MD5_OPTIONAL, MD5_REQUIRED,
    * MD5_UNSUPPORTED. For example, a Cross-Cloud Interconnect connection to a remote cloud provider
@@ -112,25 +104,6 @@ public final class InterconnectAttachmentConfigurationConstraints extends com.go
    */
   public InterconnectAttachmentConfigurationConstraints setBgpPeerAsnRanges(java.util.List<InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange> bgpPeerAsnRanges) {
     this.bgpPeerAsnRanges = bgpPeerAsnRanges;
-    return this;
-  }
-
-  /**
-   * [Output Only] Network Connectivity Center constraints, which can take one of the following
-   * values: NCC_UNCONSTRAINED, NCC_SPOKE_REQUIRED
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNetworkConnectivityCenter() {
-    return networkConnectivityCenter;
-  }
-
-  /**
-   * [Output Only] Network Connectivity Center constraints, which can take one of the following
-   * values: NCC_UNCONSTRAINED, NCC_SPOKE_REQUIRED
-   * @param networkConnectivityCenter networkConnectivityCenter or {@code null} for none
-   */
-  public InterconnectAttachmentConfigurationConstraints setNetworkConnectivityCenter(java.lang.String networkConnectivityCenter) {
-    this.networkConnectivityCenter = networkConnectivityCenter;
     return this;
   }
 

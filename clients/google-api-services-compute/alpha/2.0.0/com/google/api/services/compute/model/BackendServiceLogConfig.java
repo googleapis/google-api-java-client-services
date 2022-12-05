@@ -38,9 +38,10 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
   private java.lang.Boolean enable;
 
   /**
-   * This field can only be specified if logging is enabled for this backend service. Configures
-   * whether all, none or a subset of optional fields should be added to the reported logs. One of
-   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * Deprecated in favor of optionalMode. This field can only be specified if logging is enabled for
+   * this backend service. Configures whether all, none or a subset of optional fields should be
+   * added to the reported logs. One of [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM].
+   * Default is EXCLUDE_ALL_OPTIONAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,13 +49,22 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
 
   /**
    * This field can only be specified if logging is enabled for this backend service and
-   * "logConfig.optional" was set to CUSTOM. Contains a list of optional fields you want to include
-   * in the logs. For example: serverInstance, serverGkeDetails.cluster,
+   * "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to
+   * include in the logs. For example: serverInstance, serverGkeDetails.cluster,
    * serverGkeDetails.pod.podNamespace
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> optionalFields;
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service. Configures
+   * whether all, none or a subset of optional fields should be added to the reported logs. One of
+   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optionalMode;
 
   /**
    * This field can only be specified if logging is enabled for this backend service. The value of
@@ -86,9 +96,10 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * This field can only be specified if logging is enabled for this backend service. Configures
-   * whether all, none or a subset of optional fields should be added to the reported logs. One of
-   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * Deprecated in favor of optionalMode. This field can only be specified if logging is enabled for
+   * this backend service. Configures whether all, none or a subset of optional fields should be
+   * added to the reported logs. One of [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM].
+   * Default is EXCLUDE_ALL_OPTIONAL.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptional() {
@@ -96,9 +107,10 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * This field can only be specified if logging is enabled for this backend service. Configures
-   * whether all, none or a subset of optional fields should be added to the reported logs. One of
-   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * Deprecated in favor of optionalMode. This field can only be specified if logging is enabled for
+   * this backend service. Configures whether all, none or a subset of optional fields should be
+   * added to the reported logs. One of [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM].
+   * Default is EXCLUDE_ALL_OPTIONAL.
    * @param optional optional or {@code null} for none
    */
   public BackendServiceLogConfig setOptional(java.lang.String optional) {
@@ -108,8 +120,8 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
 
   /**
    * This field can only be specified if logging is enabled for this backend service and
-   * "logConfig.optional" was set to CUSTOM. Contains a list of optional fields you want to include
-   * in the logs. For example: serverInstance, serverGkeDetails.cluster,
+   * "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to
+   * include in the logs. For example: serverInstance, serverGkeDetails.cluster,
    * serverGkeDetails.pod.podNamespace
    * @return value or {@code null} for none
    */
@@ -119,13 +131,34 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
 
   /**
    * This field can only be specified if logging is enabled for this backend service and
-   * "logConfig.optional" was set to CUSTOM. Contains a list of optional fields you want to include
-   * in the logs. For example: serverInstance, serverGkeDetails.cluster,
+   * "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to
+   * include in the logs. For example: serverInstance, serverGkeDetails.cluster,
    * serverGkeDetails.pod.podNamespace
    * @param optionalFields optionalFields or {@code null} for none
    */
   public BackendServiceLogConfig setOptionalFields(java.util.List<java.lang.String> optionalFields) {
     this.optionalFields = optionalFields;
+    return this;
+  }
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service. Configures
+   * whether all, none or a subset of optional fields should be added to the reported logs. One of
+   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptionalMode() {
+    return optionalMode;
+  }
+
+  /**
+   * This field can only be specified if logging is enabled for this backend service. Configures
+   * whether all, none or a subset of optional fields should be added to the reported logs. One of
+   * [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+   * @param optionalMode optionalMode or {@code null} for none
+   */
+  public BackendServiceLogConfig setOptionalMode(java.lang.String optionalMode) {
+    this.optionalMode = optionalMode;
     return this;
   }
 

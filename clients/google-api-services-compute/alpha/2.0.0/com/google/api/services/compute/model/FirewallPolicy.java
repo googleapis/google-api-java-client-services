@@ -92,7 +92,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. For Organization Firewall Policies it's a [Output Only] numeric ID
-   * allocated by GCP which uniquely identifies the Organization Firewall Policy.
+   * allocated by Google Cloud which uniquely identifies the Organization Firewall Policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,7 +354,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. For Organization Firewall Policies it's a [Output Only] numeric ID
-   * allocated by GCP which uniquely identifies the Organization Firewall Policy.
+   * allocated by Google Cloud which uniquely identifies the Organization Firewall Policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -363,7 +363,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. For Organization Firewall Policies it's a [Output Only] numeric ID
-   * allocated by GCP which uniquely identifies the Organization Firewall Policy.
+   * allocated by Google Cloud which uniquely identifies the Organization Firewall Policy.
    * @param name name or {@code null} for none
    */
   public FirewallPolicy setName(java.lang.String name) {

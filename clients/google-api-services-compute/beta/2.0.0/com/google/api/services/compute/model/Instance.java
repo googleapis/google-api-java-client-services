@@ -150,6 +150,17 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
+   * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
+   * instance during the suspend operation. If you do not provide an encryption key when creating
+   * the instance, then the local SSD and in-memory contents will be encrypted using an
+   * automatically generated key during the suspend operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey instanceEncryptionKey;
+
+  /**
    * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
    * value is "NONE" if it is not specified.
    * The value may be {@code null}.
@@ -708,6 +719,31 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
+   * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
+   * instance during the suspend operation. If you do not provide an encryption key when creating
+   * the instance, then the local SSD and in-memory contents will be encrypted using an
+   * automatically generated key during the suspend operation.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getInstanceEncryptionKey() {
+    return instanceEncryptionKey;
+  }
+
+  /**
+   * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
+   * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
+   * instance during the suspend operation. If you do not provide an encryption key when creating
+   * the instance, then the local SSD and in-memory contents will be encrypted using an
+   * automatically generated key during the suspend operation.
+   * @param instanceEncryptionKey instanceEncryptionKey or {@code null} for none
+   */
+  public Instance setInstanceEncryptionKey(CustomerEncryptionKey instanceEncryptionKey) {
+    this.instanceEncryptionKey = instanceEncryptionKey;
     return this;
   }
 

@@ -46,7 +46,8 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   private java.lang.Long amount;
 
   /**
-   * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+   * Type of resource for which this commitment applies. Possible values are VCPU, MEMORY,
+   * LOCAL_SSD, and ACCELERATOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,8 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+   * Type of resource for which this commitment applies. Possible values are VCPU, MEMORY,
+   * LOCAL_SSD, and ACCELERATOR.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -99,7 +101,8 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+   * Type of resource for which this commitment applies. Possible values are VCPU, MEMORY,
+   * LOCAL_SSD, and ACCELERATOR.
    * @param type type or {@code null} for none
    */
   public ResourceCommitment setType(java.lang.String type) {

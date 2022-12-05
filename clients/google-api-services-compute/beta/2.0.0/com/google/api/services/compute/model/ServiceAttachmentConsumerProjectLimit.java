@@ -37,6 +37,13 @@ public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.
   private java.lang.Long connectionLimit;
 
   /**
+   * The network URL for the network to set the limit for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkUrl;
+
+  /**
    * The project id or number for the project to set the limit for.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.
    */
   public ServiceAttachmentConsumerProjectLimit setConnectionLimit(java.lang.Long connectionLimit) {
     this.connectionLimit = connectionLimit;
+    return this;
+  }
+
+  /**
+   * The network URL for the network to set the limit for.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkUrl() {
+    return networkUrl;
+  }
+
+  /**
+   * The network URL for the network to set the limit for.
+   * @param networkUrl networkUrl or {@code null} for none
+   */
+  public ServiceAttachmentConsumerProjectLimit setNetworkUrl(java.lang.String networkUrl) {
+    this.networkUrl = networkUrl;
     return this;
   }
 

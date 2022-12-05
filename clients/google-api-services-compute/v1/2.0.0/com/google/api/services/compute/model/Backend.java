@@ -48,7 +48,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * balancingMode). A setting of 0 means the group is completely drained, offering 0% of its
    * available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting
    * larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one
-   * backend attached to the backend service.
+   * backend attached to the backend service. Not available with backends that don't support using a
+   * balancingMode. This includes backends such as global internet NEGs, regional serverless NEGs,
+   * and PSC NEGs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +179,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * balancingMode). A setting of 0 means the group is completely drained, offering 0% of its
    * available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting
    * larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one
-   * backend attached to the backend service.
+   * backend attached to the backend service. Not available with backends that don't support using a
+   * balancingMode. This includes backends such as global internet NEGs, regional serverless NEGs,
+   * and PSC NEGs.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCapacityScaler() {
@@ -190,7 +194,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * balancingMode). A setting of 0 means the group is completely drained, offering 0% of its
    * available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting
    * larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one
-   * backend attached to the backend service.
+   * backend attached to the backend service. Not available with backends that don't support using a
+   * balancingMode. This includes backends such as global internet NEGs, regional serverless NEGs,
+   * and PSC NEGs.
    * @param capacityScaler capacityScaler or {@code null} for none
    */
   public Backend setCapacityScaler(java.lang.Float capacityScaler) {

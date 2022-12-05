@@ -150,15 +150,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Encrypts or decrypts data for an instance with a customer-supplied encryption key. If you are
-   * creating a new instance, this field encrypts the local SSD and in-memory contents of the
-   * instance using a key that you provide. If you are restarting an instance protected with a
-   * customer-supplied encryption key, you must provide the correct key in order to successfully
-   * restart the instance. If you do not provide an encryption key when creating the instance, then
-   * the local SSD and in-memory contents will be encrypted using an automatically generated key and
-   * you do not need to provide a key to start the instance later. Instance templates do not store
-   * customer-supplied encryption keys, so you cannot use your own keys to encrypt local SSDs and
-   * in-memory content in a managed instance group.
+   * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
+   * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
+   * instance during the suspend operation. If you do not provide an encryption key when creating
+   * the instance, then the local SSD and in-memory contents will be encrypted using an
+   * automatically generated key during the suspend operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -756,15 +752,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts or decrypts data for an instance with a customer-supplied encryption key. If you are
-   * creating a new instance, this field encrypts the local SSD and in-memory contents of the
-   * instance using a key that you provide. If you are restarting an instance protected with a
-   * customer-supplied encryption key, you must provide the correct key in order to successfully
-   * restart the instance. If you do not provide an encryption key when creating the instance, then
-   * the local SSD and in-memory contents will be encrypted using an automatically generated key and
-   * you do not need to provide a key to start the instance later. Instance templates do not store
-   * customer-supplied encryption keys, so you cannot use your own keys to encrypt local SSDs and
-   * in-memory content in a managed instance group.
+   * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
+   * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
+   * instance during the suspend operation. If you do not provide an encryption key when creating
+   * the instance, then the local SSD and in-memory contents will be encrypted using an
+   * automatically generated key during the suspend operation.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getInstanceEncryptionKey() {
@@ -772,15 +764,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts or decrypts data for an instance with a customer-supplied encryption key. If you are
-   * creating a new instance, this field encrypts the local SSD and in-memory contents of the
-   * instance using a key that you provide. If you are restarting an instance protected with a
-   * customer-supplied encryption key, you must provide the correct key in order to successfully
-   * restart the instance. If you do not provide an encryption key when creating the instance, then
-   * the local SSD and in-memory contents will be encrypted using an automatically generated key and
-   * you do not need to provide a key to start the instance later. Instance templates do not store
-   * customer-supplied encryption keys, so you cannot use your own keys to encrypt local SSDs and
-   * in-memory content in a managed instance group.
+   * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
+   * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
+   * instance during the suspend operation. If you do not provide an encryption key when creating
+   * the instance, then the local SSD and in-memory contents will be encrypted using an
+   * automatically generated key during the suspend operation.
    * @param instanceEncryptionKey instanceEncryptionKey or {@code null} for none
    */
   public Instance setInstanceEncryptionKey(CustomerEncryptionKey instanceEncryptionKey) {

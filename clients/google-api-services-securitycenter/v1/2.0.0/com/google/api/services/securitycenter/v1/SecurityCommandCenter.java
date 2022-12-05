@@ -181,7 +181,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        *        folders/[folder_id], or projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
@@ -210,7 +210,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+         * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        *        folders/[folder_id], or projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
@@ -281,13 +281,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
+         * folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+        /** Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -295,8 +295,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
+         * folders/[folder_id], or projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -321,7 +321,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization assets should belong to. Its format is
+       * @param parent Required. Name of the parent assets should belong to. Its format is
        *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
        * @return the request
        */
@@ -348,7 +348,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization assets should belong to. Its format is
+         * @param parent Required. Name of the parent assets should belong to. Its format is
        *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          * @since 1.13
          */
@@ -428,13 +428,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization assets should belong to. Its format is
+         * Required. Name of the parent assets should belong to. Its format is
          * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization assets should belong to. Its format is
+        /** Required. Name of the parent assets should belong to. Its format is
        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -442,7 +442,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization assets should belong to. Its format is
+         * Required. Name of the parent assets should belong to. Its format is
          * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -3053,7 +3053,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3081,7 +3083,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -3151,13 +3155,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to delete. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]".
+       "organizations/[organization_id]/notificationConfigs/[config_id]",
+       "folders/[folder_id]/notificationConfigs/[config_id]", or
+       "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public java.lang.String getName() {
           return name;
@@ -3165,7 +3173,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3191,7 +3201,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3218,7 +3230,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3298,13 +3312,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to get. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]".
+       "organizations/[organization_id]/notificationConfigs/[config_id]",
+       "folders/[folder_id]/notificationConfigs/[config_id]", or
+       "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public java.lang.String getName() {
           return name;
@@ -3312,7 +3330,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3337,7 +3357,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to list notification configs. Its format is
+       * @param parent Required. Name of the parent to list notification configs. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
@@ -3364,7 +3384,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to list notification configs. Its format is
+         * @param parent Required. Name of the parent to list notification configs. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
@@ -3444,13 +3464,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to list notification configs. Its format is
+         * Required. Name of the parent to list notification configs. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to list notification configs. Its format is
+        /** Required. Name of the parent to list notification configs. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -3458,7 +3478,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to list notification configs. Its format is
+         * Required. Name of the parent to list notification configs. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -3536,7 +3556,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name The relative resource name of this notification config. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -3567,7 +3589,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name The relative resource name of this notification config. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -3639,14 +3663,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this notification config. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The relative resource name of this notification config. See:
        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         public java.lang.String getName() {
           return name;
@@ -3655,7 +3683,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this notification config. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5801,7 +5831,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        *        folders/[folder_id], or projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
@@ -5830,7 +5860,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+         * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        *        folders/[folder_id], or projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
@@ -5901,13 +5931,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
+         * folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+        /** Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -5915,8 +5945,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
+         * folders/[folder_id], or projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5941,7 +5971,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization assets should belong to. Its format is
+       * @param parent Required. Name of the parent assets should belong to. Its format is
        *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
        * @return the request
        */
@@ -5968,7 +5998,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization assets should belong to. Its format is
+         * @param parent Required. Name of the parent assets should belong to. Its format is
        *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          * @since 1.13
          */
@@ -6048,13 +6078,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization assets should belong to. Its format is
+         * Required. Name of the parent assets should belong to. Its format is
          * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization assets should belong to. Its format is
+        /** Required. Name of the parent assets should belong to. Its format is
        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -6062,7 +6092,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization assets should belong to. Its format is
+         * Required. Name of the parent assets should belong to. Its format is
          * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -8818,7 +8848,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8846,7 +8878,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -8916,13 +8950,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to delete. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]".
+       "organizations/[organization_id]/notificationConfigs/[config_id]",
+       "folders/[folder_id]/notificationConfigs/[config_id]", or
+       "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public java.lang.String getName() {
           return name;
@@ -8930,7 +8968,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8956,7 +8996,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -8983,7 +9025,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -9063,13 +9107,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to get. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]".
+       "organizations/[organization_id]/notificationConfigs/[config_id]",
+       "folders/[folder_id]/notificationConfigs/[config_id]", or
+       "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public java.lang.String getName() {
           return name;
@@ -9077,7 +9125,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -9102,7 +9152,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to list notification configs. Its format is
+       * @param parent Required. Name of the parent to list notification configs. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
@@ -9129,7 +9179,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to list notification configs. Its format is
+         * @param parent Required. Name of the parent to list notification configs. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
@@ -9209,13 +9259,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to list notification configs. Its format is
+         * Required. Name of the parent to list notification configs. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to list notification configs. Its format is
+        /** Required. Name of the parent to list notification configs. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -9223,7 +9273,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to list notification configs. Its format is
+         * Required. Name of the parent to list notification configs. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -9301,7 +9351,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name The relative resource name of this notification config. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -9332,7 +9384,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name The relative resource name of this notification config. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -9404,14 +9458,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this notification config. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The relative resource name of this notification config. See:
        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         public java.lang.String getName() {
           return name;
@@ -9420,7 +9478,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this notification config. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -12939,7 +12999,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        *        folders/[folder_id], or projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
@@ -12968,7 +13028,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+         * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        *        folders/[folder_id], or projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
@@ -13039,13 +13099,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
+         * folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+        /** Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
        folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -13053,8 +13113,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
+         * folders/[folder_id], or projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -13079,7 +13139,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization assets should belong to. Its format is
+       * @param parent Required. Name of the parent assets should belong to. Its format is
        *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
        * @return the request
        */
@@ -13106,7 +13166,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization assets should belong to. Its format is
+         * @param parent Required. Name of the parent assets should belong to. Its format is
        *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          * @since 1.13
          */
@@ -13186,13 +13246,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization assets should belong to. Its format is
+         * Required. Name of the parent assets should belong to. Its format is
          * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization assets should belong to. Its format is
+        /** Required. Name of the parent assets should belong to. Its format is
        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -13200,7 +13260,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization assets should belong to. Its format is
+         * Required. Name of the parent assets should belong to. Its format is
          * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -15811,7 +15871,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15839,7 +15901,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -15909,13 +15973,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to delete. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]".
+       "organizations/[organization_id]/notificationConfigs/[config_id]",
+       "folders/[folder_id]/notificationConfigs/[config_id]", or
+       "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public java.lang.String getName() {
           return name;
@@ -15923,7 +15991,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15949,7 +16019,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -15976,7 +16048,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]".
+       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
+       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
+       *        "projects/[project_id]/notificationConfigs/[config_id]".
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -16056,13 +16130,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to get. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]".
+       "organizations/[organization_id]/notificationConfigs/[config_id]",
+       "folders/[folder_id]/notificationConfigs/[config_id]", or
+       "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public java.lang.String getName() {
           return name;
@@ -16070,7 +16148,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]".
+         * "organizations/[organization_id]/notificationConfigs/[config_id]",
+         * "folders/[folder_id]/notificationConfigs/[config_id]", or
+         * "projects/[project_id]/notificationConfigs/[config_id]".
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -16095,7 +16175,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to list notification configs. Its format is
+       * @param parent Required. Name of the parent to list notification configs. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
@@ -16122,7 +16202,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to list notification configs. Its format is
+         * @param parent Required. Name of the parent to list notification configs. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
@@ -16202,13 +16282,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to list notification configs. Its format is
+         * Required. Name of the parent to list notification configs. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to list notification configs. Its format is
+        /** Required. Name of the parent to list notification configs. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -16216,7 +16296,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the organization to list notification configs. Its format is
+         * Required. Name of the parent to list notification configs. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -16294,7 +16374,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name The relative resource name of this notification config. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -16325,7 +16407,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name The relative resource name of this notification config. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -16397,14 +16481,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this notification config. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The relative resource name of this notification config. See:
        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+       "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+       "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+       "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         public java.lang.String getName() {
           return name;
@@ -16413,7 +16501,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this notification config. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

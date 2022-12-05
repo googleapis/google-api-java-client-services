@@ -2698,6 +2698,252 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         }
 
       }
+      /**
+       * An accessor for creating requests from the Events collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+       *   {@code ChromeManagement.Events.List request = chromemanagement.events().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Events events() {
+        return new Events();
+      }
+
+      /**
+       * The "events" collection of methods.
+       */
+      public class Events {
+
+        /**
+         * List telemetry events.
+         *
+         * Create a request for the method "events.list".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Customer id or "my_customer" to use the customer associated to the account making the
+         *        request.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1ListTelemetryEventsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/telemetry/events";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * List telemetry events.
+           *
+           * Create a request for the method "events.list".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Customer id or "my_customer" to use the customer associated to the account making the
+         *        request.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1ListTelemetryEventsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Customer id or "my_customer" to use the customer associated to the account
+           * making the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Customer id or "my_customer" to use the customer associated to the account making the
+         request.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Customer id or "my_customer" to use the customer associated to the account
+           * making the request.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Only include resources that match the filter. Supported filter fields: *
+           * device_id * user_id * device_org_unit_id * user_org_unit_id * timestamp * event_type
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Only include resources that match the filter. Supported filter fields: * device_id *
+         user_id * device_org_unit_id * user_org_unit_id * timestamp * event_type
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Only include resources that match the filter. Supported filter fields: *
+           * device_id * user_id * device_org_unit_id * user_org_unit_id * timestamp * event_type
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of results to return. Default value is 100. Maximum value is
+           * 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of results to return. Default value is 100. Maximum value is 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of results to return. Default value is 100. Maximum value is
+           * 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Token to specify next page in the list. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Token to specify next page in the list.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Token to specify next page in the list. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. Read mask to specify which fields to return. */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Required. Read mask to specify which fields to return.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /** Required. Read mask to specify which fields to return. */
+          public List setReadMask(String readMask) {
+            this.readMask = readMask;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

@@ -74,6 +74,17 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private java.lang.Boolean escalated;
 
   /**
+   * The language the user has requested to receive support in. This should be a BCP 47 language
+   * code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported
+   * language is specified, this field defaults to English (en). Language selection during case
+   * creation may affect your available support options. For a list of supported languages and their
+   * support working hours, see: https://cloud.google.com/support/docs/language-working-hours
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * The resource name for the case.
    * The value may be {@code null}.
    */
@@ -232,6 +243,31 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
    */
   public CloudSupportCase setEscalated(java.lang.Boolean escalated) {
     this.escalated = escalated;
+    return this;
+  }
+
+  /**
+   * The language the user has requested to receive support in. This should be a BCP 47 language
+   * code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported
+   * language is specified, this field defaults to English (en). Language selection during case
+   * creation may affect your available support options. For a list of supported languages and their
+   * support working hours, see: https://cloud.google.com/support/docs/language-working-hours
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The language the user has requested to receive support in. This should be a BCP 47 language
+   * code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported
+   * language is specified, this field defaults to English (en). Language selection during case
+   * creation may affect your available support options. For a list of supported languages and their
+   * support working hours, see: https://cloud.google.com/support/docs/language-working-hours
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public CloudSupportCase setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
     return this;
   }
 

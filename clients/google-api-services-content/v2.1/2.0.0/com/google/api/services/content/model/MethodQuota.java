@@ -17,7 +17,8 @@
 package com.google.api.services.content.model;
 
 /**
- * The quota information per method in the Content API.
+ * The quota information per method in the Content API. Includes only methods with current usage
+ * greater than zero for your account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -31,7 +32,7 @@ package com.google.api.services.content.model;
 public final class MethodQuota extends com.google.api.client.json.GenericJson {
 
   /**
-   * The method name, for example “products.list”. Method name does not contain version because
+   * The method name, for example `products.list`. Method name does not contain version because
    * quota can be shared between different API versions of the same method.
    * The value may be {@code null}.
    */
@@ -39,21 +40,21 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   private java.lang.String method;
 
   /**
-   * The current quota limit, for example the maximum number of calls for the method.
+   * The current quota limit per day, meaning the maximum number of calls for the method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quotaLimit;
 
   /**
-   * The current quota usage, for example the number of calls for the method.
+   * The current quota usage, meaning the number of calls already made to the method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quotaUsage;
 
   /**
-   * The method name, for example “products.list”. Method name does not contain version because
+   * The method name, for example `products.list`. Method name does not contain version because
    * quota can be shared between different API versions of the same method.
    * @return value or {@code null} for none
    */
@@ -62,7 +63,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The method name, for example “products.list”. Method name does not contain version because
+   * The method name, for example `products.list`. Method name does not contain version because
    * quota can be shared between different API versions of the same method.
    * @param method method or {@code null} for none
    */
@@ -72,7 +73,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota limit, for example the maximum number of calls for the method.
+   * The current quota limit per day, meaning the maximum number of calls for the method.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuotaLimit() {
@@ -80,7 +81,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota limit, for example the maximum number of calls for the method.
+   * The current quota limit per day, meaning the maximum number of calls for the method.
    * @param quotaLimit quotaLimit or {@code null} for none
    */
   public MethodQuota setQuotaLimit(java.lang.Long quotaLimit) {
@@ -89,7 +90,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota usage, for example the number of calls for the method.
+   * The current quota usage, meaning the number of calls already made to the method.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuotaUsage() {
@@ -97,7 +98,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota usage, for example the number of calls for the method.
+   * The current quota usage, meaning the number of calls already made to the method.
    * @param quotaUsage quotaUsage or {@code null} for none
    */
   public MethodQuota setQuotaUsage(java.lang.Long quotaUsage) {

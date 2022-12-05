@@ -58,6 +58,22 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   private java.lang.String name;
 
   /**
+   * Output only. Human eval template in csv format. It tooks real-world conversations provided
+   * through input dataset, generates example suggestions for customer to verify quality of the
+   * model. For Smart Reply, the generated csv file contains columns of Context,
+   * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
+   * conversation prior to the current suggestion. Q1: "Would you send it as the next message of
+   * agent?" Evaluated based on whether the suggest is appropriate to be sent by agent in current
+   * context. Q2: "Does the suggestion move the conversation closer to resolution?" Evaluated based
+   * on whether the suggestion provide solutions, or answers customer's question or collect
+   * information from customer to resolve the customer's issue. Actual reply column contains the
+   * actual agent reply sent in the context.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rawHumanEvalTemplateCsv;
+
+  /**
    * Output only. Only available when model is for smart reply.
    * The value may be {@code null}.
    */
@@ -129,6 +145,41 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Human eval template in csv format. It tooks real-world conversations provided
+   * through input dataset, generates example suggestions for customer to verify quality of the
+   * model. For Smart Reply, the generated csv file contains columns of Context,
+   * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
+   * conversation prior to the current suggestion. Q1: "Would you send it as the next message of
+   * agent?" Evaluated based on whether the suggest is appropriate to be sent by agent in current
+   * context. Q2: "Does the suggestion move the conversation closer to resolution?" Evaluated based
+   * on whether the suggestion provide solutions, or answers customer's question or collect
+   * information from customer to resolve the customer's issue. Actual reply column contains the
+   * actual agent reply sent in the context.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRawHumanEvalTemplateCsv() {
+    return rawHumanEvalTemplateCsv;
+  }
+
+  /**
+   * Output only. Human eval template in csv format. It tooks real-world conversations provided
+   * through input dataset, generates example suggestions for customer to verify quality of the
+   * model. For Smart Reply, the generated csv file contains columns of Context,
+   * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
+   * conversation prior to the current suggestion. Q1: "Would you send it as the next message of
+   * agent?" Evaluated based on whether the suggest is appropriate to be sent by agent in current
+   * context. Q2: "Does the suggestion move the conversation closer to resolution?" Evaluated based
+   * on whether the suggestion provide solutions, or answers customer's question or collect
+   * information from customer to resolve the customer's issue. Actual reply column contains the
+   * actual agent reply sent in the context.
+   * @param rawHumanEvalTemplateCsv rawHumanEvalTemplateCsv or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationModelEvaluation setRawHumanEvalTemplateCsv(java.lang.String rawHumanEvalTemplateCsv) {
+    this.rawHumanEvalTemplateCsv = rawHumanEvalTemplateCsv;
     return this;
   }
 

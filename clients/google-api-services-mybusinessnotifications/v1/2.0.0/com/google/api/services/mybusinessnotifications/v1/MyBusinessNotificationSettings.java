@@ -20,7 +20,7 @@ package com.google.api.services.mybusinessnotifications.v1;
  * Service definition for MyBusinessNotificationSettings (v1).
  *
  * <p>
- * The My Business Notification Settings API enables managing notification settings for business accounts.
+ * The My Business Notification Settings API enables managing notification settings for business accounts. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
  * </p>
  *
  * <p>

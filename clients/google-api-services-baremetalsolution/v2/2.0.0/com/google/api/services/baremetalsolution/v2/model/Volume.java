@@ -187,6 +187,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String storageType;
 
   /**
+   * The workload profile for the volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workloadProfile;
+
+  /**
    * The size, in GiB, that this storage volume has expanded as a result of an auto grow policy. In
    * the absence of auto-grow, the value is 0.
    * @return value or {@code null} for none
@@ -558,6 +565,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setStorageType(java.lang.String storageType) {
     this.storageType = storageType;
+    return this;
+  }
+
+  /**
+   * The workload profile for the volume.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkloadProfile() {
+    return workloadProfile;
+  }
+
+  /**
+   * The workload profile for the volume.
+   * @param workloadProfile workloadProfile or {@code null} for none
+   */
+  public Volume setWorkloadProfile(java.lang.String workloadProfile) {
+    this.workloadProfile = workloadProfile;
     return this;
   }
 

@@ -44,7 +44,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   private GoogleCloudDiscoveryengineV1betaImportErrorConfig errorConfig;
 
   /**
-   * Google Cloud Storage location for the input content.
+   * Cloud Storage location for the input content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   }
 
   /**
-   * Google Cloud Storage location for the input content.
+   * Cloud Storage location for the input content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaGcsSource getGcsSource() {
@@ -108,7 +108,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   }
 
   /**
-   * Google Cloud Storage location for the input content.
+   * Cloud Storage location for the input content.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setGcsSource(GoogleCloudDiscoveryengineV1betaGcsSource gcsSource) {

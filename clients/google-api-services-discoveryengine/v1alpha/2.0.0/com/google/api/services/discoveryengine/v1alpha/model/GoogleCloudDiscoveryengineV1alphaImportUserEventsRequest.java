@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   private GoogleCloudDiscoveryengineV1alphaImportErrorConfig errorConfig;
 
   /**
-   * Required. Google Cloud Storage location for the input content.
+   * Required. Cloud Storage location for the input content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. Google Cloud Storage location for the input content.
+   * Required. Cloud Storage location for the input content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaGcsSource getGcsSource() {
@@ -103,7 +103,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. Google Cloud Storage location for the input content.
+   * Required. Cloud Storage location for the input content.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest setGcsSource(GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource) {

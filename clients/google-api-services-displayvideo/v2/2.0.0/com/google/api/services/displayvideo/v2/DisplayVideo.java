@@ -9104,19 +9104,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link BulkUpdate#execute()} method to invoke the remote operation.
        *
-       * @param advertisersId
+       * @param advertiserId Required. The ID of the advertiser this line item belongs to.
        * @param content the {@link com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsRequest}
        * @return the request
        */
-      public BulkUpdate bulkUpdate(java.lang.String advertisersId, com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsRequest content) throws java.io.IOException {
-        BulkUpdate result = new BulkUpdate(advertisersId, content);
+      public BulkUpdate bulkUpdate(java.lang.Long advertiserId, com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsRequest content) throws java.io.IOException {
+        BulkUpdate result = new BulkUpdate(advertiserId, content);
         initialize(result);
         return result;
       }
 
       public class BulkUpdate extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsResponse> {
 
-        private static final String REST_PATH = "v2/advertisers/{advertisersId}/lineItems:bulkUpdate";
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/lineItems:bulkUpdate";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
          * Updates multiple line items. Requests to this endpoint cannot be made concurrently with the
@@ -9131,13 +9134,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * BulkUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param advertisersId
+         * @param advertiserId Required. The ID of the advertiser this line item belongs to.
          * @param content the {@link com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsRequest}
          * @since 1.13
          */
-        protected BulkUpdate(java.lang.String advertisersId, com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsRequest content) {
+        protected BulkUpdate(java.lang.Long advertiserId, com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsRequest content) {
           super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v2.model.BulkUpdateLineItemsResponse.class);
-          this.advertisersId = com.google.api.client.util.Preconditions.checkNotNull(advertisersId, "Required parameter advertisersId must be specified.");
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
         }
 
         @Override
@@ -9195,18 +9198,19 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (BulkUpdate) super.setUploadProtocol(uploadProtocol);
         }
 
+        /** Required. The ID of the advertiser this line item belongs to. */
         @com.google.api.client.util.Key
-        private java.lang.String advertisersId;
+        private java.lang.Long advertiserId;
 
-        /**
-
+        /** Required. The ID of the advertiser this line item belongs to.
          */
-        public java.lang.String getAdvertisersId() {
-          return advertisersId;
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
         }
 
-        public BulkUpdate setAdvertisersId(java.lang.String advertisersId) {
-          this.advertisersId = advertisersId;
+        /** Required. The ID of the advertiser this line item belongs to. */
+        public BulkUpdate setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
           return this;
         }
 

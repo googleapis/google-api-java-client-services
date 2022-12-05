@@ -104,8 +104,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation tableConditionExpectation;
 
   /**
-   * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule. Default =
-   * 1.0
+   * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
+   * range of 0.0, 1.00 indicates default value (i.e. 1.0)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,8 +297,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule. Default =
-   * 1.0
+   * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
+   * range of 0.0, 1.00 indicates default value (i.e. 1.0)
    * @return value or {@code null} for none
    */
   public java.lang.Double getThreshold() {
@@ -306,8 +306,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule. Default =
-   * 1.0
+   * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
+   * range of 0.0, 1.00 indicates default value (i.e. 1.0)
    * @param threshold threshold or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setThreshold(java.lang.Double threshold) {

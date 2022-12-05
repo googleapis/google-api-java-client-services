@@ -31,11 +31,28 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * An [App Engine](https://cloud.google.com/appengine) [service
+   * version](https://cloud.google.com/appengine/docs/admin-
+   * api/reference/rest/v1/apps.services.versions).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppEngineVersionEndpoint appEngineVersion;
+
+  /**
    * A [Cloud Function](https://cloud.google.com/functions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudFunctionEndpoint cloudFunction;
+
+  /**
+   * A [Cloud Run](https://cloud.google.com/run)
+   * [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunRevisionEndpoint cloudRunRevision;
 
   /**
    * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
@@ -102,6 +119,27 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * An [App Engine](https://cloud.google.com/appengine) [service
+   * version](https://cloud.google.com/appengine/docs/admin-
+   * api/reference/rest/v1/apps.services.versions).
+   * @return value or {@code null} for none
+   */
+  public AppEngineVersionEndpoint getAppEngineVersion() {
+    return appEngineVersion;
+  }
+
+  /**
+   * An [App Engine](https://cloud.google.com/appengine) [service
+   * version](https://cloud.google.com/appengine/docs/admin-
+   * api/reference/rest/v1/apps.services.versions).
+   * @param appEngineVersion appEngineVersion or {@code null} for none
+   */
+  public Endpoint setAppEngineVersion(AppEngineVersionEndpoint appEngineVersion) {
+    this.appEngineVersion = appEngineVersion;
+    return this;
+  }
+
+  /**
    * A [Cloud Function](https://cloud.google.com/functions).
    * @return value or {@code null} for none
    */
@@ -115,6 +153,25 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setCloudFunction(CloudFunctionEndpoint cloudFunction) {
     this.cloudFunction = cloudFunction;
+    return this;
+  }
+
+  /**
+   * A [Cloud Run](https://cloud.google.com/run)
+   * [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get)
+   * @return value or {@code null} for none
+   */
+  public CloudRunRevisionEndpoint getCloudRunRevision() {
+    return cloudRunRevision;
+  }
+
+  /**
+   * A [Cloud Run](https://cloud.google.com/run)
+   * [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get)
+   * @param cloudRunRevision cloudRunRevision or {@code null} for none
+   */
+  public Endpoint setCloudRunRevision(CloudRunRevisionEndpoint cloudRunRevision) {
+    this.cloudRunRevision = cloudRunRevision;
     return this;
   }
 

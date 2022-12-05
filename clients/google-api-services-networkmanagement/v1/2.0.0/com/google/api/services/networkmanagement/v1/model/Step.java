@@ -39,6 +39,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private AbortInfo abort;
 
   /**
+   * Display information of an App Engine service version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppEngineVersionInfo appEngineVersion;
+
+  /**
    * This is a step that leads to the final state Drop.
    * The value may be {@code null}.
    */
@@ -51,6 +58,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private CloudFunctionInfo cloudFunction;
+
+  /**
+   * Display information of a Cloud Run revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunRevisionInfo cloudRunRevision;
 
   /**
    * Display information of a Cloud SQL instance.
@@ -198,6 +212,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Display information of an App Engine service version.
+   * @return value or {@code null} for none
+   */
+  public AppEngineVersionInfo getAppEngineVersion() {
+    return appEngineVersion;
+  }
+
+  /**
+   * Display information of an App Engine service version.
+   * @param appEngineVersion appEngineVersion or {@code null} for none
+   */
+  public Step setAppEngineVersion(AppEngineVersionInfo appEngineVersion) {
+    this.appEngineVersion = appEngineVersion;
+    return this;
+  }
+
+  /**
    * This is a step that leads to the final state Drop.
    * @return value or {@code null} for none
    */
@@ -228,6 +259,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setCloudFunction(CloudFunctionInfo cloudFunction) {
     this.cloudFunction = cloudFunction;
+    return this;
+  }
+
+  /**
+   * Display information of a Cloud Run revision.
+   * @return value or {@code null} for none
+   */
+  public CloudRunRevisionInfo getCloudRunRevision() {
+    return cloudRunRevision;
+  }
+
+  /**
+   * Display information of a Cloud Run revision.
+   * @param cloudRunRevision cloudRunRevision or {@code null} for none
+   */
+  public Step setCloudRunRevision(CloudRunRevisionInfo cloudRunRevision) {
+    this.cloudRunRevision = cloudRunRevision;
     return this;
   }
 

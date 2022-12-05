@@ -63,6 +63,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private java.lang.String assignedTargetingOptionId;
 
   /**
+   * Output only. An alias for the assigned targeting option id field. This field is only supported
+   * for targeting types with enum targeting enabled. This value can be used in place of the
+   * assignedTargetingOptionId required for GET and DELETE targeting methods. An alias for the
+   * assignedTargetingOptionId. This value can be used in place of `assignedTargetingOptionId` when
+   * retrieving or deleting existing targeting. This field will only be supported for assigned
+   * targeting options of the following targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+   * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+   * `TARGETING_TYPE_DEVICE_TYPE` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+   * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` *
+   * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_NATIVE_CONTENT_POSITION` *
+   * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_PARENTAL_STATUS` *
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
+   * `TARGETING_TYPE_VIEWABILITY`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assignedTargetingOptionIdAlias;
+
+  /**
    * Audience targeting details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per resource.
    * The value may be {@code null}.
@@ -501,6 +520,47 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
     this.assignedTargetingOptionId = assignedTargetingOptionId;
+    return this;
+  }
+
+  /**
+   * Output only. An alias for the assigned targeting option id field. This field is only supported
+   * for targeting types with enum targeting enabled. This value can be used in place of the
+   * assignedTargetingOptionId required for GET and DELETE targeting methods. An alias for the
+   * assignedTargetingOptionId. This value can be used in place of `assignedTargetingOptionId` when
+   * retrieving or deleting existing targeting. This field will only be supported for assigned
+   * targeting options of the following targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+   * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+   * `TARGETING_TYPE_DEVICE_TYPE` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+   * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` *
+   * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_NATIVE_CONTENT_POSITION` *
+   * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_PARENTAL_STATUS` *
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
+   * `TARGETING_TYPE_VIEWABILITY`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssignedTargetingOptionIdAlias() {
+    return assignedTargetingOptionIdAlias;
+  }
+
+  /**
+   * Output only. An alias for the assigned targeting option id field. This field is only supported
+   * for targeting types with enum targeting enabled. This value can be used in place of the
+   * assignedTargetingOptionId required for GET and DELETE targeting methods. An alias for the
+   * assignedTargetingOptionId. This value can be used in place of `assignedTargetingOptionId` when
+   * retrieving or deleting existing targeting. This field will only be supported for assigned
+   * targeting options of the following targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+   * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+   * `TARGETING_TYPE_DEVICE_TYPE` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+   * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` *
+   * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_NATIVE_CONTENT_POSITION` *
+   * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_PARENTAL_STATUS` *
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
+   * `TARGETING_TYPE_VIEWABILITY`
+   * @param assignedTargetingOptionIdAlias assignedTargetingOptionIdAlias or {@code null} for none
+   */
+  public AssignedTargetingOption setAssignedTargetingOptionIdAlias(java.lang.String assignedTargetingOptionIdAlias) {
+    this.assignedTargetingOptionIdAlias = assignedTargetingOptionIdAlias;
     return this;
   }
 

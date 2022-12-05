@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Individual line item definition of a subscription. Next id: 9
+ * Individual line item definition of a subscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -69,6 +69,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   @com.google.api.client.util.Key
   private java.lang.String product;
+
+  /**
+   * Optional. Product specific payload for this line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1ProductPayload productPayload;
 
   /**
    * Output only. The recurrence type of the line item.
@@ -176,6 +183,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setProduct(java.lang.String product) {
     this.product = product;
+    return this;
+  }
+
+  /**
+   * Optional. Product specific payload for this line item.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload getProductPayload() {
+    return productPayload;
+  }
+
+  /**
+   * Optional. Product specific payload for this line item.
+   * @param productPayload productPayload or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setProductPayload(GoogleCloudPaymentsResellerSubscriptionV1ProductPayload productPayload) {
+    this.productPayload = productPayload;
     return this;
   }
 

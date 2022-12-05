@@ -1284,9 +1284,9 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
       }
       /**
-       * Used by partners to extend a subscription service for their customers on an ongoing basis for the
-       * subscription to remain active and renewable. It should be called directly by the partner using
-       * service accounts.
+       * [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a
+       * subscription service for their customers on an ongoing basis for the subscription to remain
+       * active and renewable. It should be called directly by the partner using service accounts.
        *
        * Create a request for the method "subscriptions.extend".
        *
@@ -1313,9 +1313,9 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
             java.util.regex.Pattern.compile("^partners/[^/]+/subscriptions/[^/]+$");
 
         /**
-         * Used by partners to extend a subscription service for their customers on an ongoing basis for
-         * the subscription to remain active and renewable. It should be called directly by the partner
-         * using service accounts.
+         * [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a
+         * subscription service for their customers on an ongoing basis for the subscription to remain
+         * active and renewable. It should be called directly by the partner using service accounts.
          *
          * Create a request for the method "subscriptions.extend".
          *

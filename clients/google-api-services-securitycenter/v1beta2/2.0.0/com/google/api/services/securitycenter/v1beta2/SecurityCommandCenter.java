@@ -154,7 +154,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Folders {
 
     /**
-     * Get the ContainerThreatDetectionSettings resource.
+     * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+     * field only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
+     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+     * use CalculateContainerThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "folders.getContainerThreatDetectionSettings".
      *
@@ -183,7 +187,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Get the ContainerThreatDetectionSettings resource.
+       * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
+       * effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "folders.getContainerThreatDetectionSettings".
        *
@@ -318,7 +326,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the EventThreatDetectionSettings resource.
+     * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing field
+     * only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetEventThreatDetectionSettings does not calculate the effective service
+     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+     * CalculateEventThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "folders.getEventThreatDetectionSettings".
      *
@@ -346,7 +358,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Get the EventThreatDetectionSettings resource.
+       * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetEventThreatDetectionSettings does not calculate the effective
+       * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+       * use CalculateEventThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "folders.getEventThreatDetectionSettings".
        *
@@ -630,7 +646,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the RapidVulnerabilityDetectionSettings resource.
+     * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
+     * missing field only indicates that it was not explicitly set, so no assumption should be made
+     * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate the
+     * effective service settings for the resource, which accounts for inherited settings and defaults.
+     * Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
      *
      * Create a request for the method "folders.getRapidVulnerabilityDetectionSettings".
      *
@@ -658,7 +678,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Get the RapidVulnerabilityDetectionSettings resource.
+       * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
+       * missing field only indicates that it was not explicitly set, so no assumption should be made
+       * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate
+       * the effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
        *
        * Create a request for the method "folders.getRapidVulnerabilityDetectionSettings".
        *
@@ -943,7 +967,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityHealthAnalyticsSettings resource.
+     * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
+     * field only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the effective
+     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+     * use CalculateSecurityHealthAnalyticsSettings for this purpose.
      *
      * Create a request for the method "folders.getSecurityHealthAnalyticsSettings".
      *
@@ -971,7 +999,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Get the SecurityHealthAnalyticsSettings resource.
+       * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the
+       * effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateSecurityHealthAnalyticsSettings for this purpose.
        *
        * Create a request for the method "folders.getSecurityHealthAnalyticsSettings".
        *
@@ -1102,7 +1134,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the VirtualMachineThreatDetectionSettings resource.
+     * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
+     * missing field only indicates that it was not explicitly set, so no assumption should be made
+     * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
+     * the effective service settings for the resource, which accounts for inherited settings and
+     * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "folders.getVirtualMachineThreatDetectionSettings".
      *
@@ -1130,7 +1166,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Get the VirtualMachineThreatDetectionSettings resource.
+       * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
+       * missing field only indicates that it was not explicitly set, so no assumption should be made
+       * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
+       * the effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "folders.getVirtualMachineThreatDetectionSettings".
        *
@@ -1261,7 +1301,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the WebSecurityScannerSettings resource.
+     * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
+     * only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
+     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+     * CalculateWebSecurityScannerSettings for this purpose.
      *
      * Create a request for the method "folders.getWebSecurityScannerSettings".
      *
@@ -1289,7 +1333,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Get the WebSecurityScannerSettings resource.
+       * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
+       * only indicates that it was not explicitly set, so no assumption should be made about these
+       * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
+       * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+       * CalculateWebSecurityScannerSettings for this purpose.
        *
        * Create a request for the method "folders.getWebSecurityScannerSettings".
        *
@@ -2442,7 +2490,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "containerThreatDetectionSettings.calculate".
        *
@@ -2471,7 +2523,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "containerThreatDetectionSettings.calculate".
          *
@@ -2629,7 +2685,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "eventThreatDetectionSettings.calculate".
        *
@@ -2657,7 +2717,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "eventThreatDetectionSettings.calculate".
          *
@@ -2810,7 +2874,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
        *
@@ -2838,7 +2906,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
          *
@@ -2992,7 +3064,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "securityHealthAnalyticsSettings.calculate".
        *
@@ -3020,7 +3096,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "securityHealthAnalyticsSettings.calculate".
          *
@@ -3174,7 +3254,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
        *
@@ -3202,7 +3286,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
-         * resource hierarchy and its settings.
+         * resource hierarchy and its settings. Settings provided closer to the target resource take
+         * precedence over those further away (e.g. folder will override organization level settings). The
+         * default SCC setting for the detector service defaults can be overridden at organization, folder
+         * and project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
          *
@@ -3356,7 +3444,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy
-       * and its settings.
+       * and its settings. Settings provided closer to the target resource take precedence over those
+       * further away (e.g. folder will override organization level settings). The default SCC setting for
+       * the detector service defaults can be overridden at organization, folder and project levels. No
+       * assumptions should be made about the SCC defaults as it is considered an internal implementation
+       * detail.
        *
        * Create a request for the method "webSecurityScannerSettings.calculate".
        *
@@ -3384,7 +3476,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective WebSecurityScannerSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "webSecurityScannerSettings.calculate".
          *
@@ -3538,7 +3634,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Organizations {
 
     /**
-     * Get the ContainerThreatDetectionSettings resource.
+     * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+     * field only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
+     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+     * use CalculateContainerThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "organizations.getContainerThreatDetectionSettings".
      *
@@ -3567,7 +3667,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Get the ContainerThreatDetectionSettings resource.
+       * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
+       * effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "organizations.getContainerThreatDetectionSettings".
        *
@@ -3702,7 +3806,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the EventThreatDetectionSettings resource.
+     * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing field
+     * only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetEventThreatDetectionSettings does not calculate the effective service
+     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+     * CalculateEventThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "organizations.getEventThreatDetectionSettings".
      *
@@ -3730,7 +3838,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Get the EventThreatDetectionSettings resource.
+       * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetEventThreatDetectionSettings does not calculate the effective
+       * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+       * use CalculateEventThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "organizations.getEventThreatDetectionSettings".
        *
@@ -4014,7 +4126,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the RapidVulnerabilityDetectionSettings resource.
+     * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
+     * missing field only indicates that it was not explicitly set, so no assumption should be made
+     * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate the
+     * effective service settings for the resource, which accounts for inherited settings and defaults.
+     * Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
      *
      * Create a request for the method "organizations.getRapidVulnerabilityDetectionSettings".
      *
@@ -4042,7 +4158,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Get the RapidVulnerabilityDetectionSettings resource.
+       * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
+       * missing field only indicates that it was not explicitly set, so no assumption should be made
+       * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate
+       * the effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
        *
        * Create a request for the method "organizations.getRapidVulnerabilityDetectionSettings".
        *
@@ -4327,7 +4447,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityHealthAnalyticsSettings resource.
+     * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
+     * field only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the effective
+     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+     * use CalculateSecurityHealthAnalyticsSettings for this purpose.
      *
      * Create a request for the method "organizations.getSecurityHealthAnalyticsSettings".
      *
@@ -4355,7 +4479,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Get the SecurityHealthAnalyticsSettings resource.
+       * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the
+       * effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateSecurityHealthAnalyticsSettings for this purpose.
        *
        * Create a request for the method "organizations.getSecurityHealthAnalyticsSettings".
        *
@@ -4635,7 +4763,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the VirtualMachineThreatDetectionSettings resource.
+     * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
+     * missing field only indicates that it was not explicitly set, so no assumption should be made
+     * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
+     * the effective service settings for the resource, which accounts for inherited settings and
+     * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "organizations.getVirtualMachineThreatDetectionSettings".
      *
@@ -4663,7 +4795,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Get the VirtualMachineThreatDetectionSettings resource.
+       * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
+       * missing field only indicates that it was not explicitly set, so no assumption should be made
+       * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
+       * the effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "organizations.getVirtualMachineThreatDetectionSettings".
        *
@@ -4794,7 +4930,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the WebSecurityScannerSettings resource.
+     * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
+     * only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
+     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+     * CalculateWebSecurityScannerSettings for this purpose.
      *
      * Create a request for the method "organizations.getWebSecurityScannerSettings".
      *
@@ -4822,7 +4962,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Get the WebSecurityScannerSettings resource.
+       * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
+       * only indicates that it was not explicitly set, so no assumption should be made about these
+       * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
+       * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+       * CalculateWebSecurityScannerSettings for this purpose.
        *
        * Create a request for the method "organizations.getWebSecurityScannerSettings".
        *
@@ -5975,7 +6119,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "containerThreatDetectionSettings.calculate".
        *
@@ -6004,7 +6152,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "containerThreatDetectionSettings.calculate".
          *
@@ -6162,7 +6314,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "eventThreatDetectionSettings.calculate".
        *
@@ -6190,7 +6346,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "eventThreatDetectionSettings.calculate".
          *
@@ -6343,7 +6503,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
        *
@@ -6371,7 +6535,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
          *
@@ -6525,7 +6693,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "securityHealthAnalyticsSettings.calculate".
        *
@@ -6553,7 +6725,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "securityHealthAnalyticsSettings.calculate".
          *
@@ -6707,7 +6883,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
        *
@@ -6735,7 +6915,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
-         * resource hierarchy and its settings.
+         * resource hierarchy and its settings. Settings provided closer to the target resource take
+         * precedence over those further away (e.g. folder will override organization level settings). The
+         * default SCC setting for the detector service defaults can be overridden at organization, folder
+         * and project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
          *
@@ -6889,7 +7073,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy
-       * and its settings.
+       * and its settings. Settings provided closer to the target resource take precedence over those
+       * further away (e.g. folder will override organization level settings). The default SCC setting for
+       * the detector service defaults can be overridden at organization, folder and project levels. No
+       * assumptions should be made about the SCC defaults as it is considered an internal implementation
+       * detail.
        *
        * Create a request for the method "webSecurityScannerSettings.calculate".
        *
@@ -6917,7 +7105,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective WebSecurityScannerSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "webSecurityScannerSettings.calculate".
          *
@@ -7071,7 +7263,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Projects {
 
     /**
-     * Get the ContainerThreatDetectionSettings resource.
+     * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+     * field only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
+     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+     * use CalculateContainerThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "projects.getContainerThreatDetectionSettings".
      *
@@ -7100,7 +7296,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Get the ContainerThreatDetectionSettings resource.
+       * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
+       * effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "projects.getContainerThreatDetectionSettings".
        *
@@ -7235,7 +7435,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the EventThreatDetectionSettings resource.
+     * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing field
+     * only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetEventThreatDetectionSettings does not calculate the effective service
+     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+     * CalculateEventThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "projects.getEventThreatDetectionSettings".
      *
@@ -7263,7 +7467,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Get the EventThreatDetectionSettings resource.
+       * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetEventThreatDetectionSettings does not calculate the effective
+       * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+       * use CalculateEventThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "projects.getEventThreatDetectionSettings".
        *
@@ -7547,7 +7755,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the RapidVulnerabilityDetectionSettings resource.
+     * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
+     * missing field only indicates that it was not explicitly set, so no assumption should be made
+     * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate the
+     * effective service settings for the resource, which accounts for inherited settings and defaults.
+     * Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
      *
      * Create a request for the method "projects.getRapidVulnerabilityDetectionSettings".
      *
@@ -7575,7 +7787,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Get the RapidVulnerabilityDetectionSettings resource.
+       * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
+       * missing field only indicates that it was not explicitly set, so no assumption should be made
+       * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate
+       * the effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
        *
        * Create a request for the method "projects.getRapidVulnerabilityDetectionSettings".
        *
@@ -7860,7 +8076,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityHealthAnalyticsSettings resource.
+     * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
+     * field only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the effective
+     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+     * use CalculateSecurityHealthAnalyticsSettings for this purpose.
      *
      * Create a request for the method "projects.getSecurityHealthAnalyticsSettings".
      *
@@ -7888,7 +8108,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Get the SecurityHealthAnalyticsSettings resource.
+       * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
+       * field only indicates that it was not explicitly set, so no assumption should be made about
+       * these fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the
+       * effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateSecurityHealthAnalyticsSettings for this purpose.
        *
        * Create a request for the method "projects.getSecurityHealthAnalyticsSettings".
        *
@@ -8019,7 +8243,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the VirtualMachineThreatDetectionSettings resource.
+     * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
+     * missing field only indicates that it was not explicitly set, so no assumption should be made
+     * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
+     * the effective service settings for the resource, which accounts for inherited settings and
+     * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
      *
      * Create a request for the method "projects.getVirtualMachineThreatDetectionSettings".
      *
@@ -8047,7 +8275,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Get the VirtualMachineThreatDetectionSettings resource.
+       * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
+       * missing field only indicates that it was not explicitly set, so no assumption should be made
+       * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
+       * the effective service settings for the resource, which accounts for inherited settings and
+       * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
        *
        * Create a request for the method "projects.getVirtualMachineThreatDetectionSettings".
        *
@@ -8178,7 +8410,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the WebSecurityScannerSettings resource.
+     * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
+     * only indicates that it was not explicitly set, so no assumption should be made about these
+     * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
+     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+     * CalculateWebSecurityScannerSettings for this purpose.
      *
      * Create a request for the method "projects.getWebSecurityScannerSettings".
      *
@@ -8206,7 +8442,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Get the WebSecurityScannerSettings resource.
+       * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
+       * only indicates that it was not explicitly set, so no assumption should be made about these
+       * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
+       * settings for the resource, which accounts for inherited settings and defaults. Instead, use
+       * CalculateWebSecurityScannerSettings for this purpose.
        *
        * Create a request for the method "projects.getWebSecurityScannerSettings".
        *
@@ -9359,7 +9599,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "containerThreatDetectionSettings.calculate".
        *
@@ -9388,7 +9632,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "containerThreatDetectionSettings.calculate".
          *
@@ -9546,7 +9794,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "eventThreatDetectionSettings.calculate".
        *
@@ -9574,7 +9826,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "eventThreatDetectionSettings.calculate".
          *
@@ -9746,7 +10002,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class Clusters {
 
         /**
-         * Get the ContainerThreatDetectionSettings resource.
+         * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+         * field only indicates that it was not explicitly set, so no assumption should be made about these
+         * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
+         * service settings for the resource, which accounts for inherited settings and defaults. Instead,
+         * use CalculateContainerThreatDetectionSettings for this purpose.
          *
          * Create a request for the method "clusters.getContainerThreatDetectionSettings".
          *
@@ -9775,7 +10035,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/containerThreatDetectionSettings$");
 
           /**
-           * Get the ContainerThreatDetectionSettings resource.
+           * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
+           * field only indicates that it was not explicitly set, so no assumption should be made about
+           * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
+           * effective service settings for the resource, which accounts for inherited settings and
+           * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
            *
            * Create a request for the method "clusters.getContainerThreatDetectionSettings".
            *
@@ -10104,7 +10368,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-           * hierarchy and its settings.
+           * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+           * those further away (e.g. folder will override organization level settings). The default SCC
+           * setting for the detector service defaults can be overridden at organization, folder and project
+           * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+           * implementation detail.
            *
            * Create a request for the method "containerThreatDetectionSettings.calculate".
            *
@@ -10133,7 +10401,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-             * hierarchy and its settings.
+             * hierarchy and its settings. Settings provided closer to the target resource take precedence
+             * over those further away (e.g. folder will override organization level settings). The default
+             * SCC setting for the detector service defaults can be overridden at organization, folder and
+             * project levels. No assumptions should be made about the SCC defaults as it is considered an
+             * internal implementation detail.
              *
              * Create a request for the method "containerThreatDetectionSettings.calculate".
              *
@@ -10293,7 +10565,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
        *
@@ -10321,7 +10597,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
          *
@@ -10475,7 +10755,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "securityHealthAnalyticsSettings.calculate".
        *
@@ -10503,7 +10787,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "securityHealthAnalyticsSettings.calculate".
          *
@@ -10657,7 +10945,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings.
+       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
+       * those further away (e.g. folder will override organization level settings). The default SCC
+       * setting for the detector service defaults can be overridden at organization, folder and project
+       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
+       * implementation detail.
        *
        * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
        *
@@ -10685,7 +10977,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
-         * resource hierarchy and its settings.
+         * resource hierarchy and its settings. Settings provided closer to the target resource take
+         * precedence over those further away (e.g. folder will override organization level settings). The
+         * default SCC setting for the detector service defaults can be overridden at organization, folder
+         * and project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
          *
@@ -10839,7 +11135,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy
-       * and its settings.
+       * and its settings. Settings provided closer to the target resource take precedence over those
+       * further away (e.g. folder will override organization level settings). The default SCC setting for
+       * the detector service defaults can be overridden at organization, folder and project levels. No
+       * assumptions should be made about the SCC defaults as it is considered an internal implementation
+       * detail.
        *
        * Create a request for the method "webSecurityScannerSettings.calculate".
        *
@@ -10867,7 +11167,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Calculates the effective WebSecurityScannerSettings based on its level in the resource
-         * hierarchy and its settings.
+         * hierarchy and its settings. Settings provided closer to the target resource take precedence
+         * over those further away (e.g. folder will override organization level settings). The default
+         * SCC setting for the detector service defaults can be overridden at organization, folder and
+         * project levels. No assumptions should be made about the SCC defaults as it is considered an
+         * internal implementation detail.
          *
          * Create a request for the method "webSecurityScannerSettings.calculate".
          *

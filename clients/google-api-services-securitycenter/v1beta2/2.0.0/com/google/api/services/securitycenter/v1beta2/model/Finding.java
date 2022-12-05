@@ -211,6 +211,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Indicator indicator;
 
   /**
+   * Kernel Rootkit signature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KernelRootkit kernelRootkit;
+
+  /**
    * Kubernetes resources associated with the finding.
    * The value may be {@code null}.
    */
@@ -684,6 +691,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setIndicator(Indicator indicator) {
     this.indicator = indicator;
+    return this;
+  }
+
+  /**
+   * Kernel Rootkit signature.
+   * @return value or {@code null} for none
+   */
+  public KernelRootkit getKernelRootkit() {
+    return kernelRootkit;
+  }
+
+  /**
+   * Kernel Rootkit signature.
+   * @param kernelRootkit kernelRootkit or {@code null} for none
+   */
+  public Finding setKernelRootkit(KernelRootkit kernelRootkit) {
+    this.kernelRootkit = kernelRootkit;
     return this;
   }
 

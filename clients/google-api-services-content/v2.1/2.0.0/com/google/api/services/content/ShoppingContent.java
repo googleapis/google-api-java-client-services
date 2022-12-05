@@ -19627,7 +19627,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Quotas {
 
     /**
-     * Lists the quota limit and quota usage per method for your Merchant Center account.
+     * Lists the daily call quota and usage per method for your Merchant Center account.
      *
      * Create a request for the method "quotas.list".
      *
@@ -19648,7 +19648,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/quotas";
 
       /**
-       * Lists the quota limit and quota usage per method for your Merchant Center account.
+       * Lists the daily call quota and usage per method for your Merchant Center account.
        *
        * Create a request for the method "quotas.list".
        *

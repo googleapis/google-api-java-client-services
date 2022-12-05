@@ -40,8 +40,8 @@ public final class PriceCompetitiveness extends com.google.api.client.json.Gener
   private java.lang.String benchmarkPriceCurrencyCode;
 
   /**
-   * The latest available price benchmark in micros for the product's catalog in the benchmark
-   * country.
+   * The latest available price benchmark in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros) for the product's catalog in the benchmark country.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -72,8 +72,8 @@ public final class PriceCompetitiveness extends com.google.api.client.json.Gener
   }
 
   /**
-   * The latest available price benchmark in micros for the product's catalog in the benchmark
-   * country.
+   * The latest available price benchmark in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros) for the product's catalog in the benchmark country.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBenchmarkPriceMicros() {
@@ -81,8 +81,8 @@ public final class PriceCompetitiveness extends com.google.api.client.json.Gener
   }
 
   /**
-   * The latest available price benchmark in micros for the product's catalog in the benchmark
-   * country.
+   * The latest available price benchmark in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros) for the product's catalog in the benchmark country.
    * @param benchmarkPriceMicros benchmarkPriceMicros or {@code null} for none
    */
   public PriceCompetitiveness setBenchmarkPriceMicros(java.lang.Long benchmarkPriceMicros) {

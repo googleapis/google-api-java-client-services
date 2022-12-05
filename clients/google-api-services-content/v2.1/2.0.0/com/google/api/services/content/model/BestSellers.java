@@ -33,14 +33,17 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
 
   /**
    * Google product category ID to calculate the ranking for, represented in [Google's product
-   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * taxonomy](https://support.google.com/merchants/answer/6324436). If a `WHERE` condition on
+   * `best_sellers.category_id` is not specified in the query, rankings for all top-level categories
+   * are returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long categoryId;
 
   /**
-   * Country where the ranking is calculated.
+   * Country where the ranking is calculated. A `WHERE` condition on `best_sellers.country_code` is
+   * required in the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,14 +89,17 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
 
   /**
    * Report date. The value of this field can only be one of the following: * The first day of the
-   * week (Monday) for weekly reports. * The first day of the month for monthly reports.
+   * week (Monday) for weekly reports. * The first day of the month for monthly reports. If a
+   * `WHERE` condition on `best_sellers.report_date` is not specified in the query, the latest
+   * available weekly or monthly report is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date reportDate;
 
   /**
-   * Granularity of the report. The ranking can be done over a week or a month timeframe.
+   * Granularity of the report. The ranking can be done over a week or a month timeframe. A `WHERE`
+   * condition on `best_sellers.report_granularity` is required in the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +107,9 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
 
   /**
    * Google product category ID to calculate the ranking for, represented in [Google's product
-   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * taxonomy](https://support.google.com/merchants/answer/6324436). If a `WHERE` condition on
+   * `best_sellers.category_id` is not specified in the query, rankings for all top-level categories
+   * are returned.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCategoryId() {
@@ -110,7 +118,9 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
 
   /**
    * Google product category ID to calculate the ranking for, represented in [Google's product
-   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * taxonomy](https://support.google.com/merchants/answer/6324436). If a `WHERE` condition on
+   * `best_sellers.category_id` is not specified in the query, rankings for all top-level categories
+   * are returned.
    * @param categoryId categoryId or {@code null} for none
    */
   public BestSellers setCategoryId(java.lang.Long categoryId) {
@@ -119,7 +129,8 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Country where the ranking is calculated.
+   * Country where the ranking is calculated. A `WHERE` condition on `best_sellers.country_code` is
+   * required in the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -127,7 +138,8 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Country where the ranking is calculated.
+   * Country where the ranking is calculated. A `WHERE` condition on `best_sellers.country_code` is
+   * required in the query.
    * @param countryCode countryCode or {@code null} for none
    */
   public BestSellers setCountryCode(java.lang.String countryCode) {
@@ -228,7 +240,9 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
 
   /**
    * Report date. The value of this field can only be one of the following: * The first day of the
-   * week (Monday) for weekly reports. * The first day of the month for monthly reports.
+   * week (Monday) for weekly reports. * The first day of the month for monthly reports. If a
+   * `WHERE` condition on `best_sellers.report_date` is not specified in the query, the latest
+   * available weekly or monthly report is returned.
    * @return value or {@code null} for none
    */
   public Date getReportDate() {
@@ -237,7 +251,9 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
 
   /**
    * Report date. The value of this field can only be one of the following: * The first day of the
-   * week (Monday) for weekly reports. * The first day of the month for monthly reports.
+   * week (Monday) for weekly reports. * The first day of the month for monthly reports. If a
+   * `WHERE` condition on `best_sellers.report_date` is not specified in the query, the latest
+   * available weekly or monthly report is returned.
    * @param reportDate reportDate or {@code null} for none
    */
   public BestSellers setReportDate(Date reportDate) {
@@ -246,7 +262,8 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Granularity of the report. The ranking can be done over a week or a month timeframe.
+   * Granularity of the report. The ranking can be done over a week or a month timeframe. A `WHERE`
+   * condition on `best_sellers.report_granularity` is required in the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportGranularity() {
@@ -254,7 +271,8 @@ public final class BestSellers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Granularity of the report. The ranking can be done over a week or a month timeframe.
+   * Granularity of the report. The ranking can be done over a week or a month timeframe. A `WHERE`
+   * condition on `best_sellers.report_granularity` is required in the query.
    * @param reportGranularity reportGranularity or {@code null} for none
    */
   public BestSellers setReportGranularity(java.lang.String reportGranularity) {

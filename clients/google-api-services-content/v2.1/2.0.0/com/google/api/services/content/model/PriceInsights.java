@@ -71,8 +71,8 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   private java.lang.String predictedMonthlyGrossProfitChangeCurrencyCode;
 
   /**
-   * The predicted change in gross profit in micros after introducing the suggested price for a
-   * month compared to current active price.
+   * The predicted change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros) after introducing the suggested price for a month compared to current active price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -86,7 +86,8 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   private java.lang.String suggestedPriceCurrencyCode;
 
   /**
-   * The latest suggested price in micros for the product.
+   * The latest suggested price in micros (1 millionth of a standard unit, 1 USD = 1000000 micros)
+   * for the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -186,8 +187,8 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The predicted change in gross profit in micros after introducing the suggested price for a
-   * month compared to current active price.
+   * The predicted change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros) after introducing the suggested price for a month compared to current active price.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPredictedMonthlyGrossProfitChangeMicros() {
@@ -195,8 +196,8 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The predicted change in gross profit in micros after introducing the suggested price for a
-   * month compared to current active price.
+   * The predicted change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000
+   * micros) after introducing the suggested price for a month compared to current active price.
    * @param predictedMonthlyGrossProfitChangeMicros predictedMonthlyGrossProfitChangeMicros or {@code null} for none
    */
   public PriceInsights setPredictedMonthlyGrossProfitChangeMicros(java.lang.Long predictedMonthlyGrossProfitChangeMicros) {
@@ -222,7 +223,8 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The latest suggested price in micros for the product.
+   * The latest suggested price in micros (1 millionth of a standard unit, 1 USD = 1000000 micros)
+   * for the product.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSuggestedPriceMicros() {
@@ -230,7 +232,8 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The latest suggested price in micros for the product.
+   * The latest suggested price in micros (1 millionth of a standard unit, 1 USD = 1000000 micros)
+   * for the product.
    * @param suggestedPriceMicros suggestedPriceMicros or {@code null} for none
    */
   public PriceInsights setSuggestedPriceMicros(java.lang.Long suggestedPriceMicros) {

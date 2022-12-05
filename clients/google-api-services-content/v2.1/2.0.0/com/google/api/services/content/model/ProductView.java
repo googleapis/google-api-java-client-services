@@ -54,6 +54,46 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
+   * First level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryL1;
+
+  /**
+   * Second level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryL2;
+
+  /**
+   * Third level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryL3;
+
+  /**
+   * Fourth level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryL4;
+
+  /**
+   * Fifth level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryL5;
+
+  /**
    * Channel of the product (online versus local).
    * The value may be {@code null}.
    */
@@ -133,12 +173,53 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   private java.lang.String offerId;
 
   /**
-   * Product price specified as micros in the product currency. Absent in case the information about
-   * the price of the product is not available.
+   * Product price specified as micros (1 millionth of a standard unit, 1 USD = 1000000 micros) in
+   * the product currency. Absent in case the information about the price of the product is not
+   * available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long priceMicros;
+
+  /**
+   * First level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL1;
+
+  /**
+   * Second level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL2;
+
+  /**
+   * Third level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL3;
+
+  /**
+   * Fourth level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL4;
+
+  /**
+   * Fifth level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL5;
 
   /**
    * The normalized shipping label specified in the feed
@@ -202,6 +283,101 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
    */
   public ProductView setBrand(java.lang.String brand) {
     this.brand = brand;
+    return this;
+  }
+
+  /**
+   * First level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryL1() {
+    return categoryL1;
+  }
+
+  /**
+   * First level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param categoryL1 categoryL1 or {@code null} for none
+   */
+  public ProductView setCategoryL1(java.lang.String categoryL1) {
+    this.categoryL1 = categoryL1;
+    return this;
+  }
+
+  /**
+   * Second level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryL2() {
+    return categoryL2;
+  }
+
+  /**
+   * Second level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param categoryL2 categoryL2 or {@code null} for none
+   */
+  public ProductView setCategoryL2(java.lang.String categoryL2) {
+    this.categoryL2 = categoryL2;
+    return this;
+  }
+
+  /**
+   * Third level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryL3() {
+    return categoryL3;
+  }
+
+  /**
+   * Third level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param categoryL3 categoryL3 or {@code null} for none
+   */
+  public ProductView setCategoryL3(java.lang.String categoryL3) {
+    this.categoryL3 = categoryL3;
+    return this;
+  }
+
+  /**
+   * Fourth level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryL4() {
+    return categoryL4;
+  }
+
+  /**
+   * Fourth level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param categoryL4 categoryL4 or {@code null} for none
+   */
+  public ProductView setCategoryL4(java.lang.String categoryL4) {
+    this.categoryL4 = categoryL4;
+    return this;
+  }
+
+  /**
+   * Fifth level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryL5() {
+    return categoryL5;
+  }
+
+  /**
+   * Fifth level of the product category in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param categoryL5 categoryL5 or {@code null} for none
+   */
+  public ProductView setCategoryL5(java.lang.String categoryL5) {
+    this.categoryL5 = categoryL5;
     return this;
   }
 
@@ -397,8 +573,9 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product price specified as micros in the product currency. Absent in case the information about
-   * the price of the product is not available.
+   * Product price specified as micros (1 millionth of a standard unit, 1 USD = 1000000 micros) in
+   * the product currency. Absent in case the information about the price of the product is not
+   * available.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriceMicros() {
@@ -406,12 +583,108 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product price specified as micros in the product currency. Absent in case the information about
-   * the price of the product is not available.
+   * Product price specified as micros (1 millionth of a standard unit, 1 USD = 1000000 micros) in
+   * the product currency. Absent in case the information about the price of the product is not
+   * available.
    * @param priceMicros priceMicros or {@code null} for none
    */
   public ProductView setPriceMicros(java.lang.Long priceMicros) {
     this.priceMicros = priceMicros;
+    return this;
+  }
+
+  /**
+   * First level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL1() {
+    return productTypeL1;
+  }
+
+  /**
+   * First level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param productTypeL1 productTypeL1 or {@code null} for none
+   */
+  public ProductView setProductTypeL1(java.lang.String productTypeL1) {
+    this.productTypeL1 = productTypeL1;
+    return this;
+  }
+
+  /**
+   * Second level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL2() {
+    return productTypeL2;
+  }
+
+  /**
+   * Second level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param productTypeL2 productTypeL2 or {@code null} for none
+   */
+  public ProductView setProductTypeL2(java.lang.String productTypeL2) {
+    this.productTypeL2 = productTypeL2;
+    return this;
+  }
+
+  /**
+   * Third level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL3() {
+    return productTypeL3;
+  }
+
+  /**
+   * Third level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param productTypeL3 productTypeL3 or {@code null} for none
+   */
+  public ProductView setProductTypeL3(java.lang.String productTypeL3) {
+    this.productTypeL3 = productTypeL3;
+    return this;
+  }
+
+  /**
+   * Fourth level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL4() {
+    return productTypeL4;
+  }
+
+  /**
+   * Fourth level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param productTypeL4 productTypeL4 or {@code null} for none
+   */
+  public ProductView setProductTypeL4(java.lang.String productTypeL4) {
+    this.productTypeL4 = productTypeL4;
+    return this;
+  }
+
+  /**
+   * Fifth level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL5() {
+    return productTypeL5;
+  }
+
+  /**
+   * Fifth level of the product type in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   * @param productTypeL5 productTypeL5 or {@code null} for none
+   */
+  public ProductView setProductTypeL5(java.lang.String productTypeL5) {
+    this.productTypeL5 = productTypeL5;
     return this;
   }
 

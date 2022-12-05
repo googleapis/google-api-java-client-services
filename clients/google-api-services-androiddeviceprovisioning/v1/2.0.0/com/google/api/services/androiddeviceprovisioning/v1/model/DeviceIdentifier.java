@@ -73,7 +73,7 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   /**
    * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
    * /manufacturer-names#model-names) and [Chrome OS
-   * models](https://support.google.com/chrome/a/answer/10130175?hl=en#identify_compatible).
+   * models](https://support.google.com/chrome/a/answer/10130175#identify_compatible).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +181,7 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   /**
    * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
    * /manufacturer-names#model-names) and [Chrome OS
-   * models](https://support.google.com/chrome/a/answer/10130175?hl=en#identify_compatible).
+   * models](https://support.google.com/chrome/a/answer/10130175#identify_compatible).
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -191,7 +191,7 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   /**
    * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
    * /manufacturer-names#model-names) and [Chrome OS
-   * models](https://support.google.com/chrome/a/answer/10130175?hl=en#identify_compatible).
+   * models](https://support.google.com/chrome/a/answer/10130175#identify_compatible).
    * @param model model or {@code null} for none
    */
   public DeviceIdentifier setModel(java.lang.String model) {

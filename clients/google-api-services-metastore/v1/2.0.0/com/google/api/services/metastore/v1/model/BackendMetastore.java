@@ -39,9 +39,9 @@ public final class BackendMetastore extends com.google.api.client.json.GenericJs
 
   /**
    * The relative resource name of the metastore that is being federated. The formats of the
-   * relative resource names for the currently supported metastores are listed below: Dataplex:
-   * projects/{project_id}/locations/{location}/lakes/{lake_id} BigQuery: projects/{project_id}
-   * Dataproc Metastore: projects/{project_id}/locations/{location}/services/{service_id}
+   * relative resource names for the currently supported metastores are listed below: Dataplex
+   * projects/{project_id}/locations/{location}/lakes/{lake_id} BigQuery projects/{project_id}
+   * Dataproc Metastore projects/{project_id}/locations/{location}/services/{service_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +66,9 @@ public final class BackendMetastore extends com.google.api.client.json.GenericJs
 
   /**
    * The relative resource name of the metastore that is being federated. The formats of the
-   * relative resource names for the currently supported metastores are listed below: Dataplex:
-   * projects/{project_id}/locations/{location}/lakes/{lake_id} BigQuery: projects/{project_id}
-   * Dataproc Metastore: projects/{project_id}/locations/{location}/services/{service_id}
+   * relative resource names for the currently supported metastores are listed below: Dataplex
+   * projects/{project_id}/locations/{location}/lakes/{lake_id} BigQuery projects/{project_id}
+   * Dataproc Metastore projects/{project_id}/locations/{location}/services/{service_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,9 +77,9 @@ public final class BackendMetastore extends com.google.api.client.json.GenericJs
 
   /**
    * The relative resource name of the metastore that is being federated. The formats of the
-   * relative resource names for the currently supported metastores are listed below: Dataplex:
-   * projects/{project_id}/locations/{location}/lakes/{lake_id} BigQuery: projects/{project_id}
-   * Dataproc Metastore: projects/{project_id}/locations/{location}/services/{service_id}
+   * relative resource names for the currently supported metastores are listed below: Dataplex
+   * projects/{project_id}/locations/{location}/lakes/{lake_id} BigQuery projects/{project_id}
+   * Dataproc Metastore projects/{project_id}/locations/{location}/services/{service_id}
    * @param name name or {@code null} for none
    */
   public BackendMetastore setName(java.lang.String name) {

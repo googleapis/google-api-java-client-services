@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.metastore.v1.model;
+package com.google.api.services.metastore.v1alpha.model;
 
 /**
- * Telemetry Configuration for the Dataproc Metastore service.
+ * Request message for DataprocMetastore.QueryMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -28,40 +28,43 @@ package com.google.api.services.metastore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TelemetryConfig extends com.google.api.client.json.GenericJson {
+public final class QueryMetadataRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The output format of the Dataproc Metastore service's logs.
+   * Required. A read-only SQL query to execute against the metadata database. The query cannot
+   * change or mutate the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String logFormat;
+  private java.lang.String query;
 
   /**
-   * The output format of the Dataproc Metastore service's logs.
+   * Required. A read-only SQL query to execute against the metadata database. The query cannot
+   * change or mutate the data.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLogFormat() {
-    return logFormat;
+  public java.lang.String getQuery() {
+    return query;
   }
 
   /**
-   * The output format of the Dataproc Metastore service's logs.
-   * @param logFormat logFormat or {@code null} for none
+   * Required. A read-only SQL query to execute against the metadata database. The query cannot
+   * change or mutate the data.
+   * @param query query or {@code null} for none
    */
-  public TelemetryConfig setLogFormat(java.lang.String logFormat) {
-    this.logFormat = logFormat;
+  public QueryMetadataRequest setQuery(java.lang.String query) {
+    this.query = query;
     return this;
   }
 
   @Override
-  public TelemetryConfig set(String fieldName, Object value) {
-    return (TelemetryConfig) super.set(fieldName, value);
+  public QueryMetadataRequest set(String fieldName, Object value) {
+    return (QueryMetadataRequest) super.set(fieldName, value);
   }
 
   @Override
-  public TelemetryConfig clone() {
-    return (TelemetryConfig) super.clone();
+  public QueryMetadataRequest clone() {
+    return (QueryMetadataRequest) super.clone();
   }
 
 }

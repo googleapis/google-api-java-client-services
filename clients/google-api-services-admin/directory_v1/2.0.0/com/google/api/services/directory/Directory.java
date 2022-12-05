@@ -5382,7 +5382,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @param domainAliasName Name of domain alias to be retrieved.
      * @return the request
      */
@@ -5406,7 +5410,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @param domainAliasName Name of domain alias to be retrieved.
        * @since 1.13
        */
@@ -5481,17 +5489,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -5643,7 +5667,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -5666,7 +5694,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -5739,17 +5771,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -5941,7 +5989,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @param domainName Name of domain to be retrieved
      * @return the request
      */
@@ -5965,7 +6017,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @param domainName Name of domain to be retrieved
        * @since 1.13
        */
@@ -6040,17 +6096,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -6204,7 +6276,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -6227,7 +6303,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -6300,17 +6380,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -6805,20 +6901,19 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, fill in this field instead of `domain`. You
-       * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users](/admin-
-       * sdk/directory/v1/reference/users) resource. Either the `customer` or the `domain` parameter
-       * must be provided.
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
-     fetch all groups for a customer, fill in this field instead of `domain`. You can also use the
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. Either the `customer` or the
-     `domain` parameter must be provided.
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -6826,11 +6921,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, fill in this field instead of `domain`. You
-       * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users](/admin-
-       * sdk/directory/v1/reference/users) resource. Either the `customer` or the `domain` parameter
-       * must be provided.
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -8301,7 +8395,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Retrieves a paginated list of all members in a group.
+     * Retrieves a paginated list of all members in a group. This method times out after 60 minutes. For
+     * more information, see [Troubleshoot error codes](https://developers.google.com/admin-
+     * sdk/directory/v1/guides/troubleshoot-error-codes).
      *
      * Create a request for the method "members.list".
      *
@@ -8323,7 +8419,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/groups/{groupKey}/members";
 
       /**
-       * Retrieves a paginated list of all members in a group.
+       * Retrieves a paginated list of all members in a group. This method times out after 60 minutes.
+       * For more information, see [Troubleshoot error codes](https://developers.google.com/admin-
+       * sdk/directory/v1/guides/troubleshoot-error-codes).
        *
        * Create a request for the method "members.list".
        *
@@ -9323,7 +9421,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
     /**
      * Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list
      * that includes company-owned devices, use the Cloud Identity [Devices
-     * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead.
+     * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method times
+     * out after 60 minutes. For more information, see [Troubleshoot error
+     * codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
      *
      * Create a request for the method "mobiledevices.list".
      *
@@ -9348,7 +9448,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list
        * that includes company-owned devices, use the Cloud Identity [Devices
-       * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead.
+       * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method
+       * times out after 60 minutes. For more information, see [Troubleshoot error
+       * codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
        *
        * Create a request for the method "mobiledevices.list".
        *
@@ -10613,7 +10715,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -10636,7 +10742,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -10709,17 +10819,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -13898,7 +14024,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @param roleAssignmentId Immutable ID of the role assignment.
      * @return the request
      */
@@ -13922,7 +14052,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @param roleAssignmentId Immutable ID of the role assignment.
        * @since 1.13
        */
@@ -13997,17 +14131,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -14159,7 +14309,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -14182,7 +14336,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -14255,17 +14413,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -14521,7 +14695,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @param roleId Immutable ID of the role.
      * @return the request
      */
@@ -14545,7 +14723,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @param roleId Immutable ID of the role.
        * @since 1.13
        */
@@ -14620,17 +14802,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -14784,7 +14982,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the Google Workspace account.
+     * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -14807,7 +15009,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the Google Workspace account.
+       * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -14880,17 +15086,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -15372,7 +15594,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the Google Workspace account.
+     * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @param schemaKey Name or immutable ID of the schema.
      * @return the request
      */
@@ -15396,7 +15622,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the Google Workspace account.
+       * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @param schemaKey Name or immutable ID of the schema.
        * @since 1.13
        */
@@ -15471,17 +15701,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -15637,7 +15883,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the Google Workspace account.
+     * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -15660,7 +15910,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the Google Workspace account.
+       * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
+     *        must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -15733,17 +15987,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Workspace account.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Workspace account. */
+      /**
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
+       */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -17201,19 +17471,19 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, fill this field instead of domain. You can
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * Either the `customer` or the `domain` parameter must be provided.
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
-     fetch all groups for a customer, fill this field instead of domain. You can also use the
+     fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users). Either the `customer` or the
-     `domain` parameter must be provided.
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
+     `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -17221,10 +17491,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, fill this field instead of domain. You can
+       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * Either the `customer` or the `domain` parameter must be provided.
+       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
+       * You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -17926,9 +18196,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates a user. This method supports patch semantics, meaning you only need to include the fields
-     * you wish to update. Fields that are not present in the request will be preserved, and fields set
-     * to `null` will be cleared.
+     * Updates a user. This method supports patch semantics, meaning that you only need to include the
+     * fields you wish to update. Fields that are not present in the request will be preserved, and
+     * fields set to `null` will be cleared. For repeating fields that contain arrays, individual items
+     * in the array can't be patched piecemeal; they must be supplied in the request body with the
+     * desired values for all items. See the [user accounts guide](https://developers.google.com/admin-
+     * sdk/directory/v1/guides/manage-users#update_user) for more information.
      *
      * Create a request for the method "users.update".
      *
@@ -17951,9 +18224,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}";
 
       /**
-       * Updates a user. This method supports patch semantics, meaning you only need to include the
+       * Updates a user. This method supports patch semantics, meaning that you only need to include the
        * fields you wish to update. Fields that are not present in the request will be preserved, and
-       * fields set to `null` will be cleared.
+       * fields set to `null` will be cleared. For repeating fields that contain arrays, individual
+       * items in the array can't be patched piecemeal; they must be supplied in the request body with
+       * the desired values for all items. See the [user accounts guide](https://developers.google.com
+       * /admin-sdk/directory/v1/guides/manage-users#update_user) for more information.
        *
        * Create a request for the method "users.update".
        *

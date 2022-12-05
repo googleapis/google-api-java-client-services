@@ -3952,9 +3952,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location and project to list resources on. Location must be a valid GCP region, and
-         *        cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where
-         *        {project} can be project id or number.
+         * @param parent Required. The location and project to list resources on. Location must be a valid Google Cloud
+         *        region, and cannot be the "-" wildcard. Format: projects/{project}/locations/{location},
+         *        where {project} can be project id or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3980,9 +3980,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location and project to list resources on. Location must be a valid GCP region, and
-         *        cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where
-         *        {project} can be project id or number.
+           * @param parent Required. The location and project to list resources on. Location must be a valid Google Cloud
+         *        region, and cannot be the "-" wildcard. Format: projects/{project}/locations/{location},
+         *        where {project} can be project id or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4061,24 +4061,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The location and project to list resources on. Location must be a valid GCP
-           * region, and cannot be the "-" wildcard. Format:
+           * Required. The location and project to list resources on. Location must be a valid
+           * Google Cloud region, and cannot be the "-" wildcard. Format:
            * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location and project to list resources on. Location must be a valid GCP region, and
-         cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where {project} can be
-         project id or number.
+          /** Required. The location and project to list resources on. Location must be a valid Google Cloud
+         region, and cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where
+         {project} can be project id or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The location and project to list resources on. Location must be a valid GCP
-           * region, and cannot be the "-" wildcard. Format:
+           * Required. The location and project to list resources on. Location must be a valid
+           * Google Cloud region, and cannot be the "-" wildcard. Format:
            * projects/{project}/locations/{location}, where {project} can be project id or number.
            */
           public List setParent(java.lang.String parent) {

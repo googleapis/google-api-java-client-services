@@ -52,6 +52,14 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Specifies the event stream for the transfer job for event-driven transfers. When EventStream is
+   * specified, the Schedule fields are ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventStream eventStream;
+
+  /**
    * Output only. The time that the transfer job was last modified.
    * The value may be {@code null}.
    */
@@ -180,6 +188,25 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    */
   public TransferJob setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Specifies the event stream for the transfer job for event-driven transfers. When EventStream is
+   * specified, the Schedule fields are ignored.
+   * @return value or {@code null} for none
+   */
+  public EventStream getEventStream() {
+    return eventStream;
+  }
+
+  /**
+   * Specifies the event stream for the transfer job for event-driven transfers. When EventStream is
+   * specified, the Schedule fields are ignored.
+   * @param eventStream eventStream or {@code null} for none
+   */
+  public TransferJob setEventStream(EventStream eventStream) {
+    this.eventStream = eventStream;
     return this;
   }
 

@@ -5715,6 +5715,378 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
     }
     /**
+     * An accessor for creating requests from the BigQueryLinks collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.BigQueryLinks.List request = analyticsadmin.bigQueryLinks().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BigQueryLinks bigQueryLinks() {
+      return new BigQueryLinks();
+    }
+
+    /**
+     * The "bigQueryLinks" collection of methods.
+     */
+    public class BigQueryLinks {
+
+      /**
+       * Lookup for a single BigQuery Link.
+       *
+       * Create a request for the method "bigQueryLinks.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the BigQuery link to lookup. Format:
+       *        properties/{property_id}/bigQueryLinks/{bigquery_link_id} Example:
+       *        properties/123/bigQueryLinks/456
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/bigQueryLinks/[^/]+$");
+
+        /**
+         * Lookup for a single BigQuery Link.
+         *
+         * Create a request for the method "bigQueryLinks.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the BigQuery link to lookup. Format:
+       *        properties/{property_id}/bigQueryLinks/{bigquery_link_id} Example:
+       *        properties/123/bigQueryLinks/456
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/bigQueryLinks/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the BigQuery link to lookup. Format:
+         * properties/{property_id}/bigQueryLinks/{bigquery_link_id} Example:
+         * properties/123/bigQueryLinks/456
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the BigQuery link to lookup. Format:
+       properties/{property_id}/bigQueryLinks/{bigquery_link_id} Example: properties/123/bigQueryLinks/456
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the BigQuery link to lookup. Format:
+         * properties/{property_id}/bigQueryLinks/{bigquery_link_id} Example:
+         * properties/123/bigQueryLinks/456
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/bigQueryLinks/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists BigQuery Links on a property.
+       *
+       * Create a request for the method "bigQueryLinks.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the property to list BigQuery links under. Format: properties/{property_id}
+       *        Example: properties/1234
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/bigQueryLinks";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Lists BigQuery Links on a property.
+         *
+         * Create a request for the method "bigQueryLinks.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the property to list BigQuery links under. Format: properties/{property_id}
+       *        Example: properties/1234
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the property to list BigQuery links under. Format:
+         * properties/{property_id} Example: properties/1234
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the property to list BigQuery links under. Format: properties/{property_id}
+       Example: properties/1234
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the property to list BigQuery links under. Format:
+         * properties/{property_id} Example: properties/1234
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of resources to return. The service may return fewer than this value,
+         * even if there are additional pages. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of resources to return. The service may return fewer than this value, even if
+       there are additional pages. If unspecified, at most 50 resources will be returned. The maximum
+       value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of resources to return. The service may return fewer than this value,
+         * even if there are additional pages. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryLinks` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryLinks` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListBigQueryLinks` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListBigQueryLinks` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryLinks` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryLinks` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the ConversionEvents collection.
      *
      * <p>The typical use is:</p>

@@ -6730,6 +6730,731 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
     }
     /**
+     * An accessor for creating requests from the Snoozes collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Monitoring monitoring = new Monitoring(...);}
+     *   {@code Monitoring.Snoozes.List request = monitoring.snoozes().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Snoozes snoozes() {
+      return new Snoozes();
+    }
+
+    /**
+     * The "snoozes" collection of methods.
+     */
+    public class Snoozes {
+
+      /**
+       * Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened.
+       * The Snooze applies for a specific time interval.
+       *
+       * Create a request for the method "snoozes.create".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which a Snooze
+       *        should be created. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @param content the {@link com.google.api.services.monitoring.v3.model.Snooze}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.monitoring.v3.model.Snooze content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Snooze> {
+
+        private static final String REST_PATH = "v3/{+parent}/snoozes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a Snooze that will prevent alerts, which match the provided criteria, from being
+         * opened. The Snooze applies for a specific time interval.
+         *
+         * Create a request for the method "snoozes.create".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which a Snooze
+       *        should be created. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         * @param content the {@link com.google.api.services.monitoring.v3.model.Snooze}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.monitoring.v3.model.Snooze content) {
+          super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.Snooze.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * a Snooze should be created. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which a Snooze
+       should be created. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * a Snooze should be created. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a Snooze by name.
+       *
+       * Create a request for the method "snoozes.get".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The ID of the Snooze to retrieve. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Snooze> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/snoozes/[^/]+$");
+
+        /**
+         * Retrieves a Snooze by name.
+         *
+         * Create a request for the method "snoozes.get".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The ID of the Snooze to retrieve. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.Snooze.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/snoozes/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the Snooze to retrieve. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The ID of the Snooze to retrieve. The format is:
+       projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The ID of the Snooze to retrieve. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/snoozes/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies
+       * predicates to match Snoozes.
+       *
+       * Create a request for the method "snoozes.list".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Snoozes should
+       *        be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ListSnoozesResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}/snoozes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies
+         * predicates to match Snoozes.
+         *
+         * Create a request for the method "snoozes.list".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Snoozes should
+       *        be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ListSnoozesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * Snoozes should be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Snoozes
+       should be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * Snoozes should be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Optional filter to restrict results to the given criteria. The following fields
+         * are supported. interval.start_time interval.end_timeFor example: ``` interval.start_time
+         * > "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00" ```
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Optional filter to restrict results to the given criteria. The following fields are
+       supported. interval.start_time interval.end_timeFor example: ``` interval.start_time >
+       "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00" ```
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Optional filter to restrict results to the given criteria. The following fields
+         * are supported. interval.start_time interval.end_timeFor example: ``` interval.start_time
+         * > "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00" ```
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of results to return for a single query. The server may
+         * further constrain the maximum number of results returned in a single page. The value
+         * should be in the range 1, 1000. If the value given is outside this range, the server will
+         * decide the number of results to be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of results to return for a single query. The server may further
+       constrain the maximum number of results returned in a single page. The value should be in the range
+       1, 1000. If the value given is outside this range, the server will decide the number of results to
+       be returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of results to return for a single query. The server may
+         * further constrain the maximum number of results returned in a single page. The value
+         * should be in the range 1, 1000. If the value given is outside this range, the server will
+         * decide the number of results to be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. The next_page_token from a previous call to ListSnoozesRequest to get the next
+         * page of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token from a previous call to ListSnoozesRequest to get the next page of
+       results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. The next_page_token from a previous call to ListSnoozesRequest to get the next
+         * page of results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a Snooze, identified by its name, with the parameters in the given Snooze object.
+       *
+       * Create a request for the method "snoozes.patch".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Snooze. The format is: projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+       *        The ID of the Snooze will be generated by the system.
+       * @param content the {@link com.google.api.services.monitoring.v3.model.Snooze}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.monitoring.v3.model.Snooze content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Snooze> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/snoozes/[^/]+$");
+
+        /**
+         * Updates a Snooze, identified by its name, with the parameters in the given Snooze object.
+         *
+         * Create a request for the method "snoozes.patch".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Snooze. The format is: projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID]
+       *        The ID of the Snooze will be generated by the system.
+         * @param content the {@link com.google.api.services.monitoring.v3.model.Snooze}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.monitoring.v3.model.Snooze content) {
+          super(Monitoring.this, "PATCH", REST_PATH, content, com.google.api.services.monitoring.v3.model.Snooze.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/snoozes/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Snooze. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID] The ID of the Snooze will be
+         * generated by the system.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Snooze. The format is:
+       projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID] The ID of the Snooze will be generated by the
+       system.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Snooze. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]/snoozes/[SNOOZE_ID] The ID of the Snooze will be
+         * generated by the system.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/snoozes/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The fields to update.For each field listed in update_mask: If the Snooze object
+         * supplied in the UpdateSnoozeRequest has a value for that field, the value of the field in
+         * the existing Snooze will be set to the value of the field in the supplied Snooze. If the
+         * field does not have a value in the supplied Snooze, the field in the existing Snooze is
+         * set to its default value.Fields not listed retain their existing value.The following are
+         * the field names that are accepted in update_mask: display_name interval.start_time
+         * interval.end_timeThat said, the start time and end time of the Snooze determines which
+         * fields can legally be updated. Before attempting an update, users should consult the
+         * documentation for UpdateSnoozeRequest, which talks about which fields can be updated.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The fields to update.For each field listed in update_mask: If the Snooze object supplied
+       in the UpdateSnoozeRequest has a value for that field, the value of the field in the existing
+       Snooze will be set to the value of the field in the supplied Snooze. If the field does not have a
+       value in the supplied Snooze, the field in the existing Snooze is set to its default value.Fields
+       not listed retain their existing value.The following are the field names that are accepted in
+       update_mask: display_name interval.start_time interval.end_timeThat said, the start time and end
+       time of the Snooze determines which fields can legally be updated. Before attempting an update,
+       users should consult the documentation for UpdateSnoozeRequest, which talks about which fields can
+       be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The fields to update.For each field listed in update_mask: If the Snooze object
+         * supplied in the UpdateSnoozeRequest has a value for that field, the value of the field in
+         * the existing Snooze will be set to the value of the field in the supplied Snooze. If the
+         * field does not have a value in the supplied Snooze, the field in the existing Snooze is
+         * set to its default value.Fields not listed retain their existing value.The following are
+         * the field names that are accepted in update_mask: display_name interval.start_time
+         * interval.end_timeThat said, the start time and end time of the Snooze determines which
+         * fields can legally be updated. Before attempting an update, users should consult the
+         * documentation for UpdateSnoozeRequest, which talks about which fields can be updated.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the TimeSeries collection.
      *
      * <p>The typical use is:</p>

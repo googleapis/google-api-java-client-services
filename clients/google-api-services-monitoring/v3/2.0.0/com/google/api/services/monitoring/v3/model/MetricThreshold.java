@@ -123,6 +123,15 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   private java.lang.String filter;
 
   /**
+   * When this field is present, the MetricThreshold condition forecasts whether the time series is
+   * predicted to violate the threshold within the forecast_horizion. When this field is not set,
+   * the MetricThreshold tests the current value of the timeseries against the threshold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ForecastOptions forecastOptions;
+
+  /**
    * A value against which to compare the time series.
    * The value may be {@code null}.
    */
@@ -319,6 +328,27 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    */
   public MetricThreshold setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * When this field is present, the MetricThreshold condition forecasts whether the time series is
+   * predicted to violate the threshold within the forecast_horizion. When this field is not set,
+   * the MetricThreshold tests the current value of the timeseries against the threshold.
+   * @return value or {@code null} for none
+   */
+  public ForecastOptions getForecastOptions() {
+    return forecastOptions;
+  }
+
+  /**
+   * When this field is present, the MetricThreshold condition forecasts whether the time series is
+   * predicted to violate the threshold within the forecast_horizion. When this field is not set,
+   * the MetricThreshold tests the current value of the timeseries against the threshold.
+   * @param forecastOptions forecastOptions or {@code null} for none
+   */
+  public MetricThreshold setForecastOptions(ForecastOptions forecastOptions) {
+    this.forecastOptions = forecastOptions;
     return this;
   }
 

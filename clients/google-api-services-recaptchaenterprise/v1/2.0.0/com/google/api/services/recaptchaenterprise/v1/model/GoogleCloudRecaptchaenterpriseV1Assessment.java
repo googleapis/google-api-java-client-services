@@ -38,6 +38,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment;
 
   /**
+   * Account verification information for identity verification. The assessment event must include a
+   * token and site key to use this feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo accountVerification;
+
+  /**
    * The event being assessed.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setAccountDefenderAssessment(GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment) {
     this.accountDefenderAssessment = accountDefenderAssessment;
+    return this;
+  }
+
+  /**
+   * Account verification information for identity verification. The assessment event must include a
+   * token and site key to use this feature.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo getAccountVerification() {
+    return accountVerification;
+  }
+
+  /**
+   * Account verification information for identity verification. The assessment event must include a
+   * token and site key to use this feature.
+   * @param accountVerification accountVerification or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setAccountVerification(GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo accountVerification) {
+    this.accountVerification = accountVerification;
     return this;
   }
 

@@ -30,6 +30,45 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Whether or not to do billing check. A reCAPTCHA Enterprise or migrated key behaves
+   * differently than a reCAPTCHA (non-Enterprise version) key when you reach a quota limit (see
+   * https://cloud.google.com/recaptcha-enterprise/quotas#quota_limit). To avoid any disruption of
+   * your usage, we check that a billing account is present. If your usage of reCAPTCHA is under the
+   * free quota, you can safely skip the billing check and proceed with the migration. See
+   * https://cloud.google.com/recaptcha-enterprise/docs/billing-information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipBillingCheck;
+
+  /**
+   * Optional. Whether or not to do billing check. A reCAPTCHA Enterprise or migrated key behaves
+   * differently than a reCAPTCHA (non-Enterprise version) key when you reach a quota limit (see
+   * https://cloud.google.com/recaptcha-enterprise/quotas#quota_limit). To avoid any disruption of
+   * your usage, we check that a billing account is present. If your usage of reCAPTCHA is under the
+   * free quota, you can safely skip the billing check and proceed with the migration. See
+   * https://cloud.google.com/recaptcha-enterprise/docs/billing-information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipBillingCheck() {
+    return skipBillingCheck;
+  }
+
+  /**
+   * Optional. Whether or not to do billing check. A reCAPTCHA Enterprise or migrated key behaves
+   * differently than a reCAPTCHA (non-Enterprise version) key when you reach a quota limit (see
+   * https://cloud.google.com/recaptcha-enterprise/quotas#quota_limit). To avoid any disruption of
+   * your usage, we check that a billing account is present. If your usage of reCAPTCHA is under the
+   * free quota, you can safely skip the billing check and proceed with the migration. See
+   * https://cloud.google.com/recaptcha-enterprise/docs/billing-information.
+   * @param skipBillingCheck skipBillingCheck or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest setSkipBillingCheck(java.lang.Boolean skipBillingCheck) {
+    this.skipBillingCheck = skipBillingCheck;
+    return this;
+  }
+
   @Override
   public GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest set(String fieldName, Object value) {
     return (GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest) super.set(fieldName, value);

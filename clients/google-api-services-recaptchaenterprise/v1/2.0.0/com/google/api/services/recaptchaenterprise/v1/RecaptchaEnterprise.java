@@ -20,7 +20,7 @@ package com.google.api.services.recaptchaenterprise.v1;
  * Service definition for RecaptchaEnterprise (v1).
  *
  * <p>
- * 
+ * Help protect your website from fraudulent activity, spam, and abuse without creating friction.
  * </p>
  *
  * <p>

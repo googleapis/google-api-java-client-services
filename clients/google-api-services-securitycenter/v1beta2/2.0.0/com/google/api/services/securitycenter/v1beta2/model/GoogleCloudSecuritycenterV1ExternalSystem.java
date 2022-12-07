@@ -53,10 +53,10 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   private java.lang.String externalUid;
 
   /**
-   * External System Name e.g. jira, demisto, etc. e.g.:
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+   * Full resource name of the external system, for example:
+   * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,10 +123,10 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * External System Name e.g. jira, demisto, etc. e.g.:
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+   * Full resource name of the external system, for example:
+   * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -134,10 +134,10 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * External System Name e.g. jira, demisto, etc. e.g.:
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+   * Full resource name of the external system, for example:
+   * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ExternalSystem setName(java.lang.String name) {

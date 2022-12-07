@@ -339,7 +339,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Represents vulnerability specific fields like cve, cvss scores etc. CVE stands for Common
+   * Represents vulnerability-specific fields like CVE and CVS scores. CVE stands for Common
    * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * The value may be {@code null}.
    */
@@ -999,7 +999,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents vulnerability specific fields like cve, cvss scores etc. CVE stands for Common
+   * Represents vulnerability-specific fields like CVE and CVS scores. CVE stands for Common
    * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * @return value or {@code null} for none
    */
@@ -1008,7 +1008,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents vulnerability specific fields like cve, cvss scores etc. CVE stands for Common
+   * Represents vulnerability-specific fields like CVE and CVS scores. CVE stands for Common
    * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * @param vulnerability vulnerability or {@code null} for none
    */

@@ -38,47 +38,47 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Flag indicating unexpected modifications of kernel code memory.
+   * True when unexpected modifications of kernel read-only data memory are present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean unexpectedCodeModification;
 
   /**
-   * Flag indicating presence of ftrace points with callbacks pointing to regions that are not in
-   * the expected kernel or module code range.
+   * True when `ftrace` points are present with callbacks pointing to regions that are not in the
+   * expected kernel or module code range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean unexpectedFtraceHandler;
 
   /**
-   * Flag indicating presence of interrupt handlers that are are not in the expected kernel, module
-   * code regions.
+   * True when interrupt handlers that are are not in the expected kernel or module code regions are
+   * present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean unexpectedInterruptHandler;
 
   /**
-   * Flag indicating presence of kernel code pages that are not in the expected kernel, module code
-   * regions.
+   * True when kernel code pages that are not in the expected kernel or module code regions are
+   * present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean unexpectedKernelCodePages;
 
   /**
-   * Flag indicating presence of kprobe points with callbacks pointing to regions that are not in
-   * the expected kernel or module code range.
+   * True when `kprobe` points are present with callbacks pointing to regions that are not in the
+   * expected kernel or module code range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean unexpectedKprobeHandler;
 
   /**
-   * Flag indicating unexpected process(es) in the scheduler run-queue, those that are in the run-
-   * queue, but not in the process task-list.
+   * True when unexpected processes in the scheduler run queue are present. Such processes are in
+   * the run queue, but not in the process task list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean unexpectedReadOnlyDataModification;
 
   /**
-   * Flag indicating presence of system call handlers that are are not in the expected kernel,
-   * module code regions.
+   * True when system call handlers that are are not in the expected kernel or module code regions
+   * are present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating unexpected modifications of kernel code memory.
+   * True when unexpected modifications of kernel read-only data memory are present.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedCodeModification() {
@@ -125,7 +125,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating unexpected modifications of kernel code memory.
+   * True when unexpected modifications of kernel read-only data memory are present.
    * @param unexpectedCodeModification unexpectedCodeModification or {@code null} for none
    */
   public KernelRootkit setUnexpectedCodeModification(java.lang.Boolean unexpectedCodeModification) {
@@ -134,8 +134,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of ftrace points with callbacks pointing to regions that are not in
-   * the expected kernel or module code range.
+   * True when `ftrace` points are present with callbacks pointing to regions that are not in the
+   * expected kernel or module code range.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedFtraceHandler() {
@@ -143,8 +143,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of ftrace points with callbacks pointing to regions that are not in
-   * the expected kernel or module code range.
+   * True when `ftrace` points are present with callbacks pointing to regions that are not in the
+   * expected kernel or module code range.
    * @param unexpectedFtraceHandler unexpectedFtraceHandler or {@code null} for none
    */
   public KernelRootkit setUnexpectedFtraceHandler(java.lang.Boolean unexpectedFtraceHandler) {
@@ -153,8 +153,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of interrupt handlers that are are not in the expected kernel, module
-   * code regions.
+   * True when interrupt handlers that are are not in the expected kernel or module code regions are
+   * present.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedInterruptHandler() {
@@ -162,8 +162,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of interrupt handlers that are are not in the expected kernel, module
-   * code regions.
+   * True when interrupt handlers that are are not in the expected kernel or module code regions are
+   * present.
    * @param unexpectedInterruptHandler unexpectedInterruptHandler or {@code null} for none
    */
   public KernelRootkit setUnexpectedInterruptHandler(java.lang.Boolean unexpectedInterruptHandler) {
@@ -172,8 +172,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of kernel code pages that are not in the expected kernel, module code
-   * regions.
+   * True when kernel code pages that are not in the expected kernel or module code regions are
+   * present.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedKernelCodePages() {
@@ -181,8 +181,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of kernel code pages that are not in the expected kernel, module code
-   * regions.
+   * True when kernel code pages that are not in the expected kernel or module code regions are
+   * present.
    * @param unexpectedKernelCodePages unexpectedKernelCodePages or {@code null} for none
    */
   public KernelRootkit setUnexpectedKernelCodePages(java.lang.Boolean unexpectedKernelCodePages) {
@@ -191,8 +191,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of kprobe points with callbacks pointing to regions that are not in
-   * the expected kernel or module code range.
+   * True when `kprobe` points are present with callbacks pointing to regions that are not in the
+   * expected kernel or module code range.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedKprobeHandler() {
@@ -200,8 +200,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of kprobe points with callbacks pointing to regions that are not in
-   * the expected kernel or module code range.
+   * True when `kprobe` points are present with callbacks pointing to regions that are not in the
+   * expected kernel or module code range.
    * @param unexpectedKprobeHandler unexpectedKprobeHandler or {@code null} for none
    */
   public KernelRootkit setUnexpectedKprobeHandler(java.lang.Boolean unexpectedKprobeHandler) {
@@ -210,8 +210,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating unexpected process(es) in the scheduler run-queue, those that are in the run-
-   * queue, but not in the process task-list.
+   * True when unexpected processes in the scheduler run queue are present. Such processes are in
+   * the run queue, but not in the process task list.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedProcessesInRunqueue() {
@@ -219,8 +219,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating unexpected process(es) in the scheduler run-queue, those that are in the run-
-   * queue, but not in the process task-list.
+   * True when unexpected processes in the scheduler run queue are present. Such processes are in
+   * the run queue, but not in the process task list.
    * @param unexpectedProcessesInRunqueue unexpectedProcessesInRunqueue or {@code null} for none
    */
   public KernelRootkit setUnexpectedProcessesInRunqueue(java.lang.Boolean unexpectedProcessesInRunqueue) {
@@ -246,8 +246,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of system call handlers that are are not in the expected kernel,
-   * module code regions.
+   * True when system call handlers that are are not in the expected kernel or module code regions
+   * are present.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedSystemCallHandler() {
@@ -255,8 +255,8 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating presence of system call handlers that are are not in the expected kernel,
-   * module code regions.
+   * True when system call handlers that are are not in the expected kernel or module code regions
+   * are present.
    * @param unexpectedSystemCallHandler unexpectedSystemCallHandler or {@code null} for none
    */
   public KernelRootkit setUnexpectedSystemCallHandler(java.lang.Boolean unexpectedSystemCallHandler) {

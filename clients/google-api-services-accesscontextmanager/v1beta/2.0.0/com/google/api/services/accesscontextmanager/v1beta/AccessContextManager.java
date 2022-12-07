@@ -1564,10 +1564,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the Access Level. The `short_name` component must begin with a letter
-       *        and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
-       *        `short_name` component is 50 characters.
+       * @param name Resource name for the `AccessLevel`. Format:
+       *        `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component
+       *        must begin with a letter, followed by alphanumeric characters or `_`. Its maximum length
+       *        is 50 characters. After you create an `AccessLevel`, you cannot change its `name`.
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessLevel}
        * @return the request
        */
@@ -1597,10 +1597,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the Access Level. The `short_name` component must begin with a letter
-       *        and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
-       *        `short_name` component is 50 characters.
+         * @param name Resource name for the `AccessLevel`. Format:
+       *        `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component
+       *        must begin with a letter, followed by alphanumeric characters or `_`. Its maximum length
+       *        is 50 characters. After you create an `AccessLevel`, you cannot change its `name`.
          * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessLevel}
          * @since 1.13
          */
@@ -1670,28 +1670,30 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the Access Level. The `short_name` component must begin with
-         * a letter and only include alphanumeric and '_'. Format:
-         * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
-         * `short_name` component is 50 characters.
+         * Resource name for the `AccessLevel`. Format:
+         * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level`
+         * component must begin with a letter, followed by alphanumeric characters or `_`. Its
+         * maximum length is 50 characters. After you create an `AccessLevel`, you cannot change its
+         * `name`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the Access Level. The `short_name` component must begin with a letter
-       and only include alphanumeric and '_'. Format:
-       `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the `short_name`
-       component is 50 characters.
+        /** Resource name for the `AccessLevel`. Format:
+       `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
+       begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
+       characters. After you create an `AccessLevel`, you cannot change its `name`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name for the Access Level. The `short_name` component must begin with
-         * a letter and only include alphanumeric and '_'. Format:
-         * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
-         * `short_name` component is 50 characters.
+         * Resource name for the `AccessLevel`. Format:
+         * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level`
+         * component must begin with a letter, followed by alphanumeric characters or `_`. Its
+         * maximum length is 50 characters. After you create an `AccessLevel`, you cannot change its
+         * `name`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2375,9 +2377,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
-       *        letter and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+       * @param name Resource name for the `ServicePerimeter`. Format:
+       *        `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
+       *        `service_perimeter` component must begin with a letter, followed by alphanumeric
+       *        characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeter}
        * @return the request
        */
@@ -2408,9 +2411,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
-       *        letter and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+         * @param name Resource name for the `ServicePerimeter`. Format:
+       *        `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
+       *        `service_perimeter` component must begin with a letter, followed by alphanumeric
+       *        characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
          * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeter}
          * @since 1.13
          */
@@ -2480,25 +2484,28 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the ServicePerimeter. The `short_name` component must begin
-         * with a letter and only include alphanumeric and '_'. Format:
-         * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+         * Resource name for the `ServicePerimeter`. Format:
+         * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
+         * `service_perimeter` component must begin with a letter, followed by alphanumeric
+         * characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
-       letter and only include alphanumeric and '_'. Format:
-       `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+        /** Resource name for the `ServicePerimeter`. Format:
+       `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
+       component must begin with a letter, followed by alphanumeric characters or `_`. After you create a
+       `ServicePerimeter`, you cannot change its `name`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name for the ServicePerimeter. The `short_name` component must begin
-         * with a letter and only include alphanumeric and '_'. Format:
-         * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+         * Resource name for the `ServicePerimeter`. Format:
+         * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
+         * `service_perimeter` component must begin with a letter, followed by alphanumeric
+         * characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

@@ -109,7 +109,7 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta3DocumentTextChange> textChanges;
 
   /**
-   * Placeholder. Styles for the Document.text.
+   * Styles for the Document.text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,7 +337,7 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   }
 
   /**
-   * Placeholder. Styles for the Document.text.
+   * Styles for the Document.text.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1beta3DocumentStyle> getTextStyles() {
@@ -345,7 +345,7 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   }
 
   /**
-   * Placeholder. Styles for the Document.text.
+   * Styles for the Document.text.
    * @param textStyles textStyles or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Document setTextStyles(java.util.List<GoogleCloudDocumentaiV1beta3DocumentStyle> textStyles) {

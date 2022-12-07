@@ -69,6 +69,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
   private java.lang.String name;
 
   /**
+   * A set of Cloud Storage URIs of sample documents for this processor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sampleDocumentUris;
+
+  /**
    * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
    */
   public GoogleCloudDocumentaiV1beta3ProcessorType setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * A set of Cloud Storage URIs of sample documents for this processor.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSampleDocumentUris() {
+    return sampleDocumentUris;
+  }
+
+  /**
+   * A set of Cloud Storage URIs of sample documents for this processor.
+   * @param sampleDocumentUris sampleDocumentUris or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorType setSampleDocumentUris(java.util.List<java.lang.String> sampleDocumentUris) {
+    this.sampleDocumentUris = sampleDocumentUris;
     return this;
   }
 

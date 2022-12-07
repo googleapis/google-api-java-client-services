@@ -59,6 +59,13 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
   private GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig outputConfig;
 
   /**
+   * Inference-time options for the process API
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ProcessOptions processOptions;
+
+  /**
    * Whether Human Review feature should be skipped for this request. Default to false.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessRequest setOutputConfig(GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig outputConfig) {
     this.outputConfig = outputConfig;
+    return this;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptions getProcessOptions() {
+    return processOptions;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @param processOptions processOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setProcessOptions(GoogleCloudDocumentaiV1beta3ProcessOptions processOptions) {
+    this.processOptions = processOptions;
     return this;
   }
 

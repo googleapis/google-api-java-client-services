@@ -46,6 +46,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConf
   private java.lang.String gcsUri;
 
   /**
+   * Specifies the sharding config for the output document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConfigShardingConfig shardingConfig;
+
+  /**
    * Specifies which fields to include in the output documents. Only supports top level document and
    * pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
    * @return value or {@code null} for none
@@ -78,6 +85,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConf
    */
   public GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConfig setGcsUri(java.lang.String gcsUri) {
     this.gcsUri = gcsUri;
+    return this;
+  }
+
+  /**
+   * Specifies the sharding config for the output document.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConfigShardingConfig getShardingConfig() {
+    return shardingConfig;
+  }
+
+  /**
+   * Specifies the sharding config for the output document.
+   * @param shardingConfig shardingConfig or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConfig setShardingConfig(GoogleCloudDocumentaiV1beta3DocumentOutputConfigGcsOutputConfigShardingConfig shardingConfig) {
+    this.shardingConfig = shardingConfig;
     return this;
   }
 

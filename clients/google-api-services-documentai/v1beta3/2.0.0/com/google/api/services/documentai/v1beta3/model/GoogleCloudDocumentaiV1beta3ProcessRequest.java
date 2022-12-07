@@ -54,6 +54,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private GoogleCloudDocumentaiV1beta3Document inlineDocument;
 
   /**
+   * Inference-time options for the process API
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ProcessOptions processOptions;
+
+  /**
    * A raw document content (bytes).
    * The value may be {@code null}.
    */
@@ -119,6 +126,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessRequest setInlineDocument(GoogleCloudDocumentaiV1beta3Document inlineDocument) {
     this.inlineDocument = inlineDocument;
+    return this;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptions getProcessOptions() {
+    return processOptions;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @param processOptions processOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessRequest setProcessOptions(GoogleCloudDocumentaiV1beta3ProcessOptions processOptions) {
+    this.processOptions = processOptions;
     return this;
   }
 

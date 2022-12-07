@@ -123,7 +123,10 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   /**
    * The height of the video in pixels. Must be an even integer. When not specified, the height is
    * adjusted to match the specified width and input aspect ratio. If both are omitted, the input
-   * height is used.
+   * height is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
+   * the height, in pixels, per the horizontal ASR. The API calculates the width per the horizontal
+   * ASR. The API detects any rotation metadata and swaps the requested height and width for the
+   * output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +201,10 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   /**
    * The width of the video in pixels. Must be an even integer. When not specified, the width is
    * adjusted to match the specified height and input aspect ratio. If both are omitted, the input
-   * width is used.
+   * width is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
+   * the width, in pixels, per the horizontal ASR. The API calculates the height per the horizontal
+   * ASR. The API detects any rotation metadata and swaps the requested height and width for the
+   * output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -422,7 +428,10 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   /**
    * The height of the video in pixels. Must be an even integer. When not specified, the height is
    * adjusted to match the specified width and input aspect ratio. If both are omitted, the input
-   * height is used.
+   * height is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
+   * the height, in pixels, per the horizontal ASR. The API calculates the width per the horizontal
+   * ASR. The API detects any rotation metadata and swaps the requested height and width for the
+   * output.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHeightPixels() {
@@ -432,7 +441,10 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   /**
    * The height of the video in pixels. Must be an even integer. When not specified, the height is
    * adjusted to match the specified width and input aspect ratio. If both are omitted, the input
-   * height is used.
+   * height is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
+   * the height, in pixels, per the horizontal ASR. The API calculates the width per the horizontal
+   * ASR. The API detects any rotation metadata and swaps the requested height and width for the
+   * output.
    * @param heightPixels heightPixels or {@code null} for none
    */
   public H264CodecSettings setHeightPixels(java.lang.Integer heightPixels) {
@@ -596,7 +608,10 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   /**
    * The width of the video in pixels. Must be an even integer. When not specified, the width is
    * adjusted to match the specified height and input aspect ratio. If both are omitted, the input
-   * width is used.
+   * width is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
+   * the width, in pixels, per the horizontal ASR. The API calculates the height per the horizontal
+   * ASR. The API detects any rotation metadata and swaps the requested height and width for the
+   * output.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWidthPixels() {
@@ -606,7 +621,10 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   /**
    * The width of the video in pixels. Must be an even integer. When not specified, the width is
    * adjusted to match the specified height and input aspect ratio. If both are omitted, the input
-   * width is used.
+   * width is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
+   * the width, in pixels, per the horizontal ASR. The API calculates the height per the horizontal
+   * ASR. The API detects any rotation metadata and swaps the requested height and width for the
+   * output.
    * @param widthPixels widthPixels or {@code null} for none
    */
   public H264CodecSettings setWidthPixels(java.lang.Integer widthPixels) {

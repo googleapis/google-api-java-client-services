@@ -995,14 +995,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class BigQueryExports {
 
       /**
-       * Creates a big query export.
+       * Creates a BigQuery export.
        *
        * Create a request for the method "bigQueryExports.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new big query export's parent. Its format is
+       * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
@@ -1021,7 +1021,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Creates a big query export.
+         * Creates a BigQuery export.
          *
          * Create a request for the method "bigQueryExports.create".
          *
@@ -1031,7 +1031,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new big query export's parent. Its format is
+         * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
@@ -1102,13 +1102,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new big query export's parent. Its format is
+         * Required. Resource name of the new BigQuery export's parent. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new big query export's parent. Its format is
+        /** Required. Resource name of the new BigQuery export's parent. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -1116,7 +1116,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new big query export's parent. Its format is
+         * Required. Resource name of the new BigQuery export's parent. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -1161,14 +1161,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing big query export.
+       * Deletes an existing BigQuery export.
        *
        * Create a request for the method "bigQueryExports.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the big query export to delete. Its format is
+       * @param name Required. Name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -1188,7 +1188,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Deletes an existing big query export.
+         * Deletes an existing BigQuery export.
          *
          * Create a request for the method "bigQueryExports.delete".
          *
@@ -1198,7 +1198,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the big query export to delete. Its format is
+         * @param name Required. Name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -1270,7 +1270,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to delete. Its format is
+         * Required. Name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -1278,7 +1278,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the big query export to delete. Its format is
+        /** Required. Name of the BigQuery export to delete. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -1287,7 +1287,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to delete. Its format is
+         * Required. Name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -1308,14 +1308,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a big query export.
+       * Gets a BigQuery export.
        *
        * Create a request for the method "bigQueryExports.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the big query export to retrieve. Its format is
+       * @param name Required. Name of the BigQuery export to retrieve. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -1335,7 +1335,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Gets a big query export.
+         * Gets a BigQuery export.
          *
          * Create a request for the method "bigQueryExports.get".
          *
@@ -1344,7 +1344,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the big query export to retrieve. Its format is
+         * @param name Required. Name of the BigQuery export to retrieve. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -1426,7 +1426,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to retrieve. Its format is
+         * Required. Name of the BigQuery export to retrieve. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -1434,7 +1434,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the big query export to retrieve. Its format is
+        /** Required. Name of the BigQuery export to retrieve. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -1443,7 +1443,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to retrieve. Its format is
+         * Required. Name of the BigQuery export to retrieve. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -3016,14 +3016,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contains alphanumeric characters, underscores or
-         * hyphens only.
+         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * only.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
         /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+       and 128 characters, and contain alphanumeric characters, underscores or hyphens only.
          */
         public java.lang.String getConfigId() {
           return configId;
@@ -3031,8 +3031,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contains alphanumeric characters, underscores or
-         * hyphens only.
+         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * only.
          */
         public Create setConfigId(java.lang.String configId) {
           this.configId = configId;
@@ -4769,8 +4769,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetMute#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4801,8 +4802,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4875,8 +4877,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
            * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
            * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
            * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4884,9 +4887,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+          /** Required. The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
@@ -4895,8 +4898,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
            * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
            * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
            * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -4924,9 +4928,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -4954,9 +4956,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -5025,27 +5025,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5293,10 +5282,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+           * @param name Full resource name of the external system, for example:
+           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -5324,10 +5313,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * @param name Full resource name of the external system, for example:
+           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -5397,28 +5386,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             }
 
             /**
-             * External System Name e.g. jira, demisto, etc. e.g.:
-             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * Full resource name of the external system, for example:
+             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** External System Name e.g. jira, demisto, etc. e.g.:
-           `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+            /** Full resource name of the external system, for example:
+           "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * External System Name e.g. jira, demisto, etc. e.g.:
-             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * Full resource name of the external system, for example:
+             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6790,14 +6779,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class BigQueryExports {
 
       /**
-       * Creates a big query export.
+       * Creates a BigQuery export.
        *
        * Create a request for the method "bigQueryExports.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new big query export's parent. Its format is
+       * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
@@ -6816,7 +6805,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a big query export.
+         * Creates a BigQuery export.
          *
          * Create a request for the method "bigQueryExports.create".
          *
@@ -6826,7 +6815,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new big query export's parent. Its format is
+         * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
@@ -6897,13 +6886,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new big query export's parent. Its format is
+         * Required. Resource name of the new BigQuery export's parent. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new big query export's parent. Its format is
+        /** Required. Resource name of the new BigQuery export's parent. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -6911,7 +6900,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new big query export's parent. Its format is
+         * Required. Resource name of the new BigQuery export's parent. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -6956,14 +6945,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing big query export.
+       * Deletes an existing BigQuery export.
        *
        * Create a request for the method "bigQueryExports.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the big query export to delete. Its format is
+       * @param name Required. Name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -6983,7 +6972,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Deletes an existing big query export.
+         * Deletes an existing BigQuery export.
          *
          * Create a request for the method "bigQueryExports.delete".
          *
@@ -6993,7 +6982,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the big query export to delete. Its format is
+         * @param name Required. Name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -7065,7 +7054,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to delete. Its format is
+         * Required. Name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -7073,7 +7062,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the big query export to delete. Its format is
+        /** Required. Name of the BigQuery export to delete. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -7082,7 +7071,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to delete. Its format is
+         * Required. Name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -7103,14 +7092,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a big query export.
+       * Gets a BigQuery export.
        *
        * Create a request for the method "bigQueryExports.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the big query export to retrieve. Its format is
+       * @param name Required. Name of the BigQuery export to retrieve. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -7130,7 +7119,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Gets a big query export.
+         * Gets a BigQuery export.
          *
          * Create a request for the method "bigQueryExports.get".
          *
@@ -7139,7 +7128,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the big query export to retrieve. Its format is
+         * @param name Required. Name of the BigQuery export to retrieve. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -7221,7 +7210,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to retrieve. Its format is
+         * Required. Name of the BigQuery export to retrieve. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -7229,7 +7218,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the big query export to retrieve. Its format is
+        /** Required. Name of the BigQuery export to retrieve. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -7238,7 +7227,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to retrieve. Its format is
+         * Required. Name of the BigQuery export to retrieve. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -8811,14 +8800,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contains alphanumeric characters, underscores or
-         * hyphens only.
+         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * only.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
         /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+       and 128 characters, and contain alphanumeric characters, underscores or hyphens only.
          */
         public java.lang.String getConfigId() {
           return configId;
@@ -8826,8 +8815,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contains alphanumeric characters, underscores or
-         * hyphens only.
+         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * only.
          */
         public Create setConfigId(java.lang.String configId) {
           this.configId = configId;
@@ -12256,8 +12245,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetMute#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -12288,8 +12278,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -12362,8 +12353,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
            * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
            * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
            * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -12371,9 +12363,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+          /** Required. The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
@@ -12382,8 +12374,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
            * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
            * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
            * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -12411,9 +12404,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -12441,9 +12432,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -12512,27 +12501,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12780,10 +12758,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+           * @param name Full resource name of the external system, for example:
+           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -12811,10 +12789,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * @param name Full resource name of the external system, for example:
+           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -12884,28 +12862,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             }
 
             /**
-             * External System Name e.g. jira, demisto, etc. e.g.:
-             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * Full resource name of the external system, for example:
+             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** External System Name e.g. jira, demisto, etc. e.g.:
-           `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+            /** Full resource name of the external system, for example:
+           "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * External System Name e.g. jira, demisto, etc. e.g.:
-             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * Full resource name of the external system, for example:
+             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -13813,14 +13791,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class BigQueryExports {
 
       /**
-       * Creates a big query export.
+       * Creates a BigQuery export.
        *
        * Create a request for the method "bigQueryExports.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new big query export's parent. Its format is
+       * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
@@ -13839,7 +13817,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a big query export.
+         * Creates a BigQuery export.
          *
          * Create a request for the method "bigQueryExports.create".
          *
@@ -13849,7 +13827,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new big query export's parent. Its format is
+         * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
@@ -13920,13 +13898,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new big query export's parent. Its format is
+         * Required. Resource name of the new BigQuery export's parent. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new big query export's parent. Its format is
+        /** Required. Resource name of the new BigQuery export's parent. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -13934,7 +13912,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new big query export's parent. Its format is
+         * Required. Resource name of the new BigQuery export's parent. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -13979,14 +13957,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing big query export.
+       * Deletes an existing BigQuery export.
        *
        * Create a request for the method "bigQueryExports.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the big query export to delete. Its format is
+       * @param name Required. Name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -14006,7 +13984,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Deletes an existing big query export.
+         * Deletes an existing BigQuery export.
          *
          * Create a request for the method "bigQueryExports.delete".
          *
@@ -14016,7 +13994,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the big query export to delete. Its format is
+         * @param name Required. Name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -14088,7 +14066,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to delete. Its format is
+         * Required. Name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -14096,7 +14074,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the big query export to delete. Its format is
+        /** Required. Name of the BigQuery export to delete. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -14105,7 +14083,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to delete. Its format is
+         * Required. Name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -14126,14 +14104,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a big query export.
+       * Gets a BigQuery export.
        *
        * Create a request for the method "bigQueryExports.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the big query export to retrieve. Its format is
+       * @param name Required. Name of the BigQuery export to retrieve. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -14153,7 +14131,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Gets a big query export.
+         * Gets a BigQuery export.
          *
          * Create a request for the method "bigQueryExports.get".
          *
@@ -14162,7 +14140,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the big query export to retrieve. Its format is
+         * @param name Required. Name of the BigQuery export to retrieve. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -14244,7 +14222,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to retrieve. Its format is
+         * Required. Name of the BigQuery export to retrieve. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -14252,7 +14230,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the big query export to retrieve. Its format is
+        /** Required. Name of the BigQuery export to retrieve. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -14261,7 +14239,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the big query export to retrieve. Its format is
+         * Required. Name of the BigQuery export to retrieve. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -15834,14 +15812,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contains alphanumeric characters, underscores or
-         * hyphens only.
+         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * only.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
         /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+       and 128 characters, and contain alphanumeric characters, underscores or hyphens only.
          */
         public java.lang.String getConfigId() {
           return configId;
@@ -15849,8 +15827,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contains alphanumeric characters, underscores or
-         * hyphens only.
+         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * only.
          */
         public Create setConfigId(java.lang.String configId) {
           this.configId = configId;
@@ -17587,8 +17565,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetMute#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -17619,8 +17598,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -17693,8 +17673,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
            * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
            * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
            * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -17702,9 +17683,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+          /** Required. The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
          "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
          "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
@@ -17713,8 +17694,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
            * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
            * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
            * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
@@ -17742,9 +17724,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -17772,9 +17752,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -17843,27 +17821,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}".
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18111,10 +18078,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+           * @param name Full resource name of the external system, for example:
+           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -18142,10 +18109,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * @param name Full resource name of the external system, for example:
+           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -18215,28 +18182,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             }
 
             /**
-             * External System Name e.g. jira, demisto, etc. e.g.:
-             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * Full resource name of the external system, for example:
+             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** External System Name e.g. jira, demisto, etc. e.g.:
-           `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-           `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-           `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+            /** Full resource name of the external system, for example:
+           "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+           "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+           "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * External System Name e.g. jira, demisto, etc. e.g.:
-             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+             * Full resource name of the external system, for example:
+             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

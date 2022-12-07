@@ -31,12 +31,39 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector;
+
+  /**
    * Percentage of conversations created using Dialogflow runtime integration to analyze
    * automatically, between [0, 100].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double runtimeIntegrationAnalysisPercentage;
+
+  /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector getAnnotatorSelector() {
+    return annotatorSelector;
+  }
+
+  /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * @param annotatorSelector annotatorSelector or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig setAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector) {
+    this.annotatorSelector = annotatorSelector;
+    return this;
+  }
 
   /**
    * Percentage of conversations created using Dialogflow runtime integration to analyze

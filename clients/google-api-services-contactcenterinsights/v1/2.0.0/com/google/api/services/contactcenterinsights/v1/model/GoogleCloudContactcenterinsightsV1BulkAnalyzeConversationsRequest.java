@@ -38,6 +38,14 @@ public final class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsReq
   private java.lang.Float analysisPercentage;
 
   /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector;
+
+  /**
    * Required. Filter used to select the subset of conversations to analyze.
    * The value may be {@code null}.
    */
@@ -65,6 +73,25 @@ public final class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsReq
    */
   public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest setAnalysisPercentage(java.lang.Float analysisPercentage) {
     this.analysisPercentage = analysisPercentage;
+    return this;
+  }
+
+  /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector getAnnotatorSelector() {
+    return annotatorSelector;
+  }
+
+  /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * @param annotatorSelector annotatorSelector or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest setAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector) {
+    this.annotatorSelector = annotatorSelector;
     return this;
   }
 

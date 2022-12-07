@@ -52,6 +52,13 @@ public final class GoogleCloudContactcenterinsightsV1IssueModel extends com.goog
   private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig inputDataConfig;
 
   /**
+   * Output only. Number of issues in this issue model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long issueCount;
+
+  /**
    * Immutable. The resource name of the issue model. Format:
    * projects/{project}/locations/{location}/issueModels/{issue_model}
    * The value may be {@code null}.
@@ -128,6 +135,23 @@ public final class GoogleCloudContactcenterinsightsV1IssueModel extends com.goog
    */
   public GoogleCloudContactcenterinsightsV1IssueModel setInputDataConfig(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig inputDataConfig) {
     this.inputDataConfig = inputDataConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Number of issues in this issue model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIssueCount() {
+    return issueCount;
+  }
+
+  /**
+   * Output only. Number of issues in this issue model.
+   * @param issueCount issueCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IssueModel setIssueCount(java.lang.Long issueCount) {
+    this.issueCount = issueCount;
     return this;
   }
 

@@ -38,6 +38,14 @@ public final class GoogleCloudContactcenterinsightsV1Analysis extends com.google
   private GoogleCloudContactcenterinsightsV1AnalysisResult analysisResult;
 
   /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector;
+
+  /**
    * Output only. The time at which the analysis was created, which occurs when the long-running
    * operation completes.
    * The value may be {@code null}.
@@ -74,6 +82,25 @@ public final class GoogleCloudContactcenterinsightsV1Analysis extends com.google
    */
   public GoogleCloudContactcenterinsightsV1Analysis setAnalysisResult(GoogleCloudContactcenterinsightsV1AnalysisResult analysisResult) {
     this.analysisResult = analysisResult;
+    return this;
+  }
+
+  /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector getAnnotatorSelector() {
+    return annotatorSelector;
+  }
+
+  /**
+   * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
+   * annotators will be run.
+   * @param annotatorSelector annotatorSelector or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Analysis setAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector) {
+    this.annotatorSelector = annotatorSelector;
     return this;
   }
 

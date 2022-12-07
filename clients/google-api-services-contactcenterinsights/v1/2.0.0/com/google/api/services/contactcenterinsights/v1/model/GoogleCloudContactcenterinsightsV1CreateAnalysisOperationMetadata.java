@@ -31,6 +31,13 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1CreateAnalysisOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The annotator selector used for the analysis (if any).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector;
+
+  /**
    * Output only. The Conversation that this Analysis Operation belongs to.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudContactcenterinsightsV1CreateAnalysisOperationMeta
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * Output only. The annotator selector used for the analysis (if any).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector getAnnotatorSelector() {
+    return annotatorSelector;
+  }
+
+  /**
+   * Output only. The annotator selector used for the analysis (if any).
+   * @param annotatorSelector annotatorSelector or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1CreateAnalysisOperationMetadata setAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector) {
+    this.annotatorSelector = annotatorSelector;
+    return this;
+  }
 
   /**
    * Output only. The Conversation that this Analysis Operation belongs to.

@@ -31,6 +31,14 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class SpeechAdaptation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Augmented Backus-Naur form (ABNF) is a standardized grammar notation comprised by a set of
+   * derivation rules. See specifications: https://www.w3.org/TR/speech-grammar
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ABNFGrammar abnfGrammar;
+
+  /**
    * A collection of custom classes. To specify the classes inline, leave the class' `name` blank
    * and fill in the rest of its fields, giving it a unique `custom_class_id`. Refer to the inline
    * defined class in phrase hints by its `custom_class_id`.
@@ -64,6 +72,25 @@ public final class SpeechAdaptation extends com.google.api.client.json.GenericJs
     // hack to force ProGuard to consider PhraseSet used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(PhraseSet.class);
+  }
+
+  /**
+   * Augmented Backus-Naur form (ABNF) is a standardized grammar notation comprised by a set of
+   * derivation rules. See specifications: https://www.w3.org/TR/speech-grammar
+   * @return value or {@code null} for none
+   */
+  public ABNFGrammar getAbnfGrammar() {
+    return abnfGrammar;
+  }
+
+  /**
+   * Augmented Backus-Naur form (ABNF) is a standardized grammar notation comprised by a set of
+   * derivation rules. See specifications: https://www.w3.org/TR/speech-grammar
+   * @param abnfGrammar abnfGrammar or {@code null} for none
+   */
+  public SpeechAdaptation setAbnfGrammar(ABNFGrammar abnfGrammar) {
+    this.abnfGrammar = abnfGrammar;
+    return this;
   }
 
   /**

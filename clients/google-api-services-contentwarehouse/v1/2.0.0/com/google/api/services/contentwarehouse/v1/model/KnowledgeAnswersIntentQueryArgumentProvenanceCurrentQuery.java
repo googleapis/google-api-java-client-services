@@ -42,6 +42,12 @@ public final class KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery ext
   private java.util.List<NlpSemanticParsingAnnotationEvalData> evalData;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator neuralLocationAnnotator;
+
+  /**
    * The span(s) in the query where the value comes from. Note that if the argument is split across
    * the current and previous query, this message should *NOT* be populated. Please use
    * PreviousQuery below, populating it's eval-data fields accordingly.
@@ -59,6 +65,21 @@ public final class KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery ext
    */
   public KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery setEvalData(java.util.List<NlpSemanticParsingAnnotationEvalData> evalData) {
     this.evalData = evalData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator getNeuralLocationAnnotator() {
+    return neuralLocationAnnotator;
+  }
+
+  /**
+   * @param neuralLocationAnnotator neuralLocationAnnotator or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery setNeuralLocationAnnotator(KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator neuralLocationAnnotator) {
+    this.neuralLocationAnnotator = neuralLocationAnnotator;
     return this;
   }
 

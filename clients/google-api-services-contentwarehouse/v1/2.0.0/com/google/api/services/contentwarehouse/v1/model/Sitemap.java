@@ -61,6 +61,14 @@ public final class Sitemap extends com.google.api.client.json.GenericJson {
   private java.util.List<SitemapDEPRECATEDTarget> deprecatedTarget;
 
   /**
+   * This field is populated in the Sitemap MDU subpopulator from cdoc data. This is used to store
+   * page anchors information for TopicTagsScrolltoFlow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SdrPageAnchorsDocInfo pageAnchorsDocInfo;
+
+  /**
    * Enable site search.
    * The value may be {@code null}.
    */
@@ -148,6 +156,25 @@ public final class Sitemap extends com.google.api.client.json.GenericJson {
    */
   public Sitemap setDeprecatedTarget(java.util.List<SitemapDEPRECATEDTarget> deprecatedTarget) {
     this.deprecatedTarget = deprecatedTarget;
+    return this;
+  }
+
+  /**
+   * This field is populated in the Sitemap MDU subpopulator from cdoc data. This is used to store
+   * page anchors information for TopicTagsScrolltoFlow.
+   * @return value or {@code null} for none
+   */
+  public SdrPageAnchorsDocInfo getPageAnchorsDocInfo() {
+    return pageAnchorsDocInfo;
+  }
+
+  /**
+   * This field is populated in the Sitemap MDU subpopulator from cdoc data. This is used to store
+   * page anchors information for TopicTagsScrolltoFlow.
+   * @param pageAnchorsDocInfo pageAnchorsDocInfo or {@code null} for none
+   */
+  public Sitemap setPageAnchorsDocInfo(SdrPageAnchorsDocInfo pageAnchorsDocInfo) {
+    this.pageAnchorsDocInfo = pageAnchorsDocInfo;
     return this;
   }
 

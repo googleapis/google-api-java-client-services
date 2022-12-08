@@ -87,62 +87,12 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   }
 
   /**
+   * Policy metadata fields for LMS data. Only expected to be used by LMS providers -- please
+   * consult ke-data-governance@ before populating this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> lmsClientIdsAllowed;
-
-  /**
-   * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
-   * online-restrictions for details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean lmsIsEditorial;
-
-  /**
-   * Int values corresponds to the values of image_repository.licensed.api.restrictions.Modification
-   * enum.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.util.List<java.lang.Long> lmsModificationsAllowed;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private KeGovernanceTypedRegions lmsRegionsAllowed;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private KeGovernanceTypedRegions lmsRegionsDisallowed;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean lmsRequiresAttribution;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean lmsRequiresFirstPartyOnly;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean lmsRequiresLink;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean lmsRequiresShareAlike;
+  private StorageGraphBfgLmsPolicyMetadata lmsPolicyMetadata;
 
   /**
    * Policy metadata are VERTICAL by default. Vertical policy makers / providers does not need to
@@ -255,145 +205,21 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   }
 
   /**
+   * Policy metadata fields for LMS data. Only expected to be used by LMS providers -- please
+   * consult ke-data-governance@ before populating this field.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getLmsClientIdsAllowed() {
-    return lmsClientIdsAllowed;
+  public StorageGraphBfgLmsPolicyMetadata getLmsPolicyMetadata() {
+    return lmsPolicyMetadata;
   }
 
   /**
-   * @param lmsClientIdsAllowed lmsClientIdsAllowed or {@code null} for none
+   * Policy metadata fields for LMS data. Only expected to be used by LMS providers -- please
+   * consult ke-data-governance@ before populating this field.
+   * @param lmsPolicyMetadata lmsPolicyMetadata or {@code null} for none
    */
-  public StorageGraphBfgPolicyMetadata setLmsClientIdsAllowed(java.util.List<java.lang.String> lmsClientIdsAllowed) {
-    this.lmsClientIdsAllowed = lmsClientIdsAllowed;
-    return this;
-  }
-
-  /**
-   * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
-   * online-restrictions for details.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLmsIsEditorial() {
-    return lmsIsEditorial;
-  }
-
-  /**
-   * The following attributes with `lms_` prefix are for supporting LMS restrictions. See go/lms-
-   * online-restrictions for details.
-   * @param lmsIsEditorial lmsIsEditorial or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsIsEditorial(java.lang.Boolean lmsIsEditorial) {
-    this.lmsIsEditorial = lmsIsEditorial;
-    return this;
-  }
-
-  /**
-   * Int values corresponds to the values of image_repository.licensed.api.restrictions.Modification
-   * enum.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Long> getLmsModificationsAllowed() {
-    return lmsModificationsAllowed;
-  }
-
-  /**
-   * Int values corresponds to the values of image_repository.licensed.api.restrictions.Modification
-   * enum.
-   * @param lmsModificationsAllowed lmsModificationsAllowed or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsModificationsAllowed(java.util.List<java.lang.Long> lmsModificationsAllowed) {
-    this.lmsModificationsAllowed = lmsModificationsAllowed;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public KeGovernanceTypedRegions getLmsRegionsAllowed() {
-    return lmsRegionsAllowed;
-  }
-
-  /**
-   * @param lmsRegionsAllowed lmsRegionsAllowed or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsRegionsAllowed(KeGovernanceTypedRegions lmsRegionsAllowed) {
-    this.lmsRegionsAllowed = lmsRegionsAllowed;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public KeGovernanceTypedRegions getLmsRegionsDisallowed() {
-    return lmsRegionsDisallowed;
-  }
-
-  /**
-   * @param lmsRegionsDisallowed lmsRegionsDisallowed or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsRegionsDisallowed(KeGovernanceTypedRegions lmsRegionsDisallowed) {
-    this.lmsRegionsDisallowed = lmsRegionsDisallowed;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLmsRequiresAttribution() {
-    return lmsRequiresAttribution;
-  }
-
-  /**
-   * @param lmsRequiresAttribution lmsRequiresAttribution or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsRequiresAttribution(java.lang.Boolean lmsRequiresAttribution) {
-    this.lmsRequiresAttribution = lmsRequiresAttribution;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLmsRequiresFirstPartyOnly() {
-    return lmsRequiresFirstPartyOnly;
-  }
-
-  /**
-   * @param lmsRequiresFirstPartyOnly lmsRequiresFirstPartyOnly or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsRequiresFirstPartyOnly(java.lang.Boolean lmsRequiresFirstPartyOnly) {
-    this.lmsRequiresFirstPartyOnly = lmsRequiresFirstPartyOnly;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLmsRequiresLink() {
-    return lmsRequiresLink;
-  }
-
-  /**
-   * @param lmsRequiresLink lmsRequiresLink or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsRequiresLink(java.lang.Boolean lmsRequiresLink) {
-    this.lmsRequiresLink = lmsRequiresLink;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLmsRequiresShareAlike() {
-    return lmsRequiresShareAlike;
-  }
-
-  /**
-   * @param lmsRequiresShareAlike lmsRequiresShareAlike or {@code null} for none
-   */
-  public StorageGraphBfgPolicyMetadata setLmsRequiresShareAlike(java.lang.Boolean lmsRequiresShareAlike) {
-    this.lmsRequiresShareAlike = lmsRequiresShareAlike;
+  public StorageGraphBfgPolicyMetadata setLmsPolicyMetadata(StorageGraphBfgLmsPolicyMetadata lmsPolicyMetadata) {
+    this.lmsPolicyMetadata = lmsPolicyMetadata;
     return this;
   }
 

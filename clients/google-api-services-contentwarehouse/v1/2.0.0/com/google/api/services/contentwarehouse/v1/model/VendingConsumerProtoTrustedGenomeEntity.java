@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Proto message containing the id, localized title, score, and hierarchy level of a trusted genome
- * entity.
+ * entity. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -54,6 +54,13 @@ public final class VendingConsumerProtoTrustedGenomeEntity extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Integer level;
+
+  /**
+   * The name of the relation between the app and the entity. Required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predicateName;
 
   /**
    * The localized query string for this trusted genome entity. This query will be used when we want
@@ -141,6 +148,23 @@ public final class VendingConsumerProtoTrustedGenomeEntity extends com.google.ap
    */
   public VendingConsumerProtoTrustedGenomeEntity setLevel(java.lang.Integer level) {
     this.level = level;
+    return this;
+  }
+
+  /**
+   * The name of the relation between the app and the entity. Required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredicateName() {
+    return predicateName;
+  }
+
+  /**
+   * The name of the relation between the app and the entity. Required.
+   * @param predicateName predicateName or {@code null} for none
+   */
+  public VendingConsumerProtoTrustedGenomeEntity setPredicateName(java.lang.String predicateName) {
+    this.predicateName = predicateName;
     return this;
   }
 

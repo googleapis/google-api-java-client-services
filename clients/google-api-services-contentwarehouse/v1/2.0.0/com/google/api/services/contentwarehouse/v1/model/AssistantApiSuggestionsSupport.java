@@ -38,7 +38,8 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
   private java.lang.Boolean clickImpersonationSupported;
 
   /**
-   * Whether client supports suggestion chips with colored background/border.
+   * Whether client supports suggestion chips with colored background/border. Deprecated in favor of
+   * go/color-token-suggestion-chip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,7 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
 
   /**
    * Whether client supports suggestion chips with colored text. See design doc: http://go/opa-
-   * suggestions-ux-eng-design.
+   * suggestions-ux-eng-design. Deprecated in favor of go/color-token-suggestion-chip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +172,8 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
   }
 
   /**
-   * Whether client supports suggestion chips with colored background/border.
+   * Whether client supports suggestion chips with colored background/border. Deprecated in favor of
+   * go/color-token-suggestion-chip.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getColoredChipBackgroundBorderSupported() {
@@ -179,7 +181,8 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
   }
 
   /**
-   * Whether client supports suggestion chips with colored background/border.
+   * Whether client supports suggestion chips with colored background/border. Deprecated in favor of
+   * go/color-token-suggestion-chip.
    * @param coloredChipBackgroundBorderSupported coloredChipBackgroundBorderSupported or {@code null} for none
    */
   public AssistantApiSuggestionsSupport setColoredChipBackgroundBorderSupported(java.lang.Boolean coloredChipBackgroundBorderSupported) {
@@ -189,7 +192,7 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
 
   /**
    * Whether client supports suggestion chips with colored text. See design doc: http://go/opa-
-   * suggestions-ux-eng-design.
+   * suggestions-ux-eng-design. Deprecated in favor of go/color-token-suggestion-chip.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getColoredChipTextSupported() {
@@ -198,7 +201,7 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
 
   /**
    * Whether client supports suggestion chips with colored text. See design doc: http://go/opa-
-   * suggestions-ux-eng-design.
+   * suggestions-ux-eng-design. Deprecated in favor of go/color-token-suggestion-chip.
    * @param coloredChipTextSupported coloredChipTextSupported or {@code null} for none
    */
   public AssistantApiSuggestionsSupport setColoredChipTextSupported(java.lang.Boolean coloredChipTextSupported) {

@@ -17,12 +17,12 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Protocol record used for collecting together all information about a document. Please consult
- * go/dme for two basic questions about `CompositeDoc`: - Where should I look up certain information
- * (e.g: pagerank, language)? - What does each field in CompositeDoc mean and who should I contact
- * if I have questions? To add a new field into CompositeDoc, or change existing field's size
- * significantly, please file a ticket at go/dj-new-field, fill in necessary information and get
- * approved by docjoin-access@ team. Next id: 191
+ * Protocol record used for collecting together all information about a document. Please consult go
+ * /dj-explorer for two basic questions about `CompositeDoc`: - Where should I look up certain
+ * information (e.g: pagerank, language)? - What does each field in CompositeDoc mean and who should
+ * I contact if I have questions? To add a new field into CompositeDoc, or change existing field's
+ * size significantly, please file a ticket at go/dj-new-field, fill in necessary information and
+ * get approved by docjoin-access@ team. Next id: 191
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:

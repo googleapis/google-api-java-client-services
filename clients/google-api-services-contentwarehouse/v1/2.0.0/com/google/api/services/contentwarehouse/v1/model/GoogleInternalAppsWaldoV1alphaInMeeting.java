@@ -31,8 +31,8 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that the goal of this field is to provide
-   * information to help users decide how to communicate with a user (see also
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that the goal of this field is to
+   * provide information to help users decide how to communicate with a user (see also
    * http://shortn/_wXYXtZScgh).
    * The value may be {@code null}.
    */
@@ -79,8 +79,8 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that the goal of this field is to provide
-   * information to help users decide how to communicate with a user (see also
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that the goal of this field is to
+   * provide information to help users decide how to communicate with a user (see also
    * http://shortn/_wXYXtZScgh).
    * @return value or {@code null} for none
    */
@@ -90,8 +90,8 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that the goal of this field is to provide
-   * information to help users decide how to communicate with a user (see also
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that the goal of this field is to
+   * provide information to help users decide how to communicate with a user (see also
    * http://shortn/_wXYXtZScgh).
    * @param committedUntil committedUntil or {@code null} for none
    */

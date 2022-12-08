@@ -23,8 +23,9 @@ package com.google.api.services.contentwarehouse.v1.model;
  * month_day: 17 } } months: JULY } Weekly reccurrence such as: every two weeks on Monday: every: 2
  * weekly_recurrence { week_day: MONDAY } Monthly recurrence such as: third Thursday of every month:
  * monthly_recurrence { monthly_weekday_recurrence { week_day: THURSDAY week_day_number: 3 } } Used
- * in PeopleAPI layers + FBS/ContactsService (not in ProfileService) TODO(b/240850530) add link to
- * validators when created.
+ * in PeopleAPI layers + FBS/ContactsService (not in ProfileService) The canonical recurrence
+ * validation function is located here: http://google3/java/com/google/social/people/prompts/util/Pr
+ * omptValidators.java?q=func:%5CbvalidateRecurrence%5Cb
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -44,9 +45,9 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * Multiplier on the frequency of the recurrence. Use this to specify patterns that recur every X
-   * days, months, years, etc. Example: [remind me to call mom every 2nd week]. Default value will
-   * be considered 1 (every day,every week,...) and not 0. This is ignored for a SingleRecurrence.
-   * Optional.
+   * days, months, years, etc. Must be a positive int. Example: [remind me to call mom every 2nd
+   * week]. If this field isn't set, it will default to 1 (every day,every week, etc). This field is
+   * ignored when recurrence_data is a SingleRecurrence. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +67,8 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
   private GoogleTypeDateTime recurrenceEndDate;
 
   /**
-   * The start of the recurrence can be represented as a DateTime. This is ignored for a
-   * SingleRecurrence.
+   * The start of the recurrence can be represented as a DateTime. This field is ignored when
+   * recurrence_data is a SingleRecurrence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,8 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * Will repeat only a finite number of times. This is the original number of times the recurrence
-   * will repeat and not how many times are left for it to repeat.
+   * will repeat and not how many times are left for it to repeat. This end type is not currently
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,9 +125,9 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * Multiplier on the frequency of the recurrence. Use this to specify patterns that recur every X
-   * days, months, years, etc. Example: [remind me to call mom every 2nd week]. Default value will
-   * be considered 1 (every day,every week,...) and not 0. This is ignored for a SingleRecurrence.
-   * Optional.
+   * days, months, years, etc. Must be a positive int. Example: [remind me to call mom every 2nd
+   * week]. If this field isn't set, it will default to 1 (every day,every week, etc). This field is
+   * ignored when recurrence_data is a SingleRecurrence. Optional.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEvery() {
@@ -134,9 +136,9 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * Multiplier on the frequency of the recurrence. Use this to specify patterns that recur every X
-   * days, months, years, etc. Example: [remind me to call mom every 2nd week]. Default value will
-   * be considered 1 (every day,every week,...) and not 0. This is ignored for a SingleRecurrence.
-   * Optional.
+   * days, months, years, etc. Must be a positive int. Example: [remind me to call mom every 2nd
+   * week]. If this field isn't set, it will default to 1 (every day,every week, etc). This field is
+   * ignored when recurrence_data is a SingleRecurrence. Optional.
    * @param every every or {@code null} for none
    */
   public SocialGraphApiProtoRecurrence setEvery(java.lang.Integer every) {
@@ -177,8 +179,8 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
   }
 
   /**
-   * The start of the recurrence can be represented as a DateTime. This is ignored for a
-   * SingleRecurrence.
+   * The start of the recurrence can be represented as a DateTime. This field is ignored when
+   * recurrence_data is a SingleRecurrence.
    * @return value or {@code null} for none
    */
   public GoogleTypeDateTime getRecurrenceStart() {
@@ -186,8 +188,8 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
   }
 
   /**
-   * The start of the recurrence can be represented as a DateTime. This is ignored for a
-   * SingleRecurrence.
+   * The start of the recurrence can be represented as a DateTime. This field is ignored when
+   * recurrence_data is a SingleRecurrence.
    * @param recurrenceStart recurrenceStart or {@code null} for none
    */
   public SocialGraphApiProtoRecurrence setRecurrenceStart(GoogleTypeDateTime recurrenceStart) {
@@ -197,7 +199,8 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * Will repeat only a finite number of times. This is the original number of times the recurrence
-   * will repeat and not how many times are left for it to repeat.
+   * will repeat and not how many times are left for it to repeat. This end type is not currently
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRepeatCount() {
@@ -206,7 +209,8 @@ public final class SocialGraphApiProtoRecurrence extends com.google.api.client.j
 
   /**
    * Will repeat only a finite number of times. This is the original number of times the recurrence
-   * will repeat and not how many times are left for it to repeat.
+   * will repeat and not how many times are left for it to repeat. This end type is not currently
+   * supported.
    * @param repeatCount repeatCount or {@code null} for none
    */
   public SocialGraphApiProtoRecurrence setRepeatCount(java.lang.Integer repeatCount) {

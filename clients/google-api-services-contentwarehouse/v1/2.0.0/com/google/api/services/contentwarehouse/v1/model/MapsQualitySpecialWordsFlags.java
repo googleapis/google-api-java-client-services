@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Flags that describe the information about a special word. If you add another flag please add it
  * to the special words implemenation in google3/maps/quality/internal/special_words.cc. -- Next
- * available id: 21 --
+ * available id: 22 --
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -30,6 +30,16 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class MapsQualitySpecialWordsFlags extends com.google.api.client.json.GenericJson {
+
+  /**
+   * An affix that indicates an alley. Alleys are unnamed, numbered routes that are always linked to
+   * a "parent street". As these parent streets can be named e.g. "7th street" and alleys might be
+   * referred to as "7th alley", we need to be able to distinguish those affixes. For more details
+   * about alleys see go/vn-alley-geocoding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAlleyAffix;
 
   /**
    * Common words E.g.: center, park, etc.
@@ -172,6 +182,29 @@ public final class MapsQualitySpecialWordsFlags extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isStreetNumberIdentifier;
+
+  /**
+   * An affix that indicates an alley. Alleys are unnamed, numbered routes that are always linked to
+   * a "parent street". As these parent streets can be named e.g. "7th street" and alleys might be
+   * referred to as "7th alley", we need to be able to distinguish those affixes. For more details
+   * about alleys see go/vn-alley-geocoding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAlleyAffix() {
+    return isAlleyAffix;
+  }
+
+  /**
+   * An affix that indicates an alley. Alleys are unnamed, numbered routes that are always linked to
+   * a "parent street". As these parent streets can be named e.g. "7th street" and alleys might be
+   * referred to as "7th alley", we need to be able to distinguish those affixes. For more details
+   * about alleys see go/vn-alley-geocoding.
+   * @param isAlleyAffix isAlleyAffix or {@code null} for none
+   */
+  public MapsQualitySpecialWordsFlags setIsAlleyAffix(java.lang.Boolean isAlleyAffix) {
+    this.isAlleyAffix = isAlleyAffix;
+    return this;
+  }
 
   /**
    * Common words E.g.: center, park, etc.

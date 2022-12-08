@@ -31,6 +31,12 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class SnippetExtraInfoSnippetsBrainModelInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ng3ModelName;
+
+  /**
    * The below fields are populated by SnippetFlow in superroot.
    * The value may be {@code null}.
    */
@@ -48,6 +54,21 @@ public final class SnippetExtraInfoSnippetsBrainModelInfo extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String snippetsbrainTokenizerType;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNg3ModelName() {
+    return ng3ModelName;
+  }
+
+  /**
+   * @param ng3ModelName ng3ModelName or {@code null} for none
+   */
+  public SnippetExtraInfoSnippetsBrainModelInfo setNg3ModelName(java.lang.String ng3ModelName) {
+    this.ng3ModelName = ng3ModelName;
+    return this;
+  }
 
   /**
    * The below fields are populated by SnippetFlow in superroot.

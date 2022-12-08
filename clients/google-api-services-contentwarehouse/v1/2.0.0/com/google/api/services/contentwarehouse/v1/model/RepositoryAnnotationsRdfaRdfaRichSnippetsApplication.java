@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This structure holds data for application information for rich snippets Next ID: 51
+ * This structure holds data for application information for rich snippets Next ID: 52
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -134,6 +134,13 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
    */
   @com.google.api.client.util.Key
   private java.lang.String iconUrlThumbnail;
+
+  /**
+   * Copied from google3/contentads/shared/boulder/mobile-app-data-image-data.proto.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityCalypsoAppsUniversalImageData imageData;
 
   /**
    * Whether the app offers in-app purchase.
@@ -273,6 +280,7 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
   private java.lang.String reviewCount;
 
   /**
+   * TODO(b/260128276) deprecate this field in favor of image_data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -618,6 +626,23 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
   }
 
   /**
+   * Copied from google3/contentads/shared/boulder/mobile-app-data-image-data.proto.
+   * @return value or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalImageData getImageData() {
+    return imageData;
+  }
+
+  /**
+   * Copied from google3/contentads/shared/boulder/mobile-app-data-image-data.proto.
+   * @param imageData imageData or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setImageData(QualityCalypsoAppsUniversalImageData imageData) {
+    this.imageData = imageData;
+    return this;
+  }
+
+  /**
    * Whether the app offers in-app purchase.
    * @return value or {@code null} for none
    */
@@ -955,6 +980,7 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
   }
 
   /**
+   * TODO(b/260128276) deprecate this field in favor of image_data.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScreenUrlHref() {
@@ -962,6 +988,7 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
   }
 
   /**
+   * TODO(b/260128276) deprecate this field in favor of image_data.
    * @param screenUrlHref screenUrlHref or {@code null} for none
    */
   public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setScreenUrlHref(java.util.List<java.lang.String> screenUrlHref) {

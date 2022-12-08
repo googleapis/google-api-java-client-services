@@ -60,6 +60,12 @@ public final class KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery ex
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator neuralLocationAnnotator;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private KnowledgeAnswersIntentQueryArgumentProvenancePreviousQueryRole role;
 
   /**
@@ -118,6 +124,21 @@ public final class KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery ex
    */
   public KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery setEventId(EventIdMessage eventId) {
     this.eventId = eventId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator getNeuralLocationAnnotator() {
+    return neuralLocationAnnotator;
+  }
+
+  /**
+   * @param neuralLocationAnnotator neuralLocationAnnotator or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery setNeuralLocationAnnotator(KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator neuralLocationAnnotator) {
+    this.neuralLocationAnnotator = neuralLocationAnnotator;
     return this;
   }
 

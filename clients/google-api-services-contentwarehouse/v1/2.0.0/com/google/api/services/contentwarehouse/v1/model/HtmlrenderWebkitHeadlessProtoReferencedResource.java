@@ -130,6 +130,7 @@ public final class HtmlrenderWebkitHeadlessProtoReferencedResource extends com.g
   private java.lang.Integer referencedResourceContentIndex;
 
   /**
+   * Only necessary headers are recorded. See google3/htmlrender/webkit_headless/resource_key.cc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -441,6 +442,7 @@ public final class HtmlrenderWebkitHeadlessProtoReferencedResource extends com.g
   }
 
   /**
+   * Only necessary headers are recorded. See google3/htmlrender/webkit_headless/resource_key.cc
    * @return value or {@code null} for none
    */
   public java.util.List<HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader> getRequestHeader() {
@@ -448,6 +450,7 @@ public final class HtmlrenderWebkitHeadlessProtoReferencedResource extends com.g
   }
 
   /**
+   * Only necessary headers are recorded. See google3/htmlrender/webkit_headless/resource_key.cc
    * @param requestHeader requestHeader or {@code null} for none
    */
   public HtmlrenderWebkitHeadlessProtoReferencedResource setRequestHeader(java.util.List<HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader> requestHeader) {

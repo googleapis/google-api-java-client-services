@@ -37,6 +37,12 @@ public final class FatcatCompactTaxonomicClassification extends com.google.api.c
   private java.util.List<FatcatCompactTaxonomicClassificationCategory> category;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String classifierVersion;
+
+  /**
    * Either taxonomy will be set, using the enum above, or taxonomy_name will be set (if the
    * taxonomy is not one of the ones in the enum) - never both
    * The value may be {@code null}.
@@ -62,6 +68,21 @@ public final class FatcatCompactTaxonomicClassification extends com.google.api.c
    */
   public FatcatCompactTaxonomicClassification setCategory(java.util.List<FatcatCompactTaxonomicClassificationCategory> category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClassifierVersion() {
+    return classifierVersion;
+  }
+
+  /**
+   * @param classifierVersion classifierVersion or {@code null} for none
+   */
+  public FatcatCompactTaxonomicClassification setClassifierVersion(java.lang.String classifierVersion) {
+    this.classifierVersion = classifierVersion;
     return this;
   }
 

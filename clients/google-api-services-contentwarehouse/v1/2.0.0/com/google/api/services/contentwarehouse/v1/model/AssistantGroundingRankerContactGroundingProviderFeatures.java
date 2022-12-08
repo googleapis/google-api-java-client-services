@@ -78,28 +78,32 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   private java.lang.String matchedNameType;
 
   /**
-   * Number of alternate contact names from fuzzy contact match.
+   * Number of alternate contact names from fuzzy contact match. (Not suggest using it since it can
+   * change due to retrieval iteration)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float numAlternateNameFromFuzzyContactMatch;
 
   /**
-   * Number of alternate contact names from S3_HYPOTHESES.
+   * Number of alternate contact names from S3_HYPOTHESES. (Not suggest using it since it can change
+   * due to retrieval iteration)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float numAlternateNamesFromS3;
 
   /**
-   * Number of alternate contact names from interpretation.
+   * Number of alternate contact names from interpretation. (Not suggest using it since it can
+   * change due to retrieval iteration)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float numAlternativeNamesFromInterpretation;
 
   /**
-   * Number of contacts populated by the contact Grounding Provider.
+   * Number of contacts populated by the contact Grounding Provider. (Not suggest using it since it
+   * can change due to retrieval iteration)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,7 +233,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of alternate contact names from fuzzy contact match.
+   * Number of alternate contact names from fuzzy contact match. (Not suggest using it since it can
+   * change due to retrieval iteration)
    * @return value or {@code null} for none
    */
   public java.lang.Float getNumAlternateNameFromFuzzyContactMatch() {
@@ -237,7 +242,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of alternate contact names from fuzzy contact match.
+   * Number of alternate contact names from fuzzy contact match. (Not suggest using it since it can
+   * change due to retrieval iteration)
    * @param numAlternateNameFromFuzzyContactMatch numAlternateNameFromFuzzyContactMatch or {@code null} for none
    */
   public AssistantGroundingRankerContactGroundingProviderFeatures setNumAlternateNameFromFuzzyContactMatch(java.lang.Float numAlternateNameFromFuzzyContactMatch) {
@@ -246,7 +252,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of alternate contact names from S3_HYPOTHESES.
+   * Number of alternate contact names from S3_HYPOTHESES. (Not suggest using it since it can change
+   * due to retrieval iteration)
    * @return value or {@code null} for none
    */
   public java.lang.Float getNumAlternateNamesFromS3() {
@@ -254,7 +261,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of alternate contact names from S3_HYPOTHESES.
+   * Number of alternate contact names from S3_HYPOTHESES. (Not suggest using it since it can change
+   * due to retrieval iteration)
    * @param numAlternateNamesFromS3 numAlternateNamesFromS3 or {@code null} for none
    */
   public AssistantGroundingRankerContactGroundingProviderFeatures setNumAlternateNamesFromS3(java.lang.Float numAlternateNamesFromS3) {
@@ -263,7 +271,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of alternate contact names from interpretation.
+   * Number of alternate contact names from interpretation. (Not suggest using it since it can
+   * change due to retrieval iteration)
    * @return value or {@code null} for none
    */
   public java.lang.Float getNumAlternativeNamesFromInterpretation() {
@@ -271,7 +280,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of alternate contact names from interpretation.
+   * Number of alternate contact names from interpretation. (Not suggest using it since it can
+   * change due to retrieval iteration)
    * @param numAlternativeNamesFromInterpretation numAlternativeNamesFromInterpretation or {@code null} for none
    */
   public AssistantGroundingRankerContactGroundingProviderFeatures setNumAlternativeNamesFromInterpretation(java.lang.Float numAlternativeNamesFromInterpretation) {
@@ -280,7 +290,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of contacts populated by the contact Grounding Provider.
+   * Number of contacts populated by the contact Grounding Provider. (Not suggest using it since it
+   * can change due to retrieval iteration)
    * @return value or {@code null} for none
    */
   public java.lang.Float getNumCandidates() {
@@ -288,7 +299,8 @@ public final class AssistantGroundingRankerContactGroundingProviderFeatures exte
   }
 
   /**
-   * Number of contacts populated by the contact Grounding Provider.
+   * Number of contacts populated by the contact Grounding Provider. (Not suggest using it since it
+   * can change due to retrieval iteration)
    * @param numCandidates numCandidates or {@code null} for none
    */
   public AssistantGroundingRankerContactGroundingProviderFeatures setNumCandidates(java.lang.Float numCandidates) {

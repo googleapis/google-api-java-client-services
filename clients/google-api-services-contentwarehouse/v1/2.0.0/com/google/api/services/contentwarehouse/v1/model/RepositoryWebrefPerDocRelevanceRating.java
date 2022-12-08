@@ -36,24 +36,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   private java.lang.String contentRelevant;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer deprecatedItemId;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer deprecatedProjectId;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer deprecatedTaskId;
-
-  /**
    * How this rating is displayed in the evals, pre-computed from the other fields.
    * The value may be {@code null}.
    */
@@ -71,20 +53,8 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.String itemDescription;
-
-  /**
-   * The value may be {@code null}.
-   */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger itemId;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String language;
 
   /**
    * If the topic is about a business chain, whether the
@@ -94,13 +64,7 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   private java.lang.String pageIsAboutChain;
 
   /**
-   * If true, content_relevance is set to NONE.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean pageNotLoaded;
-
-  /**
+   * Metadata for task-level ratings. Not filled for aggregated doc-level ratings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -114,13 +78,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   private java.lang.Boolean raterCanUnderstandTopic;
 
   /**
-   * Floating point representation of the `content_relevant` field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double ratingScore;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,25 +88,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger taskId;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String taskStatus;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer taskUser;
-
-  /**
-   * Metadata for task-level ratings. Not filled for aggregated doc-level ratings.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer templateId;
 
   /**
    * Whether the topic is about a business chain.
@@ -170,51 +108,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
    */
   public RepositoryWebrefPerDocRelevanceRating setContentRelevant(java.lang.String contentRelevant) {
     this.contentRelevant = contentRelevant;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getDeprecatedItemId() {
-    return deprecatedItemId;
-  }
-
-  /**
-   * @param deprecatedItemId deprecatedItemId or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setDeprecatedItemId(java.lang.Integer deprecatedItemId) {
-    this.deprecatedItemId = deprecatedItemId;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getDeprecatedProjectId() {
-    return deprecatedProjectId;
-  }
-
-  /**
-   * @param deprecatedProjectId deprecatedProjectId or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setDeprecatedProjectId(java.lang.Integer deprecatedProjectId) {
-    this.deprecatedProjectId = deprecatedProjectId;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getDeprecatedTaskId() {
-    return deprecatedTaskId;
-  }
-
-  /**
-   * @param deprecatedTaskId deprecatedTaskId or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setDeprecatedTaskId(java.lang.Integer deprecatedTaskId) {
-    this.deprecatedTaskId = deprecatedTaskId;
     return this;
   }
 
@@ -257,21 +150,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getItemDescription() {
-    return itemDescription;
-  }
-
-  /**
-   * @param itemDescription itemDescription or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setItemDescription(java.lang.String itemDescription) {
-    this.itemDescription = itemDescription;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
   public java.math.BigInteger getItemId() {
     return itemId;
   }
@@ -281,21 +159,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
    */
   public RepositoryWebrefPerDocRelevanceRating setItemId(java.math.BigInteger itemId) {
     this.itemId = itemId;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLanguage() {
-    return language;
-  }
-
-  /**
-   * @param language language or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setLanguage(java.lang.String language) {
-    this.language = language;
     return this;
   }
 
@@ -317,23 +180,7 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   }
 
   /**
-   * If true, content_relevance is set to NONE.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPageNotLoaded() {
-    return pageNotLoaded;
-  }
-
-  /**
-   * If true, content_relevance is set to NONE.
-   * @param pageNotLoaded pageNotLoaded or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setPageNotLoaded(java.lang.Boolean pageNotLoaded) {
-    this.pageNotLoaded = pageNotLoaded;
-    return this;
-  }
-
-  /**
+   * Metadata for task-level ratings. Not filled for aggregated doc-level ratings.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getProjectId() {
@@ -341,6 +188,7 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
   }
 
   /**
+   * Metadata for task-level ratings. Not filled for aggregated doc-level ratings.
    * @param projectId projectId or {@code null} for none
    */
   public RepositoryWebrefPerDocRelevanceRating setProjectId(java.math.BigInteger projectId) {
@@ -362,23 +210,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
    */
   public RepositoryWebrefPerDocRelevanceRating setRaterCanUnderstandTopic(java.lang.Boolean raterCanUnderstandTopic) {
     this.raterCanUnderstandTopic = raterCanUnderstandTopic;
-    return this;
-  }
-
-  /**
-   * Floating point representation of the `content_relevant` field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getRatingScore() {
-    return ratingScore;
-  }
-
-  /**
-   * Floating point representation of the `content_relevant` field.
-   * @param ratingScore ratingScore or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setRatingScore(java.lang.Double ratingScore) {
-    this.ratingScore = ratingScore;
     return this;
   }
 
@@ -409,53 +240,6 @@ public final class RepositoryWebrefPerDocRelevanceRating extends com.google.api.
    */
   public RepositoryWebrefPerDocRelevanceRating setTaskId(java.math.BigInteger taskId) {
     this.taskId = taskId;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTaskStatus() {
-    return taskStatus;
-  }
-
-  /**
-   * @param taskStatus taskStatus or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setTaskStatus(java.lang.String taskStatus) {
-    this.taskStatus = taskStatus;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getTaskUser() {
-    return taskUser;
-  }
-
-  /**
-   * @param taskUser taskUser or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setTaskUser(java.lang.Integer taskUser) {
-    this.taskUser = taskUser;
-    return this;
-  }
-
-  /**
-   * Metadata for task-level ratings. Not filled for aggregated doc-level ratings.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getTemplateId() {
-    return templateId;
-  }
-
-  /**
-   * Metadata for task-level ratings. Not filled for aggregated doc-level ratings.
-   * @param templateId templateId or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRating setTemplateId(java.lang.Integer templateId) {
-    this.templateId = templateId;
     return this;
   }
 

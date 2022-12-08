@@ -69,12 +69,6 @@ public final class RepositoryWebrefMdvcMetadata extends com.google.api.client.js
   private java.util.List<RepositoryWebrefMdvcMetadataPerVertical> perVertical;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private NewsReconServiceLrsQ2lrs2QueryToLrsDataset queryToLongRunningStoryDataset;
-
-  /**
    * Undergoing migration into the PerVertical message. Avoid using it. Resolution priority for this
    * entity. In case a query has many possible resolutions, only the ones with the highest
    * resolution priority are annotated.
@@ -173,21 +167,6 @@ public final class RepositoryWebrefMdvcMetadata extends com.google.api.client.js
    */
   public RepositoryWebrefMdvcMetadata setPerVertical(java.util.List<RepositoryWebrefMdvcMetadataPerVertical> perVertical) {
     this.perVertical = perVertical;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public NewsReconServiceLrsQ2lrs2QueryToLrsDataset getQueryToLongRunningStoryDataset() {
-    return queryToLongRunningStoryDataset;
-  }
-
-  /**
-   * @param queryToLongRunningStoryDataset queryToLongRunningStoryDataset or {@code null} for none
-   */
-  public RepositoryWebrefMdvcMetadata setQueryToLongRunningStoryDataset(NewsReconServiceLrsQ2lrs2QueryToLrsDataset queryToLongRunningStoryDataset) {
-    this.queryToLongRunningStoryDataset = queryToLongRunningStoryDataset;
     return this;
   }
 

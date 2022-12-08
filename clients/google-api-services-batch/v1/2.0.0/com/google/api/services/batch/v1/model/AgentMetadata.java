@@ -30,7 +30,7 @@ package com.google.api.services.batch.v1.model;
 public final class AgentMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * When the VM agent started.
+   * When the VM agent started. Use agent_startup_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +44,13 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String creator;
+
+  /**
+   * image version for the VM that this agent is installed on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageVersion;
 
   /**
    * GCP instance name (go/instance-name).
@@ -81,7 +88,7 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.String zone;
 
   /**
-   * When the VM agent started.
+   * When the VM agent started. Use agent_startup_time instead.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -89,7 +96,7 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When the VM agent started.
+   * When the VM agent started. Use agent_startup_time instead.
    * @param creationTime creationTime or {@code null} for none
    */
   public AgentMetadata setCreationTime(String creationTime) {
@@ -115,6 +122,23 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
    */
   public AgentMetadata setCreator(java.lang.String creator) {
     this.creator = creator;
+    return this;
+  }
+
+  /**
+   * image version for the VM that this agent is installed on.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageVersion() {
+    return imageVersion;
+  }
+
+  /**
+   * image version for the VM that this agent is installed on.
+   * @param imageVersion imageVersion or {@code null} for none
+   */
+  public AgentMetadata setImageVersion(java.lang.String imageVersion) {
+    this.imageVersion = imageVersion;
     return this;
   }
 

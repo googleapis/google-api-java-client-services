@@ -17,7 +17,7 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * Request to report agent's state. The Request itself implies the agent is healthy.
+ * VM timing information
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.batch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReportAgentStateRequest extends com.google.api.client.json.GenericJson {
+public final class AgentTimingInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Agent info.
+   * Agent startup time
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AgentInfo agentInfo;
+  private String agentStartupTime;
 
   /**
-   * Agent timing info.
+   * Boot timestamp of the VM OS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AgentTimingInfo agentTimingInfo;
+  private String bootTime;
 
   /**
-   * Agent metadata.
+   * Startup time of the Batch VM script.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AgentMetadata metadata;
+  private String scriptStartupTime;
 
   /**
-   * Agent info.
+   * Agent startup time
    * @return value or {@code null} for none
    */
-  public AgentInfo getAgentInfo() {
-    return agentInfo;
+  public String getAgentStartupTime() {
+    return agentStartupTime;
   }
 
   /**
-   * Agent info.
-   * @param agentInfo agentInfo or {@code null} for none
+   * Agent startup time
+   * @param agentStartupTime agentStartupTime or {@code null} for none
    */
-  public ReportAgentStateRequest setAgentInfo(AgentInfo agentInfo) {
-    this.agentInfo = agentInfo;
+  public AgentTimingInfo setAgentStartupTime(String agentStartupTime) {
+    this.agentStartupTime = agentStartupTime;
     return this;
   }
 
   /**
-   * Agent timing info.
+   * Boot timestamp of the VM OS
    * @return value or {@code null} for none
    */
-  public AgentTimingInfo getAgentTimingInfo() {
-    return agentTimingInfo;
+  public String getBootTime() {
+    return bootTime;
   }
 
   /**
-   * Agent timing info.
-   * @param agentTimingInfo agentTimingInfo or {@code null} for none
+   * Boot timestamp of the VM OS
+   * @param bootTime bootTime or {@code null} for none
    */
-  public ReportAgentStateRequest setAgentTimingInfo(AgentTimingInfo agentTimingInfo) {
-    this.agentTimingInfo = agentTimingInfo;
+  public AgentTimingInfo setBootTime(String bootTime) {
+    this.bootTime = bootTime;
     return this;
   }
 
   /**
-   * Agent metadata.
+   * Startup time of the Batch VM script.
    * @return value or {@code null} for none
    */
-  public AgentMetadata getMetadata() {
-    return metadata;
+  public String getScriptStartupTime() {
+    return scriptStartupTime;
   }
 
   /**
-   * Agent metadata.
-   * @param metadata metadata or {@code null} for none
+   * Startup time of the Batch VM script.
+   * @param scriptStartupTime scriptStartupTime or {@code null} for none
    */
-  public ReportAgentStateRequest setMetadata(AgentMetadata metadata) {
-    this.metadata = metadata;
+  public AgentTimingInfo setScriptStartupTime(String scriptStartupTime) {
+    this.scriptStartupTime = scriptStartupTime;
     return this;
   }
 
   @Override
-  public ReportAgentStateRequest set(String fieldName, Object value) {
-    return (ReportAgentStateRequest) super.set(fieldName, value);
+  public AgentTimingInfo set(String fieldName, Object value) {
+    return (AgentTimingInfo) super.set(fieldName, value);
   }
 
   @Override
-  public ReportAgentStateRequest clone() {
-    return (ReportAgentStateRequest) super.clone();
+  public AgentTimingInfo clone() {
+    return (AgentTimingInfo) super.clone();
   }
 
 }

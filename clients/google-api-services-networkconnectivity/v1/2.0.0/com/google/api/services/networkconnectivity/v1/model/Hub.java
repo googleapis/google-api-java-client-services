@@ -17,10 +17,11 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * A Network Connectivity Center hub is a collection of spokes. A single hub can contain spokes from
- * multiple regions. However, if any of a hub's spokes use the data transfer feature, the resources
- * associated with those spokes must all reside in the same VPC network. Spokes that do not use data
- * transfer can be associated with any VPC network in your project.
+ * A Network Connectivity Center hub is a global management resource to which you attach spokes. A
+ * single hub can contain spokes from multiple regions. However, if any of a hub's spokes use the
+ * site-to-site data transfer feature, the resources associated with those spokes must all be in the
+ * same VPC network. Spokes that do not use site-to-site data transfer can be associated with any
+ * VPC network in your project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

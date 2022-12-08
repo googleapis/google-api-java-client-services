@@ -46,7 +46,7 @@ public final class EntityMention extends com.google.api.client.json.GenericJson 
 
   /**
    * linked_entities are candidate ontological concepts that this entity mention may refer to. They
-   * are sorted by decreasing confidence.it
+   * are sorted by decreasing confidence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class EntityMention extends com.google.api.client.json.GenericJson 
 
   /**
    * linked_entities are candidate ontological concepts that this entity mention may refer to. They
-   * are sorted by decreasing confidence.it
+   * are sorted by decreasing confidence.
    * @return value or {@code null} for none
    */
   public java.util.List<LinkedEntity> getLinkedEntities() {
@@ -141,7 +141,7 @@ public final class EntityMention extends com.google.api.client.json.GenericJson 
 
   /**
    * linked_entities are candidate ontological concepts that this entity mention may refer to. They
-   * are sorted by decreasing confidence.it
+   * are sorted by decreasing confidence.
    * @param linkedEntities linkedEntities or {@code null} for none
    */
   public EntityMention setLinkedEntities(java.util.List<LinkedEntity> linkedEntities) {

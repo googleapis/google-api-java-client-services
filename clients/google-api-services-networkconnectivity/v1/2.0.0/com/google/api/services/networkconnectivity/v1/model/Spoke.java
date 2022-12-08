@@ -17,10 +17,10 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * A Network Connectivity Center spoke represents a connection between your Google Cloud network
- * resources and a non-Google-Cloud network. When you create a spoke, you associate it with a hub.
- * You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels *
- * linked_interconnect_attachments * linked_router_appliance_instances
+ * A Network Connectivity Center spoke represents one or more network connectivity resources. When
+ * you create a spoke, you associate it with a hub. You must also identify a value for exactly one
+ * of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments *
+ * linked_router_appliance_instances
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

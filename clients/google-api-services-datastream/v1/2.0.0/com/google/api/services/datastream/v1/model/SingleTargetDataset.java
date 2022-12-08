@@ -30,12 +30,14 @@ package com.google.api.services.datastream.v1.model;
 public final class SingleTargetDataset extends com.google.api.client.json.GenericJson {
 
   /**
+   * The dataset ID of the target dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
+   * The dataset ID of the target dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -43,6 +45,7 @@ public final class SingleTargetDataset extends com.google.api.client.json.Generi
   }
 
   /**
+   * The dataset ID of the target dataset.
    * @param datasetId datasetId or {@code null} for none
    */
   public SingleTargetDataset setDatasetId(java.lang.String datasetId) {

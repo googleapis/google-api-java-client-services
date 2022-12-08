@@ -2650,6 +2650,22 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /** Optional. If set to true, will skip validations. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, will skip validations.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /** Optional. If set to true, will skip validations. */
+          public Create setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           /** Required. The private connectivity identifier. */
           @com.google.api.client.util.Key
           private java.lang.String privateConnectionId;

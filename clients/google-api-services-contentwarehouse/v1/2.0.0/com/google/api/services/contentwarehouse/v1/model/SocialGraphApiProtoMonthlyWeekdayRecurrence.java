@@ -35,8 +35,7 @@ public final class SocialGraphApiProtoMonthlyWeekdayRecurrence extends com.googl
 
   /**
    * The nth occurrence of week_day to match. I.e. For 3rd Wednesday of the month, week_day =
-   * WEDNESDAY and week_day_number = 3. Values beyond the end of the month are skipped. Negative
-   * values are relative from end of month (e.g. Last Friday of every month).
+   * WEDNESDAY and week_day_number = 3. Values beyond the end of the month are skipped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +49,7 @@ public final class SocialGraphApiProtoMonthlyWeekdayRecurrence extends com.googl
 
   /**
    * The nth occurrence of week_day to match. I.e. For 3rd Wednesday of the month, week_day =
-   * WEDNESDAY and week_day_number = 3. Values beyond the end of the month are skipped. Negative
-   * values are relative from end of month (e.g. Last Friday of every month).
+   * WEDNESDAY and week_day_number = 3. Values beyond the end of the month are skipped.
    * @return value or {@code null} for none
    */
   public java.lang.String getWeekDay() {
@@ -60,8 +58,7 @@ public final class SocialGraphApiProtoMonthlyWeekdayRecurrence extends com.googl
 
   /**
    * The nth occurrence of week_day to match. I.e. For 3rd Wednesday of the month, week_day =
-   * WEDNESDAY and week_day_number = 3. Values beyond the end of the month are skipped. Negative
-   * values are relative from end of month (e.g. Last Friday of every month).
+   * WEDNESDAY and week_day_number = 3. Values beyond the end of the month are skipped.
    * @param weekDay weekDay or {@code null} for none
    */
   public SocialGraphApiProtoMonthlyWeekdayRecurrence setWeekDay(java.lang.String weekDay) {

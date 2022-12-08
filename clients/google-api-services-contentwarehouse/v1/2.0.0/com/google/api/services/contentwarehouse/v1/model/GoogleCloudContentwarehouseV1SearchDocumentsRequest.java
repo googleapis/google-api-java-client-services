@@ -78,7 +78,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    * `"relevance desc"`: By relevance descending, as determined by the API algorithms. *
    * `"upload_date desc"`: By upload date descending. * `"upload_date"`: By upload date ascending. *
    * `"update_date desc"`: By last updated date descending. * `"update_date"`: By last updated date
-   * ascending.
+   * ascending. * `"retrieval_importance desc"`: By retrieval importance of properties descending.
+   * This feature is still under development, please do not use unless otherwise instructed to do
+   * so.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +228,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    * `"relevance desc"`: By relevance descending, as determined by the API algorithms. *
    * `"upload_date desc"`: By upload date descending. * `"upload_date"`: By upload date ascending. *
    * `"update_date desc"`: By last updated date descending. * `"update_date"`: By last updated date
-   * ascending.
+   * ascending. * `"retrieval_importance desc"`: By retrieval importance of properties descending.
+   * This feature is still under development, please do not use unless otherwise instructed to do
+   * so.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -239,7 +243,9 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
    * `"relevance desc"`: By relevance descending, as determined by the API algorithms. *
    * `"upload_date desc"`: By upload date descending. * `"upload_date"`: By upload date ascending. *
    * `"update_date desc"`: By last updated date descending. * `"update_date"`: By last updated date
-   * ascending.
+   * ascending. * `"retrieval_importance desc"`: By retrieval importance of properties descending.
+   * This feature is still under development, please do not use unless otherwise instructed to do
+   * so.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsRequest setOrderBy(java.lang.String orderBy) {

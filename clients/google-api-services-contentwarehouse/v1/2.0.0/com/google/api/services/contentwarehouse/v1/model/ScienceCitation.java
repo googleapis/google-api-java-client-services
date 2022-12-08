@@ -162,6 +162,12 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
   private java.lang.String citationSrc;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("ClearedReason")
+  private java.lang.String clearedReason;
+
+  /**
    * Used for logging, recommendations, and sort-by-date. Contains the earliest discovery date of
    * the cluster, adjusted for earlier publication dates. Stored in Universal time scale (100 ns
    * ticks since 0001 AD) because Unix timestamp would lead to negative dates for pre-1970 docs.
@@ -1076,6 +1082,21 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
    */
   public ScienceCitation setCitationSrc(java.lang.String citationSrc) {
     this.citationSrc = citationSrc;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClearedReason() {
+    return clearedReason;
+  }
+
+  /**
+   * @param clearedReason clearedReason or {@code null} for none
+   */
+  public ScienceCitation setClearedReason(java.lang.String clearedReason) {
+    this.clearedReason = clearedReason;
     return this;
   }
 

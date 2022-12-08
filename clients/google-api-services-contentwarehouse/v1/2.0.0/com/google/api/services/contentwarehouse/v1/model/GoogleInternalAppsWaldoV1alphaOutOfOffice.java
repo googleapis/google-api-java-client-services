@@ -40,9 +40,8 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that if this OOO block is large (>Xh),
-   * committed_until will be the end of this block, not including any meetings or focus time
-   * following it.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that if this OOO block is large (>=Xh),
+   * committed_until is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +49,7 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
 
   /**
    * Whether the status of the user from this status's start to committed_until has more than one
-   * status type (e.g. DoNotDisturb + InMeeting).
+   * status type (e.g. DoNotDisturb + InMeeting). Only set if committed_until is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +86,8 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that if this OOO block is large (>Xh),
-   * committed_until will be the end of this block, not including any meetings or focus time
-   * following it.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that if this OOO block is large (>=Xh),
+   * committed_until is not set.
    * @return value or {@code null} for none
    */
   public String getCommittedUntil() {
@@ -98,9 +96,8 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh. Note that if this OOO block is large (>Xh),
-   * committed_until will be the end of this block, not including any meetings or focus time
-   * following it.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that if this OOO block is large (>=Xh),
+   * committed_until is not set.
    * @param committedUntil committedUntil or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntil(String committedUntil) {
@@ -110,7 +107,7 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
 
   /**
    * Whether the status of the user from this status's start to committed_until has more than one
-   * status type (e.g. DoNotDisturb + InMeeting).
+   * status type (e.g. DoNotDisturb + InMeeting). Only set if committed_until is set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCommittedUntilIsMixed() {
@@ -119,7 +116,7 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
 
   /**
    * Whether the status of the user from this status's start to committed_until has more than one
-   * status type (e.g. DoNotDisturb + InMeeting).
+   * status type (e.g. DoNotDisturb + InMeeting). Only set if committed_until is set.
    * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {

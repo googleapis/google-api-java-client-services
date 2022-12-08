@@ -44,7 +44,7 @@ public final class GoogleCloudContentwarehouseV1DocumentSchema extends com.googl
   private java.lang.String description;
 
   /**
-   * Required. Name of the schema given by the user. Must be unique per customer.
+   * Required. Name of the schema given by the user. Must be unique per project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GoogleCloudContentwarehouseV1DocumentSchema extends com.googl
   }
 
   /**
-   * Required. Name of the schema given by the user. Must be unique per customer.
+   * Required. Name of the schema given by the user. Must be unique per project.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -123,7 +123,7 @@ public final class GoogleCloudContentwarehouseV1DocumentSchema extends com.googl
   }
 
   /**
-   * Required. Name of the schema given by the user. Must be unique per customer.
+   * Required. Name of the schema given by the user. Must be unique per project.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1DocumentSchema setDisplayName(java.lang.String displayName) {

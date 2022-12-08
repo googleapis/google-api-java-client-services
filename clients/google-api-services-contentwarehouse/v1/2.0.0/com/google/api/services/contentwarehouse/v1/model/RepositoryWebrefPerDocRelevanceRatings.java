@@ -42,12 +42,6 @@ public final class RepositoryWebrefPerDocRelevanceRatings extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RepositoryWebrefPerDocRelevanceRating docLevelRating;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.util.List<RepositoryWebrefEntityNameRatings> entityNameRating;
 
   static {
@@ -60,12 +54,6 @@ public final class RepositoryWebrefPerDocRelevanceRatings extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RepositoryWebrefToprefListMembership> listMembership;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.util.List<RepositoryWebrefMentionRatings> mentionRating;
 
   static {
@@ -73,12 +61,6 @@ public final class RepositoryWebrefPerDocRelevanceRatings extends com.google.api
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(RepositoryWebrefMentionRatings.class);
   }
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<RepositoryWebrefToprefPageClassification> pageClassification;
 
   /**
    * The value may be {@code null}.
@@ -126,21 +108,6 @@ public final class RepositoryWebrefPerDocRelevanceRatings extends com.google.api
   /**
    * @return value or {@code null} for none
    */
-  public RepositoryWebrefPerDocRelevanceRating getDocLevelRating() {
-    return docLevelRating;
-  }
-
-  /**
-   * @param docLevelRating docLevelRating or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRatings setDocLevelRating(RepositoryWebrefPerDocRelevanceRating docLevelRating) {
-    this.docLevelRating = docLevelRating;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
   public java.util.List<RepositoryWebrefEntityNameRatings> getEntityNameRating() {
     return entityNameRating;
   }
@@ -156,21 +123,6 @@ public final class RepositoryWebrefPerDocRelevanceRatings extends com.google.api
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<RepositoryWebrefToprefListMembership> getListMembership() {
-    return listMembership;
-  }
-
-  /**
-   * @param listMembership listMembership or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRatings setListMembership(java.util.List<RepositoryWebrefToprefListMembership> listMembership) {
-    this.listMembership = listMembership;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
   public java.util.List<RepositoryWebrefMentionRatings> getMentionRating() {
     return mentionRating;
   }
@@ -180,21 +132,6 @@ public final class RepositoryWebrefPerDocRelevanceRatings extends com.google.api
    */
   public RepositoryWebrefPerDocRelevanceRatings setMentionRating(java.util.List<RepositoryWebrefMentionRatings> mentionRating) {
     this.mentionRating = mentionRating;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<RepositoryWebrefToprefPageClassification> getPageClassification() {
-    return pageClassification;
-  }
-
-  /**
-   * @param pageClassification pageClassification or {@code null} for none
-   */
-  public RepositoryWebrefPerDocRelevanceRatings setPageClassification(java.util.List<RepositoryWebrefToprefPageClassification> pageClassification) {
-    this.pageClassification = pageClassification;
     return this;
   }
 

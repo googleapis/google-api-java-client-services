@@ -75,6 +75,24 @@ public final class GeostoreComposableItemProto extends com.google.api.client.jso
   private GeostorePriceRangeProto price;
 
   /**
+   * Represents which price format is being used by this item, which determines the usage/meaning of
+   * the “price” field above. Optional – the default value is legal and safe (represents no price if
+   * the “price” field is unset).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priceFormat;
+
+  /**
+   * Numerical score which can be provided by data sources to indicate preferred item ordering. This
+   * is purely a hint – we are not required to followed it if we have a different order we think is
+   * better. Higher scores represent items that should be shown more prominently/earlier. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float rankingHint;
+
+  /**
    * Call to action for the individual product.
    * @return value or {@code null} for none
    */
@@ -177,6 +195,48 @@ public final class GeostoreComposableItemProto extends com.google.api.client.jso
    */
   public GeostoreComposableItemProto setPrice(GeostorePriceRangeProto price) {
     this.price = price;
+    return this;
+  }
+
+  /**
+   * Represents which price format is being used by this item, which determines the usage/meaning of
+   * the “price” field above. Optional – the default value is legal and safe (represents no price if
+   * the “price” field is unset).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriceFormat() {
+    return priceFormat;
+  }
+
+  /**
+   * Represents which price format is being used by this item, which determines the usage/meaning of
+   * the “price” field above. Optional – the default value is legal and safe (represents no price if
+   * the “price” field is unset).
+   * @param priceFormat priceFormat or {@code null} for none
+   */
+  public GeostoreComposableItemProto setPriceFormat(java.lang.String priceFormat) {
+    this.priceFormat = priceFormat;
+    return this;
+  }
+
+  /**
+   * Numerical score which can be provided by data sources to indicate preferred item ordering. This
+   * is purely a hint – we are not required to followed it if we have a different order we think is
+   * better. Higher scores represent items that should be shown more prominently/earlier. Optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getRankingHint() {
+    return rankingHint;
+  }
+
+  /**
+   * Numerical score which can be provided by data sources to indicate preferred item ordering. This
+   * is purely a hint – we are not required to followed it if we have a different order we think is
+   * better. Higher scores represent items that should be shown more prominently/earlier. Optional.
+   * @param rankingHint rankingHint or {@code null} for none
+   */
+  public GeostoreComposableItemProto setRankingHint(java.lang.Float rankingHint) {
+    this.rankingHint = rankingHint;
     return this;
   }
 

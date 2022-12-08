@@ -31,7 +31,7 @@ public final class GoogleInternalAppsWaldoV1alphaDoNotDisturb extends com.google
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleInternalAppsWaldoV1alphaDoNotDisturb extends com.google
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh.
    * @return value or {@code null} for none
    */
   public String getCommittedUntil() {
@@ -72,7 +72,7 @@ public final class GoogleInternalAppsWaldoV1alphaDoNotDisturb extends com.google
 
   /**
    * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb or OutOfOffice < Xh.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh.
    * @param committedUntil committedUntil or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaDoNotDisturb setCommittedUntil(String committedUntil) {

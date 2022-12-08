@@ -46,11 +46,17 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo acceleratedShoppingSignal;
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo chromeCounts;
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo instantNavboost;
 
   /**
    * The value may be {@code null}.
@@ -142,7 +148,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getChromeCounts() {
@@ -150,11 +155,27 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
    * @param chromeCounts chromeCounts or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setChromeCounts(IndexingDocjoinerDataVersionVersionInfo chromeCounts) {
     this.chromeCounts = chromeCounts;
+    return this;
+  }
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getInstantNavboost() {
+    return instantNavboost;
+  }
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/websearch_main.sdl)
+   * @param instantNavboost instantNavboost or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setInstantNavboost(IndexingDocjoinerDataVersionVersionInfo instantNavboost) {
+    this.instantNavboost = instantNavboost;
     return this;
   }
 

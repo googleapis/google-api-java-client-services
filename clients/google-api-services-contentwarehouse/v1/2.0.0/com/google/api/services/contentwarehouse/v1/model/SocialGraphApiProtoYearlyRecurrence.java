@@ -19,9 +19,10 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Pattern for a YEARLY recurrence. A YEARLY recurrence is specified using a monthly pattern and a
  * set of months the pattern applies to. Some examples: "Every January 16" : monthly_pattern {
- * month_day: 16 } months: JANUARY "Last day of every April and August" : monthly_pattern {
- * month_day: -1 } months: APRIL months: AUGUST Used in PeopleAPI layers + FBS/ContactsService (not
- * in ProfileService)
+ * monthly_day_recurrence { month_day: 16 } } months: JANUARY "Fourth Thursday of November and
+ * December" : monthly_pattern { monthly_weekday_recurrence { week_day: THURSDAY week_day_number: 4
+ * } } months: NOVEMBER months: DECEMBER Used in PeopleAPI layers + FBS/ContactsService (not in
+ * ProfileService)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:

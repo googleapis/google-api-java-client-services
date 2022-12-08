@@ -17,7 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Contains meta information about this data.
+ * Contains meta information about this data. This field is only available in docjoins (and
+ * potentially MDU shards), it is not populated offline. NOTE: This is a new field (Nov 2022) and we
+ * do not want clients to depend on this; please contact qscore-team@ if you want to use this
+ * information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -30,20 +33,89 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is an internal field set by Raffia, to indicate which lookup key this record belonged to.
-   * This is helpful in determining where the final data is coming from, as we don't populate
-   * `site_chunk` fields offline (at all), so we cannot distinguish if data is coming from host
-   * fallback, secondary chunks or something else.
+   * Same as raffia_lookup_key_per_field. Note that the goldmine_lookups have priority; if a field
+   * appears in both goldmine and raffia entries, it means it was taken from goldmine. If it's
+   * missing here but present in raffia_lookup_key_per_field, it was taken from raffia.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Integer> goldmineLookupKeyPerField;
+
+  /**
+   * The lookup keys attempted by goldmine. Note that goldmine only runs for urls which can be
+   * chunked differently than raffia; in those cases, goldmine related fields are empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> goldmineLookupKeys;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String raffiaLookupKey;
 
   /**
-   * This is an internal field set by Raffia, to indicate which lookup key this record belonged to.
-   * This is helpful in determining where the final data is coming from, as we don't populate
-   * `site_chunk` fields offline (at all), so we cannot distinguish if data is coming from host
-   * fallback, secondary chunks or something else.
+   * Returns the raffia lookup key per each field in the NsrData proto (with exclusion of the
+   * Metadata sub-message (i.e. this)). It contains information like 3 : 1, meaning that the field
+   * inside NsrData with id '3' (in this case 'host') has been taken by raffia from the raffia
+   * lookup key at index 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Integer> raffiaLookupKeyPerField;
+
+  /**
+   * This is an internal field set by Raffia, to indicate which lookup keys have been attempted to
+   * populate the NsrData for this document. This will allow us to determine which key has been used
+   * to populate each field in the proto. The keys are ordered by lookup priority; raffia will give
+   * priority to earlier keys, and only take fields from later keys if they are missing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> raffiaLookupKeys;
+
+  /**
+   * Same as raffia_lookup_key_per_field. Note that the goldmine_lookups have priority; if a field
+   * appears in both goldmine and raffia entries, it means it was taken from goldmine. If it's
+   * missing here but present in raffia_lookup_key_per_field, it was taken from raffia.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Integer> getGoldmineLookupKeyPerField() {
+    return goldmineLookupKeyPerField;
+  }
+
+  /**
+   * Same as raffia_lookup_key_per_field. Note that the goldmine_lookups have priority; if a field
+   * appears in both goldmine and raffia entries, it means it was taken from goldmine. If it's
+   * missing here but present in raffia_lookup_key_per_field, it was taken from raffia.
+   * @param goldmineLookupKeyPerField goldmineLookupKeyPerField or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setGoldmineLookupKeyPerField(java.util.Map<String, java.lang.Integer> goldmineLookupKeyPerField) {
+    this.goldmineLookupKeyPerField = goldmineLookupKeyPerField;
+    return this;
+  }
+
+  /**
+   * The lookup keys attempted by goldmine. Note that goldmine only runs for urls which can be
+   * chunked differently than raffia; in those cases, goldmine related fields are empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGoldmineLookupKeys() {
+    return goldmineLookupKeys;
+  }
+
+  /**
+   * The lookup keys attempted by goldmine. Note that goldmine only runs for urls which can be
+   * chunked differently than raffia; in those cases, goldmine related fields are empty.
+   * @param goldmineLookupKeys goldmineLookupKeys or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setGoldmineLookupKeys(java.util.List<java.lang.String> goldmineLookupKeys) {
+    this.goldmineLookupKeys = goldmineLookupKeys;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getRaffiaLookupKey() {
@@ -51,14 +123,56 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
   }
 
   /**
-   * This is an internal field set by Raffia, to indicate which lookup key this record belonged to.
-   * This is helpful in determining where the final data is coming from, as we don't populate
-   * `site_chunk` fields offline (at all), so we cannot distinguish if data is coming from host
-   * fallback, secondary chunks or something else.
    * @param raffiaLookupKey raffiaLookupKey or {@code null} for none
    */
   public QualityNsrNsrDataMetadata setRaffiaLookupKey(java.lang.String raffiaLookupKey) {
     this.raffiaLookupKey = raffiaLookupKey;
+    return this;
+  }
+
+  /**
+   * Returns the raffia lookup key per each field in the NsrData proto (with exclusion of the
+   * Metadata sub-message (i.e. this)). It contains information like 3 : 1, meaning that the field
+   * inside NsrData with id '3' (in this case 'host') has been taken by raffia from the raffia
+   * lookup key at index 1.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Integer> getRaffiaLookupKeyPerField() {
+    return raffiaLookupKeyPerField;
+  }
+
+  /**
+   * Returns the raffia lookup key per each field in the NsrData proto (with exclusion of the
+   * Metadata sub-message (i.e. this)). It contains information like 3 : 1, meaning that the field
+   * inside NsrData with id '3' (in this case 'host') has been taken by raffia from the raffia
+   * lookup key at index 1.
+   * @param raffiaLookupKeyPerField raffiaLookupKeyPerField or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setRaffiaLookupKeyPerField(java.util.Map<String, java.lang.Integer> raffiaLookupKeyPerField) {
+    this.raffiaLookupKeyPerField = raffiaLookupKeyPerField;
+    return this;
+  }
+
+  /**
+   * This is an internal field set by Raffia, to indicate which lookup keys have been attempted to
+   * populate the NsrData for this document. This will allow us to determine which key has been used
+   * to populate each field in the proto. The keys are ordered by lookup priority; raffia will give
+   * priority to earlier keys, and only take fields from later keys if they are missing.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRaffiaLookupKeys() {
+    return raffiaLookupKeys;
+  }
+
+  /**
+   * This is an internal field set by Raffia, to indicate which lookup keys have been attempted to
+   * populate the NsrData for this document. This will allow us to determine which key has been used
+   * to populate each field in the proto. The keys are ordered by lookup priority; raffia will give
+   * priority to earlier keys, and only take fields from later keys if they are missing.
+   * @param raffiaLookupKeys raffiaLookupKeys or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setRaffiaLookupKeys(java.util.List<java.lang.String> raffiaLookupKeys) {
+    this.raffiaLookupKeys = raffiaLookupKeys;
     return this;
   }
 

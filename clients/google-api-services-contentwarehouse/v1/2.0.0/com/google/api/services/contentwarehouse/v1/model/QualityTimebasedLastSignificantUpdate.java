@@ -30,6 +30,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityTimebasedLastSignificantUpdate extends com.google.api.client.json.GenericJson {
 
   /**
+   * This is stored only for debugging purposes. Please consult dates@ team before making a
+   * dependency on this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityTimebasedLastSignificantUpdateAdjustments adjustmentInfo;
+
+  /**
    * LastSignificantUpdate as UNIX timestamp in seconds. This is the new signal (go/lsu-dd) from LSU
    * Selector V2 (once that is enabled, see b/171879888 for status), falling back to the legacy V1
    * signal if the V2 signal does not exist. Please use the 'source' field to determine where the
@@ -45,6 +53,25 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * This is stored only for debugging purposes. Please consult dates@ team before making a
+   * dependency on this field.
+   * @return value or {@code null} for none
+   */
+  public QualityTimebasedLastSignificantUpdateAdjustments getAdjustmentInfo() {
+    return adjustmentInfo;
+  }
+
+  /**
+   * This is stored only for debugging purposes. Please consult dates@ team before making a
+   * dependency on this field.
+   * @param adjustmentInfo adjustmentInfo or {@code null} for none
+   */
+  public QualityTimebasedLastSignificantUpdate setAdjustmentInfo(QualityTimebasedLastSignificantUpdateAdjustments adjustmentInfo) {
+    this.adjustmentInfo = adjustmentInfo;
+    return this;
+  }
 
   /**
    * LastSignificantUpdate as UNIX timestamp in seconds. This is the new signal (go/lsu-dd) from LSU

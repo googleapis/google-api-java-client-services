@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Data which is produced for logging and debugging. Servers MUST NOT use this for any other
- * purposes, such as branching on it. Next ID: 14
+ * purposes, such as branching on it. Next ID: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -29,6 +29,15 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantApiLoggingOnlyData extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The index of the account on the device. Useful when there are multiple accounts on a device
+   * such as distinguishing primary user data from secondary users. There is no guarantee that this
+   * is a stable number but is relatively stable in practice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer accountIndex;
 
   /**
    * A user-readable string describing the ACP version (go/acp-version) of the client app used by
@@ -129,6 +138,27 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualReleaseChannel;
+
+  /**
+   * The index of the account on the device. Useful when there are multiple accounts on a device
+   * such as distinguishing primary user data from secondary users. There is no guarantee that this
+   * is a stable number but is relatively stable in practice.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAccountIndex() {
+    return accountIndex;
+  }
+
+  /**
+   * The index of the account on the device. Useful when there are multiple accounts on a device
+   * such as distinguishing primary user data from secondary users. There is no guarantee that this
+   * is a stable number but is relatively stable in practice.
+   * @param accountIndex accountIndex or {@code null} for none
+   */
+  public AssistantApiLoggingOnlyData setAccountIndex(java.lang.Integer accountIndex) {
+    this.accountIndex = accountIndex;
+    return this;
+  }
 
   /**
    * A user-readable string describing the ACP version (go/acp-version) of the client app used by

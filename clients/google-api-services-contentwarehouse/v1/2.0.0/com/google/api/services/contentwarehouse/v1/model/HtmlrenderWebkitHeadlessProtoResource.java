@@ -80,6 +80,8 @@ public final class HtmlrenderWebkitHeadlessProtoResource extends com.google.api.
   private java.lang.String postData;
 
   /**
+   * Only necessary headers are included in the resource key by default. See
+   * google3/htmlrender/webkit_headless/resource_key.cc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,6 +284,8 @@ public final class HtmlrenderWebkitHeadlessProtoResource extends com.google.api.
   }
 
   /**
+   * Only necessary headers are included in the resource key by default. See
+   * google3/htmlrender/webkit_headless/resource_key.cc
    * @return value or {@code null} for none
    */
   public java.util.List<HtmlrenderWebkitHeadlessProtoResourceHttpHeader> getRequestHeader() {
@@ -289,6 +293,8 @@ public final class HtmlrenderWebkitHeadlessProtoResource extends com.google.api.
   }
 
   /**
+   * Only necessary headers are included in the resource key by default. See
+   * google3/htmlrender/webkit_headless/resource_key.cc
    * @param requestHeader requestHeader or {@code null} for none
    */
   public HtmlrenderWebkitHeadlessProtoResource setRequestHeader(java.util.List<HtmlrenderWebkitHeadlessProtoResourceHttpHeader> requestHeader) {

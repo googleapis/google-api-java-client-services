@@ -37,6 +37,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostorePriceListProto extends com.google.api.client.json.GenericJson {
 
   /**
+   * For third party lists, represents the ID of the aggregator which provided this data. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger aggregatorId;
+
+  /**
    * The time period when this price list is available. Establishments are not required to give
    * available_time for any given price list, however, when this field is not set, the price list is
    * understood as available any time the establishment is open.
@@ -81,12 +88,36 @@ public final class GeostorePriceListProto extends com.google.api.client.json.Gen
   private java.util.List<GeostorePriceListSectionProto> section;
 
   /**
+   * Source of the information retrieved, could be from our own NMX UI or a third party API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostorePriceInfoSourceDetails sourceDetails;
+
+  /**
    * Where this price list comes from. If set, this must also be a member of the price_list_url
    * field, and represents translations of a single URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GeostoreUrlListProto sourceUrl;
+
+  /**
+   * For third party lists, represents the ID of the aggregator which provided this data. Optional.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getAggregatorId() {
+    return aggregatorId;
+  }
+
+  /**
+   * For third party lists, represents the ID of the aggregator which provided this data. Optional.
+   * @param aggregatorId aggregatorId or {@code null} for none
+   */
+  public GeostorePriceListProto setAggregatorId(java.math.BigInteger aggregatorId) {
+    this.aggregatorId = aggregatorId;
+    return this;
+  }
 
   /**
    * The time period when this price list is available. Establishments are not required to give
@@ -173,6 +204,23 @@ public final class GeostorePriceListProto extends com.google.api.client.json.Gen
    */
   public GeostorePriceListProto setSection(java.util.List<GeostorePriceListSectionProto> section) {
     this.section = section;
+    return this;
+  }
+
+  /**
+   * Source of the information retrieved, could be from our own NMX UI or a third party API.
+   * @return value or {@code null} for none
+   */
+  public GeostorePriceInfoSourceDetails getSourceDetails() {
+    return sourceDetails;
+  }
+
+  /**
+   * Source of the information retrieved, could be from our own NMX UI or a third party API.
+   * @param sourceDetails sourceDetails or {@code null} for none
+   */
+  public GeostorePriceListProto setSourceDetails(GeostorePriceInfoSourceDetails sourceDetails) {
+    this.sourceDetails = sourceDetails;
     return this;
   }
 

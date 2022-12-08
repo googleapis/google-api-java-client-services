@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for
  * protocols used during search and/or docinfo. Next available tag deprecated, use this (and look
  * for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \
- * indexer/perdocdata/perdocdata.proto Next tag: 218
+ * indexer/perdocdata/perdocdata.proto Next tag: 219
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -200,13 +200,6 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key("ScaledSpamScoreYoram")
   private java.lang.Integer scaledSpamScoreYoram;
-
-  /**
-   * science data - used only in scholar index
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("ScienceData")
-  private SciencePerDocData scienceData;
 
   /**
    * The spamword score is represented in 7-bits, going from 0 to 127.
@@ -828,6 +821,13 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   private SpamMuppetjoinsMuppetSignals spamMuppetSignals;
 
   /**
+   * Site level scores coming from spambrain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpamBrainData spambrainData;
+
+  /**
    * The document total spam score identified by spambrain, going from 0 to 1.
    * The value may be {@code null}.
    */
@@ -1402,23 +1402,6 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   public PerDocData setScaledSpamScoreYoram(java.lang.Integer scaledSpamScoreYoram) {
     this.scaledSpamScoreYoram = scaledSpamScoreYoram;
-    return this;
-  }
-
-  /**
-   * science data - used only in scholar index
-   * @return value or {@code null} for none
-   */
-  public SciencePerDocData getScienceData() {
-    return scienceData;
-  }
-
-  /**
-   * science data - used only in scholar index
-   * @param scienceData scienceData or {@code null} for none
-   */
-  public PerDocData setScienceData(SciencePerDocData scienceData) {
-    this.scienceData = scienceData;
     return this;
   }
 
@@ -2928,6 +2911,23 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   public PerDocData setSpamMuppetSignals(SpamMuppetjoinsMuppetSignals spamMuppetSignals) {
     this.spamMuppetSignals = spamMuppetSignals;
+    return this;
+  }
+
+  /**
+   * Site level scores coming from spambrain.
+   * @return value or {@code null} for none
+   */
+  public SpamBrainData getSpambrainData() {
+    return spambrainData;
+  }
+
+  /**
+   * Site level scores coming from spambrain.
+   * @param spambrainData spambrainData or {@code null} for none
+   */
+  public PerDocData setSpambrainData(SpamBrainData spambrainData) {
+    this.spambrainData = spambrainData;
     return this;
   }
 

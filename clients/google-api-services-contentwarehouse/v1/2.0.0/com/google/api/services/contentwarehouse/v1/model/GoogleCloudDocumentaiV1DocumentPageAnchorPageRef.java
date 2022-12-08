@@ -58,8 +58,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends com.
   private java.lang.String layoutType;
 
   /**
-   * Required. Index into the Document.pages element, for example using Document.pages to locate the
-   * related page element. This field is skipped when its value is the default 0. See
+   * Required. Index into the Document.pages element, for example using `Document.pages` to locate
+   * the related page element. This field is skipped when its value is the default `0`. See
    * https://developers.google.com/protocol-buffers/docs/proto3#json.
    * The value may be {@code null}.
    */
@@ -135,8 +135,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends com.
   }
 
   /**
-   * Required. Index into the Document.pages element, for example using Document.pages to locate the
-   * related page element. This field is skipped when its value is the default 0. See
+   * Required. Index into the Document.pages element, for example using `Document.pages` to locate
+   * the related page element. This field is skipped when its value is the default `0`. See
    * https://developers.google.com/protocol-buffers/docs/proto3#json.
    * @return value or {@code null} for none
    */
@@ -145,8 +145,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends com.
   }
 
   /**
-   * Required. Index into the Document.pages element, for example using Document.pages to locate the
-   * related page element. This field is skipped when its value is the default 0. See
+   * Required. Index into the Document.pages element, for example using `Document.pages` to locate
+   * the related page element. This field is skipped when its value is the default `0`. See
    * https://developers.google.com/protocol-buffers/docs/proto3#json.
    * @param page page or {@code null} for none
    */

@@ -119,12 +119,6 @@ public final class RepositoryWebrefEntityJoin extends com.google.api.client.json
   private java.util.List<RepositoryWebrefGlobalNameInfo> nameInfo;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RepositoryWebrefPreprocessingNameSignals nameSignals;
-
-  /**
    * Contains names and names metadata used by Refcon.
    * The value may be {@code null}.
    */
@@ -341,21 +335,6 @@ public final class RepositoryWebrefEntityJoin extends com.google.api.client.json
    */
   public RepositoryWebrefEntityJoin setNameInfo(java.util.List<RepositoryWebrefGlobalNameInfo> nameInfo) {
     this.nameInfo = nameInfo;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefPreprocessingNameSignals getNameSignals() {
-    return nameSignals;
-  }
-
-  /**
-   * @param nameSignals nameSignals or {@code null} for none
-   */
-  public RepositoryWebrefEntityJoin setNameSignals(RepositoryWebrefPreprocessingNameSignals nameSignals) {
-    this.nameSignals = nameSignals;
     return this;
   }
 

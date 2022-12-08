@@ -104,7 +104,27 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
 
   /**
    * The query string that matches against the full text of the document and the searchable
-   * properties. The maximum number of allowed characters is 255.
+   * properties. The query partially supports [Google AIP style syntax](https://google.aip.dev/160).
+   * Specifically, the query supports literals, logical operators, negation operators, comparison
+   * operators, and functions. Literals: A bare literal value (examples: "42", "Hugo") is a value to
+   * be matched against. It searches over the full text of the document and the searchable
+   * properties. Logical operators: "AND", "and", "OR", and "or" are binary logical operators
+   * (example: "engineer OR developer"). Negation operators: "NOT" and "!" are negation operators
+   * (example: "NOT software"). Comparison operators: support the binary comparison operators =, !=,
+   * <, >, <= and >= for string, numeric, enum, boolean. Also support like operator `~~` for string.
+   * It provides semantic search functionality by parsing, stemming and doing synonyms expansion
+   * against the input query. To specify a property in the query, the left hand side expression in
+   * the comparison must be the property ID including the parent. The right hand side must be
+   * literals. For example: "\"projects/123/locations/us\".property_a < 1" matches results whose
+   * "property_a" is less than 1 in project 123 and us location. The literals and comparison
+   * expression can be connected in a single query (example: "software engineer
+   * \"projects/123/locations/us\".salary > 100"). Functions: supported functions are
+   * `LOWER([property_name])` to perform a case insensitive match and `EMPTY([property_name])` to
+   * filter on the existence of a key. Support nested expressions connected using parenthesis and
+   * logical operators. The default logical operators is `AND` if there is no operators between
+   * expressions. The query can be used with other filters e.g. `time_filters` and
+   * `folder_name_filter`. They are connected with `AND` operator under the hood. The maximum number
+   * of allowed characters is 255.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,7 +316,27 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
 
   /**
    * The query string that matches against the full text of the document and the searchable
-   * properties. The maximum number of allowed characters is 255.
+   * properties. The query partially supports [Google AIP style syntax](https://google.aip.dev/160).
+   * Specifically, the query supports literals, logical operators, negation operators, comparison
+   * operators, and functions. Literals: A bare literal value (examples: "42", "Hugo") is a value to
+   * be matched against. It searches over the full text of the document and the searchable
+   * properties. Logical operators: "AND", "and", "OR", and "or" are binary logical operators
+   * (example: "engineer OR developer"). Negation operators: "NOT" and "!" are negation operators
+   * (example: "NOT software"). Comparison operators: support the binary comparison operators =, !=,
+   * <, >, <= and >= for string, numeric, enum, boolean. Also support like operator `~~` for string.
+   * It provides semantic search functionality by parsing, stemming and doing synonyms expansion
+   * against the input query. To specify a property in the query, the left hand side expression in
+   * the comparison must be the property ID including the parent. The right hand side must be
+   * literals. For example: "\"projects/123/locations/us\".property_a < 1" matches results whose
+   * "property_a" is less than 1 in project 123 and us location. The literals and comparison
+   * expression can be connected in a single query (example: "software engineer
+   * \"projects/123/locations/us\".salary > 100"). Functions: supported functions are
+   * `LOWER([property_name])` to perform a case insensitive match and `EMPTY([property_name])` to
+   * filter on the existence of a key. Support nested expressions connected using parenthesis and
+   * logical operators. The default logical operators is `AND` if there is no operators between
+   * expressions. The query can be used with other filters e.g. `time_filters` and
+   * `folder_name_filter`. They are connected with `AND` operator under the hood. The maximum number
+   * of allowed characters is 255.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -305,7 +345,27 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
 
   /**
    * The query string that matches against the full text of the document and the searchable
-   * properties. The maximum number of allowed characters is 255.
+   * properties. The query partially supports [Google AIP style syntax](https://google.aip.dev/160).
+   * Specifically, the query supports literals, logical operators, negation operators, comparison
+   * operators, and functions. Literals: A bare literal value (examples: "42", "Hugo") is a value to
+   * be matched against. It searches over the full text of the document and the searchable
+   * properties. Logical operators: "AND", "and", "OR", and "or" are binary logical operators
+   * (example: "engineer OR developer"). Negation operators: "NOT" and "!" are negation operators
+   * (example: "NOT software"). Comparison operators: support the binary comparison operators =, !=,
+   * <, >, <= and >= for string, numeric, enum, boolean. Also support like operator `~~` for string.
+   * It provides semantic search functionality by parsing, stemming and doing synonyms expansion
+   * against the input query. To specify a property in the query, the left hand side expression in
+   * the comparison must be the property ID including the parent. The right hand side must be
+   * literals. For example: "\"projects/123/locations/us\".property_a < 1" matches results whose
+   * "property_a" is less than 1 in project 123 and us location. The literals and comparison
+   * expression can be connected in a single query (example: "software engineer
+   * \"projects/123/locations/us\".salary > 100"). Functions: supported functions are
+   * `LOWER([property_name])` to perform a case insensitive match and `EMPTY([property_name])` to
+   * filter on the existence of a key. Support nested expressions connected using parenthesis and
+   * logical operators. The default logical operators is `AND` if there is no operators between
+   * expressions. The query can be used with other filters e.g. `time_filters` and
+   * `folder_name_filter`. They are connected with `AND` operator under the hood. The maximum number
+   * of allowed characters is 255.
    * @param query query or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1DocumentQuery setQuery(java.lang.String query) {

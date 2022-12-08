@@ -93,7 +93,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> importedLibraries;
 
   /**
-   * Optional. Defaults to "SQL".
+   * Optional. Defaults to "SQL" if remote_function_options field is absent, not set otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return
    * table type is inferred from definition_body at query time in each query that references this
    * routine. If present, then the columns in the evaluated table result will be cast to match the
-   * column types specificed in return table type, at query time.
+   * column types specified in return table type, at query time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,7 +307,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Defaults to "SQL".
+   * Optional. Defaults to "SQL" if remote_function_options field is absent, not set otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -315,7 +315,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Defaults to "SQL".
+   * Optional. Defaults to "SQL" if remote_function_options field is absent, not set otherwise.
    * @param language language or {@code null} for none
    */
   public Routine setLanguage(java.lang.String language) {
@@ -361,7 +361,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return
    * table type is inferred from definition_body at query time in each query that references this
    * routine. If present, then the columns in the evaluated table result will be cast to match the
-   * column types specificed in return table type, at query time.
+   * column types specified in return table type, at query time.
    * @return value or {@code null} for none
    */
   public StandardSqlTableType getReturnTableType() {
@@ -372,7 +372,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return
    * table type is inferred from definition_body at query time in each query that references this
    * routine. If present, then the columns in the evaluated table result will be cast to match the
-   * column types specificed in return table type, at query time.
+   * column types specified in return table type, at query time.
    * @param returnTableType returnTableType or {@code null} for none
    */
   public Routine setReturnTableType(StandardSqlTableType returnTableType) {

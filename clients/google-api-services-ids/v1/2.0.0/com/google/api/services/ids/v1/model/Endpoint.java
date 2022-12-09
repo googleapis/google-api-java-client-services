@@ -94,6 +94,13 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * List of threat IDs to be excepted from generating alerts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> threatExceptions;
+
+  /**
    * Whether the endpoint should report traffic logs in addition to threat logs.
    * The value may be {@code null}.
    */
@@ -257,6 +264,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * List of threat IDs to be excepted from generating alerts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getThreatExceptions() {
+    return threatExceptions;
+  }
+
+  /**
+   * List of threat IDs to be excepted from generating alerts.
+   * @param threatExceptions threatExceptions or {@code null} for none
+   */
+  public Endpoint setThreatExceptions(java.util.List<java.lang.String> threatExceptions) {
+    this.threatExceptions = threatExceptions;
     return this;
   }
 

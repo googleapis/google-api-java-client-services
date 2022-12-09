@@ -31,6 +31,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
 
   /**
    * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
+   * This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,6 +78,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
 
   /**
    * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
+   * This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowVerticalScale() {
@@ -85,6 +87,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
 
   /**
    * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
+   * This field is deprecated.
    * @param allowVerticalScale allowVerticalScale or {@code null} for none
    */
   public ConfigManagementConfigSync setAllowVerticalScale(java.lang.Boolean allowVerticalScale) {

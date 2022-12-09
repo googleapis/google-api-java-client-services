@@ -34,7 +34,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A name for this commitment. All commitments in a CostScenario must have unique names.
-   * Each name must be a maximum of 32 characters.
+   * Each name may be at most 128 characters long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A name for this commitment. All commitments in a CostScenario must have unique names.
-   * Each name must be a maximum of 32 characters.
+   * Each name may be at most 128 characters long.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -58,7 +58,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A name for this commitment. All commitments in a CostScenario must have unique names.
-   * Each name must be a maximum of 32 characters.
+   * Each name may be at most 128 characters long.
    * @param name name or {@code null} for none
    */
   public Commitment setName(java.lang.String name) {

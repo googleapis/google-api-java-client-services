@@ -32,6 +32,41 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class Workload extends com.google.api.client.json.GenericJson {
 
   /**
+   * Usage on Google Cloud CDN Egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudCdnEgressWorkload cloudCdnEgressWorkload;
+
+  /**
+   * Usage on Google Cloud CDN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudCdnWorkload cloudCdnWorkload;
+
+  /**
+   * Usage on Google Cloud Interconnect Egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudInterconnectEgressWorkload cloudInterconnectEgressWorkload;
+
+  /**
+   * Usage on Google Cloud Interconnect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudInterconnectWorkload cloudInterconnectWorkload;
+
+  /**
+   * Usage on a cloud storage egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudStorageEgressWorkload cloudStorageEgressWorkload;
+
+  /**
    * Usage on Google Cloud Storage.
    * The value may be {@code null}.
    */
@@ -47,11 +82,110 @@ public final class Workload extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A name for this workload. All workloads in a `CostScenario` must have a unique
-   * `name`. Each `name` must be a maximum of 32 characters.
+   * `name`. Each `name` may be at most 128 characters long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Usage on Premium Tier Internet Egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PremiumTierEgressWorkload premiumTierEgressWorkload;
+
+  /**
+   * Usage on Standard Tier Internet Egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StandardTierEgressWorkload standardTierEgressWorkload;
+
+  /**
+   * Usage on Google Cloud CDN Egress.
+   * @return value or {@code null} for none
+   */
+  public CloudCdnEgressWorkload getCloudCdnEgressWorkload() {
+    return cloudCdnEgressWorkload;
+  }
+
+  /**
+   * Usage on Google Cloud CDN Egress.
+   * @param cloudCdnEgressWorkload cloudCdnEgressWorkload or {@code null} for none
+   */
+  public Workload setCloudCdnEgressWorkload(CloudCdnEgressWorkload cloudCdnEgressWorkload) {
+    this.cloudCdnEgressWorkload = cloudCdnEgressWorkload;
+    return this;
+  }
+
+  /**
+   * Usage on Google Cloud CDN.
+   * @return value or {@code null} for none
+   */
+  public CloudCdnWorkload getCloudCdnWorkload() {
+    return cloudCdnWorkload;
+  }
+
+  /**
+   * Usage on Google Cloud CDN.
+   * @param cloudCdnWorkload cloudCdnWorkload or {@code null} for none
+   */
+  public Workload setCloudCdnWorkload(CloudCdnWorkload cloudCdnWorkload) {
+    this.cloudCdnWorkload = cloudCdnWorkload;
+    return this;
+  }
+
+  /**
+   * Usage on Google Cloud Interconnect Egress.
+   * @return value or {@code null} for none
+   */
+  public CloudInterconnectEgressWorkload getCloudInterconnectEgressWorkload() {
+    return cloudInterconnectEgressWorkload;
+  }
+
+  /**
+   * Usage on Google Cloud Interconnect Egress.
+   * @param cloudInterconnectEgressWorkload cloudInterconnectEgressWorkload or {@code null} for none
+   */
+  public Workload setCloudInterconnectEgressWorkload(CloudInterconnectEgressWorkload cloudInterconnectEgressWorkload) {
+    this.cloudInterconnectEgressWorkload = cloudInterconnectEgressWorkload;
+    return this;
+  }
+
+  /**
+   * Usage on Google Cloud Interconnect.
+   * @return value or {@code null} for none
+   */
+  public CloudInterconnectWorkload getCloudInterconnectWorkload() {
+    return cloudInterconnectWorkload;
+  }
+
+  /**
+   * Usage on Google Cloud Interconnect.
+   * @param cloudInterconnectWorkload cloudInterconnectWorkload or {@code null} for none
+   */
+  public Workload setCloudInterconnectWorkload(CloudInterconnectWorkload cloudInterconnectWorkload) {
+    this.cloudInterconnectWorkload = cloudInterconnectWorkload;
+    return this;
+  }
+
+  /**
+   * Usage on a cloud storage egress.
+   * @return value or {@code null} for none
+   */
+  public CloudStorageEgressWorkload getCloudStorageEgressWorkload() {
+    return cloudStorageEgressWorkload;
+  }
+
+  /**
+   * Usage on a cloud storage egress.
+   * @param cloudStorageEgressWorkload cloudStorageEgressWorkload or {@code null} for none
+   */
+  public Workload setCloudStorageEgressWorkload(CloudStorageEgressWorkload cloudStorageEgressWorkload) {
+    this.cloudStorageEgressWorkload = cloudStorageEgressWorkload;
+    return this;
+  }
 
   /**
    * Usage on Google Cloud Storage.
@@ -89,7 +223,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A name for this workload. All workloads in a `CostScenario` must have a unique
-   * `name`. Each `name` must be a maximum of 32 characters.
+   * `name`. Each `name` may be at most 128 characters long.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -98,11 +232,45 @@ public final class Workload extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A name for this workload. All workloads in a `CostScenario` must have a unique
-   * `name`. Each `name` must be a maximum of 32 characters.
+   * `name`. Each `name` may be at most 128 characters long.
    * @param name name or {@code null} for none
    */
   public Workload setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Usage on Premium Tier Internet Egress.
+   * @return value or {@code null} for none
+   */
+  public PremiumTierEgressWorkload getPremiumTierEgressWorkload() {
+    return premiumTierEgressWorkload;
+  }
+
+  /**
+   * Usage on Premium Tier Internet Egress.
+   * @param premiumTierEgressWorkload premiumTierEgressWorkload or {@code null} for none
+   */
+  public Workload setPremiumTierEgressWorkload(PremiumTierEgressWorkload premiumTierEgressWorkload) {
+    this.premiumTierEgressWorkload = premiumTierEgressWorkload;
+    return this;
+  }
+
+  /**
+   * Usage on Standard Tier Internet Egress.
+   * @return value or {@code null} for none
+   */
+  public StandardTierEgressWorkload getStandardTierEgressWorkload() {
+    return standardTierEgressWorkload;
+  }
+
+  /**
+   * Usage on Standard Tier Internet Egress.
+   * @param standardTierEgressWorkload standardTierEgressWorkload or {@code null} for none
+   */
+  public Workload setStandardTierEgressWorkload(StandardTierEgressWorkload standardTierEgressWorkload) {
+    this.standardTierEgressWorkload = standardTierEgressWorkload;
     return this;
   }
 

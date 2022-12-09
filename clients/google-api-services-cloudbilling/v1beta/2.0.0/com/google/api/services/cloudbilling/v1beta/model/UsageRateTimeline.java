@@ -37,20 +37,21 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class UsageRateTimeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unit for the usage rate in each timeline entry. The supported units are a subset of [The
-   * Unified Code for Units of Measure](https://ucum.org/ucum.html) standard: * **Time units (TIME-
-   * UNIT)** * `s` second * `min` minute * `h` hour * `d` day * `wk` week * `mo` month * `yr` year *
-   * `ms` millisecond * `us` microsecond * `ns` nanosecond * **Basic storage units (BASIC-STORAGE-
-   * UNIT)** * `bit` bit * `By` byte * **Count units (COUNT-UNIT)** * `count` count * **Prefixes
-   * (PREFIX)** * `k` kilo (10^3) * `M` mega (10^6) * `G` giga (10^9) * `T` tera (10^12) * `P` peta
-   * (10^15) * `Ki` kibi (2^10) * `Mi` mebi (2^20) * `Gi` gibi (2^30) * `Ti` tebi (2^40) * `Pi` pebi
-   * (2^50) **Grammar** The grammar also includes these connectors: * `/` division or ratio (as an
-   * infix operator). For example: `kBy/{email}` or `MiBy/10ms`. * `.` multiplication or composition
-   * (as an infix operator). For example: `GBy.d` or `k{watt}.h`. The grammar for a unit is as
-   * follows: ``` Expression = Component { "." Component } { "/" Component } ; Component = ( [
-   * PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ; UNIT = TIME-UNIT | STORAGE-UNIT |
-   * DATA-UNIT | COUNT-UNIT Annotation = "{" NAME "}" ; ``` Examples: * Request per second: `1/s` or
-   * `{requests}/s` * GibiBytes: `GiBy` * GibiBytes * seconds: `GiBy.s`
+   * The unit for the usage rate in each timeline entry. If you provide an incorrect unit for an
+   * instance, the correct unit is provided in the error message. The supported units are a subset
+   * of [The Unified Code for Units of Measure](https://ucum.org/ucum.html) standard: * **Time units
+   * (TIME-UNIT)** * `s` second * `min` minute * `h` hour * `d` day * `wk` week * `mo` month * `yr`
+   * year * `ms` millisecond * `us` microsecond * `ns` nanosecond * **Basic storage units (BASIC-
+   * STORAGE-UNIT)** * `bit` bit * `By` byte * **Count units (COUNT-UNIT)** * `count` count *
+   * **Prefixes (PREFIX)** * `k` kilo (10^3) * `M` mega (10^6) * `G` giga (10^9) * `T` tera (10^12)
+   * * `P` peta (10^15) * `Ki` kibi (2^10) * `Mi` mebi (2^20) * `Gi` gibi (2^30) * `Ti` tebi (2^40)
+   * * `Pi` pebi (2^50) **Grammar** The grammar also includes these connectors: * `/` division or
+   * ratio (as an infix operator). For example: `kBy/{email}` or `MiBy/10ms`. * `.` multiplication
+   * or composition (as an infix operator). For example: `GBy.d` or `k{watt}.h`. The grammar for a
+   * unit is as follows: ``` Expression = Component { "." Component } { "/" Component } ; Component
+   * = ( [ PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ; UNIT = TIME-UNIT | STORAGE-UNIT
+   * | DATA-UNIT | COUNT-UNIT Annotation = "{" NAME "}" ; ``` Examples: * Request per second: `1/s`
+   * or `{requests}/s` * GibiBytes: `GiBy` * GibiBytes * seconds: `GiBy.s`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,20 +67,21 @@ public final class UsageRateTimeline extends com.google.api.client.json.GenericJ
   private java.util.List<UsageRateTimelineEntry> usageRateTimelineEntries;
 
   /**
-   * The unit for the usage rate in each timeline entry. The supported units are a subset of [The
-   * Unified Code for Units of Measure](https://ucum.org/ucum.html) standard: * **Time units (TIME-
-   * UNIT)** * `s` second * `min` minute * `h` hour * `d` day * `wk` week * `mo` month * `yr` year *
-   * `ms` millisecond * `us` microsecond * `ns` nanosecond * **Basic storage units (BASIC-STORAGE-
-   * UNIT)** * `bit` bit * `By` byte * **Count units (COUNT-UNIT)** * `count` count * **Prefixes
-   * (PREFIX)** * `k` kilo (10^3) * `M` mega (10^6) * `G` giga (10^9) * `T` tera (10^12) * `P` peta
-   * (10^15) * `Ki` kibi (2^10) * `Mi` mebi (2^20) * `Gi` gibi (2^30) * `Ti` tebi (2^40) * `Pi` pebi
-   * (2^50) **Grammar** The grammar also includes these connectors: * `/` division or ratio (as an
-   * infix operator). For example: `kBy/{email}` or `MiBy/10ms`. * `.` multiplication or composition
-   * (as an infix operator). For example: `GBy.d` or `k{watt}.h`. The grammar for a unit is as
-   * follows: ``` Expression = Component { "." Component } { "/" Component } ; Component = ( [
-   * PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ; UNIT = TIME-UNIT | STORAGE-UNIT |
-   * DATA-UNIT | COUNT-UNIT Annotation = "{" NAME "}" ; ``` Examples: * Request per second: `1/s` or
-   * `{requests}/s` * GibiBytes: `GiBy` * GibiBytes * seconds: `GiBy.s`
+   * The unit for the usage rate in each timeline entry. If you provide an incorrect unit for an
+   * instance, the correct unit is provided in the error message. The supported units are a subset
+   * of [The Unified Code for Units of Measure](https://ucum.org/ucum.html) standard: * **Time units
+   * (TIME-UNIT)** * `s` second * `min` minute * `h` hour * `d` day * `wk` week * `mo` month * `yr`
+   * year * `ms` millisecond * `us` microsecond * `ns` nanosecond * **Basic storage units (BASIC-
+   * STORAGE-UNIT)** * `bit` bit * `By` byte * **Count units (COUNT-UNIT)** * `count` count *
+   * **Prefixes (PREFIX)** * `k` kilo (10^3) * `M` mega (10^6) * `G` giga (10^9) * `T` tera (10^12)
+   * * `P` peta (10^15) * `Ki` kibi (2^10) * `Mi` mebi (2^20) * `Gi` gibi (2^30) * `Ti` tebi (2^40)
+   * * `Pi` pebi (2^50) **Grammar** The grammar also includes these connectors: * `/` division or
+   * ratio (as an infix operator). For example: `kBy/{email}` or `MiBy/10ms`. * `.` multiplication
+   * or composition (as an infix operator). For example: `GBy.d` or `k{watt}.h`. The grammar for a
+   * unit is as follows: ``` Expression = Component { "." Component } { "/" Component } ; Component
+   * = ( [ PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ; UNIT = TIME-UNIT | STORAGE-UNIT
+   * | DATA-UNIT | COUNT-UNIT Annotation = "{" NAME "}" ; ``` Examples: * Request per second: `1/s`
+   * or `{requests}/s` * GibiBytes: `GiBy` * GibiBytes * seconds: `GiBy.s`
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -87,20 +89,21 @@ public final class UsageRateTimeline extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The unit for the usage rate in each timeline entry. The supported units are a subset of [The
-   * Unified Code for Units of Measure](https://ucum.org/ucum.html) standard: * **Time units (TIME-
-   * UNIT)** * `s` second * `min` minute * `h` hour * `d` day * `wk` week * `mo` month * `yr` year *
-   * `ms` millisecond * `us` microsecond * `ns` nanosecond * **Basic storage units (BASIC-STORAGE-
-   * UNIT)** * `bit` bit * `By` byte * **Count units (COUNT-UNIT)** * `count` count * **Prefixes
-   * (PREFIX)** * `k` kilo (10^3) * `M` mega (10^6) * `G` giga (10^9) * `T` tera (10^12) * `P` peta
-   * (10^15) * `Ki` kibi (2^10) * `Mi` mebi (2^20) * `Gi` gibi (2^30) * `Ti` tebi (2^40) * `Pi` pebi
-   * (2^50) **Grammar** The grammar also includes these connectors: * `/` division or ratio (as an
-   * infix operator). For example: `kBy/{email}` or `MiBy/10ms`. * `.` multiplication or composition
-   * (as an infix operator). For example: `GBy.d` or `k{watt}.h`. The grammar for a unit is as
-   * follows: ``` Expression = Component { "." Component } { "/" Component } ; Component = ( [
-   * PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ; UNIT = TIME-UNIT | STORAGE-UNIT |
-   * DATA-UNIT | COUNT-UNIT Annotation = "{" NAME "}" ; ``` Examples: * Request per second: `1/s` or
-   * `{requests}/s` * GibiBytes: `GiBy` * GibiBytes * seconds: `GiBy.s`
+   * The unit for the usage rate in each timeline entry. If you provide an incorrect unit for an
+   * instance, the correct unit is provided in the error message. The supported units are a subset
+   * of [The Unified Code for Units of Measure](https://ucum.org/ucum.html) standard: * **Time units
+   * (TIME-UNIT)** * `s` second * `min` minute * `h` hour * `d` day * `wk` week * `mo` month * `yr`
+   * year * `ms` millisecond * `us` microsecond * `ns` nanosecond * **Basic storage units (BASIC-
+   * STORAGE-UNIT)** * `bit` bit * `By` byte * **Count units (COUNT-UNIT)** * `count` count *
+   * **Prefixes (PREFIX)** * `k` kilo (10^3) * `M` mega (10^6) * `G` giga (10^9) * `T` tera (10^12)
+   * * `P` peta (10^15) * `Ki` kibi (2^10) * `Mi` mebi (2^20) * `Gi` gibi (2^30) * `Ti` tebi (2^40)
+   * * `Pi` pebi (2^50) **Grammar** The grammar also includes these connectors: * `/` division or
+   * ratio (as an infix operator). For example: `kBy/{email}` or `MiBy/10ms`. * `.` multiplication
+   * or composition (as an infix operator). For example: `GBy.d` or `k{watt}.h`. The grammar for a
+   * unit is as follows: ``` Expression = Component { "." Component } { "/" Component } ; Component
+   * = ( [ PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ; UNIT = TIME-UNIT | STORAGE-UNIT
+   * | DATA-UNIT | COUNT-UNIT Annotation = "{" NAME "}" ; ``` Examples: * Request per second: `1/s`
+   * or `{requests}/s` * GibiBytes: `GiBy` * GibiBytes * seconds: `GiBy.s`
    * @param unit unit or {@code null} for none
    */
   public UsageRateTimeline setUnit(java.lang.String unit) {

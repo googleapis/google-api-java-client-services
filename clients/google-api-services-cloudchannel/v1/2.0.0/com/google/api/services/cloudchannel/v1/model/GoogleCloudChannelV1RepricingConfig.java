@@ -45,6 +45,21 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   private GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity channelPartnerGranularity;
 
   /**
+   * The conditional overrides to apply for this configuration. If you list multiple overrides, only
+   * the first valid override is used. If you don't list any overrides, the API uses the normal
+   * adjustment and rebilling basis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudChannelV1ConditionalOverride> conditionalOverrides;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudChannelV1ConditionalOverride used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudChannelV1ConditionalOverride.class);
+  }
+
+  /**
    * Required. The YearMonth when these adjustments activate. The Day field needs to be "0" since we
    * only accept YearMonth repricing boundaries.
    * The value may be {@code null}.
@@ -101,6 +116,27 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
    */
   public GoogleCloudChannelV1RepricingConfig setChannelPartnerGranularity(GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity channelPartnerGranularity) {
     this.channelPartnerGranularity = channelPartnerGranularity;
+    return this;
+  }
+
+  /**
+   * The conditional overrides to apply for this configuration. If you list multiple overrides, only
+   * the first valid override is used. If you don't list any overrides, the API uses the normal
+   * adjustment and rebilling basis.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudChannelV1ConditionalOverride> getConditionalOverrides() {
+    return conditionalOverrides;
+  }
+
+  /**
+   * The conditional overrides to apply for this configuration. If you list multiple overrides, only
+   * the first valid override is used. If you don't list any overrides, the API uses the normal
+   * adjustment and rebilling basis.
+   * @param conditionalOverrides conditionalOverrides or {@code null} for none
+   */
+  public GoogleCloudChannelV1RepricingConfig setConditionalOverrides(java.util.List<GoogleCloudChannelV1ConditionalOverride> conditionalOverrides) {
+    this.conditionalOverrides = conditionalOverrides;
     return this;
   }
 

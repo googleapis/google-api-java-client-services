@@ -39,6 +39,13 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
   private java.lang.String column;
 
   /**
+   * Optional. Default value for the column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultValue;
+
+  /**
    * Optional. Description of the column. Default value is an empty string. The description must be
    * a UTF-8 string with the maximum size of 2000 bytes.
    * The value may be {@code null}.
@@ -55,6 +62,20 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
   private java.lang.String gcRule;
 
   /**
+   * Optional. Most important inclusion of this column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String highestIndexingType;
+
+  /**
+   * Looker specific column info of this column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec lookerColumnSpec;
+
+  /**
    * Optional. A column's mode indicates whether values in this column are required, nullable, or
    * repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is
    * `NULLABLE`.
@@ -62,6 +83,13 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
+
+  /**
+   * Optional. Ordinal position
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ordinalPosition;
 
   /**
    * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
@@ -93,6 +121,23 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
    */
   public GoogleCloudDatacatalogV1ColumnSchema setColumn(java.lang.String column) {
     this.column = column;
+    return this;
+  }
+
+  /**
+   * Optional. Default value for the column.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultValue() {
+    return defaultValue;
+  }
+
+  /**
+   * Optional. Default value for the column.
+   * @param defaultValue defaultValue or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setDefaultValue(java.lang.String defaultValue) {
+    this.defaultValue = defaultValue;
     return this;
   }
 
@@ -135,6 +180,40 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
   }
 
   /**
+   * Optional. Most important inclusion of this column.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHighestIndexingType() {
+    return highestIndexingType;
+  }
+
+  /**
+   * Optional. Most important inclusion of this column.
+   * @param highestIndexingType highestIndexingType or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setHighestIndexingType(java.lang.String highestIndexingType) {
+    this.highestIndexingType = highestIndexingType;
+    return this;
+  }
+
+  /**
+   * Looker specific column info of this column.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec getLookerColumnSpec() {
+    return lookerColumnSpec;
+  }
+
+  /**
+   * Looker specific column info of this column.
+   * @param lookerColumnSpec lookerColumnSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setLookerColumnSpec(GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec lookerColumnSpec) {
+    this.lookerColumnSpec = lookerColumnSpec;
+    return this;
+  }
+
+  /**
    * Optional. A column's mode indicates whether values in this column are required, nullable, or
    * repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is
    * `NULLABLE`.
@@ -152,6 +231,23 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
    */
   public GoogleCloudDatacatalogV1ColumnSchema setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * Optional. Ordinal position
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOrdinalPosition() {
+    return ordinalPosition;
+  }
+
+  /**
+   * Optional. Ordinal position
+   * @param ordinalPosition ordinalPosition or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setOrdinalPosition(java.lang.Integer ordinalPosition) {
+    this.ordinalPosition = ordinalPosition;
     return this;
   }
 

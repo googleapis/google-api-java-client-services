@@ -32,6 +32,27 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1UsageSignal extends com.google.api.client.json.GenericJson {
 
   /**
+   * Common usage statistics over each of the predefined time ranges. Supported time ranges are
+   * `{"24H", "7D", "30D", "Lifetime"}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDatacatalogV1CommonUsageStats> commonUsageWithinTimeRange;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDatacatalogV1CommonUsageStats used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDatacatalogV1CommonUsageStats.class);
+  }
+
+  /**
+   * Favorite count in the source system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long favoriteCount;
+
+  /**
    * The end timestamp of the duration of usage statistics.
    * The value may be {@code null}.
    */
@@ -45,6 +66,42 @@ public final class GoogleCloudDatacatalogV1UsageSignal extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDatacatalogV1UsageStats> usageWithinTimeRange;
+
+  /**
+   * Common usage statistics over each of the predefined time ranges. Supported time ranges are
+   * `{"24H", "7D", "30D", "Lifetime"}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDatacatalogV1CommonUsageStats> getCommonUsageWithinTimeRange() {
+    return commonUsageWithinTimeRange;
+  }
+
+  /**
+   * Common usage statistics over each of the predefined time ranges. Supported time ranges are
+   * `{"24H", "7D", "30D", "Lifetime"}`.
+   * @param commonUsageWithinTimeRange commonUsageWithinTimeRange or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1UsageSignal setCommonUsageWithinTimeRange(java.util.Map<String, GoogleCloudDatacatalogV1CommonUsageStats> commonUsageWithinTimeRange) {
+    this.commonUsageWithinTimeRange = commonUsageWithinTimeRange;
+    return this;
+  }
+
+  /**
+   * Favorite count in the source system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getFavoriteCount() {
+    return favoriteCount;
+  }
+
+  /**
+   * Favorite count in the source system.
+   * @param favoriteCount favoriteCount or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1UsageSignal setFavoriteCount(java.lang.Long favoriteCount) {
+    this.favoriteCount = favoriteCount;
+    return this;
+  }
 
   /**
    * The end timestamp of the duration of usage statistics.

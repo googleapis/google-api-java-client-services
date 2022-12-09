@@ -74,7 +74,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1DataSourceConnectionSpec dataSourceConnectionSpec;
 
   /**
-   * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
+   * Specification that applies to a table resource. Valid only for entries with the `TABLE` or
+   * `EXPLORE` type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +92,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String description;
 
   /**
-   * Display name of an entry. The name must contain only Unicode letters, numbers (0-9),
-   * underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum size
-   * is 200 bytes when encoded in UTF-8. Default value is an empty string.
+   * Display name of an entry. The maximum size is 500 bytes when encoded in UTF-8. Default value is
+   * an empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,6 +162,14 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String linkedResource;
 
   /**
+   * Specification that applies to Looker sysstem. Only settable when `user_specified_system` is
+   * equal to `LOOKER`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1LookerSystemSpec lookerSystemSpec;
+
+  /**
    * Output only. The resource name of an entry in URL format. Note: The entry itself and its child
    * resources might not be stored in the location specified in its name.
    * The value may be {@code null}.
@@ -199,6 +207,14 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1SystemTimestamps sourceSystemTimestamps;
+
+  /**
+   * Specification that applies to a relational database system. Only settable when
+   * `user_specified_system` is equal to `SQL_DATABASE`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1SqlDatabaseSystemSpec sqlDatabaseSystemSpec;
 
   /**
    * The type of the entry. Only used for entries with types listed in the `EntryType` enum.
@@ -332,7 +348,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
+   * Specification that applies to a table resource. Valid only for entries with the `TABLE` or
+   * `EXPLORE` type.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DatabaseTableSpec getDatabaseTableSpec() {
@@ -340,7 +357,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
+   * Specification that applies to a table resource. Valid only for entries with the `TABLE` or
+   * `EXPLORE` type.
    * @param databaseTableSpec databaseTableSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setDatabaseTableSpec(GoogleCloudDatacatalogV1DatabaseTableSpec databaseTableSpec) {
@@ -372,9 +390,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Display name of an entry. The name must contain only Unicode letters, numbers (0-9),
-   * underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum size
-   * is 200 bytes when encoded in UTF-8. Default value is an empty string.
+   * Display name of an entry. The maximum size is 500 bytes when encoded in UTF-8. Default value is
+   * an empty string.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -382,9 +399,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Display name of an entry. The name must contain only Unicode letters, numbers (0-9),
-   * underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum size
-   * is 200 bytes when encoded in UTF-8. Default value is an empty string.
+   * Display name of an entry. The maximum size is 500 bytes when encoded in UTF-8. Default value is
+   * an empty string.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setDisplayName(java.lang.String displayName) {
@@ -535,6 +551,25 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
+   * Specification that applies to Looker sysstem. Only settable when `user_specified_system` is
+   * equal to `LOOKER`
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1LookerSystemSpec getLookerSystemSpec() {
+    return lookerSystemSpec;
+  }
+
+  /**
+   * Specification that applies to Looker sysstem. Only settable when `user_specified_system` is
+   * equal to `LOOKER`
+   * @param lookerSystemSpec lookerSystemSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setLookerSystemSpec(GoogleCloudDatacatalogV1LookerSystemSpec lookerSystemSpec) {
+    this.lookerSystemSpec = lookerSystemSpec;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of an entry in URL format. Note: The entry itself and its child
    * resources might not be stored in the location specified in its name.
    * @return value or {@code null} for none
@@ -624,6 +659,25 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setSourceSystemTimestamps(GoogleCloudDatacatalogV1SystemTimestamps sourceSystemTimestamps) {
     this.sourceSystemTimestamps = sourceSystemTimestamps;
+    return this;
+  }
+
+  /**
+   * Specification that applies to a relational database system. Only settable when
+   * `user_specified_system` is equal to `SQL_DATABASE`
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SqlDatabaseSystemSpec getSqlDatabaseSystemSpec() {
+    return sqlDatabaseSystemSpec;
+  }
+
+  /**
+   * Specification that applies to a relational database system. Only settable when
+   * `user_specified_system` is equal to `SQL_DATABASE`
+   * @param sqlDatabaseSystemSpec sqlDatabaseSystemSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setSqlDatabaseSystemSpec(GoogleCloudDatacatalogV1SqlDatabaseSystemSpec sqlDatabaseSystemSpec) {
+    this.sqlDatabaseSystemSpec = sqlDatabaseSystemSpec;
     return this;
   }
 

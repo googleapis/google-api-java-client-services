@@ -176,7 +176,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * Email address to contact the customer NOC for operations and maintenance notifications
    * regarding this Interconnect. If specified, this will be used for notifications in addition to
-   * all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
+   * all other forms described, such as Cloud Monitoring logs alerting and Cloud Notifications. This
+   * field is required for users who sign up for Cloud Interconnect using workforce identity
+   * federation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -620,7 +622,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * Email address to contact the customer NOC for operations and maintenance notifications
    * regarding this Interconnect. If specified, this will be used for notifications in addition to
-   * all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
+   * all other forms described, such as Cloud Monitoring logs alerting and Cloud Notifications. This
+   * field is required for users who sign up for Cloud Interconnect using workforce identity
+   * federation.
    * @return value or {@code null} for none
    */
   public java.lang.String getNocContactEmail() {
@@ -630,7 +634,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * Email address to contact the customer NOC for operations and maintenance notifications
    * regarding this Interconnect. If specified, this will be used for notifications in addition to
-   * all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
+   * all other forms described, such as Cloud Monitoring logs alerting and Cloud Notifications. This
+   * field is required for users who sign up for Cloud Interconnect using workforce identity
+   * federation.
    * @param nocContactEmail nocContactEmail or {@code null} for none
    */
   public Interconnect setNocContactEmail(java.lang.String nocContactEmail) {

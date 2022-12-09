@@ -31,6 +31,15 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class AddSubnetworkRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Defines the allowSubnetCidrRoutesOverlap field of the subnet, e.g. Available in alpha
+   * and beta according to [Compute API
+   * documentation](https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks/insert)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowSubnetCidrRoutesOverlap;
+
+  /**
    * Optional. The IAM permission check determines whether the consumer project has
    * 'servicenetworking.services.use' permission or not.
    * The value may be {@code null}.
@@ -178,6 +187,27 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useCustomComputeIdempotencyWindow;
+
+  /**
+   * Optional. Defines the allowSubnetCidrRoutesOverlap field of the subnet, e.g. Available in alpha
+   * and beta according to [Compute API
+   * documentation](https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks/insert)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowSubnetCidrRoutesOverlap() {
+    return allowSubnetCidrRoutesOverlap;
+  }
+
+  /**
+   * Optional. Defines the allowSubnetCidrRoutesOverlap field of the subnet, e.g. Available in alpha
+   * and beta according to [Compute API
+   * documentation](https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks/insert)
+   * @param allowSubnetCidrRoutesOverlap allowSubnetCidrRoutesOverlap or {@code null} for none
+   */
+  public AddSubnetworkRequest setAllowSubnetCidrRoutesOverlap(java.lang.Boolean allowSubnetCidrRoutesOverlap) {
+    this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
+    return this;
+  }
 
   /**
    * Optional. The IAM permission check determines whether the consumer project has

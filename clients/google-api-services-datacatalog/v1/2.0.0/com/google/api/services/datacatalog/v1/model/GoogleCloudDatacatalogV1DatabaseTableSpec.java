@@ -31,6 +31,13 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Spec what aplies to tables that are actually views. Not set for "real" tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec databaseViewSpec;
+
+  /**
    * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
    * entries.
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Spec what aplies to tables that are actually views. Not set for "real" tables.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec getDatabaseViewSpec() {
+    return databaseViewSpec;
+  }
+
+  /**
+   * Spec what aplies to tables that are actually views. Not set for "real" tables.
+   * @param databaseViewSpec databaseViewSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1DatabaseTableSpec setDatabaseViewSpec(GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec databaseViewSpec) {
+    this.databaseViewSpec = databaseViewSpec;
+    return this;
+  }
 
   /**
    * Output only. Fields specific to a Dataplex table and present only in the Dataplex table

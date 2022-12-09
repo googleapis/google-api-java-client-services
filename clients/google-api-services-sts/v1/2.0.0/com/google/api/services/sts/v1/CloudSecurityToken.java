@@ -255,11 +255,124 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
       }
     }
     /**
+     * Exchanges a credential that represents the resource owner's authorization for a Google-generated
+     * [OAuth 2.0 access token] (https://www.rfc-editor.org/rfc/rfc6749#section-5) or [refreshes an
+     * accesstoken] (https://www.rfc-editor.org/rfc/rfc6749#section-6) following [the OAuth 2.0
+     * authorization framework] (https://tools.ietf.org/html/rfc8693) The credential can be one of the
+     * following: - An authorization code issued by the workforce identity federation authorization
+     * endpoint - A [refresh token](https://www.rfc-editor.org/rfc/rfc6749#section-10.4) issued by this
+     * endpoint This endpoint is only meant to be called by the Google Cloud CLI. Also note that this
+     * API only accepts the authorization code issued for workforce pools.
+     *
+     * Create a request for the method "v1.oauthtoken".
+     *
+     * This request holds the parameters needed by the sts server.  After setting any optional
+     * parameters, call the {@link Oauthtoken#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.sts.v1.model.GoogleIdentityStsV1ExchangeOauthTokenRequest}
+     * @return the request
+     */
+    public Oauthtoken oauthtoken(com.google.api.services.sts.v1.model.GoogleIdentityStsV1ExchangeOauthTokenRequest content) throws java.io.IOException {
+      Oauthtoken result = new Oauthtoken(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Oauthtoken extends CloudSecurityTokenRequest<com.google.api.services.sts.v1.model.GoogleIdentityStsV1ExchangeOauthTokenResponse> {
+
+      private static final String REST_PATH = "v1/oauthtoken";
+
+      /**
+       * Exchanges a credential that represents the resource owner's authorization for a Google-
+       * generated [OAuth 2.0 access token] (https://www.rfc-editor.org/rfc/rfc6749#section-5) or
+       * [refreshes an accesstoken] (https://www.rfc-editor.org/rfc/rfc6749#section-6) following [the
+       * OAuth 2.0 authorization framework] (https://tools.ietf.org/html/rfc8693) The credential can be
+       * one of the following: - An authorization code issued by the workforce identity federation
+       * authorization endpoint - A [refresh token](https://www.rfc-editor.org/rfc/rfc6749#section-10.4)
+       * issued by this endpoint This endpoint is only meant to be called by the Google Cloud CLI. Also
+       * note that this API only accepts the authorization code issued for workforce pools.
+       *
+       * Create a request for the method "v1.oauthtoken".
+       *
+       * This request holds the parameters needed by the the sts server.  After setting any optional
+       * parameters, call the {@link Oauthtoken#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Oauthtoken#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.sts.v1.model.GoogleIdentityStsV1ExchangeOauthTokenRequest}
+       * @since 1.13
+       */
+      protected Oauthtoken(com.google.api.services.sts.v1.model.GoogleIdentityStsV1ExchangeOauthTokenRequest content) {
+        super(CloudSecurityToken.this, "POST", REST_PATH, content, com.google.api.services.sts.v1.model.GoogleIdentityStsV1ExchangeOauthTokenResponse.class);
+      }
+
+      @Override
+      public Oauthtoken set$Xgafv(java.lang.String $Xgafv) {
+        return (Oauthtoken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Oauthtoken setAccessToken(java.lang.String accessToken) {
+        return (Oauthtoken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Oauthtoken setAlt(java.lang.String alt) {
+        return (Oauthtoken) super.setAlt(alt);
+      }
+
+      @Override
+      public Oauthtoken setCallback(java.lang.String callback) {
+        return (Oauthtoken) super.setCallback(callback);
+      }
+
+      @Override
+      public Oauthtoken setFields(java.lang.String fields) {
+        return (Oauthtoken) super.setFields(fields);
+      }
+
+      @Override
+      public Oauthtoken setKey(java.lang.String key) {
+        return (Oauthtoken) super.setKey(key);
+      }
+
+      @Override
+      public Oauthtoken setOauthToken(java.lang.String oauthToken) {
+        return (Oauthtoken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Oauthtoken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Oauthtoken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Oauthtoken setQuotaUser(java.lang.String quotaUser) {
+        return (Oauthtoken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Oauthtoken setUploadType(java.lang.String uploadType) {
+        return (Oauthtoken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Oauthtoken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Oauthtoken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Oauthtoken set(String parameterName, Object value) {
+        return (Oauthtoken) super.set(parameterName, value);
+      }
+    }
+    /**
      * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
      * identity within an identity pool, or it applies a Credential Access Boundary to a Google access
-     * token. Note that workforce pools do not support Credential Access Boundary at the moment. When
-     * you call this method, do not send the `Authorization` HTTP header in the request. This method
-     * does not require the `Authorization` header, and using the header can cause the request to fail.
+     * token. Note that workforce pools do not support Credential Access Boundaries. When you call this
+     * method, do not send the `Authorization` HTTP header in the request. This method does not require
+     * the `Authorization` header, and using the header can cause the request to fail.
      *
      * Create a request for the method "v1.token".
      *
@@ -282,10 +395,9 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
       /**
        * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
        * identity within an identity pool, or it applies a Credential Access Boundary to a Google access
-       * token. Note that workforce pools do not support Credential Access Boundary at the moment. When
-       * you call this method, do not send the `Authorization` HTTP header in the request. This method
-       * does not require the `Authorization` header, and using the header can cause the request to
-       * fail.
+       * token. Note that workforce pools do not support Credential Access Boundaries. When you call
+       * this method, do not send the `Authorization` HTTP header in the request. This method does not
+       * require the `Authorization` header, and using the header can cause the request to fail.
        *
        * Create a request for the method "v1.token".
        *

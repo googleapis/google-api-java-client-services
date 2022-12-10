@@ -45,7 +45,7 @@ public final class Function extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Describe whether the function is gen1 or gen2.
+   * Describe whether the function is 1st Gen or 2nd Gen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class Function extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describe whether the function is gen1 or gen2.
+   * Describe whether the function is 1st Gen or 2nd Gen.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -145,7 +145,7 @@ public final class Function extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describe whether the function is gen1 or gen2.
+   * Describe whether the function is 1st Gen or 2nd Gen.
    * @param environment environment or {@code null} for none
    */
   public Function setEnvironment(java.lang.String environment) {

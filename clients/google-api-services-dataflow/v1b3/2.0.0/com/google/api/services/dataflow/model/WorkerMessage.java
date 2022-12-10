@@ -83,6 +83,13 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
   private WorkerShutdownNotice workerShutdownNotice;
 
   /**
+   * Thread scaling information reported by workers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkerThreadScalingReport workerThreadScalingReport;
+
+  /**
    * Labels are used to group WorkerMessages. For example, a worker_message about a particular
    * container might have the labels: { "JOB_ID": "2015-04-22", "WORKER_ID": "wordcount-vm-2015…"
    * "CONTAINER_TYPE": "worker", "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
@@ -206,6 +213,23 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
    */
   public WorkerMessage setWorkerShutdownNotice(WorkerShutdownNotice workerShutdownNotice) {
     this.workerShutdownNotice = workerShutdownNotice;
+    return this;
+  }
+
+  /**
+   * Thread scaling information reported by workers.
+   * @return value or {@code null} for none
+   */
+  public WorkerThreadScalingReport getWorkerThreadScalingReport() {
+    return workerThreadScalingReport;
+  }
+
+  /**
+   * Thread scaling information reported by workers.
+   * @param workerThreadScalingReport workerThreadScalingReport or {@code null} for none
+   */
+  public WorkerMessage setWorkerThreadScalingReport(WorkerThreadScalingReport workerThreadScalingReport) {
+    this.workerThreadScalingReport = workerThreadScalingReport;
     return this;
   }
 

@@ -31,7 +31,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
-   * `projects/{project}/locations/{location}/functions/{function}`
+   * `projects/{project}/locations/{location}/functions/{function}` This is a read-only field.
+   * Creating Cloud Functions V2 triggers is only supported via the Cloud Functions product. An
+   * error will be returned if the user sets this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +66,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
-   * `projects/{project}/locations/{location}/functions/{function}`
+   * `projects/{project}/locations/{location}/functions/{function}` This is a read-only field.
+   * Creating Cloud Functions V2 triggers is only supported via the Cloud Functions product. An
+   * error will be returned if the user sets this value.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudFunction() {
@@ -73,7 +77,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
-   * `projects/{project}/locations/{location}/functions/{function}`
+   * `projects/{project}/locations/{location}/functions/{function}` This is a read-only field.
+   * Creating Cloud Functions V2 triggers is only supported via the Cloud Functions product. An
+   * error will be returned if the user sets this value.
    * @param cloudFunction cloudFunction or {@code null} for none
    */
   public Destination setCloudFunction(java.lang.String cloudFunction) {

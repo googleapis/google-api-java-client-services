@@ -2157,6 +2157,168 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * An accessor for creating requests from the ConnectionSchemaMetadata collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Connectors connectors = new Connectors(...);}
+         *   {@code Connectors.ConnectionSchemaMetadata.List request = connectors.connectionSchemaMetadata().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ConnectionSchemaMetadata connectionSchemaMetadata() {
+          return new ConnectionSchemaMetadata();
+        }
+
+        /**
+         * The "connectionSchemaMetadata" collection of methods.
+         */
+        public class ConnectionSchemaMetadata {
+
+          /**
+           * Refresh runtime schema of a connection.
+           *
+           * Create a request for the method "connectionSchemaMetadata.refresh".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Refresh#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
+           * @param content the {@link com.google.api.services.connectors.v1.model.RefreshConnectionSchemaMetadataRequest}
+           * @return the request
+           */
+          public Refresh refresh(java.lang.String name, com.google.api.services.connectors.v1.model.RefreshConnectionSchemaMetadataRequest content) throws java.io.IOException {
+            Refresh result = new Refresh(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Refresh extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:refresh";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/connectionSchemaMetadata$");
+
+            /**
+             * Refresh runtime schema of a connection.
+             *
+             * Create a request for the method "connectionSchemaMetadata.refresh".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Refresh#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Refresh#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
+             * @param content the {@link com.google.api.services.connectors.v1.model.RefreshConnectionSchemaMetadataRequest}
+             * @since 1.13
+             */
+            protected Refresh(java.lang.String name, com.google.api.services.connectors.v1.model.RefreshConnectionSchemaMetadataRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/connectionSchemaMetadata$");
+              }
+            }
+
+            @Override
+            public Refresh set$Xgafv(java.lang.String $Xgafv) {
+              return (Refresh) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Refresh setAccessToken(java.lang.String accessToken) {
+              return (Refresh) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Refresh setAlt(java.lang.String alt) {
+              return (Refresh) super.setAlt(alt);
+            }
+
+            @Override
+            public Refresh setCallback(java.lang.String callback) {
+              return (Refresh) super.setCallback(callback);
+            }
+
+            @Override
+            public Refresh setFields(java.lang.String fields) {
+              return (Refresh) super.setFields(fields);
+            }
+
+            @Override
+            public Refresh setKey(java.lang.String key) {
+              return (Refresh) super.setKey(key);
+            }
+
+            @Override
+            public Refresh setOauthToken(java.lang.String oauthToken) {
+              return (Refresh) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Refresh setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Refresh) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Refresh setQuotaUser(java.lang.String quotaUser) {
+              return (Refresh) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Refresh setUploadType(java.lang.String uploadType) {
+              return (Refresh) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Refresh setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Refresh) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name. Format: projects/{project}/locations/{location}/connections/
+             * {connection}/connectionSchemaMetadata
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name. Format:
+           projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name. Format: projects/{project}/locations/{location}/connections/
+             * {connection}/connectionSchemaMetadata
+             */
+            public Refresh setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/connectionSchemaMetadata$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Refresh set(String parameterName, Object value) {
+              return (Refresh) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the RuntimeActionSchemas collection.
          *
          * <p>The typical use is:</p>

@@ -37,6 +37,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private DeliveryConfig deliveryConfig;
 
   /**
+   * If present, messages are automatically written from the Pub/Sub Lite topic associated with this
+   * subscription to a destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExportConfig exportConfig;
+
+  /**
    * The name of the subscription. Structured like:
    * projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
    * The value may be {@code null}.
@@ -66,6 +74,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setDeliveryConfig(DeliveryConfig deliveryConfig) {
     this.deliveryConfig = deliveryConfig;
+    return this;
+  }
+
+  /**
+   * If present, messages are automatically written from the Pub/Sub Lite topic associated with this
+   * subscription to a destination.
+   * @return value or {@code null} for none
+   */
+  public ExportConfig getExportConfig() {
+    return exportConfig;
+  }
+
+  /**
+   * If present, messages are automatically written from the Pub/Sub Lite topic associated with this
+   * subscription to a destination.
+   * @param exportConfig exportConfig or {@code null} for none
+   */
+  public Subscription setExportConfig(ExportConfig exportConfig) {
+    this.exportConfig = exportConfig;
     return this;
   }
 

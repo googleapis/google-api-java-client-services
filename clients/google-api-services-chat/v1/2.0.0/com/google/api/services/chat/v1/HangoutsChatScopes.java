@@ -35,6 +35,12 @@ public class HangoutsChatScopes {
   /** View messages and reactions in Google Chat. */
   public static final String CHAT_MESSAGES_READONLY = "https://www.googleapis.com/auth/chat.messages.readonly";
 
+  /** Create conversations and spaces and view or update metadata (including history settings) in Google Chat. */
+  public static final String CHAT_SPACES = "https://www.googleapis.com/auth/chat.spaces";
+
+  /** View chat and spaces in Google Chat. */
+  public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -46,6 +52,8 @@ public class HangoutsChatScopes {
     set.add(CHAT_MESSAGES);
     set.add(CHAT_MESSAGES_CREATE);
     set.add(CHAT_MESSAGES_READONLY);
+    set.add(CHAT_SPACES);
+    set.add(CHAT_SPACES_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

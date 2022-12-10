@@ -51,6 +51,13 @@ public final class WorkerMessageResponse extends com.google.api.client.json.Gene
   private WorkerShutdownNoticeResponse workerShutdownNoticeResponse;
 
   /**
+   * Service's thread scaling recommendation for workers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkerThreadScalingReportResponse workerThreadScalingReportResponse;
+
+  /**
    * The service's response to a worker's health report.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class WorkerMessageResponse extends com.google.api.client.json.Gene
    */
   public WorkerMessageResponse setWorkerShutdownNoticeResponse(WorkerShutdownNoticeResponse workerShutdownNoticeResponse) {
     this.workerShutdownNoticeResponse = workerShutdownNoticeResponse;
+    return this;
+  }
+
+  /**
+   * Service's thread scaling recommendation for workers.
+   * @return value or {@code null} for none
+   */
+  public WorkerThreadScalingReportResponse getWorkerThreadScalingReportResponse() {
+    return workerThreadScalingReportResponse;
+  }
+
+  /**
+   * Service's thread scaling recommendation for workers.
+   * @param workerThreadScalingReportResponse workerThreadScalingReportResponse or {@code null} for none
+   */
+  public WorkerMessageResponse setWorkerThreadScalingReportResponse(WorkerThreadScalingReportResponse workerThreadScalingReportResponse) {
+    this.workerThreadScalingReportResponse = workerThreadScalingReportResponse;
     return this;
   }
 

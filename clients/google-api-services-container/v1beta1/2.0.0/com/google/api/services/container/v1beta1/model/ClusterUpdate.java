@@ -341,6 +341,15 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ShieldedNodes desiredShieldedNodes;
 
   /**
+   * The desired stack type of the cluster. If a stack type is provided and does not match the
+   * current stack type of the cluster, update will attempt to change the stack type to the new
+   * type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredStackType;
+
+  /**
    * The desired Cloud TPU configuration.
    * The value may be {@code null}.
    */
@@ -1110,6 +1119,27 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredShieldedNodes(ShieldedNodes desiredShieldedNodes) {
     this.desiredShieldedNodes = desiredShieldedNodes;
+    return this;
+  }
+
+  /**
+   * The desired stack type of the cluster. If a stack type is provided and does not match the
+   * current stack type of the cluster, update will attempt to change the stack type to the new
+   * type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredStackType() {
+    return desiredStackType;
+  }
+
+  /**
+   * The desired stack type of the cluster. If a stack type is provided and does not match the
+   * current stack type of the cluster, update will attempt to change the stack type to the new
+   * type.
+   * @param desiredStackType desiredStackType or {@code null} for none
+   */
+  public ClusterUpdate setDesiredStackType(java.lang.String desiredStackType) {
+    this.desiredStackType = desiredStackType;
     return this;
   }
 

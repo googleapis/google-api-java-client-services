@@ -30,6 +30,33 @@ package com.google.api.services.metastore.v1beta.model;
 @SuppressWarnings("javadoc")
 public final class RemoveIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Removes IAM policy attached to database or table asynchronously when it is set. The
+   * default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean asynchronous;
+
+  /**
+   * Optional. Removes IAM policy attached to database or table asynchronously when it is set. The
+   * default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAsynchronous() {
+    return asynchronous;
+  }
+
+  /**
+   * Optional. Removes IAM policy attached to database or table asynchronously when it is set. The
+   * default is false.
+   * @param asynchronous asynchronous or {@code null} for none
+   */
+  public RemoveIamPolicyRequest setAsynchronous(java.lang.Boolean asynchronous) {
+    this.asynchronous = asynchronous;
+    return this;
+  }
+
   @Override
   public RemoveIamPolicyRequest set(String fieldName, Object value) {
     return (RemoveIamPolicyRequest) super.set(fieldName, value);

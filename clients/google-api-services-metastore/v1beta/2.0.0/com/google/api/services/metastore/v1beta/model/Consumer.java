@@ -42,7 +42,7 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
    * as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to
    * all hosts in a subnet in the same region and same network. There must be at least one IP
    * address available in the subnet's primary range. The subnet is specified in the following
-   * form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
+   * form:projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
    * as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to
    * all hosts in a subnet in the same region and same network. There must be at least one IP
    * address available in the subnet's primary range. The subnet is specified in the following
-   * form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
+   * form:projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -82,7 +82,7 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
    * as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to
    * all hosts in a subnet in the same region and same network. There must be at least one IP
    * address available in the subnet's primary range. The subnet is specified in the following
-   * form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
+   * form:projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
    * @param subnetwork subnetwork or {@code null} for none
    */
   public Consumer setSubnetwork(java.lang.String subnetwork) {

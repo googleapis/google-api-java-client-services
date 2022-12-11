@@ -90,8 +90,8 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
    * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
    * unique. However, you can use the same key with multiple resources. * Keys must start with a
-   * lowercase letter or international character. See [Google Cloud
-   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * lowercase letter or international character. See [Requirements for
+   * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
    * The value may be {@code null}.
    */
@@ -233,8 +233,8 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
    * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
    * unique. However, you can use the same key with multiple resources. * Keys must start with a
-   * lowercase letter or international character. See [Google Cloud
-   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * lowercase letter or international character. See [Requirements for
+   * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
    * @return value or {@code null} for none
    */
@@ -250,8 +250,8 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
    * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
    * unique. However, you can use the same key with multiple resources. * Keys must start with a
-   * lowercase letter or international character. See [Google Cloud
-   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * lowercase letter or international character. See [Requirements for
+   * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
    * @param userLabels userLabels or {@code null} for none
    */

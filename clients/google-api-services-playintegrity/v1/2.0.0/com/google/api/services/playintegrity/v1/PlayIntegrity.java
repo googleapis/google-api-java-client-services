@@ -20,7 +20,7 @@ package com.google.api.services.playintegrity.v1;
  * Service definition for PlayIntegrity (v1).
  *
  * <p>
- * Play Integrity
+ * The Play Integrity API helps you check that you're interacting with your genuine app on a genuine Android device powered by Google Play services. The Play Integrity API has replaced SafetyNet Attestation and Android Device Verification.
  * </p>
  *
  * <p>

@@ -31,8 +31,8 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Config extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Default Skaffold version that is assigned when a Release is created without
-   * specifying a Skaffold version.
+   * Default Skaffold version that is assigned when a Release is created without specifying a
+   * Skaffold version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,15 +46,15 @@ public final class Config extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. All supported versions of Skaffold.
+   * All supported versions of Skaffold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SkaffoldVersion> supportedVersions;
 
   /**
-   * Output only. Default Skaffold version that is assigned when a Release is created without
-   * specifying a Skaffold version.
+   * Default Skaffold version that is assigned when a Release is created without specifying a
+   * Skaffold version.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultSkaffoldVersion() {
@@ -62,8 +62,8 @@ public final class Config extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Default Skaffold version that is assigned when a Release is created without
-   * specifying a Skaffold version.
+   * Default Skaffold version that is assigned when a Release is created without specifying a
+   * Skaffold version.
    * @param defaultSkaffoldVersion defaultSkaffoldVersion or {@code null} for none
    */
   public Config setDefaultSkaffoldVersion(java.lang.String defaultSkaffoldVersion) {
@@ -89,7 +89,7 @@ public final class Config extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. All supported versions of Skaffold.
+   * All supported versions of Skaffold.
    * @return value or {@code null} for none
    */
   public java.util.List<SkaffoldVersion> getSupportedVersions() {
@@ -97,7 +97,7 @@ public final class Config extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. All supported versions of Skaffold.
+   * All supported versions of Skaffold.
    * @param supportedVersions supportedVersions or {@code null} for none
    */
   public Config setSupportedVersions(java.util.List<SkaffoldVersion> supportedVersions) {

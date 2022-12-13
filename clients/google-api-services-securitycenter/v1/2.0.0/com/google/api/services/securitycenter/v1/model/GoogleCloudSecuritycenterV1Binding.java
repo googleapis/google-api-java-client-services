@@ -52,7 +52,8 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   private Role role;
 
   /**
-   * Represents the subjects(s) bound to the role. Not always available for PATCH requests.
+   * Represents one or more subjects that are bound to the role. Not always available for PATCH
+   * requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,8 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   }
 
   /**
-   * Represents the subjects(s) bound to the role. Not always available for PATCH requests.
+   * Represents one or more subjects that are bound to the role. Not always available for PATCH
+   * requests.
    * @return value or {@code null} for none
    */
   public java.util.List<Subject> getSubjects() {
@@ -118,7 +120,8 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   }
 
   /**
-   * Represents the subjects(s) bound to the role. Not always available for PATCH requests.
+   * Represents one or more subjects that are bound to the role. Not always available for PATCH
+   * requests.
    * @param subjects subjects or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Binding setSubjects(java.util.List<Subject> subjects) {

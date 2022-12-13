@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Representa a single contact's email address
+ * The email address of a contact.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,14 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Contact extends com.google.api.client.json.GenericJson {
 
   /**
-   * An email address e.g. "person123@company.com"
+   * An email address. For example, "`person123@company.com`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * An email address e.g. "person123@company.com"
+   * An email address. For example, "`person123@company.com`".
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -46,7 +46,7 @@ public final class Contact extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An email address e.g. "person123@company.com"
+   * An email address. For example, "`person123@company.com`".
    * @param email email or {@code null} for none
    */
   public Contact setEmail(java.lang.String email) {

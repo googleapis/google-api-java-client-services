@@ -38,7 +38,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * True when unexpected modifications of kernel read-only data memory are present.
+   * True when unexpected modifications of kernel code memory are present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean unexpectedProcessesInRunqueue;
 
   /**
-   * Flag indicating unexpected modifications of kernel read-only data memory.
+   * True when unexpected modifications of kernel read-only data memory are present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True when unexpected modifications of kernel read-only data memory are present.
+   * True when unexpected modifications of kernel code memory are present.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedCodeModification() {
@@ -125,7 +125,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True when unexpected modifications of kernel read-only data memory are present.
+   * True when unexpected modifications of kernel code memory are present.
    * @param unexpectedCodeModification unexpectedCodeModification or {@code null} for none
    */
   public KernelRootkit setUnexpectedCodeModification(java.lang.Boolean unexpectedCodeModification) {
@@ -229,7 +229,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating unexpected modifications of kernel read-only data memory.
+   * True when unexpected modifications of kernel read-only data memory are present.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnexpectedReadOnlyDataModification() {
@@ -237,7 +237,7 @@ public final class KernelRootkit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag indicating unexpected modifications of kernel read-only data memory.
+   * True when unexpected modifications of kernel read-only data memory are present.
    * @param unexpectedReadOnlyDataModification unexpectedReadOnlyDataModification or {@code null} for none
    */
   public KernelRootkit setUnexpectedReadOnlyDataModification(java.lang.Boolean unexpectedReadOnlyDataModification) {

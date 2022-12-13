@@ -17,9 +17,10 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics. This
- * is an artifact observed on a network or in an operating system that, with high confidence,
- * indicates a computer intrusion. Reference: https://en.wikipedia.org/wiki/Indicator_of_compromise
+ * Represents what's commonly known as an _indicator of compromise_ (IoC) in computer forensics.
+ * This is an artifact observed on a network or in an operating system that, with high confidence,
+ * indicates a computer intrusion. For more information, see [Indicator of
+ * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -40,7 +41,7 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> domains;
 
   /**
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +79,7 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIpAddresses() {
@@ -86,7 +87,7 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * @param ipAddresses ipAddresses or {@code null} for none
    */
   public Indicator setIpAddresses(java.util.List<java.lang.String> ipAddresses) {

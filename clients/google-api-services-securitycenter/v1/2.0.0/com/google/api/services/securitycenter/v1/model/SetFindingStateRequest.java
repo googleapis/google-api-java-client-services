@@ -17,11 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message for updating a finding's state. The [relative resource
- * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
- * Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
- * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
- * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+ * Request message for updating a finding's state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

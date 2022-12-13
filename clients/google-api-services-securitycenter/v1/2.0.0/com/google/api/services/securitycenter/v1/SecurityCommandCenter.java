@@ -181,8 +181,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       *        folders/[folder_id], or projects/[project_id]".
+       * @param parent Required. The name of the parent to group the assets by. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -210,8 +210,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       *        folders/[folder_id], or projects/[project_id]".
+         * @param parent Required. The name of the parent to group the assets by. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -281,22 +281,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-         * folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent to group the assets by. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       folders/[folder_id], or projects/[project_id]".
+        /** Required. The name of the parent to group the assets by. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-         * folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent to group the assets by. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -321,8 +321,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent assets should belong to. Its format is
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @param parent Required. The name of the parent that the listed assets belong to. Its format is
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -348,8 +348,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent assets should belong to. Its format is
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @param parent Required. The name of the parent that the listed assets belong to. Its format is
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -428,22 +428,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent assets should belong to. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent that the listed assets belong to. Its format is
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent assets should belong to. Its format is
-       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+        /** Required. The name of the parent that the listed assets belong to. Its format is
+       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent assets should belong to. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent that the listed assets belong to. Its format is
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1002,7 +1002,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
+       * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
@@ -1031,7 +1031,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
+         * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
@@ -1102,13 +1102,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new BigQuery export's parent. Its format is
+         * Required. The name of the parent resource of the new BigQuery export. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new BigQuery export's parent. Its format is
+        /** Required. The name of the parent resource of the new BigQuery export. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -1116,7 +1116,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new BigQuery export's parent. Its format is
+         * Required. The name of the parent resource of the new BigQuery export. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -1168,7 +1168,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the BigQuery export to delete. Its format is
+       * @param name Required. The name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -1198,7 +1198,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the BigQuery export to delete. Its format is
+         * @param name Required. The name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -1270,7 +1270,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the BigQuery export to delete. Its format is
+         * Required. The name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -1278,7 +1278,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the BigQuery export to delete. Its format is
+        /** Required. The name of the BigQuery export to delete. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -1287,7 +1287,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the BigQuery export to delete. Its format is
+         * Required. The name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -3016,14 +3016,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
          * only.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
         /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters, and contain alphanumeric characters, underscores or hyphens only.
+       and 128 characters and contain alphanumeric characters, underscores, or hyphens only.
          */
         public java.lang.String getConfigId() {
           return configId;
@@ -3031,7 +3031,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
          * only.
          */
         public Create setConfigId(java.lang.String configId) {
@@ -3357,7 +3357,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent to list notification configs. Its format is
+       * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
@@ -3384,7 +3384,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent to list notification configs. Its format is
+         * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
@@ -3464,13 +3464,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to list notification configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent in which to list the notification configurations. Its
+         * format is "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent to list notification configs. Its format is
+        /** Required. The name of the parent in which to list the notification configurations. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -3478,8 +3479,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to list notification configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent in which to list the notification configurations. Its
+         * format is "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3756,7 +3758,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3783,7 +3785,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3863,13 +3865,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -3877,7 +3879,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4928,7 +4930,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name
+         * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -4956,7 +4963,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name
+           * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -5025,16 +5037,35 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
+          /**
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /**
-
+          /** Required. The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
           }
 
+          /**
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5820,8 +5851,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       *        folders/[folder_id], or projects/[project_id]".
+       * @param parent Required. The name of the parent to group the assets by. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -5849,8 +5880,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       *        folders/[folder_id], or projects/[project_id]".
+         * @param parent Required. The name of the parent to group the assets by. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -5920,22 +5951,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-         * folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent to group the assets by. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       folders/[folder_id], or projects/[project_id]".
+        /** Required. The name of the parent to group the assets by. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-         * folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent to group the assets by. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5960,8 +5991,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent assets should belong to. Its format is
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @param parent Required. The name of the parent that the listed assets belong to. Its format is
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5987,8 +6018,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent assets should belong to. Its format is
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @param parent Required. The name of the parent that the listed assets belong to. Its format is
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6067,22 +6098,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent assets should belong to. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent that the listed assets belong to. Its format is
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent assets should belong to. Its format is
-       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+        /** Required. The name of the parent that the listed assets belong to. Its format is
+       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent assets should belong to. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent that the listed assets belong to. Its format is
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -6786,7 +6817,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
+       * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
@@ -6815,7 +6846,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
+         * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
@@ -6886,13 +6917,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new BigQuery export's parent. Its format is
+         * Required. The name of the parent resource of the new BigQuery export. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new BigQuery export's parent. Its format is
+        /** Required. The name of the parent resource of the new BigQuery export. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -6900,7 +6931,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new BigQuery export's parent. Its format is
+         * Required. The name of the parent resource of the new BigQuery export. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -6952,7 +6983,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the BigQuery export to delete. Its format is
+       * @param name Required. The name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -6982,7 +7013,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the BigQuery export to delete. Its format is
+         * @param name Required. The name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -7054,7 +7085,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the BigQuery export to delete. Its format is
+         * Required. The name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -7062,7 +7093,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the BigQuery export to delete. Its format is
+        /** Required. The name of the BigQuery export to delete. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -7071,7 +7102,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the BigQuery export to delete. Its format is
+         * Required. The name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -8800,14 +8831,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
          * only.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
         /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters, and contain alphanumeric characters, underscores or hyphens only.
+       and 128 characters and contain alphanumeric characters, underscores, or hyphens only.
          */
         public java.lang.String getConfigId() {
           return configId;
@@ -8815,7 +8846,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
          * only.
          */
         public Create setConfigId(java.lang.String configId) {
@@ -9141,7 +9172,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent to list notification configs. Its format is
+       * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
@@ -9168,7 +9199,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent to list notification configs. Its format is
+         * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
@@ -9248,13 +9279,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to list notification configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent in which to list the notification configurations. Its
+         * format is "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent to list notification configs. Its format is
+        /** Required. The name of the parent in which to list the notification configurations. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -9262,8 +9294,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to list notification configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent in which to list the notification configurations. Its
+         * format is "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -10607,7 +10640,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10634,7 +10667,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10714,13 +10747,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -10728,7 +10761,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -12404,7 +12437,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name
+         * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -12432,7 +12470,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name
+           * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -12501,16 +12544,35 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
+          /**
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /**
-
+          /** Required. The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
           }
 
+          /**
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12977,8 +13039,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       *        folders/[folder_id], or projects/[project_id]".
+       * @param parent Required. The name of the parent to group the assets by. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -13006,8 +13068,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       *        folders/[folder_id], or projects/[project_id]".
+         * @param parent Required. The name of the parent to group the assets by. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -13077,22 +13139,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-         * folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent to group the assets by. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-       folders/[folder_id], or projects/[project_id]".
+        /** Required. The name of the parent to group the assets by. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent to groupBy. Its format is "organizations/[organization_id],
-         * folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent to group the assets by. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -13117,8 +13179,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent assets should belong to. Its format is
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @param parent Required. The name of the parent that the listed assets belong to. Its format is
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -13144,8 +13206,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent assets should belong to. Its format is
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @param parent Required. The name of the parent that the listed assets belong to. Its format is
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -13224,22 +13286,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent assets should belong to. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent that the listed assets belong to. Its format is
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent assets should belong to. Its format is
-       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+        /** Required. The name of the parent that the listed assets belong to. Its format is
+       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent assets should belong to. Its format is
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * Required. The name of the parent that the listed assets belong to. Its format is
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -13798,7 +13860,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
+       * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
@@ -13827,7 +13889,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new BigQuery export's parent. Its format is
+         * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
@@ -13898,13 +13960,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new BigQuery export's parent. Its format is
+         * Required. The name of the parent resource of the new BigQuery export. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new BigQuery export's parent. Its format is
+        /** Required. The name of the parent resource of the new BigQuery export. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -13912,7 +13974,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Resource name of the new BigQuery export's parent. Its format is
+         * Required. The name of the parent resource of the new BigQuery export. Its format is
          * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -13964,7 +14026,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the BigQuery export to delete. Its format is
+       * @param name Required. The name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -13994,7 +14056,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the BigQuery export to delete. Its format is
+         * @param name Required. The name of the BigQuery export to delete. Its format is
        *        organizations/{organization}/bigQueryExports/{export_id},
        *        folders/{folder}/bigQueryExports/{export_id}, or
        *        projects/{project}/bigQueryExports/{export_id}
@@ -14066,7 +14128,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the BigQuery export to delete. Its format is
+         * Required. The name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -14074,7 +14136,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the BigQuery export to delete. Its format is
+        /** Required. The name of the BigQuery export to delete. Its format is
        organizations/{organization}/bigQueryExports/{export_id},
        folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
          */
@@ -14083,7 +14145,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the BigQuery export to delete. Its format is
+         * Required. The name of the BigQuery export to delete. Its format is
          * organizations/{organization}/bigQueryExports/{export_id},
          * folders/{folder}/bigQueryExports/{export_id}, or
          * projects/{project}/bigQueryExports/{export_id}
@@ -15812,14 +15874,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
          * only.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
         /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters, and contain alphanumeric characters, underscores or hyphens only.
+       and 128 characters and contain alphanumeric characters, underscores, or hyphens only.
          */
         public java.lang.String getConfigId() {
           return configId;
@@ -15827,7 +15889,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters, and contain alphanumeric characters, underscores or hyphens
+         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
          * only.
          */
         public Create setConfigId(java.lang.String configId) {
@@ -16153,7 +16215,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent to list notification configs. Its format is
+       * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
@@ -16180,7 +16242,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent to list notification configs. Its format is
+         * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
        *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
@@ -16260,13 +16322,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to list notification configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent in which to list the notification configurations. Its
+         * format is "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent to list notification configs. Its format is
+        /** Required. The name of the parent in which to list the notification configurations. Its format is
        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
@@ -16274,8 +16337,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. Name of the parent to list notification configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent in which to list the notification configurations. Its
+         * format is "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -16552,7 +16616,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -16579,7 +16643,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -16659,13 +16723,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -16673,7 +16737,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -17724,7 +17788,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name
+         * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -17752,7 +17821,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name
+           * @param name Required. The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -17821,16 +17895,35 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
+          /**
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /**
-
+          /** Required. The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
           }
 
+          /**
+           * Required. The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

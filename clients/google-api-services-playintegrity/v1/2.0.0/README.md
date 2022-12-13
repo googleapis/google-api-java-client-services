@@ -1,6 +1,6 @@
 # Google Play Integrity API Client Library for Java
 
-Play Integrity
+The Play Integrity API helps you check that you're interacting with your genuine app on a genuine Android device powered by Google Play services. The Play Integrity API has replaced SafetyNet Attestation and Android Device Verification.
 
 This page contains information about getting started with the Google Play Integrity API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-playintegrity</artifactId>
-      <version>v1-rev20221027-2.0.0</version>
+      <version>v1-rev20221210-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-playintegrity:v1-rev20221027-2.0.0'
+  implementation 'com.google.apis:google-api-services-playintegrity:v1-rev20221210-2.0.0'
 }
 ```
 

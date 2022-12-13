@@ -480,9 +480,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
      *        find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
      *        /property-id). `property` should be the same value as in your `runReport` request.
-     *        Example: properties/1234 Set the Property ID to 0 for compatibility checking on dimensions
-     *        and metrics common to all properties. In this special mode, this method will not return
-     *        custom dimensions and metrics.
+     *        Example: properties/1234
      * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest}
      * @return the request
      */
@@ -518,9 +516,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
      *        find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
      *        /property-id). `property` should be the same value as in your `runReport` request.
-     *        Example: properties/1234 Set the Property ID to 0 for compatibility checking on dimensions
-     *        and metrics common to all properties. In this special mode, this method will not return
-     *        custom dimensions and metrics.
+     *        Example: properties/1234
        * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest}
        * @since 1.13
        */
@@ -594,9 +590,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * `property` should be the same value as in your `runReport` request. Example:
-       * properties/1234 Set the Property ID to 0 for compatibility checking on dimensions and
-       * metrics common to all properties. In this special mode, this method will not return custom
-       * dimensions and metrics.
+       * properties/1234
        */
       @com.google.api.client.util.Key
       private java.lang.String property;
@@ -604,9 +598,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       /** A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
      find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
      /property-id). `property` should be the same value as in your `runReport` request. Example:
-     properties/1234 Set the Property ID to 0 for compatibility checking on dimensions and metrics
-     common to all properties. In this special mode, this method will not return custom dimensions and
-     metrics.
+     properties/1234
        */
       public java.lang.String getProperty() {
         return property;
@@ -617,9 +609,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * `property` should be the same value as in your `runReport` request. Example:
-       * properties/1234 Set the Property ID to 0 for compatibility checking on dimensions and
-       * metrics common to all properties. In this special mode, this method will not return custom
-       * dimensions and metrics.
+       * properties/1234
        */
       public CheckCompatibility setProperty(java.lang.String property) {
         if (!getSuppressPatternChecks()) {

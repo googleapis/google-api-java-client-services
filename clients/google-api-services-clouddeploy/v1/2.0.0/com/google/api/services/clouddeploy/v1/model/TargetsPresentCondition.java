@@ -32,7 +32,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class TargetsPresentCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Target names that are missing. For example,
+   * The list of Target names that do not exist. For example,
    * projects/{project_id}/locations/{location_name}/targets/{target_name}.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class TargetsPresentCondition extends com.google.api.client.json.Ge
   private String updateTime;
 
   /**
-   * The list of Target names that are missing. For example,
+   * The list of Target names that do not exist. For example,
    * projects/{project_id}/locations/{location_name}/targets/{target_name}.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class TargetsPresentCondition extends com.google.api.client.json.Ge
   }
 
   /**
-   * The list of Target names that are missing. For example,
+   * The list of Target names that do not exist. For example,
    * projects/{project_id}/locations/{location_name}/targets/{target_name}.
    * @param missingTargets missingTargets or {@code null} for none
    */

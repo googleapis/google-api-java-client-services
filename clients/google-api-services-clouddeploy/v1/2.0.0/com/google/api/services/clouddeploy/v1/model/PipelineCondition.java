@@ -38,11 +38,18 @@ public final class PipelineCondition extends com.google.api.client.json.GenericJ
   private PipelineReadyCondition pipelineReadyCondition;
 
   /**
-   * Detalis around targets enumerated in the pipeline.
+   * Details around targets enumerated in the pipeline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TargetsPresentCondition targetsPresentCondition;
+
+  /**
+   * Details on the whether the targets enumerated in the pipeline are of the same type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetsTypeCondition targetsTypeCondition;
 
   /**
    * Details around the Pipeline's overall status.
@@ -62,7 +69,7 @@ public final class PipelineCondition extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Detalis around targets enumerated in the pipeline.
+   * Details around targets enumerated in the pipeline.
    * @return value or {@code null} for none
    */
   public TargetsPresentCondition getTargetsPresentCondition() {
@@ -70,11 +77,28 @@ public final class PipelineCondition extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Detalis around targets enumerated in the pipeline.
+   * Details around targets enumerated in the pipeline.
    * @param targetsPresentCondition targetsPresentCondition or {@code null} for none
    */
   public PipelineCondition setTargetsPresentCondition(TargetsPresentCondition targetsPresentCondition) {
     this.targetsPresentCondition = targetsPresentCondition;
+    return this;
+  }
+
+  /**
+   * Details on the whether the targets enumerated in the pipeline are of the same type.
+   * @return value or {@code null} for none
+   */
+  public TargetsTypeCondition getTargetsTypeCondition() {
+    return targetsTypeCondition;
+  }
+
+  /**
+   * Details on the whether the targets enumerated in the pipeline are of the same type.
+   * @param targetsTypeCondition targetsTypeCondition or {@code null} for none
+   */
+  public PipelineCondition setTargetsTypeCondition(TargetsTypeCondition targetsTypeCondition) {
+    this.targetsTypeCondition = targetsTypeCondition;
     return this;
   }
 

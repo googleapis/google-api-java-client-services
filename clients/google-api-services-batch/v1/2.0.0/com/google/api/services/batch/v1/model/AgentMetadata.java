@@ -17,7 +17,7 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * AgentMetadata never changes for a single instance of VM agent.
+ * VM Agent Metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -65,6 +65,13 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger instanceId;
+
+  /**
+   * If the GCP instance has received preemption notice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean instancePreemptionNoticeReceived;
 
   /**
    * parsed contents of /etc/os-release
@@ -173,6 +180,23 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
    */
   public AgentMetadata setInstanceId(java.math.BigInteger instanceId) {
     this.instanceId = instanceId;
+    return this;
+  }
+
+  /**
+   * If the GCP instance has received preemption notice.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInstancePreemptionNoticeReceived() {
+    return instancePreemptionNoticeReceived;
+  }
+
+  /**
+   * If the GCP instance has received preemption notice.
+   * @param instancePreemptionNoticeReceived instancePreemptionNoticeReceived or {@code null} for none
+   */
+  public AgentMetadata setInstancePreemptionNoticeReceived(java.lang.Boolean instancePreemptionNoticeReceived) {
+    this.instancePreemptionNoticeReceived = instancePreemptionNoticeReceived;
     return this;
   }
 

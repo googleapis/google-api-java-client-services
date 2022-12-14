@@ -38,6 +38,15 @@ public final class PhotosAnimationMetadata extends com.google.api.client.json.Ge
   private java.lang.Long durationMs;
 
   /**
+   * The number of times the animation plays. If 0, the animation will loop indefinitely. If
+   * positive, this number includes the initial playthrough. For example, a value of 3 means that
+   * each frame is shown 3 times.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer loopCount;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,6 +68,27 @@ public final class PhotosAnimationMetadata extends com.google.api.client.json.Ge
    */
   public PhotosAnimationMetadata setDurationMs(java.lang.Long durationMs) {
     this.durationMs = durationMs;
+    return this;
+  }
+
+  /**
+   * The number of times the animation plays. If 0, the animation will loop indefinitely. If
+   * positive, this number includes the initial playthrough. For example, a value of 3 means that
+   * each frame is shown 3 times.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLoopCount() {
+    return loopCount;
+  }
+
+  /**
+   * The number of times the animation plays. If 0, the animation will loop indefinitely. If
+   * positive, this number includes the initial playthrough. For example, a value of 3 means that
+   * each frame is shown 3 times.
+   * @param loopCount loopCount or {@code null} for none
+   */
+  public PhotosAnimationMetadata setLoopCount(java.lang.Integer loopCount) {
+    this.loopCount = loopCount;
     return this;
   }
 

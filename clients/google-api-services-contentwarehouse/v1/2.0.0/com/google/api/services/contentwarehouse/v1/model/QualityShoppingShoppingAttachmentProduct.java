@@ -132,6 +132,13 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
   }
 
   /**
+   * Matched/Inferred weak product identity - set only if the global_product_cluster_id is missing
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger weakGlobalProductClusterId;
+
+  /**
    * @return value or {@code null} for none
    */
   public ShoppingWebentityShoppingAnnotationProductRating getAggregateRating() {
@@ -350,6 +357,23 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
    */
   public QualityShoppingShoppingAttachmentProduct setRelevanceEmbedding(java.util.List<QualityRankembedMustangMustangRankEmbedInfo> relevanceEmbedding) {
     this.relevanceEmbedding = relevanceEmbedding;
+    return this;
+  }
+
+  /**
+   * Matched/Inferred weak product identity - set only if the global_product_cluster_id is missing
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getWeakGlobalProductClusterId() {
+    return weakGlobalProductClusterId;
+  }
+
+  /**
+   * Matched/Inferred weak product identity - set only if the global_product_cluster_id is missing
+   * @param weakGlobalProductClusterId weakGlobalProductClusterId or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachmentProduct setWeakGlobalProductClusterId(java.math.BigInteger weakGlobalProductClusterId) {
+    this.weakGlobalProductClusterId = weakGlobalProductClusterId;
     return this;
   }
 

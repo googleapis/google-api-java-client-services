@@ -30,13 +30,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, makes the document visible to asynchronous policies and rules.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean asyncEnabled;
-
-  /**
    * Document AI format to save the structured content, including OCR.
    * The value may be {@code null}.
    */
@@ -156,8 +149,15 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
   private java.lang.Boolean textExtractionDisabled;
 
   /**
-   * Title that describes the document. This is usually present in the top section of the document,
-   * and is a mandatory field for the question-answering feature.
+   * If true, text extraction will be performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean textExtractionEnabled;
+
+  /**
+   * Title that describes the document. This can be the top heading or text that describes the
+   * document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,23 +176,6 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String updater;
-
-  /**
-   * If true, makes the document visible to asynchronous policies and rules.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getAsyncEnabled() {
-    return asyncEnabled;
-  }
-
-  /**
-   * If true, makes the document visible to asynchronous policies and rules.
-   * @param asyncEnabled asyncEnabled or {@code null} for none
-   */
-  public GoogleCloudContentwarehouseV1Document setAsyncEnabled(java.lang.Boolean asyncEnabled) {
-    this.asyncEnabled = asyncEnabled;
-    return this;
-  }
 
   /**
    * Document AI format to save the structured content, including OCR.
@@ -509,8 +492,25 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
   }
 
   /**
-   * Title that describes the document. This is usually present in the top section of the document,
-   * and is a mandatory field for the question-answering feature.
+   * If true, text extraction will be performed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTextExtractionEnabled() {
+    return textExtractionEnabled;
+  }
+
+  /**
+   * If true, text extraction will be performed.
+   * @param textExtractionEnabled textExtractionEnabled or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1Document setTextExtractionEnabled(java.lang.Boolean textExtractionEnabled) {
+    this.textExtractionEnabled = textExtractionEnabled;
+    return this;
+  }
+
+  /**
+   * Title that describes the document. This can be the top heading or text that describes the
+   * document.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -518,8 +518,8 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
   }
 
   /**
-   * Title that describes the document. This is usually present in the top section of the document,
-   * and is a mandatory field for the question-answering feature.
+   * Title that describes the document. This can be the top heading or text that describes the
+   * document.
    * @param title title or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1Document setTitle(java.lang.String title) {

@@ -653,6 +653,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   private java.util.List<AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo> readOnlyProfileInfo;
 
   /**
+   * See go/relation-vs-relationship for relation vs relationship explanation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1717,6 +1718,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * See go/relation-vs-relationship for relation vs relationship explanation.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsPeopleOzExternalMergedpeopleapiRelation> getRelation() {
@@ -1724,6 +1726,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * See go/relation-vs-relationship for relation vs relationship explanation.
    * @param relation relation or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setRelation(java.util.List<AppsPeopleOzExternalMergedpeopleapiRelation> relation) {

@@ -111,15 +111,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
   private java.lang.Float nbScore;
 
   /**
-   * Experimental. This is used for doing experiments only. For example, new entity confidence can
-   * be populated here to experiment with replacing the one re-computed by
-   * NewAnnotationConfidence().
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float newConfidenceExperimentalDontUse;
-
-  /**
    * DEPRECATED: this field is no longer set. As of early June 2018 it is referenced in hundreds of
    * test files and is difficult to remove from the code base.
    * The value may be {@code null}.
@@ -344,27 +335,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   public RepositoryWebrefDetailedEntityScores setNbScore(java.lang.Float nbScore) {
     this.nbScore = nbScore;
-    return this;
-  }
-
-  /**
-   * Experimental. This is used for doing experiments only. For example, new entity confidence can
-   * be populated here to experiment with replacing the one re-computed by
-   * NewAnnotationConfidence().
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNewConfidenceExperimentalDontUse() {
-    return newConfidenceExperimentalDontUse;
-  }
-
-  /**
-   * Experimental. This is used for doing experiments only. For example, new entity confidence can
-   * be populated here to experiment with replacing the one re-computed by
-   * NewAnnotationConfidence().
-   * @param newConfidenceExperimentalDontUse newConfidenceExperimentalDontUse or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setNewConfidenceExperimentalDontUse(java.lang.Float newConfidenceExperimentalDontUse) {
-    this.newConfidenceExperimentalDontUse = newConfidenceExperimentalDontUse;
     return this;
   }
 

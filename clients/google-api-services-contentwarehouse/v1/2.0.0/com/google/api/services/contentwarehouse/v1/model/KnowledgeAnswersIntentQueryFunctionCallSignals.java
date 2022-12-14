@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 34
+ * Next ID: 35
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -168,6 +168,13 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isDisambiguationIntent;
+
+  /**
+   * Whether the interpretation was generated from the neural categorical parser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isNeuralCategoricalInterpretation;
 
   /**
    * Denotes this is a sub-intent used for composing an Assistant UI response. The assistant dialog
@@ -568,6 +575,23 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   public KnowledgeAnswersIntentQueryFunctionCallSignals setIsDisambiguationIntent(java.lang.Boolean isDisambiguationIntent) {
     this.isDisambiguationIntent = isDisambiguationIntent;
+    return this;
+  }
+
+  /**
+   * Whether the interpretation was generated from the neural categorical parser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsNeuralCategoricalInterpretation() {
+    return isNeuralCategoricalInterpretation;
+  }
+
+  /**
+   * Whether the interpretation was generated from the neural categorical parser.
+   * @param isNeuralCategoricalInterpretation isNeuralCategoricalInterpretation or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryFunctionCallSignals setIsNeuralCategoricalInterpretation(java.lang.Boolean isNeuralCategoricalInterpretation) {
+    this.isNeuralCategoricalInterpretation = isNeuralCategoricalInterpretation;
     return this;
   }
 

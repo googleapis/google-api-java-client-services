@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Intended to be simpler to work with than the ExportedStanza it's derived from See documentation: 
  * https://g3doc.corp.google.com/company/teams/youtube/community_intelligence/eng_resources/data_sou
- * rces.md#ministanza Next available: 75
+ * rces.md#ministanza Next available: 76
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -487,6 +487,13 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Double wordEntropy;
+
+  /**
+   * The youtube channel id of the comment author.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ytAuthorChannelId;
 
   /**
    * Existing quality corpus scores.
@@ -1582,6 +1589,23 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setWordEntropy(java.lang.Double wordEntropy) {
     this.wordEntropy = wordEntropy;
+    return this;
+  }
+
+  /**
+   * The youtube channel id of the comment author.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getYtAuthorChannelId() {
+    return ytAuthorChannelId;
+  }
+
+  /**
+   * The youtube channel id of the comment author.
+   * @param ytAuthorChannelId ytAuthorChannelId or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setYtAuthorChannelId(java.lang.String ytAuthorChannelId) {
+    this.ytAuthorChannelId = ytAuthorChannelId;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Message to contain scoring / debugging information. If you want to add information which is not
- * directly used in the final VideoAnchor data, it should be put here. Next ID: 25
+ * directly used in the final VideoAnchor data, it should be put here. Next ID: 27
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -43,6 +43,13 @@ public final class VideoContentSearchVideoAnchorScoreInfo extends com.google.api
    */
   @com.google.api.client.util.Key
   private Proto2BridgeMessageSet attachments;
+
+  /**
+   * The path to the particular babel checkpoint
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String babelCheckpointPath;
 
   /**
    * Training features and debug info for caption entity anchors.
@@ -150,6 +157,14 @@ public final class VideoContentSearchVideoAnchorScoreInfo extends com.google.api
   private VideoContentSearchMultimodalTopicTrainingFeatures multimodalTopicTrainingFeatures;
 
   /**
+   * Normalized babel embedding of anchor.label(). If the label has more than one sentences, the
+   * embedding will be the averaged normalized embedding of each sentence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Float> normalizedBabelEmbedding;
+
+  /**
    * OCR anchor features.
    * The value may be {@code null}.
    */
@@ -243,6 +258,23 @@ public final class VideoContentSearchVideoAnchorScoreInfo extends com.google.api
    */
   public VideoContentSearchVideoAnchorScoreInfo setAttachments(Proto2BridgeMessageSet attachments) {
     this.attachments = attachments;
+    return this;
+  }
+
+  /**
+   * The path to the particular babel checkpoint
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBabelCheckpointPath() {
+    return babelCheckpointPath;
+  }
+
+  /**
+   * The path to the particular babel checkpoint
+   * @param babelCheckpointPath babelCheckpointPath or {@code null} for none
+   */
+  public VideoContentSearchVideoAnchorScoreInfo setBabelCheckpointPath(java.lang.String babelCheckpointPath) {
+    this.babelCheckpointPath = babelCheckpointPath;
     return this;
   }
 
@@ -483,6 +515,25 @@ public final class VideoContentSearchVideoAnchorScoreInfo extends com.google.api
    */
   public VideoContentSearchVideoAnchorScoreInfo setMultimodalTopicTrainingFeatures(VideoContentSearchMultimodalTopicTrainingFeatures multimodalTopicTrainingFeatures) {
     this.multimodalTopicTrainingFeatures = multimodalTopicTrainingFeatures;
+    return this;
+  }
+
+  /**
+   * Normalized babel embedding of anchor.label(). If the label has more than one sentences, the
+   * embedding will be the averaged normalized embedding of each sentence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Float> getNormalizedBabelEmbedding() {
+    return normalizedBabelEmbedding;
+  }
+
+  /**
+   * Normalized babel embedding of anchor.label(). If the label has more than one sentences, the
+   * embedding will be the averaged normalized embedding of each sentence.
+   * @param normalizedBabelEmbedding normalizedBabelEmbedding or {@code null} for none
+   */
+  public VideoContentSearchVideoAnchorScoreInfo setNormalizedBabelEmbedding(java.util.List<java.lang.Float> normalizedBabelEmbedding) {
+    this.normalizedBabelEmbedding = normalizedBabelEmbedding;
     return this;
   }
 

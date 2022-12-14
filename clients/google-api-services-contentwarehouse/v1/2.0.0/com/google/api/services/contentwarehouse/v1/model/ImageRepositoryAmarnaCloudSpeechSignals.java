@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next Tag: 7
+ * Next Tag: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -28,6 +28,15 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.api.client.json.GenericJson {
+
+  /**
+   * If this field is set to true, it means that Youtube already processed the ASR from S3 for the
+   * langID. Please find the ASR result from transcript_asr in
+   * google3/image/repository/proto/video_search.proto instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean duplicateOfYtS3Asr;
 
   /**
    * The language id input for creating this ASR without regional info. Same format as in
@@ -59,6 +68,27 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
    */
   @com.google.api.client.util.Key
   private PseudoVideoData transcriptAsr;
+
+  /**
+   * If this field is set to true, it means that Youtube already processed the ASR from S3 for the
+   * langID. Please find the ASR result from transcript_asr in
+   * google3/image/repository/proto/video_search.proto instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDuplicateOfYtS3Asr() {
+    return duplicateOfYtS3Asr;
+  }
+
+  /**
+   * If this field is set to true, it means that Youtube already processed the ASR from S3 for the
+   * langID. Please find the ASR result from transcript_asr in
+   * google3/image/repository/proto/video_search.proto instead.
+   * @param duplicateOfYtS3Asr duplicateOfYtS3Asr or {@code null} for none
+   */
+  public ImageRepositoryAmarnaCloudSpeechSignals setDuplicateOfYtS3Asr(java.lang.Boolean duplicateOfYtS3Asr) {
+    this.duplicateOfYtS3Asr = duplicateOfYtS3Asr;
+    return this;
+  }
 
   /**
    * The language id input for creating this ASR without regional info. Same format as in

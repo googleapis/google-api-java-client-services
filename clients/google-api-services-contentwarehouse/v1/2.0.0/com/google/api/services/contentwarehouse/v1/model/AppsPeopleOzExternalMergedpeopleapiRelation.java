@@ -17,9 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Relation stores the related person between the contact or profile and a third person This field
- * currently includes RelationshipToMe data in fields value and canonical_value for ContainerType
- * CONTACT_ANNOTATION. This will be moved to RelationshipToMe in b/221081499.
+ * Relation stores the related person between the contact or profile and a third person. See go
+ * /relation-vs-relationship for relation vs relationship explanation. This field currently includes
+ * RelationshipToMe data in fields value and canonical_value for ContainerType CONTACT_ANNOTATION.
+ * This will be moved to RelationshipToMe in b/221081499.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:

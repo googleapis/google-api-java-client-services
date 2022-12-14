@@ -2886,7 +2886,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * of the [Google Workspace Developer Preview
        * Program](https://developers.google.com/workspace/preview), which grants early access to certain
        * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
-       * requires the `chat.messages` or `chat.messages.create` authorization scope.
+       * requires the `chat.messages` or `chat.messages.create` authorization scope. Because Chat provides
+       * authentication for [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of the
+       * URL that's generated when a webhook is registered, webhooks can create messages without a service
+       * account or user authentication.
        *
        * Create a request for the method "messages.create".
        *
@@ -2920,7 +2923,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
          * which grants early access to certain features. [User
          * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
-         * `chat.messages` or `chat.messages.create` authorization scope.
+         * `chat.messages` or `chat.messages.create` authorization scope. Because Chat provides
+         * authentication for [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of
+         * the URL that's generated when a webhook is registered, webhooks can create messages without a
+         * service account or user authentication.
          *
          * Create a request for the method "messages.create".
          *

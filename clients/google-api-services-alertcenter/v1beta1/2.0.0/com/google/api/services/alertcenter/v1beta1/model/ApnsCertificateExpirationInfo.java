@@ -32,7 +32,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class ApnsCertificateExpirationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Apple ID used for the certificate, may be blank if admins did not enter it.
+   * The Apple ID used for the certificate may be blank if admins didn't enter it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   private java.lang.String uid;
 
   /**
-   * The Apple ID used for the certificate, may be blank if admins did not enter it.
+   * The Apple ID used for the certificate may be blank if admins didn't enter it.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppleId() {
@@ -61,7 +61,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   }
 
   /**
-   * The Apple ID used for the certificate, may be blank if admins did not enter it.
+   * The Apple ID used for the certificate may be blank if admins didn't enter it.
    * @param appleId appleId or {@code null} for none
    */
   public ApnsCertificateExpirationInfo setAppleId(java.lang.String appleId) {

@@ -39,7 +39,7 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   /**
    * Field mask for creating Document fields. If mask path is empty, it means all fields are masked.
    * For the `FieldMask` definition, see https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#fieldmask
+   * buffers/docs/reference/google.protobuf#fieldmask.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   /**
    * Field mask for creating Document fields. If mask path is empty, it means all fields are masked.
    * For the `FieldMask` definition, see https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#fieldmask
+   * buffers/docs/reference/google.protobuf#fieldmask.
    * @return value or {@code null} for none
    */
   public String getCreateMask() {
@@ -97,7 +97,7 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   /**
    * Field mask for creating Document fields. If mask path is empty, it means all fields are masked.
    * For the `FieldMask` definition, see https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#fieldmask
+   * buffers/docs/reference/google.protobuf#fieldmask.
    * @param createMask createMask or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1CreateDocumentRequest setCreateMask(String createMask) {

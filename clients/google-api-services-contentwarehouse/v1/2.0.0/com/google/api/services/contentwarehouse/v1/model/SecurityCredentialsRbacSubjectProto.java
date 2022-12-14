@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Principal associated with a given RBAC subject. This principal is used by Sphinx Provisioning
- * Service for RBAC (go/cedi-auth) provisionable (go/sphinx-rbacz-design).
+ * Service for RBAC provisionable (go/sphinx-rbacz).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:

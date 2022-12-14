@@ -121,19 +121,18 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   private GoogleCloudContentwarehouseV1RequestMetadata requestMetadata;
 
   /**
-   * Optional. Controls if the search document request requires the return of a total size of
-   * matched documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely
-   * impact performance. Hint: If this is used with pagination, set this flag on the initial query
-   * but set this to false on subsequent page calls (keep the total count locally). Defaults to
-   * false.
+   * Controls if the search document request requires the return of a total size of matched
+   * documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely impact
+   * performance. Hint: If this is used with pagination, set this flag on the initial query but set
+   * this to false on subsequent page calls (keep the total count locally). Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireTotalSize;
 
   /**
-   * Optional. Controls if the search document request requires the return of a total size of
-   * matched documents. See SearchDocumentsResponse.total_size.
+   * Controls if the search document request requires the return of a total size of matched
+   * documents. See SearchDocumentsResponse.total_size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,11 +333,10 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   }
 
   /**
-   * Optional. Controls if the search document request requires the return of a total size of
-   * matched documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely
-   * impact performance. Hint: If this is used with pagination, set this flag on the initial query
-   * but set this to false on subsequent page calls (keep the total count locally). Defaults to
-   * false.
+   * Controls if the search document request requires the return of a total size of matched
+   * documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely impact
+   * performance. Hint: If this is used with pagination, set this flag on the initial query but set
+   * this to false on subsequent page calls (keep the total count locally). Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireTotalSize() {
@@ -346,11 +344,10 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   }
 
   /**
-   * Optional. Controls if the search document request requires the return of a total size of
-   * matched documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely
-   * impact performance. Hint: If this is used with pagination, set this flag on the initial query
-   * but set this to false on subsequent page calls (keep the total count locally). Defaults to
-   * false.
+   * Controls if the search document request requires the return of a total size of matched
+   * documents. See SearchDocumentsResponse.total_size. Enabling this flag may adversely impact
+   * performance. Hint: If this is used with pagination, set this flag on the initial query but set
+   * this to false on subsequent page calls (keep the total count locally). Defaults to false.
    * @param requireTotalSize requireTotalSize or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsRequest setRequireTotalSize(java.lang.Boolean requireTotalSize) {
@@ -359,8 +356,8 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   }
 
   /**
-   * Optional. Controls if the search document request requires the return of a total size of
-   * matched documents. See SearchDocumentsResponse.total_size.
+   * Controls if the search document request requires the return of a total size of matched
+   * documents. See SearchDocumentsResponse.total_size.
    * @return value or {@code null} for none
    */
   public java.lang.String getTotalResultSize() {
@@ -368,8 +365,8 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends c
   }
 
   /**
-   * Optional. Controls if the search document request requires the return of a total size of
-   * matched documents. See SearchDocumentsResponse.total_size.
+   * Controls if the search document request requires the return of a total size of matched
+   * documents. See SearchDocumentsResponse.total_size.
    * @param totalResultSize totalResultSize or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsRequest setTotalResultSize(java.lang.String totalResultSize) {

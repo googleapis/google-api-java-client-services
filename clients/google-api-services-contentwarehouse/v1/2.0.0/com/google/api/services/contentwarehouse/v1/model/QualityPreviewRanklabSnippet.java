@@ -17,7 +17,9 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Snippet candidate related information and signal scores. Next ID: 11
+ * Snippet candidate related information and signal scores. This message is used for both snippet
+ * scoring and ranklab features recording. Next ID: 12 ================== Features populated in
+ * production =======================
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
@@ -30,6 +32,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityPreviewRanklabSnippet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Features from SnippetFlow in Superroot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +45,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   private QualityPreviewSnippetDocumentFeatures documentFeatures;
 
   /**
+   * For experimental usage, not populated yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,6 +93,13 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   private QualityPreviewSnippetQueryTermCoverageFeatures queryTermCoverageFeatures;
 
   /**
+   * Radish related information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityPreviewSnippetRadishFeatures radishFeatures;
+
+  /**
    * Information to identify current chosen snippet.
    * The value may be {@code null}.
    */
@@ -96,6 +107,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   private QualityPreviewChosenSnippetInfo snippetInfo;
 
   /**
+   * Features from SnippetFlow in Superroot.
    * @return value or {@code null} for none
    */
   public QualityPreviewSnippetBrainFeatures getBrainFeatures() {
@@ -103,6 +115,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   }
 
   /**
+   * Features from SnippetFlow in Superroot.
    * @param brainFeatures brainFeatures or {@code null} for none
    */
   public QualityPreviewRanklabSnippet setBrainFeatures(QualityPreviewSnippetBrainFeatures brainFeatures) {
@@ -126,6 +139,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   }
 
   /**
+   * For experimental usage, not populated yet.
    * @return value or {@code null} for none
    */
   public QualityPreviewSnippetExperimentalFeatures getExperimentalFeatures() {
@@ -133,6 +147,7 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
   }
 
   /**
+   * For experimental usage, not populated yet.
    * @param experimentalFeatures experimentalFeatures or {@code null} for none
    */
   public QualityPreviewRanklabSnippet setExperimentalFeatures(QualityPreviewSnippetExperimentalFeatures experimentalFeatures) {
@@ -237,6 +252,23 @@ public final class QualityPreviewRanklabSnippet extends com.google.api.client.js
    */
   public QualityPreviewRanklabSnippet setQueryTermCoverageFeatures(QualityPreviewSnippetQueryTermCoverageFeatures queryTermCoverageFeatures) {
     this.queryTermCoverageFeatures = queryTermCoverageFeatures;
+    return this;
+  }
+
+  /**
+   * Radish related information.
+   * @return value or {@code null} for none
+   */
+  public QualityPreviewSnippetRadishFeatures getRadishFeatures() {
+    return radishFeatures;
+  }
+
+  /**
+   * Radish related information.
+   * @param radishFeatures radishFeatures or {@code null} for none
+   */
+  public QualityPreviewRanklabSnippet setRadishFeatures(QualityPreviewSnippetRadishFeatures radishFeatures) {
+    this.radishFeatures = radishFeatures;
     return this;
   }
 

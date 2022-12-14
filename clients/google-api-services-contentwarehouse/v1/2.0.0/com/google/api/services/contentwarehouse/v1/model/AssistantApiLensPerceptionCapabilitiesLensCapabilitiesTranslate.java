@@ -30,16 +30,18 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantApiLensPerceptionCapabilitiesLensCapabilitiesTranslate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of language IETF BCP 47 tags that are supported. See the full list at
-   * go/androidlanguages.
+   * The list of language IETF BCP 47 tags that are supported. See the full details in the comment
+   * on the equivalent field in: http://google3/java/com/google/android/apps/gsa/search/shared/servi
+   * ce/proto/lens_service_event.proto;l=55;rcl=355512559
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedLanguageTags;
 
   /**
-   * The list of language IETF BCP 47 tags that are supported. See the full list at
-   * go/androidlanguages.
+   * The list of language IETF BCP 47 tags that are supported. See the full details in the comment
+   * on the equivalent field in: http://google3/java/com/google/android/apps/gsa/search/shared/servi
+   * ce/proto/lens_service_event.proto;l=55;rcl=355512559
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedLanguageTags() {
@@ -47,8 +49,9 @@ public final class AssistantApiLensPerceptionCapabilitiesLensCapabilitiesTransla
   }
 
   /**
-   * The list of language IETF BCP 47 tags that are supported. See the full list at
-   * go/androidlanguages.
+   * The list of language IETF BCP 47 tags that are supported. See the full details in the comment
+   * on the equivalent field in: http://google3/java/com/google/android/apps/gsa/search/shared/servi
+   * ce/proto/lens_service_event.proto;l=55;rcl=355512559
    * @param supportedLanguageTags supportedLanguageTags or {@code null} for none
    */
   public AssistantApiLensPerceptionCapabilitiesLensCapabilitiesTranslate setSupportedLanguageTags(java.util.List<java.lang.String> supportedLanguageTags) {

@@ -30,6 +30,13 @@ package com.google.api.services.batch.v1.model;
 public final class ReportAgentStateResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Default report interval override
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String defaultReportInterval;
+
+  /**
    * Minimum report interval override
    * The value may be {@code null}.
    */
@@ -47,6 +54,23 @@ public final class ReportAgentStateResponse extends com.google.api.client.json.G
     // hack to force ProGuard to consider AgentTask used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AgentTask.class);
+  }
+
+  /**
+   * Default report interval override
+   * @return value or {@code null} for none
+   */
+  public String getDefaultReportInterval() {
+    return defaultReportInterval;
+  }
+
+  /**
+   * Default report interval override
+   * @param defaultReportInterval defaultReportInterval or {@code null} for none
+   */
+  public ReportAgentStateResponse setDefaultReportInterval(String defaultReportInterval) {
+    this.defaultReportInterval = defaultReportInterval;
+    return this;
   }
 
   /**

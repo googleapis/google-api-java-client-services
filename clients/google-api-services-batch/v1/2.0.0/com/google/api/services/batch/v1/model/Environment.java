@@ -30,11 +30,65 @@ package com.google.api.services.batch.v1.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
+   * An encrypted JSON dictionary where the key/value pairs correspond to environment variable names
+   * and their values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KMSEnvMap encryptedVariables;
+
+  /**
+   * A map of environment variable names to Secret Manager secret names. The VM will access the
+   * named secrets to set the value of each environment variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> secretVariables;
+
+  /**
    * A map of environment variable names to values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> variables;
+
+  /**
+   * An encrypted JSON dictionary where the key/value pairs correspond to environment variable names
+   * and their values.
+   * @return value or {@code null} for none
+   */
+  public KMSEnvMap getEncryptedVariables() {
+    return encryptedVariables;
+  }
+
+  /**
+   * An encrypted JSON dictionary where the key/value pairs correspond to environment variable names
+   * and their values.
+   * @param encryptedVariables encryptedVariables or {@code null} for none
+   */
+  public Environment setEncryptedVariables(KMSEnvMap encryptedVariables) {
+    this.encryptedVariables = encryptedVariables;
+    return this;
+  }
+
+  /**
+   * A map of environment variable names to Secret Manager secret names. The VM will access the
+   * named secrets to set the value of each environment variable.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSecretVariables() {
+    return secretVariables;
+  }
+
+  /**
+   * A map of environment variable names to Secret Manager secret names. The VM will access the
+   * named secrets to set the value of each environment variable.
+   * @param secretVariables secretVariables or {@code null} for none
+   */
+  public Environment setSecretVariables(java.util.Map<String, java.lang.String> secretVariables) {
+    this.secretVariables = secretVariables;
+    return this;
+  }
 
   /**
    * A map of environment variable names to values.

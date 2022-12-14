@@ -18,9 +18,8 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * The PageOptimizationConfig for model training. This determines how many panels to optimize for,
- * and which serving configurations to consider for each panel. The purpose of this model is to
- * optimize which ServingConfig to show on which panels in way that optimizes the visitors shopping
- * journey.
+ * and which serving configs to consider for each panel. The purpose of this model is to optimize
+ * which ServingConfig to show on which panels in way that optimizes the visitors shopping journey.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

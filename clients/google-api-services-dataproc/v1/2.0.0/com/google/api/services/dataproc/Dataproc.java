@@ -8375,6 +8375,216 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         public class NodeGroups {
 
           /**
+           * Creates a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata
+           * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperation
+           * metadata).
+           *
+           * Create a request for the method "nodeGroups.create".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where this node group will be created. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}
+           * @param content the {@link com.google.api.services.dataproc.model.NodeGroup}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dataproc.model.NodeGroup content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/nodeGroups";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Creates a node group in a cluster. The returned Operation.metadata is
+             * NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.d
+             * ataproc.v1#nodegroupoperationmetadata).
+             *
+             * Create a request for the method "nodeGroups.create".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where this node group will be created. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}
+             * @param content the {@link com.google.api.services.dataproc.model.NodeGroup}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dataproc.model.NodeGroup content) {
+              super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where this node group will be created. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where this node group will be created. Format:
+           projects/{project}/regions/{region}/clusters/{cluster}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where this node group will be created. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. An optional node group ID. Generated if not specified.The ID must contain
+             * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
+             * begin or end with underscore or hyphen. Must consist of from 3 to 33 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String nodeGroupId;
+
+            /** Optional. An optional node group ID. Generated if not specified.The ID must contain only letters
+           (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or
+           hyphen. Must consist of from 3 to 33 characters.
+             */
+            public java.lang.String getNodeGroupId() {
+              return nodeGroupId;
+            }
+
+            /**
+             * Optional. An optional node group ID. Generated if not specified.The ID must contain
+             * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
+             * begin or end with underscore or hyphen. Must consist of from 3 to 33 characters.
+             */
+            public Create setNodeGroupId(java.lang.String nodeGroupId) {
+              this.nodeGroupId = nodeGroupId;
+              return this;
+            }
+
+            /**
+             * Optional. A unique ID used to identify the request. If the server receives two
+             * CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.c
+             * loud.dataproc.v1#google.cloud.dataproc.v1.CreateNodeGroupRequests) with the same ID,
+             * the second request is ignored and the first google.longrunning.Operation created and
+             * stored in the backend is returned.Recommendation: Set this value to a UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain
+             * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+             * length is 40 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A unique ID used to identify the request. If the server receives two
+           CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.
+           v1#google.cloud.dataproc.v1.CreateNodeGroupRequests) with the same ID, the second request is
+           ignored and the first google.longrunning.Operation created and stored in the backend is
+           returned.Recommendation: Set this value to a UUID
+           (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
+           (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A unique ID used to identify the request. If the server receives two
+             * CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.c
+             * loud.dataproc.v1#google.cloud.dataproc.v1.CreateNodeGroupRequests) with the same ID,
+             * the second request is ignored and the first google.longrunning.Operation created and
+             * stored in the backend is returned.Recommendation: Set this value to a UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain
+             * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+             * length is 40 characters.
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the resource representation for a node group in a cluster.
            *
            * Create a request for the method "nodeGroups.get".

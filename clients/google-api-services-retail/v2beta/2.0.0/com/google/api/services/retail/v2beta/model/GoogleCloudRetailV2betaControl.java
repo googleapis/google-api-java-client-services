@@ -31,8 +31,8 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of serving configuration ids that are associated with this control in the
-   * same Catalog. Note the association is managed via the ServingConfig, this is an output only
+   * Output only. List of serving config ids that are associated with this control in the same
+   * Catalog. Note the association is managed via the ServingConfig, this is an output only
    * denormalized view.
    * The value may be {@code null}.
    */
@@ -91,8 +91,8 @@ public final class GoogleCloudRetailV2betaControl extends com.google.api.client.
   private java.util.List<java.lang.String> solutionTypes;
 
   /**
-   * Output only. List of serving configuration ids that are associated with this control in the
-   * same Catalog. Note the association is managed via the ServingConfig, this is an output only
+   * Output only. List of serving config ids that are associated with this control in the same
+   * Catalog. Note the association is managed via the ServingConfig, this is an output only
    * denormalized view.
    * @return value or {@code null} for none
    */
@@ -101,8 +101,8 @@ public final class GoogleCloudRetailV2betaControl extends com.google.api.client.
   }
 
   /**
-   * Output only. List of serving configuration ids that are associated with this control in the
-   * same Catalog. Note the association is managed via the ServingConfig, this is an output only
+   * Output only. List of serving config ids that are associated with this control in the same
+   * Catalog. Note the association is managed via the ServingConfig, this is an output only
    * denormalized view.
    * @param associatedServingConfigIds associatedServingConfigIds or {@code null} for none
    */

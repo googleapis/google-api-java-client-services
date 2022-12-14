@@ -7151,8 +7151,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
-           *        /manage-configs). The full list of available serving configs can be seen at
+           *        information, see [Manage serving configs] (https://cloud.google.com/retail/docs/manage-
+           *        configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
            * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaPredictRequest}
            * @return the request
@@ -7187,8 +7187,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
-           *        /manage-configs). The full list of available serving configs can be seen at
+           *        information, see [Manage serving configs] (https://cloud.google.com/retail/docs/manage-
+           *        configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaPredictRequest}
              * @since 1.13
@@ -7265,7 +7265,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * recommend using the `servingConfigs` resource. `placements` is a legacy resource. The
              * ID of the Recommendations AI serving config or placement. Before you can request
              * predictions from your model, you must create at least one serving config or placement
-             * for it. For more information, see [Managing serving configurations]
+             * for it. For more information, see [Manage serving configs]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -7278,10 +7278,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `{placement=projects/locations/global/catalogs/default_catalog/placements}`. We recommend using the
            `servingConfigs` resource. `placements` is a legacy resource. The ID of the Recommendations AI
            serving config or placement. Before you can request predictions from your model, you must create at
-           least one serving config or placement for it. For more information, see [Managing serving
-           configurations] (https://cloud.google.com/retail/docs/manage-configs). The full list of available
-           serving configs can be seen at
-           https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
+           least one serving config or placement for it. For more information, see [Manage serving configs]
+           (https://cloud.google.com/retail/docs/manage-configs). The full list of available serving configs
+           can be seen at https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -7294,7 +7293,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * recommend using the `servingConfigs` resource. `placements` is a legacy resource. The
              * ID of the Recommendations AI serving config or placement. Before you can request
              * predictions from your model, you must create at least one serving config or placement
-             * for it. For more information, see [Managing serving configurations]
+             * for it. For more information, see [Manage serving configs]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -7327,8 +7326,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving configuration name and the set of models that will be used
-           *        to make the search.
+           *        is used to identify the serving config name and the set of models that will be used to
+           *        make the search.
            * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
            * @return the request
            */
@@ -7360,8 +7359,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving configuration name and the set of models that will be used
-           *        to make the search.
+           *        is used to identify the serving config name and the set of models that will be used to
+           *        make the search.
              * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
              * @since 1.13
              */
@@ -7435,8 +7434,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving configuration name and the set of models that
-             * will be used to make the search.
+             * field is used to identify the serving config name and the set of models that will be
+             * used to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
@@ -7445,8 +7444,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
            name of the legacy placement resource, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the serving configuration name and the set of models that will be used to make the
-           search.
+           to identify the serving config name and the set of models that will be used to make the search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -7457,8 +7455,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving configuration name and the set of models that
-             * will be used to make the search.
+             * field is used to identify the serving config name and the set of models that will be
+             * used to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {
@@ -8464,8 +8462,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
-           *        /manage-configs). The full list of available serving configs can be seen at
+           *        information, see [Manage serving configs] (https://cloud.google.com/retail/docs/manage-
+           *        configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
            * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaPredictRequest}
            * @return the request
@@ -8500,8 +8498,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
-           *        /manage-configs). The full list of available serving configs can be seen at
+           *        information, see [Manage serving configs] (https://cloud.google.com/retail/docs/manage-
+           *        configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaPredictRequest}
              * @since 1.13
@@ -8578,7 +8576,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * recommend using the `servingConfigs` resource. `placements` is a legacy resource. The
              * ID of the Recommendations AI serving config or placement. Before you can request
              * predictions from your model, you must create at least one serving config or placement
-             * for it. For more information, see [Managing serving configurations]
+             * for it. For more information, see [Manage serving configs]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -8591,10 +8589,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `{placement=projects/locations/global/catalogs/default_catalog/placements}`. We recommend using the
            `servingConfigs` resource. `placements` is a legacy resource. The ID of the Recommendations AI
            serving config or placement. Before you can request predictions from your model, you must create at
-           least one serving config or placement for it. For more information, see [Managing serving
-           configurations] (https://cloud.google.com/retail/docs/manage-configs). The full list of available
-           serving configs can be seen at
-           https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
+           least one serving config or placement for it. For more information, see [Manage serving configs]
+           (https://cloud.google.com/retail/docs/manage-configs). The full list of available serving configs
+           can be seen at https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -8607,7 +8604,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * recommend using the `servingConfigs` resource. `placements` is a legacy resource. The
              * ID of the Recommendations AI serving config or placement. Before you can request
              * predictions from your model, you must create at least one serving config or placement
-             * for it. For more information, see [Managing serving configurations]
+             * for it. For more information, see [Manage serving configs]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -8782,8 +8779,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving configuration name and the set of models that will be used
-           *        to make the search.
+           *        is used to identify the serving config name and the set of models that will be used to
+           *        make the search.
            * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
            * @return the request
            */
@@ -8815,8 +8812,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving configuration name and the set of models that will be used
-           *        to make the search.
+           *        is used to identify the serving config name and the set of models that will be used to
+           *        make the search.
              * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
              * @since 1.13
              */
@@ -8890,8 +8887,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving configuration name and the set of models that
-             * will be used to make the search.
+             * field is used to identify the serving config name and the set of models that will be
+             * used to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
@@ -8900,8 +8897,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
            name of the legacy placement resource, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the serving configuration name and the set of models that will be used to make the
-           search.
+           to identify the serving config name and the set of models that will be used to make the search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -8912,8 +8908,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving configuration name and the set of models that
-             * will be used to make the search.
+             * field is used to identify the serving config name and the set of models that will be
+             * used to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {
@@ -9782,6 +9778,34 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                     "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * If set to true, the user event will be written asynchronously after validation, and
+             * the API will respond without waiting for the write. Therefore, silent failures can
+             * occur even if the API returns success. In case of silent failures, error messages can
+             * be found in Stackdriver logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean writeAsync;
+
+            /** If set to true, the user event will be written asynchronously after validation, and the API will
+           respond without waiting for the write. Therefore, silent failures can occur even if the API returns
+           success. In case of silent failures, error messages can be found in Stackdriver logs.
+             */
+            public java.lang.Boolean getWriteAsync() {
+              return writeAsync;
+            }
+
+            /**
+             * If set to true, the user event will be written asynchronously after validation, and
+             * the API will respond without waiting for the write. Therefore, silent failures can
+             * occur even if the API returns success. In case of silent failures, error messages can
+             * be found in Stackdriver logs.
+             */
+            public Write setWriteAsync(java.lang.Boolean writeAsync) {
+              this.writeAsync = writeAsync;
               return this;
             }
 

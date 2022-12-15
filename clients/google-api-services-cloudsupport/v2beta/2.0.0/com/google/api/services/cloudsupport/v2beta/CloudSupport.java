@@ -1274,9 +1274,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Update the specified case. Only a subset of fields (display_name, description, time_zone,
-     * subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels)
-     * can be updated.
+     * Update the specified case. Only a subset of fields can be updated.
      *
      * Create a request for the method "cases.patch".
      *
@@ -1301,9 +1299,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Update the specified case. Only a subset of fields (display_name, description, time_zone,
-       * subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels)
-       * can be updated.
+       * Update the specified case. Only a subset of fields can be updated.
        *
        * Create a request for the method "cases.patch".
        *

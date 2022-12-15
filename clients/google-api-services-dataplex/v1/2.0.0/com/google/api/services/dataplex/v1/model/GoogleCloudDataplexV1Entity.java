@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1Entity extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Identifies the access mechanism to the entity. Not user settable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1StorageAccess access;
+
+  /**
    * Required. Immutable. The ID of the asset associated with the storage location containing the
    * entity data. The entity must be with in the same zone with the asset.
    * The value may be {@code null}.
@@ -153,6 +160,23 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Identifies the access mechanism to the entity. Not user settable.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1StorageAccess getAccess() {
+    return access;
+  }
+
+  /**
+   * Output only. Identifies the access mechanism to the entity. Not user settable.
+   * @param access access or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Entity setAccess(GoogleCloudDataplexV1StorageAccess access) {
+    this.access = access;
+    return this;
+  }
 
   /**
    * Required. Immutable. The ID of the asset associated with the storage location containing the

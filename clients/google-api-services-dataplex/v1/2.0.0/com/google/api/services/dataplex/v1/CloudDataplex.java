@@ -11165,6 +11165,145 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
+           * Run an on demand execution of a Task.
+           *
+           * Create a request for the method "tasks.run".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Run#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the task:
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunTaskRequest}
+           * @return the request
+           */
+          public Run run(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunTaskRequest content) throws java.io.IOException {
+            Run result = new Run(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Run extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunTaskResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:run";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lakes/[^/]+/tasks/[^/]+$");
+
+            /**
+             * Run an on demand execution of a Task.
+             *
+             * Create a request for the method "tasks.run".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+             * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the task:
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunTaskRequest}
+             * @since 1.13
+             */
+            protected Run(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunTaskRequest content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunTaskResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/lakes/[^/]+/tasks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Run set$Xgafv(java.lang.String $Xgafv) {
+              return (Run) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Run setAccessToken(java.lang.String accessToken) {
+              return (Run) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Run setAlt(java.lang.String alt) {
+              return (Run) super.setAlt(alt);
+            }
+
+            @Override
+            public Run setCallback(java.lang.String callback) {
+              return (Run) super.setCallback(callback);
+            }
+
+            @Override
+            public Run setFields(java.lang.String fields) {
+              return (Run) super.setFields(fields);
+            }
+
+            @Override
+            public Run setKey(java.lang.String key) {
+              return (Run) super.setKey(key);
+            }
+
+            @Override
+            public Run setOauthToken(java.lang.String oauthToken) {
+              return (Run) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Run) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Run setQuotaUser(java.lang.String quotaUser) {
+              return (Run) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Run setUploadType(java.lang.String uploadType) {
+              return (Run) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Run setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Run) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the task:
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the task:
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the task:
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
+             */
+            public Run setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/lakes/[^/]+/tasks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Run set(String parameterName, Object value) {
+              return (Run) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
            * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *

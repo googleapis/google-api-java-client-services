@@ -39,6 +39,14 @@ public final class GoogleCloudDataplexV1AssetResourceSpec extends com.google.api
   private java.lang.String name;
 
   /**
+   * Optional. Determines how read permissions are handled for each asset and their associated
+   * tables. Only available to storage buckets assets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readAccessMode;
+
+  /**
    * Required. Immutable. Type of resource.
    * The value may be {@code null}.
    */
@@ -63,6 +71,25 @@ public final class GoogleCloudDataplexV1AssetResourceSpec extends com.google.api
    */
   public GoogleCloudDataplexV1AssetResourceSpec setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Determines how read permissions are handled for each asset and their associated
+   * tables. Only available to storage buckets assets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReadAccessMode() {
+    return readAccessMode;
+  }
+
+  /**
+   * Optional. Determines how read permissions are handled for each asset and their associated
+   * tables. Only available to storage buckets assets.
+   * @param readAccessMode readAccessMode or {@code null} for none
+   */
+  public GoogleCloudDataplexV1AssetResourceSpec setReadAccessMode(java.lang.String readAccessMode) {
+    this.readAccessMode = readAccessMode;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * NEXT ID: 9
+ * NEXT ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -42,6 +42,21 @@ public final class GoogleCloudApigeeV1DeploymentConfig extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String basePath;
+
+  /**
+   * The list of deployment groups in which this proxy should be deployed. Not currently populated
+   * for shared flows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> deploymentGroups;
+
+  /**
+   * A mapping from basepaths to proxy endpoint names in this proxy. Not populated for shared flows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> endpoints;
 
   /**
    * Location of the API proxy bundle as a URI.
@@ -112,6 +127,42 @@ public final class GoogleCloudApigeeV1DeploymentConfig extends com.google.api.cl
    */
   public GoogleCloudApigeeV1DeploymentConfig setBasePath(java.lang.String basePath) {
     this.basePath = basePath;
+    return this;
+  }
+
+  /**
+   * The list of deployment groups in which this proxy should be deployed. Not currently populated
+   * for shared flows.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDeploymentGroups() {
+    return deploymentGroups;
+  }
+
+  /**
+   * The list of deployment groups in which this proxy should be deployed. Not currently populated
+   * for shared flows.
+   * @param deploymentGroups deploymentGroups or {@code null} for none
+   */
+  public GoogleCloudApigeeV1DeploymentConfig setDeploymentGroups(java.util.List<java.lang.String> deploymentGroups) {
+    this.deploymentGroups = deploymentGroups;
+    return this;
+  }
+
+  /**
+   * A mapping from basepaths to proxy endpoint names in this proxy. Not populated for shared flows.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getEndpoints() {
+    return endpoints;
+  }
+
+  /**
+   * A mapping from basepaths to proxy endpoint names in this proxy. Not populated for shared flows.
+   * @param endpoints endpoints or {@code null} for none
+   */
+  public GoogleCloudApigeeV1DeploymentConfig setEndpoints(java.util.Map<String, java.lang.String> endpoints) {
+    this.endpoints = endpoints;
     return this;
   }
 

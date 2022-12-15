@@ -65,6 +65,19 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
   private GoogleCloudApigeeV1DebugMask debugMask;
 
   /**
+   * List of deployment groups in the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudApigeeV1DeploymentGroupConfig> deploymentGroups;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudApigeeV1DeploymentGroupConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1DeploymentGroupConfig.class);
+  }
+
+  /**
    * List of deployments in the environment.
    * The value may be {@code null}.
    */
@@ -76,6 +89,14 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1DeploymentConfig.class);
   }
+
+  /**
+   * Revision ID for environment-scoped resources (e.g. target servers, keystores) in this config.
+   * This ID will increment any time a resource not scoped to a deployment group changes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long envScopedRevisionId;
 
   /**
    * Feature flags inherited from the organization and environment.
@@ -260,6 +281,23 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
   }
 
   /**
+   * List of deployment groups in the environment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudApigeeV1DeploymentGroupConfig> getDeploymentGroups() {
+    return deploymentGroups;
+  }
+
+  /**
+   * List of deployment groups in the environment.
+   * @param deploymentGroups deploymentGroups or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentConfig setDeploymentGroups(java.util.List<GoogleCloudApigeeV1DeploymentGroupConfig> deploymentGroups) {
+    this.deploymentGroups = deploymentGroups;
+    return this;
+  }
+
+  /**
    * List of deployments in the environment.
    * @return value or {@code null} for none
    */
@@ -273,6 +311,25 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
    */
   public GoogleCloudApigeeV1EnvironmentConfig setDeployments(java.util.List<GoogleCloudApigeeV1DeploymentConfig> deployments) {
     this.deployments = deployments;
+    return this;
+  }
+
+  /**
+   * Revision ID for environment-scoped resources (e.g. target servers, keystores) in this config.
+   * This ID will increment any time a resource not scoped to a deployment group changes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEnvScopedRevisionId() {
+    return envScopedRevisionId;
+  }
+
+  /**
+   * Revision ID for environment-scoped resources (e.g. target servers, keystores) in this config.
+   * This ID will increment any time a resource not scoped to a deployment group changes.
+   * @param envScopedRevisionId envScopedRevisionId or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentConfig setEnvScopedRevisionId(java.lang.Long envScopedRevisionId) {
+    this.envScopedRevisionId = envScopedRevisionId;
     return this;
   }
 

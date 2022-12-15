@@ -38,7 +38,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   private java.lang.String acceleratorType;
 
   /**
-   * The state of the accelerator
+   * The state of the accelerator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the accelerator
+   * The state of the accelerator.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +70,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the accelerator
+   * The state of the accelerator.
    * @param state state or {@code null} for none
    */
   public Accelerator setState(java.lang.String state) {

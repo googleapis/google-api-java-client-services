@@ -91,6 +91,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * An Oracle database connection profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleConnectionProfile oracle;
+
+  /**
    * A PostgreSQL database connection profile.
    * The value may be {@code null}.
    */
@@ -260,6 +267,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * An Oracle database connection profile.
+   * @return value or {@code null} for none
+   */
+  public OracleConnectionProfile getOracle() {
+    return oracle;
+  }
+
+  /**
+   * An Oracle database connection profile.
+   * @param oracle oracle or {@code null} for none
+   */
+  public ConnectionProfile setOracle(OracleConnectionProfile oracle) {
+    this.oracle = oracle;
     return this;
   }
 

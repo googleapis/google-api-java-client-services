@@ -77,11 +77,25 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   private java.lang.Integer port;
 
   /**
+   * Private service connect connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateServiceConnectConnectivity privateServiceConnectConnectivity;
+
+  /**
    * SSL configuration for the destination to connect to the source database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SslConfig ssl;
+
+  /**
+   * Static ip connectivity data (default, no additional details needed).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StaticIpConnectivity staticIpConnectivity;
 
   /**
    * Required. The username that Database Migration Service will use to connect to the database. The
@@ -202,6 +216,23 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   }
 
   /**
+   * Private service connect connectivity.
+   * @return value or {@code null} for none
+   */
+  public PrivateServiceConnectConnectivity getPrivateServiceConnectConnectivity() {
+    return privateServiceConnectConnectivity;
+  }
+
+  /**
+   * Private service connect connectivity.
+   * @param privateServiceConnectConnectivity privateServiceConnectConnectivity or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setPrivateServiceConnectConnectivity(PrivateServiceConnectConnectivity privateServiceConnectConnectivity) {
+    this.privateServiceConnectConnectivity = privateServiceConnectConnectivity;
+    return this;
+  }
+
+  /**
    * SSL configuration for the destination to connect to the source database.
    * @return value or {@code null} for none
    */
@@ -215,6 +246,23 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   public PostgreSqlConnectionProfile setSsl(SslConfig ssl) {
     this.ssl = ssl;
+    return this;
+  }
+
+  /**
+   * Static ip connectivity data (default, no additional details needed).
+   * @return value or {@code null} for none
+   */
+  public StaticIpConnectivity getStaticIpConnectivity() {
+    return staticIpConnectivity;
+  }
+
+  /**
+   * Static ip connectivity data (default, no additional details needed).
+   * @param staticIpConnectivity staticIpConnectivity or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setStaticIpConnectivity(StaticIpConnectivity staticIpConnectivity) {
+    this.staticIpConnectivity = staticIpConnectivity;
     return this;
   }
 

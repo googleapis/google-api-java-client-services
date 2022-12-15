@@ -80,7 +80,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private GoogleCloudRunV2Probe livenessProbe;
 
   /**
-   * Name of the container specified as a DNS_LABEL.
+   * Name of the container specified as a DNS_LABEL (RFC 1123).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +241,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL.
+   * Name of the container specified as a DNS_LABEL (RFC 1123).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -249,7 +249,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL.
+   * Name of the container specified as a DNS_LABEL (RFC 1123).
    * @param name name or {@code null} for none
    */
   public GoogleCloudRunV2Container setName(java.lang.String name) {

@@ -705,6 +705,52 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
+          /**
+           * Optional. Create the connection profile without validating it. The default is false.
+           * Only supported for Oracle connection profiles.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean skipValidation;
+
+          /** Optional. Create the connection profile without validating it. The default is false. Only supported
+         for Oracle connection profiles.
+           */
+          public java.lang.Boolean getSkipValidation() {
+            return skipValidation;
+          }
+
+          /**
+           * Optional. Create the connection profile without validating it. The default is false.
+           * Only supported for Oracle connection profiles.
+           */
+          public Create setSkipValidation(java.lang.Boolean skipValidation) {
+            this.skipValidation = skipValidation;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't create any resources. The
+           * default is false. Only supported for Oracle connection profiles.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the connection profile, but don't create any resources. The default is
+         false. Only supported for Oracle connection profiles.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't create any resources. The
+           * default is false. Only supported for Oracle connection profiles.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -1640,6 +1686,29 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
+           * Optional. Update the connection profile without validating it. The default is false.
+           * Only supported for Oracle connection profiles.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean skipValidation;
+
+          /** Optional. Update the connection profile without validating it. The default is false. Only supported
+         for Oracle connection profiles.
+           */
+          public java.lang.Boolean getSkipValidation() {
+            return skipValidation;
+          }
+
+          /**
+           * Optional. Update the connection profile without validating it. The default is false.
+           * Only supported for Oracle connection profiles.
+           */
+          public Patch setSkipValidation(java.lang.Boolean skipValidation) {
+            this.skipValidation = skipValidation;
+            return this;
+          }
+
+          /**
            * Required. Field mask is used to specify the fields to be overwritten in the connection
            * profile resource by the update.
            */
@@ -1659,6 +1728,29 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't update any resources. The
+           * default is false. Only supported for Oracle connection profiles.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the connection profile, but don't update any resources. The default is
+         false. Only supported for Oracle connection profiles.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't update any resources. The
+           * default is false. Only supported for Oracle connection profiles.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -1966,6 +2058,2450 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
 
+      }
+      /**
+       * An accessor for creating requests from the ConversionWorkspaces collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DatabaseMigrationService datamigration = new DatabaseMigrationService(...);}
+       *   {@code DatabaseMigrationService.ConversionWorkspaces.List request = datamigration.conversionWorkspaces().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ConversionWorkspaces conversionWorkspaces() {
+        return new ConversionWorkspaces();
+      }
+
+      /**
+       * The "conversionWorkspaces" collection of methods.
+       */
+      public class ConversionWorkspaces {
+
+        /**
+         * Apply draft tree onto a specific destination database
+         *
+         * Create a request for the method "conversionWorkspaces.apply".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Apply#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the conversion workspace resource to apply draft to destination for. in the form
+         *        of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.ApplyConversionWorkspaceRequest}
+         * @return the request
+         */
+        public Apply apply(java.lang.String name, com.google.api.services.datamigration.v1.model.ApplyConversionWorkspaceRequest content) throws java.io.IOException {
+          Apply result = new Apply(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Apply extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:apply";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Apply draft tree onto a specific destination database
+           *
+           * Create a request for the method "conversionWorkspaces.apply".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Apply#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Apply#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the conversion workspace resource to apply draft to destination for. in the form
+         *        of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.ApplyConversionWorkspaceRequest}
+           * @since 1.13
+           */
+          protected Apply(java.lang.String name, com.google.api.services.datamigration.v1.model.ApplyConversionWorkspaceRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Apply set$Xgafv(java.lang.String $Xgafv) {
+            return (Apply) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Apply setAccessToken(java.lang.String accessToken) {
+            return (Apply) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Apply setAlt(java.lang.String alt) {
+            return (Apply) super.setAlt(alt);
+          }
+
+          @Override
+          public Apply setCallback(java.lang.String callback) {
+            return (Apply) super.setCallback(callback);
+          }
+
+          @Override
+          public Apply setFields(java.lang.String fields) {
+            return (Apply) super.setFields(fields);
+          }
+
+          @Override
+          public Apply setKey(java.lang.String key) {
+            return (Apply) super.setKey(key);
+          }
+
+          @Override
+          public Apply setOauthToken(java.lang.String oauthToken) {
+            return (Apply) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Apply setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Apply) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Apply setQuotaUser(java.lang.String quotaUser) {
+            return (Apply) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Apply setUploadType(java.lang.String uploadType) {
+            return (Apply) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Apply setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Apply) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource to apply draft to destination for.
+           * in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the conversion workspace resource to apply draft to destination for. in the form
+         of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource to apply draft to destination for.
+           * in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public Apply setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Apply set(String parameterName, Object value) {
+            return (Apply) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Marks all the data in the conversion workspace as committed.
+         *
+         * Create a request for the method "conversionWorkspaces.commit".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the conversion workspace resource to commit.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.CommitConversionWorkspaceRequest}
+         * @return the request
+         */
+        public Commit commit(java.lang.String name, com.google.api.services.datamigration.v1.model.CommitConversionWorkspaceRequest content) throws java.io.IOException {
+          Commit result = new Commit(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Commit extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:commit";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Marks all the data in the conversion workspace as committed.
+           *
+           * Create a request for the method "conversionWorkspaces.commit".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the conversion workspace resource to commit.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.CommitConversionWorkspaceRequest}
+           * @since 1.13
+           */
+          protected Commit(java.lang.String name, com.google.api.services.datamigration.v1.model.CommitConversionWorkspaceRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Commit set$Xgafv(java.lang.String $Xgafv) {
+            return (Commit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Commit setAccessToken(java.lang.String accessToken) {
+            return (Commit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Commit setAlt(java.lang.String alt) {
+            return (Commit) super.setAlt(alt);
+          }
+
+          @Override
+          public Commit setCallback(java.lang.String callback) {
+            return (Commit) super.setCallback(callback);
+          }
+
+          @Override
+          public Commit setFields(java.lang.String fields) {
+            return (Commit) super.setFields(fields);
+          }
+
+          @Override
+          public Commit setKey(java.lang.String key) {
+            return (Commit) super.setKey(key);
+          }
+
+          @Override
+          public Commit setOauthToken(java.lang.String oauthToken) {
+            return (Commit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Commit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Commit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Commit setQuotaUser(java.lang.String quotaUser) {
+            return (Commit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Commit setUploadType(java.lang.String uploadType) {
+            return (Commit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Commit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the conversion workspace resource to commit. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the conversion workspace resource to commit.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the conversion workspace resource to commit. */
+          public Commit setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Commit set(String parameterName, Object value) {
+            return (Commit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a draft tree schema for the destination database.
+         *
+         * Create a request for the method "conversionWorkspaces.convert".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Convert#execute()} method to invoke the remote operation.
+         *
+         * @param name Name of the conversion workspace resource to convert in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.ConvertConversionWorkspaceRequest}
+         * @return the request
+         */
+        public Convert convert(java.lang.String name, com.google.api.services.datamigration.v1.model.ConvertConversionWorkspaceRequest content) throws java.io.IOException {
+          Convert result = new Convert(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Convert extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:convert";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Creates a draft tree schema for the destination database.
+           *
+           * Create a request for the method "conversionWorkspaces.convert".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Convert#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Convert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Name of the conversion workspace resource to convert in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.ConvertConversionWorkspaceRequest}
+           * @since 1.13
+           */
+          protected Convert(java.lang.String name, com.google.api.services.datamigration.v1.model.ConvertConversionWorkspaceRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Convert set$Xgafv(java.lang.String $Xgafv) {
+            return (Convert) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Convert setAccessToken(java.lang.String accessToken) {
+            return (Convert) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Convert setAlt(java.lang.String alt) {
+            return (Convert) super.setAlt(alt);
+          }
+
+          @Override
+          public Convert setCallback(java.lang.String callback) {
+            return (Convert) super.setCallback(callback);
+          }
+
+          @Override
+          public Convert setFields(java.lang.String fields) {
+            return (Convert) super.setFields(fields);
+          }
+
+          @Override
+          public Convert setKey(java.lang.String key) {
+            return (Convert) super.setKey(key);
+          }
+
+          @Override
+          public Convert setOauthToken(java.lang.String oauthToken) {
+            return (Convert) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Convert setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Convert) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Convert setQuotaUser(java.lang.String quotaUser) {
+            return (Convert) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Convert setUploadType(java.lang.String uploadType) {
+            return (Convert) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Convert setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Convert) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the conversion workspace resource to convert in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Name of the conversion workspace resource to convert in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Name of the conversion workspace resource to convert in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public Convert setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Convert set(String parameterName, Object value) {
+            return (Convert) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new conversion workspace in a given project and location.
+         *
+         * Create a request for the method "conversionWorkspaces.create".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of conversion workspaces.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.ConversionWorkspace}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datamigration.v1.model.ConversionWorkspace content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/conversionWorkspaces";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new conversion workspace in a given project and location.
+           *
+           * Create a request for the method "conversionWorkspaces.create".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of conversion workspaces.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.ConversionWorkspace}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datamigration.v1.model.ConversionWorkspace content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent, which owns this collection of conversion workspaces. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of conversion workspaces.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent, which owns this collection of conversion workspaces. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The ID of the conversion workspace to create. */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspaceId;
+
+          /** Required. The ID of the conversion workspace to create.
+           */
+          public java.lang.String getConversionWorkspaceId() {
+            return conversionWorkspaceId;
+          }
+
+          /** Required. The ID of the conversion workspace to create. */
+          public Create setConversionWorkspaceId(java.lang.String conversionWorkspaceId) {
+            this.conversionWorkspaceId = conversionWorkspaceId;
+            return this;
+          }
+
+          /**
+           * A unique id used to identify the request. If the server receives two requests with the
+           * same id, then the second request will be ignored. It is recommended to always set this
+           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** A unique id used to identify the request. If the server receives two requests with the same id,
+         then the second request will be ignored. It is recommended to always set this value to a UUID. The
+         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * A unique id used to identify the request. If the server receives two requests with the
+           * same id, then the second request will be ignored. It is recommended to always set this
+           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single conversion workspace.
+         *
+         * Create a request for the method "conversionWorkspaces.delete".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the conversion workspace resource to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Deletes a single conversion workspace.
+           *
+           * Create a request for the method "conversionWorkspaces.delete".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the conversion workspace resource to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DatabaseMigrationService.this, "DELETE", REST_PATH, null, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the conversion workspace resource to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the conversion workspace resource to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the conversion workspace resource to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * A unique id used to identify the request. If the server receives two requests with the
+           * same id, then the second request will be ignored. It is recommended to always set this
+           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** A unique id used to identify the request. If the server receives two requests with the same id,
+         then the second request will be ignored. It is recommended to always set this value to a UUID. The
+         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * A unique id used to identify the request. If the server receives two requests with the
+           * same id, then the second request will be ignored. It is recommended to always set this
+           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a list of committed revisions of a specific conversion workspace.
+         *
+         * Create a request for the method "conversionWorkspaces.describeConversionWorkspaceRevisions".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link DescribeConversionWorkspaceRevisions#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whose revisions are listed. in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @return the request
+         */
+        public DescribeConversionWorkspaceRevisions describeConversionWorkspaceRevisions(java.lang.String conversionWorkspace) throws java.io.IOException {
+          DescribeConversionWorkspaceRevisions result = new DescribeConversionWorkspaceRevisions(conversionWorkspace);
+          initialize(result);
+          return result;
+        }
+
+        public class DescribeConversionWorkspaceRevisions extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.DescribeConversionWorkspaceRevisionsResponse> {
+
+          private static final String REST_PATH = "v1/{+conversionWorkspace}:describeConversionWorkspaceRevisions";
+
+          private final java.util.regex.Pattern CONVERSION_WORKSPACE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Retrieves a list of committed revisions of a specific conversion workspace.
+           *
+           * Create a request for the method "conversionWorkspaces.describeConversionWorkspaceRevisions".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link DescribeConversionWorkspaceRevisions#execute()} method to
+           * invoke the remote operation. <p> {@link DescribeConversionWorkspaceRevisions#initialize(com.goo
+           * gle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+           * this instance immediately after invoking the constructor. </p>
+           *
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whose revisions are listed. in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @since 1.13
+           */
+          protected DescribeConversionWorkspaceRevisions(java.lang.String conversionWorkspace) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.DescribeConversionWorkspaceRevisionsResponse.class);
+            this.conversionWorkspace = com.google.api.client.util.Preconditions.checkNotNull(conversionWorkspace, "Required parameter conversionWorkspace must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions set$Xgafv(java.lang.String $Xgafv) {
+            return (DescribeConversionWorkspaceRevisions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setAccessToken(java.lang.String accessToken) {
+            return (DescribeConversionWorkspaceRevisions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setAlt(java.lang.String alt) {
+            return (DescribeConversionWorkspaceRevisions) super.setAlt(alt);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setCallback(java.lang.String callback) {
+            return (DescribeConversionWorkspaceRevisions) super.setCallback(callback);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setFields(java.lang.String fields) {
+            return (DescribeConversionWorkspaceRevisions) super.setFields(fields);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setKey(java.lang.String key) {
+            return (DescribeConversionWorkspaceRevisions) super.setKey(key);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setOauthToken(java.lang.String oauthToken) {
+            return (DescribeConversionWorkspaceRevisions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DescribeConversionWorkspaceRevisions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setQuotaUser(java.lang.String quotaUser) {
+            return (DescribeConversionWorkspaceRevisions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setUploadType(java.lang.String uploadType) {
+            return (DescribeConversionWorkspaceRevisions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DescribeConversionWorkspaceRevisions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whose revisions are listed. in the
+           * form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspace;
+
+          /** Required. Name of the conversion workspace resource whose revisions are listed. in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getConversionWorkspace() {
+            return conversionWorkspace;
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whose revisions are listed. in the
+           * form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public DescribeConversionWorkspaceRevisions setConversionWorkspace(java.lang.String conversionWorkspace) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.conversionWorkspace = conversionWorkspace;
+            return this;
+          }
+
+          /** Optional filter to request a specific commit id */
+          @com.google.api.client.util.Key
+          private java.lang.String commitId;
+
+          /** Optional filter to request a specific commit id
+           */
+          public java.lang.String getCommitId() {
+            return commitId;
+          }
+
+          /** Optional filter to request a specific commit id */
+          public DescribeConversionWorkspaceRevisions setCommitId(java.lang.String commitId) {
+            this.commitId = commitId;
+            return this;
+          }
+
+          @Override
+          public DescribeConversionWorkspaceRevisions set(String parameterName, Object value) {
+            return (DescribeConversionWorkspaceRevisions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Use this method to describe the database entities tree for a specific conversion workspace and a
+         * specific tree type. The DB Entities are not a resource like conversion workspace or mapping rule,
+         * and they can not be created, updated or deleted like one. Instead they are simple data objects
+         * describing the structure of the client database.
+         *
+         * Create a request for the method "conversionWorkspaces.describeDatabaseEntities".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link DescribeDatabaseEntities#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whose DB entities are described in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @return the request
+         */
+        public DescribeDatabaseEntities describeDatabaseEntities(java.lang.String conversionWorkspace) throws java.io.IOException {
+          DescribeDatabaseEntities result = new DescribeDatabaseEntities(conversionWorkspace);
+          initialize(result);
+          return result;
+        }
+
+        public class DescribeDatabaseEntities extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.DescribeDatabaseEntitiesResponse> {
+
+          private static final String REST_PATH = "v1/{+conversionWorkspace}:describeDatabaseEntities";
+
+          private final java.util.regex.Pattern CONVERSION_WORKSPACE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Use this method to describe the database entities tree for a specific conversion workspace and
+           * a specific tree type. The DB Entities are not a resource like conversion workspace or mapping
+           * rule, and they can not be created, updated or deleted like one. Instead they are simple data
+           * objects describing the structure of the client database.
+           *
+           * Create a request for the method "conversionWorkspaces.describeDatabaseEntities".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link DescribeDatabaseEntities#execute()} method to invoke the
+           * remote operation. <p> {@link DescribeDatabaseEntities#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whose DB entities are described in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @since 1.13
+           */
+          protected DescribeDatabaseEntities(java.lang.String conversionWorkspace) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.DescribeDatabaseEntitiesResponse.class);
+            this.conversionWorkspace = com.google.api.client.util.Preconditions.checkNotNull(conversionWorkspace, "Required parameter conversionWorkspace must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public DescribeDatabaseEntities set$Xgafv(java.lang.String $Xgafv) {
+            return (DescribeDatabaseEntities) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setAccessToken(java.lang.String accessToken) {
+            return (DescribeDatabaseEntities) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setAlt(java.lang.String alt) {
+            return (DescribeDatabaseEntities) super.setAlt(alt);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setCallback(java.lang.String callback) {
+            return (DescribeDatabaseEntities) super.setCallback(callback);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setFields(java.lang.String fields) {
+            return (DescribeDatabaseEntities) super.setFields(fields);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setKey(java.lang.String key) {
+            return (DescribeDatabaseEntities) super.setKey(key);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setOauthToken(java.lang.String oauthToken) {
+            return (DescribeDatabaseEntities) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DescribeDatabaseEntities) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setQuotaUser(java.lang.String quotaUser) {
+            return (DescribeDatabaseEntities) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setUploadType(java.lang.String uploadType) {
+            return (DescribeDatabaseEntities) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DescribeDatabaseEntities setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DescribeDatabaseEntities) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whose DB entities are described in
+           * the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspace;
+
+          /** Required. Name of the conversion workspace resource whose DB entities are described in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getConversionWorkspace() {
+            return conversionWorkspace;
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whose DB entities are described in
+           * the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public DescribeDatabaseEntities setConversionWorkspace(java.lang.String conversionWorkspace) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.conversionWorkspace = conversionWorkspace;
+            return this;
+          }
+
+          /**
+           * Request a specific commit id. If not specified, the entities from the latest commit are
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String commitId;
+
+          /** Request a specific commit id. If not specified, the entities from the latest commit are returned.
+           */
+          public java.lang.String getCommitId() {
+            return commitId;
+          }
+
+          /**
+           * Request a specific commit id. If not specified, the entities from the latest commit are
+           * returned.
+           */
+          public DescribeDatabaseEntities setCommitId(java.lang.String commitId) {
+            this.commitId = commitId;
+            return this;
+          }
+
+          /** Filter the returned entities based on AIP-160 standard */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filter the returned entities based on AIP-160 standard
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Filter the returned entities based on AIP-160 standard */
+          public DescribeDatabaseEntities setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of entities to return. The service may return fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of entities to return. The service may return fewer than this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of entities to return. The service may return fewer than this value.
+           */
+          public DescribeDatabaseEntities setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The nextPageToken value received in the previous call to
+           * conversionWorkspace.describeDatabaseEntities, used in the subsequent request to
+           * retrieve the next page of results. On first call this should be left blank. When
+           * paginating, all other parameters provided to
+           * conversionWorkspace.describeDatabaseEntities must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The nextPageToken value received in the previous call to
+         conversionWorkspace.describeDatabaseEntities, used in the subsequent request to retrieve the next
+         page of results. On first call this should be left blank. When paginating, all other parameters
+         provided to conversionWorkspace.describeDatabaseEntities must match the call that provided the page
+         token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The nextPageToken value received in the previous call to
+           * conversionWorkspace.describeDatabaseEntities, used in the subsequent request to
+           * retrieve the next page of results. On first call this should be left blank. When
+           * paginating, all other parameters provided to
+           * conversionWorkspace.describeDatabaseEntities must match the call that provided the page
+           * token.
+           */
+          public DescribeDatabaseEntities setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** The tree to fetch */
+          @com.google.api.client.util.Key
+          private java.lang.String tree;
+
+          /** The tree to fetch
+           */
+          public java.lang.String getTree() {
+            return tree;
+          }
+
+          /** The tree to fetch */
+          public DescribeDatabaseEntities setTree(java.lang.String tree) {
+            this.tree = tree;
+            return this;
+          }
+
+          /**
+           * Whether to retrieve the latest committed version of the entities or the latest version.
+           * This field is ignored if a specific commit_id is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean uncommitted;
+
+          /** Whether to retrieve the latest committed version of the entities or the latest version. This field
+         is ignored if a specific commit_id is specified.
+           */
+          public java.lang.Boolean getUncommitted() {
+            return uncommitted;
+          }
+
+          /**
+           * Whether to retrieve the latest committed version of the entities or the latest version.
+           * This field is ignored if a specific commit_id is specified.
+           */
+          public DescribeDatabaseEntities setUncommitted(java.lang.Boolean uncommitted) {
+            this.uncommitted = uncommitted;
+            return this;
+          }
+
+          @Override
+          public DescribeDatabaseEntities set(String parameterName, Object value) {
+            return (DescribeDatabaseEntities) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single conversion workspace.
+         *
+         * Create a request for the method "conversionWorkspaces.get".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the conversion workspace resource to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.ConversionWorkspace> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Gets details of a single conversion workspace.
+           *
+           * Create a request for the method "conversionWorkspaces.get".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the conversion workspace resource to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.ConversionWorkspace.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the conversion workspace resource to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the conversion workspace resource to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the conversion workspace resource to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists conversion workspaces in a given project and location.
+         *
+         * Create a request for the method "conversionWorkspaces.list".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of conversion workspaces.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.ListConversionWorkspacesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/conversionWorkspaces";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists conversion workspaces in a given project and location.
+           *
+           * Create a request for the method "conversionWorkspaces.list".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of conversion workspaces.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.ListConversionWorkspacesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent, which owns this collection of conversion workspaces. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of conversion workspaces.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent, which owns this collection of conversion workspaces. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that filters conversion workspaces listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be either =, !=, >, or <. For example, list conversion
+           * workspaces created this year by specifying **createTime %gt;
+           * 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you
+           * could specify **source.version = "12.c.1"** to select all conversion workspaces with
+           * source database version equal to 12.c.1
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that filters conversion workspaces listed in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         The value must be a string, a number, or a boolean. The comparison operator must be either =, !=,
+         >, or <. For example, list conversion workspaces created this year by specifying **createTime %gt;
+         2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you could specify
+         **source.version = "12.c.1"** to select all conversion workspaces with source database version
+         equal to 12.c.1
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that filters conversion workspaces listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be either =, !=, >, or <. For example, list conversion
+           * workspaces created this year by specifying **createTime %gt;
+           * 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you
+           * could specify **source.version = "12.c.1"** to select all conversion workspaces with
+           * source database version equal to 12.c.1
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of conversion workspaces to return. The service may return fewer
+           * than this value. If unspecified, at most 50 sets will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of conversion workspaces to return. The service may return fewer than this
+         value. If unspecified, at most 50 sets will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of conversion workspaces to return. The service may return fewer
+           * than this value. If unspecified, at most 50 sets will be returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The nextPageToken value received in the previous call to conversionWorkspaces.list,
+           * used in the subsequent request to retrieve the next page of results. On first call this
+           * should be left blank. When paginating, all other parameters provided to
+           * conversionWorkspaces.list must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The nextPageToken value received in the previous call to conversionWorkspaces.list, used in the
+         subsequent request to retrieve the next page of results. On first call this should be left blank.
+         When paginating, all other parameters provided to conversionWorkspaces.list must match the call
+         that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The nextPageToken value received in the previous call to conversionWorkspaces.list,
+           * used in the subsequent request to retrieve the next page of results. On first call this
+           * should be left blank. When paginating, all other parameters provided to
+           * conversionWorkspaces.list must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single conversion workspace.
+         *
+         * Create a request for the method "conversionWorkspaces.patch".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Full name of the workspace resource, in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.ConversionWorkspace}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.datamigration.v1.model.ConversionWorkspace content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Updates the parameters of a single conversion workspace.
+           *
+           * Create a request for the method "conversionWorkspaces.patch".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Full name of the workspace resource, in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.ConversionWorkspace}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.datamigration.v1.model.ConversionWorkspace content) {
+            super(DatabaseMigrationService.this, "PATCH", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Full name of the workspace resource, in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Full name of the workspace resource, in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Full name of the workspace resource, in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * A unique id used to identify the request. If the server receives two requests with the
+           * same id, then the second request will be ignored. It is recommended to always set this
+           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** A unique id used to identify the request. If the server receives two requests with the same id,
+         then the second request will be ignored. It is recommended to always set this value to a UUID. The
+         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * A unique id used to identify the request. If the server receives two requests with the
+           * same id, then the second request will be ignored. It is recommended to always set this
+           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Field mask is used to specify the fields to be overwritten in the conversion
+           * workspace resource by the update.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask is used to specify the fields to be overwritten in the conversion workspace
+         resource by the update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask is used to specify the fields to be overwritten in the conversion
+           * workspace resource by the update.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rollbacks a conversion workspace to the last committed spanshot.
+         *
+         * Create a request for the method "conversionWorkspaces.rollback".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the conversion workspace resource to rollback to.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.RollbackConversionWorkspaceRequest}
+         * @return the request
+         */
+        public Rollback rollback(java.lang.String name, com.google.api.services.datamigration.v1.model.RollbackConversionWorkspaceRequest content) throws java.io.IOException {
+          Rollback result = new Rollback(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rollback extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:rollback";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Rollbacks a conversion workspace to the last committed spanshot.
+           *
+           * Create a request for the method "conversionWorkspaces.rollback".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the conversion workspace resource to rollback to.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.RollbackConversionWorkspaceRequest}
+           * @since 1.13
+           */
+          protected Rollback(java.lang.String name, com.google.api.services.datamigration.v1.model.RollbackConversionWorkspaceRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rollback set$Xgafv(java.lang.String $Xgafv) {
+            return (Rollback) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rollback setAccessToken(java.lang.String accessToken) {
+            return (Rollback) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rollback setAlt(java.lang.String alt) {
+            return (Rollback) super.setAlt(alt);
+          }
+
+          @Override
+          public Rollback setCallback(java.lang.String callback) {
+            return (Rollback) super.setCallback(callback);
+          }
+
+          @Override
+          public Rollback setFields(java.lang.String fields) {
+            return (Rollback) super.setFields(fields);
+          }
+
+          @Override
+          public Rollback setKey(java.lang.String key) {
+            return (Rollback) super.setKey(key);
+          }
+
+          @Override
+          public Rollback setOauthToken(java.lang.String oauthToken) {
+            return (Rollback) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rollback) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rollback setQuotaUser(java.lang.String quotaUser) {
+            return (Rollback) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rollback setUploadType(java.lang.String uploadType) {
+            return (Rollback) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rollback) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the conversion workspace resource to rollback to. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the conversion workspace resource to rollback to.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the conversion workspace resource to rollback to. */
+          public Rollback setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Rollback set(String parameterName, Object value) {
+            return (Rollback) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Use this method to search/list the background jobs for a specific conversion workspace. The
+         * background jobs are not a resource like conversion workspace or mapping rule, and they can not be
+         * created, updated or deleted like one. Instead they are a way to expose the data plane jobs log.
+         *
+         * Create a request for the method "conversionWorkspaces.searchBackgroundJobs".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link SearchBackgroundJobs#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whos jobs are listed. in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @return the request
+         */
+        public SearchBackgroundJobs searchBackgroundJobs(java.lang.String conversionWorkspace) throws java.io.IOException {
+          SearchBackgroundJobs result = new SearchBackgroundJobs(conversionWorkspace);
+          initialize(result);
+          return result;
+        }
+
+        public class SearchBackgroundJobs extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.SearchBackgroundJobsResponse> {
+
+          private static final String REST_PATH = "v1/{+conversionWorkspace}:searchBackgroundJobs";
+
+          private final java.util.regex.Pattern CONVERSION_WORKSPACE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Use this method to search/list the background jobs for a specific conversion workspace. The
+           * background jobs are not a resource like conversion workspace or mapping rule, and they can not
+           * be created, updated or deleted like one. Instead they are a way to expose the data plane jobs
+           * log.
+           *
+           * Create a request for the method "conversionWorkspaces.searchBackgroundJobs".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link SearchBackgroundJobs#execute()} method to invoke the
+           * remote operation. <p> {@link SearchBackgroundJobs#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whos jobs are listed. in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @since 1.13
+           */
+          protected SearchBackgroundJobs(java.lang.String conversionWorkspace) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.SearchBackgroundJobsResponse.class);
+            this.conversionWorkspace = com.google.api.client.util.Preconditions.checkNotNull(conversionWorkspace, "Required parameter conversionWorkspace must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public SearchBackgroundJobs set$Xgafv(java.lang.String $Xgafv) {
+            return (SearchBackgroundJobs) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SearchBackgroundJobs setAccessToken(java.lang.String accessToken) {
+            return (SearchBackgroundJobs) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SearchBackgroundJobs setAlt(java.lang.String alt) {
+            return (SearchBackgroundJobs) super.setAlt(alt);
+          }
+
+          @Override
+          public SearchBackgroundJobs setCallback(java.lang.String callback) {
+            return (SearchBackgroundJobs) super.setCallback(callback);
+          }
+
+          @Override
+          public SearchBackgroundJobs setFields(java.lang.String fields) {
+            return (SearchBackgroundJobs) super.setFields(fields);
+          }
+
+          @Override
+          public SearchBackgroundJobs setKey(java.lang.String key) {
+            return (SearchBackgroundJobs) super.setKey(key);
+          }
+
+          @Override
+          public SearchBackgroundJobs setOauthToken(java.lang.String oauthToken) {
+            return (SearchBackgroundJobs) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SearchBackgroundJobs setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SearchBackgroundJobs) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SearchBackgroundJobs setQuotaUser(java.lang.String quotaUser) {
+            return (SearchBackgroundJobs) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SearchBackgroundJobs setUploadType(java.lang.String uploadType) {
+            return (SearchBackgroundJobs) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SearchBackgroundJobs setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SearchBackgroundJobs) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whos jobs are listed. in the form
+           * of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspace;
+
+          /** Required. Name of the conversion workspace resource whos jobs are listed. in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getConversionWorkspace() {
+            return conversionWorkspace;
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whos jobs are listed. in the form
+           * of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public SearchBackgroundJobs setConversionWorkspace(java.lang.String conversionWorkspace) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.conversionWorkspace = conversionWorkspace;
+            return this;
+          }
+
+          /**
+           * Optional. If supplied, will only return jobs that completed until (not including) the
+           * given timestamp.
+           */
+          @com.google.api.client.util.Key
+          private String completedUntilTime;
+
+          /** Optional. If supplied, will only return jobs that completed until (not including) the given
+         timestamp.
+           */
+          public String getCompletedUntilTime() {
+            return completedUntilTime;
+          }
+
+          /**
+           * Optional. If supplied, will only return jobs that completed until (not including) the
+           * given timestamp.
+           */
+          public SearchBackgroundJobs setCompletedUntilTime(String completedUntilTime) {
+            this.completedUntilTime = completedUntilTime;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of jobs to return. The service may return fewer than this
+           * value. If unspecified, at most 100 jobs will be returned. The maximum value is 100;
+           * values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer maxSize;
+
+          /** Optional. The maximum number of jobs to return. The service may return fewer than this value. If
+         unspecified, at most 100 jobs will be returned. The maximum value is 100; values above 100 will be
+         coerced to 100.
+           */
+          public java.lang.Integer getMaxSize() {
+            return maxSize;
+          }
+
+          /**
+           * Optional. The maximum number of jobs to return. The service may return fewer than this
+           * value. If unspecified, at most 100 jobs will be returned. The maximum value is 100;
+           * values above 100 will be coerced to 100.
+           */
+          public SearchBackgroundJobs setMaxSize(java.lang.Integer maxSize) {
+            this.maxSize = maxSize;
+            return this;
+          }
+
+          /** Optional. Whether or not to return just the most recent job per job type */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnMostRecentPerJobType;
+
+          /** Optional. Whether or not to return just the most recent job per job type
+           */
+          public java.lang.Boolean getReturnMostRecentPerJobType() {
+            return returnMostRecentPerJobType;
+          }
+
+          /** Optional. Whether or not to return just the most recent job per job type */
+          public SearchBackgroundJobs setReturnMostRecentPerJobType(java.lang.Boolean returnMostRecentPerJobType) {
+            this.returnMostRecentPerJobType = returnMostRecentPerJobType;
+            return this;
+          }
+
+          @Override
+          public SearchBackgroundJobs set(String parameterName, Object value) {
+            return (SearchBackgroundJobs) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Imports a snapshot of the source database into the conversion workspace.
+         *
+         * Create a request for the method "conversionWorkspaces.seed".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Seed#execute()} method to invoke the remote operation.
+         *
+         * @param name Name of the conversion workspace resource to seed with new database structure. in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.SeedConversionWorkspaceRequest}
+         * @return the request
+         */
+        public Seed seed(java.lang.String name, com.google.api.services.datamigration.v1.model.SeedConversionWorkspaceRequest content) throws java.io.IOException {
+          Seed result = new Seed(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Seed extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:seed";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Imports a snapshot of the source database into the conversion workspace.
+           *
+           * Create a request for the method "conversionWorkspaces.seed".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Seed#execute()} method to invoke the remote operation. <p>
+           * {@link Seed#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Name of the conversion workspace resource to seed with new database structure. in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.SeedConversionWorkspaceRequest}
+           * @since 1.13
+           */
+          protected Seed(java.lang.String name, com.google.api.services.datamigration.v1.model.SeedConversionWorkspaceRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Seed set$Xgafv(java.lang.String $Xgafv) {
+            return (Seed) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Seed setAccessToken(java.lang.String accessToken) {
+            return (Seed) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Seed setAlt(java.lang.String alt) {
+            return (Seed) super.setAlt(alt);
+          }
+
+          @Override
+          public Seed setCallback(java.lang.String callback) {
+            return (Seed) super.setCallback(callback);
+          }
+
+          @Override
+          public Seed setFields(java.lang.String fields) {
+            return (Seed) super.setFields(fields);
+          }
+
+          @Override
+          public Seed setKey(java.lang.String key) {
+            return (Seed) super.setKey(key);
+          }
+
+          @Override
+          public Seed setOauthToken(java.lang.String oauthToken) {
+            return (Seed) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Seed setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Seed) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Seed setQuotaUser(java.lang.String quotaUser) {
+            return (Seed) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Seed setUploadType(java.lang.String uploadType) {
+            return (Seed) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Seed setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Seed) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the conversion workspace resource to seed with new database structure. in the
+           * form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Name of the conversion workspace resource to seed with new database structure. in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Name of the conversion workspace resource to seed with new database structure. in the
+           * form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public Seed setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Seed set(String parameterName, Object value) {
+            return (Seed) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the MappingRules collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DatabaseMigrationService datamigration = new DatabaseMigrationService(...);}
+         *   {@code DatabaseMigrationService.MappingRules.List request = datamigration.mappingRules().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public MappingRules mappingRules() {
+          return new MappingRules();
+        }
+
+        /**
+         * The "mappingRules" collection of methods.
+         */
+        public class MappingRules {
+
+          /**
+           * Imports the mapping rules for a given conversion workspace. Supports various formats of external
+           * rules files.
+           *
+           * Create a request for the method "mappingRules.import".
+           *
+           * This request holds the parameters needed by the datamigration server.  After setting any optional
+           * parameters, call the {@link DatabaseMigrationServiceImport#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. Name of the conversion workspace resource to import the rules to in the form of:
+           *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.ImportMappingRulesRequest}
+           * @return the request
+           */
+          public DatabaseMigrationServiceImport datamigrationImport(java.lang.String parent, com.google.api.services.datamigration.v1.model.ImportMappingRulesRequest content) throws java.io.IOException {
+            DatabaseMigrationServiceImport result = new DatabaseMigrationServiceImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DatabaseMigrationServiceImport extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/mappingRules:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+            /**
+             * Imports the mapping rules for a given conversion workspace. Supports various formats of
+             * external rules files.
+             *
+             * Create a request for the method "mappingRules.import".
+             *
+             * This request holds the parameters needed by the the datamigration server.  After setting any
+             * optional parameters, call the {@link DatabaseMigrationServiceImport#execute()} method to invoke
+             * the remote operation. <p> {@link DatabaseMigrationServiceImport#initialize(com.google.api.clien
+             * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of the conversion workspace resource to import the rules to in the form of:
+           *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+             * @param content the {@link com.google.api.services.datamigration.v1.model.ImportMappingRulesRequest}
+             * @since 1.13
+             */
+            protected DatabaseMigrationServiceImport(java.lang.String parent, com.google.api.services.datamigration.v1.model.ImportMappingRulesRequest content) {
+              super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport set$Xgafv(java.lang.String $Xgafv) {
+              return (DatabaseMigrationServiceImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setAccessToken(java.lang.String accessToken) {
+              return (DatabaseMigrationServiceImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setAlt(java.lang.String alt) {
+              return (DatabaseMigrationServiceImport) super.setAlt(alt);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setCallback(java.lang.String callback) {
+              return (DatabaseMigrationServiceImport) super.setCallback(callback);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setFields(java.lang.String fields) {
+              return (DatabaseMigrationServiceImport) super.setFields(fields);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setKey(java.lang.String key) {
+              return (DatabaseMigrationServiceImport) super.setKey(key);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setOauthToken(java.lang.String oauthToken) {
+              return (DatabaseMigrationServiceImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DatabaseMigrationServiceImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setQuotaUser(java.lang.String quotaUser) {
+              return (DatabaseMigrationServiceImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setUploadType(java.lang.String uploadType) {
+              return (DatabaseMigrationServiceImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DatabaseMigrationServiceImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the conversion workspace resource to import the rules to in the
+             * form of:
+             * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of the conversion workspace resource to import the rules to in the form of:
+           projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Name of the conversion workspace resource to import the rules to in the
+             * form of:
+             * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+             */
+            public DatabaseMigrationServiceImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DatabaseMigrationServiceImport set(String parameterName, Object value) {
+              return (DatabaseMigrationServiceImport) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the MigrationJobs collection.
@@ -4975,6 +7511,739 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the PrivateConnections collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DatabaseMigrationService datamigration = new DatabaseMigrationService(...);}
+       *   {@code DatabaseMigrationService.PrivateConnections.List request = datamigration.privateConnections().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PrivateConnections privateConnections() {
+        return new PrivateConnections();
+      }
+
+      /**
+       * The "privateConnections" collection of methods.
+       */
+      public class PrivateConnections {
+
+        /**
+         * Creates a new private connection in a given project and location.
+         *
+         * Create a request for the method "privateConnections.create".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent that owns the collection of PrivateConnections.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.PrivateConnection}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datamigration.v1.model.PrivateConnection content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/privateConnections";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new private connection in a given project and location.
+           *
+           * Create a request for the method "privateConnections.create".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent that owns the collection of PrivateConnections.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.PrivateConnection}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datamigration.v1.model.PrivateConnection content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent that owns the collection of PrivateConnections. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent that owns the collection of PrivateConnections.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent that owns the collection of PrivateConnections. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The private connection identifier. */
+          @com.google.api.client.util.Key
+          private java.lang.String privateConnectionId;
+
+          /** Required. The private connection identifier.
+           */
+          public java.lang.String getPrivateConnectionId() {
+            return privateConnectionId;
+          }
+
+          /** Required. The private connection identifier. */
+          public Create setPrivateConnectionId(java.lang.String privateConnectionId) {
+            this.privateConnectionId = privateConnectionId;
+            return this;
+          }
+
+          /**
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique id used to identify the request. If the server receives two requests with the
+         same id, then the second request will be ignored. It is recommended to always set this value to a
+         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+         The maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single Database Migration Service private connection.
+         *
+         * Create a request for the method "privateConnections.delete".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the private connection to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
+
+          /**
+           * Deletes a single Database Migration Service private connection.
+           *
+           * Create a request for the method "privateConnections.delete".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the private connection to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DatabaseMigrationService.this, "DELETE", REST_PATH, null, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the private connection to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the private connection to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the private connection to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique id used to identify the request. If the server receives two requests with the
+         same id, then the second request will be ignored. It is recommended to always set this value to a
+         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+         The maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single private connection.
+         *
+         * Create a request for the method "privateConnections.get".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the private connection to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.PrivateConnection> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
+
+          /**
+           * Gets details of a single private connection.
+           *
+           * Create a request for the method "privateConnections.get".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the private connection to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.PrivateConnection.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the private connection to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the private connection to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the private connection to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a list of private connections in a given project and location.
+         *
+         * Create a request for the method "privateConnections.list".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent that owns the collection of private connections.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.ListPrivateConnectionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/privateConnections";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Retrieves a list of private connections in a given project and location.
+           *
+           * Create a request for the method "privateConnections.list".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent that owns the collection of private connections.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.ListPrivateConnectionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent that owns the collection of private connections. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent that owns the collection of private connections.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent that owns the collection of private connections. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that filters private connections listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be either =, !=, >, or <. For example, list private
+           * connections created this year by specifying **createTime %gt;
+           * 2021-01-01T00:00:00.000000000Z**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that filters private connections listed in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         The value must be a string, a number, or a boolean. The comparison operator must be either =, !=,
+         >, or <. For example, list private connections created this year by specifying **createTime %gt;
+         2021-01-01T00:00:00.000000000Z**.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that filters private connections listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be either =, !=, >, or <. For example, list private
+           * connections created this year by specifying **createTime %gt;
+           * 2021-01-01T00:00:00.000000000Z**.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Order by fields for the result. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Order by fields for the result.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Order by fields for the result. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Maximum number of private connections to return. If unspecified, at most 50 private
+           * connections that will be returned. The maximum value is 1000; values above 1000 will be
+           * coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of private connections to return. If unspecified, at most 50 private connections
+         that will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Maximum number of private connections to return. If unspecified, at most 50 private
+           * connections that will be returned. The maximum value is 1000; values above 1000 will be
+           * coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Page token received from a previous `ListPrivateConnections` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListPrivateConnections` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token received from a previous `ListPrivateConnections` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListPrivateConnections` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Page token received from a previous `ListPrivateConnections` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListPrivateConnections` must match the call that provided the page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

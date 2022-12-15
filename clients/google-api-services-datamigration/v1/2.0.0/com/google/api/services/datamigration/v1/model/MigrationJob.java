@@ -31,6 +31,13 @@ package com.google.api.services.datamigration.v1.model;
 public final class MigrationJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * The conversion workspace used by the migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConversionWorkspaceInfo conversionWorkspace;
+
+  /**
    * Output only. The timestamp when the migration job resource was created. A timestamp in RFC3339
    * UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
    * The value may be {@code null}.
@@ -96,6 +103,16 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Status error;
+
+  /**
+   * This field can be used to select the entities to migrate as part of the migration job. It uses
+   * AIP-160 notation to select a subset of the entities configured on the associated conversion-
+   * workspace. This field should not be set on migration-jobs that are not associated with a
+   * conversion workspace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
 
   /**
    * The resource labels for migration job to use to annotate any related underlying resources such
@@ -177,6 +194,23 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VpcPeeringConnectivity vpcPeeringConnectivity;
+
+  /**
+   * The conversion workspace used by the migration.
+   * @return value or {@code null} for none
+   */
+  public ConversionWorkspaceInfo getConversionWorkspace() {
+    return conversionWorkspace;
+  }
+
+  /**
+   * The conversion workspace used by the migration.
+   * @param conversionWorkspace conversionWorkspace or {@code null} for none
+   */
+  public MigrationJob setConversionWorkspace(ConversionWorkspaceInfo conversionWorkspace) {
+    this.conversionWorkspace = conversionWorkspace;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when the migration job resource was created. A timestamp in RFC3339
@@ -336,6 +370,29 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * This field can be used to select the entities to migrate as part of the migration job. It uses
+   * AIP-160 notation to select a subset of the entities configured on the associated conversion-
+   * workspace. This field should not be set on migration-jobs that are not associated with a
+   * conversion workspace.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * This field can be used to select the entities to migrate as part of the migration job. It uses
+   * AIP-160 notation to select a subset of the entities configured on the associated conversion-
+   * workspace. This field should not be set on migration-jobs that are not associated with a
+   * conversion workspace.
+   * @param filter filter or {@code null} for none
+   */
+  public MigrationJob setFilter(java.lang.String filter) {
+    this.filter = filter;
     return this;
   }
 

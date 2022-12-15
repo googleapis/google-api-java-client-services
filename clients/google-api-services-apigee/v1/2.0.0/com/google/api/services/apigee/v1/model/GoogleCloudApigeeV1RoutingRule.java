@@ -38,6 +38,15 @@ public final class GoogleCloudApigeeV1RoutingRule extends com.google.api.client.
   private java.lang.String basepath;
 
   /**
+   * Name of a deployment group in an environment bound to the environment group in the following
+   * format: `organizations/{org}/environment/{env}/deploymentGroups/{group}` Only one of
+   * environment or deployment_group will be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentGroup;
+
+  /**
    * The env group config revision_id when this rule was added or last updated. This value is set
    * when the rule is created and will only update if the the environment_id changes. It is used to
    * determine if the runtime is up to date with respect to this rule. This field is omitted from
@@ -49,11 +58,20 @@ public final class GoogleCloudApigeeV1RoutingRule extends com.google.api.client.
 
   /**
    * Name of an environment bound to the environment group in the following format:
-   * `organizations/{org}/environments/{env}`.
+   * `organizations/{org}/environments/{env}`. Only one of environment or deployment_group will be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
+
+  /**
+   * Conflicting targets, which will be resource names specifying either deployment groups or
+   * environments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> otherTargets;
 
   /**
    * The resource name of the proxy revision that is receiving this basepath in the following
@@ -93,6 +111,27 @@ public final class GoogleCloudApigeeV1RoutingRule extends com.google.api.client.
   }
 
   /**
+   * Name of a deployment group in an environment bound to the environment group in the following
+   * format: `organizations/{org}/environment/{env}/deploymentGroups/{group}` Only one of
+   * environment or deployment_group will be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentGroup() {
+    return deploymentGroup;
+  }
+
+  /**
+   * Name of a deployment group in an environment bound to the environment group in the following
+   * format: `organizations/{org}/environment/{env}/deploymentGroups/{group}` Only one of
+   * environment or deployment_group will be set.
+   * @param deploymentGroup deploymentGroup or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RoutingRule setDeploymentGroup(java.lang.String deploymentGroup) {
+    this.deploymentGroup = deploymentGroup;
+    return this;
+  }
+
+  /**
    * The env group config revision_id when this rule was added or last updated. This value is set
    * when the rule is created and will only update if the the environment_id changes. It is used to
    * determine if the runtime is up to date with respect to this rule. This field is omitted from
@@ -117,7 +156,8 @@ public final class GoogleCloudApigeeV1RoutingRule extends com.google.api.client.
 
   /**
    * Name of an environment bound to the environment group in the following format:
-   * `organizations/{org}/environments/{env}`.
+   * `organizations/{org}/environments/{env}`. Only one of environment or deployment_group will be
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -126,11 +166,31 @@ public final class GoogleCloudApigeeV1RoutingRule extends com.google.api.client.
 
   /**
    * Name of an environment bound to the environment group in the following format:
-   * `organizations/{org}/environments/{env}`.
+   * `organizations/{org}/environments/{env}`. Only one of environment or deployment_group will be
+   * set.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudApigeeV1RoutingRule setEnvironment(java.lang.String environment) {
     this.environment = environment;
+    return this;
+  }
+
+  /**
+   * Conflicting targets, which will be resource names specifying either deployment groups or
+   * environments.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOtherTargets() {
+    return otherTargets;
+  }
+
+  /**
+   * Conflicting targets, which will be resource names specifying either deployment groups or
+   * environments.
+   * @param otherTargets otherTargets or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RoutingRule setOtherTargets(java.util.List<java.lang.String> otherTargets) {
+    this.otherTargets = otherTargets;
     return this;
   }
 

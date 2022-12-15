@@ -31,11 +31,33 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1EnvironmentGroupConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of proxies in each deployment group for proxy chaining calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudApigeeV1EndpointChainingRule> endpointChainingRules;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudApigeeV1EndpointChainingRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1EndpointChainingRule.class);
+  }
+
+  /**
    * Host names for the environment group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> hostnames;
+
+  /**
+   * When this message appears in the top-level IngressConfig, this field will be populated in lieu
+   * of the inlined routing_rules and hostnames fields. Some URL for downloading the full
+   * EnvironmentGroupConfig for this group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
 
   /**
    * Name of the environment group in the following format:
@@ -70,6 +92,23 @@ public final class GoogleCloudApigeeV1EnvironmentGroupConfig extends com.google.
   private java.lang.String uid;
 
   /**
+   * A list of proxies in each deployment group for proxy chaining calls.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudApigeeV1EndpointChainingRule> getEndpointChainingRules() {
+    return endpointChainingRules;
+  }
+
+  /**
+   * A list of proxies in each deployment group for proxy chaining calls.
+   * @param endpointChainingRules endpointChainingRules or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentGroupConfig setEndpointChainingRules(java.util.List<GoogleCloudApigeeV1EndpointChainingRule> endpointChainingRules) {
+    this.endpointChainingRules = endpointChainingRules;
+    return this;
+  }
+
+  /**
    * Host names for the environment group.
    * @return value or {@code null} for none
    */
@@ -83,6 +122,27 @@ public final class GoogleCloudApigeeV1EnvironmentGroupConfig extends com.google.
    */
   public GoogleCloudApigeeV1EnvironmentGroupConfig setHostnames(java.util.List<java.lang.String> hostnames) {
     this.hostnames = hostnames;
+    return this;
+  }
+
+  /**
+   * When this message appears in the top-level IngressConfig, this field will be populated in lieu
+   * of the inlined routing_rules and hostnames fields. Some URL for downloading the full
+   * EnvironmentGroupConfig for this group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * When this message appears in the top-level IngressConfig, this field will be populated in lieu
+   * of the inlined routing_rules and hostnames fields. Some URL for downloading the full
+   * EnvironmentGroupConfig for this group.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentGroupConfig setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

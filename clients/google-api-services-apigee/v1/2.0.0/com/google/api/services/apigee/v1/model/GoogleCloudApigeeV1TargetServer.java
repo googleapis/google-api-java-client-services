@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * TargetServer configuration. TargetServers are used to decouple a proxy's TargetEndpoint
+ * TargetServer configuration. TargetServers are used to decouple a proxy TargetEndpoint
  * HTTPTargetConnections from concrete URLs for backend services.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

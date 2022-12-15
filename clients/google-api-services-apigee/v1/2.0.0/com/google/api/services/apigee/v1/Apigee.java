@@ -17046,6 +17046,178 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Gets the deployed ingress configuration for an environment group.
+       *
+       * Create a request for the method "envgroups.getDeployedIngressConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetDeployedIngressConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Name of the deployed configuration for the environment group in the following format:
+       *        'organizations/{org}/envgroups/{envgroup}/deployedIngressConfig'.
+       * @return the request
+       */
+      public GetDeployedIngressConfig getDeployedIngressConfig(java.lang.String name) throws java.io.IOException {
+        GetDeployedIngressConfig result = new GetDeployedIngressConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetDeployedIngressConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EnvironmentGroupConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/envgroups/[^/]+/deployedIngressConfig$");
+
+        /**
+         * Gets the deployed ingress configuration for an environment group.
+         *
+         * Create a request for the method "envgroups.getDeployedIngressConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetDeployedIngressConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetDeployedIngressConfig#initialize(com.google.api.client.googleapis.serv
+         * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Name of the deployed configuration for the environment group in the following format:
+       *        'organizations/{org}/envgroups/{envgroup}/deployedIngressConfig'.
+         * @since 1.13
+         */
+        protected GetDeployedIngressConfig(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EnvironmentGroupConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/envgroups/[^/]+/deployedIngressConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetDeployedIngressConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetDeployedIngressConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setAccessToken(java.lang.String accessToken) {
+          return (GetDeployedIngressConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setAlt(java.lang.String alt) {
+          return (GetDeployedIngressConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setCallback(java.lang.String callback) {
+          return (GetDeployedIngressConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setFields(java.lang.String fields) {
+          return (GetDeployedIngressConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setKey(java.lang.String key) {
+          return (GetDeployedIngressConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetDeployedIngressConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetDeployedIngressConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetDeployedIngressConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setUploadType(java.lang.String uploadType) {
+          return (GetDeployedIngressConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetDeployedIngressConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetDeployedIngressConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the deployed configuration for the environment group in the following
+         * format: 'organizations/{org}/envgroups/{envgroup}/deployedIngressConfig'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the deployed configuration for the environment group in the following format:
+       'organizations/{org}/envgroups/{envgroup}/deployedIngressConfig'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the deployed configuration for the environment group in the following
+         * format: 'organizations/{org}/envgroups/{envgroup}/deployedIngressConfig'.
+         */
+        public GetDeployedIngressConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/envgroups/[^/]+/deployedIngressConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * When set to FULL, additional details about the specific deployments receiving traffic
+         * will be included in the IngressConfig response's RoutingRules.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** When set to FULL, additional details about the specific deployments receiving traffic will be
+       included in the IngressConfig response's RoutingRules.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * When set to FULL, additional details about the specific deployments receiving traffic
+         * will be included in the IngressConfig response's RoutingRules.
+         */
+        public GetDeployedIngressConfig setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public GetDeployedIngressConfig set(String parameterName, Object value) {
+          return (GetDeployedIngressConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists all environment groups.
        *
        * Create a request for the method "envgroups.list".

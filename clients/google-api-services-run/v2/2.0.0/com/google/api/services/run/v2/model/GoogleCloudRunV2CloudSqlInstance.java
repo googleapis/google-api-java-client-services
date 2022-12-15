@@ -17,7 +17,9 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Represents a specific Cloud SQL instance.
+ * Represents a set of Cloud SQL instances. Each one will be available under /cloudsql/[instance].
+ * Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect
+ * Cloud SQL and Cloud Run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

@@ -20,7 +20,7 @@ package com.google.api.services.firebasedatabase.v1beta;
  * Service definition for FirebaseRealtimeDatabase (v1beta).
  *
  * <p>
- * The Firebase Realtime Database Management API enables programmatic provisioning and management of Realtime Database instances.
+ * The Firebase Realtime Database API enables programmatic provisioning and management of Realtime Database instances.
  * </p>
  *
  * <p>

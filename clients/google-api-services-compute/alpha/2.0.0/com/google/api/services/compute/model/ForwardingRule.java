@@ -387,11 +387,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must be in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For more information, see the "Target" column in [Port
+   * appropriate to the target object. - For load balancers, see the "Target" column in [Port
    * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). For Private Service Connect forwarding rules that forward
-   * traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc - APIs that
-   * support VPC Service Controls. - all-apis - All supported Google APIs.
+   * concepts#ip_address_specifications). - For Private Service Connect forwarding rules that
+   * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
+   * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
+   * Service Connect forwarding rules that forward traffic to managed services, the target must be a
+   * service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1271,11 +1273,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must be in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For more information, see the "Target" column in [Port
+   * appropriate to the target object. - For load balancers, see the "Target" column in [Port
    * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). For Private Service Connect forwarding rules that forward
-   * traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc - APIs that
-   * support VPC Service Controls. - all-apis - All supported Google APIs.
+   * concepts#ip_address_specifications). - For Private Service Connect forwarding rules that
+   * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
+   * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
+   * Service Connect forwarding rules that forward traffic to managed services, the target must be a
+   * service attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -1286,11 +1290,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must be in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For more information, see the "Target" column in [Port
+   * appropriate to the target object. - For load balancers, see the "Target" column in [Port
    * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). For Private Service Connect forwarding rules that forward
-   * traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc - APIs that
-   * support VPC Service Controls. - all-apis - All supported Google APIs.
+   * concepts#ip_address_specifications). - For Private Service Connect forwarding rules that
+   * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
+   * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
+   * Service Connect forwarding rules that forward traffic to managed services, the target must be a
+   * service attachment.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

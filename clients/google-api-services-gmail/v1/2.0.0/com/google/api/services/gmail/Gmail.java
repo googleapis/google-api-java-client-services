@@ -6461,6 +6461,1805 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * An accessor for creating requests from the Cse collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Gmail gmail = new Gmail(...);}
+       *   {@code Gmail.Cse.List request = gmail.cse().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Cse cse() {
+        return new Cse();
+      }
+
+      /**
+       * The "cse" collection of methods.
+       */
+      public class Cse {
+
+        /**
+         * An accessor for creating requests from the Identities collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Gmail gmail = new Gmail(...);}
+         *   {@code Gmail.Identities.List request = gmail.identities().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Identities identities() {
+          return new Identities();
+        }
+
+        /**
+         * The "identities" collection of methods.
+         */
+        public class Identities {
+
+          /**
+           * Creates and configures a client-side encryption identity that's authorized to send mail from the
+           * user account. Google publishes the S/MIME certificate to a shared domain-wide directory so that
+           * people within a Google Workspace organization can encrypt and send mail to the identity.
+           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "identities.create".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param content the {@link com.google.api.services.gmail.model.CseIdentity}
+           * @return the request
+           */
+          public Create create(java.lang.String userId, com.google.api.services.gmail.model.CseIdentity content) throws java.io.IOException {
+            Create result = new Create(userId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends GmailRequest<com.google.api.services.gmail.model.CseIdentity> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities";
+
+            /**
+             * Creates and configures a client-side encryption identity that's authorized to send mail from
+             * the user account. Google publishes the S/MIME certificate to a shared domain-wide directory so
+             * that people within a Google Workspace organization can encrypt and send mail to the identity.
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "identities.create".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param content the {@link com.google.api.services.gmail.model.CseIdentity}
+             * @since 1.13
+             */
+            protected Create(java.lang.String userId, com.google.api.services.gmail.model.CseIdentity content) {
+              super(Gmail.this, "POST", REST_PATH, content, com.google.api.services.gmail.model.CseIdentity.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Create setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a client-side encryption identity. The authenticated user can no longer use the identity
+           * to send encrypted messages. You cannot restore the identity after you delete it. Instead, use the
+           * CreateCseIdentity method to create another identity with the same configuration.
+           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "identities.delete".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param cseEmailAddress The primary email address associated with the client-side encryption identity configuration that's
+           *        removed.
+           * @return the request
+           */
+          public Delete delete(java.lang.String userId, java.lang.String cseEmailAddress) throws java.io.IOException {
+            Delete result = new Delete(userId, cseEmailAddress);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends GmailRequest<Void> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities/{cseEmailAddress}";
+
+            /**
+             * Deletes a client-side encryption identity. The authenticated user can no longer use the
+             * identity to send encrypted messages. You cannot restore the identity after you delete it.
+             * Instead, use the CreateCseIdentity method to create another identity with the same
+             * configuration. [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "identities.delete".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param cseEmailAddress The primary email address associated with the client-side encryption identity configuration that's
+           *        removed.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String userId, java.lang.String cseEmailAddress) {
+              super(Gmail.this, "DELETE", REST_PATH, null, Void.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.cseEmailAddress = com.google.api.client.util.Preconditions.checkNotNull(cseEmailAddress, "Required parameter cseEmailAddress must be specified.");
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Delete setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /**
+             * The primary email address associated with the client-side encryption identity
+             * configuration that's removed.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String cseEmailAddress;
+
+            /** The primary email address associated with the client-side encryption identity configuration that's
+           removed.
+             */
+            public java.lang.String getCseEmailAddress() {
+              return cseEmailAddress;
+            }
+
+            /**
+             * The primary email address associated with the client-side encryption identity
+             * configuration that's removed.
+             */
+            public Delete setCseEmailAddress(java.lang.String cseEmailAddress) {
+              this.cseEmailAddress = cseEmailAddress;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves a client-side encryption identity configuration.
+           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "identities.get".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param cseEmailAddress The primary email address associated with the client-side encryption identity configuration that's
+           *        retrieved.
+           * @return the request
+           */
+          public Get get(java.lang.String userId, java.lang.String cseEmailAddress) throws java.io.IOException {
+            Get result = new Get(userId, cseEmailAddress);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends GmailRequest<com.google.api.services.gmail.model.CseIdentity> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities/{cseEmailAddress}";
+
+            /**
+             * Retrieves a client-side encryption identity configuration.
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "identities.get".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param cseEmailAddress The primary email address associated with the client-side encryption identity configuration that's
+           *        retrieved.
+             * @since 1.13
+             */
+            protected Get(java.lang.String userId, java.lang.String cseEmailAddress) {
+              super(Gmail.this, "GET", REST_PATH, null, com.google.api.services.gmail.model.CseIdentity.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.cseEmailAddress = com.google.api.client.util.Preconditions.checkNotNull(cseEmailAddress, "Required parameter cseEmailAddress must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Get setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /**
+             * The primary email address associated with the client-side encryption identity
+             * configuration that's retrieved.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String cseEmailAddress;
+
+            /** The primary email address associated with the client-side encryption identity configuration that's
+           retrieved.
+             */
+            public java.lang.String getCseEmailAddress() {
+              return cseEmailAddress;
+            }
+
+            /**
+             * The primary email address associated with the client-side encryption identity
+             * configuration that's retrieved.
+             */
+            public Get setCseEmailAddress(java.lang.String cseEmailAddress) {
+              this.cseEmailAddress = cseEmailAddress;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the client-side encrypted identities for an authenticated user.
+           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "identities.list".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @return the request
+           */
+          public List list(java.lang.String userId) throws java.io.IOException {
+            List result = new List(userId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends GmailRequest<com.google.api.services.gmail.model.ListCseIdentitiesResponse> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities";
+
+            /**
+             * Lists the client-side encrypted identities for an authenticated user.
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "identities.list".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @since 1.13
+             */
+            protected List(java.lang.String userId) {
+              super(Gmail.this, "GET", REST_PATH, null, com.google.api.services.gmail.model.ListCseIdentitiesResponse.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public List setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /**
+             * The number of identities to return. If not provided, the page size will default to 20
+             * entries.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The number of identities to return. If not provided, the page size will default to 20 entries.
+           [default: 20]
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The number of identities to return. If not provided, the page size will default to 20
+             * entries.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Pagination token indicating which page of identities to return. If the token is not
+             * supplied, then the API will return the first page of results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Pagination token indicating which page of identities to return. If the token is not supplied, then
+           the API will return the first page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Pagination token indicating which page of identities to return. If the token is not
+             * supplied, then the API will return the first page of results.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Associates a different key pair with an existing client-side encryption identity. The updated key
+           * pair must validate against Google's [S/MIME certificate
+           * profiles](https://support.google.com/a/answer/7300887?hl=en).
+           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "identities.patch".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param emailAddress The email address of the client-side encryption identity to update.
+           * @param content the {@link com.google.api.services.gmail.model.CseIdentity}
+           * @return the request
+           */
+          public Patch patch(java.lang.String userId, java.lang.String emailAddress, com.google.api.services.gmail.model.CseIdentity content) throws java.io.IOException {
+            Patch result = new Patch(userId, emailAddress, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends GmailRequest<com.google.api.services.gmail.model.CseIdentity> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities/{emailAddress}";
+
+            /**
+             * Associates a different key pair with an existing client-side encryption identity. The updated
+             * key pair must validate against Google's [S/MIME certificate
+             * profiles](https://support.google.com/a/answer/7300887?hl=en).
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "identities.patch".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param emailAddress The email address of the client-side encryption identity to update.
+             * @param content the {@link com.google.api.services.gmail.model.CseIdentity}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String userId, java.lang.String emailAddress, com.google.api.services.gmail.model.CseIdentity content) {
+              super(Gmail.this, "PATCH", REST_PATH, content, com.google.api.services.gmail.model.CseIdentity.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.emailAddress = com.google.api.client.util.Preconditions.checkNotNull(emailAddress, "Required parameter emailAddress must be specified.");
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Patch setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /** The email address of the client-side encryption identity to update. */
+            @com.google.api.client.util.Key
+            private java.lang.String emailAddress;
+
+            /** The email address of the client-side encryption identity to update.
+             */
+            public java.lang.String getEmailAddress() {
+              return emailAddress;
+            }
+
+            /** The email address of the client-side encryption identity to update. */
+            public Patch setEmailAddress(java.lang.String emailAddress) {
+              this.emailAddress = emailAddress;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Keypairs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Gmail gmail = new Gmail(...);}
+         *   {@code Gmail.Keypairs.List request = gmail.keypairs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Keypairs keypairs() {
+          return new Keypairs();
+        }
+
+        /**
+         * The "keypairs" collection of methods.
+         */
+        public class Keypairs {
+
+          /**
+           * Creates and uploads a client-side encryption S/MIME public key certificate chain and private key
+           * metadata for the authenticated user. [Beta](https://workspace.google.com/terms/service-
+           * terms/index.html).
+           *
+           * Create a request for the method "keypairs.create".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param content the {@link com.google.api.services.gmail.model.CseKeyPair}
+           * @return the request
+           */
+          public Create create(java.lang.String userId, com.google.api.services.gmail.model.CseKeyPair content) throws java.io.IOException {
+            Create result = new Create(userId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends GmailRequest<com.google.api.services.gmail.model.CseKeyPair> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs";
+
+            /**
+             * Creates and uploads a client-side encryption S/MIME public key certificate chain and private
+             * key metadata for the authenticated user. [Beta](https://workspace.google.com/terms/service-
+             * terms/index.html).
+             *
+             * Create a request for the method "keypairs.create".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param content the {@link com.google.api.services.gmail.model.CseKeyPair}
+             * @since 1.13
+             */
+            protected Create(java.lang.String userId, com.google.api.services.gmail.model.CseKeyPair content) {
+              super(Gmail.this, "POST", REST_PATH, content, com.google.api.services.gmail.model.CseKeyPair.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Create setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Turns off a client-side encryption key pair. The authenticated user can no longer use the key
+           * pair to decrypt incoming CSE message texts or sign outgoing CSE mail. To regain access, use the
+           * EnableCseKeyPair to turn on the key pair. After 30 days, you can permanently delete the key pair
+           * by using the ObliterateCseKeyPair method. [Beta](https://workspace.google.com/terms/service-
+           * terms/index.html).
+           *
+           * Create a request for the method "keypairs.disable".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param keyPairId The identifier of the key pair to turn off.
+           * @param content the {@link com.google.api.services.gmail.model.DisableCseKeyPairRequest}
+           * @return the request
+           */
+          public Disable disable(java.lang.String userId, java.lang.String keyPairId, com.google.api.services.gmail.model.DisableCseKeyPairRequest content) throws java.io.IOException {
+            Disable result = new Disable(userId, keyPairId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Disable extends GmailRequest<com.google.api.services.gmail.model.CseKeyPair> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs/{keyPairId}:disable";
+
+            /**
+             * Turns off a client-side encryption key pair. The authenticated user can no longer use the key
+             * pair to decrypt incoming CSE message texts or sign outgoing CSE mail. To regain access, use the
+             * EnableCseKeyPair to turn on the key pair. After 30 days, you can permanently delete the key
+             * pair by using the ObliterateCseKeyPair method. [Beta](https://workspace.google.com/terms
+             * /service-terms/index.html).
+             *
+             * Create a request for the method "keypairs.disable".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Disable#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param keyPairId The identifier of the key pair to turn off.
+             * @param content the {@link com.google.api.services.gmail.model.DisableCseKeyPairRequest}
+             * @since 1.13
+             */
+            protected Disable(java.lang.String userId, java.lang.String keyPairId, com.google.api.services.gmail.model.DisableCseKeyPairRequest content) {
+              super(Gmail.this, "POST", REST_PATH, content, com.google.api.services.gmail.model.CseKeyPair.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.keyPairId = com.google.api.client.util.Preconditions.checkNotNull(keyPairId, "Required parameter keyPairId must be specified.");
+            }
+
+            @Override
+            public Disable set$Xgafv(java.lang.String $Xgafv) {
+              return (Disable) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Disable setAccessToken(java.lang.String accessToken) {
+              return (Disable) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Disable setAlt(java.lang.String alt) {
+              return (Disable) super.setAlt(alt);
+            }
+
+            @Override
+            public Disable setCallback(java.lang.String callback) {
+              return (Disable) super.setCallback(callback);
+            }
+
+            @Override
+            public Disable setFields(java.lang.String fields) {
+              return (Disable) super.setFields(fields);
+            }
+
+            @Override
+            public Disable setKey(java.lang.String key) {
+              return (Disable) super.setKey(key);
+            }
+
+            @Override
+            public Disable setOauthToken(java.lang.String oauthToken) {
+              return (Disable) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Disable) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Disable setQuotaUser(java.lang.String quotaUser) {
+              return (Disable) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Disable setUploadType(java.lang.String uploadType) {
+              return (Disable) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Disable) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Disable setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /** The identifier of the key pair to turn off. */
+            @com.google.api.client.util.Key
+            private java.lang.String keyPairId;
+
+            /** The identifier of the key pair to turn off.
+             */
+            public java.lang.String getKeyPairId() {
+              return keyPairId;
+            }
+
+            /** The identifier of the key pair to turn off. */
+            public Disable setKeyPairId(java.lang.String keyPairId) {
+              this.keyPairId = keyPairId;
+              return this;
+            }
+
+            @Override
+            public Disable set(String parameterName, Object value) {
+              return (Disable) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Turns on a client-side encryption key pair that was turned off. The key pair becomes active again
+           * for any associated client-side encryption identities. [Beta](https://workspace.google.com/terms
+           * /service-terms/index.html).
+           *
+           * Create a request for the method "keypairs.enable".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param keyPairId The identifier of the key pair to turn on.
+           * @param content the {@link com.google.api.services.gmail.model.EnableCseKeyPairRequest}
+           * @return the request
+           */
+          public Enable enable(java.lang.String userId, java.lang.String keyPairId, com.google.api.services.gmail.model.EnableCseKeyPairRequest content) throws java.io.IOException {
+            Enable result = new Enable(userId, keyPairId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Enable extends GmailRequest<com.google.api.services.gmail.model.CseKeyPair> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs/{keyPairId}:enable";
+
+            /**
+             * Turns on a client-side encryption key pair that was turned off. The key pair becomes active
+             * again for any associated client-side encryption identities.
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "keypairs.enable".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Enable#execute()} method to invoke the remote operation. <p> {@link
+             * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param keyPairId The identifier of the key pair to turn on.
+             * @param content the {@link com.google.api.services.gmail.model.EnableCseKeyPairRequest}
+             * @since 1.13
+             */
+            protected Enable(java.lang.String userId, java.lang.String keyPairId, com.google.api.services.gmail.model.EnableCseKeyPairRequest content) {
+              super(Gmail.this, "POST", REST_PATH, content, com.google.api.services.gmail.model.CseKeyPair.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.keyPairId = com.google.api.client.util.Preconditions.checkNotNull(keyPairId, "Required parameter keyPairId must be specified.");
+            }
+
+            @Override
+            public Enable set$Xgafv(java.lang.String $Xgafv) {
+              return (Enable) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Enable setAccessToken(java.lang.String accessToken) {
+              return (Enable) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Enable setAlt(java.lang.String alt) {
+              return (Enable) super.setAlt(alt);
+            }
+
+            @Override
+            public Enable setCallback(java.lang.String callback) {
+              return (Enable) super.setCallback(callback);
+            }
+
+            @Override
+            public Enable setFields(java.lang.String fields) {
+              return (Enable) super.setFields(fields);
+            }
+
+            @Override
+            public Enable setKey(java.lang.String key) {
+              return (Enable) super.setKey(key);
+            }
+
+            @Override
+            public Enable setOauthToken(java.lang.String oauthToken) {
+              return (Enable) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Enable) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Enable setQuotaUser(java.lang.String quotaUser) {
+              return (Enable) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Enable setUploadType(java.lang.String uploadType) {
+              return (Enable) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Enable) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Enable setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /** The identifier of the key pair to turn on. */
+            @com.google.api.client.util.Key
+            private java.lang.String keyPairId;
+
+            /** The identifier of the key pair to turn on.
+             */
+            public java.lang.String getKeyPairId() {
+              return keyPairId;
+            }
+
+            /** The identifier of the key pair to turn on. */
+            public Enable setKeyPairId(java.lang.String keyPairId) {
+              this.keyPairId = keyPairId;
+              return this;
+            }
+
+            @Override
+            public Enable set(String parameterName, Object value) {
+              return (Enable) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves an existing client-side encryption key pair. [Beta](https://workspace.google.com/terms
+           * /service-terms/index.html).
+           *
+           * Create a request for the method "keypairs.get".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param keyPairId The identifier of the key pair to retrieve.
+           * @return the request
+           */
+          public Get get(java.lang.String userId, java.lang.String keyPairId) throws java.io.IOException {
+            Get result = new Get(userId, keyPairId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends GmailRequest<com.google.api.services.gmail.model.CseKeyPair> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs/{keyPairId}";
+
+            /**
+             * Retrieves an existing client-side encryption key pair.
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "keypairs.get".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param keyPairId The identifier of the key pair to retrieve.
+             * @since 1.13
+             */
+            protected Get(java.lang.String userId, java.lang.String keyPairId) {
+              super(Gmail.this, "GET", REST_PATH, null, com.google.api.services.gmail.model.CseKeyPair.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.keyPairId = com.google.api.client.util.Preconditions.checkNotNull(keyPairId, "Required parameter keyPairId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Get setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /** The identifier of the key pair to retrieve. */
+            @com.google.api.client.util.Key
+            private java.lang.String keyPairId;
+
+            /** The identifier of the key pair to retrieve.
+             */
+            public java.lang.String getKeyPairId() {
+              return keyPairId;
+            }
+
+            /** The identifier of the key pair to retrieve. */
+            public Get setKeyPairId(java.lang.String keyPairId) {
+              this.keyPairId = keyPairId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists client-side encryption key pairs for an authenticated user.
+           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "keypairs.list".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @return the request
+           */
+          public List list(java.lang.String userId) throws java.io.IOException {
+            List result = new List(userId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends GmailRequest<com.google.api.services.gmail.model.ListCseKeyPairsResponse> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs";
+
+            /**
+             * Lists client-side encryption key pairs for an authenticated user.
+             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             *
+             * Create a request for the method "keypairs.list".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @since 1.13
+             */
+            protected List(java.lang.String userId) {
+              super(Gmail.this, "GET", REST_PATH, null, com.google.api.services.gmail.model.ListCseKeyPairsResponse.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public List setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /**
+             * The number of key pairs to return. If not provided, the page size will default to 20
+             * entries.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The number of key pairs to return. If not provided, the page size will default to 20 entries.
+           [default: 20]
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The number of key pairs to return. If not provided, the page size will default to 20
+             * entries.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Pagination token indicating which page of key pairs to return. If the token is not
+             * supplied, then the API will return the first page of results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Pagination token indicating which page of key pairs to return. If the token is not supplied, then
+           the API will return the first page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Pagination token indicating which page of key pairs to return. If the token is not
+             * supplied, then the API will return the first page of results.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a client-side encryption key pair permanently and immediately. You can only permanently
+           * delete key pairs that have been turned off for more than 30 days. To turn off a key pair, use the
+           * DisableCseKeyPair method. Gmail can't restore or decrypt any messages that were encrypted by an
+           * obliterated key. Authenticated users and Google Workspace administrators lose access to reading
+           * the encrypted messages. [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           *
+           * Create a request for the method "keypairs.obliterate".
+           *
+           * This request holds the parameters needed by the gmail server.  After setting any optional
+           * parameters, call the {@link Obliterate#execute()} method to invoke the remote operation.
+           *
+           * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+           * @param keyPairId The identifier of the key pair to obliterate.
+           * @param content the {@link com.google.api.services.gmail.model.ObliterateCseKeyPairRequest}
+           * @return the request
+           */
+          public Obliterate obliterate(java.lang.String userId, java.lang.String keyPairId, com.google.api.services.gmail.model.ObliterateCseKeyPairRequest content) throws java.io.IOException {
+            Obliterate result = new Obliterate(userId, keyPairId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Obliterate extends GmailRequest<Void> {
+
+            private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs/{keyPairId}:obliterate";
+
+            /**
+             * Deletes a client-side encryption key pair permanently and immediately. You can only permanently
+             * delete key pairs that have been turned off for more than 30 days. To turn off a key pair, use
+             * the DisableCseKeyPair method. Gmail can't restore or decrypt any messages that were encrypted
+             * by an obliterated key. Authenticated users and Google Workspace administrators lose access to
+             * reading the encrypted messages. [Beta](https://workspace.google.com/terms/service-
+             * terms/index.html).
+             *
+             * Create a request for the method "keypairs.obliterate".
+             *
+             * This request holds the parameters needed by the the gmail server.  After setting any optional
+             * parameters, call the {@link Obliterate#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Obliterate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param userId The requester's primary email address. To indicate the authenticated user, you can use the special
+           *        value `me`.
+          [default: me]
+             * @param keyPairId The identifier of the key pair to obliterate.
+             * @param content the {@link com.google.api.services.gmail.model.ObliterateCseKeyPairRequest}
+             * @since 1.13
+             */
+            protected Obliterate(java.lang.String userId, java.lang.String keyPairId, com.google.api.services.gmail.model.ObliterateCseKeyPairRequest content) {
+              super(Gmail.this, "POST", REST_PATH, content, Void.class);
+              this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+              this.keyPairId = com.google.api.client.util.Preconditions.checkNotNull(keyPairId, "Required parameter keyPairId must be specified.");
+            }
+
+            @Override
+            public Obliterate set$Xgafv(java.lang.String $Xgafv) {
+              return (Obliterate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Obliterate setAccessToken(java.lang.String accessToken) {
+              return (Obliterate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Obliterate setAlt(java.lang.String alt) {
+              return (Obliterate) super.setAlt(alt);
+            }
+
+            @Override
+            public Obliterate setCallback(java.lang.String callback) {
+              return (Obliterate) super.setCallback(callback);
+            }
+
+            @Override
+            public Obliterate setFields(java.lang.String fields) {
+              return (Obliterate) super.setFields(fields);
+            }
+
+            @Override
+            public Obliterate setKey(java.lang.String key) {
+              return (Obliterate) super.setKey(key);
+            }
+
+            @Override
+            public Obliterate setOauthToken(java.lang.String oauthToken) {
+              return (Obliterate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Obliterate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Obliterate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Obliterate setQuotaUser(java.lang.String quotaUser) {
+              return (Obliterate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Obliterate setUploadType(java.lang.String uploadType) {
+              return (Obliterate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Obliterate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Obliterate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String userId;
+
+            /** The requester's primary email address. To indicate the authenticated user, you can use the special
+           value `me`. [default: me]
+             */
+            public java.lang.String getUserId() {
+              return userId;
+            }
+
+            /**
+             * The requester's primary email address. To indicate the authenticated user, you can
+             * use the special value `me`.
+             */
+            public Obliterate setUserId(java.lang.String userId) {
+              this.userId = userId;
+              return this;
+            }
+
+            /** The identifier of the key pair to obliterate. */
+            @com.google.api.client.util.Key
+            private java.lang.String keyPairId;
+
+            /** The identifier of the key pair to obliterate.
+             */
+            public java.lang.String getKeyPairId() {
+              return keyPairId;
+            }
+
+            /** The identifier of the key pair to obliterate. */
+            public Obliterate setKeyPairId(java.lang.String keyPairId) {
+              this.keyPairId = keyPairId;
+              return this;
+            }
+
+            @Override
+            public Obliterate set(String parameterName, Object value) {
+              return (Obliterate) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Delegates collection.
        *
        * <p>The typical use is:</p>

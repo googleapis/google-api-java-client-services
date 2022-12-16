@@ -26,6 +26,9 @@ public class HangoutsChatScopes {
   /** View, add, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
+  /** View members in Google Chat conversations.. */
+  public static final String CHAT_MEMBERSHIPS_READONLY = "https://www.googleapis.com/auth/chat.memberships.readonly";
+
   /** View, compose, send, update, and delete messages, and add, view, and delete reactions to messages.. */
   public static final String CHAT_MESSAGES = "https://www.googleapis.com/auth/chat.messages";
 
@@ -49,6 +52,7 @@ public class HangoutsChatScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CHAT_MEMBERSHIPS);
+    set.add(CHAT_MEMBERSHIPS_READONLY);
     set.add(CHAT_MESSAGES);
     set.add(CHAT_MESSAGES_CREATE);
     set.add(CHAT_MESSAGES_READONLY);

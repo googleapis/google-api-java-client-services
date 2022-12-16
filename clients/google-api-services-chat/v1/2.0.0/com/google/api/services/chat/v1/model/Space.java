@@ -31,7 +31,9 @@ package com.google.api.services.chat.v1.model;
 public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
-   * The space's display name. For direct messages between humans, this field might be empty.
+   * The space's display name. Required when [creating a
+   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
+   * messages, this field may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +84,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * The space's display name. For direct messages between humans, this field might be empty.
+   * The space's display name. Required when [creating a
+   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
+   * messages, this field may be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -90,7 +94,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space's display name. For direct messages between humans, this field might be empty.
+   * The space's display name. Required when [creating a
+   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
+   * messages, this field may be empty.
    * @param displayName displayName or {@code null} for none
    */
   public Space setDisplayName(java.lang.String displayName) {

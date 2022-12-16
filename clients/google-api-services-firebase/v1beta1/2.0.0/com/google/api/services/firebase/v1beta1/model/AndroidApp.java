@@ -65,6 +65,16 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update requests to ensure the client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154#declarative-friendly-resources). This etag is strongly
+   * validated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * The resource name of the AndroidApp, in the format: projects/
    * PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
    * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
@@ -189,6 +199,29 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
    */
   public AndroidApp setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update requests to ensure the client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154#declarative-friendly-resources). This etag is strongly
+   * validated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update requests to ensure the client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154#declarative-friendly-resources). This etag is strongly
+   * validated.
+   * @param etag etag or {@code null} for none
+   */
+  public AndroidApp setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

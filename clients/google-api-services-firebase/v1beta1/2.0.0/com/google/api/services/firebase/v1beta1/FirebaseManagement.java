@@ -2091,65 +2091,67 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use
+       * A query string compatible with Google's [AIP-160 standard](https://google.aip.dev/160). Use
        * any of the following fields in a query: *
-       * [`app_id`](../projects.apps#FirebaseAppInfo.FIELDS.app_id) *
-       * [`namespace`](../projects.apps#FirebaseAppInfo.FIELDS.namespace) *
-       * [`platform`](../projects.apps#FirebaseAppInfo.FIELDS.platform) We also support the
-       * following "virtual" fields (fields which are not actually part of the returned resource
-       * object, but can be queried as if they are pre-populated with specific values): *
-       * `sha1_hash` or `sha1_hashes`: This field is considered to be a repeated `string` field,
-       * populated with the list of all SHA-1 certificate fingerprints registered with the app. This
-       * list is empty if the app is not an Android app. * `sha256_hash` or `sha256_hashes`: This
-       * field is considered to be a repeated `string` field, populated with the list of all SHA-256
-       * certificate fingerprints registered with the app. This list is empty if the app is not an
-       * Android app. * `app_store_id`: This field is considered to be a singular `string` field,
-       * populated with the Apple App Store ID registered with the app. This field is empty if the
-       * app is not an iOS app. * `team_id`: This field is considered to be a singular `string`
-       * field, populated with the Apple team ID registered with the app. This field is empty if the
-       * app is not an iOS app.
+       * [`app_id`](../projects/searchApps#FirebaseAppInfo.FIELDS.app_id) *
+       * [`namespace`](../projects/searchApps#FirebaseAppInfo.FIELDS.namespace) *
+       * [`platform`](../projects/searchApps#FirebaseAppInfo.FIELDS.platform) This query also
+       * supports the following "virtual" fields. These are fields which are not actually part of
+       * the returned resource object, but they can be queried as if they are pre-populated with
+       * specific values. * `sha1_hash` or `sha1_hashes`: This field is considered to be a
+       * _repeated_ `string` field, populated with the list of all SHA-1 certificate fingerprints
+       * registered with the AndroidApp. This list is empty if the App is not an `AndroidApp`. *
+       * `sha256_hash` or `sha256_hashes`: This field is considered to be a _repeated_ `string`
+       * field, populated with the list of all SHA-256 certificate fingerprints registered with the
+       * AndroidApp. This list is empty if the App is not an `AndroidApp`. * `app_store_id`: This
+       * field is considered to be a _singular_ `string` field, populated with the Apple App Store
+       * ID registered with the IosApp. This field is empty if the App is not an `IosApp`. *
+       * `team_id`: This field is considered to be a _singular_ `string` field, populated with the
+       * Apple team ID registered with the IosApp. This field is empty if the App is not an
+       * `IosApp`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use any of
-     the following fields in a query: * [`app_id`](../projects.apps#FirebaseAppInfo.FIELDS.app_id) *
-     [`namespace`](../projects.apps#FirebaseAppInfo.FIELDS.namespace) *
-     [`platform`](../projects.apps#FirebaseAppInfo.FIELDS.platform) We also support the following
-     "virtual" fields (fields which are not actually part of the returned resource object, but can be
-     queried as if they are pre-populated with specific values): * `sha1_hash` or `sha1_hashes`: This
-     field is considered to be a repeated `string` field, populated with the list of all SHA-1
-     certificate fingerprints registered with the app. This list is empty if the app is not an Android
-     app. * `sha256_hash` or `sha256_hashes`: This field is considered to be a repeated `string` field,
-     populated with the list of all SHA-256 certificate fingerprints registered with the app. This list
-     is empty if the app is not an Android app. * `app_store_id`: This field is considered to be a
-     singular `string` field, populated with the Apple App Store ID registered with the app. This field
-     is empty if the app is not an iOS app. * `team_id`: This field is considered to be a singular
-     `string` field, populated with the Apple team ID registered with the app. This field is empty if
-     the app is not an iOS app.
+      /** A query string compatible with Google's [AIP-160 standard](https://google.aip.dev/160). Use any of
+     the following fields in a query: * [`app_id`](../projects/searchApps#FirebaseAppInfo.FIELDS.app_id)
+     * [`namespace`](../projects/searchApps#FirebaseAppInfo.FIELDS.namespace) *
+     [`platform`](../projects/searchApps#FirebaseAppInfo.FIELDS.platform) This query also supports the
+     following "virtual" fields. These are fields which are not actually part of the returned resource
+     object, but they can be queried as if they are pre-populated with specific values. * `sha1_hash` or
+     `sha1_hashes`: This field is considered to be a _repeated_ `string` field, populated with the list
+     of all SHA-1 certificate fingerprints registered with the AndroidApp. This list is empty if the App
+     is not an `AndroidApp`. * `sha256_hash` or `sha256_hashes`: This field is considered to be a
+     _repeated_ `string` field, populated with the list of all SHA-256 certificate fingerprints
+     registered with the AndroidApp. This list is empty if the App is not an `AndroidApp`. *
+     `app_store_id`: This field is considered to be a _singular_ `string` field, populated with the
+     Apple App Store ID registered with the IosApp. This field is empty if the App is not an `IosApp`. *
+     `team_id`: This field is considered to be a _singular_ `string` field, populated with the Apple
+     team ID registered with the IosApp. This field is empty if the App is not an `IosApp`.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use
+       * A query string compatible with Google's [AIP-160 standard](https://google.aip.dev/160). Use
        * any of the following fields in a query: *
-       * [`app_id`](../projects.apps#FirebaseAppInfo.FIELDS.app_id) *
-       * [`namespace`](../projects.apps#FirebaseAppInfo.FIELDS.namespace) *
-       * [`platform`](../projects.apps#FirebaseAppInfo.FIELDS.platform) We also support the
-       * following "virtual" fields (fields which are not actually part of the returned resource
-       * object, but can be queried as if they are pre-populated with specific values): *
-       * `sha1_hash` or `sha1_hashes`: This field is considered to be a repeated `string` field,
-       * populated with the list of all SHA-1 certificate fingerprints registered with the app. This
-       * list is empty if the app is not an Android app. * `sha256_hash` or `sha256_hashes`: This
-       * field is considered to be a repeated `string` field, populated with the list of all SHA-256
-       * certificate fingerprints registered with the app. This list is empty if the app is not an
-       * Android app. * `app_store_id`: This field is considered to be a singular `string` field,
-       * populated with the Apple App Store ID registered with the app. This field is empty if the
-       * app is not an iOS app. * `team_id`: This field is considered to be a singular `string`
-       * field, populated with the Apple team ID registered with the app. This field is empty if the
-       * app is not an iOS app.
+       * [`app_id`](../projects/searchApps#FirebaseAppInfo.FIELDS.app_id) *
+       * [`namespace`](../projects/searchApps#FirebaseAppInfo.FIELDS.namespace) *
+       * [`platform`](../projects/searchApps#FirebaseAppInfo.FIELDS.platform) This query also
+       * supports the following "virtual" fields. These are fields which are not actually part of
+       * the returned resource object, but they can be queried as if they are pre-populated with
+       * specific values. * `sha1_hash` or `sha1_hashes`: This field is considered to be a
+       * _repeated_ `string` field, populated with the list of all SHA-1 certificate fingerprints
+       * registered with the AndroidApp. This list is empty if the App is not an `AndroidApp`. *
+       * `sha256_hash` or `sha256_hashes`: This field is considered to be a _repeated_ `string`
+       * field, populated with the list of all SHA-256 certificate fingerprints registered with the
+       * AndroidApp. This list is empty if the App is not an `AndroidApp`. * `app_store_id`: This
+       * field is considered to be a _singular_ `string` field, populated with the Apple App Store
+       * ID registered with the IosApp. This field is empty if the App is not an `IosApp`. *
+       * `team_id`: This field is considered to be a _singular_ `string` field, populated with the
+       * Apple team ID registered with the IosApp. This field is empty if the App is not an
+       * `IosApp`.
        */
       public SearchApps setFilter(java.lang.String filter) {
         this.filter = filter;

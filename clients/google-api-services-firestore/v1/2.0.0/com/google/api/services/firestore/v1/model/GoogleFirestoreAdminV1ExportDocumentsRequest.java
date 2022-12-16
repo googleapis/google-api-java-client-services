@@ -37,16 +37,6 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
   private java.util.List<java.lang.String> collectionIds;
 
   /**
-   * An empty list represents all namespaces. This is the preferred usage for databases that don't
-   * use namespaces. An empty string element represents the default namespace. This should be used
-   * if the database has data in non-default namespaces, but doesn't want to include them. Each
-   * namespace in this list must be unique.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> namespaceIds;
-
-  /**
    * The output URI. Currently only supports Google Cloud Storage URIs of the form:
    * `gs://BUCKET_NAME[/NAMESPACE_PATH]`, where `BUCKET_NAME` is the name of the Google Cloud
    * Storage bucket and `NAMESPACE_PATH` is an optional Google Cloud Storage namespace path. When
@@ -72,29 +62,6 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
    */
   public GoogleFirestoreAdminV1ExportDocumentsRequest setCollectionIds(java.util.List<java.lang.String> collectionIds) {
     this.collectionIds = collectionIds;
-    return this;
-  }
-
-  /**
-   * An empty list represents all namespaces. This is the preferred usage for databases that don't
-   * use namespaces. An empty string element represents the default namespace. This should be used
-   * if the database has data in non-default namespaces, but doesn't want to include them. Each
-   * namespace in this list must be unique.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getNamespaceIds() {
-    return namespaceIds;
-  }
-
-  /**
-   * An empty list represents all namespaces. This is the preferred usage for databases that don't
-   * use namespaces. An empty string element represents the default namespace. This should be used
-   * if the database has data in non-default namespaces, but doesn't want to include them. Each
-   * namespace in this list must be unique.
-   * @param namespaceIds namespaceIds or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1ExportDocumentsRequest setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {
-    this.namespaceIds = namespaceIds;
     return this;
   }
 

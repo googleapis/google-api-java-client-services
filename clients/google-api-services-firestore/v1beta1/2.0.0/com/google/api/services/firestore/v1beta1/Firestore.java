@@ -1658,7 +1658,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
          *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         *        This is optional, and when not provided, Firestore will list documents from all
+         *        collections under the provided `parent`.
          * @return the request
          */
         public List list(java.lang.String parent, java.lang.String collectionId) throws java.io.IOException {
@@ -1689,7 +1691,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
          *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+           * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         *        This is optional, and when not provided, Firestore will list documents from all
+         *        collections under the provided `parent`.
            * @since 1.13
            */
           protected List(java.lang.String parent, java.lang.String collectionId) {
@@ -1806,21 +1810,25 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
-           * `messages`.
+           * Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`. This is optional, and when not provided, Firestore will list documents from
+           * all collections under the provided `parent`.
            */
           @com.google.api.client.util.Key
           private java.lang.String collectionId;
 
-          /** Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+          /** Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         This is optional, and when not provided, Firestore will list documents from all collections under
+         the provided `parent`.
            */
           public java.lang.String getCollectionId() {
             return collectionId;
           }
 
           /**
-           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
-           * `messages`.
+           * Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`. This is optional, and when not provided, Firestore will list documents from
+           * all collections under the provided `parent`.
            */
           public List setCollectionId(java.lang.String collectionId) {
             this.collectionId = collectionId;
@@ -1849,114 +1857,139 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The order to sort results by. For example: `priority desc, name`. */
+          /**
+           * Optional. The optional ordering of the documents to return. For example: `priority
+           * desc, __name__ desc`. This mirrors the `ORDER BY` used in Firestore queries but in a
+           * string representation. When absent, documents are ordered based on `__name__ ASC`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** The order to sort results by. For example: `priority desc, name`.
+          /** Optional. The optional ordering of the documents to return. For example: `priority desc, __name__
+         desc`. This mirrors the `ORDER BY` used in Firestore queries but in a string representation. When
+         absent, documents are ordered based on `__name__ ASC`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** The order to sort results by. For example: `priority desc, name`. */
+          /**
+           * Optional. The optional ordering of the documents to return. For example: `priority
+           * desc, __name__ desc`. This mirrors the `ORDER BY` used in Firestore queries but in a
+           * string representation. When absent, documents are ordered based on `__name__ ASC`.
+           */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** The maximum number of documents to return. */
+          /**
+           * Optional. The maximum number of documents to return in a single response. Firestore may
+           * return fewer than this value.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of documents to return.
+          /** Optional. The maximum number of documents to return in a single response. Firestore may return
+         fewer than this value.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of documents to return. */
+          /**
+           * Optional. The maximum number of documents to return in a single response. Firestore may
+           * return fewer than this value.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The `next_page_token` value returned from a previous List request, if any. */
+          /**
+           * Optional. A page token, received from a previous `ListDocuments` response. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters (with the
+           * exception of `page_size`) must match the values set in the request that generated the
+           * page token.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The `next_page_token` value returned from a previous List request, if any.
+          /** Optional. A page token, received from a previous `ListDocuments` response. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters (with the exception of `page_size`) must
+         match the values set in the request that generated the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The `next_page_token` value returned from a previous List request, if any. */
+          /**
+           * Optional. A page token, received from a previous `ListDocuments` response. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters (with the
+           * exception of `page_size`) must match the values set in the request that generated the
+           * page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * Reads documents as they were at the given time. This may not be older than 270 seconds.
-           */
+          /** Perform the read at the provided time. This may not be older than 270 seconds. */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Reads documents as they were at the given time. This may not be older than 270 seconds.
+          /** Perform the read at the provided time. This may not be older than 270 seconds.
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /**
-           * Reads documents as they were at the given time. This may not be older than 270 seconds.
-           */
+          /** Perform the read at the provided time. This may not be older than 270 seconds. */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
           }
 
           /**
-           * If the list should show missing documents. A missing document is a document that does
-           * not exist but has sub-documents. These documents will be returned with a key but will
-           * not have fields, Document.create_time, or Document.update_time set. Requests with
-           * `show_missing` may not specify `where` or `order_by`.
+           * If the list should show missing documents. A document is missing if it does not exist,
+           * but there are sub-documents nested underneath it. When true, such missing documents
+           * will be returned with a key but will not have fields, `create_time`, or `update_time`
+           * set. Requests with `show_missing` may not specify `where` or `order_by`.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean showMissing;
 
-          /** If the list should show missing documents. A missing document is a document that does not exist but
-         has sub-documents. These documents will be returned with a key but will not have fields,
-         Document.create_time, or Document.update_time set. Requests with `show_missing` may not specify
-         `where` or `order_by`.
+          /** If the list should show missing documents. A document is missing if it does not exist, but there
+         are sub-documents nested underneath it. When true, such missing documents will be returned with a
+         key but will not have fields, `create_time`, or `update_time` set. Requests with `show_missing` may
+         not specify `where` or `order_by`.
            */
           public java.lang.Boolean getShowMissing() {
             return showMissing;
           }
 
           /**
-           * If the list should show missing documents. A missing document is a document that does
-           * not exist but has sub-documents. These documents will be returned with a key but will
-           * not have fields, Document.create_time, or Document.update_time set. Requests with
-           * `show_missing` may not specify `where` or `order_by`.
+           * If the list should show missing documents. A document is missing if it does not exist,
+           * but there are sub-documents nested underneath it. When true, such missing documents
+           * will be returned with a key but will not have fields, `create_time`, or `update_time`
+           * set. Requests with `show_missing` may not specify `where` or `order_by`.
            */
           public List setShowMissing(java.lang.Boolean showMissing) {
             this.showMissing = showMissing;
             return this;
           }
 
-          /** Reads documents in a transaction. */
+          /** Perform the read as part of an already active transaction. */
           @com.google.api.client.util.Key
           private java.lang.String transaction;
 
-          /** Reads documents in a transaction.
+          /** Perform the read as part of an already active transaction.
            */
           public java.lang.String getTransaction() {
             return transaction;
           }
 
-          /** Reads documents in a transaction. */
+          /** Perform the read as part of an already active transaction. */
           public List setTransaction(java.lang.String transaction) {
             this.transaction = transaction;
             return this;
@@ -2125,7 +2158,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
          *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         *        This is optional, and when not provided, Firestore will list documents from all
+         *        collections under the provided `parent`.
          * @return the request
          */
         public ListDocuments listDocuments(java.lang.String parent, java.lang.String collectionId) throws java.io.IOException {
@@ -2157,7 +2192,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
          *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+           * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         *        This is optional, and when not provided, Firestore will list documents from all
+         *        collections under the provided `parent`.
            * @since 1.13
            */
           protected ListDocuments(java.lang.String parent, java.lang.String collectionId) {
@@ -2274,21 +2311,25 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
-           * `messages`.
+           * Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`. This is optional, and when not provided, Firestore will list documents from
+           * all collections under the provided `parent`.
            */
           @com.google.api.client.util.Key
           private java.lang.String collectionId;
 
-          /** Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+          /** Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         This is optional, and when not provided, Firestore will list documents from all collections under
+         the provided `parent`.
            */
           public java.lang.String getCollectionId() {
             return collectionId;
           }
 
           /**
-           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
-           * `messages`.
+           * Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`. This is optional, and when not provided, Firestore will list documents from
+           * all collections under the provided `parent`.
            */
           public ListDocuments setCollectionId(java.lang.String collectionId) {
             this.collectionId = collectionId;
@@ -2317,114 +2358,139 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The order to sort results by. For example: `priority desc, name`. */
+          /**
+           * Optional. The optional ordering of the documents to return. For example: `priority
+           * desc, __name__ desc`. This mirrors the `ORDER BY` used in Firestore queries but in a
+           * string representation. When absent, documents are ordered based on `__name__ ASC`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** The order to sort results by. For example: `priority desc, name`.
+          /** Optional. The optional ordering of the documents to return. For example: `priority desc, __name__
+         desc`. This mirrors the `ORDER BY` used in Firestore queries but in a string representation. When
+         absent, documents are ordered based on `__name__ ASC`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** The order to sort results by. For example: `priority desc, name`. */
+          /**
+           * Optional. The optional ordering of the documents to return. For example: `priority
+           * desc, __name__ desc`. This mirrors the `ORDER BY` used in Firestore queries but in a
+           * string representation. When absent, documents are ordered based on `__name__ ASC`.
+           */
           public ListDocuments setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** The maximum number of documents to return. */
+          /**
+           * Optional. The maximum number of documents to return in a single response. Firestore may
+           * return fewer than this value.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of documents to return.
+          /** Optional. The maximum number of documents to return in a single response. Firestore may return
+         fewer than this value.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of documents to return. */
+          /**
+           * Optional. The maximum number of documents to return in a single response. Firestore may
+           * return fewer than this value.
+           */
           public ListDocuments setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The `next_page_token` value returned from a previous List request, if any. */
+          /**
+           * Optional. A page token, received from a previous `ListDocuments` response. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters (with the
+           * exception of `page_size`) must match the values set in the request that generated the
+           * page token.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The `next_page_token` value returned from a previous List request, if any.
+          /** Optional. A page token, received from a previous `ListDocuments` response. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters (with the exception of `page_size`) must
+         match the values set in the request that generated the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The `next_page_token` value returned from a previous List request, if any. */
+          /**
+           * Optional. A page token, received from a previous `ListDocuments` response. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters (with the
+           * exception of `page_size`) must match the values set in the request that generated the
+           * page token.
+           */
           public ListDocuments setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * Reads documents as they were at the given time. This may not be older than 270 seconds.
-           */
+          /** Perform the read at the provided time. This may not be older than 270 seconds. */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Reads documents as they were at the given time. This may not be older than 270 seconds.
+          /** Perform the read at the provided time. This may not be older than 270 seconds.
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /**
-           * Reads documents as they were at the given time. This may not be older than 270 seconds.
-           */
+          /** Perform the read at the provided time. This may not be older than 270 seconds. */
           public ListDocuments setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
           }
 
           /**
-           * If the list should show missing documents. A missing document is a document that does
-           * not exist but has sub-documents. These documents will be returned with a key but will
-           * not have fields, Document.create_time, or Document.update_time set. Requests with
-           * `show_missing` may not specify `where` or `order_by`.
+           * If the list should show missing documents. A document is missing if it does not exist,
+           * but there are sub-documents nested underneath it. When true, such missing documents
+           * will be returned with a key but will not have fields, `create_time`, or `update_time`
+           * set. Requests with `show_missing` may not specify `where` or `order_by`.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean showMissing;
 
-          /** If the list should show missing documents. A missing document is a document that does not exist but
-         has sub-documents. These documents will be returned with a key but will not have fields,
-         Document.create_time, or Document.update_time set. Requests with `show_missing` may not specify
-         `where` or `order_by`.
+          /** If the list should show missing documents. A document is missing if it does not exist, but there
+         are sub-documents nested underneath it. When true, such missing documents will be returned with a
+         key but will not have fields, `create_time`, or `update_time` set. Requests with `show_missing` may
+         not specify `where` or `order_by`.
            */
           public java.lang.Boolean getShowMissing() {
             return showMissing;
           }
 
           /**
-           * If the list should show missing documents. A missing document is a document that does
-           * not exist but has sub-documents. These documents will be returned with a key but will
-           * not have fields, Document.create_time, or Document.update_time set. Requests with
-           * `show_missing` may not specify `where` or `order_by`.
+           * If the list should show missing documents. A document is missing if it does not exist,
+           * but there are sub-documents nested underneath it. When true, such missing documents
+           * will be returned with a key but will not have fields, `create_time`, or `update_time`
+           * set. Requests with `show_missing` may not specify `where` or `order_by`.
            */
           public ListDocuments setShowMissing(java.lang.Boolean showMissing) {
             this.showMissing = showMissing;
             return this;
           }
 
-          /** Reads documents in a transaction. */
+          /** Perform the read as part of an already active transaction. */
           @com.google.api.client.util.Key
           private java.lang.String transaction;
 
-          /** Reads documents in a transaction.
+          /** Perform the read as part of an already active transaction.
            */
           public java.lang.String getTransaction() {
             return transaction;
           }
 
-          /** Reads documents in a transaction. */
+          /** Perform the read as part of an already active transaction. */
           public ListDocuments setTransaction(java.lang.String transaction) {
             this.transaction = transaction;
             return this;

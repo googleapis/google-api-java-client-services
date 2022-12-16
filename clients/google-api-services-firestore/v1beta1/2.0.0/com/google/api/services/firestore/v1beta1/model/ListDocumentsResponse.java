@@ -43,7 +43,8 @@ public final class ListDocumentsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The next page token.
+   * A token to retrieve the next page of documents. If this field is omitted, there are no
+   * subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class ListDocumentsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The next page token.
+   * A token to retrieve the next page of documents. If this field is omitted, there are no
+   * subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,7 +77,8 @@ public final class ListDocumentsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The next page token.
+   * A token to retrieve the next page of documents. If this field is omitted, there are no
+   * subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListDocumentsResponse setNextPageToken(java.lang.String nextPageToken) {

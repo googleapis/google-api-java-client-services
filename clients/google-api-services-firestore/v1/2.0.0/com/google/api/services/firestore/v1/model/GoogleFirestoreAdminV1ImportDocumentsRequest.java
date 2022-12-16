@@ -46,16 +46,6 @@ public final class GoogleFirestoreAdminV1ImportDocumentsRequest extends com.goog
   private java.lang.String inputUriPrefix;
 
   /**
-   * An empty list represents all namespaces. This is the preferred usage for databases that don't
-   * use namespaces. An empty string element represents the default namespace. This should be used
-   * if the database has data in non-default namespaces, but doesn't want to include them. Each
-   * namespace in this list must be unique.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> namespaceIds;
-
-  /**
    * Which collection ids to import. Unspecified means all collections included in the import.
    * @return value or {@code null} for none
    */
@@ -90,29 +80,6 @@ public final class GoogleFirestoreAdminV1ImportDocumentsRequest extends com.goog
    */
   public GoogleFirestoreAdminV1ImportDocumentsRequest setInputUriPrefix(java.lang.String inputUriPrefix) {
     this.inputUriPrefix = inputUriPrefix;
-    return this;
-  }
-
-  /**
-   * An empty list represents all namespaces. This is the preferred usage for databases that don't
-   * use namespaces. An empty string element represents the default namespace. This should be used
-   * if the database has data in non-default namespaces, but doesn't want to include them. Each
-   * namespace in this list must be unique.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getNamespaceIds() {
-    return namespaceIds;
-  }
-
-  /**
-   * An empty list represents all namespaces. This is the preferred usage for databases that don't
-   * use namespaces. An empty string element represents the default namespace. This should be used
-   * if the database has data in non-default namespaces, but doesn't want to include them. Each
-   * namespace in this list must be unique.
-   * @param namespaceIds namespaceIds or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1ImportDocumentsRequest setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {
-    this.namespaceIds = namespaceIds;
     return this;
   }
 

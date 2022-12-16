@@ -25,7 +25,7 @@ package com.google.api.services.workloadmanager.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://g3doc.corp.google.com/company/teams/compute-fe/index.md?cl=head" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/workload-manager/docs" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -1089,6 +1089,164 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Insights collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code WorkloadManager workloadmanager = new WorkloadManager(...);}
+       *   {@code WorkloadManager.Insights.List request = workloadmanager.insights().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Insights insights() {
+        return new Insights();
+      }
+
+      /**
+       * The "insights" collection of methods.
+       */
+      public class Insights {
+
+        /**
+         * Write the data insights to workload manager data warehouse.
+         *
+         * Create a request for the method "insights.writeInsight".
+         *
+         * This request holds the parameters needed by the workloadmanager server.  After setting any
+         * optional parameters, call the {@link WriteInsight#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param location Required. The GCP location. The format is: projects/{project}/locations/{location}.
+         * @param content the {@link com.google.api.services.workloadmanager.v1.model.WriteInsightRequest}
+         * @return the request
+         */
+        public WriteInsight writeInsight(java.lang.String location, com.google.api.services.workloadmanager.v1.model.WriteInsightRequest content) throws java.io.IOException {
+          WriteInsight result = new WriteInsight(location, content);
+          initialize(result);
+          return result;
+        }
+
+        public class WriteInsight extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.WriteInsightResponse> {
+
+          private static final String REST_PATH = "v1/{+location}/insights:writeInsight";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Write the data insights to workload manager data warehouse.
+           *
+           * Create a request for the method "insights.writeInsight".
+           *
+           * This request holds the parameters needed by the the workloadmanager server.  After setting any
+           * optional parameters, call the {@link WriteInsight#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * WriteInsight#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param location Required. The GCP location. The format is: projects/{project}/locations/{location}.
+           * @param content the {@link com.google.api.services.workloadmanager.v1.model.WriteInsightRequest}
+           * @since 1.13
+           */
+          protected WriteInsight(java.lang.String location, com.google.api.services.workloadmanager.v1.model.WriteInsightRequest content) {
+            super(WorkloadManager.this, "POST", REST_PATH, content, com.google.api.services.workloadmanager.v1.model.WriteInsightResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public WriteInsight set$Xgafv(java.lang.String $Xgafv) {
+            return (WriteInsight) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public WriteInsight setAccessToken(java.lang.String accessToken) {
+            return (WriteInsight) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public WriteInsight setAlt(java.lang.String alt) {
+            return (WriteInsight) super.setAlt(alt);
+          }
+
+          @Override
+          public WriteInsight setCallback(java.lang.String callback) {
+            return (WriteInsight) super.setCallback(callback);
+          }
+
+          @Override
+          public WriteInsight setFields(java.lang.String fields) {
+            return (WriteInsight) super.setFields(fields);
+          }
+
+          @Override
+          public WriteInsight setKey(java.lang.String key) {
+            return (WriteInsight) super.setKey(key);
+          }
+
+          @Override
+          public WriteInsight setOauthToken(java.lang.String oauthToken) {
+            return (WriteInsight) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public WriteInsight setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (WriteInsight) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public WriteInsight setQuotaUser(java.lang.String quotaUser) {
+            return (WriteInsight) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public WriteInsight setUploadType(java.lang.String uploadType) {
+            return (WriteInsight) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public WriteInsight setUploadProtocol(java.lang.String uploadProtocol) {
+            return (WriteInsight) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The GCP location. The format is: projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. The GCP location. The format is: projects/{project}/locations/{location}.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * Required. The GCP location. The format is: projects/{project}/locations/{location}.
+           */
+          public WriteInsight setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public WriteInsight set(String parameterName, Object value) {
+            return (WriteInsight) super.set(parameterName, value);
           }
         }
 

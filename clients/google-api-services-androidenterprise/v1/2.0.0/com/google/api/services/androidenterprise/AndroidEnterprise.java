@@ -1420,6 +1420,143 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
+     * Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-touch
+     * enrollment payload or fetch it before calling the on-device API to authenticate the user. The
+     * token can be generated for each device or reused across multiple devices.
+     *
+     * Create a request for the method "enterprises.createEnrollmentToken".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link CreateEnrollmentToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @return the request
+     */
+    public CreateEnrollmentToken createEnrollmentToken(java.lang.String enterpriseId) throws java.io.IOException {
+      CreateEnrollmentToken result = new CreateEnrollmentToken(enterpriseId);
+      initialize(result);
+      return result;
+    }
+
+    public class CreateEnrollmentToken extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.CreateEnrollmentTokenResponse> {
+
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/createEnrollmentToken";
+
+      /**
+       * Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-
+       * touch enrollment payload or fetch it before calling the on-device API to authenticate the user.
+       * The token can be generated for each device or reused across multiple devices.
+       *
+       * Create a request for the method "enterprises.createEnrollmentToken".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link CreateEnrollmentToken#execute()} method to invoke the
+       * remote operation. <p> {@link CreateEnrollmentToken#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @since 1.13
+       */
+      protected CreateEnrollmentToken(java.lang.String enterpriseId) {
+        super(AndroidEnterprise.this, "POST", REST_PATH, null, com.google.api.services.androidenterprise.model.CreateEnrollmentTokenResponse.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+      }
+
+      @Override
+      public CreateEnrollmentToken set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateEnrollmentToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateEnrollmentToken setAccessToken(java.lang.String accessToken) {
+        return (CreateEnrollmentToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CreateEnrollmentToken setAlt(java.lang.String alt) {
+        return (CreateEnrollmentToken) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateEnrollmentToken setCallback(java.lang.String callback) {
+        return (CreateEnrollmentToken) super.setCallback(callback);
+      }
+
+      @Override
+      public CreateEnrollmentToken setFields(java.lang.String fields) {
+        return (CreateEnrollmentToken) super.setFields(fields);
+      }
+
+      @Override
+      public CreateEnrollmentToken setKey(java.lang.String key) {
+        return (CreateEnrollmentToken) super.setKey(key);
+      }
+
+      @Override
+      public CreateEnrollmentToken setOauthToken(java.lang.String oauthToken) {
+        return (CreateEnrollmentToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CreateEnrollmentToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CreateEnrollmentToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CreateEnrollmentToken setQuotaUser(java.lang.String quotaUser) {
+        return (CreateEnrollmentToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CreateEnrollmentToken setUploadType(java.lang.String uploadType) {
+        return (CreateEnrollmentToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateEnrollmentToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateEnrollmentToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public CreateEnrollmentToken setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /** Whether it’s a dedicated device or a knowledge worker device. */
+      @com.google.api.client.util.Key
+      private java.lang.String deviceType;
+
+      /** Whether it’s a dedicated device or a knowledge worker device.
+       */
+      public java.lang.String getDeviceType() {
+        return deviceType;
+      }
+
+      /** Whether it’s a dedicated device or a knowledge worker device. */
+      public CreateEnrollmentToken setDeviceType(java.lang.String deviceType) {
+        this.deviceType = deviceType;
+        return this;
+      }
+
+      @Override
+      public CreateEnrollmentToken set(String parameterName, Object value) {
+        return (CreateEnrollmentToken) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated token
      * into the managed Google Play javascript API. Each token may only be used to start one UI session.
      * See the javascript API documentation for further information.
@@ -2453,7 +2590,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * The request mode for pulling notifications. Specifying waitForNotifications will cause the
        * request to block and wait until one or more notifications are present, or return an empty
-       * notification list if no notifications are present after some time. Speciying
+       * notification list if no notifications are present after some time. Specifying
        * returnImmediately will cause the request to immediately return the pending notifications,
        * or an empty list if no notifications are present. If omitted, defaults to
        * waitForNotifications.
@@ -2463,9 +2600,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /** The request mode for pulling notifications. Specifying waitForNotifications will cause the request
      to block and wait until one or more notifications are present, or return an empty notification list
-     if no notifications are present after some time. Speciying returnImmediately will cause the request
-     to immediately return the pending notifications, or an empty list if no notifications are present.
-     If omitted, defaults to waitForNotifications.
+     if no notifications are present after some time. Specifying returnImmediately will cause the
+     request to immediately return the pending notifications, or an empty list if no notifications are
+     present. If omitted, defaults to waitForNotifications.
        */
       public java.lang.String getRequestMode() {
         return requestMode;
@@ -2474,7 +2611,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * The request mode for pulling notifications. Specifying waitForNotifications will cause the
        * request to block and wait until one or more notifications are present, or return an empty
-       * notification list if no notifications are present after some time. Speciying
+       * notification list if no notifications are present after some time. Specifying
        * returnImmediately will cause the request to immediately return the pending notifications,
        * or an empty list if no notifications are present. If omitted, defaults to
        * waitForNotifications.

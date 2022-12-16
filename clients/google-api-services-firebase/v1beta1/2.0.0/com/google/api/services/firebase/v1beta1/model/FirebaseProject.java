@@ -38,9 +38,10 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class FirebaseProject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set of user-defined annotations for the FirebaseProject as per
-   * [AIP-128](https://google.aip.dev/128#annotations). These annotations are intended solely for
-   * developers and client-side tools Firebase services will not mutate this annotation set.
+   * A set of user-defined annotations for the FirebaseProject. Learn more about annotations in
+   * Google's [AIP-128 standard](https://google.aip.dev/128#annotations). These annotations are
+   * intended solely for developers and client-side tools. Firebase services will not mutate this
+   * annotations set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,9 +109,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
-   * Set of user-defined annotations for the FirebaseProject as per
-   * [AIP-128](https://google.aip.dev/128#annotations). These annotations are intended solely for
-   * developers and client-side tools Firebase services will not mutate this annotation set.
+   * A set of user-defined annotations for the FirebaseProject. Learn more about annotations in
+   * Google's [AIP-128 standard](https://google.aip.dev/128#annotations). These annotations are
+   * intended solely for developers and client-side tools. Firebase services will not mutate this
+   * annotations set.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -118,9 +120,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Set of user-defined annotations for the FirebaseProject as per
-   * [AIP-128](https://google.aip.dev/128#annotations). These annotations are intended solely for
-   * developers and client-side tools Firebase services will not mutate this annotation set.
+   * A set of user-defined annotations for the FirebaseProject. Learn more about annotations in
+   * Google's [AIP-128 standard](https://google.aip.dev/128#annotations). These annotations are
+   * intended solely for developers and client-side tools. Firebase services will not mutate this
+   * annotations set.
    * @param annotations annotations or {@code null} for none
    */
   public FirebaseProject setAnnotations(java.util.Map<String, java.lang.String> annotations) {

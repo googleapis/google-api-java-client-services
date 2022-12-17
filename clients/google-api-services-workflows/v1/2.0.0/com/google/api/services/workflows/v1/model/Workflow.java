@@ -30,7 +30,7 @@ package com.google.api.services.workflows.v1.model;
 public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The timestamp of when the workflow was created.
+   * Output only. The timestamp for when the workflow was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   /**
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
-   * underscores and dashes. Label keys must start with a letter. International characters are
+   * underscores, and dashes. Label keys must start with a letter. International characters are
    * allowed.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The timestamp that the latest revision of the workflow was created.
+   * Output only. The timestamp for the latest revision of the workflow's creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,14 +106,14 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. The last update timestamp of the workflow.
+   * Output only. The timestamp for when the workflow was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The timestamp of when the workflow was created.
+   * Output only. The timestamp for when the workflow was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -121,7 +121,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp of when the workflow was created.
+   * Output only. The timestamp for when the workflow was created.
    * @param createTime createTime or {@code null} for none
    */
   public Workflow setCreateTime(String createTime) {
@@ -149,7 +149,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   /**
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
-   * underscores and dashes. Label keys must start with a letter. International characters are
+   * underscores, and dashes. Label keys must start with a letter. International characters are
    * allowed.
    * @return value or {@code null} for none
    */
@@ -160,7 +160,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   /**
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
-   * underscores and dashes. Label keys must start with a letter. International characters are
+   * underscores, and dashes. Label keys must start with a letter. International characters are
    * allowed.
    * @param labels labels or {@code null} for none
    */
@@ -189,7 +189,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp that the latest revision of the workflow was created.
+   * Output only. The timestamp for the latest revision of the workflow's creation.
    * @return value or {@code null} for none
    */
   public String getRevisionCreateTime() {
@@ -197,7 +197,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp that the latest revision of the workflow was created.
+   * Output only. The timestamp for the latest revision of the workflow's creation.
    * @param revisionCreateTime revisionCreateTime or {@code null} for none
    */
   public Workflow setRevisionCreateTime(String revisionCreateTime) {
@@ -292,7 +292,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last update timestamp of the workflow.
+   * Output only. The timestamp for when the workflow was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -300,7 +300,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last update timestamp of the workflow.
+   * Output only. The timestamp for when the workflow was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Workflow setUpdateTime(String updateTime) {

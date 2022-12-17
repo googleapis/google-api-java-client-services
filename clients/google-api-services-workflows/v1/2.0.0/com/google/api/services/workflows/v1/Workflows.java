@@ -1029,7 +1029,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Creates a new workflow. If a workflow with the specified name already exists in the specified
-         * project and location, the long running operation will return ALREADY_EXISTS error.
+         * project and location, the long running operation returns a ALREADY_EXISTS error.
          *
          * Create a request for the method "workflows.create".
          *
@@ -1056,7 +1056,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Creates a new workflow. If a workflow with the specified name already exists in the specified
-           * project and location, the long running operation will return ALREADY_EXISTS error.
+           * project and location, the long running operation returns a ALREADY_EXISTS error.
            *
            * Create a request for the method "workflows.create".
            *
@@ -1339,14 +1339,14 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Gets details of a single Workflow.
+         * Gets details of a single workflow.
          *
          * Create a request for the method "workflows.get".
          *
          * This request holds the parameters needed by the workflows server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the workflow which information should be retrieved. Format:
+         * @param name Required. Name of the workflow for which information should be retrieved. Format:
          *        projects/{project}/locations/{location}/workflows/{workflow}
          * @return the request
          */
@@ -1364,7 +1364,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+$");
 
           /**
-           * Gets details of a single Workflow.
+           * Gets details of a single workflow.
            *
            * Create a request for the method "workflows.get".
            *
@@ -1373,7 +1373,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the workflow which information should be retrieved. Format:
+           * @param name Required. Name of the workflow for which information should be retrieved. Format:
          *        projects/{project}/locations/{location}/workflows/{workflow}
            * @since 1.13
            */
@@ -1453,13 +1453,13 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Name of the workflow which information should be retrieved. Format:
+           * Required. Name of the workflow for which information should be retrieved. Format:
            * projects/{project}/locations/{location}/workflows/{workflow}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the workflow which information should be retrieved. Format:
+          /** Required. Name of the workflow for which information should be retrieved. Format:
          projects/{project}/locations/{location}/workflows/{workflow}
            */
           public java.lang.String getName() {
@@ -1467,7 +1467,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Name of the workflow which information should be retrieved. Format:
+           * Required. Name of the workflow for which information should be retrieved. Format:
            * projects/{project}/locations/{location}/workflows/{workflow}
            */
           public Get setName(java.lang.String name) {
@@ -1486,7 +1486,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Lists Workflows in a given project and location. The default order is not specified.
+         * Lists workflows in a given project and location. The default order is not specified.
          *
          * Create a request for the method "workflows.list".
          *
@@ -1511,7 +1511,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Workflows in a given project and location. The default order is not specified.
+           * Lists workflows in a given project and location. The default order is not specified.
            *
            * Create a request for the method "workflows.list".
            *
@@ -1644,27 +1644,25 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Comma-separated list of fields that that specify the order of the results. Default
-           * sorting order for a field is ascending. To specify descending order for a field, append
-           * a " desc" suffix. If not specified, the results will be returned in an unspecified
-           * order.
+           * Comma-separated list of fields that specify the order of the results. Default sorting
+           * order for a field is ascending. To specify descending order for a field, append a
+           * "desc" suffix. If not specified, the results are returned in an unspecified order.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Comma-separated list of fields that that specify the order of the results. Default sorting order
-         for a field is ascending. To specify descending order for a field, append a " desc" suffix. If not
-         specified, the results will be returned in an unspecified order.
+          /** Comma-separated list of fields that specify the order of the results. Default sorting order for a
+         field is ascending. To specify descending order for a field, append a "desc" suffix. If not
+         specified, the results are returned in an unspecified order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Comma-separated list of fields that that specify the order of the results. Default
-           * sorting order for a field is ascending. To specify descending order for a field, append
-           * a " desc" suffix. If not specified, the results will be returned in an unspecified
-           * order.
+           * Comma-separated list of fields that specify the order of the results. Default sorting
+           * order for a field is ascending. To specify descending order for a field, append a
+           * "desc" suffix. If not specified, the results are returned in an unspecified order.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -1672,25 +1670,27 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Maximum number of workflows to return per call. The service may return fewer than this
-           * value. If the value is not specified, a default value of 500 will be used. The maximum
-           * permitted value is 1000 and values greater than 1000 will be coerced down to 1000.
+           * Maximum number of workflows to return per call. The service might return fewer than
+           * this value even if not at the end of the collection. If a value is not specified, a
+           * default value of 500 is used. The maximum permitted value is 1000 and values greater
+           * than 1000 are coerced down to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of workflows to return per call. The service may return fewer than this value. If
-         the value is not specified, a default value of 500 will be used. The maximum permitted value is
-         1000 and values greater than 1000 will be coerced down to 1000.
+          /** Maximum number of workflows to return per call. The service might return fewer than this value even
+         if not at the end of the collection. If a value is not specified, a default value of 500 is used.
+         The maximum permitted value is 1000 and values greater than 1000 are coerced down to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Maximum number of workflows to return per call. The service may return fewer than this
-           * value. If the value is not specified, a default value of 500 will be used. The maximum
-           * permitted value is 1000 and values greater than 1000 will be coerced down to 1000.
+           * Maximum number of workflows to return per call. The service might return fewer than
+           * this value even if not at the end of the collection. If a value is not specified, a
+           * default value of 500 is used. The maximum permitted value is 1000 and values greater
+           * than 1000 are coerced down to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1730,8 +1730,8 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Updates an existing workflow. Running this method has no impact on already running executions of
-         * the workflow. A new revision of the workflow may be created as a result of a successful update
-         * operation. In that case, such revision will be used in new workflow executions.
+         * the workflow. A new revision of the workflow might be created as a result of a successful update
+         * operation. In that case, the new revision is used in new workflow executions.
          *
          * Create a request for the method "workflows.patch".
          *
@@ -1758,8 +1758,8 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Updates an existing workflow. Running this method has no impact on already running executions
-           * of the workflow. A new revision of the workflow may be created as a result of a successful
-           * update operation. In that case, such revision will be used in new workflow executions.
+           * of the workflow. A new revision of the workflow might be created as a result of a successful
+           * update operation. In that case, the new revision is used in new workflow executions.
            *
            * Create a request for the method "workflows.patch".
            *

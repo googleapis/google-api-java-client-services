@@ -69,8 +69,9 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> jarUris;
 
   /**
-   * The main file URI of the Spark application. Exactly one of the definition_body field and the
-   * main_file_uri field must be set.
+   * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
+   * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
+   * field should be set for Java/Scala language type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,8 +196,9 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The main file URI of the Spark application. Exactly one of the definition_body field and the
-   * main_file_uri field must be set.
+   * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
+   * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
+   * field should be set for Java/Scala language type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMainFileUri() {
@@ -204,8 +206,9 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The main file URI of the Spark application. Exactly one of the definition_body field and the
-   * main_file_uri field must be set.
+   * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
+   * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
+   * field should be set for Java/Scala language type.
    * @param mainFileUri mainFileUri or {@code null} for none
    */
   public SparkOptions setMainFileUri(java.lang.String mainFileUri) {

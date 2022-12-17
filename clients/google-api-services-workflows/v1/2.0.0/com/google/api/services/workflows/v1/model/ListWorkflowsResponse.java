@@ -45,7 +45,7 @@ public final class ListWorkflowsResponse extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The workflows which match the request.
+   * The workflows that match the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ListWorkflowsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The workflows which match the request.
+   * The workflows that match the request.
    * @return value or {@code null} for none
    */
   public java.util.List<Workflow> getWorkflows() {
@@ -96,7 +96,7 @@ public final class ListWorkflowsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The workflows which match the request.
+   * The workflows that match the request.
    * @param workflows workflows or {@code null} for none
    */
   public ListWorkflowsResponse setWorkflows(java.util.List<Workflow> workflows) {

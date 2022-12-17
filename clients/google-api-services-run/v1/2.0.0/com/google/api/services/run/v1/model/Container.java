@@ -48,7 +48,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> command;
 
   /**
-   * List of environment variables to set in the container.
+   * List of environment variables to set in the container. EnvVar with duplicate names are
+   * generally allowed; if referencing a secret, the name must be unique for the container. For non-
+   * secret EnvVar names, the Container will only get the last-declared one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +89,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private Probe livenessProbe;
 
   /**
-   * Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info:
+   * Name of the container specified as a DNS_LABEL (RFC 1123). More info:
    * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * The value may be {@code null}.
    */
@@ -213,7 +215,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of environment variables to set in the container.
+   * List of environment variables to set in the container. EnvVar with duplicate names are
+   * generally allowed; if referencing a secret, the name must be unique for the container. For non-
+   * secret EnvVar names, the Container will only get the last-declared one.
    * @return value or {@code null} for none
    */
   public java.util.List<EnvVar> getEnv() {
@@ -221,7 +225,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of environment variables to set in the container.
+   * List of environment variables to set in the container. EnvVar with duplicate names are
+   * generally allowed; if referencing a secret, the name must be unique for the container. For non-
+   * secret EnvVar names, the Container will only get the last-declared one.
    * @param env env or {@code null} for none
    */
   public Container setEnv(java.util.List<EnvVar> env) {
@@ -306,7 +312,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info:
+   * Name of the container specified as a DNS_LABEL (RFC 1123). More info:
    * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * @return value or {@code null} for none
    */
@@ -315,7 +321,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info:
+   * Name of the container specified as a DNS_LABEL (RFC 1123). More info:
    * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * @param name name or {@code null} for none
    */

@@ -31,6 +31,15 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class OperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Map to hold any additional status info for the operation If there is an accelerator being
+   * enabled/disabled/deleted, this will be populated with accelerator name as key and status as
+   * ENABLING, DISABLING or DELETING
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> additionalStatus;
+
+  /**
    * API version used to start the operation.
    * The value may be {@code null}.
    */
@@ -80,6 +89,27 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String verb;
+
+  /**
+   * Map to hold any additional status info for the operation If there is an accelerator being
+   * enabled/disabled/deleted, this will be populated with accelerator name as key and status as
+   * ENABLING, DISABLING or DELETING
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAdditionalStatus() {
+    return additionalStatus;
+  }
+
+  /**
+   * Map to hold any additional status info for the operation If there is an accelerator being
+   * enabled/disabled/deleted, this will be populated with accelerator name as key and status as
+   * ENABLING, DISABLING or DELETING
+   * @param additionalStatus additionalStatus or {@code null} for none
+   */
+  public OperationMetadata setAdditionalStatus(java.util.Map<String, java.lang.String> additionalStatus) {
+    this.additionalStatus = additionalStatus;
+    return this;
+  }
 
   /**
    * API version used to start the operation.

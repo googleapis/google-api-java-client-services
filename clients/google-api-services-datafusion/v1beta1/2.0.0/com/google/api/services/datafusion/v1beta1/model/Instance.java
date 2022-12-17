@@ -124,6 +124,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableStackdriverMonitoring;
 
   /**
+   * Option to enable zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableZoneSeparation;
+
+  /**
    * Option to enable and pass metadata for event publishing.
    * The value may be {@code null}.
    */
@@ -455,6 +462,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setEnableStackdriverMonitoring(java.lang.Boolean enableStackdriverMonitoring) {
     this.enableStackdriverMonitoring = enableStackdriverMonitoring;
+    return this;
+  }
+
+  /**
+   * Option to enable zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableZoneSeparation() {
+    return enableZoneSeparation;
+  }
+
+  /**
+   * Option to enable zone separation.
+   * @param enableZoneSeparation enableZoneSeparation or {@code null} for none
+   */
+  public Instance setEnableZoneSeparation(java.lang.Boolean enableZoneSeparation) {
+    this.enableZoneSeparation = enableZoneSeparation;
     return this;
   }
 

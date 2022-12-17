@@ -38,6 +38,13 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   private java.lang.String acceleratorType;
 
   /**
+   * The state of the accelerator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The type of an accelator for a CDF instance.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
    */
   public Accelerator setAcceleratorType(java.lang.String acceleratorType) {
     this.acceleratorType = acceleratorType;
+    return this;
+  }
+
+  /**
+   * The state of the accelerator.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * The state of the accelerator.
+   * @param state state or {@code null} for none
+   */
+  public Accelerator setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

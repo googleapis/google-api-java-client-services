@@ -17,9 +17,9 @@
 package com.google.api.services.vmmigration.v1alpha1.model;
 
 /**
- * DatacenterConnector message describes a connector between the Source and GCP, which is installed
- * on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to GCP and
- * support vm migration data transfer.
+ * DatacenterConnector message describes a connector between the Source and Google Cloud, which is
+ * installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to
+ * Google Cloud and support vm migration data transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migrate to Virtual Machines API. For a detailed
@@ -56,7 +56,7 @@ public final class DatacenterConnector extends com.google.api.client.json.Generi
   private AvailableUpdates availableVersions;
 
   /**
-   * Output only. The communication channel between the datacenter connector and GCP.
+   * Output only. The communication channel between the datacenter connector and Google Cloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class DatacenterConnector extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The communication channel between the datacenter connector and GCP.
+   * Output only. The communication channel between the datacenter connector and Google Cloud.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucket() {
@@ -199,7 +199,7 @@ public final class DatacenterConnector extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The communication channel between the datacenter connector and GCP.
+   * Output only. The communication channel between the datacenter connector and Google Cloud.
    * @param bucket bucket or {@code null} for none
    */
   public DatacenterConnector setBucket(java.lang.String bucket) {

@@ -123,7 +123,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private java.util.List<java.lang.String> networkTags;
 
   /**
-   * The GCP target project ID or project name.
+   * The Google Cloud target project ID or project name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,7 +380,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * The GCP target project ID or project name.
+   * The Google Cloud target project ID or project name.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -388,7 +388,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * The GCP target project ID or project name.
+   * The Google Cloud target project ID or project name.
    * @param project project or {@code null} for none
    */
   public ComputeEngineTargetDetails setProject(java.lang.String project) {

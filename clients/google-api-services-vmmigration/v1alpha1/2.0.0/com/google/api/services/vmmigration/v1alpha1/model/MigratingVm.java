@@ -180,8 +180,8 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private String stateTime;
 
   /**
-   * The default configuration of the target VM that will be created in GCP as a result of the
-   * migration. Deprecated: Use compute_engine_target_defaults instead.
+   * The default configuration of the target VM that will be created in Google Cloud as a result of
+   * the migration. Deprecated: Use compute_engine_target_defaults instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -521,8 +521,8 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default configuration of the target VM that will be created in GCP as a result of the
-   * migration. Deprecated: Use compute_engine_target_defaults instead.
+   * The default configuration of the target VM that will be created in Google Cloud as a result of
+   * the migration. Deprecated: Use compute_engine_target_defaults instead.
    * @return value or {@code null} for none
    */
   public TargetVMDetails getTargetDefaults() {
@@ -530,8 +530,8 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default configuration of the target VM that will be created in GCP as a result of the
-   * migration. Deprecated: Use compute_engine_target_defaults instead.
+   * The default configuration of the target VM that will be created in Google Cloud as a result of
+   * the migration. Deprecated: Use compute_engine_target_defaults instead.
    * @param targetDefaults targetDefaults or {@code null} for none
    */
   public MigratingVm setTargetDefaults(TargetVMDetails targetDefaults) {

@@ -37,12 +37,12 @@ public final class DiagnosticConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean copyHomeFilesFlagEnabled;
 
   /**
-   * Required. User Cloud Storage bucket location (REQUIRED) ## Must be formatted with path prefix
-   * (gs://$GCS_BUCKET) Permissions: User Managed Notebooks: - storage.buckets.writer: Must be given
-   * to the project's service account attached to VM. Google Managed Notebooks: -
-   * storage.buckets.writer: Must be given to the project's service account or ## user credentials
+   * Required. User Cloud Storage bucket location (REQUIRED). Must be formatted with path prefix
+   * (`gs://$GCS_BUCKET`). Permissions: User Managed Notebooks: - storage.buckets.writer: Must be
+   * given to the project's service account attached to VM. Google Managed Notebooks: -
+   * storage.buckets.writer: Must be given to the project's service account or user credentials
    * attached to VM depending on authentication mode. Cloud Storage bucket Log file will be written
-   * to gs://$GCS_BUCKET/$RELATIVE_PATH/$VM_DATE_$TIME.tar.gz
+   * to `gs://$GCS_BUCKET/$RELATIVE_PATH/$VM_DATE_$TIME.tar.gz`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class DiagnosticConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. Defines the relative storage path in the Cloud Storage bucket where the diagnostic
    * logs will be written: Default path will be the root directory of the Cloud Storage bucket
-   * (gs://$GCS_BUCKET/$DATE_$TIME.tar.gz) Example of full path where Log file will be written:
-   * gs://$GCS_BUCKET/$RELATIVE_PATH/
+   * (`gs://$GCS_BUCKET/$DATE_$TIME.tar.gz`) Example of full path where Log file will be written:
+   * `gs://$GCS_BUCKET/$RELATIVE_PATH/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,12 +90,12 @@ public final class DiagnosticConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. User Cloud Storage bucket location (REQUIRED) ## Must be formatted with path prefix
-   * (gs://$GCS_BUCKET) Permissions: User Managed Notebooks: - storage.buckets.writer: Must be given
-   * to the project's service account attached to VM. Google Managed Notebooks: -
-   * storage.buckets.writer: Must be given to the project's service account or ## user credentials
+   * Required. User Cloud Storage bucket location (REQUIRED). Must be formatted with path prefix
+   * (`gs://$GCS_BUCKET`). Permissions: User Managed Notebooks: - storage.buckets.writer: Must be
+   * given to the project's service account attached to VM. Google Managed Notebooks: -
+   * storage.buckets.writer: Must be given to the project's service account or user credentials
    * attached to VM depending on authentication mode. Cloud Storage bucket Log file will be written
-   * to gs://$GCS_BUCKET/$RELATIVE_PATH/$VM_DATE_$TIME.tar.gz
+   * to `gs://$GCS_BUCKET/$RELATIVE_PATH/$VM_DATE_$TIME.tar.gz`
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsBucket() {
@@ -103,12 +103,12 @@ public final class DiagnosticConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. User Cloud Storage bucket location (REQUIRED) ## Must be formatted with path prefix
-   * (gs://$GCS_BUCKET) Permissions: User Managed Notebooks: - storage.buckets.writer: Must be given
-   * to the project's service account attached to VM. Google Managed Notebooks: -
-   * storage.buckets.writer: Must be given to the project's service account or ## user credentials
+   * Required. User Cloud Storage bucket location (REQUIRED). Must be formatted with path prefix
+   * (`gs://$GCS_BUCKET`). Permissions: User Managed Notebooks: - storage.buckets.writer: Must be
+   * given to the project's service account attached to VM. Google Managed Notebooks: -
+   * storage.buckets.writer: Must be given to the project's service account or user credentials
    * attached to VM depending on authentication mode. Cloud Storage bucket Log file will be written
-   * to gs://$GCS_BUCKET/$RELATIVE_PATH/$VM_DATE_$TIME.tar.gz
+   * to `gs://$GCS_BUCKET/$RELATIVE_PATH/$VM_DATE_$TIME.tar.gz`
    * @param gcsBucket gcsBucket or {@code null} for none
    */
   public DiagnosticConfig setGcsBucket(java.lang.String gcsBucket) {
@@ -136,8 +136,8 @@ public final class DiagnosticConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. Defines the relative storage path in the Cloud Storage bucket where the diagnostic
    * logs will be written: Default path will be the root directory of the Cloud Storage bucket
-   * (gs://$GCS_BUCKET/$DATE_$TIME.tar.gz) Example of full path where Log file will be written:
-   * gs://$GCS_BUCKET/$RELATIVE_PATH/
+   * (`gs://$GCS_BUCKET/$DATE_$TIME.tar.gz`) Example of full path where Log file will be written:
+   * `gs://$GCS_BUCKET/$RELATIVE_PATH/`
    * @return value or {@code null} for none
    */
   public java.lang.String getRelativePath() {
@@ -147,8 +147,8 @@ public final class DiagnosticConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. Defines the relative storage path in the Cloud Storage bucket where the diagnostic
    * logs will be written: Default path will be the root directory of the Cloud Storage bucket
-   * (gs://$GCS_BUCKET/$DATE_$TIME.tar.gz) Example of full path where Log file will be written:
-   * gs://$GCS_BUCKET/$RELATIVE_PATH/
+   * (`gs://$GCS_BUCKET/$DATE_$TIME.tar.gz`) Example of full path where Log file will be written:
+   * `gs://$GCS_BUCKET/$RELATIVE_PATH/`
    * @param relativePath relativePath or {@code null} for none
    */
   public DiagnosticConfig setRelativePath(java.lang.String relativePath) {

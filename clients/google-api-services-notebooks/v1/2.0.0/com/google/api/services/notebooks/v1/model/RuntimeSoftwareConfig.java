@@ -118,6 +118,13 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.Boolean upgradeable;
 
   /**
+   * Output only. version of boot image such as M100, from release label of the image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
    * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll
    * automatically choose from official GPU drivers.
    * @return value or {@code null} for none
@@ -307,6 +314,23 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   public RuntimeSoftwareConfig setUpgradeable(java.lang.Boolean upgradeable) {
     this.upgradeable = upgradeable;
+    return this;
+  }
+
+  /**
+   * Output only. version of boot image such as M100, from release label of the image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Output only. version of boot image such as M100, from release label of the image.
+   * @param version version or {@code null} for none
+   */
+  public RuntimeSoftwareConfig setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

@@ -90,8 +90,9 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
-   * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
-   * a pool of available ranges in the service consumer's allocated range.
+   * `29` to provision a subnet with an `x.x.x.x/29` CIDR range. The IP address range is drawn from
+   * a pool of available ranges in the service consumer's allocated range. GCE disallows subnets
+   * with prefix_length > 29
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,8 +325,9 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
-   * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
-   * a pool of available ranges in the service consumer's allocated range.
+   * `29` to provision a subnet with an `x.x.x.x/29` CIDR range. The IP address range is drawn from
+   * a pool of available ranges in the service consumer's allocated range. GCE disallows subnets
+   * with prefix_length > 29
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIpPrefixLength() {
@@ -334,8 +336,9 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
-   * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
-   * a pool of available ranges in the service consumer's allocated range.
+   * `29` to provision a subnet with an `x.x.x.x/29` CIDR range. The IP address range is drawn from
+   * a pool of available ranges in the service consumer's allocated range. GCE disallows subnets
+   * with prefix_length > 29
    * @param ipPrefixLength ipPrefixLength or {@code null} for none
    */
   public AddSubnetworkRequest setIpPrefixLength(java.lang.Integer ipPrefixLength) {

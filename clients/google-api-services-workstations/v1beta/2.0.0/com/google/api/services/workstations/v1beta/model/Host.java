@@ -17,8 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * The system will attempt to keep enough computational resources on standby Runtime host for a
- * Workstation.
+ * Runtime host for a workstation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -32,14 +31,14 @@ package com.google.api.services.workstations.v1beta.model;
 public final class Host extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies a Google Compute Engine Instance as the host.
+   * Specifies a Compute Engine instance as the host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GceInstance gceInstance;
 
   /**
-   * Specifies a Google Compute Engine Instance as the host.
+   * Specifies a Compute Engine instance as the host.
    * @return value or {@code null} for none
    */
   public GceInstance getGceInstance() {
@@ -47,7 +46,7 @@ public final class Host extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies a Google Compute Engine Instance as the host.
+   * Specifies a Compute Engine instance as the host.
    * @param gceInstance gceInstance or {@code null} for none
    */
   public Host setGceInstance(GceInstance gceInstance) {

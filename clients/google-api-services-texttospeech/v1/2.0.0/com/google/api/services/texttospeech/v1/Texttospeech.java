@@ -429,344 +429,6 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
         return (Delete) super.set(parameterName, value);
       }
     }
-    /**
-     * Gets the latest state of a long-running operation. Clients can use this method to poll the
-     * operation result at intervals as recommended by the API service.
-     *
-     * Create a request for the method "operations.get".
-     *
-     * This request holds the parameters needed by the texttospeech server.  After setting any optional
-     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation resource.
-     * @return the request
-     */
-    public Get get(java.lang.String name) throws java.io.IOException {
-      Get result = new Get(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Get extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.Operation> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.*$");
-
-      /**
-       * Gets the latest state of a long-running operation. Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
-       *
-       * Create a request for the method "operations.get".
-       *
-       * This request holds the parameters needed by the the texttospeech server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation resource.
-       * @since 1.13
-       */
-      protected Get(java.lang.String name) {
-        super(Texttospeech.this, "GET", REST_PATH, null, com.google.api.services.texttospeech.v1.model.Operation.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/.*$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Get set$Xgafv(java.lang.String $Xgafv) {
-        return (Get) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Get setAlt(java.lang.String alt) {
-        return (Get) super.setAlt(alt);
-      }
-
-      @Override
-      public Get setCallback(java.lang.String callback) {
-        return (Get) super.setCallback(callback);
-      }
-
-      @Override
-      public Get setFields(java.lang.String fields) {
-        return (Get) super.setFields(fields);
-      }
-
-      @Override
-      public Get setKey(java.lang.String key) {
-        return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Get) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Get setQuotaUser(java.lang.String quotaUser) {
-        return (Get) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Get setUploadType(java.lang.String uploadType) {
-        return (Get) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Get setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Get) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation resource.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation resource. */
-      public Get setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/.*$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Get set(String parameterName, Object value) {
-        return (Get) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-     * the binding to use different resource name schemes, such as `users/operations`. To override the
-     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-     * configuration. For backwards compatibility, the default name includes the operations collection
-     * id, however overriding users must ensure the name binding is the parent resource, without the
-     * operations collection id.
-     *
-     * Create a request for the method "operations.list".
-     *
-     * This request holds the parameters needed by the texttospeech server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation's parent resource.
-     * @return the request
-     */
-    public List list(java.lang.String name) throws java.io.IOException {
-      List result = new List(name);
-      initialize(result);
-      return result;
-    }
-
-    public class List extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.ListOperationsResponse> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations$");
-
-      /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-       * override the binding to use different resource name schemes, such as `users/operations`. To
-       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-       * their service configuration. For backwards compatibility, the default name includes the
-       * operations collection id, however overriding users must ensure the name binding is the parent
-       * resource, without the operations collection id.
-       *
-       * Create a request for the method "operations.list".
-       *
-       * This request holds the parameters needed by the the texttospeech server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation's parent resource.
-       * @since 1.13
-       */
-      protected List(java.lang.String name) {
-        super(Texttospeech.this, "GET", REST_PATH, null, com.google.api.services.texttospeech.v1.model.ListOperationsResponse.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List set$Xgafv(java.lang.String $Xgafv) {
-        return (List) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setCallback(java.lang.String callback) {
-        return (List) super.setCallback(callback);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUploadType(java.lang.String uploadType) {
-        return (List) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public List setUploadProtocol(java.lang.String uploadProtocol) {
-        return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation's parent resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation's parent resource.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation's parent resource. */
-      public List setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** The standard list filter. */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** The standard list filter.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
-        return this;
-      }
-
-      /** The standard list page size. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The standard list page size.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** The standard list page size. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
-    }
 
   }
 
@@ -811,154 +473,493 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
     public class Locations {
 
       /**
-       * An accessor for creating requests from the Voices collection.
+       * Synthesizes long form text asynchronously.
        *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Texttospeech texttospeech = new Texttospeech(...);}
-       *   {@code Texttospeech.Voices.List request = texttospeech.voices().list(parameters ...)}
-       * </pre>
+       * Create a request for the method "locations.synthesizeLongAudio".
        *
-       * @return the resource collection
+       * This request holds the parameters needed by the texttospeech server.  After setting any optional
+       * parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote operation.
+       *
+       * @param parent The resource states of the request in the form of `projects/locations/voices`.
+       * @param content the {@link com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest}
+       * @return the request
        */
-      public Voices voices() {
-        return new Voices();
+      public SynthesizeLongAudio synthesizeLongAudio(java.lang.String parent, com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest content) throws java.io.IOException {
+        SynthesizeLongAudio result = new SynthesizeLongAudio(parent, content);
+        initialize(result);
+        return result;
       }
 
-      /**
-       * The "voices" collection of methods.
-       */
-      public class Voices {
+      public class SynthesizeLongAudio extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}:synthesizeLongAudio";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
          * Synthesizes long form text asynchronously.
          *
-         * Create a request for the method "voices.synthesizeLongAudio".
+         * Create a request for the method "locations.synthesizeLongAudio".
+         *
+         * This request holds the parameters needed by the the texttospeech server.  After setting any
+         * optional parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote
+         * operation. <p> {@link SynthesizeLongAudio#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent The resource states of the request in the form of `projects/locations/voices`.
+         * @param content the {@link com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest}
+         * @since 1.13
+         */
+        protected SynthesizeLongAudio(java.lang.String parent, com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest content) {
+          super(Texttospeech.this, "POST", REST_PATH, content, com.google.api.services.texttospeech.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SynthesizeLongAudio set$Xgafv(java.lang.String $Xgafv) {
+          return (SynthesizeLongAudio) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SynthesizeLongAudio setAccessToken(java.lang.String accessToken) {
+          return (SynthesizeLongAudio) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SynthesizeLongAudio setAlt(java.lang.String alt) {
+          return (SynthesizeLongAudio) super.setAlt(alt);
+        }
+
+        @Override
+        public SynthesizeLongAudio setCallback(java.lang.String callback) {
+          return (SynthesizeLongAudio) super.setCallback(callback);
+        }
+
+        @Override
+        public SynthesizeLongAudio setFields(java.lang.String fields) {
+          return (SynthesizeLongAudio) super.setFields(fields);
+        }
+
+        @Override
+        public SynthesizeLongAudio setKey(java.lang.String key) {
+          return (SynthesizeLongAudio) super.setKey(key);
+        }
+
+        @Override
+        public SynthesizeLongAudio setOauthToken(java.lang.String oauthToken) {
+          return (SynthesizeLongAudio) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SynthesizeLongAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SynthesizeLongAudio) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SynthesizeLongAudio setQuotaUser(java.lang.String quotaUser) {
+          return (SynthesizeLongAudio) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SynthesizeLongAudio setUploadType(java.lang.String uploadType) {
+          return (SynthesizeLongAudio) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SynthesizeLongAudio setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SynthesizeLongAudio) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The resource states of the request in the form of `projects/locations/voices`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource states of the request in the form of `projects/locations/voices`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** The resource states of the request in the form of `projects/locations/voices`. */
+        public SynthesizeLongAudio setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public SynthesizeLongAudio set(String parameterName, Object value) {
+          return (SynthesizeLongAudio) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+       *   {@code Texttospeech.Operations.List request = texttospeech.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
          *
          * This request holds the parameters needed by the texttospeech server.  After setting any optional
-         * parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote operation.
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param parent The resource states of the request in the form of projects/locations/voices.
-         * @param content the {@link com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest}
+         * @param name The name of the operation resource.
          * @return the request
          */
-        public SynthesizeLongAudio synthesizeLongAudio(java.lang.String parent, com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest content) throws java.io.IOException {
-          SynthesizeLongAudio result = new SynthesizeLongAudio(parent, content);
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
           initialize(result);
           return result;
         }
 
-        public class SynthesizeLongAudio extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.Operation> {
+        public class Get extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1/{+parent}:SynthesizeLongAudio";
+          private static final String REST_PATH = "v1/{+name}";
 
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Synthesizes long form text asynchronously.
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
            *
-           * Create a request for the method "voices.synthesizeLongAudio".
+           * Create a request for the method "operations.get".
            *
            * This request holds the parameters needed by the the texttospeech server.  After setting any
-           * optional parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote
-           * operation. <p> {@link SynthesizeLongAudio#initialize(com.google.api.client.googleapis.services.
-           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The resource states of the request in the form of projects/locations/voices.
-           * @param content the {@link com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest}
+           * @param name The name of the operation resource.
            * @since 1.13
            */
-          protected SynthesizeLongAudio(java.lang.String parent, com.google.api.services.texttospeech.v1.model.SynthesizeLongAudioRequest content) {
-            super(Texttospeech.this, "POST", REST_PATH, content, com.google.api.services.texttospeech.v1.model.Operation.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          protected Get(java.lang.String name) {
+            super(Texttospeech.this, "GET", REST_PATH, null, com.google.api.services.texttospeech.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
             }
           }
 
           @Override
-          public SynthesizeLongAudio set$Xgafv(java.lang.String $Xgafv) {
-            return (SynthesizeLongAudio) super.set$Xgafv($Xgafv);
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
           }
 
           @Override
-          public SynthesizeLongAudio setAccessToken(java.lang.String accessToken) {
-            return (SynthesizeLongAudio) super.setAccessToken(accessToken);
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
           }
 
           @Override
-          public SynthesizeLongAudio setAlt(java.lang.String alt) {
-            return (SynthesizeLongAudio) super.setAlt(alt);
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public SynthesizeLongAudio setCallback(java.lang.String callback) {
-            return (SynthesizeLongAudio) super.setCallback(callback);
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
           }
 
           @Override
-          public SynthesizeLongAudio setFields(java.lang.String fields) {
-            return (SynthesizeLongAudio) super.setFields(fields);
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
           }
 
           @Override
-          public SynthesizeLongAudio setKey(java.lang.String key) {
-            return (SynthesizeLongAudio) super.setKey(key);
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
-          public SynthesizeLongAudio setOauthToken(java.lang.String oauthToken) {
-            return (SynthesizeLongAudio) super.setOauthToken(oauthToken);
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
           }
 
           @Override
-          public SynthesizeLongAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (SynthesizeLongAudio) super.setPrettyPrint(prettyPrint);
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
           }
 
           @Override
-          public SynthesizeLongAudio setQuotaUser(java.lang.String quotaUser) {
-            return (SynthesizeLongAudio) super.setQuotaUser(quotaUser);
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public SynthesizeLongAudio setUploadType(java.lang.String uploadType) {
-            return (SynthesizeLongAudio) super.setUploadType(uploadType);
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public SynthesizeLongAudio setUploadProtocol(java.lang.String uploadProtocol) {
-            return (SynthesizeLongAudio) super.setUploadProtocol(uploadProtocol);
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
           }
 
-          /** The resource states of the request in the form of projects/locations/voices. */
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
           @com.google.api.client.util.Key
-          private java.lang.String parent;
+          private java.lang.String name;
 
-          /** The resource states of the request in the form of projects/locations/voices.
+          /** The name of the operation resource.
            */
-          public java.lang.String getParent() {
-            return parent;
+          public java.lang.String getName() {
+            return name;
           }
 
-          /** The resource states of the request in the form of projects/locations/voices. */
-          public SynthesizeLongAudio setParent(java.lang.String parent) {
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
             }
-            this.parent = parent;
+            this.name = name;
             return this;
           }
 
           @Override
-          public SynthesizeLongAudio set(String parameterName, Object value) {
-            return (SynthesizeLongAudio) super.set(parameterName, value);
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the texttospeech server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the texttospeech server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Texttospeech.this, "GET", REST_PATH, null, com.google.api.services.texttospeech.v1.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

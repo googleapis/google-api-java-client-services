@@ -830,7 +830,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
       public class WorkstationClusters {
 
         /**
-         * Creates a new WorkstationCluster.
+         * Creates a new workstation cluster.
          *
          * Create a request for the method "workstationClusters.create".
          *
@@ -855,7 +855,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new WorkstationCluster.
+           * Creates a new workstation cluster.
            *
            * Create a request for the method "workstationClusters.create".
            *
@@ -993,7 +993,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * Deletes the specified WorkstationCluster.
+         * Deletes the specified workstation cluster.
          *
          * Create a request for the method "workstationClusters.delete".
          *
@@ -1017,7 +1017,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
 
           /**
-           * Deletes the specified WorkstationCluster.
+           * Deletes the specified workstation cluster.
            *
            * Create a request for the method "workstationClusters.delete".
            *
@@ -1140,22 +1140,24 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, any WorkstationConfigs and Workstations in the cluster will also be deleted.
-           * Otherwise, the request will work only if the cluster has no configs or workstations.
+           * If set, any workstation configurations and workstations in the cluster will also be
+           * deleted. Otherwise, the request will work only if the cluster has no configurations or
+           * workstations.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** If set, any WorkstationConfigs and Workstations in the cluster will also be deleted. Otherwise, the
-         request will work only if the cluster has no configs or workstations.
+          /** If set, any workstation configurations and workstations in the cluster will also be deleted.
+         Otherwise, the request will work only if the cluster has no configurations or workstations.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * If set, any WorkstationConfigs and Workstations in the cluster will also be deleted.
-           * Otherwise, the request will work only if the cluster has no configs or workstations.
+           * If set, any workstation configurations and workstations in the cluster will also be
+           * deleted. Otherwise, the request will work only if the cluster has no configurations or
+           * workstations.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
@@ -1184,7 +1186,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * Returns the requested WorkstationCluster.
+         * Returns the requested workstation cluster.
          *
          * Create a request for the method "workstationClusters.get".
          *
@@ -1208,7 +1210,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
 
           /**
-           * Returns the requested WorkstationCluster.
+           * Returns the requested workstation cluster.
            *
            * Create a request for the method "workstationClusters.get".
            *
@@ -1322,7 +1324,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * Returns all WorkstationClusters in the specified location.
+         * Returns all workstation clusters in the specified location.
          *
          * Create a request for the method "workstationClusters.list".
          *
@@ -1346,7 +1348,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Returns all WorkstationClusters in the specified location.
+           * Returns all workstation clusters in the specified location.
            *
            * Create a request for the method "workstationClusters.list".
            *
@@ -1492,7 +1494,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * Updates an existing WorkstationCluster.
+         * Updates an existing workstation cluster.
          *
          * Create a request for the method "workstationClusters.patch".
          *
@@ -1517,7 +1519,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
 
           /**
-           * Updates an existing WorkstationCluster.
+           * Updates an existing workstation cluster.
            *
            * Create a request for the method "workstationClusters.patch".
            *
@@ -1699,7 +1701,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
         public class WorkstationConfigs {
 
           /**
-           * Creates a new WorkstationConfig.
+           * Creates a new workstation configuration.
            *
            * Create a request for the method "workstationConfigs.create".
            *
@@ -1724,7 +1726,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
 
             /**
-             * Creates a new WorkstationConfig.
+             * Creates a new workstation configuration.
              *
              * Create a request for the method "workstationConfigs.create".
              *
@@ -1866,7 +1868,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Deletes the specified WorkstationConfig.
+           * Deletes the specified workstation configuration.
            *
            * Create a request for the method "workstationConfigs.delete".
            *
@@ -1890,7 +1892,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
 
             /**
-             * Deletes the specified WorkstationConfig.
+             * Deletes the specified workstation configuration.
              *
              * Create a request for the method "workstationConfigs.delete".
              *
@@ -2061,7 +2063,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Returns the requested WorkstationConfig.
+           * Returns the requested workstation configuration.
            *
            * Create a request for the method "workstationConfigs.get".
            *
@@ -2085,7 +2087,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
 
             /**
-             * Returns the requested WorkstationConfig.
+             * Returns the requested workstation configuration.
              *
              * Create a request for the method "workstationConfigs.get".
              *
@@ -2397,7 +2399,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Returns all WorkstationConfigs in the specified cluster.
+           * Returns all workstation configurations in the specified cluster.
            *
            * Create a request for the method "workstationConfigs.list".
            *
@@ -2421,7 +2423,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
 
             /**
-             * Returns all WorkstationConfigs in the specified cluster.
+             * Returns all workstation configurations in the specified cluster.
              *
              * Create a request for the method "workstationConfigs.list".
              *
@@ -2567,7 +2569,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Returns all WorkstationConfigs in the specified cluster on which the caller has the
+           * Returns all workstation configurations in the specified cluster on which the caller has the
            * "workstations.workstation.create" permission.
            *
            * Create a request for the method "workstationConfigs.listUsable".
@@ -2592,7 +2594,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
 
             /**
-             * Returns all WorkstationConfigs in the specified cluster on which the caller has the
+             * Returns all workstation configurations in the specified cluster on which the caller has the
              * "workstations.workstation.create" permission.
              *
              * Create a request for the method "workstationConfigs.listUsable".
@@ -2740,7 +2742,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Updates an existing WorkstationConfig.
+           * Updates an existing workstation configuration.
            *
            * Create a request for the method "workstationConfigs.patch".
            *
@@ -2765,7 +2767,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
 
             /**
-             * Updates an existing WorkstationConfig.
+             * Updates an existing workstation configuration.
              *
              * Create a request for the method "workstationConfigs.patch".
              *
@@ -3249,7 +3251,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           public class Workstations {
 
             /**
-             * Creates a new Workstation.
+             * Creates a new workstation.
              *
              * Create a request for the method "workstations.create".
              *
@@ -3274,7 +3276,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
 
               /**
-               * Creates a new Workstation.
+               * Creates a new workstation.
                *
                * Create a request for the method "workstations.create".
                *
@@ -3416,7 +3418,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
-             * Deletes the specified Workstation.
+             * Deletes the specified workstation.
              *
              * Create a request for the method "workstations.delete".
              *
@@ -3440,7 +3442,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
 
               /**
-               * Deletes the specified Workstation.
+               * Deletes the specified workstation.
                *
                * Create a request for the method "workstations.delete".
                *
@@ -3725,7 +3727,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
-             * Returns the requested Workstation.
+             * Returns the requested workstation.
              *
              * Create a request for the method "workstations.get".
              *
@@ -3749,7 +3751,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
 
               /**
-               * Returns the requested Workstation.
+               * Returns the requested workstation.
                *
                * Create a request for the method "workstations.get".
                *
@@ -4406,7 +4408,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
-             * Updates an existing Workstation.
+             * Updates an existing workstation.
              *
              * Create a request for the method "workstations.patch".
              *
@@ -4431,7 +4433,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
 
               /**
-               * Updates an existing Workstation.
+               * Updates an existing workstation.
                *
                * Create a request for the method "workstations.patch".
                *

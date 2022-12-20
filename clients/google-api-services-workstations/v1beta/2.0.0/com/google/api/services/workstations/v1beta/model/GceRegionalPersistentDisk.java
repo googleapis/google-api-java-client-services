@@ -38,7 +38,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   private java.lang.String diskType;
 
   /**
-   * Type of file system that the disk should be formatted with. The Workstation image must support
+   * Type of file system that the disk should be formatted with. The workstation image must support
    * this file system type. Must be empty if source_snapshot is set.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   private java.lang.String fsType;
 
   /**
-   * What should happen to the disk after the Workstation is deleted. Defaults to DELETE.
+   * What should happen to the disk after the workstation is deleted. Defaults to DELETE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Type of file system that the disk should be formatted with. The Workstation image must support
+   * Type of file system that the disk should be formatted with. The workstation image must support
    * this file system type. Must be empty if source_snapshot is set.
    * @return value or {@code null} for none
    */
@@ -86,7 +86,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Type of file system that the disk should be formatted with. The Workstation image must support
+   * Type of file system that the disk should be formatted with. The workstation image must support
    * this file system type. Must be empty if source_snapshot is set.
    * @param fsType fsType or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * What should happen to the disk after the Workstation is deleted. Defaults to DELETE.
+   * What should happen to the disk after the workstation is deleted. Defaults to DELETE.
    * @return value or {@code null} for none
    */
   public java.lang.String getReclaimPolicy() {
@@ -104,7 +104,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * What should happen to the disk after the Workstation is deleted. Defaults to DELETE.
+   * What should happen to the disk after the workstation is deleted. Defaults to DELETE.
    * @param reclaimPolicy reclaimPolicy or {@code null} for none
    */
   public GceRegionalPersistentDisk setReclaimPolicy(java.lang.String reclaimPolicy) {

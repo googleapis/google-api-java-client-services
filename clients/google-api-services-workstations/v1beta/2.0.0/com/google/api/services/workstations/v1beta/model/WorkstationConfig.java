@@ -17,8 +17,8 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A set of configuration options describing how a workstation will be run. WorkstationConfigs are
- * intended to be shared across multiple workstations.
+ * A set of configuration options describing how a workstation will be run. Workstation
+ * configurations are intended to be shared across multiple workstations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -52,8 +52,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that will be run for each Workstation using this config when that Workstation is
-   * started.
+   * Container that will be run for each workstation using this configuration when that workstation
+   * is started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String etag;
 
   /**
-   * Runtime host for the Workstation.
+   * Runtime host for the workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +120,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Directories to persist across Workstation sessions.
+   * Directories to persist across workstation sessions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,8 +198,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that will be run for each Workstation using this config when that Workstation is
-   * started.
+   * Container that will be run for each workstation using this configuration when that workstation
+   * is started.
    * @return value or {@code null} for none
    */
   public Container getContainer() {
@@ -207,8 +207,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that will be run for each Workstation using this config when that Workstation is
-   * started.
+   * Container that will be run for each workstation using this configuration when that workstation
+   * is started.
    * @param container container or {@code null} for none
    */
   public WorkstationConfig setContainer(Container container) {
@@ -306,7 +306,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Runtime host for the Workstation.
+   * Runtime host for the workstation.
    * @return value or {@code null} for none
    */
   public Host getHost() {
@@ -314,7 +314,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Runtime host for the Workstation.
+   * Runtime host for the workstation.
    * @param host host or {@code null} for none
    */
   public WorkstationConfig setHost(Host host) {
@@ -361,7 +361,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Directories to persist across Workstation sessions.
+   * Directories to persist across workstation sessions.
    * @return value or {@code null} for none
    */
   public java.util.List<PersistentDirectory> getPersistentDirectories() {
@@ -369,7 +369,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Directories to persist across Workstation sessions.
+   * Directories to persist across workstation sessions.
    * @param persistentDirectories persistentDirectories or {@code null} for none
    */
   public WorkstationConfig setPersistentDirectories(java.util.List<PersistentDirectory> persistentDirectories) {

@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A directory persisted across Workstation sessions.
+ * A directory to persist across workstation sessions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
   private GceRegionalPersistentDisk gcePd;
 
   /**
-   * Location of this directory in the running Workstation.
+   * Location of this directory in the running workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Location of this directory in the running Workstation.
+   * Location of this directory in the running workstation.
    * @return value or {@code null} for none
    */
   public java.lang.String getMountPath() {
@@ -70,7 +70,7 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Location of this directory in the running Workstation.
+   * Location of this directory in the running workstation.
    * @param mountPath mountPath or {@code null} for none
    */
   public PersistentDirectory setMountPath(java.lang.String mountPath) {

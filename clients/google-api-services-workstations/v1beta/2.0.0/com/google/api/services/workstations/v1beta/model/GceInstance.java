@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A runtime using a Google Compute Engine Instance.
+ * A runtime using a Compute Engine instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer bootDiskSizeGb;
 
   /**
-   * A set of Confidential Google Compute Engine Instance option.
+   * A set of Compute Engine Confidential VM instance options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,14 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disablePublicIpAddresses;
 
   /**
-   * The name of a Google Compute Engine machine type.
+   * The name of a Compute Engine machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Number of instances to pool for faster Workstation starup.
+   * Number of instances to pool for faster workstation starup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +76,14 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * A set of Shielded Google Compute Engine Instance options.
+   * A set of Compute Engine Shielded instance options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GceShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
-   * Network tags to add to the Google Compute Engine machines backing the Workstations.
+   * Network tags to add to the Compute Engine machines backing the Workstations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Confidential Google Compute Engine Instance option.
+   * A set of Compute Engine Confidential VM instance options.
    * @return value or {@code null} for none
    */
   public GceConfidentialInstanceConfig getConfidentialInstanceConfig() {
@@ -115,7 +115,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Confidential Google Compute Engine Instance option.
+   * A set of Compute Engine Confidential VM instance options.
    * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
    */
   public GceInstance setConfidentialInstanceConfig(GceConfidentialInstanceConfig confidentialInstanceConfig) {
@@ -141,7 +141,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine machine type.
+   * The name of a Compute Engine machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -149,7 +149,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine machine type.
+   * The name of a Compute Engine machine type.
    * @param machineType machineType or {@code null} for none
    */
   public GceInstance setMachineType(java.lang.String machineType) {
@@ -158,7 +158,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of instances to pool for faster Workstation starup.
+   * Number of instances to pool for faster workstation starup.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPoolSize() {
@@ -166,7 +166,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of instances to pool for faster Workstation starup.
+   * Number of instances to pool for faster workstation starup.
    * @param poolSize poolSize or {@code null} for none
    */
   public GceInstance setPoolSize(java.lang.Integer poolSize) {
@@ -198,7 +198,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Shielded Google Compute Engine Instance options.
+   * A set of Compute Engine Shielded instance options.
    * @return value or {@code null} for none
    */
   public GceShieldedInstanceConfig getShieldedInstanceConfig() {
@@ -206,7 +206,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Shielded Google Compute Engine Instance options.
+   * A set of Compute Engine Shielded instance options.
    * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
    */
   public GceInstance setShieldedInstanceConfig(GceShieldedInstanceConfig shieldedInstanceConfig) {
@@ -215,7 +215,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network tags to add to the Google Compute Engine machines backing the Workstations.
+   * Network tags to add to the Compute Engine machines backing the Workstations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -223,7 +223,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network tags to add to the Google Compute Engine machines backing the Workstations.
+   * Network tags to add to the Compute Engine machines backing the Workstations.
    * @param tags tags or {@code null} for none
    */
   public GceInstance setTags(java.util.List<java.lang.String> tags) {

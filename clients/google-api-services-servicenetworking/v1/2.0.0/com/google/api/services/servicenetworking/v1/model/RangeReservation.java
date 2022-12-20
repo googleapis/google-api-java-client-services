@@ -31,9 +31,10 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class RangeReservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '30' to
-   * find unused x.x.x.x/30 CIDR range. The goal is to determine if one of the allocated ranges has
-   * enough free space for a subnet of the requested size.
+   * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '29' to
+   * find unused x.x.x.x/29 CIDR range. The goal is to determine if one of the allocated ranges has
+   * enough free space for a subnet of the requested size. GCE disallows subnets with prefix_length
+   * > 29
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +52,9 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The size of the desired secondary ranges for the subnet. Use usual CIDR range
-   * notation. For example, '30' to find unused x.x.x.x/30 CIDR range. The goal is to determine that
-   * the allocated ranges have enough free space for all the requested secondary ranges.
+   * notation. For example, '29' to find unused x.x.x.x/29 CIDR range. The goal is to determine that
+   * the allocated ranges have enough free space for all the requested secondary ranges. GCE
+   * disallows subnets with prefix_length > 29
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +71,10 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   private java.util.List<Subnetwork> subnetworkCandidates;
 
   /**
-   * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '30' to
-   * find unused x.x.x.x/30 CIDR range. The goal is to determine if one of the allocated ranges has
-   * enough free space for a subnet of the requested size.
+   * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '29' to
+   * find unused x.x.x.x/29 CIDR range. The goal is to determine if one of the allocated ranges has
+   * enough free space for a subnet of the requested size. GCE disallows subnets with prefix_length
+   * > 29
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIpPrefixLength() {
@@ -79,9 +82,10 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '30' to
-   * find unused x.x.x.x/30 CIDR range. The goal is to determine if one of the allocated ranges has
-   * enough free space for a subnet of the requested size.
+   * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '29' to
+   * find unused x.x.x.x/29 CIDR range. The goal is to determine if one of the allocated ranges has
+   * enough free space for a subnet of the requested size. GCE disallows subnets with prefix_length
+   * > 29
    * @param ipPrefixLength ipPrefixLength or {@code null} for none
    */
   public RangeReservation setIpPrefixLength(java.lang.Integer ipPrefixLength) {
@@ -114,8 +118,9 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The size of the desired secondary ranges for the subnet. Use usual CIDR range
-   * notation. For example, '30' to find unused x.x.x.x/30 CIDR range. The goal is to determine that
-   * the allocated ranges have enough free space for all the requested secondary ranges.
+   * notation. For example, '29' to find unused x.x.x.x/29 CIDR range. The goal is to determine that
+   * the allocated ranges have enough free space for all the requested secondary ranges. GCE
+   * disallows subnets with prefix_length > 29
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getSecondaryRangeIpPrefixLengths() {
@@ -124,8 +129,9 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The size of the desired secondary ranges for the subnet. Use usual CIDR range
-   * notation. For example, '30' to find unused x.x.x.x/30 CIDR range. The goal is to determine that
-   * the allocated ranges have enough free space for all the requested secondary ranges.
+   * notation. For example, '29' to find unused x.x.x.x/29 CIDR range. The goal is to determine that
+   * the allocated ranges have enough free space for all the requested secondary ranges. GCE
+   * disallows subnets with prefix_length > 29
    * @param secondaryRangeIpPrefixLengths secondaryRangeIpPrefixLengths or {@code null} for none
    */
   public RangeReservation setSecondaryRangeIpPrefixLengths(java.util.List<java.lang.Integer> secondaryRangeIpPrefixLengths) {

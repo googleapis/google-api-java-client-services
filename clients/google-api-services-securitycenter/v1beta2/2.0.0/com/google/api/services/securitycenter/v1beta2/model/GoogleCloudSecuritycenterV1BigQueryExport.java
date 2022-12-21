@@ -31,8 +31,8 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time at which the big query export was created. This field is set by the
-   * server and will be ignored if provided on export on creation.
+   * Output only. The time at which the BigQuery export was created. This field is set by the server
+   * and will be ignored if provided on export on creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   private java.lang.String filter;
 
   /**
-   * Output only. Email address of the user who last edited the big query export. This field is set
+   * Output only. Email address of the user who last edited the BigQuery export. This field is set
    * by the server and will be ignored if provided on export creation or update.
    * The value may be {@code null}.
    */
@@ -89,24 +89,24 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   private java.lang.String name;
 
   /**
-   * Output only. The service account that needs permission to create table, upload data to the big
-   * query dataset.
+   * Output only. The service account that needs permission to create table and upload data to the
+   * BigQuery dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principal;
 
   /**
-   * Output only. The most recent time at which the big export was updated. This field is set by the
-   * server and will be ignored if provided on export creation or update.
+   * Output only. The most recent time at which the BigQuery export was updated. This field is set
+   * by the server and will be ignored if provided on export creation or update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time at which the big query export was created. This field is set by the
-   * server and will be ignored if provided on export on creation.
+   * Output only. The time at which the BigQuery export was created. This field is set by the server
+   * and will be ignored if provided on export on creation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -114,8 +114,8 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The time at which the big query export was created. This field is set by the
-   * server and will be ignored if provided on export on creation.
+   * Output only. The time at which the BigQuery export was created. This field is set by the server
+   * and will be ignored if provided on export on creation.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1BigQueryExport setCreateTime(String createTime) {
@@ -193,7 +193,7 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. Email address of the user who last edited the big query export. This field is set
+   * Output only. Email address of the user who last edited the BigQuery export. This field is set
    * by the server and will be ignored if provided on export creation or update.
    * @return value or {@code null} for none
    */
@@ -202,7 +202,7 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. Email address of the user who last edited the big query export. This field is set
+   * Output only. Email address of the user who last edited the BigQuery export. This field is set
    * by the server and will be ignored if provided on export creation or update.
    * @param mostRecentEditor mostRecentEditor or {@code null} for none
    */
@@ -239,8 +239,8 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The service account that needs permission to create table, upload data to the big
-   * query dataset.
+   * Output only. The service account that needs permission to create table and upload data to the
+   * BigQuery dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -248,8 +248,8 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The service account that needs permission to create table, upload data to the big
-   * query dataset.
+   * Output only. The service account that needs permission to create table and upload data to the
+   * BigQuery dataset.
    * @param principal principal or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1BigQueryExport setPrincipal(java.lang.String principal) {
@@ -258,8 +258,8 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The most recent time at which the big export was updated. This field is set by the
-   * server and will be ignored if provided on export creation or update.
+   * Output only. The most recent time at which the BigQuery export was updated. This field is set
+   * by the server and will be ignored if provided on export creation or update.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -267,8 +267,8 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The most recent time at which the big export was updated. This field is set by the
-   * server and will be ignored if provided on export creation or update.
+   * Output only. The most recent time at which the BigQuery export was updated. This field is set
+   * by the server and will be ignored if provided on export creation or update.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1BigQueryExport setUpdateTime(String updateTime) {

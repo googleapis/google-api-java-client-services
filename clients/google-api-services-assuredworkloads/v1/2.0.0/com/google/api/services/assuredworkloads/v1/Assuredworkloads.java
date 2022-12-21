@@ -1250,6 +1250,149 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * Update the permissions settings for an existing partner workload. For force updates don't set
+         * etag field in the Workload. Only one update operation per workload can be in progress.
+         *
+         * Create a request for the method "workloads.mutatePartnerPermissions".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link MutatePartnerPermissions#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+         * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest}
+         * @return the request
+         */
+        public MutatePartnerPermissions mutatePartnerPermissions(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest content) throws java.io.IOException {
+          MutatePartnerPermissions result = new MutatePartnerPermissions(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MutatePartnerPermissions extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload> {
+
+          private static final String REST_PATH = "v1/{+name}:mutatePartnerPermissions";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * Update the permissions settings for an existing partner workload. For force updates don't set
+           * etag field in the Workload. Only one update operation per workload can be in progress.
+           *
+           * Create a request for the method "workloads.mutatePartnerPermissions".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link MutatePartnerPermissions#execute()} method to invoke the
+           * remote operation. <p> {@link MutatePartnerPermissions#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest}
+           * @since 1.13
+           */
+          protected MutatePartnerPermissions(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest content) {
+            super(Assuredworkloads.this, "PATCH", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1Workload.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public MutatePartnerPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (MutatePartnerPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MutatePartnerPermissions setAccessToken(java.lang.String accessToken) {
+            return (MutatePartnerPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MutatePartnerPermissions setAlt(java.lang.String alt) {
+            return (MutatePartnerPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public MutatePartnerPermissions setCallback(java.lang.String callback) {
+            return (MutatePartnerPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public MutatePartnerPermissions setFields(java.lang.String fields) {
+            return (MutatePartnerPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public MutatePartnerPermissions setKey(java.lang.String key) {
+            return (MutatePartnerPermissions) super.setKey(key);
+          }
+
+          @Override
+          public MutatePartnerPermissions setOauthToken(java.lang.String oauthToken) {
+            return (MutatePartnerPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MutatePartnerPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MutatePartnerPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MutatePartnerPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (MutatePartnerPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MutatePartnerPermissions setUploadType(java.lang.String uploadType) {
+            return (MutatePartnerPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MutatePartnerPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MutatePartnerPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the workload. Format:
+         organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public MutatePartnerPermissions setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public MutatePartnerPermissions set(String parameterName, Object value) {
+            return (MutatePartnerPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates an existing workload. Currently allows updating of workload display_name and labels. For
          * force updates don't set etag field in the Workload. Only one update operation per workload can be
          * in progress.

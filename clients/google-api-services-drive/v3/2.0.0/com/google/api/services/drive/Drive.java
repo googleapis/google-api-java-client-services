@@ -917,22 +917,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query within the user corpus. Supported values are
-       * 'drive', 'appDataFolder' and 'photos'.
+       * A comma-separated list of spaces to query within the corpora. Supported values are 'drive'
+       * and 'appDataFolder'.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query within the user corpus. Supported values are 'drive',
-     'appDataFolder' and 'photos'. [default: drive]
+      /** A comma-separated list of spaces to query within the corpora. Supported values are 'drive' and
+     'appDataFolder'. [default: drive]
        */
       public java.lang.String getSpaces() {
         return spaces;
       }
 
       /**
-       * A comma-separated list of spaces to query within the user corpus. Supported values are
-       * 'drive', 'appDataFolder' and 'photos'.
+       * A comma-separated list of spaces to query within the corpora. Supported values are 'drive'
+       * and 'appDataFolder'.
        */
       public List setSpaces(java.lang.String spaces) {
         this.spaces = spaces;
@@ -1481,22 +1481,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query within the user corpus. Supported values are
-       * 'drive', 'appDataFolder' and 'photos'.
+       * A comma-separated list of spaces to query within the corpora. Supported values are 'drive'
+       * and 'appDataFolder'.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query within the user corpus. Supported values are 'drive',
-     'appDataFolder' and 'photos'. [default: drive]
+      /** A comma-separated list of spaces to query within the corpora. Supported values are 'drive' and
+     'appDataFolder'. [default: drive]
        */
       public java.lang.String getSpaces() {
         return spaces;
       }
 
       /**
-       * A comma-separated list of spaces to query within the user corpus. Supported values are
-       * 'drive', 'appDataFolder' and 'photos'.
+       * A comma-separated list of spaces to query within the corpora. Supported values are 'drive'
+       * and 'appDataFolder'.
        */
       public Watch setSpaces(java.lang.String spaces) {
         this.spaces = spaces;
@@ -1735,7 +1735,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Comments {
 
     /**
-     * Creates a new comment on a file.
+     * Creates a comment on a file.
      *
      * Create a request for the method "comments.create".
      *
@@ -1757,7 +1757,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments";
 
       /**
-       * Creates a new comment on a file.
+       * Creates a comment on a file.
        *
        * Create a request for the method "comments.create".
        *
@@ -2473,7 +2473,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Drives {
 
     /**
-     * Creates a new shared drive.
+     * Creates a shared drive.
      *
      * Create a request for the method "drives.create".
      *
@@ -2498,7 +2498,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives";
 
       /**
-       * Creates a new shared drive.
+       * Creates a shared drive.
        *
        * Create a request for the method "drives.create".
        *
@@ -3909,7 +3909,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Creates a new file.
+     * Creates a file.
      *
      * Create a request for the method "files.create".
      *
@@ -3926,7 +3926,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
 
     /**
-     * Creates a new file.
+     * Creates a file.
      *
      * Create a request for the method "files.create".
      *
@@ -3954,7 +3954,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files";
 
       /**
-       * Creates a new file.
+       * Creates a file.
        *
        * Create a request for the method "files.create".
        *
@@ -3971,7 +3971,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Creates a new file.
+       * Creates a file.
        *
        * Create a request for the method "files.create".
        *
@@ -5723,13 +5723,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query within the corpus. Supported values are 'drive'
+       * A comma-separated list of spaces to query within the corpora. Supported values are 'drive'
        * and 'appDataFolder'.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query within the corpus. Supported values are 'drive' and
+      /** A comma-separated list of spaces to query within the corpora. Supported values are 'drive' and
      'appDataFolder'. [default: drive]
        */
       public java.lang.String getSpaces() {
@@ -5737,7 +5737,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query within the corpus. Supported values are 'drive'
+       * A comma-separated list of spaces to query within the corpora. Supported values are 'drive'
        * and 'appDataFolder'.
        */
       public List setSpaces(java.lang.String spaces) {
@@ -8583,7 +8583,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Replies {
 
     /**
-     * Creates a new reply to a comment.
+     * Creates a reply to a comment.
      *
      * Create a request for the method "replies.create".
      *
@@ -8606,7 +8606,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies";
 
       /**
-       * Creates a new reply to a comment.
+       * Creates a reply to a comment.
        *
        * Create a request for the method "replies.create".
        *

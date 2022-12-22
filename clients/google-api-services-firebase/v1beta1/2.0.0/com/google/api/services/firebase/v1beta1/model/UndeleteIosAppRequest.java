@@ -31,8 +31,8 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class UndeleteIosAppRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Checksum provided in the IosApp entity, which if provided ensures the client has an up-to-date
-   * value before proceeding.
+   * Checksum provided in the IosApp resource. If provided, this checksum ensures that the client
+   * has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class UndeleteIosAppRequest extends com.google.api.client.json.Gene
   private java.lang.Boolean validateOnly;
 
   /**
-   * Checksum provided in the IosApp entity, which if provided ensures the client has an up-to-date
-   * value before proceeding.
+   * Checksum provided in the IosApp resource. If provided, this checksum ensures that the client
+   * has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -55,8 +55,8 @@ public final class UndeleteIosAppRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Checksum provided in the IosApp entity, which if provided ensures the client has an up-to-date
-   * value before proceeding.
+   * Checksum provided in the IosApp resource. If provided, this checksum ensures that the client
+   * has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public UndeleteIosAppRequest setEtag(java.lang.String etag) {

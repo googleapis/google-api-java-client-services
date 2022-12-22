@@ -2388,6 +2388,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Move to Trash if possible */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useTrash;
+
+      /** Move to Trash if possible
+       */
+      public java.lang.Boolean getUseTrash() {
+        return useTrash;
+      }
+
+      /** Move to Trash if possible */
+      public Delete setUseTrash(java.lang.Boolean useTrash) {
+        this.useTrash = useTrash;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -4129,6 +4145,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Move to Trash if possible */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useTrash;
+
+      /** Move to Trash if possible
+       */
+      public java.lang.Boolean getUseTrash() {
+        return useTrash;
+      }
+
+      /** Move to Trash if possible */
+      public Delete setUseTrash(java.lang.Boolean useTrash) {
+        this.useTrash = useTrash;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -4980,6 +5012,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /** Sort direction applied to post list. */
+      @com.google.api.client.util.Key
+      private java.lang.String sortOption;
+
+      /** Sort direction applied to post list. [default: DESCENDING]
+       */
+      public java.lang.String getSortOption() {
+        return sortOption;
+      }
+
+      /** Sort direction applied to post list. */
+      public List setSortOption(java.lang.String sortOption) {
+        this.sortOption = sortOption;
         return this;
       }
 

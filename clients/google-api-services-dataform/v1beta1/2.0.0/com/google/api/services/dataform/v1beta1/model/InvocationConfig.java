@@ -17,8 +17,8 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Includes various configuration options for this workflow invocation. If both `included_targets`
- * and `included_tags` are unset, all actions will be included.
+ * Includes various configuration options for a workflow invocation. If both `included_targets` and
+ * `included_tags` are unset, all actions will be included.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -31,42 +31,42 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class InvocationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. When set to true, any incremental tables will be fully refreshed.
+   * Optional. When set to true, any incremental tables will be fully refreshed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean fullyRefreshIncrementalTablesEnabled;
 
   /**
-   * Immutable. The set of tags to include.
+   * Optional. The set of tags to include.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> includedTags;
 
   /**
-   * Immutable. The set of action identifiers to include.
+   * Optional. The set of action identifiers to include.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Target> includedTargets;
 
   /**
-   * Immutable. When set to true, transitive dependencies of included actions will be executed.
+   * Optional. When set to true, transitive dependencies of included actions will be executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean transitiveDependenciesIncluded;
 
   /**
-   * Immutable. When set to true, transitive dependents of included actions will be executed.
+   * Optional. When set to true, transitive dependents of included actions will be executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean transitiveDependentsIncluded;
 
   /**
-   * Immutable. When set to true, any incremental tables will be fully refreshed.
+   * Optional. When set to true, any incremental tables will be fully refreshed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullyRefreshIncrementalTablesEnabled() {
@@ -74,7 +74,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. When set to true, any incremental tables will be fully refreshed.
+   * Optional. When set to true, any incremental tables will be fully refreshed.
    * @param fullyRefreshIncrementalTablesEnabled fullyRefreshIncrementalTablesEnabled or {@code null} for none
    */
   public InvocationConfig setFullyRefreshIncrementalTablesEnabled(java.lang.Boolean fullyRefreshIncrementalTablesEnabled) {
@@ -83,7 +83,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. The set of tags to include.
+   * Optional. The set of tags to include.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedTags() {
@@ -91,7 +91,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. The set of tags to include.
+   * Optional. The set of tags to include.
    * @param includedTags includedTags or {@code null} for none
    */
   public InvocationConfig setIncludedTags(java.util.List<java.lang.String> includedTags) {
@@ -100,7 +100,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. The set of action identifiers to include.
+   * Optional. The set of action identifiers to include.
    * @return value or {@code null} for none
    */
   public java.util.List<Target> getIncludedTargets() {
@@ -108,7 +108,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. The set of action identifiers to include.
+   * Optional. The set of action identifiers to include.
    * @param includedTargets includedTargets or {@code null} for none
    */
   public InvocationConfig setIncludedTargets(java.util.List<Target> includedTargets) {
@@ -117,7 +117,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. When set to true, transitive dependencies of included actions will be executed.
+   * Optional. When set to true, transitive dependencies of included actions will be executed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTransitiveDependenciesIncluded() {
@@ -125,7 +125,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. When set to true, transitive dependencies of included actions will be executed.
+   * Optional. When set to true, transitive dependencies of included actions will be executed.
    * @param transitiveDependenciesIncluded transitiveDependenciesIncluded or {@code null} for none
    */
   public InvocationConfig setTransitiveDependenciesIncluded(java.lang.Boolean transitiveDependenciesIncluded) {
@@ -134,7 +134,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. When set to true, transitive dependents of included actions will be executed.
+   * Optional. When set to true, transitive dependents of included actions will be executed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTransitiveDependentsIncluded() {
@@ -142,7 +142,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. When set to true, transitive dependents of included actions will be executed.
+   * Optional. When set to true, transitive dependents of included actions will be executed.
    * @param transitiveDependentsIncluded transitiveDependentsIncluded or {@code null} for none
    */
   public InvocationConfig setTransitiveDependentsIncluded(java.lang.Boolean transitiveDependentsIncluded) {

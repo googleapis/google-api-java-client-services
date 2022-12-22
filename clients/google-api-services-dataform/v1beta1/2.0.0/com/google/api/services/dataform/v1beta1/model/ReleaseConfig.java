@@ -30,8 +30,8 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class ReleaseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. If set, fields of `code_compilation_config` override the default compilation
-   * settings that are specified in dataform.json.
+   * Optional. If set, fields of `code_compilation_config` override the default compilation settings
+   * that are specified in dataform.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,18 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String releaseCompilationResult;
 
   /**
-   * Immutable. If set, fields of `code_compilation_config` override the default compilation
-   * settings that are specified in dataform.json.
+   * Optional. Specifies the time zone to be used when interpreting cron_schedule. Must be a time
+   * zone name from the time zone database
+   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified, the
+   * default is UTC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
+   * Optional. If set, fields of `code_compilation_config` override the default compilation settings
+   * that are specified in dataform.json.
    * @return value or {@code null} for none
    */
   public CodeCompilationConfig getCodeCompilationConfig() {
@@ -89,8 +99,8 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. If set, fields of `code_compilation_config` override the default compilation
-   * settings that are specified in dataform.json.
+   * Optional. If set, fields of `code_compilation_config` override the default compilation settings
+   * that are specified in dataform.json.
    * @param codeCompilationConfig codeCompilationConfig or {@code null} for none
    */
   public ReleaseConfig setCodeCompilationConfig(CodeCompilationConfig codeCompilationConfig) {
@@ -194,6 +204,29 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
    */
   public ReleaseConfig setReleaseCompilationResult(java.lang.String releaseCompilationResult) {
     this.releaseCompilationResult = releaseCompilationResult;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the time zone to be used when interpreting cron_schedule. Must be a time
+   * zone name from the time zone database
+   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified, the
+   * default is UTC.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. Specifies the time zone to be used when interpreting cron_schedule. Must be a time
+   * zone name from the time zone database
+   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified, the
+   * default is UTC.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public ReleaseConfig setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

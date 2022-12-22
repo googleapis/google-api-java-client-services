@@ -39,8 +39,8 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
   private java.lang.Boolean allowMissing;
 
   /**
-   * Checksum provided in the AndroidApp entity, which if provided ensures the client has an up-to-
-   * date value before proceeding.
+   * Checksum provided in the AndroidApp resource. If provided, this checksum ensures that the
+   * client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,8 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Checksum provided in the AndroidApp entity, which if provided ensures the client has an up-to-
-   * date value before proceeding.
+   * Checksum provided in the AndroidApp resource. If provided, this checksum ensures that the
+   * client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -92,8 +92,8 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Checksum provided in the AndroidApp entity, which if provided ensures the client has an up-to-
-   * date value before proceeding.
+   * Checksum provided in the AndroidApp resource. If provided, this checksum ensures that the
+   * client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public RemoveAndroidAppRequest setEtag(java.lang.String etag) {

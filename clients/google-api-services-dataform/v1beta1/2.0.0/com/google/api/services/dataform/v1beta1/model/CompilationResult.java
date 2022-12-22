@@ -83,7 +83,8 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   private java.lang.String releaseConfig;
 
   /**
-   * Output only. The fully resolved Git commit SHA of the code that was compiled.
+   * Output only. The fully resolved Git commit SHA of the code that was compiled. Not set for
+   * compilation results whose source is a workspace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,7 +211,8 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The fully resolved Git commit SHA of the code that was compiled.
+   * Output only. The fully resolved Git commit SHA of the code that was compiled. Not set for
+   * compilation results whose source is a workspace.
    * @return value or {@code null} for none
    */
   public java.lang.String getResolvedGitCommitSha() {
@@ -218,7 +220,8 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The fully resolved Git commit SHA of the code that was compiled.
+   * Output only. The fully resolved Git commit SHA of the code that was compiled. Not set for
+   * compilation results whose source is a workspace.
    * @param resolvedGitCommitSha resolvedGitCommitSha or {@code null} for none
    */
   public CompilationResult setResolvedGitCommitSha(java.lang.String resolvedGitCommitSha) {

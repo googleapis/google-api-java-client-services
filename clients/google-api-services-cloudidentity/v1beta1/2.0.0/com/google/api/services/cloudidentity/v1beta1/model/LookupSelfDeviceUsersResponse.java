@@ -30,8 +30,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class LookupSelfDeviceUsersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The obfuscated customer Id that may be passed back to other Devices API methods such as List,
-   * Get, etc.
+   * The customer Id that may be passed back to other Devices API methods such as List, Get, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +53,7 @@ public final class LookupSelfDeviceUsersResponse extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
-   * The obfuscated customer Id that may be passed back to other Devices API methods such as List,
-   * Get, etc.
+   * The customer Id that may be passed back to other Devices API methods such as List, Get, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomer() {
@@ -63,8 +61,7 @@ public final class LookupSelfDeviceUsersResponse extends com.google.api.client.j
   }
 
   /**
-   * The obfuscated customer Id that may be passed back to other Devices API methods such as List,
-   * Get, etc.
+   * The customer Id that may be passed back to other Devices API methods such as List, Get, etc.
    * @param customer customer or {@code null} for none
    */
   public LookupSelfDeviceUsersResponse setCustomer(java.lang.String customer) {

@@ -1431,6 +1431,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+     you're using this API for your own organization, use `customers/my_customer` If you're using this
+     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+     customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      public Delete setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -1580,6 +1609,31 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Customer in format: `customers/{customer_id}`, where customer_id is the customer to whom
+       * the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Customer in
+     format: `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Customer in format: `customers/{customer_id}`, where customer_id is the customer to whom
+       * the device belongs.
+       */
+      public Get setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -1684,6 +1738,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public List setUploadProtocol(java.lang.String uploadProtocol) {
         return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer.
+       */
+      public List setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
       }
 
       /**
@@ -2563,6 +2639,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public Delete setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -2717,6 +2822,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public Get setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -2861,6 +2995,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
                 "^devices/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public List setCustomer(java.lang.String customer) {
+          this.customer = customer;
           return this;
         }
 
@@ -4592,7 +4755,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Required. The parent resource under which to list all `Group` resources. Must be of the
        * form `identitysources/{identity_source_id}` for external- identity-mapped groups or
        * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
-       * example, 'C046psxkn').
+       * example, 'C046psxkn'). [Find your customer ID.]
+       * (https://support.google.com/cloudidentity/answer/10070793)
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
@@ -4600,7 +4764,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /** Required. The parent resource under which to list all `Group` resources. Must be of the form
      `identitysources/{identity_source_id}` for external- identity-mapped groups or
      `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for example,
-     'C046psxkn').
+     'C046psxkn'). [Find your customer ID.] (https://support.google.com/cloudidentity/answer/10070793)
        */
       public java.lang.String getParent() {
         return parent;
@@ -4610,7 +4774,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Required. The parent resource under which to list all `Group` resources. Must be of the
        * form `identitysources/{identity_source_id}` for external- identity-mapped groups or
        * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
-       * example, 'C046psxkn').
+       * example, 'C046psxkn'). [Find your customer ID.]
+       * (https://support.google.com/cloudidentity/answer/10070793)
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -5070,6 +5235,37 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
+       * The ordering of groups for the display name or email in the search groups response. The
+       * syntax for this field can be found at
+       * https://cloud.google.com/apis/design/design_patterns#sorting_order. Example: Sort by the
+       * ascending name: order_by="display_name" Sort by the descending group key email:
+       * order_by="group_key desc"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** The ordering of groups for the display name or email in the search groups response. The syntax for
+     this field can be found at https://cloud.google.com/apis/design/design_patterns#sorting_order.
+     Example: Sort by the ascending name: order_by="display_name" Sort by the descending group key
+     email: order_by="group_key desc"
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * The ordering of groups for the display name or email in the search groups response. The
+       * syntax for this field can be found at
+       * https://cloud.google.com/apis/design/design_patterns#sorting_order. Example: Sort by the
+       * ascending name: order_by="display_name" Sort by the descending group key email:
+       * order_by="group_key desc"
+       */
+      public Search setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
        * The maximum number of results to return. Note that the number of results returned may be
        * less than this value even if there are more available results. To fetch all results,
        * clients must continue calling this method repeatedly until the response no longer contains
@@ -5120,31 +5316,48 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The search query. Must be specified in [Common Expression
-       * Language](https://opensource.google/projects/cel). May only contain equality operators on
-       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
-       * begin with "C" (for example, 'C046psxkn').
+       * Required. The search query. * Must be specified in [Common Expression
+       * Language](https://opensource.google/projects/cel). * Must contain equality operators on the
+       * parent, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C"
+       * (for example, 'C046psxkn'). [Find your customer ID.]
+       * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
+       * operators on `labels` such as `cloudidentity.googleapis.com/groups.discussion_forum' in
+       * labels`). * Can contain an optional equality operator on `domain_name` or
+       * `startsWith/contains/equality` operator on `group_key`, e.g. `domain_name == 'abc.com'`,
+       * `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key == 'dev@abc.com'` *
+       * Can contain an optional `startsWith/contains/equality` operator on `display_name`, such as
+       * `display_name.startsWith('dev')` , `display_name.contains('dev')`, `display_name == 'dev'`
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. The search query. Must be specified in [Common Expression
-     Language](https://opensource.google/projects/cel). May only contain equality operators on the
-     parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must begin
-     with "C" (for example, 'C046psxkn').
+      /** Required. The search query. * Must be specified in [Common Expression
+     Language](https://opensource.google/projects/cel). * Must contain equality operators on the parent,
+     e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+     'C046psxkn'). [Find your customer ID.] (https://support.google.com/cloudidentity/answer/10070793) *
+     Can contain optional inclusion operators on `labels` such as
+     `cloudidentity.googleapis.com/groups.discussion_forum' in labels`). * Can contain an optional
+     equality operator on `domain_name` or `startsWith/contains/equality` operator on `group_key`, e.g.
+     `domain_name == 'abc.com'`, `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key ==
+     'dev@abc.com'` * Can contain an optional `startsWith/contains/equality` operator on `display_name`,
+     such as `display_name.startsWith('dev')` , `display_name.contains('dev')`, `display_name == 'dev'`
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Required. The search query. Must be specified in [Common Expression
-       * Language](https://opensource.google/projects/cel). May only contain equality operators on
-       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
-       * begin with "C" (for example, 'C046psxkn').
+       * Required. The search query. * Must be specified in [Common Expression
+       * Language](https://opensource.google/projects/cel). * Must contain equality operators on the
+       * parent, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C"
+       * (for example, 'C046psxkn'). [Find your customer ID.]
+       * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
+       * operators on `labels` such as `cloudidentity.googleapis.com/groups.discussion_forum' in
+       * labels`). * Can contain an optional equality operator on `domain_name` or
+       * `startsWith/contains/equality` operator on `group_key`, e.g. `domain_name == 'abc.com'`,
+       * `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key == 'dev@abc.com'` *
+       * Can contain an optional `startsWith/contains/equality` operator on `display_name`, such as
+       * `display_name.startsWith('dev')` , `display_name.contains('dev')`, `display_name == 'dev'`
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;

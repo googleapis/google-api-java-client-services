@@ -91,8 +91,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
    * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for
-   * external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer`
-   * must begin with "C" (for example, 'C046psxkn').
+   * external [identity-mapped groups](https://support.google.com/a/answer/9039510) or
+   * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
+   * example, 'C046psxkn'). [Find your customer ID.]
+   * (https://support.google.com/cloudidentity/answer/10070793)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,8 +247,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
    * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for
-   * external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer`
-   * must begin with "C" (for example, 'C046psxkn').
+   * external [identity-mapped groups](https://support.google.com/a/answer/9039510) or
+   * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
+   * example, 'C046psxkn'). [Find your customer ID.]
+   * (https://support.google.com/cloudidentity/answer/10070793)
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -256,8 +260,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
    * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for
-   * external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer`
-   * must begin with "C" (for example, 'C046psxkn').
+   * external [identity-mapped groups](https://support.google.com/a/answer/9039510) or
+   * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
+   * example, 'C046psxkn'). [Find your customer ID.]
+   * (https://support.google.com/cloudidentity/answer/10070793)
    * @param parent parent or {@code null} for none
    */
   public Group setParent(java.lang.String parent) {

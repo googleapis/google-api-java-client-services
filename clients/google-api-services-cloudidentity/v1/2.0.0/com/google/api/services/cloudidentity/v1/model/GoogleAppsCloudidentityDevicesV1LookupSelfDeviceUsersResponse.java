@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The obfuscated customer Id that may be passed back to other Devices API methods such as List,
+   * The customer resource name that may be passed back to other Devices API methods such as List,
    * Get, etc.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
   private java.lang.String nextPageToken;
 
   /**
-   * The obfuscated customer Id that may be passed back to other Devices API methods such as List,
+   * The customer resource name that may be passed back to other Devices API methods such as List,
    * Get, etc.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
   }
 
   /**
-   * The obfuscated customer Id that may be passed back to other Devices API methods such as List,
+   * The customer resource name that may be passed back to other Devices API methods such as List,
    * Get, etc.
    * @param customer customer or {@code null} for none
    */

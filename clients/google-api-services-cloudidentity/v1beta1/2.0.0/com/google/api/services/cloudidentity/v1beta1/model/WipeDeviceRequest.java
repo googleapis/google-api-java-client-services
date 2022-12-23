@@ -30,6 +30,16 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class WipeDeviceRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use `customers/my_customer` If you're using
+   * this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+   * the customer to whom the device belongs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customer;
+
+  /**
    * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
    * this is called "Activation Lock", while on Android, this is known as "Factory Reset
    * Protection". If true, this protection will be removed from the device, so that a user can
@@ -38,6 +48,29 @@ public final class WipeDeviceRequest extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean removeResetLock;
+
+  /**
+   * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use `customers/my_customer` If you're using
+   * this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+   * the customer to whom the device belongs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomer() {
+    return customer;
+  }
+
+  /**
+   * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use `customers/my_customer` If you're using
+   * this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+   * the customer to whom the device belongs.
+   * @param customer customer or {@code null} for none
+   */
+  public WipeDeviceRequest setCustomer(java.lang.String customer) {
+    this.customer = customer;
+    return this;
+  }
 
   /**
    * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,

@@ -67,6 +67,13 @@ public final class SasPortalInstallationParams extends com.google.api.client.jso
   private java.lang.Integer antennaGain;
 
   /**
+   * As above, but as a DoubleValue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double antennaGainNewField;
+
+  /**
    * If an external antenna is used, the antenna model is optionally provided in this field. The
    * string has a maximum length of 128 octets.
    * The value may be {@code null}.
@@ -89,6 +96,13 @@ public final class SasPortalInstallationParams extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer eirpCapability;
+
+  /**
+   * As above, but as a DoubleValue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double eirpCapabilityNewField;
 
   /**
    * Device antenna height in meters. When the `heightType` parameter value is "AGL", the antenna
@@ -234,6 +248,23 @@ public final class SasPortalInstallationParams extends com.google.api.client.jso
   }
 
   /**
+   * As above, but as a DoubleValue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAntennaGainNewField() {
+    return antennaGainNewField;
+  }
+
+  /**
+   * As above, but as a DoubleValue.
+   * @param antennaGainNewField antennaGainNewField or {@code null} for none
+   */
+  public SasPortalInstallationParams setAntennaGainNewField(java.lang.Double antennaGainNewField) {
+    this.antennaGainNewField = antennaGainNewField;
+    return this;
+  }
+
+  /**
    * If an external antenna is used, the antenna model is optionally provided in this field. The
    * string has a maximum length of 128 octets.
    * @return value or {@code null} for none
@@ -287,6 +318,23 @@ public final class SasPortalInstallationParams extends com.google.api.client.jso
    */
   public SasPortalInstallationParams setEirpCapability(java.lang.Integer eirpCapability) {
     this.eirpCapability = eirpCapability;
+    return this;
+  }
+
+  /**
+   * As above, but as a DoubleValue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getEirpCapabilityNewField() {
+    return eirpCapabilityNewField;
+  }
+
+  /**
+   * As above, but as a DoubleValue.
+   * @param eirpCapabilityNewField eirpCapabilityNewField or {@code null} for none
+   */
+  public SasPortalInstallationParams setEirpCapabilityNewField(java.lang.Double eirpCapabilityNewField) {
+    this.eirpCapabilityNewField = eirpCapabilityNewField;
     return this;
   }
 

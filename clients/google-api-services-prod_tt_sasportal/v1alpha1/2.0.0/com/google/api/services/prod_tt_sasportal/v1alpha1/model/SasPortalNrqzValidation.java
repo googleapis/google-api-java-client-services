@@ -31,7 +31,7 @@ package com.google.api.services.prod_tt_sasportal.v1alpha1.model;
 public final class SasPortalNrqzValidation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Validation case id.
+   * Validation case ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,14 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   private java.lang.String cpiId;
 
   /**
-   * Device latitude associated with the validation.
+   * Device latitude that's associated with the validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double latitude;
 
   /**
-   * Device longitude associated with the validation.
+   * Device longitude that's associated with the validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   private java.lang.String state;
 
   /**
-   * Validation case id.
+   * Validation case ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getCaseId() {
@@ -74,7 +74,7 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Validation case id.
+   * Validation case ID.
    * @param caseId caseId or {@code null} for none
    */
   public SasPortalNrqzValidation setCaseId(java.lang.String caseId) {
@@ -100,7 +100,7 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device latitude associated with the validation.
+   * Device latitude that's associated with the validation.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLatitude() {
@@ -108,7 +108,7 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device latitude associated with the validation.
+   * Device latitude that's associated with the validation.
    * @param latitude latitude or {@code null} for none
    */
   public SasPortalNrqzValidation setLatitude(java.lang.Double latitude) {
@@ -117,7 +117,7 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device longitude associated with the validation.
+   * Device longitude that's associated with the validation.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLongitude() {
@@ -125,7 +125,7 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device longitude associated with the validation.
+   * Device longitude that's associated with the validation.
    * @param longitude longitude or {@code null} for none
    */
   public SasPortalNrqzValidation setLongitude(java.lang.Double longitude) {

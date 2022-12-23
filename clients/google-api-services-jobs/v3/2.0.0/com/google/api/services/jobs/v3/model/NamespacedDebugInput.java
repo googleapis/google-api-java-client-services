@@ -81,8 +81,8 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   /**
    * If true, disable automatic enrollment selection (at all diversion points). Automatic enrollment
    * selection means experiment selection process based on the experiment's automatic enrollment
-   * condition. This does not disable selection of forced experiments. Setting this filed to false
-   * does not change anything in experiment selection process.
+   * condition. This does not disable selection of forced experiments. Setting this field to false
+   * does not change anything in the experiment selection process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    * If true, disable manual enrollment selection (at all diversion points). Manual enrollment
    * selection means experiment selection process based on the request's manual enrollment states
    * (a.k.a. opt-in experiments). This does not disable selection of forced experiments. Setting
-   * this filed to false does not change anything in experiment selection process.
+   * this field to false does not change anything in the experiment selection process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    * evaluation. This does not disable selection of forced experiments. This is useful in cases when
    * it is not known whether experiment selection behavior is responsible for a error or breakage.
    * Disabling organic selection may help to isolate the cause of a given problem. Setting this
-   * filed to false does not change anything in experiment selection process.
+   * field to false does not change anything in the experiment selection process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,9 +157,8 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.Boolean> forcedRollouts;
 
   /**
-   * If set to ALL_OFF, organic selection will be disabled; if set to ALL_ON, organic selection will
-   * be disabled, and only select launch experiments will receive traffic. See go/mendel-aoao-
-   * runtime-design.
+   * Sets different testing modes. See the documentation in the TestingMode message for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,8 +281,8 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   /**
    * If true, disable automatic enrollment selection (at all diversion points). Automatic enrollment
    * selection means experiment selection process based on the experiment's automatic enrollment
-   * condition. This does not disable selection of forced experiments. Setting this filed to false
-   * does not change anything in experiment selection process.
+   * condition. This does not disable selection of forced experiments. Setting this field to false
+   * does not change anything in the experiment selection process.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableAutomaticEnrollmentSelection() {
@@ -293,8 +292,8 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   /**
    * If true, disable automatic enrollment selection (at all diversion points). Automatic enrollment
    * selection means experiment selection process based on the experiment's automatic enrollment
-   * condition. This does not disable selection of forced experiments. Setting this filed to false
-   * does not change anything in experiment selection process.
+   * condition. This does not disable selection of forced experiments. Setting this field to false
+   * does not change anything in the experiment selection process.
    * @param disableAutomaticEnrollmentSelection disableAutomaticEnrollmentSelection or {@code null} for none
    */
   public NamespacedDebugInput setDisableAutomaticEnrollmentSelection(java.lang.Boolean disableAutomaticEnrollmentSelection) {
@@ -379,7 +378,7 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    * If true, disable manual enrollment selection (at all diversion points). Manual enrollment
    * selection means experiment selection process based on the request's manual enrollment states
    * (a.k.a. opt-in experiments). This does not disable selection of forced experiments. Setting
-   * this filed to false does not change anything in experiment selection process.
+   * this field to false does not change anything in the experiment selection process.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableManualEnrollmentSelection() {
@@ -390,7 +389,7 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    * If true, disable manual enrollment selection (at all diversion points). Manual enrollment
    * selection means experiment selection process based on the request's manual enrollment states
    * (a.k.a. opt-in experiments). This does not disable selection of forced experiments. Setting
-   * this filed to false does not change anything in experiment selection process.
+   * this field to false does not change anything in the experiment selection process.
    * @param disableManualEnrollmentSelection disableManualEnrollmentSelection or {@code null} for none
    */
   public NamespacedDebugInput setDisableManualEnrollmentSelection(java.lang.Boolean disableManualEnrollmentSelection) {
@@ -404,7 +403,7 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    * evaluation. This does not disable selection of forced experiments. This is useful in cases when
    * it is not known whether experiment selection behavior is responsible for a error or breakage.
    * Disabling organic selection may help to isolate the cause of a given problem. Setting this
-   * filed to false does not change anything in experiment selection process.
+   * field to false does not change anything in the experiment selection process.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableOrganicSelection() {
@@ -417,7 +416,7 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    * evaluation. This does not disable selection of forced experiments. This is useful in cases when
    * it is not known whether experiment selection behavior is responsible for a error or breakage.
    * Disabling organic selection may help to isolate the cause of a given problem. Setting this
-   * filed to false does not change anything in experiment selection process.
+   * field to false does not change anything in the experiment selection process.
    * @param disableOrganicSelection disableOrganicSelection or {@code null} for none
    */
   public NamespacedDebugInput setDisableOrganicSelection(java.lang.Boolean disableOrganicSelection) {
@@ -460,9 +459,8 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   }
 
   /**
-   * If set to ALL_OFF, organic selection will be disabled; if set to ALL_ON, organic selection will
-   * be disabled, and only select launch experiments will receive traffic. See go/mendel-aoao-
-   * runtime-design.
+   * Sets different testing modes. See the documentation in the TestingMode message for more
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestingMode() {
@@ -470,9 +468,8 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   }
 
   /**
-   * If set to ALL_OFF, organic selection will be disabled; if set to ALL_ON, organic selection will
-   * be disabled, and only select launch experiments will receive traffic. See go/mendel-aoao-
-   * runtime-design.
+   * Sets different testing modes. See the documentation in the TestingMode message for more
+   * information.
    * @param testingMode testingMode or {@code null} for none
    */
   public NamespacedDebugInput setTestingMode(java.lang.String testingMode) {

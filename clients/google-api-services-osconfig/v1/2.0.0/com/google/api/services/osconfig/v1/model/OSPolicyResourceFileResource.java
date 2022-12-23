@@ -30,7 +30,7 @@ package com.google.api.services.osconfig.v1.model;
 public final class OSPolicyResourceFileResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * A a file with this content. The size of the content is limited to 1024 characters.
+   * A a file with this content. The size of the content is limited to 32KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class OSPolicyResourceFileResource extends com.google.api.client.js
   private java.lang.String state;
 
   /**
-   * A a file with this content. The size of the content is limited to 1024 characters.
+   * A a file with this content. The size of the content is limited to 32KiB.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -78,7 +78,7 @@ public final class OSPolicyResourceFileResource extends com.google.api.client.js
   }
 
   /**
-   * A a file with this content. The size of the content is limited to 1024 characters.
+   * A a file with this content. The size of the content is limited to 32KiB.
    * @param content content or {@code null} for none
    */
   public OSPolicyResourceFileResource setContent(java.lang.String content) {

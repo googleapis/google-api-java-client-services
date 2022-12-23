@@ -61,7 +61,7 @@ public final class OSPolicyResourceExecResourceExec extends com.google.api.clien
   private java.lang.String outputFilePath;
 
   /**
-   * An inline script. The size of the script is limited to 1024 characters.
+   * An inline script. The size of the script is limited to 32KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class OSPolicyResourceExecResourceExec extends com.google.api.clien
   }
 
   /**
-   * An inline script. The size of the script is limited to 1024 characters.
+   * An inline script. The size of the script is limited to 32KiB.
    * @return value or {@code null} for none
    */
   public java.lang.String getScript() {
@@ -150,7 +150,7 @@ public final class OSPolicyResourceExecResourceExec extends com.google.api.clien
   }
 
   /**
-   * An inline script. The size of the script is limited to 1024 characters.
+   * An inline script. The size of the script is limited to 32KiB.
    * @param script script or {@code null} for none
    */
   public OSPolicyResourceExecResourceExec setScript(java.lang.String script) {

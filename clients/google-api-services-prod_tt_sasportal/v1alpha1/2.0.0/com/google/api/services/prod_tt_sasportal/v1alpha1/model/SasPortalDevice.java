@@ -72,7 +72,7 @@ public final class SasPortalDevice extends com.google.api.client.json.GenericJso
   private java.lang.String fccId;
 
   /**
-   * Only ranges within the allowlists are available for new grants.
+   * Only ranges that are within the allowlists are available for new grants.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +199,7 @@ public final class SasPortalDevice extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Only ranges within the allowlists are available for new grants.
+   * Only ranges that are within the allowlists are available for new grants.
    * @return value or {@code null} for none
    */
   public java.util.List<SasPortalFrequencyRange> getGrantRangeAllowlists() {
@@ -207,7 +207,7 @@ public final class SasPortalDevice extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Only ranges within the allowlists are available for new grants.
+   * Only ranges that are within the allowlists are available for new grants.
    * @param grantRangeAllowlists grantRangeAllowlists or {@code null} for none
    */
   public SasPortalDevice setGrantRangeAllowlists(java.util.List<SasPortalFrequencyRange> grantRangeAllowlists) {

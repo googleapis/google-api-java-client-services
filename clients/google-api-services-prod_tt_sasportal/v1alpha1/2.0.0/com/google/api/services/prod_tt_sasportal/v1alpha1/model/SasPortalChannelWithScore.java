@@ -38,7 +38,7 @@ public final class SasPortalChannelWithScore extends com.google.api.client.json.
   private SasPortalFrequencyRange frequencyRange;
 
   /**
-   * The channel score, normalized to be in [0,100].
+   * The channel score, normalized to be in the range [0,100].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class SasPortalChannelWithScore extends com.google.api.client.json.
   }
 
   /**
-   * The channel score, normalized to be in [0,100].
+   * The channel score, normalized to be in the range [0,100].
    * @return value or {@code null} for none
    */
   public java.lang.Double getScore() {
@@ -70,7 +70,7 @@ public final class SasPortalChannelWithScore extends com.google.api.client.json.
   }
 
   /**
-   * The channel score, normalized to be in [0,100].
+   * The channel score, normalized to be in the range [0,100].
    * @param score score or {@code null} for none
    */
   public SasPortalChannelWithScore setScore(java.lang.Double score) {

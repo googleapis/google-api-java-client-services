@@ -20,7 +20,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Defines the metadata for a schema property.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -73,7 +74,9 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
   private java.lang.Boolean isFilterable;
 
   /**
-   * Whether the property is user supplied metadata.
+   * Whether the property is user supplied metadata. This out-of-the box placeholder setting can be
+   * used to tag derived properties. Its value and interpretation logic should be implemented by API
+   * user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,7 +246,9 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
   }
 
   /**
-   * Whether the property is user supplied metadata.
+   * Whether the property is user supplied metadata. This out-of-the box placeholder setting can be
+   * used to tag derived properties. Its value and interpretation logic should be implemented by API
+   * user.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsMetadata() {
@@ -251,7 +256,9 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
   }
 
   /**
-   * Whether the property is user supplied metadata.
+   * Whether the property is user supplied metadata. This out-of-the box placeholder setting can be
+   * used to tag derived properties. Its value and interpretation logic should be implemented by API
+   * user.
    * @param isMetadata isMetadata or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1PropertyDefinition setIsMetadata(java.lang.Boolean isMetadata) {

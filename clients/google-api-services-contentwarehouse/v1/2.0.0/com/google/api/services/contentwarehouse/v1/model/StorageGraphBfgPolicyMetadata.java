@@ -24,7 +24,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * automatically. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -35,8 +36,7 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
 
   /**
    * Timestamp after which data with this policy cannot be used. This value must be strictly
-   * larger/later than availability_start_time, if both are set. WARNING: This field is WIP and
-   * please do not populate it without reading go/ke-dg-tape and consulting ke-data-governance@.
+   * larger/later than availability_start_time, if both are set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +44,7 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
 
   /**
    * Timestamp before which data with this policy cannot be used. This value must be strictly
-   * smaller/earlier than availability_end_time, if both are set. WARNING: This field is WIP and
-   * please do not populate it without reading go/ke-dg-tape and consulting ke-data-governance@.
+   * smaller/earlier than availability_end_time, if both are set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +111,7 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
 
   /**
    * Timestamp after which data with this policy cannot be used. This value must be strictly
-   * larger/later than availability_start_time, if both are set. WARNING: This field is WIP and
-   * please do not populate it without reading go/ke-dg-tape and consulting ke-data-governance@.
+   * larger/later than availability_start_time, if both are set.
    * @return value or {@code null} for none
    */
   public String getAvailabilityEndTimestamp() {
@@ -122,8 +120,7 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
 
   /**
    * Timestamp after which data with this policy cannot be used. This value must be strictly
-   * larger/later than availability_start_time, if both are set. WARNING: This field is WIP and
-   * please do not populate it without reading go/ke-dg-tape and consulting ke-data-governance@.
+   * larger/later than availability_start_time, if both are set.
    * @param availabilityEndTimestamp availabilityEndTimestamp or {@code null} for none
    */
   public StorageGraphBfgPolicyMetadata setAvailabilityEndTimestamp(String availabilityEndTimestamp) {
@@ -133,8 +130,7 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
 
   /**
    * Timestamp before which data with this policy cannot be used. This value must be strictly
-   * smaller/earlier than availability_end_time, if both are set. WARNING: This field is WIP and
-   * please do not populate it without reading go/ke-dg-tape and consulting ke-data-governance@.
+   * smaller/earlier than availability_end_time, if both are set.
    * @return value or {@code null} for none
    */
   public String getAvailabilityStartTimestamp() {
@@ -143,8 +139,7 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
 
   /**
    * Timestamp before which data with this policy cannot be used. This value must be strictly
-   * smaller/earlier than availability_end_time, if both are set. WARNING: This field is WIP and
-   * please do not populate it without reading go/ke-dg-tape and consulting ke-data-governance@.
+   * smaller/earlier than availability_end_time, if both are set.
    * @param availabilityStartTimestamp availabilityStartTimestamp or {@code null} for none
    */
   public StorageGraphBfgPolicyMetadata setAvailabilityStartTimestamp(String availabilityStartTimestamp) {

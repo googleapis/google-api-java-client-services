@@ -22,7 +22,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * concepts#repeated
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -178,6 +179,30 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
     // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiConnectionReminder used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiConnectionReminder.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo> contactCreateContextInfo;
+
+  static {
+    // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo> contactEditContextInfo;
+
+  static {
+    // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo.class);
   }
 
   /**
@@ -962,6 +987,36 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setConnectionReminder(java.util.List<AppsPeopleOzExternalMergedpeopleapiConnectionReminder> connectionReminder) {
     this.connectionReminder = connectionReminder;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo> getContactCreateContextInfo() {
+    return contactCreateContextInfo;
+  }
+
+  /**
+   * @param contactCreateContextInfo contactCreateContextInfo or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPerson setContactCreateContextInfo(java.util.List<AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo> contactCreateContextInfo) {
+    this.contactCreateContextInfo = contactCreateContextInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo> getContactEditContextInfo() {
+    return contactEditContextInfo;
+  }
+
+  /**
+   * @param contactEditContextInfo contactEditContextInfo or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPerson setContactEditContextInfo(java.util.List<AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo> contactEditContextInfo) {
+    this.contactEditContextInfo = contactEditContextInfo;
     return this;
   }
 

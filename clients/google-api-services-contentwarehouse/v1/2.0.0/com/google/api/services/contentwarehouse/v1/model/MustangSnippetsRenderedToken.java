@@ -20,7 +20,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Tidbit token rendered in generating snippet/title.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +29,13 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class MustangSnippetsRenderedToken extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Is the rendered token bolded (insided )
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bolded;
 
   /**
    * Byte offset range in the rendered text that corresponds to this token. [byte_offset_begin,
@@ -56,6 +64,23 @@ public final class MustangSnippetsRenderedToken extends com.google.api.client.js
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long tokenPos;
+
+  /**
+   * Is the rendered token bolded (insided )
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBolded() {
+    return bolded;
+  }
+
+  /**
+   * Is the rendered token bolded (insided )
+   * @param bolded bolded or {@code null} for none
+   */
+  public MustangSnippetsRenderedToken setBolded(java.lang.Boolean bolded) {
+    this.bolded = bolded;
+    return this;
+  }
 
   /**
    * Byte offset range in the rendered text that corresponds to this token. [byte_offset_begin,

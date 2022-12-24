@@ -20,7 +20,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Request message for DocumentService.CreateDocument.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +31,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse. This field offers
+   * limited support for mapping entities from Cloud AI Document to Warehouse Document. Please
+   * consult with product team before using this field and other available options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +56,9 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   private GoogleCloudContentwarehouseV1Document document;
 
   /**
-   * Default document policy during creation. Conditions defined in the policy will be ignored.
+   * Default document policy during creation. This refers to an Identity and Access (IAM) policy,
+   * which specifies access controls for the Document. Conditions defined in the policy will be
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +73,9 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   private GoogleCloudContentwarehouseV1RequestMetadata requestMetadata;
 
   /**
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse. This field offers
+   * limited support for mapping entities from Cloud AI Document to Warehouse Document. Please
+   * consult with product team before using this field and other available options.
    * @return value or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1CloudAIDocumentOption getCloudAiDocumentOption() {
@@ -76,7 +83,9 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   }
 
   /**
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse. This field offers
+   * limited support for mapping entities from Cloud AI Document to Warehouse Document. Please
+   * consult with product team before using this field and other available options.
    * @param cloudAiDocumentOption cloudAiDocumentOption or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1CreateDocumentRequest setCloudAiDocumentOption(GoogleCloudContentwarehouseV1CloudAIDocumentOption cloudAiDocumentOption) {
@@ -123,7 +132,9 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   }
 
   /**
-   * Default document policy during creation. Conditions defined in the policy will be ignored.
+   * Default document policy during creation. This refers to an Identity and Access (IAM) policy,
+   * which specifies access controls for the Document. Conditions defined in the policy will be
+   * ignored.
    * @return value or {@code null} for none
    */
   public GoogleIamV1Policy getPolicy() {
@@ -131,7 +142,9 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentRequest extends co
   }
 
   /**
-   * Default document policy during creation. Conditions defined in the policy will be ignored.
+   * Default document policy during creation. This refers to an Identity and Access (IAM) policy,
+   * which specifies access controls for the Document. Conditions defined in the policy will be
+   * ignored.
    * @param policy policy or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1CreateDocumentRequest setPolicy(GoogleIamV1Policy policy) {

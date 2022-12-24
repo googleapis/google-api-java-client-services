@@ -18,10 +18,11 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 50
+ * be updated. Next ID: 51
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -180,6 +181,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float nsr;
+
+  /**
+   * The epoch from which this NSR value is coming from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nsrEpoch;
 
   /**
    * This signal is used to unconditionally override NSR as a bid in Q*. Should only be used in case
@@ -721,6 +729,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setNsr(java.lang.Float nsr) {
     this.nsr = nsr;
+    return this;
+  }
+
+  /**
+   * The epoch from which this NSR value is coming from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNsrEpoch() {
+    return nsrEpoch;
+  }
+
+  /**
+   * The epoch from which this NSR value is coming from.
+   * @param nsrEpoch nsrEpoch or {@code null} for none
+   */
+  public QualityNsrNsrData setNsrEpoch(java.lang.String nsrEpoch) {
+    this.nsrEpoch = nsrEpoch;
     return this;
   }
 

@@ -27,7 +27,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * below. At least one item must be present in each section.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -86,13 +87,6 @@ public final class GeostorePriceListProto extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<GeostorePriceListSectionProto> section;
-
-  /**
-   * Source of the information retrieved, could be from our own NMX UI or a third party API.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostorePriceInfoSourceDetails sourceDetails;
 
   /**
    * Where this price list comes from. If set, this must also be a member of the price_list_url
@@ -204,23 +198,6 @@ public final class GeostorePriceListProto extends com.google.api.client.json.Gen
    */
   public GeostorePriceListProto setSection(java.util.List<GeostorePriceListSectionProto> section) {
     this.section = section;
-    return this;
-  }
-
-  /**
-   * Source of the information retrieved, could be from our own NMX UI or a third party API.
-   * @return value or {@code null} for none
-   */
-  public GeostorePriceInfoSourceDetails getSourceDetails() {
-    return sourceDetails;
-  }
-
-  /**
-   * Source of the information retrieved, could be from our own NMX UI or a third party API.
-   * @param sourceDetails sourceDetails or {@code null} for none
-   */
-  public GeostorePriceListProto setSourceDetails(GeostorePriceInfoSourceDetails sourceDetails) {
-    this.sourceDetails = sourceDetails;
     return this;
   }
 

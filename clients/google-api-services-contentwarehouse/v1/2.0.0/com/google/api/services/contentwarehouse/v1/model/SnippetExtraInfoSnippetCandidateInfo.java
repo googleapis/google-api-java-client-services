@@ -17,10 +17,11 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 12
+ * Next ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +29,19 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Bolded ranges in the printed snippet lines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualitySnippetsTruncationSnippetBoldedRange> boldedRanges;
+
+  static {
+    // hack to force ProGuard to consider QualitySnippetsTruncationSnippetBoldedRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(QualitySnippetsTruncationSnippetBoldedRange.class);
+  }
 
   /**
    * Candidate identifier number, unique among all snippet candidates under each document in each
@@ -88,6 +102,23 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String snippetType;
+
+  /**
+   * Bolded ranges in the printed snippet lines.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualitySnippetsTruncationSnippetBoldedRange> getBoldedRanges() {
+    return boldedRanges;
+  }
+
+  /**
+   * Bolded ranges in the printed snippet lines.
+   * @param boldedRanges boldedRanges or {@code null} for none
+   */
+  public SnippetExtraInfoSnippetCandidateInfo setBoldedRanges(java.util.List<QualitySnippetsTruncationSnippetBoldedRange> boldedRanges) {
+    this.boldedRanges = boldedRanges;
+    return this;
+  }
 
   /**
    * Candidate identifier number, unique among all snippet candidates under each document in each

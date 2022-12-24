@@ -20,7 +20,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Request message for DocumentService.UpdateDocument.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +31,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1UpdateDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse. This field offers
+   * limited support for mapping entities from Cloud AI Document to Warehouse Document. Please
+   * consult with product team before using this field and other available options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +62,9 @@ public final class GoogleCloudContentwarehouseV1UpdateDocumentRequest extends co
   private GoogleCloudContentwarehouseV1UpdateOptions updateOptions;
 
   /**
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse. This field offers
+   * limited support for mapping entities from Cloud AI Document to Warehouse Document. Please
+   * consult with product team before using this field and other available options.
    * @return value or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1CloudAIDocumentOption getCloudAiDocumentOption() {
@@ -67,7 +72,9 @@ public final class GoogleCloudContentwarehouseV1UpdateDocumentRequest extends co
   }
 
   /**
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse. This field offers
+   * limited support for mapping entities from Cloud AI Document to Warehouse Document. Please
+   * consult with product team before using this field and other available options.
    * @param cloudAiDocumentOption cloudAiDocumentOption or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1UpdateDocumentRequest setCloudAiDocumentOption(GoogleCloudContentwarehouseV1CloudAIDocumentOption cloudAiDocumentOption) {

@@ -20,10 +20,15 @@ package com.google.api.services.contentwarehouse.v1.model;
  * These options use more sophisticated logic from a location-aware name detector to parse the full
  * name of a user into structured parts and operate on those parts. For more information on how
  * names are parsed, see the NameOccurrence proto definition: http://google3/quality/peoplesearch/na
- * medetector/detector/proto/name_occurrence.proto?l=50=334484707 Next ID: 7
+ * medetector/detector/proto/name_occurrence.proto?l=50=334484707 In general, when parsing display
+ * names the following rules will apply to *all* specs: - Hyphenated names are broken down:
+ * "Angelina Jollie-Pit" is pre-processed as "Angelina Jollie Pitt"; - Prefixes are ignored: "Prof.
+ * Albus Dumbledore" is pre-processed as "Albus Dumbledore"; - Auxiliaries are ignored: "Luís de
+ * Camões" is pre-processed as "Luís Camões". Next ID: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -34,19 +39,23 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Extract an initial from each parsed name. For example, "Niels Henrik David Bohr" yields "N. H.
-   * D. B.". Other special cases are treated as follows: - Hyphenated names are broken down:
-   * "Angelina Jollie-Pit" yields "A. J. P."; - Prefixes are ignored: "Prof. Albus Dumbledore"
-   * yields "A. D."; - Auxiliaries are ignored: "Luís de Camões" yields "L. C.".
+   * D. B.". Other special cases are treated as follows:
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allInitialsFromParsedName;
 
   /**
+   * Show the initial of the very first name and the first last name, e.g. "Hugo Daniel Hernandez
+   * Garcia" yields "H. Hernandez".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean firstInitialAndFirstLastName;
+
+  /**
    * Show the initial of the very first name and the very last name, e.g. "Ana Maria Silva" yields
-   * "A. Silva". - Hyphenated names are broken down: "Angelina Jollie-Pitt" yields "A. Pitt"; -
-   * Prefixes are ignored: "Prof. Albus Dumbledore" yields "A. Dumbledore"; - Auxiliaries are
-   * ignored: "Luís de Camões" yields "L. Camões".
+   * "A. Silva".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,18 +78,14 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Show the full very first name and all the other initials, e.g. "Ana Maria Silva" yields "Ana M.
-   * S.". - Hyphenated names are broken down: "Angelina Jollie-Pit" yields "Angelina J. P."; -
-   * Prefixes are ignored: "Prof. Albus Dumbledore" yields "Albus D."; - Auxiliaries are ignored:
-   * "Luís de Camões" yields "Luís C.".
+   * S.".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean veryFirstNameAndAllInitials;
 
   /**
-   * Show the very first name only, e.g. "Ana Maria Silva" yields "Ana". - Hyphenated names are
-   * broken down: "Mary-Kate Smith" yields "Mary"; - Prefixes are ignored: "Prof. Albus Dumbledore"
-   * yields "Albus";
+   * Show the very first name only, e.g. "Ana Maria Silva" yields "Ana".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +93,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Extract an initial from each parsed name. For example, "Niels Henrik David Bohr" yields "N. H.
-   * D. B.". Other special cases are treated as follows: - Hyphenated names are broken down:
-   * "Angelina Jollie-Pit" yields "A. J. P."; - Prefixes are ignored: "Prof. Albus Dumbledore"
-   * yields "A. D."; - Auxiliaries are ignored: "Luís de Camões" yields "L. C.".
+   * D. B.". Other special cases are treated as follows:
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllInitialsFromParsedName() {
@@ -99,9 +102,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Extract an initial from each parsed name. For example, "Niels Henrik David Bohr" yields "N. H.
-   * D. B.". Other special cases are treated as follows: - Hyphenated names are broken down:
-   * "Angelina Jollie-Pit" yields "A. J. P."; - Prefixes are ignored: "Prof. Albus Dumbledore"
-   * yields "A. D."; - Auxiliaries are ignored: "Luís de Camões" yields "L. C.".
+   * D. B.". Other special cases are treated as follows:
    * @param allInitialsFromParsedName allInitialsFromParsedName or {@code null} for none
    */
   public SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec setAllInitialsFromParsedName(java.lang.Boolean allInitialsFromParsedName) {
@@ -110,10 +111,27 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
   }
 
   /**
+   * Show the initial of the very first name and the first last name, e.g. "Hugo Daniel Hernandez
+   * Garcia" yields "H. Hernandez".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFirstInitialAndFirstLastName() {
+    return firstInitialAndFirstLastName;
+  }
+
+  /**
+   * Show the initial of the very first name and the first last name, e.g. "Hugo Daniel Hernandez
+   * Garcia" yields "H. Hernandez".
+   * @param firstInitialAndFirstLastName firstInitialAndFirstLastName or {@code null} for none
+   */
+  public SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec setFirstInitialAndFirstLastName(java.lang.Boolean firstInitialAndFirstLastName) {
+    this.firstInitialAndFirstLastName = firstInitialAndFirstLastName;
+    return this;
+  }
+
+  /**
    * Show the initial of the very first name and the very last name, e.g. "Ana Maria Silva" yields
-   * "A. Silva". - Hyphenated names are broken down: "Angelina Jollie-Pitt" yields "A. Pitt"; -
-   * Prefixes are ignored: "Prof. Albus Dumbledore" yields "A. Dumbledore"; - Auxiliaries are
-   * ignored: "Luís de Camões" yields "L. Camões".
+   * "A. Silva".
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFirstInitialAndVeryLastName() {
@@ -122,9 +140,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Show the initial of the very first name and the very last name, e.g. "Ana Maria Silva" yields
-   * "A. Silva". - Hyphenated names are broken down: "Angelina Jollie-Pitt" yields "A. Pitt"; -
-   * Prefixes are ignored: "Prof. Albus Dumbledore" yields "A. Dumbledore"; - Auxiliaries are
-   * ignored: "Luís de Camões" yields "L. Camões".
+   * "A. Silva".
    * @param firstInitialAndVeryLastName firstInitialAndVeryLastName or {@code null} for none
    */
   public SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec setFirstInitialAndVeryLastName(java.lang.Boolean firstInitialAndVeryLastName) {
@@ -170,9 +186,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Show the full very first name and all the other initials, e.g. "Ana Maria Silva" yields "Ana M.
-   * S.". - Hyphenated names are broken down: "Angelina Jollie-Pit" yields "Angelina J. P."; -
-   * Prefixes are ignored: "Prof. Albus Dumbledore" yields "Albus D."; - Auxiliaries are ignored:
-   * "Luís de Camões" yields "Luís C.".
+   * S.".
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVeryFirstNameAndAllInitials() {
@@ -181,9 +195,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
 
   /**
    * Show the full very first name and all the other initials, e.g. "Ana Maria Silva" yields "Ana M.
-   * S.". - Hyphenated names are broken down: "Angelina Jollie-Pit" yields "Angelina J. P."; -
-   * Prefixes are ignored: "Prof. Albus Dumbledore" yields "Albus D."; - Auxiliaries are ignored:
-   * "Luís de Camões" yields "Luís C.".
+   * S.".
    * @param veryFirstNameAndAllInitials veryFirstNameAndAllInitials or {@code null} for none
    */
   public SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec setVeryFirstNameAndAllInitials(java.lang.Boolean veryFirstNameAndAllInitials) {
@@ -192,9 +204,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
   }
 
   /**
-   * Show the very first name only, e.g. "Ana Maria Silva" yields "Ana". - Hyphenated names are
-   * broken down: "Mary-Kate Smith" yields "Mary"; - Prefixes are ignored: "Prof. Albus Dumbledore"
-   * yields "Albus";
+   * Show the very first name only, e.g. "Ana Maria Silva" yields "Ana".
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVeryFirstNameOnly() {
@@ -202,9 +212,7 @@ public final class SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec ex
   }
 
   /**
-   * Show the very first name only, e.g. "Ana Maria Silva" yields "Ana". - Hyphenated names are
-   * broken down: "Mary-Kate Smith" yields "Mary"; - Prefixes are ignored: "Prof. Albus Dumbledore"
-   * yields "Albus";
+   * Show the very first name only, e.g. "Ana Maria Silva" yields "Ana".
    * @param veryFirstNameOnly veryFirstNameOnly or {@code null} for none
    */
   public SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec setVeryFirstNameOnly(java.lang.Boolean veryFirstNameOnly) {

@@ -25,7 +25,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * recommended by CDS for cheaper and more efficient storage. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -69,14 +70,6 @@ public final class LensDiscoveryStylePersonAttributes extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.Integer discretizedVisualSaliencyScore;
-
-  /**
-   * Normalized bounding box of the most iconic person in the image. The x,y coordinates are in the
-   * range [0, 1]. Deprecated to comply with CDS requirements (b/228535076).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PhotosVisionGroundtruthdbNormalizedBoundingBox iconicPersonBoundingBox;
 
   /**
    * Bounding box of the most iconic person in the image.
@@ -188,25 +181,6 @@ public final class LensDiscoveryStylePersonAttributes extends com.google.api.cli
    */
   public LensDiscoveryStylePersonAttributes setDiscretizedVisualSaliencyScore(java.lang.Integer discretizedVisualSaliencyScore) {
     this.discretizedVisualSaliencyScore = discretizedVisualSaliencyScore;
-    return this;
-  }
-
-  /**
-   * Normalized bounding box of the most iconic person in the image. The x,y coordinates are in the
-   * range [0, 1]. Deprecated to comply with CDS requirements (b/228535076).
-   * @return value or {@code null} for none
-   */
-  public PhotosVisionGroundtruthdbNormalizedBoundingBox getIconicPersonBoundingBox() {
-    return iconicPersonBoundingBox;
-  }
-
-  /**
-   * Normalized bounding box of the most iconic person in the image. The x,y coordinates are in the
-   * range [0, 1]. Deprecated to comply with CDS requirements (b/228535076).
-   * @param iconicPersonBoundingBox iconicPersonBoundingBox or {@code null} for none
-   */
-  public LensDiscoveryStylePersonAttributes setIconicPersonBoundingBox(PhotosVisionGroundtruthdbNormalizedBoundingBox iconicPersonBoundingBox) {
-    this.iconicPersonBoundingBox = iconicPersonBoundingBox;
     return this;
   }
 

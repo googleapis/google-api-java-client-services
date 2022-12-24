@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the contentwarehouse API.
+ * Available OAuth 2.0 scopes for use with the Document AI Warehouse API.
  *
  * @since 1.4
  */

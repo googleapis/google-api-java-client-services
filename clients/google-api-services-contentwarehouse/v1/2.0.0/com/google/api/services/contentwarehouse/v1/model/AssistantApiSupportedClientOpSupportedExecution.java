@@ -17,10 +17,12 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Additional properties that client can support for executing the client op.
+ * Additional properties that client can support for executing the client op. They are surface-
+ * specific execution properties and are unrelated to the execution model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,6 +32,18 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantApiSupportedClientOpSupportedExecution extends com.google.api.client.json.GenericJson {
 
   /**
+   * ClientOp execution supports special rendering behavior while the user is in the middle of
+   * expressing their query. This behavior includes: 1) New partial output always over-writes prior
+   * partial output. 2) Canceling the interaction removes partial fulfilment from any user visible
+   * interaction history. If this is true, whether to apply the special rendering behavior will be
+   * determined by PartialFulfillmentRenderingParams. More details can be found at go/ma-natcon-pf-
+   * api.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsPartialFulfillment;
+
+  /**
    * Client can support synchronous execution of the client op. For tts.OUTPUT client op it means
    * that client would honor |synchronous_playback_args| argument. Please see more at go
    * /synchronous-sounds-design.
@@ -37,6 +51,33 @@ public final class AssistantApiSupportedClientOpSupportedExecution extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean supportsSynchronousExecution;
+
+  /**
+   * ClientOp execution supports special rendering behavior while the user is in the middle of
+   * expressing their query. This behavior includes: 1) New partial output always over-writes prior
+   * partial output. 2) Canceling the interaction removes partial fulfilment from any user visible
+   * interaction history. If this is true, whether to apply the special rendering behavior will be
+   * determined by PartialFulfillmentRenderingParams. More details can be found at go/ma-natcon-pf-
+   * api.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsPartialFulfillment() {
+    return supportsPartialFulfillment;
+  }
+
+  /**
+   * ClientOp execution supports special rendering behavior while the user is in the middle of
+   * expressing their query. This behavior includes: 1) New partial output always over-writes prior
+   * partial output. 2) Canceling the interaction removes partial fulfilment from any user visible
+   * interaction history. If this is true, whether to apply the special rendering behavior will be
+   * determined by PartialFulfillmentRenderingParams. More details can be found at go/ma-natcon-pf-
+   * api.
+   * @param supportsPartialFulfillment supportsPartialFulfillment or {@code null} for none
+   */
+  public AssistantApiSupportedClientOpSupportedExecution setSupportsPartialFulfillment(java.lang.Boolean supportsPartialFulfillment) {
+    this.supportsPartialFulfillment = supportsPartialFulfillment;
+    return this;
+  }
 
   /**
    * Client can support synchronous execution of the client op. For tts.OUTPUT client op it means

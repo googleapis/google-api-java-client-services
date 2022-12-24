@@ -17,10 +17,11 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 2
+ * Features to be passed from Media GP to HGR. Next ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +29,20 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantGroundingRankerMediaGroundingProviderFeatures extends com.google.api.client.json.GenericJson {
+
+  /**
+   * True if the media deeplink has tag SEED_RADIO.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSeedRadio;
+
+  /**
+   * True if the user requests seed radio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSeedRadioRequest;
 
   /**
    * MSC(Media Short Click) rate. MSC rate = total number of MSC events / total number of MSC
@@ -40,6 +55,40 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Float mscRate;
+
+  /**
+   * True if the media deeplink has tag SEED_RADIO.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSeedRadio() {
+    return isSeedRadio;
+  }
+
+  /**
+   * True if the media deeplink has tag SEED_RADIO.
+   * @param isSeedRadio isSeedRadio or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsSeedRadio(java.lang.Boolean isSeedRadio) {
+    this.isSeedRadio = isSeedRadio;
+    return this;
+  }
+
+  /**
+   * True if the user requests seed radio.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSeedRadioRequest() {
+    return isSeedRadioRequest;
+  }
+
+  /**
+   * True if the user requests seed radio.
+   * @param isSeedRadioRequest isSeedRadioRequest or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsSeedRadioRequest(java.lang.Boolean isSeedRadioRequest) {
+    this.isSeedRadioRequest = isSeedRadioRequest;
+    return this;
+  }
 
   /**
    * MSC(Media Short Click) rate. MSC rate = total number of MSC events / total number of MSC

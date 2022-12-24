@@ -20,7 +20,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Defines the structure for content warehouse document proto.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the contentwarehouse API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -133,13 +134,6 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String referenceId;
-
-  /**
-   * A path linked to structured content file.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String structuredContentUri;
 
   /**
    * If true, text extraction will not be performed.
@@ -454,23 +448,6 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
    */
   public GoogleCloudContentwarehouseV1Document setReferenceId(java.lang.String referenceId) {
     this.referenceId = referenceId;
-    return this;
-  }
-
-  /**
-   * A path linked to structured content file.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStructuredContentUri() {
-    return structuredContentUri;
-  }
-
-  /**
-   * A path linked to structured content file.
-   * @param structuredContentUri structuredContentUri or {@code null} for none
-   */
-  public GoogleCloudContentwarehouseV1Document setStructuredContentUri(java.lang.String structuredContentUri) {
-    this.structuredContentUri = structuredContentUri;
     return this;
   }
 

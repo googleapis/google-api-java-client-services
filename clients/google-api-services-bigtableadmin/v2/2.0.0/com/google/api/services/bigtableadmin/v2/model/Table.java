@@ -63,7 +63,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * Set to true to make the table protected against data loss. i.e. deleting the following
-   * resources through Admin APIs are prohibited: - The table. - The column families in the table. -
+   * resources through Admin APIs are prohibited: * The table. * The column families in the table. *
    * The instance containing the table. Note one can still delete the data stored in the table
    * through Data APIs.
    * The value may be {@code null}.
@@ -150,7 +150,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * Set to true to make the table protected against data loss. i.e. deleting the following
-   * resources through Admin APIs are prohibited: - The table. - The column families in the table. -
+   * resources through Admin APIs are prohibited: * The table. * The column families in the table. *
    * The instance containing the table. Note one can still delete the data stored in the table
    * through Data APIs.
    * @return value or {@code null} for none
@@ -161,7 +161,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * Set to true to make the table protected against data loss. i.e. deleting the following
-   * resources through Admin APIs are prohibited: - The table. - The column families in the table. -
+   * resources through Admin APIs are prohibited: * The table. * The column families in the table. *
    * The instance containing the table. Note one can still delete the data stored in the table
    * through Data APIs.
    * @param deletionProtection deletionProtection or {@code null} for none

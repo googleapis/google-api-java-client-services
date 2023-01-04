@@ -18,7 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * Represents a repricing rule. A repricing rule is used by shopping serving to adjust transactable
- * offer prices if conditions are met. Next ID: 24
+ * offer prices if conditions are met.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

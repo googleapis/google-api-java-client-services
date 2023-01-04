@@ -64,7 +64,8 @@ public final class GoogleCloudRetailV2ServingConfig extends com.google.api.clien
   private java.lang.String diversityLevel;
 
   /**
-   * What kind of diversity to use - data driven or rule based.
+   * What kind of diversity to use - data driven or rule based. If unset, the server behavior
+   * defaults to RULE_BASED_DIVERSITY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +171,7 @@ public final class GoogleCloudRetailV2ServingConfig extends com.google.api.clien
    * How much price ranking we want in serving results. Price reranking causes product items with a
    * similar recommendation probability to be ordered by price, with the highest-priced items first.
    * This setting could result in a decrease in click-through and conversion rates. Allowed values
-   * are: * `no-price-reranking` * `low-price-raranking` * `medium-price-reranking` * `high-price-
+   * are: * `no-price-reranking` * `low-price-reranking` * `medium-price-reranking` * `high-price-
    * reranking` If not specified, we choose default based on model type. Default value: `no-price-
    * reranking`. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * The value may be {@code null}.
@@ -289,7 +290,8 @@ public final class GoogleCloudRetailV2ServingConfig extends com.google.api.clien
   }
 
   /**
-   * What kind of diversity to use - data driven or rule based.
+   * What kind of diversity to use - data driven or rule based. If unset, the server behavior
+   * defaults to RULE_BASED_DIVERSITY.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiversityType() {
@@ -297,7 +299,8 @@ public final class GoogleCloudRetailV2ServingConfig extends com.google.api.clien
   }
 
   /**
-   * What kind of diversity to use - data driven or rule based.
+   * What kind of diversity to use - data driven or rule based. If unset, the server behavior
+   * defaults to RULE_BASED_DIVERSITY.
    * @param diversityType diversityType or {@code null} for none
    */
   public GoogleCloudRetailV2ServingConfig setDiversityType(java.lang.String diversityType) {
@@ -531,7 +534,7 @@ public final class GoogleCloudRetailV2ServingConfig extends com.google.api.clien
    * How much price ranking we want in serving results. Price reranking causes product items with a
    * similar recommendation probability to be ordered by price, with the highest-priced items first.
    * This setting could result in a decrease in click-through and conversion rates. Allowed values
-   * are: * `no-price-reranking` * `low-price-raranking` * `medium-price-reranking` * `high-price-
+   * are: * `no-price-reranking` * `low-price-reranking` * `medium-price-reranking` * `high-price-
    * reranking` If not specified, we choose default based on model type. Default value: `no-price-
    * reranking`. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @return value or {@code null} for none
@@ -544,7 +547,7 @@ public final class GoogleCloudRetailV2ServingConfig extends com.google.api.clien
    * How much price ranking we want in serving results. Price reranking causes product items with a
    * similar recommendation probability to be ordered by price, with the highest-priced items first.
    * This setting could result in a decrease in click-through and conversion rates. Allowed values
-   * are: * `no-price-reranking` * `low-price-raranking` * `medium-price-reranking` * `high-price-
+   * are: * `no-price-reranking` * `low-price-reranking` * `medium-price-reranking` * `high-price-
    * reranking` If not specified, we choose default based on model type. Default value: `no-price-
    * reranking`. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @param priceRerankingLevel priceRerankingLevel or {@code null} for none

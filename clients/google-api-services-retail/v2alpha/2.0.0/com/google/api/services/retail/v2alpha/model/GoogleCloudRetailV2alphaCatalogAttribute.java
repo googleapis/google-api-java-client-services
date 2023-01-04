@@ -43,7 +43,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
    * applies to textual custom attributes and requires indexable set to enabled to enable exact-
-   * searchable.
+   * searchable. If unset, the server behavior defaults to EXACT_SEARCHABLE_DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,9 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
    * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
    * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
-   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. For attributes whoes
+   * key start with `attributes.`, we refer them as custom attributes. Otherwise they are built-in
+   * attributes such as `color` and `brands`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,8 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   private java.lang.String recommendationsFilteringOption;
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results. If unset, the
+   * server behavior defaults to RETRIEVABLE_DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +148,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
    * applies to textual custom attributes and requires indexable set to enabled to enable exact-
-   * searchable.
+   * searchable. If unset, the server behavior defaults to EXACT_SEARCHABLE_DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getExactSearchableOption() {
@@ -155,7 +158,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   /**
    * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
    * applies to textual custom attributes and requires indexable set to enabled to enable exact-
-   * searchable.
+   * searchable. If unset, the server behavior defaults to EXACT_SEARCHABLE_DISABLED.
    * @param exactSearchableOption exactSearchableOption or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setExactSearchableOption(java.lang.String exactSearchableOption) {
@@ -221,7 +224,9 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
    * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
    * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
-   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. For attributes whoes
+   * key start with `attributes.`, we refer them as custom attributes. Otherwise they are built-in
+   * attributes such as `color` and `brands`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -232,7 +237,9 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
    * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
    * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
-   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. For attributes whoes
+   * key start with `attributes.`, we refer them as custom attributes. Otherwise they are built-in
+   * attributes such as `color` and `brands`.
    * @param key key or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setKey(java.lang.String key) {
@@ -264,7 +271,8 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   }
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results. If unset, the
+   * server behavior defaults to RETRIEVABLE_DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetrievableOption() {
@@ -272,7 +280,8 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   }
 
   /**
-   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results.
+   * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search results. If unset, the
+   * server behavior defaults to RETRIEVABLE_DISABLED.
    * @param retrievableOption retrievableOption or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setRetrievableOption(java.lang.String retrievableOption) {

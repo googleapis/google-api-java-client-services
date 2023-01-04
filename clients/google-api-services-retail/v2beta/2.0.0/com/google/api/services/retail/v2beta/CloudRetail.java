@@ -9120,13 +9120,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * The prebuilt rule name that can convert a specific type of raw_json. For example:
-             * "default_schema/v1.0"
+             * "ga4_bq" rule for the GA4 user event schema.
              */
             @com.google.api.client.util.Key
             private java.lang.String prebuiltRule;
 
-            /** The prebuilt rule name that can convert a specific type of raw_json. For example:
-           "default_schema/v1.0"
+            /** The prebuilt rule name that can convert a specific type of raw_json. For example: "ga4_bq" rule for
+           the GA4 user event schema.
              */
             public java.lang.String getPrebuiltRule() {
               return prebuiltRule;
@@ -9134,7 +9134,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * The prebuilt rule name that can convert a specific type of raw_json. For example:
-             * "default_schema/v1.0"
+             * "ga4_bq" rule for the GA4 user event schema.
              */
             public Collect setPrebuiltRule(java.lang.String prebuiltRule) {
               this.prebuiltRule = prebuiltRule;

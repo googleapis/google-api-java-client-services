@@ -68,19 +68,19 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
   private java.lang.String name;
 
   /**
-   * Output only. Payload for network connection state change event. Present only when `event_type`
-   * is `NETWORK_CONNECTION_STATE_CHANGE`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent networkConnectionStateChangeEvent;
-
-  /**
    * Timestamp that represents when the event was reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String reportTime;
+
+  /**
+   * Output only. Payload for usb peripherals event. Present only when the `event_type` field is
+   * either `USB_ADDED` or `USB_REMOVED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryUsbPeripheralsEvent usbPeripheralsEvent;
 
   /**
    * Output only. Information about the user associated with the event.
@@ -179,25 +179,6 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
   }
 
   /**
-   * Output only. Payload for network connection state change event. Present only when `event_type`
-   * is `NETWORK_CONNECTION_STATE_CHANGE`.
-   * @return value or {@code null} for none
-   */
-  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent getNetworkConnectionStateChangeEvent() {
-    return networkConnectionStateChangeEvent;
-  }
-
-  /**
-   * Output only. Payload for network connection state change event. Present only when `event_type`
-   * is `NETWORK_CONNECTION_STATE_CHANGE`.
-   * @param networkConnectionStateChangeEvent networkConnectionStateChangeEvent or {@code null} for none
-   */
-  public GoogleChromeManagementV1TelemetryEvent setNetworkConnectionStateChangeEvent(GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent networkConnectionStateChangeEvent) {
-    this.networkConnectionStateChangeEvent = networkConnectionStateChangeEvent;
-    return this;
-  }
-
-  /**
    * Timestamp that represents when the event was reported.
    * @return value or {@code null} for none
    */
@@ -211,6 +192,25 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
    */
   public GoogleChromeManagementV1TelemetryEvent setReportTime(String reportTime) {
     this.reportTime = reportTime;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for usb peripherals event. Present only when the `event_type` field is
+   * either `USB_ADDED` or `USB_REMOVED`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryUsbPeripheralsEvent getUsbPeripheralsEvent() {
+    return usbPeripheralsEvent;
+  }
+
+  /**
+   * Output only. Payload for usb peripherals event. Present only when the `event_type` field is
+   * either `USB_ADDED` or `USB_REMOVED`.
+   * @param usbPeripheralsEvent usbPeripheralsEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setUsbPeripheralsEvent(GoogleChromeManagementV1TelemetryUsbPeripheralsEvent usbPeripheralsEvent) {
+    this.usbPeripheralsEvent = usbPeripheralsEvent;
     return this;
   }
 

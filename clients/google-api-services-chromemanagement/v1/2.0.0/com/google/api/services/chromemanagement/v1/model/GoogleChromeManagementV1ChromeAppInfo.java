@@ -107,6 +107,13 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
   private java.lang.Boolean supportEnabled;
 
   /**
+   * Output only. Types of an item in the Chrome Web Store
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. Whether the app or extension is built and maintained by Google. Version-specific
    * field that will only be set when the requested app version is found.
    * @return value or {@code null} for none
@@ -285,6 +292,23 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
    */
   public GoogleChromeManagementV1ChromeAppInfo setSupportEnabled(java.lang.Boolean supportEnabled) {
     this.supportEnabled = supportEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. Types of an item in the Chrome Web Store
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Output only. Types of an item in the Chrome Web Store
+   * @param type type or {@code null} for none
+   */
+  public GoogleChromeManagementV1ChromeAppInfo setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

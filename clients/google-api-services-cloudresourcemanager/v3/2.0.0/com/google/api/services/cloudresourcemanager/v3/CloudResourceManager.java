@@ -1079,27 +1079,31 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. The resource name of the organization or folder whose folders are being listed.
-       * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this
-       * method is controlled by checking the `resourcemanager.folders.list` permission on the
-       * `parent`.
+       * Required. The name of the parent resource whose folders are being listed. Only children of
+       * this parent resource are listed; descendants are not listed. If the parent is a folder, use
+       * the value `folders/{folder_id}`. If the parent is an organization, use the value
+       * `organizations/{org_id}`. Access to this method is controlled by checking the
+       * `resourcemanager.folders.list` permission on the `parent`.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name of the organization or folder whose folders are being listed. Must be
-     of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is controlled
-     by checking the `resourcemanager.folders.list` permission on the `parent`.
+      /** Required. The name of the parent resource whose folders are being listed. Only children of this
+     parent resource are listed; descendants are not listed. If the parent is a folder, use the value
+     `folders/{folder_id}`. If the parent is an organization, use the value `organizations/{org_id}`.
+     Access to this method is controlled by checking the `resourcemanager.folders.list` permission on
+     the `parent`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The resource name of the organization or folder whose folders are being listed.
-       * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this
-       * method is controlled by checking the `resourcemanager.folders.list` permission on the
-       * `parent`.
+       * Required. The name of the parent resource whose folders are being listed. Only children of
+       * this parent resource are listed; descendants are not listed. If the parent is a folder, use
+       * the value `folders/{folder_id}`. If the parent is an organization, use the value
+       * `organizations/{org_id}`. Access to this method is controlled by checking the
+       * `resourcemanager.folders.list` permission on the `parent`.
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -4428,22 +4432,27 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. The name of the parent resource to list projects under. For example, setting this
-       * field to 'folders/1234' would list all projects directly under that folder.
+       * Required. The name of the parent resource whose projects are being listed. Only children of
+       * this parent resource are listed; descendants are not listed. If the parent is a folder, use
+       * the value `folders/{folder_id}`. If the parent is an organization, use the value
+       * `organizations/{org_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The name of the parent resource to list projects under. For example, setting this field
-     to 'folders/1234' would list all projects directly under that folder.
+      /** Required. The name of the parent resource whose projects are being listed. Only children of this
+     parent resource are listed; descendants are not listed. If the parent is a folder, use the value
+     `folders/{folder_id}`. If the parent is an organization, use the value `organizations/{org_id}`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The name of the parent resource to list projects under. For example, setting this
-       * field to 'folders/1234' would list all projects directly under that folder.
+       * Required. The name of the parent resource whose projects are being listed. Only children of
+       * this parent resource are listed; descendants are not listed. If the parent is a folder, use
+       * the value `folders/{folder_id}`. If the parent is an organization, use the value
+       * `organizations/{org_id}`.
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -8011,24 +8020,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return this;
       }
 
-      /**
-       * Required. Resource name for TagKey, parent of the TagValues to be listed, in the format
-       * `tagKeys/123`.
-       */
+      /** Required. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Resource name for TagKey, parent of the TagValues to be listed, in the format
-     `tagKeys/123`.
+      /** Required.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /**
-       * Required. Resource name for TagKey, parent of the TagValues to be listed, in the format
-       * `tagKeys/123`.
-       */
+      /** Required. */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;

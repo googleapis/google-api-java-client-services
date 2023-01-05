@@ -31,14 +31,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class CommitConversionWorkspaceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional name of the commit.
+   * Optional. Optional name of the commit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commitName;
 
   /**
-   * Optional name of the commit.
+   * Optional. Optional name of the commit.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommitName() {
@@ -46,7 +46,7 @@ public final class CommitConversionWorkspaceRequest extends com.google.api.clien
   }
 
   /**
-   * Optional name of the commit.
+   * Optional. Optional name of the commit.
    * @param commitName commitName or {@code null} for none
    */
   public CommitConversionWorkspaceRequest setCommitName(java.lang.String commitName) {

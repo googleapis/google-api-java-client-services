@@ -39,11 +39,10 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   private String bufferWindow;
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Filters
-   * (https://cloud.google.com/logging/docs/view/advanced_filters). Only log entries that match the
-   * filter are returned. An empty filter matches all log entries in the resources listed in
-   * resource_names. Referencing a parent resource that is not in resource_names will cause the
-   * filter to return no results. The maximum length of the filter is 20000 characters.
+   * Optional. Only log entries that match the filter are returned. An empty filter matches all log
+   * entries in the resources listed in resource_names. Referencing a parent resource that is not
+   * listed in resource_names will cause the filter to return no results. The maximum length of a
+   * filter is 20,000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,11 +83,10 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Filters
-   * (https://cloud.google.com/logging/docs/view/advanced_filters). Only log entries that match the
-   * filter are returned. An empty filter matches all log entries in the resources listed in
-   * resource_names. Referencing a parent resource that is not in resource_names will cause the
-   * filter to return no results. The maximum length of the filter is 20000 characters.
+   * Optional. Only log entries that match the filter are returned. An empty filter matches all log
+   * entries in the resources listed in resource_names. Referencing a parent resource that is not
+   * listed in resource_names will cause the filter to return no results. The maximum length of a
+   * filter is 20,000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -96,11 +94,10 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Filters
-   * (https://cloud.google.com/logging/docs/view/advanced_filters). Only log entries that match the
-   * filter are returned. An empty filter matches all log entries in the resources listed in
-   * resource_names. Referencing a parent resource that is not in resource_names will cause the
-   * filter to return no results. The maximum length of the filter is 20000 characters.
+   * Optional. Only log entries that match the filter are returned. An empty filter matches all log
+   * entries in the resources listed in resource_names. Referencing a parent resource that is not
+   * listed in resource_names will cause the filter to return no results. The maximum length of a
+   * filter is 20,000 characters.
    * @param filter filter or {@code null} for none
    */
   public TailLogEntriesRequest setFilter(java.lang.String filter) {

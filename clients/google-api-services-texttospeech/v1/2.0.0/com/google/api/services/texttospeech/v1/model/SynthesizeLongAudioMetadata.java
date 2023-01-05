@@ -31,13 +31,6 @@ package com.google.api.services.texttospeech.v1.model;
 public final class SynthesizeLongAudioMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time of the most recent processing update.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String lastUpdateTime;
-
-  /**
    * The progress of the most recent processing update in percentage, ie. 70.0%.
    * The value may be {@code null}.
    */
@@ -50,23 +43,6 @@ public final class SynthesizeLongAudioMetadata extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private String startTime;
-
-  /**
-   * Time of the most recent processing update.
-   * @return value or {@code null} for none
-   */
-  public String getLastUpdateTime() {
-    return lastUpdateTime;
-  }
-
-  /**
-   * Time of the most recent processing update.
-   * @param lastUpdateTime lastUpdateTime or {@code null} for none
-   */
-  public SynthesizeLongAudioMetadata setLastUpdateTime(String lastUpdateTime) {
-    this.lastUpdateTime = lastUpdateTime;
-    return this;
-  }
 
   /**
    * The progress of the most recent processing update in percentage, ie. 70.0%.

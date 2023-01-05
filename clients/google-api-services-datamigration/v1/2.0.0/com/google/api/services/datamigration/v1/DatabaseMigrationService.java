@@ -2972,17 +2972,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** Optional filter to request a specific commit id */
+          /** Optional. Optional filter to request a specific commit id */
           @com.google.api.client.util.Key
           private java.lang.String commitId;
 
-          /** Optional filter to request a specific commit id
+          /** Optional. Optional filter to request a specific commit id
            */
           public java.lang.String getCommitId() {
             return commitId;
           }
 
-          /** Optional filter to request a specific commit id */
+          /** Optional. Optional filter to request a specific commit id */
           public DescribeConversionWorkspaceRevisions setCommitId(java.lang.String commitId) {
             this.commitId = commitId;
             return this;

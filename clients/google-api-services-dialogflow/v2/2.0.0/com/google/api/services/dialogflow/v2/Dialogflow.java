@@ -18412,6 +18412,168 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         }
       }
+      /**
+       * An accessor for creating requests from the Suggestions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.Suggestions.List request = dialogflow.suggestions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Suggestions suggestions() {
+        return new Suggestions();
+      }
+
+      /**
+       * The "suggestions" collection of methods.
+       */
+      public class Suggestions {
+
+        /**
+         * Suggests summary for a conversation based on specific historical messages. The range of the
+         * messages to be used for summary can be specified in the request.
+         *
+         * Create a request for the method "suggestions.suggestConversationSummary".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link SuggestConversationSummary#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversation Required. The conversation to fetch suggestion for. Format: `projects//locations//conversations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest}
+         * @return the request
+         */
+        public SuggestConversationSummary suggestConversationSummary(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest content) throws java.io.IOException {
+          SuggestConversationSummary result = new SuggestConversationSummary(conversation, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SuggestConversationSummary extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryResponse> {
+
+          private static final String REST_PATH = "v2/{+conversation}/suggestions:suggestConversationSummary";
+
+          private final java.util.regex.Pattern CONVERSATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Suggests summary for a conversation based on specific historical messages. The range of the
+           * messages to be used for summary can be specified in the request.
+           *
+           * Create a request for the method "suggestions.suggestConversationSummary".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link SuggestConversationSummary#execute()} method to invoke the
+           * remote operation. <p> {@link SuggestConversationSummary#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param conversation Required. The conversation to fetch suggestion for. Format: `projects//locations//conversations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest}
+           * @since 1.13
+           */
+          protected SuggestConversationSummary(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryResponse.class);
+            this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public SuggestConversationSummary set$Xgafv(java.lang.String $Xgafv) {
+            return (SuggestConversationSummary) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SuggestConversationSummary setAccessToken(java.lang.String accessToken) {
+            return (SuggestConversationSummary) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SuggestConversationSummary setAlt(java.lang.String alt) {
+            return (SuggestConversationSummary) super.setAlt(alt);
+          }
+
+          @Override
+          public SuggestConversationSummary setCallback(java.lang.String callback) {
+            return (SuggestConversationSummary) super.setCallback(callback);
+          }
+
+          @Override
+          public SuggestConversationSummary setFields(java.lang.String fields) {
+            return (SuggestConversationSummary) super.setFields(fields);
+          }
+
+          @Override
+          public SuggestConversationSummary setKey(java.lang.String key) {
+            return (SuggestConversationSummary) super.setKey(key);
+          }
+
+          @Override
+          public SuggestConversationSummary setOauthToken(java.lang.String oauthToken) {
+            return (SuggestConversationSummary) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SuggestConversationSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SuggestConversationSummary) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SuggestConversationSummary setQuotaUser(java.lang.String quotaUser) {
+            return (SuggestConversationSummary) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SuggestConversationSummary setUploadType(java.lang.String uploadType) {
+            return (SuggestConversationSummary) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SuggestConversationSummary setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SuggestConversationSummary) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation to fetch suggestion for. Format:
+           * `projects//locations//conversations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversation;
+
+          /** Required. The conversation to fetch suggestion for. Format: `projects//locations//conversations/`.
+           */
+          public java.lang.String getConversation() {
+            return conversation;
+          }
+
+          /**
+           * Required. The conversation to fetch suggestion for. Format:
+           * `projects//locations//conversations/`.
+           */
+          public SuggestConversationSummary setConversation(java.lang.String conversation) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+            this.conversation = conversation;
+            return this;
+          }
+
+          @Override
+          public SuggestConversationSummary set(String parameterName, Object value) {
+            return (SuggestConversationSummary) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the KnowledgeBases collection.
@@ -37772,6 +37934,168 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
 
           }
+        }
+        /**
+         * An accessor for creating requests from the Suggestions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Suggestions.List request = dialogflow.suggestions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Suggestions suggestions() {
+          return new Suggestions();
+        }
+
+        /**
+         * The "suggestions" collection of methods.
+         */
+        public class Suggestions {
+
+          /**
+           * Suggests summary for a conversation based on specific historical messages. The range of the
+           * messages to be used for summary can be specified in the request.
+           *
+           * Create a request for the method "suggestions.suggestConversationSummary".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link SuggestConversationSummary#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param conversation Required. The conversation to fetch suggestion for. Format: `projects//locations//conversations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest}
+           * @return the request
+           */
+          public SuggestConversationSummary suggestConversationSummary(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest content) throws java.io.IOException {
+            SuggestConversationSummary result = new SuggestConversationSummary(conversation, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SuggestConversationSummary extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryResponse> {
+
+            private static final String REST_PATH = "v2/{+conversation}/suggestions:suggestConversationSummary";
+
+            private final java.util.regex.Pattern CONVERSATION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+
+            /**
+             * Suggests summary for a conversation based on specific historical messages. The range of the
+             * messages to be used for summary can be specified in the request.
+             *
+             * Create a request for the method "suggestions.suggestConversationSummary".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link SuggestConversationSummary#execute()} method to invoke the
+             * remote operation. <p> {@link SuggestConversationSummary#initialize(com.google.api.client.google
+             * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param conversation Required. The conversation to fetch suggestion for. Format: `projects//locations//conversations/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest}
+             * @since 1.13
+             */
+            protected SuggestConversationSummary(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestConversationSummaryResponse.class);
+              this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                    "Parameter conversation must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+            }
+
+            @Override
+            public SuggestConversationSummary set$Xgafv(java.lang.String $Xgafv) {
+              return (SuggestConversationSummary) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SuggestConversationSummary setAccessToken(java.lang.String accessToken) {
+              return (SuggestConversationSummary) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SuggestConversationSummary setAlt(java.lang.String alt) {
+              return (SuggestConversationSummary) super.setAlt(alt);
+            }
+
+            @Override
+            public SuggestConversationSummary setCallback(java.lang.String callback) {
+              return (SuggestConversationSummary) super.setCallback(callback);
+            }
+
+            @Override
+            public SuggestConversationSummary setFields(java.lang.String fields) {
+              return (SuggestConversationSummary) super.setFields(fields);
+            }
+
+            @Override
+            public SuggestConversationSummary setKey(java.lang.String key) {
+              return (SuggestConversationSummary) super.setKey(key);
+            }
+
+            @Override
+            public SuggestConversationSummary setOauthToken(java.lang.String oauthToken) {
+              return (SuggestConversationSummary) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SuggestConversationSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SuggestConversationSummary) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SuggestConversationSummary setQuotaUser(java.lang.String quotaUser) {
+              return (SuggestConversationSummary) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SuggestConversationSummary setUploadType(java.lang.String uploadType) {
+              return (SuggestConversationSummary) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SuggestConversationSummary setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SuggestConversationSummary) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The conversation to fetch suggestion for. Format:
+             * `projects//locations//conversations/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String conversation;
+
+            /** Required. The conversation to fetch suggestion for. Format: `projects//locations//conversations/`.
+             */
+            public java.lang.String getConversation() {
+              return conversation;
+            }
+
+            /**
+             * Required. The conversation to fetch suggestion for. Format:
+             * `projects//locations//conversations/`.
+             */
+            public SuggestConversationSummary setConversation(java.lang.String conversation) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                    "Parameter conversation must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+              this.conversation = conversation;
+              return this;
+            }
+
+            @Override
+            public SuggestConversationSummary set(String parameterName, Object value) {
+              return (SuggestConversationSummary) super.set(parameterName, value);
+            }
+          }
+
         }
       }
       /**

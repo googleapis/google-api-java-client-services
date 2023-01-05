@@ -58,6 +58,13 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   private java.lang.String documentEfficiency;
 
   /**
+   * Optional. Feedback for conversation summarization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback summarizationFeedback;
+
+  /**
    * Optional. Whether or not the suggested answer is relevant. For example: * Query: "Can I change
    * my mailing address?" * Suggested document says: "Items must be returned/exchanged within 60
    * days of the purchase date." * answer_relevance: AnswerRelevance.IRRELEVANT
@@ -119,6 +126,23 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setDocumentEfficiency(java.lang.String documentEfficiency) {
     this.documentEfficiency = documentEfficiency;
+    return this;
+  }
+
+  /**
+   * Optional. Feedback for conversation summarization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback getSummarizationFeedback() {
+    return summarizationFeedback;
+  }
+
+  /**
+   * Optional. Feedback for conversation summarization.
+   * @param summarizationFeedback summarizationFeedback or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AgentAssistantFeedback setSummarizationFeedback(GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback summarizationFeedback) {
+    this.summarizationFeedback = summarizationFeedback;
     return this;
   }
 

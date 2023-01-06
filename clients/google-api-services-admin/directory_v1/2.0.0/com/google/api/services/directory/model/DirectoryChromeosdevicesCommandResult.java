@@ -30,6 +30,15 @@ package com.google.api.services.directory.model;
 public final class DirectoryChromeosdevicesCommandResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The payload for the command result. The following commands respond with a payload: -
+   * DEVICE_START_CRD_SESSION: Payload is a stringified JSON object in the form: { "url": url }. The
+   * URL provides a link to the CRD session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commandResultPayload;
+
+  /**
    * The error message with a short explanation as to why the command failed. Only present if the
    * command failed.
    * The value may be {@code null}.
@@ -50,6 +59,27 @@ public final class DirectoryChromeosdevicesCommandResult extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String result;
+
+  /**
+   * The payload for the command result. The following commands respond with a payload: -
+   * DEVICE_START_CRD_SESSION: Payload is a stringified JSON object in the form: { "url": url }. The
+   * URL provides a link to the CRD session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommandResultPayload() {
+    return commandResultPayload;
+  }
+
+  /**
+   * The payload for the command result. The following commands respond with a payload: -
+   * DEVICE_START_CRD_SESSION: Payload is a stringified JSON object in the form: { "url": url }. The
+   * URL provides a link to the CRD session.
+   * @param commandResultPayload commandResultPayload or {@code null} for none
+   */
+  public DirectoryChromeosdevicesCommandResult setCommandResultPayload(java.lang.String commandResultPayload) {
+    this.commandResultPayload = commandResultPayload;
+    return this;
+  }
 
   /**
    * The error message with a short explanation as to why the command failed. Only present if the

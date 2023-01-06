@@ -30,14 +30,14 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1ListOrganizationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Apigee organizations and associated GCP projects.
+   * List of Apigee organizations and associated Google Cloud projects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApigeeV1OrganizationProjectMapping> organizations;
 
   /**
-   * List of Apigee organizations and associated GCP projects.
+   * List of Apigee organizations and associated Google Cloud projects.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1OrganizationProjectMapping> getOrganizations() {
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1ListOrganizationsResponse extends com.goog
   }
 
   /**
-   * List of Apigee organizations and associated GCP projects.
+   * List of Apigee organizations and associated Google Cloud projects.
    * @param organizations organizations or {@code null} for none
    */
   public GoogleCloudApigeeV1ListOrganizationsResponse setOrganizations(java.util.List<GoogleCloudApigeeV1OrganizationProjectMapping> organizations) {

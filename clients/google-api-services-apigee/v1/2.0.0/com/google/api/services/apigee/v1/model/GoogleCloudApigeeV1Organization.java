@@ -37,8 +37,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private GoogleCloudApigeeV1AddonsConfig addonsConfig;
 
   /**
-   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP
-   * region for analytics data storage. For valid values, see [Create an Apigee
+   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary Google
+   * Cloud region for analytics data storage. For valid values, see [Create an Apigee
    * organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
    * The value may be {@code null}.
    */
@@ -232,8 +232,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP
-   * region for analytics data storage. For valid values, see [Create an Apigee
+   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary Google
+   * Cloud region for analytics data storage. For valid values, see [Create an Apigee
    * organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
    * @return value or {@code null} for none
    */
@@ -242,8 +242,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP
-   * region for analytics data storage. For valid values, see [Create an Apigee
+   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary Google
+   * Cloud region for analytics data storage. For valid values, see [Create an Apigee
    * organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
    * @param analyticsRegion analyticsRegion or {@code null} for none
    */

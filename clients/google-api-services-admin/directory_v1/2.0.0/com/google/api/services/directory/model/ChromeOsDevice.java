@@ -112,6 +112,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * (Read-only) Deprovision reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deprovisionReason;
+
+  /**
    * A list of device files to download (Read-only)
    * The value may be {@code null}.
    */
@@ -198,6 +205,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * (Read-only) Date and time for the last deprovision of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastDeprovisionTimestamp;
 
   /**
    * Date and time the device was last enrolled (Read-only)
@@ -556,6 +570,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * (Read-only) Deprovision reason.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeprovisionReason() {
+    return deprovisionReason;
+  }
+
+  /**
+   * (Read-only) Deprovision reason.
+   * @param deprovisionReason deprovisionReason or {@code null} for none
+   */
+  public ChromeOsDevice setDeprovisionReason(java.lang.String deprovisionReason) {
+    this.deprovisionReason = deprovisionReason;
+    return this;
+  }
+
+  /**
    * A list of device files to download (Read-only)
    * @return value or {@code null} for none
    */
@@ -734,6 +765,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * (Read-only) Date and time for the last deprovision of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastDeprovisionTimestamp() {
+    return lastDeprovisionTimestamp;
+  }
+
+  /**
+   * (Read-only) Date and time for the last deprovision of the device.
+   * @param lastDeprovisionTimestamp lastDeprovisionTimestamp or {@code null} for none
+   */
+  public ChromeOsDevice setLastDeprovisionTimestamp(java.lang.String lastDeprovisionTimestamp) {
+    this.lastDeprovisionTimestamp = lastDeprovisionTimestamp;
     return this;
   }
 

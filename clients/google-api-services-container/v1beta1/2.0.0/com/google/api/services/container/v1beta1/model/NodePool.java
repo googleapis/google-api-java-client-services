@@ -68,6 +68,14 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeConfig config;
 
   /**
+   * This checksum is computed by the server based on the value of node pool fields, and may be sent
+   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * The initial node count for the pool. You must ensure that your Compute Engine [resource
    * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
    * must also have available firewall and routes quota.
@@ -236,6 +244,25 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setConfig(NodeConfig config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of node pool fields, and may be sent
+   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of node pool fields, and may be sent
+   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * @param etag etag or {@code null} for none
+   */
+  public NodePool setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

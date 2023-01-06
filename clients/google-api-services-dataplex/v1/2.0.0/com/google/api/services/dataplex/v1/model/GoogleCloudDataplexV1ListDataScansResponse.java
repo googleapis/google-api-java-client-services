@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListDataScansResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * DataScans (metadata only) under the given parent location.
+   * DataScans (BASIC view only) under the given parent location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class GoogleCloudDataplexV1ListDataScansResponse extends com.google
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * DataScans (metadata only) under the given parent location.
+   * DataScans (BASIC view only) under the given parent location.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataScan> getDataScans() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDataplexV1ListDataScansResponse extends com.google
   }
 
   /**
-   * DataScans (metadata only) under the given parent location.
+   * DataScans (BASIC view only) under the given parent location.
    * @param dataScans dataScans or {@code null} for none
    */
   public GoogleCloudDataplexV1ListDataScansResponse setDataScans(java.util.List<GoogleCloudDataplexV1DataScan> dataScans) {

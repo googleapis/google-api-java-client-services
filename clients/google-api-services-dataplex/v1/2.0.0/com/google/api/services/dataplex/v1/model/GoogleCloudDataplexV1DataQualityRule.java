@@ -37,7 +37,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private java.lang.String column;
 
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension-level.
+   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
    * "INTEGRITY"
    * The value may be {@code null}.
@@ -47,7 +47,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing. Only applicable to ColumnMap rules.
+   * that case, such null rows are trivially considered passing.Only applicable to ColumnMap rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
-   * range of 0.0, 1.00 indicates default value (i.e. 1.0)
+   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension-level.
+   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
    * "INTEGRITY"
    * @return value or {@code null} for none
@@ -146,7 +146,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension-level.
+   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
    * "INTEGRITY"
    * @param dimension dimension or {@code null} for none
@@ -158,7 +158,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing. Only applicable to ColumnMap rules.
+   * that case, such null rows are trivially considered passing.Only applicable to ColumnMap rules.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreNull() {
@@ -167,7 +167,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing. Only applicable to ColumnMap rules.
+   * that case, such null rows are trivially considered passing.Only applicable to ColumnMap rules.
    * @param ignoreNull ignoreNull or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setIgnoreNull(java.lang.Boolean ignoreNull) {
@@ -298,7 +298,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
-   * range of 0.0, 1.00 indicates default value (i.e. 1.0)
+   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).
    * @return value or {@code null} for none
    */
   public java.lang.Double getThreshold() {
@@ -307,7 +307,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
-   * range of 0.0, 1.00 indicates default value (i.e. 1.0)
+   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).
    * @param threshold threshold or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setThreshold(java.lang.Double threshold) {

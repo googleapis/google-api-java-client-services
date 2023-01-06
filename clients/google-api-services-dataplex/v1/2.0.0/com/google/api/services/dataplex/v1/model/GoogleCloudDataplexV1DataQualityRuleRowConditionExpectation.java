@@ -17,9 +17,9 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Evaluates whether each row passes the specified condition. The SQL expression needs to use
- * BigQuery standard SQL syntax and should produce a boolean per row as the result. Example: col1 >=
- * 0 AND col2 < 10
+ * Evaluates whether each row passes the specified condition.The SQL expression needs to use
+ * BigQuery standard SQL syntax and should produce a boolean value per row as the result.Example:
+ * col1 >= 0 AND col2 < 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -32,12 +32,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The SQL expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlExpression;
 
   /**
+   * The SQL expression.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlExpression() {
@@ -45,6 +47,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation e
   }
 
   /**
+   * The SQL expression.
    * @param sqlExpression sqlExpression or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation setSqlExpression(java.lang.String sqlExpression) {

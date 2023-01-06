@@ -17,11 +17,10 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Represents a user-visible job which provides the insights for the related data source. For
- * examples: - Data Quality: generates queries based on the rules and run against the data to get
- * data quality check results. - Data Profile: analyzes the data in table(s) and generates insights
- * about the structure, content and relationships (such as null percent, cardinality, min/max/mean,
- * etc).
+ * Represents a user-visible job which provides the insights for the related data source.For
+ * example: Data Quality: generates queries based on the rules and runs against the data to get data
+ * quality check results. Data Profile: analyzes the data in table(s) and generates insights about
+ * the structure, content and relationships (such as null percent, cardinality, min/max/mean, etc).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -76,22 +75,22 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private GoogleCloudDataplexV1DataQualitySpec dataQualitySpec;
 
   /**
-   * Optional. Description of the scan. * Must be between 1-1024 characters.
+   * Optional. Description of the scan. Must be between 1-1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. User friendly display name. * Must be between 1-256 characters.
+   * Optional. User friendly display name. Must be between 1-256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. DataScan execution settings. If not specified, the fields under it will use their
-   * default values.
+   * Optional. DataScan execution settings.If not specified, the fields in it will use their default
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +112,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
 
   /**
    * Output only. The relative resource name of the scan, of the form:
-   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers to a
+   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * The value may be {@code null}.
    */
@@ -252,7 +251,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Optional. Description of the scan. * Must be between 1-1024 characters.
+   * Optional. Description of the scan. Must be between 1-1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -260,7 +259,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Optional. Description of the scan. * Must be between 1-1024 characters.
+   * Optional. Description of the scan. Must be between 1-1024 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setDescription(java.lang.String description) {
@@ -269,7 +268,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Optional. User friendly display name. * Must be between 1-256 characters.
+   * Optional. User friendly display name. Must be between 1-256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -277,7 +276,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Optional. User friendly display name. * Must be between 1-256 characters.
+   * Optional. User friendly display name. Must be between 1-256 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setDisplayName(java.lang.String displayName) {
@@ -286,8 +285,8 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Optional. DataScan execution settings. If not specified, the fields under it will use their
-   * default values.
+   * Optional. DataScan execution settings.If not specified, the fields in it will use their default
+   * values.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanExecutionSpec getExecutionSpec() {
@@ -295,8 +294,8 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Optional. DataScan execution settings. If not specified, the fields under it will use their
-   * default values.
+   * Optional. DataScan execution settings.If not specified, the fields in it will use their default
+   * values.
    * @param executionSpec executionSpec or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setExecutionSpec(GoogleCloudDataplexV1DataScanExecutionSpec executionSpec) {
@@ -340,7 +339,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
 
   /**
    * Output only. The relative resource name of the scan, of the form:
-   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers to a
+   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * @return value or {@code null} for none
    */
@@ -350,7 +349,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
 
   /**
    * Output only. The relative resource name of the scan, of the form:
-   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers to a
+   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * @param name name or {@code null} for none
    */

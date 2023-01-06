@@ -30,14 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1RunDataScanResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * DataScanJob created by RunDataScan API.
+   * DataScanJob created by RunDataScan request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataScanJob job;
 
   /**
-   * DataScanJob created by RunDataScan API.
+   * DataScanJob created by RunDataScan request.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanJob getJob() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDataplexV1RunDataScanResponse extends com.google.a
   }
 
   /**
-   * DataScanJob created by RunDataScan API.
+   * DataScanJob created by RunDataScan request.
    * @param job job or {@code null} for none
    */
   public GoogleCloudDataplexV1RunDataScanResponse setJob(GoogleCloudDataplexV1DataScanJob job) {

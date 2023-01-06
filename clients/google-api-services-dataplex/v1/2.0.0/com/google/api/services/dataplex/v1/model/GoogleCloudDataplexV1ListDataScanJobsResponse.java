@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListDataScanJobsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * DataScanJobs (metadata only) under a given dataScan.
+   * DataScanJobs (BASIC view only) under a given dataScan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GoogleCloudDataplexV1ListDataScanJobsResponse extends com.goo
   private java.lang.String nextPageToken;
 
   /**
-   * DataScanJobs (metadata only) under a given dataScan.
+   * DataScanJobs (BASIC view only) under a given dataScan.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataScanJob> getDataScanJobs() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDataplexV1ListDataScanJobsResponse extends com.goo
   }
 
   /**
-   * DataScanJobs (metadata only) under a given dataScan.
+   * DataScanJobs (BASIC view only) under a given dataScan.
    * @param dataScanJobs dataScanJobs or {@code null} for none
    */
   public GoogleCloudDataplexV1ListDataScanJobsResponse setDataScanJobs(java.util.List<GoogleCloudDataplexV1DataScanJob> dataScanJobs) {

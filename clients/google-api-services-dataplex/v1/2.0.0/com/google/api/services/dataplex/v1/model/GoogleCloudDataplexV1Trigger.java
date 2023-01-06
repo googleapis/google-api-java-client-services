@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1Trigger extends com.google.api.client.json.GenericJson {
 
   /**
-   * The scan runs one-time shortly after DataScan Creation.
+   * The scan runs once via RunDataScan API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDataplexV1Trigger extends com.google.api.client.js
   private GoogleCloudDataplexV1TriggerSchedule schedule;
 
   /**
-   * The scan runs one-time shortly after DataScan Creation.
+   * The scan runs once via RunDataScan API.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1TriggerOnDemand getOnDemand() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDataplexV1Trigger extends com.google.api.client.js
   }
 
   /**
-   * The scan runs one-time shortly after DataScan Creation.
+   * The scan runs once via RunDataScan API.
    * @param onDemand onDemand or {@code null} for none
    */
   public GoogleCloudDataplexV1Trigger setOnDemand(GoogleCloudDataplexV1TriggerOnDemand onDemand) {

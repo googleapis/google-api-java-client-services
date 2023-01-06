@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * The TopNValue defines the structure of output of top N values of a field.
+ * Top N non-null values in the scanned data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * The frequency count of the corresponding value in the field.
+   * Count of the corresponding value in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long count;
 
   /**
-   * The value is the string value of the actual value from the field.
+   * String value of a top N non-null value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The frequency count of the corresponding value in the field.
+   * Count of the corresponding value in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The frequency count of the corresponding value in the field.
+   * Count of the corresponding value in the scanned data.
    * @param count count or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setCount(java.lang.Long count) {
@@ -61,7 +61,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The value is the string value of the actual value from the field.
+   * String value of a top N non-null value.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The value is the string value of the actual value from the field.
+   * String value of a top N non-null value.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setValue(java.lang.String value) {

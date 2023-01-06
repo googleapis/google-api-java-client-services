@@ -155,6 +155,14 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   private java.lang.String type;
 
   /**
+   * Output only. System generated unique ID for the Entity. This ID will be different if the Entity
+   * is deleted and re-created with the same name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. The time when the entity was last updated.
    * The value may be {@code null}.
    */
@@ -456,6 +464,25 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
    */
   public GoogleCloudDataplexV1Entity setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. System generated unique ID for the Entity. This ID will be different if the Entity
+   * is deleted and re-created with the same name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. System generated unique ID for the Entity. This ID will be different if the Entity
+   * is deleted and re-created with the same name.
+   * @param uid uid or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Entity setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

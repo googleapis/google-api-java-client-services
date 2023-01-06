@@ -37,7 +37,7 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
    * Required. The total number of shards to create. This must always be a positive number that is
    * no greater than the total number of test cases. When you select one or more physical devices,
    * the number of shards must be <= 50. When you select one or more ARM virtual devices, it must be
-   * <= 50. When you select only x86 virtual devices, it must be <= 500.
+   * <= 100. When you select only x86 virtual devices, it must be <= 500.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
    * Required. The total number of shards to create. This must always be a positive number that is
    * no greater than the total number of test cases. When you select one or more physical devices,
    * the number of shards must be <= 50. When you select one or more ARM virtual devices, it must be
-   * <= 50. When you select only x86 virtual devices, it must be <= 500.
+   * <= 100. When you select only x86 virtual devices, it must be <= 500.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumShards() {
@@ -58,7 +58,7 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
    * Required. The total number of shards to create. This must always be a positive number that is
    * no greater than the total number of test cases. When you select one or more physical devices,
    * the number of shards must be <= 50. When you select one or more ARM virtual devices, it must be
-   * <= 50. When you select only x86 virtual devices, it must be <= 500.
+   * <= 100. When you select only x86 virtual devices, it must be <= 500.
    * @param numShards numShards or {@code null} for none
    */
   public UniformSharding setNumShards(java.lang.Integer numShards) {

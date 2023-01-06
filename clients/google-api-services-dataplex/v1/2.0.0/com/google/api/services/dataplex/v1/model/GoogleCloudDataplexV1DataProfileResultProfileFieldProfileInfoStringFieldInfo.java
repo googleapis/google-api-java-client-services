@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * StringFieldInfo defines output info for any string type field.
+ * The profile information for a string type field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The average length of a string field in the sampled data. Optional if zero non-null rows.
+   * Average length of non-null values in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double averageLength;
 
   /**
-   * The maximum length of a string field in the sampled data. Optional if zero non-null rows.
+   * Maximum length of non-null values in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxLength;
 
   /**
-   * The minimum length of the string field in the sampled data. Optional if zero non-null rows.
+   * Minimum length of non-null values in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minLength;
 
   /**
-   * The average length of a string field in the sampled data. Optional if zero non-null rows.
+   * Average length of non-null values in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageLength() {
@@ -59,7 +59,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The average length of a string field in the sampled data. Optional if zero non-null rows.
+   * Average length of non-null values in the scanned data.
    * @param averageLength averageLength or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo setAverageLength(java.lang.Double averageLength) {
@@ -68,7 +68,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The maximum length of a string field in the sampled data. Optional if zero non-null rows.
+   * Maximum length of non-null values in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxLength() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The maximum length of a string field in the sampled data. Optional if zero non-null rows.
+   * Maximum length of non-null values in the scanned data.
    * @param maxLength maxLength or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo setMaxLength(java.lang.Long maxLength) {
@@ -85,7 +85,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The minimum length of the string field in the sampled data. Optional if zero non-null rows.
+   * Minimum length of non-null values in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinLength() {
@@ -93,7 +93,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The minimum length of the string field in the sampled data. Optional if zero non-null rows.
+   * Minimum length of non-null values in the scanned data.
    * @param minLength minLength or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo setMinLength(java.lang.Long minLength) {

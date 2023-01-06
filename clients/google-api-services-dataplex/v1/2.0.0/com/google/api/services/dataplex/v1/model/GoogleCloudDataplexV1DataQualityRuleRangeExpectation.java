@@ -47,7 +47,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends 
 
   /**
    * Optional. Whether each value needs to be strictly lesser than ('<') the maximum, or if equality
-   * is allowed. Only relevant if a max_value has been defined. Default = false.
+   * is allowed.Only relevant if a max_value has been defined. Default = false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends 
 
   /**
    * Optional. Whether each value needs to be strictly greater than ('>') the minimum, or if
-   * equality is allowed. Only relevant if a min_value has been defined. Default = false.
+   * equality is allowed.Only relevant if a min_value has been defined. Default = false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends 
 
   /**
    * Optional. Whether each value needs to be strictly lesser than ('<') the maximum, or if equality
-   * is allowed. Only relevant if a max_value has been defined. Default = false.
+   * is allowed.Only relevant if a max_value has been defined. Default = false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStrictMaxEnabled() {
@@ -110,7 +110,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends 
 
   /**
    * Optional. Whether each value needs to be strictly lesser than ('<') the maximum, or if equality
-   * is allowed. Only relevant if a max_value has been defined. Default = false.
+   * is allowed.Only relevant if a max_value has been defined. Default = false.
    * @param strictMaxEnabled strictMaxEnabled or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRangeExpectation setStrictMaxEnabled(java.lang.Boolean strictMaxEnabled) {
@@ -120,7 +120,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends 
 
   /**
    * Optional. Whether each value needs to be strictly greater than ('>') the minimum, or if
-   * equality is allowed. Only relevant if a min_value has been defined. Default = false.
+   * equality is allowed.Only relevant if a min_value has been defined. Default = false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStrictMinEnabled() {
@@ -129,7 +129,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends 
 
   /**
    * Optional. Whether each value needs to be strictly greater than ('>') the minimum, or if
-   * equality is allowed. Only relevant if a min_value has been defined. Default = false.
+   * equality is allowed.Only relevant if a min_value has been defined. Default = false.
    * @param strictMinEnabled strictMinEnabled or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRangeExpectation setStrictMinEnabled(java.lang.Boolean strictMinEnabled) {

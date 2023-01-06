@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * DataQualityRuleResult provides a more detailed, per-rule level view of the results.
+ * DataQualityRuleResult provides a more detailed, per-rule view of the results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -31,9 +31,9 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
 
   /**
    * The number of rows a rule was evaluated against. This field is only valid for ColumnMap type
-   * rules. Evaluated count can be configured to either (1) include all rows (default) - with null
-   * rows automatically failing rule evaluation OR (2) exclude null rows from the evaluated_count,
-   * by setting ignore_nulls = true
+   * rules.Evaluated count can be configured to either include all rows (default) - with null rows
+   * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
+   * setting ignore_nulls = true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -85,9 +85,9 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
 
   /**
    * The number of rows a rule was evaluated against. This field is only valid for ColumnMap type
-   * rules. Evaluated count can be configured to either (1) include all rows (default) - with null
-   * rows automatically failing rule evaluation OR (2) exclude null rows from the evaluated_count,
-   * by setting ignore_nulls = true
+   * rules.Evaluated count can be configured to either include all rows (default) - with null rows
+   * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
+   * setting ignore_nulls = true.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEvaluatedCount() {
@@ -96,9 +96,9 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
 
   /**
    * The number of rows a rule was evaluated against. This field is only valid for ColumnMap type
-   * rules. Evaluated count can be configured to either (1) include all rows (default) - with null
-   * rows automatically failing rule evaluation OR (2) exclude null rows from the evaluated_count,
-   * by setting ignore_nulls = true
+   * rules.Evaluated count can be configured to either include all rows (default) - with null rows
+   * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
+   * setting ignore_nulls = true.
    * @param evaluatedCount evaluatedCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleResult setEvaluatedCount(java.lang.Long evaluatedCount) {

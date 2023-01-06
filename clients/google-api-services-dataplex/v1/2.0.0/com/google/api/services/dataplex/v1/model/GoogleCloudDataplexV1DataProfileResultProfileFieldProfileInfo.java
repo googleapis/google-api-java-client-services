@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * ProfileInfo defines the profile information for each schema field type.
+ * The profile information for each field type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,51 +30,53 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ratio of rows that are distinct against the rows in the sampled data.
+   * Ratio of rows with distinct values against total scanned rows. Not available for complex non-
+   * groupable field type RECORD and fields with REPEATABLE mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double distinctRatio;
 
   /**
-   * The corresponding double field profile.
+   * Double type field information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo doubleProfile;
 
   /**
-   * The corresponding integer field profile.
+   * Integer type field information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo integerProfile;
 
   /**
-   * The ratio of null rows against the rows in the sampled data.
+   * Ratio of rows with null value against total scanned rows.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double nullRatio;
 
   /**
-   * The corresponding string field profile.
+   * String type field information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo stringProfile;
 
   /**
-   * The array of top N values of the field in the sampled data. Currently N is set as 10 or equal
-   * to distinct values in the field, whichever is smaller. This will be optional for complex non-
-   * groupable data-types such as JSON, ARRAY, JSON, STRUCT.
+   * The list of top N non-null values and number of times they occur in the scanned data. N is 10
+   * or equal to the number of distinct values in the field, whichever is smaller. Not available for
+   * complex non-groupable field type RECORD and fields with REPEATABLE mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> topNValues;
 
   /**
-   * The ratio of rows that are distinct against the rows in the sampled data.
+   * Ratio of rows with distinct values against total scanned rows. Not available for complex non-
+   * groupable field type RECORD and fields with REPEATABLE mode.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDistinctRatio() {
@@ -82,7 +84,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The ratio of rows that are distinct against the rows in the sampled data.
+   * Ratio of rows with distinct values against total scanned rows. Not available for complex non-
+   * groupable field type RECORD and fields with REPEATABLE mode.
    * @param distinctRatio distinctRatio or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setDistinctRatio(java.lang.Double distinctRatio) {
@@ -91,7 +94,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The corresponding double field profile.
+   * Double type field information.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo getDoubleProfile() {
@@ -99,7 +102,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The corresponding double field profile.
+   * Double type field information.
    * @param doubleProfile doubleProfile or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setDoubleProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo doubleProfile) {
@@ -108,7 +111,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The corresponding integer field profile.
+   * Integer type field information.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo getIntegerProfile() {
@@ -116,7 +119,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The corresponding integer field profile.
+   * Integer type field information.
    * @param integerProfile integerProfile or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setIntegerProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo integerProfile) {
@@ -125,7 +128,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The ratio of null rows against the rows in the sampled data.
+   * Ratio of rows with null value against total scanned rows.
    * @return value or {@code null} for none
    */
   public java.lang.Double getNullRatio() {
@@ -133,7 +136,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The ratio of null rows against the rows in the sampled data.
+   * Ratio of rows with null value against total scanned rows.
    * @param nullRatio nullRatio or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setNullRatio(java.lang.Double nullRatio) {
@@ -142,7 +145,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The corresponding string field profile.
+   * String type field information.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo getStringProfile() {
@@ -150,7 +153,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The corresponding string field profile.
+   * String type field information.
    * @param stringProfile stringProfile or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setStringProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo stringProfile) {
@@ -159,9 +162,9 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The array of top N values of the field in the sampled data. Currently N is set as 10 or equal
-   * to distinct values in the field, whichever is smaller. This will be optional for complex non-
-   * groupable data-types such as JSON, ARRAY, JSON, STRUCT.
+   * The list of top N non-null values and number of times they occur in the scanned data. N is 10
+   * or equal to the number of distinct values in the field, whichever is smaller. Not available for
+   * complex non-groupable field type RECORD and fields with REPEATABLE mode.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> getTopNValues() {
@@ -169,9 +172,9 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The array of top N values of the field in the sampled data. Currently N is set as 10 or equal
-   * to distinct values in the field, whichever is smaller. This will be optional for complex non-
-   * groupable data-types such as JSON, ARRAY, JSON, STRUCT.
+   * The list of top N non-null values and number of times they occur in the scanned data. N is 10
+   * or equal to the number of distinct values in the field, whichever is smaller. Not available for
+   * complex non-groupable field type RECORD and fields with REPEATABLE mode.
    * @param topNValues topNValues or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setTopNValues(java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> topNValues) {

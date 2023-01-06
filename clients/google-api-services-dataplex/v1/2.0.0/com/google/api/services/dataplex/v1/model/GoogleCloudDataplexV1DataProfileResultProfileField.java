@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Represents a column field within a table schema.
+ * A field within a table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileField extends com.google.api.client.json.GenericJson {
 
   /**
-   * The mode of the field. Its value will be: REQUIRED, if it is a required field. NULLABLE, if it
-   * is an optional field. REPEATED, if it is a repeated field.
+   * The mode of the field. Possible values include: REQUIRED, if it is a required field. NULLABLE,
+   * if it is an optional field. REPEATED, if it is a repeated field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   private java.lang.String name;
 
   /**
-   * The profile information for the corresponding field.
+   * Profile information for the corresponding field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   private java.lang.String type;
 
   /**
-   * The mode of the field. Its value will be: REQUIRED, if it is a required field. NULLABLE, if it
-   * is an optional field. REPEATED, if it is a repeated field.
+   * The mode of the field. Possible values include: REQUIRED, if it is a required field. NULLABLE,
+   * if it is an optional field. REPEATED, if it is a repeated field.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -69,8 +69,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The mode of the field. Its value will be: REQUIRED, if it is a required field. NULLABLE, if it
-   * is an optional field. REPEATED, if it is a repeated field.
+   * The mode of the field. Possible values include: REQUIRED, if it is a required field. NULLABLE,
+   * if it is an optional field. REPEATED, if it is a repeated field.
    * @param mode mode or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileField setMode(java.lang.String mode) {
@@ -96,7 +96,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The profile information for the corresponding field.
+   * Profile information for the corresponding field.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo getProfile() {
@@ -104,7 +104,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The profile information for the corresponding field.
+   * Profile information for the corresponding field.
    * @param profile profile or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileField setProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo profile) {

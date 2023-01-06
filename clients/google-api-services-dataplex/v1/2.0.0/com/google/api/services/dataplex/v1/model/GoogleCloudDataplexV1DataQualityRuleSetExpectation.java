@@ -30,12 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleSetExpectation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Expected values for the column value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> values;
 
   /**
+   * Expected values for the column value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -43,6 +45,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleSetExpectation extends co
   }
 
   /**
+   * Expected values for the column value.
    * @param values values or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleSetExpectation setValues(java.util.List<java.lang.String> values) {

@@ -30,15 +30,16 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanExecutionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The unnested field (Date or Timestamp) that contains values that monotonically
-   * increase over time.
+   * Immutable. The unnested field (of type Date or Timestamp) that contains values which
+   * monotonically increase over time.If not specified, a data scan will run for all data in the
+   * table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * Optional. Spec related to how often and when a scan should be triggered. If not specified, the
+   * Optional. Spec related to how often and when a scan should be triggered.If not specified, the
    * default is OnDemand, which means the scan will not run until the user calls RunDataScan API.
    * The value may be {@code null}.
    */
@@ -46,8 +47,9 @@ public final class GoogleCloudDataplexV1DataScanExecutionSpec extends com.google
   private GoogleCloudDataplexV1Trigger trigger;
 
   /**
-   * Immutable. The unnested field (Date or Timestamp) that contains values that monotonically
-   * increase over time.
+   * Immutable. The unnested field (of type Date or Timestamp) that contains values which
+   * monotonically increase over time.If not specified, a data scan will run for all data in the
+   * table.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -55,8 +57,9 @@ public final class GoogleCloudDataplexV1DataScanExecutionSpec extends com.google
   }
 
   /**
-   * Immutable. The unnested field (Date or Timestamp) that contains values that monotonically
-   * increase over time.
+   * Immutable. The unnested field (of type Date or Timestamp) that contains values which
+   * monotonically increase over time.If not specified, a data scan will run for all data in the
+   * table.
    * @param field field or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanExecutionSpec setField(java.lang.String field) {
@@ -65,7 +68,7 @@ public final class GoogleCloudDataplexV1DataScanExecutionSpec extends com.google
   }
 
   /**
-   * Optional. Spec related to how often and when a scan should be triggered. If not specified, the
+   * Optional. Spec related to how often and when a scan should be triggered.If not specified, the
    * default is OnDemand, which means the scan will not run until the user calls RunDataScan API.
    * @return value or {@code null} for none
    */
@@ -74,7 +77,7 @@ public final class GoogleCloudDataplexV1DataScanExecutionSpec extends com.google
   }
 
   /**
-   * Optional. Spec related to how often and when a scan should be triggered. If not specified, the
+   * Optional. Spec related to how often and when a scan should be triggered.If not specified, the
    * default is OnDemand, which means the scan will not run until the user calls RunDataScan API.
    * @param trigger trigger or {@code null} for none
    */

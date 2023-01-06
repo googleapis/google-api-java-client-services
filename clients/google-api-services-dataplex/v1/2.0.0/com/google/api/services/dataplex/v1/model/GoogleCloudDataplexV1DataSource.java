@@ -30,16 +30,18 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The dataplex entity that contains the data for DataScan, of the form: projects/{proj
-   * ect_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}.
+   * Immutable. The Dataplex entity that represents the data source (e.g. BigQuery table) for
+   * DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/
+   * {zone_id}/entities/{entity_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entity;
 
   /**
-   * Immutable. The dataplex entity that contains the data for DataScan, of the form: projects/{proj
-   * ect_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}.
+   * Immutable. The Dataplex entity that represents the data source (e.g. BigQuery table) for
+   * DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/
+   * {zone_id}/entities/{entity_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntity() {
@@ -47,8 +49,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
   }
 
   /**
-   * Immutable. The dataplex entity that contains the data for DataScan, of the form: projects/{proj
-   * ect_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}.
+   * Immutable. The Dataplex entity that represents the data source (e.g. BigQuery table) for
+   * DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/
+   * {zone_id}/entities/{entity_id}.
    * @param entity entity or {@code null} for none
    */
   public GoogleCloudDataplexV1DataSource setEntity(java.lang.String entity) {

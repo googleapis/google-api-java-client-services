@@ -6,7 +6,7 @@
   "baseClientLibrary": "2.1.1",
   "oauthClientLibrary": "1.34.1",
   "httpClientLibrary": "1.42.3",
-  "gsonVersion": "2.10",
+  "gsonVersion": "2.10.1",
   "httpClientVersion": "4.5.14",
   "jackson2CoreVersion": "2.14.1",
   "jdo2ApiVersion": "2.3-eb",

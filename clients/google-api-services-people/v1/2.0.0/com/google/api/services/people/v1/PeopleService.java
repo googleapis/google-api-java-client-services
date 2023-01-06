@@ -4016,8 +4016,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link UpdateContact#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name for the person, assigned by the server. An ASCII string with a max length of 27
-     *        characters, in the form of `people/{person_id}`.
+     * @param resourceName The resource name for the person, assigned by the server. An ASCII string in the form of
+     *        `people/{person_id}`.
      * @param content the {@link com.google.api.services.people.v1.model.Person}
      * @return the request
      */
@@ -4056,8 +4056,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * equest)} must be called to initialize this instance immediately after invoking the constructor.
        * </p>
        *
-       * @param resourceName The resource name for the person, assigned by the server. An ASCII string with a max length of 27
-     *        characters, in the form of `people/{person_id}`.
+       * @param resourceName The resource name for the person, assigned by the server. An ASCII string in the form of
+     *        `people/{person_id}`.
        * @param content the {@link com.google.api.services.people.v1.model.Person}
        * @since 1.13
        */
@@ -4127,22 +4127,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The resource name for the person, assigned by the server. An ASCII string with a max length
-       * of 27 characters, in the form of `people/{person_id}`.
+       * The resource name for the person, assigned by the server. An ASCII string in the form of
+       * `people/{person_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** The resource name for the person, assigned by the server. An ASCII string with a max length of 27
-     characters, in the form of `people/{person_id}`.
+      /** The resource name for the person, assigned by the server. An ASCII string in the form of
+     `people/{person_id}`.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
       /**
-       * The resource name for the person, assigned by the server. An ASCII string with a max length
-       * of 27 characters, in the form of `people/{person_id}`.
+       * The resource name for the person, assigned by the server. An ASCII string in the form of
+       * `people/{person_id}`.
        */
       public UpdateContact setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {

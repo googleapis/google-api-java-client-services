@@ -59,6 +59,13 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings;
 
   /**
+   * The settings related to VideoAdSequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VideoAdSequenceSettings videoAdSequenceSettings;
+
+  /**
    * The view frequency cap settings of the line item. The max_views field in this settings object
    * must be used if assigning a limited cap.
    * The value may be {@code null}.
@@ -131,6 +138,23 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
    */
   public YoutubeAndPartnersSettings setThirdPartyMeasurementSettings(YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings) {
     this.thirdPartyMeasurementSettings = thirdPartyMeasurementSettings;
+    return this;
+  }
+
+  /**
+   * The settings related to VideoAdSequence.
+   * @return value or {@code null} for none
+   */
+  public VideoAdSequenceSettings getVideoAdSequenceSettings() {
+    return videoAdSequenceSettings;
+  }
+
+  /**
+   * The settings related to VideoAdSequence.
+   * @param videoAdSequenceSettings videoAdSequenceSettings or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setVideoAdSequenceSettings(VideoAdSequenceSettings videoAdSequenceSettings) {
+    this.videoAdSequenceSettings = videoAdSequenceSettings;
     return this;
   }
 

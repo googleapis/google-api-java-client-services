@@ -30,6 +30,19 @@ package com.google.api.services.dataflow.model;
 public final class StragglerSummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * The most recent stragglers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Straggler> recentStragglers;
+
+  static {
+    // hack to force ProGuard to consider Straggler used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Straggler.class);
+  }
+
+  /**
    * Aggregated counts of straggler causes, keyed by the string representation of the StragglerCause
    * enum.
    * The value may be {@code null}.
@@ -43,6 +56,23 @@ public final class StragglerSummary extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalStragglerCount;
+
+  /**
+   * The most recent stragglers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Straggler> getRecentStragglers() {
+    return recentStragglers;
+  }
+
+  /**
+   * The most recent stragglers.
+   * @param recentStragglers recentStragglers or {@code null} for none
+   */
+  public StragglerSummary setRecentStragglers(java.util.List<Straggler> recentStragglers) {
+    this.recentStragglers = recentStragglers;
+    return this;
+  }
 
   /**
    * Aggregated counts of straggler causes, keyed by the string representation of the StragglerCause

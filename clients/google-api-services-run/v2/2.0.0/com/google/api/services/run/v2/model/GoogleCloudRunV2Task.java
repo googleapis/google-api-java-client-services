@@ -166,6 +166,13 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private GoogleCloudRunV2TaskAttemptResult lastAttemptResult;
 
   /**
+   * Output only. URI where logs for this execution can be found in Cloud Console.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logUri;
+
+  /**
    * Number of retries allowed per Task, before marking this Task failed.
    * The value may be {@code null}.
    */
@@ -552,6 +559,23 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setLastAttemptResult(GoogleCloudRunV2TaskAttemptResult lastAttemptResult) {
     this.lastAttemptResult = lastAttemptResult;
+    return this;
+  }
+
+  /**
+   * Output only. URI where logs for this execution can be found in Cloud Console.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogUri() {
+    return logUri;
+  }
+
+  /**
+   * Output only. URI where logs for this execution can be found in Cloud Console.
+   * @param logUri logUri or {@code null} for none
+   */
+  public GoogleCloudRunV2Task setLogUri(java.lang.String logUri) {
+    this.logUri = logUri;
     return this;
   }
 

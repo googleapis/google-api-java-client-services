@@ -38,6 +38,13 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Output only. The number of tasks which reached phase Cancelled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cancelledCount;
+
+  /**
    * Output only. Represents time when the execution was completed. It is not guaranteed to be set
    * in happens-before order across separate operations.
    * The value may be {@code null}.
@@ -133,6 +140,13 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private java.lang.String launchStage;
 
   /**
+   * Output only. URI where logs for this execution can be found in Cloud Console.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logUri;
+
+  /**
    * Output only. The unique name of this Execution.
    * The value may be {@code null}.
    */
@@ -165,6 +179,13 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
+
+  /**
+   * Output only. The number of tasks which have retried at least once.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer retriedCount;
 
   /**
    * Output only. The number of actively running tasks.
@@ -234,6 +255,23 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Execution setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Output only. The number of tasks which reached phase Cancelled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCancelledCount() {
+    return cancelledCount;
+  }
+
+  /**
+   * Output only. The number of tasks which reached phase Cancelled.
+   * @param cancelledCount cancelledCount or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setCancelledCount(java.lang.Integer cancelledCount) {
+    this.cancelledCount = cancelledCount;
     return this;
   }
 
@@ -449,6 +487,23 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
+   * Output only. URI where logs for this execution can be found in Cloud Console.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogUri() {
+    return logUri;
+  }
+
+  /**
+   * Output only. URI where logs for this execution can be found in Cloud Console.
+   * @param logUri logUri or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setLogUri(java.lang.String logUri) {
+    this.logUri = logUri;
+    return this;
+  }
+
+  /**
    * Output only. The unique name of this Execution.
    * @return value or {@code null} for none
    */
@@ -525,6 +580,23 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Execution setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Output only. The number of tasks which have retried at least once.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRetriedCount() {
+    return retriedCount;
+  }
+
+  /**
+   * Output only. The number of tasks which have retried at least once.
+   * @param retriedCount retriedCount or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setRetriedCount(java.lang.Integer retriedCount) {
+    this.retriedCount = retriedCount;
     return this;
   }
 

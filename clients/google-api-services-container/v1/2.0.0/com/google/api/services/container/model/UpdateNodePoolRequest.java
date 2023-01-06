@@ -46,6 +46,14 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * The current etag of the node pool. If an etag is provided and does not match the current etag
+   * of the node pool, update will be blocked and an ABORTED error will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Enable or disable NCCL fast socket for the node pool.
    * The value may be {@code null}.
    */
@@ -192,6 +200,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private UpgradeSettings upgradeSettings;
 
   /**
+   * Parameters that can be configured on Windows nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WindowsNodeConfig windowsNodeConfig;
+
+  /**
    * The desired workload metadata config for the node pool.
    * The value may be {@code null}.
    */
@@ -240,6 +255,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * The current etag of the node pool. If an etag is provided and does not match the current etag
+   * of the node pool, update will be blocked and an ABORTED error will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * The current etag of the node pool. If an etag is provided and does not match the current etag
+   * of the node pool, update will be blocked and an ABORTED error will be returned.
+   * @param etag etag or {@code null} for none
+   */
+  public UpdateNodePoolRequest setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
@@ -586,6 +620,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setUpgradeSettings(UpgradeSettings upgradeSettings) {
     this.upgradeSettings = upgradeSettings;
+    return this;
+  }
+
+  /**
+   * Parameters that can be configured on Windows nodes.
+   * @return value or {@code null} for none
+   */
+  public WindowsNodeConfig getWindowsNodeConfig() {
+    return windowsNodeConfig;
+  }
+
+  /**
+   * Parameters that can be configured on Windows nodes.
+   * @param windowsNodeConfig windowsNodeConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setWindowsNodeConfig(WindowsNodeConfig windowsNodeConfig) {
+    this.windowsNodeConfig = windowsNodeConfig;
     return this;
   }
 

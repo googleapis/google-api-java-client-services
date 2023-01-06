@@ -87,6 +87,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Parameters for the node ephemeral storage using Local SSDs. If unspecified, ephemeral storage
+   * is backed by the boot disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EphemeralStorageLocalSsdConfig ephemeralStorageLocalSsdConfig;
+
+  /**
    * Enable or disable NCCL fast socket for the node pool.
    * The value may be {@code null}.
    */
@@ -140,6 +148,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private LinuxNodeConfig linuxNodeConfig;
+
+  /**
+   * Parameters for using raw-block Local NVMe SSDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocalNvmeSsdBlockConfig localNvmeSsdBlockConfig;
 
   /**
    * The number of local SSD disks to be attached to the node. The limit for this value is dependent
@@ -289,6 +304,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<NodeTaint> taints;
 
   /**
+   * Parameters that can be configured on Windows nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WindowsNodeConfig windowsNodeConfig;
+
+  /**
    * The workload metadata configuration for this node.
    * The value may be {@code null}.
    */
@@ -408,6 +430,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Parameters for the node ephemeral storage using Local SSDs. If unspecified, ephemeral storage
+   * is backed by the boot disk.
+   * @return value or {@code null} for none
+   */
+  public EphemeralStorageLocalSsdConfig getEphemeralStorageLocalSsdConfig() {
+    return ephemeralStorageLocalSsdConfig;
+  }
+
+  /**
+   * Parameters for the node ephemeral storage using Local SSDs. If unspecified, ephemeral storage
+   * is backed by the boot disk.
+   * @param ephemeralStorageLocalSsdConfig ephemeralStorageLocalSsdConfig or {@code null} for none
+   */
+  public NodeConfig setEphemeralStorageLocalSsdConfig(EphemeralStorageLocalSsdConfig ephemeralStorageLocalSsdConfig) {
+    this.ephemeralStorageLocalSsdConfig = ephemeralStorageLocalSsdConfig;
     return this;
   }
 
@@ -539,6 +580,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
     this.linuxNodeConfig = linuxNodeConfig;
+    return this;
+  }
+
+  /**
+   * Parameters for using raw-block Local NVMe SSDs.
+   * @return value or {@code null} for none
+   */
+  public LocalNvmeSsdBlockConfig getLocalNvmeSsdBlockConfig() {
+    return localNvmeSsdBlockConfig;
+  }
+
+  /**
+   * Parameters for using raw-block Local NVMe SSDs.
+   * @param localNvmeSsdBlockConfig localNvmeSsdBlockConfig or {@code null} for none
+   */
+  public NodeConfig setLocalNvmeSsdBlockConfig(LocalNvmeSsdBlockConfig localNvmeSsdBlockConfig) {
+    this.localNvmeSsdBlockConfig = localNvmeSsdBlockConfig;
     return this;
   }
 
@@ -881,6 +939,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setTaints(java.util.List<NodeTaint> taints) {
     this.taints = taints;
+    return this;
+  }
+
+  /**
+   * Parameters that can be configured on Windows nodes.
+   * @return value or {@code null} for none
+   */
+  public WindowsNodeConfig getWindowsNodeConfig() {
+    return windowsNodeConfig;
+  }
+
+  /**
+   * Parameters that can be configured on Windows nodes.
+   * @param windowsNodeConfig windowsNodeConfig or {@code null} for none
+   */
+  public NodeConfig setWindowsNodeConfig(WindowsNodeConfig windowsNodeConfig) {
+    this.windowsNodeConfig = windowsNodeConfig;
     return this;
   }
 

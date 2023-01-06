@@ -385,6 +385,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private WorkloadIdentityConfig desiredWorkloadIdentityConfig;
 
   /**
+   * The current etag of the cluster. If an etag is provided and does not match the current etag of
+   * the cluster, update will be blocked and an ABORTED error will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Configurations for the various addons available to run in the cluster.
    * @return value or {@code null} for none
    */
@@ -1225,6 +1233,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredWorkloadIdentityConfig(WorkloadIdentityConfig desiredWorkloadIdentityConfig) {
     this.desiredWorkloadIdentityConfig = desiredWorkloadIdentityConfig;
+    return this;
+  }
+
+  /**
+   * The current etag of the cluster. If an etag is provided and does not match the current etag of
+   * the cluster, update will be blocked and an ABORTED error will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * The current etag of the cluster. If an etag is provided and does not match the current etag of
+   * the cluster, update will be blocked and an ABORTED error will be returned.
+   * @param etag etag or {@code null} for none
+   */
+  public ClusterUpdate setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

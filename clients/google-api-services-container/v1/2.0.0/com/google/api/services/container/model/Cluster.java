@@ -179,6 +179,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String endpoint;
 
   /**
+   * This checksum is computed by the server based on the value of cluster fields, and may be sent
+   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * [Output only] The time the cluster will be automatically deleted in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
@@ -893,6 +901,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setEndpoint(java.lang.String endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of cluster fields, and may be sent
+   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of cluster fields, and may be sent
+   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * @param etag etag or {@code null} for none
+   */
+  public Cluster setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

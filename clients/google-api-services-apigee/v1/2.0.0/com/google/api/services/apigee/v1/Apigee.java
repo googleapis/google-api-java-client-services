@@ -435,13 +435,14 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
-       * Required. Name of the GCP project in which to associate the Apigee organization. Pass the
-       * information as a query parameter using the following structure in your request: `projects/`
+       * Required. Name of the Google Cloud project in which to associate the Apigee organization.
+       * Pass the information as a query parameter using the following structure in your request:
+       * `projects/`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Name of the GCP project in which to associate the Apigee organization. Pass the
+      /** Required. Name of the Google Cloud project in which to associate the Apigee organization. Pass the
      information as a query parameter using the following structure in your request: `projects/`
        */
       public java.lang.String getParent() {
@@ -449,8 +450,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
-       * Required. Name of the GCP project in which to associate the Apigee organization. Pass the
-       * information as a query parameter using the following structure in your request: `projects/`
+       * Required. Name of the Google Cloud project in which to associate the Apigee organization.
+       * Pass the information as a query parameter using the following structure in your request:
+       * `projects/`
        */
       public Create setParent(java.lang.String parent) {
         this.parent = parent;
@@ -1392,9 +1394,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Lists the Apigee organizations and associated GCP projects that you have permission to access.
-     * See [Understanding organizations](https://cloud.google.com/apigee/docs/api-platform/fundamentals
-     * /organization-structure).
+     * Lists the Apigee organizations and associated Google Cloud projects that you have permission to
+     * access. See [Understanding organizations](https://cloud.google.com/apigee/docs/api-
+     * platform/fundamentals/organization-structure).
      *
      * Create a request for the method "organizations.list".
      *
@@ -1418,8 +1420,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           java.util.regex.Pattern.compile("^organizations$");
 
       /**
-       * Lists the Apigee organizations and associated GCP projects that you have permission to access.
-       * See [Understanding organizations](https://cloud.google.com/apigee/docs/api-
+       * Lists the Apigee organizations and associated Google Cloud projects that you have permission to
+       * access. See [Understanding organizations](https://cloud.google.com/apigee/docs/api-
        * platform/fundamentals/organization-structure).
        *
        * Create a request for the method "organizations.list".

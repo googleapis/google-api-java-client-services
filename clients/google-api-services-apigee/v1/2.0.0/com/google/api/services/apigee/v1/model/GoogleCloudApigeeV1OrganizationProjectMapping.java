@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
   private java.lang.String organization;
 
   /**
-   * GCP project associated with the Apigee organization
+   * Google Cloud project associated with the Apigee organization
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
   }
 
   /**
-   * GCP project associated with the Apigee organization
+   * Google Cloud project associated with the Apigee organization
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -103,7 +103,7 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
   }
 
   /**
-   * GCP project associated with the Apigee organization
+   * Google Cloud project associated with the Apigee organization
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudApigeeV1OrganizationProjectMapping setProjectId(java.lang.String projectId) {

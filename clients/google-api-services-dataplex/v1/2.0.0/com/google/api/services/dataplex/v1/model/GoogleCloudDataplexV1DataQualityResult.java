@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of results at the dimension-level.
+   * A list of results at the dimension level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
   private GoogleCloudDataplexV1ScannedData scannedData;
 
   /**
-   * A list of results at the dimension-level.
+   * A list of results at the dimension level.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataQualityDimensionResult> getDimensions() {
@@ -79,7 +79,7 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
   }
 
   /**
-   * A list of results at the dimension-level.
+   * A list of results at the dimension level.
    * @param dimensions dimensions or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityResult setDimensions(java.util.List<GoogleCloudDataplexV1DataQualityDimensionResult> dimensions) {

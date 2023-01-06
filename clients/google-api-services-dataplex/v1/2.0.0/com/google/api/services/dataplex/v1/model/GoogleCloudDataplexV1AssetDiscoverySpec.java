@@ -75,7 +75,7 @@ public final class GoogleCloudDataplexV1AssetDiscoverySpec extends com.google.ap
    * default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron
    * tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}". The
    * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example,
-   * "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * * *".
+   * CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class GoogleCloudDataplexV1AssetDiscoverySpec extends com.google.ap
    * default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron
    * tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}". The
    * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example,
-   * "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * * *".
+   * CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -195,7 +195,7 @@ public final class GoogleCloudDataplexV1AssetDiscoverySpec extends com.google.ap
    * default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron
    * tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}". The
    * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example,
-   * "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * * *".
+   * CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *.
    * @param schedule schedule or {@code null} for none
    */
   public GoogleCloudDataplexV1AssetDiscoverySpec setSchedule(java.lang.String schedule) {

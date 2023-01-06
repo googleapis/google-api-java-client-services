@@ -17,8 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Evaluates whether the provided expression is true. The SQL expression needs to use BigQuery
- * standard SQL syntax and should produce a scalar boolean result. Example: MIN(col1) >= 0
+ * Evaluates whether the provided expression is true.The SQL expression needs to use BigQuery
+ * standard SQL syntax and should produce a scalar boolean result.Example: MIN(col1) >= 0
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -31,12 +31,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The SQL expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlExpression;
 
   /**
+   * The SQL expression.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlExpression() {
@@ -44,6 +46,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation
   }
 
   /**
+   * The SQL expression.
    * @param sqlExpression sqlExpression or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation setSqlExpression(java.lang.String sqlExpression) {

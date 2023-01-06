@@ -1050,7 +1050,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class DataScans {
 
         /**
-         * Creates a dataScan resource.
+         * Creates a DataScan resource.
          *
          * Create a request for the method "dataScans.create".
          *
@@ -1058,7 +1058,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        {project} refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a GCP region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
          * @return the request
          */
@@ -1076,7 +1076,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a dataScan resource.
+           * Creates a DataScan resource.
            *
            * Create a request for the method "dataScans.create".
            *
@@ -1087,7 +1087,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        {project} refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a GCP region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
            * @since 1.13
            */
@@ -1158,14 +1158,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the parent location:
-           * projects/{project}/locations/{location_id} where {project} refers to a project_id or
+           * projects/{project}/locations/{location_id} where project refers to a project_id or
            * project_number and location_id refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
-         where {project} refers to a project_id or project_number and location_id refers to a GCP region.
+         where project refers to a project_id or project_number and location_id refers to a GCP region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1173,7 +1173,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the parent location:
-           * projects/{project}/locations/{location_id} where {project} refers to a project_id or
+           * projects/{project}/locations/{location_id} where project refers to a project_id or
            * project_number and location_id refers to a GCP region.
            */
           public Create setParent(java.lang.String parent) {
@@ -1187,25 +1187,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. DataScan identifier. * Must contain only lowercase letters, numbers and
-           * hyphens. * Must start with a letter. * Must end with a number or a letter. * Must be
-           * between 1-63 characters. * Must be unique within the customer project / location.
+           * Required. DataScan identifier. Must contain only lowercase letters, numbers and
+           * hyphens. Must start with a letter. Must end with a number or a letter. Must be between
+           * 1-63 characters. Must be unique within the customer project / location.
            */
           @com.google.api.client.util.Key
           private java.lang.String dataScanId;
 
-          /** Required. DataScan identifier. * Must contain only lowercase letters, numbers and hyphens. * Must
-         start with a letter. * Must end with a number or a letter. * Must be between 1-63 characters. *
-         Must be unique within the customer project / location.
+          /** Required. DataScan identifier. Must contain only lowercase letters, numbers and hyphens. Must start
+         with a letter. Must end with a number or a letter. Must be between 1-63 characters. Must be unique
+         within the customer project / location.
            */
           public java.lang.String getDataScanId() {
             return dataScanId;
           }
 
           /**
-           * Required. DataScan identifier. * Must contain only lowercase letters, numbers and
-           * hyphens. * Must start with a letter. * Must end with a number or a letter. * Must be
-           * between 1-63 characters. * Must be unique within the customer project / location.
+           * Required. DataScan identifier. Must contain only lowercase letters, numbers and
+           * hyphens. Must start with a letter. Must end with a number or a letter. Must be between
+           * 1-63 characters. Must be unique within the customer project / location.
            */
           public Create setDataScanId(java.lang.String dataScanId) {
             this.dataScanId = dataScanId;
@@ -1218,7 +1218,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Delete the dataScan resource.
+         * Deletes a DataScan resource.
          *
          * Create a request for the method "dataScans.delete".
          *
@@ -1226,7 +1226,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the dataScan:
-         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
          * @return the request
          */
@@ -1244,7 +1244,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
 
           /**
-           * Delete the dataScan resource.
+           * Deletes a DataScan resource.
            *
            * Create a request for the method "dataScans.delete".
            *
@@ -1255,7 +1255,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the dataScan:
-         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
            * @since 1.13
            */
@@ -1326,14 +1326,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the dataScan:
-           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the dataScan:
-         projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers to a
+         projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
          project_id or project_number and location_id refers to a GCP region.
            */
           public java.lang.String getName() {
@@ -1342,7 +1342,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the dataScan:
-           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           public Delete setName(java.lang.String name) {
@@ -1361,7 +1361,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Get dataScan resource.
+         * Gets a DataScan resource.
          *
          * Create a request for the method "dataScans.get".
          *
@@ -1369,7 +1369,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the dataScan:
-         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
          * @return the request
          */
@@ -1387,7 +1387,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
 
           /**
-           * Get dataScan resource.
+           * Gets a DataScan resource.
            *
            * Create a request for the method "dataScans.get".
            *
@@ -1397,7 +1397,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the dataScan:
-         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
            * @since 1.13
            */
@@ -1478,14 +1478,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the dataScan:
-           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the dataScan:
-         projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers to a
+         projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
          project_id or project_number and location_id refers to a GCP region.
            */
           public java.lang.String getName() {
@@ -1494,7 +1494,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the dataScan:
-           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           public Get setName(java.lang.String name) {
@@ -1507,23 +1507,17 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
-          /**
-           * Optional. Used to select the subset of DataScan information to return. Defaults to
-           * BASIC.
-           */
+          /** Optional. Select the DataScan view to return. Defaults to BASIC. */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. Used to select the subset of DataScan information to return. Defaults to BASIC.
+          /** Optional. Select the DataScan view to return. Defaults to BASIC.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /**
-           * Optional. Used to select the subset of DataScan information to return. Defaults to
-           * BASIC.
-           */
+          /** Optional. Select the DataScan view to return. Defaults to BASIC. */
           public Get setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -1732,15 +1726,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Lists dataScans.
+         * Lists DataScans.
          *
          * Create a request for the method "dataScans.list".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. projects/{project}/locations/{location_id} where {project} refers to a project_id or
-         *        project_number and location_id refers to a GCP region.
+         * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
+         *        project refers to a project_id or project_number and location_id refers to a GCP region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1757,7 +1751,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists dataScans.
+           * Lists DataScans.
            *
            * Create a request for the method "dataScans.list".
            *
@@ -1766,8 +1760,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. projects/{project}/locations/{location_id} where {project} refers to a project_id or
-         *        project_number and location_id refers to a GCP region.
+           * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
+         *        project refers to a project_id or project_number and location_id refers to a GCP region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1846,22 +1840,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. projects/{project}/locations/{location_id} where {project} refers to a
-           * project_id or project_number and location_id refers to a GCP region.
+           * Required. The resource name of the parent location:
+           * projects/{project}/locations/{location_id} where project refers to a project_id or
+           * project_number and location_id refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. projects/{project}/locations/{location_id} where {project} refers to a project_id or
-         project_number and location_id refers to a GCP region.
+          /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
+         where project refers to a project_id or project_number and location_id refers to a GCP region.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. projects/{project}/locations/{location_id} where {project} refers to a
-           * project_id or project_number and location_id refers to a GCP region.
+           * Required. The resource name of the parent location:
+           * projects/{project}/locations/{location_id} where project refers to a project_id or
+           * project_number and location_id refers to a GCP region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1970,7 +1966,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Update the dataScan resource.
+         * Updates a DataScan resource.
          *
          * Create a request for the method "dataScans.patch".
          *
@@ -1978,7 +1974,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The relative resource name of the scan, of the form:
-         *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers
+         *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
          * @return the request
@@ -1997,7 +1993,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
 
           /**
-           * Update the dataScan resource.
+           * Updates a DataScan resource.
            *
            * Create a request for the method "dataScans.patch".
            *
@@ -2008,7 +2004,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The relative resource name of the scan, of the form:
-         *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers
+         *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
            * @since 1.13
@@ -2080,14 +2076,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Output only. The relative resource name of the scan, of the form:
-           * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project}
+           * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. The relative resource name of the scan, of the form:
-         projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project} refers to a
+         projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
          project_id or project_number and location_id refers to a GCP region.
            */
           public java.lang.String getName() {
@@ -2096,7 +2092,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Output only. The relative resource name of the scan, of the form:
-           * projects/{project}/locations/{location_id}/dataScans/{datascan_id}. where {project}
+           * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           public Patch setName(java.lang.String name) {
@@ -2131,7 +2127,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Run an on demand execution of a DataScan.
+         * Runs an on-demand execution of a DataScan
          *
          * Create a request for the method "dataScans.run".
          *
@@ -2139,9 +2135,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Run#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the DataScan:
-         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
-         *        refers to a project_id or project_number and location_id refers to a GCP region. Only on-
-         *        demand DataScans are allowed.
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers
+         *        to a project_id or project_number and location_id refers to a GCP region.Only OnDemand
+         *        data scans are allowed.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
          * @return the request
          */
@@ -2159,7 +2155,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
 
           /**
-           * Run an on demand execution of a DataScan.
+           * Runs an on-demand execution of a DataScan
            *
            * Create a request for the method "dataScans.run".
            *
@@ -2169,9 +2165,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the DataScan:
-         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
-         *        refers to a project_id or project_number and location_id refers to a GCP region. Only on-
-         *        demand DataScans are allowed.
+         *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers
+         *        to a project_id or project_number and location_id refers to a GCP region.Only OnDemand
+         *        data scans are allowed.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
            * @since 1.13
            */
@@ -2242,16 +2238,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the DataScan:
-           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
-           * refers to a project_id or project_number and location_id refers to a GCP region. Only
-           * on-demand DataScans are allowed.
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project
+           * refers to a project_id or project_number and location_id refers to a GCP region.Only
+           * OnDemand data scans are allowed.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the DataScan:
-         projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project} refers to a
-         project_id or project_number and location_id refers to a GCP region. Only on-demand DataScans are
+         projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers to a
+         project_id or project_number and location_id refers to a GCP region.Only OnDemand data scans are
          allowed.
            */
           public java.lang.String getName() {
@@ -2260,9 +2256,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the DataScan:
-           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where {project}
-           * refers to a project_id or project_number and location_id refers to a GCP region. Only
-           * on-demand DataScans are allowed.
+           * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project
+           * refers to a project_id or project_number and location_id refers to a GCP region.Only
+           * OnDemand data scans are allowed.
            */
           public Run setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2597,7 +2593,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Jobs {
 
           /**
-           * Get DataScanJob resource.
+           * Gets a DataScanJob resource.
            *
            * Create a request for the method "jobs.get".
            *
@@ -2606,8 +2602,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the DataScanJob:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_sca
-           *        n_job_id} where {project} refers to a project_id or project_number and location_id refers
-           *        to a GCP region.
+           *        n_job_id} where project refers to a project_id or project_number and location_id refers to
+           *        a GCP region.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2624,7 +2620,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
 
             /**
-             * Get DataScanJob resource.
+             * Gets a DataScanJob resource.
              *
              * Create a request for the method "jobs.get".
              *
@@ -2635,8 +2631,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param name Required. The resource name of the DataScanJob:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_sca
-           *        n_job_id} where {project} refers to a project_id or project_number and location_id refers
-           *        to a GCP region.
+           *        n_job_id} where project refers to a project_id or project_number and location_id refers to
+           *        a GCP region.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2716,7 +2712,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
-             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where {project} refers
+             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where project refers
              * to a project_id or project_number and location_id refers to a GCP region.
              */
             @com.google.api.client.util.Key
@@ -2724,7 +2720,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /** Required. The resource name of the DataScanJob:
            projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-           where {project} refers to a project_id or project_number and location_id refers to a GCP region.
+           where project refers to a project_id or project_number and location_id refers to a GCP region.
              */
             public java.lang.String getName() {
               return name;
@@ -2732,7 +2728,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
-             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where {project} refers
+             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where project refers
              * to a project_id or project_number and location_id refers to a GCP region.
              */
             public Get setName(java.lang.String name) {
@@ -2745,23 +2741,17 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
-            /**
-             * Optional. Used to select the subset of DataScan information to return. Defaults to
-             * BASIC.
-             */
+            /** Optional. Select the DataScanJob view to return. Defaults to BASIC. */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Optional. Used to select the subset of DataScan information to return. Defaults to BASIC.
+            /** Optional. Select the DataScanJob view to return. Defaults to BASIC.
              */
             public java.lang.String getView() {
               return view;
             }
 
-            /**
-             * Optional. Used to select the subset of DataScan information to return. Defaults to
-             * BASIC.
-             */
+            /** Optional. Select the DataScanJob view to return. Defaults to BASIC. */
             public Get setView(java.lang.String view) {
               this.view = view;
               return this;
@@ -2773,7 +2763,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists DataScanJobs under the given dataScan.
+           * Lists DataScanJobs under the given DataScan.
            *
            * Create a request for the method "jobs.list".
            *
@@ -2781,7 +2771,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent environment:
-           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
            *        to a project_id or project_number and location_id refers to a GCP region.
            * @return the request
            */
@@ -2799,7 +2789,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
 
             /**
-             * Lists DataScanJobs under the given dataScan.
+             * Lists DataScanJobs under the given DataScan.
              *
              * Create a request for the method "jobs.list".
              *
@@ -2809,7 +2799,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent environment:
-           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
            *        to a project_id or project_number and location_id refers to a GCP region.
              * @since 1.13
              */
@@ -2890,14 +2880,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent environment:
-             * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+             * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
              * refers to a project_id or project_number and location_id refers to a GCP region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent environment:
-           projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project} refers to a
+           projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
            project_id or project_number and location_id refers to a GCP region.
              */
             public java.lang.String getParent() {
@@ -2906,7 +2896,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent environment:
-             * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where {project}
+             * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
              * refers to a project_id or project_number and location_id refers to a GCP region.
              */
             public List setParent(java.lang.String parent) {

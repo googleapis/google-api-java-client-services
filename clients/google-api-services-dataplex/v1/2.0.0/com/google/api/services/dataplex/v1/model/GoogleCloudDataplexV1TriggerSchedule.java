@@ -30,22 +30,26 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1TriggerSchedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running scans periodically. To
-   * explicitly set a timezone to the cron tab, apply a prefix in the cron tab:
+   * Required. Cron (https://en.wikipedia.org/wiki/Cron) schedule for running scans periodically.To
+   * explicitly set a timezone in the cron tab, apply a prefix in the cron tab:
    * "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a
-   * valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *",
-   * or "TZ=America/New_York 1 * * * *". This field is required for Schedule scans.
+   * valid string from IANA time zone database (wikipedia
+   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)). For example,
+   * CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *.This field is required for
+   * Schedule scans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cron;
 
   /**
-   * Required. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running scans periodically. To
-   * explicitly set a timezone to the cron tab, apply a prefix in the cron tab:
+   * Required. Cron (https://en.wikipedia.org/wiki/Cron) schedule for running scans periodically.To
+   * explicitly set a timezone in the cron tab, apply a prefix in the cron tab:
    * "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a
-   * valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *",
-   * or "TZ=America/New_York 1 * * * *". This field is required for Schedule scans.
+   * valid string from IANA time zone database (wikipedia
+   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)). For example,
+   * CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *.This field is required for
+   * Schedule scans.
    * @return value or {@code null} for none
    */
   public java.lang.String getCron() {
@@ -53,11 +57,13 @@ public final class GoogleCloudDataplexV1TriggerSchedule extends com.google.api.c
   }
 
   /**
-   * Required. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running scans periodically. To
-   * explicitly set a timezone to the cron tab, apply a prefix in the cron tab:
+   * Required. Cron (https://en.wikipedia.org/wiki/Cron) schedule for running scans periodically.To
+   * explicitly set a timezone in the cron tab, apply a prefix in the cron tab:
    * "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a
-   * valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *",
-   * or "TZ=America/New_York 1 * * * *". This field is required for Schedule scans.
+   * valid string from IANA time zone database (wikipedia
+   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)). For example,
+   * CRON_TZ=America/New_York 1 * * * *, or TZ=America/New_York 1 * * * *.This field is required for
+   * Schedule scans.
    * @param cron cron or {@code null} for none
    */
   public GoogleCloudDataplexV1TriggerSchedule setCron(java.lang.String cron) {

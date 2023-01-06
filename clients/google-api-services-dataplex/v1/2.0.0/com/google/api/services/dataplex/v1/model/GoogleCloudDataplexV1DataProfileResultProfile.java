@@ -17,8 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Profile information describing the structure and layout of the data and contains the profile
- * info.
+ * Contains name, type, mode and field type specific profile information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The sequence of fields describing data in table entities.
+   * List of fields with structural and profile information for each field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDataplexV1DataProfileResultProfileField> fields;
 
   /**
-   * The sequence of fields describing data in table entities.
+   * List of fields with structural and profile information for each field.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataProfileResultProfileField> getFields() {
@@ -46,7 +45,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfile extends com.goo
   }
 
   /**
-   * The sequence of fields describing data in table entities.
+   * List of fields with structural and profile information for each field.
    * @param fields fields or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfile setFields(java.util.List<GoogleCloudDataplexV1DataProfileResultProfileField> fields) {

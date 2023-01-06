@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * A DataScanJob represents an instance of a data scan.
+ * A DataScanJob represents an instance of DataScan execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -73,8 +73,8 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
 
   /**
    * Output only. The relative resource name of the DataScanJob, of the form:
-   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}. where
-   * {project} refers to a project_id or project_number and location_id refers to a GCP region.
+   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}, where project
+   * refers to a project_id or project_number and location_id refers to a GCP region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,8 +212,8 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
 
   /**
    * Output only. The relative resource name of the DataScanJob, of the form:
-   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}. where
-   * {project} refers to a project_id or project_number and location_id refers to a GCP region.
+   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}, where project
+   * refers to a project_id or project_number and location_id refers to a GCP region.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -222,8 +222,8 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
 
   /**
    * Output only. The relative resource name of the DataScanJob, of the form:
-   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}. where
-   * {project} refers to a project_id or project_number and location_id refers to a GCP region.
+   * projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}, where project
+   * refers to a project_id or project_number and location_id refers to a GCP region.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanJob setName(java.lang.String name) {

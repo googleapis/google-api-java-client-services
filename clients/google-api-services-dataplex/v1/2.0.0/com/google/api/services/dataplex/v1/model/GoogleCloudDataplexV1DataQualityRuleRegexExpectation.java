@@ -30,12 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleRegexExpectation extends com.google.api.client.json.GenericJson {
 
   /**
+   * A regular expression the column value is expected to match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regex;
 
   /**
+   * A regular expression the column value is expected to match.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegex() {
@@ -43,6 +45,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRegexExpectation extends 
   }
 
   /**
+   * A regular expression the column value is expected to match.
    * @param regex regex or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRegexExpectation setRegex(java.lang.String regex) {

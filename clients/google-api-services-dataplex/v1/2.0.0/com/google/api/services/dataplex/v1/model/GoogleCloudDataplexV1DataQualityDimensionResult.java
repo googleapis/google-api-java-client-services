@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * DataQualityDimensionResult provides a more detailed, per-dimension level view of the results.
+ * DataQualityDimensionResult provides a more detailed, per-dimension view of the results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

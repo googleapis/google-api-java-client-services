@@ -49,8 +49,8 @@ public final class GoogleCloudDataplexV1TaskTriggerSpec extends com.google.api.c
    * Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running tasks periodically. To
    * explicitly set a timezone to the cron tab, apply a prefix in the cron tab:
    * "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a
-   * valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *",
-   * or "TZ=America/New_York 1 * * * *". This field is required for RECURRING tasks.
+   * valid string from IANA time zone database. For example, CRON_TZ=America/New_York 1 * * * *, or
+   * TZ=America/New_York 1 * * * *. This field is required for RECURRING tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +113,8 @@ public final class GoogleCloudDataplexV1TaskTriggerSpec extends com.google.api.c
    * Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running tasks periodically. To
    * explicitly set a timezone to the cron tab, apply a prefix in the cron tab:
    * "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a
-   * valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *",
-   * or "TZ=America/New_York 1 * * * *". This field is required for RECURRING tasks.
+   * valid string from IANA time zone database. For example, CRON_TZ=America/New_York 1 * * * *, or
+   * TZ=America/New_York 1 * * * *. This field is required for RECURRING tasks.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -125,8 +125,8 @@ public final class GoogleCloudDataplexV1TaskTriggerSpec extends com.google.api.c
    * Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running tasks periodically. To
    * explicitly set a timezone to the cron tab, apply a prefix in the cron tab:
    * "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a
-   * valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *",
-   * or "TZ=America/New_York 1 * * * *". This field is required for RECURRING tasks.
+   * valid string from IANA time zone database. For example, CRON_TZ=America/New_York 1 * * * *, or
+   * TZ=America/New_York 1 * * * *. This field is required for RECURRING tasks.
    * @param schedule schedule or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskTriggerSpec setSchedule(java.lang.String schedule) {

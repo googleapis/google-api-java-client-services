@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * DoubleFieldInfo defines output for any double type field.
+ * The profile information for a double type field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,54 +30,49 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The average of non-null values of double field in the sampled data. Return NaN, if the field
-   * has a NaN. Optional if zero non-null rows.
+   * Average of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double average;
 
   /**
-   * The maximum value of a double field in the sampled data. Return NaN, if the field has a NaN.
-   * Optional if zero non-null rows.
+   * Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double max;
 
   /**
-   * The minimum value of a double field in the sampled data. Return NaN, if the field has a NaN.
-   * Optional if zero non-null rows.
+   * Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double min;
 
   /**
-   * A quartile divide the numebr of data points into four parts, or quarters, of more-or-less equal
-   * size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of data
-   * from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of the
-   * data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of the
-   * data lies below this point. The third quartile (Q3) splits off the highest 25% of data from the
-   * lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies below
-   * this point. So, here the quartiles is provided as an ordered list of quartile values, occurring
-   * in order Q1, median, Q3.
+   * A quartile divides the number of data points into four parts, or quarters, of more-or-less
+   * equal size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of
+   * data from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of
+   * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
+   * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
+   * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
+   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
+   * scanned data, occurring in order Q1, median, Q3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Double> quartiles;
 
   /**
-   * The standard deviation of non-null of double field in the sampled data. Return NaN, if the
-   * field has a NaN. Optional if zero non-null rows.
+   * Standard deviation of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double standardDeviation;
 
   /**
-   * The average of non-null values of double field in the sampled data. Return NaN, if the field
-   * has a NaN. Optional if zero non-null rows.
+   * Average of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverage() {
@@ -85,8 +80,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The average of non-null values of double field in the sampled data. Return NaN, if the field
-   * has a NaN. Optional if zero non-null rows.
+   * Average of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param average average or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setAverage(java.lang.Double average) {
@@ -95,8 +89,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The maximum value of a double field in the sampled data. Return NaN, if the field has a NaN.
-   * Optional if zero non-null rows.
+   * Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMax() {
@@ -104,8 +97,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The maximum value of a double field in the sampled data. Return NaN, if the field has a NaN.
-   * Optional if zero non-null rows.
+   * Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param max max or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setMax(java.lang.Double max) {
@@ -114,8 +106,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The minimum value of a double field in the sampled data. Return NaN, if the field has a NaN.
-   * Optional if zero non-null rows.
+   * Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMin() {
@@ -123,8 +114,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The minimum value of a double field in the sampled data. Return NaN, if the field has a NaN.
-   * Optional if zero non-null rows.
+   * Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param min min or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setMin(java.lang.Double min) {
@@ -133,14 +123,14 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * A quartile divide the numebr of data points into four parts, or quarters, of more-or-less equal
-   * size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of data
-   * from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of the
-   * data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of the
-   * data lies below this point. The third quartile (Q3) splits off the highest 25% of data from the
-   * lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies below
-   * this point. So, here the quartiles is provided as an ordered list of quartile values, occurring
-   * in order Q1, median, Q3.
+   * A quartile divides the number of data points into four parts, or quarters, of more-or-less
+   * equal size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of
+   * data from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of
+   * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
+   * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
+   * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
+   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
+   * scanned data, occurring in order Q1, median, Q3.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Double> getQuartiles() {
@@ -148,14 +138,14 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * A quartile divide the numebr of data points into four parts, or quarters, of more-or-less equal
-   * size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of data
-   * from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of the
-   * data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of the
-   * data lies below this point. The third quartile (Q3) splits off the highest 25% of data from the
-   * lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies below
-   * this point. So, here the quartiles is provided as an ordered list of quartile values, occurring
-   * in order Q1, median, Q3.
+   * A quartile divides the number of data points into four parts, or quarters, of more-or-less
+   * equal size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of
+   * data from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of
+   * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
+   * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
+   * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
+   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
+   * scanned data, occurring in order Q1, median, Q3.
    * @param quartiles quartiles or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setQuartiles(java.util.List<java.lang.Double> quartiles) {
@@ -164,8 +154,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The standard deviation of non-null of double field in the sampled data. Return NaN, if the
-   * field has a NaN. Optional if zero non-null rows.
+   * Standard deviation of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getStandardDeviation() {
@@ -173,8 +162,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The standard deviation of non-null of double field in the sampled data. Return NaN, if the
-   * field has a NaN. Optional if zero non-null rows.
+   * Standard deviation of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param standardDeviation standardDeviation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setStandardDeviation(java.lang.Double standardDeviation) {

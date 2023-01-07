@@ -51,6 +51,13 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription exte
   private java.lang.String field;
 
   /**
+   * Output only. Information on any input constraints associated on the values for the field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromePolicyVersionsV1FieldConstraints fieldConstraints;
+
+  /**
    * Output only. Provides a list of fields and values. At least one of the fields must have the
    * corresponding value in order for this field to be allowed to be set.
    * The value may be {@code null}.
@@ -157,6 +164,23 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription exte
    */
   public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription setField(java.lang.String field) {
     this.field = field;
+    return this;
+  }
+
+  /**
+   * Output only. Information on any input constraints associated on the values for the field.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1FieldConstraints getFieldConstraints() {
+    return fieldConstraints;
+  }
+
+  /**
+   * Output only. Information on any input constraints associated on the values for the field.
+   * @param fieldConstraints fieldConstraints or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription setFieldConstraints(GoogleChromePolicyVersionsV1FieldConstraints fieldConstraints) {
+    this.fieldConstraints = fieldConstraints;
     return this;
   }
 

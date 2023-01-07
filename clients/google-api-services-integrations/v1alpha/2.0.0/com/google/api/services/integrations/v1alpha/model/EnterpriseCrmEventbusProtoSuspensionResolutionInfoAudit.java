@@ -40,6 +40,12 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit exten
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String resolvedByCpi;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private String timestamp;
 
   /**
@@ -54,6 +60,21 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit exten
    */
   public EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit setResolvedBy(java.lang.String resolvedBy) {
     this.resolvedBy = resolvedBy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolvedByCpi() {
+    return resolvedByCpi;
+  }
+
+  /**
+   * @param resolvedByCpi resolvedByCpi or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit setResolvedByCpi(java.lang.String resolvedByCpi) {
+    this.resolvedByCpi = resolvedByCpi;
     return this;
   }
 

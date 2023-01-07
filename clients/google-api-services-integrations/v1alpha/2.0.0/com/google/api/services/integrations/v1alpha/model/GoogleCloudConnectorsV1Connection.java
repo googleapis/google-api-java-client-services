@@ -122,7 +122,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * Optional. Configuration for the connection.
+   * Optional. Node configuration for the connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -369,7 +369,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Optional. Configuration for the connection.
+   * Optional. Node configuration for the connection.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1NodeConfig getNodeConfig() {
@@ -377,7 +377,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Optional. Configuration for the connection.
+   * Optional. Node configuration for the connection.
    * @param nodeConfig nodeConfig or {@code null} for none
    */
   public GoogleCloudConnectorsV1Connection setNodeConfig(GoogleCloudConnectorsV1NodeConfig nodeConfig) {

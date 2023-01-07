@@ -154,149 +154,6 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
   public class Projects {
 
     /**
-     * Queries the contact center quota, an aggregation over all the projects, that belongs to the
-     * billing account, which the input project belongs to.
-     *
-     * Create a request for the method "projects.queryContactCenterQuota".
-     *
-     * This request holds the parameters needed by the contactcenteraiplatform server.  After setting
-     * any optional parameters, call the {@link QueryContactCenterQuota#execute()} method to invoke the
-     * remote operation.
-     *
-     * @param parent Required. Parent project resource id.
-     * @return the request
-     */
-    public QueryContactCenterQuota queryContactCenterQuota(java.lang.String parent) throws java.io.IOException {
-      QueryContactCenterQuota result = new QueryContactCenterQuota(parent);
-      initialize(result);
-      return result;
-    }
-
-    public class QueryContactCenterQuota extends CCAIPlatformRequest<com.google.api.services.contactcenteraiplatform.v1alpha1.model.ContactCenterQuota> {
-
-      private static final String REST_PATH = "v1alpha1/{+parent}:queryContactCenterQuota";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-      /**
-       * Queries the contact center quota, an aggregation over all the projects, that belongs to the
-       * billing account, which the input project belongs to.
-       *
-       * Create a request for the method "projects.queryContactCenterQuota".
-       *
-       * This request holds the parameters needed by the the contactcenteraiplatform server.  After
-       * setting any optional parameters, call the {@link QueryContactCenterQuota#execute()} method to
-       * invoke the remote operation. <p> {@link QueryContactCenterQuota#initialize(com.google.api.clien
-       * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @param parent Required. Parent project resource id.
-       * @since 1.13
-       */
-      protected QueryContactCenterQuota(java.lang.String parent) {
-        super(CCAIPlatform.this, "GET", REST_PATH, null, com.google.api.services.contactcenteraiplatform.v1alpha1.model.ContactCenterQuota.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public QueryContactCenterQuota set$Xgafv(java.lang.String $Xgafv) {
-        return (QueryContactCenterQuota) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public QueryContactCenterQuota setAccessToken(java.lang.String accessToken) {
-        return (QueryContactCenterQuota) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public QueryContactCenterQuota setAlt(java.lang.String alt) {
-        return (QueryContactCenterQuota) super.setAlt(alt);
-      }
-
-      @Override
-      public QueryContactCenterQuota setCallback(java.lang.String callback) {
-        return (QueryContactCenterQuota) super.setCallback(callback);
-      }
-
-      @Override
-      public QueryContactCenterQuota setFields(java.lang.String fields) {
-        return (QueryContactCenterQuota) super.setFields(fields);
-      }
-
-      @Override
-      public QueryContactCenterQuota setKey(java.lang.String key) {
-        return (QueryContactCenterQuota) super.setKey(key);
-      }
-
-      @Override
-      public QueryContactCenterQuota setOauthToken(java.lang.String oauthToken) {
-        return (QueryContactCenterQuota) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public QueryContactCenterQuota setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (QueryContactCenterQuota) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public QueryContactCenterQuota setQuotaUser(java.lang.String quotaUser) {
-        return (QueryContactCenterQuota) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public QueryContactCenterQuota setUploadType(java.lang.String uploadType) {
-        return (QueryContactCenterQuota) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public QueryContactCenterQuota setUploadProtocol(java.lang.String uploadProtocol) {
-        return (QueryContactCenterQuota) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Required. Parent project resource id. */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** Required. Parent project resource id.
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /** Required. Parent project resource id. */
-      public QueryContactCenterQuota setParent(java.lang.String parent) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+$");
-        }
-        this.parent = parent;
-        return this;
-      }
-
-      @Override
-      public QueryContactCenterQuota set(String parameterName, Object value) {
-        return (QueryContactCenterQuota) super.set(parameterName, value);
-      }
-    }
-
-    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -669,21 +526,20 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
        * remote operation.
        *
        * @param parent Required. Parent project resource id.
-       * @param locationsId
        * @return the request
        */
-      public QueryContactCenterQuota queryContactCenterQuota(java.lang.String parent, java.lang.String locationsId) throws java.io.IOException {
-        QueryContactCenterQuota result = new QueryContactCenterQuota(parent, locationsId);
+      public QueryContactCenterQuota queryContactCenterQuota(java.lang.String parent) throws java.io.IOException {
+        QueryContactCenterQuota result = new QueryContactCenterQuota(parent);
         initialize(result);
         return result;
       }
 
       public class QueryContactCenterQuota extends CCAIPlatformRequest<com.google.api.services.contactcenteraiplatform.v1alpha1.model.ContactCenterQuota> {
 
-        private static final String REST_PATH = "v1alpha1/{+parent}/locations/{locationsId}:queryContactCenterQuota";
+        private static final String REST_PATH = "v1alpha1/{+parent}:queryContactCenterQuota";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
          * Queries the contact center quota, an aggregation over all the projects, that belongs to the
@@ -698,18 +554,16 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
          * immediately after invoking the constructor. </p>
          *
          * @param parent Required. Parent project resource id.
-         * @param locationsId
          * @since 1.13
          */
-        protected QueryContactCenterQuota(java.lang.String parent, java.lang.String locationsId) {
+        protected QueryContactCenterQuota(java.lang.String parent) {
           super(CCAIPlatform.this, "GET", REST_PATH, null, com.google.api.services.contactcenteraiplatform.v1alpha1.model.ContactCenterQuota.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
+                "^projects/[^/]+/locations/[^/]+$");
           }
-          this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
         }
 
         @Override
@@ -792,24 +646,9 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
+                "^projects/[^/]+/locations/[^/]+$");
           }
           this.parent = parent;
-          return this;
-        }
-
-        @com.google.api.client.util.Key
-        private java.lang.String locationsId;
-
-        /**
-
-         */
-        public java.lang.String getLocationsId() {
-          return locationsId;
-        }
-
-        public QueryContactCenterQuota setLocationsId(java.lang.String locationsId) {
-          this.locationsId = locationsId;
           return this;
         }
 

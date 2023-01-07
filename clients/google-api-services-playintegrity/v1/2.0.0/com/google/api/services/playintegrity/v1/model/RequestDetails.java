@@ -31,11 +31,18 @@ package com.google.api.services.playintegrity.v1.model;
 public final class RequestDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Nonce that was provided in the request (which is base64 web-safe no-wrap).
+   * Nonce that was provided in the request (which is base64 web-safe no-wrap).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nonce;
+
+  /**
+   * Request hash that was provided in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestHash;
 
   /**
    * Required. Application package name this attestation was requested for. Note: This field makes
@@ -54,7 +61,7 @@ public final class RequestDetails extends com.google.api.client.json.GenericJson
   private java.lang.Long timestampMillis;
 
   /**
-   * Required. Nonce that was provided in the request (which is base64 web-safe no-wrap).
+   * Nonce that was provided in the request (which is base64 web-safe no-wrap).
    * @return value or {@code null} for none
    */
   public java.lang.String getNonce() {
@@ -62,11 +69,28 @@ public final class RequestDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Nonce that was provided in the request (which is base64 web-safe no-wrap).
+   * Nonce that was provided in the request (which is base64 web-safe no-wrap).
    * @param nonce nonce or {@code null} for none
    */
   public RequestDetails setNonce(java.lang.String nonce) {
     this.nonce = nonce;
+    return this;
+  }
+
+  /**
+   * Request hash that was provided in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestHash() {
+    return requestHash;
+  }
+
+  /**
+   * Request hash that was provided in the request.
+   * @param requestHash requestHash or {@code null} for none
+   */
+  public RequestDetails setRequestHash(java.lang.String requestHash) {
+    this.requestHash = requestHash;
     return this;
   }
 

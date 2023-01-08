@@ -133,6 +133,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkConfig> networks;
 
   /**
+   * Immutable. The protocol indicates the access protocol for all shares in the instance. This
+   * field is immutable and it cannot be changed after the instance has been created. Default value:
+   * `NFS_V3`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protocol;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -397,6 +406,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworks(java.util.List<NetworkConfig> networks) {
     this.networks = networks;
+    return this;
+  }
+
+  /**
+   * Immutable. The protocol indicates the access protocol for all shares in the instance. This
+   * field is immutable and it cannot be changed after the instance has been created. Default value:
+   * `NFS_V3`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtocol() {
+    return protocol;
+  }
+
+  /**
+   * Immutable. The protocol indicates the access protocol for all shares in the instance. This
+   * field is immutable and it cannot be changed after the instance has been created. Default value:
+   * `NFS_V3`.
+   * @param protocol protocol or {@code null} for none
+   */
+  public Instance setProtocol(java.lang.String protocol) {
+    this.protocol = protocol;
     return this;
   }
 

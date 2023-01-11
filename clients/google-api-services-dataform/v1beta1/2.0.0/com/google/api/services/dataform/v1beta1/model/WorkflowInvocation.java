@@ -66,6 +66,14 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   private java.lang.String state;
 
   /**
+   * Immutable. The name of the workflow config to invoke. Must be in the format
+   * `projects/locations/repositories/workflowConfigs`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workflowConfig;
+
+  /**
    * Immutable. The name of the compilation result to compile. Must be in the format
    * `projects/locations/repositories/compilationResults`.
    * @return value or {@code null} for none
@@ -149,6 +157,25 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
    */
   public WorkflowInvocation setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Immutable. The name of the workflow config to invoke. Must be in the format
+   * `projects/locations/repositories/workflowConfigs`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkflowConfig() {
+    return workflowConfig;
+  }
+
+  /**
+   * Immutable. The name of the workflow config to invoke. Must be in the format
+   * `projects/locations/repositories/workflowConfigs`.
+   * @param workflowConfig workflowConfig or {@code null} for none
+   */
+  public WorkflowInvocation setWorkflowConfig(java.lang.String workflowConfig) {
+    this.workflowConfig = workflowConfig;
     return this;
   }
 

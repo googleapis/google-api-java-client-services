@@ -77,6 +77,14 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String host;
 
   /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Full name of this resource.
    * The value may be {@code null}.
    */
@@ -219,6 +227,25 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * @param labels labels or {@code null} for none
+   */
+  public Workstation setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

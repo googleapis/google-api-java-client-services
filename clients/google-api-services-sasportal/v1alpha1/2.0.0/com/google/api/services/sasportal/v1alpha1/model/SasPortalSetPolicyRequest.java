@@ -30,7 +30,7 @@ package com.google.api.services.sasportal.v1alpha1.model;
 public final class SasPortalSetPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Set the field as true when we would like to disable the onboarding notification.
+   * Optional. Set the field as `true` to disable the onboarding notification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class SasPortalSetPolicyRequest extends com.google.api.client.json.
   private java.lang.String resource;
 
   /**
-   * Optional. Set the field as true when we would like to disable the onboarding notification.
+   * Optional. Set the field as `true` to disable the onboarding notification.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableNotification() {
@@ -60,7 +60,7 @@ public final class SasPortalSetPolicyRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Set the field as true when we would like to disable the onboarding notification.
+   * Optional. Set the field as `true` to disable the onboarding notification.
    * @param disableNotification disableNotification or {@code null} for none
    */
   public SasPortalSetPolicyRequest setDisableNotification(java.lang.Boolean disableNotification) {

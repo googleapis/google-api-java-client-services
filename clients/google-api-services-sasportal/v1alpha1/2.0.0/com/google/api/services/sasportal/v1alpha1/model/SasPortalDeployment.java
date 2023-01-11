@@ -37,7 +37,7 @@ public final class SasPortalDeployment extends com.google.api.client.json.Generi
   private java.lang.String displayName;
 
   /**
-   * Output only. The FRNs copied from its direct parent.
+   * Output only. The FCC Registration Numbers (FRNs) copied from its direct parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class SasPortalDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The FRNs copied from its direct parent.
+   * Output only. The FCC Registration Numbers (FRNs) copied from its direct parent.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFrns() {
@@ -84,7 +84,7 @@ public final class SasPortalDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The FRNs copied from its direct parent.
+   * Output only. The FCC Registration Numbers (FRNs) copied from its direct parent.
    * @param frns frns or {@code null} for none
    */
   public SasPortalDeployment setFrns(java.util.List<java.lang.String> frns) {

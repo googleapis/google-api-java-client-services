@@ -30,31 +30,33 @@ package com.google.api.services.sasportal.v1alpha1.model;
 public final class SasPortalDeviceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * If populated, the Antenna Model Pattern to use. Format is: RecordCreatorId:PatternId
+   * If populated, the Antenna Model Pattern to use. Format is: `RecordCreatorId:PatternId`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String antennaModel;
 
   /**
-   * CCG. A group of CBSDs in the same ICG requesting a common primary channel assignment. See
-   * CBRSA-TS-2001 V3.0.0 for more details.
+   * Common Channel Group (CCG). A group of CBSDs in the same ICG requesting a common primary
+   * channel assignment. For more details, see [CBRSA-TS-2001 V3.0.0](https://ongoalliance.org/wp-
+   * content/uploads/2020/02/CBRSA-TS-2001-V3.0.0_Approved-for-publication.pdf).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commonChannelGroup;
 
   /**
-   * ICG. A group of CBSDs that manage their own interference with the group. See CBRSA-TS-2001
-   * V3.0.0 for more details.
+   * Interference Coordination Group (ICG). A group of CBSDs that manage their own interference with
+   * the group. For more details, see [CBRSA-TS-2001 V3.0.0](https://ongoalliance.org/wp-
+   * content/uploads/2020/02/CBRSA-TS-2001-V3.0.0_Approved-for-publication.pdf).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interferenceCoordinationGroup;
 
   /**
-   * Output only. Whether a CPI has validated to have coordinated with the National Quiet Zone
-   * office.
+   * Output only. Set to `true` if a CPI has validated that they have coordinated with the National
+   * Quiet Zone office.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +70,7 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   private SasPortalNrqzValidation nrqzValidation;
 
   /**
-   * If populated, the Antenna Model Pattern to use. Format is: RecordCreatorId:PatternId
+   * If populated, the Antenna Model Pattern to use. Format is: `RecordCreatorId:PatternId`
    * @return value or {@code null} for none
    */
   public java.lang.String getAntennaModel() {
@@ -76,7 +78,7 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * If populated, the Antenna Model Pattern to use. Format is: RecordCreatorId:PatternId
+   * If populated, the Antenna Model Pattern to use. Format is: `RecordCreatorId:PatternId`
    * @param antennaModel antennaModel or {@code null} for none
    */
   public SasPortalDeviceMetadata setAntennaModel(java.lang.String antennaModel) {
@@ -85,8 +87,9 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * CCG. A group of CBSDs in the same ICG requesting a common primary channel assignment. See
-   * CBRSA-TS-2001 V3.0.0 for more details.
+   * Common Channel Group (CCG). A group of CBSDs in the same ICG requesting a common primary
+   * channel assignment. For more details, see [CBRSA-TS-2001 V3.0.0](https://ongoalliance.org/wp-
+   * content/uploads/2020/02/CBRSA-TS-2001-V3.0.0_Approved-for-publication.pdf).
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonChannelGroup() {
@@ -94,8 +97,9 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * CCG. A group of CBSDs in the same ICG requesting a common primary channel assignment. See
-   * CBRSA-TS-2001 V3.0.0 for more details.
+   * Common Channel Group (CCG). A group of CBSDs in the same ICG requesting a common primary
+   * channel assignment. For more details, see [CBRSA-TS-2001 V3.0.0](https://ongoalliance.org/wp-
+   * content/uploads/2020/02/CBRSA-TS-2001-V3.0.0_Approved-for-publication.pdf).
    * @param commonChannelGroup commonChannelGroup or {@code null} for none
    */
   public SasPortalDeviceMetadata setCommonChannelGroup(java.lang.String commonChannelGroup) {
@@ -104,8 +108,9 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * ICG. A group of CBSDs that manage their own interference with the group. See CBRSA-TS-2001
-   * V3.0.0 for more details.
+   * Interference Coordination Group (ICG). A group of CBSDs that manage their own interference with
+   * the group. For more details, see [CBRSA-TS-2001 V3.0.0](https://ongoalliance.org/wp-
+   * content/uploads/2020/02/CBRSA-TS-2001-V3.0.0_Approved-for-publication.pdf).
    * @return value or {@code null} for none
    */
   public java.lang.String getInterferenceCoordinationGroup() {
@@ -113,8 +118,9 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * ICG. A group of CBSDs that manage their own interference with the group. See CBRSA-TS-2001
-   * V3.0.0 for more details.
+   * Interference Coordination Group (ICG). A group of CBSDs that manage their own interference with
+   * the group. For more details, see [CBRSA-TS-2001 V3.0.0](https://ongoalliance.org/wp-
+   * content/uploads/2020/02/CBRSA-TS-2001-V3.0.0_Approved-for-publication.pdf).
    * @param interferenceCoordinationGroup interferenceCoordinationGroup or {@code null} for none
    */
   public SasPortalDeviceMetadata setInterferenceCoordinationGroup(java.lang.String interferenceCoordinationGroup) {
@@ -123,8 +129,8 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Whether a CPI has validated to have coordinated with the National Quiet Zone
-   * office.
+   * Output only. Set to `true` if a CPI has validated that they have coordinated with the National
+   * Quiet Zone office.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNrqzValidated() {
@@ -132,8 +138,8 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Whether a CPI has validated to have coordinated with the National Quiet Zone
-   * office.
+   * Output only. Set to `true` if a CPI has validated that they have coordinated with the National
+   * Quiet Zone office.
    * @param nrqzValidated nrqzValidated or {@code null} for none
    */
   public SasPortalDeviceMetadata setNrqzValidated(java.lang.Boolean nrqzValidated) {

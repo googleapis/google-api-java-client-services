@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * These capabilities represent the tactile features associated with the device. This includes, for
  * example, whether the device has a screen, how big the screen is, and privacy of the screen. Next
- * ID: 10
+ * ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,6 +31,16 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantApiScreenCapabilities extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The scale factor used to convert Scalable Pixel (SP) units to Density-independent Pixel (DP)
+   * units (DP = SP * scale factor). Fonts are measured in units of SP, and on some platforms such
+   * as Android the SP to DP scale factor can be affected by the font size a user selects in
+   * accessibility settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float fontScaleFactor;
 
   /**
    * The types of input that this screen supports. Note that this can be empty in which case the
@@ -99,6 +109,29 @@ public final class AssistantApiScreenCapabilities extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean visionHelpEnabled;
+
+  /**
+   * The scale factor used to convert Scalable Pixel (SP) units to Density-independent Pixel (DP)
+   * units (DP = SP * scale factor). Fonts are measured in units of SP, and on some platforms such
+   * as Android the SP to DP scale factor can be affected by the font size a user selects in
+   * accessibility settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFontScaleFactor() {
+    return fontScaleFactor;
+  }
+
+  /**
+   * The scale factor used to convert Scalable Pixel (SP) units to Density-independent Pixel (DP)
+   * units (DP = SP * scale factor). Fonts are measured in units of SP, and on some platforms such
+   * as Android the SP to DP scale factor can be affected by the font size a user selects in
+   * accessibility settings.
+   * @param fontScaleFactor fontScaleFactor or {@code null} for none
+   */
+  public AssistantApiScreenCapabilities setFontScaleFactor(java.lang.Float fontScaleFactor) {
+    this.fontScaleFactor = fontScaleFactor;
+    return this;
+  }
 
   /**
    * The types of input that this screen supports. Note that this can be empty in which case the

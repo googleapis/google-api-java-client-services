@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 42
+ * Next ID: 43
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -100,6 +100,15 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   @com.google.api.client.util.Key
   private java.lang.String gcmExecutionAddress;
+
+  /**
+   * List of parent group IDs, if the device is added to one or multiple device groups (see go/home-
+   * groups). Will be consumed by Smart Home APIs and (in the future) Assistant CTF to populate the
+   * group member list of device groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> groupIds;
 
   /**
    * The hash value from go/de-consistency-check
@@ -547,6 +556,27 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setGcmExecutionAddress(java.lang.String gcmExecutionAddress) {
     this.gcmExecutionAddress = gcmExecutionAddress;
+    return this;
+  }
+
+  /**
+   * List of parent group IDs, if the device is added to one or multiple device groups (see go/home-
+   * groups). Will be consumed by Smart Home APIs and (in the future) Assistant CTF to populate the
+   * group member list of device groups.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGroupIds() {
+    return groupIds;
+  }
+
+  /**
+   * List of parent group IDs, if the device is added to one or multiple device groups (see go/home-
+   * groups). Will be consumed by Smart Home APIs and (in the future) Assistant CTF to populate the
+   * group member list of device groups.
+   * @param groupIds groupIds or {@code null} for none
+   */
+  public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setGroupIds(java.util.List<java.lang.String> groupIds) {
+    this.groupIds = groupIds;
     return this;
   }
 

@@ -34,6 +34,18 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Encoded lookup information. The fields set above are expensive to store. Storing them in
+   * docjoins is fine, but we cannot store them in MDU shards. In order for the MDU shards to
+   * display field provenance information, we store them as a bitfield. For details about the
+   * encoding and decoding scheme, see quality_nsr::util::EncodeMetadataLookupInformation. We expect
+   * this to occupy 8 bytes as long as there are less than 64 fields in NsrData proto, 12 bytes
+   * between 64 and 92 fields, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encodedLookupInformation;
+
+  /**
    * Same as raffia_lookup_key_per_field. Note that the goldmine_lookups have priority; if a field
    * appears in both goldmine and raffia entries, it means it was taken from goldmine. If it's
    * missing here but present in raffia_lookup_key_per_field, it was taken from raffia.
@@ -75,6 +87,71 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> raffiaLookupKeys;
+
+  /**
+   * Encoded lookup information. The fields set above are expensive to store. Storing them in
+   * docjoins is fine, but we cannot store them in MDU shards. In order for the MDU shards to
+   * display field provenance information, we store them as a bitfield. For details about the
+   * encoding and decoding scheme, see quality_nsr::util::EncodeMetadataLookupInformation. We expect
+   * this to occupy 8 bytes as long as there are less than 64 fields in NsrData proto, 12 bytes
+   * between 64 and 92 fields, etc.
+   * @see #decodeEncodedLookupInformation()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncodedLookupInformation() {
+    return encodedLookupInformation;
+  }
+
+  /**
+   * Encoded lookup information. The fields set above are expensive to store. Storing them in
+   * docjoins is fine, but we cannot store them in MDU shards. In order for the MDU shards to
+   * display field provenance information, we store them as a bitfield. For details about the
+   * encoding and decoding scheme, see quality_nsr::util::EncodeMetadataLookupInformation. We expect
+   * this to occupy 8 bytes as long as there are less than 64 fields in NsrData proto, 12 bytes
+   * between 64 and 92 fields, etc.
+   * @see #getEncodedLookupInformation()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeEncodedLookupInformation() {
+    return com.google.api.client.util.Base64.decodeBase64(encodedLookupInformation);
+  }
+
+  /**
+   * Encoded lookup information. The fields set above are expensive to store. Storing them in
+   * docjoins is fine, but we cannot store them in MDU shards. In order for the MDU shards to
+   * display field provenance information, we store them as a bitfield. For details about the
+   * encoding and decoding scheme, see quality_nsr::util::EncodeMetadataLookupInformation. We expect
+   * this to occupy 8 bytes as long as there are less than 64 fields in NsrData proto, 12 bytes
+   * between 64 and 92 fields, etc.
+   * @see #encodeEncodedLookupInformation()
+   * @param encodedLookupInformation encodedLookupInformation or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setEncodedLookupInformation(java.lang.String encodedLookupInformation) {
+    this.encodedLookupInformation = encodedLookupInformation;
+    return this;
+  }
+
+  /**
+   * Encoded lookup information. The fields set above are expensive to store. Storing them in
+   * docjoins is fine, but we cannot store them in MDU shards. In order for the MDU shards to
+   * display field provenance information, we store them as a bitfield. For details about the
+   * encoding and decoding scheme, see quality_nsr::util::EncodeMetadataLookupInformation. We expect
+   * this to occupy 8 bytes as long as there are less than 64 fields in NsrData proto, 12 bytes
+   * between 64 and 92 fields, etc.
+   * @see #setEncodedLookupInformation()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public QualityNsrNsrDataMetadata encodeEncodedLookupInformation(byte[] encodedLookupInformation) {
+    this.encodedLookupInformation = com.google.api.client.util.Base64.encodeBase64URLSafeString(encodedLookupInformation);
+    return this;
+  }
 
   /**
    * Same as raffia_lookup_key_per_field. Note that the goldmine_lookups have priority; if a field

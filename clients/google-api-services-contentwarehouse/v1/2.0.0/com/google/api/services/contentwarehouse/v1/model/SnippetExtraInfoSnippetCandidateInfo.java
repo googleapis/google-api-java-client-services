@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 13
+ * Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -81,6 +81,19 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private SnippetExtraInfoSnippetScoringInfo scoringInfo;
+
+  /**
+   * Sentence starting positions in the printed snippet lines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualitySnippetsTruncationSnippetBoldedRangePosition> sentenceStarts;
+
+  static {
+    // hack to force ProGuard to consider QualitySnippetsTruncationSnippetBoldedRangePosition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(QualitySnippetsTruncationSnippetBoldedRangePosition.class);
+  }
 
   /**
    * Muppet fills snippet lines in `snippet` field.
@@ -210,6 +223,23 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
    */
   public SnippetExtraInfoSnippetCandidateInfo setScoringInfo(SnippetExtraInfoSnippetScoringInfo scoringInfo) {
     this.scoringInfo = scoringInfo;
+    return this;
+  }
+
+  /**
+   * Sentence starting positions in the printed snippet lines.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualitySnippetsTruncationSnippetBoldedRangePosition> getSentenceStarts() {
+    return sentenceStarts;
+  }
+
+  /**
+   * Sentence starting positions in the printed snippet lines.
+   * @param sentenceStarts sentenceStarts or {@code null} for none
+   */
+  public SnippetExtraInfoSnippetCandidateInfo setSentenceStarts(java.util.List<QualitySnippetsTruncationSnippetBoldedRangePosition> sentenceStarts) {
+    this.sentenceStarts = sentenceStarts;
     return this;
   }
 

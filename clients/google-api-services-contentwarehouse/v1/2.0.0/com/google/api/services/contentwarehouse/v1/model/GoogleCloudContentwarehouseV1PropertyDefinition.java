@@ -128,6 +128,13 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
   private GoogleCloudContentwarehouseV1PropertyTypeOptions propertyTypeOptions;
 
   /**
+   * The retrieval importance of the property during search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String retrievalImportance;
+
+  /**
    * Text/string property.
    * The value may be {@code null}.
    */
@@ -371,6 +378,23 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
    */
   public GoogleCloudContentwarehouseV1PropertyDefinition setPropertyTypeOptions(GoogleCloudContentwarehouseV1PropertyTypeOptions propertyTypeOptions) {
     this.propertyTypeOptions = propertyTypeOptions;
+    return this;
+  }
+
+  /**
+   * The retrieval importance of the property during search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRetrievalImportance() {
+    return retrievalImportance;
+  }
+
+  /**
+   * The retrieval importance of the property during search.
+   * @param retrievalImportance retrievalImportance or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1PropertyDefinition setRetrievalImportance(java.lang.String retrievalImportance) {
+    this.retrievalImportance = retrievalImportance;
     return this;
   }
 

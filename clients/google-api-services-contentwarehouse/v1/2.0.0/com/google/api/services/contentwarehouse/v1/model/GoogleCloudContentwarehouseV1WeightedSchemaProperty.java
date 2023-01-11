@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The message represents a field in the query candidate Id.
+ * Specifies the schema property name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class QualityQrewriteCandidateIdField extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudContentwarehouseV1WeightedSchemaProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * If needed, a servlet can use this field to assign an ID to distinguish between different
-   * candidates of the same CandidateType.
+   * The document schema name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer index;
+  private java.lang.String documentSchemaName;
 
   /**
+   * The property definition names in the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.util.List<java.lang.String> propertyNames;
 
   /**
-   * If needed, a servlet can use this field to assign an ID to distinguish between different
-   * candidates of the same CandidateType.
+   * The document schema name.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getIndex() {
-    return index;
+  public java.lang.String getDocumentSchemaName() {
+    return documentSchemaName;
   }
 
   /**
-   * If needed, a servlet can use this field to assign an ID to distinguish between different
-   * candidates of the same CandidateType.
-   * @param index index or {@code null} for none
+   * The document schema name.
+   * @param documentSchemaName documentSchemaName or {@code null} for none
    */
-  public QualityQrewriteCandidateIdField setIndex(java.lang.Integer index) {
-    this.index = index;
+  public GoogleCloudContentwarehouseV1WeightedSchemaProperty setDocumentSchemaName(java.lang.String documentSchemaName) {
+    this.documentSchemaName = documentSchemaName;
     return this;
   }
 
   /**
+   * The property definition names in the schema.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.util.List<java.lang.String> getPropertyNames() {
+    return propertyNames;
   }
 
   /**
-   * @param type type or {@code null} for none
+   * The property definition names in the schema.
+   * @param propertyNames propertyNames or {@code null} for none
    */
-  public QualityQrewriteCandidateIdField setType(java.lang.String type) {
-    this.type = type;
+  public GoogleCloudContentwarehouseV1WeightedSchemaProperty setPropertyNames(java.util.List<java.lang.String> propertyNames) {
+    this.propertyNames = propertyNames;
     return this;
   }
 
   @Override
-  public QualityQrewriteCandidateIdField set(String fieldName, Object value) {
-    return (QualityQrewriteCandidateIdField) super.set(fieldName, value);
+  public GoogleCloudContentwarehouseV1WeightedSchemaProperty set(String fieldName, Object value) {
+    return (GoogleCloudContentwarehouseV1WeightedSchemaProperty) super.set(fieldName, value);
   }
 
   @Override
-  public QualityQrewriteCandidateIdField clone() {
-    return (QualityQrewriteCandidateIdField) super.clone();
+  public GoogleCloudContentwarehouseV1WeightedSchemaProperty clone() {
+    return (GoogleCloudContentwarehouseV1WeightedSchemaProperty) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 51
+ * Next ID: 52
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -56,6 +56,14 @@ public final class ClassifierPornSiteData extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger numberOfPedoPages;
+
+  /**
+   * Sitechunk used to compute the signals. The field is present only for data created after
+   * December 2022.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String site;
 
   /**
    * The ratio of porn/softporn of the site this page belongs to.
@@ -145,6 +153,25 @@ public final class ClassifierPornSiteData extends com.google.api.client.json.Gen
    */
   public ClassifierPornSiteData setNumberOfPedoPages(java.math.BigInteger numberOfPedoPages) {
     this.numberOfPedoPages = numberOfPedoPages;
+    return this;
+  }
+
+  /**
+   * Sitechunk used to compute the signals. The field is present only for data created after
+   * December 2022.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSite() {
+    return site;
+  }
+
+  /**
+   * Sitechunk used to compute the signals. The field is present only for data created after
+   * December 2022.
+   * @param site site or {@code null} for none
+   */
+  public ClassifierPornSiteData setSite(java.lang.String site) {
+    this.site = site;
     return this;
   }
 

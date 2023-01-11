@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Metadata associated with a region in an image. NEXT_ID: 13
+ * Metadata associated with a region in an image. NEXT_ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -116,6 +116,12 @@ public final class MediaIndexRegion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private ImageContentStarburstVersionGroup starburstV4;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageContentStarburstVersionGroup starburstV5;
 
   /**
    * The bounding box corresponding to the region.
@@ -424,6 +430,21 @@ public final class MediaIndexRegion extends com.google.api.client.json.GenericJs
    */
   public MediaIndexRegion setStarburstV4(ImageContentStarburstVersionGroup starburstV4) {
     this.starburstV4 = starburstV4;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ImageContentStarburstVersionGroup getStarburstV5() {
+    return starburstV5;
+  }
+
+  /**
+   * @param starburstV5 starburstV5 or {@code null} for none
+   */
+  public MediaIndexRegion setStarburstV5(ImageContentStarburstVersionGroup starburstV5) {
+    this.starburstV5 = starburstV5;
     return this;
   }
 

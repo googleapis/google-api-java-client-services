@@ -74,6 +74,17 @@ public final class GeostorePriceListSectionProto extends com.google.api.client.j
   private java.util.List<java.lang.String> itemType;
 
   /**
+   * The external form of a Google International Identifiers Initiative (III) LanguageCode object.
+   * See google3/i18n/identifiers/languagecode.h for details. We place extra restrictions on
+   * languages in addition to what the III library requires. See go/geo-schema-reference/feature-
+   * properties/languages. When set, represents the language of the section and its items. Any
+   * section and item level name infos must match this language. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String language;
+
+  /**
    * One or more media items (photos, videos, etc.) describing this section / category.
    * The value may be {@code null}.
    */
@@ -166,6 +177,31 @@ public final class GeostorePriceListSectionProto extends com.google.api.client.j
    */
   public GeostorePriceListSectionProto setItemType(java.util.List<java.lang.String> itemType) {
     this.itemType = itemType;
+    return this;
+  }
+
+  /**
+   * The external form of a Google International Identifiers Initiative (III) LanguageCode object.
+   * See google3/i18n/identifiers/languagecode.h for details. We place extra restrictions on
+   * languages in addition to what the III library requires. See go/geo-schema-reference/feature-
+   * properties/languages. When set, represents the language of the section and its items. Any
+   * section and item level name infos must match this language. Optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguage() {
+    return language;
+  }
+
+  /**
+   * The external form of a Google International Identifiers Initiative (III) LanguageCode object.
+   * See google3/i18n/identifiers/languagecode.h for details. We place extra restrictions on
+   * languages in addition to what the III library requires. See go/geo-schema-reference/feature-
+   * properties/languages. When set, represents the language of the section and its items. Any
+   * section and item level name infos must match this language. Optional.
+   * @param language language or {@code null} for none
+   */
+  public GeostorePriceListSectionProto setLanguage(java.lang.String language) {
+    this.language = language;
     return this;
   }
 

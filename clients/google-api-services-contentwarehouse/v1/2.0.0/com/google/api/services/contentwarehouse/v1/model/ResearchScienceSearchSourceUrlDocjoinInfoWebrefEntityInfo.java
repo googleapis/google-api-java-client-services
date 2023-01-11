@@ -44,6 +44,13 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
   private java.lang.String entityType;
 
   /**
+   * HRID of the KG collections
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> kgCollection;
+
+  /**
    * The KG identifier of the WebrefEntity.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
    */
   public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setEntityType(java.lang.String entityType) {
     this.entityType = entityType;
+    return this;
+  }
+
+  /**
+   * HRID of the KG collections
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getKgCollection() {
+    return kgCollection;
+  }
+
+  /**
+   * HRID of the KG collections
+   * @param kgCollection kgCollection or {@code null} for none
+   */
+  public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setKgCollection(java.util.List<java.lang.String> kgCollection) {
+    this.kgCollection = kgCollection;
     return this;
   }
 

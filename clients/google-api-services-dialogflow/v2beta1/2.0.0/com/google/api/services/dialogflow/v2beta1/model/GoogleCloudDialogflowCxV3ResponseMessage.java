@@ -39,6 +39,14 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3ResponseMessage extends com.google.api.client.json.GenericJson {
 
   /**
+   * The channel which the response is associated with. Clients can specify the channel via
+   * QueryParameters.channel, and only associated channel response will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * Indicates that the conversation succeeded.
    * The value may be {@code null}.
    */
@@ -109,6 +117,25 @@ public final class GoogleCloudDialogflowCxV3ResponseMessage extends com.google.a
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ResponseMessageText text;
+
+  /**
+   * The channel which the response is associated with. Clients can specify the channel via
+   * QueryParameters.channel, and only associated channel response will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * The channel which the response is associated with. Clients can specify the channel via
+   * QueryParameters.channel, and only associated channel response will be returned.
+   * @param channel channel or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ResponseMessage setChannel(java.lang.String channel) {
+    this.channel = channel;
+    return this;
+  }
 
   /**
    * Indicates that the conversation succeeded.

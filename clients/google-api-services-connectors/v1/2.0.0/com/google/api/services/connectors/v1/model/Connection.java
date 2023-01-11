@@ -121,7 +121,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Configuration for the connection.
+   * Optional. Node configuration for the connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -368,7 +368,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the connection.
+   * Optional. Node configuration for the connection.
    * @return value or {@code null} for none
    */
   public NodeConfig getNodeConfig() {
@@ -376,7 +376,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the connection.
+   * Optional. Node configuration for the connection.
    * @param nodeConfig nodeConfig or {@code null} for none
    */
   public Connection setNodeConfig(NodeConfig nodeConfig) {

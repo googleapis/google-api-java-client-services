@@ -46,6 +46,13 @@ public final class NlpSemanticParsingExpressionStatus extends com.google.api.cli
   private java.lang.String status;
 
   /**
+   * Completeness probability as calculated by the parser's completeness layer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float textCompletenessProbability;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -57,6 +64,23 @@ public final class NlpSemanticParsingExpressionStatus extends com.google.api.cli
    */
   public NlpSemanticParsingExpressionStatus setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Completeness probability as calculated by the parser's completeness layer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getTextCompletenessProbability() {
+    return textCompletenessProbability;
+  }
+
+  /**
+   * Completeness probability as calculated by the parser's completeness layer.
+   * @param textCompletenessProbability textCompletenessProbability or {@code null} for none
+   */
+  public NlpSemanticParsingExpressionStatus setTextCompletenessProbability(java.lang.Float textCompletenessProbability) {
+    this.textCompletenessProbability = textCompletenessProbability;
     return this;
   }
 

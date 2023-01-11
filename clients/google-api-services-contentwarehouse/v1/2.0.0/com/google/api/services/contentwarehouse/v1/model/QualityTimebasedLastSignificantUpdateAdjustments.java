@@ -31,6 +31,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.google.api.client.json.GenericJson {
 
   /**
+   * If the selected LSU has been adjusted, i.e. the maximum passage timestamp, firstseen or
+   * contentage were assigned to LSU, the adjustment source is stored here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,12 +47,18 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
 
   /**
    * The timestamp that was picked up by the component indicated in the LastSignificantUpdateSource
-   * but was dropped due to exceeding the upper bound. The two following fields are present only
-   * when the adjustment took place.
+   * but was dropped due to exceeding the upper bound. Set only if it's not equal to final LSU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long unadjustedTimestampInSeconds;
+  private java.lang.Long unboundedTimestampInSeconds;
+
+  /**
+   * The source that produced the unbounded timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unboundedTimestampSource;
 
   /**
    * The upperbound value derived from passage timestamps. If present, the LSU date should never
@@ -61,6 +69,8 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
   private java.lang.Long upperboundTimestampInSeconds;
 
   /**
+   * If the selected LSU has been adjusted, i.e. the maximum passage timestamp, firstseen or
+   * contentage were assigned to LSU, the adjustment source is stored here.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdjustmentSource() {
@@ -68,6 +78,8 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
   }
 
   /**
+   * If the selected LSU has been adjusted, i.e. the maximum passage timestamp, firstseen or
+   * contentage were assigned to LSU, the adjustment source is stored here.
    * @param adjustmentSource adjustmentSource or {@code null} for none
    */
   public QualityTimebasedLastSignificantUpdateAdjustments setAdjustmentSource(java.lang.String adjustmentSource) {
@@ -94,22 +106,37 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
 
   /**
    * The timestamp that was picked up by the component indicated in the LastSignificantUpdateSource
-   * but was dropped due to exceeding the upper bound. The two following fields are present only
-   * when the adjustment took place.
+   * but was dropped due to exceeding the upper bound. Set only if it's not equal to final LSU.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getUnadjustedTimestampInSeconds() {
-    return unadjustedTimestampInSeconds;
+  public java.lang.Long getUnboundedTimestampInSeconds() {
+    return unboundedTimestampInSeconds;
   }
 
   /**
    * The timestamp that was picked up by the component indicated in the LastSignificantUpdateSource
-   * but was dropped due to exceeding the upper bound. The two following fields are present only
-   * when the adjustment took place.
-   * @param unadjustedTimestampInSeconds unadjustedTimestampInSeconds or {@code null} for none
+   * but was dropped due to exceeding the upper bound. Set only if it's not equal to final LSU.
+   * @param unboundedTimestampInSeconds unboundedTimestampInSeconds or {@code null} for none
    */
-  public QualityTimebasedLastSignificantUpdateAdjustments setUnadjustedTimestampInSeconds(java.lang.Long unadjustedTimestampInSeconds) {
-    this.unadjustedTimestampInSeconds = unadjustedTimestampInSeconds;
+  public QualityTimebasedLastSignificantUpdateAdjustments setUnboundedTimestampInSeconds(java.lang.Long unboundedTimestampInSeconds) {
+    this.unboundedTimestampInSeconds = unboundedTimestampInSeconds;
+    return this;
+  }
+
+  /**
+   * The source that produced the unbounded timestamp.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnboundedTimestampSource() {
+    return unboundedTimestampSource;
+  }
+
+  /**
+   * The source that produced the unbounded timestamp.
+   * @param unboundedTimestampSource unboundedTimestampSource or {@code null} for none
+   */
+  public QualityTimebasedLastSignificantUpdateAdjustments setUnboundedTimestampSource(java.lang.String unboundedTimestampSource) {
+    this.unboundedTimestampSource = unboundedTimestampSource;
     return this;
   }
 

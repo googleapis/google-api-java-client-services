@@ -41,8 +41,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   private java.lang.String id;
 
   /**
-   * LINT.ThenChange( //depot/google3/googledata/production/playbooks/video-assets/clients.md )
-   * REQUIRED.
+   * LINT.ThenChange( //depot/google3/googledata/production/playbooks/video-assets/clients.md,
+   * //depot/google3/video/assets/venom/proto/namespace.proto ) REQUIRED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   }
 
   /**
-   * LINT.ThenChange( //depot/google3/googledata/production/playbooks/video-assets/clients.md )
-   * REQUIRED.
+   * LINT.ThenChange( //depot/google3/googledata/production/playbooks/video-assets/clients.md,
+   * //depot/google3/video/assets/venom/proto/namespace.proto ) REQUIRED.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -111,8 +111,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   }
 
   /**
-   * LINT.ThenChange( //depot/google3/googledata/production/playbooks/video-assets/clients.md )
-   * REQUIRED.
+   * LINT.ThenChange( //depot/google3/googledata/production/playbooks/video-assets/clients.md,
+   * //depot/google3/video/assets/venom/proto/namespace.proto ) REQUIRED.
    * @param ns ns or {@code null} for none
    */
   public VideoAssetsVenomVideoId setNs(java.lang.String ns) {

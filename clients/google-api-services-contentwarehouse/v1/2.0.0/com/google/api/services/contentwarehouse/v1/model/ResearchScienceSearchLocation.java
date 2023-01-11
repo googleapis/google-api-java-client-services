@@ -75,6 +75,12 @@ public final class ResearchScienceSearchLocation extends com.google.api.client.j
   private java.lang.String locationName;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationResource;
+
+  /**
    * Latitude and longitude for a single point in the form of "lat,long".
    * The value may be {@code null}.
    */
@@ -189,6 +195,21 @@ public final class ResearchScienceSearchLocation extends com.google.api.client.j
    */
   public ResearchScienceSearchLocation setLocationName(java.lang.String locationName) {
     this.locationName = locationName;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationResource() {
+    return locationResource;
+  }
+
+  /**
+   * @param locationResource locationResource or {@code null} for none
+   */
+  public ResearchScienceSearchLocation setLocationResource(java.lang.String locationResource) {
+    this.locationResource = locationResource;
     return this;
   }
 

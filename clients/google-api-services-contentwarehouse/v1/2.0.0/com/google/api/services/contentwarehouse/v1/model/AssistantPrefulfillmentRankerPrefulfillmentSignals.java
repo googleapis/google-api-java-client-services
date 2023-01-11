@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 34
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 36
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -37,6 +37,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float bindingSetAuis;
+
+  /**
+   * Pauis score for the binding set
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float bindingSetPauis;
 
   /**
    * A parsing score that is independently calibrated by each parser/IG.
@@ -135,6 +142,14 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean maskCandidateLevelFeatures;
+
+  /**
+   * The maximum score assigned by the Horizontal Grounding Ranker (HGR) across all of the intent's
+   * binding sets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double maxHgrScoreAcrossBindingSets;
 
   /**
    * Number of alternative hypotheses from speech recognition(S3).
@@ -252,6 +267,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetAuis(java.lang.Float bindingSetAuis) {
     this.bindingSetAuis = bindingSetAuis;
+    return this;
+  }
+
+  /**
+   * Pauis score for the binding set
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getBindingSetPauis() {
+    return bindingSetPauis;
+  }
+
+  /**
+   * Pauis score for the binding set
+   * @param bindingSetPauis bindingSetPauis or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetPauis(java.lang.Float bindingSetPauis) {
+    this.bindingSetPauis = bindingSetPauis;
     return this;
   }
 
@@ -484,6 +516,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setMaskCandidateLevelFeatures(java.lang.Boolean maskCandidateLevelFeatures) {
     this.maskCandidateLevelFeatures = maskCandidateLevelFeatures;
+    return this;
+  }
+
+  /**
+   * The maximum score assigned by the Horizontal Grounding Ranker (HGR) across all of the intent's
+   * binding sets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMaxHgrScoreAcrossBindingSets() {
+    return maxHgrScoreAcrossBindingSets;
+  }
+
+  /**
+   * The maximum score assigned by the Horizontal Grounding Ranker (HGR) across all of the intent's
+   * binding sets.
+   * @param maxHgrScoreAcrossBindingSets maxHgrScoreAcrossBindingSets or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setMaxHgrScoreAcrossBindingSets(java.lang.Double maxHgrScoreAcrossBindingSets) {
+    this.maxHgrScoreAcrossBindingSets = maxHgrScoreAcrossBindingSets;
     return this;
   }
 

@@ -18,7 +18,10 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * PToken expresses policy-relevant properties of the data objects being processed and stored in
- * Google's production systems. See go/ptoken to learn more. Next ID: 8
+ * Google's production systems. See go/ptoken to learn more. PTokens are intentionally opaque: go
+ * /ptokens-are-opaque. The following should be considered implementation details. Next ID: 8
+ * INTERNAL: If both the Scalar and the Compound extensions are populated, we use the Compound and
+ * discard the Scalar. In principle, this should never happen.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -30,104 +33,6 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class PtokenPToken extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String compoundPtokenData;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String ptokenData;
-
-  /**
-   * @see #decodeCompoundPtokenData()
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCompoundPtokenData() {
-    return compoundPtokenData;
-  }
-
-  /**
-
-   * @see #getCompoundPtokenData()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeCompoundPtokenData() {
-    return com.google.api.client.util.Base64.decodeBase64(compoundPtokenData);
-  }
-
-  /**
-   * @see #encodeCompoundPtokenData()
-   * @param compoundPtokenData compoundPtokenData or {@code null} for none
-   */
-  public PtokenPToken setCompoundPtokenData(java.lang.String compoundPtokenData) {
-    this.compoundPtokenData = compoundPtokenData;
-    return this;
-  }
-
-  /**
-
-   * @see #setCompoundPtokenData()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public PtokenPToken encodeCompoundPtokenData(byte[] compoundPtokenData) {
-    this.compoundPtokenData = com.google.api.client.util.Base64.encodeBase64URLSafeString(compoundPtokenData);
-    return this;
-  }
-
-  /**
-   * @see #decodePtokenData()
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPtokenData() {
-    return ptokenData;
-  }
-
-  /**
-
-   * @see #getPtokenData()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodePtokenData() {
-    return com.google.api.client.util.Base64.decodeBase64(ptokenData);
-  }
-
-  /**
-   * @see #encodePtokenData()
-   * @param ptokenData ptokenData or {@code null} for none
-   */
-  public PtokenPToken setPtokenData(java.lang.String ptokenData) {
-    this.ptokenData = ptokenData;
-    return this;
-  }
-
-  /**
-
-   * @see #setPtokenData()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public PtokenPToken encodePtokenData(byte[] ptokenData) {
-    this.ptokenData = com.google.api.client.util.Base64.encodeBase64URLSafeString(ptokenData);
-    return this;
-  }
 
   @Override
   public PtokenPToken set(String fieldName, Object value) {

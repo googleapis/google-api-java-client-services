@@ -38,6 +38,16 @@ public final class GoogleAssistantAccessoryV1ScreenOutConfig extends com.google.
   private GoogleAssistantAccessoryV1ScreenOutConfigDimensions dimensions;
 
   /**
+   * The scale factor used to convert Scalable Pixel (SP) units to Density-independent Pixel (DP)
+   * units (DP = SP * scale factor). Fonts are measured in units of SP, and on some platforms such
+   * as Android the SP to DP scale factor can be affected by the font size a user selects in
+   * accessibility settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float fontScaleFactor;
+
+  /**
    * Device dimensions.
    * @return value or {@code null} for none
    */
@@ -51,6 +61,29 @@ public final class GoogleAssistantAccessoryV1ScreenOutConfig extends com.google.
    */
   public GoogleAssistantAccessoryV1ScreenOutConfig setDimensions(GoogleAssistantAccessoryV1ScreenOutConfigDimensions dimensions) {
     this.dimensions = dimensions;
+    return this;
+  }
+
+  /**
+   * The scale factor used to convert Scalable Pixel (SP) units to Density-independent Pixel (DP)
+   * units (DP = SP * scale factor). Fonts are measured in units of SP, and on some platforms such
+   * as Android the SP to DP scale factor can be affected by the font size a user selects in
+   * accessibility settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFontScaleFactor() {
+    return fontScaleFactor;
+  }
+
+  /**
+   * The scale factor used to convert Scalable Pixel (SP) units to Density-independent Pixel (DP)
+   * units (DP = SP * scale factor). Fonts are measured in units of SP, and on some platforms such
+   * as Android the SP to DP scale factor can be affected by the font size a user selects in
+   * accessibility settings.
+   * @param fontScaleFactor fontScaleFactor or {@code null} for none
+   */
+  public GoogleAssistantAccessoryV1ScreenOutConfig setFontScaleFactor(java.lang.Float fontScaleFactor) {
+    this.fontScaleFactor = fontScaleFactor;
     return this;
   }
 

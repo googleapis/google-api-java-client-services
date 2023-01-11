@@ -40,7 +40,7 @@ public final class HomeGraphCommonTraitRoutingHints extends com.google.api.clien
 
   /**
    * Trait name, e.g., "action.devices.traits.MediaInitiation". See [device
-   * traits](https://developers.google.com/assistant/smarthome/traits). See
+   * traits](https://developers.home.google.com/cloud-to-cloud/traits). See
    * java/com/google/home/graph/common/devices/config/protoconf.pi for the exhaustive list of trait-
    * strings.
    * The value may be {@code null}.
@@ -67,7 +67,7 @@ public final class HomeGraphCommonTraitRoutingHints extends com.google.api.clien
 
   /**
    * Trait name, e.g., "action.devices.traits.MediaInitiation". See [device
-   * traits](https://developers.google.com/assistant/smarthome/traits). See
+   * traits](https://developers.home.google.com/cloud-to-cloud/traits). See
    * java/com/google/home/graph/common/devices/config/protoconf.pi for the exhaustive list of trait-
    * strings.
    * @return value or {@code null} for none
@@ -78,7 +78,7 @@ public final class HomeGraphCommonTraitRoutingHints extends com.google.api.clien
 
   /**
    * Trait name, e.g., "action.devices.traits.MediaInitiation". See [device
-   * traits](https://developers.google.com/assistant/smarthome/traits). See
+   * traits](https://developers.home.google.com/cloud-to-cloud/traits). See
    * java/com/google/home/graph/common/devices/config/protoconf.pi for the exhaustive list of trait-
    * strings.
    * @param trait trait or {@code null} for none

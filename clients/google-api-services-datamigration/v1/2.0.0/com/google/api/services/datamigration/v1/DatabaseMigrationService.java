@@ -677,27 +677,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** Optional. A unique id used to identify the request. If the server receives two requests with the
+         same id, then the second request will be ignored. It is recommended to always set this value to a
+         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+         The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
@@ -1657,27 +1657,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** Optional. A unique id used to identify the request. If the server receives two requests with the
+         same id, then the second request will be ignored. It is recommended to always set this value to a
+         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+         The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique id used to identify the request. If the server receives two requests
+           * with the same id, then the second request will be ignored. It is recommended to always
+           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
@@ -7711,6 +7711,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. If set to true, will skip validations. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean skipValidation;
+
+          /** Optional. If set to true, will skip validations.
+           */
+          public java.lang.Boolean getSkipValidation() {
+            return skipValidation;
+          }
+
+          /** Optional. If set to true, will skip validations. */
+          public Create setSkipValidation(java.lang.Boolean skipValidation) {
+            this.skipValidation = skipValidation;
             return this;
           }
 

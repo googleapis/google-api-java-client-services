@@ -41,7 +41,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.String clusterHostname;
 
   /**
-   * Whether Workstations endpoint is private.
+   * Immutable. Whether Workstations endpoint is private.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether Workstations endpoint is private.
+   * Immutable. Whether Workstations endpoint is private.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEndpoint() {
@@ -89,7 +89,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether Workstations endpoint is private.
+   * Immutable. Whether Workstations endpoint is private.
    * @param enablePrivateEndpoint enablePrivateEndpoint or {@code null} for none
    */
   public PrivateClusterConfig setEnablePrivateEndpoint(java.lang.Boolean enablePrivateEndpoint) {

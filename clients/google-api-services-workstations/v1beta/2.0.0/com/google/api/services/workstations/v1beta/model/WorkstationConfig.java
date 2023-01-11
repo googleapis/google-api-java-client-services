@@ -113,6 +113,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String idleTimeout;
 
   /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Full name of this resource.
    * The value may be {@code null}.
    */
@@ -340,6 +348,25 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setIdleTimeout(String idleTimeout) {
     this.idleTimeout = idleTimeout;
+    return this;
+  }
+
+  /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * @param labels labels or {@code null} for none
+   */
+  public WorkstationConfig setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

@@ -88,6 +88,14 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String etag;
 
   /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Full name of this resource.
    * The value may be {@code null}.
    */
@@ -95,8 +103,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Name of the Compute Engine network in which instances associated with this cluster will be
-   * created.
+   * Immutable. Name of the Compute Engine network in which instances associated with this cluster
+   * will be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +126,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.Boolean reconciling;
 
   /**
-   * Name of the Compute Engine subnetwork in which instances associated with this cluster will be
-   * created. Must be part of the subnetwork specified for this cluster.
+   * Immutable. Name of the Compute Engine subnetwork in which instances associated with this
+   * cluster will be created. Must be part of the subnetwork specified for this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,6 +271,25 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Client-specified labels that are applied to the resource and that are also propagated to the
+   * underlying Compute Engine resources.
+   * @param labels labels or {@code null} for none
+   */
+  public WorkstationCluster setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
    * Full name of this resource.
    * @return value or {@code null} for none
    */
@@ -280,8 +307,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the Compute Engine network in which instances associated with this cluster will be
-   * created.
+   * Immutable. Name of the Compute Engine network in which instances associated with this cluster
+   * will be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -289,8 +316,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the Compute Engine network in which instances associated with this cluster will be
-   * created.
+   * Immutable. Name of the Compute Engine network in which instances associated with this cluster
+   * will be created.
    * @param network network or {@code null} for none
    */
   public WorkstationCluster setNetwork(java.lang.String network) {
@@ -335,8 +362,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the Compute Engine subnetwork in which instances associated with this cluster will be
-   * created. Must be part of the subnetwork specified for this cluster.
+   * Immutable. Name of the Compute Engine subnetwork in which instances associated with this
+   * cluster will be created. Must be part of the subnetwork specified for this cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -344,8 +371,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the Compute Engine subnetwork in which instances associated with this cluster will be
-   * created. Must be part of the subnetwork specified for this cluster.
+   * Immutable. Name of the Compute Engine subnetwork in which instances associated with this
+   * cluster will be created. Must be part of the subnetwork specified for this cluster.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public WorkstationCluster setSubnetwork(java.lang.String subnetwork) {

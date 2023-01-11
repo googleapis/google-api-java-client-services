@@ -45,6 +45,13 @@ public final class GoogleCloudContentwarehouseV1InitializeProjectRequest extends
   private java.lang.String databaseType;
 
   /**
+   * Optional. The default role for the person who create a document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentCreatorDefaultRole;
+
+  /**
    * Optional. The KMS key used for CMEK encryption. It is required that the kms key is in the same
    * region as the endpoint. The same key will be used for all provisioned resources, if encryption
    * is available. If the kms_key is left empty, no encryption will be enforced.
@@ -84,6 +91,23 @@ public final class GoogleCloudContentwarehouseV1InitializeProjectRequest extends
    */
   public GoogleCloudContentwarehouseV1InitializeProjectRequest setDatabaseType(java.lang.String databaseType) {
     this.databaseType = databaseType;
+    return this;
+  }
+
+  /**
+   * Optional. The default role for the person who create a document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentCreatorDefaultRole() {
+    return documentCreatorDefaultRole;
+  }
+
+  /**
+   * Optional. The default role for the person who create a document.
+   * @param documentCreatorDefaultRole documentCreatorDefaultRole or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1InitializeProjectRequest setDocumentCreatorDefaultRole(java.lang.String documentCreatorDefaultRole) {
+    this.documentCreatorDefaultRole = documentCreatorDefaultRole;
     return this;
   }
 

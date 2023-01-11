@@ -22,8 +22,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * in the same language, as specified by the language field. None of the fields in this proto is
  * required, although it is not expected to have the language field set unless there is a name or
  * description. When the language field is not set, it is understood to be the preferred language of
- * the locale where the establishment is located. An empty string for any of the fields is treated
- * the same as having the fields not set.
+ * the locale where the establishment is located. An empty string for any of the fields is not
+ * allowed (as enforced by lints).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

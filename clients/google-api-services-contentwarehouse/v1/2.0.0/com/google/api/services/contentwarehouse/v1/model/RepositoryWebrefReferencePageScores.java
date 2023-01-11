@@ -39,15 +39,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
   private java.lang.Float bookScore;
 
   /**
-   * Fraction of importance_ratio (IR) that is explained by this entity and implied entities. E.g. a
-   * page about a song with IR 0.2 for the song and 0.5 for the artist actually has
-   * explained_normalized_topicality 0.7 for the song.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float explainedNormalizedTopicality;
-
-  /**
    * The raw topicality score of the primary entity.
    * The value may be {@code null}.
    */
@@ -82,14 +73,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Float referencePageScore;
-
-  /**
-   * The score used to sort reference pages for a given entity. This score tries to assign higher
-   * scores to reference pages that are more useful to the model building.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float referencePageSelectionScore;
 
   /**
    * True if the entity is selected as the reference page owner.
@@ -143,27 +126,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
    */
   public RepositoryWebrefReferencePageScores setBookScore(java.lang.Float bookScore) {
     this.bookScore = bookScore;
-    return this;
-  }
-
-  /**
-   * Fraction of importance_ratio (IR) that is explained by this entity and implied entities. E.g. a
-   * page about a song with IR 0.2 for the song and 0.5 for the artist actually has
-   * explained_normalized_topicality 0.7 for the song.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getExplainedNormalizedTopicality() {
-    return explainedNormalizedTopicality;
-  }
-
-  /**
-   * Fraction of importance_ratio (IR) that is explained by this entity and implied entities. E.g. a
-   * page about a song with IR 0.2 for the song and 0.5 for the artist actually has
-   * explained_normalized_topicality 0.7 for the song.
-   * @param explainedNormalizedTopicality explainedNormalizedTopicality or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setExplainedNormalizedTopicality(java.lang.Float explainedNormalizedTopicality) {
-    this.explainedNormalizedTopicality = explainedNormalizedTopicality;
     return this;
   }
 
@@ -251,25 +213,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
    */
   public RepositoryWebrefReferencePageScores setReferencePageScore(java.lang.Float referencePageScore) {
     this.referencePageScore = referencePageScore;
-    return this;
-  }
-
-  /**
-   * The score used to sort reference pages for a given entity. This score tries to assign higher
-   * scores to reference pages that are more useful to the model building.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getReferencePageSelectionScore() {
-    return referencePageSelectionScore;
-  }
-
-  /**
-   * The score used to sort reference pages for a given entity. This score tries to assign higher
-   * scores to reference pages that are more useful to the model building.
-   * @param referencePageSelectionScore referencePageSelectionScore or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setReferencePageSelectionScore(java.lang.Float referencePageSelectionScore) {
-    this.referencePageSelectionScore = referencePageSelectionScore;
     return this;
   }
 

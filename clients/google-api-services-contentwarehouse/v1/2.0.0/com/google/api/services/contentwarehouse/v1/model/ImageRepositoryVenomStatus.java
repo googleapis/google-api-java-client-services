@@ -114,6 +114,14 @@ public final class ImageRepositoryVenomStatus extends com.google.api.client.json
   private java.lang.Long venomMutationGeneration;
 
   /**
+   * This field is not persisted anywhere. It is only used in deletion service for converying the
+   * VideoVenomSetting when deleting Venom data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoVenomSetting;
+
+  /**
    * Venom ACL of the video. Used to check if other systems, such as Ares, are able to process the
    * video.
    * @return value or {@code null} for none
@@ -312,6 +320,25 @@ public final class ImageRepositoryVenomStatus extends com.google.api.client.json
    */
   public ImageRepositoryVenomStatus setVenomMutationGeneration(java.lang.Long venomMutationGeneration) {
     this.venomMutationGeneration = venomMutationGeneration;
+    return this;
+  }
+
+  /**
+   * This field is not persisted anywhere. It is only used in deletion service for converying the
+   * VideoVenomSetting when deleting Venom data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVideoVenomSetting() {
+    return videoVenomSetting;
+  }
+
+  /**
+   * This field is not persisted anywhere. It is only used in deletion service for converying the
+   * VideoVenomSetting when deleting Venom data.
+   * @param videoVenomSetting videoVenomSetting or {@code null} for none
+   */
+  public ImageRepositoryVenomStatus setVideoVenomSetting(java.lang.String videoVenomSetting) {
+    this.videoVenomSetting = videoVenomSetting;
     return this;
   }
 

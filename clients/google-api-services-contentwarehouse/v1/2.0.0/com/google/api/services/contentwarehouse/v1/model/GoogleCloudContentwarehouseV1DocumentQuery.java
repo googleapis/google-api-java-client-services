@@ -48,6 +48,16 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
   private java.lang.String customPropertyFilter;
 
   /**
+   * To support the custom weighting across document schemas, customers need to provide the
+   * properties to be used to boost the ranking in the search request. For a search query with
+   * CustomWeightsMetadata specified, only the RetrievalImportance for the properties in the
+   * CustomWeightsMetadata will be honored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1CustomWeightsMetadata customWeightsMetadata;
+
+  /**
    * The exact creator(s) of the documents to search against. If a value isn't specified, documents
    * within the search results are associated with any creator. If multiple values are specified,
    * documents within the search results may be associated with any of the specified creators.
@@ -182,6 +192,29 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
    */
   public GoogleCloudContentwarehouseV1DocumentQuery setCustomPropertyFilter(java.lang.String customPropertyFilter) {
     this.customPropertyFilter = customPropertyFilter;
+    return this;
+  }
+
+  /**
+   * To support the custom weighting across document schemas, customers need to provide the
+   * properties to be used to boost the ranking in the search request. For a search query with
+   * CustomWeightsMetadata specified, only the RetrievalImportance for the properties in the
+   * CustomWeightsMetadata will be honored.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1CustomWeightsMetadata getCustomWeightsMetadata() {
+    return customWeightsMetadata;
+  }
+
+  /**
+   * To support the custom weighting across document schemas, customers need to provide the
+   * properties to be used to boost the ranking in the search request. For a search query with
+   * CustomWeightsMetadata specified, only the RetrievalImportance for the properties in the
+   * CustomWeightsMetadata will be honored.
+   * @param customWeightsMetadata customWeightsMetadata or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1DocumentQuery setCustomWeightsMetadata(GoogleCloudContentwarehouseV1CustomWeightsMetadata customWeightsMetadata) {
+    this.customWeightsMetadata = customWeightsMetadata;
     return this;
   }
 

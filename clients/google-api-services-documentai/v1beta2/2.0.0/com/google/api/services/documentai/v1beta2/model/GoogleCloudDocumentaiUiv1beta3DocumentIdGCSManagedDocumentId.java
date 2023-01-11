@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * Identifies a document uniquely within the scope of a dataset in the GCS-based option.
+ * Identifies a document uniquely within the scope of a dataset in the Cloud Storage option.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Id of the document (indexed) managed by Content Warehouse.
+   * Id of the document (indexed) managed by Content Warehouse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId 
   private java.lang.String gcsUri;
 
   /**
-   * Optional. Id of the document (indexed) managed by Content Warehouse.
+   * Id of the document (indexed) managed by Content Warehouse.
    * @return value or {@code null} for none
    */
   public java.lang.String getCwDocId() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId 
   }
 
   /**
-   * Optional. Id of the document (indexed) managed by Content Warehouse.
+   * Id of the document (indexed) managed by Content Warehouse.
    * @param cwDocId cwDocId or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId setCwDocId(java.lang.String cwDocId) {

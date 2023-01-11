@@ -272,6 +272,13 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String promotionId;
 
   /**
+   * Output only. The current status of the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PromotionPromotionStatus promotionStatus;
+
+  /**
    * URL to the page on the merchant's site where the promotion shows. Local Inventory ads
    * promotions throw an error if no promo url is included. URL is used to confirm that the
    * promotion is valid and can be redeemed.
@@ -898,6 +905,23 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setPromotionId(java.lang.String promotionId) {
     this.promotionId = promotionId;
+    return this;
+  }
+
+  /**
+   * Output only. The current status of the promotion.
+   * @return value or {@code null} for none
+   */
+  public PromotionPromotionStatus getPromotionStatus() {
+    return promotionStatus;
+  }
+
+  /**
+   * Output only. The current status of the promotion.
+   * @param promotionStatus promotionStatus or {@code null} for none
+   */
+  public Promotion setPromotionStatus(PromotionPromotionStatus promotionStatus) {
+    this.promotionStatus = promotionStatus;
     return this;
   }
 

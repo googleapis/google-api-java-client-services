@@ -6727,10 +6727,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       * @param name Required. The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6763,10 +6768,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -6835,28 +6845,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * Required. The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
-       will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-       `unique_id` of the service account.
+        /** Required. The resource name of the service account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * Required. The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6889,10 +6913,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       * @param name The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.DisableServiceAccountRequest}
        * @return the request
        */
@@ -6928,10 +6957,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+         * @param name The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.DisableServiceAccountRequest}
          * @since 1.13
          */
@@ -7001,28 +7035,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
-       will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-       `unique_id` of the service account.
+        /** The resource name of the service account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public Disable setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7050,10 +7098,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       * @param name The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountRequest}
        * @return the request
        */
@@ -7083,10 +7136,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+         * @param name The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountRequest}
          * @since 1.13
          */
@@ -7156,28 +7214,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
-       will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-       `unique_id` of the service account.
+        /** The resource name of the service account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public Enable setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7202,10 +7274,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       * @param name Required. The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -7231,10 +7308,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -7313,28 +7395,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * Required. The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
-       will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-       `unique_id` of the service account.
+        /** Required. The resource name of the service account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * Required. The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7760,7 +7856,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        *        wildcard character instead of the project ID: *
        *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
        *        When possible, avoid using the `-` wildcard character, because it can cause response
-       *        messages to contain misleading error codes. For example, if you try to get the service
+       *        messages to contain misleading error codes. For example, if you try to access the service
        *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
        *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.PatchServiceAccountRequest}
@@ -7795,7 +7891,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        *        wildcard character instead of the project ID: *
        *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
        *        When possible, avoid using the `-` wildcard character, because it can cause response
-       *        messages to contain misleading error codes. For example, if you try to get the service
+       *        messages to contain misleading error codes. For example, if you try to access the service
        *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
        *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.PatchServiceAccountRequest}
@@ -7873,7 +7969,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * `-` wildcard character instead of the project ID: *
          * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
          * When possible, avoid using the `-` wildcard character, because it can cause response
-         * messages to contain misleading error codes. For example, if you try to get the service
+         * messages to contain misleading error codes. For example, if you try to access the service
          * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
          * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
@@ -7886,8 +7982,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
        `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
        because it can cause response messages to contain misleading error codes. For example, if you try
-       to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the
-       response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
@@ -7900,7 +7996,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * `-` wildcard character instead of the project ID: *
          * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
          * When possible, avoid using the `-` wildcard character, because it can cause response
-         * messages to contain misleading error codes. For example, if you try to get the service
+         * messages to contain misleading error codes. For example, if you try to access the service
          * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
          * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
@@ -8096,10 +8192,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param name Required. Deprecated. [Migrate to Service Account Credentials
        *        API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-       *        service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       *        service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.SignBlobRequest}
        * @return the request
        */
@@ -8133,10 +8234,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param name Required. Deprecated. [Migrate to Service Account Credentials
        *        API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-       *        service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       *        service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.SignBlobRequest}
          * @since 1.13
          */
@@ -8208,19 +8314,29 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Deprecated. [Migrate to Service Account Credentials
          * API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-         * service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Deprecated. [Migrate to Service Account Credentials
        API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the service
-       account in the following format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a
-       wildcard for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be
-       the `email` address or the `unique_id` of the service account.
+       account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
@@ -8229,10 +8345,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Deprecated. [Migrate to Service Account Credentials
          * API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-         * service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public SignBlob setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8263,10 +8384,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param name Required. Deprecated. [Migrate to Service Account Credentials
        *        API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-       *        service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       *        service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.SignJwtRequest}
        * @return the request
        */
@@ -8300,10 +8426,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param name Required. Deprecated. [Migrate to Service Account Credentials
        *        API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-       *        service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-       *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-       *        `email` address or the `unique_id` of the service account.
+       *        service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.SignJwtRequest}
          * @since 1.13
          */
@@ -8375,19 +8506,29 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Deprecated. [Migrate to Service Account Credentials
          * API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-         * service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Deprecated. [Migrate to Service Account Credentials
        API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the service
-       account in the following format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a
-       wildcard for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be
-       the `email` address or the `unique_id` of the service account.
+       account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
@@ -8396,10 +8537,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Deprecated. [Migrate to Service Account Credentials
          * API](https://cloud.google.com/iam/help/credentials/migrate-api). The resource name of the
-         * service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         * `email` address or the `unique_id` of the service account.
+         * service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public SignJwt setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8572,9 +8718,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for
-       *        the `PROJECT_ID` will infer the project from the account.
+       * @param name The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.UndeleteServiceAccountRequest}
        * @return the request
        */
@@ -8605,9 +8757,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for
-       *        the `PROJECT_ID` will infer the project from the account.
+         * @param name The resource name of the service account. Use one of the following formats: *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+       *        wildcard character instead of the project ID: *
+       *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+       *        When possible, avoid using the `-` wildcard character, because it can cause response
+       *        messages to contain misleading error codes. For example, if you try to access the service
+       *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+       *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.UndeleteServiceAccountRequest}
          * @since 1.13
          */
@@ -8677,25 +8835,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for
-         * the `PROJECT_ID` will infer the project from the account.
+         * The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for the
-       `PROJECT_ID` will infer the project from the account.
+        /** The resource name of the service account. Use one of the following formats: *
+       `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+       character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+       `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+       because it can cause response messages to contain misleading error codes. For example, if you try
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for
-         * the `PROJECT_ID` will infer the project from the account.
+         * The resource name of the service account. Use one of the following formats: *
+         * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+         * `-` wildcard character instead of the project ID: *
+         * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         * When possible, avoid using the `-` wildcard character, because it can cause response
+         * messages to contain misleading error codes. For example, if you try to access the service
+         * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public Undelete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8727,7 +8902,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        *        wildcard character instead of the project ID: *
        *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
        *        When possible, avoid using the `-` wildcard character, because it can cause response
-       *        messages to contain misleading error codes. For example, if you try to get the service
+       *        messages to contain misleading error codes. For example, if you try to access the service
        *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
        *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
        * @param content the {@link com.google.api.services.iam.v1.model.ServiceAccount}
@@ -8763,7 +8938,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        *        wildcard character instead of the project ID: *
        *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
        *        When possible, avoid using the `-` wildcard character, because it can cause response
-       *        messages to contain misleading error codes. For example, if you try to get the service
+       *        messages to contain misleading error codes. For example, if you try to access the service
        *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
        *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.ServiceAccount}
@@ -8841,7 +9016,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * `-` wildcard character instead of the project ID: *
          * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
          * When possible, avoid using the `-` wildcard character, because it can cause response
-         * messages to contain misleading error codes. For example, if you try to get the service
+         * messages to contain misleading error codes. For example, if you try to access the service
          * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
          * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
@@ -8854,8 +9029,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
        `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
        because it can cause response messages to contain misleading error codes. For example, if you try
-       to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the
-       response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+       to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+       the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
         public java.lang.String getName() {
           return name;
@@ -8868,7 +9043,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * `-` wildcard character instead of the project ID: *
          * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
          * When possible, avoid using the `-` wildcard character, because it can cause response
-         * messages to contain misleading error codes. For example, if you try to get the service
+         * messages to contain misleading error codes. For example, if you try to access the service
          * account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
          * contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          */
@@ -8916,10 +9091,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the service account in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+         *        wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         *        When possible, avoid using the `-` wildcard character, because it can cause response
+         *        messages to contain misleading error codes. For example, if you try to access the service
+         *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.CreateServiceAccountKeyRequest}
          * @return the request
          */
@@ -8946,10 +9126,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the service account in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name Required. The resource name of the service account. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+         *        wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         *        When possible, avoid using the `-` wildcard character, because it can cause response
+         *        messages to contain misleading error codes. For example, if you try to access the service
+         *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @param content the {@link com.google.api.services.iam.v1.model.CreateServiceAccountKeyRequest}
            * @since 1.13
            */
@@ -9019,28 +9204,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the service account in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-           * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-           * `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account. Use one of the following formats: *
+           * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+           * `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+           * When possible, avoid using the `-` wildcard character, because it can cause response
+           * messages to contain misleading error codes. For example, if you try to access the
+           * service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+           * the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the service account in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
-         will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-         `unique_id` of the service account.
+          /** Required. The resource name of the service account. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+         character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+         because it can cause response messages to contain misleading error codes. For example, if you try
+         to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+         the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the service account in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-           * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-           * `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account. Use one of the following formats: *
+           * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+           * `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+           * When possible, avoid using the `-` wildcard character, because it can cause response
+           * messages to contain misleading error codes. For example, if you try to access the
+           * service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+           * the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public Create setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9066,10 +9265,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9096,10 +9301,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -9168,28 +9379,46 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the service account key in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
-         `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
-         address or the `unique_id` of the service account.
+          /** Required. The resource name of the service account key. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you can use
+         the `-` wildcard character instead of the project ID: *
+         `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
+         character, because it can cause response messages to contain misleading error codes. For example,
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9215,10 +9444,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.DisableServiceAccountKeyRequest}
          * @return the request
          */
@@ -9247,10 +9482,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @param content the {@link com.google.api.services.iam.v1.model.DisableServiceAccountKeyRequest}
            * @since 1.13
            */
@@ -9320,28 +9561,46 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the service account key in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
-         `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
-         address or the `unique_id` of the service account.
+          /** Required. The resource name of the service account key. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you can use
+         the `-` wildcard character instead of the project ID: *
+         `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
+         character, because it can cause response messages to contain misleading error codes. For example,
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public Disable setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9366,10 +9625,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountKeyRequest}
          * @return the request
          */
@@ -9396,10 +9661,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountKeyRequest}
            * @since 1.13
            */
@@ -9469,28 +9740,46 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the service account key in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
-         `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
-         address or the `unique_id` of the service account.
+          /** Required. The resource name of the service account key. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you can use
+         the `-` wildcard character instead of the project ID: *
+         `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
+         character, because it can cause response messages to contain misleading error codes. For example,
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public Enable setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9515,10 +9804,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -9544,10 +9839,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the service account key in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
-         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name Required. The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you
+         *        can use the `-` wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         *        `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-`
+         *        wildcard character, because it can cause response messages to contain misleading error
+         *        codes. For example, if you try to access the service account key
+         *        `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+         *        response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -9626,28 +9927,46 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the service account key in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
-         `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
-         address or the `unique_id` of the service account.
+          /** Required. The resource name of the service account key. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative, you can use
+         the `-` wildcard character instead of the project ID: *
+         `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
+         character, because it can cause response messages to contain misleading error codes. For example,
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the service account key in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
-           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
-           * be the `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account key. Use one of the following
+           * formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` As an alternative,
+           * you can use the `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
+           * `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the
+           * `-` wildcard character, because it can cause response messages to contain misleading
+           * error codes. For example, if you try to access the service account key
+           * `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the
+           * response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9695,10 +10014,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the service account in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         *        `PROJECT_ID`, will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name Required. The resource name of the service account. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+         *        wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         *        When possible, avoid using the `-` wildcard character, because it can cause response
+         *        messages to contain misleading error codes. For example, if you try to access the service
+         *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -9724,10 +10048,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the service account in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         *        `PROJECT_ID`, will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name Required. The resource name of the service account. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+         *        wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         *        When possible, avoid using the `-` wildcard character, because it can cause response
+         *        messages to contain misleading error codes. For example, if you try to access the service
+         *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -9806,28 +10135,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the service account in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-           * `PROJECT_ID`, will infer the project from the account. The `ACCOUNT` value can be the
-           * `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account. Use one of the following formats: *
+           * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+           * `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+           * When possible, avoid using the `-` wildcard character, because it can cause response
+           * messages to contain misleading error codes. For example, if you try to access the
+           * service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+           * the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the service account in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`,
-         will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-         `unique_id` of the service account.
+          /** Required. The resource name of the service account. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+         character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+         because it can cause response messages to contain misleading error codes. For example, if you try
+         to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+         the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the service account in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-           * `PROJECT_ID`, will infer the project from the account. The `ACCOUNT` value can be the
-           * `email` address or the `unique_id` of the service account.
+           * Required. The resource name of the service account. Use one of the following formats: *
+           * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+           * `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+           * When possible, avoid using the `-` wildcard character, because it can cause response
+           * messages to contain misleading error codes. For example, if you try to access the
+           * service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+           * the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9877,10 +10220,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the service account in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+         * @param name The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+         *        wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         *        When possible, avoid using the `-` wildcard character, because it can cause response
+         *        messages to contain misleading error codes. For example, if you try to access the service
+         *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
          * @param content the {@link com.google.api.services.iam.v1.model.UploadServiceAccountKeyRequest}
          * @return the request
          */
@@ -9909,10 +10257,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the service account in the following format:
-         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-         *        `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-         *        `email` address or the `unique_id` of the service account.
+           * @param name The resource name of the service account key. Use one of the following formats: *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         *        `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+         *        wildcard character instead of the project ID: *
+         *        `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+         *        When possible, avoid using the `-` wildcard character, because it can cause response
+         *        messages to contain misleading error codes. For example, if you try to access the service
+         *        account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response
+         *        contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            * @param content the {@link com.google.api.services.iam.v1.model.UploadServiceAccountKeyRequest}
            * @since 1.13
            */
@@ -9982,28 +10335,42 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-           * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-           * `email` address or the `unique_id` of the service account.
+           * The resource name of the service account key. Use one of the following formats: *
+           * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+           * `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+           * When possible, avoid using the `-` wildcard character, because it can cause response
+           * messages to contain misleading error codes. For example, if you try to access the
+           * service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+           * the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the service account in the following format:
-         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
-         will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
-         `unique_id` of the service account.
+          /** The resource name of the service account key. Use one of the following formats: *
+         `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+         `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard
+         character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+         `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+         because it can cause response messages to contain misleading error codes. For example, if you try
+         to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+         the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the service account in the following format:
-           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
-           * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
-           * `email` address or the `unique_id` of the service account.
+           * The resource name of the service account key. Use one of the following formats: *
+           * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+           * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the
+           * `-` wildcard character instead of the project ID: *
+           * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+           * When possible, avoid using the `-` wildcard character, because it can cause response
+           * messages to contain misleading error codes. For example, if you try to access the
+           * service account `projects/-/serviceAccounts/fake@example.com`, which does not exist,
+           * the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
            */
           public Upload setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

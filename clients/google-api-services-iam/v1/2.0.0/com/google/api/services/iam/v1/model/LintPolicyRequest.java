@@ -39,10 +39,9 @@ public final class LintPolicyRequest extends com.google.api.client.json.GenericJ
 
   /**
    * The full resource name of the policy this lint request is about. The name follows the Google
-   * Cloud Platform (GCP) resource format. For example, a GCP project with ID `my-project` will be
+   * Cloud format for full resource names. For example, a Cloud project with ID `my-project` will be
    * named `//cloudresourcemanager.googleapis.com/projects/my-project`. The resource name is not
-   * used to read the policy instance from the Cloud IAM database. The candidate policy for lint has
-   * to be provided in the same request object.
+   * used to read a policy from IAM. Only the data in the request object is linted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +66,9 @@ public final class LintPolicyRequest extends com.google.api.client.json.GenericJ
 
   /**
    * The full resource name of the policy this lint request is about. The name follows the Google
-   * Cloud Platform (GCP) resource format. For example, a GCP project with ID `my-project` will be
+   * Cloud format for full resource names. For example, a Cloud project with ID `my-project` will be
    * named `//cloudresourcemanager.googleapis.com/projects/my-project`. The resource name is not
-   * used to read the policy instance from the Cloud IAM database. The candidate policy for lint has
-   * to be provided in the same request object.
+   * used to read a policy from IAM. Only the data in the request object is linted.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -79,10 +77,9 @@ public final class LintPolicyRequest extends com.google.api.client.json.GenericJ
 
   /**
    * The full resource name of the policy this lint request is about. The name follows the Google
-   * Cloud Platform (GCP) resource format. For example, a GCP project with ID `my-project` will be
+   * Cloud format for full resource names. For example, a Cloud project with ID `my-project` will be
    * named `//cloudresourcemanager.googleapis.com/projects/my-project`. The resource name is not
-   * used to read the policy instance from the Cloud IAM database. The candidate policy for lint has
-   * to be provided in the same request object.
+   * used to read a policy from IAM. Only the data in the request object is linted.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public LintPolicyRequest setFullResourceName(java.lang.String fullResourceName) {

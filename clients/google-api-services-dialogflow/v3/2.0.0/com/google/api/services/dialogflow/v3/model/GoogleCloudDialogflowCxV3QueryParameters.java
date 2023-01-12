@@ -38,6 +38,16 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   private java.lang.Boolean analyzeQueryTextSentiment;
 
   /**
+   * The channel which this query is for. If specified, only the ResponseMessage associated with the
+   * channel will be returned. If no ResponseMessage is associated with the channel, it falls back
+   * to the ResponseMessage with unspecified channel. If unspecified, the ResponseMessage with
+   * unspecified channel will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * The unique identifier of the page to override the current page in the session. Format:
    * `projects//locations//agents//flows//pages/`. If `current_page` is specified, the previous
    * state of the session will be ignored by Dialogflow, including the previous page and the
@@ -143,6 +153,29 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
    */
   public GoogleCloudDialogflowCxV3QueryParameters setAnalyzeQueryTextSentiment(java.lang.Boolean analyzeQueryTextSentiment) {
     this.analyzeQueryTextSentiment = analyzeQueryTextSentiment;
+    return this;
+  }
+
+  /**
+   * The channel which this query is for. If specified, only the ResponseMessage associated with the
+   * channel will be returned. If no ResponseMessage is associated with the channel, it falls back
+   * to the ResponseMessage with unspecified channel. If unspecified, the ResponseMessage with
+   * unspecified channel will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * The channel which this query is for. If specified, only the ResponseMessage associated with the
+   * channel will be returned. If no ResponseMessage is associated with the channel, it falls back
+   * to the ResponseMessage with unspecified channel. If unspecified, the ResponseMessage with
+   * unspecified channel will be returned.
+   * @param channel channel or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryParameters setChannel(java.lang.String channel) {
+    this.channel = channel;
     return this;
   }
 

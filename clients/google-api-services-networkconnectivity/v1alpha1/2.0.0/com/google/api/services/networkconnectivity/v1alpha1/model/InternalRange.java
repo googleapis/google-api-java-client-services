@@ -17,10 +17,9 @@
 package com.google.api.services.networkconnectivity.v1alpha1.model;
 
 /**
- * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private
- * address range along with behavioral characterstics of that range (it's usage and peering
+ * The internal range resource for IPAM operations within a VPC network. Used to represent a private
+ * address range along with behavioral characterstics of that range (its usage and peering
  * behavior). Networking resources can link to this range if they are created as belonging to it.
- * Next id: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -34,7 +33,7 @@ package com.google.api.services.networkconnectivity.v1alpha1.model;
 public final class InternalRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time when the InternalRange was created.
+   * Time when the internal range was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +47,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * IP range that this InternalRange defines.
+   * IP range that this internal range defines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +61,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. The name of a InternalRange. Format:
+   * Immutable. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
    * The value may be {@code null}.
@@ -71,9 +70,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The URL or resource ID of the network in which to reserve the Internal Range. The network
-   * cannot be deleted if there are any reserved Internal Ranges referring to it. Legacy network is
-   * not supported. This can only be specified for a global internal address. Example: - URL:
+   * The URL or resource ID of the network in which to reserve the internal range. The network
+   * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
+   * are not supported. This can only be specified for a global internal address. Example: - URL:
    * /compute/v1/projects/{project}/global/networks/{resourceId} - ID: network123
    * The value may be {@code null}.
    */
@@ -81,24 +80,24 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * Optional. Types of resources that are allowed to overlap with the current InternalRange.
+   * Optional. Types of resources that are allowed to overlap with the current internal range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> overlaps;
 
   /**
-   * The type of peering set for this InternalRange.
+   * The type of peering set for this internal range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peering;
 
   /**
-   * An alternate to ip_cidr_range. Can be set when trying to create a reservation that
+   * An alternative to ip_cidr_range. Can be set when trying to create a reservation that
    * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
-   * set, it's an error if the range sizes don't match. Can also be used during updates to change
-   * the range size.
+   * set, there is an error if the range sizes do not match. Can also be used during updates to
+   * change the range size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,14 +114,14 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> targetCidrRange;
 
   /**
-   * Time when the InternalRange was updated.
+   * Time when the internal range was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The type of usage set for this InternalRange.
+   * The type of usage set for this internal range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,17 +129,17 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The list of resources that refer to this internal range. Resources that use the
-   * InternalRange for their range allocation are referred to as users of the range. Other resources
-   * mark themselves as users while doing so by creating a reference to this InternalRange. Having a
-   * user, based on this reference, prevents deletion of the InternalRange referred to. Can be
-   * empty.
+   * internal range for their range allocation are referred to as users of the range. Other
+   * resources mark themselves as users while doing so by creating a reference to this internal
+   * range. Having a user, based on this reference, prevents deletion of the internal range that is
+   * referred to. Can be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> users;
 
   /**
-   * Time when the InternalRange was created.
+   * Time when the internal range was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -148,7 +147,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the InternalRange was created.
+   * Time when the internal range was created.
    * @param createTime createTime or {@code null} for none
    */
   public InternalRange setCreateTime(String createTime) {
@@ -174,7 +173,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP range that this InternalRange defines.
+   * IP range that this internal range defines.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -182,7 +181,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP range that this InternalRange defines.
+   * IP range that this internal range defines.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public InternalRange setIpCidrRange(java.lang.String ipCidrRange) {
@@ -208,7 +207,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. The name of a InternalRange. Format:
+   * Immutable. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
    * @return value or {@code null} for none
@@ -218,7 +217,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. The name of a InternalRange. Format:
+   * Immutable. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
    * @param name name or {@code null} for none
@@ -229,9 +228,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL or resource ID of the network in which to reserve the Internal Range. The network
-   * cannot be deleted if there are any reserved Internal Ranges referring to it. Legacy network is
-   * not supported. This can only be specified for a global internal address. Example: - URL:
+   * The URL or resource ID of the network in which to reserve the internal range. The network
+   * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
+   * are not supported. This can only be specified for a global internal address. Example: - URL:
    * /compute/v1/projects/{project}/global/networks/{resourceId} - ID: network123
    * @return value or {@code null} for none
    */
@@ -240,9 +239,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL or resource ID of the network in which to reserve the Internal Range. The network
-   * cannot be deleted if there are any reserved Internal Ranges referring to it. Legacy network is
-   * not supported. This can only be specified for a global internal address. Example: - URL:
+   * The URL or resource ID of the network in which to reserve the internal range. The network
+   * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
+   * are not supported. This can only be specified for a global internal address. Example: - URL:
    * /compute/v1/projects/{project}/global/networks/{resourceId} - ID: network123
    * @param network network or {@code null} for none
    */
@@ -252,7 +251,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Types of resources that are allowed to overlap with the current InternalRange.
+   * Optional. Types of resources that are allowed to overlap with the current internal range.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOverlaps() {
@@ -260,7 +259,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Types of resources that are allowed to overlap with the current InternalRange.
+   * Optional. Types of resources that are allowed to overlap with the current internal range.
    * @param overlaps overlaps or {@code null} for none
    */
   public InternalRange setOverlaps(java.util.List<java.lang.String> overlaps) {
@@ -269,7 +268,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of peering set for this InternalRange.
+   * The type of peering set for this internal range.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeering() {
@@ -277,7 +276,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of peering set for this InternalRange.
+   * The type of peering set for this internal range.
    * @param peering peering or {@code null} for none
    */
   public InternalRange setPeering(java.lang.String peering) {
@@ -286,10 +285,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An alternate to ip_cidr_range. Can be set when trying to create a reservation that
+   * An alternative to ip_cidr_range. Can be set when trying to create a reservation that
    * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
-   * set, it's an error if the range sizes don't match. Can also be used during updates to change
-   * the range size.
+   * set, there is an error if the range sizes do not match. Can also be used during updates to
+   * change the range size.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPrefixLength() {
@@ -297,10 +296,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An alternate to ip_cidr_range. Can be set when trying to create a reservation that
+   * An alternative to ip_cidr_range. Can be set when trying to create a reservation that
    * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
-   * set, it's an error if the range sizes don't match. Can also be used during updates to change
-   * the range size.
+   * set, there is an error if the range sizes do not match. Can also be used during updates to
+   * change the range size.
    * @param prefixLength prefixLength or {@code null} for none
    */
   public InternalRange setPrefixLength(java.lang.Integer prefixLength) {
@@ -332,7 +331,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the InternalRange was updated.
+   * Time when the internal range was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -340,7 +339,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the InternalRange was updated.
+   * Time when the internal range was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public InternalRange setUpdateTime(String updateTime) {
@@ -349,7 +348,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of usage set for this InternalRange.
+   * The type of usage set for this internal range.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsage() {
@@ -357,7 +356,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of usage set for this InternalRange.
+   * The type of usage set for this internal range.
    * @param usage usage or {@code null} for none
    */
   public InternalRange setUsage(java.lang.String usage) {
@@ -367,10 +366,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The list of resources that refer to this internal range. Resources that use the
-   * InternalRange for their range allocation are referred to as users of the range. Other resources
-   * mark themselves as users while doing so by creating a reference to this InternalRange. Having a
-   * user, based on this reference, prevents deletion of the InternalRange referred to. Can be
-   * empty.
+   * internal range for their range allocation are referred to as users of the range. Other
+   * resources mark themselves as users while doing so by creating a reference to this internal
+   * range. Having a user, based on this reference, prevents deletion of the internal range that is
+   * referred to. Can be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsers() {
@@ -379,10 +378,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The list of resources that refer to this internal range. Resources that use the
-   * InternalRange for their range allocation are referred to as users of the range. Other resources
-   * mark themselves as users while doing so by creating a reference to this InternalRange. Having a
-   * user, based on this reference, prevents deletion of the InternalRange referred to. Can be
-   * empty.
+   * internal range for their range allocation are referred to as users of the range. Other
+   * resources mark themselves as users while doing so by creating a reference to this internal
+   * range. Having a user, based on this reference, prevents deletion of the internal range that is
+   * referred to. Can be empty.
    * @param users users or {@code null} for none
    */
   public InternalRange setUsers(java.util.List<java.lang.String> users) {

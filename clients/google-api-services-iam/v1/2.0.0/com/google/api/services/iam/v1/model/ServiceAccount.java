@@ -79,7 +79,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    * wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
    * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
    * because it can cause response messages to contain misleading error codes. For example, if you
-   * try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not
+   * try to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not
    * exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * The value may be {@code null}.
    */
@@ -234,7 +234,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    * wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
    * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
    * because it can cause response messages to contain misleading error codes. For example, if you
-   * try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not
+   * try to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not
    * exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * @return value or {@code null} for none
    */
@@ -249,7 +249,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    * wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
    * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
    * because it can cause response messages to contain misleading error codes. For example, if you
-   * try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not
+   * try to access the service account `projects/-/serviceAccounts/fake@example.com`, which does not
    * exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * @param name name or {@code null} for none
    */

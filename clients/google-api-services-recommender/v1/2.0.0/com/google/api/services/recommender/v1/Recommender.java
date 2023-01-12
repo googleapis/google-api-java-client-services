@@ -2048,6 +2048,143 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+           * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+           * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+           * recommender.*.update IAM permission for the specified recommender.
+           *
+           * Create a request for the method "recommendations.markDismissed".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
+           *
+           * @param name Name of the recommendation.
+           * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+           * @return the request
+           */
+          public MarkDismissed markDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) throws java.io.IOException {
+            MarkDismissed result = new MarkDismissed(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class MarkDismissed extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation> {
+
+            private static final String REST_PATH = "v1/{+name}:markDismissed";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+
+            /**
+             * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+             * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+             * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+             * recommender.*.update IAM permission for the specified recommender.
+             *
+             * Create a request for the method "recommendations.markDismissed".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link MarkDismissed#execute()} method to invoke the remote
+             * operation. <p> {@link MarkDismissed#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Name of the recommendation.
+             * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+             * @since 1.13
+             */
+            protected MarkDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) {
+              super(Recommender.this, "POST", REST_PATH, content, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+            }
+
+            @Override
+            public MarkDismissed set$Xgafv(java.lang.String $Xgafv) {
+              return (MarkDismissed) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MarkDismissed setAccessToken(java.lang.String accessToken) {
+              return (MarkDismissed) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public MarkDismissed setAlt(java.lang.String alt) {
+              return (MarkDismissed) super.setAlt(alt);
+            }
+
+            @Override
+            public MarkDismissed setCallback(java.lang.String callback) {
+              return (MarkDismissed) super.setCallback(callback);
+            }
+
+            @Override
+            public MarkDismissed setFields(java.lang.String fields) {
+              return (MarkDismissed) super.setFields(fields);
+            }
+
+            @Override
+            public MarkDismissed setKey(java.lang.String key) {
+              return (MarkDismissed) super.setKey(key);
+            }
+
+            @Override
+            public MarkDismissed setOauthToken(java.lang.String oauthToken) {
+              return (MarkDismissed) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public MarkDismissed setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (MarkDismissed) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public MarkDismissed setQuotaUser(java.lang.String quotaUser) {
+              return (MarkDismissed) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public MarkDismissed setUploadType(java.lang.String uploadType) {
+              return (MarkDismissed) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MarkDismissed setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the recommendation. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Name of the recommendation.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Name of the recommendation. */
+            public MarkDismissed setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public MarkDismissed set(String parameterName, Object value) {
+              return (MarkDismissed) super.set(parameterName, value);
+            }
+          }
+          /**
            * Marks the Recommendation State as Failed. Users can use this method to indicate to the
            * Recommender API that they have applied the recommendation themselves, and the operation failed.
            * This stops the recommendation content from being updated. Associated insights are frozen and
@@ -3555,6 +3692,143 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @Override
             public MarkClaimed set(String parameterName, Object value) {
               return (MarkClaimed) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+           * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+           * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+           * recommender.*.update IAM permission for the specified recommender.
+           *
+           * Create a request for the method "recommendations.markDismissed".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
+           *
+           * @param name Name of the recommendation.
+           * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+           * @return the request
+           */
+          public MarkDismissed markDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) throws java.io.IOException {
+            MarkDismissed result = new MarkDismissed(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class MarkDismissed extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation> {
+
+            private static final String REST_PATH = "v1/{+name}:markDismissed";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+
+            /**
+             * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+             * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+             * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+             * recommender.*.update IAM permission for the specified recommender.
+             *
+             * Create a request for the method "recommendations.markDismissed".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link MarkDismissed#execute()} method to invoke the remote
+             * operation. <p> {@link MarkDismissed#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Name of the recommendation.
+             * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+             * @since 1.13
+             */
+            protected MarkDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) {
+              super(Recommender.this, "POST", REST_PATH, content, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+            }
+
+            @Override
+            public MarkDismissed set$Xgafv(java.lang.String $Xgafv) {
+              return (MarkDismissed) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MarkDismissed setAccessToken(java.lang.String accessToken) {
+              return (MarkDismissed) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public MarkDismissed setAlt(java.lang.String alt) {
+              return (MarkDismissed) super.setAlt(alt);
+            }
+
+            @Override
+            public MarkDismissed setCallback(java.lang.String callback) {
+              return (MarkDismissed) super.setCallback(callback);
+            }
+
+            @Override
+            public MarkDismissed setFields(java.lang.String fields) {
+              return (MarkDismissed) super.setFields(fields);
+            }
+
+            @Override
+            public MarkDismissed setKey(java.lang.String key) {
+              return (MarkDismissed) super.setKey(key);
+            }
+
+            @Override
+            public MarkDismissed setOauthToken(java.lang.String oauthToken) {
+              return (MarkDismissed) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public MarkDismissed setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (MarkDismissed) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public MarkDismissed setQuotaUser(java.lang.String quotaUser) {
+              return (MarkDismissed) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public MarkDismissed setUploadType(java.lang.String uploadType) {
+              return (MarkDismissed) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MarkDismissed setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the recommendation. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Name of the recommendation.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Name of the recommendation. */
+            public MarkDismissed setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public MarkDismissed set(String parameterName, Object value) {
+              return (MarkDismissed) super.set(parameterName, value);
             }
           }
           /**
@@ -5760,6 +6034,143 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+           * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+           * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+           * recommender.*.update IAM permission for the specified recommender.
+           *
+           * Create a request for the method "recommendations.markDismissed".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
+           *
+           * @param name Name of the recommendation.
+           * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+           * @return the request
+           */
+          public MarkDismissed markDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) throws java.io.IOException {
+            MarkDismissed result = new MarkDismissed(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class MarkDismissed extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation> {
+
+            private static final String REST_PATH = "v1/{+name}:markDismissed";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+
+            /**
+             * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+             * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+             * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+             * recommender.*.update IAM permission for the specified recommender.
+             *
+             * Create a request for the method "recommendations.markDismissed".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link MarkDismissed#execute()} method to invoke the remote
+             * operation. <p> {@link MarkDismissed#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Name of the recommendation.
+             * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+             * @since 1.13
+             */
+            protected MarkDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) {
+              super(Recommender.this, "POST", REST_PATH, content, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+            }
+
+            @Override
+            public MarkDismissed set$Xgafv(java.lang.String $Xgafv) {
+              return (MarkDismissed) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MarkDismissed setAccessToken(java.lang.String accessToken) {
+              return (MarkDismissed) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public MarkDismissed setAlt(java.lang.String alt) {
+              return (MarkDismissed) super.setAlt(alt);
+            }
+
+            @Override
+            public MarkDismissed setCallback(java.lang.String callback) {
+              return (MarkDismissed) super.setCallback(callback);
+            }
+
+            @Override
+            public MarkDismissed setFields(java.lang.String fields) {
+              return (MarkDismissed) super.setFields(fields);
+            }
+
+            @Override
+            public MarkDismissed setKey(java.lang.String key) {
+              return (MarkDismissed) super.setKey(key);
+            }
+
+            @Override
+            public MarkDismissed setOauthToken(java.lang.String oauthToken) {
+              return (MarkDismissed) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public MarkDismissed setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (MarkDismissed) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public MarkDismissed setQuotaUser(java.lang.String quotaUser) {
+              return (MarkDismissed) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public MarkDismissed setUploadType(java.lang.String uploadType) {
+              return (MarkDismissed) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MarkDismissed setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the recommendation. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Name of the recommendation.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Name of the recommendation. */
+            public MarkDismissed setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public MarkDismissed set(String parameterName, Object value) {
+              return (MarkDismissed) super.set(parameterName, value);
+            }
+          }
+          /**
            * Marks the Recommendation State as Failed. Users can use this method to indicate to the
            * Recommender API that they have applied the recommendation themselves, and the operation failed.
            * This stops the recommendation content from being updated. Associated insights are frozen and
@@ -7959,6 +8370,143 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @Override
             public MarkClaimed set(String parameterName, Object value) {
               return (MarkClaimed) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+           * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+           * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+           * recommender.*.update IAM permission for the specified recommender.
+           *
+           * Create a request for the method "recommendations.markDismissed".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
+           *
+           * @param name Name of the recommendation.
+           * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+           * @return the request
+           */
+          public MarkDismissed markDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) throws java.io.IOException {
+            MarkDismissed result = new MarkDismissed(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class MarkDismissed extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation> {
+
+            private static final String REST_PATH = "v1/{+name}:markDismissed";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+
+            /**
+             * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the
+             * Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED.
+             * MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the
+             * recommender.*.update IAM permission for the specified recommender.
+             *
+             * Create a request for the method "recommendations.markDismissed".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link MarkDismissed#execute()} method to invoke the remote
+             * operation. <p> {@link MarkDismissed#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Name of the recommendation.
+             * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
+             * @since 1.13
+             */
+            protected MarkDismissed(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest content) {
+              super(Recommender.this, "POST", REST_PATH, content, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Recommendation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+            }
+
+            @Override
+            public MarkDismissed set$Xgafv(java.lang.String $Xgafv) {
+              return (MarkDismissed) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MarkDismissed setAccessToken(java.lang.String accessToken) {
+              return (MarkDismissed) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public MarkDismissed setAlt(java.lang.String alt) {
+              return (MarkDismissed) super.setAlt(alt);
+            }
+
+            @Override
+            public MarkDismissed setCallback(java.lang.String callback) {
+              return (MarkDismissed) super.setCallback(callback);
+            }
+
+            @Override
+            public MarkDismissed setFields(java.lang.String fields) {
+              return (MarkDismissed) super.setFields(fields);
+            }
+
+            @Override
+            public MarkDismissed setKey(java.lang.String key) {
+              return (MarkDismissed) super.setKey(key);
+            }
+
+            @Override
+            public MarkDismissed setOauthToken(java.lang.String oauthToken) {
+              return (MarkDismissed) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public MarkDismissed setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (MarkDismissed) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public MarkDismissed setQuotaUser(java.lang.String quotaUser) {
+              return (MarkDismissed) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public MarkDismissed setUploadType(java.lang.String uploadType) {
+              return (MarkDismissed) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MarkDismissed setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the recommendation. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Name of the recommendation.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Name of the recommendation. */
+            public MarkDismissed setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/recommenders/[^/]+/recommendations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public MarkDismissed set(String parameterName, Object value) {
+              return (MarkDismissed) super.set(parameterName, value);
             }
           }
           /**

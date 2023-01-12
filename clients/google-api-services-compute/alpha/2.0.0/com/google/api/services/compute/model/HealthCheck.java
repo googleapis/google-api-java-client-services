@@ -147,6 +147,20 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
+   * The list of cloud regions from which health checks are performed. If any regions are specified,
+   * then exactly 3 regions should be specified. The region names must be valid names of GCP
+   * regions. This can only be set for global health check. If this list is non-empty, then there
+   * are restrictions on what other health check fields are supported and what other resources can
+   * use this health check: - SSL, HTTP2, and GRPC protocols are not supported. - The TCP request
+   * field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not supported. -
+   * The checkIntervalSec field must be at least 30. - The health check cannot be used with
+   * BackendService nor with managed instance group auto-healing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sourceRegions;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -444,6 +458,37 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * The list of cloud regions from which health checks are performed. If any regions are specified,
+   * then exactly 3 regions should be specified. The region names must be valid names of GCP
+   * regions. This can only be set for global health check. If this list is non-empty, then there
+   * are restrictions on what other health check fields are supported and what other resources can
+   * use this health check: - SSL, HTTP2, and GRPC protocols are not supported. - The TCP request
+   * field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not supported. -
+   * The checkIntervalSec field must be at least 30. - The health check cannot be used with
+   * BackendService nor with managed instance group auto-healing.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSourceRegions() {
+    return sourceRegions;
+  }
+
+  /**
+   * The list of cloud regions from which health checks are performed. If any regions are specified,
+   * then exactly 3 regions should be specified. The region names must be valid names of GCP
+   * regions. This can only be set for global health check. If this list is non-empty, then there
+   * are restrictions on what other health check fields are supported and what other resources can
+   * use this health check: - SSL, HTTP2, and GRPC protocols are not supported. - The TCP request
+   * field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not supported. -
+   * The checkIntervalSec field must be at least 30. - The health check cannot be used with
+   * BackendService nor with managed instance group auto-healing.
+   * @param sourceRegions sourceRegions or {@code null} for none
+   */
+  public HealthCheck setSourceRegions(java.util.List<java.lang.String> sourceRegions) {
+    this.sourceRegions = sourceRegions;
     return this;
   }
 

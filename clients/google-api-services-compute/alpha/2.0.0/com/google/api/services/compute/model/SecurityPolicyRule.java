@@ -162,7 +162,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String redirectTarget;
 
   /**
-   * [Output Only] The minimum managed protection tier required for this rule.
+   * [Output Only] The minimum managed protection tier required for this rule. [Deprecated] Use
+   * requiredManagedProtectionTiers instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -504,7 +505,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] The minimum managed protection tier required for this rule.
+   * [Output Only] The minimum managed protection tier required for this rule. [Deprecated] Use
+   * requiredManagedProtectionTiers instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleManagedProtectionTier() {
@@ -512,7 +514,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] The minimum managed protection tier required for this rule.
+   * [Output Only] The minimum managed protection tier required for this rule. [Deprecated] Use
+   * requiredManagedProtectionTiers instead.
    * @param ruleManagedProtectionTier ruleManagedProtectionTier or {@code null} for none
    */
   public SecurityPolicyRule setRuleManagedProtectionTier(java.lang.String ruleManagedProtectionTier) {

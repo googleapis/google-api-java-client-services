@@ -31,7 +31,7 @@ package com.google.api.services.networkconnectivity.v1alpha1.model;
 public final class ListInternalRangesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * InternalRanges to be returned.
+   * Internal range to be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class ListInternalRangesResponse extends com.google.api.client.json
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * InternalRanges to be returned.
+   * Internal range to be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<InternalRange> getInternalRanges() {
@@ -67,7 +67,7 @@ public final class ListInternalRangesResponse extends com.google.api.client.json
   }
 
   /**
-   * InternalRanges to be returned.
+   * Internal range to be returned.
    * @param internalRanges internalRanges or {@code null} for none
    */
   public ListInternalRangesResponse setInternalRanges(java.util.List<InternalRange> internalRanges) {

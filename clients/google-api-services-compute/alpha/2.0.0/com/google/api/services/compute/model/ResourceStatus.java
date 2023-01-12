@@ -44,6 +44,14 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private ResourceStatusScheduling scheduling;
 
   /**
+   * [Output Only] Represents the status of the service integration specs defined by the user in
+   * instance.serviceIntegrationSpecs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,6 +86,25 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setScheduling(ResourceStatusScheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * [Output Only] Represents the status of the service integration specs defined by the user in
+   * instance.serviceIntegrationSpecs.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ResourceStatusServiceIntegrationStatus> getServiceIntegrationStatuses() {
+    return serviceIntegrationStatuses;
+  }
+
+  /**
+   * [Output Only] Represents the status of the service integration specs defined by the user in
+   * instance.serviceIntegrationSpecs.
+   * @param serviceIntegrationStatuses serviceIntegrationStatuses or {@code null} for none
+   */
+  public ResourceStatus setServiceIntegrationStatuses(java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses) {
+    this.serviceIntegrationStatuses = serviceIntegrationStatuses;
     return this;
   }
 

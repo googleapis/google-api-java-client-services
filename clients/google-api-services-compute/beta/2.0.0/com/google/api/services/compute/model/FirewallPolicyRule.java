@@ -31,8 +31,8 @@ package com.google.api.services.compute.model;
 public final class FirewallPolicyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Action to perform when the client connection triggers the rule. Can currently be either
-   * "allow" or "deny()" where valid values for status are 403, 404, and 502.
+   * The Action to perform when the client connection triggers the rule. Valid actions are "allow",
+   * "deny" and "goto_next".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +138,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetServiceAccounts;
 
   /**
-   * The Action to perform when the client connection triggers the rule. Can currently be either
-   * "allow" or "deny()" where valid values for status are 403, 404, and 502.
+   * The Action to perform when the client connection triggers the rule. Valid actions are "allow",
+   * "deny" and "goto_next".
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -147,8 +147,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Action to perform when the client connection triggers the rule. Can currently be either
-   * "allow" or "deny()" where valid values for status are 403, 404, and 502.
+   * The Action to perform when the client connection triggers the rule. Valid actions are "allow",
+   * "deny" and "goto_next".
    * @param action action or {@code null} for none
    */
   public FirewallPolicyRule setAction(java.lang.String action) {

@@ -58,6 +58,19 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   private AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties;
 
   /**
+   * Specifies the instance template to create the reservation. If you use this field, you must
+   * exclude the instanceProperties field. This field is optional, and it can be a full or partial
+   * URL. For example, the following are all valid URLs to an instance template: -
+   * https://www.googleapis.com/compute/v1/projects/project
+   * /global/instanceTemplates/instanceTemplate -
+   * projects/project/global/instanceTemplates/instanceTemplate -
+   * global/instanceTemplates/instanceTemplate
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstanceTemplate;
+
+  /**
    * [Output Only] Indicates how many instances are actually usable currently.
    * @return value or {@code null} for none
    */
@@ -122,6 +135,35 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
    */
   public AllocationSpecificSKUReservation setInstanceProperties(AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties) {
     this.instanceProperties = instanceProperties;
+    return this;
+  }
+
+  /**
+   * Specifies the instance template to create the reservation. If you use this field, you must
+   * exclude the instanceProperties field. This field is optional, and it can be a full or partial
+   * URL. For example, the following are all valid URLs to an instance template: -
+   * https://www.googleapis.com/compute/v1/projects/project
+   * /global/instanceTemplates/instanceTemplate -
+   * projects/project/global/instanceTemplates/instanceTemplate -
+   * global/instanceTemplates/instanceTemplate
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstanceTemplate() {
+    return sourceInstanceTemplate;
+  }
+
+  /**
+   * Specifies the instance template to create the reservation. If you use this field, you must
+   * exclude the instanceProperties field. This field is optional, and it can be a full or partial
+   * URL. For example, the following are all valid URLs to an instance template: -
+   * https://www.googleapis.com/compute/v1/projects/project
+   * /global/instanceTemplates/instanceTemplate -
+   * projects/project/global/instanceTemplates/instanceTemplate -
+   * global/instanceTemplates/instanceTemplate
+   * @param sourceInstanceTemplate sourceInstanceTemplate or {@code null} for none
+   */
+  public AllocationSpecificSKUReservation setSourceInstanceTemplate(java.lang.String sourceInstanceTemplate) {
+    this.sourceInstanceTemplate = sourceInstanceTemplate;
     return this;
   }
 

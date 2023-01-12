@@ -38,10 +38,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Custom device attributes stored in Home Graph and provided to your smart home Action in each
-   * [QUERY](https://developers.google.com/assistant/smarthome/reference/intent/query) and
-   * [EXECUTE](https://developers.google.com/assistant/smarthome/reference/intent/execute) intent.
-   * Data in this object has a few constraints: No sensitive information, including but not limited
-   * to Personally Identifiable Information.
+   * [QUERY](https://developers.home.google.com/cloud-to-cloud/intents/query) and
+   * [EXECUTE](https://developers.home.google.com/cloud-to-cloud/intents/execute) intent. Data in
+   * this object has a few constraints: No sensitive information, including but not limited to
+   * Personally Identifiable Information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Alternate IDs associated with this device. This is used to identify cloud synced devices
-   * enabled for [local
-   * fulfillment](https://developers.google.com/assistant/smarthome/concepts/local).
+   * enabled for [local fulfillment](https://developers.home.google.com/local-home/overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,16 +108,16 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String structureHint;
 
   /**
-   * Traits supported by the device. See [device
-   * traits](https://developers.google.com/assistant/smarthome/traits).
+   * Traits supported by the device. See [device traits](https://developers.home.google.com/cloud-
+   * to-cloud/traits).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> traits;
 
   /**
-   * Hardware type of the device. See [device
-   * types](https://developers.google.com/assistant/smarthome/guides).
+   * Hardware type of the device. See [device types](https://developers.home.google.com/cloud-to-
+   * cloud/guides).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,10 +150,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Custom device attributes stored in Home Graph and provided to your smart home Action in each
-   * [QUERY](https://developers.google.com/assistant/smarthome/reference/intent/query) and
-   * [EXECUTE](https://developers.google.com/assistant/smarthome/reference/intent/execute) intent.
-   * Data in this object has a few constraints: No sensitive information, including but not limited
-   * to Personally Identifiable Information.
+   * [QUERY](https://developers.home.google.com/cloud-to-cloud/intents/query) and
+   * [EXECUTE](https://developers.home.google.com/cloud-to-cloud/intents/execute) intent. Data in
+   * this object has a few constraints: No sensitive information, including but not limited to
+   * Personally Identifiable Information.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomData() {
@@ -163,10 +162,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Custom device attributes stored in Home Graph and provided to your smart home Action in each
-   * [QUERY](https://developers.google.com/assistant/smarthome/reference/intent/query) and
-   * [EXECUTE](https://developers.google.com/assistant/smarthome/reference/intent/execute) intent.
-   * Data in this object has a few constraints: No sensitive information, including but not limited
-   * to Personally Identifiable Information.
+   * [QUERY](https://developers.home.google.com/cloud-to-cloud/intents/query) and
+   * [EXECUTE](https://developers.home.google.com/cloud-to-cloud/intents/execute) intent. Data in
+   * this object has a few constraints: No sensitive information, including but not limited to
+   * Personally Identifiable Information.
    * @param customData customData or {@code null} for none
    */
   public Device setCustomData(java.util.Map<String, java.lang.Object> customData) {
@@ -248,8 +247,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Alternate IDs associated with this device. This is used to identify cloud synced devices
-   * enabled for [local
-   * fulfillment](https://developers.google.com/assistant/smarthome/concepts/local).
+   * enabled for [local fulfillment](https://developers.home.google.com/local-home/overview).
    * @return value or {@code null} for none
    */
   public java.util.List<AgentOtherDeviceId> getOtherDeviceIds() {
@@ -258,8 +256,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Alternate IDs associated with this device. This is used to identify cloud synced devices
-   * enabled for [local
-   * fulfillment](https://developers.google.com/assistant/smarthome/concepts/local).
+   * enabled for [local fulfillment](https://developers.home.google.com/local-home/overview).
    * @param otherDeviceIds otherDeviceIds or {@code null} for none
    */
   public Device setOtherDeviceIds(java.util.List<AgentOtherDeviceId> otherDeviceIds) {
@@ -306,8 +303,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Traits supported by the device. See [device
-   * traits](https://developers.google.com/assistant/smarthome/traits).
+   * Traits supported by the device. See [device traits](https://developers.home.google.com/cloud-
+   * to-cloud/traits).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTraits() {
@@ -315,8 +312,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Traits supported by the device. See [device
-   * traits](https://developers.google.com/assistant/smarthome/traits).
+   * Traits supported by the device. See [device traits](https://developers.home.google.com/cloud-
+   * to-cloud/traits).
    * @param traits traits or {@code null} for none
    */
   public Device setTraits(java.util.List<java.lang.String> traits) {
@@ -325,8 +322,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hardware type of the device. See [device
-   * types](https://developers.google.com/assistant/smarthome/guides).
+   * Hardware type of the device. See [device types](https://developers.home.google.com/cloud-to-
+   * cloud/guides).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -334,8 +331,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hardware type of the device. See [device
-   * types](https://developers.google.com/assistant/smarthome/guides).
+   * Hardware type of the device. See [device types](https://developers.home.google.com/cloud-to-
+   * cloud/guides).
    * @param type type or {@code null} for none
    */
   public Device setType(java.lang.String type) {

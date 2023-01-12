@@ -17,7 +17,7 @@
 package com.google.api.services.managedidentities.v1.model;
 
 /**
- * Defines policies to service maintenance events.
+ * LINT.IfChange Defines policies to service maintenance events.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Managed Service for Microsoft Active Directory API.

@@ -31,7 +31,7 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
 
   /**
    * Notifications metadata for devices. See the **Device NOTIFICATIONS** section of the individual
-   * trait [reference guides](https://developers.google.com/assistant/smarthome/traits).
+   * trait [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
 
   /**
    * States of devices to update. See the **Device STATES** section of the individual trait
-   * [reference guides](https://developers.google.com/assistant/smarthome/traits).
+   * [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
 
   /**
    * Notifications metadata for devices. See the **Device NOTIFICATIONS** section of the individual
-   * trait [reference guides](https://developers.google.com/assistant/smarthome/traits).
+   * trait [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getNotifications() {
@@ -56,7 +56,7 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
 
   /**
    * Notifications metadata for devices. See the **Device NOTIFICATIONS** section of the individual
-   * trait [reference guides](https://developers.google.com/assistant/smarthome/traits).
+   * trait [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * @param notifications notifications or {@code null} for none
    */
   public ReportStateAndNotificationDevice setNotifications(java.util.Map<String, java.lang.Object> notifications) {
@@ -66,7 +66,7 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
 
   /**
    * States of devices to update. See the **Device STATES** section of the individual trait
-   * [reference guides](https://developers.google.com/assistant/smarthome/traits).
+   * [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getStates() {
@@ -75,7 +75,7 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
 
   /**
    * States of devices to update. See the **Device STATES** section of the individual trait
-   * [reference guides](https://developers.google.com/assistant/smarthome/traits).
+   * [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * @param states states or {@code null} for none
    */
   public ReportStateAndNotificationDevice setStates(java.util.Map<String, java.lang.Object> states) {

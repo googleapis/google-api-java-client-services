@@ -2525,14 +2525,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
       public class InternalRanges {
 
         /**
-         * Creates a new InternalRange in a given project and location.
+         * Creates a new internal range in a given project and location.
          *
          * Create a request for the method "internalRanges.create".
          *
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource's name of the InternalRange.
+         * @param parent Required. The parent resource's name of the internal range.
          * @param content the {@link com.google.api.services.networkconnectivity.v1.model.InternalRange}
          * @return the request
          */
@@ -2550,7 +2550,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new InternalRange in a given project and location.
+           * Creates a new internal range in a given project and location.
            *
            * Create a request for the method "internalRanges.create".
            *
@@ -2560,7 +2560,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource's name of the InternalRange.
+           * @param parent Required. The parent resource's name of the internal range.
            * @param content the {@link com.google.api.services.networkconnectivity.v1.model.InternalRange}
            * @since 1.13
            */
@@ -2629,17 +2629,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource's name of the InternalRange. */
+          /** Required. The parent resource's name of the internal range. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource's name of the InternalRange.
+          /** Required. The parent resource's name of the internal range.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource's name of the InternalRange. */
+          /** Required. The parent resource's name of the internal range. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2722,14 +2722,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Deletes a single InternalRange.
+         * Deletes a single internal range.
          *
          * Create a request for the method "internalRanges.delete".
          *
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the InternalRange to delete.
+         * @param name Required. The name of the internal range to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2746,7 +2746,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/internalRanges/[^/]+$");
 
           /**
-           * Deletes a single InternalRange.
+           * Deletes a single internal range.
            *
            * Create a request for the method "internalRanges.delete".
            *
@@ -2756,7 +2756,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the InternalRange to delete.
+           * @param name Required. The name of the internal range to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2824,17 +2824,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the InternalRange to delete. */
+          /** Required. The name of the internal range to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the InternalRange to delete.
+          /** Required. The name of the internal range to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the InternalRange to delete. */
+          /** Required. The name of the internal range to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2894,7 +2894,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets details of a single InternalRange.
+         * Gets details of a single internal range.
          *
          * Create a request for the method "internalRanges.get".
          *
@@ -2918,7 +2918,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/internalRanges/[^/]+$");
 
           /**
-           * Gets details of a single InternalRange.
+           * Gets details of a single internal range.
            *
            * Create a request for the method "internalRanges.get".
            *
@@ -3033,7 +3033,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Lists InternalRanges in a given project and location.
+         * Lists internal ranges in a given project and location.
          *
          * Create a request for the method "internalRanges.list".
          *
@@ -3057,7 +3057,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists InternalRanges in a given project and location.
+           * Lists internal ranges in a given project and location.
            *
            * Create a request for the method "internalRanges.list".
            *
@@ -3236,14 +3236,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Updates the parameters of a single InternalRange.
+         * Updates the parameters of a single internal range.
          *
          * Create a request for the method "internalRanges.patch".
          *
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The name of a InternalRange. Format:
+         * @param name Immutable. The name of an internal range. Format:
          *        projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          *        https://google.aip.dev/122#fields-representing-resource-names
          * @param content the {@link com.google.api.services.networkconnectivity.v1.model.InternalRange}
@@ -3263,7 +3263,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/internalRanges/[^/]+$");
 
           /**
-           * Updates the parameters of a single InternalRange.
+           * Updates the parameters of a single internal range.
            *
            * Create a request for the method "internalRanges.patch".
            *
@@ -3273,7 +3273,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The name of a InternalRange. Format:
+           * @param name Immutable. The name of an internal range. Format:
          *        projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          *        https://google.aip.dev/122#fields-representing-resource-names
            * @param content the {@link com.google.api.services.networkconnectivity.v1.model.InternalRange}
@@ -3345,14 +3345,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Immutable. The name of a InternalRange. Format:
+           * Immutable. The name of an internal range. Format:
            * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
            * https://google.aip.dev/122#fields-representing-resource-names
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The name of a InternalRange. Format:
+          /** Immutable. The name of an internal range. Format:
          projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          https://google.aip.dev/122#fields-representing-resource-names
            */
@@ -3361,7 +3361,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Immutable. The name of a InternalRange. Format:
+           * Immutable. The name of an internal range. Format:
            * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
            * https://google.aip.dev/122#fields-representing-resource-names
            */

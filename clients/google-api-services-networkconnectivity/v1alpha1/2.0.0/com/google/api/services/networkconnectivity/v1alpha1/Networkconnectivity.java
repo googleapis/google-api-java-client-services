@@ -1986,7 +1986,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
       public class InternalRanges {
 
         /**
-         * Creates a new InternalRange in a given project and location.
+         * Creates a new internal range in a given project and location.
          *
          * Create a request for the method "internalRanges.create".
          *
@@ -2011,7 +2011,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new InternalRange in a given project and location.
+           * Creates a new internal range in a given project and location.
            *
            * Create a request for the method "internalRanges.create".
            *
@@ -2140,10 +2140,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
@@ -2152,10 +2152,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
          example, consider a situation where you make an initial request and t he request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         make the request again with the same request ID, the server can check if the original operation
+         with the same request ID was received, and if so, will ignore the second request. This prevents
+         clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with
+         the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -2167,10 +2167,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2183,7 +2183,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Deletes a single InternalRange.
+         * Deletes a single internal range.
          *
          * Create a request for the method "internalRanges.delete".
          *
@@ -2207,7 +2207,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/internalRanges/[^/]+$");
 
           /**
-           * Deletes a single InternalRange.
+           * Deletes a single internal range.
            *
            * Create a request for the method "internalRanges.delete".
            *
@@ -2312,10 +2312,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * has already been completed. The server will guarantee that for at least 60 minutes
            * after the first request. For example, consider a situation where you make an initial
            * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
@@ -2324,10 +2324,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes after the first request. For
          example, consider a situation where you make an initial request and t he request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         make the request again with the same request ID, the server can check if the original operation
+         with the same request ID was received, and if so, will ignore the second request. This prevents
+         clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with
+         the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -2339,10 +2339,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * has already been completed. The server will guarantee that for at least 60 minutes
            * after the first request. For example, consider a situation where you make an initial
            * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2355,7 +2355,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets details of a single InternalRange.
+         * Gets details of a single internal range.
          *
          * Create a request for the method "internalRanges.get".
          *
@@ -2379,7 +2379,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/internalRanges/[^/]+$");
 
           /**
-           * Gets details of a single InternalRange.
+           * Gets details of a single internal range.
            *
            * Create a request for the method "internalRanges.get".
            *
@@ -2693,7 +2693,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Lists InternalRanges in a given project and location.
+         * Lists internal ranges in a given project and location.
          *
          * Create a request for the method "internalRanges.list".
          *
@@ -2717,7 +2717,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists InternalRanges in a given project and location.
+           * Lists internal ranges in a given project and location.
            *
            * Create a request for the method "internalRanges.list".
            *
@@ -2896,14 +2896,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Updates the parameters of a single InternalRange.
+         * Updates the parameters of a single internal range.
          *
          * Create a request for the method "internalRanges.patch".
          *
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The name of a InternalRange. Format:
+         * @param name Immutable. The name of an internal range. Format:
          *        projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          *        https://google.aip.dev/122#fields-representing-resource-names
          * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.InternalRange}
@@ -2923,7 +2923,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/internalRanges/[^/]+$");
 
           /**
-           * Updates the parameters of a single InternalRange.
+           * Updates the parameters of a single internal range.
            *
            * Create a request for the method "internalRanges.patch".
            *
@@ -2933,7 +2933,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The name of a InternalRange. Format:
+           * @param name Immutable. The name of an internal range. Format:
          *        projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          *        https://google.aip.dev/122#fields-representing-resource-names
            * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.InternalRange}
@@ -3005,14 +3005,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Immutable. The name of a InternalRange. Format:
+           * Immutable. The name of an internal range. Format:
            * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
            * https://google.aip.dev/122#fields-representing-resource-names
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The name of a InternalRange. Format:
+          /** Immutable. The name of an internal range. Format:
          projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          https://google.aip.dev/122#fields-representing-resource-names
            */
@@ -3021,7 +3021,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Immutable. The name of a InternalRange. Format:
+           * Immutable. The name of an internal range. Format:
            * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
            * https://google.aip.dev/122#fields-representing-resource-names
            */
@@ -3041,10 +3041,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
@@ -3053,10 +3053,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
          example, consider a situation where you make an initial request and t he request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         make the request again with the same request ID, the server can check if the original operation
+         with the same request ID was received, and if so, will ignore the second request. This prevents
+         clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with
+         the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -3068,10 +3068,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and t he request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -3079,15 +3079,15 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Optional. Field mask is used to specify the fields to be overwritten in the
-           * InternalRange resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the internal
+           * range resource by the update. The fields specified in the update_mask are relative to
+           * the resource, not the full request. A field will be overwritten if it is in the mask.
+           * If the user does not provide a mask then all fields will be overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Optional. Field mask is used to specify the fields to be overwritten in the InternalRange resource
+          /** Optional. Field mask is used to specify the fields to be overwritten in the internal range resource
          by the update. The fields specified in the update_mask are relative to the resource, not the full
          request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
          all fields will be overwritten.
@@ -3097,10 +3097,10 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Optional. Field mask is used to specify the fields to be overwritten in the
-           * InternalRange resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the internal
+           * range resource by the update. The fields specified in the update_mask are relative to
+           * the resource, not the full request. A field will be overwritten if it is in the mask.
+           * If the user does not provide a mask then all fields will be overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

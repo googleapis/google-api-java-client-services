@@ -93,6 +93,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowGlobalAccess;
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
+   * from another region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowPscGlobalAccess;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load
    * balancer types.
@@ -505,6 +513,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setAllowGlobalAccess(java.lang.Boolean allowGlobalAccess) {
     this.allowGlobalAccess = allowGlobalAccess;
+    return this;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
+   * from another region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowPscGlobalAccess() {
+    return allowPscGlobalAccess;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
+   * from another region.
+   * @param allowPscGlobalAccess allowPscGlobalAccess or {@code null} for none
+   */
+  public ForwardingRule setAllowPscGlobalAccess(java.lang.Boolean allowPscGlobalAccess) {
+    this.allowPscGlobalAccess = allowPscGlobalAccess;
     return this;
   }
 

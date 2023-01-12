@@ -371,6 +371,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<ServiceAccount> serviceAccounts;
 
   /**
+   * Mapping of user-defined keys to specifications for service integrations. Currently only a
+   * single key-value pair is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ServiceIntegrationSpec> serviceIntegrationSpecs;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1307,6 +1315,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setServiceAccounts(java.util.List<ServiceAccount> serviceAccounts) {
     this.serviceAccounts = serviceAccounts;
+    return this;
+  }
+
+  /**
+   * Mapping of user-defined keys to specifications for service integrations. Currently only a
+   * single key-value pair is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ServiceIntegrationSpec> getServiceIntegrationSpecs() {
+    return serviceIntegrationSpecs;
+  }
+
+  /**
+   * Mapping of user-defined keys to specifications for service integrations. Currently only a
+   * single key-value pair is supported.
+   * @param serviceIntegrationSpecs serviceIntegrationSpecs or {@code null} for none
+   */
+  public Instance setServiceIntegrationSpecs(java.util.Map<String, ServiceIntegrationSpec> serviceIntegrationSpecs) {
+    this.serviceIntegrationSpecs = serviceIntegrationSpecs;
     return this;
   }
 

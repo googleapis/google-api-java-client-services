@@ -219,6 +219,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<ServiceAccount> serviceAccounts;
 
   /**
+   * Mapping of user defined keys to ServiceIntegrationSpec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ServiceIntegrationSpec> serviceIntegrationSpecs;
+
+  /**
    * Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
@@ -658,6 +665,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setServiceAccounts(java.util.List<ServiceAccount> serviceAccounts) {
     this.serviceAccounts = serviceAccounts;
+    return this;
+  }
+
+  /**
+   * Mapping of user defined keys to ServiceIntegrationSpec.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ServiceIntegrationSpec> getServiceIntegrationSpecs() {
+    return serviceIntegrationSpecs;
+  }
+
+  /**
+   * Mapping of user defined keys to ServiceIntegrationSpec.
+   * @param serviceIntegrationSpecs serviceIntegrationSpecs or {@code null} for none
+   */
+  public InstanceProperties setServiceIntegrationSpecs(java.util.Map<String, ServiceIntegrationSpec> serviceIntegrationSpecs) {
+    this.serviceIntegrationSpecs = serviceIntegrationSpecs;
     return this;
   }
 

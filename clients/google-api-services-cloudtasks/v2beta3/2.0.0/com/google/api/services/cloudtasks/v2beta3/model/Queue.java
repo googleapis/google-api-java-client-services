@@ -39,6 +39,13 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private AppEngineHttpQueue appEngineHttpQueue;
 
   /**
+   * Modifies HTTP target for HTTP tasks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpTarget httpTarget;
+
+  /**
    * Caller-specified and required in CreateQueue, after which it becomes output only. The queue
    * name. The queue name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain letters
@@ -168,6 +175,23 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    */
   public Queue setAppEngineHttpQueue(AppEngineHttpQueue appEngineHttpQueue) {
     this.appEngineHttpQueue = appEngineHttpQueue;
+    return this;
+  }
+
+  /**
+   * Modifies HTTP target for HTTP tasks.
+   * @return value or {@code null} for none
+   */
+  public HttpTarget getHttpTarget() {
+    return httpTarget;
+  }
+
+  /**
+   * Modifies HTTP target for HTTP tasks.
+   * @param httpTarget httpTarget or {@code null} for none
+   */
+  public Queue setHttpTarget(HttpTarget httpTarget) {
+    this.httpTarget = httpTarget;
     return this;
   }
 

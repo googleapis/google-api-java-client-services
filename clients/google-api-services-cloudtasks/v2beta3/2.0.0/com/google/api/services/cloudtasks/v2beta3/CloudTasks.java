@@ -2379,6 +2379,190 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         public class Tasks {
 
           /**
+           * Creates and buffers a new task without the need to explicitly define a Task message. The queue
+           * must have HTTP target. To create the task with a custom ID, use the following format and set
+           * TASK_ID to your desired ID:
+           * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer To create the task
+           * with an automatically generated ID, use the following format:
+           * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer. Note: This feature is in
+           * its experimental stage. You must request access to the API through the [Cloud Tasks BufferTask
+           * Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
+           *
+           * Create a request for the method "tasks.buffer".
+           *
+           * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+           * parameters, call the {@link Buffer#execute()} method to invoke the remote operation.
+           *
+           * @param queue Required. The parent queue name. For example:
+           *        projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+           * @param taskId Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
+           *        task.
+           * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.BufferTaskRequest}
+           * @return the request
+           */
+          public Buffer buffer(java.lang.String queue, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta3.model.BufferTaskRequest content) throws java.io.IOException {
+            Buffer result = new Buffer(queue, taskId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Buffer extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta3.model.BufferTaskResponse> {
+
+            private static final String REST_PATH = "v2beta3/{+queue}/tasks/{taskId}:buffer";
+
+            private final java.util.regex.Pattern QUEUE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+
+            /**
+             * Creates and buffers a new task without the need to explicitly define a Task message. The queue
+             * must have HTTP target. To create the task with a custom ID, use the following format and set
+             * TASK_ID to your desired ID:
+             * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer To create the
+             * task with an automatically generated ID, use the following format:
+             * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer. Note: This feature is
+             * in its experimental stage. You must request access to the API through the [Cloud Tasks
+             * BufferTask Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
+             *
+             * Create a request for the method "tasks.buffer".
+             *
+             * This request holds the parameters needed by the the cloudtasks server.  After setting any
+             * optional parameters, call the {@link Buffer#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Buffer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param queue Required. The parent queue name. For example:
+           *        projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+             * @param taskId Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
+           *        task.
+             * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.BufferTaskRequest}
+             * @since 1.13
+             */
+            protected Buffer(java.lang.String queue, java.lang.String taskId, com.google.api.services.cloudtasks.v2beta3.model.BufferTaskRequest content) {
+              super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta3.model.BufferTaskResponse.class);
+              this.queue = com.google.api.client.util.Preconditions.checkNotNull(queue, "Required parameter queue must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(QUEUE_PATTERN.matcher(queue).matches(),
+                    "Parameter queue must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+              }
+              this.taskId = com.google.api.client.util.Preconditions.checkNotNull(taskId, "Required parameter taskId must be specified.");
+            }
+
+            @Override
+            public Buffer set$Xgafv(java.lang.String $Xgafv) {
+              return (Buffer) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Buffer setAccessToken(java.lang.String accessToken) {
+              return (Buffer) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Buffer setAlt(java.lang.String alt) {
+              return (Buffer) super.setAlt(alt);
+            }
+
+            @Override
+            public Buffer setCallback(java.lang.String callback) {
+              return (Buffer) super.setCallback(callback);
+            }
+
+            @Override
+            public Buffer setFields(java.lang.String fields) {
+              return (Buffer) super.setFields(fields);
+            }
+
+            @Override
+            public Buffer setKey(java.lang.String key) {
+              return (Buffer) super.setKey(key);
+            }
+
+            @Override
+            public Buffer setOauthToken(java.lang.String oauthToken) {
+              return (Buffer) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Buffer setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Buffer) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Buffer setQuotaUser(java.lang.String quotaUser) {
+              return (Buffer) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Buffer setUploadType(java.lang.String uploadType) {
+              return (Buffer) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Buffer setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Buffer) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent queue name. For example:
+             * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+             * exist.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String queue;
+
+            /** Required. The parent queue name. For example:
+           projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+             */
+            public java.lang.String getQueue() {
+              return queue;
+            }
+
+            /**
+             * Required. The parent queue name. For example:
+             * projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+             * exist.
+             */
+            public Buffer setQueue(java.lang.String queue) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(QUEUE_PATTERN.matcher(queue).matches(),
+                    "Parameter queue must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+              }
+              this.queue = queue;
+              return this;
+            }
+
+            /**
+             * Optional. Task ID for the task being created. If not provided, a random task ID is
+             * assigned to the task.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String taskId;
+
+            /** Optional. Task ID for the task being created. If not provided, a random task ID is assigned to the
+           task.
+             */
+            public java.lang.String getTaskId() {
+              return taskId;
+            }
+
+            /**
+             * Optional. Task ID for the task being created. If not provided, a random task ID is
+             * assigned to the task.
+             */
+            public Buffer setTaskId(java.lang.String taskId) {
+              this.taskId = taskId;
+              return this;
+            }
+
+            @Override
+            public Buffer set(String parameterName, Object value) {
+              return (Buffer) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a task and adds it to a queue. Tasks cannot be updated after creation; there is no
            * UpdateTask command. * The maximum task size is 100KB.
            *

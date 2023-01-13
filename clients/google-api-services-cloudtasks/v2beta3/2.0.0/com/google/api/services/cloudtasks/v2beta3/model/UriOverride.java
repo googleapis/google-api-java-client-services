@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudtasks.v2beta2.model;
+package com.google.api.services.cloudtasks.v2beta3.model;
 
 /**
- * Uri Override. When specified, all the HTTP tasks inside the queue will be partially or fully
+ * URI Override. When specified, all the HTTP tasks inside the queue will be partially or fully
  * overridden depending on the configured values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

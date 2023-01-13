@@ -33,7 +33,9 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
    * cause the session to be terminated. Minimum value is 10 minutes; maximum value is 14 days (see
    * JSON representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)). Defaults to 4 hours if not set.
+   * buffers/docs/proto3#json)). Defaults to 4 hours if not set. If both ttl and idle_ttl are
+   * specified, the conditions are treated as and OR: the workload will be terminated when it has
+   * been idle for idle_ttl or when the ttl has passed, whichever comes first.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,9 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
    * cause the session to be terminated. Minimum value is 10 minutes; maximum value is 14 days (see
    * JSON representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)). Defaults to 4 hours if not set.
+   * buffers/docs/proto3#json)). Defaults to 4 hours if not set. If both ttl and idle_ttl are
+   * specified, the conditions are treated as and OR: the workload will be terminated when it has
+   * been idle for idle_ttl or when the ttl has passed, whichever comes first.
    * @return value or {@code null} for none
    */
   public String getIdleTtl() {
@@ -89,7 +93,9 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
    * cause the session to be terminated. Minimum value is 10 minutes; maximum value is 14 days (see
    * JSON representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)). Defaults to 4 hours if not set.
+   * buffers/docs/proto3#json)). Defaults to 4 hours if not set. If both ttl and idle_ttl are
+   * specified, the conditions are treated as and OR: the workload will be terminated when it has
+   * been idle for idle_ttl or when the ttl has passed, whichever comes first.
    * @param idleTtl idleTtl or {@code null} for none
    */
   public ExecutionConfig setIdleTtl(String idleTtl) {

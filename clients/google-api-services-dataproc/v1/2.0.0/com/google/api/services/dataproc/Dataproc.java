@@ -7458,7 +7458,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows
+           * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning allows
            * removing nodes from the cluster without interrupting jobs in progress. Timeout
            * specifies how long to wait for jobs in progress to finish before forcefully removing
            * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
@@ -7469,7 +7469,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @com.google.api.client.util.Key
           private String gracefulDecommissionTimeout;
 
-          /** Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows removing nodes
+          /** Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning allows removing nodes
          from the cluster without interrupting jobs in progress. Timeout specifies how long to wait for jobs
          in progress to finish before forcefully removing nodes (and potentially interrupting jobs). Default
          timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day. (see JSON
@@ -7481,7 +7481,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows
+           * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning allows
            * removing nodes from the cluster without interrupting jobs in progress. Timeout
            * specifies how long to wait for jobs in progress to finish before forcefully removing
            * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful

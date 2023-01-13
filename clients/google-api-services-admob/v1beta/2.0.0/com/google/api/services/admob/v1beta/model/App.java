@@ -30,6 +30,13 @@ package com.google.api.services.admob.v1beta.model;
 public final class App extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The approval state for the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appApprovalState;
+
+  /**
    * The externally visible ID of the app which can be used to integrate with the AdMob SDK. This is
    * a read only property. Example: ca-app-pub-9876543210987654~0123456789
    * The value may be {@code null}.
@@ -68,6 +75,23 @@ public final class App extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
+
+  /**
+   * Output only. The approval state for the app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppApprovalState() {
+    return appApprovalState;
+  }
+
+  /**
+   * Output only. The approval state for the app.
+   * @param appApprovalState appApprovalState or {@code null} for none
+   */
+  public App setAppApprovalState(java.lang.String appApprovalState) {
+    this.appApprovalState = appApprovalState;
+    return this;
+  }
 
   /**
    * The externally visible ID of the app which can be used to integrate with the AdMob SDK. This is

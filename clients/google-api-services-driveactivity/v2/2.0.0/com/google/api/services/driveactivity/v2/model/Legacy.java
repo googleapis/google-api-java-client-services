@@ -17,10 +17,10 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * A strategy which consolidates activities using the grouping rules from the legacy V1 Activity
- * API. Similar actions occurring within a window of time can be grouped across multiple targets
- * (such as moving a set of files at once) or multiple actors (such as several users editing the
- * same item). Grouping rules for this strategy are specific to each type of action.
+ * A strategy that consolidates activities using the grouping rules from the legacy V1 Activity API.
+ * Similar actions occurring within a window of time can be grouped across multiple targets (such as
+ * moving a set of files at once) or multiple actors (such as several users editing the same item).
+ * Grouping rules for this strategy are specific to each type of action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:

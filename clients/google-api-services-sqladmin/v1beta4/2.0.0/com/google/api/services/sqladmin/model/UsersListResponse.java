@@ -50,8 +50,7 @@ public final class UsersListResponse extends com.google.api.client.json.GenericJ
   private java.lang.String kind;
 
   /**
-   * An identifier that uniquely identifies the operation. You can use this identifier to retrieve
-   * the Operations resource that has information about the operation.
+   * Unused.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +91,7 @@ public final class UsersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An identifier that uniquely identifies the operation. You can use this identifier to retrieve
-   * the Operations resource that has information about the operation.
+   * Unused.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -101,8 +99,7 @@ public final class UsersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An identifier that uniquely identifies the operation. You can use this identifier to retrieve
-   * the Operations resource that has information about the operation.
+   * Unused.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public UsersListResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -38,7 +38,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String clusterUuid;
 
   /**
-   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning facilitates the
    * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
    * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
@@ -103,7 +103,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning facilitates the
    * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
    * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
@@ -117,7 +117,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning facilitates the
    * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
    * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON

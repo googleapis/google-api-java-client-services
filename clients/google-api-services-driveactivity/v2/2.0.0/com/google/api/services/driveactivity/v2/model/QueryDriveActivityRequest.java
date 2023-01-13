@@ -30,7 +30,7 @@ package com.google.api.services.driveactivity.v2.model;
 public final class QueryDriveActivityRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Return activities for this Drive folder and all children and descendants. The format is
+   * Return activities for this Drive folder, plus all children and descendants. The format is
    * `items/ITEM_ID`.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Details on how to consolidate related actions that make up the activity. If not set, then
-   * related actions are not consolidated.
+   * related actions aren't consolidated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,10 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
    * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time >
    * 1452409200000 AND time <= 1492812924310` - `time >= "2016-01-10T01:02:03-05:00"` -
    * `detail.action_detail_case`: Uses the "has" operator (:) and either a singular value or a list
-   * of allowed action types enclosed in parentheses. Examples: - `detail.action_detail_case:
-   * RENAME` - `detail.action_detail_case:(CREATE EDIT)` - `-detail.action_detail_case:MOVE`
+   * of allowed action types enclosed in parentheses, separated by a space. To exclude a result from
+   * the response, prepend a hyphen (`-`) to the beginning of the filter string. Examples: -
+   * `detail.action_detail_case:RENAME` - `detail.action_detail_case:(CREATE RESTORE)` -
+   * `-detail.action_detail_case:MOVE`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +69,8 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   private java.lang.String itemName;
 
   /**
-   * The miminum number of activities desired in the response; the server will attempt to return at
-   * least this quanitity. The server may also return fewer activities if it has a partial response
+   * The minimum number of activities desired in the response; the server attempts to return at
+   * least this quantity. The server may also return fewer activities if it has a partial response
    * ready before the request times out. If not set, a default value is used.
    * The value may be {@code null}.
    */
@@ -76,16 +78,16 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   private java.lang.Integer pageSize;
 
   /**
-   * The token identifying which page of results to return. Set this to the next_page_token value
+   * The token identifies which page of results to return. Set this to the next_page_token value
    * returned from a previous query to obtain the following page of results. If not set, the first
-   * page of results will be returned.
+   * page of results is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pageToken;
 
   /**
-   * Return activities for this Drive folder and all children and descendants. The format is
+   * Return activities for this Drive folder, plus all children and descendants. The format is
    * `items/ITEM_ID`.
    * @return value or {@code null} for none
    */
@@ -94,7 +96,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * Return activities for this Drive folder and all children and descendants. The format is
+   * Return activities for this Drive folder, plus all children and descendants. The format is
    * `items/ITEM_ID`.
    * @param ancestorName ancestorName or {@code null} for none
    */
@@ -105,7 +107,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Details on how to consolidate related actions that make up the activity. If not set, then
-   * related actions are not consolidated.
+   * related actions aren't consolidated.
    * @return value or {@code null} for none
    */
   public ConsolidationStrategy getConsolidationStrategy() {
@@ -114,7 +116,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Details on how to consolidate related actions that make up the activity. If not set, then
-   * related actions are not consolidated.
+   * related actions aren't consolidated.
    * @param consolidationStrategy consolidationStrategy or {@code null} for none
    */
   public QueryDriveActivityRequest setConsolidationStrategy(ConsolidationStrategy consolidationStrategy) {
@@ -129,8 +131,10 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
    * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time >
    * 1452409200000 AND time <= 1492812924310` - `time >= "2016-01-10T01:02:03-05:00"` -
    * `detail.action_detail_case`: Uses the "has" operator (:) and either a singular value or a list
-   * of allowed action types enclosed in parentheses. Examples: - `detail.action_detail_case:
-   * RENAME` - `detail.action_detail_case:(CREATE EDIT)` - `-detail.action_detail_case:MOVE`
+   * of allowed action types enclosed in parentheses, separated by a space. To exclude a result from
+   * the response, prepend a hyphen (`-`) to the beginning of the filter string. Examples: -
+   * `detail.action_detail_case:RENAME` - `detail.action_detail_case:(CREATE RESTORE)` -
+   * `-detail.action_detail_case:MOVE`
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -144,8 +148,10 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
    * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time >
    * 1452409200000 AND time <= 1492812924310` - `time >= "2016-01-10T01:02:03-05:00"` -
    * `detail.action_detail_case`: Uses the "has" operator (:) and either a singular value or a list
-   * of allowed action types enclosed in parentheses. Examples: - `detail.action_detail_case:
-   * RENAME` - `detail.action_detail_case:(CREATE EDIT)` - `-detail.action_detail_case:MOVE`
+   * of allowed action types enclosed in parentheses, separated by a space. To exclude a result from
+   * the response, prepend a hyphen (`-`) to the beginning of the filter string. Examples: -
+   * `detail.action_detail_case:RENAME` - `detail.action_detail_case:(CREATE RESTORE)` -
+   * `-detail.action_detail_case:MOVE`
    * @param filter filter or {@code null} for none
    */
   public QueryDriveActivityRequest setFilter(java.lang.String filter) {
@@ -171,8 +177,8 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The miminum number of activities desired in the response; the server will attempt to return at
-   * least this quanitity. The server may also return fewer activities if it has a partial response
+   * The minimum number of activities desired in the response; the server attempts to return at
+   * least this quantity. The server may also return fewer activities if it has a partial response
    * ready before the request times out. If not set, a default value is used.
    * @return value or {@code null} for none
    */
@@ -181,8 +187,8 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The miminum number of activities desired in the response; the server will attempt to return at
-   * least this quanitity. The server may also return fewer activities if it has a partial response
+   * The minimum number of activities desired in the response; the server attempts to return at
+   * least this quantity. The server may also return fewer activities if it has a partial response
    * ready before the request times out. If not set, a default value is used.
    * @param pageSize pageSize or {@code null} for none
    */
@@ -192,9 +198,9 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The token identifying which page of results to return. Set this to the next_page_token value
+   * The token identifies which page of results to return. Set this to the next_page_token value
    * returned from a previous query to obtain the following page of results. If not set, the first
-   * page of results will be returned.
+   * page of results is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -202,9 +208,9 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The token identifying which page of results to return. Set this to the next_page_token value
+   * The token identifies which page of results to return. Set this to the next_page_token value
    * returned from a previous query to obtain the following page of results. If not set, the first
-   * page of results will be returned.
+   * page of results is returned.
    * @param pageToken pageToken or {@code null} for none
    */
   public QueryDriveActivityRequest setPageToken(java.lang.String pageToken) {

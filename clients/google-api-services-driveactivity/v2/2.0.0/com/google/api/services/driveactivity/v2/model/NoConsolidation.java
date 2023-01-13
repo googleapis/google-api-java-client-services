@@ -17,7 +17,7 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * A strategy which does no consolidation of individual activities.
+ * A strategy that does no consolidation of individual activities.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:

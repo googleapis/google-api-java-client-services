@@ -78,6 +78,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Status information for Reservation resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationResourceStatus resourceStatus;
+
+  /**
    * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
@@ -240,6 +247,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Status information for Reservation resource.
+   * @return value or {@code null} for none
+   */
+  public AllocationResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output Only] Status information for Reservation resource.
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Reservation setResourceStatus(AllocationResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

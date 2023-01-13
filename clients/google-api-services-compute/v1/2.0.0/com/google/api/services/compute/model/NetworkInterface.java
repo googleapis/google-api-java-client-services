@@ -137,6 +137,15 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
+   * The URL of the network attachment that this interface should connect to in the following
+   * format:
+   * projects/{project_number}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
    * An IPv4 internal IP address to assign to the instance for this network interface. If not
    * specified by the user, an unused internal IP is assigned by the system.
    * The value may be {@code null}.
@@ -420,6 +429,27 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * The URL of the network attachment that this interface should connect to in the following
+   * format:
+   * projects/{project_number}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * The URL of the network attachment that this interface should connect to in the following
+   * format:
+   * projects/{project_number}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public NetworkInterface setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
     return this;
   }
 

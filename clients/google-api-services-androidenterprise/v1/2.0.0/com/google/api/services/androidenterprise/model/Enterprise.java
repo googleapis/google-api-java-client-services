@@ -52,6 +52,13 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Settings for Google-provided user authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAuthenticationSettings googleAuthenticationSettings;
+
+  /**
    * The unique ID for the enterprise.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   public Enterprise setAdministrator(java.util.List<Administrator> administrator) {
     this.administrator = administrator;
+    return this;
+  }
+
+  /**
+   * Output only. Settings for Google-provided user authentication.
+   * @return value or {@code null} for none
+   */
+  public GoogleAuthenticationSettings getGoogleAuthenticationSettings() {
+    return googleAuthenticationSettings;
+  }
+
+  /**
+   * Output only. Settings for Google-provided user authentication.
+   * @param googleAuthenticationSettings googleAuthenticationSettings or {@code null} for none
+   */
+  public Enterprise setGoogleAuthenticationSettings(GoogleAuthenticationSettings googleAuthenticationSettings) {
+    this.googleAuthenticationSettings = googleAuthenticationSettings;
     return this;
   }
 

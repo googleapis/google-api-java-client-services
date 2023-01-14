@@ -101,17 +101,19 @@ public final class Access extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceName;
 
   /**
-   * What kind of user agent is associated, e.g. operating system shells, embedded or stand-alone
-   * applications, etc.
+   * What kind of user agent is associated, for example operating system shells, embedded or stand-
+   * alone applications, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userAgentFamily;
 
   /**
-   * A string representing a username. This is likely not an IAM principal. For instance, this may
-   * be the system user name if the finding is VM-related, or this may be some type of application
-   * login user name, depending on the type of finding.
+   * A string that represents the username of a user, user account, or other entity involved in the
+   * access event. What the entity is and what its role in the access event is depends on the
+   * finding that this field appears in. The entity is likely not an IAM principal, but could be a
+   * user that is logged into an operating system, if the finding is VM-related, or a user that is
+   * logged into some type of application that is involved in the access event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,8 +284,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * What kind of user agent is associated, e.g. operating system shells, embedded or stand-alone
-   * applications, etc.
+   * What kind of user agent is associated, for example operating system shells, embedded or stand-
+   * alone applications, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserAgentFamily() {
@@ -291,8 +293,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * What kind of user agent is associated, e.g. operating system shells, embedded or stand-alone
-   * applications, etc.
+   * What kind of user agent is associated, for example operating system shells, embedded or stand-
+   * alone applications, etc.
    * @param userAgentFamily userAgentFamily or {@code null} for none
    */
   public Access setUserAgentFamily(java.lang.String userAgentFamily) {
@@ -301,9 +303,11 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representing a username. This is likely not an IAM principal. For instance, this may
-   * be the system user name if the finding is VM-related, or this may be some type of application
-   * login user name, depending on the type of finding.
+   * A string that represents the username of a user, user account, or other entity involved in the
+   * access event. What the entity is and what its role in the access event is depends on the
+   * finding that this field appears in. The entity is likely not an IAM principal, but could be a
+   * user that is logged into an operating system, if the finding is VM-related, or a user that is
+   * logged into some type of application that is involved in the access event.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserName() {
@@ -311,9 +315,11 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representing a username. This is likely not an IAM principal. For instance, this may
-   * be the system user name if the finding is VM-related, or this may be some type of application
-   * login user name, depending on the type of finding.
+   * A string that represents the username of a user, user account, or other entity involved in the
+   * access event. What the entity is and what its role in the access event is depends on the
+   * finding that this field appears in. The entity is likely not an IAM principal, but could be a
+   * user that is logged into an operating system, if the finding is VM-related, or a user that is
+   * logged into some type of application that is involved in the access event.
    * @param userName userName or {@code null} for none
    */
   public Access setUserName(java.lang.String userName) {

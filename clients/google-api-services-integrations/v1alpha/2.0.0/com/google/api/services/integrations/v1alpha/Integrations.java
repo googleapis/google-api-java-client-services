@@ -4088,6 +4088,530 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
           }
 
+          /**
+           * An accessor for creating requests from the Suspensions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Integrations integrations = new Integrations(...);}
+           *   {@code Integrations.Suspensions.List request = integrations.suspensions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Suspensions suspensions() {
+            return new Suspensions();
+          }
+
+          /**
+           * The "suspensions" collection of methods.
+           */
+          public class Suspensions {
+
+            /**
+             * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+             * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
+             *
+             * Create a request for the method "suspensions.lift".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Lift#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource that the suspension belongs to. "projects/{project}/locations/{location}/prod
+             *        ucts/{product}/integrations/{integration}/executions/{execution}/suspensions/{suspenion}"
+             *        format.
+             * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaLiftSuspensionRequest}
+             * @return the request
+             */
+            public Lift lift(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaLiftSuspensionRequest content) throws java.io.IOException {
+              Lift result = new Lift(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Lift extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaLiftSuspensionResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+name}:lift";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
+
+              /**
+               * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+               * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
+               *
+               * Create a request for the method "suspensions.lift".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Lift#execute()} method to invoke the remote operation. <p>
+               * {@link Lift#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource that the suspension belongs to. "projects/{project}/locations/{location}/prod
+             *        ucts/{product}/integrations/{integration}/executions/{execution}/suspensions/{suspenion}"
+             *        format.
+               * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaLiftSuspensionRequest}
+               * @since 1.13
+               */
+              protected Lift(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaLiftSuspensionRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaLiftSuspensionResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Lift set$Xgafv(java.lang.String $Xgafv) {
+                return (Lift) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Lift setAccessToken(java.lang.String accessToken) {
+                return (Lift) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Lift setAlt(java.lang.String alt) {
+                return (Lift) super.setAlt(alt);
+              }
+
+              @Override
+              public Lift setCallback(java.lang.String callback) {
+                return (Lift) super.setCallback(callback);
+              }
+
+              @Override
+              public Lift setFields(java.lang.String fields) {
+                return (Lift) super.setFields(fields);
+              }
+
+              @Override
+              public Lift setKey(java.lang.String key) {
+                return (Lift) super.setKey(key);
+              }
+
+              @Override
+              public Lift setOauthToken(java.lang.String oauthToken) {
+                return (Lift) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Lift setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Lift) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Lift setQuotaUser(java.lang.String quotaUser) {
+                return (Lift) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Lift setUploadType(java.lang.String uploadType) {
+                return (Lift) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Lift setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Lift) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource that the suspension belongs to. "projects/{project}/location
+               * s/{location}/products/{product}/integrations/{integration}/executions/{execution}/s
+               * uspensions/{suspenion}" format.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource that the suspension belongs to. "projects/{project}/locations/{location}/pro
+             ducts/{product}/integrations/{integration}/executions/{execution}/suspensions/{suspenion}" format.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource that the suspension belongs to. "projects/{project}/location
+               * s/{location}/products/{product}/integrations/{integration}/executions/{execution}/s
+               * uspensions/{suspenion}" format.
+               */
+              public Lift setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Lift set(String parameterName, Object value) {
+                return (Lift) super.set(parameterName, value);
+              }
+            }
+            /**
+             * * Lists suspensions associated with a specific execution. Only those with permissions to resolve
+             * the relevant suspensions will be able to view them.
+             *
+             * Create a request for the method "suspensions.list".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integratio
+             *        n_name}/executions/{execution_name}
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaListSuspensionsResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/suspensions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+
+              /**
+               * * Lists suspensions associated with a specific execution. Only those with permissions to
+               * resolve the relevant suspensions will be able to view them.
+               *
+               * Create a request for the method "suspensions.list".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integratio
+             *        n_name}/executions/{execution_name}
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaListSuspensionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integra
+               * tions/{integration_name}/executions/{execution_name}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integrati
+             on_name}/executions/{execution_name}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integra
+               * tions/{integration_name}/executions/{execution_name}
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Standard filter field. */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Standard filter field.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** Standard filter field. */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** Field name to order by. */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Field name to order by.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /** Field name to order by. */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /** Maximum number of entries in the response. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Maximum number of entries in the response.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** Maximum number of entries in the response. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Token to retrieve a specific page. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Token to retrieve a specific page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Token to retrieve a specific page. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * * Resolves (lifts/rejects) any number of suspensions. If the integration is already running, only
+             * the status of the suspension is updated. Otherwise, the suspended integration will begin
+             * execution again.
+             *
+             * Create a request for the method "suspensions.resolve".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integratio
+             *        n_name}/executions/{execution_name}/suspensions/{suspension_id}
+             * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaResolveSuspensionRequest}
+             * @return the request
+             */
+            public Resolve resolve(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaResolveSuspensionRequest content) throws java.io.IOException {
+              Resolve result = new Resolve(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Resolve extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaResolveSuspensionResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+name}:resolve";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
+
+              /**
+               * * Resolves (lifts/rejects) any number of suspensions. If the integration is already running,
+               * only the status of the suspension is updated. Otherwise, the suspended integration will begin
+               * execution again.
+               *
+               * Create a request for the method "suspensions.resolve".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integratio
+             *        n_name}/executions/{execution_name}/suspensions/{suspension_id}
+               * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaResolveSuspensionRequest}
+               * @since 1.13
+               */
+              protected Resolve(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaResolveSuspensionRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaResolveSuspensionResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Resolve set$Xgafv(java.lang.String $Xgafv) {
+                return (Resolve) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Resolve setAccessToken(java.lang.String accessToken) {
+                return (Resolve) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Resolve setAlt(java.lang.String alt) {
+                return (Resolve) super.setAlt(alt);
+              }
+
+              @Override
+              public Resolve setCallback(java.lang.String callback) {
+                return (Resolve) super.setCallback(callback);
+              }
+
+              @Override
+              public Resolve setFields(java.lang.String fields) {
+                return (Resolve) super.setFields(fields);
+              }
+
+              @Override
+              public Resolve setKey(java.lang.String key) {
+                return (Resolve) super.setKey(key);
+              }
+
+              @Override
+              public Resolve setOauthToken(java.lang.String oauthToken) {
+                return (Resolve) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Resolve setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Resolve) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Resolve setQuotaUser(java.lang.String quotaUser) {
+                return (Resolve) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Resolve setUploadType(java.lang.String uploadType) {
+                return (Resolve) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Resolve setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Resolve) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integra
+               * tions/{integration_name}/executions/{execution_name}/suspensions/{suspension_id}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integrations/{integrati
+             on_name}/executions/{execution_name}/suspensions/{suspension_id}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. projects/{gcp_project_id}/locations/{location}/products/{product}/integra
+               * tions/{integration_name}/executions/{execution_name}/suspensions/{suspension_id}
+               */
+              public Resolve setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Resolve set(String parameterName, Object value) {
+                return (Resolve) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the Versions collection.

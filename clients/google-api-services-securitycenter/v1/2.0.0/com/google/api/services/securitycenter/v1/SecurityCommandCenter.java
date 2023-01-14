@@ -321,8 +321,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent that the listed assets belong to. Its format is
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
+       *        on parent depends on the method in which you specify parent. You can specify one of the
+       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
+       *        "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -348,8 +350,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent that the listed assets belong to. Its format is
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
+       *        on parent depends on the method in which you specify parent. You can specify one of the
+       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
+       *        "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -428,22 +432,27 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. The name of the parent that the listed assets belong to. Its format is
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent resource that contains the assets. The value that you
+         * can specify on parent depends on the method in which you specify parent. You can specify
+         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent that the listed assets belong to. Its format is
-       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+        /** Required. The name of the parent resource that contains the assets. The value that you can specify
+       on parent depends on the method in which you specify parent. You can specify one of the following
+       values: "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the parent that the listed assets belong to. Its format is
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent resource that contains the assets. The value that you
+         * can specify on parent depends on the method in which you specify parent. You can specify
+         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3758,7 +3767,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3785,7 +3794,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3865,13 +3874,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -3879,7 +3888,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5991,8 +6000,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent that the listed assets belong to. Its format is
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
+       *        on parent depends on the method in which you specify parent. You can specify one of the
+       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
+       *        "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6018,8 +6029,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent that the listed assets belong to. Its format is
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
+       *        on parent depends on the method in which you specify parent. You can specify one of the
+       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
+       *        "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6098,22 +6111,27 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. The name of the parent that the listed assets belong to. Its format is
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent resource that contains the assets. The value that you
+         * can specify on parent depends on the method in which you specify parent. You can specify
+         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent that the listed assets belong to. Its format is
-       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+        /** Required. The name of the parent resource that contains the assets. The value that you can specify
+       on parent depends on the method in which you specify parent. You can specify one of the following
+       values: "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the parent that the listed assets belong to. Its format is
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent resource that contains the assets. The value that you
+         * can specify on parent depends on the method in which you specify parent. You can specify
+         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -10640,7 +10658,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10667,7 +10685,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10747,13 +10765,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -10761,7 +10779,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -13179,8 +13197,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent that the listed assets belong to. Its format is
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
+       *        on parent depends on the method in which you specify parent. You can specify one of the
+       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
+       *        "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -13206,8 +13226,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent that the listed assets belong to. Its format is
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
+       *        on parent depends on the method in which you specify parent. You can specify one of the
+       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
+       *        "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -13286,22 +13308,27 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Required. The name of the parent that the listed assets belong to. Its format is
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent resource that contains the assets. The value that you
+         * can specify on parent depends on the method in which you specify parent. You can specify
+         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent that the listed assets belong to. Its format is
-       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+        /** Required. The name of the parent resource that contains the assets. The value that you can specify
+       on parent depends on the method in which you specify parent. You can specify one of the following
+       values: "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the parent that the listed assets belong to. Its format is
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * Required. The name of the parent resource that contains the assets. The value that you
+         * can specify on parent depends on the method in which you specify parent. You can specify
+         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
+         * "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -16616,7 +16643,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -16643,7 +16670,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -16723,13 +16750,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -16737,7 +16764,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id], "folders/[folder_id]", or "projects/[project_id]".
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

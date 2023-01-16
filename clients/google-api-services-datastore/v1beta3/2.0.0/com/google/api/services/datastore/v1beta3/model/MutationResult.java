@@ -38,6 +38,13 @@ public final class MutationResult extends com.google.api.client.json.GenericJson
   private java.lang.Boolean conflictDetected;
 
   /**
+   * The create time of the entity. This field will not be set after a 'delete'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The automatically allocated key. Set only when the mutation allocated a key.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class MutationResult extends com.google.api.client.json.GenericJson
    */
   public MutationResult setConflictDetected(java.lang.Boolean conflictDetected) {
     this.conflictDetected = conflictDetected;
+    return this;
+  }
+
+  /**
+   * The create time of the entity. This field will not be set after a 'delete'.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * The create time of the entity. This field will not be set after a 'delete'.
+   * @param createTime createTime or {@code null} for none
+   */
+  public MutationResult setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

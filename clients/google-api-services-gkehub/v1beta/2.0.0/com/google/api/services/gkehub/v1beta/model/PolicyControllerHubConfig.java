@@ -76,6 +76,13 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   private java.lang.Boolean mutationEnabled;
 
   /**
+   * Specifies the desired policy content on the cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerPolicyContentSpec policyContent;
+
+  /**
    * Enables the ability to use Constraint Templates that reference to objects other than the object
    * currently being evaluated.
    * The value may be {@code null}.
@@ -197,6 +204,23 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
    */
   public PolicyControllerHubConfig setMutationEnabled(java.lang.Boolean mutationEnabled) {
     this.mutationEnabled = mutationEnabled;
+    return this;
+  }
+
+  /**
+   * Specifies the desired policy content on the cluster
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerPolicyContentSpec getPolicyContent() {
+    return policyContent;
+  }
+
+  /**
+   * Specifies the desired policy content on the cluster
+   * @param policyContent policyContent or {@code null} for none
+   */
+  public PolicyControllerHubConfig setPolicyContent(PolicyControllerPolicyContentSpec policyContent) {
+    this.policyContent = policyContent;
     return this;
   }
 

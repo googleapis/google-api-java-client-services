@@ -30,12 +30,19 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class PolicyControllerMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
-   * "constraint template library"
+   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, PolicyControllerOnClusterState> componentStates;
+
+  /**
+   * The state of the template library and any bundles included in the chosen version of the
+   * manifest
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, PolicyControllerOnClusterState> contentStates;
 
   /**
    * The overall Policy Controller lifecycle state observed by the Hub Feature controller.
@@ -45,8 +52,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   private java.lang.String state;
 
   /**
-   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
-   * "constraint template library"
+   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation"
    * @return value or {@code null} for none
    */
   public java.util.Map<String, PolicyControllerOnClusterState> getComponentStates() {
@@ -54,12 +60,30 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   }
 
   /**
-   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
-   * "constraint template library"
+   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation"
    * @param componentStates componentStates or {@code null} for none
    */
   public PolicyControllerMembershipState setComponentStates(java.util.Map<String, PolicyControllerOnClusterState> componentStates) {
     this.componentStates = componentStates;
+    return this;
+  }
+
+  /**
+   * The state of the template library and any bundles included in the chosen version of the
+   * manifest
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, PolicyControllerOnClusterState> getContentStates() {
+    return contentStates;
+  }
+
+  /**
+   * The state of the template library and any bundles included in the chosen version of the
+   * manifest
+   * @param contentStates contentStates or {@code null} for none
+   */
+  public PolicyControllerMembershipState setContentStates(java.util.Map<String, PolicyControllerOnClusterState> contentStates) {
+    this.contentStates = contentStates;
     return this;
   }
 

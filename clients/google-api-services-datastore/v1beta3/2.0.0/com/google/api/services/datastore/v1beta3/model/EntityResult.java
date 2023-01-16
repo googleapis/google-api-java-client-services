@@ -30,6 +30,14 @@ package com.google.api.services.datastore.v1beta3.model;
 public final class EntityResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time at which the entity was created. This field is set for `FULL` entity results. If this
+   * entity is missing, this field will not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * A cursor that points to the position after the result entity. Set only when the `EntityResult`
    * is part of a `QueryResultBatch` message.
    * The value may be {@code null}.
@@ -61,6 +69,25 @@ public final class EntityResult extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long version;
+
+  /**
+   * The time at which the entity was created. This field is set for `FULL` entity results. If this
+   * entity is missing, this field will not be set.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * The time at which the entity was created. This field is set for `FULL` entity results. If this
+   * entity is missing, this field will not be set.
+   * @param createTime createTime or {@code null} for none
+   */
+  public EntityResult setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * A cursor that points to the position after the result entity. Set only when the `EntityResult`

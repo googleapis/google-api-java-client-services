@@ -38,7 +38,7 @@ public final class ProductTax extends com.google.api.client.json.GenericJson {
   private java.lang.String country;
 
   /**
-   * The numeric ID of a location that the tax rate applies to as defined in the AdWords API.
+   * The numeric ID of a location that the tax rate applies to as defined in the Google Ads API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -92,7 +92,7 @@ public final class ProductTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The numeric ID of a location that the tax rate applies to as defined in the AdWords API.
+   * The numeric ID of a location that the tax rate applies to as defined in the Google Ads API.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLocationId() {
@@ -100,7 +100,7 @@ public final class ProductTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The numeric ID of a location that the tax rate applies to as defined in the AdWords API.
+   * The numeric ID of a location that the tax rate applies to as defined in the Google Ads API.
    * @param locationId locationId or {@code null} for none
    */
   public ProductTax setLocationId(java.lang.Long locationId) {

@@ -174,6 +174,142 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
     public class Schemas {
 
       /**
+       * Commits a new schema revision to an existing schema.
+       *
+       * Create a request for the method "schemas.commit".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the schema we are revising. Format is `projects/{project}/schemas/{schema}`.
+       * @param content the {@link com.google.api.services.pubsub.model.CommitSchemaRequest}
+       * @return the request
+       */
+      public Commit commit(java.lang.String name, com.google.api.services.pubsub.model.CommitSchemaRequest content) throws java.io.IOException {
+        Commit result = new Commit(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Commit extends PubsubRequest<com.google.api.services.pubsub.model.Schema> {
+
+        private static final String REST_PATH = "v1/{+name}:commit";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/schemas/[^/]+$");
+
+        /**
+         * Commits a new schema revision to an existing schema.
+         *
+         * Create a request for the method "schemas.commit".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Commit#execute()} method to invoke the remote operation. <p> {@link
+         * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the schema we are revising. Format is `projects/{project}/schemas/{schema}`.
+         * @param content the {@link com.google.api.services.pubsub.model.CommitSchemaRequest}
+         * @since 1.13
+         */
+        protected Commit(java.lang.String name, com.google.api.services.pubsub.model.CommitSchemaRequest content) {
+          super(Pubsub.this, "POST", REST_PATH, content, com.google.api.services.pubsub.model.Schema.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+        }
+
+        @Override
+        public Commit set$Xgafv(java.lang.String $Xgafv) {
+          return (Commit) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Commit setAccessToken(java.lang.String accessToken) {
+          return (Commit) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Commit setAlt(java.lang.String alt) {
+          return (Commit) super.setAlt(alt);
+        }
+
+        @Override
+        public Commit setCallback(java.lang.String callback) {
+          return (Commit) super.setCallback(callback);
+        }
+
+        @Override
+        public Commit setFields(java.lang.String fields) {
+          return (Commit) super.setFields(fields);
+        }
+
+        @Override
+        public Commit setKey(java.lang.String key) {
+          return (Commit) super.setKey(key);
+        }
+
+        @Override
+        public Commit setOauthToken(java.lang.String oauthToken) {
+          return (Commit) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Commit setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Commit) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Commit setQuotaUser(java.lang.String quotaUser) {
+          return (Commit) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Commit setUploadType(java.lang.String uploadType) {
+          return (Commit) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Commit) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the schema we are revising. Format is
+         * `projects/{project}/schemas/{schema}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the schema we are revising. Format is `projects/{project}/schemas/{schema}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the schema we are revising. Format is
+         * `projects/{project}/schemas/{schema}`.
+         */
+        public Commit setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Commit set(String parameterName, Object value) {
+          return (Commit) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a schema.
        *
        * Create a request for the method "schemas.create".
@@ -464,6 +600,167 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a specific schema revision.
+       *
+       * Create a request for the method "schemas.deleteRevision".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link DeleteRevision#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the schema revision to be deleted, with a revision ID explicitly included.
+       *        Example: projects/123/schemas/my-schema@c7cfa2a8
+       * @return the request
+       */
+      public DeleteRevision deleteRevision(java.lang.String name) throws java.io.IOException {
+        DeleteRevision result = new DeleteRevision(name);
+        initialize(result);
+        return result;
+      }
+
+      public class DeleteRevision extends PubsubRequest<com.google.api.services.pubsub.model.Schema> {
+
+        private static final String REST_PATH = "v1/{+name}:deleteRevision";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/schemas/[^/]+$");
+
+        /**
+         * Deletes a specific schema revision.
+         *
+         * Create a request for the method "schemas.deleteRevision".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link DeleteRevision#execute()} method to invoke the remote operation.
+         * <p> {@link DeleteRevision#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. The name of the schema revision to be deleted, with a revision ID explicitly included.
+       *        Example: projects/123/schemas/my-schema@c7cfa2a8
+         * @since 1.13
+         */
+        protected DeleteRevision(java.lang.String name) {
+          super(Pubsub.this, "DELETE", REST_PATH, null, com.google.api.services.pubsub.model.Schema.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+        }
+
+        @Override
+        public DeleteRevision set$Xgafv(java.lang.String $Xgafv) {
+          return (DeleteRevision) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public DeleteRevision setAccessToken(java.lang.String accessToken) {
+          return (DeleteRevision) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public DeleteRevision setAlt(java.lang.String alt) {
+          return (DeleteRevision) super.setAlt(alt);
+        }
+
+        @Override
+        public DeleteRevision setCallback(java.lang.String callback) {
+          return (DeleteRevision) super.setCallback(callback);
+        }
+
+        @Override
+        public DeleteRevision setFields(java.lang.String fields) {
+          return (DeleteRevision) super.setFields(fields);
+        }
+
+        @Override
+        public DeleteRevision setKey(java.lang.String key) {
+          return (DeleteRevision) super.setKey(key);
+        }
+
+        @Override
+        public DeleteRevision setOauthToken(java.lang.String oauthToken) {
+          return (DeleteRevision) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public DeleteRevision setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (DeleteRevision) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public DeleteRevision setQuotaUser(java.lang.String quotaUser) {
+          return (DeleteRevision) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public DeleteRevision setUploadType(java.lang.String uploadType) {
+          return (DeleteRevision) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public DeleteRevision setUploadProtocol(java.lang.String uploadProtocol) {
+          return (DeleteRevision) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the schema revision to be deleted, with a revision ID explicitly
+         * included. Example: projects/123/schemas/my-schema@c7cfa2a8
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the schema revision to be deleted, with a revision ID explicitly included.
+       Example: projects/123/schemas/my-schema@c7cfa2a8
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the schema revision to be deleted, with a revision ID explicitly
+         * included. Example: projects/123/schemas/my-schema@c7cfa2a8
+         */
+        public DeleteRevision setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The revision ID to roll back to. It must be a revision of the same schema.
+         * Example: c7cfa2a8
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String revisionId;
+
+        /** Required. The revision ID to roll back to. It must be a revision of the same schema. Example:
+       c7cfa2a8
+         */
+        public java.lang.String getRevisionId() {
+          return revisionId;
+        }
+
+        /**
+         * Required. The revision ID to roll back to. It must be a revision of the same schema.
+         * Example: c7cfa2a8
+         */
+        public DeleteRevision setRevisionId(java.lang.String revisionId) {
+          this.revisionId = revisionId;
+          return this;
+        }
+
+        @Override
+        public DeleteRevision set(String parameterName, Object value) {
+          return (DeleteRevision) super.set(parameterName, value);
         }
       }
       /**
@@ -1035,6 +1332,338 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all schema revisions for the named schema.
+       *
+       * Create a request for the method "schemas.listRevisions".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the schema to list revisions for.
+       * @return the request
+       */
+      public ListRevisions listRevisions(java.lang.String name) throws java.io.IOException {
+        ListRevisions result = new ListRevisions(name);
+        initialize(result);
+        return result;
+      }
+
+      public class ListRevisions extends PubsubRequest<com.google.api.services.pubsub.model.ListSchemaRevisionsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:listRevisions";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/schemas/[^/]+$");
+
+        /**
+         * Lists all schema revisions for the named schema.
+         *
+         * Create a request for the method "schemas.listRevisions".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation. <p>
+         * {@link ListRevisions#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+         * equest)} must be called to initialize this instance immediately after invoking the constructor.
+         * </p>
+         *
+         * @param name Required. The name of the schema to list revisions for.
+         * @since 1.13
+         */
+        protected ListRevisions(java.lang.String name) {
+          super(Pubsub.this, "GET", REST_PATH, null, com.google.api.services.pubsub.model.ListSchemaRevisionsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ListRevisions set$Xgafv(java.lang.String $Xgafv) {
+          return (ListRevisions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ListRevisions setAccessToken(java.lang.String accessToken) {
+          return (ListRevisions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ListRevisions setAlt(java.lang.String alt) {
+          return (ListRevisions) super.setAlt(alt);
+        }
+
+        @Override
+        public ListRevisions setCallback(java.lang.String callback) {
+          return (ListRevisions) super.setCallback(callback);
+        }
+
+        @Override
+        public ListRevisions setFields(java.lang.String fields) {
+          return (ListRevisions) super.setFields(fields);
+        }
+
+        @Override
+        public ListRevisions setKey(java.lang.String key) {
+          return (ListRevisions) super.setKey(key);
+        }
+
+        @Override
+        public ListRevisions setOauthToken(java.lang.String oauthToken) {
+          return (ListRevisions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ListRevisions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ListRevisions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ListRevisions setQuotaUser(java.lang.String quotaUser) {
+          return (ListRevisions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ListRevisions setUploadType(java.lang.String uploadType) {
+          return (ListRevisions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ListRevisions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ListRevisions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the schema to list revisions for. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the schema to list revisions for.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the schema to list revisions for. */
+        public ListRevisions setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The maximum number of revisions to return per page. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of revisions to return per page.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of revisions to return per page. */
+        public ListRevisions setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The page token, received from a previous ListSchemaRevisions call. Provide this to
+         * retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token, received from a previous ListSchemaRevisions call. Provide this to retrieve the
+       subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The page token, received from a previous ListSchemaRevisions call. Provide this to
+         * retrieve the subsequent page.
+         */
+        public ListRevisions setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The set of Schema fields to return in the response. If not set, returns Schemas with
+         * `name` and `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** The set of Schema fields to return in the response. If not set, returns Schemas with `name` and
+       `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * The set of Schema fields to return in the response. If not set, returns Schemas with
+         * `name` and `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        public ListRevisions setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public ListRevisions set(String parameterName, Object value) {
+          return (ListRevisions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new schema revision that is a copy of the provided revision_id.
+       *
+       * Create a request for the method "schemas.rollback".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The schema being rolled back with revision id.
+       * @param content the {@link com.google.api.services.pubsub.model.RollbackSchemaRequest}
+       * @return the request
+       */
+      public Rollback rollback(java.lang.String name, com.google.api.services.pubsub.model.RollbackSchemaRequest content) throws java.io.IOException {
+        Rollback result = new Rollback(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Rollback extends PubsubRequest<com.google.api.services.pubsub.model.Schema> {
+
+        private static final String REST_PATH = "v1/{+name}:rollback";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/schemas/[^/]+$");
+
+        /**
+         * Creates a new schema revision that is a copy of the provided revision_id.
+         *
+         * Create a request for the method "schemas.rollback".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Rollback#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The schema being rolled back with revision id.
+         * @param content the {@link com.google.api.services.pubsub.model.RollbackSchemaRequest}
+         * @since 1.13
+         */
+        protected Rollback(java.lang.String name, com.google.api.services.pubsub.model.RollbackSchemaRequest content) {
+          super(Pubsub.this, "POST", REST_PATH, content, com.google.api.services.pubsub.model.Schema.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+        }
+
+        @Override
+        public Rollback set$Xgafv(java.lang.String $Xgafv) {
+          return (Rollback) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Rollback setAccessToken(java.lang.String accessToken) {
+          return (Rollback) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Rollback setAlt(java.lang.String alt) {
+          return (Rollback) super.setAlt(alt);
+        }
+
+        @Override
+        public Rollback setCallback(java.lang.String callback) {
+          return (Rollback) super.setCallback(callback);
+        }
+
+        @Override
+        public Rollback setFields(java.lang.String fields) {
+          return (Rollback) super.setFields(fields);
+        }
+
+        @Override
+        public Rollback setKey(java.lang.String key) {
+          return (Rollback) super.setKey(key);
+        }
+
+        @Override
+        public Rollback setOauthToken(java.lang.String oauthToken) {
+          return (Rollback) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Rollback) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Rollback setQuotaUser(java.lang.String quotaUser) {
+          return (Rollback) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Rollback setUploadType(java.lang.String uploadType) {
+          return (Rollback) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Rollback) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The schema being rolled back with revision id. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The schema being rolled back with revision id.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The schema being rolled back with revision id. */
+        public Rollback setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Rollback set(String parameterName, Object value) {
+          return (Rollback) super.set(parameterName, value);
         }
       }
       /**

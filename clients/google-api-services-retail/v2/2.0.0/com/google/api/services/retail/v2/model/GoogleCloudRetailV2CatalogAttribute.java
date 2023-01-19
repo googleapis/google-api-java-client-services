@@ -77,9 +77,9 @@ public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.cl
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
    * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
    * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
-   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. For attributes whoes
-   * key start with `attributes.`, we refer them as custom attributes. Otherwise they are built-in
-   * attributes such as `color` and `brands`.
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. If the attribute key
+   * starts with `attributes.`, then the attribute is a custom attribute. Attributes such as
+   * `brands`, `patterns`, and `title` are built-in and called system attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,9 +214,9 @@ public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.cl
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
    * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
    * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
-   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. For attributes whoes
-   * key start with `attributes.`, we refer them as custom attributes. Otherwise they are built-in
-   * attributes such as `color` and `brands`.
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. If the attribute key
+   * starts with `attributes.`, then the attribute is a custom attribute. Attributes such as
+   * `brands`, `patterns`, and `title` are built-in and called system attributes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -227,9 +227,9 @@ public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.cl
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
    * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
    * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
-   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. For attributes whoes
-   * key start with `attributes.`, we refer them as custom attributes. Otherwise they are built-in
-   * attributes such as `color` and `brands`.
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. If the attribute key
+   * starts with `attributes.`, then the attribute is a custom attribute. Attributes such as
+   * `brands`, `patterns`, and `title` are built-in and called system attributes.
    * @param key key or {@code null} for none
    */
   public GoogleCloudRetailV2CatalogAttribute setKey(java.lang.String key) {

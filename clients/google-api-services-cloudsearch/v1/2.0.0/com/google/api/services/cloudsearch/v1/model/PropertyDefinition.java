@@ -76,7 +76,7 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   /**
    * Indicates that the property can be used for generating facets. Cannot be true for properties
    * whose type is object. IsReturnable must be true to set this option. Only supported for boolean,
-   * enum, and text properties.
+   * enum, integer, and text properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -272,7 +272,7 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   /**
    * Indicates that the property can be used for generating facets. Cannot be true for properties
    * whose type is object. IsReturnable must be true to set this option. Only supported for boolean,
-   * enum, and text properties.
+   * enum, integer, and text properties.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFacetable() {
@@ -282,7 +282,7 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   /**
    * Indicates that the property can be used for generating facets. Cannot be true for properties
    * whose type is object. IsReturnable must be true to set this option. Only supported for boolean,
-   * enum, and text properties.
+   * enum, integer, and text properties.
    * @param isFacetable isFacetable or {@code null} for none
    */
   public PropertyDefinition setIsFacetable(java.lang.Boolean isFacetable) {

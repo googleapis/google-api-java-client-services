@@ -22,7 +22,7 @@ package com.google.api.services.cloudsearch.v1.model;
  * should prefer to use the wrapper classes in google3/security/credentials/public/principal.h
  * google3/java/com/google/security/credentials/Principal.java
  * google3/security/credentials/go/principal.go unless direct proto access is essential. If you
- * update this protocol buffer, please update the wrapper classes as well.
+ * update this protocol buffer, please update the wrapper classes as well. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

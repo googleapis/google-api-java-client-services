@@ -53,6 +53,13 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<DocumentInfo> attachedDocuments;
 
   /**
+   * List of available access types of the conference.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableAccessTypes;
+
+  /**
    * Output only. The set of reactions that clients are allowed to send and can expect to receive.
    * Note that a device in the conference should have the MAY_SEND_REACTIONS privilege to be able to
    * send reactions.
@@ -252,6 +259,23 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    */
   public CallInfo setAttachedDocuments(java.util.List<DocumentInfo> attachedDocuments) {
     this.attachedDocuments = attachedDocuments;
+    return this;
+  }
+
+  /**
+   * List of available access types of the conference.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableAccessTypes() {
+    return availableAccessTypes;
+  }
+
+  /**
+   * List of available access types of the conference.
+   * @param availableAccessTypes availableAccessTypes or {@code null} for none
+   */
+  public CallInfo setAvailableAccessTypes(java.util.List<java.lang.String> availableAccessTypes) {
+    this.availableAccessTypes = availableAccessTypes;
     return this;
   }
 

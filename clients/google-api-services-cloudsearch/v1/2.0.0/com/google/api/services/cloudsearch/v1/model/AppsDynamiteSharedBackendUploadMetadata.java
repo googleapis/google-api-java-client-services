@@ -83,6 +83,13 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   private GroupId groupId;
 
   /**
+   * If the uploaded file is a video that has been transcoded on the client side Next tag: 18
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isClientSideTranscodedVideo;
+
+  /**
    * Original dimension of the content. Only set for image attachments.
    * The value may be {@code null}.
    */
@@ -268,6 +275,23 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    */
   public AppsDynamiteSharedBackendUploadMetadata setGroupId(GroupId groupId) {
     this.groupId = groupId;
+    return this;
+  }
+
+  /**
+   * If the uploaded file is a video that has been transcoded on the client side Next tag: 18
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsClientSideTranscodedVideo() {
+    return isClientSideTranscodedVideo;
+  }
+
+  /**
+   * If the uploaded file is a video that has been transcoded on the client side Next tag: 18
+   * @param isClientSideTranscodedVideo isClientSideTranscodedVideo or {@code null} for none
+   */
+  public AppsDynamiteSharedBackendUploadMetadata setIsClientSideTranscodedVideo(java.lang.Boolean isClientSideTranscodedVideo) {
+    this.isClientSideTranscodedVideo = isClientSideTranscodedVideo;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.cloudsearch.v1.model;
 
 /**
  * Principal associated with a given RBAC role. This principal is used by Sphinx Provisioning
- * Service for RBAC (go/cedi-auth) provisionable (go/sphinx-rbacz-design).
+ * Service for RBAC provisionable (go/sphinx-rbacz).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -50,8 +50,10 @@ public final class RbacRoleProto extends com.google.api.client.json.GenericJson 
   private java.lang.String rbacNamespace;
 
   /**
-   * Format: "RbacNamespaceName.RbacRoleName(/field=value)*", e.g., "hr.v1.Reader",
-   * "hr.v1.Reader/language=EN_US/country=USA/room=NYC-9th-11A201".
+   * Format: "role/z?" - "role" is the Sphinx globally unique name of the Sphinx role that
+   * provisions the RBAC role. - "/z?" suffix indicates which Zanzibar environment stores the role
+   * membership data ("/zd": dev, "/zs": staging, "/zp": prod, "/zt": local test instance). Example:
+   * "mysystem_myrole/zp"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +107,10 @@ public final class RbacRoleProto extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Format: "RbacNamespaceName.RbacRoleName(/field=value)*", e.g., "hr.v1.Reader",
-   * "hr.v1.Reader/language=EN_US/country=USA/room=NYC-9th-11A201".
+   * Format: "role/z?" - "role" is the Sphinx globally unique name of the Sphinx role that
+   * provisions the RBAC role. - "/z?" suffix indicates which Zanzibar environment stores the role
+   * membership data ("/zd": dev, "/zs": staging, "/zp": prod, "/zt": local test instance). Example:
+   * "mysystem_myrole/zp"
    * @return value or {@code null} for none
    */
   public java.lang.String getRbacRoleName() {
@@ -114,8 +118,10 @@ public final class RbacRoleProto extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Format: "RbacNamespaceName.RbacRoleName(/field=value)*", e.g., "hr.v1.Reader",
-   * "hr.v1.Reader/language=EN_US/country=USA/room=NYC-9th-11A201".
+   * Format: "role/z?" - "role" is the Sphinx globally unique name of the Sphinx role that
+   * provisions the RBAC role. - "/z?" suffix indicates which Zanzibar environment stores the role
+   * membership data ("/zd": dev, "/zs": staging, "/zp": prod, "/zt": local test instance). Example:
+   * "mysystem_myrole/zp"
    * @param rbacRoleName rbacRoleName or {@code null} for none
    */
   public RbacRoleProto setRbacRoleName(java.lang.String rbacRoleName) {

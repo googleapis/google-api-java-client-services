@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Principal associated with a given RBAC subject. This principal is used by Sphinx Provisioning
- * Service for RBAC provisionable (go/sphinx-rbacz).
+ * A paragraph of text that supports formatting. See [Text formatting](workspace/add-
+ * ons/concepts/widgets#text_formatting") for details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,40 +28,40 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RbacSubjectProto extends com.google.api.client.json.GenericJson {
+public final class AppsDynamiteStorageTextParagraph extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
+   * The text that's shown in the widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String username;
+  private java.lang.String text;
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
+   * The text that's shown in the widget.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUsername() {
-    return username;
+  public java.lang.String getText() {
+    return text;
   }
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
-   * @param username username or {@code null} for none
+   * The text that's shown in the widget.
+   * @param text text or {@code null} for none
    */
-  public RbacSubjectProto setUsername(java.lang.String username) {
-    this.username = username;
+  public AppsDynamiteStorageTextParagraph setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 
   @Override
-  public RbacSubjectProto set(String fieldName, Object value) {
-    return (RbacSubjectProto) super.set(fieldName, value);
+  public AppsDynamiteStorageTextParagraph set(String fieldName, Object value) {
+    return (AppsDynamiteStorageTextParagraph) super.set(fieldName, value);
   }
 
   @Override
-  public RbacSubjectProto clone() {
-    return (RbacSubjectProto) super.clone();
+  public AppsDynamiteStorageTextParagraph clone() {
+    return (AppsDynamiteStorageTextParagraph) super.clone();
   }
 
 }

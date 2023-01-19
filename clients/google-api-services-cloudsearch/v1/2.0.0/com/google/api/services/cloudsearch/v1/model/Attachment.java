@@ -56,7 +56,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteSharedCard cardAddOnData;
+  private AppsDynamiteStorageCard cardAddOnData;
 
   /**
    * Deprecated version of Gmail AddOn attachment.
@@ -136,7 +136,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
    * Card AddOn attachment with the possibility for specifying editable widgets.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteSharedCard getCardAddOnData() {
+  public AppsDynamiteStorageCard getCardAddOnData() {
     return cardAddOnData;
   }
 
@@ -144,7 +144,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
    * Card AddOn attachment with the possibility for specifying editable widgets.
    * @param cardAddOnData cardAddOnData or {@code null} for none
    */
-  public Attachment setCardAddOnData(AppsDynamiteSharedCard cardAddOnData) {
+  public Attachment setCardAddOnData(AppsDynamiteStorageCard cardAddOnData) {
     this.cardAddOnData = cardAddOnData;
     return this;
   }

@@ -6504,7 +6504,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * Creates and configures a client-side encryption identity that's authorized to send mail from the
            * user account. Google publishes the S/MIME certificate to a shared domain-wide directory so that
            * people within a Google Workspace organization can encrypt and send mail to the identity.
-           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
            *
            * Create a request for the method "identities.create".
            *
@@ -6531,7 +6530,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Creates and configures a client-side encryption identity that's authorized to send mail from
              * the user account. Google publishes the S/MIME certificate to a shared domain-wide directory so
              * that people within a Google Workspace organization can encrypt and send mail to the identity.
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "identities.create".
              *
@@ -6638,7 +6636,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * Deletes a client-side encryption identity. The authenticated user can no longer use the identity
            * to send encrypted messages. You cannot restore the identity after you delete it. Instead, use the
            * CreateCseIdentity method to create another identity with the same configuration.
-           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
            *
            * Create a request for the method "identities.delete".
            *
@@ -6666,7 +6663,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Deletes a client-side encryption identity. The authenticated user can no longer use the
              * identity to send encrypted messages. You cannot restore the identity after you delete it.
              * Instead, use the CreateCseIdentity method to create another identity with the same
-             * configuration. [Beta](https://workspace.google.com/terms/service-terms/index.html).
+             * configuration.
              *
              * Create a request for the method "identities.delete".
              *
@@ -6796,7 +6793,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
           /**
            * Retrieves a client-side encryption identity configuration.
-           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
            *
            * Create a request for the method "identities.get".
            *
@@ -6822,7 +6818,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Retrieves a client-side encryption identity configuration.
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "identities.get".
              *
@@ -6962,7 +6957,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
           /**
            * Lists the client-side encrypted identities for an authenticated user.
-           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
            *
            * Create a request for the method "identities.list".
            *
@@ -6986,7 +6980,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Lists the client-side encrypted identities for an authenticated user.
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "identities.list".
              *
@@ -7147,8 +7140,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           /**
            * Associates a different key pair with an existing client-side encryption identity. The updated key
            * pair must validate against Google's [S/MIME certificate
-           * profiles](https://support.google.com/a/answer/7300887). [Beta](https://workspace.google.com/terms
-           * /service-terms/index.html).
+           * profiles](https://support.google.com/a/answer/7300887).
            *
            * Create a request for the method "identities.patch".
            *
@@ -7176,7 +7168,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Associates a different key pair with an existing client-side encryption identity. The updated
              * key pair must validate against Google's [S/MIME certificate
              * profiles](https://support.google.com/a/answer/7300887).
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "identities.patch".
              *
@@ -7321,8 +7312,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Creates and uploads a client-side encryption S/MIME public key certificate chain and private key
-           * metadata for the authenticated user. [Beta](https://workspace.google.com/terms/service-
-           * terms/index.html).
+           * metadata for the authenticated user.
            *
            * Create a request for the method "keypairs.create".
            *
@@ -7347,8 +7337,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Creates and uploads a client-side encryption S/MIME public key certificate chain and private
-             * key metadata for the authenticated user. [Beta](https://workspace.google.com/terms/service-
-             * terms/index.html).
+             * key metadata for the authenticated user.
              *
              * Create a request for the method "keypairs.create".
              *
@@ -7455,8 +7444,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * Turns off a client-side encryption key pair. The authenticated user can no longer use the key
            * pair to decrypt incoming CSE message texts or sign outgoing CSE mail. To regain access, use the
            * EnableCseKeyPair to turn on the key pair. After 30 days, you can permanently delete the key pair
-           * by using the ObliterateCseKeyPair method. [Beta](https://workspace.google.com/terms/service-
-           * terms/index.html).
+           * by using the ObliterateCseKeyPair method.
            *
            * Create a request for the method "keypairs.disable".
            *
@@ -7484,8 +7472,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Turns off a client-side encryption key pair. The authenticated user can no longer use the key
              * pair to decrypt incoming CSE message texts or sign outgoing CSE mail. To regain access, use the
              * EnableCseKeyPair to turn on the key pair. After 30 days, you can permanently delete the key
-             * pair by using the ObliterateCseKeyPair method. [Beta](https://workspace.google.com/terms
-             * /service-terms/index.html).
+             * pair by using the ObliterateCseKeyPair method.
              *
              * Create a request for the method "keypairs.disable".
              *
@@ -7609,8 +7596,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
           /**
            * Turns on a client-side encryption key pair that was turned off. The key pair becomes active again
-           * for any associated client-side encryption identities. [Beta](https://workspace.google.com/terms
-           * /service-terms/index.html).
+           * for any associated client-side encryption identities.
            *
            * Create a request for the method "keypairs.enable".
            *
@@ -7637,7 +7623,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             /**
              * Turns on a client-side encryption key pair that was turned off. The key pair becomes active
              * again for any associated client-side encryption identities.
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "keypairs.enable".
              *
@@ -7759,8 +7744,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Retrieves an existing client-side encryption key pair. [Beta](https://workspace.google.com/terms
-           * /service-terms/index.html).
+           * Retrieves an existing client-side encryption key pair.
            *
            * Create a request for the method "keypairs.get".
            *
@@ -7785,7 +7769,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Retrieves an existing client-side encryption key pair.
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "keypairs.get".
              *
@@ -7917,7 +7900,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
           /**
            * Lists client-side encryption key pairs for an authenticated user.
-           * [Beta](https://workspace.google.com/terms/service-terms/index.html).
            *
            * Create a request for the method "keypairs.list".
            *
@@ -7941,7 +7923,6 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Lists client-side encryption key pairs for an authenticated user.
-             * [Beta](https://workspace.google.com/terms/service-terms/index.html).
              *
              * Create a request for the method "keypairs.list".
              *
@@ -8104,7 +8085,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * delete key pairs that have been turned off for more than 30 days. To turn off a key pair, use the
            * DisableCseKeyPair method. Gmail can't restore or decrypt any messages that were encrypted by an
            * obliterated key. Authenticated users and Google Workspace administrators lose access to reading
-           * the encrypted messages. [Beta](https://workspace.google.com/terms/service-terms/index.html).
+           * the encrypted messages.
            *
            * Create a request for the method "keypairs.obliterate".
            *
@@ -8133,8 +8114,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * delete key pairs that have been turned off for more than 30 days. To turn off a key pair, use
              * the DisableCseKeyPair method. Gmail can't restore or decrypt any messages that were encrypted
              * by an obliterated key. Authenticated users and Google Workspace administrators lose access to
-             * reading the encrypted messages. [Beta](https://workspace.google.com/terms/service-
-             * terms/index.html).
+             * reading the encrypted messages.
              *
              * Create a request for the method "keypairs.obliterate".
              *

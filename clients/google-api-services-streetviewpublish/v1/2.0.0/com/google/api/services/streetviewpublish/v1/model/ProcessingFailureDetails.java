@@ -54,6 +54,13 @@ public final class ProcessingFailureDetails extends com.google.api.client.json.G
   private InsufficientGpsFailureDetails insufficientGpsDetails;
 
   /**
+   * See NoOverlapGpsFailureDetails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NoOverlapGpsFailureDetails noOverlapGpsDetails;
+
+  /**
    * See NotOutdoorsFailureDetails.
    * The value may be {@code null}.
    */
@@ -108,6 +115,23 @@ public final class ProcessingFailureDetails extends com.google.api.client.json.G
    */
   public ProcessingFailureDetails setInsufficientGpsDetails(InsufficientGpsFailureDetails insufficientGpsDetails) {
     this.insufficientGpsDetails = insufficientGpsDetails;
+    return this;
+  }
+
+  /**
+   * See NoOverlapGpsFailureDetails.
+   * @return value or {@code null} for none
+   */
+  public NoOverlapGpsFailureDetails getNoOverlapGpsDetails() {
+    return noOverlapGpsDetails;
+  }
+
+  /**
+   * See NoOverlapGpsFailureDetails.
+   * @param noOverlapGpsDetails noOverlapGpsDetails or {@code null} for none
+   */
+  public ProcessingFailureDetails setNoOverlapGpsDetails(NoOverlapGpsFailureDetails noOverlapGpsDetails) {
+    this.noOverlapGpsDetails = noOverlapGpsDetails;
     return this;
   }
 

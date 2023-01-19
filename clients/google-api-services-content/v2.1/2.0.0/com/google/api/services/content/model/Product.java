@@ -17,8 +17,8 @@
 package com.google.api.services.content.model;
 
 /**
- * Required product attributes are primarily defined by the products data specification. See the
- * Products Data Specification Help Center article for information. Product data. After inserting,
+ * Required product attributes are primarily defined by the product data specification. See the
+ * Product Data Specification Help Center article for information. Product data. After inserting,
  * updating, or deleting a product, it may take several minutes before changes take effect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -367,6 +367,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Additional URLs of lifestyle images of the item, used to explicitly identify images that
+   * showcase your item in a real-world context. See the Help Center article for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> lifestyleImageLinks;
+
+  /**
    * URL directly linking to your item's page on your website.
    * The value may be {@code null}.
    */
@@ -528,7 +536,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private ProductDimension productLength;
 
   /**
-   * Categories of the item (formatted as in products data specification).
+   * Categories of the item (formatted as in product data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -565,7 +573,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price salePrice;
 
   /**
-   * Date range during which the item is on sale (see products data specification ).
+   * Date range during which the item is on sale (see product data specification ).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1507,6 +1515,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Additional URLs of lifestyle images of the item, used to explicitly identify images that
+   * showcase your item in a real-world context. See the Help Center article for more information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLifestyleImageLinks() {
+    return lifestyleImageLinks;
+  }
+
+  /**
+   * Additional URLs of lifestyle images of the item, used to explicitly identify images that
+   * showcase your item in a real-world context. See the Help Center article for more information.
+   * @param lifestyleImageLinks lifestyleImageLinks or {@code null} for none
+   */
+  public Product setLifestyleImageLinks(java.util.List<java.lang.String> lifestyleImageLinks) {
+    this.lifestyleImageLinks = lifestyleImageLinks;
+    return this;
+  }
+
+  /**
    * URL directly linking to your item's page on your website.
    * @return value or {@code null} for none
    */
@@ -1895,7 +1922,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Categories of the item (formatted as in products data specification).
+   * Categories of the item (formatted as in product data specification).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProductTypes() {
@@ -1903,7 +1930,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Categories of the item (formatted as in products data specification).
+   * Categories of the item (formatted as in product data specification).
    * @param productTypes productTypes or {@code null} for none
    */
   public Product setProductTypes(java.util.List<java.lang.String> productTypes) {
@@ -1984,7 +2011,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products data specification ).
+   * Date range during which the item is on sale (see product data specification ).
    * @return value or {@code null} for none
    */
   public java.lang.String getSalePriceEffectiveDate() {
@@ -1992,7 +2019,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products data specification ).
+   * Date range during which the item is on sale (see product data specification ).
    * @param salePriceEffectiveDate salePriceEffectiveDate or {@code null} for none
    */
   public Product setSalePriceEffectiveDate(java.lang.String salePriceEffectiveDate) {

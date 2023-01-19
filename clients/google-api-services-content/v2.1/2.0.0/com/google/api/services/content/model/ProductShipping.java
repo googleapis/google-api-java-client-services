@@ -45,7 +45,8 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   private java.lang.String locationGroupName;
 
   /**
-   * The numeric ID of a location that the shipping rate applies to as defined in the AdWords API.
+   * The numeric ID of a location that the shipping rate applies to as defined in the Google Ads
+   * API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -155,7 +156,8 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The numeric ID of a location that the shipping rate applies to as defined in the AdWords API.
+   * The numeric ID of a location that the shipping rate applies to as defined in the Google Ads
+   * API.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLocationId() {
@@ -163,7 +165,8 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The numeric ID of a location that the shipping rate applies to as defined in the AdWords API.
+   * The numeric ID of a location that the shipping rate applies to as defined in the Google Ads
+   * API.
    * @param locationId locationId or {@code null} for none
    */
   public ProductShipping setLocationId(java.lang.Long locationId) {

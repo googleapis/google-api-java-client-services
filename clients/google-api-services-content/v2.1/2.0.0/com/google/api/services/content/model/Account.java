@@ -41,8 +41,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   /**
    * Linked Ads accounts that are active or pending approval. To create a new link request, add a
    * new link with status `active` to the list. It will remain in a `pending` state until approved
-   * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
-   * or to cancel a link request, remove it from the list.
+   * or rejected either in the Ads interface or through the Google Ads API. To delete an active
+   * link, or to cancel a link request, remove it from the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +172,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   /**
    * Linked Ads accounts that are active or pending approval. To create a new link request, add a
    * new link with status `active` to the list. It will remain in a `pending` state until approved
-   * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
-   * or to cancel a link request, remove it from the list.
+   * or rejected either in the Ads interface or through the Google Ads API. To delete an active
+   * link, or to cancel a link request, remove it from the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountAdsLink> getAdsLinks() {
@@ -183,8 +183,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   /**
    * Linked Ads accounts that are active or pending approval. To create a new link request, add a
    * new link with status `active` to the list. It will remain in a `pending` state until approved
-   * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
-   * or to cancel a link request, remove it from the list.
+   * or rejected either in the Ads interface or through the Google Ads API. To delete an active
+   * link, or to cancel a link request, remove it from the list.
    * @param adsLinks adsLinks or {@code null} for none
    */
   public Account setAdsLinks(java.util.List<AccountAdsLink> adsLinks) {

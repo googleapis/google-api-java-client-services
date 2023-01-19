@@ -83,6 +83,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   private java.lang.String kmsKeyVersionName;
 
   /**
+   * The most recently invoked evaluation for the processor version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3EvaluationReference latestEvaluation;
+
+  /**
    * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
    * ocessors/{processor}/processorVersions/{processor_version}`
    * The value may be {@code null}.
@@ -213,6 +220,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersion setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {
     this.kmsKeyVersionName = kmsKeyVersionName;
+    return this;
+  }
+
+  /**
+   * The most recently invoked evaluation for the processor version.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3EvaluationReference getLatestEvaluation() {
+    return latestEvaluation;
+  }
+
+  /**
+   * The most recently invoked evaluation for the processor version.
+   * @param latestEvaluation latestEvaluation or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorVersion setLatestEvaluation(GoogleCloudDocumentaiV1beta3EvaluationReference latestEvaluation) {
+    this.latestEvaluation = latestEvaluation;
     return this;
   }
 

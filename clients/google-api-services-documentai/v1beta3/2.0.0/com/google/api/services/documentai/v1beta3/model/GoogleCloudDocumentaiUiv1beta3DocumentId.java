@@ -41,6 +41,13 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.a
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiUiv1beta3RevisionRef revisionRef;
+
+  /**
+   * Points to a specific revision of the document if set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudDocumentaiUiv1beta3RevisionReference revisionReference;
 
   /**
@@ -55,6 +62,23 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.a
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentId setGcsManagedDocId(GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId gcsManagedDocId) {
     this.gcsManagedDocId = gcsManagedDocId;
+    return this;
+  }
+
+  /**
+   * Points to a specific revision of the document if set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3RevisionRef getRevisionRef() {
+    return revisionRef;
+  }
+
+  /**
+   * Points to a specific revision of the document if set.
+   * @param revisionRef revisionRef or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3DocumentId setRevisionRef(GoogleCloudDocumentaiUiv1beta3RevisionRef revisionRef) {
+    this.revisionRef = revisionRef;
     return this;
   }
 

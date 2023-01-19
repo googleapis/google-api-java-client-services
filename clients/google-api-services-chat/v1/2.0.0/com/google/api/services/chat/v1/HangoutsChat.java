@@ -681,15 +681,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Members {
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Returns a membership.
-       * Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports
-       * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
-       * accounts). Supports [user
-       * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google
-       * Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which
-       * grants early access to certain features. [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
-       * `chat.memberships` or `chat.memberships.readonly` authorization scope.
+       * Returns a membership. Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.memberships` or `chat.memberships.readonly` authorization scope.
        *
        * Create a request for the method "members.get".
        *
@@ -713,15 +712,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/members/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Returns a membership.
-         * Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports
-         * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
-         * accounts). Supports [user
-         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
-         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
-         * which grants early access to certain features. [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
-         * `chat.memberships` or `chat.memberships.readonly` authorization scope.
+         * Returns a membership. Requires
+         * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
+         * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as
+         * part of the [Google Workspace Developer Preview
+         * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+         * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+         * requires the `chat.memberships` or `chat.memberships.readonly` authorization scope.
          *
          * Create a request for the method "members.get".
          *
@@ -841,15 +839,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Lists memberships in a
-       * space. Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
-       * supports [service account authentication](https://developers.google.com/chat/api/guides/auth
-       * /service-accounts). Supports [user
-       * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google
-       * Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which
-       * grants early access to certain features. [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
-       * `chat.memberships` or `chat.memberships.readonly` authorization scope.
+       * Lists memberships in a space. Requires
+       * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
+       * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part
+       * of the [Google Workspace Developer Preview
+       * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+       * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+       * requires the `chat.memberships` or `chat.memberships.readonly` authorization scope.
        *
        * Create a request for the method "members.list".
        *
@@ -874,15 +871,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Lists memberships in a
-         * space. Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
-         * supports [service account authentication](https://developers.google.com/chat/api/guides/auth
-         * /service-accounts). Supports [user
-         * authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the
-         * [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview),
-         * which grants early access to certain features. [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users) requires the
-         * `chat.memberships` or `chat.memberships.readonly` authorization scope.
+         * Lists memberships in a space. Requires
+         * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
+         * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+         * Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as
+         * part of the [Google Workspace Developer Preview
+         * Program](https://developers.google.com/workspace/preview), which grants early access to certain
+         * features. [User authentication](https://developers.google.com/chat/api/guides/auth/users)
+         * requires the `chat.memberships` or `chat.memberships.readonly` authorization scope.
          *
          * Create a request for the method "members.list".
          *

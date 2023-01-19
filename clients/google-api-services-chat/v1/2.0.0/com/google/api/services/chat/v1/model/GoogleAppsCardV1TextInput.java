@@ -47,9 +47,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   private GoogleAppsCardV1Action autoCompleteAction;
 
   /**
-   * Text that appears inside the text input field meant to assist users by prompting them to enter
-   * a certain value. This text is not visible after users begin typing. Required if `label` is
-   * unspecified. Otherwise, optional.
+   * Text that appears below the text input field meant to assist users by prompting them to enter a
+   * certain value. This text is always visible. Required if `label` is unspecified. Otherwise,
+   * optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,9 +141,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * Text that appears inside the text input field meant to assist users by prompting them to enter
-   * a certain value. This text is not visible after users begin typing. Required if `label` is
-   * unspecified. Otherwise, optional.
+   * Text that appears below the text input field meant to assist users by prompting them to enter a
+   * certain value. This text is always visible. Required if `label` is unspecified. Otherwise,
+   * optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getHintText() {
@@ -151,9 +151,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * Text that appears inside the text input field meant to assist users by prompting them to enter
-   * a certain value. This text is not visible after users begin typing. Required if `label` is
-   * unspecified. Otherwise, optional.
+   * Text that appears below the text input field meant to assist users by prompting them to enter a
+   * certain value. This text is always visible. Required if `label` is unspecified. Otherwise,
+   * optional.
    * @param hintText hintText or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setHintText(java.lang.String hintText) {

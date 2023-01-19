@@ -93,8 +93,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private Space space;
 
   /**
-   * The Chat app-defined key for the thread related to the event. See the thread_key field of the
-   * `spaces.message.create` request for more information.
+   * The Chat app-defined key for the thread related to the event. See [`spaces.messages.thread.thre
+   * adKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,8 +279,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Chat app-defined key for the thread related to the event. See the thread_key field of the
-   * `spaces.message.create` request for more information.
+   * The Chat app-defined key for the thread related to the event. See [`spaces.messages.thread.thre
+   * adKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for more
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreadKey() {
@@ -287,8 +289,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Chat app-defined key for the thread related to the event. See the thread_key field of the
-   * `spaces.message.create` request for more information.
+   * The Chat app-defined key for the thread related to the event. See [`spaces.messages.thread.thre
+   * adKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for more
+   * information.
    * @param threadKey threadKey or {@code null} for none
    */
   public DeprecatedEvent setThreadKey(java.lang.String threadKey) {

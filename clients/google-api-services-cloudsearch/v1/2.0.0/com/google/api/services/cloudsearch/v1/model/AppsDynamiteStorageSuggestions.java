@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Principal associated with a given RBAC subject. This principal is used by Sphinx Provisioning
- * Service for RBAC provisionable (go/sphinx-rbacz).
+ * A container wrapping elements necessary for showing suggestion items used in text input
+ * autocomplete.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,40 +28,40 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RbacSubjectProto extends com.google.api.client.json.GenericJson {
+public final class AppsDynamiteStorageSuggestions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
+   * A list of suggestions items which will be used in are used in autocomplete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String username;
+  private java.util.List<AppsDynamiteStorageSuggestionsSuggestionItem> items;
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
+   * A list of suggestions items which will be used in are used in autocomplete.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUsername() {
-    return username;
+  public java.util.List<AppsDynamiteStorageSuggestionsSuggestionItem> getItems() {
+    return items;
   }
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
-   * @param username username or {@code null} for none
+   * A list of suggestions items which will be used in are used in autocomplete.
+   * @param items items or {@code null} for none
    */
-  public RbacSubjectProto setUsername(java.lang.String username) {
-    this.username = username;
+  public AppsDynamiteStorageSuggestions setItems(java.util.List<AppsDynamiteStorageSuggestionsSuggestionItem> items) {
+    this.items = items;
     return this;
   }
 
   @Override
-  public RbacSubjectProto set(String fieldName, Object value) {
-    return (RbacSubjectProto) super.set(fieldName, value);
+  public AppsDynamiteStorageSuggestions set(String fieldName, Object value) {
+    return (AppsDynamiteStorageSuggestions) super.set(fieldName, value);
   }
 
   @Override
-  public RbacSubjectProto clone() {
-    return (RbacSubjectProto) super.clone();
+  public AppsDynamiteStorageSuggestions clone() {
+    return (AppsDynamiteStorageSuggestions) super.clone();
   }
 
 }

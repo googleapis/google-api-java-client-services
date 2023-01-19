@@ -17,8 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Principal associated with a given RBAC subject. This principal is used by Sphinx Provisioning
- * Service for RBAC provisionable (go/sphinx-rbacz).
+ * A list of buttons layed out horizontally.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,40 +27,43 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RbacSubjectProto extends com.google.api.client.json.GenericJson {
+public final class AppsDynamiteStorageButtonList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String username;
+  private java.util.List<AppsDynamiteStorageButton> buttons;
 
-  /**
-   * Format "username" without "@domain", e.g., "bogdand".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUsername() {
-    return username;
+  static {
+    // hack to force ProGuard to consider AppsDynamiteStorageButton used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsDynamiteStorageButton.class);
   }
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
-   * @param username username or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public RbacSubjectProto setUsername(java.lang.String username) {
-    this.username = username;
+  public java.util.List<AppsDynamiteStorageButton> getButtons() {
+    return buttons;
+  }
+
+  /**
+   * @param buttons buttons or {@code null} for none
+   */
+  public AppsDynamiteStorageButtonList setButtons(java.util.List<AppsDynamiteStorageButton> buttons) {
+    this.buttons = buttons;
     return this;
   }
 
   @Override
-  public RbacSubjectProto set(String fieldName, Object value) {
-    return (RbacSubjectProto) super.set(fieldName, value);
+  public AppsDynamiteStorageButtonList set(String fieldName, Object value) {
+    return (AppsDynamiteStorageButtonList) super.set(fieldName, value);
   }
 
   @Override
-  public RbacSubjectProto clone() {
-    return (RbacSubjectProto) super.clone();
+  public AppsDynamiteStorageButtonList clone() {
+    return (AppsDynamiteStorageButtonList) super.clone();
   }
 
 }

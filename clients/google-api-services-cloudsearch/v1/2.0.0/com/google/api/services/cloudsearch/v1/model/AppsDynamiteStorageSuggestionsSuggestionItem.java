@@ -17,8 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Principal associated with a given RBAC subject. This principal is used by Sphinx Provisioning
- * Service for RBAC provisionable (go/sphinx-rbacz).
+ * A suggestion item. Only supports text for now.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,40 +27,37 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RbacSubjectProto extends com.google.api.client.json.GenericJson {
+public final class AppsDynamiteStorageSuggestionsSuggestionItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String username;
+  private java.lang.String text;
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
    * @return value or {@code null} for none
    */
-  public java.lang.String getUsername() {
-    return username;
+  public java.lang.String getText() {
+    return text;
   }
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
-   * @param username username or {@code null} for none
+   * @param text text or {@code null} for none
    */
-  public RbacSubjectProto setUsername(java.lang.String username) {
-    this.username = username;
+  public AppsDynamiteStorageSuggestionsSuggestionItem setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 
   @Override
-  public RbacSubjectProto set(String fieldName, Object value) {
-    return (RbacSubjectProto) super.set(fieldName, value);
+  public AppsDynamiteStorageSuggestionsSuggestionItem set(String fieldName, Object value) {
+    return (AppsDynamiteStorageSuggestionsSuggestionItem) super.set(fieldName, value);
   }
 
   @Override
-  public RbacSubjectProto clone() {
-    return (RbacSubjectProto) super.clone();
+  public AppsDynamiteStorageSuggestionsSuggestionItem clone() {
+    return (AppsDynamiteStorageSuggestionsSuggestionItem) super.clone();
   }
 
 }

@@ -17,8 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Principal associated with a given RBAC subject. This principal is used by Sphinx Provisioning
- * Service for RBAC provisionable (go/sphinx-rbacz).
+ * Represents the crop style applied to an image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,40 +27,64 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RbacSubjectProto extends com.google.api.client.json.GenericJson {
+public final class AppsDynamiteStorageImageCropStyle extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String username;
+  private java.lang.Double aspectRatio;
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
+   * The crop type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUsername() {
-    return username;
+  public java.lang.Double getAspectRatio() {
+    return aspectRatio;
   }
 
   /**
-   * Format "username" without "@domain", e.g., "bogdand".
-   * @param username username or {@code null} for none
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`.
+   * @param aspectRatio aspectRatio or {@code null} for none
    */
-  public RbacSubjectProto setUsername(java.lang.String username) {
-    this.username = username;
+  public AppsDynamiteStorageImageCropStyle setAspectRatio(java.lang.Double aspectRatio) {
+    this.aspectRatio = aspectRatio;
+    return this;
+  }
+
+  /**
+   * The crop type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The crop type.
+   * @param type type or {@code null} for none
+   */
+  public AppsDynamiteStorageImageCropStyle setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public RbacSubjectProto set(String fieldName, Object value) {
-    return (RbacSubjectProto) super.set(fieldName, value);
+  public AppsDynamiteStorageImageCropStyle set(String fieldName, Object value) {
+    return (AppsDynamiteStorageImageCropStyle) super.set(fieldName, value);
   }
 
   @Override
-  public RbacSubjectProto clone() {
-    return (RbacSubjectProto) super.clone();
+  public AppsDynamiteStorageImageCropStyle clone() {
+    return (AppsDynamiteStorageImageCropStyle) super.clone();
   }
 
 }

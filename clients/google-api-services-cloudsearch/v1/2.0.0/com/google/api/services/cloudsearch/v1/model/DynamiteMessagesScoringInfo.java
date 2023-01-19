@@ -58,7 +58,19 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Double messageSenderAffinityScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Double topicalityScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double unjoinedSpaceAffinityScore;
 
   /**
    * @return value or {@code null} for none
@@ -123,6 +135,21 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
   /**
    * @return value or {@code null} for none
    */
+  public java.lang.Double getMessageSenderAffinityScore() {
+    return messageSenderAffinityScore;
+  }
+
+  /**
+   * @param messageSenderAffinityScore messageSenderAffinityScore or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setMessageSenderAffinityScore(java.lang.Double messageSenderAffinityScore) {
+    this.messageSenderAffinityScore = messageSenderAffinityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.Double getTopicalityScore() {
     return topicalityScore;
   }
@@ -132,6 +159,21 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
    */
   public DynamiteMessagesScoringInfo setTopicalityScore(java.lang.Double topicalityScore) {
     this.topicalityScore = topicalityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUnjoinedSpaceAffinityScore() {
+    return unjoinedSpaceAffinityScore;
+  }
+
+  /**
+   * @param unjoinedSpaceAffinityScore unjoinedSpaceAffinityScore or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setUnjoinedSpaceAffinityScore(java.lang.Double unjoinedSpaceAffinityScore) {
+    this.unjoinedSpaceAffinityScore = unjoinedSpaceAffinityScore;
     return this;
   }
 

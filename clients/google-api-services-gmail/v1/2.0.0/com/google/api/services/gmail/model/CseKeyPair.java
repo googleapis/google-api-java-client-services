@@ -17,11 +17,11 @@
 package com.google.api.services.gmail.model;
 
 /**
- * [Beta](https://workspace.google.com/terms/service-terms/index.html). A client-side encryption
- * S/MIME key pair, which is comprised of a public key, its certificate chain, and metadata for its
- * paired private key. Gmail uses the key pair to complete the following tasks: - Sign outgoing
- * client-side encrypted messages. - Save and reopen drafts of client-side encrypted messages. -
- * Save and reopen sent messages. - Decrypt incoming or archived S/MIME messages.
+ * A client-side encryption S/MIME key pair, which is comprised of a public key, its certificate
+ * chain, and metadata for its paired private key. Gmail uses the key pair to complete the following
+ * tasks: - Sign outgoing client-side encrypted messages. - Save and reopen drafts of client-side
+ * encrypted messages. - Save and reopen sent messages. - Decrypt incoming or archived S/MIME
+ * messages.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gmail API. For a detailed explanation see:

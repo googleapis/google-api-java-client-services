@@ -72,7 +72,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input only. The resource name of the account which will be the primary owner of the
-   * account being created. It should be of the form `accounts/{account_id}/`.
+   * account being created. It should be of the form `accounts/{account_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +200,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input only. The resource name of the account which will be the primary owner of the
-   * account being created. It should be of the form `accounts/{account_id}/`.
+   * account being created. It should be of the form `accounts/{account_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryOwner() {
@@ -209,7 +209,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input only. The resource name of the account which will be the primary owner of the
-   * account being created. It should be of the form `accounts/{account_id}/`.
+   * account being created. It should be of the form `accounts/{account_id}`.
    * @param primaryOwner primaryOwner or {@code null} for none
    */
   public Account setPrimaryOwner(java.lang.String primaryOwner) {

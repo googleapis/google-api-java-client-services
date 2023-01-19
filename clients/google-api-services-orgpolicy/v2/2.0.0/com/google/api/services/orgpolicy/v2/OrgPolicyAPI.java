@@ -1332,6 +1332,29 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * Field mask used to specify the fields to be overwritten in the policy by the set. The
+         * fields specified in the update_mask are relative to the policy, not the full request.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Field mask used to specify the fields to be overwritten in the policy by the set. The fields
+       specified in the update_mask are relative to the policy, not the full request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Field mask used to specify the fields to be overwritten in the policy by the set. The
+         * fields specified in the update_mask are relative to the policy, not the full request.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
@@ -3336,6 +3359,29 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * Field mask used to specify the fields to be overwritten in the policy by the set. The
+         * fields specified in the update_mask are relative to the policy, not the full request.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Field mask used to specify the fields to be overwritten in the policy by the set. The fields
+       specified in the update_mask are relative to the policy, not the full request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Field mask used to specify the fields to be overwritten in the policy by the set. The
+         * fields specified in the update_mask are relative to the policy, not the full request.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
@@ -4541,6 +4587,29 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
                 "^projects/[^/]+/policies/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Field mask used to specify the fields to be overwritten in the policy by the set. The
+         * fields specified in the update_mask are relative to the policy, not the full request.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Field mask used to specify the fields to be overwritten in the policy by the set. The fields
+       specified in the update_mask are relative to the policy, not the full request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Field mask used to specify the fields to be overwritten in the policy by the set. The
+         * fields specified in the update_mask are relative to the policy, not the full request.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
           return this;
         }
 

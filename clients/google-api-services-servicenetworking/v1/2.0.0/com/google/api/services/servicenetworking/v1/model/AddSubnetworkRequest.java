@@ -156,6 +156,16 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> requestedRanges;
 
   /**
+   * Optional. Defines the role field of the subnet, e.g. 'ACTIVE'. For information about the roles
+   * that can be set using this field, see
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String role;
+
+  /**
    * Optional. A list of secondary IP ranges to be created within the new subnetwork.
    * The value may be {@code null}.
    */
@@ -475,6 +485,29 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setRequestedRanges(java.util.List<java.lang.String> requestedRanges) {
     this.requestedRanges = requestedRanges;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the role field of the subnet, e.g. 'ACTIVE'. For information about the roles
+   * that can be set using this field, see
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRole() {
+    return role;
+  }
+
+  /**
+   * Optional. Defines the role field of the subnet, e.g. 'ACTIVE'. For information about the roles
+   * that can be set using this field, see
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
+   * @param role role or {@code null} for none
+   */
+  public AddSubnetworkRequest setRole(java.lang.String role) {
+    this.role = role;
     return this;
   }
 

@@ -36,6 +36,13 @@ public final class GoogleCloudIdentitytoolkitV1GetRecaptchaParamResponse extends
   private java.lang.String kind;
 
   /**
+   * The producer project number used to generate PIA tokens
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String producerProjectNumber;
+
+  /**
    * The reCAPTCHA v2 site key used to invoke the reCAPTCHA service. Always present.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class GoogleCloudIdentitytoolkitV1GetRecaptchaParamResponse extends
    */
   public GoogleCloudIdentitytoolkitV1GetRecaptchaParamResponse setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The producer project number used to generate PIA tokens
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProducerProjectNumber() {
+    return producerProjectNumber;
+  }
+
+  /**
+   * The producer project number used to generate PIA tokens
+   * @param producerProjectNumber producerProjectNumber or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1GetRecaptchaParamResponse setProducerProjectNumber(java.lang.String producerProjectNumber) {
+    this.producerProjectNumber = producerProjectNumber;
     return this;
   }
 

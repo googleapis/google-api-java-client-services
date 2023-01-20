@@ -38,8 +38,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   private AccessDeniedPageSettings accessDeniedPageSettings;
 
   /**
-   * Settings to configure attribute propagation to customer application. These attributes may come
-   * from SAML/SessionStorage integration, or other sources in the future.
+   * Settings to configure attribute propagation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +77,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure attribute propagation to customer application. These attributes may come
-   * from SAML/SessionStorage integration, or other sources in the future.
+   * Settings to configure attribute propagation.
    * @return value or {@code null} for none
    */
   public AttributePropagationSettings getAttributePropagationSettings() {
@@ -87,8 +85,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure attribute propagation to customer application. These attributes may come
-   * from SAML/SessionStorage integration, or other sources in the future.
+   * Settings to configure attribute propagation.
    * @param attributePropagationSettings attributePropagationSettings or {@code null} for none
    */
   public ApplicationSettings setAttributePropagationSettings(AttributePropagationSettings attributePropagationSettings) {

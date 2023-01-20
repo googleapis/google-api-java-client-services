@@ -3192,6 +3192,148 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Waits until the specified long-running operation is done or reaches at most a specified timeout,
+         * returning the latest state. If the operation is already done, the latest state is immediately
+         * returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
+         * timeout is used. If the server does not support this method, it returns
+         * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
+         * the latest state before the specified timeout (including immediately), meaning even an immediate
+         * response is no guarantee that the operation is done.
+         *
+         * Create a request for the method "operations.wait".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Wait#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to wait on.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleLongrunningWaitOperationRequest}
+         * @return the request
+         */
+        public Wait wait(java.lang.String name, com.google.api.services.run.v2.model.GoogleLongrunningWaitOperationRequest content) throws java.io.IOException {
+          Wait result = new Wait(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Wait extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:wait";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Waits until the specified long-running operation is done or reaches at most a specified
+           * timeout, returning the latest state. If the operation is already done, the latest state is
+           * immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout,
+           * the HTTP/RPC timeout is used. If the server does not support this method, it returns
+           * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
+           * the latest state before the specified timeout (including immediately), meaning even an
+           * immediate response is no guarantee that the operation is done.
+           *
+           * Create a request for the method "operations.wait".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Wait#execute()} method to invoke the remote operation. <p> {@link
+           * Wait#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to wait on.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleLongrunningWaitOperationRequest}
+           * @since 1.13
+           */
+          protected Wait(java.lang.String name, com.google.api.services.run.v2.model.GoogleLongrunningWaitOperationRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Wait set$Xgafv(java.lang.String $Xgafv) {
+            return (Wait) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Wait setAccessToken(java.lang.String accessToken) {
+            return (Wait) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Wait setAlt(java.lang.String alt) {
+            return (Wait) super.setAlt(alt);
+          }
+
+          @Override
+          public Wait setCallback(java.lang.String callback) {
+            return (Wait) super.setCallback(callback);
+          }
+
+          @Override
+          public Wait setFields(java.lang.String fields) {
+            return (Wait) super.setFields(fields);
+          }
+
+          @Override
+          public Wait setKey(java.lang.String key) {
+            return (Wait) super.setKey(key);
+          }
+
+          @Override
+          public Wait setOauthToken(java.lang.String oauthToken) {
+            return (Wait) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Wait setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Wait) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Wait setQuotaUser(java.lang.String quotaUser) {
+            return (Wait) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Wait setUploadType(java.lang.String uploadType) {
+            return (Wait) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Wait setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Wait) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to wait on. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to wait on.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to wait on. */
+          public Wait setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Wait set(String parameterName, Object value) {
+            return (Wait) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

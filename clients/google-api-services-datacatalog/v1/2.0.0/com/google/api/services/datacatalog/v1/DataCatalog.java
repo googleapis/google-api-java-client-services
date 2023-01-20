@@ -8696,6 +8696,26 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
+           * Supported field for filter is 'service' and value is 'dataplex'. Eg: service=dataplex.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Supported field for filter is 'service' and value is 'dataplex'. Eg: service=dataplex.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Supported field for filter is 'service' and value is 'dataplex'. Eg: service=dataplex.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * The maximum number of items to return. Must be a value between 1 and 1000 inclusively.
            * If not set, defaults to 50.
            */

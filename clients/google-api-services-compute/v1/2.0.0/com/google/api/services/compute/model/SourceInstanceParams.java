@@ -32,8 +32,8 @@ public final class SourceInstanceParams extends com.google.api.client.json.Gener
 
   /**
    * Attached disks configuration. If not provided, defaults are applied: For boot disk and any
-   * other R/W disks, new custom images will be created from each disk. For read-only disks, they
-   * will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+   * other R/W disks, the source images for each disk will be used. For read-only disks, they will
+   * be attached in read-only mode. Local SSD disks will be created as blank volumes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class SourceInstanceParams extends com.google.api.client.json.Gener
 
   /**
    * Attached disks configuration. If not provided, defaults are applied: For boot disk and any
-   * other R/W disks, new custom images will be created from each disk. For read-only disks, they
-   * will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+   * other R/W disks, the source images for each disk will be used. For read-only disks, they will
+   * be attached in read-only mode. Local SSD disks will be created as blank volumes.
    * @return value or {@code null} for none
    */
   public java.util.List<DiskInstantiationConfig> getDiskConfigs() {
@@ -57,8 +57,8 @@ public final class SourceInstanceParams extends com.google.api.client.json.Gener
 
   /**
    * Attached disks configuration. If not provided, defaults are applied: For boot disk and any
-   * other R/W disks, new custom images will be created from each disk. For read-only disks, they
-   * will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+   * other R/W disks, the source images for each disk will be used. For read-only disks, they will
+   * be attached in read-only mode. Local SSD disks will be created as blank volumes.
    * @param diskConfigs diskConfigs or {@code null} for none
    */
   public SourceInstanceParams setDiskConfigs(java.util.List<DiskInstantiationConfig> diskConfigs) {

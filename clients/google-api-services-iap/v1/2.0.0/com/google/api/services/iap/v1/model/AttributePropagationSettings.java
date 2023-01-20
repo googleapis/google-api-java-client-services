@@ -17,9 +17,7 @@
 package com.google.api.services.iap.v1.model;
 
 /**
- * Configuration for propagating attributes to customer applications protected by IAP. These
- * attributes may be SAML attributes from a 3rd party IdP, or potentially other sources in the
- * future.
+ * Configuration for propagating attributes to applications protected by IAP.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity-Aware Proxy API. For a detailed
@@ -42,10 +40,17 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   private java.lang.Boolean enable;
 
   /**
-   * Raw string CEL expression. Expression should be of the form
-   * attributes.saml_attributes.filter(attribute, attribute.name in [{attribute_list}]). An example
-   * expression to select the attributes "my_attr" and "other_attr":
-   * attributes.saml_attributes.filter(attribute, attribute.name in ["my_attr", "other_attr"])
+   * Raw string CEL expression. Must return a list of attributes. Maximum of 45 attributes can be
+   * selected. Expressions can select different attribute types from `attributes`:
+   * `attributes.saml_attributes`, `attributes.iap_attributes`. Limited functions are supported: -
+   * filter: .filter(, ) -> returns a subset of where is true for every item - in: in -> returns
+   * true if contains - selectByName: .selectByName() -> returns the attribute in with the given
+   * name, otherwise returns empty. - emitAs: .emitAs() -> sets the name field to the given for
+   * propagation in selected output credentials. - strict: .strict() -> ignore the `x-goog-iap-
+   * attr-` prefix for the provided attribute when propagating via the `HEADER` output credential,
+   * i.e. request headers. - append: .append() OR .append() -> append the provided or onto the end
+   * of Example expression: attributes.saml_attributes.filter(x, x.name in
+   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,10 +86,17 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Raw string CEL expression. Expression should be of the form
-   * attributes.saml_attributes.filter(attribute, attribute.name in [{attribute_list}]). An example
-   * expression to select the attributes "my_attr" and "other_attr":
-   * attributes.saml_attributes.filter(attribute, attribute.name in ["my_attr", "other_attr"])
+   * Raw string CEL expression. Must return a list of attributes. Maximum of 45 attributes can be
+   * selected. Expressions can select different attribute types from `attributes`:
+   * `attributes.saml_attributes`, `attributes.iap_attributes`. Limited functions are supported: -
+   * filter: .filter(, ) -> returns a subset of where is true for every item - in: in -> returns
+   * true if contains - selectByName: .selectByName() -> returns the attribute in with the given
+   * name, otherwise returns empty. - emitAs: .emitAs() -> sets the name field to the given for
+   * propagation in selected output credentials. - strict: .strict() -> ignore the `x-goog-iap-
+   * attr-` prefix for the provided attribute when propagating via the `HEADER` output credential,
+   * i.e. request headers. - append: .append() OR .append() -> append the provided or onto the end
+   * of Example expression: attributes.saml_attributes.filter(x, x.name in
+   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())
    * @return value or {@code null} for none
    */
   public java.lang.String getExpression() {
@@ -92,10 +104,17 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Raw string CEL expression. Expression should be of the form
-   * attributes.saml_attributes.filter(attribute, attribute.name in [{attribute_list}]). An example
-   * expression to select the attributes "my_attr" and "other_attr":
-   * attributes.saml_attributes.filter(attribute, attribute.name in ["my_attr", "other_attr"])
+   * Raw string CEL expression. Must return a list of attributes. Maximum of 45 attributes can be
+   * selected. Expressions can select different attribute types from `attributes`:
+   * `attributes.saml_attributes`, `attributes.iap_attributes`. Limited functions are supported: -
+   * filter: .filter(, ) -> returns a subset of where is true for every item - in: in -> returns
+   * true if contains - selectByName: .selectByName() -> returns the attribute in with the given
+   * name, otherwise returns empty. - emitAs: .emitAs() -> sets the name field to the given for
+   * propagation in selected output credentials. - strict: .strict() -> ignore the `x-goog-iap-
+   * attr-` prefix for the provided attribute when propagating via the `HEADER` output credential,
+   * i.e. request headers. - append: .append() OR .append() -> append the provided or onto the end
+   * of Example expression: attributes.saml_attributes.filter(x, x.name in
+   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())
    * @param expression expression or {@code null} for none
    */
   public AttributePropagationSettings setExpression(java.lang.String expression) {

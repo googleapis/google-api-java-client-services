@@ -31,6 +31,20 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Source of the effective targetCpa value for AdGroup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adGroupEffectiveTargetCpaSource;
+
+  /**
+   * Output only. The effective targetCpa for AdGroup, in micros of advertiser's currency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long adGroupEffectiveTargetCpaValue;
+
+  /**
    * The type of the bidding strategy.
    * The value may be {@code null}.
    */
@@ -51,6 +65,40 @@ public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.clie
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long value;
+
+  /**
+   * Output only. Source of the effective targetCpa value for AdGroup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdGroupEffectiveTargetCpaSource() {
+    return adGroupEffectiveTargetCpaSource;
+  }
+
+  /**
+   * Output only. Source of the effective targetCpa value for AdGroup.
+   * @param adGroupEffectiveTargetCpaSource adGroupEffectiveTargetCpaSource or {@code null} for none
+   */
+  public YoutubeAndPartnersBiddingStrategy setAdGroupEffectiveTargetCpaSource(java.lang.String adGroupEffectiveTargetCpaSource) {
+    this.adGroupEffectiveTargetCpaSource = adGroupEffectiveTargetCpaSource;
+    return this;
+  }
+
+  /**
+   * Output only. The effective targetCpa for AdGroup, in micros of advertiser's currency.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAdGroupEffectiveTargetCpaValue() {
+    return adGroupEffectiveTargetCpaValue;
+  }
+
+  /**
+   * Output only. The effective targetCpa for AdGroup, in micros of advertiser's currency.
+   * @param adGroupEffectiveTargetCpaValue adGroupEffectiveTargetCpaValue or {@code null} for none
+   */
+  public YoutubeAndPartnersBiddingStrategy setAdGroupEffectiveTargetCpaValue(java.lang.Long adGroupEffectiveTargetCpaValue) {
+    this.adGroupEffectiveTargetCpaValue = adGroupEffectiveTargetCpaValue;
+    return this;
+  }
 
   /**
    * The type of the bidding strategy.

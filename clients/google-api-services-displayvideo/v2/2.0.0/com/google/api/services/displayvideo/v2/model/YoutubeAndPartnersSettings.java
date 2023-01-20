@@ -52,6 +52,36 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private YoutubeAndPartnersInventorySourceConfig inventorySourceSettings;
 
   /**
+   * The ID of the form to generate leads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long leadFormId;
+
+  /**
+   * The ID of the merchant which is linked to the line item for product feed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long linkedMerchantId;
+
+  /**
+   * The IDs of the videos appear below the primary video ad when the ad is playing in the YouTube
+   * app on mobile devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> relatedVideoIds;
+
+  /**
+   * The average number of times you want ads from this line item to show to the same person over a
+   * certain period of time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetFrequency targetFrequency;
+
+  /**
    * The third-party measurement settings of the line item.
    * The value may be {@code null}.
    */
@@ -121,6 +151,78 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
    */
   public YoutubeAndPartnersSettings setInventorySourceSettings(YoutubeAndPartnersInventorySourceConfig inventorySourceSettings) {
     this.inventorySourceSettings = inventorySourceSettings;
+    return this;
+  }
+
+  /**
+   * The ID of the form to generate leads.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLeadFormId() {
+    return leadFormId;
+  }
+
+  /**
+   * The ID of the form to generate leads.
+   * @param leadFormId leadFormId or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setLeadFormId(java.lang.Long leadFormId) {
+    this.leadFormId = leadFormId;
+    return this;
+  }
+
+  /**
+   * The ID of the merchant which is linked to the line item for product feed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLinkedMerchantId() {
+    return linkedMerchantId;
+  }
+
+  /**
+   * The ID of the merchant which is linked to the line item for product feed.
+   * @param linkedMerchantId linkedMerchantId or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setLinkedMerchantId(java.lang.Long linkedMerchantId) {
+    this.linkedMerchantId = linkedMerchantId;
+    return this;
+  }
+
+  /**
+   * The IDs of the videos appear below the primary video ad when the ad is playing in the YouTube
+   * app on mobile devices.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRelatedVideoIds() {
+    return relatedVideoIds;
+  }
+
+  /**
+   * The IDs of the videos appear below the primary video ad when the ad is playing in the YouTube
+   * app on mobile devices.
+   * @param relatedVideoIds relatedVideoIds or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setRelatedVideoIds(java.util.List<java.lang.String> relatedVideoIds) {
+    this.relatedVideoIds = relatedVideoIds;
+    return this;
+  }
+
+  /**
+   * The average number of times you want ads from this line item to show to the same person over a
+   * certain period of time.
+   * @return value or {@code null} for none
+   */
+  public TargetFrequency getTargetFrequency() {
+    return targetFrequency;
+  }
+
+  /**
+   * The average number of times you want ads from this line item to show to the same person over a
+   * certain period of time.
+   * @param targetFrequency targetFrequency or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setTargetFrequency(TargetFrequency targetFrequency) {
+    this.targetFrequency = targetFrequency;
     return this;
   }
 

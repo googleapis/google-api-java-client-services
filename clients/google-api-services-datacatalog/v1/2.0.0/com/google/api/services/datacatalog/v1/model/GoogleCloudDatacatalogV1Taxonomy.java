@@ -77,6 +77,14 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   private java.lang.Integer policyTagCount;
 
   /**
+   * Output only. Identity of the service which owns the Taxonomy. This field is only populated when
+   * the taxonomy is created by a GCP service. Currently only 'DATAPLEX' is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1TaxonomyService service;
+
+  /**
    * Output only. Creation and modification timestamps of this taxonomy.
    * The value may be {@code null}.
    */
@@ -179,6 +187,25 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
    */
   public GoogleCloudDatacatalogV1Taxonomy setPolicyTagCount(java.lang.Integer policyTagCount) {
     this.policyTagCount = policyTagCount;
+    return this;
+  }
+
+  /**
+   * Output only. Identity of the service which owns the Taxonomy. This field is only populated when
+   * the taxonomy is created by a GCP service. Currently only 'DATAPLEX' is supported.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1TaxonomyService getService() {
+    return service;
+  }
+
+  /**
+   * Output only. Identity of the service which owns the Taxonomy. This field is only populated when
+   * the taxonomy is created by a GCP service. Currently only 'DATAPLEX' is supported.
+   * @param service service or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Taxonomy setService(GoogleCloudDatacatalogV1TaxonomyService service) {
+    this.service = service;
     return this;
   }
 

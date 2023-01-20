@@ -114,6 +114,14 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean snapshotsEnabled;
 
   /**
+   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
+   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageAggregatePool;
+
+  /**
    * The type of this Volume.
    * The value may be {@code null}.
    */
@@ -297,6 +305,25 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
    */
   public VolumeConfig setSnapshotsEnabled(java.lang.Boolean snapshotsEnabled) {
     this.snapshotsEnabled = snapshotsEnabled;
+    return this;
+  }
+
+  /**
+   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
+   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageAggregatePool() {
+    return storageAggregatePool;
+  }
+
+  /**
+   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
+   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
+   * @param storageAggregatePool storageAggregatePool or {@code null} for none
+   */
+  public VolumeConfig setStorageAggregatePool(java.lang.String storageAggregatePool) {
+    this.storageAggregatePool = storageAggregatePool;
     return this;
   }
 

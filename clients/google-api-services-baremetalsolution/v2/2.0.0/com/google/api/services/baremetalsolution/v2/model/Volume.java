@@ -180,6 +180,14 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
+   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageAggregatePool;
+
+  /**
    * The storage type for this volume.
    * The value may be {@code null}.
    */
@@ -548,6 +556,25 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
+   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageAggregatePool() {
+    return storageAggregatePool;
+  }
+
+  /**
+   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
+   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
+   * @param storageAggregatePool storageAggregatePool or {@code null} for none
+   */
+  public Volume setStorageAggregatePool(java.lang.String storageAggregatePool) {
+    this.storageAggregatePool = storageAggregatePool;
     return this;
   }
 

@@ -394,6 +394,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private SensitiveCategoryAssignedTargetingOptionDetails sensitiveCategoryExclusionDetails;
 
   /**
+   * Session position details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_SESSION_POSITION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SessionPositionAssignedTargetingOptionDetails sessionPositionDetails;
+
+  /**
    * Sub-exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SUB_EXCHANGE`.
    * The value may be {@code null}.
@@ -446,6 +454,22 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private ViewabilityAssignedTargetingOptionDetails viewabilityDetails;
+
+  /**
+   * YouTube channel details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeChannelAssignedTargetingOptionDetails youtubeChannelDetails;
+
+  /**
+   * YouTube video details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_VIDEO`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeVideoAssignedTargetingOptionDetails youtubeVideoDetails;
 
   /**
    * Age range details. This field will be populated when the targeting_type is
@@ -1301,6 +1325,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
+   * Session position details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_SESSION_POSITION`.
+   * @return value or {@code null} for none
+   */
+  public SessionPositionAssignedTargetingOptionDetails getSessionPositionDetails() {
+    return sessionPositionDetails;
+  }
+
+  /**
+   * Session position details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_SESSION_POSITION`.
+   * @param sessionPositionDetails sessionPositionDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setSessionPositionDetails(SessionPositionAssignedTargetingOptionDetails sessionPositionDetails) {
+    this.sessionPositionDetails = sessionPositionDetails;
+    return this;
+  }
+
+  /**
    * Sub-exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SUB_EXCHANGE`.
    * @return value or {@code null} for none
@@ -1426,6 +1469,44 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setViewabilityDetails(ViewabilityAssignedTargetingOptionDetails viewabilityDetails) {
     this.viewabilityDetails = viewabilityDetails;
+    return this;
+  }
+
+  /**
+   * YouTube channel details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL`.
+   * @return value or {@code null} for none
+   */
+  public YoutubeChannelAssignedTargetingOptionDetails getYoutubeChannelDetails() {
+    return youtubeChannelDetails;
+  }
+
+  /**
+   * YouTube channel details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL`.
+   * @param youtubeChannelDetails youtubeChannelDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setYoutubeChannelDetails(YoutubeChannelAssignedTargetingOptionDetails youtubeChannelDetails) {
+    this.youtubeChannelDetails = youtubeChannelDetails;
+    return this;
+  }
+
+  /**
+   * YouTube video details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_VIDEO`.
+   * @return value or {@code null} for none
+   */
+  public YoutubeVideoAssignedTargetingOptionDetails getYoutubeVideoDetails() {
+    return youtubeVideoDetails;
+  }
+
+  /**
+   * YouTube video details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_VIDEO`.
+   * @param youtubeVideoDetails youtubeVideoDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setYoutubeVideoDetails(YoutubeVideoAssignedTargetingOptionDetails youtubeVideoDetails) {
+    this.youtubeVideoDetails = youtubeVideoDetails;
     return this;
   }
 

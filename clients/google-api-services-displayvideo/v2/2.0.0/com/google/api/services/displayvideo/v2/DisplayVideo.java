@@ -16369,6 +16369,1756 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       }
     }
+    /**
+     * An accessor for creating requests from the YoutubeAdGroupAds collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.YoutubeAdGroupAds.List request = displayvideo.youtubeAdGroupAds().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public YoutubeAdGroupAds youtubeAdGroupAds() {
+      return new YoutubeAdGroupAds();
+    }
+
+    /**
+     * The "youtubeAdGroupAds" collection of methods.
+     */
+    public class YoutubeAdGroupAds {
+
+      /**
+       * Gets a YouTube ad group ad.
+       *
+       * Create a request for the method "youtubeAdGroupAds.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad group ad belongs to.
+       * @param youtubeAdGroupAdId Required. The ID of the ad group ad to fetch.
+       * @return the request
+       */
+      public Get get(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupAdId) throws java.io.IOException {
+        Get result = new Get(advertiserId, youtubeAdGroupAdId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.YoutubeAdGroupAd> {
+
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroupAds/{+youtubeAdGroupAdId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern YOUTUBE_AD_GROUP_AD_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Gets a YouTube ad group ad.
+         *
+         * Create a request for the method "youtubeAdGroupAds.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad group ad belongs to.
+         * @param youtubeAdGroupAdId Required. The ID of the ad group ad to fetch.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupAdId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.YoutubeAdGroupAd.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.youtubeAdGroupAdId = com.google.api.client.util.Preconditions.checkNotNull(youtubeAdGroupAdId, "Required parameter youtubeAdGroupAdId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad group ad belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad group ad belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad group ad belongs to. */
+        public Get setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the ad group ad to fetch. */
+        @com.google.api.client.util.Key
+        private java.lang.Long youtubeAdGroupAdId;
+
+        /** Required. The ID of the ad group ad to fetch.
+         */
+        public java.lang.Long getYoutubeAdGroupAdId() {
+          return youtubeAdGroupAdId;
+        }
+
+        /** Required. The ID of the ad group ad to fetch. */
+        public Get setYoutubeAdGroupAdId(java.lang.Long youtubeAdGroupAdId) {
+          this.youtubeAdGroupAdId = youtubeAdGroupAdId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists YouTube ad group ads.
+       *
+       * Create a request for the method "youtubeAdGroupAds.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the ad groups belongs to.
+       * @return the request
+       */
+      public List list(java.lang.Long advertiserId) throws java.io.IOException {
+        List result = new List(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.ListYoutubeAdGroupAdsResponse> {
+
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroupAds";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists YouTube ad group ads.
+         *
+         * Create a request for the method "youtubeAdGroupAds.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the ad groups belongs to.
+         * @since 1.13
+         */
+        protected List(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.ListYoutubeAdGroupAdsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the ad groups belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the ad groups belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the ad groups belongs to. */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by custom YouTube ad group ad fields. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * `AND` and `OR`. Only the restrictions for * the same field can be combined by `OR`. A
+         * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
+         * properties: - `adGroupId` - `displayName` - `entityStatus` - `adGroupAdId` Examples: *
+         * All ad group ads under an ad group: `adGroupId="1234"` and its * entityStatus is
+         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`: `(entityStatus="ENTITY_STATUS_ACTIVE"
+         * OR entityStatus="ENTITY_STATUS_PAUSED") AND adGroupId="12345"` The length of this field
+         * should be no more than 500 characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by custom YouTube ad group ad fields. Supported syntax: * Filter expressions are
+       made up of one or more restrictions. * Restrictions can be combined by `AND` and `OR`. Only the
+       restrictions for * the same field can be combined by `OR`. A sequence of restrictions * implicitly
+       uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
+       `EQUALS (=)`. * Supported properties: - `adGroupId` - `displayName` - `entityStatus` -
+       `adGroupAdId` Examples: * All ad group ads under an ad group: `adGroupId="1234"` and its *
+       entityStatus is `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`:
+       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
+       adGroupId="12345"` The length of this field should be no more than 500 characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by custom YouTube ad group ad fields. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * `AND` and `OR`. Only the restrictions for * the same field can be combined by `OR`. A
+         * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
+         * properties: - `adGroupId` - `displayName` - `entityStatus` - `adGroupAdId` Examples: *
+         * All ad group ads under an ad group: `adGroupId="1234"` and its * entityStatus is
+         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`: `(entityStatus="ENTITY_STATUS_ACTIVE"
+         * OR entityStatus="ENTITY_STATUS_PAUSED") AND adGroupId="12345"` The length of this field
+         * should be no more than 500 characters.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
+       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
+       should be added to the field name. Example: `displayName desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+       error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListYoutubeAdGroupAds`
+         * method. If not specified, the first page of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListYoutubeAdGroupAds` method. If not
+       specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListYoutubeAdGroupAds`
+         * method. If not specified, the first page of results will be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the YoutubeAdGroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.YoutubeAdGroups.List request = displayvideo.youtubeAdGroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public YoutubeAdGroups youtubeAdGroups() {
+      return new YoutubeAdGroups();
+    }
+
+    /**
+     * The "youtubeAdGroups" collection of methods.
+     */
+    public class YoutubeAdGroups {
+
+      /**
+       * Lists assigned targeting options for multiple YouTube ad groups across targeting types.
+       *
+       * Create a request for the method "youtubeAdGroups.bulkListAdGroupAssignedTargetingOptions".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link BulkListAdGroupAssignedTargetingOptions#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the line items belongs to.
+       * @return the request
+       */
+      public BulkListAdGroupAssignedTargetingOptions bulkListAdGroupAssignedTargetingOptions(java.lang.Long advertiserId) throws java.io.IOException {
+        BulkListAdGroupAssignedTargetingOptions result = new BulkListAdGroupAssignedTargetingOptions(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkListAdGroupAssignedTargetingOptions extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.BulkListAdGroupAssignedTargetingOptionsResponse> {
+
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroups:bulkListAdGroupAssignedTargetingOptions";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists assigned targeting options for multiple YouTube ad groups across targeting types.
+         *
+         * Create a request for the method "youtubeAdGroups.bulkListAdGroupAssignedTargetingOptions".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link BulkListAdGroupAssignedTargetingOptions#execute()} method
+         * to invoke the remote operation. <p> {@link BulkListAdGroupAssignedTargetingOptions#initialize(c
+         * om.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+         * initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the line items belongs to.
+         * @since 1.13
+         */
+        protected BulkListAdGroupAssignedTargetingOptions(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.BulkListAdGroupAssignedTargetingOptionsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setAlt(java.lang.String alt) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setCallback(java.lang.String callback) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setFields(java.lang.String fields) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setFields(fields);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setKey(java.lang.String key) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setKey(key);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setQuotaUser(java.lang.String quotaUser) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setUploadType(java.lang.String uploadType) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the line items belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the line items belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the line items belongs to. */
+        public BulkListAdGroupAssignedTargetingOptions setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_YOUTUBE_VIDEO or TARGETING_TYPE_YOUTUBE_CHANNEL
+         * `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
+         * targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no
+         * more than 500 characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
+       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` Examples: *
+       AssignedTargetingOptions of targeting type TARGETING_TYPE_YOUTUBE_VIDEO or
+       TARGETING_TYPE_YOUTUBE_CHANNEL `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
+       targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no more than 500
+       characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_YOUTUBE_VIDEO or TARGETING_TYPE_YOUTUBE_CHANNEL
+         * `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
+         * targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no
+         * more than 500 characters.
+         */
+        public BulkListAdGroupAssignedTargetingOptions setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (default) *
+         * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
+         * specify descending order for a field, a suffix "desc" should be added to the field name.
+         * Example: `targetingType desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (default) *
+       `assignedTargetingOption.targetingType` The default sorting order is ascending. To specify
+       descending order for a field, a suffix "desc" should be added to the field name. Example:
+       `targetingType desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (default) *
+         * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
+         * specify descending order for a field, a suffix "desc" should be added to the field name.
+         * Example: `targetingType desc`.
+         */
+        public BulkListAdGroupAssignedTargetingOptions setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+         * the default is '5000'. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The size must be an integer between `1` and `5000`. If unspecified, the
+       default is '5000'. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+         * the default is '5000'. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        public BulkListAdGroupAssignedTargetingOptions setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token that lets the client fetch the next page of results. Typically, this is the value
+         * of next_page_token returned from the previous call to the
+         * `BulkListAdGroupAssignedTargetingOptions` method. If not specified, the first page of
+         * results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token that lets the client fetch the next page of results. Typically, this is the value of
+       next_page_token returned from the previous call to the `BulkListAdGroupAssignedTargetingOptions`
+       method. If not specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token that lets the client fetch the next page of results. Typically, this is the value
+         * of next_page_token returned from the previous call to the
+         * `BulkListAdGroupAssignedTargetingOptions` method. If not specified, the first page of
+         * results will be returned.
+         */
+        public BulkListAdGroupAssignedTargetingOptions setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Required. The IDs of the youtube ad groups to list assigned targeting options for. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.Long> youtubeAdGroupIds;
+
+        /** Required. The IDs of the youtube ad groups to list assigned targeting options for.
+         */
+        public java.util.List<java.lang.Long> getYoutubeAdGroupIds() {
+          return youtubeAdGroupIds;
+        }
+
+        /** Required. The IDs of the youtube ad groups to list assigned targeting options for. */
+        public BulkListAdGroupAssignedTargetingOptions setYoutubeAdGroupIds(java.util.List<java.lang.Long> youtubeAdGroupIds) {
+          this.youtubeAdGroupIds = youtubeAdGroupIds;
+          return this;
+        }
+
+        @Override
+        public BulkListAdGroupAssignedTargetingOptions set(String parameterName, Object value) {
+          return (BulkListAdGroupAssignedTargetingOptions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a YouTube ad group.
+       *
+       * Create a request for the method "youtubeAdGroups.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad group belongs to.
+       * @param youtubeAdGroupId Required. The ID of the ad group to fetch.
+       * @return the request
+       */
+      public Get get(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupId) throws java.io.IOException {
+        Get result = new Get(advertiserId, youtubeAdGroupId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.YoutubeAdGroup> {
+
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroups/{+youtubeAdGroupId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern YOUTUBE_AD_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Gets a YouTube ad group.
+         *
+         * Create a request for the method "youtubeAdGroups.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad group belongs to.
+         * @param youtubeAdGroupId Required. The ID of the ad group to fetch.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.YoutubeAdGroup.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.youtubeAdGroupId = com.google.api.client.util.Preconditions.checkNotNull(youtubeAdGroupId, "Required parameter youtubeAdGroupId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad group belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad group belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad group belongs to. */
+        public Get setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the ad group to fetch. */
+        @com.google.api.client.util.Key
+        private java.lang.Long youtubeAdGroupId;
+
+        /** Required. The ID of the ad group to fetch.
+         */
+        public java.lang.Long getYoutubeAdGroupId() {
+          return youtubeAdGroupId;
+        }
+
+        /** Required. The ID of the ad group to fetch. */
+        public Get setYoutubeAdGroupId(java.lang.Long youtubeAdGroupId) {
+          this.youtubeAdGroupId = youtubeAdGroupId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists YouTube ad groups.
+       *
+       * Create a request for the method "youtubeAdGroups.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the ad groups belongs to.
+       * @return the request
+       */
+      public List list(java.lang.Long advertiserId) throws java.io.IOException {
+        List result = new List(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.ListYoutubeAdGroupsResponse> {
+
+        private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroups";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists YouTube ad groups.
+         *
+         * Create a request for the method "youtubeAdGroups.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the ad groups belongs to.
+         * @since 1.13
+         */
+        protected List(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.ListYoutubeAdGroupsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the ad groups belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the ad groups belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the ad groups belongs to. */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by custom YouTube ad group fields. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * `AND` and `OR`. Only the restrictions for * the same field can be combined by `OR`. A
+         * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
+         * properties: - `adGroupId` - `displayName` - `entityStatus` - `lineItemId` -
+         * `adGroupFormat` Examples: * All ad groups under an line item: `lineItemId="1234"` * All
+         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+         * `YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM` ad groups under an advertiser:
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
+         * adGroupFormat="YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM"` The length of this field
+         * should be no more than 500 characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by custom YouTube ad group fields. Supported syntax: * Filter expressions are made
+       up of one or more restrictions. * Restrictions can be combined by `AND` and `OR`. Only the
+       restrictions for * the same field can be combined by `OR`. A sequence of restrictions * implicitly
+       uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
+       `EQUALS (=)`. * Supported properties: - `adGroupId` - `displayName` - `entityStatus` - `lineItemId`
+       - `adGroupFormat` Examples: * All ad groups under an line item: `lineItemId="1234"` * All
+       `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+       `YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM` ad groups under an advertiser:
+       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
+       adGroupFormat="YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM"` The length of this field should be
+       no more than 500 characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by custom YouTube ad group fields. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * `AND` and `OR`. Only the restrictions for * the same field can be combined by `OR`. A
+         * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
+         * properties: - `adGroupId` - `displayName` - `entityStatus` - `lineItemId` -
+         * `adGroupFormat` Examples: * All ad groups under an line item: `lineItemId="1234"` * All
+         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+         * `YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM` ad groups under an advertiser:
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
+         * adGroupFormat="YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM"` The length of this field
+         * should be no more than 500 characters.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
+       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
+       should be added to the field name. Example: `displayName desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `200`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Must be between `1` and `200`. If unspecified will default to `100`. Returns
+       error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `200`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListYoutubeAdGroups` method.
+         * If not specified, the first page of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListYoutubeAdGroups` method. If not specified,
+       the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListYoutubeAdGroups` method.
+         * If not specified, the first page of results will be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the TargetingTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.TargetingTypes.List request = displayvideo.targetingTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TargetingTypes targetingTypes() {
+        return new TargetingTypes();
+      }
+
+      /**
+       * The "targetingTypes" collection of methods.
+       */
+      public class TargetingTypes {
+
+        /**
+         * An accessor for creating requests from the AssignedTargetingOptions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+         *   {@code DisplayVideo.AssignedTargetingOptions.List request = displayvideo.assignedTargetingOptions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AssignedTargetingOptions assignedTargetingOptions() {
+          return new AssignedTargetingOptions();
+        }
+
+        /**
+         * The "assignedTargetingOptions" collection of methods.
+         */
+        public class AssignedTargetingOptions {
+
+          /**
+           * Gets a single targeting option assigned to a YouTube ad group. Inherited targeting is not
+           * included.
+           *
+           * Create a request for the method "assignedTargetingOptions.get".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+           * @param youtubeAdGroupId Required. The ID of the ad group the assigned targeting option belongs to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types include:
+           *        * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_PARENTAL_STATUS`
+           *        * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_AUDIENCE_GROUP` *
+           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_SESSION_POSITION` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that identifies the assigned
+           *        targeting option being requested.
+           * @return the request
+           */
+          public Get get(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+            Get result = new Get(advertiserId, youtubeAdGroupId, targetingType, assignedTargetingOptionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.AssignedTargetingOption> {
+
+            private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroups/{+youtubeAdGroupId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Gets a single targeting option assigned to a YouTube ad group. Inherited targeting is not
+             * included.
+             *
+             * Create a request for the method "assignedTargetingOptions.get".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+             * @param youtubeAdGroupId Required. The ID of the ad group the assigned targeting option belongs to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types include:
+           *        * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_PARENTAL_STATUS`
+           *        * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_AUDIENCE_GROUP` *
+           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_SESSION_POSITION` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that identifies the assigned
+           *        targeting option being requested.
+             * @since 1.13
+             */
+            protected Get(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.AssignedTargetingOption.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.youtubeAdGroupId = com.google.api.client.util.Preconditions.checkNotNull(youtubeAdGroupId, "Required parameter youtubeAdGroupId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the ad group belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            public Get setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the ad group the assigned targeting option belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long youtubeAdGroupId;
+
+            /** Required. The ID of the ad group the assigned targeting option belongs to.
+             */
+            public java.lang.Long getYoutubeAdGroupId() {
+              return youtubeAdGroupId;
+            }
+
+            /** Required. The ID of the ad group the assigned targeting option belongs to. */
+            public Get setYoutubeAdGroupId(java.lang.Long youtubeAdGroupId) {
+              this.youtubeAdGroupId = youtubeAdGroupId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+             * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY`
+             * * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option. Supported targeting types include:
+           * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` *
+           `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` *
+           `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+             * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY`
+             * * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public Get setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /**
+             * Required. An identifier unique to the targeting type in this line item that
+             * identifies the assigned targeting option being requested.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String assignedTargetingOptionId;
+
+            /** Required. An identifier unique to the targeting type in this line item that identifies the assigned
+           targeting option being requested.
+             */
+            public java.lang.String getAssignedTargetingOptionId() {
+              return assignedTargetingOptionId;
+            }
+
+            /**
+             * Required. An identifier unique to the targeting type in this line item that
+             * identifies the assigned targeting option being requested.
+             */
+            public Get setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = assignedTargetingOptionId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the targeting options assigned to a YouTube ad group. Inherited targeting is not included.
+           *
+           * Create a request for the method "assignedTargetingOptions.list".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+           * @param youtubeAdGroupId Required. The ID of the ad group to list assigned targeting options for.
+           * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types
+           *        include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+           *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` *
+           *        `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY` *
+           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           *        `TARGETING_TYPE_YOUTUBE_VIDEO`
+           * @return the request
+           */
+          public List list(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupId, java.lang.String targetingType) throws java.io.IOException {
+            List result = new List(advertiserId, youtubeAdGroupId, targetingType);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.ListYoutubeAdGroupAssignedTargetingOptionsResponse> {
+
+            private static final String REST_PATH = "v2/advertisers/{+advertiserId}/youtubeAdGroups/{+youtubeAdGroupId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Lists the targeting options assigned to a YouTube ad group. Inherited targeting is not
+             * included.
+             *
+             * Create a request for the method "assignedTargetingOptions.list".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+             * @param youtubeAdGroupId Required. The ID of the ad group to list assigned targeting options for.
+             * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types
+           *        include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+           *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` *
+           *        `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY` *
+           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           *        `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * @since 1.13
+             */
+            protected List(java.lang.Long advertiserId, java.lang.Long youtubeAdGroupId, java.lang.String targetingType) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.ListYoutubeAdGroupAssignedTargetingOptionsResponse.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.youtubeAdGroupId = com.google.api.client.util.Preconditions.checkNotNull(youtubeAdGroupId, "Required parameter youtubeAdGroupId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the ad group belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            public List setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the ad group to list assigned targeting options for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long youtubeAdGroupId;
+
+            /** Required. The ID of the ad group to list assigned targeting options for.
+             */
+            public java.lang.Long getYoutubeAdGroupId() {
+              return youtubeAdGroupId;
+            }
+
+            /** Required. The ID of the ad group to list assigned targeting options for. */
+            public List setYoutubeAdGroupId(java.lang.Long youtubeAdGroupId) {
+              this.youtubeAdGroupId = youtubeAdGroupId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of assigned targeting options to list. Supported
+             * targeting types include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+             * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY`
+             * * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of assigned targeting options to list. Supported targeting types
+           include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_PARENTAL_STATUS`
+           * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` *
+           `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` *
+           `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of assigned targeting options to list. Supported
+             * targeting types include: * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_AGE_RANGE` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
+             * `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CATEGORY`
+             * * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public List setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /**
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` Examples: * AssignedTargetingOptions with ID 1 or 2
+             * `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` The length of this
+             * field should be no more than 500 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+           (=)`. * Supported fields: - `assignedTargetingOptionId` Examples: * AssignedTargetingOptions with
+           ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` The length of this field
+           should be no more than 500 characters.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` Examples: * AssignedTargetingOptions with ID 1 or 2
+             * `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` The length of this
+             * field should be no more than 500 characters.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId` (default) The
+           default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+           be added to the field name. Example: `assignedTargetingOptionId desc`.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Requested page size. Must be between `1` and `5000`. If unspecified will default to
+             * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. Must be between `1` and `5000`. If unspecified will default to `100`. Returns
+           error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. Must be between `1` and `5000`. If unspecified will default to
+             * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of next_page_token returned from the previous call to
+             * `ListYoutubeAdGroupAssignedTargetingOptions` method. If not specified, the first page
+             * of results will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return. Typically, this is the value of
+           next_page_token returned from the previous call to `ListYoutubeAdGroupAssignedTargetingOptions`
+           method. If not specified, the first page of results will be returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of next_page_token returned from the previous call to
+             * `ListYoutubeAdGroupAssignedTargetingOptions` method. If not specified, the first page
+             * of results will be returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
   }
 
   /**

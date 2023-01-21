@@ -118,6 +118,14 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.lang.String requestAccess;
 
   /**
+   * Optional. If set, restricted export configuration will be propagated and enforced on the linked
+   * dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictedExportConfig restrictedExportConfig;
+
+  /**
    * Output only. Current state of the listing.
    * The value may be {@code null}.
    */
@@ -360,6 +368,25 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   public Listing setRequestAccess(java.lang.String requestAccess) {
     this.requestAccess = requestAccess;
+    return this;
+  }
+
+  /**
+   * Optional. If set, restricted export configuration will be propagated and enforced on the linked
+   * dataset.
+   * @return value or {@code null} for none
+   */
+  public RestrictedExportConfig getRestrictedExportConfig() {
+    return restrictedExportConfig;
+  }
+
+  /**
+   * Optional. If set, restricted export configuration will be propagated and enforced on the linked
+   * dataset.
+   * @param restrictedExportConfig restrictedExportConfig or {@code null} for none
+   */
+  public Listing setRestrictedExportConfig(RestrictedExportConfig restrictedExportConfig) {
+    this.restrictedExportConfig = restrictedExportConfig;
     return this;
   }
 

@@ -34,6 +34,13 @@ public final class BiEngineStatistics extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String accelerationMode;
+
+  /**
+   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String biEngineMode;
 
   /**
@@ -49,6 +56,23 @@ public final class BiEngineStatistics extends com.google.api.client.json.Generic
     // hack to force ProGuard to consider BiEngineReason used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(BiEngineReason.class);
+  }
+
+  /**
+   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccelerationMode() {
+    return accelerationMode;
+  }
+
+  /**
+   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * @param accelerationMode accelerationMode or {@code null} for none
+   */
+  public BiEngineStatistics setAccelerationMode(java.lang.String accelerationMode) {
+    this.accelerationMode = accelerationMode;
+    return this;
   }
 
   /**

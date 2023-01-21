@@ -3056,6 +3056,135 @@ public class Integrations extends com.google.api.client.googleapis.services.json
       public class IntegrationsOperations {
 
         /**
+         * Delete the selected integration and all versions inside
+         *
+         * Create a request for the method "integrations.delete".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The location resource of the request.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+
+          /**
+           * Delete the selected integration and all versions inside
+           *
+           * Create a request for the method "integrations.delete".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The location resource of the request.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The location resource of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The location resource of the request.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The location resource of the request. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Executes integrations synchronously by passing the trigger id in the request body. The request is
          * not returned until the requested executions are either fulfilled or experienced an error. If the
          * integration name is not specified (passing `-`), all of the associated integration under the
@@ -5100,6 +5229,322 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
           }
           /**
+           * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
+           * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set to
+           * the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed too.
+           * This RPC throws an exception if the version being deleted is DRAFT, and if the `locked_by` user
+           * is not the same as the user performing the Delete. Audit fields updated include
+           * last_modified_timestamp, last_modified_by. Any existing lock is released when Deleting a
+           * integration. Currently, there is no undelete mechanism.
+           *
+           * Create a request for the method "versions.delete".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The version to delete. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+            /**
+             * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
+             * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set
+             * to the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed
+             * too. This RPC throws an exception if the version being deleted is DRAFT, and if the `locked_by`
+             * user is not the same as the user performing the Delete. Audit fields updated include
+             * last_modified_timestamp, last_modified_by. Any existing lock is released when Deleting a
+             * integration. Currently, there is no undelete mechanism.
+             *
+             * Create a request for the method "versions.delete".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The version to delete. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The version to delete. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The version to delete. Format:
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The version to delete. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Downloads an integration. Retrieves the `IntegrationVersion` for a given `integration_id` and
+           * returns the response as a string.
+           *
+           * Create a request for the method "versions.download".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The version to download. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+           * @return the request
+           */
+          public Download download(java.lang.String name) throws java.io.IOException {
+            Download result = new Download(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Download extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:download";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+            /**
+             * Downloads an integration. Retrieves the `IntegrationVersion` for a given `integration_id` and
+             * returns the response as a string.
+             *
+             * Create a request for the method "versions.download".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The version to download. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             * @since 1.13
+             */
+            protected Download(java.lang.String name) {
+              super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Download set$Xgafv(java.lang.String $Xgafv) {
+              return (Download) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Download setAccessToken(java.lang.String accessToken) {
+              return (Download) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Download setAlt(java.lang.String alt) {
+              return (Download) super.setAlt(alt);
+            }
+
+            @Override
+            public Download setCallback(java.lang.String callback) {
+              return (Download) super.setCallback(callback);
+            }
+
+            @Override
+            public Download setFields(java.lang.String fields) {
+              return (Download) super.setFields(fields);
+            }
+
+            @Override
+            public Download setKey(java.lang.String key) {
+              return (Download) super.setKey(key);
+            }
+
+            @Override
+            public Download setOauthToken(java.lang.String oauthToken) {
+              return (Download) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Download) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Download setQuotaUser(java.lang.String quotaUser) {
+              return (Download) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Download setUploadType(java.lang.String uploadType) {
+              return (Download) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Download setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Download) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The version to download. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The version to download. Format:
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The version to download. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public Download setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** File format for download request. */
+            @com.google.api.client.util.Key
+            private java.lang.String fileFormat;
+
+            /** File format for download request.
+             */
+            public java.lang.String getFileFormat() {
+              return fileFormat;
+            }
+
+            /** File format for download request. */
+            public Download setFileFormat(java.lang.String fileFormat) {
+              this.fileFormat = fileFormat;
+              return this;
+            }
+
+            @Override
+            public Download set(String parameterName, Object value) {
+              return (Download) super.set(parameterName, value);
+            }
+          }
+          /**
            * Get a integration in the specified project.
            *
            * Create a request for the method "versions.get".
@@ -5999,6 +6444,296 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             @Override
             public TakeoverEditLock set(String parameterName, Object value) {
               return (TakeoverEditLock) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after
+           * validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
+           * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
+           * action_by, action_timestamp.
+           *
+           * Create a request for the method "versions.unpublish".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Unpublish#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The version to deactivate. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+           * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest}
+           * @return the request
+           */
+          public Unpublish unpublish(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest content) throws java.io.IOException {
+            Unpublish result = new Unpublish(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Unpublish extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:unpublish";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+            /**
+             * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED"
+             * after validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
+             * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
+             * action_by, action_timestamp.
+             *
+             * Create a request for the method "versions.unpublish".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Unpublish#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Unpublish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The version to deactivate. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest}
+             * @since 1.13
+             */
+            protected Unpublish(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest content) {
+              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Unpublish set$Xgafv(java.lang.String $Xgafv) {
+              return (Unpublish) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Unpublish setAccessToken(java.lang.String accessToken) {
+              return (Unpublish) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Unpublish setAlt(java.lang.String alt) {
+              return (Unpublish) super.setAlt(alt);
+            }
+
+            @Override
+            public Unpublish setCallback(java.lang.String callback) {
+              return (Unpublish) super.setCallback(callback);
+            }
+
+            @Override
+            public Unpublish setFields(java.lang.String fields) {
+              return (Unpublish) super.setFields(fields);
+            }
+
+            @Override
+            public Unpublish setKey(java.lang.String key) {
+              return (Unpublish) super.setKey(key);
+            }
+
+            @Override
+            public Unpublish setOauthToken(java.lang.String oauthToken) {
+              return (Unpublish) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Unpublish setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Unpublish) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Unpublish setQuotaUser(java.lang.String quotaUser) {
+              return (Unpublish) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Unpublish setUploadType(java.lang.String uploadType) {
+              return (Unpublish) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Unpublish setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Unpublish) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The version to deactivate. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The version to deactivate. Format:
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The version to deactivate. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public Unpublish setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Unpublish set(String parameterName, Object value) {
+              return (Unpublish) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Uploads an integration. The content can be a previously downloaded integration. Performs the same
+           * function as CreateDraftIntegrationVersion, but accepts input in a string format, which holds the
+           * complete representation of the IntegrationVersion content.
+           *
+           * Create a request for the method "versions.upload".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The version to upload. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}
+           * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest}
+           * @return the request
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest content) throws java.io.IOException {
+            Upload result = new Upload(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Upload extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/versions:upload";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+
+            /**
+             * Uploads an integration. The content can be a previously downloaded integration. Performs the
+             * same function as CreateDraftIntegrationVersion, but accepts input in a string format, which
+             * holds the complete representation of the IntegrationVersion content.
+             *
+             * Create a request for the method "versions.upload".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The version to upload. Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}
+             * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest}
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest content) {
+              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Upload set$Xgafv(java.lang.String $Xgafv) {
+              return (Upload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Upload setAccessToken(java.lang.String accessToken) {
+              return (Upload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Upload setAlt(java.lang.String alt) {
+              return (Upload) super.setAlt(alt);
+            }
+
+            @Override
+            public Upload setCallback(java.lang.String callback) {
+              return (Upload) super.setCallback(callback);
+            }
+
+            @Override
+            public Upload setFields(java.lang.String fields) {
+              return (Upload) super.setFields(fields);
+            }
+
+            @Override
+            public Upload setKey(java.lang.String key) {
+              return (Upload) super.setKey(key);
+            }
+
+            @Override
+            public Upload setOauthToken(java.lang.String oauthToken) {
+              return (Upload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Upload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Upload setQuotaUser(java.lang.String quotaUser) {
+              return (Upload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Upload setUploadType(java.lang.String uploadType) {
+              return (Upload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Upload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The version to upload. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The version to upload. Format:
+           projects/{project}/locations/{location}/integrations/{integration}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The version to upload. Format:
+             * projects/{project}/locations/{location}/integrations/{integration}
+             */
+            public Upload setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Upload set(String parameterName, Object value) {
+              return (Upload) super.set(parameterName, value);
             }
           }
           /**
@@ -11100,6 +11835,156 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
             }
             /**
+             * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
+             * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set to
+             * the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed too.
+             * This RPC throws an exception if the version being deleted is DRAFT, and if the `locked_by` user
+             * is not the same as the user performing the Delete. Audit fields updated include
+             * last_modified_timestamp, last_modified_by. Any existing lock is released when Deleting a
+             * integration. Currently, there is no undelete mechanism.
+             *
+             * Create a request for the method "versions.delete".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The version to delete. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+              /**
+               * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
+               * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set
+               * to the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed
+               * too. This RPC throws an exception if the version being deleted is DRAFT, and if the `locked_by`
+               * user is not the same as the user performing the Delete. Audit fields updated include
+               * last_modified_timestamp, last_modified_by. Any existing lock is released when Deleting a
+               * integration. Currently, there is no undelete mechanism.
+               *
+               * Create a request for the method "versions.delete".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The version to delete. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The version to delete. Format: projects/{project}/locations/{location}/in
+               * tegrations/{integration}/versions/{version}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The version to delete. Format:
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The version to delete. Format: projects/{project}/locations/{location}/in
+               * tegrations/{integration}/versions/{version}
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
              * Downloads an integration. Retrieves the `IntegrationVersion` for a given `integration_id` and
              * returns the response as a string.
              *
@@ -12308,6 +13193,152 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               @Override
               public TakeoverEditLock set(String parameterName, Object value) {
                 return (TakeoverEditLock) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after
+             * validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
+             * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
+             * action_by, action_timestamp.
+             *
+             * Create a request for the method "versions.unpublish".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Unpublish#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The version to deactivate. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest}
+             * @return the request
+             */
+            public Unpublish unpublish(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest content) throws java.io.IOException {
+              Unpublish result = new Unpublish(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Unpublish extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v1alpha/{+name}:unpublish";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+              /**
+               * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED"
+               * after validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
+               * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
+               * action_by, action_timestamp.
+               *
+               * Create a request for the method "versions.unpublish".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Unpublish#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Unpublish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The version to deactivate. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+               * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest}
+               * @since 1.13
+               */
+              protected Unpublish(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Unpublish set$Xgafv(java.lang.String $Xgafv) {
+                return (Unpublish) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Unpublish setAccessToken(java.lang.String accessToken) {
+                return (Unpublish) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Unpublish setAlt(java.lang.String alt) {
+                return (Unpublish) super.setAlt(alt);
+              }
+
+              @Override
+              public Unpublish setCallback(java.lang.String callback) {
+                return (Unpublish) super.setCallback(callback);
+              }
+
+              @Override
+              public Unpublish setFields(java.lang.String fields) {
+                return (Unpublish) super.setFields(fields);
+              }
+
+              @Override
+              public Unpublish setKey(java.lang.String key) {
+                return (Unpublish) super.setKey(key);
+              }
+
+              @Override
+              public Unpublish setOauthToken(java.lang.String oauthToken) {
+                return (Unpublish) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Unpublish setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Unpublish) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Unpublish setQuotaUser(java.lang.String quotaUser) {
+                return (Unpublish) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Unpublish setUploadType(java.lang.String uploadType) {
+                return (Unpublish) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Unpublish setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Unpublish) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The version to deactivate. Format: projects/{project}/locations/{location
+               * }/integrations/{integration}/versions/{version}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The version to deactivate. Format:
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The version to deactivate. Format: projects/{project}/locations/{location
+               * }/integrations/{integration}/versions/{version}
+               */
+              public Unpublish setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Unpublish set(String parameterName, Object value) {
+                return (Unpublish) super.set(parameterName, value);
               }
             }
             /**

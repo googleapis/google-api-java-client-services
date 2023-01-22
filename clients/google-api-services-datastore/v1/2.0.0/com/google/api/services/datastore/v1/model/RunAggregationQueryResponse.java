@@ -44,6 +44,14 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
   private AggregationQuery query;
 
   /**
+   * The identifier of the transaction that was started as part of this RunAggregationQuery request.
+   * Set only when ReadOptions.begin_transaction was set in RunAggregationQueryRequest.read_options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transaction;
+
+  /**
    * A batch of aggregation results. Always present.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,55 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
    */
   public RunAggregationQueryResponse setQuery(AggregationQuery query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this RunAggregationQuery request.
+   * Set only when ReadOptions.begin_transaction was set in RunAggregationQueryRequest.read_options.
+   * @see #decodeTransaction()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransaction() {
+    return transaction;
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this RunAggregationQuery request.
+   * Set only when ReadOptions.begin_transaction was set in RunAggregationQueryRequest.read_options.
+   * @see #getTransaction()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeTransaction() {
+    return com.google.api.client.util.Base64.decodeBase64(transaction);
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this RunAggregationQuery request.
+   * Set only when ReadOptions.begin_transaction was set in RunAggregationQueryRequest.read_options.
+   * @see #encodeTransaction()
+   * @param transaction transaction or {@code null} for none
+   */
+  public RunAggregationQueryResponse setTransaction(java.lang.String transaction) {
+    this.transaction = transaction;
+    return this;
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this RunAggregationQuery request.
+   * Set only when ReadOptions.begin_transaction was set in RunAggregationQueryRequest.read_options.
+   * @see #setTransaction()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public RunAggregationQueryResponse encodeTransaction(byte[] transaction) {
+    this.transaction = com.google.api.client.util.Base64.encodeBase64URLSafeString(transaction);
     return this;
   }
 

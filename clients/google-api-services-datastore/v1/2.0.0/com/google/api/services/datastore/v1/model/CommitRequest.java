@@ -56,6 +56,14 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.util.List<Mutation> mutations;
 
   /**
+   * Options for beginning a new transaction for this request. The transaction is committed when the
+   * request completes. If specified, TransactionOptions.mode must be TransactionOptions.ReadWrite.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransactionOptions singleUseTransaction;
+
+  /**
    * The identifier of the transaction associated with the commit. A transaction identifier is
    * returned by a call to Datastore.BeginTransaction.
    * The value may be {@code null}.
@@ -121,6 +129,25 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    */
   public CommitRequest setMutations(java.util.List<Mutation> mutations) {
     this.mutations = mutations;
+    return this;
+  }
+
+  /**
+   * Options for beginning a new transaction for this request. The transaction is committed when the
+   * request completes. If specified, TransactionOptions.mode must be TransactionOptions.ReadWrite.
+   * @return value or {@code null} for none
+   */
+  public TransactionOptions getSingleUseTransaction() {
+    return singleUseTransaction;
+  }
+
+  /**
+   * Options for beginning a new transaction for this request. The transaction is committed when the
+   * request completes. If specified, TransactionOptions.mode must be TransactionOptions.ReadWrite.
+   * @param singleUseTransaction singleUseTransaction or {@code null} for none
+   */
+  public CommitRequest setSingleUseTransaction(TransactionOptions singleUseTransaction) {
+    this.singleUseTransaction = singleUseTransaction;
     return this;
   }
 

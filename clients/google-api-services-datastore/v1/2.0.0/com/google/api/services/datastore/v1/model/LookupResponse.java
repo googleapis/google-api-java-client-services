@@ -79,6 +79,14 @@ public final class LookupResponse extends com.google.api.client.json.GenericJson
   private String readTime;
 
   /**
+   * The identifier of the transaction that was started as part of this Lookup request. Set only
+   * when ReadOptions.begin_transaction was set in LookupRequest.read_options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transaction;
+
+  /**
    * A list of keys that were not looked up due to resource constraints. The order of results in
    * this field is undefined and has no relation to the order of the keys in the input.
    * @return value or {@code null} for none
@@ -149,6 +157,55 @@ public final class LookupResponse extends com.google.api.client.json.GenericJson
    */
   public LookupResponse setReadTime(String readTime) {
     this.readTime = readTime;
+    return this;
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this Lookup request. Set only
+   * when ReadOptions.begin_transaction was set in LookupRequest.read_options.
+   * @see #decodeTransaction()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransaction() {
+    return transaction;
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this Lookup request. Set only
+   * when ReadOptions.begin_transaction was set in LookupRequest.read_options.
+   * @see #getTransaction()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeTransaction() {
+    return com.google.api.client.util.Base64.decodeBase64(transaction);
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this Lookup request. Set only
+   * when ReadOptions.begin_transaction was set in LookupRequest.read_options.
+   * @see #encodeTransaction()
+   * @param transaction transaction or {@code null} for none
+   */
+  public LookupResponse setTransaction(java.lang.String transaction) {
+    this.transaction = transaction;
+    return this;
+  }
+
+  /**
+   * The identifier of the transaction that was started as part of this Lookup request. Set only
+   * when ReadOptions.begin_transaction was set in LookupRequest.read_options.
+   * @see #setTransaction()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public LookupResponse encodeTransaction(byte[] transaction) {
+    this.transaction = com.google.api.client.util.Base64.encodeBase64URLSafeString(transaction);
     return this;
   }
 

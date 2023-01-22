@@ -30,6 +30,15 @@ package com.google.api.services.datastore.v1.model;
 public final class ReadOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Options for beginning a new transaction for this request. The new transaction identifier will
+   * be returned in the corresponding response as either LookupResponse.transaction or
+   * RunQueryResponse.transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransactionOptions newTransaction;
+
+  /**
    * The non-transactional read consistency to use.
    * The value may be {@code null}.
    */
@@ -51,6 +60,27 @@ public final class ReadOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
+
+  /**
+   * Options for beginning a new transaction for this request. The new transaction identifier will
+   * be returned in the corresponding response as either LookupResponse.transaction or
+   * RunQueryResponse.transaction.
+   * @return value or {@code null} for none
+   */
+  public TransactionOptions getNewTransaction() {
+    return newTransaction;
+  }
+
+  /**
+   * Options for beginning a new transaction for this request. The new transaction identifier will
+   * be returned in the corresponding response as either LookupResponse.transaction or
+   * RunQueryResponse.transaction.
+   * @param newTransaction newTransaction or {@code null} for none
+   */
+  public ReadOptions setNewTransaction(TransactionOptions newTransaction) {
+    this.newTransaction = newTransaction;
+    return this;
+  }
 
   /**
    * The non-transactional read consistency to use.

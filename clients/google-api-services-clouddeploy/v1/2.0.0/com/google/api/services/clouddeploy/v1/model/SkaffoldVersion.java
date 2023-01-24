@@ -31,8 +31,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class SkaffoldVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date when this version is expected to no longer be supported. For a more precise time, use the
-   * `support_expiration_time` field.
+   * Date when this version is expected to no longer be supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +45,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   private java.lang.String version;
 
   /**
-   * Date when this version is expected to no longer be supported. For a more precise time, use the
-   * `support_expiration_time` field.
+   * Date when this version is expected to no longer be supported.
    * @return value or {@code null} for none
    */
   public Date getSupportEndDate() {
@@ -55,8 +53,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Date when this version is expected to no longer be supported. For a more precise time, use the
-   * `support_expiration_time` field.
+   * Date when this version is expected to no longer be supported.
    * @param supportEndDate supportEndDate or {@code null} for none
    */
   public SkaffoldVersion setSupportEndDate(Date supportEndDate) {

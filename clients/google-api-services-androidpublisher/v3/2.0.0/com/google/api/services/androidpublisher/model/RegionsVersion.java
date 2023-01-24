@@ -32,7 +32,7 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A string representing version of the available regions being used for the specified
-   * resource. The current version is 2022/01.
+   * resource. The current version is 2022/02.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A string representing version of the available regions being used for the specified
-   * resource. The current version is 2022/01.
+   * resource. The current version is 2022/02.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -49,7 +49,7 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A string representing version of the available regions being used for the specified
-   * resource. The current version is 2022/01.
+   * resource. The current version is 2022/02.
    * @param version version or {@code null} for none
    */
   public RegionsVersion setVersion(java.lang.String version) {

@@ -17,7 +17,7 @@
 package com.google.api.services.translate.v3.model;
 
 /**
- * The response message for language detection.
+ * An input file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation
@@ -28,64 +28,67 @@ package com.google.api.services.translate.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DetectedLanguage extends com.google.api.client.json.GenericJson {
+public final class InputFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence of the detection result for this language.
+   * Google Cloud Storage file source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float confidence;
+  private GcsInputSource gcsSource;
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * Optional. Usage of the file contents. Options are TRAIN|VALIDATION|TEST, or UNASSIGNED (by
+   * default) for auto split.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String languageCode;
+  private java.lang.String usage;
 
   /**
-   * The confidence of the detection result for this language.
+   * Google Cloud Storage file source.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getConfidence() {
-    return confidence;
+  public GcsInputSource getGcsSource() {
+    return gcsSource;
   }
 
   /**
-   * The confidence of the detection result for this language.
-   * @param confidence confidence or {@code null} for none
+   * Google Cloud Storage file source.
+   * @param gcsSource gcsSource or {@code null} for none
    */
-  public DetectedLanguage setConfidence(java.lang.Float confidence) {
-    this.confidence = confidence;
+  public InputFile setGcsSource(GcsInputSource gcsSource) {
+    this.gcsSource = gcsSource;
     return this;
   }
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * Optional. Usage of the file contents. Options are TRAIN|VALIDATION|TEST, or UNASSIGNED (by
+   * default) for auto split.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLanguageCode() {
-    return languageCode;
+  public java.lang.String getUsage() {
+    return usage;
   }
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
-   * @param languageCode languageCode or {@code null} for none
+   * Optional. Usage of the file contents. Options are TRAIN|VALIDATION|TEST, or UNASSIGNED (by
+   * default) for auto split.
+   * @param usage usage or {@code null} for none
    */
-  public DetectedLanguage setLanguageCode(java.lang.String languageCode) {
-    this.languageCode = languageCode;
+  public InputFile setUsage(java.lang.String usage) {
+    this.usage = usage;
     return this;
   }
 
   @Override
-  public DetectedLanguage set(String fieldName, Object value) {
-    return (DetectedLanguage) super.set(fieldName, value);
+  public InputFile set(String fieldName, Object value) {
+    return (InputFile) super.set(fieldName, value);
   }
 
   @Override
-  public DetectedLanguage clone() {
-    return (DetectedLanguage) super.clone();
+  public InputFile clone() {
+    return (InputFile) super.clone();
   }
 
 }

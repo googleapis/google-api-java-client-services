@@ -119,7 +119,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * Optional. To deliver messages, Eventarc might use other GCP products as a transport
+   * Optional. To deliver messages, Eventarc might use other Google Cloud products as a transport
    * intermediary. This field contains a reference to that transport intermediary. This information
    * can be used for debugging purposes.
    * The value may be {@code null}.
@@ -324,7 +324,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. To deliver messages, Eventarc might use other GCP products as a transport
+   * Optional. To deliver messages, Eventarc might use other Google Cloud products as a transport
    * intermediary. This field contains a reference to that transport intermediary. This information
    * can be used for debugging purposes.
    * @return value or {@code null} for none
@@ -334,7 +334,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. To deliver messages, Eventarc might use other GCP products as a transport
+   * Optional. To deliver messages, Eventarc might use other Google Cloud products as a transport
    * intermediary. This field contains a reference to that transport intermediary. This information
    * can be used for debugging purposes.
    * @param transport transport or {@code null} for none

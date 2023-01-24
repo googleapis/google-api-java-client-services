@@ -43,10 +43,11 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressSource extends com
 
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources
-   * will be allowed to access perimeter data. Currently only projects are allowed. Format:
-   * `projects/{project_number}` The project may be in any Google Cloud organization, not just the
-   * organization that the perimeter is defined in. `*` is not allowed, the case of allowing all
-   * Google Cloud resources only is not supported.
+   * will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project
+   * format: `projects/{project_number}` VPC format:
+   * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`. The project may be in
+   * any Google Cloud organization, not just the organization that the perimeter is defined in. `*`
+   * is not allowed, the case of allowing all Google Cloud resources only is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,10 +82,11 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressSource extends com
 
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources
-   * will be allowed to access perimeter data. Currently only projects are allowed. Format:
-   * `projects/{project_number}` The project may be in any Google Cloud organization, not just the
-   * organization that the perimeter is defined in. `*` is not allowed, the case of allowing all
-   * Google Cloud resources only is not supported.
+   * will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project
+   * format: `projects/{project_number}` VPC format:
+   * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`. The project may be in
+   * any Google Cloud organization, not just the organization that the perimeter is defined in. `*`
+   * is not allowed, the case of allowing all Google Cloud resources only is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -93,10 +95,11 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressSource extends com
 
   /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources
-   * will be allowed to access perimeter data. Currently only projects are allowed. Format:
-   * `projects/{project_number}` The project may be in any Google Cloud organization, not just the
-   * organization that the perimeter is defined in. `*` is not allowed, the case of allowing all
-   * Google Cloud resources only is not supported.
+   * will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project
+   * format: `projects/{project_number}` VPC format:
+   * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`. The project may be in
+   * any Google Cloud organization, not just the organization that the perimeter is defined in. `*`
+   * is not allowed, the case of allowing all Google Cloud resources only is not supported.
    * @param resource resource or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1IngressSource setResource(java.lang.String resource) {

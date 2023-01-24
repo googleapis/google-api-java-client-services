@@ -31,7 +31,7 @@ public final class AnalyzeMoveResponse extends com.google.api.client.json.Generi
 
   /**
    * The list of analyses returned from performing the intended resource move analysis. The analysis
-   * is grouped by different Cloud services.
+   * is grouped by different Google Cloud services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class AnalyzeMoveResponse extends com.google.api.client.json.Generi
 
   /**
    * The list of analyses returned from performing the intended resource move analysis. The analysis
-   * is grouped by different Cloud services.
+   * is grouped by different Google Cloud services.
    * @return value or {@code null} for none
    */
   public java.util.List<MoveAnalysis> getMoveAnalysis() {
@@ -48,7 +48,7 @@ public final class AnalyzeMoveResponse extends com.google.api.client.json.Generi
 
   /**
    * The list of analyses returned from performing the intended resource move analysis. The analysis
-   * is grouped by different Cloud services.
+   * is grouped by different Google Cloud services.
    * @param moveAnalysis moveAnalysis or {@code null} for none
    */
   public AnalyzeMoveResponse setMoveAnalysis(java.util.List<MoveAnalysis> moveAnalysis) {

@@ -20,7 +20,7 @@ package com.google.api.services.cloudasset.v1p1beta1;
  * Service definition for CloudAsset (v1p1beta1).
  *
  * <p>
- * The cloud asset API manages the history and inventory of cloud resources.
+ * The Cloud Asset API manages the history and inventory of Google Cloud resources.
  * </p>
  *
  * <p>
@@ -154,11 +154,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class IamPolicies {
 
     /**
-     * Searches all the IAM policies within a given accessible CRM scope (project/folder/organization).
-     * This RPC gives callers especially administrators the ability to search all the IAM policies
-     * within a scope, even if they don't have `.getIamPolicy` permission of all the IAM policies.
-     * Callers should have `cloud.assets.SearchAllIamPolicies` permission on the requested scope,
-     * otherwise the request will be rejected.
+     * Searches all the IAM policies within a given accessible Resource Manager scope
+     * (project/folder/organization). This RPC gives callers especially administrators the ability to
+     * search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission of
+     * all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on the
+     * requested scope, otherwise the request will be rejected.
      *
      * Create a request for the method "iamPolicies.searchAll".
      *
@@ -167,7 +167,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
-     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        number (such as "folders/1234") * Project number (such as "projects/12345") * Project ID
      *        (such as "projects/abc")
      * @return the request
      */
@@ -185,7 +185,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Searches all the IAM policies within a given accessible CRM scope
+       * Searches all the IAM policies within a given accessible Resource Manager scope
        * (project/folder/organization). This RPC gives callers especially administrators the ability to
        * search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission
        * of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on
@@ -201,7 +201,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
-     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        number (such as "folders/1234") * Project number (such as "projects/12345") * Project ID
      *        (such as "projects/abc")
        * @since 1.13
        */
@@ -283,15 +283,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
-       * id (such as "projects/abc")
+       * Folder number (such as "folders/1234") * Project number (such as "projects/12345") *
+       * Project ID (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
-     The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
-     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     The allowed value must be: * Organization number (such as "organizations/123") * Folder number
+     (such as "folders/1234") * Project number (such as "projects/12345") * Project ID (such as
      "projects/abc")
        */
       public java.lang.String getScope() {
@@ -301,8 +301,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
-       * id (such as "projects/abc")
+       * Folder number (such as "folders/1234") * Project number (such as "projects/12345") *
+       * Project ID (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -421,11 +421,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class Resources {
 
     /**
-     * Searches all the resources within a given accessible CRM scope (project/folder/organization).
-     * This RPC gives callers especially administrators the ability to search all the resources within a
-     * scope, even if they don't have `.get` permission of all the resources. Callers should have
-     * `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will
-     * be rejected.
+     * Searches all the resources within a given accessible Resource Manager scope
+     * (project/folder/organization). This RPC gives callers especially administrators the ability to
+     * search all the resources within a scope, even if they don't have `.get` permission of all the
+     * resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested
+     * scope, otherwise the request will be rejected.
      *
      * Create a request for the method "resources.searchAll".
      *
@@ -434,7 +434,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
-     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        number (such as "folders/1234") * Project number (such as "projects/12345") * Project ID
      *        (such as "projects/abc")
      * @return the request
      */
@@ -452,11 +452,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Searches all the resources within a given accessible CRM scope (project/folder/organization).
-       * This RPC gives callers especially administrators the ability to search all the resources within
-       * a scope, even if they don't have `.get` permission of all the resources. Callers should have
-       * `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will
-       * be rejected.
+       * Searches all the resources within a given accessible Resource Manager scope
+       * (project/folder/organization). This RPC gives callers especially administrators the ability to
+       * search all the resources within a scope, even if they don't have `.get` permission of all the
+       * resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested
+       * scope, otherwise the request will be rejected.
        *
        * Create a request for the method "resources.searchAll".
        *
@@ -468,7 +468,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
-     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        number (such as "folders/1234") * Project number (such as "projects/12345") * Project ID
      *        (such as "projects/abc")
        * @since 1.13
        */
@@ -550,15 +550,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
-       * id (such as "projects/abc")
+       * Folder number (such as "folders/1234") * Project number (such as "projects/12345") *
+       * Project ID (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
-     The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
-     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     The allowed value must be: * Organization number (such as "organizations/123") * Folder number
+     (such as "folders/1234") * Project number (such as "projects/12345") * Project ID (such as
      "projects/abc")
        */
       public java.lang.String getScope() {
@@ -568,8 +568,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
-       * id (such as "projects/abc")
+       * Folder number (such as "folders/1234") * Project number (such as "projects/12345") *
+       * Project ID (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {

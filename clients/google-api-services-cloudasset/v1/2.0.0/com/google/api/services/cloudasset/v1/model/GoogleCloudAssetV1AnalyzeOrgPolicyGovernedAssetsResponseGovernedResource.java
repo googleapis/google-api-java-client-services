@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * The GCP resources governed by the organization policies of the
+ * The Google Cloud resources governed by the organization policies of the
  * AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -40,7 +40,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
 
   /**
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format)
-   * of the GCP resource.
+   * of the Google Cloud resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
 
   /**
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format)
-   * of the GCP resource.
+   * of the Google Cloud resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -101,7 +101,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
 
   /**
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format)
-   * of the GCP resource.
+   * of the Google Cloud resource.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource setFullResourceName(java.lang.String fullResourceName) {

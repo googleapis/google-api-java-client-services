@@ -20,7 +20,7 @@ package com.google.api.services.cloudasset.v1;
  * Service definition for CloudAsset (v1).
  *
  * <p>
- * The cloud asset API manages the history and inventory of cloud resources.
+ * The Cloud Asset API manages the history and inventory of Google Cloud resources.
  * </p>
  *
  * <p>
@@ -1829,7 +1829,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The ID to use for the saved query, which must be unique in the specified parent.
        * It will become the final component of the saved query's resource name. This value should be
-       * 4-63 characters, and valid characters are /a-z-/. Notice that this field is required in the
+       * 4-63 characters, and valid characters are `a-z-`. Notice that this field is required in the
        * saved query creation, and the `name` field of the `saved_query` will be ignored.
        */
       @com.google.api.client.util.Key
@@ -1837,7 +1837,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Required. The ID to use for the saved query, which must be unique in the specified parent. It will
      become the final component of the saved query's resource name. This value should be 4-63
-     characters, and valid characters are /a-z-/. Notice that this field is required in the saved query
+     characters, and valid characters are `a-z-`. Notice that this field is required in the saved query
      creation, and the `name` field of the `saved_query` will be ignored.
        */
       public java.lang.String getSavedQueryId() {
@@ -1847,7 +1847,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The ID to use for the saved query, which must be unique in the specified parent.
        * It will become the final component of the saved query's resource name. This value should be
-       * 4-63 characters, and valid characters are /a-z-/. Notice that this field is required in the
+       * 4-63 characters, and valid characters are `a-z-`. Notice that this field is required in the
        * saved query creation, and the `name` field of the `saved_query` will be ignored.
        */
       public Create setSavedQueryId(java.lang.String savedQueryId) {
@@ -2853,17 +2853,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. If true, the response will include access analysis from identities to resources
        * via service account impersonation. This is a very expensive operation, because many derived
        * queries will be executed. We highly recommend you use
-       * AssetService.AnalyzeIamPolicyLongrunning rpc instead. For example, if the request analyzes
+       * AssetService.AnalyzeIamPolicyLongrunning RPC instead. For example, if the request analyzes
        * for which resources user A has permission P, and there's an IAM policy states user A has
        * iam.serviceAccounts.getAccessToken permission to a service account SA, and there's another
-       * IAM policy states service account SA has permission P to a GCP folder F, then user A
-       * potentially has access to the GCP folder F. And those advanced analysis results will be
-       * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another
-       * example, if the request analyzes for who has permission P to a GCP folder F, and there's an
-       * IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA,
-       * and there's another IAM policy states service account SA has permission P to the GCP folder
-       * F, then user A potentially has access to the GCP folder F. And those advanced analysis
-       * results will be included in
+       * IAM policy states service account SA has permission P to a Google Cloud folder F, then user
+       * A potentially has access to the Google Cloud folder F. And those advanced analysis results
+       * will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
+       * Another example, if the request analyzes for who has permission P to a Google Cloud folder
+       * F, and there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a
+       * service account SA, and there's another IAM policy states service account SA has permission
+       * P to the Google Cloud folder F, then user A potentially has access to the Google Cloud
+       * folder F. And those advanced analysis results will be included in
        * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following
        * permissions are considered in this analysis: * `iam.serviceAccounts.actAs` *
        * `iam.serviceAccounts.signBlob` * `iam.serviceAccounts.signJwt` *
@@ -2875,16 +2875,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Optional. If true, the response will include access analysis from identities to resources via
      service account impersonation. This is a very expensive operation, because many derived queries
-     will be executed. We highly recommend you use AssetService.AnalyzeIamPolicyLongrunning rpc instead.
+     will be executed. We highly recommend you use AssetService.AnalyzeIamPolicyLongrunning RPC instead.
      For example, if the request analyzes for which resources user A has permission P, and there's an
      IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA,
-     and there's another IAM policy states service account SA has permission P to a GCP folder F, then
-     user A potentially has access to the GCP folder F. And those advanced analysis results will be
-     included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if
-     the request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states
-     user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another IAM
-     policy states service account SA has permission P to the GCP folder F, then user A potentially has
-     access to the GCP folder F. And those advanced analysis results will be included in
+     and there's another IAM policy states service account SA has permission P to a Google Cloud folder
+     F, then user A potentially has access to the Google Cloud folder F. And those advanced analysis
+     results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
+     Another example, if the request analyzes for who has permission P to a Google Cloud folder F, and
+     there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service account
+     SA, and there's another IAM policy states service account SA has permission P to the Google Cloud
+     folder F, then user A potentially has access to the Google Cloud folder F. And those advanced
+     analysis results will be included in
      AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following permissions are
      considered in this analysis: * `iam.serviceAccounts.actAs` * `iam.serviceAccounts.signBlob` *
      `iam.serviceAccounts.signJwt` * `iam.serviceAccounts.getAccessToken` *
@@ -2898,17 +2899,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. If true, the response will include access analysis from identities to resources
        * via service account impersonation. This is a very expensive operation, because many derived
        * queries will be executed. We highly recommend you use
-       * AssetService.AnalyzeIamPolicyLongrunning rpc instead. For example, if the request analyzes
+       * AssetService.AnalyzeIamPolicyLongrunning RPC instead. For example, if the request analyzes
        * for which resources user A has permission P, and there's an IAM policy states user A has
        * iam.serviceAccounts.getAccessToken permission to a service account SA, and there's another
-       * IAM policy states service account SA has permission P to a GCP folder F, then user A
-       * potentially has access to the GCP folder F. And those advanced analysis results will be
-       * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another
-       * example, if the request analyzes for who has permission P to a GCP folder F, and there's an
-       * IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA,
-       * and there's another IAM policy states service account SA has permission P to the GCP folder
-       * F, then user A potentially has access to the GCP folder F. And those advanced analysis
-       * results will be included in
+       * IAM policy states service account SA has permission P to a Google Cloud folder F, then user
+       * A potentially has access to the Google Cloud folder F. And those advanced analysis results
+       * will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
+       * Another example, if the request analyzes for who has permission P to a Google Cloud folder
+       * F, and there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a
+       * service account SA, and there's another IAM policy states service account SA has permission
+       * P to the Google Cloud folder F, then user A potentially has access to the Google Cloud
+       * folder F. And those advanced analysis results will be included in
        * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following
        * permissions are considered in this analysis: * `iam.serviceAccounts.actAs` *
        * `iam.serviceAccounts.signBlob` * `iam.serviceAccounts.signJwt` *
@@ -2956,15 +2957,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * resource section of the result will expand any resource attached to an IAM policy to
        * include resources lower in the resource hierarchy. For example, if the request analyzes for
        * which resources user A has permission P, and the results include an IAM policy with P on a
-       * GCP folder, the results will also include resources in that folder with permission P. If
-       * true and IamPolicyAnalysisQuery.resource_selector is specified, the resource section of the
-       * result will expand the specified resource to include resources lower in the resource
-       * hierarchy. Only project or lower resources are supported. Folder and organization resource
+       * Google Cloud folder, the results will also include resources in that folder with permission
+       * P. If true and IamPolicyAnalysisQuery.resource_selector is specified, the resource section
+       * of the result will expand the specified resource to include resources lower in the resource
+       * hierarchy. Only project or lower resources are supported. Folder and organization resources
        * cannot be used together with this option. For example, if the request analyzes for which
-       * users have permission P on a GCP project with this option enabled, the results will include
-       * all users who have permission P on that project or any lower resource. If true, the default
-       * max expansion per resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
-       * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
+       * users have permission P on a Google Cloud project with this option enabled, the results
+       * will include all users who have permission P on that project or any lower resource. If
+       * true, the default max expansion per resource is 1000 for AssetService.AnalyzeIamPolicy][]
+       * and 100000 for AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
        */
       @com.google.api.client.util.Key("analysisQuery.options.expandResources")
       private java.lang.Boolean analysisQueryOptionsExpandResources;
@@ -2972,14 +2973,14 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Optional. If true and IamPolicyAnalysisQuery.resource_selector is not specified, the resource
      section of the result will expand any resource attached to an IAM policy to include resources lower
      in the resource hierarchy. For example, if the request analyzes for which resources user A has
-     permission P, and the results include an IAM policy with P on a GCP folder, the results will also
-     include resources in that folder with permission P. If true and
+     permission P, and the results include an IAM policy with P on a Google Cloud folder, the results
+     will also include resources in that folder with permission P. If true and
      IamPolicyAnalysisQuery.resource_selector is specified, the resource section of the result will
      expand the specified resource to include resources lower in the resource hierarchy. Only project or
-     lower resources are supported. Folder and organization resource cannot be used together with this
-     option. For example, if the request analyzes for which users have permission P on a GCP project
-     with this option enabled, the results will include all users who have permission P on that project
-     or any lower resource. If true, the default max expansion per resource is 1000 for
+     lower resources are supported. Folder and organization resources cannot be used together with this
+     option. For example, if the request analyzes for which users have permission P on a Google Cloud
+     project with this option enabled, the results will include all users who have permission P on that
+     project or any lower resource. If true, the default max expansion per resource is 1000 for
      AssetService.AnalyzeIamPolicy][] and 100000 for AssetService.AnalyzeIamPolicyLongrunning][].
      Default is false.
        */
@@ -2992,15 +2993,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * resource section of the result will expand any resource attached to an IAM policy to
        * include resources lower in the resource hierarchy. For example, if the request analyzes for
        * which resources user A has permission P, and the results include an IAM policy with P on a
-       * GCP folder, the results will also include resources in that folder with permission P. If
-       * true and IamPolicyAnalysisQuery.resource_selector is specified, the resource section of the
-       * result will expand the specified resource to include resources lower in the resource
-       * hierarchy. Only project or lower resources are supported. Folder and organization resource
+       * Google Cloud folder, the results will also include resources in that folder with permission
+       * P. If true and IamPolicyAnalysisQuery.resource_selector is specified, the resource section
+       * of the result will expand the specified resource to include resources lower in the resource
+       * hierarchy. Only project or lower resources are supported. Folder and organization resources
        * cannot be used together with this option. For example, if the request analyzes for which
-       * users have permission P on a GCP project with this option enabled, the results will include
-       * all users who have permission P on that project or any lower resource. If true, the default
-       * max expansion per resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
-       * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
+       * users have permission P on a Google Cloud project with this option enabled, the results
+       * will include all users who have permission P on that project or any lower resource. If
+       * true, the default max expansion per resource is 1000 for AssetService.AnalyzeIamPolicy][]
+       * and 100000 for AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
        */
       public AnalyzeIamPolicy setAnalysisQueryOptionsExpandResources(java.lang.Boolean analysisQueryOptionsExpandResources) {
         this.analysisQueryOptionsExpandResources = analysisQueryOptionsExpandResources;
@@ -3389,9 +3390,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link AnalyzeMove#execute()} method to invoke the remote operation.
      *
-     * @param resource Required. Name of the resource to perform the analysis against. Only GCP Project are supported as of
-     *        today. Hence, this can only be Project ID (such as "projects/my-project-id") or a Project
-     *        Number (such as "projects/12345").
+     * @param resource Required. Name of the resource to perform the analysis against. Only Google Cloud projects are
+     *        supported as of today. Hence, this can only be a project ID (such as "projects/my-project-
+     *        id") or a project number (such as "projects/12345").
      * @return the request
      */
     public AnalyzeMove analyzeMove(java.lang.String resource) throws java.io.IOException {
@@ -3421,9 +3422,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * AnalyzeMove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource Required. Name of the resource to perform the analysis against. Only GCP Project are supported as of
-     *        today. Hence, this can only be Project ID (such as "projects/my-project-id") or a Project
-     *        Number (such as "projects/12345").
+       * @param resource Required. Name of the resource to perform the analysis against. Only Google Cloud projects are
+     *        supported as of today. Hence, this can only be a project ID (such as "projects/my-project-
+     *        id") or a project number (such as "projects/12345").
        * @since 1.13
        */
       protected AnalyzeMove(java.lang.String resource) {
@@ -3502,25 +3503,25 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. Name of the resource to perform the analysis against. Only GCP Project are
-       * supported as of today. Hence, this can only be Project ID (such as "projects/my-project-
-       * id") or a Project Number (such as "projects/12345").
+       * Required. Name of the resource to perform the analysis against. Only Google Cloud projects
+       * are supported as of today. Hence, this can only be a project ID (such as "projects/my-
+       * project-id") or a project number (such as "projects/12345").
        */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Required. Name of the resource to perform the analysis against. Only GCP Project are supported as
-     of today. Hence, this can only be Project ID (such as "projects/my-project-id") or a Project Number
-     (such as "projects/12345").
+      /** Required. Name of the resource to perform the analysis against. Only Google Cloud projects are
+     supported as of today. Hence, this can only be a project ID (such as "projects/my-project-id") or a
+     project number (such as "projects/12345").
        */
       public java.lang.String getResource() {
         return resource;
       }
 
       /**
-       * Required. Name of the resource to perform the analysis against. Only GCP Project are
-       * supported as of today. Hence, this can only be Project ID (such as "projects/my-project-
-       * id") or a Project Number (such as "projects/12345").
+       * Required. Name of the resource to perform the analysis against. Only Google Cloud projects
+       * are supported as of today. Hence, this can only be a project ID (such as "projects/my-
+       * project-id") or a project number (such as "projects/12345").
        */
       public AnalyzeMove setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
@@ -3533,28 +3534,28 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. Name of the GCP Folder or Organization to reparent the target resource. The
-       * analysis will be performed against hypothetically moving the resource to this specified
-       * desitination parent. This can only be a Folder number (such as "folders/123") or an
-       * Organization number (such as "organizations/123").
+       * Required. Name of the Google Cloud folder or organization to reparent the target resource.
+       * The analysis will be performed against hypothetically moving the resource to this specified
+       * desitination parent. This can only be a folder number (such as "folders/123") or an
+       * organization number (such as "organizations/123").
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationParent;
 
-      /** Required. Name of the GCP Folder or Organization to reparent the target resource. The analysis will
-     be performed against hypothetically moving the resource to this specified desitination parent. This
-     can only be a Folder number (such as "folders/123") or an Organization number (such as
-     "organizations/123").
+      /** Required. Name of the Google Cloud folder or organization to reparent the target resource. The
+     analysis will be performed against hypothetically moving the resource to this specified
+     desitination parent. This can only be a folder number (such as "folders/123") or an organization
+     number (such as "organizations/123").
        */
       public java.lang.String getDestinationParent() {
         return destinationParent;
       }
 
       /**
-       * Required. Name of the GCP Folder or Organization to reparent the target resource. The
-       * analysis will be performed against hypothetically moving the resource to this specified
-       * desitination parent. This can only be a Folder number (such as "folders/123") or an
-       * Organization number (such as "organizations/123").
+       * Required. Name of the Google Cloud folder or organization to reparent the target resource.
+       * The analysis will be performed against hypothetically moving the resource to this specified
+       * desitination parent. This can only be a folder number (such as "folders/123") or an
+       * organization number (such as "organizations/123").
        */
       public AnalyzeMove setDestinationParent(java.lang.String destinationParent) {
         this.destinationParent = destinationParent;
@@ -3833,8 +3834,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Analyzes organization policies governed assets (GCP resources or policies) under a scope. This
-     * RPC supports custom constraints and the following 10 canned constraints: *
+     * Analyzes organization policies governed assets (Google Cloud resources or policies) under a
+     * scope. This RPC supports custom constraints and the following 10 canned constraints: *
      * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation *
      * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess *
      * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects
@@ -3869,8 +3870,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Analyzes organization policies governed assets (GCP resources or policies) under a scope. This
-       * RPC supports custom constraints and the following 10 canned constraints: *
+       * Analyzes organization policies governed assets (Google Cloud resources or policies) under a
+       * scope. This RPC supports custom constraints and the following 10 canned constraints: *
        * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation *
        * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess *
        * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations *
@@ -5290,14 +5291,14 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
        * information. If not specified or empty, it will search all the IAM policies within the
-       * specified `scope`. Note that the query string is compared against each Cloud IAM policy
-       * binding, including its principals, roles, and Cloud IAM conditions. The returned Cloud IAM
-       * policies will only contain the bindings that match your query. To learn more about the IAM
-       * policy structure, see the [IAM policy documentation](https://cloud.google.com/iam/help
-       * /allow-policies/structure). Examples: * `policy:amy@gmail.com` to find IAM policy bindings
-       * that specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy
-       * bindings that specify the Compute Admin role. * `policy:comp*` to find IAM policy bindings
-       * that contain "comp" as a prefix of any word in the binding. *
+       * specified `scope`. Note that the query string is compared against each IAM policy binding,
+       * including its principals, roles, and IAM conditions. The returned IAM policies will only
+       * contain the bindings that match your query. To learn more about the IAM policy structure,
+       * see the [IAM policy documentation](https://cloud.google.com/iam/help/allow-
+       * policies/structure). Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy:comp*` to find IAM policy bindings that
+       * contain "comp" as a prefix of any word in the binding. *
        * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a
        * role containing "storage.buckets.update" permission. Note that if callers don't have
        * `iam.roles.get` access to a role's included permissions, policy bindings that specify this
@@ -5322,9 +5323,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Optional. The query statement. See [how to construct a query](https://cloud.google.com/asset-
      inventory/docs/searching-iam-policies#how_to_construct_a_query) for more information. If not
      specified or empty, it will search all the IAM policies within the specified `scope`. Note that the
-     query string is compared against each Cloud IAM policy binding, including its principals, roles,
-     and Cloud IAM conditions. The returned Cloud IAM policies will only contain the bindings that match
-     your query. To learn more about the IAM policy structure, see the [IAM policy
+     query string is compared against each IAM policy binding, including its principals, roles, and IAM
+     conditions. The returned IAM policies will only contain the bindings that match your query. To
+     learn more about the IAM policy structure, see the [IAM policy
      documentation](https://cloud.google.com/iam/help/allow-policies/structure). Examples: *
      `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
      `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin role. *
@@ -5353,14 +5354,14 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
        * information. If not specified or empty, it will search all the IAM policies within the
-       * specified `scope`. Note that the query string is compared against each Cloud IAM policy
-       * binding, including its principals, roles, and Cloud IAM conditions. The returned Cloud IAM
-       * policies will only contain the bindings that match your query. To learn more about the IAM
-       * policy structure, see the [IAM policy documentation](https://cloud.google.com/iam/help
-       * /allow-policies/structure). Examples: * `policy:amy@gmail.com` to find IAM policy bindings
-       * that specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy
-       * bindings that specify the Compute Admin role. * `policy:comp*` to find IAM policy bindings
-       * that contain "comp" as a prefix of any word in the binding. *
+       * specified `scope`. Note that the query string is compared against each IAM policy binding,
+       * including its principals, roles, and IAM conditions. The returned IAM policies will only
+       * contain the bindings that match your query. To learn more about the IAM policy structure,
+       * see the [IAM policy documentation](https://cloud.google.com/iam/help/allow-
+       * policies/structure). Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy:comp*` to find IAM policy bindings that
+       * contain "comp" as a prefix of any word in the binding. *
        * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a
        * role containing "storage.buckets.update" permission. Note that if callers don't have
        * `iam.roles.get` access to a role's included permissions, policy bindings that specify this
@@ -5390,7 +5391,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Searches all Cloud resources within the specified scope, such as a project, folder, or
+     * Searches all Google Cloud resources within the specified scope, such as a project, folder, or
      * organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on
      * the desired scope, otherwise the request will be rejected.
      *
@@ -5422,7 +5423,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Searches all Cloud resources within the specified scope, such as a project, folder, or
+       * Searches all Google Cloud resources within the specified scope, such as a project, folder, or
        * organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission
        * on the desired scope, otherwise the request will be rejected.
        *
@@ -5706,34 +5707,36 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
        * If not specified or empty, it will search all the resources within the specified `scope`.
-       * Examples: * `name:Important` to find Cloud resources whose name contains "Important" as a
-       * word. * `name=Important` to find the Cloud resource whose name is exactly "Important". *
-       * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
-       * prefix of any word in the field. * `location:us-west*` to find Cloud resources whose
-       * location contains both "us" and "west" as prefixes. * `labels:prod` to find Cloud resources
-       * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
-       * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
-       * that have a label "env". * `kmsKey:key` to find Cloud resources encrypted with a customer-
-       * managed encryption key whose name contains "key" as a word. This field is deprecated.
-       * Please use the `kmsKeys` field to retrieve KMS key information. * `kmsKeys:key` to find
-       * Cloud resources encrypted with customer-managed encryption keys whose name contains the
-       * word "key". * `relationships:instance-group-1` to find Cloud resources that have
-       * relationships with "instance-group-1" in the related resource name. *
-       * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that have relationships
-       * of type "INSTANCE_TO_INSTANCEGROUP". * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-
-       * group-1` to find compute instances that have relationships with "instance-group-1" in the
-       * compute instance group resource name, for relationship type "INSTANCE_TO_INSTANCEGROUP". *
-       * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a word. * `NOT
-       * state:ACTIVE` to find Cloud resources whose state doesn't contain "ACTIVE" as a word. *
-       * `createTime<1609459200` to find Cloud resources that were created before "2021-01-01
+       * Examples: * `name:Important` to find Google Cloud resources whose name contains "Important"
+       * as a word. * `name=Important` to find the Google Cloud resource whose name is exactly
+       * "Important". * `displayName:Impor*` to find Google Cloud resources whose display name
+       * contains "Impor" as a prefix of any word in the field. * `location:us-west*` to find Google
+       * Cloud resources whose location contains both "us" and "west" as prefixes. * `labels:prod`
+       * to find Google Cloud resources whose labels contain "prod" as a key or value. *
+       * `labels.env:prod` to find Google Cloud resources that have a label "env" and its value is
+       * "prod". * `labels.env:*` to find Google Cloud resources that have a label "env". *
+       * `kmsKey:key` to find Google Cloud resources encrypted with a customer-managed encryption
+       * key whose name contains "key" as a word. This field is deprecated. Please use the `kmsKeys`
+       * field to retrieve Cloud KMS key information. * `kmsKeys:key` to find Google Cloud resources
+       * encrypted with customer-managed encryption keys whose name contains the word "key". *
+       * `relationships:instance-group-1` to find Google Cloud resources that have relationships
+       * with "instance-group-1" in the related resource name. *
+       * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine instances that have
+       * relationships of type "INSTANCE_TO_INSTANCEGROUP". *
+       * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute Engine instances
+       * that have relationships with "instance-group-1" in the Compute Engine instance group
+       * resource name, for relationship type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find
+       * Google Cloud resources whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to
+       * find Google Cloud resources whose state doesn't contain "ACTIVE" as a word. *
+       * `createTime<1609459200` to find Google Cloud resources that were created before "2021-01-01
        * 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
-       * `updateTime>1609459200` to find Cloud resources that were updated after "2021-01-01
+       * `updateTime>1609459200` to find Google Cloud resources that were updated after "2021-01-01
        * 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
-       * `Important` to find Cloud resources that contain "Important" as a word in any of the
-       * searchable fields. * `Impor*` to find Cloud resources that contain "Impor" as a prefix of
-       * any word in any of the searchable fields. * `Important location:(us-west1 OR global)` to
-       * find Cloud resources that contain "Important" as a word in any of the searchable fields and
-       * are also located in the "us-west1" region or the "global" location.
+       * `Important` to find Google Cloud resources that contain "Important" as a word in any of the
+       * searchable fields. * `Impor*` to find Google Cloud resources that contain "Impor" as a
+       * prefix of any word in any of the searchable fields. * `Important location:(us-west1 OR
+       * global)` to find Google Cloud resources that contain "Important" as a word in any of the
+       * searchable fields and are also located in the "us-west1" region or the "global" location.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -5741,32 +5744,33 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Optional. The query statement. See [how to construct a query](https://cloud.google.com/asset-
      inventory/docs/searching-resources#how_to_construct_a_query) for more information. If not specified
      or empty, it will search all the resources within the specified `scope`. Examples: *
-     `name:Important` to find Cloud resources whose name contains "Important" as a word. *
-     `name=Important` to find the Cloud resource whose name is exactly "Important". *
-     `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a prefix of any
-     word in the field. * `location:us-west*` to find Cloud resources whose location contains both "us"
-     and "west" as prefixes. * `labels:prod` to find Cloud resources whose labels contain "prod" as a
-     key or value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
-     "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `kmsKey:key` to find
-     Cloud resources encrypted with a customer-managed encryption key whose name contains "key" as a
-     word. This field is deprecated. Please use the `kmsKeys` field to retrieve KMS key information. *
-     `kmsKeys:key` to find Cloud resources encrypted with customer-managed encryption keys whose name
-     contains the word "key". * `relationships:instance-group-1` to find Cloud resources that have
-     relationships with "instance-group-1" in the related resource name. *
-     `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that have relationships of type
-     "INSTANCE_TO_INSTANCEGROUP". * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-     compute instances that have relationships with "instance-group-1" in the compute instance group
-     resource name, for relationship type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find Cloud
-     resources whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to find Cloud resources
-     whose state doesn't contain "ACTIVE" as a word. * `createTime<1609459200` to find Cloud resources
+     `name:Important` to find Google Cloud resources whose name contains "Important" as a word. *
+     `name=Important` to find the Google Cloud resource whose name is exactly "Important". *
+     `displayName:Impor*` to find Google Cloud resources whose display name contains "Impor" as a prefix
+     of any word in the field. * `location:us-west*` to find Google Cloud resources whose location
+     contains both "us" and "west" as prefixes. * `labels:prod` to find Google Cloud resources whose
+     labels contain "prod" as a key or value. * `labels.env:prod` to find Google Cloud resources that
+     have a label "env" and its value is "prod". * `labels.env:*` to find Google Cloud resources that
+     have a label "env". * `kmsKey:key` to find Google Cloud resources encrypted with a customer-managed
+     encryption key whose name contains "key" as a word. This field is deprecated. Please use the
+     `kmsKeys` field to retrieve Cloud KMS key information. * `kmsKeys:key` to find Google Cloud
+     resources encrypted with customer-managed encryption keys whose name contains the word "key". *
+     `relationships:instance-group-1` to find Google Cloud resources that have relationships with
+     "instance-group-1" in the related resource name. * `relationships:INSTANCE_TO_INSTANCEGROUP` to
+     find Compute Engine instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP". *
+     `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute Engine instances that
+     have relationships with "instance-group-1" in the Compute Engine instance group resource name, for
+     relationship type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find Google Cloud resources
+     whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to find Google Cloud resources whose
+     state doesn't contain "ACTIVE" as a word. * `createTime<1609459200` to find Google Cloud resources
      that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-     "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud resources that were
-     updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00
-     UTC" in seconds. * `Important` to find Cloud resources that contain "Important" as a word in any of
-     the searchable fields. * `Impor*` to find Cloud resources that contain "Impor" as a prefix of any
-     word in any of the searchable fields. * `Important location:(us-west1 OR global)` to find Cloud
-     resources that contain "Important" as a word in any of the searchable fields and are also located
-     in the "us-west1" region or the "global" location.
+     "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Google Cloud resources that
+     were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01
+     00:00:00 UTC" in seconds. * `Important` to find Google Cloud resources that contain "Important" as
+     a word in any of the searchable fields. * `Impor*` to find Google Cloud resources that contain
+     "Impor" as a prefix of any word in any of the searchable fields. * `Important location:(us-west1 OR
+     global)` to find Google Cloud resources that contain "Important" as a word in any of the searchable
+     fields and are also located in the "us-west1" region or the "global" location.
        */
       public java.lang.String getQuery() {
         return query;
@@ -5776,34 +5780,36 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
        * If not specified or empty, it will search all the resources within the specified `scope`.
-       * Examples: * `name:Important` to find Cloud resources whose name contains "Important" as a
-       * word. * `name=Important` to find the Cloud resource whose name is exactly "Important". *
-       * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
-       * prefix of any word in the field. * `location:us-west*` to find Cloud resources whose
-       * location contains both "us" and "west" as prefixes. * `labels:prod` to find Cloud resources
-       * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
-       * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
-       * that have a label "env". * `kmsKey:key` to find Cloud resources encrypted with a customer-
-       * managed encryption key whose name contains "key" as a word. This field is deprecated.
-       * Please use the `kmsKeys` field to retrieve KMS key information. * `kmsKeys:key` to find
-       * Cloud resources encrypted with customer-managed encryption keys whose name contains the
-       * word "key". * `relationships:instance-group-1` to find Cloud resources that have
-       * relationships with "instance-group-1" in the related resource name. *
-       * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that have relationships
-       * of type "INSTANCE_TO_INSTANCEGROUP". * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-
-       * group-1` to find compute instances that have relationships with "instance-group-1" in the
-       * compute instance group resource name, for relationship type "INSTANCE_TO_INSTANCEGROUP". *
-       * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a word. * `NOT
-       * state:ACTIVE` to find Cloud resources whose state doesn't contain "ACTIVE" as a word. *
-       * `createTime<1609459200` to find Cloud resources that were created before "2021-01-01
+       * Examples: * `name:Important` to find Google Cloud resources whose name contains "Important"
+       * as a word. * `name=Important` to find the Google Cloud resource whose name is exactly
+       * "Important". * `displayName:Impor*` to find Google Cloud resources whose display name
+       * contains "Impor" as a prefix of any word in the field. * `location:us-west*` to find Google
+       * Cloud resources whose location contains both "us" and "west" as prefixes. * `labels:prod`
+       * to find Google Cloud resources whose labels contain "prod" as a key or value. *
+       * `labels.env:prod` to find Google Cloud resources that have a label "env" and its value is
+       * "prod". * `labels.env:*` to find Google Cloud resources that have a label "env". *
+       * `kmsKey:key` to find Google Cloud resources encrypted with a customer-managed encryption
+       * key whose name contains "key" as a word. This field is deprecated. Please use the `kmsKeys`
+       * field to retrieve Cloud KMS key information. * `kmsKeys:key` to find Google Cloud resources
+       * encrypted with customer-managed encryption keys whose name contains the word "key". *
+       * `relationships:instance-group-1` to find Google Cloud resources that have relationships
+       * with "instance-group-1" in the related resource name. *
+       * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine instances that have
+       * relationships of type "INSTANCE_TO_INSTANCEGROUP". *
+       * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute Engine instances
+       * that have relationships with "instance-group-1" in the Compute Engine instance group
+       * resource name, for relationship type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find
+       * Google Cloud resources whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to
+       * find Google Cloud resources whose state doesn't contain "ACTIVE" as a word. *
+       * `createTime<1609459200` to find Google Cloud resources that were created before "2021-01-01
        * 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
-       * `updateTime>1609459200` to find Cloud resources that were updated after "2021-01-01
+       * `updateTime>1609459200` to find Google Cloud resources that were updated after "2021-01-01
        * 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
-       * `Important` to find Cloud resources that contain "Important" as a word in any of the
-       * searchable fields. * `Impor*` to find Cloud resources that contain "Impor" as a prefix of
-       * any word in any of the searchable fields. * `Important location:(us-west1 OR global)` to
-       * find Cloud resources that contain "Important" as a word in any of the searchable fields and
-       * are also located in the "us-west1" region or the "global" location.
+       * `Important` to find Google Cloud resources that contain "Important" as a word in any of the
+       * searchable fields. * `Impor*` to find Google Cloud resources that contain "Impor" as a
+       * prefix of any word in any of the searchable fields. * `Important location:(us-west1 OR
+       * global)` to find Google Cloud resources that contain "Important" as a word in any of the
+       * searchable fields and are also located in the "us-west1" region or the "global" location.
        */
       public SearchAllResources setQuery(java.lang.String query) {
         this.query = query;
@@ -5818,10 +5824,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * limited to (both snake_case and camelCase are supported): * name * assetType * project *
        * displayName * description * location * tagKeys * tagValues * tagValueIds * labels *
        * networkTags * kmsKey (This field is deprecated. Please use the `kmsKeys` field to retrieve
-       * KMS key information.) * kmsKeys * createTime * updateTime * state * additionalAttributes *
-       * versionedResources If read_mask is not specified, all fields except versionedResources will
-       * be returned. If only '*' is specified, all fields including versionedResources will be
-       * returned. Any invalid field path will trigger INVALID_ARGUMENT error.
+       * Cloud KMS key information.) * kmsKeys * createTime * updateTime * state *
+       * additionalAttributes * versionedResources If read_mask is not specified, all fields except
+       * versionedResources will be returned. If only '*' is specified, all fields including
+       * versionedResources will be returned. Any invalid field path will trigger INVALID_ARGUMENT
+       * error.
        */
       @com.google.api.client.util.Key
       private String readMask;
@@ -5832,10 +5839,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      `"name,versionedResources"`. The read_mask paths must be valid field paths listed but not limited
      to (both snake_case and camelCase are supported): * name * assetType * project * displayName *
      description * location * tagKeys * tagValues * tagValueIds * labels * networkTags * kmsKey (This
-     field is deprecated. Please use the `kmsKeys` field to retrieve KMS key information.) * kmsKeys *
-     createTime * updateTime * state * additionalAttributes * versionedResources If read_mask is not
-     specified, all fields except versionedResources will be returned. If only '*' is specified, all
-     fields including versionedResources will be returned. Any invalid field path will trigger
+     field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS key information.) *
+     kmsKeys * createTime * updateTime * state * additionalAttributes * versionedResources If read_mask
+     is not specified, all fields except versionedResources will be returned. If only '*' is specified,
+     all fields including versionedResources will be returned. Any invalid field path will trigger
      INVALID_ARGUMENT error.
        */
       public String getReadMask() {
@@ -5850,10 +5857,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * limited to (both snake_case and camelCase are supported): * name * assetType * project *
        * displayName * description * location * tagKeys * tagValues * tagValueIds * labels *
        * networkTags * kmsKey (This field is deprecated. Please use the `kmsKeys` field to retrieve
-       * KMS key information.) * kmsKeys * createTime * updateTime * state * additionalAttributes *
-       * versionedResources If read_mask is not specified, all fields except versionedResources will
-       * be returned. If only '*' is specified, all fields including versionedResources will be
-       * returned. Any invalid field path will trigger INVALID_ARGUMENT error.
+       * Cloud KMS key information.) * kmsKeys * createTime * updateTime * state *
+       * additionalAttributes * versionedResources If read_mask is not specified, all fields except
+       * versionedResources will be returned. If only '*' is specified, all fields including
+       * versionedResources will be returned. Any invalid field path will trigger INVALID_ARGUMENT
+       * error.
        */
       public SearchAllResources setReadMask(String readMask) {
         this.readMask = readMask;

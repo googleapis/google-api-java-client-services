@@ -40,16 +40,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String diskInterface;
 
   /**
-   * Name of a public or custom image used as the data source.
+   * Name of a public or custom image used as the data source. For example, the following are all
+   * valid URLs: (1) Specify the image by its family name:
+   * projects/{project}/global/images/family/{image_family} (2) Specify the image version:
+   * projects/{project}/global/images/{image_version} You can also use Batch customized image in
+   * short names. The following image values are supported for a boot disk: "batch-debian": use
+   * Batch Debian images. "batch-centos": use Batch CentOS images. "batch-cos": use Batch Container-
+   * Optimized images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * Disk size in GB. This field is ignored if `data_source` is `disk` or `image`. If `type` is
-   * `local-ssd`, size_gb should be a multiple of 375GB, otherwise, the final size will be the next
-   * greater multiple of 375 GB.
+   * Disk size in GB. For persistent disk, this field is ignored if `data_source` is `image` or
+   * `snapshot`. For local SSD, size_gb should be a multiple of 375GB, otherwise, the final size
+   * will be the next greater multiple of 375 GB. For boot disk, Batch will calculate the boot disk
+   * size based on source image and task requirements if you do not speicify the size. If both this
+   * field and the boot_disk_mib field in task spec's compute_resource are defined, Batch will only
+   * honor this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -63,8 +72,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String snapshot;
 
   /**
-   * Disk type as shown in `gcloud compute disk-types list` For example, "pd-ssd", "pd-standard",
-   * "pd-balanced", "local-ssd".
+   * Disk type as shown in `gcloud compute disk-types list`. For example, local SSD uses type
+   * "local-ssd". Persistent disks and boot disks use "pd-balanced", "pd-extreme", "pd-ssd" or "pd-
+   * standard".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +100,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a public or custom image used as the data source.
+   * Name of a public or custom image used as the data source. For example, the following are all
+   * valid URLs: (1) Specify the image by its family name:
+   * projects/{project}/global/images/family/{image_family} (2) Specify the image version:
+   * projects/{project}/global/images/{image_version} You can also use Batch customized image in
+   * short names. The following image values are supported for a boot disk: "batch-debian": use
+   * Batch Debian images. "batch-centos": use Batch CentOS images. "batch-cos": use Batch Container-
+   * Optimized images.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -98,7 +114,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a public or custom image used as the data source.
+   * Name of a public or custom image used as the data source. For example, the following are all
+   * valid URLs: (1) Specify the image by its family name:
+   * projects/{project}/global/images/family/{image_family} (2) Specify the image version:
+   * projects/{project}/global/images/{image_version} You can also use Batch customized image in
+   * short names. The following image values are supported for a boot disk: "batch-debian": use
+   * Batch Debian images. "batch-centos": use Batch CentOS images. "batch-cos": use Batch Container-
+   * Optimized images.
    * @param image image or {@code null} for none
    */
   public Disk setImage(java.lang.String image) {
@@ -107,9 +129,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Disk size in GB. This field is ignored if `data_source` is `disk` or `image`. If `type` is
-   * `local-ssd`, size_gb should be a multiple of 375GB, otherwise, the final size will be the next
-   * greater multiple of 375 GB.
+   * Disk size in GB. For persistent disk, this field is ignored if `data_source` is `image` or
+   * `snapshot`. For local SSD, size_gb should be a multiple of 375GB, otherwise, the final size
+   * will be the next greater multiple of 375 GB. For boot disk, Batch will calculate the boot disk
+   * size based on source image and task requirements if you do not speicify the size. If both this
+   * field and the boot_disk_mib field in task spec's compute_resource are defined, Batch will only
+   * honor this field.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -117,9 +142,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Disk size in GB. This field is ignored if `data_source` is `disk` or `image`. If `type` is
-   * `local-ssd`, size_gb should be a multiple of 375GB, otherwise, the final size will be the next
-   * greater multiple of 375 GB.
+   * Disk size in GB. For persistent disk, this field is ignored if `data_source` is `image` or
+   * `snapshot`. For local SSD, size_gb should be a multiple of 375GB, otherwise, the final size
+   * will be the next greater multiple of 375 GB. For boot disk, Batch will calculate the boot disk
+   * size based on source image and task requirements if you do not speicify the size. If both this
+   * field and the boot_disk_mib field in task spec's compute_resource are defined, Batch will only
+   * honor this field.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Disk setSizeGb(java.lang.Long sizeGb) {
@@ -145,8 +173,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Disk type as shown in `gcloud compute disk-types list` For example, "pd-ssd", "pd-standard",
-   * "pd-balanced", "local-ssd".
+   * Disk type as shown in `gcloud compute disk-types list`. For example, local SSD uses type
+   * "local-ssd". Persistent disks and boot disks use "pd-balanced", "pd-extreme", "pd-ssd" or "pd-
+   * standard".
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -154,8 +183,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Disk type as shown in `gcloud compute disk-types list` For example, "pd-ssd", "pd-standard",
-   * "pd-balanced", "local-ssd".
+   * Disk type as shown in `gcloud compute disk-types list`. For example, local SSD uses type
+   * "local-ssd". Persistent disks and boot disks use "pd-balanced", "pd-extreme", "pd-ssd" or "pd-
+   * standard".
    * @param type type or {@code null} for none
    */
   public Disk setType(java.lang.String type) {

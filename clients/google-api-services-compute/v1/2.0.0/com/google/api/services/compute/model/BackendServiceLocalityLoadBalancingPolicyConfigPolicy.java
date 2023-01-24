@@ -30,22 +30,20 @@ package com.google.api.services.compute.model;
 public final class BackendServiceLocalityLoadBalancingPolicyConfigPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of a locality load balancer policy to be used. The value should be one of the
-   * predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is
-   * supported. This field should only be populated when the customPolicy field is not used. Note
-   * that specifying the same policy more than once for a backend is not a valid configuration and
-   * will be rejected.
+   * The name of a locality load-balancing policy. Valid values include ROUND_ROBIN and, for Java
+   * clients, LEAST_REQUEST. For information about these values, see the description of
+   * localityLbPolicy. Do not specify the same policy more than once for a backend. If you do, the
+   * configuration is rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of a locality load balancer policy to be used. The value should be one of the
-   * predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is
-   * supported. This field should only be populated when the customPolicy field is not used. Note
-   * that specifying the same policy more than once for a backend is not a valid configuration and
-   * will be rejected.
+   * The name of a locality load-balancing policy. Valid values include ROUND_ROBIN and, for Java
+   * clients, LEAST_REQUEST. For information about these values, see the description of
+   * localityLbPolicy. Do not specify the same policy more than once for a backend. If you do, the
+   * configuration is rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -53,11 +51,10 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigPolicy extends
   }
 
   /**
-   * The name of a locality load balancer policy to be used. The value should be one of the
-   * predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is
-   * supported. This field should only be populated when the customPolicy field is not used. Note
-   * that specifying the same policy more than once for a backend is not a valid configuration and
-   * will be rejected.
+   * The name of a locality load-balancing policy. Valid values include ROUND_ROBIN and, for Java
+   * clients, LEAST_REQUEST. For information about these values, see the description of
+   * localityLbPolicy. Do not specify the same policy more than once for a backend. If you do, the
+   * configuration is rejected.
    * @param name name or {@code null} for none
    */
   public BackendServiceLocalityLoadBalancingPolicyConfigPolicy setName(java.lang.String name) {

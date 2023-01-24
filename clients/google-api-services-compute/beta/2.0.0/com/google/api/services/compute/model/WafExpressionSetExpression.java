@@ -40,6 +40,14 @@ public final class WafExpressionSetExpression extends com.google.api.client.json
   private java.lang.String id;
 
   /**
+   * The sensitivity value associated with the WAF rule ID. This corresponds to the ModSecurity
+   * paranoia level, ranging from 1 to 4. 0 is reserved for opt-in only rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer sensitivity;
+
+  /**
    * Expression ID should uniquely identify the origin of the expression. E.g. owasp-
    * crs-v020901-id973337 identifies Owasp core rule set version 2.9.1 rule id 973337. The ID could
    * be used to determine the individual attack definition that has been detected. It could also be
@@ -59,6 +67,25 @@ public final class WafExpressionSetExpression extends com.google.api.client.json
    */
   public WafExpressionSetExpression setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The sensitivity value associated with the WAF rule ID. This corresponds to the ModSecurity
+   * paranoia level, ranging from 1 to 4. 0 is reserved for opt-in only rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSensitivity() {
+    return sensitivity;
+  }
+
+  /**
+   * The sensitivity value associated with the WAF rule ID. This corresponds to the ModSecurity
+   * paranoia level, ranging from 1 to 4. 0 is reserved for opt-in only rules.
+   * @param sensitivity sensitivity or {@code null} for none
+   */
+  public WafExpressionSetExpression setSensitivity(java.lang.Integer sensitivity) {
+    this.sensitivity = sensitivity;
     return this;
   }
 

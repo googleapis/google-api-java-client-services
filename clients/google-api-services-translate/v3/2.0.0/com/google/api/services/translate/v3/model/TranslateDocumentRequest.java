@@ -57,6 +57,14 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   private DocumentOutputConfig documentOutputConfig;
 
   /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableShadowRemovalNativePdf;
+
+  /**
    * Optional. Glossary to be applied. The glossary must be within the same region (have the same
    * location-id) as the model, otherwise an INVALID_ARGUMENT (400) error is returned.
    * The value may be {@code null}.
@@ -171,6 +179,25 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
    */
   public TranslateDocumentRequest setDocumentOutputConfig(DocumentOutputConfig documentOutputConfig) {
     this.documentOutputConfig = documentOutputConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableShadowRemovalNativePdf() {
+    return enableShadowRemovalNativePdf;
+  }
+
+  /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation.
+   * @param enableShadowRemovalNativePdf enableShadowRemovalNativePdf or {@code null} for none
+   */
+  public TranslateDocumentRequest setEnableShadowRemovalNativePdf(java.lang.Boolean enableShadowRemovalNativePdf) {
+    this.enableShadowRemovalNativePdf = enableShadowRemovalNativePdf;
     return this;
   }
 

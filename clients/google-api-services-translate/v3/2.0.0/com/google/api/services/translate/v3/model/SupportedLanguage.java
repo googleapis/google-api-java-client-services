@@ -32,7 +32,7 @@ package com.google.api.services.translate.v3.model;
 public final class SupportedLanguage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable name of the language localized in the display language specified in the request.
+   * Human-readable name of the language localized in the display language specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,28 +41,28 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   /**
    * Supported language code, generally consisting of its ISO 639-1 identifier, for example, 'en',
    * 'ja'. In certain cases, BCP-47 codes including language and region identifiers are returned
-   * (for example, 'zh-TW' and 'zh-CN')
+   * (for example, 'zh-TW' and 'zh-CN').
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Can be used as source language.
+   * Can be used as a source language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean supportSource;
 
   /**
-   * Can be used as target language.
+   * Can be used as a target language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean supportTarget;
 
   /**
-   * Human readable name of the language localized in the display language specified in the request.
+   * Human-readable name of the language localized in the display language specified in the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -70,7 +70,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Human readable name of the language localized in the display language specified in the request.
+   * Human-readable name of the language localized in the display language specified in the request.
    * @param displayName displayName or {@code null} for none
    */
   public SupportedLanguage setDisplayName(java.lang.String displayName) {
@@ -81,7 +81,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   /**
    * Supported language code, generally consisting of its ISO 639-1 identifier, for example, 'en',
    * 'ja'. In certain cases, BCP-47 codes including language and region identifiers are returned
-   * (for example, 'zh-TW' and 'zh-CN')
+   * (for example, 'zh-TW' and 'zh-CN').
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -91,7 +91,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   /**
    * Supported language code, generally consisting of its ISO 639-1 identifier, for example, 'en',
    * 'ja'. In certain cases, BCP-47 codes including language and region identifiers are returned
-   * (for example, 'zh-TW' and 'zh-CN')
+   * (for example, 'zh-TW' and 'zh-CN').
    * @param languageCode languageCode or {@code null} for none
    */
   public SupportedLanguage setLanguageCode(java.lang.String languageCode) {
@@ -100,7 +100,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Can be used as source language.
+   * Can be used as a source language.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportSource() {
@@ -108,7 +108,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Can be used as source language.
+   * Can be used as a source language.
    * @param supportSource supportSource or {@code null} for none
    */
   public SupportedLanguage setSupportSource(java.lang.Boolean supportSource) {
@@ -117,7 +117,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Can be used as target language.
+   * Can be used as a target language.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportTarget() {
@@ -125,7 +125,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Can be used as target language.
+   * Can be used as a target language.
    * @param supportTarget supportTarget or {@code null} for none
    */
   public SupportedLanguage setSupportTarget(java.lang.Boolean supportTarget) {

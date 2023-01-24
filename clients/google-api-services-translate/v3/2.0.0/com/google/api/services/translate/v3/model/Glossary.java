@@ -17,7 +17,7 @@
 package com.google.api.services.translate.v3.model;
 
 /**
- * Represents a glossary built from user provided data.
+ * Represents a glossary built from user-provided data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation

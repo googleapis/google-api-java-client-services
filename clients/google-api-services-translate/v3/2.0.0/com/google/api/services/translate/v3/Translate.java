@@ -2068,6 +2068,1127 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
+       * An accessor for creating requests from the Datasets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Translate translate = new Translate(...);}
+       *   {@code Translate.Datasets.List request = translate.datasets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Datasets datasets() {
+        return new Datasets();
+      }
+
+      /**
+       * The "datasets" collection of methods.
+       */
+      public class Datasets {
+
+        /**
+         * Creates a Dataset.
+         *
+         * Create a request for the method "datasets.create".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project name.
+         * @param content the {@link com.google.api.services.translate.v3.model.Dataset}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.translate.v3.model.Dataset content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+          private static final String REST_PATH = "v3/{+parent}/datasets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a Dataset.
+           *
+           * Create a request for the method "datasets.create".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project name.
+           * @param content the {@link com.google.api.services.translate.v3.model.Dataset}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.translate.v3.model.Dataset content) {
+            super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The project name. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project name.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The project name. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a dataset and all of its contents.
+         *
+         * Create a request for the method "datasets.delete".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the dataset to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+          private static final String REST_PATH = "v3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+          /**
+           * Deletes a dataset and all of its contents.
+           *
+           * Create a request for the method "datasets.delete".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the dataset to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Translate.this, "DELETE", REST_PATH, null, com.google.api.services.translate.v3.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the dataset to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the dataset to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the dataset to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Exports dataset's data to the provided output location.
+         *
+         * Create a request for the method "datasets.exportData".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link ExportData#execute()} method to invoke the remote operation.
+         *
+         * @param dataset Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/datasets/{dataset-id}`
+         * @param content the {@link com.google.api.services.translate.v3.model.ExportDataRequest}
+         * @return the request
+         */
+        public ExportData exportData(java.lang.String dataset, com.google.api.services.translate.v3.model.ExportDataRequest content) throws java.io.IOException {
+          ExportData result = new ExportData(dataset, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExportData extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+          private static final String REST_PATH = "v3/{+dataset}:exportData";
+
+          private final java.util.regex.Pattern DATASET_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+          /**
+           * Exports dataset's data to the provided output location.
+           *
+           * Create a request for the method "datasets.exportData".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link ExportData#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ExportData#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param dataset Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/datasets/{dataset-id}`
+           * @param content the {@link com.google.api.services.translate.v3.model.ExportDataRequest}
+           * @since 1.13
+           */
+          protected ExportData(java.lang.String dataset, com.google.api.services.translate.v3.model.ExportDataRequest content) {
+            super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.Operation.class);
+            this.dataset = com.google.api.client.util.Preconditions.checkNotNull(dataset, "Required parameter dataset must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                  "Parameter dataset must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExportData set$Xgafv(java.lang.String $Xgafv) {
+            return (ExportData) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExportData setAccessToken(java.lang.String accessToken) {
+            return (ExportData) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExportData setAlt(java.lang.String alt) {
+            return (ExportData) super.setAlt(alt);
+          }
+
+          @Override
+          public ExportData setCallback(java.lang.String callback) {
+            return (ExportData) super.setCallback(callback);
+          }
+
+          @Override
+          public ExportData setFields(java.lang.String fields) {
+            return (ExportData) super.setFields(fields);
+          }
+
+          @Override
+          public ExportData setKey(java.lang.String key) {
+            return (ExportData) super.setKey(key);
+          }
+
+          @Override
+          public ExportData setOauthToken(java.lang.String oauthToken) {
+            return (ExportData) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExportData setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExportData) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExportData setQuotaUser(java.lang.String quotaUser) {
+            return (ExportData) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExportData setUploadType(java.lang.String uploadType) {
+            return (ExportData) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExportData setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExportData) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataset;
+
+          /** Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations/{location-
+         id}/datasets/{dataset-id}`
+           */
+          public java.lang.String getDataset() {
+            return dataset;
+          }
+
+          /**
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
+           */
+          public ExportData setDataset(java.lang.String dataset) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                  "Parameter dataset must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+            this.dataset = dataset;
+            return this;
+          }
+
+          @Override
+          public ExportData set(String parameterName, Object value) {
+            return (ExportData) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a Dataset.
+         *
+         * Create a request for the method "datasets.get".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the dataset to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends TranslateRequest<com.google.api.services.translate.v3.model.Dataset> {
+
+          private static final String REST_PATH = "v3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+          /**
+           * Gets a Dataset.
+           *
+           * Create a request for the method "datasets.get".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the dataset to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.Dataset.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the dataset to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the dataset to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the dataset to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Import sentence pairs into translation Dataset.
+         *
+         * Create a request for the method "datasets.importData".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link ImportData#execute()} method to invoke the remote operation.
+         *
+         * @param dataset Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/datasets/{dataset-id}`
+         * @param content the {@link com.google.api.services.translate.v3.model.ImportDataRequest}
+         * @return the request
+         */
+        public ImportData importData(java.lang.String dataset, com.google.api.services.translate.v3.model.ImportDataRequest content) throws java.io.IOException {
+          ImportData result = new ImportData(dataset, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ImportData extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+          private static final String REST_PATH = "v3/{+dataset}:importData";
+
+          private final java.util.regex.Pattern DATASET_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+          /**
+           * Import sentence pairs into translation Dataset.
+           *
+           * Create a request for the method "datasets.importData".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link ImportData#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ImportData#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param dataset Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/datasets/{dataset-id}`
+           * @param content the {@link com.google.api.services.translate.v3.model.ImportDataRequest}
+           * @since 1.13
+           */
+          protected ImportData(java.lang.String dataset, com.google.api.services.translate.v3.model.ImportDataRequest content) {
+            super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.Operation.class);
+            this.dataset = com.google.api.client.util.Preconditions.checkNotNull(dataset, "Required parameter dataset must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                  "Parameter dataset must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public ImportData set$Xgafv(java.lang.String $Xgafv) {
+            return (ImportData) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ImportData setAccessToken(java.lang.String accessToken) {
+            return (ImportData) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ImportData setAlt(java.lang.String alt) {
+            return (ImportData) super.setAlt(alt);
+          }
+
+          @Override
+          public ImportData setCallback(java.lang.String callback) {
+            return (ImportData) super.setCallback(callback);
+          }
+
+          @Override
+          public ImportData setFields(java.lang.String fields) {
+            return (ImportData) super.setFields(fields);
+          }
+
+          @Override
+          public ImportData setKey(java.lang.String key) {
+            return (ImportData) super.setKey(key);
+          }
+
+          @Override
+          public ImportData setOauthToken(java.lang.String oauthToken) {
+            return (ImportData) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ImportData setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ImportData) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ImportData setQuotaUser(java.lang.String quotaUser) {
+            return (ImportData) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ImportData setUploadType(java.lang.String uploadType) {
+            return (ImportData) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ImportData setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ImportData) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataset;
+
+          /** Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations/{location-
+         id}/datasets/{dataset-id}`
+           */
+          public java.lang.String getDataset() {
+            return dataset;
+          }
+
+          /**
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
+           */
+          public ImportData setDataset(java.lang.String dataset) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                  "Parameter dataset must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+            this.dataset = dataset;
+            return this;
+          }
+
+          @Override
+          public ImportData set(String parameterName, Object value) {
+            return (ImportData) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists datasets.
+         *
+         * Create a request for the method "datasets.list".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListDatasetsResponse> {
+
+          private static final String REST_PATH = "v3/{+parent}/datasets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists datasets.
+           *
+           * Create a request for the method "datasets.list".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListDatasetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the parent project. In form of `projects/{project-number-or-
+           * id}/locations/{location-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         /{location-id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the parent project. In form of `projects/{project-number-or-
+           * id}/locations/{location-id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Requested page size. The server can return fewer results than requested. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. The server can return fewer results than requested.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Requested page size. The server can return fewer results than requested. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying a page of results for the server to return. Typically
+           * obtained from next_page_token field in the response of a ListDatasets call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results for the server to return. Typically obtained from
+         next_page_token field in the response of a ListDatasets call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying a page of results for the server to return. Typically
+           * obtained from next_page_token field in the response of a ListDatasets call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Examples collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Translate translate = new Translate(...);}
+         *   {@code Translate.Examples.List request = translate.examples().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Examples examples() {
+          return new Examples();
+        }
+
+        /**
+         * The "examples" collection of methods.
+         */
+        public class Examples {
+
+          /**
+           * Lists sentence pairs in the dataset.
+           *
+           * Create a request for the method "examples.list".
+           *
+           * This request holds the parameters needed by the translate server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of the parent dataset. In form of `projects/{project-number-or-id}/locations
+           *        /{location-id}/datasets/{dataset-id}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListExamplesResponse> {
+
+            private static final String REST_PATH = "v3/{+parent}/examples";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Lists sentence pairs in the dataset.
+             *
+             * Create a request for the method "examples.list".
+             *
+             * This request holds the parameters needed by the the translate server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of the parent dataset. In form of `projects/{project-number-or-id}/locations
+           *        /{location-id}/datasets/{dataset-id}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListExamplesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the parent dataset. In form of `projects/{project-number-or-
+             * id}/locations/{location-id}/datasets/{dataset-id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of the parent dataset. In form of `projects/{project-number-or-id}/locations
+           /{location-id}/datasets/{dataset-id}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Name of the parent dataset. In form of `projects/{project-number-or-
+             * id}/locations/{location-id}/datasets/{dataset-id}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. An expression for filtering the examples that will be returned. Example
+             * filter: * `usage=TRAIN`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. An expression for filtering the examples that will be returned. Example filter: *
+           `usage=TRAIN`
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. An expression for filtering the examples that will be returned. Example
+             * filter: * `usage=TRAIN`
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. The server can return fewer results than requested.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. The server can return fewer results than requested.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. The server can return fewer results than requested.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A token identifying a page of results for the server to return. Typically
+             * obtained from next_page_token field in the response of a ListExamples call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results for the server to return. Typically obtained from
+           next_page_token field in the response of a ListExamples call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A token identifying a page of results for the server to return. Typically
+             * obtained from next_page_token field in the response of a ListExamples call.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Glossaries collection.
        *
        * <p>The typical use is:</p>
@@ -3633,6 +4754,635 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Models collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Translate translate = new Translate(...);}
+       *   {@code Translate.Models.List request = translate.models().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Models models() {
+        return new Models();
+      }
+
+      /**
+       * The "models" collection of methods.
+       */
+      public class Models {
+
+        /**
+         * Creates a Model.
+         *
+         * Create a request for the method "models.create".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project name, in form of `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.translate.v3.model.Model}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.translate.v3.model.Model content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+          private static final String REST_PATH = "v3/{+parent}/models";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a Model.
+           *
+           * Create a request for the method "models.create".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project name, in form of `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.translate.v3.model.Model}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.translate.v3.model.Model content) {
+            super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The project name, in form of `projects/{project}/locations/{location}` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project name, in form of `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The project name, in form of `projects/{project}/locations/{location}` */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a model.
+         *
+         * Create a request for the method "models.delete".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the model to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+          private static final String REST_PATH = "v3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/models/[^/]+$");
+
+          /**
+           * Deletes a model.
+           *
+           * Create a request for the method "models.delete".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the model to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Translate.this, "DELETE", REST_PATH, null, com.google.api.services.translate.v3.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the model to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the model to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the model to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a model.
+         *
+         * Create a request for the method "models.get".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the model to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends TranslateRequest<com.google.api.services.translate.v3.model.Model> {
+
+          private static final String REST_PATH = "v3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/models/[^/]+$");
+
+          /**
+           * Gets a model.
+           *
+           * Create a request for the method "models.get".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the model to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.Model.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the model to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the model to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the model to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists models.
+         *
+         * Create a request for the method "models.list".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListModelsResponse> {
+
+          private static final String REST_PATH = "v3/{+parent}/models";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists models.
+           *
+           * Create a request for the method "models.list".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListModelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the parent project. In form of `projects/{project-number-or-
+           * id}/locations/{location-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         /{location-id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the parent project. In form of `projects/{project-number-or-
+           * id}/locations/{location-id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression for filtering the models that will be returned. Supported
+           * filter: `dataset_id=${dataset_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the models that will be returned. Supported filter:
+         `dataset_id=${dataset_id}`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the models that will be returned. Supported
+           * filter: `dataset_id=${dataset_id}`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Requested page size. The server can return fewer results than requested. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. The server can return fewer results than requested.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Requested page size. The server can return fewer results than requested. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying a page of results for the server to return. Typically
+           * obtained from next_page_token field in the response of a ListModels call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results for the server to return. Typically obtained from
+         next_page_token field in the response of a ListModels call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying a page of results for the server to return. Typically
+           * obtained from next_page_token field in the response of a ListModels call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
       /**
        * An accessor for creating requests from the Operations collection.

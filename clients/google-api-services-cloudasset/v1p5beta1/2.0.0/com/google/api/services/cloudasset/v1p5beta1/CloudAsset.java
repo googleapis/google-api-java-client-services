@@ -20,7 +20,7 @@ package com.google.api.services.cloudasset.v1p5beta1;
  * Service definition for CloudAsset (v1p5beta1).
  *
  * <p>
- * The cloud asset API manages the history and inventory of cloud resources.
+ * The Cloud Asset API manages the history and inventory of Google Cloud resources.
  * </p>
  *
  * <p>

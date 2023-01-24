@@ -30,16 +30,16 @@ package com.google.api.services.cloudasset.v1.model;
 public final class QueryContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or
-   * the AssetService.AnalyzeIamPolicyLongrunning rpc.
+   * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy RPC or
+   * the AssetService.AnalyzeIamPolicyLongrunning RPC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IamPolicyAnalysisQuery iamPolicyAnalysisQuery;
 
   /**
-   * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or
-   * the AssetService.AnalyzeIamPolicyLongrunning rpc.
+   * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy RPC or
+   * the AssetService.AnalyzeIamPolicyLongrunning RPC.
    * @return value or {@code null} for none
    */
   public IamPolicyAnalysisQuery getIamPolicyAnalysisQuery() {
@@ -47,8 +47,8 @@ public final class QueryContent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or
-   * the AssetService.AnalyzeIamPolicyLongrunning rpc.
+   * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy RPC or
+   * the AssetService.AnalyzeIamPolicyLongrunning RPC.
    * @param iamPolicyAnalysisQuery iamPolicyAnalysisQuery or {@code null} for none
    */
   public QueryContent setIamPolicyAnalysisQuery(IamPolicyAnalysisQuery iamPolicyAnalysisQuery) {

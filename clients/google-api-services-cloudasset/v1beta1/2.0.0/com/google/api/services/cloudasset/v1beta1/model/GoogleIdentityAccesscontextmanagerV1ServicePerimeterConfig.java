@@ -75,7 +75,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
 
   /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects are allowed. Format: `projects/{project_number}`
+   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC format:
+   * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +171,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
 
   /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects are allowed. Format: `projects/{project_number}`
+   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC format:
+   * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -179,7 +181,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
 
   /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects are allowed. Format: `projects/{project_number}`
+   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC format:
+   * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * @param resources resources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setResources(java.util.List<java.lang.String> resources) {

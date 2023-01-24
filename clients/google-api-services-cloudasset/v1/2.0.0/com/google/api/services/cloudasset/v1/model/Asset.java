@@ -20,9 +20,9 @@ package com.google.api.services.cloudasset.v1.model;
  * An asset in Google Cloud. An asset can be any resource in the Google Cloud [resource
  * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy), a
  * resource outside the Google Cloud resource hierarchy (such as Google Kubernetes Engine clusters
- * and objects), or a policy (e.g. Cloud IAM policy), or a relationship (e.g. an
- * INSTANCE_TO_INSTANCEGROUP relationship). See [Supported asset types](https://cloud.google.com
- * /asset-inventory/docs/supported-asset-types) for more information.
+ * and objects), or a policy (e.g. IAM policy), or a relationship (e.g. an INSTANCE_TO_INSTANCEGROUP
+ * relationship). See [Supported asset types](https://cloud.google.com/asset-inventory/docs
+ * /supported-asset-types) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -71,11 +71,11 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.lang.String assetType;
 
   /**
-   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
-   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
-   * their granted access scope from any policies set on parent resources in the resource hierarchy.
-   * Therefore, the effectively policy is the union of both the policy set on this resource and each
-   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * A representation of the IAM policy set on a Google Cloud resource. There can be a maximum of
+   * one IAM policy set on any given resource. In addition, IAM policies inherit their granted
+   * access scope from any policies set on parent resources in the resource hierarchy. Therefore,
+   * the effectively policy is the union of both the policy set on this resource and each policy set
+   * on all of the resource's ancestry resource levels in the hierarchy. See [this
    * topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for more information.
    * The value may be {@code null}.
    */
@@ -234,11 +234,11 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
-   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
-   * their granted access scope from any policies set on parent resources in the resource hierarchy.
-   * Therefore, the effectively policy is the union of both the policy set on this resource and each
-   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * A representation of the IAM policy set on a Google Cloud resource. There can be a maximum of
+   * one IAM policy set on any given resource. In addition, IAM policies inherit their granted
+   * access scope from any policies set on parent resources in the resource hierarchy. Therefore,
+   * the effectively policy is the union of both the policy set on this resource and each policy set
+   * on all of the resource's ancestry resource levels in the hierarchy. See [this
    * topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for more information.
    * @return value or {@code null} for none
    */
@@ -247,11 +247,11 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
-   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
-   * their granted access scope from any policies set on parent resources in the resource hierarchy.
-   * Therefore, the effectively policy is the union of both the policy set on this resource and each
-   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * A representation of the IAM policy set on a Google Cloud resource. There can be a maximum of
+   * one IAM policy set on any given resource. In addition, IAM policies inherit their granted
+   * access scope from any policies set on parent resources in the resource hierarchy. Therefore,
+   * the effectively policy is the union of both the policy set on this resource and each policy set
+   * on all of the resource's ancestry resource levels in the hierarchy. See [this
    * topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for more information.
    * @param iamPolicy iamPolicy or {@code null} for none
    */

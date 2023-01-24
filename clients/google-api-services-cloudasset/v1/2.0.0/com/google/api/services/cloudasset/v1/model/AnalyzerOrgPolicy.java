@@ -17,9 +17,9 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * This organization policy message is a modified version of the one defined in the OrgPolicy
- * system. This message contains several fields defined in the original organization policy with
- * some new fields for analysis purpose.
+ * This organization policy message is a modified version of the one defined in the Organization
+ * Policy system. This message contains several fields defined in the original organization policy
+ * with some new fields for analysis purpose.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

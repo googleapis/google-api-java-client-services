@@ -37,7 +37,7 @@ public final class MoveAnalysis extends com.google.api.client.json.GenericJson {
   private MoveAnalysisResult analysis;
 
   /**
-   * The user friendly display name of the analysis. E.g. IAM, Organization Policy etc.
+   * The user friendly display name of the analysis. E.g. IAM, organization policy etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class MoveAnalysis extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user friendly display name of the analysis. E.g. IAM, Organization Policy etc.
+   * The user friendly display name of the analysis. E.g. IAM, organization policy etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -76,7 +76,7 @@ public final class MoveAnalysis extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user friendly display name of the analysis. E.g. IAM, Organization Policy etc.
+   * The user friendly display name of the analysis. E.g. IAM, organization policy etc.
    * @param displayName displayName or {@code null} for none
    */
   public MoveAnalysis setDisplayName(java.lang.String displayName) {

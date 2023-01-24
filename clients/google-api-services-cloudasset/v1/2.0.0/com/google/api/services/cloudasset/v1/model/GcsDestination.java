@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
+   * The URI of the Cloud Storage object. It's the same URI that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * If the specified Cloud Storage object already exists and there is no
@@ -42,8 +42,8 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   private java.lang.String uri;
 
   /**
-   * The uri prefix of all generated Cloud Storage objects. Example:
-   * "gs://bucket_name/object_name_prefix". Each object uri is in format:
+   * The URI prefix of all generated Cloud Storage objects. Example:
+   * "gs://bucket_name/object_name_prefix". Each object URI is in format:
    * "gs://bucket_name/object_name_prefix// and only contains assets for that type. starts from 0.
    * Example: "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is the first shard
    * of output objects containing all compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error
@@ -55,7 +55,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   private java.lang.String uriPrefix;
 
   /**
-   * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
+   * The URI of the Cloud Storage object. It's the same URI that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * If the specified Cloud Storage object already exists and there is no
@@ -68,7 +68,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
+   * The URI of the Cloud Storage object. It's the same URI that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * If the specified Cloud Storage object already exists and there is no
@@ -82,8 +82,8 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The uri prefix of all generated Cloud Storage objects. Example:
-   * "gs://bucket_name/object_name_prefix". Each object uri is in format:
+   * The URI prefix of all generated Cloud Storage objects. Example:
+   * "gs://bucket_name/object_name_prefix". Each object URI is in format:
    * "gs://bucket_name/object_name_prefix// and only contains assets for that type. starts from 0.
    * Example: "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is the first shard
    * of output objects containing all compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error
@@ -96,8 +96,8 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The uri prefix of all generated Cloud Storage objects. Example:
-   * "gs://bucket_name/object_name_prefix". Each object uri is in format:
+   * The URI prefix of all generated Cloud Storage objects. Example:
+   * "gs://bucket_name/object_name_prefix". Each object URI is in format:
    * "gs://bucket_name/object_name_prefix// and only contains assets for that type. starts from 0.
    * Example: "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is the first shard
    * of output objects containing all compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error

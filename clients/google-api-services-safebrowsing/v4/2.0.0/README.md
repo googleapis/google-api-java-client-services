@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-safebrowsing</artifactId>
-      <version>v4-rev20220323-2.0.0</version>
+      <version>v4-rev20230121-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-safebrowsing:v4-rev20220323-2.0.0'
+  implementation 'com.google.apis:google-api-services-safebrowsing:v4-rev20230121-2.0.0'
 }
 ```
 

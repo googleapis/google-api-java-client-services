@@ -2503,8 +2503,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be
              * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
-             * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Enable Retail Search on Cloud Console before using this feature.
+             * until being obsolete.
              *
              * Create a request for the method "products.addFulfillmentPlaces".
              *
@@ -2540,8 +2539,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned
                * Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards.
                * If conflicting updates are issued, the Operations associated with the stale updates will not be
-               * marked as done until being obsolete. This feature is only available for users who have Retail
-               * Search enabled. Enable Retail Search on Cloud Console before using this feature.
+               * marked as done until being obsolete.
                *
                * Create a request for the method "products.addFulfillmentPlaces".
                *
@@ -2671,8 +2669,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories.
              * The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND
              * afterwards. If conflicting updates are issued, the Operations associated with the stale updates
-             * will not be marked as done until being obsolete. This feature is only available for users who
-             * have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
+             * will not be marked as done until being obsolete.
              *
              * Create a request for the method "products.addLocalInventories".
              *
@@ -2710,8 +2707,6 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * has no effect on local inventories. The returned Operations will be obsolete after 1 day, and
                * GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the
                * Operations associated with the stale updates will not be marked as done until being obsolete.
-               * This feature is only available for users who have Retail Search enabled. Enable Retail Search
-               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.addLocalInventories".
                *
@@ -3981,8 +3976,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will
              * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
-             * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Enable Retail Search on Cloud Console before using this feature.
+             * until being obsolete.
              *
              * Create a request for the method "products.removeFulfillmentPlaces".
              *
@@ -4018,8 +4012,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The
                * returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND
                * afterwards. If conflicting updates are issued, the Operations associated with the stale updates
-               * will not be marked as done until being obsolete. This feature is only available for users who
-               * have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
+               * will not be marked as done until being obsolete.
                *
                * Create a request for the method "products.removeFulfillmentPlaces".
                *
@@ -4148,8 +4141,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * and ProductService.UpdateProduct has no effect on local inventories. The returned Operations will
              * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
-             * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Enable Retail Search on Cloud Console before using this feature.
+             * until being obsolete.
              *
              * Create a request for the method "products.removeLocalInventories".
              *
@@ -4186,9 +4178,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local
                * inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will
                * return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with
-               * the stale updates will not be marked as done until being obsolete. This feature is only
-               * available for users who have Retail Search enabled. Enable Retail Search on Cloud Console
-               * before using this feature.
+               * the stale updates will not be marked as done until being obsolete.
                *
                * Create a request for the method "products.removeLocalInventories".
                *
@@ -4325,8 +4315,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * ProductService.AddFulfillmentPlaces, and ProductService.RemoveFulfillmentPlaces. The returned
              * Operations is obsolete after one day, and the GetOperation API returns `NOT_FOUND` afterwards. If
              * conflicting updates are issued, the Operations associated with the stale updates are not marked
-             * as done until they are obsolete. This feature is only available for users who have Retail Search
-             * enabled. Enable Retail Search on Cloud Console before using this feature.
+             * as done until they are obsolete.
              *
              * Create a request for the method "products.setInventory".
              *
@@ -4370,8 +4359,6 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * ProductService.RemoveFulfillmentPlaces. The returned Operations is obsolete after one day, and
                * the GetOperation API returns `NOT_FOUND` afterwards. If conflicting updates are issued, the
                * Operations associated with the stale updates are not marked as done until they are obsolete.
-               * This feature is only available for users who have Retail Search enabled. Enable Retail Search
-               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.setInventory".
                *
@@ -5503,6 +5490,1113 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Models collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.Models.List request = retail.models().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Models models() {
+          return new Models();
+        }
+
+        /**
+         * The "models" collection of methods.
+         */
+        public class Models {
+
+          /**
+           * Creates a new model.
+           *
+           * Create a request for the method "models.create".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource under which to create the model. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2/{+parent}/models";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Creates a new model.
+             *
+             * Create a request for the method "models.create".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource under which to create the model. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource under which to create the model. Format:
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource under which to create the model. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource under which to create the model. Format:
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Whether to run a dry run to validate the request (without actually creating
+             * the model).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean dryRun;
+
+            /** Optional. Whether to run a dry run to validate the request (without actually creating the model).
+             */
+            public java.lang.Boolean getDryRun() {
+              return dryRun;
+            }
+
+            /**
+             * Optional. Whether to run a dry run to validate the request (without actually creating
+             * the model).
+             */
+            public Create setDryRun(java.lang.Boolean dryRun) {
+              this.dryRun = dryRun;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an existing model.
+           *
+           * Create a request for the method "models.delete".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Model to delete. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+
+            /**
+             * Deletes an existing model.
+             *
+             * Create a request for the method "models.delete".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Model to delete. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudRetail.this, "DELETE", REST_PATH, null, com.google.api.services.retail.v2.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Model to delete. Format: `projects/{project_number
+             * }/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Model to delete. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Model to delete. Format: `projects/{project_number
+             * }/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all the models linked to this event store.
+           *
+           * Create a request for the method "models.list".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent for which to list models. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2ListModelsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/models";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Lists all the models linked to this event store.
+             *
+             * Create a request for the method "models.list".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent for which to list models. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ListModelsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent for which to list models. Format:
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent for which to list models. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent for which to list models. Format:
+             * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of results to return. If unspecified, defaults to 50. Max
+             * allowed value is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of results to return. If unspecified, defaults to 50. Max allowed value is
+           1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of results to return. If unspecified, defaults to 50. Max
+             * allowed value is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListModels` call. Provide this to
+             * retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListModels` call. Provide this to retrieve the
+           subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListModels` call. Provide this to
+             * retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update of model metadata. Only fields that currently can be updated are: `filtering_option` and
+           * `periodic_tuning_state`. If other values are provided, this API method ignores them.
+           *
+           * Create a request for the method "models.patch".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified resource name of the model. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        ` catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+
+            /**
+             * Update of model metadata. Only fields that currently can be updated are: `filtering_option` and
+             * `periodic_tuning_state`. If other values are provided, this API method ignores them.
+             *
+             * Create a request for the method "models.patch".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified resource name of the model. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        ` catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model content) {
+              super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified resource name of the model. Format: `projects/{project_
+             * number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}` catalog_id
+             * has char limit of 50. recommendation_model_id has char limit of 40.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified resource name of the model. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+           catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified resource name of the model. Format: `projects/{project_
+             * number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}` catalog_id
+             * has char limit of 50. recommendation_model_id has char limit of 40.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Indicates which fields in the provided 'model' to update. If not set, by
+             * default updates all fields.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. Indicates which fields in the provided 'model' to update. If not set, by default updates
+           all fields.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. Indicates which fields in the provided 'model' to update. If not set, by
+             * default updates all fields.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Pauses the training of an existing model.
+           *
+           * Create a request for the method "models.pause".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the model to pause. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2PauseModelRequest}
+           * @return the request
+           */
+          public Pause pause(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2PauseModelRequest content) throws java.io.IOException {
+            Pause result = new Pause(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Pause extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model> {
+
+            private static final String REST_PATH = "v2/{+name}:pause";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+
+            /**
+             * Pauses the training of an existing model.
+             *
+             * Create a request for the method "models.pause".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
+             * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the model to pause. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2PauseModelRequest}
+             * @since 1.13
+             */
+            protected Pause(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2PauseModelRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public Pause set$Xgafv(java.lang.String $Xgafv) {
+              return (Pause) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Pause setAccessToken(java.lang.String accessToken) {
+              return (Pause) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Pause setAlt(java.lang.String alt) {
+              return (Pause) super.setAlt(alt);
+            }
+
+            @Override
+            public Pause setCallback(java.lang.String callback) {
+              return (Pause) super.setCallback(callback);
+            }
+
+            @Override
+            public Pause setFields(java.lang.String fields) {
+              return (Pause) super.setFields(fields);
+            }
+
+            @Override
+            public Pause setKey(java.lang.String key) {
+              return (Pause) super.setKey(key);
+            }
+
+            @Override
+            public Pause setOauthToken(java.lang.String oauthToken) {
+              return (Pause) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Pause) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Pause setQuotaUser(java.lang.String quotaUser) {
+              return (Pause) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Pause setUploadType(java.lang.String uploadType) {
+              return (Pause) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Pause) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the model to pause. Format: `projects/{project_number}/location
+             * s/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the model to pause. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the model to pause. Format: `projects/{project_number}/location
+             * s/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public Pause setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Pause set(String parameterName, Object value) {
+              return (Pause) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Resumes the training of an existing model.
+           *
+           * Create a request for the method "models.resume".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the model to resume. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2ResumeModelRequest}
+           * @return the request
+           */
+          public Resume resume(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ResumeModelRequest content) throws java.io.IOException {
+            Resume result = new Resume(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Resume extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model> {
+
+            private static final String REST_PATH = "v2/{+name}:resume";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+
+            /**
+             * Resumes the training of an existing model.
+             *
+             * Create a request for the method "models.resume".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Resume#execute()} method to invoke the remote operation. <p> {@link
+             * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the model to resume. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2ResumeModelRequest}
+             * @since 1.13
+             */
+            protected Resume(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ResumeModelRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public Resume set$Xgafv(java.lang.String $Xgafv) {
+              return (Resume) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Resume setAccessToken(java.lang.String accessToken) {
+              return (Resume) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Resume setAlt(java.lang.String alt) {
+              return (Resume) super.setAlt(alt);
+            }
+
+            @Override
+            public Resume setCallback(java.lang.String callback) {
+              return (Resume) super.setCallback(callback);
+            }
+
+            @Override
+            public Resume setFields(java.lang.String fields) {
+              return (Resume) super.setFields(fields);
+            }
+
+            @Override
+            public Resume setKey(java.lang.String key) {
+              return (Resume) super.setKey(key);
+            }
+
+            @Override
+            public Resume setOauthToken(java.lang.String oauthToken) {
+              return (Resume) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Resume) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Resume setQuotaUser(java.lang.String quotaUser) {
+              return (Resume) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Resume setUploadType(java.lang.String uploadType) {
+              return (Resume) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Resume) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the model to resume. Format: `projects/{project_number}/locatio
+             * ns/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the model to resume. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the model to resume. Format: `projects/{project_number}/locatio
+             * ns/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public Resume setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Resume set(String parameterName, Object value) {
+              return (Resume) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Tunes an existing model.
+           *
+           * Create a request for the method "models.tune".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Tune#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the model to tune. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2TuneModelRequest}
+           * @return the request
+           */
+          public Tune tune(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2TuneModelRequest content) throws java.io.IOException {
+            Tune result = new Tune(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Tune extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2/{+name}:tune";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+
+            /**
+             * Tunes an existing model.
+             *
+             * Create a request for the method "models.tune".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Tune#execute()} method to invoke the remote operation. <p> {@link
+             * Tune#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the model to tune. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+           *        `
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2TuneModelRequest}
+             * @since 1.13
+             */
+            protected Tune(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2TuneModelRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public Tune set$Xgafv(java.lang.String $Xgafv) {
+              return (Tune) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Tune setAccessToken(java.lang.String accessToken) {
+              return (Tune) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Tune setAlt(java.lang.String alt) {
+              return (Tune) super.setAlt(alt);
+            }
+
+            @Override
+            public Tune setCallback(java.lang.String callback) {
+              return (Tune) super.setCallback(callback);
+            }
+
+            @Override
+            public Tune setFields(java.lang.String fields) {
+              return (Tune) super.setFields(fields);
+            }
+
+            @Override
+            public Tune setKey(java.lang.String key) {
+              return (Tune) super.setKey(key);
+            }
+
+            @Override
+            public Tune setOauthToken(java.lang.String oauthToken) {
+              return (Tune) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Tune setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Tune) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Tune setQuotaUser(java.lang.String quotaUser) {
+              return (Tune) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Tune setUploadType(java.lang.String uploadType) {
+              return (Tune) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Tune setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Tune) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the model to tune. Format: `projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the model to tune. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the model to tune. Format: `projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
+             */
+            public Tune setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Tune set(String parameterName, Object value) {
+              return (Tune) super.set(parameterName, value);
             }
           }
 

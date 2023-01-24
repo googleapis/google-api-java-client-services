@@ -2646,8 +2646,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be
              * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
-             * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Enable Retail Search on Cloud Console before using this feature.
+             * until being obsolete.
              *
              * Create a request for the method "products.addFulfillmentPlaces".
              *
@@ -2683,8 +2682,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned
                * Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards.
                * If conflicting updates are issued, the Operations associated with the stale updates will not be
-               * marked as done until being obsolete. This feature is only available for users who have Retail
-               * Search enabled. Enable Retail Search on Cloud Console before using this feature.
+               * marked as done until being obsolete.
                *
                * Create a request for the method "products.addFulfillmentPlaces".
                *
@@ -2814,8 +2812,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories.
              * The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND
              * afterwards. If conflicting updates are issued, the Operations associated with the stale updates
-             * will not be marked as done until being obsolete. This feature is only available for users who
-             * have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
+             * will not be marked as done until being obsolete.
              *
              * Create a request for the method "products.addLocalInventories".
              *
@@ -2853,8 +2850,6 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * has no effect on local inventories. The returned Operations will be obsolete after 1 day, and
                * GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the
                * Operations associated with the stale updates will not be marked as done until being obsolete.
-               * This feature is only available for users who have Retail Search enabled. Enable Retail Search
-               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.addLocalInventories".
                *
@@ -4124,8 +4119,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will
              * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
-             * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Enable Retail Search on Cloud Console before using this feature.
+             * until being obsolete.
              *
              * Create a request for the method "products.removeFulfillmentPlaces".
              *
@@ -4161,8 +4155,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The
                * returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND
                * afterwards. If conflicting updates are issued, the Operations associated with the stale updates
-               * will not be marked as done until being obsolete. This feature is only available for users who
-               * have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
+               * will not be marked as done until being obsolete.
                *
                * Create a request for the method "products.removeFulfillmentPlaces".
                *
@@ -4291,8 +4284,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * and ProductService.UpdateProduct has no effect on local inventories. The returned Operations will
              * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
-             * until being obsolete. This feature is only available for users who have Retail Search enabled.
-             * Enable Retail Search on Cloud Console before using this feature.
+             * until being obsolete.
              *
              * Create a request for the method "products.removeLocalInventories".
              *
@@ -4329,9 +4321,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local
                * inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will
                * return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with
-               * the stale updates will not be marked as done until being obsolete. This feature is only
-               * available for users who have Retail Search enabled. Enable Retail Search on Cloud Console
-               * before using this feature.
+               * the stale updates will not be marked as done until being obsolete.
                *
                * Create a request for the method "products.removeLocalInventories".
                *
@@ -4468,8 +4458,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * ProductService.AddFulfillmentPlaces, and ProductService.RemoveFulfillmentPlaces. The returned
              * Operations is obsolete after one day, and the GetOperation API returns `NOT_FOUND` afterwards. If
              * conflicting updates are issued, the Operations associated with the stale updates are not marked
-             * as done until they are obsolete. This feature is only available for users who have Retail Search
-             * enabled. Enable Retail Search on Cloud Console before using this feature.
+             * as done until they are obsolete.
              *
              * Create a request for the method "products.setInventory".
              *
@@ -4513,8 +4502,6 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * ProductService.RemoveFulfillmentPlaces. The returned Operations is obsolete after one day, and
                * the GetOperation API returns `NOT_FOUND` afterwards. If conflicting updates are issued, the
                * Operations associated with the stale updates are not marked as done until they are obsolete.
-               * This feature is only available for users who have Retail Search enabled. Enable Retail Search
-               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.setInventory".
                *

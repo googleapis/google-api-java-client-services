@@ -46,8 +46,8 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Common useful percentiles of the Metric. The value type for the percentiles will be the same as
-   * the value types given for the Histogram bins.
+   * Commonly useful percentiles of the Metric. The value type for the percentiles will be the same
+   * as the value types given for the Histogram bins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Common useful percentiles of the Metric. The value type for the percentiles will be the same as
-   * the value types given for the Histogram bins.
+   * Commonly useful percentiles of the Metric. The value type for the percentiles will be the same
+   * as the value types given for the Histogram bins.
    * @return value or {@code null} for none
    */
   public Percentiles getPercentiles() {
@@ -82,8 +82,8 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Common useful percentiles of the Metric. The value type for the percentiles will be the same as
-   * the value types given for the Histogram bins.
+   * Commonly useful percentiles of the Metric. The value type for the percentiles will be the same
+   * as the value types given for the Histogram bins.
    * @param percentiles percentiles or {@code null} for none
    */
   public Metric setPercentiles(Percentiles percentiles) {

@@ -1902,7 +1902,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Start#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name.
+         * @param name Required. The resource name.
          * @param content the {@link com.google.api.services.tpu.v2.model.StartNodeRequest}
          * @return the request
          */
@@ -1929,7 +1929,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name.
+           * @param name Required. The resource name.
            * @param content the {@link com.google.api.services.tpu.v2.model.StartNodeRequest}
            * @since 1.13
            */
@@ -1998,17 +1998,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Start) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name.
+          /** Required. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           public Start setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2032,7 +2032,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name.
+         * @param name Required. The resource name.
          * @param content the {@link com.google.api.services.tpu.v2.model.StopNodeRequest}
          * @return the request
          */
@@ -2059,7 +2059,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name.
+           * @param name Required. The resource name.
            * @param content the {@link com.google.api.services.tpu.v2.model.StopNodeRequest}
            * @since 1.13
            */
@@ -2128,17 +2128,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Stop) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name.
+          /** Required. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           public Stop setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

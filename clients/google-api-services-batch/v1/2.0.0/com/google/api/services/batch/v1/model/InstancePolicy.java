@@ -44,6 +44,14 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Book disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
+   * deleted when the VM is deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Disk bootDisk;
+
+  /**
    * Non-boot disks to be attached for each VM created by this InstancePolicy. New disks will be
    * deleted when the VM is deleted.
    * The value may be {@code null}.
@@ -93,6 +101,25 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
    */
   public InstancePolicy setAccelerators(java.util.List<Accelerator> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * Book disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
+   * deleted when the VM is deleted.
+   * @return value or {@code null} for none
+   */
+  public Disk getBootDisk() {
+    return bootDisk;
+  }
+
+  /**
+   * Book disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
+   * deleted when the VM is deleted.
+   * @param bootDisk bootDisk or {@code null} for none
+   */
+  public InstancePolicy setBootDisk(Disk bootDisk) {
+    this.bootDisk = bootDisk;
     return this;
   }
 

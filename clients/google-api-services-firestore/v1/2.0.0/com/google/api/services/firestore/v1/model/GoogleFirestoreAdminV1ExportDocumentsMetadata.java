@@ -44,6 +44,13 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   private String endTime;
 
   /**
+   * Which namespace ids are being exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> namespaceIds;
+
+  /**
    * The state of the export operation.
    * The value may be {@code null}.
    */
@@ -51,7 +58,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   private java.lang.String operationState;
 
   /**
-   * Where the entities are being exported to.
+   * Where the documents are being exported to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,6 +120,23 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   }
 
   /**
+   * Which namespace ids are being exported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNamespaceIds() {
+    return namespaceIds;
+  }
+
+  /**
+   * Which namespace ids are being exported.
+   * @param namespaceIds namespaceIds or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1ExportDocumentsMetadata setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {
+    this.namespaceIds = namespaceIds;
+    return this;
+  }
+
+  /**
    * The state of the export operation.
    * @return value or {@code null} for none
    */
@@ -130,7 +154,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Where the entities are being exported to.
+   * Where the documents are being exported to.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputUriPrefix() {
@@ -138,7 +162,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Where the entities are being exported to.
+   * Where the documents are being exported to.
    * @param outputUriPrefix outputUriPrefix or {@code null} for none
    */
   public GoogleFirestoreAdminV1ExportDocumentsMetadata setOutputUriPrefix(java.lang.String outputUriPrefix) {

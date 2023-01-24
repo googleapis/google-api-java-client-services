@@ -160,8 +160,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
      * following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to create
      * courses or for access errors. * `NOT_FOUND` if the primary teacher is not a valid user. *
      * `FAILED_PRECONDITION` if the course owner's account is disabled or for the following request
-     * errors: * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an alias was specified in the
-     * `id` and already exists.
+     * errors: * UserCannotOwnCourse * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an alias
+     * was specified in the `id` and already exists.
      *
      * Create a request for the method "courses.create".
      *
@@ -188,8 +188,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not
        * permitted to create courses or for access errors. * `NOT_FOUND` if the primary teacher is not a
        * valid user. * `FAILED_PRECONDITION` if the course owner's account is disabled or for the
-       * following request errors: * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an alias was
-       * specified in the `id` and already exists.
+       * following request errors: * UserCannotOwnCourse * UserGroupsMembershipLimitReached *
+       * `ALREADY_EXISTS` if an alias was specified in the `id` and already exists.
        *
        * Create a request for the method "courses.create".
        *

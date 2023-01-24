@@ -30,7 +30,9 @@ package com.google.api.services.classroom.model;
 public final class UserProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Email address of the user. Read-only.
+   * Email address of the user. Must request
+   * `https://www.googleapis.com/auth/classroom.profile.emails` scope for this field to be populated
+   * in a response body. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,23 +66,27 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of user's profile photo. Read-only.
+   * URL of user's profile photo. Must request
+   * `https://www.googleapis.com/auth/classroom.profile.photos` scope for this field to be populated
+   * in a response body. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String photoUrl;
 
   /**
-   * Represents whether a G Suite for Education user's domain administrator has explicitly verified
-   * them as being a teacher. If the user is not a member of a G Suite for Education domain, than
-   * this field is always false. Read-only
+   * Represents whether a Google Workspace for Education user's domain administrator has explicitly
+   * verified them as being a teacher. This field is always false if the user is not a member of a
+   * Google Workspace for Education domain. Read-only
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean verifiedTeacher;
 
   /**
-   * Email address of the user. Read-only.
+   * Email address of the user. Must request
+   * `https://www.googleapis.com/auth/classroom.profile.emails` scope for this field to be populated
+   * in a response body. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -88,7 +94,9 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the user. Read-only.
+   * Email address of the user. Must request
+   * `https://www.googleapis.com/auth/classroom.profile.emails` scope for this field to be populated
+   * in a response body. Read-only.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public UserProfile setEmailAddress(java.lang.String emailAddress) {
@@ -148,7 +156,9 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of user's profile photo. Read-only.
+   * URL of user's profile photo. Must request
+   * `https://www.googleapis.com/auth/classroom.profile.photos` scope for this field to be populated
+   * in a response body. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhotoUrl() {
@@ -156,7 +166,9 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of user's profile photo. Read-only.
+   * URL of user's profile photo. Must request
+   * `https://www.googleapis.com/auth/classroom.profile.photos` scope for this field to be populated
+   * in a response body. Read-only.
    * @param photoUrl photoUrl or {@code null} for none
    */
   public UserProfile setPhotoUrl(java.lang.String photoUrl) {
@@ -165,9 +177,9 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents whether a G Suite for Education user's domain administrator has explicitly verified
-   * them as being a teacher. If the user is not a member of a G Suite for Education domain, than
-   * this field is always false. Read-only
+   * Represents whether a Google Workspace for Education user's domain administrator has explicitly
+   * verified them as being a teacher. This field is always false if the user is not a member of a
+   * Google Workspace for Education domain. Read-only
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerifiedTeacher() {
@@ -175,9 +187,9 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents whether a G Suite for Education user's domain administrator has explicitly verified
-   * them as being a teacher. If the user is not a member of a G Suite for Education domain, than
-   * this field is always false. Read-only
+   * Represents whether a Google Workspace for Education user's domain administrator has explicitly
+   * verified them as being a teacher. This field is always false if the user is not a member of a
+   * Google Workspace for Education domain. Read-only
    * @param verifiedTeacher verifiedTeacher or {@code null} for none
    */
   public UserProfile setVerifiedTeacher(java.lang.Boolean verifiedTeacher) {

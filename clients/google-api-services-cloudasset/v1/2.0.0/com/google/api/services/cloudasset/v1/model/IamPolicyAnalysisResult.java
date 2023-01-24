@@ -60,7 +60,7 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   private java.lang.Boolean fullyExplored;
 
   /**
-   * The Cloud IAM policy binding under analysis.
+   * The IAM policy binding under analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The Cloud IAM policy binding under analysis.
+   * The IAM policy binding under analysis.
    * @return value or {@code null} for none
    */
   public Binding getIamBinding() {
@@ -138,7 +138,7 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The Cloud IAM policy binding under analysis.
+   * The IAM policy binding under analysis.
    * @param iamBinding iamBinding or {@code null} for none
    */
   public IamPolicyAnalysisResult setIamBinding(Binding iamBinding) {

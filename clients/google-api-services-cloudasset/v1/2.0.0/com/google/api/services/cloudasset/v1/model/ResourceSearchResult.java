@@ -33,14 +33,14 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The additional searchable attributes of this resource. The attributes may vary from one
    * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
-   * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
-   * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
-   * asset-types#searchable_asset_types) to see which fields are included. You can search values of
-   * these fields through free text search. However, you should not consume the field programically
-   * as the field names and values may change as the GCP service updates to a new incompatible API
-   * version. To search against the `additional_attributes`: * Use a free text query to match the
-   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
-   * issue a query `foobar`.
+   * Get APIs provided by the corresponding Google Cloud service (e.g., Compute Engine). see [API
+   * references and supported searchable attributes](https://cloud.google.com/asset-inventory/docs
+   * /supported-asset-types#searchable_asset_types) to see which fields are included. You can search
+   * values of these fields through free text search. However, you should not consume the field
+   * programically as the field names and values may change as the Google Cloud service updates to a
+   * new incompatible API version. To search against the `additional_attributes`: * Use a free text
+   * query to match the attributes values. Example: to search `additional_attributes = { dnsName:
+   * "foobar" }`, you can issue a query `foobar`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,9 +115,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field only presents
-   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve KMS key
-   * information. This field is available only when the resource's Protobuf contains it and will
-   * only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
+   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve Cloud
+   * KMS key information. This field is available only when the resource's Protobuf contains it and
+   * will only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
    * /legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field) for backward
    * compatible purposes. To search against the `kms_key`: * Use a field query. Example:
    * `kmsKey:key` * Use a free text query. Example: `key`
@@ -138,7 +138,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> kmsKeys;
 
   /**
-   * Labels associated with this resource. See [Labelling and grouping GCP
+   * Labels associated with this resource. See [Labelling and grouping Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `labels`: * Use a field query: - query on any
@@ -172,7 +172,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Network tags associated with this resource. Like labels, network tags are a type of annotations
-   * used to group GCP resources. See [Labelling GCP
+   * used to group Google Cloud resources. See [Labelling Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `network_tags`: * Use a field query. Example:
@@ -246,11 +246,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
    * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
-   * is a project provided by Cloud Resource Manager, its state will include
-   * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
-   * `lifecycleState` definition in [API Reference](https://cloud.google.com/resource-
-   * manager/reference/rest/v1/projects). To search against the `state`: * Use a field query.
-   * Example: `state:RUNNING` * Use a free text query. Example: `RUNNING`
+   * is a project provided by Resource Manager, its state will include LIFECYCLE_STATE_UNSPECIFIED,
+   * ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See `lifecycleState` definition in [API
+   * Reference](https://cloud.google.com/resource-manager/reference/rest/v1/projects). To search
+   * against the `state`: * Use a field query. Example: `state:RUNNING` * Use a free text query.
+   * Example: `RUNNING`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -311,14 +311,14 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The additional searchable attributes of this resource. The attributes may vary from one
    * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
-   * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
-   * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
-   * asset-types#searchable_asset_types) to see which fields are included. You can search values of
-   * these fields through free text search. However, you should not consume the field programically
-   * as the field names and values may change as the GCP service updates to a new incompatible API
-   * version. To search against the `additional_attributes`: * Use a free text query to match the
-   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
-   * issue a query `foobar`.
+   * Get APIs provided by the corresponding Google Cloud service (e.g., Compute Engine). see [API
+   * references and supported searchable attributes](https://cloud.google.com/asset-inventory/docs
+   * /supported-asset-types#searchable_asset_types) to see which fields are included. You can search
+   * values of these fields through free text search. However, you should not consume the field
+   * programically as the field names and values may change as the Google Cloud service updates to a
+   * new incompatible API version. To search against the `additional_attributes`: * Use a free text
+   * query to match the attributes values. Example: to search `additional_attributes = { dnsName:
+   * "foobar" }`, you can issue a query `foobar`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalAttributes() {
@@ -329,14 +329,14 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The additional searchable attributes of this resource. The attributes may vary from one
    * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
-   * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
-   * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
-   * asset-types#searchable_asset_types) to see which fields are included. You can search values of
-   * these fields through free text search. However, you should not consume the field programically
-   * as the field names and values may change as the GCP service updates to a new incompatible API
-   * version. To search against the `additional_attributes`: * Use a free text query to match the
-   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
-   * issue a query `foobar`.
+   * Get APIs provided by the corresponding Google Cloud service (e.g., Compute Engine). see [API
+   * references and supported searchable attributes](https://cloud.google.com/asset-inventory/docs
+   * /supported-asset-types#searchable_asset_types) to see which fields are included. You can search
+   * values of these fields through free text search. However, you should not consume the field
+   * programically as the field names and values may change as the Google Cloud service updates to a
+   * new incompatible API version. To search against the `additional_attributes`: * Use a free text
+   * query to match the attributes values. Example: to search `additional_attributes = { dnsName:
+   * "foobar" }`, you can issue a query `foobar`.
    * @param additionalAttributes additionalAttributes or {@code null} for none
    */
   public ResourceSearchResult setAdditionalAttributes(java.util.Map<String, java.lang.Object> additionalAttributes) {
@@ -484,9 +484,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field only presents
-   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve KMS key
-   * information. This field is available only when the resource's Protobuf contains it and will
-   * only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
+   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve Cloud
+   * KMS key information. This field is available only when the resource's Protobuf contains it and
+   * will only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
    * /legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field) for backward
    * compatible purposes. To search against the `kms_key`: * Use a field query. Example:
    * `kmsKey:key` * Use a free text query. Example: `key`
@@ -500,9 +500,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field only presents
-   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve KMS key
-   * information. This field is available only when the resource's Protobuf contains it and will
-   * only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
+   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve Cloud
+   * KMS key information. This field is available only when the resource's Protobuf contains it and
+   * will only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
    * /legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field) for backward
    * compatible purposes. To search against the `kms_key`: * Use a field query. Example:
    * `kmsKey:key` * Use a free text query. Example: `key`
@@ -539,7 +539,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Labels associated with this resource. See [Labelling and grouping GCP
+   * Labels associated with this resource. See [Labelling and grouping Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `labels`: * Use a field query: - query on any
@@ -553,7 +553,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Labels associated with this resource. See [Labelling and grouping GCP
+   * Labels associated with this resource. See [Labelling and grouping Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `labels`: * Use a field query: - query on any
@@ -615,7 +615,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Network tags associated with this resource. Like labels, network tags are a type of annotations
-   * used to group GCP resources. See [Labelling GCP
+   * used to group Google Cloud resources. See [Labelling Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `network_tags`: * Use a field query. Example:
@@ -628,7 +628,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Network tags associated with this resource. Like labels, network tags are a type of annotations
-   * used to group GCP resources. See [Labelling GCP
+   * used to group Google Cloud resources. See [Labelling Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `network_tags`: * Use a field query. Example:
@@ -764,11 +764,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
    * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
-   * is a project provided by Cloud Resource Manager, its state will include
-   * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
-   * `lifecycleState` definition in [API Reference](https://cloud.google.com/resource-
-   * manager/reference/rest/v1/projects). To search against the `state`: * Use a field query.
-   * Example: `state:RUNNING` * Use a free text query. Example: `RUNNING`
+   * is a project provided by Resource Manager, its state will include LIFECYCLE_STATE_UNSPECIFIED,
+   * ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See `lifecycleState` definition in [API
+   * Reference](https://cloud.google.com/resource-manager/reference/rest/v1/projects). To search
+   * against the `state`: * Use a field query. Example: `state:RUNNING` * Use a free text query.
+   * Example: `RUNNING`
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -782,11 +782,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
    * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
-   * is a project provided by Cloud Resource Manager, its state will include
-   * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
-   * `lifecycleState` definition in [API Reference](https://cloud.google.com/resource-
-   * manager/reference/rest/v1/projects). To search against the `state`: * Use a field query.
-   * Example: `state:RUNNING` * Use a free text query. Example: `RUNNING`
+   * is a project provided by Resource Manager, its state will include LIFECYCLE_STATE_UNSPECIFIED,
+   * ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See `lifecycleState` definition in [API
+   * Reference](https://cloud.google.com/resource-manager/reference/rest/v1/projects). To search
+   * against the `state`: * Use a field query. Example: `state:RUNNING` * Use a free text query.
+   * Example: `RUNNING`
    * @param state state or {@code null} for none
    */
   public ResourceSearchResult setState(java.lang.String state) {

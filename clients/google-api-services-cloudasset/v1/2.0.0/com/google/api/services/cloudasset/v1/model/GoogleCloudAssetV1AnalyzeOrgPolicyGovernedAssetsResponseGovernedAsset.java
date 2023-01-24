@@ -17,8 +17,8 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * Represents a GCP asset(resource or IAM policy) governed by the organization policies of the
- * AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
+ * Represents a Google Cloud asset(resource or IAM policy) governed by the organization policies of
+ * the AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -49,7 +49,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   private GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy governedIamPolicy;
 
   /**
-   * A GCP resource governed by the organization policies of the
+   * A Google Cloud resource governed by the organization policies of the
    * AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
    * The value may be {@code null}.
    */
@@ -115,7 +115,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * A GCP resource governed by the organization policies of the
+   * A Google Cloud resource governed by the organization policies of the
    * AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
    * @return value or {@code null} for none
    */
@@ -124,7 +124,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * A GCP resource governed by the organization policies of the
+   * A Google Cloud resource governed by the organization policies of the
    * AnalyzeOrgPolicyGovernedAssetsRequest.constraint.
    * @param governedResource governedResource or {@code null} for none
    */

@@ -38,7 +38,7 @@ public final class SearchAllIamPoliciesResponse extends com.google.api.client.js
   private java.lang.String nextPageToken;
 
   /**
-   * A list of IamPolicy that match the search query. Related information such as the associated
+   * A list of IAM policies that match the search query. Related information such as the associated
    * resource is returned along with the policy.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class SearchAllIamPoliciesResponse extends com.google.api.client.js
   }
 
   /**
-   * A list of IamPolicy that match the search query. Related information such as the associated
+   * A list of IAM policies that match the search query. Related information such as the associated
    * resource is returned along with the policy.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class SearchAllIamPoliciesResponse extends com.google.api.client.js
   }
 
   /**
-   * A list of IamPolicy that match the search query. Related information such as the associated
+   * A list of IAM policies that match the search query. Related information such as the associated
    * resource is returned along with the policy.
    * @param results results or {@code null} for none
    */

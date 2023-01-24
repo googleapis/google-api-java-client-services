@@ -20,9 +20,9 @@ package com.google.api.services.cloudasset.v1p7beta1.model;
  * An asset identify in Google Cloud which contains its name, type and ancestors. An asset can be
  * any resource in the Google Cloud [resource hierarchy](https://cloud.google.com/resource-
  * manager/docs/cloud-platform-resource-hierarchy), a resource outside the Google Cloud resource
- * hierarchy (such as Google Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM
- * policy). See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-
- * asset-types) for more information.
+ * hierarchy (such as Google Kubernetes Engine clusters and objects), or a policy (e.g. IAM policy).
+ * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+ * for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

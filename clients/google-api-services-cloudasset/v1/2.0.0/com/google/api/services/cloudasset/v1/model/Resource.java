@@ -65,8 +65,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * The full name of the immediate parent of this resource. See [Resource
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
-   * information. For Google Cloud assets, this value is the parent resource defined in the [Cloud
-   * IAM policy hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
+   * information. For Google Cloud assets, this value is the parent resource defined in the [IAM
+   * policy hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
    * `//cloudresourcemanager.googleapis.com/projects/my_project_123` For third-party assets, this
    * field may be set differently.
    * The value may be {@code null}.
@@ -171,8 +171,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * The full name of the immediate parent of this resource. See [Resource
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
-   * information. For Google Cloud assets, this value is the parent resource defined in the [Cloud
-   * IAM policy hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
+   * information. For Google Cloud assets, this value is the parent resource defined in the [IAM
+   * policy hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
    * `//cloudresourcemanager.googleapis.com/projects/my_project_123` For third-party assets, this
    * field may be set differently.
    * @return value or {@code null} for none
@@ -184,8 +184,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * The full name of the immediate parent of this resource. See [Resource
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
-   * information. For Google Cloud assets, this value is the parent resource defined in the [Cloud
-   * IAM policy hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
+   * information. For Google Cloud assets, this value is the parent resource defined in the [IAM
+   * policy hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
    * `//cloudresourcemanager.googleapis.com/projects/my_project_123` For third-party assets, this
    * field may be set differently.
    * @param parent parent or {@code null} for none

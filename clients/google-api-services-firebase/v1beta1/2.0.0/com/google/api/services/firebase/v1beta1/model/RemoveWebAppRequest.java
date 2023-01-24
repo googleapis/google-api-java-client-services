@@ -47,9 +47,10 @@ public final class RemoveWebAppRequest extends com.google.api.client.json.Generi
   private java.lang.String etag;
 
   /**
-   * Determines whether to _immediately_ delete the App. If set to true, the App is immediately
+   * Determines whether to _immediately_ delete the WebApp. If set to true, the App is immediately
    * deleted from the Project and cannot be restored to the Project. If not set, defaults to false,
-   * which means that the App may be restored to the Project within 30 days using UndeleteWebApp
+   * which means the App will be set to expire in 30 days. Within the 30 days, the App may be
+   * restored to the Project using UndeleteWebApp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +102,10 @@ public final class RemoveWebAppRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Determines whether to _immediately_ delete the App. If set to true, the App is immediately
+   * Determines whether to _immediately_ delete the WebApp. If set to true, the App is immediately
    * deleted from the Project and cannot be restored to the Project. If not set, defaults to false,
-   * which means that the App may be restored to the Project within 30 days using UndeleteWebApp
+   * which means the App will be set to expire in 30 days. Within the 30 days, the App may be
+   * restored to the Project using UndeleteWebApp
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImmediate() {
@@ -111,9 +113,10 @@ public final class RemoveWebAppRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Determines whether to _immediately_ delete the App. If set to true, the App is immediately
+   * Determines whether to _immediately_ delete the WebApp. If set to true, the App is immediately
    * deleted from the Project and cannot be restored to the Project. If not set, defaults to false,
-   * which means that the App may be restored to the Project within 30 days using UndeleteWebApp
+   * which means the App will be set to expire in 30 days. Within the 30 days, the App may be
+   * restored to the Project using UndeleteWebApp
    * @param immediate immediate or {@code null} for none
    */
   public RemoveWebAppRequest setImmediate(java.lang.Boolean immediate) {

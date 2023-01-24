@@ -38,11 +38,11 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy e
   private java.lang.String data;
 
   /**
-   * Identifies the custom policy. The value should match the type the custom implementation is
-   * registered with on the gRPC clients. It should follow protocol buffer message naming
-   * conventions and include the full path (e.g. myorg.CustomLbPolicy). The maximum length is 256
-   * characters. Note that specifying the same custom policy more than once for a backend is not a
-   * valid configuration and will be rejected.
+   * Identifies the custom policy. The value should match the name of a custom implementation
+   * registered on the gRPC clients. It should follow protocol buffer message naming conventions and
+   * include the full path (for example, myorg.CustomLbPolicy). The maximum length is 256
+   * characters. Do not specify the same custom policy more than once for a backend. If you do, the
+   * configuration is rejected. For an example of how to use this field, see Use a custom policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,11 +68,11 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy e
   }
 
   /**
-   * Identifies the custom policy. The value should match the type the custom implementation is
-   * registered with on the gRPC clients. It should follow protocol buffer message naming
-   * conventions and include the full path (e.g. myorg.CustomLbPolicy). The maximum length is 256
-   * characters. Note that specifying the same custom policy more than once for a backend is not a
-   * valid configuration and will be rejected.
+   * Identifies the custom policy. The value should match the name of a custom implementation
+   * registered on the gRPC clients. It should follow protocol buffer message naming conventions and
+   * include the full path (for example, myorg.CustomLbPolicy). The maximum length is 256
+   * characters. Do not specify the same custom policy more than once for a backend. If you do, the
+   * configuration is rejected. For an example of how to use this field, see Use a custom policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,11 +80,11 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy e
   }
 
   /**
-   * Identifies the custom policy. The value should match the type the custom implementation is
-   * registered with on the gRPC clients. It should follow protocol buffer message naming
-   * conventions and include the full path (e.g. myorg.CustomLbPolicy). The maximum length is 256
-   * characters. Note that specifying the same custom policy more than once for a backend is not a
-   * valid configuration and will be rejected.
+   * Identifies the custom policy. The value should match the name of a custom implementation
+   * registered on the gRPC clients. It should follow protocol buffer message naming conventions and
+   * include the full path (for example, myorg.CustomLbPolicy). The maximum length is 256
+   * characters. Do not specify the same custom policy more than once for a backend. If you do, the
+   * configuration is rejected. For an example of how to use this field, see Use a custom policy.
    * @param name name or {@code null} for none
    */
   public BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy setName(java.lang.String name) {

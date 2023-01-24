@@ -38,7 +38,7 @@ public final class NodeSpec extends com.google.api.client.json.GenericJson {
   private Node node;
 
   /**
-   * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format. This is
+   * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format. This is
    * only specified when requesting a single node. In case of multi-node requests, multi_node_params
    * must be populated instead. It's an error to specify both node_id and multi_node_params.
    * The value may be {@code null}.
@@ -71,7 +71,7 @@ public final class NodeSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format. This is
+   * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format. This is
    * only specified when requesting a single node. In case of multi-node requests, multi_node_params
    * must be populated instead. It's an error to specify both node_id and multi_node_params.
    * @return value or {@code null} for none
@@ -81,7 +81,7 @@ public final class NodeSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format. This is
+   * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format. This is
    * only specified when requesting a single node. In case of multi-node requests, multi_node_params
    * must be populated instead. It's an error to specify both node_id and multi_node_params.
    * @param nodeId nodeId or {@code null} for none

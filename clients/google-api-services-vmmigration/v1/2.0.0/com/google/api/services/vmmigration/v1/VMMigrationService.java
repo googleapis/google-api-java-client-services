@@ -49,7 +49,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Migrate to Virtual Machines API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the VM Migration API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

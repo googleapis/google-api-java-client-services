@@ -20,8 +20,7 @@ package com.google.api.services.vmmigration.v1alpha1.model;
  * AwsSourceDetails message describes a specific source details for the AWS source type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Migrate to Virtual Machines API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -36,13 +35,6 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private AccessKeyCredentials accessKeyCreds;
-
-  /**
-   * AWS access key ID.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String accessKeyId;
 
   /**
    * Immutable. The AWS region that the source VMs will be migrated from.
@@ -73,14 +65,6 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
   private java.util.List<Tag> inventoryTagList;
 
   /**
-   * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
-   * inventory_tag_list instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> inventoryTags;
-
-  /**
    * User specified tags to add to every M2VM generated resource in AWS. These tags will be set in
    * addition to the default tags that are set as part of the migration process. The tags must not
    * begin with the reserved prefix `m2vm`.
@@ -96,13 +80,6 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String publicIp;
-
-  /**
-   * Input only. AWS secret access key.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String secretAccessKey;
 
   /**
    * Output only. State of the source as determined by the health check.
@@ -125,23 +102,6 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   public AwsSourceDetails setAccessKeyCreds(AccessKeyCredentials accessKeyCreds) {
     this.accessKeyCreds = accessKeyCreds;
-    return this;
-  }
-
-  /**
-   * AWS access key ID.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAccessKeyId() {
-    return accessKeyId;
-  }
-
-  /**
-   * AWS access key ID.
-   * @param accessKeyId accessKeyId or {@code null} for none
-   */
-  public AwsSourceDetails setAccessKeyId(java.lang.String accessKeyId) {
-    this.accessKeyId = accessKeyId;
     return this;
   }
 
@@ -214,25 +174,6 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
-   * inventory_tag_list instead.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getInventoryTags() {
-    return inventoryTags;
-  }
-
-  /**
-   * Deprecated: AWS resource tags to limit the scope of the source inventory. Use
-   * inventory_tag_list instead.
-   * @param inventoryTags inventoryTags or {@code null} for none
-   */
-  public AwsSourceDetails setInventoryTags(java.util.Map<String, java.lang.String> inventoryTags) {
-    this.inventoryTags = inventoryTags;
-    return this;
-  }
-
-  /**
    * User specified tags to add to every M2VM generated resource in AWS. These tags will be set in
    * addition to the default tags that are set as part of the migration process. The tags must not
    * begin with the reserved prefix `m2vm`.
@@ -269,23 +210,6 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   public AwsSourceDetails setPublicIp(java.lang.String publicIp) {
     this.publicIp = publicIp;
-    return this;
-  }
-
-  /**
-   * Input only. AWS secret access key.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSecretAccessKey() {
-    return secretAccessKey;
-  }
-
-  /**
-   * Input only. AWS secret access key.
-   * @param secretAccessKey secretAccessKey or {@code null} for none
-   */
-  public AwsSourceDetails setSecretAccessKey(java.lang.String secretAccessKey) {
-    this.secretAccessKey = secretAccessKey;
     return this;
   }
 

@@ -20,8 +20,7 @@ package com.google.api.services.vmmigration.v1.model;
  * Response message for fetchInventory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Migrate to Virtual Machines API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -29,6 +28,13 @@ package com.google.api.services.vmmigration.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class FetchInventoryResponse extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The description of the VMs in a Source of type AWS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsVmsDetails awsVms;
 
   /**
    * Output only. A token, which can be sent as `page_token` to retrieve the next page. If this
@@ -51,6 +57,23 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private VmwareVmsDetails vmwareVms;
+
+  /**
+   * The description of the VMs in a Source of type AWS.
+   * @return value or {@code null} for none
+   */
+  public AwsVmsDetails getAwsVms() {
+    return awsVms;
+  }
+
+  /**
+   * The description of the VMs in a Source of type AWS.
+   * @param awsVms awsVms or {@code null} for none
+   */
+  public FetchInventoryResponse setAwsVms(AwsVmsDetails awsVms) {
+    this.awsVms = awsVms;
+    return this;
+  }
 
   /**
    * Output only. A token, which can be sent as `page_token` to retrieve the next page. If this

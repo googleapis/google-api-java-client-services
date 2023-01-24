@@ -30,8 +30,9 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class Site extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1
-   * beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
+   * Optional. The [ID of a Web App](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting
+   * site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,12 +54,12 @@ public final class Site extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The fully-qualified resource name of the Hosting site, in the format:
-   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectN
-   * umber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseP
-   * roject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.
-   * com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn
-   * more about using project identifiers in Google's [AIP 2510
-   * standard](https://google.aip.dev/cloud/2510).
+   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
+   * [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or
+   * its [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about using
+   * project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +74,9 @@ public final class Site extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1
-   * beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
+   * Optional. The [ID of a Web App](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting
+   * site.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -82,8 +84,9 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1
-   * beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
+   * Optional. The [ID of a Web App](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting
+   * site.
    * @param appId appId or {@code null} for none
    */
   public Site setAppId(java.lang.String appId) {
@@ -127,12 +130,12 @@ public final class Site extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The fully-qualified resource name of the Hosting site, in the format:
-   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectN
-   * umber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseP
-   * roject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.
-   * com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn
-   * more about using project identifiers in Google's [AIP 2510
-   * standard](https://google.aip.dev/cloud/2510).
+   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
+   * [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or
+   * its [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about using
+   * project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,12 +144,12 @@ public final class Site extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The fully-qualified resource name of the Hosting site, in the format:
-   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectN
-   * umber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseP
-   * roject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.
-   * com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn
-   * more about using project identifiers in Google's [AIP 2510
-   * standard](https://google.aip.dev/cloud/2510).
+   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
+   * [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or
+   * its [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+   * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about using
+   * project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
    * @param name name or {@code null} for none
    */
   public Site setName(java.lang.String name) {

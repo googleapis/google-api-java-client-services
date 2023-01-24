@@ -55,6 +55,20 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
   private java.lang.String correctedQuery;
 
   /**
+   * Metadata related to A/B testing Experiment associated with this response. Only exists when an
+   * experiment is triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaExperimentInfo> experimentInfo;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2alphaExperimentInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaExperimentInfo.class);
+  }
+
+  /**
    * Results of facets requested by user.
    * The value may be {@code null}.
    */
@@ -168,6 +182,25 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
    */
   public GoogleCloudRetailV2alphaSearchResponse setCorrectedQuery(java.lang.String correctedQuery) {
     this.correctedQuery = correctedQuery;
+    return this;
+  }
+
+  /**
+   * Metadata related to A/B testing Experiment associated with this response. Only exists when an
+   * experiment is triggered.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaExperimentInfo> getExperimentInfo() {
+    return experimentInfo;
+  }
+
+  /**
+   * Metadata related to A/B testing Experiment associated with this response. Only exists when an
+   * experiment is triggered.
+   * @param experimentInfo experimentInfo or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponse setExperimentInfo(java.util.List<GoogleCloudRetailV2alphaExperimentInfo> experimentInfo) {
+    this.experimentInfo = experimentInfo;
     return this;
   }
 

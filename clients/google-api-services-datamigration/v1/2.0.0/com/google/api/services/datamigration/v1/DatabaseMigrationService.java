@@ -3167,17 +3167,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** Filter the returned entities based on AIP-160 standard */
+          /** Filter the returned entities based on AIP-160 standard. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter the returned entities based on AIP-160 standard
+          /** Filter the returned entities based on AIP-160 standard.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter the returned entities based on AIP-160 standard */
+          /** Filter the returned entities based on AIP-160 standard. */
           public DescribeDatabaseEntities setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -3237,17 +3237,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** The tree to fetch */
+          /** The tree to fetch. */
           @com.google.api.client.util.Key
           private java.lang.String tree;
 
-          /** The tree to fetch
+          /** The tree to fetch.
            */
           public java.lang.String getTree() {
             return tree;
           }
 
-          /** The tree to fetch */
+          /** The tree to fetch. */
           public DescribeDatabaseEntities setTree(java.lang.String tree) {
             this.tree = tree;
             return this;

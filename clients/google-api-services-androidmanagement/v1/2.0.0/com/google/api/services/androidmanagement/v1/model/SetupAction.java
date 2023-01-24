@@ -40,7 +40,9 @@ public final class SetupAction extends com.google.api.client.json.GenericJson {
   /**
    * An action to launch an app. The app will be launched with an intent containing an extra with
    * key com.google.android.apps.work.clouddpc.EXTRA_LAUNCHED_AS_SETUP_ACTION set to the boolean
-   * value true to indicate that this is a setup action flow.
+   * value true to indicate that this is a setup action flow. If SetupAction references an app, the
+   * corresponding installType in the application policy must be set as REQUIRED_FOR_SETUP or said
+   * setup will fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +75,9 @@ public final class SetupAction extends com.google.api.client.json.GenericJson {
   /**
    * An action to launch an app. The app will be launched with an intent containing an extra with
    * key com.google.android.apps.work.clouddpc.EXTRA_LAUNCHED_AS_SETUP_ACTION set to the boolean
-   * value true to indicate that this is a setup action flow.
+   * value true to indicate that this is a setup action flow. If SetupAction references an app, the
+   * corresponding installType in the application policy must be set as REQUIRED_FOR_SETUP or said
+   * setup will fail.
    * @return value or {@code null} for none
    */
   public LaunchAppAction getLaunchApp() {
@@ -83,7 +87,9 @@ public final class SetupAction extends com.google.api.client.json.GenericJson {
   /**
    * An action to launch an app. The app will be launched with an intent containing an extra with
    * key com.google.android.apps.work.clouddpc.EXTRA_LAUNCHED_AS_SETUP_ACTION set to the boolean
-   * value true to indicate that this is a setup action flow.
+   * value true to indicate that this is a setup action flow. If SetupAction references an app, the
+   * corresponding installType in the application policy must be set as REQUIRED_FOR_SETUP or said
+   * setup will fail.
    * @param launchApp launchApp or {@code null} for none
    */
   public SetupAction setLaunchApp(LaunchAppAction launchApp) {

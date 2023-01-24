@@ -21,8 +21,7 @@ package com.google.api.services.vmmigration.v1alpha1.model;
  * state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Migrate to Virtual Machines API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -61,7 +60,7 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. The percentage progress of the current running replication cycle.
+   * Output only. Details of the current running replication cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +264,7 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The percentage progress of the current running replication cycle.
+   * Output only. Details of the current running replication cycle.
    * @return value or {@code null} for none
    */
   public ReplicationCycle getCurrentSyncInfo() {
@@ -273,7 +272,7 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The percentage progress of the current running replication cycle.
+   * Output only. Details of the current running replication cycle.
    * @param currentSyncInfo currentSyncInfo or {@code null} for none
    */
   public MigratingVm setCurrentSyncInfo(ReplicationCycle currentSyncInfo) {

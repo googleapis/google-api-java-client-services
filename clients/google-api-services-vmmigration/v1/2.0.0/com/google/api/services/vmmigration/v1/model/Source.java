@@ -21,8 +21,7 @@ package com.google.api.services.vmmigration.v1.model;
  * environment information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Migrate to Virtual Machines API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,6 +29,13 @@ package com.google.api.services.vmmigration.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class Source extends com.google.api.client.json.GenericJson {
+
+  /**
+   * AWS type source details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsSourceDetails aws;
 
   /**
    * Output only. The create time timestamp.
@@ -72,6 +78,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VmwareSourceDetails vmware;
+
+  /**
+   * AWS type source details.
+   * @return value or {@code null} for none
+   */
+  public AwsSourceDetails getAws() {
+    return aws;
+  }
+
+  /**
+   * AWS type source details.
+   * @param aws aws or {@code null} for none
+   */
+  public Source setAws(AwsSourceDetails aws) {
+    this.aws = aws;
+    return this;
+  }
 
   /**
    * Output only. The create time timestamp.

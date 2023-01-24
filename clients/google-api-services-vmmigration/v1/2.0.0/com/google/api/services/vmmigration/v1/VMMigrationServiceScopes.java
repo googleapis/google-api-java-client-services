@@ -17,7 +17,7 @@
 package com.google.api.services.vmmigration.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Migrate to Virtual Machines API.
+ * Available OAuth 2.0 scopes for use with the VM Migration API.
  *
  * @since 1.4
  */

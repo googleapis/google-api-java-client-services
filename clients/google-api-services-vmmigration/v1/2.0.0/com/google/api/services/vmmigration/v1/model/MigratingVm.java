@@ -21,8 +21,7 @@ package com.google.api.services.vmmigration.v1.model;
  * state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Migrate to Virtual Machines API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,6 +29,13 @@ package com.google.api.services.vmmigration.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class MigratingVm extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Output only. Details of the VM from an AWS source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsSourceVmDetails awsSourceVmDetails;
 
   /**
    * Details of the target VM in Compute Engine.
@@ -47,7 +53,7 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. The percentage progress of the current running replication cycle.
+   * Output only. Details of the current running replication cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,6 +179,23 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. Details of the VM from an AWS source.
+   * @return value or {@code null} for none
+   */
+  public AwsSourceVmDetails getAwsSourceVmDetails() {
+    return awsSourceVmDetails;
+  }
+
+  /**
+   * Output only. Details of the VM from an AWS source.
+   * @param awsSourceVmDetails awsSourceVmDetails or {@code null} for none
+   */
+  public MigratingVm setAwsSourceVmDetails(AwsSourceVmDetails awsSourceVmDetails) {
+    this.awsSourceVmDetails = awsSourceVmDetails;
+    return this;
+  }
+
+  /**
    * Details of the target VM in Compute Engine.
    * @return value or {@code null} for none
    */
@@ -209,7 +232,7 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The percentage progress of the current running replication cycle.
+   * Output only. Details of the current running replication cycle.
    * @return value or {@code null} for none
    */
   public ReplicationCycle getCurrentSyncInfo() {
@@ -217,7 +240,7 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The percentage progress of the current running replication cycle.
+   * Output only. Details of the current running replication cycle.
    * @param currentSyncInfo currentSyncInfo or {@code null} for none
    */
   public MigratingVm setCurrentSyncInfo(ReplicationCycle currentSyncInfo) {

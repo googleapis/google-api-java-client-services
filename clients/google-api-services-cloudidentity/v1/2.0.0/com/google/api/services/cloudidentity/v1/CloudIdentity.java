@@ -7674,6 +7674,2180 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the InboundSamlSsoProfiles collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+   *   {@code CloudIdentity.InboundSamlSsoProfiles.List request = cloudidentity.inboundSamlSsoProfiles().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public InboundSamlSsoProfiles inboundSamlSsoProfiles() {
+    return new InboundSamlSsoProfiles();
+  }
+
+  /**
+   * The "inboundSamlSsoProfiles" collection of methods.
+   */
+  public class InboundSamlSsoProfiles {
+
+    /**
+     * Creates an InboundSamlSsoProfile for a customer.
+     *
+     * Create a request for the method "inboundSamlSsoProfiles.create".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile}
+     * @return the request
+     */
+    public Create create(com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/inboundSamlSsoProfiles";
+
+      /**
+       * Creates an InboundSamlSsoProfile for a customer.
+       *
+       * Create a request for the method "inboundSamlSsoProfiles.create".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile content) {
+        super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes an InboundSamlSsoProfile.
+     *
+     * Create a request for the method "inboundSamlSsoProfiles.delete".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSamlSsoProfile to delete. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
+
+      /**
+       * Deletes an InboundSamlSsoProfile.
+       *
+       * Create a request for the method "inboundSamlSsoProfiles.delete".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSamlSsoProfile to delete. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(CloudIdentity.this, "DELETE", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSamlSsoProfiles/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSamlSsoProfile to delete. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     InboundSamlSsoProfile to delete. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSamlSsoProfile to delete. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSamlSsoProfiles/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets an InboundSamlSsoProfile.
+     *
+     * Create a request for the method "inboundSamlSsoProfiles.get".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSamlSsoProfile to get. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
+
+      /**
+       * Gets an InboundSamlSsoProfile.
+       *
+       * Create a request for the method "inboundSamlSsoProfiles.get".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSamlSsoProfile to get. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSamlSsoProfiles/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSamlSsoProfile to get. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     InboundSamlSsoProfile to get. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSamlSsoProfile to get. Format: `inboundSamlSsoProfiles/{sso_profile_id}`
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSamlSsoProfiles/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists InboundSamlSsoProfiles for a customer.
+     *
+     * Create a request for the method "inboundSamlSsoProfiles.list".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.ListInboundSamlSsoProfilesResponse> {
+
+      private static final String REST_PATH = "v1/inboundSamlSsoProfiles";
+
+      /**
+       * Lists InboundSamlSsoProfiles for a customer.
+       *
+       * Create a request for the method "inboundSamlSsoProfiles.list".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.ListInboundSamlSsoProfilesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
+       * results. The only currently-supported filter is filtering by customer. For example:
+       * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
+       * `customer=="customers/my_customer"` will return the profiles for the customer that the
+       * caller (authenticated user) belongs to.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
+     results. The only currently-supported filter is filtering by customer. For example:
+     `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
+     `customer=="customers/my_customer"` will return the profiles for the customer that the caller
+     (authenticated user) belongs to.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
+       * results. The only currently-supported filter is filtering by customer. For example:
+       * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
+       * `customer=="customers/my_customer"` will return the profiles for the customer that the
+       * caller (authenticated user) belongs to.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of InboundSamlSsoProfiles to return. The service may return fewer than
+       * this value. If omitted (or defaulted to zero) the server will use a sensible default. This
+       * default may change over time. The maximum allowed value is 100. Requests with page_size
+       * greater than that will be silently interpreted as having this maximum value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of InboundSamlSsoProfiles to return. The service may return fewer than this
+     value. If omitted (or defaulted to zero) the server will use a sensible default. This default may
+     change over time. The maximum allowed value is 100. Requests with page_size greater than that will
+     be silently interpreted as having this maximum value.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of InboundSamlSsoProfiles to return. The service may return fewer than
+       * this value. If omitted (or defaulted to zero) the server will use a sensible default. This
+       * default may change over time. The maximum allowed value is 100. Requests with page_size
+       * greater than that will be silently interpreted as having this maximum value.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListInboundSamlSsoProfiles` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListInboundSamlSsoProfiles` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListInboundSamlSsoProfiles` call. Provide this to retrieve
+     the subsequent page. When paginating, all other parameters provided to `ListInboundSamlSsoProfiles`
+     must match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListInboundSamlSsoProfiles` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListInboundSamlSsoProfiles` must match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an InboundSamlSsoProfile.
+     *
+     * Create a request for the method "inboundSamlSsoProfiles.patch".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the SAML SSO
+     *        profile.
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
+
+      /**
+       * Updates an InboundSamlSsoProfile.
+       *
+       * Create a request for the method "inboundSamlSsoProfiles.patch".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the SAML SSO
+     *        profile.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.cloudidentity.v1.model.InboundSamlSsoProfile content) {
+        super(CloudIdentity.this, "PATCH", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSamlSsoProfiles/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * SAML SSO profile.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the SAML SSO
+     profile.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * SAML SSO profile.
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSamlSsoProfiles/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The list of fields to be updated. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the IdpCredentials collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+     *   {@code CloudIdentity.IdpCredentials.List request = cloudidentity.idpCredentials().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public IdpCredentials idpCredentials() {
+      return new IdpCredentials();
+    }
+
+    /**
+     * The "idpCredentials" collection of methods.
+     */
+    public class IdpCredentials {
+
+      /**
+       * Adds an IdpCredential. Up to 2 credentials are allowed.
+       *
+       * Create a request for the method "idpCredentials.add".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Add#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The InboundSamlSsoProfile that owns the IdpCredential. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}`
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.AddIdpCredentialRequest}
+       * @return the request
+       */
+      public Add add(java.lang.String parent, com.google.api.services.cloudidentity.v1.model.AddIdpCredentialRequest content) throws java.io.IOException {
+        Add result = new Add(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Add extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/idpCredentials:add";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
+
+        /**
+         * Adds an IdpCredential. Up to 2 credentials are allowed.
+         *
+         * Create a request for the method "idpCredentials.add".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Add#execute()} method to invoke the remote operation. <p>
+         * {@link Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The InboundSamlSsoProfile that owns the IdpCredential. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}`
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.AddIdpCredentialRequest}
+         * @since 1.13
+         */
+        protected Add(java.lang.String parent, com.google.api.services.cloudidentity.v1.model.AddIdpCredentialRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public Add set$Xgafv(java.lang.String $Xgafv) {
+          return (Add) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Add setAccessToken(java.lang.String accessToken) {
+          return (Add) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Add setAlt(java.lang.String alt) {
+          return (Add) super.setAlt(alt);
+        }
+
+        @Override
+        public Add setCallback(java.lang.String callback) {
+          return (Add) super.setCallback(callback);
+        }
+
+        @Override
+        public Add setFields(java.lang.String fields) {
+          return (Add) super.setFields(fields);
+        }
+
+        @Override
+        public Add setKey(java.lang.String key) {
+          return (Add) super.setKey(key);
+        }
+
+        @Override
+        public Add setOauthToken(java.lang.String oauthToken) {
+          return (Add) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Add) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Add setQuotaUser(java.lang.String quotaUser) {
+          return (Add) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Add setUploadType(java.lang.String uploadType) {
+          return (Add) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Add setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Add) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The InboundSamlSsoProfile that owns the IdpCredential. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The InboundSamlSsoProfile that owns the IdpCredential. Format:
+       `inboundSamlSsoProfiles/{sso_profile_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The InboundSamlSsoProfile that owns the IdpCredential. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}`
+         */
+        public Add setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Add set(String parameterName, Object value) {
+          return (Add) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an IdpCredential.
+       *
+       * Create a request for the method "idpCredentials.delete".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        IdpCredential to delete. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+/idpCredentials/[^/]+$");
+
+        /**
+         * Deletes an IdpCredential.
+         *
+         * Create a request for the method "idpCredentials.delete".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        IdpCredential to delete. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudIdentity.this, "DELETE", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+/idpCredentials/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * IdpCredential to delete. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       IdpCredential to delete. Format:
+       `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * IdpCredential to delete. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+/idpCredentials/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets an IdpCredential.
+       *
+       * Create a request for the method "idpCredentials.get".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        IdpCredential to retrieve. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.IdpCredential> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+/idpCredentials/[^/]+$");
+
+        /**
+         * Gets an IdpCredential.
+         *
+         * Create a request for the method "idpCredentials.get".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        IdpCredential to retrieve. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.IdpCredential.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+/idpCredentials/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * IdpCredential to retrieve. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       IdpCredential to retrieve. Format:
+       `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * IdpCredential to retrieve. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}/idpCredentials/{idp_credential_id}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+/idpCredentials/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a list of IdpCredentials in an InboundSamlSsoProfile.
+       *
+       * Create a request for the method "idpCredentials.list".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns this collection of `IdpCredential`s. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.ListIdpCredentialsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/idpCredentials";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
+
+        /**
+         * Returns a list of IdpCredentials in an InboundSamlSsoProfile.
+         *
+         * Create a request for the method "idpCredentials.list".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns this collection of `IdpCredential`s. Format:
+       *        `inboundSamlSsoProfiles/{sso_profile_id}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.ListIdpCredentialsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns this collection of `IdpCredential`s. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns this collection of `IdpCredential`s. Format:
+       `inboundSamlSsoProfiles/{sso_profile_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns this collection of `IdpCredential`s. Format:
+         * `inboundSamlSsoProfiles/{sso_profile_id}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^inboundSamlSsoProfiles/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of `IdpCredential`s to return. The service may return fewer than this
+         * value.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of `IdpCredential`s to return. The service may return fewer than this value.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of `IdpCredential`s to return. The service may return fewer than this
+         * value.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListIdpCredentials` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListIdpCredentials` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListIdpCredentials` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListIdpCredentials` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListIdpCredentials` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListIdpCredentials` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the InboundSsoAssignments collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+   *   {@code CloudIdentity.InboundSsoAssignments.List request = cloudidentity.inboundSsoAssignments().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public InboundSsoAssignments inboundSsoAssignments() {
+    return new InboundSsoAssignments();
+  }
+
+  /**
+   * The "inboundSsoAssignments" collection of methods.
+   */
+  public class InboundSsoAssignments {
+
+    /**
+     * Creates an InboundSsoAssignment for users and devices in a `Customer` under a given `Group` or
+     * `OrgUnit`.
+     *
+     * Create a request for the method "inboundSsoAssignments.create".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment}
+     * @return the request
+     */
+    public Create create(com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/inboundSsoAssignments";
+
+      /**
+       * Creates an InboundSsoAssignment for users and devices in a `Customer` under a given `Group` or
+       * `OrgUnit`.
+       *
+       * Create a request for the method "inboundSsoAssignments.create".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment content) {
+        super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has
+     * `sso_mode` == `SSO_OFF`.
+     *
+     * Create a request for the method "inboundSsoAssignments.delete".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSsoAssignment to delete. Format: `inboundSsoAssignments/{assignment}`
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^inboundSsoAssignments/[^/]+$");
+
+      /**
+       * Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has
+       * `sso_mode` == `SSO_OFF`.
+       *
+       * Create a request for the method "inboundSsoAssignments.delete".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSsoAssignment to delete. Format: `inboundSsoAssignments/{assignment}`
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(CloudIdentity.this, "DELETE", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSsoAssignments/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSsoAssignment to delete. Format: `inboundSsoAssignments/{assignment}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     InboundSsoAssignment to delete. Format: `inboundSsoAssignments/{assignment}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSsoAssignment to delete. Format: `inboundSsoAssignments/{assignment}`
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSsoAssignments/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets an InboundSsoAssignment.
+     *
+     * Create a request for the method "inboundSsoAssignments.get".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSsoAssignment to fetch. Format: `inboundSsoAssignments/{assignment}`
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^inboundSsoAssignments/[^/]+$");
+
+      /**
+       * Gets an InboundSsoAssignment.
+       *
+       * Create a request for the method "inboundSsoAssignments.get".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        InboundSsoAssignment to fetch. Format: `inboundSsoAssignments/{assignment}`
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSsoAssignments/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSsoAssignment to fetch. Format: `inboundSsoAssignments/{assignment}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     InboundSsoAssignment to fetch. Format: `inboundSsoAssignments/{assignment}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * InboundSsoAssignment to fetch. Format: `inboundSsoAssignments/{assignment}`
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSsoAssignments/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the InboundSsoAssignments for a `Customer`.
+     *
+     * Create a request for the method "inboundSsoAssignments.list".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.ListInboundSsoAssignmentsResponse> {
+
+      private static final String REST_PATH = "v1/inboundSsoAssignments";
+
+      /**
+       * Lists the InboundSsoAssignments for a `Customer`.
+       *
+       * Create a request for the method "inboundSsoAssignments.list".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.ListInboundSsoAssignmentsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A CEL expression to filter the results. The only currently-supported filter is filtering by
+       * customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a
+       * filter of `customer==customers/my_customer` will return the assignments for the customer
+       * that the caller (authenticated user) belongs to.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A CEL expression to filter the results. The only currently-supported filter is filtering by
+     customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a filter
+     of `customer==customers/my_customer` will return the assignments for the customer that the caller
+     (authenticated user) belongs to.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A CEL expression to filter the results. The only currently-supported filter is filtering by
+       * customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a
+       * filter of `customer==customers/my_customer` will return the assignments for the customer
+       * that the caller (authenticated user) belongs to.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of assignments to return. The service may return fewer than this value.
+       * If omitted (or defaulted to zero) the server will use a sensible default. This default may
+       * change over time. The maximum allowed value is 100, though requests with page_size greater
+       * than that will be silently interpreted as having this maximum value. This may increase in
+       * the futue.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of assignments to return. The service may return fewer than this value. If
+     omitted (or defaulted to zero) the server will use a sensible default. This default may change over
+     time. The maximum allowed value is 100, though requests with page_size greater than that will be
+     silently interpreted as having this maximum value. This may increase in the futue.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of assignments to return. The service may return fewer than this value.
+       * If omitted (or defaulted to zero) the server will use a sensible default. This default may
+       * change over time. The maximum allowed value is 100, though requests with page_size greater
+       * than that will be silently interpreted as having this maximum value. This may increase in
+       * the futue.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListInboundSsoAssignments` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListInboundSsoAssignments` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListInboundSsoAssignments` call. Provide this to retrieve
+     the subsequent page. When paginating, all other parameters provided to `ListInboundSsoAssignments`
+     must match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListInboundSsoAssignments` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListInboundSsoAssignments` must match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field
+     * and the `update_mask` is relative to that. For example: a PATCH to
+     * `/v1/inboundSsoAssignments/0abcdefg1234567_mask=rank` with a body of `{ "rank": 1 }` moves that
+     * (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-
+     * targeted assignments down in priority.
+     *
+     * Create a request for the method "inboundSsoAssignments.patch".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Inbound SSO
+     *        Assignment.
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^inboundSsoAssignments/[^/]+$");
+
+      /**
+       * Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field
+       * and the `update_mask` is relative to that. For example: a PATCH to
+       * `/v1/inboundSsoAssignments/0abcdefg1234567_mask=rank` with a body of `{ "rank": 1 }` moves that
+       * (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-
+       * targeted assignments down in priority.
+       *
+       * Create a request for the method "inboundSsoAssignments.patch".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Inbound SSO
+     *        Assignment.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.cloudidentity.v1.model.InboundSsoAssignment content) {
+        super(CloudIdentity.this, "PATCH", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSsoAssignments/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Inbound SSO Assignment.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Inbound
+     SSO Assignment.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Inbound SSO Assignment.
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^inboundSsoAssignments/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The list of fields to be updated. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link CloudIdentity}.
    *
    * <p>

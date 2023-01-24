@@ -505,6 +505,29 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
+         * If set, will free the database_id associated with this database. uid will be used as the
+         * resource id to identify this deleted database.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean freeId;
+
+        /** If set, will free the database_id associated with this database. uid will be used as the resource
+       id to identify this deleted database.
+         */
+        public java.lang.Boolean getFreeId() {
+          return freeId;
+        }
+
+        /**
+         * If set, will free the database_id associated with this database. uid will be used as the
+         * resource id to identify this deleted database.
+         */
+        public Delete setFreeId(java.lang.Boolean freeId) {
+          this.freeId = freeId;
+          return this;
+        }
+
+        /**
          * If set, validate the request and preview the response, but do not actually delete the
          * database.
          */

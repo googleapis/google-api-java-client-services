@@ -51,6 +51,13 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
   private java.lang.String inputUriPrefix;
 
   /**
+   * Which namespace ids are being imported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> namespaceIds;
+
+  /**
    * The state of the import operation.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
    */
   public GoogleFirestoreAdminV1ImportDocumentsMetadata setInputUriPrefix(java.lang.String inputUriPrefix) {
     this.inputUriPrefix = inputUriPrefix;
+    return this;
+  }
+
+  /**
+   * Which namespace ids are being imported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNamespaceIds() {
+    return namespaceIds;
+  }
+
+  /**
+   * Which namespace ids are being imported.
+   * @param namespaceIds namespaceIds or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1ImportDocumentsMetadata setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {
+    this.namespaceIds = namespaceIds;
     return this;
   }
 

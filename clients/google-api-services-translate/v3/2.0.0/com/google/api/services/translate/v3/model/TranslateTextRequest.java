@@ -32,7 +32,7 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The content of the input in string format. We recommend the total content be less
-   * than 30k codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
+   * than 30,000 codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
    * text.
    * The value may be {@code null}.
    */
@@ -98,7 +98,7 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The content of the input in string format. We recommend the total content be less
-   * than 30k codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
+   * than 30,000 codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
    * text.
    * @return value or {@code null} for none
    */
@@ -108,7 +108,7 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The content of the input in string format. We recommend the total content be less
-   * than 30k codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
+   * than 30,000 codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
    * text.
    * @param contents contents or {@code null} for none
    */

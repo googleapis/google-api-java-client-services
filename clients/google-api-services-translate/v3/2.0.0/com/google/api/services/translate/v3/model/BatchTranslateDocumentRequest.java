@@ -31,6 +31,15 @@ package com.google.api.services.translate.v3.model;
 public final class BatchTranslateDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. This flag is to support user customized attribution. If not provided, the default is
+   * `Machine Translated by Google`. Customized attribution should follow rules in
+   * https://cloud.google.com/translate/attribution#attribution_and_logos
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customizedAttribution;
+
+  /**
    * Optional.
    * The value may be {@code null}.
    */
@@ -95,6 +104,27 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetLanguageCodes;
+
+  /**
+   * Optional. This flag is to support user customized attribution. If not provided, the default is
+   * `Machine Translated by Google`. Customized attribution should follow rules in
+   * https://cloud.google.com/translate/attribution#attribution_and_logos
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomizedAttribution() {
+    return customizedAttribution;
+  }
+
+  /**
+   * Optional. This flag is to support user customized attribution. If not provided, the default is
+   * `Machine Translated by Google`. Customized attribution should follow rules in
+   * https://cloud.google.com/translate/attribution#attribution_and_logos
+   * @param customizedAttribution customizedAttribution or {@code null} for none
+   */
+  public BatchTranslateDocumentRequest setCustomizedAttribution(java.lang.String customizedAttribution) {
+    this.customizedAttribution = customizedAttribution;
+    return this;
+  }
 
   /**
    * Optional.

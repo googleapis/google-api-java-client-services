@@ -17,8 +17,8 @@
 package com.google.api.services.translate.v3.model;
 
 /**
- * Configures which glossary should be used for a specific target language, and defines options for
- * applying that glossary.
+ * Configures which glossary is used for a specific target language and defines options for applying
+ * that glossary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation
@@ -32,25 +32,25 @@ package com.google.api.services.translate.v3.model;
 public final class TranslateTextGlossaryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The `glossary` to be applied for this translation. The format depends on glossary: -
-   * User provided custom glossary: `projects/{project-number-or-id}/locations/{location-
-   * id}/glossaries/{glossary-id}`
+   * Required. The `glossary` to be applied for this translation. The format depends on the
+   * glossary: - User-provided custom glossary: `projects/{project-number-or-id}/locations
+   * /{location-id}/glossaries/{glossary-id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String glossary;
 
   /**
-   * Optional. Indicates match is case-insensitive. Default value is false if missing.
+   * Optional. Indicates match is case insensitive. The default value is `false` if missing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreCase;
 
   /**
-   * Required. The `glossary` to be applied for this translation. The format depends on glossary: -
-   * User provided custom glossary: `projects/{project-number-or-id}/locations/{location-
-   * id}/glossaries/{glossary-id}`
+   * Required. The `glossary` to be applied for this translation. The format depends on the
+   * glossary: - User-provided custom glossary: `projects/{project-number-or-id}/locations
+   * /{location-id}/glossaries/{glossary-id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getGlossary() {
@@ -58,9 +58,9 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
   }
 
   /**
-   * Required. The `glossary` to be applied for this translation. The format depends on glossary: -
-   * User provided custom glossary: `projects/{project-number-or-id}/locations/{location-
-   * id}/glossaries/{glossary-id}`
+   * Required. The `glossary` to be applied for this translation. The format depends on the
+   * glossary: - User-provided custom glossary: `projects/{project-number-or-id}/locations
+   * /{location-id}/glossaries/{glossary-id}`
    * @param glossary glossary or {@code null} for none
    */
   public TranslateTextGlossaryConfig setGlossary(java.lang.String glossary) {
@@ -69,7 +69,7 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Indicates match is case-insensitive. Default value is false if missing.
+   * Optional. Indicates match is case insensitive. The default value is `false` if missing.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreCase() {
@@ -77,7 +77,7 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Indicates match is case-insensitive. Default value is false if missing.
+   * Optional. Indicates match is case insensitive. The default value is `false` if missing.
    * @param ignoreCase ignoreCase or {@code null} for none
    */
   public TranslateTextGlossaryConfig setIgnoreCase(java.lang.Boolean ignoreCase) {

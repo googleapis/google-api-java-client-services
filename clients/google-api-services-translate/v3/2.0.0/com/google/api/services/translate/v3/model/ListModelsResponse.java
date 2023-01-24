@@ -17,7 +17,7 @@
 package com.google.api.services.translate.v3.model;
 
 /**
- * The response message for language detection.
+ * Response message for ListModels.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation
@@ -28,64 +28,67 @@ package com.google.api.services.translate.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DetectedLanguage extends com.google.api.client.json.GenericJson {
+public final class ListModelsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence of the detection result for this language.
+   * The models read.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float confidence;
+  private java.util.List<Model> models;
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * A token to retrieve next page of results. Pass this token to the page_token field in the
+   * ListModelsRequest to obtain the corresponding page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String languageCode;
+  private java.lang.String nextPageToken;
 
   /**
-   * The confidence of the detection result for this language.
+   * The models read.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getConfidence() {
-    return confidence;
+  public java.util.List<Model> getModels() {
+    return models;
   }
 
   /**
-   * The confidence of the detection result for this language.
-   * @param confidence confidence or {@code null} for none
+   * The models read.
+   * @param models models or {@code null} for none
    */
-  public DetectedLanguage setConfidence(java.lang.Float confidence) {
-    this.confidence = confidence;
+  public ListModelsResponse setModels(java.util.List<Model> models) {
+    this.models = models;
     return this;
   }
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * A token to retrieve next page of results. Pass this token to the page_token field in the
+   * ListModelsRequest to obtain the corresponding page.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLanguageCode() {
-    return languageCode;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
-   * @param languageCode languageCode or {@code null} for none
+   * A token to retrieve next page of results. Pass this token to the page_token field in the
+   * ListModelsRequest to obtain the corresponding page.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public DetectedLanguage setLanguageCode(java.lang.String languageCode) {
-    this.languageCode = languageCode;
+  public ListModelsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public DetectedLanguage set(String fieldName, Object value) {
-    return (DetectedLanguage) super.set(fieldName, value);
+  public ListModelsResponse set(String fieldName, Object value) {
+    return (ListModelsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public DetectedLanguage clone() {
-    return (DetectedLanguage) super.clone();
+  public ListModelsResponse clone() {
+    return (ListModelsResponse) super.clone();
   }
 
 }

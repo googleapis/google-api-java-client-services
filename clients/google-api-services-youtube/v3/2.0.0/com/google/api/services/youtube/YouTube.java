@@ -11272,17 +11272,17 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Returen content in specified language */
+      /** Return content in specified language */
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
-      /** Returen content in specified language
+      /** Return content in specified language
        */
       public java.lang.String getHl() {
         return hl;
       }
 
-      /** Returen content in specified language */
+      /** Return content in specified language */
       public List setHl(java.lang.String hl) {
         this.hl = hl;
         return this;

@@ -29,6 +29,81 @@ package com.google.api.services.dataproc.model;
 @SuppressWarnings("javadoc")
 public final class DiagnoseClusterRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Time interval in which diagnosis should be carried out on the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Interval diagnosisInterval;
+
+  /**
+   * Optional. DEPRECATED Specifies the job on which diagnosis is to be performed. Format:
+   * projects/{project}/regions/{region}/jobs/{job}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String job;
+
+  /**
+   * Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String yarnApplicationId;
+
+  /**
+   * Optional. Time interval in which diagnosis should be carried out on the cluster.
+   * @return value or {@code null} for none
+   */
+  public Interval getDiagnosisInterval() {
+    return diagnosisInterval;
+  }
+
+  /**
+   * Optional. Time interval in which diagnosis should be carried out on the cluster.
+   * @param diagnosisInterval diagnosisInterval or {@code null} for none
+   */
+  public DiagnoseClusterRequest setDiagnosisInterval(Interval diagnosisInterval) {
+    this.diagnosisInterval = diagnosisInterval;
+    return this;
+  }
+
+  /**
+   * Optional. DEPRECATED Specifies the job on which diagnosis is to be performed. Format:
+   * projects/{project}/regions/{region}/jobs/{job}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJob() {
+    return job;
+  }
+
+  /**
+   * Optional. DEPRECATED Specifies the job on which diagnosis is to be performed. Format:
+   * projects/{project}/regions/{region}/jobs/{job}
+   * @param job job or {@code null} for none
+   */
+  public DiagnoseClusterRequest setJob(java.lang.String job) {
+    this.job = job;
+    return this;
+  }
+
+  /**
+   * Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getYarnApplicationId() {
+    return yarnApplicationId;
+  }
+
+  /**
+   * Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
+   * @param yarnApplicationId yarnApplicationId or {@code null} for none
+   */
+  public DiagnoseClusterRequest setYarnApplicationId(java.lang.String yarnApplicationId) {
+    this.yarnApplicationId = yarnApplicationId;
+    return this;
+  }
+
   @Override
   public DiagnoseClusterRequest set(String fieldName, Object value) {
     return (DiagnoseClusterRequest) super.set(fieldName, value);

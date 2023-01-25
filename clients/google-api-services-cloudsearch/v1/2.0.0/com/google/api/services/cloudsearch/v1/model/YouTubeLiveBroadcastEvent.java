@@ -30,6 +30,15 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class YouTubeLiveBroadcastEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. If the channel_id is for a YouTube Channel owned by a Brand Account, client is
+   * required to populate this field with the obfuscated gaia id of the Brand account when starting
+   * the broadcast.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String brandAccountGaiaId;
+
+  /**
    * Input only. The broadcast id, used to control the lifecycle of the event on YouTube
    * The value may be {@code null}.
    */
@@ -37,7 +46,7 @@ public final class YouTubeLiveBroadcastEvent extends com.google.api.client.json.
   private java.lang.String broadcastId;
 
   /**
-   * YouTube channel associated with the broadcast.
+   * YouTube Channel associated with the broadcast.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +59,27 @@ public final class YouTubeLiveBroadcastEvent extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String viewUrl;
+
+  /**
+   * Input only. If the channel_id is for a YouTube Channel owned by a Brand Account, client is
+   * required to populate this field with the obfuscated gaia id of the Brand account when starting
+   * the broadcast.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBrandAccountGaiaId() {
+    return brandAccountGaiaId;
+  }
+
+  /**
+   * Input only. If the channel_id is for a YouTube Channel owned by a Brand Account, client is
+   * required to populate this field with the obfuscated gaia id of the Brand account when starting
+   * the broadcast.
+   * @param brandAccountGaiaId brandAccountGaiaId or {@code null} for none
+   */
+  public YouTubeLiveBroadcastEvent setBrandAccountGaiaId(java.lang.String brandAccountGaiaId) {
+    this.brandAccountGaiaId = brandAccountGaiaId;
+    return this;
+  }
 
   /**
    * Input only. The broadcast id, used to control the lifecycle of the event on YouTube
@@ -69,7 +99,7 @@ public final class YouTubeLiveBroadcastEvent extends com.google.api.client.json.
   }
 
   /**
-   * YouTube channel associated with the broadcast.
+   * YouTube Channel associated with the broadcast.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelId() {
@@ -77,7 +107,7 @@ public final class YouTubeLiveBroadcastEvent extends com.google.api.client.json.
   }
 
   /**
-   * YouTube channel associated with the broadcast.
+   * YouTube Channel associated with the broadcast.
    * @param channelId channelId or {@code null} for none
    */
   public YouTubeLiveBroadcastEvent setChannelId(java.lang.String channelId) {

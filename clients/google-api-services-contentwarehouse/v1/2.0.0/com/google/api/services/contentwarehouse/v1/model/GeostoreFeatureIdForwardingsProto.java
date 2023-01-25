@@ -61,8 +61,8 @@ public final class GeostoreFeatureIdForwardingsProto extends com.google.api.clie
   private java.util.List<GeostoreFeatureIdProto> inactiveDuplicate;
 
   /**
-   * If the feature has been REPLACED by one or more other feature(s), this is the list of feature
-   * IDs of the replacement feature(s). Note that the other features may themselves be removed.
+   * DEPRECATED - Use feature.metadata.feature_replacement_info instead. This field was never
+   * populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class GeostoreFeatureIdForwardingsProto extends com.google.api.clie
   }
 
   /**
-   * If the feature has been REPLACED by one or more other feature(s), this is the list of feature
-   * IDs of the replacement feature(s). Note that the other features may themselves be removed.
+   * DEPRECATED - Use feature.metadata.feature_replacement_info instead. This field was never
+   * populated.
    * @return value or {@code null} for none
    */
   public GeostoreFeatureIdListProto getReplacedBy() {
@@ -149,8 +149,8 @@ public final class GeostoreFeatureIdForwardingsProto extends com.google.api.clie
   }
 
   /**
-   * If the feature has been REPLACED by one or more other feature(s), this is the list of feature
-   * IDs of the replacement feature(s). Note that the other features may themselves be removed.
+   * DEPRECATED - Use feature.metadata.feature_replacement_info instead. This field was never
+   * populated.
    * @param replacedBy replacedBy or {@code null} for none
    */
   public GeostoreFeatureIdForwardingsProto setReplacedBy(GeostoreFeatureIdListProto replacedBy) {

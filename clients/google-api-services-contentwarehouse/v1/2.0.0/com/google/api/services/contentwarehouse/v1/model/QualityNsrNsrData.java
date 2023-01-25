@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 51
+ * be updated. Next ID: 52
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -324,6 +324,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * Versioned map of ASR (authenticity) values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> versionedAsrData;
 
   /**
    * Versioned map of NSR values for experimenting with the next release.
@@ -1075,6 +1082,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setUrl(java.lang.String url) {
     this.url = url;
+    return this;
+  }
+
+  /**
+   * Versioned map of ASR (authenticity) values.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getVersionedAsrData() {
+    return versionedAsrData;
+  }
+
+  /**
+   * Versioned map of ASR (authenticity) values.
+   * @param versionedAsrData versionedAsrData or {@code null} for none
+   */
+  public QualityNsrNsrData setVersionedAsrData(java.util.List<QualityNsrVersionedFloatSignal> versionedAsrData) {
+    this.versionedAsrData = versionedAsrData;
     return this;
   }
 

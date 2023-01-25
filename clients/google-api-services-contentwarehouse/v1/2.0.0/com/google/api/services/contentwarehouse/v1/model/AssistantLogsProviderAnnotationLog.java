@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for RepositoryWebrefDetailedMentionScores.
+ * Provider annotation annotated from the query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,43 +28,37 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RepositoryWebrefDetailedMentionScores extends com.google.api.client.json.GenericJson {
+public final class AssistantLogsProviderAnnotationLog extends com.google.api.client.json.GenericJson {
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float resultEntityScore;
+  private java.util.List<java.lang.String> packageNames;
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getResultEntityScore() {
-    return resultEntityScore;
+  public java.util.List<java.lang.String> getPackageNames() {
+    return packageNames;
   }
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
-   * @param resultEntityScore resultEntityScore or {@code null} for none
+   * @param packageNames packageNames or {@code null} for none
    */
-  public RepositoryWebrefDetailedMentionScores setResultEntityScore(java.lang.Float resultEntityScore) {
-    this.resultEntityScore = resultEntityScore;
+  public AssistantLogsProviderAnnotationLog setPackageNames(java.util.List<java.lang.String> packageNames) {
+    this.packageNames = packageNames;
     return this;
   }
 
   @Override
-  public RepositoryWebrefDetailedMentionScores set(String fieldName, Object value) {
-    return (RepositoryWebrefDetailedMentionScores) super.set(fieldName, value);
+  public AssistantLogsProviderAnnotationLog set(String fieldName, Object value) {
+    return (AssistantLogsProviderAnnotationLog) super.set(fieldName, value);
   }
 
   @Override
-  public RepositoryWebrefDetailedMentionScores clone() {
-    return (RepositoryWebrefDetailedMentionScores) super.clone();
+  public AssistantLogsProviderAnnotationLog clone() {
+    return (AssistantLogsProviderAnnotationLog) super.clone();
   }
 
 }

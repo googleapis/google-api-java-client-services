@@ -47,7 +47,7 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
 
   /**
    * The timestamp that was picked up by the component indicated in the LastSignificantUpdateSource
-   * but was dropped due to exceeding the upper bound. Set only if it's not equal to final LSU.
+   * but was dropped due to exceeding the upper bound. Set only if it is not equal to final LSU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -106,7 +106,7 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
 
   /**
    * The timestamp that was picked up by the component indicated in the LastSignificantUpdateSource
-   * but was dropped due to exceeding the upper bound. Set only if it's not equal to final LSU.
+   * but was dropped due to exceeding the upper bound. Set only if it is not equal to final LSU.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUnboundedTimestampInSeconds() {
@@ -115,7 +115,7 @@ public final class QualityTimebasedLastSignificantUpdateAdjustments extends com.
 
   /**
    * The timestamp that was picked up by the component indicated in the LastSignificantUpdateSource
-   * but was dropped due to exceeding the upper bound. Set only if it's not equal to final LSU.
+   * but was dropped due to exceeding the upper bound. Set only if it is not equal to final LSU.
    * @param unboundedTimestampInSeconds unboundedTimestampInSeconds or {@code null} for none
    */
   public QualityTimebasedLastSignificantUpdateAdjustments setUnboundedTimestampInSeconds(java.lang.Long unboundedTimestampInSeconds) {

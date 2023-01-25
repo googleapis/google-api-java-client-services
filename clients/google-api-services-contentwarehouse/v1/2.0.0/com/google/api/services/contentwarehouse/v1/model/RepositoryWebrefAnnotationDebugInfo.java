@@ -31,32 +31,16 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefAnnotationDebugInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Only use for debugging, this should not be displayed to user or used for any kind of
+   * logic/processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> infoString;
-
-  /**
-   * Raw classification output from relevance classifier for classifier training and debugging. See
-   * http://go/entityclassifier for details on the classifier.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EntitySignalsEntityClassification rawClassification;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String url;
-
-  /**
+   * Only use for debugging, this should not be displayed to user or used for any kind of
+   * logic/processing.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -64,59 +48,12 @@ public final class RepositoryWebrefAnnotationDebugInfo extends com.google.api.cl
   }
 
   /**
+   * Only use for debugging, this should not be displayed to user or used for any kind of
+   * logic/processing.
    * @param description description or {@code null} for none
    */
   public RepositoryWebrefAnnotationDebugInfo setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getInfoString() {
-    return infoString;
-  }
-
-  /**
-   * @param infoString infoString or {@code null} for none
-   */
-  public RepositoryWebrefAnnotationDebugInfo setInfoString(java.util.List<java.lang.String> infoString) {
-    this.infoString = infoString;
-    return this;
-  }
-
-  /**
-   * Raw classification output from relevance classifier for classifier training and debugging. See
-   * http://go/entityclassifier for details on the classifier.
-   * @return value or {@code null} for none
-   */
-  public EntitySignalsEntityClassification getRawClassification() {
-    return rawClassification;
-  }
-
-  /**
-   * Raw classification output from relevance classifier for classifier training and debugging. See
-   * http://go/entityclassifier for details on the classifier.
-   * @param rawClassification rawClassification or {@code null} for none
-   */
-  public RepositoryWebrefAnnotationDebugInfo setRawClassification(EntitySignalsEntityClassification rawClassification) {
-    this.rawClassification = rawClassification;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUrl() {
-    return url;
-  }
-
-  /**
-   * @param url url or {@code null} for none
-   */
-  public RepositoryWebrefAnnotationDebugInfo setUrl(java.lang.String url) {
-    this.url = url;
     return this;
   }
 

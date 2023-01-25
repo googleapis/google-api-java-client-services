@@ -199,9 +199,7 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
   private AssistantApiOutputRestrictions outputRestrictions;
 
   /**
-   * Capability to support Pop on lockscreen. TODO(b/230626444) this is for short term workaround
-   * for TNG MA DF. Should be deprecated when long term solution is available. go/pop-on-lockscreen-
-   * for-tng-ma.
+   * Capability to support Pop on lockscreen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -675,9 +673,7 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
   }
 
   /**
-   * Capability to support Pop on lockscreen. TODO(b/230626444) this is for short term workaround
-   * for TNG MA DF. Should be deprecated when long term solution is available. go/pop-on-lockscreen-
-   * for-tng-ma.
+   * Capability to support Pop on lockscreen.
    * @return value or {@code null} for none
    */
   public java.lang.String getPopOnLockscreenCapability() {
@@ -685,9 +681,7 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
   }
 
   /**
-   * Capability to support Pop on lockscreen. TODO(b/230626444) this is for short term workaround
-   * for TNG MA DF. Should be deprecated when long term solution is available. go/pop-on-lockscreen-
-   * for-tng-ma.
+   * Capability to support Pop on lockscreen.
    * @param popOnLockscreenCapability popOnLockscreenCapability or {@code null} for none
    */
   public AssistantApiDeviceCapabilities setPopOnLockscreenCapability(java.lang.String popOnLockscreenCapability) {

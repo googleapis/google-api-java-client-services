@@ -31,6 +31,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AppsPeopleOzExternalMergedpeopleapiPhoto extends com.google.api.client.json.GenericJson {
 
   /**
+   * Read-only. Use UpdatePersonPhoto to change photo decorations. If this photo is decorated, this
+   * field contains information about its decorations. For now, this will contain at most one entry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SocialGraphApiProtoDecorationOverlay> decoration;
+
+  /**
    * URL of an emoji avatar as an image. See go/emoji-cdn. PeopleAPI will return the SVG format so
    * that it can be scaled client side and so that the images will not be animated. All clients that
    * use this field must also have fall-back handling for using the `Photo.url` field if this is
@@ -98,6 +106,15 @@ public final class AppsPeopleOzExternalMergedpeopleapiPhoto extends com.google.a
   private java.lang.String monogramBackground;
 
   /**
+   * Read-only. A reference to the original, undecorated profile photo in storage. This field is not
+   * stored. It is populated by a live read to /SocialGraphImageService.GetActiveProfilePhoto. This
+   * field is only returned when "person.photo.original_photo" is specified in the request mask.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SocialGraphApiProtoImageReference originalPhoto;
+
+  /**
    * For writes only. Indicates photo content for person photo-field update. Currently only used for
    * profile-photo updates (not contact photos yet).
    * The value may be {@code null}.
@@ -128,6 +145,25 @@ public final class AppsPeopleOzExternalMergedpeopleapiPhoto extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String viewerUrl;
+
+  /**
+   * Read-only. Use UpdatePersonPhoto to change photo decorations. If this photo is decorated, this
+   * field contains information about its decorations. For now, this will contain at most one entry.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SocialGraphApiProtoDecorationOverlay> getDecoration() {
+    return decoration;
+  }
+
+  /**
+   * Read-only. Use UpdatePersonPhoto to change photo decorations. If this photo is decorated, this
+   * field contains information about its decorations. For now, this will contain at most one entry.
+   * @param decoration decoration or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPhoto setDecoration(java.util.List<SocialGraphApiProtoDecorationOverlay> decoration) {
+    this.decoration = decoration;
+    return this;
+  }
 
   /**
    * URL of an emoji avatar as an image. See go/emoji-cdn. PeopleAPI will return the SVG format so
@@ -281,6 +317,27 @@ public final class AppsPeopleOzExternalMergedpeopleapiPhoto extends com.google.a
    */
   public AppsPeopleOzExternalMergedpeopleapiPhoto setMonogramBackground(java.lang.String monogramBackground) {
     this.monogramBackground = monogramBackground;
+    return this;
+  }
+
+  /**
+   * Read-only. A reference to the original, undecorated profile photo in storage. This field is not
+   * stored. It is populated by a live read to /SocialGraphImageService.GetActiveProfilePhoto. This
+   * field is only returned when "person.photo.original_photo" is specified in the request mask.
+   * @return value or {@code null} for none
+   */
+  public SocialGraphApiProtoImageReference getOriginalPhoto() {
+    return originalPhoto;
+  }
+
+  /**
+   * Read-only. A reference to the original, undecorated profile photo in storage. This field is not
+   * stored. It is populated by a live read to /SocialGraphImageService.GetActiveProfilePhoto. This
+   * field is only returned when "person.photo.original_photo" is specified in the request mask.
+   * @param originalPhoto originalPhoto or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPhoto setOriginalPhoto(SocialGraphApiProtoImageReference originalPhoto) {
+    this.originalPhoto = originalPhoto;
     return this;
   }
 

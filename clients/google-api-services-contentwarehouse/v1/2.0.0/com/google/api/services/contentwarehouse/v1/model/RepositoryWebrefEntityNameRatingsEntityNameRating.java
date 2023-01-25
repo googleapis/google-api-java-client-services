@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefEntityNameRatingsEntityNameRating extends com.google.api.client.json.GenericJson {
 
   /**
+   * Comment left by the rater to justify the rating decision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String comment;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +48,23 @@ public final class RepositoryWebrefEntityNameRatingsEntityNameRating extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Comment left by the rater to justify the rating decision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComment() {
+    return comment;
+  }
+
+  /**
+   * Comment left by the rater to justify the rating decision.
+   * @param comment comment or {@code null} for none
+   */
+  public RepositoryWebrefEntityNameRatingsEntityNameRating setComment(java.lang.String comment) {
+    this.comment = comment;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

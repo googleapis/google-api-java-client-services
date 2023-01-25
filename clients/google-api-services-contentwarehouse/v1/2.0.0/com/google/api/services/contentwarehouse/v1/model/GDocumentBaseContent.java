@@ -45,7 +45,7 @@ public final class GDocumentBaseContent extends com.google.api.client.json.Gener
   private java.lang.Integer contentLength;
 
   /**
-   * See enum ContentType in webutil/http/content-type.proto.
+   * See enum ContentType in //depot/google3/webutil/http/content-type.proto.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("ContentType")
@@ -163,7 +163,7 @@ public final class GDocumentBaseContent extends com.google.api.client.json.Gener
   }
 
   /**
-   * See enum ContentType in webutil/http/content-type.proto.
+   * See enum ContentType in //depot/google3/webutil/http/content-type.proto.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContentType() {
@@ -171,7 +171,7 @@ public final class GDocumentBaseContent extends com.google.api.client.json.Gener
   }
 
   /**
-   * See enum ContentType in webutil/http/content-type.proto.
+   * See enum ContentType in //depot/google3/webutil/http/content-type.proto.
    * @param contentType contentType or {@code null} for none
    */
   public GDocumentBaseContent setContentType(java.lang.Integer contentType) {

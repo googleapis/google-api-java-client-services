@@ -266,7 +266,11 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
 
   /**
    * Indicates whether the metadata was inferred using an ML model rather than from the schema.org
-   * fields.
+   * fields. Use optional so that explicitly setting to false will ensure the value is passed along
+   * to the KG instead of being indistinguisable from being unset and thus not set in the KG. This
+   * field was originally non-optional; changing to optional is backwards compatible, but protos
+   * created prior to being optional won't have has_is_inferred() (go/proto-
+   * proposals/proto3-presence#wire-format-semantic-changes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1007,7 +1011,11 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
 
   /**
    * Indicates whether the metadata was inferred using an ML model rather than from the schema.org
-   * fields.
+   * fields. Use optional so that explicitly setting to false will ensure the value is passed along
+   * to the KG instead of being indistinguisable from being unset and thus not set in the KG. This
+   * field was originally non-optional; changing to optional is backwards compatible, but protos
+   * created prior to being optional won't have has_is_inferred() (go/proto-
+   * proposals/proto3-presence#wire-format-semantic-changes).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsInferred() {
@@ -1016,7 +1024,11 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
 
   /**
    * Indicates whether the metadata was inferred using an ML model rather than from the schema.org
-   * fields.
+   * fields. Use optional so that explicitly setting to false will ensure the value is passed along
+   * to the KG instead of being indistinguisable from being unset and thus not set in the KG. This
+   * field was originally non-optional; changing to optional is backwards compatible, but protos
+   * created prior to being optional won't have has_is_inferred() (go/proto-
+   * proposals/proto3-presence#wire-format-semantic-changes).
    * @param isInferred isInferred or {@code null} for none
    */
   public ResearchScienceSearchReconciledMetadata setIsInferred(java.lang.Boolean isInferred) {

@@ -51,6 +51,13 @@ public final class AssistantLogsQueryAnnotationLog extends com.google.api.client
   }
 
   /**
+   * Log the provider annotations annotated from the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantLogsProviderAnnotationLog providerAnnotation;
+
+  /**
    * TODO(b/171250187) Deprecates the optional RoomAnnotationLog and DeviceAnnotationLog.
    * Deprecated, please use device_annotations.
    * The value may be {@code null}.
@@ -103,6 +110,23 @@ public final class AssistantLogsQueryAnnotationLog extends com.google.api.client
    */
   public AssistantLogsQueryAnnotationLog setDeviceAnnotations(java.util.List<AssistantLogsDeviceAnnotationLog> deviceAnnotations) {
     this.deviceAnnotations = deviceAnnotations;
+    return this;
+  }
+
+  /**
+   * Log the provider annotations annotated from the query.
+   * @return value or {@code null} for none
+   */
+  public AssistantLogsProviderAnnotationLog getProviderAnnotation() {
+    return providerAnnotation;
+  }
+
+  /**
+   * Log the provider annotations annotated from the query.
+   * @param providerAnnotation providerAnnotation or {@code null} for none
+   */
+  public AssistantLogsQueryAnnotationLog setProviderAnnotation(AssistantLogsProviderAnnotationLog providerAnnotation) {
+    this.providerAnnotation = providerAnnotation;
     return this;
   }
 

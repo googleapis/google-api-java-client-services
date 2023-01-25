@@ -41,8 +41,8 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
   /**
    * LastSignificantUpdate as UNIX timestamp in seconds. This is the new signal (go/lsu-dd) from LSU
    * Selector V2 (once that is enabled, see b/171879888 for status), falling back to the legacy V1
-   * signal if the V2 signal does not exist. Please use the 'source' field to determine where the
-   * value comes from.
+   * signal if the HIGH_PRECISION signal does not exist. Please use the 'source' field to determine
+   * where the value comes from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -77,8 +77,8 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
   /**
    * LastSignificantUpdate as UNIX timestamp in seconds. This is the new signal (go/lsu-dd) from LSU
    * Selector V2 (once that is enabled, see b/171879888 for status), falling back to the legacy V1
-   * signal if the V2 signal does not exist. Please use the 'source' field to determine where the
-   * value comes from.
+   * signal if the HIGH_PRECISION signal does not exist. Please use the 'source' field to determine
+   * where the value comes from.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDate() {
@@ -88,8 +88,8 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
   /**
    * LastSignificantUpdate as UNIX timestamp in seconds. This is the new signal (go/lsu-dd) from LSU
    * Selector V2 (once that is enabled, see b/171879888 for status), falling back to the legacy V1
-   * signal if the V2 signal does not exist. Please use the 'source' field to determine where the
-   * value comes from.
+   * signal if the HIGH_PRECISION signal does not exist. Please use the 'source' field to determine
+   * where the value comes from.
    * @param date date or {@code null} for none
    */
   public QualityTimebasedLastSignificantUpdate setDate(java.lang.Long date) {

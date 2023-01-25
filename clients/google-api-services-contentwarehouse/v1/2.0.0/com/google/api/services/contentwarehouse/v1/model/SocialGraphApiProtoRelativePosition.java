@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for RepositoryWebrefDetailedMentionScores.
+ * Position relative to the user's avatar. 0 = top/left, 1 = bottom/right.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,43 +28,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RepositoryWebrefDetailedMentionScores extends com.google.api.client.json.GenericJson {
+public final class SocialGraphApiProtoRelativePosition extends com.google.api.client.json.GenericJson {
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float resultEntityScore;
+  private java.lang.Float x;
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float y;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.Float getResultEntityScore() {
-    return resultEntityScore;
+  public java.lang.Float getX() {
+    return x;
   }
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
-   * @param resultEntityScore resultEntityScore or {@code null} for none
+   * @param x x or {@code null} for none
    */
-  public RepositoryWebrefDetailedMentionScores setResultEntityScore(java.lang.Float resultEntityScore) {
-    this.resultEntityScore = resultEntityScore;
+  public SocialGraphApiProtoRelativePosition setX(java.lang.Float x) {
+    this.x = x;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getY() {
+    return y;
+  }
+
+  /**
+   * @param y y or {@code null} for none
+   */
+  public SocialGraphApiProtoRelativePosition setY(java.lang.Float y) {
+    this.y = y;
     return this;
   }
 
   @Override
-  public RepositoryWebrefDetailedMentionScores set(String fieldName, Object value) {
-    return (RepositoryWebrefDetailedMentionScores) super.set(fieldName, value);
+  public SocialGraphApiProtoRelativePosition set(String fieldName, Object value) {
+    return (SocialGraphApiProtoRelativePosition) super.set(fieldName, value);
   }
 
   @Override
-  public RepositoryWebrefDetailedMentionScores clone() {
-    return (RepositoryWebrefDetailedMentionScores) super.clone();
+  public SocialGraphApiProtoRelativePosition clone() {
+    return (SocialGraphApiProtoRelativePosition) super.clone();
   }
 
 }

@@ -298,7 +298,7 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private java.lang.Double geometryPrecisionMeters;
 
   /**
-   * RESERVED
+   * Geopolitical (unsimplified) polygons for a feature for different geopolitical use cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -830,7 +830,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreVerticalOrderingProto verticalOrdering;
 
   /**
-   * RESERVED
+   * A version of the geometry which has water removed but is not simplified (thus having equal or
+   * more vertices than polygon_for_display).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1371,7 +1372,7 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Geopolitical (unsimplified) polygons for a feature for different geopolitical use cases.
    * @return value or {@code null} for none
    */
   public GeostoreGeopoliticalGeometryProto getGeopoliticalGeometry() {
@@ -1379,7 +1380,7 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Geopolitical (unsimplified) polygons for a feature for different geopolitical use cases.
    * @param geopoliticalGeometry geopoliticalGeometry or {@code null} for none
    */
   public GeostoreFeatureProto setGeopoliticalGeometry(GeostoreGeopoliticalGeometryProto geopoliticalGeometry) {
@@ -2546,7 +2547,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * A version of the geometry which has water removed but is not simplified (thus having equal or
+   * more vertices than polygon_for_display).
    * @return value or {@code null} for none
    */
   public GeostorePolygonProto getWaterRemovedPolygon() {
@@ -2554,7 +2556,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * A version of the geometry which has water removed but is not simplified (thus having equal or
+   * more vertices than polygon_for_display).
    * @param waterRemovedPolygon waterRemovedPolygon or {@code null} for none
    */
   public GeostoreFeatureProto setWaterRemovedPolygon(GeostorePolygonProto waterRemovedPolygon) {

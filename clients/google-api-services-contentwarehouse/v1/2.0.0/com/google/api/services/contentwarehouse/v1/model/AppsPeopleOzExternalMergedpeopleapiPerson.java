@@ -664,6 +664,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   private java.util.List<AppsPeopleOzExternalMergedpeopleapiProfileUrl> profileUrlRepeated;
 
   /**
+   * Pronouns are not supported for consumer profiles. See go/pronouns-in-people-system-prd for more
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1739,6 +1741,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * Pronouns are not supported for consumer profiles. See go/pronouns-in-people-system-prd for more
+   * details.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsPeopleOzExternalMergedpeopleapiPronoun> getPronoun() {
@@ -1746,6 +1750,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * Pronouns are not supported for consumer profiles. See go/pronouns-in-people-system-prd for more
+   * details.
    * @param pronoun pronoun or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setPronoun(java.util.List<AppsPeopleOzExternalMergedpeopleapiPronoun> pronoun) {

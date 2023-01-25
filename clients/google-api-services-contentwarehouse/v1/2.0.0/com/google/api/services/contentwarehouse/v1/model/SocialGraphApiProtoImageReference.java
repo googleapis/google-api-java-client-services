@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for RepositoryWebrefDetailedMentionScores.
+ * A reference to a photo in either Photos Backend or SGI storage. This message should be treated as
+ * an opaque blob to avoid a dependency on a specific storage backend.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,43 +29,40 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RepositoryWebrefDetailedMentionScores extends com.google.api.client.json.GenericJson {
+public final class SocialGraphApiProtoImageReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
+   * Unique identifier for the photo. For now, this will always be a Photos Backend media key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float resultEntityScore;
+  private java.lang.String mediaId;
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
+   * Unique identifier for the photo. For now, this will always be a Photos Backend media key.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getResultEntityScore() {
-    return resultEntityScore;
+  public java.lang.String getMediaId() {
+    return mediaId;
   }
 
   /**
-   * How much support this mention received from the results for PostRef. This is populated only if
-   * explicitly requested and different from 0.
-   * @param resultEntityScore resultEntityScore or {@code null} for none
+   * Unique identifier for the photo. For now, this will always be a Photos Backend media key.
+   * @param mediaId mediaId or {@code null} for none
    */
-  public RepositoryWebrefDetailedMentionScores setResultEntityScore(java.lang.Float resultEntityScore) {
-    this.resultEntityScore = resultEntityScore;
+  public SocialGraphApiProtoImageReference setMediaId(java.lang.String mediaId) {
+    this.mediaId = mediaId;
     return this;
   }
 
   @Override
-  public RepositoryWebrefDetailedMentionScores set(String fieldName, Object value) {
-    return (RepositoryWebrefDetailedMentionScores) super.set(fieldName, value);
+  public SocialGraphApiProtoImageReference set(String fieldName, Object value) {
+    return (SocialGraphApiProtoImageReference) super.set(fieldName, value);
   }
 
   @Override
-  public RepositoryWebrefDetailedMentionScores clone() {
-    return (RepositoryWebrefDetailedMentionScores) super.clone();
+  public SocialGraphApiProtoImageReference clone() {
+    return (SocialGraphApiProtoImageReference) super.clone();
   }
 
 }

@@ -65,6 +65,29 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long lastTimeProcessedGoldmineInSeconds;
+
+  /**
+   * This field is populated only during MDU population, so it's *not* present in docjoins, but it's
+   * present in production so that it can be displayed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long lastTimeProcessedMduInSeconds;
+
+  /**
+   * Records the last time each system has processed the proto. These are recorded as seconds from
+   * the unix epoch. Ideally these fields would be google.protobuf.Timestamp, but the scoring bundle
+   * (which depends on this proto) does not understand proto3 syntax. See cl/500942047 for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long lastTimeProcessedRaffiaInSeconds;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key
   private java.lang.String raffiaLookupKey;
 
@@ -190,6 +213,61 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
    */
   public QualityNsrNsrDataMetadata setGoldmineLookupKeys(java.util.List<java.lang.String> goldmineLookupKeys) {
     this.goldmineLookupKeys = goldmineLookupKeys;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLastTimeProcessedGoldmineInSeconds() {
+    return lastTimeProcessedGoldmineInSeconds;
+  }
+
+  /**
+   * @param lastTimeProcessedGoldmineInSeconds lastTimeProcessedGoldmineInSeconds or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setLastTimeProcessedGoldmineInSeconds(java.lang.Long lastTimeProcessedGoldmineInSeconds) {
+    this.lastTimeProcessedGoldmineInSeconds = lastTimeProcessedGoldmineInSeconds;
+    return this;
+  }
+
+  /**
+   * This field is populated only during MDU population, so it's *not* present in docjoins, but it's
+   * present in production so that it can be displayed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLastTimeProcessedMduInSeconds() {
+    return lastTimeProcessedMduInSeconds;
+  }
+
+  /**
+   * This field is populated only during MDU population, so it's *not* present in docjoins, but it's
+   * present in production so that it can be displayed.
+   * @param lastTimeProcessedMduInSeconds lastTimeProcessedMduInSeconds or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setLastTimeProcessedMduInSeconds(java.lang.Long lastTimeProcessedMduInSeconds) {
+    this.lastTimeProcessedMduInSeconds = lastTimeProcessedMduInSeconds;
+    return this;
+  }
+
+  /**
+   * Records the last time each system has processed the proto. These are recorded as seconds from
+   * the unix epoch. Ideally these fields would be google.protobuf.Timestamp, but the scoring bundle
+   * (which depends on this proto) does not understand proto3 syntax. See cl/500942047 for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLastTimeProcessedRaffiaInSeconds() {
+    return lastTimeProcessedRaffiaInSeconds;
+  }
+
+  /**
+   * Records the last time each system has processed the proto. These are recorded as seconds from
+   * the unix epoch. Ideally these fields would be google.protobuf.Timestamp, but the scoring bundle
+   * (which depends on this proto) does not understand proto3 syntax. See cl/500942047 for details.
+   * @param lastTimeProcessedRaffiaInSeconds lastTimeProcessedRaffiaInSeconds or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setLastTimeProcessedRaffiaInSeconds(java.lang.Long lastTimeProcessedRaffiaInSeconds) {
+    this.lastTimeProcessedRaffiaInSeconds = lastTimeProcessedRaffiaInSeconds;
     return this;
   }
 

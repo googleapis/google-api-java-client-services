@@ -31,14 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class ScienceIndexSignal extends com.google.api.client.json.GenericJson {
 
   /**
-   * Subscriber Access feature: List of Holdings IDs associated with this document. Should be
-   * present only for the documents with 'VisiblePrefixTerms' being set.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("HoldingsId") @com.google.api.client.json.JsonString
-  private java.util.List<java.math.BigInteger> holdingsId;
-
-  /**
    * Fingerprint of the html title of the page. This is useful for checking if we have the same
    * version of the page as websearch.
    * The value may be {@code null}.
@@ -130,25 +122,6 @@ public final class ScienceIndexSignal extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<ScienceIndexSignalAuthor> author;
-
-  /**
-   * Subscriber Access feature: List of Holdings IDs associated with this document. Should be
-   * present only for the documents with 'VisiblePrefixTerms' being set.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.math.BigInteger> getHoldingsId() {
-    return holdingsId;
-  }
-
-  /**
-   * Subscriber Access feature: List of Holdings IDs associated with this document. Should be
-   * present only for the documents with 'VisiblePrefixTerms' being set.
-   * @param holdingsId holdingsId or {@code null} for none
-   */
-  public ScienceIndexSignal setHoldingsId(java.util.List<java.math.BigInteger> holdingsId) {
-    this.holdingsId = holdingsId;
-    return this;
-  }
 
   /**
    * Fingerprint of the html title of the page. This is useful for checking if we have the same

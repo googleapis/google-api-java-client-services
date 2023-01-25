@@ -31,20 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefDetailedEntityScores extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional info regarding how the score of an annotation was obtained. These will no longer be
-   * set once the feature `topic2_detailed_scores` is enabled (Q4 2017).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float anchorScore;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float bodyScore;
-
-  /**
    * Represents how much the entity is connected/related to the other entities in the document. This
    * signal partially influences the topicality score, but it is not totally aligned with it: an
    * entity can be very related to the rest of the document, but not central for understanding it.
@@ -106,20 +92,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
   private java.lang.Float localEntityLocationConfidence;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float nbScore;
-
-  /**
-   * DEPRECATED: this field is no longer set. As of early June 2018 it is referenced in hundreds of
-   * test files and is difficult to remove from the code base.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float newsTopicalityScore;
-
-  /**
    * Representation of the topicality score that is normalized in [0, 1] and which sum over all
    * entities in the document is 1. It represents the "proportion" of the document that talks about
    * the entity. This score is less human interpretable as the bucketized topicality score
@@ -146,40 +118,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Float relevanceScore;
-
-  /**
-   * Additional info regarding how the score of an annotation was obtained. These will no longer be
-   * set once the feature `topic2_detailed_scores` is enabled (Q4 2017).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getAnchorScore() {
-    return anchorScore;
-  }
-
-  /**
-   * Additional info regarding how the score of an annotation was obtained. These will no longer be
-   * set once the feature `topic2_detailed_scores` is enabled (Q4 2017).
-   * @param anchorScore anchorScore or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setAnchorScore(java.lang.Float anchorScore) {
-    this.anchorScore = anchorScore;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getBodyScore() {
-    return bodyScore;
-  }
-
-  /**
-   * @param bodyScore bodyScore or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setBodyScore(java.lang.Float bodyScore) {
-    this.bodyScore = bodyScore;
-    return this;
-  }
 
   /**
    * Represents how much the entity is connected/related to the other entities in the document. This
@@ -321,40 +259,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   public RepositoryWebrefDetailedEntityScores setLocalEntityLocationConfidence(java.lang.Float localEntityLocationConfidence) {
     this.localEntityLocationConfidence = localEntityLocationConfidence;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNbScore() {
-    return nbScore;
-  }
-
-  /**
-   * @param nbScore nbScore or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setNbScore(java.lang.Float nbScore) {
-    this.nbScore = nbScore;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: this field is no longer set. As of early June 2018 it is referenced in hundreds of
-   * test files and is difficult to remove from the code base.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNewsTopicalityScore() {
-    return newsTopicalityScore;
-  }
-
-  /**
-   * DEPRECATED: this field is no longer set. As of early June 2018 it is referenced in hundreds of
-   * test files and is difficult to remove from the code base.
-   * @param newsTopicalityScore newsTopicalityScore or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setNewsTopicalityScore(java.lang.Float newsTopicalityScore) {
-    this.newsTopicalityScore = newsTopicalityScore;
     return this;
   }
 

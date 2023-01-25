@@ -84,7 +84,8 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
    * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bil
    * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
    * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]Projects listed
-   * in the project_ids field are added to this list.
+   * in the project_ids field are added to this list. A maximum of 100 resources may be specified in
+   * a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +208,8 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
    * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bil
    * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
    * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]Projects listed
-   * in the project_ids field are added to this list.
+   * in the project_ids field are added to this list. A maximum of 100 resources may be specified in
+   * a single request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNames() {
@@ -222,7 +224,8 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
    * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bil
    * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
    * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]Projects listed
-   * in the project_ids field are added to this list.
+   * in the project_ids field are added to this list. A maximum of 100 resources may be specified in
+   * a single request.
    * @param resourceNames resourceNames or {@code null} for none
    */
   public ListLogEntriesRequest setResourceNames(java.util.List<java.lang.String> resourceNames) {

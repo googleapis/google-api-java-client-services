@@ -57,7 +57,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
    * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
    * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
-   * CMEK settings are bound to a single key version.
+   * CMEK settings are bound to a single key version.If this field is populated, the kms_key is tied
+   * to a specific CryptoKeyVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +128,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
    * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
    * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
-   * CMEK settings are bound to a single key version.
+   * CMEK settings are bound to a single key version.If this field is populated, the kms_key is tied
+   * to a specific CryptoKeyVersion.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyVersionName() {
@@ -140,7 +142,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
    * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
    * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
-   * CMEK settings are bound to a single key version.
+   * CMEK settings are bound to a single key version.If this field is populated, the kms_key is tied
+   * to a specific CryptoKeyVersion.
    * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
    */
   public CmekSettings setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {

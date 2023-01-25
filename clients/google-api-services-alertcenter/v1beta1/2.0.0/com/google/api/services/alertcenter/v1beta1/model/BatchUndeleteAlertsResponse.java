@@ -31,7 +31,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class BatchUndeleteAlertsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status details for each failed alert_id.
+   * The status details for each failed `alert_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class BatchUndeleteAlertsResponse extends com.google.api.client.jso
   private java.util.List<java.lang.String> successAlertIds;
 
   /**
-   * The status details for each failed alert_id.
+   * The status details for each failed `alert_id`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Status> getFailedAlertStatus() {
@@ -53,7 +53,7 @@ public final class BatchUndeleteAlertsResponse extends com.google.api.client.jso
   }
 
   /**
-   * The status details for each failed alert_id.
+   * The status details for each failed `alert_id`.
    * @param failedAlertStatus failedAlertStatus or {@code null} for none
    */
   public BatchUndeleteAlertsResponse setFailedAlertStatus(java.util.Map<String, Status> failedAlertStatus) {

@@ -31,16 +31,20 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class UndeleteAlertRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The unique identifier of the Google Workspace organization account of the customer
-   * the alert is associated with. Inferred from the caller identity if not provided.
+   * Optional. The unique identifier of the Google Workspace account of the customer the alert is
+   * associated with. The `customer_id` must have the initial "C" stripped (for example,
+   * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerId;
 
   /**
-   * Optional. The unique identifier of the Google Workspace organization account of the customer
-   * the alert is associated with. Inferred from the caller identity if not provided.
+   * Optional. The unique identifier of the Google Workspace account of the customer the alert is
+   * associated with. The `customer_id` must have the initial "C" stripped (for example,
+   * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -48,8 +52,10 @@ public final class UndeleteAlertRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The unique identifier of the Google Workspace organization account of the customer
-   * the alert is associated with. Inferred from the caller identity if not provided.
+   * Optional. The unique identifier of the Google Workspace account of the customer the alert is
+   * associated with. The `customer_id` must have the initial "C" stripped (for example,
+   * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
    * @param customerId customerId or {@code null} for none
    */
   public UndeleteAlertRequest setCustomerId(java.lang.String customerId) {

@@ -469,22 +469,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+       * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+       * ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-     alert is associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace account of the customer the alert is
+     associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`).
+     Inferred from the caller identity if not provided. [Find your customer
+     ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+       * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+       * ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -617,22 +623,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+       * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+       * ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-     alert is associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace account of the customer the alert is
+     associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`).
+     Inferred from the caller identity if not provided. [Find your customer
+     ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+       * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+       * ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -768,24 +780,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert metadata is associated with. Inferred from the caller identity if not
-       * provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * metadata is associated with. The `customer_id` must have the initial "C" stripped (for
+       * example, `046psxkn`). Inferred from the caller identity if not provided. [Find your
+       * customer ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-     alert metadata is associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace account of the customer the alert metadata
+     is associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`).
+     Inferred from the caller identity if not provided. [Find your customer
+     ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert metadata is associated with. Inferred from the caller identity if not
-       * provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * metadata is associated with. The `customer_id` must have the initial "C" stripped (for
+       * example, `046psxkn`). Inferred from the caller identity if not provided. [Find your
+       * customer ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public GetMetadata setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -899,22 +915,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alerts are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alerts
+       * are associated with. The `customer_id` must have the initial "C" stripped (for example,
+       * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+       * ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-     alerts are associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace account of the customer the alerts are
+     associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`).
+     Inferred from the caller identity if not provided. [Find your customer
+     ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alerts are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alerts
+       * are associated with. The `customer_id` must have the initial "C" stripped (for example,
+       * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+       * ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1296,22 +1318,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Optional. The unique identifier of the Google Workspace organization account of the
-         * customer the alert is associated with. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the Google Workspace account of the customer the alert
+         * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+         * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+         * ID](https://support.google.com/cloudidentity/answer/10070793).
          */
         @com.google.api.client.util.Key
         private java.lang.String customerId;
 
-        /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-       alert is associated with. Inferred from the caller identity if not provided.
+        /** Optional. The unique identifier of the Google Workspace account of the customer the alert is
+       associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`).
+       Inferred from the caller identity if not provided. [Find your customer
+       ID](https://support.google.com/cloudidentity/answer/10070793).
          */
         public java.lang.String getCustomerId() {
           return customerId;
         }
 
         /**
-         * Optional. The unique identifier of the Google Workspace organization account of the
-         * customer the alert is associated with. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the Google Workspace account of the customer the alert
+         * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+         * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+         * ID](https://support.google.com/cloudidentity/answer/10070793).
          */
         public Create setCustomerId(java.lang.String customerId) {
           this.customerId = customerId;
@@ -1450,24 +1478,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Optional. The unique identifier of the Google Workspace organization account of the
-         * customer the alert feedback are associated with. Inferred from the caller identity if not
-         * provided.
+         * Optional. The unique identifier of the Google Workspace account of the customer the alert
+         * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+         * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+         * ID](https://support.google.com/cloudidentity/answer/10070793).
          */
         @com.google.api.client.util.Key
         private java.lang.String customerId;
 
-        /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-       alert feedback are associated with. Inferred from the caller identity if not provided.
+        /** Optional. The unique identifier of the Google Workspace account of the customer the alert is
+       associated with. The `customer_id` must have the initial "C" stripped (for example, `046psxkn`).
+       Inferred from the caller identity if not provided. [Find your customer
+       ID](https://support.google.com/cloudidentity/answer/10070793).
          */
         public java.lang.String getCustomerId() {
           return customerId;
         }
 
         /**
-         * Optional. The unique identifier of the Google Workspace organization account of the
-         * customer the alert feedback are associated with. Inferred from the caller identity if not
-         * provided.
+         * Optional. The unique identifier of the Google Workspace account of the customer the alert
+         * is associated with. The `customer_id` must have the initial "C" stripped (for example,
+         * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+         * ID](https://support.google.com/cloudidentity/answer/10070793).
          */
         public List setCustomerId(java.lang.String customerId) {
           this.customerId = customerId;
@@ -1635,24 +1667,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert settings are associated with. Inferred from the caller identity if not
-       * provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * settings are associated with. The `customer_id` must/ have the initial "C" stripped (for
+       * example, `046psxkn`). Inferred from the caller identity if not provided. [Find your
+       * customer ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-     alert settings are associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace account of the customer the alert settings
+     are associated with. The `customer_id` must/ have the initial "C" stripped (for example,
+     `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+     ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert settings are associated with. Inferred from the caller identity if not
-       * provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * settings are associated with. The `customer_id` must/ have the initial "C" stripped (for
+       * example, `046psxkn`). Inferred from the caller identity if not provided. [Find your
+       * customer ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public GetSettings setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1759,24 +1795,28 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert settings are associated with. Inferred from the caller identity if not
-       * provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * settings are associated with. The `customer_id` must have the initial "C" stripped (for
+       * example, `046psxkn`). Inferred from the caller identity if not provided. [Find your
+       * customer ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
-     alert settings are associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace account of the customer the alert settings
+     are associated with. The `customer_id` must have the initial "C" stripped (for example,
+     `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+     ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google Workspace organization account of the
-       * customer the alert settings are associated with. Inferred from the caller identity if not
-       * provided.
+       * Optional. The unique identifier of the Google Workspace account of the customer the alert
+       * settings are associated with. The `customer_id` must have the initial "C" stripped (for
+       * example, `046psxkn`). Inferred from the caller identity if not provided. [Find your
+       * customer ID](https://support.google.com/cloudidentity/answer/10070793).
        */
       public UpdateSettings setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;

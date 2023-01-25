@@ -67,9 +67,9 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   private Module loadModule;
 
   /**
-   * An un-mangled function name, if `function_name` is
-   * [mangled](http://www.avabodh.com/cxxin/namemangling.html). The name can be fully-qualified (up
-   * to 1024 bytes).
+   * An un-mangled function name, if `function_name` is mangled. To get information about name
+   * mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name can be
+   * fully-qualified (up to 1024 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,9 +172,9 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An un-mangled function name, if `function_name` is
-   * [mangled](http://www.avabodh.com/cxxin/namemangling.html). The name can be fully-qualified (up
-   * to 1024 bytes).
+   * An un-mangled function name, if `function_name` is mangled. To get information about name
+   * mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name can be
+   * fully-qualified (up to 1024 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getOriginalFunctionName() {
@@ -182,9 +182,9 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An un-mangled function name, if `function_name` is
-   * [mangled](http://www.avabodh.com/cxxin/namemangling.html). The name can be fully-qualified (up
-   * to 1024 bytes).
+   * An un-mangled function name, if `function_name` is mangled. To get information about name
+   * mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name can be
+   * fully-qualified (up to 1024 bytes).
    * @param originalFunctionName originalFunctionName or {@code null} for none
    */
   public StackFrame setOriginalFunctionName(TruncatableString originalFunctionName) {

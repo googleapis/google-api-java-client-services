@@ -30,6 +30,13 @@ package com.google.api.services.batch.v1.model;
 public final class InstanceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The VM boot disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Disk bootDisk;
+
+  /**
    * The Compute Engine machine type.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class InstanceStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long taskPack;
+
+  /**
+   * The VM boot disk.
+   * @return value or {@code null} for none
+   */
+  public Disk getBootDisk() {
+    return bootDisk;
+  }
+
+  /**
+   * The VM boot disk.
+   * @param bootDisk bootDisk or {@code null} for none
+   */
+  public InstanceStatus setBootDisk(Disk bootDisk) {
+    this.bootDisk = bootDisk;
+    return this;
+  }
 
   /**
    * The Compute Engine machine type.

@@ -31,22 +31,24 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class BatchDeleteAlertsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. list of alert IDs.
+   * Required. The list of alert IDs to delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> alertId;
 
   /**
-   * Optional. The unique identifier of the Google Workspace organization account of the customer
-   * the alerts are associated with.
+   * Optional. The unique identifier of the Google Workspace account of the customer the alerts are
+   * associated with. The `customer_id` must have the initial "C" stripped (for example,
+   * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerId;
 
   /**
-   * Required. list of alert IDs.
+   * Required. The list of alert IDs to delete.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAlertId() {
@@ -54,7 +56,7 @@ public final class BatchDeleteAlertsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. list of alert IDs.
+   * Required. The list of alert IDs to delete.
    * @param alertId alertId or {@code null} for none
    */
   public BatchDeleteAlertsRequest setAlertId(java.util.List<java.lang.String> alertId) {
@@ -63,8 +65,10 @@ public final class BatchDeleteAlertsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The unique identifier of the Google Workspace organization account of the customer
-   * the alerts are associated with.
+   * Optional. The unique identifier of the Google Workspace account of the customer the alerts are
+   * associated with. The `customer_id` must have the initial "C" stripped (for example,
+   * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -72,8 +76,10 @@ public final class BatchDeleteAlertsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The unique identifier of the Google Workspace organization account of the customer
-   * the alerts are associated with.
+   * Optional. The unique identifier of the Google Workspace account of the customer the alerts are
+   * associated with. The `customer_id` must have the initial "C" stripped (for example,
+   * `046psxkn`). Inferred from the caller identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
    * @param customerId customerId or {@code null} for none
    */
   public BatchDeleteAlertsRequest setCustomerId(java.lang.String customerId) {

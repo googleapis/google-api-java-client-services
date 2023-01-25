@@ -45,7 +45,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.String assignee;
 
   /**
-   * Output only. The unique identifier of the Google account of the customer.
+   * Output only. The unique identifier of the Google Workspace account of the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The unique identifier of the Google account of the customer.
+   * Output only. The unique identifier of the Google Workspace account of the customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -132,7 +132,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The unique identifier of the Google account of the customer.
+   * Output only. The unique identifier of the Google Workspace account of the customer.
    * @param customerId customerId or {@code null} for none
    */
   public AlertMetadata setCustomerId(java.lang.String customerId) {

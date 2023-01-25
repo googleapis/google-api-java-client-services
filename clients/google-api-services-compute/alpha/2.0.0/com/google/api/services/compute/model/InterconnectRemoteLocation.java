@@ -130,6 +130,14 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private java.lang.Integer maxLagSize100Gbps;
 
   /**
+   * [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG).
+   * When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxLagSize10Gbps;
+
+  /**
    * [Output Only] Name of the resource.
    * The value may be {@code null}.
    */
@@ -417,6 +425,25 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
    */
   public InterconnectRemoteLocation setMaxLagSize100Gbps(java.lang.Integer maxLagSize100Gbps) {
     this.maxLagSize100Gbps = maxLagSize100Gbps;
+    return this;
+  }
+
+  /**
+   * [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG).
+   * When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxLagSize10Gbps() {
+    return maxLagSize10Gbps;
+  }
+
+  /**
+   * [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG).
+   * When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
+   * @param maxLagSize10Gbps maxLagSize10Gbps or {@code null} for none
+   */
+  public InterconnectRemoteLocation setMaxLagSize10Gbps(java.lang.Integer maxLagSize10Gbps) {
+    this.maxLagSize10Gbps = maxLagSize10Gbps;
     return this;
   }
 

@@ -153,8 +153,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.Long provisionedThroughput;
 
   /**
-   * URLs of the zones where the disk should be replicated to. Only applicable for regional
-   * resources. Replica zones must have 1 zone same as the instance zone.
+   * Required for each regional disk associated with the instance. Specify the URLs of the zones
+   * where the disk should be replicated to. You must provide exactly two replica zones, and one
+   * zone must be the same as the instance zone. You can't use this option with boot disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -515,8 +516,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * URLs of the zones where the disk should be replicated to. Only applicable for regional
-   * resources. Replica zones must have 1 zone same as the instance zone.
+   * Required for each regional disk associated with the instance. Specify the URLs of the zones
+   * where the disk should be replicated to. You must provide exactly two replica zones, and one
+   * zone must be the same as the instance zone. You can't use this option with boot disks.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReplicaZones() {
@@ -524,8 +526,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * URLs of the zones where the disk should be replicated to. Only applicable for regional
-   * resources. Replica zones must have 1 zone same as the instance zone.
+   * Required for each regional disk associated with the instance. Specify the URLs of the zones
+   * where the disk should be replicated to. You must provide exactly two replica zones, and one
+   * zone must be the same as the instance zone. You can't use this option with boot disks.
    * @param replicaZones replicaZones or {@code null} for none
    */
   public AttachedDiskInitializeParams setReplicaZones(java.util.List<java.lang.String> replicaZones) {

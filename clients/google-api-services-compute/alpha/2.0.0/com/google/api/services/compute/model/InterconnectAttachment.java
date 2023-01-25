@@ -403,7 +403,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String type;
 
   /**
-   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation
+   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4093. Only specified at creation
    * time.
    * The value may be {@code null}.
    */
@@ -1311,7 +1311,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation
+   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4093. Only specified at creation
    * time.
    * @return value or {@code null} for none
    */
@@ -1320,7 +1320,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation
+   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4093. Only specified at creation
    * time.
    * @param vlanTag8021q vlanTag8021q or {@code null} for none
    */

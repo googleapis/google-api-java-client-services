@@ -64,8 +64,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default
-   * projects/[project_id]/regions/global/default default
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/default
+   * projects/[project_id]/regions/[region]/default default
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +131,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
-   * projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/subnetworks/sub0
+   * projects/[project_id]/regions/[region]/subnetworks/sub0 sub0
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,12 +147,11 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is
-   * required in the "global" region. If omitted in a non-global Dataproc region, the service will
-   * pick a zone in the corresponding Compute Engine region. On a get request, zone will always be
-   * present.A full URL, partial URI, or short name are valid. Examples:
+   * Optional. The Compute Engine zone where the Dataproc cluster will be located. If omitted, the
+   * service will pick a zone in the cluster's Compute Engine region. On a get request, zone will
+   * always be present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
-   * projects/[project_id]/zones/[zone] us-central1-f
+   * projects/[project_id]/zones/[zone] [zone]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +228,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default
-   * projects/[project_id]/regions/global/default default
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/default
+   * projects/[project_id]/regions/[region]/default default
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -243,8 +242,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default
-   * projects/[project_id]/regions/global/default default
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/default
+   * projects/[project_id]/regions/[region]/default default
    * @param networkUri networkUri or {@code null} for none
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {
@@ -387,8 +386,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
-   * projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/subnetworks/sub0
+   * projects/[project_id]/regions/[region]/subnetworks/sub0 sub0
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetworkUri() {
@@ -398,8 +397,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
-   * projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/subnetworks/sub0
+   * projects/[project_id]/regions/[region]/subnetworks/sub0 sub0
    * @param subnetworkUri subnetworkUri or {@code null} for none
    */
   public GceClusterConfig setSubnetworkUri(java.lang.String subnetworkUri) {
@@ -427,12 +426,11 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is
-   * required in the "global" region. If omitted in a non-global Dataproc region, the service will
-   * pick a zone in the corresponding Compute Engine region. On a get request, zone will always be
-   * present.A full URL, partial URI, or short name are valid. Examples:
+   * Optional. The Compute Engine zone where the Dataproc cluster will be located. If omitted, the
+   * service will pick a zone in the cluster's Compute Engine region. On a get request, zone will
+   * always be present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
-   * projects/[project_id]/zones/[zone] us-central1-f
+   * projects/[project_id]/zones/[zone] [zone]
    * @return value or {@code null} for none
    */
   public java.lang.String getZoneUri() {
@@ -440,12 +438,11 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is
-   * required in the "global" region. If omitted in a non-global Dataproc region, the service will
-   * pick a zone in the corresponding Compute Engine region. On a get request, zone will always be
-   * present.A full URL, partial URI, or short name are valid. Examples:
+   * Optional. The Compute Engine zone where the Dataproc cluster will be located. If omitted, the
+   * service will pick a zone in the cluster's Compute Engine region. On a get request, zone will
+   * always be present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
-   * projects/[project_id]/zones/[zone] us-central1-f
+   * projects/[project_id]/zones/[zone] [zone]
    * @param zoneUri zoneUri or {@code null} for none
    */
   public GceClusterConfig setZoneUri(java.lang.String zoneUri) {

@@ -98,9 +98,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The virtual cluster config is used when creating a Dataproc cluster that does not
    * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
-   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke). Dataproc may set
-   * default values, and values may change when clusters are updated. Exactly one of config or
-   * virtual_cluster_config must be specified.
+   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). Dataproc
+   * may set default values, and values may change when clusters are updated. Exactly one of config
+   * or virtual_cluster_config must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,9 +265,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The virtual cluster config is used when creating a Dataproc cluster that does not
    * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
-   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke). Dataproc may set
-   * default values, and values may change when clusters are updated. Exactly one of config or
-   * virtual_cluster_config must be specified.
+   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). Dataproc
+   * may set default values, and values may change when clusters are updated. Exactly one of config
+   * or virtual_cluster_config must be specified.
    * @return value or {@code null} for none
    */
   public VirtualClusterConfig getVirtualClusterConfig() {
@@ -277,9 +277,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The virtual cluster config is used when creating a Dataproc cluster that does not
    * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
-   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke). Dataproc may set
-   * default values, and values may change when clusters are updated. Exactly one of config or
-   * virtual_cluster_config must be specified.
+   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). Dataproc
+   * may set default values, and values may change when clusters are updated. Exactly one of config
+   * or virtual_cluster_config must be specified.
    * @param virtualClusterConfig virtualClusterConfig or {@code null} for none
    */
   public Cluster setVirtualClusterConfig(VirtualClusterConfig virtualClusterConfig) {

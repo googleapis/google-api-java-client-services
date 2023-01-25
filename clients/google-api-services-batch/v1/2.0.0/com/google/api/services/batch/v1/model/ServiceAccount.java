@@ -39,6 +39,14 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String email;
 
   /**
+   * List of scopes to be enabled for this service account on the VM, in addition to the cloud-
+   * platform API scope that will be added by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> scopes;
+
+  /**
    * Email address of the service account. If not specified, the default Compute Engine service
    * account for the project will be used. If instance template is being used, the service account
    * has to be specified in the instance template and it has to match the email field here.
@@ -56,6 +64,25 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    */
   public ServiceAccount setEmail(java.lang.String email) {
     this.email = email;
+    return this;
+  }
+
+  /**
+   * List of scopes to be enabled for this service account on the VM, in addition to the cloud-
+   * platform API scope that will be added by default.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getScopes() {
+    return scopes;
+  }
+
+  /**
+   * List of scopes to be enabled for this service account on the VM, in addition to the cloud-
+   * platform API scope that will be added by default.
+   * @param scopes scopes or {@code null} for none
+   */
+  public ServiceAccount setScopes(java.util.List<java.lang.String> scopes) {
+    this.scopes = scopes;
     return this;
   }
 

@@ -30,9 +30,9 @@ package com.google.api.services.directory.model;
 public final class DirectoryChromeosdevicesCommandResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The payload for the command result. The following commands respond with a payload: -
-   * DEVICE_START_CRD_SESSION: Payload is a stringified JSON object in the form: { "url": url }. The
-   * URL provides a link to the CRD session.
+   * The payload for the command result. The following commands respond with a payload: *
+   * `DEVICE_START_CRD_SESSION`: Payload is a stringified JSON object in the form: { "url": url }.
+   * The URL provides a link to the Chrome Remote Desktop session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +61,9 @@ public final class DirectoryChromeosdevicesCommandResult extends com.google.api.
   private java.lang.String result;
 
   /**
-   * The payload for the command result. The following commands respond with a payload: -
-   * DEVICE_START_CRD_SESSION: Payload is a stringified JSON object in the form: { "url": url }. The
-   * URL provides a link to the CRD session.
+   * The payload for the command result. The following commands respond with a payload: *
+   * `DEVICE_START_CRD_SESSION`: Payload is a stringified JSON object in the form: { "url": url }.
+   * The URL provides a link to the Chrome Remote Desktop session.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommandResultPayload() {
@@ -71,9 +71,9 @@ public final class DirectoryChromeosdevicesCommandResult extends com.google.api.
   }
 
   /**
-   * The payload for the command result. The following commands respond with a payload: -
-   * DEVICE_START_CRD_SESSION: Payload is a stringified JSON object in the form: { "url": url }. The
-   * URL provides a link to the CRD session.
+   * The payload for the command result. The following commands respond with a payload: *
+   * `DEVICE_START_CRD_SESSION`: Payload is a stringified JSON object in the form: { "url": url }.
+   * The URL provides a link to the Chrome Remote Desktop session.
    * @param commandResultPayload commandResultPayload or {@code null} for none
    */
   public DirectoryChromeosdevicesCommandResult setCommandResultPayload(java.lang.String commandResultPayload) {

@@ -51,6 +51,13 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private String commitmentStartTime;
 
   /**
+   * Edition of the capacity commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Output only. For FAILED commitment plan, provides the reason of failure.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    */
   public CapacityCommitment setCommitmentStartTime(String commitmentStartTime) {
     this.commitmentStartTime = commitmentStartTime;
+    return this;
+  }
+
+  /**
+   * Edition of the capacity commitment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Edition of the capacity commitment.
+   * @param edition edition or {@code null} for none
+   */
+  public CapacityCommitment setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

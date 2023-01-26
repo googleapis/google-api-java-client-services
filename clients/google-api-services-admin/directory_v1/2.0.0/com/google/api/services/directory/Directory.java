@@ -17821,9 +17821,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates a user using patch semantics. The update method should be used instead, since it also
-     * supports patch semantics and has better performance. This method is unable to clear fields that
-     * contain repeated objects (`addresses`, `phones`, etc). Use the update method instead.
+     * Updates a user using patch semantics. The update method should be used instead, because it also
+     * supports patch semantics and has better performance. If you're mapping an external identity to a
+     * Google identity, use the [`update`](https://developers.google.com/admin-
+     * sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is
+     * unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the update
+     * method instead.
      *
      * Create a request for the method "users.patch".
      *
@@ -17846,9 +17849,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}";
 
       /**
-       * Updates a user using patch semantics. The update method should be used instead, since it also
-       * supports patch semantics and has better performance. This method is unable to clear fields that
-       * contain repeated objects (`addresses`, `phones`, etc). Use the update method instead.
+       * Updates a user using patch semantics. The update method should be used instead, because it also
+       * supports patch semantics and has better performance. If you're mapping an external identity to
+       * a Google identity, use the [`update`](https://developers.google.com/admin-
+       * sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is
+       * unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the
+       * update method instead.
        *
        * Create a request for the method "users.patch".
        *

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for SdrEmbedding.
+ * Model definition for QualityNsrNsrChunksWithSourceInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,79 +28,61 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SdrEmbedding extends com.google.api.client.json.GenericJson {
+public final class QualityNsrNsrChunksWithSourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QualityRankembedMustangMustangRankEmbedInfo compressedEmbeddings;
+  private QualityNsrNsrChunksProto nsrChunks;
 
   /**
+   * These are annotated in the Goldmine NSR annotator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.Float> values;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer version;
+  private java.lang.String siteChunkSource;
 
   /**
    * @return value or {@code null} for none
    */
-  public QualityRankembedMustangMustangRankEmbedInfo getCompressedEmbeddings() {
-    return compressedEmbeddings;
+  public QualityNsrNsrChunksProto getNsrChunks() {
+    return nsrChunks;
   }
 
   /**
-   * @param compressedEmbeddings compressedEmbeddings or {@code null} for none
+   * @param nsrChunks nsrChunks or {@code null} for none
    */
-  public SdrEmbedding setCompressedEmbeddings(QualityRankembedMustangMustangRankEmbedInfo compressedEmbeddings) {
-    this.compressedEmbeddings = compressedEmbeddings;
+  public QualityNsrNsrChunksWithSourceInfo setNsrChunks(QualityNsrNsrChunksProto nsrChunks) {
+    this.nsrChunks = nsrChunks;
     return this;
   }
 
   /**
+   * These are annotated in the Goldmine NSR annotator.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.Float> getValues() {
-    return values;
+  public java.lang.String getSiteChunkSource() {
+    return siteChunkSource;
   }
 
   /**
-   * @param values values or {@code null} for none
+   * These are annotated in the Goldmine NSR annotator.
+   * @param siteChunkSource siteChunkSource or {@code null} for none
    */
-  public SdrEmbedding setValues(java.util.List<java.lang.Float> values) {
-    this.values = values;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getVersion() {
-    return version;
-  }
-
-  /**
-   * @param version version or {@code null} for none
-   */
-  public SdrEmbedding setVersion(java.lang.Integer version) {
-    this.version = version;
+  public QualityNsrNsrChunksWithSourceInfo setSiteChunkSource(java.lang.String siteChunkSource) {
+    this.siteChunkSource = siteChunkSource;
     return this;
   }
 
   @Override
-  public SdrEmbedding set(String fieldName, Object value) {
-    return (SdrEmbedding) super.set(fieldName, value);
+  public QualityNsrNsrChunksWithSourceInfo set(String fieldName, Object value) {
+    return (QualityNsrNsrChunksWithSourceInfo) super.set(fieldName, value);
   }
 
   @Override
-  public SdrEmbedding clone() {
-    return (SdrEmbedding) super.clone();
+  public QualityNsrNsrChunksWithSourceInfo clone() {
+    return (QualityNsrNsrChunksWithSourceInfo) super.clone();
   }
 
 }

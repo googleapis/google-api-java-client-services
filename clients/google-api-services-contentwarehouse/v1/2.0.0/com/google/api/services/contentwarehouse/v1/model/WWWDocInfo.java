@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Some per-doc info is returned for all www DocInfo requests. Next id: 92
+ * Some per-doc info is returned for all www DocInfo requests. Next id: 94
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -335,6 +335,15 @@ public final class WWWDocInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer noimageframeoverlayreason;
+
+  /**
+   * Sitechunk used by NSR. For most pages this is equivalent HOST_LEVEL_V3 sitechunk. Main
+   * difference is that, for sites like youtube.com and vimeo.com, nsr_sitechunks are channel level
+   * (based on schema.org markup, not url alone). See go/nsr-chunks for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nsrSitechunk;
 
   /**
    * The value may be {@code null}.
@@ -1310,6 +1319,27 @@ public final class WWWDocInfo extends com.google.api.client.json.GenericJson {
    */
   public WWWDocInfo setNoimageframeoverlayreason(java.lang.Integer noimageframeoverlayreason) {
     this.noimageframeoverlayreason = noimageframeoverlayreason;
+    return this;
+  }
+
+  /**
+   * Sitechunk used by NSR. For most pages this is equivalent HOST_LEVEL_V3 sitechunk. Main
+   * difference is that, for sites like youtube.com and vimeo.com, nsr_sitechunks are channel level
+   * (based on schema.org markup, not url alone). See go/nsr-chunks for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNsrSitechunk() {
+    return nsrSitechunk;
+  }
+
+  /**
+   * Sitechunk used by NSR. For most pages this is equivalent HOST_LEVEL_V3 sitechunk. Main
+   * difference is that, for sites like youtube.com and vimeo.com, nsr_sitechunks are channel level
+   * (based on schema.org markup, not url alone). See go/nsr-chunks for more details.
+   * @param nsrSitechunk nsrSitechunk or {@code null} for none
+   */
+  public WWWDocInfo setNsrSitechunk(java.lang.String nsrSitechunk) {
+    this.nsrSitechunk = nsrSitechunk;
     return this;
   }
 

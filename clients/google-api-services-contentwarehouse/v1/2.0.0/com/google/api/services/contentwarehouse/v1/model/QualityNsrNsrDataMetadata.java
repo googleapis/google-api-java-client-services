@@ -86,6 +86,13 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
   private java.lang.Long lastTimeProcessedRaffiaInSeconds;
 
   /**
+   * Stores the NSRChunks (computed by goldmine) which were used to populate the data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityNsrNsrChunksWithSourceInfo nsrChunksWithSourceInfo;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,6 +275,23 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
    */
   public QualityNsrNsrDataMetadata setLastTimeProcessedRaffiaInSeconds(java.lang.Long lastTimeProcessedRaffiaInSeconds) {
     this.lastTimeProcessedRaffiaInSeconds = lastTimeProcessedRaffiaInSeconds;
+    return this;
+  }
+
+  /**
+   * Stores the NSRChunks (computed by goldmine) which were used to populate the data.
+   * @return value or {@code null} for none
+   */
+  public QualityNsrNsrChunksWithSourceInfo getNsrChunksWithSourceInfo() {
+    return nsrChunksWithSourceInfo;
+  }
+
+  /**
+   * Stores the NSRChunks (computed by goldmine) which were used to populate the data.
+   * @param nsrChunksWithSourceInfo nsrChunksWithSourceInfo or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setNsrChunksWithSourceInfo(QualityNsrNsrChunksWithSourceInfo nsrChunksWithSourceInfo) {
+    this.nsrChunksWithSourceInfo = nsrChunksWithSourceInfo;
     return this;
   }
 

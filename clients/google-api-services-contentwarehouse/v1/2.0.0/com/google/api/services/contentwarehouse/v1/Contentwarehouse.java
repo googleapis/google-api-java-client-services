@@ -301,14 +301,7 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Sets the access control policy for a resource. Replaces any existing policy. You can set ACL with
-     * condition for projects only. Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where
-     * the left of the operator is `DocumentSchemaId` or property name and the right of the operator is
-     * a number or a quoted string. You must escape backslash (\\) and quote (\") characters. Boolean
-     * expressions (AND/OR) are supported up to 3 levels of nesting (for example, "((A AND B AND C) OR
-     * D) AND E"), a maximum of 10 comparisons are allowed in the expression. The expression must be <
-     * 6000 bytes in length. Sample condition: `"DocumentSchemaId = \"some schema id\" " OR
-     * SchemaId.floatPropertyName >= 10`
+     * Sets the access control policy for a resource. Replaces any existing policy.
      *
      * Create a request for the method "projects.setAcl".
      *
@@ -335,14 +328,7 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Sets the access control policy for a resource. Replaces any existing policy. You can set ACL
-       * with condition for projects only. Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=`
-       * where the left of the operator is `DocumentSchemaId` or property name and the right of the
-       * operator is a number or a quoted string. You must escape backslash (\\) and quote (\")
-       * characters. Boolean expressions (AND/OR) are supported up to 3 levels of nesting (for example,
-       * "((A AND B AND C) OR D) AND E"), a maximum of 10 comparisons are allowed in the expression. The
-       * expression must be < 6000 bytes in length. Sample condition: `"DocumentSchemaId = \"some schema
-       * id\" " OR SchemaId.floatPropertyName >= 10`
+       * Sets the access control policy for a resource. Replaces any existing policy.
        *
        * Create a request for the method "projects.setAcl".
        *
@@ -615,147 +601,6 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
         @Override
         public Initialize set(String parameterName, Object value) {
           return (Initialize) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Run a predefined pipeline.
-       *
-       * Create a request for the method "locations.runPipeline".
-       *
-       * This request holds the parameters needed by the contentwarehouse server.  After setting any
-       * optional parameters, call the {@link RunPipeline#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name Required. The resource name which owns the resources of the pipeline. Format:
-       *        projects/{project_number}/locations/{location}.
-       * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest}
-       * @return the request
-       */
-      public RunPipeline runPipeline(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest content) throws java.io.IOException {
-        RunPipeline result = new RunPipeline(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class RunPipeline extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleLongrunningOperation> {
-
-        private static final String REST_PATH = "v1/{+name}:runPipeline";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-        /**
-         * Run a predefined pipeline.
-         *
-         * Create a request for the method "locations.runPipeline".
-         *
-         * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link RunPipeline#execute()} method to invoke the remote
-         * operation. <p> {@link
-         * RunPipeline#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The resource name which owns the resources of the pipeline. Format:
-       *        projects/{project_number}/locations/{location}.
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest}
-         * @since 1.13
-         */
-        protected RunPipeline(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest content) {
-          super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleLongrunningOperation.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+$");
-          }
-        }
-
-        @Override
-        public RunPipeline set$Xgafv(java.lang.String $Xgafv) {
-          return (RunPipeline) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public RunPipeline setAccessToken(java.lang.String accessToken) {
-          return (RunPipeline) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public RunPipeline setAlt(java.lang.String alt) {
-          return (RunPipeline) super.setAlt(alt);
-        }
-
-        @Override
-        public RunPipeline setCallback(java.lang.String callback) {
-          return (RunPipeline) super.setCallback(callback);
-        }
-
-        @Override
-        public RunPipeline setFields(java.lang.String fields) {
-          return (RunPipeline) super.setFields(fields);
-        }
-
-        @Override
-        public RunPipeline setKey(java.lang.String key) {
-          return (RunPipeline) super.setKey(key);
-        }
-
-        @Override
-        public RunPipeline setOauthToken(java.lang.String oauthToken) {
-          return (RunPipeline) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public RunPipeline setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (RunPipeline) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public RunPipeline setQuotaUser(java.lang.String quotaUser) {
-          return (RunPipeline) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public RunPipeline setUploadType(java.lang.String uploadType) {
-          return (RunPipeline) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public RunPipeline setUploadProtocol(java.lang.String uploadProtocol) {
-          return (RunPipeline) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The resource name which owns the resources of the pipeline. Format:
-         * projects/{project_number}/locations/{location}.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The resource name which owns the resources of the pipeline. Format:
-       projects/{project_number}/locations/{location}.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * Required. The resource name which owns the resources of the pipeline. Format:
-         * projects/{project_number}/locations/{location}.
-         */
-        public RunPipeline setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public RunPipeline set(String parameterName, Object value) {
-          return (RunPipeline) super.set(parameterName, value);
         }
       }
 
@@ -2685,14 +2530,7 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Sets the access control policy for a resource. Replaces any existing policy. You can set ACL with
-         * condition for projects only. Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where
-         * the left of the operator is `DocumentSchemaId` or property name and the right of the operator is
-         * a number or a quoted string. You must escape backslash (\\) and quote (\") characters. Boolean
-         * expressions (AND/OR) are supported up to 3 levels of nesting (for example, "((A AND B AND C) OR
-         * D) AND E"), a maximum of 10 comparisons are allowed in the expression. The expression must be <
-         * 6000 bytes in length. Sample condition: `"DocumentSchemaId = \"some schema id\" " OR
-         * SchemaId.floatPropertyName >= 10`
+         * Sets the access control policy for a resource. Replaces any existing policy.
          *
          * Create a request for the method "documents.setAcl".
          *
@@ -2719,14 +2557,7 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/documents/[^/]+$");
 
           /**
-           * Sets the access control policy for a resource. Replaces any existing policy. You can set ACL
-           * with condition for projects only. Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=`
-           * where the left of the operator is `DocumentSchemaId` or property name and the right of the
-           * operator is a number or a quoted string. You must escape backslash (\\) and quote (\")
-           * characters. Boolean expressions (AND/OR) are supported up to 3 levels of nesting (for example,
-           * "((A AND B AND C) OR D) AND E"), a maximum of 10 comparisons are allowed in the expression. The
-           * expression must be < 6000 bytes in length. Sample condition: `"DocumentSchemaId = \"some schema
-           * id\" " OR SchemaId.floatPropertyName >= 10`
+           * Sets the access control policy for a resource. Replaces any existing policy.
            *
            * Create a request for the method "documents.setAcl".
            *

@@ -32,6 +32,20 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class KnowledgeAnswersSemanticType extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, is compatible with a schema whose answer_type is any semantic_type including empty
+   * (since by default schemas return themselves as semantic_types (b/211438997). This is used
+   * primarily for slot composition. Example: for the slot name: Operand type { semantic_type {
+   * allow_all: true } entity_type {} } * An entity_type or a schema with answer_type 'entity_type'
+   * can fill Operand. * A schema with either (a) no answer_type or (b) answer_type with
+   * !semantic_type.names().empty() can fill Operand * A schema with answer_type 'date' CAN NOT fill
+   * Operand. Note that when there is an explicit answer_type, the 'self' semantic_type is not
+   * considered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowAll;
+
+  /**
    * Determines whether or not the meaning schema that contains this semantic_type conforms to a
    * function call with the name and arguments taken from the meaning schema. As it refers to the
    * "containing_intent", this field should only be set in a semantic_type declared in an intent's
@@ -76,6 +90,37 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private NlpMeaningMeaningRemodelings remodelings;
+
+  /**
+   * If true, is compatible with a schema whose answer_type is any semantic_type including empty
+   * (since by default schemas return themselves as semantic_types (b/211438997). This is used
+   * primarily for slot composition. Example: for the slot name: Operand type { semantic_type {
+   * allow_all: true } entity_type {} } * An entity_type or a schema with answer_type 'entity_type'
+   * can fill Operand. * A schema with either (a) no answer_type or (b) answer_type with
+   * !semantic_type.names().empty() can fill Operand * A schema with answer_type 'date' CAN NOT fill
+   * Operand. Note that when there is an explicit answer_type, the 'self' semantic_type is not
+   * considered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowAll() {
+    return allowAll;
+  }
+
+  /**
+   * If true, is compatible with a schema whose answer_type is any semantic_type including empty
+   * (since by default schemas return themselves as semantic_types (b/211438997). This is used
+   * primarily for slot composition. Example: for the slot name: Operand type { semantic_type {
+   * allow_all: true } entity_type {} } * An entity_type or a schema with answer_type 'entity_type'
+   * can fill Operand. * A schema with either (a) no answer_type or (b) answer_type with
+   * !semantic_type.names().empty() can fill Operand * A schema with answer_type 'date' CAN NOT fill
+   * Operand. Note that when there is an explicit answer_type, the 'self' semantic_type is not
+   * considered.
+   * @param allowAll allowAll or {@code null} for none
+   */
+  public KnowledgeAnswersSemanticType setAllowAll(java.lang.Boolean allowAll) {
+    this.allowAll = allowAll;
+    return this;
+  }
 
   /**
    * Determines whether or not the meaning schema that contains this semantic_type conforms to a

@@ -32,8 +32,9 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
 
   /**
    * Indicates why the limited profile has been disabled. Will be set iff the limited profile is
-   * disabled. This field can only be set server-side and must not be used by external clients when
-   * mutating LimitedProfiles.
+   * disabled. Note: When mutating limited profiles, in order to disable them,
+   * MutateDataRequest.DisableLimitedProfile must be true. Currently, disables are only performed
+   * server-side, so this is read-only for clients.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +85,9 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
 
   /**
    * Indicates why the limited profile has been disabled. Will be set iff the limited profile is
-   * disabled. This field can only be set server-side and must not be used by external clients when
-   * mutating LimitedProfiles.
+   * disabled. Note: When mutating limited profiles, in order to disable them,
+   * MutateDataRequest.DisableLimitedProfile must be true. Currently, disables are only performed
+   * server-side, so this is read-only for clients.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisableReason() {
@@ -94,8 +96,9 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
 
   /**
    * Indicates why the limited profile has been disabled. Will be set iff the limited profile is
-   * disabled. This field can only be set server-side and must not be used by external clients when
-   * mutating LimitedProfiles.
+   * disabled. Note: When mutating limited profiles, in order to disable them,
+   * MutateDataRequest.DisableLimitedProfile must be true. Currently, disables are only performed
+   * server-side, so this is read-only for clients.
    * @param disableReason disableReason or {@code null} for none
    */
   public SocialGraphApiProtoLimitedProfileSettings setDisableReason(java.lang.String disableReason) {

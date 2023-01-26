@@ -46,6 +46,12 @@ public final class BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGi
   private java.util.List<java.lang.String> services;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String useCase;
+
+  /**
    * Module name, e.g. hairdresser_reservation. from
    * quality/views/extraction/kcube/bg/modules/modules.bzl.
    * @return value or {@code null} for none
@@ -78,6 +84,21 @@ public final class BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGi
    */
   public BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule setServices(java.util.List<java.lang.String> services) {
     this.services = services;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUseCase() {
+    return useCase;
+  }
+
+  /**
+   * @param useCase useCase or {@code null} for none
+   */
+  public BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule setUseCase(java.lang.String useCase) {
+    this.useCase = useCase;
     return this;
   }
 

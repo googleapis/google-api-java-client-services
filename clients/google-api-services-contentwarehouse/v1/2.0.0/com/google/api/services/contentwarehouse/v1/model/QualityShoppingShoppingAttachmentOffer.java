@@ -65,6 +65,14 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   private java.util.List<ShoppingWebentityShoppingAnnotationInferredImage> inferredImages;
 
   /**
+   * Is the offer Lens buildable. The corresponding field in Shopping Annotation is
+   * SurfaceSelection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isLensBuildable;
+
+  /**
    * information about methods used to match offer with indexed url. See shopping_annotation.proto
    * The value may be {@code null}.
    */
@@ -204,6 +212,25 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
    */
   public QualityShoppingShoppingAttachmentOffer setInferredImages(java.util.List<ShoppingWebentityShoppingAnnotationInferredImage> inferredImages) {
     this.inferredImages = inferredImages;
+    return this;
+  }
+
+  /**
+   * Is the offer Lens buildable. The corresponding field in Shopping Annotation is
+   * SurfaceSelection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsLensBuildable() {
+    return isLensBuildable;
+  }
+
+  /**
+   * Is the offer Lens buildable. The corresponding field in Shopping Annotation is
+   * SurfaceSelection.
+   * @param isLensBuildable isLensBuildable or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachmentOffer setIsLensBuildable(java.lang.Boolean isLensBuildable) {
+    this.isLensBuildable = isLensBuildable;
     return this;
   }
 

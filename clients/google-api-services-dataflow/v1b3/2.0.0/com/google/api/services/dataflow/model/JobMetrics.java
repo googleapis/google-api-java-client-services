@@ -18,9 +18,10 @@ package com.google.api.services.dataflow.model;
 
 /**
  * JobMetrics contains a collection of metrics describing the detailed progress of a Dataflow job.
- * Metrics correspond to user-defined and system-defined metrics in the job. This resource captures
- * only the most recent values of each metric; time-series data can be queried for them (under the
- * same metric names) from Cloud Monitoring.
+ * Metrics correspond to user-defined and system-defined metrics in the job. For more information,
+ * see [Dataflow job metrics] (https://cloud.google.com/dataflow/docs/guides/using-monitoring-intf).
+ * This resource captures only the most recent values of each metric; time-series data can be
+ * queried for them (under the same metric names) from Cloud Monitoring.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

@@ -32,8 +32,8 @@ package com.google.api.services.speech.v1.model;
  * "${my-months}". To refer to custom classes resources, use the class' id wrapped in `${}` (e.g.
  * `${my-months}`). Speech-to-Text supports three locations: `global`, `us` (US North America), and
  * `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use the `global`
- * location. To specify a region, use a [regional endpoint](/speech-to-text/docs/endpoints) with
- * matching `us` or `eu` location value.
+ * location. To specify a region, use a [regional endpoint](https://cloud.google.com/speech-to-
+ * text/docs/endpoints) with matching `us` or `eu` location value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech-to-Text API. For a detailed explanation
@@ -52,8 +52,8 @@ public final class Phrase extends com.google.api.client.json.GenericJson {
    * higher the boost, the higher the chance of false positive recognition as well. Negative boost
    * will simply be ignored. Though `boost` can accept a wide range of positive values, most use
    * cases are best served with values between 0 and 20. We recommend using a binary search approach
-   * to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a
-   * boost value of 0.
+   * to finding the optimal value for your use case as well as adding phrases both with and without
+   * boost to your requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class Phrase extends com.google.api.client.json.GenericJson {
    * higher the boost, the higher the chance of false positive recognition as well. Negative boost
    * will simply be ignored. Though `boost` can accept a wide range of positive values, most use
    * cases are best served with values between 0 and 20. We recommend using a binary search approach
-   * to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a
-   * boost value of 0.
+   * to finding the optimal value for your use case as well as adding phrases both with and without
+   * boost to your requests.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBoost() {
@@ -86,8 +86,8 @@ public final class Phrase extends com.google.api.client.json.GenericJson {
    * higher the boost, the higher the chance of false positive recognition as well. Negative boost
    * will simply be ignored. Though `boost` can accept a wide range of positive values, most use
    * cases are best served with values between 0 and 20. We recommend using a binary search approach
-   * to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a
-   * boost value of 0.
+   * to finding the optimal value for your use case as well as adding phrases both with and without
+   * boost to your requests.
    * @param boost boost or {@code null} for none
    */
   public Phrase setBoost(java.lang.Float boost) {

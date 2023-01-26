@@ -87,6 +87,13 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Version-specific information of an Android model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PerAndroidVersionInfo> perVersionInfo;
+
+  /**
    * Screen density in DPI. This corresponds to ro.sf.lcd_density
    * The value may be {@code null}.
    */
@@ -274,6 +281,23 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    */
   public AndroidModel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Version-specific information of an Android model.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PerAndroidVersionInfo> getPerVersionInfo() {
+    return perVersionInfo;
+  }
+
+  /**
+   * Version-specific information of an Android model.
+   * @param perVersionInfo perVersionInfo or {@code null} for none
+   */
+  public AndroidModel setPerVersionInfo(java.util.List<PerAndroidVersionInfo> perVersionInfo) {
+    this.perVersionInfo = perVersionInfo;
     return this;
   }
 

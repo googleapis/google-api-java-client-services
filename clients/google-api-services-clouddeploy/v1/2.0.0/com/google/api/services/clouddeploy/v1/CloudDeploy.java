@@ -3440,6 +3440,29 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
+               * Optional. The starting phase ID for the `Rollout`. If empty the `Rollout` will
+               * start at the first phase.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String startingPhaseId;
+
+              /** Optional. The starting phase ID for the `Rollout`. If empty the `Rollout` will start at the first
+             phase.
+               */
+              public java.lang.String getStartingPhaseId() {
+                return startingPhaseId;
+              }
+
+              /**
+               * Optional. The starting phase ID for the `Rollout`. If empty the `Rollout` will
+               * start at the first phase.
+               */
+              public Create setStartingPhaseId(java.lang.String startingPhaseId) {
+                this.startingPhaseId = startingPhaseId;
+                return this;
+              }
+
+              /**
                * Optional. If set to true, the request is validated and the user is provided with an
                * expected result, but no actual change is made.
                */

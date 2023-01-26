@@ -35,6 +35,15 @@ package com.google.api.services.apigeeregistry.v1.model;
 public final class Artifact extends com.google.api.client.json.GenericJson {
 
   /**
+   * Annotations attach non-identifying metadata to resources. Annotation keys and values are less
+   * restricted than those of labels, but should be generally used for small values of broad
+   * interest. Larger, topic- specific metadata should be stored in Artifacts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Input only. The contents of the artifact. Provided by API callers when artifacts are created or
    * replaced. To access the contents of an artifact, use GetArtifactContents.
    * The value may be {@code null}.
@@ -56,6 +65,19 @@ public final class Artifact extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String hash;
+
+  /**
+   * Labels attach identifying metadata to resources. Identifying metadata can be used to filter
+   * list operations. Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. No more than 64 user labels can be associated with one
+   * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
+   * examples of labels. System reserved label keys are prefixed with "registry.googleapis.com/" and
+   * cannot be changed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
    * A content type specifier for the artifact. Content type specifiers are Media Types
@@ -88,6 +110,27 @@ public final class Artifact extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Annotations attach non-identifying metadata to resources. Annotation keys and values are less
+   * restricted than those of labels, but should be generally used for small values of broad
+   * interest. Larger, topic- specific metadata should be stored in Artifacts.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Annotations attach non-identifying metadata to resources. Annotation keys and values are less
+   * restricted than those of labels, but should be generally used for small values of broad
+   * interest. Larger, topic- specific metadata should be stored in Artifacts.
+   * @param annotations annotations or {@code null} for none
+   */
+  public Artifact setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Input only. The contents of the artifact. Provided by API callers when artifacts are created or
@@ -171,6 +214,35 @@ public final class Artifact extends com.google.api.client.json.GenericJson {
    */
   public Artifact setHash(java.lang.String hash) {
     this.hash = hash;
+    return this;
+  }
+
+  /**
+   * Labels attach identifying metadata to resources. Identifying metadata can be used to filter
+   * list operations. Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. No more than 64 user labels can be associated with one
+   * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
+   * examples of labels. System reserved label keys are prefixed with "registry.googleapis.com/" and
+   * cannot be changed.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels attach identifying metadata to resources. Identifying metadata can be used to filter
+   * list operations. Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. No more than 64 user labels can be associated with one
+   * resource (System labels are excluded). See https://goo.gl/xmQnxf for more information and
+   * examples of labels. System reserved label keys are prefixed with "registry.googleapis.com/" and
+   * cannot be changed.
+   * @param labels labels or {@code null} for none
+   */
+  public Artifact setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

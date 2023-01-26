@@ -80,6 +80,14 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The primary spec for this version. Format:
+   * projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primarySpec;
+
+  /**
    * A user-definable description of the lifecycle phase of this API version. Format: free-form, but
    * we expect single words that describe API maturity, e.g., "CONCEPT", "DESIGN", "DEVELOPMENT",
    * "STAGING", "PRODUCTION", "DEPRECATED", "RETIRED".
@@ -210,6 +218,25 @@ public final class ApiVersion extends com.google.api.client.json.GenericJson {
    */
   public ApiVersion setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The primary spec for this version. Format:
+   * projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimarySpec() {
+    return primarySpec;
+  }
+
+  /**
+   * The primary spec for this version. Format:
+   * projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}
+   * @param primarySpec primarySpec or {@code null} for none
+   */
+  public ApiVersion setPrimarySpec(java.lang.String primarySpec) {
+    this.primarySpec = primarySpec;
     return this;
   }
 

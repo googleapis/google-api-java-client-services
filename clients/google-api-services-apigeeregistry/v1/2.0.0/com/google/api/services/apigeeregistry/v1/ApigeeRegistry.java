@@ -4581,6 +4581,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               return this;
             }
 
+            /**
+             * An expression that can be used to filter the list. Filters use the Common Expression
+             * Language and can refer to all message fields.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** An expression that can be used to filter the list. Filters use the Common Expression Language and
+           can refer to all message fields.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * An expression that can be used to filter the list. Filters use the Common Expression
+             * Language and can refer to all message fields.
+             */
+            public ListRevisions setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
             /** The maximum number of revisions to return per page. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
@@ -10593,6 +10616,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                       "^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
                 }
                 this.name = name;
+                return this;
+              }
+
+              /**
+               * An expression that can be used to filter the list. Filters use the Common
+               * Expression Language and can refer to all message fields.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** An expression that can be used to filter the list. Filters use the Common Expression Language and
+             can refer to all message fields.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * An expression that can be used to filter the list. Filters use the Common
+               * Expression Language and can refer to all message fields.
+               */
+              public ListRevisions setFilter(java.lang.String filter) {
+                this.filter = filter;
                 return this;
               }
 

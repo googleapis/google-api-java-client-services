@@ -52,7 +52,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   /**
    * The full resource name (including revision ID) of the spec of the API being served by the
    * deployment. Changes to this value will update the revision. Format:
-   * `apis/{api}/deployments/{deployment}`
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec@revision}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   /**
    * The full resource name (including revision ID) of the spec of the API being served by the
    * deployment. Changes to this value will update the revision. Format:
-   * `apis/{api}/deployments/{deployment}`
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec@revision}`
    * @return value or {@code null} for none
    */
   public java.lang.String getApiSpecRevision() {
@@ -197,7 +197,7 @@ public final class ApiDeployment extends com.google.api.client.json.GenericJson 
   /**
    * The full resource name (including revision ID) of the spec of the API being served by the
    * deployment. Changes to this value will update the revision. Format:
-   * `apis/{api}/deployments/{deployment}`
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec@revision}`
    * @param apiSpecRevision apiSpecRevision or {@code null} for none
    */
   public ApiDeployment setApiSpecRevision(java.lang.String apiSpecRevision) {

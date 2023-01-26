@@ -72,7 +72,7 @@ public final class ResearchScamNeighborSelectionOverride extends com.google.api.
 
   /**
    * If populated, this is the maximum number of neighbors that may be returned from a single shard.
-   * If not populated, up to num_neighbors neighbors are returned from each shard. Setting his to a
+   * If not populated, up to num_neighbors neighbors are returned from each shard. Setting this to a
    * smaller value than num_neighbors will increase speed at the expense of accuray by requiring
    * cross-shard merging of fewer neighbors. If this value is set, num_neighbors must also be set
    * and this value must be <= num_neighbors and >= num_neighbors / number of shards. If set, this
@@ -207,7 +207,7 @@ public final class ResearchScamNeighborSelectionOverride extends com.google.api.
 
   /**
    * If populated, this is the maximum number of neighbors that may be returned from a single shard.
-   * If not populated, up to num_neighbors neighbors are returned from each shard. Setting his to a
+   * If not populated, up to num_neighbors neighbors are returned from each shard. Setting this to a
    * smaller value than num_neighbors will increase speed at the expense of accuray by requiring
    * cross-shard merging of fewer neighbors. If this value is set, num_neighbors must also be set
    * and this value must be <= num_neighbors and >= num_neighbors / number of shards. If set, this
@@ -220,7 +220,7 @@ public final class ResearchScamNeighborSelectionOverride extends com.google.api.
 
   /**
    * If populated, this is the maximum number of neighbors that may be returned from a single shard.
-   * If not populated, up to num_neighbors neighbors are returned from each shard. Setting his to a
+   * If not populated, up to num_neighbors neighbors are returned from each shard. Setting this to a
    * smaller value than num_neighbors will increase speed at the expense of accuray by requiring
    * cross-shard merging of fewer neighbors. If this value is set, num_neighbors must also be set
    * and this value must be <= num_neighbors and >= num_neighbors / number of shards. If set, this

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 17
+ * Next ID: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -111,6 +111,14 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean featureSpecificAppActionsNotificationSupported;
+
+  /**
+   * Whether the multi-step try saying suggestion feature is supported. dd: go/tng-multi-step-
+   * simplified
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multiStepTrySayingSupported;
 
   /**
    * Whether the rule_id field in the execution_context is supported. This is a temporary workaround
@@ -344,6 +352,25 @@ public final class AssistantApiSuggestionsSupport extends com.google.api.client.
    */
   public AssistantApiSuggestionsSupport setFeatureSpecificAppActionsNotificationSupported(java.lang.Boolean featureSpecificAppActionsNotificationSupported) {
     this.featureSpecificAppActionsNotificationSupported = featureSpecificAppActionsNotificationSupported;
+    return this;
+  }
+
+  /**
+   * Whether the multi-step try saying suggestion feature is supported. dd: go/tng-multi-step-
+   * simplified
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultiStepTrySayingSupported() {
+    return multiStepTrySayingSupported;
+  }
+
+  /**
+   * Whether the multi-step try saying suggestion feature is supported. dd: go/tng-multi-step-
+   * simplified
+   * @param multiStepTrySayingSupported multiStepTrySayingSupported or {@code null} for none
+   */
+  public AssistantApiSuggestionsSupport setMultiStepTrySayingSupported(java.lang.Boolean multiStepTrySayingSupported) {
+    this.multiStepTrySayingSupported = multiStepTrySayingSupported;
     return this;
   }
 

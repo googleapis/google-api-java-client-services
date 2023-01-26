@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityCalypsoAppsUniversalImageData extends com.google.api.client.json.GenericJson {
 
   /**
+   * iOS cover image, which includes the uni image from UAM only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityCalypsoAppsUniversalImage enhancedImage;
+
+  /**
    * aka. promotional image / cover image.
    * The value may be {@code null}.
    */
@@ -47,6 +54,23 @@ public final class QualityCalypsoAppsUniversalImageData extends com.google.api.c
     // hack to force ProGuard to consider QualityCalypsoAppsUniversalImage used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(QualityCalypsoAppsUniversalImage.class);
+  }
+
+  /**
+   * iOS cover image, which includes the uni image from UAM only.
+   * @return value or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalImage getEnhancedImage() {
+    return enhancedImage;
+  }
+
+  /**
+   * iOS cover image, which includes the uni image from UAM only.
+   * @param enhancedImage enhancedImage or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalImageData setEnhancedImage(QualityCalypsoAppsUniversalImage enhancedImage) {
+    this.enhancedImage = enhancedImage;
+    return this;
   }
 
   /**

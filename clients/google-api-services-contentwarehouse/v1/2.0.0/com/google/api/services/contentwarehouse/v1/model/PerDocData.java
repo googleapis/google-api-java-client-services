@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for
  * protocols used during search and/or docinfo. Next available tag deprecated, use this (and look
  * for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \
- * indexer/perdocdata/perdocdata.proto Next tag: 219
+ * indexer/perdocdata/perdocdata.proto Next tag: 220
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

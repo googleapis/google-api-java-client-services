@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class ScienceCitation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The source of abstract text that is chosen by science docid assigner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("AbstractCitationSource")
+  private java.lang.Integer abstractCitationSource;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("AbstractDisplay")
@@ -764,6 +771,23 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<ScienceCitationUnionCatalog> unioncatalog;
+
+  /**
+   * The source of abstract text that is chosen by science docid assigner.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAbstractCitationSource() {
+    return abstractCitationSource;
+  }
+
+  /**
+   * The source of abstract text that is chosen by science docid assigner.
+   * @param abstractCitationSource abstractCitationSource or {@code null} for none
+   */
+  public ScienceCitation setAbstractCitationSource(java.lang.Integer abstractCitationSource) {
+    this.abstractCitationSource = abstractCitationSource;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

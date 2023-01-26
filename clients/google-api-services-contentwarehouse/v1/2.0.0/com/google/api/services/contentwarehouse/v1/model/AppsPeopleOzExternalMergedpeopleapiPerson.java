@@ -539,6 +539,19 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * Metadata info for a user's name pronunciation audio. See go/name-pronunication-backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppsPeopleOzExternalMergedpeopleapiNamePronunciationAudioMetadataInfo> namePronunciationAudioMetadataInfo;
+
+  static {
+    // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiNamePronunciationAudioMetadataInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiNamePronunciationAudioMetadataInfo.class);
+  }
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1493,6 +1506,23 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setName(java.util.List<AppsPeopleOzExternalMergedpeopleapiName> name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Metadata info for a user's name pronunciation audio. See go/name-pronunication-backend.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppsPeopleOzExternalMergedpeopleapiNamePronunciationAudioMetadataInfo> getNamePronunciationAudioMetadataInfo() {
+    return namePronunciationAudioMetadataInfo;
+  }
+
+  /**
+   * Metadata info for a user's name pronunciation audio. See go/name-pronunication-backend.
+   * @param namePronunciationAudioMetadataInfo namePronunciationAudioMetadataInfo or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPerson setNamePronunciationAudioMetadataInfo(java.util.List<AppsPeopleOzExternalMergedpeopleapiNamePronunciationAudioMetadataInfo> namePronunciationAudioMetadataInfo) {
+    this.namePronunciationAudioMetadataInfo = namePronunciationAudioMetadataInfo;
     return this;
   }
 

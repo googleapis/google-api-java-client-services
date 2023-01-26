@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for SdrEmbedding.
+ * Metadata for a user's name pronunciation audio. Proto message is shared between merged_person and
+ * FBS.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,79 +29,64 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SdrEmbedding extends com.google.api.client.json.GenericJson {
+public final class SocialGraphApiProtoNamePronunciationAudioMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Stored. Updated on pronunciation creates and updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QualityRankembedMustangMustangRankEmbedInfo compressedEmbeddings;
+  private java.lang.String audioSource;
 
   /**
+   * Stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.Float> values;
+  private java.lang.String audioState;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer version;
-
-  /**
+   * Stored. Updated on pronunciation creates and updates.
    * @return value or {@code null} for none
    */
-  public QualityRankembedMustangMustangRankEmbedInfo getCompressedEmbeddings() {
-    return compressedEmbeddings;
+  public java.lang.String getAudioSource() {
+    return audioSource;
   }
 
   /**
-   * @param compressedEmbeddings compressedEmbeddings or {@code null} for none
+   * Stored. Updated on pronunciation creates and updates.
+   * @param audioSource audioSource or {@code null} for none
    */
-  public SdrEmbedding setCompressedEmbeddings(QualityRankembedMustangMustangRankEmbedInfo compressedEmbeddings) {
-    this.compressedEmbeddings = compressedEmbeddings;
+  public SocialGraphApiProtoNamePronunciationAudioMetadata setAudioSource(java.lang.String audioSource) {
+    this.audioSource = audioSource;
     return this;
   }
 
   /**
+   * Stored.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.Float> getValues() {
-    return values;
+  public java.lang.String getAudioState() {
+    return audioState;
   }
 
   /**
-   * @param values values or {@code null} for none
+   * Stored.
+   * @param audioState audioState or {@code null} for none
    */
-  public SdrEmbedding setValues(java.util.List<java.lang.Float> values) {
-    this.values = values;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getVersion() {
-    return version;
-  }
-
-  /**
-   * @param version version or {@code null} for none
-   */
-  public SdrEmbedding setVersion(java.lang.Integer version) {
-    this.version = version;
+  public SocialGraphApiProtoNamePronunciationAudioMetadata setAudioState(java.lang.String audioState) {
+    this.audioState = audioState;
     return this;
   }
 
   @Override
-  public SdrEmbedding set(String fieldName, Object value) {
-    return (SdrEmbedding) super.set(fieldName, value);
+  public SocialGraphApiProtoNamePronunciationAudioMetadata set(String fieldName, Object value) {
+    return (SocialGraphApiProtoNamePronunciationAudioMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public SdrEmbedding clone() {
-    return (SdrEmbedding) super.clone();
+  public SocialGraphApiProtoNamePronunciationAudioMetadata clone() {
+    return (SocialGraphApiProtoNamePronunciationAudioMetadata) super.clone();
   }
 
 }

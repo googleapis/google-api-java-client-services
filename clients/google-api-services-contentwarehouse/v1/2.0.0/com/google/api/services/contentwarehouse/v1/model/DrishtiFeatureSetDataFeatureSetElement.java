@@ -59,6 +59,18 @@ public final class DrishtiFeatureSetDataFeatureSetElement extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private DrishtiQuantizedByteDenseFeatureData quantizedByteDense;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DrishtiQuantizedByteIndexedFeatureData quantizedByteIndexed;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private DrishtiSparseFeatureData sparse;
 
   /**
@@ -120,6 +132,36 @@ public final class DrishtiFeatureSetDataFeatureSetElement extends com.google.api
    */
   public DrishtiFeatureSetDataFeatureSetElement setQuantized(DrishtiQuantizedDenseFeatureData quantized) {
     this.quantized = quantized;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public DrishtiQuantizedByteDenseFeatureData getQuantizedByteDense() {
+    return quantizedByteDense;
+  }
+
+  /**
+   * @param quantizedByteDense quantizedByteDense or {@code null} for none
+   */
+  public DrishtiFeatureSetDataFeatureSetElement setQuantizedByteDense(DrishtiQuantizedByteDenseFeatureData quantizedByteDense) {
+    this.quantizedByteDense = quantizedByteDense;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public DrishtiQuantizedByteIndexedFeatureData getQuantizedByteIndexed() {
+    return quantizedByteIndexed;
+  }
+
+  /**
+   * @param quantizedByteIndexed quantizedByteIndexed or {@code null} for none
+   */
+  public DrishtiFeatureSetDataFeatureSetElement setQuantizedByteIndexed(DrishtiQuantizedByteIndexedFeatureData quantizedByteIndexed) {
+    this.quantizedByteIndexed = quantizedByteIndexed;
     return this;
   }
 

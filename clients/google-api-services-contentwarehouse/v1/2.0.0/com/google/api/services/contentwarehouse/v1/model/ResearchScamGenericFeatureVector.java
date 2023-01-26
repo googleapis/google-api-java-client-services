@@ -124,6 +124,16 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   private ResearchScamGenericFeatureVectorFixedPointMetadata fixedPointMetadata;
 
   /**
+   * copybara:strip_begin INTERNAL USE ONLY! The ScaM Team reserves the right to remove this field
+   * and reuse its proto tag without notice. DO NOT USE outside of build_shards_pipeline! This field
+   * is used inside build_shards_pipeline to indicate whether this GFV is residing in its secondary
+   * (vs. primary) partition. copybara:strip_end
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean internalOnlyIsSecondaryPartition;
+
+  /**
    * Describes if data has been normalized and the type.
    * The value may be {@code null}.
    */
@@ -132,7 +142,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
 
   /**
    * copybara:strip_begin A field that contains metadata information when the datapoint is acting as
-   * a query. copybara:strip_end
+   * a query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -454,6 +464,29 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   }
 
   /**
+   * copybara:strip_begin INTERNAL USE ONLY! The ScaM Team reserves the right to remove this field
+   * and reuse its proto tag without notice. DO NOT USE outside of build_shards_pipeline! This field
+   * is used inside build_shards_pipeline to indicate whether this GFV is residing in its secondary
+   * (vs. primary) partition. copybara:strip_end
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInternalOnlyIsSecondaryPartition() {
+    return internalOnlyIsSecondaryPartition;
+  }
+
+  /**
+   * copybara:strip_begin INTERNAL USE ONLY! The ScaM Team reserves the right to remove this field
+   * and reuse its proto tag without notice. DO NOT USE outside of build_shards_pipeline! This field
+   * is used inside build_shards_pipeline to indicate whether this GFV is residing in its secondary
+   * (vs. primary) partition. copybara:strip_end
+   * @param internalOnlyIsSecondaryPartition internalOnlyIsSecondaryPartition or {@code null} for none
+   */
+  public ResearchScamGenericFeatureVector setInternalOnlyIsSecondaryPartition(java.lang.Boolean internalOnlyIsSecondaryPartition) {
+    this.internalOnlyIsSecondaryPartition = internalOnlyIsSecondaryPartition;
+    return this;
+  }
+
+  /**
    * Describes if data has been normalized and the type.
    * @return value or {@code null} for none
    */
@@ -472,7 +505,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
 
   /**
    * copybara:strip_begin A field that contains metadata information when the datapoint is acting as
-   * a query. copybara:strip_end
+   * a query.
    * @return value or {@code null} for none
    */
   public ResearchScamQueryMetadata getQueryMetadata() {
@@ -481,7 +514,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
 
   /**
    * copybara:strip_begin A field that contains metadata information when the datapoint is acting as
-   * a query. copybara:strip_end
+   * a query.
    * @param queryMetadata queryMetadata or {@code null} for none
    */
   public ResearchScamGenericFeatureVector setQueryMetadata(ResearchScamQueryMetadata queryMetadata) {

@@ -30,14 +30,14 @@ package com.google.api.services.dataflow.model;
 public final class RuntimeEnvironment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional experiment flags for the job, specified with the `--experiments` option.
+   * Optional. Additional experiment flags for the job, specified with the `--experiments` option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> additionalExperiments;
 
   /**
-   * Additional user labels to be specified for the job. Keys and values should follow the
+   * Optional. Additional user labels to be specified for the job. Keys and values should follow the
    * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
    * /labeling-resources#restrictions) page. An object containing a list of "key": value pairs.
    * Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
@@ -47,28 +47,29 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> additionalUserLabels;
 
   /**
-   * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
+   * Optional. Whether to bypass the safety checks for the job's temporary directory. Use with
+   * caution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean bypassTempDirValidation;
 
   /**
-   * Whether to enable Streaming Engine for the job.
+   * Optional. Whether to enable Streaming Engine for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableStreamingEngine;
 
   /**
-   * Configuration for VM IPs.
+   * Optional. Configuration for VM IPs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipConfiguration;
 
   /**
-   * Name for the Cloud KMS key for the job. Key format is:
+   * Optional. Name for the Cloud KMS key for the job. Key format is:
    * projects//locations//keyRings//cryptoKeys/
    * The value may be {@code null}.
    */
@@ -76,46 +77,48 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String kmsKeyName;
 
   /**
-   * The machine type to use for the job. Defaults to the value from the template if not specified.
+   * Optional. The machine type to use for the job. Defaults to the value from the template if not
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * The maximum number of Google Compute Engine instances to be made available to your pipeline
-   * during execution, from 1 to 1000.
+   * Optional. The maximum number of Google Compute Engine instances to be made available to your
+   * pipeline during execution, from 1 to 1000. The default value is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxWorkers;
 
   /**
-   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
-   * network "default".
+   * Optional. Network to which VMs will be assigned. If empty or unspecified, the service will use
+   * the network "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * The initial number of Google Compute Engine instances for the job.
+   * Optional. The initial number of Google Compute Engine instances for the job. The default value
+   * is 11.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numWorkers;
 
   /**
-   * The email address of the service account to run the job as.
+   * Optional. The email address of the service account to run the job as.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccountEmail;
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either
-   * a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/c
-   * ompute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
+   * Optional. Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork
+   * using either a complete URL or an abbreviated path. Expected to be of the form "https://www.goo
+   * gleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
    * "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network,
    * you must use the complete URL.
    * The value may be {@code null}.
@@ -124,44 +127,45 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String subnetwork;
 
   /**
-   * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning
-   * with `gs://`.
+   * Required. The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL,
+   * beginning with `gs://`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tempLocation;
 
   /**
-   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
-   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
-   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * Required. The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones
+   * /regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive
+   * with worker_zone. If neither worker_region nor worker_zone is specified, default to the control
+   * plane's region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workerRegion;
 
   /**
-   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
-   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
-   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
-   * chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone`
-   * takes precedence.
+   * Optional. The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-
+   * zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with
+   * worker_region. If neither worker_region nor worker_zone is specified, a zone in the control
+   * plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set,
+   * `worker_zone` takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workerZone;
 
   /**
-   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
-   * will take precedence.
+   * Optional. The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) for launching worker instances to run your pipeline. In the future,
+   * worker_zone will take precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Additional experiment flags for the job, specified with the `--experiments` option.
+   * Optional. Additional experiment flags for the job, specified with the `--experiments` option.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalExperiments() {
@@ -169,7 +173,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional experiment flags for the job, specified with the `--experiments` option.
+   * Optional. Additional experiment flags for the job, specified with the `--experiments` option.
    * @param additionalExperiments additionalExperiments or {@code null} for none
    */
   public RuntimeEnvironment setAdditionalExperiments(java.util.List<java.lang.String> additionalExperiments) {
@@ -178,7 +182,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional user labels to be specified for the job. Keys and values should follow the
+   * Optional. Additional user labels to be specified for the job. Keys and values should follow the
    * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
    * /labeling-resources#restrictions) page. An object containing a list of "key": value pairs.
    * Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
@@ -189,7 +193,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional user labels to be specified for the job. Keys and values should follow the
+   * Optional. Additional user labels to be specified for the job. Keys and values should follow the
    * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
    * /labeling-resources#restrictions) page. An object containing a list of "key": value pairs.
    * Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
@@ -201,7 +205,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
+   * Optional. Whether to bypass the safety checks for the job's temporary directory. Use with
+   * caution.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBypassTempDirValidation() {
@@ -209,7 +214,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
+   * Optional. Whether to bypass the safety checks for the job's temporary directory. Use with
+   * caution.
    * @param bypassTempDirValidation bypassTempDirValidation or {@code null} for none
    */
   public RuntimeEnvironment setBypassTempDirValidation(java.lang.Boolean bypassTempDirValidation) {
@@ -218,7 +224,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether to enable Streaming Engine for the job.
+   * Optional. Whether to enable Streaming Engine for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStreamingEngine() {
@@ -226,7 +232,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether to enable Streaming Engine for the job.
+   * Optional. Whether to enable Streaming Engine for the job.
    * @param enableStreamingEngine enableStreamingEngine or {@code null} for none
    */
   public RuntimeEnvironment setEnableStreamingEngine(java.lang.Boolean enableStreamingEngine) {
@@ -235,7 +241,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Configuration for VM IPs.
+   * Optional. Configuration for VM IPs.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpConfiguration() {
@@ -243,7 +249,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Configuration for VM IPs.
+   * Optional. Configuration for VM IPs.
    * @param ipConfiguration ipConfiguration or {@code null} for none
    */
   public RuntimeEnvironment setIpConfiguration(java.lang.String ipConfiguration) {
@@ -252,7 +258,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name for the Cloud KMS key for the job. Key format is:
+   * Optional. Name for the Cloud KMS key for the job. Key format is:
    * projects//locations//keyRings//cryptoKeys/
    * @return value or {@code null} for none
    */
@@ -261,7 +267,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name for the Cloud KMS key for the job. Key format is:
+   * Optional. Name for the Cloud KMS key for the job. Key format is:
    * projects//locations//keyRings//cryptoKeys/
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
@@ -271,7 +277,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The machine type to use for the job. Defaults to the value from the template if not specified.
+   * Optional. The machine type to use for the job. Defaults to the value from the template if not
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -279,7 +286,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The machine type to use for the job. Defaults to the value from the template if not specified.
+   * Optional. The machine type to use for the job. Defaults to the value from the template if not
+   * specified.
    * @param machineType machineType or {@code null} for none
    */
   public RuntimeEnvironment setMachineType(java.lang.String machineType) {
@@ -288,8 +296,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum number of Google Compute Engine instances to be made available to your pipeline
-   * during execution, from 1 to 1000.
+   * Optional. The maximum number of Google Compute Engine instances to be made available to your
+   * pipeline during execution, from 1 to 1000. The default value is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxWorkers() {
@@ -297,8 +305,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum number of Google Compute Engine instances to be made available to your pipeline
-   * during execution, from 1 to 1000.
+   * Optional. The maximum number of Google Compute Engine instances to be made available to your
+   * pipeline during execution, from 1 to 1000. The default value is 1.
    * @param maxWorkers maxWorkers or {@code null} for none
    */
   public RuntimeEnvironment setMaxWorkers(java.lang.Integer maxWorkers) {
@@ -307,8 +315,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
-   * network "default".
+   * Optional. Network to which VMs will be assigned. If empty or unspecified, the service will use
+   * the network "default".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -316,8 +324,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
-   * network "default".
+   * Optional. Network to which VMs will be assigned. If empty or unspecified, the service will use
+   * the network "default".
    * @param network network or {@code null} for none
    */
   public RuntimeEnvironment setNetwork(java.lang.String network) {
@@ -326,7 +334,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The initial number of Google Compute Engine instances for the job.
+   * Optional. The initial number of Google Compute Engine instances for the job. The default value
+   * is 11.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumWorkers() {
@@ -334,7 +343,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The initial number of Google Compute Engine instances for the job.
+   * Optional. The initial number of Google Compute Engine instances for the job. The default value
+   * is 11.
    * @param numWorkers numWorkers or {@code null} for none
    */
   public RuntimeEnvironment setNumWorkers(java.lang.Integer numWorkers) {
@@ -343,7 +353,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The email address of the service account to run the job as.
+   * Optional. The email address of the service account to run the job as.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -351,7 +361,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The email address of the service account to run the job as.
+   * Optional. The email address of the service account to run the job as.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public RuntimeEnvironment setServiceAccountEmail(java.lang.String serviceAccountEmail) {
@@ -360,9 +370,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either
-   * a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/c
-   * ompute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
+   * Optional. Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork
+   * using either a complete URL or an abbreviated path. Expected to be of the form "https://www.goo
+   * gleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
    * "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network,
    * you must use the complete URL.
    * @return value or {@code null} for none
@@ -372,9 +382,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either
-   * a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/c
-   * ompute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
+   * Optional. Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork
+   * using either a complete URL or an abbreviated path. Expected to be of the form "https://www.goo
+   * gleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
    * "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network,
    * you must use the complete URL.
    * @param subnetwork subnetwork or {@code null} for none
@@ -385,8 +395,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning
-   * with `gs://`.
+   * Required. The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL,
+   * beginning with `gs://`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTempLocation() {
@@ -394,8 +404,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning
-   * with `gs://`.
+   * Required. The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL,
+   * beginning with `gs://`.
    * @param tempLocation tempLocation or {@code null} for none
    */
   public RuntimeEnvironment setTempLocation(java.lang.String tempLocation) {
@@ -404,9 +414,10 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
-   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
-   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * Required. The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones
+   * /regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive
+   * with worker_zone. If neither worker_region nor worker_zone is specified, default to the control
+   * plane's region.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerRegion() {
@@ -414,9 +425,10 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
-   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
-   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * Required. The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones
+   * /regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive
+   * with worker_zone. If neither worker_region nor worker_zone is specified, default to the control
+   * plane's region.
    * @param workerRegion workerRegion or {@code null} for none
    */
   public RuntimeEnvironment setWorkerRegion(java.lang.String workerRegion) {
@@ -425,11 +437,11 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
-   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
-   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
-   * chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone`
-   * takes precedence.
+   * Optional. The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-
+   * zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with
+   * worker_region. If neither worker_region nor worker_zone is specified, a zone in the control
+   * plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set,
+   * `worker_zone` takes precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerZone() {
@@ -437,11 +449,11 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
-   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
-   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
-   * chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone`
-   * takes precedence.
+   * Optional. The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-
+   * zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with
+   * worker_region. If neither worker_region nor worker_zone is specified, a zone in the control
+   * plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set,
+   * `worker_zone` takes precedence.
    * @param workerZone workerZone or {@code null} for none
    */
   public RuntimeEnvironment setWorkerZone(java.lang.String workerZone) {
@@ -450,9 +462,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
-   * will take precedence.
+   * Optional. The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) for launching worker instances to run your pipeline. In the future,
+   * worker_zone will take precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -460,9 +472,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
-   * will take precedence.
+   * Optional. The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) for launching worker instances to run your pipeline. In the future,
+   * worker_zone will take precedence.
    * @param zone zone or {@code null} for none
    */
   public RuntimeEnvironment setZone(java.lang.String zone) {

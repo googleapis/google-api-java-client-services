@@ -18,7 +18,10 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A text, icon, or text + icon button that users can click. To make an image a clickable button,
- * specify an Image (not an ImageComponent) and set an `onClick` action.
+ * specify an Image (not an ImageComponent) and set an `onClick` action. Currently supported in Chat
+ * apps (including [dialogs] (https://developers.google.com/chat/how-tos/dialogs) and [card
+ * messages] (https://developers.google.com/chat/api/guides/message-formats/cards)) and Google
+ * Workspace Add-ons.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -34,8 +37,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    * The alternative text used for accessibility. Set descriptive text that lets users know what the
    * button does. For example, if a button opens a hyperlink, you might write: "Opens a new browser
    * tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat". Has no effect when an icon is set; use `icon.alt_text`
-   * instead.
+   * https://developers.google.com/chat".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,16 +68,15 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   private java.lang.Boolean disabled;
 
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears in place of the text.
-   * Support for both an icon and text is coming soon.
+   * The icon image. If both `icon` and `text` are set, then the icon appears before the text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Icon icon;
 
   /**
-   * The action to perform when the button is clicked, such as opening a hyperlink or running a
-   * custom function.
+   * Required. The action to perform when the button is clicked, such as opening a hyperlink or
+   * running a custom function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +93,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    * The alternative text used for accessibility. Set descriptive text that lets users know what the
    * button does. For example, if a button opens a hyperlink, you might write: "Opens a new browser
    * tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat". Has no effect when an icon is set; use `icon.alt_text`
-   * instead.
+   * https://developers.google.com/chat".
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -104,8 +104,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    * The alternative text used for accessibility. Set descriptive text that lets users know what the
    * button does. For example, if a button opens a hyperlink, you might write: "Opens a new browser
    * tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat". Has no effect when an icon is set; use `icon.alt_text`
-   * instead.
+   * https://developers.google.com/chat".
    * @param altText altText or {@code null} for none
    */
   public GoogleAppsCardV1Button setAltText(java.lang.String altText) {
@@ -168,8 +167,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears in place of the text.
-   * Support for both an icon and text is coming soon.
+   * The icon image. If both `icon` and `text` are set, then the icon appears before the text.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Icon getIcon() {
@@ -177,8 +175,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears in place of the text.
-   * Support for both an icon and text is coming soon.
+   * The icon image. If both `icon` and `text` are set, then the icon appears before the text.
    * @param icon icon or {@code null} for none
    */
   public GoogleAppsCardV1Button setIcon(GoogleAppsCardV1Icon icon) {
@@ -187,8 +184,8 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The action to perform when the button is clicked, such as opening a hyperlink or running a
-   * custom function.
+   * Required. The action to perform when the button is clicked, such as opening a hyperlink or
+   * running a custom function.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -196,8 +193,8 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * The action to perform when the button is clicked, such as opening a hyperlink or running a
-   * custom function.
+   * Required. The action to perform when the button is clicked, such as opening a hyperlink or
+   * running a custom function.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1Button setOnClick(GoogleAppsCardV1OnClick onClick) {

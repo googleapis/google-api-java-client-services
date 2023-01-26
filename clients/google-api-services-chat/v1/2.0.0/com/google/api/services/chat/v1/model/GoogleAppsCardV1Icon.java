@@ -32,14 +32,13 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Icon extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A description of the icon used for accessibility. If unspecified, a default value is
-   * provided. As a best practice, you should set a helpful description. For example, if an icon
-   * displays a user's account portrait, you could describe it as "A user's account portrait." If
-   * the icon displays in a Button, this alt text takes precedence and overwrites the button's alt
-   * text, so you should write alt text for the button: Set descriptive text that lets users know
-   * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
-   * browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat".
+   * Optional. A description of the icon used for accessibility. If unspecified, the default value
+   * "Button" is provided. As a best practice, you should set a helpful description for what the
+   * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
+   * `Opens a new browser tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat`. If the icon is set in a Button, the `altText` appears as
+   * helper text when the user hovers over the button. However, if the button also sets `text`, the
+   * icon's `altText` is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,14 +72,13 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   private java.lang.String knownIcon;
 
   /**
-   * Optional. A description of the icon used for accessibility. If unspecified, a default value is
-   * provided. As a best practice, you should set a helpful description. For example, if an icon
-   * displays a user's account portrait, you could describe it as "A user's account portrait." If
-   * the icon displays in a Button, this alt text takes precedence and overwrites the button's alt
-   * text, so you should write alt text for the button: Set descriptive text that lets users know
-   * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
-   * browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat".
+   * Optional. A description of the icon used for accessibility. If unspecified, the default value
+   * "Button" is provided. As a best practice, you should set a helpful description for what the
+   * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
+   * `Opens a new browser tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat`. If the icon is set in a Button, the `altText` appears as
+   * helper text when the user hovers over the button. However, if the button also sets `text`, the
+   * icon's `altText` is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -88,14 +86,13 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. A description of the icon used for accessibility. If unspecified, a default value is
-   * provided. As a best practice, you should set a helpful description. For example, if an icon
-   * displays a user's account portrait, you could describe it as "A user's account portrait." If
-   * the icon displays in a Button, this alt text takes precedence and overwrites the button's alt
-   * text, so you should write alt text for the button: Set descriptive text that lets users know
-   * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
-   * browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat".
+   * Optional. A description of the icon used for accessibility. If unspecified, the default value
+   * "Button" is provided. As a best practice, you should set a helpful description for what the
+   * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
+   * `Opens a new browser tab and navigates to the Google Chat developer documentation at
+   * https://developers.google.com/chat`. If the icon is set in a Button, the `altText` appears as
+   * helper text when the user hovers over the button. However, if the button also sets `text`, the
+   * icon's `altText` is ignored.
    * @param altText altText or {@code null} for none
    */
   public GoogleAppsCardV1Icon setAltText(java.lang.String altText) {

@@ -512,8 +512,7 @@ public class MyBusinessLodging extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetGoogleUpdated#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Google identifier for this location in the form:
-       *        `accounts/{account_id}/locations/{location_id}/lodging`
+       * @param name Required. Google identifier for this location in the form: `locations/{location_id}/lodging`
        * @return the request
        */
       public GetGoogleUpdated getGoogleUpdated(java.lang.String name) throws java.io.IOException {
@@ -540,8 +539,7 @@ public class MyBusinessLodging extends com.google.api.client.googleapis.services
          * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. Google identifier for this location in the form:
-       *        `accounts/{account_id}/locations/{location_id}/lodging`
+         * @param name Required. Google identifier for this location in the form: `locations/{location_id}/lodging`
          * @since 1.13
          */
         protected GetGoogleUpdated(java.lang.String name) {
@@ -621,13 +619,12 @@ public class MyBusinessLodging extends com.google.api.client.googleapis.services
 
         /**
          * Required. Google identifier for this location in the form:
-         * `accounts/{account_id}/locations/{location_id}/lodging`
+         * `locations/{location_id}/lodging`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Google identifier for this location in the form:
-       `accounts/{account_id}/locations/{location_id}/lodging`
+        /** Required. Google identifier for this location in the form: `locations/{location_id}/lodging`
          */
         public java.lang.String getName() {
           return name;
@@ -635,7 +632,7 @@ public class MyBusinessLodging extends com.google.api.client.googleapis.services
 
         /**
          * Required. Google identifier for this location in the form:
-         * `accounts/{account_id}/locations/{location_id}/lodging`
+         * `locations/{location_id}/lodging`
          */
         public GetGoogleUpdated setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

@@ -64,8 +64,9 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<GoogleCloudRunV2EnvVar> env;
 
   /**
-   * Required. URL of the Container image in Google Container Registry or Google Artifact Registry.
-   * More info: https://kubernetes.io/docs/concepts/containers/images
+   * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
+   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
+   * https://kubernetes.io/docs/concepts/containers/images
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,8 +204,9 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Required. URL of the Container image in Google Container Registry or Google Artifact Registry.
-   * More info: https://kubernetes.io/docs/concepts/containers/images
+   * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
+   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
+   * https://kubernetes.io/docs/concepts/containers/images
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -212,8 +214,9 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Required. URL of the Container image in Google Container Registry or Google Artifact Registry.
-   * More info: https://kubernetes.io/docs/concepts/containers/images
+   * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
+   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
+   * https://kubernetes.io/docs/concepts/containers/images
    * @param image image or {@code null} for none
    */
   public GoogleCloudRunV2Container setImage(java.lang.String image) {

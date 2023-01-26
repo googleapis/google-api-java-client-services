@@ -4458,7 +4458,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
+       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
+       * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.send".
        *
@@ -4477,7 +4478,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
+       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
+       * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.send".
        *
@@ -4506,7 +4508,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages/send";
 
         /**
-         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
+         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
+         * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.send".
          *
@@ -4528,7 +4531,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
+         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
+         * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.send".
          *

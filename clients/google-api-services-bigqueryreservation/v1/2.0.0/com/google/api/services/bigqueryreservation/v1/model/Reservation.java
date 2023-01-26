@@ -31,6 +31,13 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Autoscale autoscale;
+
+  /**
    * Job concurrency target which sets a soft upper bound on the number of jobs that can run
    * concurrently in this reservation. This is a soft target due to asynchronous nature of the
    * system and various optimizations for small queries. Default value is 0 which means that
@@ -47,6 +54,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String creationTime;
+
+  /**
+   * Edition of the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
 
   /**
    * If false, any query or pipeline job using this reservation will use idle slots from other
@@ -97,6 +111,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
+   * @return value or {@code null} for none
+   */
+  public Autoscale getAutoscale() {
+    return autoscale;
+  }
+
+  /**
+   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
+   * @param autoscale autoscale or {@code null} for none
+   */
+  public Reservation setAutoscale(Autoscale autoscale) {
+    this.autoscale = autoscale;
+    return this;
+  }
+
+  /**
    * Job concurrency target which sets a soft upper bound on the number of jobs that can run
    * concurrently in this reservation. This is a soft target due to asynchronous nature of the
    * system and various optimizations for small queries. Default value is 0 which means that
@@ -135,6 +166,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setCreationTime(String creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * Edition of the reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Edition of the reservation.
+   * @param edition edition or {@code null} for none
+   */
+  public Reservation setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

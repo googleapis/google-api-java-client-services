@@ -60,6 +60,13 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Version-specific information of an iOS model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PerIosVersionInfo> perVersionInfo;
+
+  /**
    * Screen density in DPI.
    * The value may be {@code null}.
    */
@@ -163,6 +170,23 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
    */
   public IosModel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Version-specific information of an iOS model.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PerIosVersionInfo> getPerVersionInfo() {
+    return perVersionInfo;
+  }
+
+  /**
+   * Version-specific information of an iOS model.
+   * @param perVersionInfo perVersionInfo or {@code null} for none
+   */
+  public IosModel setPerVersionInfo(java.util.List<PerIosVersionInfo> perVersionInfo) {
+    this.perVersionInfo = perVersionInfo;
     return this;
   }
 

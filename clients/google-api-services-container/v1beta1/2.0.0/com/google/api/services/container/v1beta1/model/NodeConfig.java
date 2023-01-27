@@ -126,7 +126,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
-   * will be used.
+   * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
+   * for available image types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -535,7 +536,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
-   * will be used.
+   * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
+   * for available image types.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -544,7 +546,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
-   * will be used.
+   * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
+   * for available image types.
    * @param imageType imageType or {@code null} for none
    */
   public NodeConfig setImageType(java.lang.String imageType) {

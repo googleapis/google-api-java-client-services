@@ -115,6 +115,13 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String servicesIpv4CidrBlock;
 
   /**
+   * Output only. [Output only] The services IPv6 CIDR block for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String servicesIpv6CidrBlock;
+
+  /**
    * The name of the secondary range to be used as for the services CIDR block. The secondary range
    * will be used for service ClusterIPs. This must be an existing secondary range associated with
    * the cluster subnetwork. This field is only applicable with use_ip_aliases is true and
@@ -130,6 +137,13 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String stackType;
+
+  /**
+   * Output only. [Output only] The subnet's IPv6 CIDR block used by nodes and pods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subnetIpv6CidrBlock;
 
   /**
    * A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty,
@@ -366,6 +380,23 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
+   * Output only. [Output only] The services IPv6 CIDR block for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServicesIpv6CidrBlock() {
+    return servicesIpv6CidrBlock;
+  }
+
+  /**
+   * Output only. [Output only] The services IPv6 CIDR block for the cluster.
+   * @param servicesIpv6CidrBlock servicesIpv6CidrBlock or {@code null} for none
+   */
+  public IPAllocationPolicy setServicesIpv6CidrBlock(java.lang.String servicesIpv6CidrBlock) {
+    this.servicesIpv6CidrBlock = servicesIpv6CidrBlock;
+    return this;
+  }
+
+  /**
    * The name of the secondary range to be used as for the services CIDR block. The secondary range
    * will be used for service ClusterIPs. This must be an existing secondary range associated with
    * the cluster subnetwork. This field is only applicable with use_ip_aliases is true and
@@ -402,6 +433,23 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   public IPAllocationPolicy setStackType(java.lang.String stackType) {
     this.stackType = stackType;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] The subnet's IPv6 CIDR block used by nodes and pods.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubnetIpv6CidrBlock() {
+    return subnetIpv6CidrBlock;
+  }
+
+  /**
+   * Output only. [Output only] The subnet's IPv6 CIDR block used by nodes and pods.
+   * @param subnetIpv6CidrBlock subnetIpv6CidrBlock or {@code null} for none
+   */
+  public IPAllocationPolicy setSubnetIpv6CidrBlock(java.lang.String subnetIpv6CidrBlock) {
+    this.subnetIpv6CidrBlock = subnetIpv6CidrBlock;
     return this;
   }
 

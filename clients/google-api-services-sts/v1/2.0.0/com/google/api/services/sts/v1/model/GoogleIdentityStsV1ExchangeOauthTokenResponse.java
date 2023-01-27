@@ -50,6 +50,13 @@ public final class GoogleIdentityStsV1ExchangeOauthTokenResponse extends com.goo
   private java.lang.Integer expiresIn;
 
   /**
+   * Google issued ID token in response to the OAuth token exchange request for ID token flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("id_token")
+  private java.lang.String idToken;
+
+  /**
    * A refresh token, issued by Google, in response to the OAuth token exchange request for refresh
    * token flow
    * The value may be {@code null}.
@@ -66,7 +73,7 @@ public final class GoogleIdentityStsV1ExchangeOauthTokenResponse extends com.goo
 
   /**
    * The type of token. Field reserved for RFC compliance. See https://www.rfc-
-   * editor.org/rfc/rfc6749#section-5.1 Note: No token_type is returned for current implementation
+   * editor.org/rfc/rfc6749#section-5.1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("token_type")
@@ -117,6 +124,23 @@ public final class GoogleIdentityStsV1ExchangeOauthTokenResponse extends com.goo
   }
 
   /**
+   * Google issued ID token in response to the OAuth token exchange request for ID token flow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdToken() {
+    return idToken;
+  }
+
+  /**
+   * Google issued ID token in response to the OAuth token exchange request for ID token flow.
+   * @param idToken idToken or {@code null} for none
+   */
+  public GoogleIdentityStsV1ExchangeOauthTokenResponse setIdToken(java.lang.String idToken) {
+    this.idToken = idToken;
+    return this;
+  }
+
+  /**
    * A refresh token, issued by Google, in response to the OAuth token exchange request for refresh
    * token flow
    * @return value or {@code null} for none
@@ -154,7 +178,7 @@ public final class GoogleIdentityStsV1ExchangeOauthTokenResponse extends com.goo
 
   /**
    * The type of token. Field reserved for RFC compliance. See https://www.rfc-
-   * editor.org/rfc/rfc6749#section-5.1 Note: No token_type is returned for current implementation
+   * editor.org/rfc/rfc6749#section-5.1
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenType() {
@@ -163,7 +187,7 @@ public final class GoogleIdentityStsV1ExchangeOauthTokenResponse extends com.goo
 
   /**
    * The type of token. Field reserved for RFC compliance. See https://www.rfc-
-   * editor.org/rfc/rfc6749#section-5.1 Note: No token_type is returned for current implementation
+   * editor.org/rfc/rfc6749#section-5.1
    * @param tokenType tokenType or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeOauthTokenResponse setTokenType(java.lang.String tokenType) {

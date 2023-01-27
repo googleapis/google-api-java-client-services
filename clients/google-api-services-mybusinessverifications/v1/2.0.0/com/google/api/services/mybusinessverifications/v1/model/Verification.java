@@ -31,6 +31,13 @@ package com.google.api.services.mybusinessverifications.v1.model;
 public final class Verification extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Response announcement set only if the method is VETTED_PARTNER.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String announcement;
+
+  /**
    * The timestamp when the verification is requested.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class Verification extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. Response announcement set only if the method is VETTED_PARTNER.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnnouncement() {
+    return announcement;
+  }
+
+  /**
+   * Optional. Response announcement set only if the method is VETTED_PARTNER.
+   * @param announcement announcement or {@code null} for none
+   */
+  public Verification setAnnouncement(java.lang.String announcement) {
+    this.announcement = announcement;
+    return this;
+  }
 
   /**
    * The timestamp when the verification is requested.

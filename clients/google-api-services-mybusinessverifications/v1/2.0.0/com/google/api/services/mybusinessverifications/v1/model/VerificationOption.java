@@ -39,6 +39,13 @@ public final class VerificationOption extends com.google.api.client.json.Generic
   private AddressVerificationData addressData;
 
   /**
+   * Set only if the method is VETTED_PARTNER.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String announcement;
+
+  /**
    * Set only if the method is EMAIL.
    * The value may be {@code null}.
    */
@@ -73,6 +80,23 @@ public final class VerificationOption extends com.google.api.client.json.Generic
    */
   public VerificationOption setAddressData(AddressVerificationData addressData) {
     this.addressData = addressData;
+    return this;
+  }
+
+  /**
+   * Set only if the method is VETTED_PARTNER.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnnouncement() {
+    return announcement;
+  }
+
+  /**
+   * Set only if the method is VETTED_PARTNER.
+   * @param announcement announcement or {@code null} for none
+   */
+  public VerificationOption setAnnouncement(java.lang.String announcement) {
+    this.announcement = announcement;
     return this;
   }
 

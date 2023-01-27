@@ -241,7 +241,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   /**
    * Amount of time that this build should be allowed to run, to second granularity. If this amount
    * of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout`
-   * starts ticking from `startTime`. Default time is ten minutes.
+   * starts ticking from `startTime`. Default time is 60 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -743,7 +743,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   /**
    * Amount of time that this build should be allowed to run, to second granularity. If this amount
    * of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout`
-   * starts ticking from `startTime`. Default time is ten minutes.
+   * starts ticking from `startTime`. Default time is 60 minutes.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -753,7 +753,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   /**
    * Amount of time that this build should be allowed to run, to second granularity. If this amount
    * of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout`
-   * starts ticking from `startTime`. Default time is ten minutes.
+   * starts ticking from `startTime`. Default time is 60 minutes.
    * @param timeout timeout or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Build setTimeout(String timeout) {

@@ -177,7 +177,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private UpgradeSettings upgradeSettings;
 
   /**
-   * The version of the Kubernetes of this node.
+   * The version of Kubernetes running on this NodePool's nodes. If unspecified, it defaults as
+   * described [here](https://cloud.google.com/kubernetes-
+   * engine/versioning#specifying_node_version).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -522,7 +524,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the Kubernetes of this node.
+   * The version of Kubernetes running on this NodePool's nodes. If unspecified, it defaults as
+   * described [here](https://cloud.google.com/kubernetes-
+   * engine/versioning#specifying_node_version).
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -530,7 +534,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the Kubernetes of this node.
+   * The version of Kubernetes running on this NodePool's nodes. If unspecified, it defaults as
+   * described [here](https://cloud.google.com/kubernetes-
+   * engine/versioning#specifying_node_version).
    * @param version version or {@code null} for none
    */
   public NodePool setVersion(java.lang.String version) {

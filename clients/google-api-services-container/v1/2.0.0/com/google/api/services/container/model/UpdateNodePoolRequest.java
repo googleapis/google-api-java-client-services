@@ -75,7 +75,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private VirtualNIC gvnic;
 
   /**
-   * Required. The desired image type for the node pool.
+   * Required. The desired image type for the node pool. Please see https://cloud.google.com
+   * /kubernetes-engine/docs/concepts/node-images for available image types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,7 +330,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The desired image type for the node pool.
+   * Required. The desired image type for the node pool. Please see https://cloud.google.com
+   * /kubernetes-engine/docs/concepts/node-images for available image types.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -337,7 +339,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The desired image type for the node pool.
+   * Required. The desired image type for the node pool. Please see https://cloud.google.com
+   * /kubernetes-engine/docs/concepts/node-images for available image types.
    * @param imageType imageType or {@code null} for none
    */
   public UpdateNodePoolRequest setImageType(java.lang.String imageType) {

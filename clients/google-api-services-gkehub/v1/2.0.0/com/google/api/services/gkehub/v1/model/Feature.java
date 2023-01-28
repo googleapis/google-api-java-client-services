@@ -44,6 +44,13 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   private String deleteTime;
 
   /**
+   * Optional. Feature configuration applicable to all memberships of the fleet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommonFleetDefaultMemberConfigSpec fleetDefaultMemberConfig;
+
+  /**
    * GCP labels for this Feature.
    * The value may be {@code null}.
    */
@@ -168,6 +175,23 @@ public final class Feature extends com.google.api.client.json.GenericJson {
    */
   public Feature setDeleteTime(String deleteTime) {
     this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
+   * Optional. Feature configuration applicable to all memberships of the fleet.
+   * @return value or {@code null} for none
+   */
+  public CommonFleetDefaultMemberConfigSpec getFleetDefaultMemberConfig() {
+    return fleetDefaultMemberConfig;
+  }
+
+  /**
+   * Optional. Feature configuration applicable to all memberships of the fleet.
+   * @param fleetDefaultMemberConfig fleetDefaultMemberConfig or {@code null} for none
+   */
+  public Feature setFleetDefaultMemberConfig(CommonFleetDefaultMemberConfigSpec fleetDefaultMemberConfig) {
+    this.fleetDefaultMemberConfig = fleetDefaultMemberConfig;
     return this;
   }
 

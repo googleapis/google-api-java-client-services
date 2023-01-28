@@ -72,7 +72,7 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
   private java.lang.String state;
 
   /**
-   * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+   * Target VM Image. Format: `ainotebooks-vm/project/image-name/name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +202,7 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+   * Target VM Image. Format: `ainotebooks-vm/project/image-name/name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetImage() {
@@ -210,7 +210,7 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+   * Target VM Image. Format: `ainotebooks-vm/project/image-name/name`.
    * @param targetImage targetImage or {@code null} for none
    */
   public UpgradeHistoryEntry setTargetImage(java.lang.String targetImage) {

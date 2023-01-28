@@ -38,7 +38,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month,
-   * month, day of week, e.g. 0 0 * * WED = every Wednesday More examples:
+   * month, day of week, e.g. `0 0 * * WED` = every Wednesday More examples:
    * https://crontab.guru/examples.html
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Display name used for UI purposes. Name can only contain alphanumeric characters,
-   * hyphens '-', and underscores '_'.
+   * hyphens `-`, and underscores `_`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month,
-   * month, day of week, e.g. 0 0 * * WED = every Wednesday More examples:
+   * month, day of week, e.g. `0 0 * * WED` = every Wednesday More examples:
    * https://crontab.guru/examples.html
    * @return value or {@code null} for none
    */
@@ -142,7 +142,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month,
-   * month, day of week, e.g. 0 0 * * WED = every Wednesday More examples:
+   * month, day of week, e.g. `0 0 * * WED` = every Wednesday More examples:
    * https://crontab.guru/examples.html
    * @param cronSchedule cronSchedule or {@code null} for none
    */
@@ -170,7 +170,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Display name used for UI purposes. Name can only contain alphanumeric characters,
-   * hyphens '-', and underscores '_'.
+   * hyphens `-`, and underscores `_`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -179,7 +179,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Display name used for UI purposes. Name can only contain alphanumeric characters,
-   * hyphens '-', and underscores '_'.
+   * hyphens `-`, and underscores `_`.
    * @param displayName displayName or {@code null} for none
    */
   public Schedule setDisplayName(java.lang.String displayName) {

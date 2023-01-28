@@ -50,7 +50,7 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached. For example, ['us-west1-a', 'us-central1-b']. A
+   * Locations that could not be reached. For example, `['us-west1-a', 'us-central1-b']`. A
    * ListInstancesResponse will only contain either instances or unreachables,
    * The value may be {@code null}.
    */
@@ -92,7 +92,7 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Locations that could not be reached. For example, ['us-west1-a', 'us-central1-b']. A
+   * Locations that could not be reached. For example, `['us-west1-a', 'us-central1-b']`. A
    * ListInstancesResponse will only contain either instances or unreachables,
    * @return value or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Locations that could not be reached. For example, ['us-west1-a', 'us-central1-b']. A
+   * Locations that could not be reached. For example, `['us-west1-a', 'us-central1-b']`. A
    * ListInstancesResponse will only contain either instances or unreachables,
    * @param unreachable unreachable or {@code null} for none
    */

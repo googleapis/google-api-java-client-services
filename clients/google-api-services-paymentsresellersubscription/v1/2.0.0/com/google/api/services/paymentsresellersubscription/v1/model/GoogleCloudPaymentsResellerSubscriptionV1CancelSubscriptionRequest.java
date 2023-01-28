@@ -31,9 +31,9 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If true, Google will cancel the subscription immediately, and issue a prorated refund
-   * for the remainder of the billing cycle. Otherwise, Google defers the cancelation at
-   * renewal_time, and therefore, will not issue a refund.
+   * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
+   * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
+   * Google defers the cancelation at renewal_time, and will not issue a refund.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +47,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
   private java.lang.String cancellationReason;
 
   /**
-   * Optional. If true, Google will cancel the subscription immediately, and issue a prorated refund
-   * for the remainder of the billing cycle. Otherwise, Google defers the cancelation at
-   * renewal_time, and therefore, will not issue a refund.
+   * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
+   * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
+   * Google defers the cancelation at renewal_time, and will not issue a refund.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelImmediately() {
@@ -57,9 +57,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
   }
 
   /**
-   * Optional. If true, Google will cancel the subscription immediately, and issue a prorated refund
-   * for the remainder of the billing cycle. Otherwise, Google defers the cancelation at
-   * renewal_time, and therefore, will not issue a refund.
+   * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
+   * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
+   * Google defers the cancelation at renewal_time, and will not issue a refund.
    * @param cancelImmediately cancelImmediately or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest setCancelImmediately(java.lang.Boolean cancelImmediately) {

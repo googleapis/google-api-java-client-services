@@ -32,7 +32,8 @@ public final class GenerateAccessTokenResponse extends com.google.api.client.jso
 
   /**
    * The generated bearer access token. To use this token, include it in an Authorization header of
-   * an HTTP request sent to the associated workstation's hostname, e.g. "Authorization: Bearer ".
+   * an HTTP request sent to the associated workstation's hostname, for example, `Authorization:
+   * Bearer `.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class GenerateAccessTokenResponse extends com.google.api.client.jso
 
   /**
    * The generated bearer access token. To use this token, include it in an Authorization header of
-   * an HTTP request sent to the associated workstation's hostname, e.g. "Authorization: Bearer ".
+   * an HTTP request sent to the associated workstation's hostname, for example, `Authorization:
+   * Bearer `.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessToken() {
@@ -56,7 +58,8 @@ public final class GenerateAccessTokenResponse extends com.google.api.client.jso
 
   /**
    * The generated bearer access token. To use this token, include it in an Authorization header of
-   * an HTTP request sent to the associated workstation's hostname, e.g. "Authorization: Bearer ".
+   * an HTTP request sent to the associated workstation's hostname, for example, `Authorization:
+   * Bearer `.
    * @param accessToken accessToken or {@code null} for none
    */
   public GenerateAccessTokenResponse setAccessToken(java.lang.String accessToken) {

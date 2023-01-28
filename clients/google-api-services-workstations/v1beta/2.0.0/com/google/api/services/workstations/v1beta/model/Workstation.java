@@ -70,7 +70,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    * Output only. Host to which clients can send HTTPS traffic that will be received by the
    * workstation. Authorized traffic will be received to the workstation as HTTP on port 80. To send
    * traffic to a different port, clients may prefix the host with the destination port in the
-   * format "{port}-{host}".
+   * format `{port}-{host}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    * Output only. Host to which clients can send HTTPS traffic that will be received by the
    * workstation. Authorized traffic will be received to the workstation as HTTP on port 80. To send
    * traffic to a different port, clients may prefix the host with the destination port in the
-   * format "{port}-{host}".
+   * format `{port}-{host}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -222,7 +222,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    * Output only. Host to which clients can send HTTPS traffic that will be received by the
    * workstation. Authorized traffic will be received to the workstation as HTTP on port 80. To send
    * traffic to a different port, clients may prefix the host with the destination port in the
-   * format "{port}-{host}".
+   * format `{port}-{host}`.
    * @param host host or {@code null} for none
    */
   public Workstation setHost(java.lang.String host) {

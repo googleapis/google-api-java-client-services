@@ -50,8 +50,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   /**
    * Output only. Service attachment URI for the workstation cluster. The service attachemnt is
    * created when private endpoint is enabled. To access workstations in the cluster, configure
-   * access to the managed service using (Private Service Connect)[https://cloud.google.com/vpc/docs
-   * /configure-private-service-connect-services].
+   * access to the managed service using [Private Service Connect](https://cloud.google.com/vpc/docs
+   * /configure-private-service-connect-services).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   /**
    * Output only. Service attachment URI for the workstation cluster. The service attachemnt is
    * created when private endpoint is enabled. To access workstations in the cluster, configure
-   * access to the managed service using (Private Service Connect)[https://cloud.google.com/vpc/docs
-   * /configure-private-service-connect-services].
+   * access to the managed service using [Private Service Connect](https://cloud.google.com/vpc/docs
+   * /configure-private-service-connect-services).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAttachmentUri() {
@@ -111,8 +111,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   /**
    * Output only. Service attachment URI for the workstation cluster. The service attachemnt is
    * created when private endpoint is enabled. To access workstations in the cluster, configure
-   * access to the managed service using (Private Service Connect)[https://cloud.google.com/vpc/docs
-   * /configure-private-service-connect-services].
+   * access to the managed service using [Private Service Connect](https://cloud.google.com/vpc/docs
+   * /configure-private-service-connect-services).
    * @param serviceAttachmentUri serviceAttachmentUri or {@code null} for none
    */
   public PrivateClusterConfig setServiceAttachmentUri(java.lang.String serviceAttachmentUri) {

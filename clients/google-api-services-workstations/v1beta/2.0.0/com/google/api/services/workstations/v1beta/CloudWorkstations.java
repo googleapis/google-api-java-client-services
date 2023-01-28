@@ -217,7 +217,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           return result;
         }
 
-        public class Cancel extends CloudWorkstationsRequest<com.google.api.services.workstations.v1beta.model.Empty> {
+        public class Cancel extends CloudWorkstationsRequest<com.google.api.services.workstations.v1beta.model.GoogleProtobufEmpty> {
 
           private static final String REST_PATH = "v1beta/{+name}:cancel";
 
@@ -246,7 +246,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * @since 1.13
            */
           protected Cancel(java.lang.String name, com.google.api.services.workstations.v1beta.model.CancelOperationRequest content) {
-            super(CloudWorkstations.this, "POST", REST_PATH, content, com.google.api.services.workstations.v1beta.model.Empty.class);
+            super(CloudWorkstations.this, "POST", REST_PATH, content, com.google.api.services.workstations.v1beta.model.GoogleProtobufEmpty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -355,7 +355,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           return result;
         }
 
-        public class Delete extends CloudWorkstationsRequest<com.google.api.services.workstations.v1beta.model.Empty> {
+        public class Delete extends CloudWorkstationsRequest<com.google.api.services.workstations.v1beta.model.GoogleProtobufEmpty> {
 
           private static final String REST_PATH = "v1beta/{+name}";
 
@@ -379,7 +379,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudWorkstations.this, "DELETE", REST_PATH, null, com.google.api.services.workstations.v1beta.model.Empty.class);
+            super(CloudWorkstations.this, "DELETE", REST_PATH, null, com.google.api.services.workstations.v1beta.model.GoogleProtobufEmpty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

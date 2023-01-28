@@ -138,8 +138,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid
    * sources or targets for network firewalls. Each tag within the list must comply with
-   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for
-   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -385,8 +384,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid
    * sources or targets for network firewalls. Each tag within the list must comply with
-   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for
-   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -396,8 +394,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid
    * sources or targets for network firewalls. Each tag within the list must comply with
-   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for
-   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
    * @param tags tags or {@code null} for none
    */
   public NodeConfig setTags(java.util.List<java.lang.String> tags) {

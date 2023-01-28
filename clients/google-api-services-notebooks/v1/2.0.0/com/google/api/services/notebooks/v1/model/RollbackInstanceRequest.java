@@ -30,16 +30,16 @@ package com.google.api.services.notebooks.v1.model;
 public final class RollbackInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The snapshot for rollback. Example: "projects/test-
-   * project/global/snapshots/krwlzipynril".
+   * Required. The snapshot for rollback. Example: `projects/test-
+   * project/global/snapshots/krwlzipynril`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetSnapshot;
 
   /**
-   * Required. The snapshot for rollback. Example: "projects/test-
-   * project/global/snapshots/krwlzipynril".
+   * Required. The snapshot for rollback. Example: `projects/test-
+   * project/global/snapshots/krwlzipynril`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetSnapshot() {
@@ -47,8 +47,8 @@ public final class RollbackInstanceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The snapshot for rollback. Example: "projects/test-
-   * project/global/snapshots/krwlzipynril".
+   * Required. The snapshot for rollback. Example: `projects/test-
+   * project/global/snapshots/krwlzipynril`.
    * @param targetSnapshot targetSnapshot or {@code null} for none
    */
   public RollbackInstanceRequest setTargetSnapshot(java.lang.String targetSnapshot) {

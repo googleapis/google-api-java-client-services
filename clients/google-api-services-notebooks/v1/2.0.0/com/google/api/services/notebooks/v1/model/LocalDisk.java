@@ -47,7 +47,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Specifies a unique device name of your choice that is reflected into the
-   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This
+   * `/dev/disk/by-id/google-*` tree of a Linux operating system running within the instance. This
    * name can be used to reference the device for mounting, resizing, and so on, from within the
    * instance. If not specified, the server chooses a default device name to apply to this disk, in
    * the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field
@@ -89,7 +89,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt
    * to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or
    * SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid
-   * values: * NVME * SCSI
+   * values: * `NVME` * `SCSI`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
@@ -110,8 +110,9 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
-   * default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+   * The mode in which to attach this disk, either `READ_WRITE` or `READ_ONLY`. If not specified,
+   * the default is to attach the disk in `READ_WRITE` mode. Valid values: * `READ_ONLY` *
+   * `READ_WRITE`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +126,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String source;
 
   /**
-   * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is
-   * PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+   * Specifies the type of the disk, either `SCRATCH` or `PERSISTENT`. If not specified, the default
+   * is `PERSISTENT`. Valid values: * `PERSISTENT` * `SCRATCH`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +173,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Specifies a unique device name of your choice that is reflected into the
-   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This
+   * `/dev/disk/by-id/google-*` tree of a Linux operating system running within the instance. This
    * name can be used to reference the device for mounting, resizing, and so on, from within the
    * instance. If not specified, the server chooses a default device name to apply to this disk, in
    * the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field
@@ -185,7 +186,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Specifies a unique device name of your choice that is reflected into the
-   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This
+   * `/dev/disk/by-id/google-*` tree of a Linux operating system running within the instance. This
    * name can be used to reference the device for mounting, resizing, and so on, from within the
    * instance. If not specified, the server chooses a default device name to apply to this disk, in
    * the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field
@@ -265,7 +266,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt
    * to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or
    * SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid
-   * values: * NVME * SCSI
+   * values: * `NVME` * `SCSI`
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -277,7 +278,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt
    * to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or
    * SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid
-   * values: * NVME * SCSI
+   * values: * `NVME` * `SCSI`
    * @param interface__ interface__ or {@code null} for none
    */
   public LocalDisk setInterface(java.lang.String interface__) {
@@ -320,8 +321,9 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
-   * default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+   * The mode in which to attach this disk, either `READ_WRITE` or `READ_ONLY`. If not specified,
+   * the default is to attach the disk in `READ_WRITE` mode. Valid values: * `READ_ONLY` *
+   * `READ_WRITE`
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -329,8 +331,9 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
-   * default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+   * The mode in which to attach this disk, either `READ_WRITE` or `READ_ONLY`. If not specified,
+   * the default is to attach the disk in `READ_WRITE` mode. Valid values: * `READ_ONLY` *
+   * `READ_WRITE`
    * @param mode mode or {@code null} for none
    */
   public LocalDisk setMode(java.lang.String mode) {
@@ -356,8 +359,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is
-   * PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+   * Specifies the type of the disk, either `SCRATCH` or `PERSISTENT`. If not specified, the default
+   * is `PERSISTENT`. Valid values: * `PERSISTENT` * `SCRATCH`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -365,8 +368,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is
-   * PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+   * Specifies the type of the disk, either `SCRATCH` or `PERSISTENT`. If not specified, the default
+   * is `PERSISTENT`. Valid values: * `PERSISTENT` * `SCRATCH`
    * @param type type or {@code null} for none
    */
   public LocalDisk setType(java.lang.String type) {

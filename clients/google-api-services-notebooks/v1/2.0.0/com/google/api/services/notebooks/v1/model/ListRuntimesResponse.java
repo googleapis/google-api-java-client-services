@@ -44,7 +44,7 @@ public final class ListRuntimesResponse extends com.google.api.client.json.Gener
   private java.util.List<Runtime> runtimes;
 
   /**
-   * Locations that could not be reached. For example, ['us-west1', 'us-central1']. A
+   * Locations that could not be reached. For example, `['us-west1', 'us-central1']`. A
    * ListRuntimesResponse will only contain either runtimes or unreachables,
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class ListRuntimesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Locations that could not be reached. For example, ['us-west1', 'us-central1']. A
+   * Locations that could not be reached. For example, `['us-west1', 'us-central1']`. A
    * ListRuntimesResponse will only contain either runtimes or unreachables,
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class ListRuntimesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Locations that could not be reached. For example, ['us-west1', 'us-central1']. A
+   * Locations that could not be reached. For example, `['us-west1', 'us-central1']`. A
    * ListRuntimesResponse will only contain either runtimes or unreachables,
    * @param unreachable unreachable or {@code null} for none
    */

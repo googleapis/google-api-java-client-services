@@ -17,9 +17,7 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count`
- * are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list)
- * to find a valid combination. TPUs are not supported.
+ * Request for reporting a Managed Notebook Event.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -29,64 +27,67 @@ package com.google.api.services.notebooks.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AcceleratorConfig extends com.google.api.client.json.GenericJson {
+public final class ReportInstanceEventRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of cores of this accelerator.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long coreCount;
-
-  /**
-   * Type of this accelerator.
+   * Required. The Event to be reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private Event event;
 
   /**
-   * Count of cores of this accelerator.
+   * Required. The VM hardware token for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmId;
+
+  /**
+   * Required. The Event to be reported.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getCoreCount() {
-    return coreCount;
+  public Event getEvent() {
+    return event;
   }
 
   /**
-   * Count of cores of this accelerator.
-   * @param coreCount coreCount or {@code null} for none
+   * Required. The Event to be reported.
+   * @param event event or {@code null} for none
    */
-  public AcceleratorConfig setCoreCount(java.lang.Long coreCount) {
-    this.coreCount = coreCount;
+  public ReportInstanceEventRequest setEvent(Event event) {
+    this.event = event;
     return this;
   }
 
   /**
-   * Type of this accelerator.
+   * Required. The VM hardware token for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getVmId() {
+    return vmId;
   }
 
   /**
-   * Type of this accelerator.
-   * @param type type or {@code null} for none
+   * Required. The VM hardware token for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+   * @param vmId vmId or {@code null} for none
    */
-  public AcceleratorConfig setType(java.lang.String type) {
-    this.type = type;
+  public ReportInstanceEventRequest setVmId(java.lang.String vmId) {
+    this.vmId = vmId;
     return this;
   }
 
   @Override
-  public AcceleratorConfig set(String fieldName, Object value) {
-    return (AcceleratorConfig) super.set(fieldName, value);
+  public ReportInstanceEventRequest set(String fieldName, Object value) {
+    return (ReportInstanceEventRequest) super.set(fieldName, value);
   }
 
   @Override
-  public AcceleratorConfig clone() {
-    return (AcceleratorConfig) super.clone();
+  public ReportInstanceEventRequest clone() {
+    return (ReportInstanceEventRequest) super.clone();
   }
 
 }

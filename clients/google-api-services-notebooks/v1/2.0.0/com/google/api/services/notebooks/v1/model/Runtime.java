@@ -51,6 +51,18 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   private java.lang.String healthState;
 
   /**
+   * Optional. The labels to associate with this Managed Notebook or Runtime. Label **keys** must
+   * contain 1 to 63 characters, and must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present,
+   * must contain 1 to 63 characters, and must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
+   * cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. Contains Runtime daemon metrics such as Service status and JupyterLab stats.
    * The value may be {@code null}.
    */
@@ -141,6 +153,33 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   public Runtime setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
+    return this;
+  }
+
+  /**
+   * Optional. The labels to associate with this Managed Notebook or Runtime. Label **keys** must
+   * contain 1 to 63 characters, and must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present,
+   * must contain 1 to 63 characters, and must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
+   * cluster.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels to associate with this Managed Notebook or Runtime. Label **keys** must
+   * contain 1 to 63 characters, and must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present,
+   * must contain 1 to 63 characters, and must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
+   * cluster.
+   * @param labels labels or {@code null} for none
+   */
+  public Runtime setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

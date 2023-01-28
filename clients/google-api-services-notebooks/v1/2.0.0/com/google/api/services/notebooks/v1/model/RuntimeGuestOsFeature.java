@@ -36,8 +36,8 @@ public final class RuntimeGuestOsFeature extends com.google.api.client.json.Gene
    * The ID of a supported feature. Read [Enabling guest operating system
    * features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images
    * #guest-os-features) to see a list of available options. Valid values: *
-   * FEATURE_TYPE_UNSPECIFIED * MULTI_IP_SUBNET * SECURE_BOOT * UEFI_COMPATIBLE *
-   * VIRTIO_SCSI_MULTIQUEUE * WINDOWS
+   * `FEATURE_TYPE_UNSPECIFIED` * `MULTI_IP_SUBNET` * `SECURE_BOOT` * `UEFI_COMPATIBLE` *
+   * `VIRTIO_SCSI_MULTIQUEUE` * `WINDOWS`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class RuntimeGuestOsFeature extends com.google.api.client.json.Gene
    * The ID of a supported feature. Read [Enabling guest operating system
    * features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images
    * #guest-os-features) to see a list of available options. Valid values: *
-   * FEATURE_TYPE_UNSPECIFIED * MULTI_IP_SUBNET * SECURE_BOOT * UEFI_COMPATIBLE *
-   * VIRTIO_SCSI_MULTIQUEUE * WINDOWS
+   * `FEATURE_TYPE_UNSPECIFIED` * `MULTI_IP_SUBNET` * `SECURE_BOOT` * `UEFI_COMPATIBLE` *
+   * `VIRTIO_SCSI_MULTIQUEUE` * `WINDOWS`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -59,8 +59,8 @@ public final class RuntimeGuestOsFeature extends com.google.api.client.json.Gene
    * The ID of a supported feature. Read [Enabling guest operating system
    * features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images
    * #guest-os-features) to see a list of available options. Valid values: *
-   * FEATURE_TYPE_UNSPECIFIED * MULTI_IP_SUBNET * SECURE_BOOT * UEFI_COMPATIBLE *
-   * VIRTIO_SCSI_MULTIQUEUE * WINDOWS
+   * `FEATURE_TYPE_UNSPECIFIED` * `MULTI_IP_SUBNET` * `SECURE_BOOT` * `UEFI_COMPATIBLE` *
+   * `VIRTIO_SCSI_MULTIQUEUE` * `WINDOWS`
    * @param type type or {@code null} for none
    */
   public RuntimeGuestOsFeature setType(java.lang.String type) {

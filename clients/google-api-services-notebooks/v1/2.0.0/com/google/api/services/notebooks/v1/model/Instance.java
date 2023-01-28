@@ -32,7 +32,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * The hardware accelerator used on this instance. If you use accelerators, make sure that your
    * configuration has [enough vCPUs and memory to support the `machine_type` you have
-   * selected](/compute/docs/gpus/#gpus-list).
+   * selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+   * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
+   * types) of this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +322,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * The hardware accelerator used on this instance. If you use accelerators, make sure that your
    * configuration has [enough vCPUs and memory to support the `machine_type` you have
-   * selected](/compute/docs/gpus/#gpus-list).
+   * selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).
    * @return value or {@code null} for none
    */
   public AcceleratorConfig getAcceleratorConfig() {
@@ -331,7 +332,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * The hardware accelerator used on this instance. If you use accelerators, make sure that your
    * configuration has [enough vCPUs and memory to support the `machine_type` you have
-   * selected](/compute/docs/gpus/#gpus-list).
+   * selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).
    * @param acceleratorConfig acceleratorConfig or {@code null} for none
    */
   public Instance setAcceleratorConfig(AcceleratorConfig acceleratorConfig) {
@@ -621,7 +622,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+   * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
+   * types) of this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -629,7 +631,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+   * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
+   * types) of this instance.
    * @param machineType machineType or {@code null} for none
    */
   public Instance setMachineType(java.lang.String machineType) {

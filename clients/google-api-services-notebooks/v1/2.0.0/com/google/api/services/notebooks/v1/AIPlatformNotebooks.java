@@ -1729,13 +1729,13 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
 
           /**
            * Filter applied to resulting executions. Currently only supports filtering executions by
-           * a specified schedule_id. Format: `schedule_id=`
+           * a specified `schedule_id`. Format: `schedule_id=`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Filter applied to resulting executions. Currently only supports filtering executions by a specified
-         schedule_id. Format: `schedule_id=`
+         `schedule_id`. Format: `schedule_id=`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1743,7 +1743,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
 
           /**
            * Filter applied to resulting executions. Currently only supports filtering executions by
-           * a specified schedule_id. Format: `schedule_id=`
+           * a specified `schedule_id`. Format: `schedule_id=`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3343,6 +3343,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public Report set(String parameterName, Object value) {
             return (Report) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Reports and processes an instance event.
+         *
+         * Create a request for the method "instances.reportEvent".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link ReportEvent#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.ReportInstanceEventRequest}
+         * @return the request
+         */
+        public ReportEvent reportEvent(java.lang.String name, com.google.api.services.notebooks.v1.model.ReportInstanceEventRequest content) throws java.io.IOException {
+          ReportEvent result = new ReportEvent(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReportEvent extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:reportEvent";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Reports and processes an instance event.
+           *
+           * Create a request for the method "instances.reportEvent".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link ReportEvent#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ReportEvent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.ReportInstanceEventRequest}
+           * @since 1.13
+           */
+          protected ReportEvent(java.lang.String name, com.google.api.services.notebooks.v1.model.ReportInstanceEventRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReportEvent set$Xgafv(java.lang.String $Xgafv) {
+            return (ReportEvent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReportEvent setAccessToken(java.lang.String accessToken) {
+            return (ReportEvent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReportEvent setAlt(java.lang.String alt) {
+            return (ReportEvent) super.setAlt(alt);
+          }
+
+          @Override
+          public ReportEvent setCallback(java.lang.String callback) {
+            return (ReportEvent) super.setCallback(callback);
+          }
+
+          @Override
+          public ReportEvent setFields(java.lang.String fields) {
+            return (ReportEvent) super.setFields(fields);
+          }
+
+          @Override
+          public ReportEvent setKey(java.lang.String key) {
+            return (ReportEvent) super.setKey(key);
+          }
+
+          @Override
+          public ReportEvent setOauthToken(java.lang.String oauthToken) {
+            return (ReportEvent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReportEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReportEvent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReportEvent setQuotaUser(java.lang.String quotaUser) {
+            return (ReportEvent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReportEvent setUploadType(java.lang.String uploadType) {
+            return (ReportEvent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReportEvent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReportEvent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public ReportEvent setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReportEvent set(String parameterName, Object value) {
+            return (ReportEvent) super.set(parameterName, value);
           }
         }
         /**
@@ -7043,10 +7178,10 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * would be specified as `software_config.kernels`, and the `PATCH` request body would
            * specify the new value, as follows: { "software_config":{ "kernels": [{ 'repository':
            * 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } } Currently,
-           * only the following fields can be updated: - software_config.kernels -
-           * software_config.post_startup_script - software_config.custom_gpu_driver_path -
-           * software_config.idle_shutdown - software_config.idle_shutdown_timeout -
-           * software_config.disable_terminal
+           * only the following fields can be updated: - `software_config.kernels` -
+           * `software_config.post_startup_script` - `software_config.custom_gpu_driver_path` -
+           * `software_config.idle_shutdown` - `software_config.idle_shutdown_timeout` -
+           * `software_config.disable_terminal` - `labels`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -7056,9 +7191,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          `software_config.kernels`, and the `PATCH` request body would specify the new value, as follows: {
          "software_config":{ "kernels": [{ 'repository': 'gcr.io/deeplearning-platform-release/pytorch-gpu',
          'tag': 'latest' }], } } Currently, only the following fields can be updated: -
-         software_config.kernels - software_config.post_startup_script -
-         software_config.custom_gpu_driver_path - software_config.idle_shutdown -
-         software_config.idle_shutdown_timeout - software_config.disable_terminal
+         `software_config.kernels` - `software_config.post_startup_script` -
+         `software_config.custom_gpu_driver_path` - `software_config.idle_shutdown` -
+         `software_config.idle_shutdown_timeout` - `software_config.disable_terminal` - `labels`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -7070,10 +7205,10 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * would be specified as `software_config.kernels`, and the `PATCH` request body would
            * specify the new value, as follows: { "software_config":{ "kernels": [{ 'repository':
            * 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } } Currently,
-           * only the following fields can be updated: - software_config.kernels -
-           * software_config.post_startup_script - software_config.custom_gpu_driver_path -
-           * software_config.idle_shutdown - software_config.idle_shutdown_timeout -
-           * software_config.disable_terminal
+           * only the following fields can be updated: - `software_config.kernels` -
+           * `software_config.post_startup_script` - `software_config.custom_gpu_driver_path` -
+           * `software_config.idle_shutdown` - `software_config.idle_shutdown_timeout` -
+           * `software_config.disable_terminal` - `labels`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

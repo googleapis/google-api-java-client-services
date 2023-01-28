@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v2alpha1.model;
 
 /**
- * A accelerator type that a Node can be configured with.
+ * A TPU accelerator configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:
@@ -27,71 +27,41 @@ package com.google.api.services.tpu.v2alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AcceleratorType extends com.google.api.client.json.GenericJson {
+public final class AcceleratorConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The accelerator config.
+   * Required. Topology of TPU in chips.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<AcceleratorConfig> acceleratorConfigs;
-
-  static {
-    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
-  }
+  private java.lang.String topology;
 
   /**
-   * The resource name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * The accelerator type.
+   * Required. Type of TPU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The accelerator config.
+   * Required. Topology of TPU in chips.
    * @return value or {@code null} for none
    */
-  public java.util.List<AcceleratorConfig> getAcceleratorConfigs() {
-    return acceleratorConfigs;
+  public java.lang.String getTopology() {
+    return topology;
   }
 
   /**
-   * The accelerator config.
-   * @param acceleratorConfigs acceleratorConfigs or {@code null} for none
+   * Required. Topology of TPU in chips.
+   * @param topology topology or {@code null} for none
    */
-  public AcceleratorType setAcceleratorConfigs(java.util.List<AcceleratorConfig> acceleratorConfigs) {
-    this.acceleratorConfigs = acceleratorConfigs;
+  public AcceleratorConfig setTopology(java.lang.String topology) {
+    this.topology = topology;
     return this;
   }
 
   /**
-   * The resource name.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The resource name.
-   * @param name name or {@code null} for none
-   */
-  public AcceleratorType setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * The accelerator type.
+   * Required. Type of TPU.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -99,22 +69,22 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The accelerator type.
+   * Required. Type of TPU.
    * @param type type or {@code null} for none
    */
-  public AcceleratorType setType(java.lang.String type) {
+  public AcceleratorConfig setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public AcceleratorType set(String fieldName, Object value) {
-    return (AcceleratorType) super.set(fieldName, value);
+  public AcceleratorConfig set(String fieldName, Object value) {
+    return (AcceleratorConfig) super.set(fieldName, value);
   }
 
   @Override
-  public AcceleratorType clone() {
-    return (AcceleratorType) super.clone();
+  public AcceleratorConfig clone() {
+    return (AcceleratorConfig) super.clone();
   }
 
 }

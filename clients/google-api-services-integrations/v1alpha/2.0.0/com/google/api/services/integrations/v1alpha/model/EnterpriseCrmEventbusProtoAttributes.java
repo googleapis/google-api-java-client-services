@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1alpha.model;
 
 /**
  * Attributes are additional options that can be associated with each event property. For more
- * information, see go/integration-platform/event_bus/attributes_registry.md. Next available: 8
+ * information, see
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -62,7 +62,7 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
   private java.lang.Boolean isSearchable;
 
   /**
-   * See go/integration-platform/analytics/logging_task.md for details.
+   * See
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
   }
 
   /**
-   * See go/integration-platform/analytics/logging_task.md for details.
+   * See
    * @return value or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoLogSettings getLogSettings() {
@@ -162,7 +162,7 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
   }
 
   /**
-   * See go/integration-platform/analytics/logging_task.md for details.
+   * See
    * @param logSettings logSettings or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoAttributes setLogSettings(EnterpriseCrmEventbusProtoLogSettings logSettings) {

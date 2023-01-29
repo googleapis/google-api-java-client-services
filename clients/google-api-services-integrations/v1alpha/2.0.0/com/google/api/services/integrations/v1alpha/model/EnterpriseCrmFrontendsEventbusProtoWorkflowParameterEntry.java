@@ -67,7 +67,7 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
   private java.lang.String inOutType;
 
   /**
-   * Whether this parameter is a transient parameter. go/ip-transient-parameters
+   * Whether this parameter is a transient parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +214,7 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
   }
 
   /**
-   * Whether this parameter is a transient parameter. go/ip-transient-parameters
+   * Whether this parameter is a transient parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsTransient() {
@@ -222,7 +222,7 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
   }
 
   /**
-   * Whether this parameter is a transient parameter. go/ip-transient-parameters
+   * Whether this parameter is a transient parameter.
    * @param isTransient isTransient or {@code null} for none
    */
   public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setIsTransient(java.lang.Boolean isTransient) {

@@ -71,6 +71,16 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private Error error;
 
   /**
+   * Labels associated with this execution. Labels can contain at most 64 entries. Keys and values
+   * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
+   * underscores and dashes. Label keys must start with a letter. International characters are
+   * allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. The resource name of the execution. Format:
    * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
    * The value may be {@code null}.
@@ -204,6 +214,29 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setError(Error error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Labels associated with this execution. Labels can contain at most 64 entries. Keys and values
+   * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
+   * underscores and dashes. Label keys must start with a letter. International characters are
+   * allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels associated with this execution. Labels can contain at most 64 entries. Keys and values
+   * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
+   * underscores and dashes. Label keys must start with a letter. International characters are
+   * allowed.
+   * @param labels labels or {@code null} for none
+   */
+  public Execution setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

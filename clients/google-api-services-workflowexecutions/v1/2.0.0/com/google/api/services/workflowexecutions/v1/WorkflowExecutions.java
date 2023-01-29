@@ -961,6 +961,60 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
 
             /**
+             * Optional. Filters applied to the [Executions.ListExecutions] results. The following
+             * fields are supported for filtering: executionID, state, startTime, endTime, duration,
+             * workflowRevisionID, stepName, and label.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filters applied to the [Executions.ListExecutions] results. The following fields are
+           supported for filtering: executionID, state, startTime, endTime, duration, workflowRevisionID,
+           stepName, and label.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filters applied to the [Executions.ListExecutions] results. The following
+             * fields are supported for filtering: executionID, state, startTime, endTime, duration,
+             * workflowRevisionID, stepName, and label.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The orderding applied to the [Executions.ListExecutions] results. By
+             * default the ordering is based on descending start time. The following fields are
+             * supported for order by: executionID, startTime, endTime, duration, state, and
+             * workflowRevisionID.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. The orderding applied to the [Executions.ListExecutions] results. By default the ordering
+           is based on descending start time. The following fields are supported for order by: executionID,
+           startTime, endTime, duration, state, and workflowRevisionID.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. The orderding applied to the [Executions.ListExecutions] results. By
+             * default the ordering is based on descending start time. The following fields are
+             * supported for order by: executionID, startTime, endTime, duration, state, and
+             * workflowRevisionID.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
              * Maximum number of executions to return per call. Max supported value depends on the
              * selected Execution view: it's 1000 for BASIC and 100 for FULL. The default value used
              * if the field is not specified is 100, regardless of the selected view. Values greater

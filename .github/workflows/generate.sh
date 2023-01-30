@@ -28,7 +28,7 @@ fi
 
 if [[ -z "${VARIANT}" ]]
 then
-  VARIANT=2.0.0
+  VARIANT=2.1.0
 fi
 
 # Install the local generator without dependencies first and then install the dependencies with hash checking.

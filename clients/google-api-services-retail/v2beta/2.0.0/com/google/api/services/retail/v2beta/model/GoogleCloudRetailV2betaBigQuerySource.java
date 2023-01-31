@@ -37,8 +37,8 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
    * `user_event_ga360`: The schema is available here:
    * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: The schema is
-   * available here: https://support.google.com/analytics/answer/7029846. Supported values for auto-
-   * completion imports: * `suggestions` (default): One JSON completion suggestion per line. *
+   * available here: https://support.google.com/analytics/answer/7029846. Supported values for
+   * autocomplete imports: * `suggestions` (default): One JSON completion suggestion per line. *
    * `denylist`: One JSON deny suggestion per line. * `allowlist`: One JSON allow suggestion per
    * line.
    * The value may be {@code null}.
@@ -93,8 +93,8 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
    * `user_event_ga360`: The schema is available here:
    * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: The schema is
-   * available here: https://support.google.com/analytics/answer/7029846. Supported values for auto-
-   * completion imports: * `suggestions` (default): One JSON completion suggestion per line. *
+   * available here: https://support.google.com/analytics/answer/7029846. Supported values for
+   * autocomplete imports: * `suggestions` (default): One JSON completion suggestion per line. *
    * `denylist`: One JSON deny suggestion per line. * `allowlist`: One JSON allow suggestion per
    * line.
    * @return value or {@code null} for none
@@ -111,8 +111,8 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
    * `user_event_ga360`: The schema is available here:
    * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: The schema is
-   * available here: https://support.google.com/analytics/answer/7029846. Supported values for auto-
-   * completion imports: * `suggestions` (default): One JSON completion suggestion per line. *
+   * available here: https://support.google.com/analytics/answer/7029846. Supported values for
+   * autocomplete imports: * `suggestions` (default): One JSON completion suggestion per line. *
    * `denylist`: One JSON deny suggestion per line. * `allowlist`: One JSON allow suggestion per
    * line.
    * @param dataSchema dataSchema or {@code null} for none

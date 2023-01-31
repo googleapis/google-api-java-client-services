@@ -611,7 +611,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link DeleteRevision#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the schema revision to be deleted, with a revision ID explicitly included.
-       *        Example: projects/123/schemas/my-schema@c7cfa2a8
+       *        Example: `projects/123/schemas/my-schema@c7cfa2a8`
        * @return the request
        */
       public DeleteRevision deleteRevision(java.lang.String name) throws java.io.IOException {
@@ -639,7 +639,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * constructor. </p>
          *
          * @param name Required. The name of the schema revision to be deleted, with a revision ID explicitly included.
-       *        Example: projects/123/schemas/my-schema@c7cfa2a8
+       *        Example: `projects/123/schemas/my-schema@c7cfa2a8`
          * @since 1.13
          */
         protected DeleteRevision(java.lang.String name) {
@@ -709,13 +709,13 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Required. The name of the schema revision to be deleted, with a revision ID explicitly
-         * included. Example: projects/123/schemas/my-schema@c7cfa2a8
+         * included. Example: `projects/123/schemas/my-schema@c7cfa2a8`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the schema revision to be deleted, with a revision ID explicitly included.
-       Example: projects/123/schemas/my-schema@c7cfa2a8
+       Example: `projects/123/schemas/my-schema@c7cfa2a8`
          */
         public java.lang.String getName() {
           return name;
@@ -723,7 +723,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Required. The name of the schema revision to be deleted, with a revision ID explicitly
-         * included. Example: projects/123/schemas/my-schema@c7cfa2a8
+         * included. Example: `projects/123/schemas/my-schema@c7cfa2a8`
          */
         public DeleteRevision setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

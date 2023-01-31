@@ -53,6 +53,15 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String npmrcEnvironmentVariablesSecretVersion;
 
   /**
+   * Optional. If set, fields of `workspace_compilation_overrides` override the default compilation
+   * settings that are specified in dataform.json when creating workspace-scoped compilation
+   * results. See documentation for `WorkspaceCompilationOverrides` for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkspaceCompilationOverrides workspaceCompilationOverrides;
+
+  /**
    * Optional. If set, configures this repository to be linked to a Git remote.
    * @return value or {@code null} for none
    */
@@ -104,6 +113,27 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setNpmrcEnvironmentVariablesSecretVersion(java.lang.String npmrcEnvironmentVariablesSecretVersion) {
     this.npmrcEnvironmentVariablesSecretVersion = npmrcEnvironmentVariablesSecretVersion;
+    return this;
+  }
+
+  /**
+   * Optional. If set, fields of `workspace_compilation_overrides` override the default compilation
+   * settings that are specified in dataform.json when creating workspace-scoped compilation
+   * results. See documentation for `WorkspaceCompilationOverrides` for more information.
+   * @return value or {@code null} for none
+   */
+  public WorkspaceCompilationOverrides getWorkspaceCompilationOverrides() {
+    return workspaceCompilationOverrides;
+  }
+
+  /**
+   * Optional. If set, fields of `workspace_compilation_overrides` override the default compilation
+   * settings that are specified in dataform.json when creating workspace-scoped compilation
+   * results. See documentation for `WorkspaceCompilationOverrides` for more information.
+   * @param workspaceCompilationOverrides workspaceCompilationOverrides or {@code null} for none
+   */
+  public Repository setWorkspaceCompilationOverrides(WorkspaceCompilationOverrides workspaceCompilationOverrides) {
+    this.workspaceCompilationOverrides = workspaceCompilationOverrides;
     return this;
   }
 

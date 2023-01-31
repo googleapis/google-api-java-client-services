@@ -3507,6 +3507,37 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 return this;
               }
 
+              /**
+               * This value only applies to the case when the target product is of type PRIMARY.
+               * When deleting a product of VARIANT/COLLECTION type, this value will be ignored.
+               * When set to true, the subsequent variant products will be deleted. When set to
+               * false, if the primary product has active variant products, an error will be
+               * returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean cascadeDelete;
+
+              /** This value only applies to the case when the target product is of type PRIMARY. When deleting a
+             product of VARIANT/COLLECTION type, this value will be ignored. When set to true, the subsequent
+             variant products will be deleted. When set to false, if the primary product has active variant
+             products, an error will be returned.
+               */
+              public java.lang.Boolean getCascadeDelete() {
+                return cascadeDelete;
+              }
+
+              /**
+               * This value only applies to the case when the target product is of type PRIMARY.
+               * When deleting a product of VARIANT/COLLECTION type, this value will be ignored.
+               * When set to true, the subsequent variant products will be deleted. When set to
+               * false, if the primary product has active variant products, an error will be
+               * returned.
+               */
+              public Delete setCascadeDelete(java.lang.Boolean cascadeDelete) {
+                this.cascadeDelete = cascadeDelete;
+                return this;
+              }
+
               @Override
               public Delete set(String parameterName, Object value) {
                 return (Delete) super.set(parameterName, value);

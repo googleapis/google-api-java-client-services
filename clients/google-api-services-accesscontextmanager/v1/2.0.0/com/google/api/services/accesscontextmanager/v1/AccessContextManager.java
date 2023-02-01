@@ -20,7 +20,7 @@ package com.google.api.services.accesscontextmanager.v1;
  * Service definition for AccessContextManager (v1).
  *
  * <p>
- * An API for setting attribute based access control to requests to GCP services.
+ * An API for setting attribute based access control to requests to Google Cloud services.
  * </p>
  *
  * <p>
@@ -2498,7 +2498,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
     public class AuthorizedOrgsDescs {
 
       /**
-       * Creates a authorized orgs desc. The long-running operation from this RPC has a successful status
+       * Creates an authorized orgs desc. The long-running operation from this RPC has a successful status
        * after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc
        * contains errors, an error response is returned for the first error encountered. The name of this
        * `AuthorizedOrgsDesc` will be assigned during creation.
@@ -2527,7 +2527,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Creates a authorized orgs desc. The long-running operation from this RPC has a successful
+         * Creates an authorized orgs desc. The long-running operation from this RPC has a successful
          * status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs
          * desc contains errors, an error response is returned for the first error encountered. The name
          * of this `AuthorizedOrgsDesc` will be assigned during creation.
@@ -2644,7 +2644,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Deletes a authorized orgs desc based on the resource name. The long-running operation from this
+       * Deletes an authorized orgs desc based on the resource name. The long-running operation from this
        * RPC has a successful status after the authorized orgs desc is removed from long-lasting storage.
        *
        * Create a request for the method "authorizedOrgsDescs.delete".
@@ -2670,8 +2670,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/authorizedOrgsDescs/[^/]+$");
 
         /**
-         * Deletes a authorized orgs desc based on the resource name. The long-running operation from this
-         * RPC has a successful status after the authorized orgs desc is removed from long-lasting
+         * Deletes an authorized orgs desc based on the resource name. The long-running operation from
+         * this RPC has a successful status after the authorized orgs desc is removed from long-lasting
          * storage.
          *
          * Create a request for the method "authorizedOrgsDescs.delete".
@@ -2785,7 +2785,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Gets a authorized orgs desc based on the resource name.
+       * Gets an authorized orgs desc based on the resource name.
        *
        * Create a request for the method "authorizedOrgsDescs.get".
        *
@@ -2810,7 +2810,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/authorizedOrgsDescs/[^/]+$");
 
         /**
-         * Gets a authorized orgs desc based on the resource name.
+         * Gets an authorized orgs desc based on the resource name.
          *
          * Create a request for the method "authorizedOrgsDescs.get".
          *
@@ -3120,7 +3120,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Updates a authorized orgs desc. The long-running operation from this RPC has a successful status
+       * Updates an authorized orgs desc. The long-running operation from this RPC has a successful status
        * after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc
        * contains errors, an error response is returned for the first error encountered. Only the
        * organization list in `AuthorizedOrgsDesc` can be updated. The name, authorization_type,
@@ -3131,10 +3131,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Assigned by the server during creation. The last segment has an arbitrary length and has only URI
-       *        unreserved characters (as defined by [RFC 3986 Section
-       *        2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-       *        client during creation. Example: "accessPolicies/122256/authorizedOrgs/b3-BhcX_Ud5N"
+       * @param name Resource name for the `AuthorizedOrgsDesc`. Format:
+       *        `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
+       *        `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
+       *        characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
        * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.AuthorizedOrgsDesc}
        * @return the request
        */
@@ -3152,7 +3152,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/authorizedOrgsDescs/[^/]+$");
 
         /**
-         * Updates a authorized orgs desc. The long-running operation from this RPC has a successful
+         * Updates an authorized orgs desc. The long-running operation from this RPC has a successful
          * status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs
          * desc contains errors, an error response is returned for the first error encountered. Only the
          * organization list in `AuthorizedOrgsDesc` can be updated. The name, authorization_type,
@@ -3166,10 +3166,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Assigned by the server during creation. The last segment has an arbitrary length and has only URI
-       *        unreserved characters (as defined by [RFC 3986 Section
-       *        2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-       *        client during creation. Example: "accessPolicies/122256/authorizedOrgs/b3-BhcX_Ud5N"
+         * @param name Resource name for the `AuthorizedOrgsDesc`. Format:
+       *        `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
+       *        `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
+       *        characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
          * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.AuthorizedOrgsDesc}
          * @since 1.13
          */
@@ -3239,28 +3239,30 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Assigned by the server during creation. The last segment has an arbitrary length and has
-         * only URI unreserved characters (as defined by [RFC 3986 Section
-         * 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-         * client during creation. Example: "accessPolicies/122256/authorizedOrgs/b3-BhcX_Ud5N"
+         * Resource name for the `AuthorizedOrgsDesc`. Format:
+         * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
+         * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
+         * characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its
+         * `name`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Assigned by the server during creation. The last segment has an arbitrary length and has only URI
-       unreserved characters (as defined by [RFC 3986 Section
-       2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client
-       during creation. Example: "accessPolicies/122256/authorizedOrgs/b3-BhcX_Ud5N"
+        /** Resource name for the `AuthorizedOrgsDesc`. Format:
+       `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
+       `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric characters or
+       `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Assigned by the server during creation. The last segment has an arbitrary length and has
-         * only URI unreserved characters (as defined by [RFC 3986 Section
-         * 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-         * client during creation. Example: "accessPolicies/122256/authorizedOrgs/b3-BhcX_Ud5N"
+         * Resource name for the `AuthorizedOrgsDesc`. Format:
+         * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
+         * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
+         * characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its
+         * `name`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

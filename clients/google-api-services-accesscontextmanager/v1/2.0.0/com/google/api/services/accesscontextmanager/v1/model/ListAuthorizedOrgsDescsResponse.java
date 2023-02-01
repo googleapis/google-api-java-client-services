@@ -31,7 +31,7 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class ListAuthorizedOrgsDescsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of the Authorized Orgs Desc instances.
+   * List of all the Authorized Orgs Desc instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ListAuthorizedOrgsDescsResponse extends com.google.api.client
   private java.lang.String nextPageToken;
 
   /**
-   * List of the Authorized Orgs Desc instances.
+   * List of all the Authorized Orgs Desc instances.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthorizedOrgsDesc> getAuthorizedOrgsDescs() {
@@ -60,7 +60,7 @@ public final class ListAuthorizedOrgsDescsResponse extends com.google.api.client
   }
 
   /**
-   * List of the Authorized Orgs Desc instances.
+   * List of all the Authorized Orgs Desc instances.
    * @param authorizedOrgsDescs authorizedOrgsDescs or {@code null} for none
    */
   public ListAuthorizedOrgsDescsResponse setAuthorizedOrgsDescs(java.util.List<AuthorizedOrgsDesc> authorizedOrgsDescs) {

@@ -44,6 +44,14 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
   private java.lang.Long expiresIn;
 
   /**
+   * The user's Game Center game player ID. A unique identifier for a player of the game.
+   * https://developer.apple.com/documentation/gamekit/gkplayer/3113960-gameplayerid
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gamePlayerId;
+
+  /**
    * An Identity Platform ID token for the authenticated user.
    * The value may be {@code null}.
    */
@@ -79,6 +87,15 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
   private java.lang.String refreshToken;
 
   /**
+   * The user's Game Center team player ID. A unique identifier for a player of all the games that
+   * you distribute using your developer account.
+   * https://developer.apple.com/documentation/gamekit/gkplayer/3174857-teamplayerid
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String teamPlayerId;
+
+  /**
    * Display name of the authenticated user.
    * @return value or {@code null} for none
    */
@@ -109,6 +126,25 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
    */
   public GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse setExpiresIn(java.lang.Long expiresIn) {
     this.expiresIn = expiresIn;
+    return this;
+  }
+
+  /**
+   * The user's Game Center game player ID. A unique identifier for a player of the game.
+   * https://developer.apple.com/documentation/gamekit/gkplayer/3113960-gameplayerid
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGamePlayerId() {
+    return gamePlayerId;
+  }
+
+  /**
+   * The user's Game Center game player ID. A unique identifier for a player of the game.
+   * https://developer.apple.com/documentation/gamekit/gkplayer/3113960-gameplayerid
+   * @param gamePlayerId gamePlayerId or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse setGamePlayerId(java.lang.String gamePlayerId) {
+    this.gamePlayerId = gamePlayerId;
     return this;
   }
 
@@ -194,6 +230,27 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
    */
   public GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse setRefreshToken(java.lang.String refreshToken) {
     this.refreshToken = refreshToken;
+    return this;
+  }
+
+  /**
+   * The user's Game Center team player ID. A unique identifier for a player of all the games that
+   * you distribute using your developer account.
+   * https://developer.apple.com/documentation/gamekit/gkplayer/3174857-teamplayerid
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTeamPlayerId() {
+    return teamPlayerId;
+  }
+
+  /**
+   * The user's Game Center team player ID. A unique identifier for a player of all the games that
+   * you distribute using your developer account.
+   * https://developer.apple.com/documentation/gamekit/gkplayer/3174857-teamplayerid
+   * @param teamPlayerId teamPlayerId or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse setTeamPlayerId(java.lang.String teamPlayerId) {
+    this.teamPlayerId = teamPlayerId;
     return this;
   }
 

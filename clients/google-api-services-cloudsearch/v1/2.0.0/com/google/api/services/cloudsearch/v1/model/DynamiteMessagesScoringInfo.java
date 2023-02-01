@@ -33,6 +33,42 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long commonContactCount;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double commonCountToContactListCountRatio;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double commonCountToMembershipCountRatio;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long creatorGaiaId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean creatorInSearcherContactList;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dasContactCount;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key
   private java.lang.Double finalScore;
 
@@ -63,6 +99,18 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long spaceId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long spaceMembershipCount;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key
   private java.lang.Double topicalityScore;
 
@@ -71,6 +119,96 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Double unjoinedSpaceAffinityScore;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCommonContactCount() {
+    return commonContactCount;
+  }
+
+  /**
+   * @param commonContactCount commonContactCount or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setCommonContactCount(java.lang.Long commonContactCount) {
+    this.commonContactCount = commonContactCount;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCommonCountToContactListCountRatio() {
+    return commonCountToContactListCountRatio;
+  }
+
+  /**
+   * @param commonCountToContactListCountRatio commonCountToContactListCountRatio or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setCommonCountToContactListCountRatio(java.lang.Double commonCountToContactListCountRatio) {
+    this.commonCountToContactListCountRatio = commonCountToContactListCountRatio;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCommonCountToMembershipCountRatio() {
+    return commonCountToMembershipCountRatio;
+  }
+
+  /**
+   * @param commonCountToMembershipCountRatio commonCountToMembershipCountRatio or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setCommonCountToMembershipCountRatio(java.lang.Double commonCountToMembershipCountRatio) {
+    this.commonCountToMembershipCountRatio = commonCountToMembershipCountRatio;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCreatorGaiaId() {
+    return creatorGaiaId;
+  }
+
+  /**
+   * @param creatorGaiaId creatorGaiaId or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setCreatorGaiaId(java.lang.Long creatorGaiaId) {
+    this.creatorGaiaId = creatorGaiaId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCreatorInSearcherContactList() {
+    return creatorInSearcherContactList;
+  }
+
+  /**
+   * @param creatorInSearcherContactList creatorInSearcherContactList or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setCreatorInSearcherContactList(java.lang.Boolean creatorInSearcherContactList) {
+    this.creatorInSearcherContactList = creatorInSearcherContactList;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDasContactCount() {
+    return dasContactCount;
+  }
+
+  /**
+   * @param dasContactCount dasContactCount or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setDasContactCount(java.lang.Long dasContactCount) {
+    this.dasContactCount = dasContactCount;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -144,6 +282,36 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
    */
   public DynamiteMessagesScoringInfo setMessageSenderAffinityScore(java.lang.Double messageSenderAffinityScore) {
     this.messageSenderAffinityScore = messageSenderAffinityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSpaceId() {
+    return spaceId;
+  }
+
+  /**
+   * @param spaceId spaceId or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setSpaceId(java.lang.Long spaceId) {
+    this.spaceId = spaceId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSpaceMembershipCount() {
+    return spaceMembershipCount;
+  }
+
+  /**
+   * @param spaceMembershipCount spaceMembershipCount or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setSpaceMembershipCount(java.lang.Long spaceMembershipCount) {
+    this.spaceMembershipCount = spaceMembershipCount;
     return this;
   }
 

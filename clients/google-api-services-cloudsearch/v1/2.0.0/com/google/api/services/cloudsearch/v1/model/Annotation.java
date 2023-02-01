@@ -146,7 +146,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    * otherwise. See go/message-quoting-client-to-server for details. LINT.ThenChange(
    * //depot/google3/java/com/google/apps/dynamite/v1/allshared/parser/AnnotationSanitizer.java, //d
    * epot/google3/java/com/google/apps/dynamite/v1/backend/action/common/SystemMessageHelper.java,
-   * //depot/google3/java/com/google/caribou/eli/mediation/chat/AnnotationTranslator.java )
+   * //depot/google3/java/com/google/caribou/eli/mediation/chat/AnnotationConverter.java )
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,7 +500,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    * otherwise. See go/message-quoting-client-to-server for details. LINT.ThenChange(
    * //depot/google3/java/com/google/apps/dynamite/v1/allshared/parser/AnnotationSanitizer.java, //d
    * epot/google3/java/com/google/apps/dynamite/v1/backend/action/common/SystemMessageHelper.java,
-   * //depot/google3/java/com/google/caribou/eli/mediation/chat/AnnotationTranslator.java )
+   * //depot/google3/java/com/google/caribou/eli/mediation/chat/AnnotationConverter.java )
    * @return value or {@code null} for none
    */
   public RequiredMessageFeaturesMetadata getRequiredMessageFeaturesMetadata() {
@@ -513,7 +513,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    * otherwise. See go/message-quoting-client-to-server for details. LINT.ThenChange(
    * //depot/google3/java/com/google/apps/dynamite/v1/allshared/parser/AnnotationSanitizer.java, //d
    * epot/google3/java/com/google/apps/dynamite/v1/backend/action/common/SystemMessageHelper.java,
-   * //depot/google3/java/com/google/caribou/eli/mediation/chat/AnnotationTranslator.java )
+   * //depot/google3/java/com/google/caribou/eli/mediation/chat/AnnotationConverter.java )
    * @param requiredMessageFeaturesMetadata requiredMessageFeaturesMetadata or {@code null} for none
    */
   public Annotation setRequiredMessageFeaturesMetadata(RequiredMessageFeaturesMetadata requiredMessageFeaturesMetadata) {

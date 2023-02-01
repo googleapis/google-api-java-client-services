@@ -3276,6 +3276,108 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Fetches the opt out status for the automated GA4 setup process for a UA property. Note: this has
+     * no effect on GA4 property.
+     *
+     * Create a request for the method "properties.fetchAutomatedGa4ConfigurationOptOut".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link FetchAutomatedGa4ConfigurationOptOut#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest}
+     * @return the request
+     */
+    public FetchAutomatedGa4ConfigurationOptOut fetchAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest content) throws java.io.IOException {
+      FetchAutomatedGa4ConfigurationOptOut result = new FetchAutomatedGa4ConfigurationOptOut(content);
+      initialize(result);
+      return result;
+    }
+
+    public class FetchAutomatedGa4ConfigurationOptOut extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:fetchAutomatedGa4ConfigurationOptOut";
+
+      /**
+       * Fetches the opt out status for the automated GA4 setup process for a UA property. Note: this
+       * has no effect on GA4 property.
+       *
+       * Create a request for the method "properties.fetchAutomatedGa4ConfigurationOptOut".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link FetchAutomatedGa4ConfigurationOptOut#execute()} method to
+       * invoke the remote operation. <p> {@link FetchAutomatedGa4ConfigurationOptOut#initialize(com.goo
+       * gle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+       * this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest}
+       * @since 1.13
+       */
+      protected FetchAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse.class);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut set$Xgafv(java.lang.String $Xgafv) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setAccessToken(java.lang.String accessToken) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setAlt(java.lang.String alt) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setAlt(alt);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setCallback(java.lang.String callback) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setCallback(callback);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setFields(java.lang.String fields) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setFields(fields);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setKey(java.lang.String key) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setKey(key);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setOauthToken(java.lang.String oauthToken) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setQuotaUser(java.lang.String quotaUser) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setUploadType(java.lang.String uploadType) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public FetchAutomatedGa4ConfigurationOptOut set(String parameterName, Object value) {
+        return (FetchAutomatedGa4ConfigurationOptOut) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lookup for a single "GA4" Property.
      *
      * Create a request for the method "properties.get".
@@ -4423,6 +4525,108 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public RunAccessReport set(String parameterName, Object value) {
         return (RunAccessReport) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the opt out status for the automated GA4 setup process for a UA property. Note: this has no
+     * effect on GA4 property.
+     *
+     * Create a request for the method "properties.setAutomatedGa4ConfigurationOptOut".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link SetAutomatedGa4ConfigurationOptOut#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest}
+     * @return the request
+     */
+    public SetAutomatedGa4ConfigurationOptOut setAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest content) throws java.io.IOException {
+      SetAutomatedGa4ConfigurationOptOut result = new SetAutomatedGa4ConfigurationOptOut(content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetAutomatedGa4ConfigurationOptOut extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:setAutomatedGa4ConfigurationOptOut";
+
+      /**
+       * Sets the opt out status for the automated GA4 setup process for a UA property. Note: this has
+       * no effect on GA4 property.
+       *
+       * Create a request for the method "properties.setAutomatedGa4ConfigurationOptOut".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link SetAutomatedGa4ConfigurationOptOut#execute()} method to
+       * invoke the remote operation. <p> {@link SetAutomatedGa4ConfigurationOptOut#initialize(com.googl
+       * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+       * this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest}
+       * @since 1.13
+       */
+      protected SetAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutResponse.class);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut set$Xgafv(java.lang.String $Xgafv) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setAccessToken(java.lang.String accessToken) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setAlt(java.lang.String alt) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setAlt(alt);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setCallback(java.lang.String callback) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setCallback(callback);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setFields(java.lang.String fields) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setFields(fields);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setKey(java.lang.String key) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setKey(key);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setOauthToken(java.lang.String oauthToken) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setQuotaUser(java.lang.String quotaUser) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setUploadType(java.lang.String uploadType) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetAutomatedGa4ConfigurationOptOut set(String parameterName, Object value) {
+        return (SetAutomatedGa4ConfigurationOptOut) super.set(parameterName, value);
       }
     }
     /**

@@ -45,6 +45,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMe
   private String endTime;
 
   /**
+   * Output only. Statistics for IngestConversations operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMetadataIngestConversationsStats ingestConversationsStats;
+
+  /**
    * Output only. Partial errors during ingest operation that might cause the operation output to be
    * incomplete.
    * The value may be {@code null}.
@@ -90,6 +97,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMe
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics for IngestConversations operation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMetadataIngestConversationsStats getIngestConversationsStats() {
+    return ingestConversationsStats;
+  }
+
+  /**
+   * Output only. Statistics for IngestConversations operation.
+   * @param ingestConversationsStats ingestConversationsStats or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMetadata setIngestConversationsStats(GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMetadataIngestConversationsStats ingestConversationsStats) {
+    this.ingestConversationsStats = ingestConversationsStats;
     return this;
   }
 

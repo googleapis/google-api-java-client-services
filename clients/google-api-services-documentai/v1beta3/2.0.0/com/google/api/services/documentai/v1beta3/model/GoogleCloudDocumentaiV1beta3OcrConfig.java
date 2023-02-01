@@ -31,12 +31,36 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of advanced OCR options to further fine-tune OCR behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> advancedOcrOptions;
+
+  /**
    * Enables special handling for PDFs with existing text information. Results in better text
    * extraction quality in such PDF inputs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableNativePdfParsing;
+
+  /**
+   * A list of advanced OCR options to further fine-tune OCR behavior.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdvancedOcrOptions() {
+    return advancedOcrOptions;
+  }
+
+  /**
+   * A list of advanced OCR options to further fine-tune OCR behavior.
+   * @param advancedOcrOptions advancedOcrOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3OcrConfig setAdvancedOcrOptions(java.util.List<java.lang.String> advancedOcrOptions) {
+    this.advancedOcrOptions = advancedOcrOptions;
+    return this;
+  }
 
   /**
    * Enables special handling for PDFs with existing text information. Results in better text

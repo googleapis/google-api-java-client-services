@@ -2226,6 +2226,174 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
+             * Lists exemplars relevant to a given PromQL query,
+             *
+             * Create a request for the method "v1.query_exemplars".
+             *
+             * This request holds the parameters needed by the monitoring server.  After setting any optional
+             * parameters, call the {@link QueryExemplars#execute()} method to invoke the remote operation.
+             *
+             * @param name The project on which to execute the request. Data associcated with the project's workspace stored
+             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
+             *        request path prefix to distinguish different virtual Prometheus instances of Google
+             *        Prometheus Engine.
+             * @param location Location of the resource information. Has to be "global" now.
+             * @param content the {@link com.google.api.services.monitoring.v1.model.QueryExemplarsRequest}
+             * @return the request
+             */
+            public QueryExemplars queryExemplars(java.lang.String name, java.lang.String location, com.google.api.services.monitoring.v1.model.QueryExemplarsRequest content) throws java.io.IOException {
+              QueryExemplars result = new QueryExemplars(name, location, content);
+              initialize(result);
+              return result;
+            }
+
+            public class QueryExemplars extends MonitoringRequest<com.google.api.services.monitoring.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}/location/{location}/prometheus/api/v1/query_exemplars";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+              /**
+               * Lists exemplars relevant to a given PromQL query,
+               *
+               * Create a request for the method "v1.query_exemplars".
+               *
+               * This request holds the parameters needed by the the monitoring server.  After setting any
+               * optional parameters, call the {@link QueryExemplars#execute()} method to invoke the remote
+               * operation. <p> {@link QueryExemplars#initialize(com.google.api.client.googleapis.services.Abstr
+               * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name The project on which to execute the request. Data associcated with the project's workspace stored
+             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
+             *        request path prefix to distinguish different virtual Prometheus instances of Google
+             *        Prometheus Engine.
+               * @param location Location of the resource information. Has to be "global" now.
+               * @param content the {@link com.google.api.services.monitoring.v1.model.QueryExemplarsRequest}
+               * @since 1.13
+               */
+              protected QueryExemplars(java.lang.String name, java.lang.String location, com.google.api.services.monitoring.v1.model.QueryExemplarsRequest content) {
+                super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+$");
+                }
+                this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+              }
+
+              @Override
+              public QueryExemplars set$Xgafv(java.lang.String $Xgafv) {
+                return (QueryExemplars) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public QueryExemplars setAccessToken(java.lang.String accessToken) {
+                return (QueryExemplars) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public QueryExemplars setAlt(java.lang.String alt) {
+                return (QueryExemplars) super.setAlt(alt);
+              }
+
+              @Override
+              public QueryExemplars setCallback(java.lang.String callback) {
+                return (QueryExemplars) super.setCallback(callback);
+              }
+
+              @Override
+              public QueryExemplars setFields(java.lang.String fields) {
+                return (QueryExemplars) super.setFields(fields);
+              }
+
+              @Override
+              public QueryExemplars setKey(java.lang.String key) {
+                return (QueryExemplars) super.setKey(key);
+              }
+
+              @Override
+              public QueryExemplars setOauthToken(java.lang.String oauthToken) {
+                return (QueryExemplars) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public QueryExemplars setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (QueryExemplars) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public QueryExemplars setQuotaUser(java.lang.String quotaUser) {
+                return (QueryExemplars) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public QueryExemplars setUploadType(java.lang.String uploadType) {
+                return (QueryExemplars) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public QueryExemplars setUploadProtocol(java.lang.String uploadProtocol) {
+                return (QueryExemplars) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The project on which to execute the request. Data associcated with the project's
+               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
+               * source API but used as a request path prefix to distinguish different virtual
+               * Prometheus instances of Google Prometheus Engine.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The project on which to execute the request. Data associcated with the project's workspace stored
+             under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a request path
+             prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * The project on which to execute the request. Data associcated with the project's
+               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
+               * source API but used as a request path prefix to distinguish different virtual
+               * Prometheus instances of Google Prometheus Engine.
+               */
+              public QueryExemplars setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** Location of the resource information. Has to be "global" now. */
+              @com.google.api.client.util.Key
+              private java.lang.String location;
+
+              /** Location of the resource information. Has to be "global" now.
+               */
+              public java.lang.String getLocation() {
+                return location;
+              }
+
+              /** Location of the resource information. Has to be "global" now. */
+              public QueryExemplars setLocation(java.lang.String location) {
+                this.location = location;
+                return this;
+              }
+
+              @Override
+              public QueryExemplars set(String parameterName, Object value) {
+                return (QueryExemplars) super.set(parameterName, value);
+              }
+            }
+            /**
              * Evaluate a PromQL query with start, end time range.
              *
              * Create a request for the method "v1.query_range".

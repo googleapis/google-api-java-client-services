@@ -32,7 +32,7 @@ public final class Criteria extends com.google.api.client.json.GenericJson {
 
   /**
    * The specific AlertPolicy names for the alert that should be snoozed. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID] There is a limit of 100 policies per
+   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID] There is a limit of 16 policies per
    * snooze. This limit is checked during snooze creation.
    * The value may be {@code null}.
    */
@@ -41,7 +41,7 @@ public final class Criteria extends com.google.api.client.json.GenericJson {
 
   /**
    * The specific AlertPolicy names for the alert that should be snoozed. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID] There is a limit of 100 policies per
+   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID] There is a limit of 16 policies per
    * snooze. This limit is checked during snooze creation.
    * @return value or {@code null} for none
    */
@@ -51,7 +51,7 @@ public final class Criteria extends com.google.api.client.json.GenericJson {
 
   /**
    * The specific AlertPolicy names for the alert that should be snoozed. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID] There is a limit of 100 policies per
+   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID] There is a limit of 16 policies per
    * snooze. This limit is checked during snooze creation.
    * @param policies policies or {@code null} for none
    */

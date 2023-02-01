@@ -18,8 +18,8 @@ package com.google.api.services.dataplex.v1.model;
 
 /**
  * DataAccessSpec holds the access control configuration to be enforced on data stored within
- * resources (eg: rows, columns in BigQuery Tables). When associated with data,the data is only
- * accessible to principals explicitly granted access through the DataAttribute. Principals with
+ * resources (eg: rows, columns in BigQuery Tables). When associated with data, the data is only
+ * accessible to principals explicitly granted access through the DataAccessSpec. Principals with
  * access to the containing resource are not implicitly granted access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

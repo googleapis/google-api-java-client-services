@@ -20,7 +20,7 @@ package com.google.api.services.cloudtrace.v2.model;
  * A span represents a single operation within a trace. Spans can be nested to form a trace tree.
  * Often, a trace contains a root span that describes the end-to-end latency, and one or more
  * subspans for its sub-operations. A trace can also contain multiple root spans, or none at all.
- * Spans do not need to be contiguous—there might be gaps or overlaps between spans in a trace.
+ * Spans do not need to be contiguous. There might be gaps or overlaps between spans in a trace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Trace API. For a detailed explanation see:

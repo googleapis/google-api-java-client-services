@@ -75,7 +75,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
 
   /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC format:
+   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC network format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * The value may be {@code null}.
    */
@@ -171,7 +171,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
 
   /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC format:
+   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC network format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * @return value or {@code null} for none
    */
@@ -181,7 +181,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
 
   /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC format:
+   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC network format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * @param resources resources or {@code null} for none
    */

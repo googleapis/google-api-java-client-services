@@ -20,7 +20,7 @@ package com.google.api.services.accesscontextmanager.v1beta;
  * Service definition for AccessContextManager (v1beta).
  *
  * <p>
- * An API for setting attribute based access control to requests to GCP services.
+ * An API for setting attribute based access control to requests to Google Cloud services.
  * </p>
  *
  * <p>

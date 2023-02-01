@@ -21,10 +21,10 @@ package com.google.api.services.accesscontextmanager.v1.model;
  * data amongst themselves, but not export outside of the `ServicePerimeter`. If a request with a
  * source within this `ServicePerimeter` has a target outside of the `ServicePerimeter`, the request
  * will be blocked. Otherwise the request is allowed. There are two types of Service Perimeter -
- * Regular and Bridge. Regular Service Perimeters cannot overlap, a single Google Cloud project can
- * only belong to a single regular Service Perimeter. Service Perimeter Bridges can contain only
- * Google Cloud projects as members, a single Google Cloud project may belong to multiple Service
- * Perimeter Bridges.
+ * Regular and Bridge. Regular Service Perimeters cannot overlap, a single Google Cloud project or
+ * VPC network can only belong to a single regular Service Perimeter. Service Perimeter Bridges can
+ * contain only Google Cloud projects as members, a single Google Cloud project may belong to
+ * multiple Service Perimeter Bridges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -55,8 +55,8 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Perimeter type indicator. A single project is allowed to be a member of single regular
-   * perimeter, but multiple service perimeter bridges. A project cannot be a included in a
+   * Perimeter type indicator. A single project or VPC network is allowed to be a member of single
+   * regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a
    * perimeter bridge without being included in regular perimeter. For perimeter bridges, the
    * restricted service list as well as access level lists must be empty.
    * The value may be {@code null}.
@@ -143,8 +143,8 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Perimeter type indicator. A single project is allowed to be a member of single regular
-   * perimeter, but multiple service perimeter bridges. A project cannot be a included in a
+   * Perimeter type indicator. A single project or VPC network is allowed to be a member of single
+   * regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a
    * perimeter bridge without being included in regular perimeter. For perimeter bridges, the
    * restricted service list as well as access level lists must be empty.
    * @return value or {@code null} for none
@@ -154,8 +154,8 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Perimeter type indicator. A single project is allowed to be a member of single regular
-   * perimeter, but multiple service perimeter bridges. A project cannot be a included in a
+   * Perimeter type indicator. A single project or VPC network is allowed to be a member of single
+   * regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a
    * perimeter bridge without being included in regular perimeter. For perimeter bridges, the
    * restricted service list as well as access level lists must be empty.
    * @param perimeterType perimeterType or {@code null} for none

@@ -47,15 +47,16 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String hashedAccountId;
 
   /**
-   * Optional. The site key that was used to invoke reCAPTCHA on your site and generate the token.
+   * Optional. The site key that was used to invoke reCAPTCHA Enterprise on your site and generate
+   * the token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String siteKey;
 
   /**
-   * Optional. The user response token provided by the reCAPTCHA client-side integration on your
-   * site.
+   * Optional. The user response token provided by the reCAPTCHA Enterprise client-side integration
+   * on your site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +145,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. The site key that was used to invoke reCAPTCHA on your site and generate the token.
+   * Optional. The site key that was used to invoke reCAPTCHA Enterprise on your site and generate
+   * the token.
    * @return value or {@code null} for none
    */
   public java.lang.String getSiteKey() {
@@ -152,7 +154,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. The site key that was used to invoke reCAPTCHA on your site and generate the token.
+   * Optional. The site key that was used to invoke reCAPTCHA Enterprise on your site and generate
+   * the token.
    * @param siteKey siteKey or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setSiteKey(java.lang.String siteKey) {
@@ -161,8 +164,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. The user response token provided by the reCAPTCHA client-side integration on your
-   * site.
+   * Optional. The user response token provided by the reCAPTCHA Enterprise client-side integration
+   * on your site.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -170,8 +173,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. The user response token provided by the reCAPTCHA client-side integration on your
-   * site.
+   * Optional. The user response token provided by the reCAPTCHA Enterprise client-side integration
+   * on your site.
    * @param token token or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setToken(java.lang.String token) {

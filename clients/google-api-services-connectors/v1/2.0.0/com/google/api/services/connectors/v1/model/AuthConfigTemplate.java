@@ -44,6 +44,20 @@ public final class AuthConfigTemplate extends com.google.api.client.json.Generic
   private java.util.List<ConfigVariableTemplate> configVariableTemplates;
 
   /**
+   * Connector specific description for an authentication template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Display name for authentication template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * The type of authentication configured.
    * @return value or {@code null} for none
    */
@@ -74,6 +88,40 @@ public final class AuthConfigTemplate extends com.google.api.client.json.Generic
    */
   public AuthConfigTemplate setConfigVariableTemplates(java.util.List<ConfigVariableTemplate> configVariableTemplates) {
     this.configVariableTemplates = configVariableTemplates;
+    return this;
+  }
+
+  /**
+   * Connector specific description for an authentication template.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Connector specific description for an authentication template.
+   * @param description description or {@code null} for none
+   */
+  public AuthConfigTemplate setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Display name for authentication template.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Display name for authentication template.
+   * @param displayName displayName or {@code null} for none
+   */
+  public AuthConfigTemplate setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

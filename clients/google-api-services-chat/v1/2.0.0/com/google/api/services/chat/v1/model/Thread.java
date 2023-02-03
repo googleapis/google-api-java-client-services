@@ -38,9 +38,9 @@ public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread). For other
-   * requests, this is an output only field.
+   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message thread](htt
+   * ps://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * For other requests, this is an output only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +65,9 @@ public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread). For other
-   * requests, this is an output only field.
+   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message thread](htt
+   * ps://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * For other requests, this is an output only field.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreadKey() {
@@ -76,9 +76,9 @@ public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
-   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread). For other
-   * requests, this is an output only field.
+   * `threadKey` or the thread.name. For example usage, see [Start or reply to a message thread](htt
+   * ps://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * For other requests, this is an output only field.
    * @param threadKey threadKey or {@code null} for none
    */
   public Thread setThreadKey(java.lang.String threadKey) {

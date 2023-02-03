@@ -30,7 +30,9 @@ package com.google.api.services.chat.v1.model;
 public final class CardWithId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Card proto that allows Chat apps to specify UI elements and editable widgets.
+   * Cards support a defined layout, interactive UI elements like buttons, and rich media like
+   * images. Use this card to present detailed information, gather information from users, and guide
+   * users to take a next step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +47,9 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   private java.lang.String cardId;
 
   /**
-   * Card proto that allows Chat apps to specify UI elements and editable widgets.
+   * Cards support a defined layout, interactive UI elements like buttons, and rich media like
+   * images. Use this card to present detailed information, gather information from users, and guide
+   * users to take a next step.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getCard() {
@@ -53,7 +57,9 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Card proto that allows Chat apps to specify UI elements and editable widgets.
+   * Cards support a defined layout, interactive UI elements like buttons, and rich media like
+   * images. Use this card to present detailed information, gather information from users, and guide
+   * users to take a next step.
    * @param card card or {@code null} for none
    */
   public CardWithId setCard(GoogleAppsCardV1Card card) {

@@ -57,7 +57,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String argumentText;
 
   /**
-   * User uploaded attachment.
+   * User-uploaded attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
    * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
-   * Cards are usually displayed below the text-body of a Chat message, but can situationally appear
+   * Cards are usually displayed below the text body of a Chat message, but can situationally appear
    * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
    * `cardId` is a unique identifier among cards in the same message and for identifying user input
    * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
@@ -186,8 +186,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * The thread the message belongs to. For example usage, see [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * The thread the message belongs to. For example usage, see [Start or reply to a message thread](
+   * https://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread
+   * ).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,7 +256,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User uploaded attachment.
+   * User-uploaded attachment.
    * @return value or {@code null} for none
    */
   public java.util.List<Attachment> getAttachment() {
@@ -263,7 +264,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User uploaded attachment.
+   * User-uploaded attachment.
    * @param attachment attachment or {@code null} for none
    */
   public Message setAttachment(java.util.List<Attachment> attachment) {
@@ -295,7 +296,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
    * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
-   * Cards are usually displayed below the text-body of a Chat message, but can situationally appear
+   * Cards are usually displayed below the text body of a Chat message, but can situationally appear
    * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
    * `cardId` is a unique identifier among cards in the same message and for identifying user input
    * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
@@ -309,7 +310,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
    * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
-   * Cards are usually displayed below the text-body of a Chat message, but can situationally appear
+   * Cards are usually displayed below the text body of a Chat message, but can situationally appear
    * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
    * `cardId` is a unique identifier among cards in the same message and for identifying user input
    * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
@@ -516,8 +517,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thread the message belongs to. For example usage, see [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * The thread the message belongs to. For example usage, see [Start or reply to a message thread](
+   * https://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread
+   * ).
    * @return value or {@code null} for none
    */
   public Thread getThread() {
@@ -525,8 +527,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thread the message belongs to. For example usage, see [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * The thread the message belongs to. For example usage, see [Start or reply to a message thread](
+   * https://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread
+   * ).
    * @param thread thread or {@code null} for none
    */
   public Message setThread(Thread thread) {

@@ -1310,16 +1310,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
          * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
-         * example usage, see [Start or reply to a message
-         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+         * example usage, see [Start or reply to a message thread](https://developers.google.com/cha
+         * t/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
         /** Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start or add to a
        thread, create a message and specify a `threadKey` or the thread.name. For example usage, see
-       [Start or reply to a message
-       thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+       [Start or reply to a message thread](https://developers.google.com/chat/api/guides/crudl/messages#s
+       tart_or_reply_to_a_message_thread).
          */
         public java.lang.String getThreadKey() {
           return threadKey;
@@ -1328,8 +1328,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Optional. Deprecated: Use thread.thread_key instead. Opaque thread identifier. To start
          * or add to a thread, create a message and specify a `threadKey` or the thread.name. For
-         * example usage, see [Start or reply to a message
-         * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+         * example usage, see [Start or reply to a message thread](https://developers.google.com/cha
+         * t/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -2121,9 +2121,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       public class Attachments {
 
         /**
-         * Gets the metadata of a message attachment. The attachment data is fetched using the media API.
-         * Requires [service account authentication](https://developers.google.com/chat/api/guides/auth
-         * /service-accounts).
+         * Gets the metadata of a message attachment. The attachment data is fetched using the [media
+         * API](https://developers.google.com/chat/api/reference/rest/v1/media/download). Requires [service
+         * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "attachments.get".
          *
@@ -2147,9 +2147,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+/attachments/[^/]+$");
 
           /**
-           * Gets the metadata of a message attachment. The attachment data is fetched using the media API.
-           * Requires [service account authentication](https://developers.google.com/chat/api/guides/auth
-           * /service-accounts).
+           * Gets the metadata of a message attachment. The attachment data is fetched using the [media
+           * API](https://developers.google.com/chat/api/reference/rest/v1/media/download). Requires
+           * [service account authentication](https://developers.google.com/chat/api/guides/auth/service-
+           * accounts).
            *
            * Create a request for the method "attachments.get".
            *

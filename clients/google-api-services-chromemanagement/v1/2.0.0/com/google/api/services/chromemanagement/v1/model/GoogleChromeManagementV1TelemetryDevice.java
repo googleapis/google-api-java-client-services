@@ -225,6 +225,20 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
+   * Output only. Peripherals reports collected periodically sorted in a decreasing order of
+   * report_time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1PeripheralsReport> peripheralsReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1PeripheralsReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1PeripheralsReport.class);
+  }
+
+  /**
    * Output only. Device serial number. This value is the same as the Admin Console's Serial Number
    * in the ChromeOS Devices tab.
    * The value may be {@code null}.
@@ -566,6 +580,25 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
    */
   public GoogleChromeManagementV1TelemetryDevice setOsUpdateStatus(java.util.List<GoogleChromeManagementV1OsUpdateStatus> osUpdateStatus) {
     this.osUpdateStatus = osUpdateStatus;
+    return this;
+  }
+
+  /**
+   * Output only. Peripherals reports collected periodically sorted in a decreasing order of
+   * report_time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1PeripheralsReport> getPeripheralsReport() {
+    return peripheralsReport;
+  }
+
+  /**
+   * Output only. Peripherals reports collected periodically sorted in a decreasing order of
+   * report_time.
+   * @param peripheralsReport peripheralsReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setPeripheralsReport(java.util.List<GoogleChromeManagementV1PeripheralsReport> peripheralsReport) {
+    this.peripheralsReport = peripheralsReport;
     return this;
   }
 

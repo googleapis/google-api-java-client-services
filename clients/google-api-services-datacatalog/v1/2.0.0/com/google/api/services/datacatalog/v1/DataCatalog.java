@@ -4408,6 +4408,147 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 return (Patch) super.set(parameterName, value);
               }
             }
+            /**
+             * Reconciles tags created with a given tag template on a given Entry. Reconciliation is an
+             * operation that given a list of tags creates or updates them on the entry. Additionally, the
+             * operation is also able to delete tags not mentioned in the tag list. It can be achieved by
+             * setting force_delete_missing parameter. Reconciliation is a long-running operation done in the
+             * background, so this method returns long-running operation resource. The resource can be queried
+             * with Operations.GetOperation which contains metadata and response.
+             *
+             * Create a request for the method "tags.reconcile".
+             *
+             * This request holds the parameters needed by the datacatalog server.  After setting any optional
+             * parameters, call the {@link Reconcile#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of Entry to be tagged.
+             * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ReconcileTagsRequest}
+             * @return the request
+             */
+            public Reconcile reconcile(java.lang.String parent, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ReconcileTagsRequest content) throws java.io.IOException {
+              Reconcile result = new Reconcile(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Reconcile extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+parent}/tags:reconcile";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+
+              /**
+               * Reconciles tags created with a given tag template on a given Entry. Reconciliation is an
+               * operation that given a list of tags creates or updates them on the entry. Additionally, the
+               * operation is also able to delete tags not mentioned in the tag list. It can be achieved by
+               * setting force_delete_missing parameter. Reconciliation is a long-running operation done in the
+               * background, so this method returns long-running operation resource. The resource can be queried
+               * with Operations.GetOperation which contains metadata and response.
+               *
+               * Create a request for the method "tags.reconcile".
+               *
+               * This request holds the parameters needed by the the datacatalog server.  After setting any
+               * optional parameters, call the {@link Reconcile#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Reconcile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of Entry to be tagged.
+               * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ReconcileTagsRequest}
+               * @since 1.13
+               */
+              protected Reconcile(java.lang.String parent, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ReconcileTagsRequest content) {
+                super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+                }
+              }
+
+              @Override
+              public Reconcile set$Xgafv(java.lang.String $Xgafv) {
+                return (Reconcile) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Reconcile setAccessToken(java.lang.String accessToken) {
+                return (Reconcile) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Reconcile setAlt(java.lang.String alt) {
+                return (Reconcile) super.setAlt(alt);
+              }
+
+              @Override
+              public Reconcile setCallback(java.lang.String callback) {
+                return (Reconcile) super.setCallback(callback);
+              }
+
+              @Override
+              public Reconcile setFields(java.lang.String fields) {
+                return (Reconcile) super.setFields(fields);
+              }
+
+              @Override
+              public Reconcile setKey(java.lang.String key) {
+                return (Reconcile) super.setKey(key);
+              }
+
+              @Override
+              public Reconcile setOauthToken(java.lang.String oauthToken) {
+                return (Reconcile) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Reconcile setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Reconcile) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Reconcile setQuotaUser(java.lang.String quotaUser) {
+                return (Reconcile) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Reconcile setUploadType(java.lang.String uploadType) {
+                return (Reconcile) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Reconcile setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Reconcile) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of Entry to be tagged. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of Entry to be tagged.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of Entry to be tagged. */
+              public Reconcile setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Reconcile set(String parameterName, Object value) {
+                return (Reconcile) super.set(parameterName, value);
+              }
+            }
 
           }
         }

@@ -31,6 +31,13 @@ package com.google.api.services.apigeeregistry.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Build info of the Instance if it's in `ACTIVE` state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Build build;
+
+  /**
    * Required. Config of the Instance.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Build info of the Instance if it's in `ACTIVE` state.
+   * @return value or {@code null} for none
+   */
+  public Build getBuild() {
+    return build;
+  }
+
+  /**
+   * Output only. Build info of the Instance if it's in `ACTIVE` state.
+   * @param build build or {@code null} for none
+   */
+  public Instance setBuild(Build build) {
+    this.build = build;
+    return this;
+  }
 
   /**
    * Required. Config of the Instance.

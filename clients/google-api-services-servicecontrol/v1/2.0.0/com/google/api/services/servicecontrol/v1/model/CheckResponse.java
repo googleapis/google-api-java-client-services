@@ -52,6 +52,14 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   private CheckInfo checkInfo;
 
   /**
+   * Esf migration server override during check v2 migration. This is temporary and Chemist internal
+   * only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EsfMigrationServerOverride esfMigrationServerOverride;
+
+  /**
    * The same operation_id value used in the CheckRequest. Used for logging and diagnostics
    * purposes.
    * The value may be {@code null}.
@@ -115,6 +123,25 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
    */
   public CheckResponse setCheckInfo(CheckInfo checkInfo) {
     this.checkInfo = checkInfo;
+    return this;
+  }
+
+  /**
+   * Esf migration server override during check v2 migration. This is temporary and Chemist internal
+   * only.
+   * @return value or {@code null} for none
+   */
+  public EsfMigrationServerOverride getEsfMigrationServerOverride() {
+    return esfMigrationServerOverride;
+  }
+
+  /**
+   * Esf migration server override during check v2 migration. This is temporary and Chemist internal
+   * only.
+   * @param esfMigrationServerOverride esfMigrationServerOverride or {@code null} for none
+   */
+  public CheckResponse setEsfMigrationServerOverride(EsfMigrationServerOverride esfMigrationServerOverride) {
+    this.esfMigrationServerOverride = esfMigrationServerOverride;
     return this;
   }
 

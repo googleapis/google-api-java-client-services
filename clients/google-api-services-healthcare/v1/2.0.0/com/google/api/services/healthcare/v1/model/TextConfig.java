@@ -30,7 +30,8 @@ package com.google.api.services.healthcare.v1.model;
 public final class TextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The transformations to apply to the detected data.
+   * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,8 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transformations to apply to the detected data.
+   * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
+   * instead.
    * @return value or {@code null} for none
    */
   public java.util.List<InfoTypeTransformation> getTransformations() {
@@ -51,7 +53,8 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transformations to apply to the detected data.
+   * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
+   * instead.
    * @param transformations transformations or {@code null} for none
    */
   public TextConfig setTransformations(java.util.List<InfoTypeTransformation> transformations) {

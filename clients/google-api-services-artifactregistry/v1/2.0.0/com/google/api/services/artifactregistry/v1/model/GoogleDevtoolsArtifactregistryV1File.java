@@ -38,6 +38,14 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   private String createTime;
 
   /**
+   * Output only. The time when the last attempt to refresh the file's data was made. Only set when
+   * the repository is remote.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String fetchTime;
+
+  /**
    * The hashes of the file content.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
    */
   public GoogleDevtoolsArtifactregistryV1File setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the last attempt to refresh the file's data was made. Only set when
+   * the repository is remote.
+   * @return value or {@code null} for none
+   */
+  public String getFetchTime() {
+    return fetchTime;
+  }
+
+  /**
+   * Output only. The time when the last attempt to refresh the file's data was made. Only set when
+   * the repository is remote.
+   * @param fetchTime fetchTime or {@code null} for none
+   */
+  public GoogleDevtoolsArtifactregistryV1File setFetchTime(String fetchTime) {
+    this.fetchTime = fetchTime;
     return this;
   }
 

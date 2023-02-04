@@ -610,6 +610,146 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Retrieves the VPCSC Config for the Project.
+       *
+       * Create a request for the method "locations.getVpcscConfig".
+       *
+       * This request holds the parameters needed by the artifactregistry server.  After setting any
+       * optional parameters, call the {@link GetVpcscConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the VPCSCConfig resource.
+       * @return the request
+       */
+      public GetVpcscConfig getVpcscConfig(java.lang.String name) throws java.io.IOException {
+        GetVpcscConfig result = new GetVpcscConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetVpcscConfig extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.VPCSCConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/vpcscConfig$");
+
+        /**
+         * Retrieves the VPCSC Config for the Project.
+         *
+         * Create a request for the method "locations.getVpcscConfig".
+         *
+         * This request holds the parameters needed by the the artifactregistry server.  After setting any
+         * optional parameters, call the {@link GetVpcscConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetVpcscConfig#initialize(com.google.api.client.googleapis.services.Abstr
+         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The name of the VPCSCConfig resource.
+         * @since 1.13
+         */
+        protected GetVpcscConfig(java.lang.String name) {
+          super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.VPCSCConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/vpcscConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetVpcscConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetVpcscConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetVpcscConfig setAccessToken(java.lang.String accessToken) {
+          return (GetVpcscConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetVpcscConfig setAlt(java.lang.String alt) {
+          return (GetVpcscConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetVpcscConfig setCallback(java.lang.String callback) {
+          return (GetVpcscConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetVpcscConfig setFields(java.lang.String fields) {
+          return (GetVpcscConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetVpcscConfig setKey(java.lang.String key) {
+          return (GetVpcscConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetVpcscConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetVpcscConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetVpcscConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetVpcscConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetVpcscConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetVpcscConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetVpcscConfig setUploadType(java.lang.String uploadType) {
+          return (GetVpcscConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetVpcscConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetVpcscConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the VPCSCConfig resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the VPCSCConfig resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the VPCSCConfig resource. */
+        public GetVpcscConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/vpcscConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetVpcscConfig set(String parameterName, Object value) {
+          return (GetVpcscConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -809,6 +949,168 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the VPCSC Config for the Project.
+       *
+       * Create a request for the method "locations.updateVpcscConfig".
+       *
+       * This request holds the parameters needed by the artifactregistry server.  After setting any
+       * optional parameters, call the {@link UpdateVpcscConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name The name of the project's VPC SC Config. Always of the form:
+       *        projects/{projectID}/locations/{location}/vpcscConfig In update request: never set In
+       *        response: always set
+       * @param content the {@link com.google.api.services.artifactregistry.v1.model.VPCSCConfig}
+       * @return the request
+       */
+      public UpdateVpcscConfig updateVpcscConfig(java.lang.String name, com.google.api.services.artifactregistry.v1.model.VPCSCConfig content) throws java.io.IOException {
+        UpdateVpcscConfig result = new UpdateVpcscConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateVpcscConfig extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.VPCSCConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/vpcscConfig$");
+
+        /**
+         * Updates the VPCSC Config for the Project.
+         *
+         * Create a request for the method "locations.updateVpcscConfig".
+         *
+         * This request holds the parameters needed by the the artifactregistry server.  After setting any
+         * optional parameters, call the {@link UpdateVpcscConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateVpcscConfig#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name The name of the project's VPC SC Config. Always of the form:
+       *        projects/{projectID}/locations/{location}/vpcscConfig In update request: never set In
+       *        response: always set
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.VPCSCConfig}
+         * @since 1.13
+         */
+        protected UpdateVpcscConfig(java.lang.String name, com.google.api.services.artifactregistry.v1.model.VPCSCConfig content) {
+          super(ArtifactRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.VPCSCConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/vpcscConfig$");
+          }
+        }
+
+        @Override
+        public UpdateVpcscConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateVpcscConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateVpcscConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateVpcscConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateVpcscConfig setAlt(java.lang.String alt) {
+          return (UpdateVpcscConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateVpcscConfig setCallback(java.lang.String callback) {
+          return (UpdateVpcscConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateVpcscConfig setFields(java.lang.String fields) {
+          return (UpdateVpcscConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateVpcscConfig setKey(java.lang.String key) {
+          return (UpdateVpcscConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateVpcscConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateVpcscConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateVpcscConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateVpcscConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateVpcscConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateVpcscConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateVpcscConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateVpcscConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateVpcscConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateVpcscConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the project's VPC SC Config. Always of the form:
+         * projects/{projectID}/locations/{location}/vpcscConfig In update request: never set In
+         * response: always set
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the project's VPC SC Config. Always of the form:
+       projects/{projectID}/locations/{location}/vpcscConfig In update request: never set In response:
+       always set
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the project's VPC SC Config. Always of the form:
+         * projects/{projectID}/locations/{location}/vpcscConfig In update request: never set In
+         * response: always set
+         */
+        public UpdateVpcscConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/vpcscConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Field mask to support partial updates. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Field mask to support partial updates.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Field mask to support partial updates. */
+        public UpdateVpcscConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateVpcscConfig set(String parameterName, Object value) {
+          return (UpdateVpcscConfig) super.set(parameterName, value);
         }
       }
 

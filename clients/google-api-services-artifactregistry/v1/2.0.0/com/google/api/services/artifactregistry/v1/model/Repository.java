@@ -78,12 +78,26 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private MavenRepositoryConfig mavenConfig;
 
   /**
+   * The mode of the repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * The name of the repository, for example: "projects/p1/locations/us-
    * central1/repositories/repo1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Configuration specific for a Remote Repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoteRepositoryConfig remoteRepositoryConfig;
 
   /**
    * Output only. If set, the repository satisfies physical zone separation.
@@ -106,6 +120,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Configuration specific for a Virtual Repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualRepositoryConfig virtualRepositoryConfig;
 
   /**
    * The time when the repository was created.
@@ -220,6 +241,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The mode of the repository.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * The mode of the repository.
+   * @param mode mode or {@code null} for none
+   */
+  public Repository setMode(java.lang.String mode) {
+    this.mode = mode;
+    return this;
+  }
+
+  /**
    * The name of the repository, for example: "projects/p1/locations/us-
    * central1/repositories/repo1".
    * @return value or {@code null} for none
@@ -235,6 +273,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configuration specific for a Remote Repository.
+   * @return value or {@code null} for none
+   */
+  public RemoteRepositoryConfig getRemoteRepositoryConfig() {
+    return remoteRepositoryConfig;
+  }
+
+  /**
+   * Configuration specific for a Remote Repository.
+   * @param remoteRepositoryConfig remoteRepositoryConfig or {@code null} for none
+   */
+  public Repository setRemoteRepositoryConfig(RemoteRepositoryConfig remoteRepositoryConfig) {
+    this.remoteRepositoryConfig = remoteRepositoryConfig;
     return this;
   }
 
@@ -288,6 +343,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Configuration specific for a Virtual Repository.
+   * @return value or {@code null} for none
+   */
+  public VirtualRepositoryConfig getVirtualRepositoryConfig() {
+    return virtualRepositoryConfig;
+  }
+
+  /**
+   * Configuration specific for a Virtual Repository.
+   * @param virtualRepositoryConfig virtualRepositoryConfig or {@code null} for none
+   */
+  public Repository setVirtualRepositoryConfig(VirtualRepositoryConfig virtualRepositoryConfig) {
+    this.virtualRepositoryConfig = virtualRepositoryConfig;
     return this;
   }
 

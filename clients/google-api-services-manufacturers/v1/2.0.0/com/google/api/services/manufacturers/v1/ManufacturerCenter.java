@@ -154,6 +154,719 @@ public class ManufacturerCenter extends com.google.api.client.googleapis.service
   public class Accounts {
 
     /**
+     * An accessor for creating requests from the Languages collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ManufacturerCenter manufacturers = new ManufacturerCenter(...);}
+     *   {@code ManufacturerCenter.Languages.List request = manufacturers.languages().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Languages languages() {
+      return new Languages();
+    }
+
+    /**
+     * The "languages" collection of methods.
+     */
+    public class Languages {
+
+      /**
+       * An accessor for creating requests from the ProductCertifications collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ManufacturerCenter manufacturers = new ManufacturerCenter(...);}
+       *   {@code ManufacturerCenter.ProductCertifications.List request = manufacturers.productCertifications().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ProductCertifications productCertifications() {
+        return new ProductCertifications();
+      }
+
+      /**
+       * The "productCertifications" collection of methods.
+       */
+      public class ProductCertifications {
+
+        /**
+         * Deletes a product certification by its name. This method can only be called by certification
+         * bodies.
+         *
+         * Create a request for the method "productCertifications.delete".
+         *
+         * This request holds the parameters needed by the manufacturers server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the product certification to delete. Format:
+         *        accounts/{account}/languages/{language_code}/productCertifications/{id}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ManufacturerCenterRequest<com.google.api.services.manufacturers.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+
+          /**
+           * Deletes a product certification by its name. This method can only be called by certification
+           * bodies.
+           *
+           * Create a request for the method "productCertifications.delete".
+           *
+           * This request holds the parameters needed by the the manufacturers server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the product certification to delete. Format:
+         *        accounts/{account}/languages/{language_code}/productCertifications/{id}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(ManufacturerCenter.this, "DELETE", REST_PATH, null, com.google.api.services.manufacturers.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the product certification to delete. Format:
+           * accounts/{account}/languages/{language_code}/productCertifications/{id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the product certification to delete. Format:
+         accounts/{account}/languages/{language_code}/productCertifications/{id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the product certification to delete. Format:
+           * accounts/{account}/languages/{language_code}/productCertifications/{id}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a product certification by its name. This method can only be called by certification bodies.
+         *
+         * Create a request for the method "productCertifications.get".
+         *
+         * This request holds the parameters needed by the manufacturers server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the product certification to get. Format:
+         *        accounts/{account}/languages/{language_code}/productCertifications/{id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ManufacturerCenterRequest<com.google.api.services.manufacturers.v1.model.ProductCertification> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+
+          /**
+           * Gets a product certification by its name. This method can only be called by certification
+           * bodies.
+           *
+           * Create a request for the method "productCertifications.get".
+           *
+           * This request holds the parameters needed by the the manufacturers server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the product certification to get. Format:
+         *        accounts/{account}/languages/{language_code}/productCertifications/{id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ManufacturerCenter.this, "GET", REST_PATH, null, com.google.api.services.manufacturers.v1.model.ProductCertification.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the product certification to get. Format:
+           * accounts/{account}/languages/{language_code}/productCertifications/{id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the product certification to get. Format:
+         accounts/{account}/languages/{language_code}/productCertifications/{id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the product certification to get. Format:
+           * accounts/{account}/languages/{language_code}/productCertifications/{id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists product certifications from a specified certification body. This method can only be called
+         * by certification bodies.
+         *
+         * Create a request for the method "productCertifications.list".
+         *
+         * This request holds the parameters needed by the manufacturers server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of product certifications. Format:
+         *        accounts/{account}/languages/{language_code}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ManufacturerCenterRequest<com.google.api.services.manufacturers.v1.model.ListProductCertificationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/productCertifications";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/languages/[^/]+$");
+
+          /**
+           * Lists product certifications from a specified certification body. This method can only be
+           * called by certification bodies.
+           *
+           * Create a request for the method "productCertifications.list".
+           *
+           * This request holds the parameters needed by the the manufacturers server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of product certifications. Format:
+         *        accounts/{account}/languages/{language_code}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ManufacturerCenter.this, "GET", REST_PATH, null, com.google.api.services.manufacturers.v1.model.ListProductCertificationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of product certifications. Format:
+           * accounts/{account}/languages/{language_code}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of product certifications. Format:
+         accounts/{account}/languages/{language_code}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of product certifications. Format:
+           * accounts/{account}/languages/{language_code}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of product certifications to return. The service may
+           * return fewer than this value. If unspecified, at most 50 product certifications will be
+           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of product certifications to return. The service may return fewer than
+         this value. If unspecified, at most 50 product certifications will be returned. The maximum value
+         is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of product certifications to return. The service may
+           * return fewer than this value. If unspecified, at most 50 product certifications will be
+           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListProductCertifications` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListProductCertifications` must match the call that provided the page
+           * token. Required if requesting the second or higher page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListProductCertifications` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListProductCertifications` must match the call that provided the page token. Required if
+         requesting the second or higher page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListProductCertifications` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListProductCertifications` must match the call that provided the page
+           * token. Required if requesting the second or higher page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates (or creates if allow_missing = true) a product certification which links certifications
+         * with products. This method can only be called by certification bodies.
+         *
+         * Create a request for the method "productCertifications.patch".
+         *
+         * This request holds the parameters needed by the manufacturers server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The unique name identifier of a product certification Format:
+         *        accounts/{account}/languages/{language_code}/productCertifications/{id} Where `id` is a
+         *        some unique identifier and `language_code` is a 2-letter ISO 639-1 code of a Shopping
+         *        supported language according to https://support.google.com/merchants/answer/160637.
+         * @param content the {@link com.google.api.services.manufacturers.v1.model.ProductCertification}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.manufacturers.v1.model.ProductCertification content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ManufacturerCenterRequest<com.google.api.services.manufacturers.v1.model.ProductCertification> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+
+          /**
+           * Updates (or creates if allow_missing = true) a product certification which links certifications
+           * with products. This method can only be called by certification bodies.
+           *
+           * Create a request for the method "productCertifications.patch".
+           *
+           * This request holds the parameters needed by the the manufacturers server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The unique name identifier of a product certification Format:
+         *        accounts/{account}/languages/{language_code}/productCertifications/{id} Where `id` is a
+         *        some unique identifier and `language_code` is a 2-letter ISO 639-1 code of a Shopping
+         *        supported language according to https://support.google.com/merchants/answer/160637.
+           * @param content the {@link com.google.api.services.manufacturers.v1.model.ProductCertification}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.manufacturers.v1.model.ProductCertification content) {
+            super(ManufacturerCenter.this, "PATCH", REST_PATH, content, com.google.api.services.manufacturers.v1.model.ProductCertification.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The unique name identifier of a product certification Format:
+           * accounts/{account}/languages/{language_code}/productCertifications/{id} Where `id` is a
+           * some unique identifier and `language_code` is a 2-letter ISO 639-1 code of a Shopping
+           * supported language according to https://support.google.com/merchants/answer/160637.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The unique name identifier of a product certification Format:
+         accounts/{account}/languages/{language_code}/productCertifications/{id} Where `id` is a some unique
+         identifier and `language_code` is a 2-letter ISO 639-1 code of a Shopping supported language
+         according to https://support.google.com/merchants/answer/160637.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The unique name identifier of a product certification Format:
+           * accounts/{account}/languages/{language_code}/productCertifications/{id} Where `id` is a
+           * some unique identifier and `language_code` is a 2-letter ISO 639-1 code of a Shopping
+           * supported language according to https://support.google.com/merchants/answer/160637.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/languages/[^/]+/productCertifications/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The list of fields to update according to aip.dev/134. However, only full
+           * update is supported as of right now. Therefore, it can be either ignored or set to "*".
+           * Setting any other values will returns UNIMPLEMENTED error.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update according to aip.dev/134. However, only full update is
+         supported as of right now. Therefore, it can be either ignored or set to "*". Setting any other
+         values will returns UNIMPLEMENTED error.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The list of fields to update according to aip.dev/134. However, only full
+           * update is supported as of right now. Therefore, it can be either ignored or set to "*".
+           * Setting any other values will returns UNIMPLEMENTED error.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Products collection.
      *
      * <p>The typical use is:</p>

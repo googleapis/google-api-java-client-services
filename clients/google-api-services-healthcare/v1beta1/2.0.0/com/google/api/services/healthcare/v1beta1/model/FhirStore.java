@@ -113,7 +113,8 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * If non-empty, publish all resource modifications of this FHIR store to this destination. The
    * Pub/Sub message attributes contain a map with a string describing the action that has triggered
-   * the notification. For example, "action":"CreateResource".
+   * the notification. For example, "action":"CreateResource". Deprecated. Use
+   * `notification_configs` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -356,7 +357,8 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * If non-empty, publish all resource modifications of this FHIR store to this destination. The
    * Pub/Sub message attributes contain a map with a string describing the action that has triggered
-   * the notification. For example, "action":"CreateResource".
+   * the notification. For example, "action":"CreateResource". Deprecated. Use
+   * `notification_configs` instead.
    * @return value or {@code null} for none
    */
   public NotificationConfig getNotificationConfig() {
@@ -366,7 +368,8 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * If non-empty, publish all resource modifications of this FHIR store to this destination. The
    * Pub/Sub message attributes contain a map with a string describing the action that has triggered
-   * the notification. For example, "action":"CreateResource".
+   * the notification. For example, "action":"CreateResource". Deprecated. Use
+   * `notification_configs` instead.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {

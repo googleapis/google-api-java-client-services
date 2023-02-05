@@ -38,6 +38,21 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   private java.lang.Long auditIntervalSeconds;
 
   /**
+   * The maximum number of audit violations to be stored in a constraint. If not set, the internal
+   * default (currently 20) will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long constraintViolationLimit;
+
+  /**
+   * Map of deployment configs to deployments (“admission”, “audit”, “mutation”).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, PolicyControllerPolicyControllerDeploymentConfig> deploymentConfigs;
+
+  /**
    * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need
    * to currently exist on the cluster.
    * The value may be {@code null}.
@@ -113,6 +128,42 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
    */
   public PolicyControllerHubConfig setAuditIntervalSeconds(java.lang.Long auditIntervalSeconds) {
     this.auditIntervalSeconds = auditIntervalSeconds;
+    return this;
+  }
+
+  /**
+   * The maximum number of audit violations to be stored in a constraint. If not set, the internal
+   * default (currently 20) will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConstraintViolationLimit() {
+    return constraintViolationLimit;
+  }
+
+  /**
+   * The maximum number of audit violations to be stored in a constraint. If not set, the internal
+   * default (currently 20) will be used.
+   * @param constraintViolationLimit constraintViolationLimit or {@code null} for none
+   */
+  public PolicyControllerHubConfig setConstraintViolationLimit(java.lang.Long constraintViolationLimit) {
+    this.constraintViolationLimit = constraintViolationLimit;
+    return this;
+  }
+
+  /**
+   * Map of deployment configs to deployments (“admission”, “audit”, “mutation”).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, PolicyControllerPolicyControllerDeploymentConfig> getDeploymentConfigs() {
+    return deploymentConfigs;
+  }
+
+  /**
+   * Map of deployment configs to deployments (“admission”, “audit”, “mutation”).
+   * @param deploymentConfigs deploymentConfigs or {@code null} for none
+   */
+  public PolicyControllerHubConfig setDeploymentConfigs(java.util.Map<String, PolicyControllerPolicyControllerDeploymentConfig> deploymentConfigs) {
+    this.deploymentConfigs = deploymentConfigs;
     return this;
   }
 

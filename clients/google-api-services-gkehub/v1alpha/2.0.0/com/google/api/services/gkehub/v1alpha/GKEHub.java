@@ -4100,7 +4100,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent (project and location) where the Memberships will be listed. Specified in the
-         *        format `projects/locations`.
+         *        format `projects/locations`. `projects/locations/-` list memberships in all the regions.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4127,7 +4127,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent (project and location) where the Memberships will be listed. Specified in the
-         *        format `projects/locations`.
+         *        format `projects/locations`. `projects/locations/-` list memberships in all the regions.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4207,13 +4207,14 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent (project and location) where the Memberships will be listed.
-           * Specified in the format `projects/locations`.
+           * Specified in the format `projects/locations`. `projects/locations/-` list memberships
+           * in all the regions.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent (project and location) where the Memberships will be listed. Specified in the
-         format `projects/locations`.
+         format `projects/locations`. `projects/locations/-` list memberships in all the regions.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4221,7 +4222,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent (project and location) where the Memberships will be listed.
-           * Specified in the format `projects/locations`.
+           * Specified in the format `projects/locations`. `projects/locations/-` list memberships
+           * in all the regions.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

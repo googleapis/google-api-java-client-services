@@ -37,6 +37,13 @@ public final class ConfigManagementPolicyControllerState extends com.google.api.
   private ConfigManagementGatekeeperDeploymentState deploymentState;
 
   /**
+   * Record state of ACM -> PoCo Hub migration for this feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigManagementPolicyControllerMigration migration;
+
+  /**
    * The version of Gatekeeper Policy Controller deployed.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class ConfigManagementPolicyControllerState extends com.google.api.
    */
   public ConfigManagementPolicyControllerState setDeploymentState(ConfigManagementGatekeeperDeploymentState deploymentState) {
     this.deploymentState = deploymentState;
+    return this;
+  }
+
+  /**
+   * Record state of ACM -> PoCo Hub migration for this feature.
+   * @return value or {@code null} for none
+   */
+  public ConfigManagementPolicyControllerMigration getMigration() {
+    return migration;
+  }
+
+  /**
+   * Record state of ACM -> PoCo Hub migration for this feature.
+   * @param migration migration or {@code null} for none
+   */
+  public ConfigManagementPolicyControllerState setMigration(ConfigManagementPolicyControllerMigration migration) {
+    this.migration = migration;
     return this;
   }
 

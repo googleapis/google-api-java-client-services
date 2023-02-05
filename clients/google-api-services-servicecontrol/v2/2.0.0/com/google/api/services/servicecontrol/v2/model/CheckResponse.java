@@ -30,6 +30,14 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class CheckResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Esf migration server override during check v2 migration. This is temporary and Chemist internal
+   * only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EsfMigrationServerOverride esfMigrationServerOverride;
+
+  /**
    * Returns a set of request contexts generated from the `CheckRequest`.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private Status status;
+
+  /**
+   * Esf migration server override during check v2 migration. This is temporary and Chemist internal
+   * only.
+   * @return value or {@code null} for none
+   */
+  public EsfMigrationServerOverride getEsfMigrationServerOverride() {
+    return esfMigrationServerOverride;
+  }
+
+  /**
+   * Esf migration server override during check v2 migration. This is temporary and Chemist internal
+   * only.
+   * @param esfMigrationServerOverride esfMigrationServerOverride or {@code null} for none
+   */
+  public CheckResponse setEsfMigrationServerOverride(EsfMigrationServerOverride esfMigrationServerOverride) {
+    this.esfMigrationServerOverride = esfMigrationServerOverride;
+    return this;
+  }
 
   /**
    * Returns a set of request contexts generated from the `CheckRequest`.

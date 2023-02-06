@@ -75,6 +75,14 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
+   * value is only provided if the App is in the `DELETED` state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * The resource name of the AndroidApp, in the format: projects/
    * PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
    * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
@@ -222,6 +230,25 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
    */
   public AndroidApp setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
+   * value is only provided if the App is in the `DELETED` state.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
+   * value is only provided if the App is in the `DELETED` state.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public AndroidApp setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 

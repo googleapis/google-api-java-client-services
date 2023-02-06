@@ -65,6 +65,14 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
+   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
+   * value is only provided if the App is in the `DELETED` state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * The resource name of the Firebase App, in the format: projects/PROJECT_ID /iosApps/APP_ID or
    * projects/PROJECT_ID/androidApps/APP_ID or projects/ PROJECT_ID/webApps/APP_ID
    * The value may be {@code null}.
@@ -172,6 +180,25 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
    */
   public FirebaseAppInfo setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
+   * value is only provided if the App is in the `DELETED` state.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
+   * value is only provided if the App is in the `DELETED` state.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public FirebaseAppInfo setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 

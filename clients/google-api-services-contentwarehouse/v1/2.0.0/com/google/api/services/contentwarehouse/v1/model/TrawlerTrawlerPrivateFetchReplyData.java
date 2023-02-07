@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * This is an optional container of arbitrary data that can be added to a FetchReplyData. This data
  * is meant to be logged, but not sent back in a fetch reply (it should be added *after* the reply
  * is prepared). Use FetchResponsePreparatorImpl::AddTrawlerPrivateDataToFetchReplyData to add. See
- * also the comment in fetch_response_preparator_impl.cc. Next Tag: 43
+ * also the comment in fetch_response_preparator_impl.cc. Next Tag: 44
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -204,6 +204,13 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String authenticationInfo;
+
+  /**
+   * Cache hit for this url, bypassed host_overfull error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bypassedHostOverfull;
 
   /**
    * Corresponds to AcceptableAfterDate field in FetchParams.
@@ -791,6 +798,23 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   public TrawlerTrawlerPrivateFetchReplyData setAuthenticationInfo(java.lang.String authenticationInfo) {
     this.authenticationInfo = authenticationInfo;
+    return this;
+  }
+
+  /**
+   * Cache hit for this url, bypassed host_overfull error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBypassedHostOverfull() {
+    return bypassedHostOverfull;
+  }
+
+  /**
+   * Cache hit for this url, bypassed host_overfull error.
+   * @param bypassedHostOverfull bypassedHostOverfull or {@code null} for none
+   */
+  public TrawlerTrawlerPrivateFetchReplyData setBypassedHostOverfull(java.lang.Boolean bypassedHostOverfull) {
+    this.bypassedHostOverfull = bypassedHostOverfull;
     return this;
   }
 

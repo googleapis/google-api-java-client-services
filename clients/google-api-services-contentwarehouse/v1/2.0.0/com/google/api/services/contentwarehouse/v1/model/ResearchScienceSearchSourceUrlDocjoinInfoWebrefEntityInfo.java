@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * DEPRECATED. See entity_type instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deprecatedEntityType;
+
+  /**
    * The English description of the mid from the KG.
    * The value may be {@code null}.
    */
@@ -41,7 +48,7 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entityType;
+  private java.util.List<java.lang.String> entityCollectionType;
 
   /**
    * HRID of the KG collections
@@ -56,6 +63,23 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
    */
   @com.google.api.client.util.Key
   private java.lang.String mid;
+
+  /**
+   * DEPRECATED. See entity_type instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeprecatedEntityType() {
+    return deprecatedEntityType;
+  }
+
+  /**
+   * DEPRECATED. See entity_type instead.
+   * @param deprecatedEntityType deprecatedEntityType or {@code null} for none
+   */
+  public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setDeprecatedEntityType(java.lang.String deprecatedEntityType) {
+    this.deprecatedEntityType = deprecatedEntityType;
+    return this;
+  }
 
   /**
    * The English description of the mid from the KG.
@@ -77,15 +101,15 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo ext
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntityType() {
-    return entityType;
+  public java.util.List<java.lang.String> getEntityCollectionType() {
+    return entityCollectionType;
   }
 
   /**
-   * @param entityType entityType or {@code null} for none
+   * @param entityCollectionType entityCollectionType or {@code null} for none
    */
-  public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setEntityType(java.lang.String entityType) {
-    this.entityType = entityType;
+  public ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo setEntityCollectionType(java.util.List<java.lang.String> entityCollectionType) {
+    this.entityCollectionType = entityCollectionType;
     return this;
   }
 

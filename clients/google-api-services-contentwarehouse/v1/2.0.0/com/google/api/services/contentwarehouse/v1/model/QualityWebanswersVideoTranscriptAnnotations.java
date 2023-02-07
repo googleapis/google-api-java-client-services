@@ -38,6 +38,13 @@ public final class QualityWebanswersVideoTranscriptAnnotations extends com.googl
   private java.lang.String amarnaDocid;
 
   /**
+   * The results of ASR transcript quality analysis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingVideosAsrTranscriptRepairAnnotation asrRepair;
+
+  /**
    * The language of the transcript as recorded in Amarna.
    * The value may be {@code null}.
    */
@@ -90,6 +97,23 @@ public final class QualityWebanswersVideoTranscriptAnnotations extends com.googl
    */
   public QualityWebanswersVideoTranscriptAnnotations setAmarnaDocid(java.lang.String amarnaDocid) {
     this.amarnaDocid = amarnaDocid;
+    return this;
+  }
+
+  /**
+   * The results of ASR transcript quality analysis.
+   * @return value or {@code null} for none
+   */
+  public IndexingVideosAsrTranscriptRepairAnnotation getAsrRepair() {
+    return asrRepair;
+  }
+
+  /**
+   * The results of ASR transcript quality analysis.
+   * @param asrRepair asrRepair or {@code null} for none
+   */
+  public QualityWebanswersVideoTranscriptAnnotations setAsrRepair(IndexingVideosAsrTranscriptRepairAnnotation asrRepair) {
+    this.asrRepair = asrRepair;
     return this;
   }
 

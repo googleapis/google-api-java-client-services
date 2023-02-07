@@ -21,7 +21,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * message. Each domain should create their own extension for anything that they need to propagate
  * down stream from AQUA. Note that this proto is not the same as the Superroot proto ParsingSignals
  * (http://google3/knowledge/proto/scoring-signals.proto), which is a Superroot-specific signal used
- * in Scoring. Next ID: 5
+ * in Scoring. Next ID: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -41,6 +41,25 @@ public final class KnowledgeAnswersIntentQueryParsingSignals extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Double calibratedParsingScore;
+
+  /**
+   * The total effective length of the spans for the arguments used to construct the parse. May
+   * include vertical specific adjustments. Eg: For the query [delete my 7 p.m. alarm called
+   * chicken] and intent Delete_alarm(alarm_object=RD(category=AlarmObject( label="chicken",
+   * trigger_time_datetime=<< 7 PM >>))), the effective argument span is "7 p.m." + "chicken" (total
+   * length of 13).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float effectiveArgSpanLength;
+
+  /**
+   * This is a cross-intent feature which is calculated by iterating all intent candidates. This
+   * feature should be populated in post-IG stage (before GB).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float inQueryMaxEffectiveArgSpanLength;
 
   /**
    * This proto holds the complete call path info of the QRewrite client (e.g. the QUS's phase like
@@ -83,6 +102,50 @@ public final class KnowledgeAnswersIntentQueryParsingSignals extends com.google.
    */
   public KnowledgeAnswersIntentQueryParsingSignals setCalibratedParsingScore(java.lang.Double calibratedParsingScore) {
     this.calibratedParsingScore = calibratedParsingScore;
+    return this;
+  }
+
+  /**
+   * The total effective length of the spans for the arguments used to construct the parse. May
+   * include vertical specific adjustments. Eg: For the query [delete my 7 p.m. alarm called
+   * chicken] and intent Delete_alarm(alarm_object=RD(category=AlarmObject( label="chicken",
+   * trigger_time_datetime=<< 7 PM >>))), the effective argument span is "7 p.m." + "chicken" (total
+   * length of 13).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getEffectiveArgSpanLength() {
+    return effectiveArgSpanLength;
+  }
+
+  /**
+   * The total effective length of the spans for the arguments used to construct the parse. May
+   * include vertical specific adjustments. Eg: For the query [delete my 7 p.m. alarm called
+   * chicken] and intent Delete_alarm(alarm_object=RD(category=AlarmObject( label="chicken",
+   * trigger_time_datetime=<< 7 PM >>))), the effective argument span is "7 p.m." + "chicken" (total
+   * length of 13).
+   * @param effectiveArgSpanLength effectiveArgSpanLength or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryParsingSignals setEffectiveArgSpanLength(java.lang.Float effectiveArgSpanLength) {
+    this.effectiveArgSpanLength = effectiveArgSpanLength;
+    return this;
+  }
+
+  /**
+   * This is a cross-intent feature which is calculated by iterating all intent candidates. This
+   * feature should be populated in post-IG stage (before GB).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getInQueryMaxEffectiveArgSpanLength() {
+    return inQueryMaxEffectiveArgSpanLength;
+  }
+
+  /**
+   * This is a cross-intent feature which is calculated by iterating all intent candidates. This
+   * feature should be populated in post-IG stage (before GB).
+   * @param inQueryMaxEffectiveArgSpanLength inQueryMaxEffectiveArgSpanLength or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryParsingSignals setInQueryMaxEffectiveArgSpanLength(java.lang.Float inQueryMaxEffectiveArgSpanLength) {
+    this.inQueryMaxEffectiveArgSpanLength = inQueryMaxEffectiveArgSpanLength;
     return this;
   }
 

@@ -107,7 +107,7 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   private java.lang.String nonDisplayableCurrency;
 
   /**
-   * Normalized riskiness score for Organic destinations. It's in range [0,1000] with 0 being the
+   * Normalized riskiness score for Organic destinations. It's in range [1,1000] with 1 being the
    * worst score and 1000 being the best.
    * The value may be {@code null}.
    */
@@ -318,7 +318,7 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   }
 
   /**
-   * Normalized riskiness score for Organic destinations. It's in range [0,1000] with 0 being the
+   * Normalized riskiness score for Organic destinations. It's in range [1,1000] with 1 being the
    * worst score and 1000 being the best.
    * @return value or {@code null} for none
    */
@@ -327,7 +327,7 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   }
 
   /**
-   * Normalized riskiness score for Organic destinations. It's in range [0,1000] with 0 being the
+   * Normalized riskiness score for Organic destinations. It's in range [1,1000] with 1 being the
    * worst score and 1000 being the best.
    * @param nonDisplayableOrganicScoreMillis nonDisplayableOrganicScoreMillis or {@code null} for none
    */

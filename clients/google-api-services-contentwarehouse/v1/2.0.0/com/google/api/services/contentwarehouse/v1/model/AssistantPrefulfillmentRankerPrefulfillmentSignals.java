@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 36
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 39
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -53,6 +53,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double calibratedParsingScore;
 
   /**
+   * Whether the intent is dominant according to NSP deep-media.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deepMediaDominant;
+
+  /**
    * Indicates interpretation dominance predicted by KScorer
    * The value may be {@code null}.
    */
@@ -69,6 +76,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float effectiveArgSpanLength;
+
+  /**
+   * Whether this is a fulfillable, dominant Media intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fulfillableDominantMedia;
 
   /**
    * Grounding Signals. Score indicating how grounded the intent is, populated by the Grounding Box.
@@ -132,6 +146,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Integer kscorerRank;
+
+  /**
+   * Learn and adapt(go/laa) related features. Design doc: go/laa-profile-signal-for-grounding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantGroundingRankerLaaFeatures laaFeatures;
 
   /**
    * This feature is always false / no-op in serving time. In training time, this feature may be set
@@ -305,6 +326,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Whether the intent is dominant according to NSP deep-media.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeepMediaDominant() {
+    return deepMediaDominant;
+  }
+
+  /**
+   * Whether the intent is dominant according to NSP deep-media.
+   * @param deepMediaDominant deepMediaDominant or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setDeepMediaDominant(java.lang.Boolean deepMediaDominant) {
+    this.deepMediaDominant = deepMediaDominant;
+    return this;
+  }
+
+  /**
    * Indicates interpretation dominance predicted by KScorer
    * @return value or {@code null} for none
    */
@@ -343,6 +381,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setEffectiveArgSpanLength(java.lang.Float effectiveArgSpanLength) {
     this.effectiveArgSpanLength = effectiveArgSpanLength;
+    return this;
+  }
+
+  /**
+   * Whether this is a fulfillable, dominant Media intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFulfillableDominantMedia() {
+    return fulfillableDominantMedia;
+  }
+
+  /**
+   * Whether this is a fulfillable, dominant Media intent.
+   * @param fulfillableDominantMedia fulfillableDominantMedia or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setFulfillableDominantMedia(java.lang.Boolean fulfillableDominantMedia) {
+    this.fulfillableDominantMedia = fulfillableDominantMedia;
     return this;
   }
 
@@ -493,6 +548,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setKscorerRank(java.lang.Integer kscorerRank) {
     this.kscorerRank = kscorerRank;
+    return this;
+  }
+
+  /**
+   * Learn and adapt(go/laa) related features. Design doc: go/laa-profile-signal-for-grounding.
+   * @return value or {@code null} for none
+   */
+  public AssistantGroundingRankerLaaFeatures getLaaFeatures() {
+    return laaFeatures;
+  }
+
+  /**
+   * Learn and adapt(go/laa) related features. Design doc: go/laa-profile-signal-for-grounding.
+   * @param laaFeatures laaFeatures or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setLaaFeatures(AssistantGroundingRankerLaaFeatures laaFeatures) {
+    this.laaFeatures = laaFeatures;
     return this;
   }
 

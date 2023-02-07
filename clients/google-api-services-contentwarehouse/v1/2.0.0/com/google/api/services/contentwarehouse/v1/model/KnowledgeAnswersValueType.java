@@ -77,8 +77,7 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
   private KnowledgeAnswersDateType dateType;
 
   /**
-   * Work in progress: Used for configuring dynamic types to allow for type transparency. See: go
-   * /type-dependencies
+   * Used for configuring dynamic types to allow for type transparency. See: go/type-dependencies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,13 +152,6 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersSemanticType semanticType;
-
-  /**
-   * DEPRECATED: see go/type-dependencies. Please reach out to suwu@, dqwang@ if usage is required.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String slotName;
 
   /**
    * The value may be {@code null}.
@@ -298,8 +290,7 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
   }
 
   /**
-   * Work in progress: Used for configuring dynamic types to allow for type transparency. See: go
-   * /type-dependencies
+   * Used for configuring dynamic types to allow for type transparency. See: go/type-dependencies
    * @return value or {@code null} for none
    */
   public KnowledgeAnswersDependencyType getDependencyType() {
@@ -307,8 +298,7 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
   }
 
   /**
-   * Work in progress: Used for configuring dynamic types to allow for type transparency. See: go
-   * /type-dependencies
+   * Used for configuring dynamic types to allow for type transparency. See: go/type-dependencies
    * @param dependencyType dependencyType or {@code null} for none
    */
   public KnowledgeAnswersValueType setDependencyType(KnowledgeAnswersDependencyType dependencyType) {
@@ -486,23 +476,6 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   public KnowledgeAnswersValueType setSemanticType(KnowledgeAnswersSemanticType semanticType) {
     this.semanticType = semanticType;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: see go/type-dependencies. Please reach out to suwu@, dqwang@ if usage is required.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSlotName() {
-    return slotName;
-  }
-
-  /**
-   * DEPRECATED: see go/type-dependencies. Please reach out to suwu@, dqwang@ if usage is required.
-   * @param slotName slotName or {@code null} for none
-   */
-  public KnowledgeAnswersValueType setSlotName(java.lang.String slotName) {
-    this.slotName = slotName;
     return this;
   }
 

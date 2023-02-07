@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Intended to be simpler to work with than the ExportedStanza it's derived from See documentation: 
  * https://g3doc.corp.google.com/company/teams/youtube/community_intelligence/eng_resources/data_sou
- * rces.md#ministanza Next available: 76
+ * rces.md#ministanza Next available: 77
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -374,6 +374,14 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private YoutubeCommentsSentimentSentiment sentiment;
+
+  /**
+   * Associated Short Reply video ID if the comment represents a Short Reply. See go/yt-comment-
+   * sticker-m2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortReplyVideoId;
 
   /**
    * Smart replies for this comment. Keyed by model names.
@@ -1344,6 +1352,25 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setSentiment(YoutubeCommentsSentimentSentiment sentiment) {
     this.sentiment = sentiment;
+    return this;
+  }
+
+  /**
+   * Associated Short Reply video ID if the comment represents a Short Reply. See go/yt-comment-
+   * sticker-m2.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortReplyVideoId() {
+    return shortReplyVideoId;
+  }
+
+  /**
+   * Associated Short Reply video ID if the comment represents a Short Reply. See go/yt-comment-
+   * sticker-m2.
+   * @param shortReplyVideoId shortReplyVideoId or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setShortReplyVideoId(java.lang.String shortReplyVideoId) {
+    this.shortReplyVideoId = shortReplyVideoId;
     return this;
   }
 

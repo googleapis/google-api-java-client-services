@@ -39,8 +39,8 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
   private java.lang.String inputPath;
 
   /**
-   * The Document schema resource name. All documents processed by this processor will use this
-   * schema. Format:
+   * The Document Warehouse schema resource name. All documents processed by this pipeline will use
+   * this schema. Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
    * The value may be {@code null}.
    */
@@ -67,8 +67,8 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
   }
 
   /**
-   * The Document schema resource name. All documents processed by this processor will use this
-   * schema. Format:
+   * The Document Warehouse schema resource name. All documents processed by this pipeline will use
+   * this schema. Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
    * @return value or {@code null} for none
    */
@@ -77,8 +77,8 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
   }
 
   /**
-   * The Document schema resource name. All documents processed by this processor will use this
-   * schema. Format:
+   * The Document Warehouse schema resource name. All documents processed by this pipeline will use
+   * this schema. Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
    * @param schemaName schemaName or {@code null} for none
    */

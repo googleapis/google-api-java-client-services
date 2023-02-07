@@ -135,6 +135,13 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
   private java.lang.String retrievalImportance;
 
   /**
+   * The mapping information between this property to another schema source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource> schemaSources;
+
+  /**
    * Text/string property.
    * The value may be {@code null}.
    */
@@ -395,6 +402,23 @@ public final class GoogleCloudContentwarehouseV1PropertyDefinition extends com.g
    */
   public GoogleCloudContentwarehouseV1PropertyDefinition setRetrievalImportance(java.lang.String retrievalImportance) {
     this.retrievalImportance = retrievalImportance;
+    return this;
+  }
+
+  /**
+   * The mapping information between this property to another schema source.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource> getSchemaSources() {
+    return schemaSources;
+  }
+
+  /**
+   * The mapping information between this property to another schema source.
+   * @param schemaSources schemaSources or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1PropertyDefinition setSchemaSources(java.util.List<GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource> schemaSources) {
+    this.schemaSources = schemaSources;
     return this;
   }
 

@@ -50,19 +50,22 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.google.api.client.json.GenericJson {
 
   /**
+   * Only supported for PROFILE/DOMAIN_PROFILE/ACCOUNT container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod ageDisableGracePeriod;
 
   /**
-   * Whether the user has opted in to display their birthday via photo decorations.
+   * Whether the user has opted in to display their birthday via photo decorations. Only supported
+   * for PROFILE/DOMAIN_PROFILE container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SocialGraphApiProtoBirthdayDecoration birthdayDecoration;
 
   /**
+   * Only supported for PROFILE/DOMAIN_PROFILE/ACCOUNT container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +128,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   private AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata metadata;
 
   /**
-   * People Prompts settings for contact birthday data.
+   * People Prompts settings for contact birthday data. Only supported for CONTACT container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,6 +142,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   private java.lang.String value;
 
   /**
+   * Only supported for PROFILE/DOMAIN_PROFILE/ACCOUNT container.
    * @return value or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod getAgeDisableGracePeriod() {
@@ -146,6 +150,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
+   * Only supported for PROFILE/DOMAIN_PROFILE/ACCOUNT container.
    * @param ageDisableGracePeriod ageDisableGracePeriod or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiBirthday setAgeDisableGracePeriod(AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod ageDisableGracePeriod) {
@@ -154,7 +159,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
-   * Whether the user has opted in to display their birthday via photo decorations.
+   * Whether the user has opted in to display their birthday via photo decorations. Only supported
+   * for PROFILE/DOMAIN_PROFILE container.
    * @return value or {@code null} for none
    */
   public SocialGraphApiProtoBirthdayDecoration getBirthdayDecoration() {
@@ -162,7 +168,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
-   * Whether the user has opted in to display their birthday via photo decorations.
+   * Whether the user has opted in to display their birthday via photo decorations. Only supported
+   * for PROFILE/DOMAIN_PROFILE container.
    * @param birthdayDecoration birthdayDecoration or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiBirthday setBirthdayDecoration(SocialGraphApiProtoBirthdayDecoration birthdayDecoration) {
@@ -171,6 +178,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
+   * Only supported for PROFILE/DOMAIN_PROFILE/ACCOUNT container.
    * @return value or {@code null} for none
    */
   public java.lang.String getBirthdayResolution() {
@@ -178,6 +186,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
+   * Only supported for PROFILE/DOMAIN_PROFILE/ACCOUNT container.
    * @param birthdayResolution birthdayResolution or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiBirthday setBirthdayResolution(java.lang.String birthdayResolution) {
@@ -310,7 +319,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
-   * People Prompts settings for contact birthday data.
+   * People Prompts settings for contact birthday data. Only supported for CONTACT container.
    * @return value or {@code null} for none
    */
   public SocialGraphApiProtoPrompt getPrompt() {
@@ -318,7 +327,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiBirthday extends com.googl
   }
 
   /**
-   * People Prompts settings for contact birthday data.
+   * People Prompts settings for contact birthday data. Only supported for CONTACT container.
    * @param prompt prompt or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiBirthday setPrompt(SocialGraphApiProtoPrompt prompt) {

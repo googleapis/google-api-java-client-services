@@ -154,6 +154,110 @@ public class ChromeUXReport extends com.google.api.client.googleapis.services.js
   public class Records {
 
     /**
+     * Queries the Chrome User Experience Report for a timeseries `history record` for a given site.
+     * Returns a `history record` that contains one or more `metric timeseries` corresponding to
+     * performance data about the requested site.
+     *
+     * Create a request for the method "records.queryHistoryRecord".
+     *
+     * This request holds the parameters needed by the chromeuxreport server.  After setting any
+     * optional parameters, call the {@link QueryHistoryRecord#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.chromeuxreport.v1.model.QueryHistoryRequest}
+     * @return the request
+     */
+    public QueryHistoryRecord queryHistoryRecord(com.google.api.services.chromeuxreport.v1.model.QueryHistoryRequest content) throws java.io.IOException {
+      QueryHistoryRecord result = new QueryHistoryRecord(content);
+      initialize(result);
+      return result;
+    }
+
+    public class QueryHistoryRecord extends ChromeUXReportRequest<com.google.api.services.chromeuxreport.v1.model.QueryHistoryResponse> {
+
+      private static final String REST_PATH = "v1/records:queryHistoryRecord";
+
+      /**
+       * Queries the Chrome User Experience Report for a timeseries `history record` for a given site.
+       * Returns a `history record` that contains one or more `metric timeseries` corresponding to
+       * performance data about the requested site.
+       *
+       * Create a request for the method "records.queryHistoryRecord".
+       *
+       * This request holds the parameters needed by the the chromeuxreport server.  After setting any
+       * optional parameters, call the {@link QueryHistoryRecord#execute()} method to invoke the remote
+       * operation. <p> {@link QueryHistoryRecord#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.chromeuxreport.v1.model.QueryHistoryRequest}
+       * @since 1.13
+       */
+      protected QueryHistoryRecord(com.google.api.services.chromeuxreport.v1.model.QueryHistoryRequest content) {
+        super(ChromeUXReport.this, "POST", REST_PATH, content, com.google.api.services.chromeuxreport.v1.model.QueryHistoryResponse.class);
+      }
+
+      @Override
+      public QueryHistoryRecord set$Xgafv(java.lang.String $Xgafv) {
+        return (QueryHistoryRecord) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public QueryHistoryRecord setAccessToken(java.lang.String accessToken) {
+        return (QueryHistoryRecord) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public QueryHistoryRecord setAlt(java.lang.String alt) {
+        return (QueryHistoryRecord) super.setAlt(alt);
+      }
+
+      @Override
+      public QueryHistoryRecord setCallback(java.lang.String callback) {
+        return (QueryHistoryRecord) super.setCallback(callback);
+      }
+
+      @Override
+      public QueryHistoryRecord setFields(java.lang.String fields) {
+        return (QueryHistoryRecord) super.setFields(fields);
+      }
+
+      @Override
+      public QueryHistoryRecord setKey(java.lang.String key) {
+        return (QueryHistoryRecord) super.setKey(key);
+      }
+
+      @Override
+      public QueryHistoryRecord setOauthToken(java.lang.String oauthToken) {
+        return (QueryHistoryRecord) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public QueryHistoryRecord setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (QueryHistoryRecord) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public QueryHistoryRecord setQuotaUser(java.lang.String quotaUser) {
+        return (QueryHistoryRecord) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public QueryHistoryRecord setUploadType(java.lang.String uploadType) {
+        return (QueryHistoryRecord) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public QueryHistoryRecord setUploadProtocol(java.lang.String uploadProtocol) {
+        return (QueryHistoryRecord) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public QueryHistoryRecord set(String parameterName, Object value) {
+        return (QueryHistoryRecord) super.set(parameterName, value);
+      }
+    }
+    /**
      * Queries the Chrome User Experience for a single `record` for a given site. Returns a `record`
      * that contains one or more `metrics` corresponding to performance data about the requested site.
      *

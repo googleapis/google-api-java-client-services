@@ -1354,6 +1354,1408 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     }
 
     /**
+     * An accessor for creating requests from the AccessBindings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.AccessBindings.List request = analyticsadmin.accessBindings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AccessBindings accessBindings() {
+      return new AccessBindings();
+    }
+
+    /**
+     * The "accessBindings" collection of methods.
+     */
+    public class AccessBindings {
+
+      /**
+       * Creates information about multiple access bindings to an account or property. This method is
+       * transactional. If any AccessBinding cannot be created, none of the AccessBindings will be
+       * created.
+       *
+       * Create a request for the method "accessBindings.batchCreate".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest}
+       * @return the request
+       */
+      public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest content) throws java.io.IOException {
+        BatchCreate result = new BatchCreate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchCreate extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchCreate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Creates information about multiple access bindings to an account or property. This method is
+         * transactional. If any AccessBinding cannot be created, none of the AccessBindings will be
+         * created.
+         *
+         * Create a request for the method "accessBindings.batchCreate".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest}
+         * @since 1.13
+         */
+        protected BatchCreate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchCreate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchCreate setAccessToken(java.lang.String accessToken) {
+          return (BatchCreate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchCreate setAlt(java.lang.String alt) {
+          return (BatchCreate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchCreate setCallback(java.lang.String callback) {
+          return (BatchCreate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchCreate setFields(java.lang.String fields) {
+          return (BatchCreate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchCreate setKey(java.lang.String key) {
+          return (BatchCreate) super.setKey(key);
+        }
+
+        @Override
+        public BatchCreate setOauthToken(java.lang.String oauthToken) {
+          return (BatchCreate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchCreate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchCreate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchCreate setUploadType(java.lang.String uploadType) {
+          return (BatchCreate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent field in the
+       CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchCreate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchCreate set(String parameterName, Object value) {
+          return (BatchCreate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes information about multiple users' links to an account or property.
+       *
+       * Create a request for the method "accessBindings.batchDelete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
+       * @return the request
+       */
+      public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest content) throws java.io.IOException {
+        BatchDelete result = new BatchDelete(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchDelete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchDelete";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Deletes information about multiple users' links to an account or property.
+         *
+         * Create a request for the method "accessBindings.batchDelete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
+         * @since 1.13
+         */
+        protected BatchDelete(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchDelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchDelete setAccessToken(java.lang.String accessToken) {
+          return (BatchDelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchDelete setAlt(java.lang.String alt) {
+          return (BatchDelete) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchDelete setCallback(java.lang.String callback) {
+          return (BatchDelete) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchDelete setFields(java.lang.String fields) {
+          return (BatchDelete) super.setFields(fields);
+        }
+
+        @Override
+        public BatchDelete setKey(java.lang.String key) {
+          return (BatchDelete) super.setKey(key);
+        }
+
+        @Override
+        public BatchDelete setOauthToken(java.lang.String oauthToken) {
+          return (BatchDelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchDelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+          return (BatchDelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchDelete setUploadType(java.lang.String uploadType) {
+          return (BatchDelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent field in the
+       DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+       accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchDelete setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchDelete set(String parameterName, Object value) {
+          return (BatchDelete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets information about multiple access bindings to an account or property.
+       *
+       * Create a request for the method "accessBindings.batchGet".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field must match this field. Formats: - accounts/{account} -
+       *        properties/{property}
+       * @return the request
+       */
+      public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+        BatchGet result = new BatchGet(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchGet extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchGet";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Gets information about multiple access bindings to an account or property.
+         *
+         * Create a request for the method "accessBindings.batchGet".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field must match this field. Formats: - accounts/{account} -
+       *        properties/{property}
+         * @since 1.13
+         */
+        protected BatchGet(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchGet) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchGet setAccessToken(java.lang.String accessToken) {
+          return (BatchGet) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchGet setAlt(java.lang.String alt) {
+          return (BatchGet) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchGet setCallback(java.lang.String callback) {
+          return (BatchGet) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchGet setFields(java.lang.String fields) {
+          return (BatchGet) super.setFields(fields);
+        }
+
+        @Override
+        public BatchGet setKey(java.lang.String key) {
+          return (BatchGet) super.setKey(key);
+        }
+
+        @Override
+        public BatchGet setOauthToken(java.lang.String oauthToken) {
+          return (BatchGet) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchGet) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchGet setQuotaUser(java.lang.String quotaUser) {
+          return (BatchGet) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchGet setUploadType(java.lang.String uploadType) {
+          return (BatchGet) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchGet) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field must match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent of all provided values
+       for the 'names' field must match this field. Formats: - accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field must match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchGet setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The names of the access bindings to retrieve. A maximum of 1000 access bindings
+         * can be retrieved in a batch. Formats: - accounts/{account}/accessBindings/{accessBinding}
+         * - properties/{property}/accessBindings/{accessBinding}
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> names;
+
+        /** Required. The names of the access bindings to retrieve. A maximum of 1000 access bindings can be
+       retrieved in a batch. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       properties/{property}/accessBindings/{accessBinding}
+         */
+        public java.util.List<java.lang.String> getNames() {
+          return names;
+        }
+
+        /**
+         * Required. The names of the access bindings to retrieve. A maximum of 1000 access bindings
+         * can be retrieved in a batch. Formats: - accounts/{account}/accessBindings/{accessBinding}
+         * - properties/{property}/accessBindings/{accessBinding}
+         */
+        public BatchGet setNames(java.util.List<java.lang.String> names) {
+          this.names = names;
+          return this;
+        }
+
+        @Override
+        public BatchGet set(String parameterName, Object value) {
+          return (BatchGet) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates information about multiple access bindings to an account or property.
+       *
+       * Create a request for the method "accessBindings.batchUpdate".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
+       * @return the request
+       */
+      public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest content) throws java.io.IOException {
+        BatchUpdate result = new BatchUpdate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchUpdate extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchUpdate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Updates information about multiple access bindings to an account or property.
+         *
+         * Create a request for the method "accessBindings.batchUpdate".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
+         * @since 1.13
+         */
+        protected BatchUpdate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchUpdate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchUpdate setAccessToken(java.lang.String accessToken) {
+          return (BatchUpdate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchUpdate setAlt(java.lang.String alt) {
+          return (BatchUpdate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchUpdate setCallback(java.lang.String callback) {
+          return (BatchUpdate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchUpdate setFields(java.lang.String fields) {
+          return (BatchUpdate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchUpdate setKey(java.lang.String key) {
+          return (BatchUpdate) super.setKey(key);
+        }
+
+        @Override
+        public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+          return (BatchUpdate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchUpdate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchUpdate setUploadType(java.lang.String uploadType) {
+          return (BatchUpdate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent field in the
+       UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchUpdate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchUpdate set(String parameterName, Object value) {
+          return (BatchUpdate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates an access binding on an account or property.
+       *
+       * Create a request for the method "accessBindings.create".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Formats: - accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Creates an access binding on an account or property.
+         *
+         * Create a request for the method "accessBindings.create".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Formats: - accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Formats: - accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an access binding on an account or property.
+       *
+       * Create a request for the method "accessBindings.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/accessBindings/[^/]+$");
+
+        /**
+         * Deletes an access binding on an account or property.
+         *
+         * Create a request for the method "accessBindings.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/accessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       properties/{property}/accessBindings/{accessBinding}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/accessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets information about an access binding.
+       *
+       * Create a request for the method "accessBindings.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the access binding to retrieve. Formats: -
+       *        accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/accessBindings/[^/]+$");
+
+        /**
+         * Gets information about an access binding.
+         *
+         * Create a request for the method "accessBindings.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the access binding to retrieve. Formats: -
+       *        accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/accessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the access binding to retrieve. Formats: -
+         * accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the access binding to retrieve. Formats: -
+       accounts/{account}/accessBindings/{accessBinding} -
+       properties/{property}/accessBindings/{accessBinding}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the access binding to retrieve. Formats: -
+         * accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/accessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all access bindings on an account or property.
+       *
+       * Create a request for the method "accessBindings.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Formats: - accounts/{account} - properties/{property}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Lists all access bindings on an account or property.
+         *
+         * Create a request for the method "accessBindings.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Formats: - accounts/{account} - properties/{property}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Formats: - accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of access bindings to return. The service may return fewer than this
+         * value. If unspecified, at most 200 access bindings will be returned. The maximum value is
+         * 500; values above 500 will be coerced to 500.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of access bindings to return. The service may return fewer than this value. If
+       unspecified, at most 200 access bindings will be returned. The maximum value is 500; values above
+       500 will be coerced to 500.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of access bindings to return. The service may return fewer than this
+         * value. If unspecified, at most 200 access bindings will be returned. The maximum value is
+         * 500; values above 500 will be coerced to 500.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListAccessBindings` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAccessBindings` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListAccessBindings` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListAccessBindings` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListAccessBindings` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAccessBindings` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an access binding on an account or property.
+       *
+       * Create a request for the method "accessBindings.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this binding. Format:
+       *        accounts/{account}/accessBindings/{access_binding} or
+       *        properties/{property}/accessBindings/{access_binding} Example:
+       *        "accounts/100/accessBindings/200"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/accessBindings/[^/]+$");
+
+        /**
+         * Updates an access binding on an account or property.
+         *
+         * Create a request for the method "accessBindings.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this binding. Format:
+       *        accounts/{account}/accessBindings/{access_binding} or
+       *        properties/{property}/accessBindings/{access_binding} Example:
+       *        "accounts/100/accessBindings/200"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/accessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this binding. Format:
+         * accounts/{account}/accessBindings/{access_binding} or
+         * properties/{property}/accessBindings/{access_binding} Example:
+         * "accounts/100/accessBindings/200"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this binding. Format:
+       accounts/{account}/accessBindings/{access_binding} or
+       properties/{property}/accessBindings/{access_binding} Example: "accounts/100/accessBindings/200"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this binding. Format:
+         * accounts/{account}/accessBindings/{access_binding} or
+         * properties/{property}/accessBindings/{access_binding} Example:
+         * "accounts/100/accessBindings/200"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/accessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the UserLinks collection.
      *
      * <p>The typical use is:</p>
@@ -5135,6 +6537,1408 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
 
+    /**
+     * An accessor for creating requests from the AccessBindings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.AccessBindings.List request = analyticsadmin.accessBindings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AccessBindings accessBindings() {
+      return new AccessBindings();
+    }
+
+    /**
+     * The "accessBindings" collection of methods.
+     */
+    public class AccessBindings {
+
+      /**
+       * Creates information about multiple access bindings to an account or property. This method is
+       * transactional. If any AccessBinding cannot be created, none of the AccessBindings will be
+       * created.
+       *
+       * Create a request for the method "accessBindings.batchCreate".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest}
+       * @return the request
+       */
+      public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest content) throws java.io.IOException {
+        BatchCreate result = new BatchCreate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchCreate extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchCreate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates information about multiple access bindings to an account or property. This method is
+         * transactional. If any AccessBinding cannot be created, none of the AccessBindings will be
+         * created.
+         *
+         * Create a request for the method "accessBindings.batchCreate".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest}
+         * @since 1.13
+         */
+        protected BatchCreate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequest content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchCreateAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchCreate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchCreate setAccessToken(java.lang.String accessToken) {
+          return (BatchCreate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchCreate setAlt(java.lang.String alt) {
+          return (BatchCreate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchCreate setCallback(java.lang.String callback) {
+          return (BatchCreate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchCreate setFields(java.lang.String fields) {
+          return (BatchCreate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchCreate setKey(java.lang.String key) {
+          return (BatchCreate) super.setKey(key);
+        }
+
+        @Override
+        public BatchCreate setOauthToken(java.lang.String oauthToken) {
+          return (BatchCreate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchCreate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchCreate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchCreate setUploadType(java.lang.String uploadType) {
+          return (BatchCreate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent field in the
+       CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * CreateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchCreate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchCreate set(String parameterName, Object value) {
+          return (BatchCreate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes information about multiple users' links to an account or property.
+       *
+       * Create a request for the method "accessBindings.batchDelete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
+       * @return the request
+       */
+      public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest content) throws java.io.IOException {
+        BatchDelete result = new BatchDelete(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchDelete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchDelete";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Deletes information about multiple users' links to an account or property.
+         *
+         * Create a request for the method "accessBindings.batchDelete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
+         * @since 1.13
+         */
+        protected BatchDelete(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchDelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchDelete setAccessToken(java.lang.String accessToken) {
+          return (BatchDelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchDelete setAlt(java.lang.String alt) {
+          return (BatchDelete) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchDelete setCallback(java.lang.String callback) {
+          return (BatchDelete) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchDelete setFields(java.lang.String fields) {
+          return (BatchDelete) super.setFields(fields);
+        }
+
+        @Override
+        public BatchDelete setKey(java.lang.String key) {
+          return (BatchDelete) super.setKey(key);
+        }
+
+        @Override
+        public BatchDelete setOauthToken(java.lang.String oauthToken) {
+          return (BatchDelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchDelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+          return (BatchDelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchDelete setUploadType(java.lang.String uploadType) {
+          return (BatchDelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent field in the
+       DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+       accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchDelete setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchDelete set(String parameterName, Object value) {
+          return (BatchDelete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets information about multiple access bindings to an account or property.
+       *
+       * Create a request for the method "accessBindings.batchGet".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field must match this field. Formats: - accounts/{account} -
+       *        properties/{property}
+       * @return the request
+       */
+      public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+        BatchGet result = new BatchGet(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchGet extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchGet";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Gets information about multiple access bindings to an account or property.
+         *
+         * Create a request for the method "accessBindings.batchGet".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field must match this field. Formats: - accounts/{account} -
+       *        properties/{property}
+         * @since 1.13
+         */
+        protected BatchGet(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchGet) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchGet setAccessToken(java.lang.String accessToken) {
+          return (BatchGet) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchGet setAlt(java.lang.String alt) {
+          return (BatchGet) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchGet setCallback(java.lang.String callback) {
+          return (BatchGet) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchGet setFields(java.lang.String fields) {
+          return (BatchGet) super.setFields(fields);
+        }
+
+        @Override
+        public BatchGet setKey(java.lang.String key) {
+          return (BatchGet) super.setKey(key);
+        }
+
+        @Override
+        public BatchGet setOauthToken(java.lang.String oauthToken) {
+          return (BatchGet) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchGet) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchGet setQuotaUser(java.lang.String quotaUser) {
+          return (BatchGet) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchGet setUploadType(java.lang.String uploadType) {
+          return (BatchGet) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchGet) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field must match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent of all provided values
+       for the 'names' field must match this field. Formats: - accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field must match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchGet setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The names of the access bindings to retrieve. A maximum of 1000 access bindings
+         * can be retrieved in a batch. Formats: - accounts/{account}/accessBindings/{accessBinding}
+         * - properties/{property}/accessBindings/{accessBinding}
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> names;
+
+        /** Required. The names of the access bindings to retrieve. A maximum of 1000 access bindings can be
+       retrieved in a batch. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       properties/{property}/accessBindings/{accessBinding}
+         */
+        public java.util.List<java.lang.String> getNames() {
+          return names;
+        }
+
+        /**
+         * Required. The names of the access bindings to retrieve. A maximum of 1000 access bindings
+         * can be retrieved in a batch. Formats: - accounts/{account}/accessBindings/{accessBinding}
+         * - properties/{property}/accessBindings/{accessBinding}
+         */
+        public BatchGet setNames(java.util.List<java.lang.String> names) {
+          this.names = names;
+          return this;
+        }
+
+        @Override
+        public BatchGet set(String parameterName, Object value) {
+          return (BatchGet) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates information about multiple access bindings to an account or property.
+       *
+       * Create a request for the method "accessBindings.batchUpdate".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
+       * @return the request
+       */
+      public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest content) throws java.io.IOException {
+        BatchUpdate result = new BatchUpdate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchUpdate extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings:batchUpdate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Updates information about multiple access bindings to an account or property.
+         *
+         * Create a request for the method "accessBindings.batchUpdate".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account or property that owns the access bindings. The parent field in the
+       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       *        accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
+         * @since 1.13
+         */
+        protected BatchUpdate(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchUpdate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchUpdate setAccessToken(java.lang.String accessToken) {
+          return (BatchUpdate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchUpdate setAlt(java.lang.String alt) {
+          return (BatchUpdate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchUpdate setCallback(java.lang.String callback) {
+          return (BatchUpdate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchUpdate setFields(java.lang.String fields) {
+          return (BatchUpdate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchUpdate setKey(java.lang.String key) {
+          return (BatchUpdate) super.setKey(key);
+        }
+
+        @Override
+        public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+          return (BatchUpdate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchUpdate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchUpdate setUploadType(java.lang.String uploadType) {
+          return (BatchUpdate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account or property that owns the access bindings. The parent field in the
+       UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account or property that owns the access bindings. The parent field in the
+         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * accounts/{account} - properties/{property}
+         */
+        public BatchUpdate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchUpdate set(String parameterName, Object value) {
+          return (BatchUpdate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates an access binding on an account or property.
+       *
+       * Create a request for the method "accessBindings.create".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Formats: - accounts/{account} - properties/{property}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates an access binding on an account or property.
+         *
+         * Create a request for the method "accessBindings.create".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Formats: - accounts/{account} - properties/{property}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Formats: - accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an access binding on an account or property.
+       *
+       * Create a request for the method "accessBindings.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/accessBindings/[^/]+$");
+
+        /**
+         * Deletes an access binding on an account or property.
+         *
+         * Create a request for the method "accessBindings.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/accessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+       properties/{property}/accessBindings/{accessBinding}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Formats: - accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/accessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets information about an access binding.
+       *
+       * Create a request for the method "accessBindings.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the access binding to retrieve. Formats: -
+       *        accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/accessBindings/[^/]+$");
+
+        /**
+         * Gets information about an access binding.
+         *
+         * Create a request for the method "accessBindings.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the access binding to retrieve. Formats: -
+       *        accounts/{account}/accessBindings/{accessBinding} -
+       *        properties/{property}/accessBindings/{accessBinding}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/accessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the access binding to retrieve. Formats: -
+         * accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the access binding to retrieve. Formats: -
+       accounts/{account}/accessBindings/{accessBinding} -
+       properties/{property}/accessBindings/{accessBinding}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the access binding to retrieve. Formats: -
+         * accounts/{account}/accessBindings/{accessBinding} -
+         * properties/{property}/accessBindings/{accessBinding}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/accessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all access bindings on an account or property.
+       *
+       * Create a request for the method "accessBindings.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Formats: - accounts/{account} - properties/{property}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/accessBindings";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Lists all access bindings on an account or property.
+         *
+         * Create a request for the method "accessBindings.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Formats: - accounts/{account} - properties/{property}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Formats: - accounts/{account} - properties/{property}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Formats: - accounts/{account} - properties/{property} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of access bindings to return. The service may return fewer than this
+         * value. If unspecified, at most 200 access bindings will be returned. The maximum value is
+         * 500; values above 500 will be coerced to 500.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of access bindings to return. The service may return fewer than this value. If
+       unspecified, at most 200 access bindings will be returned. The maximum value is 500; values above
+       500 will be coerced to 500.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of access bindings to return. The service may return fewer than this
+         * value. If unspecified, at most 200 access bindings will be returned. The maximum value is
+         * 500; values above 500 will be coerced to 500.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListAccessBindings` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAccessBindings` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListAccessBindings` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListAccessBindings` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListAccessBindings` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAccessBindings` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an access binding on an account or property.
+       *
+       * Create a request for the method "accessBindings.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this binding. Format:
+       *        accounts/{account}/accessBindings/{access_binding} or
+       *        properties/{property}/accessBindings/{access_binding} Example:
+       *        "accounts/100/accessBindings/200"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/accessBindings/[^/]+$");
+
+        /**
+         * Updates an access binding on an account or property.
+         *
+         * Create a request for the method "accessBindings.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this binding. Format:
+       *        accounts/{account}/accessBindings/{access_binding} or
+       *        properties/{property}/accessBindings/{access_binding} Example:
+       *        "accounts/100/accessBindings/200"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAccessBinding.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/accessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this binding. Format:
+         * accounts/{account}/accessBindings/{access_binding} or
+         * properties/{property}/accessBindings/{access_binding} Example:
+         * "accounts/100/accessBindings/200"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this binding. Format:
+       accounts/{account}/accessBindings/{access_binding} or
+       properties/{property}/accessBindings/{access_binding} Example: "accounts/100/accessBindings/200"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this binding. Format:
+         * accounts/{account}/accessBindings/{access_binding} or
+         * properties/{property}/accessBindings/{access_binding} Example:
+         * "accounts/100/accessBindings/200"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/accessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
     /**
      * An accessor for creating requests from the Audiences collection.
      *

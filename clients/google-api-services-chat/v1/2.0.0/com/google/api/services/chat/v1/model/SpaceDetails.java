@@ -31,14 +31,14 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A description of the space. It could describe the space's discussion topic,
-   * functional purpose, or participants.
+   * functional purpose, or participants. Supports up to 150 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The space's rules, expectations, and etiquette.
+   * Optional. The space's rules, expectations, and etiquette. Supports up to 5,000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A description of the space. It could describe the space's discussion topic,
-   * functional purpose, or participants.
+   * functional purpose, or participants. Supports up to 150 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -55,7 +55,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A description of the space. It could describe the space's discussion topic,
-   * functional purpose, or participants.
+   * functional purpose, or participants. Supports up to 150 characters.
    * @param description description or {@code null} for none
    */
   public SpaceDetails setDescription(java.lang.String description) {
@@ -64,7 +64,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The space's rules, expectations, and etiquette.
+   * Optional. The space's rules, expectations, and etiquette. Supports up to 5,000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getGuidelines() {
@@ -72,7 +72,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The space's rules, expectations, and etiquette.
+   * Optional. The space's rules, expectations, and etiquette. Supports up to 5,000 characters.
    * @param guidelines guidelines or {@code null} for none
    */
   public SpaceDetails setGuidelines(java.lang.String guidelines) {

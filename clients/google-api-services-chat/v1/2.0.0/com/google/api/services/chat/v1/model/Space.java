@@ -33,7 +33,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field may be empty.
+   * messages, this field may be empty. Supports up to 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field may be empty.
+   * messages, this field may be empty. Supports up to 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -96,7 +96,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field may be empty.
+   * messages, this field may be empty. Supports up to 128 characters.
    * @param displayName displayName or {@code null} for none
    */
   public Space setDisplayName(java.lang.String displayName) {

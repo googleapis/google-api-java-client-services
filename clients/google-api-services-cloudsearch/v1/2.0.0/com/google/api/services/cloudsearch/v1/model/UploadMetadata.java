@@ -30,8 +30,9 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class UploadMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opaque token. Clients shall simply pass it back to the Backend. This field will NOT be saved
-   * into storage.
+   * Opaque token. Clients shall simply pass it back to the Backend. There is no guarantee the
+   * attachment_token returned on subsequent reads is the same even if nothing has changed. This
+   * field will NOT be saved into storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +132,9 @@ public final class UploadMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String virusScanResult;
 
   /**
-   * Opaque token. Clients shall simply pass it back to the Backend. This field will NOT be saved
-   * into storage.
+   * Opaque token. Clients shall simply pass it back to the Backend. There is no guarantee the
+   * attachment_token returned on subsequent reads is the same even if nothing has changed. This
+   * field will NOT be saved into storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachmentToken() {
@@ -140,8 +142,9 @@ public final class UploadMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Opaque token. Clients shall simply pass it back to the Backend. This field will NOT be saved
-   * into storage.
+   * Opaque token. Clients shall simply pass it back to the Backend. There is no guarantee the
+   * attachment_token returned on subsequent reads is the same even if nothing has changed. This
+   * field will NOT be saved into storage.
    * @param attachmentToken attachmentToken or {@code null} for none
    */
   public UploadMetadata setAttachmentToken(java.lang.String attachmentToken) {

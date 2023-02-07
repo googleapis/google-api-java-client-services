@@ -50,7 +50,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   /**
    * Required. The content language used as part of the unique identifier. `en` content language is
    * available for all target countries. `fr` content language is available for `CA` and `FR` target
-   * countries, and `de` content language is available for `DE` target country.
+   * countries. `de` content language is available for `DE` target country. `nl` content language is
+   * available for `NL` target country. `it` content language is available for `IT` target country.
+   * `pt` content language is available for `BR` target country. `ja` content language is available
+   * for `JP` target country. `ko` content language is available for `KR` target country.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +330,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
-   * `FR`, `GB`, `IN` or `US`.
+   * `FR`, `GB`, `IN`, `US`, `BR`, `ES`, `NL`, `JP`, `IT` or `KR`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -370,7 +373,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   /**
    * Required. The content language used as part of the unique identifier. `en` content language is
    * available for all target countries. `fr` content language is available for `CA` and `FR` target
-   * countries, and `de` content language is available for `DE` target country.
+   * countries. `de` content language is available for `DE` target country. `nl` content language is
+   * available for `NL` target country. `it` content language is available for `IT` target country.
+   * `pt` content language is available for `BR` target country. `ja` content language is available
+   * for `JP` target country. `ko` content language is available for `KR` target country.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -380,7 +386,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   /**
    * Required. The content language used as part of the unique identifier. `en` content language is
    * available for all target countries. `fr` content language is available for `CA` and `FR` target
-   * countries, and `de` content language is available for `DE` target country.
+   * countries. `de` content language is available for `DE` target country. `nl` content language is
+   * available for `NL` target country. `it` content language is available for `IT` target country.
+   * `pt` content language is available for `BR` target country. `ja` content language is available
+   * for `JP` target country. `ko` content language is available for `KR` target country.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public Promotion setContentLanguage(java.lang.String contentLanguage) {
@@ -1039,7 +1048,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
-   * `FR`, `GB`, `IN` or `US`.
+   * `FR`, `GB`, `IN`, `US`, `BR`, `ES`, `NL`, `JP`, `IT` or `KR`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -1048,7 +1057,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
-   * `FR`, `GB`, `IN` or `US`.
+   * `FR`, `GB`, `IN`, `US`, `BR`, `ES`, `NL`, `JP`, `IT` or `KR`.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public Promotion setTargetCountry(java.lang.String targetCountry) {

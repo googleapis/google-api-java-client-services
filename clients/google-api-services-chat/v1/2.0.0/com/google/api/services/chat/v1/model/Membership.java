@@ -39,18 +39,15 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A Google Chat user or app. Format: `users/{user}` or `users/app` When `users/{user}`,
-   * represents a [person](https://developers.google.com/people/api/rest/v1/people) in the People
-   * API or a [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
-   * the Admin SDK Directory API. When `users/app`, represents a Chat app creating membership for
-   * itself.
+   * The Google Chat user or app the membership corresponds to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private User member;
 
   /**
-   * Resource name of the membership. Format: spaces/{space}/members/{member}
+   * Resource name of the membership, assigned by the server. Format:
+   * spaces/{space}/members/{member}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,11 +88,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Chat user or app. Format: `users/{user}` or `users/app` When `users/{user}`,
-   * represents a [person](https://developers.google.com/people/api/rest/v1/people) in the People
-   * API or a [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
-   * the Admin SDK Directory API. When `users/app`, represents a Chat app creating membership for
-   * itself.
+   * The Google Chat user or app the membership corresponds to.
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -103,11 +96,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Chat user or app. Format: `users/{user}` or `users/app` When `users/{user}`,
-   * represents a [person](https://developers.google.com/people/api/rest/v1/people) in the People
-   * API or a [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
-   * the Admin SDK Directory API. When `users/app`, represents a Chat app creating membership for
-   * itself.
+   * The Google Chat user or app the membership corresponds to.
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {
@@ -116,7 +105,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the membership. Format: spaces/{space}/members/{member}
+   * Resource name of the membership, assigned by the server. Format:
+   * spaces/{space}/members/{member}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -124,7 +114,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the membership. Format: spaces/{space}/members/{member}
+   * Resource name of the membership, assigned by the server. Format:
+   * spaces/{space}/members/{member}
    * @param name name or {@code null} for none
    */
   public Membership setName(java.lang.String name) {

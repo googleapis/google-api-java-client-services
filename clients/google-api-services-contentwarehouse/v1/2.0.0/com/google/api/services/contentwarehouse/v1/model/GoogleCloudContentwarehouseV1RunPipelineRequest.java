@@ -31,13 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Classify/split and entity/kvp extraction pipeline.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudContentwarehouseV1ClassifySplitAndExtractPipeline classifySplitAndExtractPipeline;
-
-  /**
    * Export docuemnts from Document Warehouseing to CDW for training purpose.
    * The value may be {@code null}.
    */
@@ -52,21 +45,12 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
   private GoogleCloudContentwarehouseV1GcsIngestPipeline gcsIngestPipeline;
 
   /**
-   * Classify/split and entity/kvp extraction pipeline.
-   * @return value or {@code null} for none
+   * Use DocAI processors to process documents in Cloud Storage and ingest them to Document
+   * Warehouse.
+   * The value may be {@code null}.
    */
-  public GoogleCloudContentwarehouseV1ClassifySplitAndExtractPipeline getClassifySplitAndExtractPipeline() {
-    return classifySplitAndExtractPipeline;
-  }
-
-  /**
-   * Classify/split and entity/kvp extraction pipeline.
-   * @param classifySplitAndExtractPipeline classifySplitAndExtractPipeline or {@code null} for none
-   */
-  public GoogleCloudContentwarehouseV1RunPipelineRequest setClassifySplitAndExtractPipeline(GoogleCloudContentwarehouseV1ClassifySplitAndExtractPipeline classifySplitAndExtractPipeline) {
-    this.classifySplitAndExtractPipeline = classifySplitAndExtractPipeline;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline gcsIngestWithDocAiProcessorsPipeline;
 
   /**
    * Export docuemnts from Document Warehouseing to CDW for training purpose.
@@ -99,6 +83,25 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
    */
   public GoogleCloudContentwarehouseV1RunPipelineRequest setGcsIngestPipeline(GoogleCloudContentwarehouseV1GcsIngestPipeline gcsIngestPipeline) {
     this.gcsIngestPipeline = gcsIngestPipeline;
+    return this;
+  }
+
+  /**
+   * Use DocAI processors to process documents in Cloud Storage and ingest them to Document
+   * Warehouse.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline getGcsIngestWithDocAiProcessorsPipeline() {
+    return gcsIngestWithDocAiProcessorsPipeline;
+  }
+
+  /**
+   * Use DocAI processors to process documents in Cloud Storage and ingest them to Document
+   * Warehouse.
+   * @param gcsIngestWithDocAiProcessorsPipeline gcsIngestWithDocAiProcessorsPipeline or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineRequest setGcsIngestWithDocAiProcessorsPipeline(GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline gcsIngestWithDocAiProcessorsPipeline) {
+    this.gcsIngestWithDocAiProcessorsPipeline = gcsIngestWithDocAiProcessorsPipeline;
     return this;
   }
 

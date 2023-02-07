@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Contains the format information for a single LiveOp/LiveEvent. Next ID: 10
+ * Contains the format information for a single LiveOp/LiveEvent. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -54,6 +54,12 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUrl;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originalImageUrl;
 
   /**
    * The value may be {@code null}.
@@ -145,6 +151,21 @@ public final class QualityCalypsoAppsUniversalAuLiveOpFormat extends com.google.
    */
   public QualityCalypsoAppsUniversalAuLiveOpFormat setImageUrl(java.lang.String imageUrl) {
     this.imageUrl = imageUrl;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginalImageUrl() {
+    return originalImageUrl;
+  }
+
+  /**
+   * @param originalImageUrl originalImageUrl or {@code null} for none
+   */
+  public QualityCalypsoAppsUniversalAuLiveOpFormat setOriginalImageUrl(java.lang.String originalImageUrl) {
+    this.originalImageUrl = originalImageUrl;
     return this;
   }
 

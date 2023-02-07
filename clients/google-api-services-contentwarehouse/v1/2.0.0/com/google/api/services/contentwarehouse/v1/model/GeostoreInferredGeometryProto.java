@@ -17,10 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The inferred geometry of a feature contains all the features which, together, define the geometry
- * of a feature. This happens by: 1. Taking the union of all polygons of features referenced in
- * "includes_geometry_of". 2. Subtract the geometries of all the features referenced in
- * "excludes_geometry_of". See: go/inferred-geometry for more information.
+ * Inferred geometry defines the geometry of a feature through the geometry of other features. For
+ * instance, the geometry of a timezone can be specified as the union of all the countries it
+ * applies to. See: go/inferred-geometry and go/geo-schema:composite-geometry-editor for more
+ * details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -47,30 +47,11 @@ public final class GeostoreInferredGeometryProto extends com.google.api.client.j
   }
 
   /**
-   * Features whose geometry to exclude while inferring geometry.
+   * Features whose geometry defines the geometry of this feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GeostoreFeatureIdProto> excludesGeometryOf;
-
-  static {
-    // hack to force ProGuard to consider GeostoreFeatureIdProto used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GeostoreFeatureIdProto.class);
-  }
-
-  /**
-   * Features whose geometry to include while inferring geometry.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GeostoreFeatureIdProto> includesGeometryOf;
-
-  static {
-    // hack to force ProGuard to consider GeostoreFeatureIdProto used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GeostoreFeatureIdProto.class);
-  }
+  private GeostoreGeometryComposition geometryComposition;
 
   /**
    * Features whose geometry depends on this feature's geometry.
@@ -90,36 +71,19 @@ public final class GeostoreInferredGeometryProto extends com.google.api.client.j
   }
 
   /**
-   * Features whose geometry to exclude while inferring geometry.
+   * Features whose geometry defines the geometry of this feature.
    * @return value or {@code null} for none
    */
-  public java.util.List<GeostoreFeatureIdProto> getExcludesGeometryOf() {
-    return excludesGeometryOf;
+  public GeostoreGeometryComposition getGeometryComposition() {
+    return geometryComposition;
   }
 
   /**
-   * Features whose geometry to exclude while inferring geometry.
-   * @param excludesGeometryOf excludesGeometryOf or {@code null} for none
+   * Features whose geometry defines the geometry of this feature.
+   * @param geometryComposition geometryComposition or {@code null} for none
    */
-  public GeostoreInferredGeometryProto setExcludesGeometryOf(java.util.List<GeostoreFeatureIdProto> excludesGeometryOf) {
-    this.excludesGeometryOf = excludesGeometryOf;
-    return this;
-  }
-
-  /**
-   * Features whose geometry to include while inferring geometry.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GeostoreFeatureIdProto> getIncludesGeometryOf() {
-    return includesGeometryOf;
-  }
-
-  /**
-   * Features whose geometry to include while inferring geometry.
-   * @param includesGeometryOf includesGeometryOf or {@code null} for none
-   */
-  public GeostoreInferredGeometryProto setIncludesGeometryOf(java.util.List<GeostoreFeatureIdProto> includesGeometryOf) {
-    this.includesGeometryOf = includesGeometryOf;
+  public GeostoreInferredGeometryProto setGeometryComposition(GeostoreGeometryComposition geometryComposition) {
+    this.geometryComposition = geometryComposition;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This defines the per-doc data which is extracted from thumbnails and propagated over to indexing.
- * It contains all information that can be used for restricts. Next tag id: 128
+ * It contains all information that can be used for restricts. Next tag id: 129
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -102,6 +102,13 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer clipartDetectorVersion;
+
+  /**
+   * Superlabels generated cluster id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterId;
 
   /**
    * Like is_visible, this is a property of the (web-doc, img_url) pair not just the image. A high
@@ -882,6 +889,51 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   public ImageData setClipartDetectorVersion(java.lang.Integer clipartDetectorVersion) {
     this.clipartDetectorVersion = clipartDetectorVersion;
+    return this;
+  }
+
+  /**
+   * Superlabels generated cluster id.
+   * @see #decodeClusterId()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterId() {
+    return clusterId;
+  }
+
+  /**
+   * Superlabels generated cluster id.
+   * @see #getClusterId()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeClusterId() {
+    return com.google.api.client.util.Base64.decodeBase64(clusterId);
+  }
+
+  /**
+   * Superlabels generated cluster id.
+   * @see #encodeClusterId()
+   * @param clusterId clusterId or {@code null} for none
+   */
+  public ImageData setClusterId(java.lang.String clusterId) {
+    this.clusterId = clusterId;
+    return this;
+  }
+
+  /**
+   * Superlabels generated cluster id.
+   * @see #setClusterId()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public ImageData encodeClusterId(byte[] clusterId) {
+    this.clusterId = com.google.api.client.util.Base64.encodeBase64URLSafeString(clusterId);
     return this;
   }
 

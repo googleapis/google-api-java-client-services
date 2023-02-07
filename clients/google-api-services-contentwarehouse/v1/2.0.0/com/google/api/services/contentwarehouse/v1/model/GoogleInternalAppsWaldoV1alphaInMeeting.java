@@ -31,8 +31,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that the goal of this field is to
+   * The time when the user will either stop being committed or change commitment type (i.e.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh). Note that the goal of this field is to
    * provide information to help users decide how to communicate with a user (see also
    * http://shortn/_wXYXtZScgh).
    * The value may be {@code null}.
@@ -41,8 +41,7 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   private String committedUntil;
 
   /**
-   * Whether the status of the user from this status's start to committed_until has more than one
-   * status type (e.g. DoNotDisturb + InMeeting).
+   * TODO(b/265939748) To be removed, always false from User Status Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +78,8 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   private String occupiedUntil;
 
   /**
-   * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that the goal of this field is to
+   * The time when the user will either stop being committed or change commitment type (i.e.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh). Note that the goal of this field is to
    * provide information to help users decide how to communicate with a user (see also
    * http://shortn/_wXYXtZScgh).
    * @return value or {@code null} for none
@@ -90,8 +89,8 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   }
 
   /**
-   * The time when the user will stop being committed, i.e., when their status will be neither of
-   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh. Note that the goal of this field is to
+   * The time when the user will either stop being committed or change commitment type (i.e.
+   * InMeeting, DoNotDisturb, Busy or OutOfOffice < Xh). Note that the goal of this field is to
    * provide information to help users decide how to communicate with a user (see also
    * http://shortn/_wXYXtZScgh).
    * @param committedUntil committedUntil or {@code null} for none
@@ -102,8 +101,7 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   }
 
   /**
-   * Whether the status of the user from this status's start to committed_until has more than one
-   * status type (e.g. DoNotDisturb + InMeeting).
+   * TODO(b/265939748) To be removed, always false from User Status Service.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCommittedUntilIsMixed() {
@@ -111,8 +109,7 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   }
 
   /**
-   * Whether the status of the user from this status's start to committed_until has more than one
-   * status type (e.g. DoNotDisturb + InMeeting).
+   * TODO(b/265939748) To be removed, always false from User Status Service.
    * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaInMeeting setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {

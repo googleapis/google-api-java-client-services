@@ -31,6 +31,15 @@ package com.google.api.services.workstations.v1beta.model;
 public final class PrivateClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional projects that are allowed to attach to the workstation cluster's service attachment.
+   * By default, the workstation cluster's project and the VPC host project (if different) are
+   * allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedProjects;
+
+  /**
    * Output only. Hostname for the workstation cluster. This field will be populated only when
    * private endpoint is enabled. To access workstations in the cluster, create a new DNS zone
    * mapping this domain name to an internal IP address and a forwarding rule mapping that address
@@ -56,6 +65,27 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAttachmentUri;
+
+  /**
+   * Additional projects that are allowed to attach to the workstation cluster's service attachment.
+   * By default, the workstation cluster's project and the VPC host project (if different) are
+   * allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedProjects() {
+    return allowedProjects;
+  }
+
+  /**
+   * Additional projects that are allowed to attach to the workstation cluster's service attachment.
+   * By default, the workstation cluster's project and the VPC host project (if different) are
+   * allowed.
+   * @param allowedProjects allowedProjects or {@code null} for none
+   */
+  public PrivateClusterConfig setAllowedProjects(java.util.List<java.lang.String> allowedProjects) {
+    this.allowedProjects = allowedProjects;
+    return this;
+  }
 
   /**
    * Output only. Hostname for the workstation cluster. This field will be populated only when

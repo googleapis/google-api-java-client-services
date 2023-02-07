@@ -2494,6 +2494,162 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Gets the specified release for a site or channel. When used to get a release for a site, this can
+           * get releases for both the default `live` channel and any active preview channels for the
+           * specified site.
+           *
+           * Create a request for the method "releases.get".
+           *
+           * This request holds the parameters needed by the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+           *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           *        sites/SITE_ID/releases/RELEASE_ID
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Release> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+/releases/[^/]+$");
+
+            /**
+             * Gets the specified release for a site or channel. When used to get a release for a site, this
+             * can get releases for both the default `live` channel and any active preview channels for the
+             * specified site.
+             *
+             * Create a request for the method "releases.get".
+             *
+             * This request holds the parameters needed by the the firebasehosting server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+           *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           *        sites/SITE_ID/releases/RELEASE_ID
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Release.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/channels/[^/]+/releases/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully-qualified resource name for the Hosting release, in either of the
+             * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+             * sites/SITE_ID/releases/RELEASE_ID
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully-qualified resource name for the Hosting release, in either of the following
+           formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           sites/SITE_ID/releases/RELEASE_ID
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully-qualified resource name for the Hosting release, in either of the
+             * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+             * sites/SITE_ID/releases/RELEASE_ID
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/channels/[^/]+/releases/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists the releases that have been created for the specified site or channel. When used to list
            * releases for a site, this list includes releases for both the default `live` channel and any
            * active preview channels for the specified site.
@@ -3620,6 +3776,162 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
+         * Gets the specified release for a site or channel. When used to get a release for a site, this can
+         * get releases for both the default `live` channel and any active preview channels for the
+         * specified site.
+         *
+         * Create a request for the method "releases.get".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+         *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         *        sites/SITE_ID/releases/RELEASE_ID
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Release> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/releases/[^/]+$");
+
+          /**
+           * Gets the specified release for a site or channel. When used to get a release for a site, this
+           * can get releases for both the default `live` channel and any active preview channels for the
+           * specified site.
+           *
+           * Create a request for the method "releases.get".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+         *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         *        sites/SITE_ID/releases/RELEASE_ID
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Release.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/releases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The fully-qualified resource name for the Hosting release, in either of the
+           * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           * sites/SITE_ID/releases/RELEASE_ID
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified resource name for the Hosting release, in either of the following
+         formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         sites/SITE_ID/releases/RELEASE_ID
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The fully-qualified resource name for the Hosting release, in either of the
+           * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           * sites/SITE_ID/releases/RELEASE_ID
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/releases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the releases that have been created for the specified site or channel. When used to list
          * releases for a site, this list includes releases for both the default `live` channel and any
          * active preview channels for the specified site.
@@ -4282,6 +4594,157 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get the specified version that has been created for the specified site. This can include versions
+         * that were created for the default `live` channel or for any active preview channels for the
+         * specified site.
+         *
+         * Create a request for the method "versions.get".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified resource name for the version, in the format:
+         *        sites/SITE_ID/versions/VERSION_ID
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Version> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+
+          /**
+           * Get the specified version that has been created for the specified site. This can include
+           * versions that were created for the default `live` channel or for any active preview channels
+           * for the specified site.
+           *
+           * Create a request for the method "versions.get".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified resource name for the version, in the format:
+         *        sites/SITE_ID/versions/VERSION_ID
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Version.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The fully-qualified resource name for the version, in the format:
+           * sites/SITE_ID/versions/VERSION_ID
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified resource name for the version, in the format:
+         sites/SITE_ID/versions/VERSION_ID
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The fully-qualified resource name for the version, in the format:
+           * sites/SITE_ID/versions/VERSION_ID
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
           }
         }
         /**
@@ -6374,6 +6837,162 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
+         * Gets the specified release for a site or channel. When used to get a release for a site, this can
+         * get releases for both the default `live` channel and any active preview channels for the
+         * specified site.
+         *
+         * Create a request for the method "releases.get".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+         *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         *        sites/SITE_ID/releases/RELEASE_ID
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Release> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+/releases/[^/]+$");
+
+          /**
+           * Gets the specified release for a site or channel. When used to get a release for a site, this
+           * can get releases for both the default `live` channel and any active preview channels for the
+           * specified site.
+           *
+           * Create a request for the method "releases.get".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+         *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         *        sites/SITE_ID/releases/RELEASE_ID
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Release.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^sites/[^/]+/channels/[^/]+/releases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The fully-qualified resource name for the Hosting release, in either of the
+           * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           * sites/SITE_ID/releases/RELEASE_ID
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified resource name for the Hosting release, in either of the following
+         formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         sites/SITE_ID/releases/RELEASE_ID
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The fully-qualified resource name for the Hosting release, in either of the
+           * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+           * sites/SITE_ID/releases/RELEASE_ID
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^sites/[^/]+/channels/[^/]+/releases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the releases that have been created for the specified site or channel. When used to list
          * releases for a site, this list includes releases for both the default `live` channel and any
          * active preview channels for the specified site.
@@ -7498,6 +8117,162 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Gets the specified release for a site or channel. When used to get a release for a site, this can
+       * get releases for both the default `live` channel and any active preview channels for the
+       * specified site.
+       *
+       * Create a request for the method "releases.get".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+       *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+       *        sites/SITE_ID/releases/RELEASE_ID
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Release> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/releases/[^/]+$");
+
+        /**
+         * Gets the specified release for a site or channel. When used to get a release for a site, this
+         * can get releases for both the default `live` channel and any active preview channels for the
+         * specified site.
+         *
+         * Create a request for the method "releases.get".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully-qualified resource name for the Hosting release, in either of the following
+       *        formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+       *        sites/SITE_ID/releases/RELEASE_ID
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Release.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/releases/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully-qualified resource name for the Hosting release, in either of the
+         * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         * sites/SITE_ID/releases/RELEASE_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully-qualified resource name for the Hosting release, in either of the following
+       formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+       sites/SITE_ID/releases/RELEASE_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully-qualified resource name for the Hosting release, in either of the
+         * following formats: - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID -
+         * sites/SITE_ID/releases/RELEASE_ID
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/releases/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists the releases that have been created for the specified site or channel. When used to list
        * releases for a site, this list includes releases for both the default `live` channel and any
        * active preview channels for the specified site.
@@ -8160,6 +8935,157 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get the specified version that has been created for the specified site. This can include versions
+       * that were created for the default `live` channel or for any active preview channels for the
+       * specified site.
+       *
+       * Create a request for the method "versions.get".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully-qualified resource name for the version, in the format:
+       *        sites/SITE_ID/versions/VERSION_ID
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Version> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/versions/[^/]+$");
+
+        /**
+         * Get the specified version that has been created for the specified site. This can include
+         * versions that were created for the default `live` channel or for any active preview channels
+         * for the specified site.
+         *
+         * Create a request for the method "versions.get".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully-qualified resource name for the version, in the format:
+       *        sites/SITE_ID/versions/VERSION_ID
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Version.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/versions/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully-qualified resource name for the version, in the format:
+         * sites/SITE_ID/versions/VERSION_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully-qualified resource name for the version, in the format:
+       sites/SITE_ID/versions/VERSION_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully-qualified resource name for the version, in the format:
+         * sites/SITE_ID/versions/VERSION_ID
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/versions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
         }
       }
       /**

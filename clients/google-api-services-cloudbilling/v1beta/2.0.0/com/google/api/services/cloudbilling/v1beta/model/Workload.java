@@ -103,6 +103,13 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   private StandardTierEgressWorkload standardTierEgressWorkload;
 
   /**
+   * Usage on Vm to Vm Egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmToVmEgressWorkload vmToVmEgressWorkload;
+
+  /**
    * Usage on Google Cloud CDN Egress.
    * @return value or {@code null} for none
    */
@@ -271,6 +278,23 @@ public final class Workload extends com.google.api.client.json.GenericJson {
    */
   public Workload setStandardTierEgressWorkload(StandardTierEgressWorkload standardTierEgressWorkload) {
     this.standardTierEgressWorkload = standardTierEgressWorkload;
+    return this;
+  }
+
+  /**
+   * Usage on Vm to Vm Egress.
+   * @return value or {@code null} for none
+   */
+  public VmToVmEgressWorkload getVmToVmEgressWorkload() {
+    return vmToVmEgressWorkload;
+  }
+
+  /**
+   * Usage on Vm to Vm Egress.
+   * @param vmToVmEgressWorkload vmToVmEgressWorkload or {@code null} for none
+   */
+  public Workload setVmToVmEgressWorkload(VmToVmEgressWorkload vmToVmEgressWorkload) {
+    this.vmToVmEgressWorkload = vmToVmEgressWorkload;
     return this;
   }
 

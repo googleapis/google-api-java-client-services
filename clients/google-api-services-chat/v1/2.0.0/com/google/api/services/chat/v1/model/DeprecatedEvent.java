@@ -49,8 +49,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The URL the Chat app should redirect the user to after they have completed an authorization or
-   * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
-   * guide](/chat/how-tos/auth-3p) for more information.
+   * configuration flow outside of Google Chat. For more information, see [Connect a Chat app with
+   * other services & tools](https://developers.google.com/chat/how-tos/connect-web-services-tools).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +172,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The URL the Chat app should redirect the user to after they have completed an authorization or
-   * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
-   * guide](/chat/how-tos/auth-3p) for more information.
+   * configuration flow outside of Google Chat. For more information, see [Connect a Chat app with
+   * other services & tools](https://developers.google.com/chat/how-tos/connect-web-services-tools).
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigCompleteRedirectUrl() {
@@ -182,8 +182,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The URL the Chat app should redirect the user to after they have completed an authorization or
-   * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
-   * guide](/chat/how-tos/auth-3p) for more information.
+   * configuration flow outside of Google Chat. For more information, see [Connect a Chat app with
+   * other services & tools](https://developers.google.com/chat/how-tos/connect-web-services-tools).
    * @param configCompleteRedirectUrl configCompleteRedirectUrl or {@code null} for none
    */
   public DeprecatedEvent setConfigCompleteRedirectUrl(java.lang.String configCompleteRedirectUrl) {

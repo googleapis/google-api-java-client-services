@@ -2148,6 +2148,72 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Optional. A filter for the batches to return in the response.A filter is a logical
+           * expression constraining the values of various fields in each batch resource. Filters
+           * are case sensitive, and may contain multiple clauses combined with logical operators
+           * (AND/OR). Supported fields are batch_id, batch_uuid, state, and create_time.e.g. state
+           * = RUNNING and create_time < "2023-01-01T00:00:00Z" filters for batches in state RUNNING
+           * that were created before 2023-01-01See https://google.aip.dev/assets/misc/ebnf-
+           * filtering.txt for a detailed description of the filter syntax and a list of supported
+           * comparisons.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter for the batches to return in the response.A filter is a logical expression
+         constraining the values of various fields in each batch resource. Filters are case sensitive, and
+         may contain multiple clauses combined with logical operators (AND/OR). Supported fields are
+         batch_id, batch_uuid, state, and create_time.e.g. state = RUNNING and create_time <
+         "2023-01-01T00:00:00Z" filters for batches in state RUNNING that were created before 2023-01-01See
+         https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed description of the filter
+         syntax and a list of supported comparisons.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter for the batches to return in the response.A filter is a logical
+           * expression constraining the values of various fields in each batch resource. Filters
+           * are case sensitive, and may contain multiple clauses combined with logical operators
+           * (AND/OR). Supported fields are batch_id, batch_uuid, state, and create_time.e.g. state
+           * = RUNNING and create_time < "2023-01-01T00:00:00Z" filters for batches in state RUNNING
+           * that were created before 2023-01-01See https://google.aip.dev/assets/misc/ebnf-
+           * filtering.txt for a detailed description of the filter syntax and a list of supported
+           * comparisons.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Field(s) on which to sort the list of batches.Currently the only supported
+           * sort orders are unspecified (empty) and create_time desc to sort by most recently
+           * created batches first.See https://google.aip.dev/132#ordering for more details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field(s) on which to sort the list of batches.Currently the only supported sort orders
+         are unspecified (empty) and create_time desc to sort by most recently created batches first.See
+         https://google.aip.dev/132#ordering for more details.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Field(s) on which to sort the list of batches.Currently the only supported
+           * sort orders are unspecified (empty) and create_time desc to sort by most recently
+           * created batches first.See https://google.aip.dev/132#ordering for more details.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of batches to return in each response. The service may
            * return fewer than this value. The default page size is 20; the maximum page size is
            * 1000.

@@ -17,7 +17,7 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * The response returned from the ListPolicies method. It will be empty if no `Policies` are set on
+ * The response returned from the ListPolicies method. It will be empty if no policies are set on
  * the resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -40,7 +40,7 @@ public final class GoogleCloudOrgpolicyV2ListPoliciesResponse extends com.google
   private java.lang.String nextPageToken;
 
   /**
-   * All `Policies` that exist on the resource. It will be empty if no `Policies` are set.
+   * All policies that exist on the resource. It will be empty if no policies are set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GoogleCloudOrgpolicyV2ListPoliciesResponse extends com.google
   }
 
   /**
-   * All `Policies` that exist on the resource. It will be empty if no `Policies` are set.
+   * All policies that exist on the resource. It will be empty if no policies are set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudOrgpolicyV2Policy> getPolicies() {
@@ -74,7 +74,7 @@ public final class GoogleCloudOrgpolicyV2ListPoliciesResponse extends com.google
   }
 
   /**
-   * All `Policies` that exist on the resource. It will be empty if no `Policies` are set.
+   * All policies that exist on the resource. It will be empty if no policies are set.
    * @param policies policies or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ListPoliciesResponse setPolicies(java.util.List<GoogleCloudOrgpolicyV2Policy> policies) {

@@ -17,8 +17,8 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * Defines a Cloud Organization `PolicySpec` which is used to specify `Constraints` for
- * configurations of Cloud Platform resources.
+ * Defines a Google Cloud policy specification which is used to specify constraints for
+ * configurations of Google Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -32,22 +32,21 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   * This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from
-   * either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the
-   * current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned
-   * from a `GetEffectivePolicy` request, the `etag` will be unset.
+   * An opaque tag indicating the current version of the policy, used for concurrency control. This
+   * field is ignored if used in a `CreatePolicy` request. When the policy` is returned from either
+   * a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current
+   * policy to use when executing a read-modify-write loop. When the policy is returned from a
+   * `GetEffectivePolicy` request, the `etag` will be unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true,
-   * PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present
-   * in the effective policy. If it is false, then no rules are inherited, and this Policy becomes
-   * the new root for evaluation. This field can be set only for Policies which configure list
-   * constraints.
+   * Determines the inheritance behavior for this policy. If `inherit_from_parent` is true, policy
+   * rules set higher up in the hierarchy (up to the closest root) are inherited and present in the
+   * effective policy. If it is false, then no rules are inherited, and this policy becomes the new
+   * root for evaluation. This field can be set only for policies which configure list constraints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +54,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
 
   /**
    * Ignores policies set above this resource and restores the `constraint_default` enforcement
-   * behavior of the specific `Constraint` at this resource. This field can be set in policies for
+   * behavior of the specific constraint at this resource. This field can be set in policies for
    * either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent`
    * must be set to false.
    * The value may be {@code null}.
@@ -64,10 +63,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   private java.lang.Boolean reset;
 
   /**
-   * Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following
-   * requirements apply: - There must be one and only one PolicyRule where condition is unset. -
-   * BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule
-   * without a condition. - During policy evaluation, PolicyRules with conditions that are true for
+   * Up to 10 policy rules are allowed. In policies for boolean constraints, the following
+   * requirements apply: - There must be one and only one policy rule where condition is unset. -
+   * Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule
+   * without a condition. - During policy evaluation, policy rules with conditions that are true for
    * a target resource take precedence.
    * The value may be {@code null}.
    */
@@ -76,18 +75,18 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
 
   /**
    * Output only. The time stamp this was previously updated. This represents the last time a call
-   * to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
+   * to `CreatePolicy` or `UpdatePolicy` was made for that policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   * This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from
-   * either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the
-   * current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned
-   * from a `GetEffectivePolicy` request, the `etag` will be unset.
+   * An opaque tag indicating the current version of the policy, used for concurrency control. This
+   * field is ignored if used in a `CreatePolicy` request. When the policy` is returned from either
+   * a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current
+   * policy to use when executing a read-modify-write loop. When the policy is returned from a
+   * `GetEffectivePolicy` request, the `etag` will be unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -95,11 +94,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   * This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from
-   * either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the
-   * current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned
-   * from a `GetEffectivePolicy` request, the `etag` will be unset.
+   * An opaque tag indicating the current version of the policy, used for concurrency control. This
+   * field is ignored if used in a `CreatePolicy` request. When the policy` is returned from either
+   * a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current
+   * policy to use when executing a read-modify-write loop. When the policy is returned from a
+   * `GetEffectivePolicy` request, the `etag` will be unset.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec setEtag(java.lang.String etag) {
@@ -108,11 +107,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true,
-   * PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present
-   * in the effective policy. If it is false, then no rules are inherited, and this Policy becomes
-   * the new root for evaluation. This field can be set only for Policies which configure list
-   * constraints.
+   * Determines the inheritance behavior for this policy. If `inherit_from_parent` is true, policy
+   * rules set higher up in the hierarchy (up to the closest root) are inherited and present in the
+   * effective policy. If it is false, then no rules are inherited, and this policy becomes the new
+   * root for evaluation. This field can be set only for policies which configure list constraints.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInheritFromParent() {
@@ -120,11 +118,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true,
-   * PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present
-   * in the effective policy. If it is false, then no rules are inherited, and this Policy becomes
-   * the new root for evaluation. This field can be set only for Policies which configure list
-   * constraints.
+   * Determines the inheritance behavior for this policy. If `inherit_from_parent` is true, policy
+   * rules set higher up in the hierarchy (up to the closest root) are inherited and present in the
+   * effective policy. If it is false, then no rules are inherited, and this policy becomes the new
+   * root for evaluation. This field can be set only for policies which configure list constraints.
    * @param inheritFromParent inheritFromParent or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec setInheritFromParent(java.lang.Boolean inheritFromParent) {
@@ -134,7 +131,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
 
   /**
    * Ignores policies set above this resource and restores the `constraint_default` enforcement
-   * behavior of the specific `Constraint` at this resource. This field can be set in policies for
+   * behavior of the specific constraint at this resource. This field can be set in policies for
    * either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent`
    * must be set to false.
    * @return value or {@code null} for none
@@ -145,7 +142,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
 
   /**
    * Ignores policies set above this resource and restores the `constraint_default` enforcement
-   * behavior of the specific `Constraint` at this resource. This field can be set in policies for
+   * behavior of the specific constraint at this resource. This field can be set in policies for
    * either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent`
    * must be set to false.
    * @param reset reset or {@code null} for none
@@ -156,10 +153,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following
-   * requirements apply: - There must be one and only one PolicyRule where condition is unset. -
-   * BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule
-   * without a condition. - During policy evaluation, PolicyRules with conditions that are true for
+   * Up to 10 policy rules are allowed. In policies for boolean constraints, the following
+   * requirements apply: - There must be one and only one policy rule where condition is unset. -
+   * Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule
+   * without a condition. - During policy evaluation, policy rules with conditions that are true for
    * a target resource take precedence.
    * @return value or {@code null} for none
    */
@@ -168,10 +165,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following
-   * requirements apply: - There must be one and only one PolicyRule where condition is unset. -
-   * BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule
-   * without a condition. - During policy evaluation, PolicyRules with conditions that are true for
+   * Up to 10 policy rules are allowed. In policies for boolean constraints, the following
+   * requirements apply: - There must be one and only one policy rule where condition is unset. -
+   * Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule
+   * without a condition. - During policy evaluation, policy rules with conditions that are true for
    * a target resource take precedence.
    * @param rules rules or {@code null} for none
    */
@@ -182,7 +179,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
 
   /**
    * Output only. The time stamp this was previously updated. This represents the last time a call
-   * to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
+   * to `CreatePolicy` or `UpdatePolicy` was made for that policy.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -191,7 +188,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
 
   /**
    * Output only. The time stamp this was previously updated. This represents the last time a call
-   * to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
+   * to `CreatePolicy` or `UpdatePolicy` was made for that policy.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec setUpdateTime(String updateTime) {

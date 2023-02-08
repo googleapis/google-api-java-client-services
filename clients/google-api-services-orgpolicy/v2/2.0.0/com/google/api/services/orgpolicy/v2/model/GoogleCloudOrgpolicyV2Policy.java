@@ -17,8 +17,8 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations
- * of Cloud Platform resources.
+ * Defines an organization policy which is used to specify constraints for configurations of Google
+ * Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -39,7 +39,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   private GoogleCloudOrgpolicyV2AlternatePolicySpec alternate;
 
   /**
-   * dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted
+   * Dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted
    * the existing and future resources if it's enforced.
    * The value may be {@code null}.
    */
@@ -47,8 +47,8 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   private GoogleCloudOrgpolicyV2PolicySpec dryRunSpec;
 
   /**
-   * Immutable. The resource name of the Policy. Must be one of the following forms, where
-   * constraint_name is the name of the constraint which this Policy configures: *
+   * Immutable. The resource name of the policy. Must be one of the following forms, where
+   * constraint_name is the name of the constraint which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -85,7 +85,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   }
 
   /**
-   * dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted
+   * Dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted
    * the existing and future resources if it's enforced.
    * @return value or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   }
 
   /**
-   * dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted
+   * Dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted
    * the existing and future resources if it's enforced.
    * @param dryRunSpec dryRunSpec or {@code null} for none
    */
@@ -104,8 +104,8 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   }
 
   /**
-   * Immutable. The resource name of the Policy. Must be one of the following forms, where
-   * constraint_name is the name of the constraint which this Policy configures: *
+   * Immutable. The resource name of the policy. Must be one of the following forms, where
+   * constraint_name is the name of the constraint which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -119,8 +119,8 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   }
 
   /**
-   * Immutable. The resource name of the Policy. Must be one of the following forms, where
-   * constraint_name is the name of the constraint which this Policy configures: *
+   * Immutable. The resource name of the policy. Must be one of the following forms, where
+   * constraint_name is the name of the constraint which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,

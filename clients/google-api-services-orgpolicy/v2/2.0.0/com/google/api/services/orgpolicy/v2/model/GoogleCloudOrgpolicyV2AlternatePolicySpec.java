@@ -40,7 +40,7 @@ public final class GoogleCloudOrgpolicyV2AlternatePolicySpec extends com.google.
   private java.lang.String launch;
 
   /**
-   * Specify `Constraint` for configurations of Cloud Platform resources.
+   * Specify constraint for configurations of Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GoogleCloudOrgpolicyV2AlternatePolicySpec extends com.google.
   }
 
   /**
-   * Specify `Constraint` for configurations of Cloud Platform resources.
+   * Specify constraint for configurations of Google Cloud resources.
    * @return value or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec getSpec() {
@@ -74,7 +74,7 @@ public final class GoogleCloudOrgpolicyV2AlternatePolicySpec extends com.google.
   }
 
   /**
-   * Specify `Constraint` for configurations of Cloud Platform resources.
+   * Specify constraint for configurations of Google Cloud resources.
    * @param spec spec or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2AlternatePolicySpec setSpec(GoogleCloudOrgpolicyV2PolicySpec spec) {

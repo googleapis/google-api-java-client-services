@@ -1537,17 +1537,29 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
-          /** Maximum number of functions to return per call. */
+          /**
+           * Maximum number of functions to return per call. The largest allowed page_size is 1,000,
+           * if the page_size is omitted or specified as greater than 1,000 then it will be replaced
+           * as 1,000. The size of the list response can be less than specified when used with
+           * filters.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of functions to return per call.
+          /** Maximum number of functions to return per call. The largest allowed page_size is 1,000, if the
+         page_size is omitted or specified as greater than 1,000 then it will be replaced as 1,000. The size
+         of the list response can be less than specified when used with filters.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of functions to return per call. */
+          /**
+           * Maximum number of functions to return per call. The largest allowed page_size is 1,000,
+           * if the page_size is omitted or specified as greater than 1,000 then it will be replaced
+           * as 1,000. The size of the list response can be less than specified when used with
+           * filters.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

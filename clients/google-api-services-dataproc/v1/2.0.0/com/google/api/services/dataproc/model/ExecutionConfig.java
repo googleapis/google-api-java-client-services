@@ -70,11 +70,36 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. A Cloud Storage bucket used to stage workload dependencies, config files, and store
+   * workload output and other ephemeral data, such as Spark history files. If you do not specify a
+   * staging bucket, Cloud Dataproc will determine a Cloud Storage location according to the region
+   * where your workload is running, and then create and manage project-level, per-location staging
+   * and temporary buckets. This field requires a Cloud Storage bucket name, not a gs://... URI to a
+   * Cloud Storage bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stagingBucket;
+
+  /**
    * Optional. Subnetwork URI to connect workload to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetworkUri;
+
+  /**
+   * Optional. The duration after which the workload will be terminated. When the workload passes
+   * this ttl, it will be unconditionally killed without waiting for ongoing work to finish. Minimum
+   * value is 10 minutes; maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)). If both ttl and idle_ttl
+   * are specified, the conditions are treated as and OR: the workload will be terminated when it
+   * has been idle for idle_ttl or when the ttl has passed, whichever comes first. If ttl is not
+   * specified for a session, it defaults to 24h.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
 
   /**
    * Optional. The duration to keep the session alive while it's idling. Passing this threshold will
@@ -172,6 +197,33 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. A Cloud Storage bucket used to stage workload dependencies, config files, and store
+   * workload output and other ephemeral data, such as Spark history files. If you do not specify a
+   * staging bucket, Cloud Dataproc will determine a Cloud Storage location according to the region
+   * where your workload is running, and then create and manage project-level, per-location staging
+   * and temporary buckets. This field requires a Cloud Storage bucket name, not a gs://... URI to a
+   * Cloud Storage bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStagingBucket() {
+    return stagingBucket;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to stage workload dependencies, config files, and store
+   * workload output and other ephemeral data, such as Spark history files. If you do not specify a
+   * staging bucket, Cloud Dataproc will determine a Cloud Storage location according to the region
+   * where your workload is running, and then create and manage project-level, per-location staging
+   * and temporary buckets. This field requires a Cloud Storage bucket name, not a gs://... URI to a
+   * Cloud Storage bucket.
+   * @param stagingBucket stagingBucket or {@code null} for none
+   */
+  public ExecutionConfig setStagingBucket(java.lang.String stagingBucket) {
+    this.stagingBucket = stagingBucket;
+    return this;
+  }
+
+  /**
    * Optional. Subnetwork URI to connect workload to.
    * @return value or {@code null} for none
    */
@@ -185,6 +237,35 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   public ExecutionConfig setSubnetworkUri(java.lang.String subnetworkUri) {
     this.subnetworkUri = subnetworkUri;
+    return this;
+  }
+
+  /**
+   * Optional. The duration after which the workload will be terminated. When the workload passes
+   * this ttl, it will be unconditionally killed without waiting for ongoing work to finish. Minimum
+   * value is 10 minutes; maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)). If both ttl and idle_ttl
+   * are specified, the conditions are treated as and OR: the workload will be terminated when it
+   * has been idle for idle_ttl or when the ttl has passed, whichever comes first. If ttl is not
+   * specified for a session, it defaults to 24h.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * Optional. The duration after which the workload will be terminated. When the workload passes
+   * this ttl, it will be unconditionally killed without waiting for ongoing work to finish. Minimum
+   * value is 10 minutes; maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)). If both ttl and idle_ttl
+   * are specified, the conditions are treated as and OR: the workload will be terminated when it
+   * has been idle for idle_ttl or when the ttl has passed, whichever comes first. If ttl is not
+   * specified for a session, it defaults to 24h.
+   * @param ttl ttl or {@code null} for none
+   */
+  public ExecutionConfig setTtl(String ttl) {
+    this.ttl = ttl;
     return this;
   }
 

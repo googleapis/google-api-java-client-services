@@ -18,7 +18,7 @@ package com.google.api.services.orgpolicy.v2.model;
 
 /**
  * A custom constraint defined by customers which can *only* be applied to the given resource types
- * and organization. By creating a custom constraint, customers can applied policies of this custom
+ * and organization. By creating a custom constraint, customers can apply policies of this custom
  * constraint. *Creating a custom constraint itself does NOT apply any policy enforcement*.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -72,18 +72,18 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
-   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example
-   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
-   * characters and the min length is 1. Note that the prefix
-   * "organizations/{organization_id}/customConstraints/" is not counted.
+   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70
+   * characters and the minimum length is 1. Note that the prefix
+   * `organizations/{organization_id}/customConstraints/` is not counted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Immutable. The Resource Instance type on which this policy applies to. Format will be of the
-   * form : "/" Example: * `compute.googleapis.com/Instance`.
+   * Immutable. The resource instance type on which this policy applies. Format will be of the form
+   * : "/" Example: * `compute.googleapis.com/Instance`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,10 +190,10 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
-   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example
-   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
-   * characters and the min length is 1. Note that the prefix
-   * "organizations/{organization_id}/customConstraints/" is not counted.
+   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70
+   * characters and the minimum length is 1. Note that the prefix
+   * `organizations/{organization_id}/customConstraints/` is not counted.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -202,10 +202,10 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
-   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example
-   * : "organizations/123/customConstraints/custom.createOnlyE2TypeVms" The max length is 70
-   * characters and the min length is 1. Note that the prefix
-   * "organizations/{organization_id}/customConstraints/" is not counted.
+   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70
+   * characters and the minimum length is 1. Note that the prefix
+   * `organizations/{organization_id}/customConstraints/` is not counted.
    * @param name name or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setName(java.lang.String name) {
@@ -214,8 +214,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Immutable. The Resource Instance type on which this policy applies to. Format will be of the
-   * form : "/" Example: * `compute.googleapis.com/Instance`.
+   * Immutable. The resource instance type on which this policy applies. Format will be of the form
+   * : "/" Example: * `compute.googleapis.com/Instance`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceTypes() {
@@ -223,8 +223,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Immutable. The Resource Instance type on which this policy applies to. Format will be of the
-   * form : "/" Example: * `compute.googleapis.com/Instance`.
+   * Immutable. The resource instance type on which this policy applies. Format will be of the form
+   * : "/" Example: * `compute.googleapis.com/Instance`.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setResourceTypes(java.util.List<java.lang.String> resourceTypes) {

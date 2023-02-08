@@ -17,8 +17,8 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * The response returned from the ListCustomConstraints method. It will be empty if no
- * `CustomConstraints` are set on the organization resource.
+ * The response returned from the ListCustomConstraints method. It will be empty if no custom
+ * constraints are set on the organization resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -32,8 +32,8 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * All `CustomConstraints` that exist on the organization resource. It will be empty if no
-   * `CustomConstraints` are set.
+   * All custom constraints that exist on the organization resource. It will be empty if no custom
+   * constraints are set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse extends c
   private java.lang.String nextPageToken;
 
   /**
-   * All `CustomConstraints` that exist on the organization resource. It will be empty if no
-   * `CustomConstraints` are set.
+   * All custom constraints that exist on the organization resource. It will be empty if no custom
+   * constraints are set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudOrgpolicyV2CustomConstraint> getCustomConstraints() {
@@ -63,8 +63,8 @@ public final class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse extends c
   }
 
   /**
-   * All `CustomConstraints` that exist on the organization resource. It will be empty if no
-   * `CustomConstraints` are set.
+   * All custom constraints that exist on the organization resource. It will be empty if no custom
+   * constraints are set.
    * @param customConstraints customConstraints or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ListCustomConstraintsResponse setCustomConstraints(java.util.List<GoogleCloudOrgpolicyV2CustomConstraint> customConstraints) {

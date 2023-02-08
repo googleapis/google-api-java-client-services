@@ -17,8 +17,8 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * A `Constraint` that allows or disallows a list of string values, which are configured by an
- * Organization's policy administrator with a `Policy`.
+ * A constraint that allows or disallows a list of string values, which are configured by an
+ * Organization Policy administrator with a policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -40,7 +40,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintListConstraint extends com.go
   private java.lang.Boolean supportsIn;
 
   /**
-   * Indicates whether subtrees of Cloud Resource Manager resource hierarchy can be used in
+   * Indicates whether subtrees of the Resource Manager resource hierarchy can be used in
    * `Policy.allowed_values` and `Policy.denied_values`. For example, `"under:folders/123"` would
    * match any resource under the 'folders/123' folder.
    * The value may be {@code null}.
@@ -68,7 +68,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintListConstraint extends com.go
   }
 
   /**
-   * Indicates whether subtrees of Cloud Resource Manager resource hierarchy can be used in
+   * Indicates whether subtrees of the Resource Manager resource hierarchy can be used in
    * `Policy.allowed_values` and `Policy.denied_values`. For example, `"under:folders/123"` would
    * match any resource under the 'folders/123' folder.
    * @return value or {@code null} for none
@@ -78,7 +78,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintListConstraint extends com.go
   }
 
   /**
-   * Indicates whether subtrees of Cloud Resource Manager resource hierarchy can be used in
+   * Indicates whether subtrees of the Resource Manager resource hierarchy can be used in
    * `Policy.allowed_values` and `Policy.denied_values`. For example, `"under:folders/123"` would
    * match any resource under the 'folders/123' folder.
    * @param supportsUnder supportsUnder or {@code null} for none

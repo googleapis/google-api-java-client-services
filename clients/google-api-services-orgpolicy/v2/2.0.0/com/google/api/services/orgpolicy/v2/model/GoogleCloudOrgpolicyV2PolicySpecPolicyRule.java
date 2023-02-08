@@ -31,7 +31,7 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Setting this to true means that all values are allowed. This field can be set only in Policies
+   * Setting this to true means that all values are allowed. This field can be set only in policies
    * for list constraints.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   private GoogleTypeExpr condition;
 
   /**
-   * Setting this to true means that all values are denied. This field can be set only in Policies
+   * Setting this to true means that all values are denied. This field can be set only in policies
    * for list constraints.
    * The value may be {@code null}.
    */
@@ -61,15 +61,15 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   private java.lang.Boolean denyAll;
 
   /**
-   * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable.
-   * This field can be set only in Policies for boolean constraints.
+   * If `true`, then the policy is enforced. If `false`, then any configuration is acceptable. This
+   * field can be set only in policies for boolean constraints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enforce;
 
   /**
-   * List of values to be used for this PolicyRule. This field can be set only in Policies for list
+   * List of values to be used for this policy rule. This field can be set only in policies for list
    * constraints.
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues values;
 
   /**
-   * Setting this to true means that all values are allowed. This field can be set only in Policies
+   * Setting this to true means that all values are allowed. This field can be set only in policies
    * for list constraints.
    * @return value or {@code null} for none
    */
@@ -86,7 +86,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * Setting this to true means that all values are allowed. This field can be set only in Policies
+   * Setting this to true means that all values are allowed. This field can be set only in policies
    * for list constraints.
    * @param allowAll allowAll or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * Setting this to true means that all values are denied. This field can be set only in Policies
+   * Setting this to true means that all values are denied. This field can be set only in policies
    * for list constraints.
    * @return value or {@code null} for none
    */
@@ -136,7 +136,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * Setting this to true means that all values are denied. This field can be set only in Policies
+   * Setting this to true means that all values are denied. This field can be set only in policies
    * for list constraints.
    * @param denyAll denyAll or {@code null} for none
    */
@@ -146,8 +146,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable.
-   * This field can be set only in Policies for boolean constraints.
+   * If `true`, then the policy is enforced. If `false`, then any configuration is acceptable. This
+   * field can be set only in policies for boolean constraints.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnforce() {
@@ -155,8 +155,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable.
-   * This field can be set only in Policies for boolean constraints.
+   * If `true`, then the policy is enforced. If `false`, then any configuration is acceptable. This
+   * field can be set only in policies for boolean constraints.
    * @param enforce enforce or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpecPolicyRule setEnforce(java.lang.Boolean enforce) {
@@ -165,7 +165,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * List of values to be used for this PolicyRule. This field can be set only in Policies for list
+   * List of values to be used for this policy rule. This field can be set only in policies for list
    * constraints.
    * @return value or {@code null} for none
    */
@@ -174,7 +174,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
   }
 
   /**
-   * List of values to be used for this PolicyRule. This field can be set only in Policies for list
+   * List of values to be used for this policy rule. This field can be set only in policies for list
    * constraints.
    * @param values values or {@code null} for none
    */

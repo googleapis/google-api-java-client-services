@@ -44,6 +44,13 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
   private java.lang.String path;
 
   /**
+   * Port number to access on the container. Must be in the range 1 to 65535.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer port;
+
+  /**
    * Custom headers to set in the request. HTTP allows repeated headers.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
    */
   public GoogleCloudRunV2HTTPGetAction setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * Port number to access on the container. Must be in the range 1 to 65535.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPort() {
+    return port;
+  }
+
+  /**
+   * Port number to access on the container. Must be in the range 1 to 65535.
+   * @param port port or {@code null} for none
+   */
+  public GoogleCloudRunV2HTTPGetAction setPort(java.lang.Integer port) {
+    this.port = port;
     return this;
   }
 

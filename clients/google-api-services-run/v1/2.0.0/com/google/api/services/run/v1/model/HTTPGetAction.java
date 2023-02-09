@@ -51,6 +51,13 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   private java.lang.String path;
 
   /**
+   * Port number to access on the container. Number must be in the range 1 to 65535.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer port;
+
+  /**
    * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
    */
   public HTTPGetAction setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * Port number to access on the container. Number must be in the range 1 to 65535.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPort() {
+    return port;
+  }
+
+  /**
+   * Port number to access on the container. Number must be in the range 1 to 65535.
+   * @param port port or {@code null} for none
+   */
+  public HTTPGetAction setPort(java.lang.Integer port) {
+    this.port = port;
     return this;
   }
 

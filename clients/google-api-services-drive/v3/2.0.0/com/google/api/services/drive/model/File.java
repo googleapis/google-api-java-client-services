@@ -389,8 +389,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   private ShortcutDetails shortcutDetails;
 
   /**
-   * The size of the file's content in bytes. This is applicable to binary files in Google Drive and
-   * Google Docs files.
+   * The size of the file's content in bytes. This field is populated for files with binary content
+   * stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or
+   * folders.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -1363,8 +1364,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the file's content in bytes. This is applicable to binary files in Google Drive and
-   * Google Docs files.
+   * The size of the file's content in bytes. This field is populated for files with binary content
+   * stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or
+   * folders.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -1372,8 +1374,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the file's content in bytes. This is applicable to binary files in Google Drive and
-   * Google Docs files.
+   * The size of the file's content in bytes. This field is populated for files with binary content
+   * stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or
+   * folders.
    * @param size size or {@code null} for none
    */
   public File setSize(java.lang.Long size) {

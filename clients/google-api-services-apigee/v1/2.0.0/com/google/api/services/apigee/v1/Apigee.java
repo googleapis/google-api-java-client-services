@@ -18353,24 +18353,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /**
-         * Optional. Name of the environment. Alternatively, the name may be specified in the
-         * request body in the name field.
-         */
+        /** Optional. Name of the environment. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Optional. Name of the environment. Alternatively, the name may be specified in the request body in
-       the name field.
+        /** Optional. Name of the environment.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Optional. Name of the environment. Alternatively, the name may be specified in the
-         * request body in the name field.
-         */
+        /** Optional. Name of the environment. */
         public Create setName(java.lang.String name) {
           this.name = name;
           return this;

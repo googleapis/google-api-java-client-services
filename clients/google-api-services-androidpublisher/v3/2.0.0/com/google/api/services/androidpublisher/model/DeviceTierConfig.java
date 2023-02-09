@@ -58,6 +58,13 @@ public final class DeviceTierConfig extends com.google.api.client.json.GenericJs
   private DeviceTierSet deviceTierSet;
 
   /**
+   * Definition of user country sets for the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UserCountrySet> userCountrySets;
+
+  /**
    * Definition of device groups for the app.
    * @return value or {@code null} for none
    */
@@ -105,6 +112,23 @@ public final class DeviceTierConfig extends com.google.api.client.json.GenericJs
    */
   public DeviceTierConfig setDeviceTierSet(DeviceTierSet deviceTierSet) {
     this.deviceTierSet = deviceTierSet;
+    return this;
+  }
+
+  /**
+   * Definition of user country sets for the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UserCountrySet> getUserCountrySets() {
+    return userCountrySets;
+  }
+
+  /**
+   * Definition of user country sets for the app.
+   * @param userCountrySets userCountrySets or {@code null} for none
+   */
+  public DeviceTierConfig setUserCountrySets(java.util.List<UserCountrySet> userCountrySets) {
+    this.userCountrySets = userCountrySets;
     return this;
   }
 

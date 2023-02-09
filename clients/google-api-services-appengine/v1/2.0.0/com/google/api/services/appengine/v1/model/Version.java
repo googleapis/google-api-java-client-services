@@ -162,6 +162,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Settings for App Engine flexible runtimes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlexibleRuntimeSettings flexibleRuntimeSettings;
+
+  /**
    * An ordered list of URL-matching patterns that should be applied to incoming requests. The first
    * matching URL handles the request and other request handlers are not attempted.Only returned in
    * GET requests if view=FULL is set.
@@ -660,6 +667,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setErrorHandlers(java.util.List<ErrorHandler> errorHandlers) {
     this.errorHandlers = errorHandlers;
+    return this;
+  }
+
+  /**
+   * Settings for App Engine flexible runtimes.
+   * @return value or {@code null} for none
+   */
+  public FlexibleRuntimeSettings getFlexibleRuntimeSettings() {
+    return flexibleRuntimeSettings;
+  }
+
+  /**
+   * Settings for App Engine flexible runtimes.
+   * @param flexibleRuntimeSettings flexibleRuntimeSettings or {@code null} for none
+   */
+  public Version setFlexibleRuntimeSettings(FlexibleRuntimeSettings flexibleRuntimeSettings) {
+    this.flexibleRuntimeSettings = flexibleRuntimeSettings;
     return this;
   }
 

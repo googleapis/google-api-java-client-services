@@ -81,7 +81,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * Flag that determines whether responses are sent to recipients who are outside of the user's
-   * domain. This feature is only available for G Suite users.
+   * domain. This feature is only available for Google Workspace users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +214,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * Flag that determines whether responses are sent to recipients who are outside of the user's
-   * domain. This feature is only available for G Suite users.
+   * domain. This feature is only available for Google Workspace users.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRestrictToDomain() {
@@ -223,7 +223,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * Flag that determines whether responses are sent to recipients who are outside of the user's
-   * domain. This feature is only available for G Suite users.
+   * domain. This feature is only available for Google Workspace users.
    * @param restrictToDomain restrictToDomain or {@code null} for none
    */
   public VacationSettings setRestrictToDomain(java.lang.Boolean restrictToDomain) {

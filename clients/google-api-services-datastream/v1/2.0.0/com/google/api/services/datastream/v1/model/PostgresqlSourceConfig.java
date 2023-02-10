@@ -44,6 +44,14 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   private PostgresqlRdbms includeObjects;
 
   /**
+   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
+   * set to 0), the system's default value will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConcurrentBackfillTasks;
+
+  /**
    * Required. The name of the publication that includes the set of all tables that are defined in
    * the stream's include_objects.
    * The value may be {@code null}.
@@ -90,6 +98,25 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
    */
   public PostgresqlSourceConfig setIncludeObjects(PostgresqlRdbms includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
+   * set to 0), the system's default value will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConcurrentBackfillTasks() {
+    return maxConcurrentBackfillTasks;
+  }
+
+  /**
+   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
+   * set to 0), the system's default value will be used.
+   * @param maxConcurrentBackfillTasks maxConcurrentBackfillTasks or {@code null} for none
+   */
+  public PostgresqlSourceConfig setMaxConcurrentBackfillTasks(java.lang.Integer maxConcurrentBackfillTasks) {
+    this.maxConcurrentBackfillTasks = maxConcurrentBackfillTasks;
     return this;
   }
 

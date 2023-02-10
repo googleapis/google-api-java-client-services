@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for AllocationResourceStatus.
+ * [Output Only] Contains output only fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,12 +30,14 @@ package com.google.api.services.compute.model;
 public final class AllocationResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Allocation Properties of this reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
 
   /**
+   * Allocation Properties of this reservation.
    * @return value or {@code null} for none
    */
   public AllocationResourceStatusSpecificSKUAllocation getSpecificSkuAllocation() {
@@ -43,6 +45,7 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   }
 
   /**
+   * Allocation Properties of this reservation.
    * @param specificSkuAllocation specificSkuAllocation or {@code null} for none
    */
   public AllocationResourceStatus setSpecificSkuAllocation(AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation) {

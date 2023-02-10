@@ -66,7 +66,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +202,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #decodeLabelFingerprint()
    * @return value or {@code null} for none
    */
@@ -216,7 +216,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #getLabelFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -232,7 +232,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #encodeLabelFingerprint()
    * @param labelFingerprint labelFingerprint or {@code null} for none
    */
@@ -247,7 +247,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #setLabelFingerprint()
    *
    * <p>

@@ -46,6 +46,13 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String collocation;
 
   /**
+   * Specifies the number of max logical switches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxDistance;
+
+  /**
    * Number of VMs in this placement group. Google does not recommend that you use this field unless
    * you use a compact policy and you want your policy to work only if it contains this exact number
    * of VMs.
@@ -87,6 +94,23 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setCollocation(java.lang.String collocation) {
     this.collocation = collocation;
+    return this;
+  }
+
+  /**
+   * Specifies the number of max logical switches.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxDistance() {
+    return maxDistance;
+  }
+
+  /**
+   * Specifies the number of max logical switches.
+   * @param maxDistance maxDistance or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setMaxDistance(java.lang.Integer maxDistance) {
+    this.maxDistance = maxDistance;
     return this;
   }
 

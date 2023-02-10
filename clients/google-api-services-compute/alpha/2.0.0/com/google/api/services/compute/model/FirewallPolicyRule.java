@@ -148,6 +148,14 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetServiceAccounts;
 
   /**
+   * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
+   * 'apply_security_profile_group' and cannot be set for other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean tlsInspect;
+
+  /**
    * The Action to perform when the client connection triggers the rule. Valid actions are "allow",
    * "deny" and "goto_next".
    * @return value or {@code null} for none
@@ -420,6 +428,25 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setTargetServiceAccounts(java.util.List<java.lang.String> targetServiceAccounts) {
     this.targetServiceAccounts = targetServiceAccounts;
+    return this;
+  }
+
+  /**
+   * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
+   * 'apply_security_profile_group' and cannot be set for other actions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTlsInspect() {
+    return tlsInspect;
+  }
+
+  /**
+   * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
+   * 'apply_security_profile_group' and cannot be set for other actions.
+   * @param tlsInspect tlsInspect or {@code null} for none
+   */
+  public FirewallPolicyRule setTlsInspect(java.lang.Boolean tlsInspect) {
+    this.tlsInspect = tlsInspect;
     return this;
   }
 

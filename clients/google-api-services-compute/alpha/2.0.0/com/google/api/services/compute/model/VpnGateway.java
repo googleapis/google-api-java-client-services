@@ -47,6 +47,14 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatewayIpVersion;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -66,7 +74,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,6 +171,25 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatewayIpVersion() {
+    return gatewayIpVersion;
+  }
+
+  /**
+   * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will
+   * be used.
+   * @param gatewayIpVersion gatewayIpVersion or {@code null} for none
+   */
+  public VpnGateway setGatewayIpVersion(java.lang.String gatewayIpVersion) {
+    this.gatewayIpVersion = gatewayIpVersion;
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -202,7 +229,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #decodeLabelFingerprint()
    * @return value or {@code null} for none
    */
@@ -216,7 +243,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #getLabelFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -232,7 +259,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #encodeLabelFingerprint()
    * @param labelFingerprint labelFingerprint or {@code null} for none
    */
@@ -247,7 +274,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
    * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve an VpnGateway.
+   * retrieve a VpnGateway.
    * @see #setLabelFingerprint()
    *
    * <p>

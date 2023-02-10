@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Contains Properties set for the reservation.
+ * Model definition for RouterBgpPeerCustomLearnedIpRange.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,46 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AllocationResourceStatusSpecificSKUAllocation extends com.google.api.client.json.GenericJson {
+public final class RouterBgpPeerCustomLearnedIpRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the instance template used to populate reservation properties.
+   * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided
+   * without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for
+   * IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sourceInstanceTemplateId;
+  private java.lang.String range;
 
   /**
-   * ID of the instance template used to populate reservation properties.
+   * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided
+   * without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for
+   * IPv6.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSourceInstanceTemplateId() {
-    return sourceInstanceTemplateId;
+  public java.lang.String getRange() {
+    return range;
   }
 
   /**
-   * ID of the instance template used to populate reservation properties.
-   * @param sourceInstanceTemplateId sourceInstanceTemplateId or {@code null} for none
+   * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided
+   * without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for
+   * IPv6.
+   * @param range range or {@code null} for none
    */
-  public AllocationResourceStatusSpecificSKUAllocation setSourceInstanceTemplateId(java.lang.String sourceInstanceTemplateId) {
-    this.sourceInstanceTemplateId = sourceInstanceTemplateId;
+  public RouterBgpPeerCustomLearnedIpRange setRange(java.lang.String range) {
+    this.range = range;
     return this;
   }
 
   @Override
-  public AllocationResourceStatusSpecificSKUAllocation set(String fieldName, Object value) {
-    return (AllocationResourceStatusSpecificSKUAllocation) super.set(fieldName, value);
+  public RouterBgpPeerCustomLearnedIpRange set(String fieldName, Object value) {
+    return (RouterBgpPeerCustomLearnedIpRange) super.set(fieldName, value);
   }
 
   @Override
-  public AllocationResourceStatusSpecificSKUAllocation clone() {
-    return (AllocationResourceStatusSpecificSKUAllocation) super.clone();
+  public RouterBgpPeerCustomLearnedIpRange clone() {
+    return (RouterBgpPeerCustomLearnedIpRange) super.clone();
   }
 
 }

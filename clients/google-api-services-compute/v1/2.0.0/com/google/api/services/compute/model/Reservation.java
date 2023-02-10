@@ -78,6 +78,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Resource policies to be added to this reservation. The key is defined by user, and the value is
+   * resource policy url. This is to define placement policy with reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourcePolicies;
+
+  /**
    * [Output Only] Status information for Reservation resource.
    * The value may be {@code null}.
    */
@@ -247,6 +255,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Resource policies to be added to this reservation. The key is defined by user, and the value is
+   * resource policy url. This is to define placement policy with reservation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies to be added to this reservation. The key is defined by user, and the value is
+   * resource policy url. This is to define placement policy with reservation.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public Reservation setResourcePolicies(java.util.Map<String, java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

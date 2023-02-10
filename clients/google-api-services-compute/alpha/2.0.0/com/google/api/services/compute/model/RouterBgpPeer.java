@@ -80,6 +80,22 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private RouterBgpPeerBfd bfd;
 
   /**
+   * User-defined Custom Learned Route IP range list for a BGP session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterBgpPeerCustomLearnedIpRange> customLearnedIpRanges;
+
+  /**
+   * User-defined Custom Learned Route Priority for a BGP session. This will be applied to all
+   * Custom Learned Route ranges of the BGP session, if not given, google-managed priority of 100 is
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer customLearnedRoutePriority;
+
+  /**
    * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
    * terminated and all associated routing information is removed. If set to TRUE, the peer
    * connection can be established with routing information. The default is TRUE.
@@ -277,6 +293,44 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setBfd(RouterBgpPeerBfd bfd) {
     this.bfd = bfd;
+    return this;
+  }
+
+  /**
+   * User-defined Custom Learned Route IP range list for a BGP session.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterBgpPeerCustomLearnedIpRange> getCustomLearnedIpRanges() {
+    return customLearnedIpRanges;
+  }
+
+  /**
+   * User-defined Custom Learned Route IP range list for a BGP session.
+   * @param customLearnedIpRanges customLearnedIpRanges or {@code null} for none
+   */
+  public RouterBgpPeer setCustomLearnedIpRanges(java.util.List<RouterBgpPeerCustomLearnedIpRange> customLearnedIpRanges) {
+    this.customLearnedIpRanges = customLearnedIpRanges;
+    return this;
+  }
+
+  /**
+   * User-defined Custom Learned Route Priority for a BGP session. This will be applied to all
+   * Custom Learned Route ranges of the BGP session, if not given, google-managed priority of 100 is
+   * used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCustomLearnedRoutePriority() {
+    return customLearnedRoutePriority;
+  }
+
+  /**
+   * User-defined Custom Learned Route Priority for a BGP session. This will be applied to all
+   * Custom Learned Route ranges of the BGP session, if not given, google-managed priority of 100 is
+   * used.
+   * @param customLearnedRoutePriority customLearnedRoutePriority or {@code null} for none
+   */
+  public RouterBgpPeer setCustomLearnedRoutePriority(java.lang.Integer customLearnedRoutePriority) {
+    this.customLearnedRoutePriority = customLearnedRoutePriority;
     return this;
   }
 

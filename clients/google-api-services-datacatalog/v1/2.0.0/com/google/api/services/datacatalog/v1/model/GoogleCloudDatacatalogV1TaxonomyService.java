@@ -38,7 +38,7 @@ public final class GoogleCloudDatacatalogV1TaxonomyService extends com.google.ap
   private java.lang.String identity;
 
   /**
-   * The GCP service name.
+   * The Google Cloud service name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDatacatalogV1TaxonomyService extends com.google.ap
   }
 
   /**
-   * The GCP service name.
+   * The Google Cloud service name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDatacatalogV1TaxonomyService extends com.google.ap
   }
 
   /**
-   * The GCP service name.
+   * The Google Cloud service name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1TaxonomyService setName(java.lang.String name) {

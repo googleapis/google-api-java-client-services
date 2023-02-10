@@ -31,9 +31,9 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * If `true`, include Google Cloud Platform (GCP) public datasets in the search results. Info on
-   * GCP public datasets is available at https://cloud.google.com/public-datasets/. By default, GCP
-   * public datasets are excluded.
+   * If `true`, include Google Cloud public datasets in the search results. Info on Google Cloud
+   * public datasets is available at https://cloud.google.com/public-datasets/. By default, Google
+   * Cloud public datasets are excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +72,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   private java.util.List<java.lang.String> restrictedLocations;
 
   /**
-   * If `true`, include Google Cloud Platform (GCP) public datasets in the search results. Info on
-   * GCP public datasets is available at https://cloud.google.com/public-datasets/. By default, GCP
-   * public datasets are excluded.
+   * If `true`, include Google Cloud public datasets in the search results. Info on Google Cloud
+   * public datasets is available at https://cloud.google.com/public-datasets/. By default, Google
+   * Cloud public datasets are excluded.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeGcpPublicDatasets() {
@@ -82,9 +82,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   }
 
   /**
-   * If `true`, include Google Cloud Platform (GCP) public datasets in the search results. Info on
-   * GCP public datasets is available at https://cloud.google.com/public-datasets/. By default, GCP
-   * public datasets are excluded.
+   * If `true`, include Google Cloud public datasets in the search results. Info on Google Cloud
+   * public datasets is available at https://cloud.google.com/public-datasets/. By default, Google
+   * Cloud public datasets are excluded.
    * @param includeGcpPublicDatasets includeGcpPublicDatasets or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope setIncludeGcpPublicDatasets(java.lang.Boolean includeGcpPublicDatasets) {

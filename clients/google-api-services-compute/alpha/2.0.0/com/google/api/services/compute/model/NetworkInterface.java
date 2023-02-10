@@ -100,7 +100,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String ipv6AccessType;
 
   /**
-   * An IPv6 internal network address for this network interface.
+   * An IPv6 internal network address for this network interface. To use a static internal IP
+   * address, it must be unused and in the same region as the instance's zone. If not specified, GCP
+   * will automatically assign an internal IPv6 address from the instance's subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -372,7 +374,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * An IPv6 internal network address for this network interface.
+   * An IPv6 internal network address for this network interface. To use a static internal IP
+   * address, it must be unused and in the same region as the instance's zone. If not specified, GCP
+   * will automatically assign an internal IPv6 address from the instance's subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6Address() {
@@ -380,7 +384,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * An IPv6 internal network address for this network interface.
+   * An IPv6 internal network address for this network interface. To use a static internal IP
+   * address, it must be unused and in the same region as the instance's zone. If not specified, GCP
+   * will automatically assign an internal IPv6 address from the instance's subnetwork.
    * @param ipv6Address ipv6Address or {@code null} for none
    */
   public NetworkInterface setIpv6Address(java.lang.String ipv6Address) {

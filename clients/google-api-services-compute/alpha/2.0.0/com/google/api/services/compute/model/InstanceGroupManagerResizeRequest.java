@@ -116,7 +116,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private InstanceGroupManagerResizeRequestStatus status;
 
   /**
-   * [Output Only] The URL of a zone where the resize request is located.
+   * [Output Only] The URL of a zone where the resize request is located. Populated only for zonal
+   * resize requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,7 +323,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of a zone where the resize request is located.
+   * [Output Only] The URL of a zone where the resize request is located. Populated only for zonal
+   * resize requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -330,7 +332,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of a zone where the resize request is located.
+   * [Output Only] The URL of a zone where the resize request is located. Populated only for zonal
+   * resize requests.
    * @param zone zone or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setZone(java.lang.String zone) {

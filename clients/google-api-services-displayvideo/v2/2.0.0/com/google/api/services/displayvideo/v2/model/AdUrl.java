@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v2.model;
 public final class AdUrl extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the AD url.
+   * The type of the Ad URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The url value of the ad url.
+   * The URL string value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * The type of the AD url.
+   * The type of the Ad URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -53,7 +53,7 @@ public final class AdUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the AD url.
+   * The type of the Ad URL.
    * @param type type or {@code null} for none
    */
   public AdUrl setType(java.lang.String type) {
@@ -62,7 +62,7 @@ public final class AdUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url value of the ad url.
+   * The URL string value.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -70,7 +70,7 @@ public final class AdUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url value of the ad url.
+   * The URL string value.
    * @param url url or {@code null} for none
    */
   public AdUrl setUrl(java.lang.String url) {

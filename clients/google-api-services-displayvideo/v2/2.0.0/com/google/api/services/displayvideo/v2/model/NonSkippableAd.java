@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * Ad details for NonSkippableAd
+ * Details for a non-skippable ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v2.model;
 public final class NonSkippableAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Common attributes data model.
+   * Common ad attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CommonInStreamAttribute commonInStreamAttribute;
 
   /**
-   * The custom parameters to pass custom values to tracking url template.
+   * The custom parameters to pass custom values to tracking URL template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> customParameters;
 
   /**
-   * Common attributes data model.
+   * Common ad attributes.
    * @return value or {@code null} for none
    */
   public CommonInStreamAttribute getCommonInStreamAttribute() {
@@ -53,7 +53,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Common attributes data model.
+   * Common ad attributes.
    * @param commonInStreamAttribute commonInStreamAttribute or {@code null} for none
    */
   public NonSkippableAd setCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {
@@ -62,7 +62,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The custom parameters to pass custom values to tracking url template.
+   * The custom parameters to pass custom values to tracking URL template.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -70,7 +70,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The custom parameters to pass custom values to tracking url template.
+   * The custom parameters to pass custom values to tracking URL template.
    * @param customParameters customParameters or {@code null} for none
    */
   public NonSkippableAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {

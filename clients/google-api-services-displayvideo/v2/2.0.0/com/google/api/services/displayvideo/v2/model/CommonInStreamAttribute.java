@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * The common attributes for InStreamAd, NonSkippableAd and BumperAd.
+ * Common attributes for in-stream, non-skippable and bumper ads.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -45,7 +45,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   private java.lang.String actionHeadline;
 
   /**
-   * The image which shows next to the video Ad.
+   * The image which shows next to the video ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   private java.lang.String finalUrl;
 
   /**
-   * The URL address which is loaded in background for tracking purpose.
+   * The URL address loaded in the background for tracking purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The image which shows next to the video Ad.
+   * The image which shows next to the video ad.
    * @return value or {@code null} for none
    */
   public ImageAsset getCompanionBanner() {
@@ -122,7 +122,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The image which shows next to the video Ad.
+   * The image which shows next to the video ad.
    * @param companionBanner companionBanner or {@code null} for none
    */
   public CommonInStreamAttribute setCompanionBanner(ImageAsset companionBanner) {
@@ -165,7 +165,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The URL address which is loaded in background for tracking purpose.
+   * The URL address loaded in the background for tracking purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -173,7 +173,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The URL address which is loaded in background for tracking purpose.
+   * The URL address loaded in the background for tracking purposes.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public CommonInStreamAttribute setTrackingUrl(java.lang.String trackingUrl) {

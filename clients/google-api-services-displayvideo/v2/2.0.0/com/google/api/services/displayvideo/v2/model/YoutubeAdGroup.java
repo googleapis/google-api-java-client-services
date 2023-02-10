@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The format of the ad group.
+   * The format of the ads in the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   private java.lang.Long advertiserId;
 
   /**
-   * The bidding strategy of the ad group.
+   * The bidding strategy used by the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * The data to represent the product feed in this ad group.
+   * The settings of the product feed in this ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,14 +105,14 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   private TargetingExpansionConfig targetingExpansion;
 
   /**
-   * The IDs of the YouTubeAds associated with the ad group.
+   * The IDs of the youtube_ad_group_ad resources associated with the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> youtubeAdIds;
 
   /**
-   * The format of the ad group.
+   * The format of the ads in the ad group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdGroupFormat() {
@@ -120,7 +120,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The format of the ad group.
+   * The format of the ads in the ad group.
    * @param adGroupFormat adGroupFormat or {@code null} for none
    */
   public YoutubeAdGroup setAdGroupFormat(java.lang.String adGroupFormat) {
@@ -163,7 +163,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The bidding strategy of the ad group.
+   * The bidding strategy used by the ad group.
    * @return value or {@code null} for none
    */
   public YoutubeAndPartnersBiddingStrategy getBiddingStrategy() {
@@ -171,7 +171,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The bidding strategy of the ad group.
+   * The bidding strategy used by the ad group.
    * @param biddingStrategy biddingStrategy or {@code null} for none
    */
   public YoutubeAdGroup setBiddingStrategy(YoutubeAndPartnersBiddingStrategy biddingStrategy) {
@@ -252,7 +252,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The data to represent the product feed in this ad group.
+   * The settings of the product feed in this ad group.
    * @return value or {@code null} for none
    */
   public ProductFeedData getProductFeedData() {
@@ -260,7 +260,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The data to represent the product feed in this ad group.
+   * The settings of the product feed in this ad group.
    * @param productFeedData productFeedData or {@code null} for none
    */
   public YoutubeAdGroup setProductFeedData(ProductFeedData productFeedData) {
@@ -290,7 +290,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IDs of the YouTubeAds associated with the ad group.
+   * The IDs of the youtube_ad_group_ad resources associated with the ad group.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getYoutubeAdIds() {
@@ -298,7 +298,7 @@ public final class YoutubeAdGroup extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IDs of the YouTubeAds associated with the ad group.
+   * The IDs of the youtube_ad_group_ad resources associated with the ad group.
    * @param youtubeAdIds youtubeAdIds or {@code null} for none
    */
   public YoutubeAdGroup setYoutubeAdIds(java.util.List<java.lang.Long> youtubeAdIds) {

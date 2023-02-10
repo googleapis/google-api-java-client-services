@@ -44,6 +44,14 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   private MysqlRdbms includeObjects;
 
   /**
+   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
+   * set to 0), the system's default value will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConcurrentBackfillTasks;
+
+  /**
    * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
    * to 0), the system's default value will be used.
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
    */
   public MysqlSourceConfig setIncludeObjects(MysqlRdbms includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
+   * set to 0), the system's default value will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConcurrentBackfillTasks() {
+    return maxConcurrentBackfillTasks;
+  }
+
+  /**
+   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
+   * set to 0), the system's default value will be used.
+   * @param maxConcurrentBackfillTasks maxConcurrentBackfillTasks or {@code null} for none
+   */
+  public MysqlSourceConfig setMaxConcurrentBackfillTasks(java.lang.Integer maxConcurrentBackfillTasks) {
+    this.maxConcurrentBackfillTasks = maxConcurrentBackfillTasks;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * The details for masthead ad.
+ * Details for a Masthead Ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class MastheadAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Video will autoplay for certain period of time.
+   * The duration of time the video will autoplay.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String autoplayVideoDuration;
 
   /**
-   * Video will start to play after certain period of time in millisecond.
+   * The amount of time in milliseconds after which the video will start to play.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -66,7 +66,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   private java.lang.String callToActionTrackingUrl;
 
   /**
-   * The videos (up to 2) that appear next to the Masthead ad on desktop.
+   * The videos that appear next to the Masthead Ad on desktop. Can be no more than two.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,21 +94,21 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean showChannelArt;
 
   /**
-   * The YouTube video of the ad.
+   * The YouTube video used by the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeVideoDetails video;
 
   /**
-   * Aspect ratio of the autoplaying YouTube video on the Masthead.
+   * The aspect ratio of the autoplaying YouTube video on the Masthead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String videoAspectRatio;
 
   /**
-   * Video will autoplay for certain period of time.
+   * The duration of time the video will autoplay.
    * @return value or {@code null} for none
    */
   public String getAutoplayVideoDuration() {
@@ -116,7 +116,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Video will autoplay for certain period of time.
+   * The duration of time the video will autoplay.
    * @param autoplayVideoDuration autoplayVideoDuration or {@code null} for none
    */
   public MastheadAd setAutoplayVideoDuration(String autoplayVideoDuration) {
@@ -125,7 +125,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Video will start to play after certain period of time in millisecond.
+   * The amount of time in milliseconds after which the video will start to play.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAutoplayVideoStartMillisecond() {
@@ -133,7 +133,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Video will start to play after certain period of time in millisecond.
+   * The amount of time in milliseconds after which the video will start to play.
    * @param autoplayVideoStartMillisecond autoplayVideoStartMillisecond or {@code null} for none
    */
   public MastheadAd setAutoplayVideoStartMillisecond(java.lang.Long autoplayVideoStartMillisecond) {
@@ -193,7 +193,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The videos (up to 2) that appear next to the Masthead ad on desktop.
+   * The videos that appear next to the Masthead Ad on desktop. Can be no more than two.
    * @return value or {@code null} for none
    */
   public java.util.List<YoutubeVideoDetails> getCompanionYoutubeVideos() {
@@ -201,7 +201,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The videos (up to 2) that appear next to the Masthead ad on desktop.
+   * The videos that appear next to the Masthead Ad on desktop. Can be no more than two.
    * @param companionYoutubeVideos companionYoutubeVideos or {@code null} for none
    */
   public MastheadAd setCompanionYoutubeVideos(java.util.List<YoutubeVideoDetails> companionYoutubeVideos) {
@@ -261,7 +261,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The YouTube video of the ad.
+   * The YouTube video used by the ad.
    * @return value or {@code null} for none
    */
   public YoutubeVideoDetails getVideo() {
@@ -269,7 +269,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The YouTube video of the ad.
+   * The YouTube video used by the ad.
    * @param video video or {@code null} for none
    */
   public MastheadAd setVideo(YoutubeVideoDetails video) {
@@ -278,7 +278,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Aspect ratio of the autoplaying YouTube video on the Masthead.
+   * The aspect ratio of the autoplaying YouTube video on the Masthead.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoAspectRatio() {
@@ -286,7 +286,7 @@ public final class MastheadAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Aspect ratio of the autoplaying YouTube video on the Masthead.
+   * The aspect ratio of the autoplaying YouTube video on the Masthead.
    * @param videoAspectRatio videoAspectRatio or {@code null} for none
    */
   public MastheadAd setVideoAspectRatio(java.lang.String videoAspectRatio) {

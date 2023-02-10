@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * A single YouTube ad group ad associated with a YouTube ad group.
+ * A single ad associated with a YouTube ad group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique ID of the ad group ad. Assigned by the system.
+   * The unique ID of the ad. Assigned by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long adGroupAdId;
 
   /**
-   * The unique ID of the ad group that the ad group ad belongs to.
+   * The unique ID of the ad group that the ad belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long adGroupId;
 
   /**
-   * The list of ad urls.
+   * List of URLs used by the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,97 +58,100 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique ID of the advertiser the ad group ad belongs to.
+   * The unique ID of the advertiser the ad belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long advertiserId;
 
   /**
-   * Audio ad for reach purpose. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used for reach
+   * marketing objectives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AudioAd audioAd;
 
   /**
-   * Non-skippable short video ad for reach purpose and video length equal to or less than 6
-   * seconds. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of a [non-skippable short video ad](//support.google.com/displayvideo/answer/6274216),
+   * equal to or less than 6 seconds, used for reach.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BumperAd bumperAd;
 
   /**
-   * The display name of the ad group ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The ad sourcing DV360 creative.
+   * Details of an ad sourced from a Display & Video 360 creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DisplayVideoSourceAd displayVideoSourceAd;
 
   /**
-   * The entity status of the ad group ad.
+   * The entity status of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityStatus;
 
   /**
-   * Skippable in-stream ad after 5 seconds for brand awareness or reach marketing objectives.
-   * [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [in-stream ad skippable after 5
+   * seconds](//support.google.com/displayvideo/answer/6274216), used for brand awareness or reach
+   * marketing objectives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InStreamAd inStreamAd;
 
   /**
-   * The ad which shows on YouTube homepage. [details](https://support.google.com/google-
-   * ads/answer/9709826)
+   * Details of an [ad served on the YouTube Home feed](//support.google.com/google-
+   * ads/answer/9709826).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MastheadAd mastheadAd;
 
   /**
-   * The resource name of the ad group ad.
+   * The resource name of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Non-skippable short in-stream ad for reach marketing objectives, and video length is between 6
-   * and 15 seconds. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of a [non-skippable short in-stream video
+   * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15 seconds, used for reach
+   * marketing objectives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NonSkippableAd nonSkippableAd;
 
   /**
-   * An ad which shows in places of discovery to promote a video.
-   * [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [ad promoting a video](//support.google.com/displayvideo/answer/6274216) that
+   * shows in places of discovery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VideoDiscoveryAd videoDiscoverAd;
 
   /**
-   * The ad to drive actions to the business, service or product.
-   * [details](https://support.google.com/google-ads/answer/10147229)
+   * Details of an [ad used in a video action campaign](//support.google.com/google-
+   * ads/answer/10147229) to drive actions to the business, service or product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VideoPerformanceAd videoPerformanceAd;
 
   /**
-   * The unique ID of the ad group ad. Assigned by the system.
+   * The unique ID of the ad. Assigned by the system.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupAdId() {
@@ -156,7 +159,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique ID of the ad group ad. Assigned by the system.
+   * The unique ID of the ad. Assigned by the system.
    * @param adGroupAdId adGroupAdId or {@code null} for none
    */
   public YoutubeAdGroupAd setAdGroupAdId(java.lang.Long adGroupAdId) {
@@ -165,7 +168,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique ID of the ad group that the ad group ad belongs to.
+   * The unique ID of the ad group that the ad belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupId() {
@@ -173,7 +176,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique ID of the ad group that the ad group ad belongs to.
+   * The unique ID of the ad group that the ad belongs to.
    * @param adGroupId adGroupId or {@code null} for none
    */
   public YoutubeAdGroupAd setAdGroupId(java.lang.Long adGroupId) {
@@ -182,7 +185,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of ad urls.
+   * List of URLs used by the ad.
    * @return value or {@code null} for none
    */
   public java.util.List<AdUrl> getAdUrls() {
@@ -190,7 +193,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of ad urls.
+   * List of URLs used by the ad.
    * @param adUrls adUrls or {@code null} for none
    */
   public YoutubeAdGroupAd setAdUrls(java.util.List<AdUrl> adUrls) {
@@ -199,7 +202,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique ID of the advertiser the ad group ad belongs to.
+   * The unique ID of the advertiser the ad belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserId() {
@@ -207,7 +210,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique ID of the advertiser the ad group ad belongs to.
+   * The unique ID of the advertiser the ad belongs to.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public YoutubeAdGroupAd setAdvertiserId(java.lang.Long advertiserId) {
@@ -216,7 +219,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Audio ad for reach purpose. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used for reach
+   * marketing objectives.
    * @return value or {@code null} for none
    */
   public AudioAd getAudioAd() {
@@ -224,7 +228,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Audio ad for reach purpose. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used for reach
+   * marketing objectives.
    * @param audioAd audioAd or {@code null} for none
    */
   public YoutubeAdGroupAd setAudioAd(AudioAd audioAd) {
@@ -233,8 +238,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Non-skippable short video ad for reach purpose and video length equal to or less than 6
-   * seconds. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of a [non-skippable short video ad](//support.google.com/displayvideo/answer/6274216),
+   * equal to or less than 6 seconds, used for reach.
    * @return value or {@code null} for none
    */
   public BumperAd getBumperAd() {
@@ -242,8 +247,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Non-skippable short video ad for reach purpose and video length equal to or less than 6
-   * seconds. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of a [non-skippable short video ad](//support.google.com/displayvideo/answer/6274216),
+   * equal to or less than 6 seconds, used for reach.
    * @param bumperAd bumperAd or {@code null} for none
    */
   public YoutubeAdGroupAd setBumperAd(BumperAd bumperAd) {
@@ -252,7 +257,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The display name of the ad group ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -260,7 +265,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The display name of the ad group ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public YoutubeAdGroupAd setDisplayName(java.lang.String displayName) {
@@ -269,7 +274,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ad sourcing DV360 creative.
+   * Details of an ad sourced from a Display & Video 360 creative.
    * @return value or {@code null} for none
    */
   public DisplayVideoSourceAd getDisplayVideoSourceAd() {
@@ -277,7 +282,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ad sourcing DV360 creative.
+   * Details of an ad sourced from a Display & Video 360 creative.
    * @param displayVideoSourceAd displayVideoSourceAd or {@code null} for none
    */
   public YoutubeAdGroupAd setDisplayVideoSourceAd(DisplayVideoSourceAd displayVideoSourceAd) {
@@ -286,7 +291,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The entity status of the ad group ad.
+   * The entity status of the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityStatus() {
@@ -294,7 +299,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The entity status of the ad group ad.
+   * The entity status of the ad.
    * @param entityStatus entityStatus or {@code null} for none
    */
   public YoutubeAdGroupAd setEntityStatus(java.lang.String entityStatus) {
@@ -303,8 +308,9 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Skippable in-stream ad after 5 seconds for brand awareness or reach marketing objectives.
-   * [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [in-stream ad skippable after 5
+   * seconds](//support.google.com/displayvideo/answer/6274216), used for brand awareness or reach
+   * marketing objectives.
    * @return value or {@code null} for none
    */
   public InStreamAd getInStreamAd() {
@@ -312,8 +318,9 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Skippable in-stream ad after 5 seconds for brand awareness or reach marketing objectives.
-   * [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [in-stream ad skippable after 5
+   * seconds](//support.google.com/displayvideo/answer/6274216), used for brand awareness or reach
+   * marketing objectives.
    * @param inStreamAd inStreamAd or {@code null} for none
    */
   public YoutubeAdGroupAd setInStreamAd(InStreamAd inStreamAd) {
@@ -322,8 +329,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ad which shows on YouTube homepage. [details](https://support.google.com/google-
-   * ads/answer/9709826)
+   * Details of an [ad served on the YouTube Home feed](//support.google.com/google-
+   * ads/answer/9709826).
    * @return value or {@code null} for none
    */
   public MastheadAd getMastheadAd() {
@@ -331,8 +338,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ad which shows on YouTube homepage. [details](https://support.google.com/google-
-   * ads/answer/9709826)
+   * Details of an [ad served on the YouTube Home feed](//support.google.com/google-
+   * ads/answer/9709826).
    * @param mastheadAd mastheadAd or {@code null} for none
    */
   public YoutubeAdGroupAd setMastheadAd(MastheadAd mastheadAd) {
@@ -341,7 +348,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the ad group ad.
+   * The resource name of the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -349,7 +356,7 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the ad group ad.
+   * The resource name of the ad.
    * @param name name or {@code null} for none
    */
   public YoutubeAdGroupAd setName(java.lang.String name) {
@@ -358,8 +365,9 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Non-skippable short in-stream ad for reach marketing objectives, and video length is between 6
-   * and 15 seconds. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of a [non-skippable short in-stream video
+   * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15 seconds, used for reach
+   * marketing objectives.
    * @return value or {@code null} for none
    */
   public NonSkippableAd getNonSkippableAd() {
@@ -367,8 +375,9 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Non-skippable short in-stream ad for reach marketing objectives, and video length is between 6
-   * and 15 seconds. [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of a [non-skippable short in-stream video
+   * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15 seconds, used for reach
+   * marketing objectives.
    * @param nonSkippableAd nonSkippableAd or {@code null} for none
    */
   public YoutubeAdGroupAd setNonSkippableAd(NonSkippableAd nonSkippableAd) {
@@ -377,8 +386,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * An ad which shows in places of discovery to promote a video.
-   * [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [ad promoting a video](//support.google.com/displayvideo/answer/6274216) that
+   * shows in places of discovery.
    * @return value or {@code null} for none
    */
   public VideoDiscoveryAd getVideoDiscoverAd() {
@@ -386,8 +395,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * An ad which shows in places of discovery to promote a video.
-   * [details](https://support.google.com/displayvideo/answer/6274216)
+   * Details of an [ad promoting a video](//support.google.com/displayvideo/answer/6274216) that
+   * shows in places of discovery.
    * @param videoDiscoverAd videoDiscoverAd or {@code null} for none
    */
   public YoutubeAdGroupAd setVideoDiscoverAd(VideoDiscoveryAd videoDiscoverAd) {
@@ -396,8 +405,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ad to drive actions to the business, service or product.
-   * [details](https://support.google.com/google-ads/answer/10147229)
+   * Details of an [ad used in a video action campaign](//support.google.com/google-
+   * ads/answer/10147229) to drive actions to the business, service or product.
    * @return value or {@code null} for none
    */
   public VideoPerformanceAd getVideoPerformanceAd() {
@@ -405,8 +414,8 @@ public final class YoutubeAdGroupAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ad to drive actions to the business, service or product.
-   * [details](https://support.google.com/google-ads/answer/10147229)
+   * Details of an [ad used in a video action campaign](//support.google.com/google-
+   * ads/answer/10147229) to drive actions to the business, service or product.
    * @param videoPerformanceAd videoPerformanceAd or {@code null} for none
    */
   public YoutubeAdGroupAd setVideoPerformanceAd(VideoPerformanceAd videoPerformanceAd) {

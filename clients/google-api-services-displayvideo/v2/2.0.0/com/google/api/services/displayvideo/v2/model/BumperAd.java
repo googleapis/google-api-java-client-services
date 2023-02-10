@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * Ad details for BumperAd.
+ * Details for a bumper ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class BumperAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Common attributes data model.
+   * Common ad attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CommonInStreamAttribute commonInStreamAttribute;
 
   /**
-   * Common attributes data model.
+   * Common ad attributes.
    * @return value or {@code null} for none
    */
   public CommonInStreamAttribute getCommonInStreamAttribute() {
@@ -46,7 +46,7 @@ public final class BumperAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Common attributes data model.
+   * Common ad attributes.
    * @param commonInStreamAttribute commonInStreamAttribute or {@code null} for none
    */
   public BumperAd setCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {

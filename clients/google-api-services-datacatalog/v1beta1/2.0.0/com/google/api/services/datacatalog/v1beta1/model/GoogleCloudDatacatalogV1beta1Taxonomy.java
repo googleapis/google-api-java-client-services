@@ -76,7 +76,7 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
 
   /**
    * Output only. Identity of the service which owns the Taxonomy. This field is only populated when
-   * the taxonomy is created by a GCP service. Currently only 'DATAPLEX' is supported.
+   * the taxonomy is created by a Google Cloud service. Currently only 'DATAPLEX' is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,7 +188,7 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
 
   /**
    * Output only. Identity of the service which owns the Taxonomy. This field is only populated when
-   * the taxonomy is created by a GCP service. Currently only 'DATAPLEX' is supported.
+   * the taxonomy is created by a Google Cloud service. Currently only 'DATAPLEX' is supported.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1TaxonomyService getService() {
@@ -197,7 +197,7 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
 
   /**
    * Output only. Identity of the service which owns the Taxonomy. This field is only populated when
-   * the taxonomy is created by a GCP service. Currently only 'DATAPLEX' is supported.
+   * the taxonomy is created by a Google Cloud service. Currently only 'DATAPLEX' is supported.
    * @param service service or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Taxonomy setService(GoogleCloudDatacatalogV1beta1TaxonomyService service) {

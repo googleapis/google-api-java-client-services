@@ -180,6 +180,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private Vulnerability vulnerability;
 
   /**
+   * A note describing a vulnerability assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VulnerabilityAssessmentNote vulnerabilityAssessment;
+
+  /**
    * A note describing an attestation role.
    * @return value or {@code null} for none
    */
@@ -537,6 +544,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setVulnerability(Vulnerability vulnerability) {
     this.vulnerability = vulnerability;
+    return this;
+  }
+
+  /**
+   * A note describing a vulnerability assessment.
+   * @return value or {@code null} for none
+   */
+  public VulnerabilityAssessmentNote getVulnerabilityAssessment() {
+    return vulnerabilityAssessment;
+  }
+
+  /**
+   * A note describing a vulnerability assessment.
+   * @param vulnerabilityAssessment vulnerabilityAssessment or {@code null} for none
+   */
+  public Note setVulnerabilityAssessment(VulnerabilityAssessmentNote vulnerabilityAssessment) {
+    this.vulnerabilityAssessment = vulnerabilityAssessment;
     return this;
   }
 

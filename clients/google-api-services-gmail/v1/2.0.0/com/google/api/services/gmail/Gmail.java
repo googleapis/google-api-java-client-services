@@ -3633,13 +3633,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a
-         * Vault administrator. Only used for G Suite accounts.
+         * Vault administrator. Only used for Google Workspace accounts.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean deleted;
 
         /** Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a Vault
-       administrator. Only used for G Suite accounts. [default: false]
+       administrator. Only used for Google Workspace accounts. [default: false]
          */
         public java.lang.Boolean getDeleted() {
           return deleted;
@@ -3647,7 +3647,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a
-         * Vault administrator. Only used for G Suite accounts.
+         * Vault administrator. Only used for Google Workspace accounts.
          */
         public GmailImport setDeleted(java.lang.Boolean deleted) {
           this.deleted = deleted;
@@ -3672,7 +3672,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          *
          * <p>
          * Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a Vault
-       administrator. Only used for G Suite accounts.
+       administrator. Only used for Google Workspace accounts.
          * </p>
          */
         public boolean isDeleted() {
@@ -3984,13 +3984,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a
-         * Vault administrator. Only used for G Suite accounts.
+         * Vault administrator. Only used for Google Workspace accounts.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean deleted;
 
         /** Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a Vault
-       administrator. Only used for G Suite accounts. [default: false]
+       administrator. Only used for Google Workspace accounts. [default: false]
          */
         public java.lang.Boolean getDeleted() {
           return deleted;
@@ -3998,7 +3998,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a
-         * Vault administrator. Only used for G Suite accounts.
+         * Vault administrator. Only used for Google Workspace accounts.
          */
         public Insert setDeleted(java.lang.Boolean deleted) {
           this.deleted = deleted;
@@ -4023,7 +4023,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          *
          * <p>
          * Mark the email as permanently deleted (not TRASH) and only visible in Google Vault to a Vault
-       administrator. Only used for G Suite accounts.
+       administrator. Only used for Google Workspace accounts.
          * </p>
          */
         public boolean isDeleted() {
@@ -8265,14 +8265,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Adds a delegate with its verification status set directly to `accepted`, without sending any
-         * verification email. The delegate user must be a member of the same G Suite organization as the
-         * delegator user. Gmail imposes limitations on the number of delegates and delegators each user in
-         * a G Suite organization can have. These limits depend on your organization, but in general each
-         * user can have up to 25 delegates and up to 10 delegators. Note that a delegate user must be
-         * referred to by their primary email address, and not an email alias. Also note that when a new
-         * delegate is created, there may be up to a one minute delay before the new delegate is available
-         * for use. This method is only available to service account clients that have been delegated
-         * domain-wide authority.
+         * verification email. The delegate user must be a member of the same Google Workspace organization
+         * as the delegator user. Gmail imposes limitations on the number of delegates and delegators each
+         * user in a Google Workspace organization can have. These limits depend on your organization, but
+         * in general each user can have up to 25 delegates and up to 10 delegators. Note that a delegate
+         * user must be referred to by their primary email address, and not an email alias. Also note that
+         * when a new delegate is created, there may be up to a one minute delay before the new delegate is
+         * available for use. This method is only available to service account clients that have been
+         * delegated domain-wide authority.
          *
          * Create a request for the method "delegates.create".
          *
@@ -8296,14 +8296,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Adds a delegate with its verification status set directly to `accepted`, without sending any
-           * verification email. The delegate user must be a member of the same G Suite organization as the
-           * delegator user. Gmail imposes limitations on the number of delegates and delegators each user
-           * in a G Suite organization can have. These limits depend on your organization, but in general
-           * each user can have up to 25 delegates and up to 10 delegators. Note that a delegate user must
-           * be referred to by their primary email address, and not an email alias. Also note that when a
-           * new delegate is created, there may be up to a one minute delay before the new delegate is
-           * available for use. This method is only available to service account clients that have been
-           * delegated domain-wide authority.
+           * verification email. The delegate user must be a member of the same Google Workspace
+           * organization as the delegator user. Gmail imposes limitations on the number of delegates and
+           * delegators each user in a Google Workspace organization can have. These limits depend on your
+           * organization, but in general each user can have up to 25 delegates and up to 10 delegators.
+           * Note that a delegate user must be referred to by their primary email address, and not an email
+           * alias. Also note that when a new delegate is created, there may be up to a one minute delay
+           * before the new delegate is available for use. This method is only available to service account
+           * clients that have been delegated domain-wide authority.
            *
            * Create a request for the method "delegates.create".
            *

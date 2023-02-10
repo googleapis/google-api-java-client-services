@@ -17,7 +17,7 @@
 package com.google.api.services.datacatalog.v1beta1.model;
 
 /**
- * Metadata message for long-running operation returned by the ReconcileTags.
+ * Long-running operation metadata message returned by the ReconcileTags.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -31,8 +31,8 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Map that maps name of each tagged column (or empty string in case of sole entry) to tagging
-   * operation status.
+   * Maps the name of each tagged column (or empty string for a sole entry) to tagging operation
+   * status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends com.goo
   private java.lang.String state;
 
   /**
-   * Map that maps name of each tagged column (or empty string in case of sole entry) to tagging
-   * operation status.
+   * Maps the name of each tagged column (or empty string for a sole entry) to tagging operation
+   * status.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Status> getErrors() {
@@ -55,8 +55,8 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends com.goo
   }
 
   /**
-   * Map that maps name of each tagged column (or empty string in case of sole entry) to tagging
-   * operation status.
+   * Maps the name of each tagged column (or empty string for a sole entry) to tagging operation
+   * status.
    * @param errors errors or {@code null} for none
    */
   public GoogleCloudDatacatalogV1ReconcileTagsMetadata setErrors(java.util.Map<String, Status> errors) {

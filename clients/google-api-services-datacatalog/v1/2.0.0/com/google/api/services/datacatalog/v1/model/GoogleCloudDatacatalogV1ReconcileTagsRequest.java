@@ -31,36 +31,32 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true deletes from the entry tags related to given tag template and not mentioned in
-   * the tags source. If set to false only creates and updates of the tags mentioned in the source
-   * will take place. Other tags in that entry using the same tag template will be retained instead
-   * of being deleted.
+   * If set to `true`, deletes entry tags related to a tag template not listed in the tags source
+   * from an entry. If set to `false`, unlisted tags are retained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean forceDeleteMissing;
 
   /**
-   * Required. The name of the tag template, that will be used for reconciliation.
+   * Required. The name of the tag template, which is used for reconciliation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tagTemplate;
 
   /**
-   * A list of tags to be applied on a given entry. Individual tags may specify tag template, but it
-   * must be the same as the one in the ReconcileTagsRequest. The sole entry and each of its columns
-   * must be mentioned at most once.
+   * A list of tags to apply to an entry. A tag can specify a tag template, which must be the
+   * template specified in the `ReconcileTagsRequest`. The sole entry and each of its columns must
+   * be mentioned at most once.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDatacatalogV1Tag> tags;
 
   /**
-   * If set to true deletes from the entry tags related to given tag template and not mentioned in
-   * the tags source. If set to false only creates and updates of the tags mentioned in the source
-   * will take place. Other tags in that entry using the same tag template will be retained instead
-   * of being deleted.
+   * If set to `true`, deletes entry tags related to a tag template not listed in the tags source
+   * from an entry. If set to `false`, unlisted tags are retained.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForceDeleteMissing() {
@@ -68,10 +64,8 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   }
 
   /**
-   * If set to true deletes from the entry tags related to given tag template and not mentioned in
-   * the tags source. If set to false only creates and updates of the tags mentioned in the source
-   * will take place. Other tags in that entry using the same tag template will be retained instead
-   * of being deleted.
+   * If set to `true`, deletes entry tags related to a tag template not listed in the tags source
+   * from an entry. If set to `false`, unlisted tags are retained.
    * @param forceDeleteMissing forceDeleteMissing or {@code null} for none
    */
   public GoogleCloudDatacatalogV1ReconcileTagsRequest setForceDeleteMissing(java.lang.Boolean forceDeleteMissing) {
@@ -80,7 +74,7 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   }
 
   /**
-   * Required. The name of the tag template, that will be used for reconciliation.
+   * Required. The name of the tag template, which is used for reconciliation.
    * @return value or {@code null} for none
    */
   public java.lang.String getTagTemplate() {
@@ -88,7 +82,7 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   }
 
   /**
-   * Required. The name of the tag template, that will be used for reconciliation.
+   * Required. The name of the tag template, which is used for reconciliation.
    * @param tagTemplate tagTemplate or {@code null} for none
    */
   public GoogleCloudDatacatalogV1ReconcileTagsRequest setTagTemplate(java.lang.String tagTemplate) {
@@ -97,9 +91,9 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   }
 
   /**
-   * A list of tags to be applied on a given entry. Individual tags may specify tag template, but it
-   * must be the same as the one in the ReconcileTagsRequest. The sole entry and each of its columns
-   * must be mentioned at most once.
+   * A list of tags to apply to an entry. A tag can specify a tag template, which must be the
+   * template specified in the `ReconcileTagsRequest`. The sole entry and each of its columns must
+   * be mentioned at most once.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDatacatalogV1Tag> getTags() {
@@ -107,9 +101,9 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   }
 
   /**
-   * A list of tags to be applied on a given entry. Individual tags may specify tag template, but it
-   * must be the same as the one in the ReconcileTagsRequest. The sole entry and each of its columns
-   * must be mentioned at most once.
+   * A list of tags to apply to an entry. A tag can specify a tag template, which must be the
+   * template specified in the `ReconcileTagsRequest`. The sole entry and each of its columns must
+   * be mentioned at most once.
    * @param tags tags or {@code null} for none
    */
   public GoogleCloudDatacatalogV1ReconcileTagsRequest setTags(java.util.List<GoogleCloudDatacatalogV1Tag> tags) {

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * Details of the YouTube video.
+ * Details of a YouTube video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeVideoDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID which can be searched on YouTube webpage.
+   * The YouTube video ID which can be searched on YouTube webpage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   private java.lang.String unavailableReason;
 
   /**
-   * The ID which can be searched on YouTube webpage.
+   * The YouTube video ID which can be searched on YouTube webpage.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +53,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The ID which can be searched on YouTube webpage.
+   * The YouTube video ID which can be searched on YouTube webpage.
    * @param id id or {@code null} for none
    */
   public YoutubeVideoDetails setId(java.lang.String id) {

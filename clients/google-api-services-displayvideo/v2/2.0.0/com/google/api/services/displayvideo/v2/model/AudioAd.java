@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * The details for audio ad.
+ * Details for an audio ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -45,7 +45,7 @@ public final class AudioAd extends com.google.api.client.json.GenericJson {
   private java.lang.String finalUrl;
 
   /**
-   * The URL address which is loaded in background for tracking purpose.
+   * The URL address loaded in the background for tracking purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class AudioAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL address which is loaded in background for tracking purpose.
+   * The URL address loaded in the background for tracking purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -101,7 +101,7 @@ public final class AudioAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL address which is loaded in background for tracking purpose.
+   * The URL address loaded in the background for tracking purposes.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public AudioAd setTrackingUrl(java.lang.String trackingUrl) {

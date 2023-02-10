@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * The dimension which are used to match products.
+ * A dimension used to match products.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class ProductMatchDimension extends com.google.api.client.json.Gene
   private CustomLabel customLabel;
 
   /**
-   * The ID of the product offer to match the product with the same offer ID.
+   * The ID of the product offer to match with a product with the same offer ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ProductMatchDimension extends com.google.api.client.json.Gene
   }
 
   /**
-   * The ID of the product offer to match the product with the same offer ID.
+   * The ID of the product offer to match with a product with the same offer ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductOfferId() {
@@ -70,7 +70,7 @@ public final class ProductMatchDimension extends com.google.api.client.json.Gene
   }
 
   /**
-   * The ID of the product offer to match the product with the same offer ID.
+   * The ID of the product offer to match with a product with the same offer ID.
    * @param productOfferId productOfferId or {@code null} for none
    */
   public ProductMatchDimension setProductOfferId(java.lang.String productOfferId) {

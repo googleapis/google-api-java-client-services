@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * The details for video discovery ad.
+ * Details for a video discovery ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -45,21 +45,21 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   private java.lang.String description2;
 
   /**
-   * The headline of the video discovery ad.
+   * The headline of ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String headline;
 
   /**
-   * Thumbnail image to use in the ad.
+   * Thumbnail image used in the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnail;
 
   /**
-   * The YouTube video which the ad wants to promote.
+   * The YouTube video the ad promotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The headline of the video discovery ad.
+   * The headline of ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadline() {
@@ -108,7 +108,7 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The headline of the video discovery ad.
+   * The headline of ad.
    * @param headline headline or {@code null} for none
    */
   public VideoDiscoveryAd setHeadline(java.lang.String headline) {
@@ -117,7 +117,7 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Thumbnail image to use in the ad.
+   * Thumbnail image used in the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnail() {
@@ -125,7 +125,7 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Thumbnail image to use in the ad.
+   * Thumbnail image used in the ad.
    * @param thumbnail thumbnail or {@code null} for none
    */
   public VideoDiscoveryAd setThumbnail(java.lang.String thumbnail) {
@@ -134,7 +134,7 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The YouTube video which the ad wants to promote.
+   * The YouTube video the ad promotes.
    * @return value or {@code null} for none
    */
   public YoutubeVideoDetails getVideo() {
@@ -142,7 +142,7 @@ public final class VideoDiscoveryAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The YouTube video which the ad wants to promote.
+   * The YouTube video the ad promotes.
    * @param video video or {@code null} for none
    */
   public VideoDiscoveryAd setVideo(YoutubeVideoDetails video) {

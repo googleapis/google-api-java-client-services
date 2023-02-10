@@ -31,28 +31,28 @@ package com.google.api.services.displayvideo.v2.model;
 public final class ProductFeedData extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if opt out of showing products.
+   * Whether the product feed has opted-out of showing products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isFeedDisabled;
 
   /**
-   * A list of dimensions which are used to match products.
+   * A list of dimensions used to match products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ProductMatchDimension> productMatchDimensions;
 
   /**
-   * The type of the way to select the products.
+   * How products are selected by the product feed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productMatchType;
 
   /**
-   * True if opt out of showing products.
+   * Whether the product feed has opted-out of showing products.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFeedDisabled() {
@@ -60,7 +60,7 @@ public final class ProductFeedData extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * True if opt out of showing products.
+   * Whether the product feed has opted-out of showing products.
    * @param isFeedDisabled isFeedDisabled or {@code null} for none
    */
   public ProductFeedData setIsFeedDisabled(java.lang.Boolean isFeedDisabled) {
@@ -69,7 +69,7 @@ public final class ProductFeedData extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of dimensions which are used to match products.
+   * A list of dimensions used to match products.
    * @return value or {@code null} for none
    */
   public java.util.List<ProductMatchDimension> getProductMatchDimensions() {
@@ -77,7 +77,7 @@ public final class ProductFeedData extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of dimensions which are used to match products.
+   * A list of dimensions used to match products.
    * @param productMatchDimensions productMatchDimensions or {@code null} for none
    */
   public ProductFeedData setProductMatchDimensions(java.util.List<ProductMatchDimension> productMatchDimensions) {
@@ -86,7 +86,7 @@ public final class ProductFeedData extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the way to select the products.
+   * How products are selected by the product feed.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductMatchType() {
@@ -94,7 +94,7 @@ public final class ProductFeedData extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the way to select the products.
+   * How products are selected by the product feed.
    * @param productMatchType productMatchType or {@code null} for none
    */
   public ProductFeedData setProductMatchType(java.lang.String productMatchType) {

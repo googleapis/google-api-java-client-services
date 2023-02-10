@@ -968,6 +968,164 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
     public class Reports {
 
       /**
+       * Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or have
+       * no recent activity.
+       *
+       * Create a request for the method "reports.countChromeBrowsersNeedingAttention".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeBrowsersNeedingAttention#execute()} method to
+       * invoke the remote operation.
+       *
+       * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+       * @return the request
+       */
+      public CountChromeBrowsersNeedingAttention countChromeBrowsersNeedingAttention(java.lang.String customer) throws java.io.IOException {
+        CountChromeBrowsersNeedingAttention result = new CountChromeBrowsersNeedingAttention(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeBrowsersNeedingAttention extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countChromeBrowsersNeedingAttention";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or
+         * have no recent activity.
+         *
+         * Create a request for the method "reports.countChromeBrowsersNeedingAttention".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeBrowsersNeedingAttention#execute()} method to
+         * invoke the remote operation. <p> {@link CountChromeBrowsersNeedingAttention#initialize(com.goog
+         * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+         * this instance immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+         * @since 1.13
+         */
+        protected CountChromeBrowsersNeedingAttention(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeBrowsersNeedingAttention) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setAccessToken(java.lang.String accessToken) {
+          return (CountChromeBrowsersNeedingAttention) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setAlt(java.lang.String alt) {
+          return (CountChromeBrowsersNeedingAttention) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setCallback(java.lang.String callback) {
+          return (CountChromeBrowsersNeedingAttention) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setFields(java.lang.String fields) {
+          return (CountChromeBrowsersNeedingAttention) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setKey(java.lang.String key) {
+          return (CountChromeBrowsersNeedingAttention) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeBrowsersNeedingAttention) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeBrowsersNeedingAttention) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeBrowsersNeedingAttention) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setUploadType(java.lang.String uploadType) {
+          return (CountChromeBrowsersNeedingAttention) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeBrowsersNeedingAttention) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        public CountChromeBrowsersNeedingAttention setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned. */
+        public CountChromeBrowsersNeedingAttention setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        @Override
+        public CountChromeBrowsersNeedingAttention set(String parameterName, Object value) {
+          return (CountChromeBrowsersNeedingAttention) super.set(parameterName, value);
+        }
+      }
+      /**
        * Generate report of the number of devices expiring in each month of the selected time frame.
        * Devices are grouped by auto update expiration date and model. Further information can be found
        * [here](https://support.google.com/chrome/a/answer/10564947).

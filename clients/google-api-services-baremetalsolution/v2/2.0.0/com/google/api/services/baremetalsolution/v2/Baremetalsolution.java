@@ -1725,6 +1725,151 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * RenameInstance sets a new name for an instance.
+         *
+         * Create a request for the method "instances.rename".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
+         *        conventions in https://cloud.google.com/apis/design/resource_names. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest}
+         * @return the request
+         */
+        public Rename rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest content) throws java.io.IOException {
+          Rename result = new Rename(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rename extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:rename";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * RenameInstance sets a new name for an instance.
+           *
+           * Create a request for the method "instances.rename".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Rename#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
+         *        conventions in https://cloud.google.com/apis/design/resource_names. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest}
+           * @since 1.13
+           */
+          protected Rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rename set$Xgafv(java.lang.String $Xgafv) {
+            return (Rename) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rename setAccessToken(java.lang.String accessToken) {
+            return (Rename) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rename setAlt(java.lang.String alt) {
+            return (Rename) super.setAlt(alt);
+          }
+
+          @Override
+          public Rename setCallback(java.lang.String callback) {
+            return (Rename) super.setCallback(callback);
+          }
+
+          @Override
+          public Rename setFields(java.lang.String fields) {
+            return (Rename) super.setFields(fields);
+          }
+
+          @Override
+          public Rename setKey(java.lang.String key) {
+            return (Rename) super.setKey(key);
+          }
+
+          @Override
+          public Rename setOauthToken(java.lang.String oauthToken) {
+            return (Rename) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rename setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rename) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rename setQuotaUser(java.lang.String quotaUser) {
+            return (Rename) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rename setUploadType(java.lang.String uploadType) {
+            return (Rename) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rename setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rename) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The resource name of this `Instance`. Resource names are schemeless URIs
+           * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           * Format: `projects/{project}/locations/{location}/instances/{instance}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
+         conventions in https://cloud.google.com/apis/design/resource_names. Format:
+         `projects/{project}/locations/{location}/instances/{instance}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The resource name of this `Instance`. Resource names are schemeless URIs
+           * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           * Format: `projects/{project}/locations/{location}/instances/{instance}`
+           */
+          public Rename setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Rename set(String parameterName, Object value) {
+            return (Rename) super.set(parameterName, value);
+          }
+        }
+        /**
          * Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then
          * turning it back on.
          *
@@ -5049,6 +5194,137 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
       public class Volumes {
 
         /**
+         * Skips volume's cooloff and deletes it now. Volume must be in cooloff state.
+         *
+         * Create a request for the method "volumes.evict".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Evict#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Volume.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EvictVolumeRequest}
+         * @return the request
+         */
+        public Evict evict(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EvictVolumeRequest content) throws java.io.IOException {
+          Evict result = new Evict(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Evict extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:evict";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * Skips volume's cooloff and deletes it now. Volume must be in cooloff state.
+           *
+           * Create a request for the method "volumes.evict".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Evict#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Evict#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Volume.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EvictVolumeRequest}
+           * @since 1.13
+           */
+          protected Evict(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EvictVolumeRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Evict set$Xgafv(java.lang.String $Xgafv) {
+            return (Evict) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Evict setAccessToken(java.lang.String accessToken) {
+            return (Evict) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Evict setAlt(java.lang.String alt) {
+            return (Evict) super.setAlt(alt);
+          }
+
+          @Override
+          public Evict setCallback(java.lang.String callback) {
+            return (Evict) super.setCallback(callback);
+          }
+
+          @Override
+          public Evict setFields(java.lang.String fields) {
+            return (Evict) super.setFields(fields);
+          }
+
+          @Override
+          public Evict setKey(java.lang.String key) {
+            return (Evict) super.setKey(key);
+          }
+
+          @Override
+          public Evict setOauthToken(java.lang.String oauthToken) {
+            return (Evict) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Evict setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Evict) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Evict setQuotaUser(java.lang.String quotaUser) {
+            return (Evict) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Evict setUploadType(java.lang.String uploadType) {
+            return (Evict) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Evict setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Evict) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the Volume. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Volume.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the Volume. */
+          public Evict setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Evict set(String parameterName, Object value) {
+            return (Evict) super.set(parameterName, value);
+          }
+        }
+        /**
          * Get details of a single storage volume.
          *
          * Create a request for the method "volumes.get".
@@ -5694,6 +5970,137 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
          */
         public class Luns {
 
+          /**
+           * Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
+           *
+           * Create a request for the method "luns.evict".
+           *
+           * This request holds the parameters needed by the baremetalsolution server.  After setting any
+           * optional parameters, call the {@link Evict#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the lun.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EvictLunRequest}
+           * @return the request
+           */
+          public Evict evict(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EvictLunRequest content) throws java.io.IOException {
+            Evict result = new Evict(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Evict extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}:evict";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+/luns/[^/]+$");
+
+            /**
+             * Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
+             *
+             * Create a request for the method "luns.evict".
+             *
+             * This request holds the parameters needed by the the baremetalsolution server.  After setting
+             * any optional parameters, call the {@link Evict#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Evict#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the lun.
+             * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EvictLunRequest}
+             * @since 1.13
+             */
+            protected Evict(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EvictLunRequest content) {
+              super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumes/[^/]+/luns/[^/]+$");
+              }
+            }
+
+            @Override
+            public Evict set$Xgafv(java.lang.String $Xgafv) {
+              return (Evict) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Evict setAccessToken(java.lang.String accessToken) {
+              return (Evict) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Evict setAlt(java.lang.String alt) {
+              return (Evict) super.setAlt(alt);
+            }
+
+            @Override
+            public Evict setCallback(java.lang.String callback) {
+              return (Evict) super.setCallback(callback);
+            }
+
+            @Override
+            public Evict setFields(java.lang.String fields) {
+              return (Evict) super.setFields(fields);
+            }
+
+            @Override
+            public Evict setKey(java.lang.String key) {
+              return (Evict) super.setKey(key);
+            }
+
+            @Override
+            public Evict setOauthToken(java.lang.String oauthToken) {
+              return (Evict) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Evict setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Evict) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Evict setQuotaUser(java.lang.String quotaUser) {
+              return (Evict) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Evict setUploadType(java.lang.String uploadType) {
+              return (Evict) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Evict setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Evict) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the lun. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the lun.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the lun. */
+            public Evict setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumes/[^/]+/luns/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Evict set(String parameterName, Object value) {
+              return (Evict) super.set(parameterName, value);
+            }
+          }
           /**
            * Get details of a single storage logical unit number(LUN).
            *

@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Parameters for a human assist query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
+
+  /**
    * Max number of messages prior to and including [latest_message] to use as context when compiling
    * the suggestion. By default 500 and at most 1000.
    * The value may be {@code null}.
@@ -45,6 +52,23 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
+
+  /**
+   * Parameters for a human assist query.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AssistQueryParameters getAssistQueryParams() {
+    return assistQueryParams;
+  }
+
+  /**
+   * Parameters for a human assist query.
+   * @param assistQueryParams assistQueryParams or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestConversationSummaryRequest setAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
+    this.assistQueryParams = assistQueryParams;
+    return this;
+  }
 
   /**
    * Max number of messages prior to and including [latest_message] to use as context when compiling

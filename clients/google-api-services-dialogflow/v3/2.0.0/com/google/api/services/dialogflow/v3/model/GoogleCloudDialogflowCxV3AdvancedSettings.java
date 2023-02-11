@@ -35,12 +35,39 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AdvancedSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
+   * destination. Exposed at the following levels: - Agent level - Flow level
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3GcsDestination audioExportGcsDestination;
+
+  /**
    * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver
    * logs, and speech logging. Exposed at the following levels: - Agent level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettings loggingSettings;
+
+  /**
+   * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
+   * destination. Exposed at the following levels: - Agent level - Flow level
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3GcsDestination getAudioExportGcsDestination() {
+    return audioExportGcsDestination;
+  }
+
+  /**
+   * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
+   * destination. Exposed at the following levels: - Agent level - Flow level
+   * @param audioExportGcsDestination audioExportGcsDestination or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettings setAudioExportGcsDestination(GoogleCloudDialogflowCxV3GcsDestination audioExportGcsDestination) {
+    this.audioExportGcsDestination = audioExportGcsDestination;
+    return this;
+  }
 
   /**
    * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver

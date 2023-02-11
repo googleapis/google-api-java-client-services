@@ -17,8 +17,7 @@
 package com.google.api.services.manufacturers.v1.model;
 
 /**
- * The data matches with the vertical specification for product in
- * http://google3/googlebase/verticals/devel/product_certification
+ * Product certification data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Manufacturer Center API. For a detailed explanation

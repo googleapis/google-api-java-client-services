@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
   private java.lang.String audioEncoding;
 
   /**
+   * Configuration of barge-in behavior during the streaming of input audio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1BargeInConfig bargeInConfig;
+
+  /**
    * Only used in Participants.AnalyzeContent and Participants.StreamingAnalyzeContent. If `false`
    * and recognition doesn't return any result, trigger `NO_SPEECH_RECOGNIZED` event to Dialogflow
    * agent.
@@ -139,6 +146,23 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
     this.audioEncoding = audioEncoding;
+    return this;
+  }
+
+  /**
+   * Configuration of barge-in behavior during the streaming of input audio.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1BargeInConfig getBargeInConfig() {
+    return bargeInConfig;
+  }
+
+  /**
+   * Configuration of barge-in behavior during the streaming of input audio.
+   * @param bargeInConfig bargeInConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setBargeInConfig(GoogleCloudDialogflowV2beta1BargeInConfig bargeInConfig) {
+    this.bargeInConfig = bargeInConfig;
     return this;
   }
 

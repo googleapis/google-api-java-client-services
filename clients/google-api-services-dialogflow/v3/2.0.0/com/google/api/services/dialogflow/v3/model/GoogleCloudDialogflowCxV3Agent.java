@@ -137,6 +137,13 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.util.List<java.lang.String> supportedLanguageCodes;
 
   /**
+   * Settings on instructing the speech synthesizer on how to generate the output audio content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3TextToSpeechSettings textToSpeechSettings;
+
+  /**
    * Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-
    * zones), e.g., America/New_York, Europe/Paris.
    * The value may be {@code null}.
@@ -386,6 +393,23 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
    */
   public GoogleCloudDialogflowCxV3Agent setSupportedLanguageCodes(java.util.List<java.lang.String> supportedLanguageCodes) {
     this.supportedLanguageCodes = supportedLanguageCodes;
+    return this;
+  }
+
+  /**
+   * Settings on instructing the speech synthesizer on how to generate the output audio content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3TextToSpeechSettings getTextToSpeechSettings() {
+    return textToSpeechSettings;
+  }
+
+  /**
+   * Settings on instructing the speech synthesizer on how to generate the output audio content.
+   * @param textToSpeechSettings textToSpeechSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setTextToSpeechSettings(GoogleCloudDialogflowCxV3TextToSpeechSettings textToSpeechSettings) {
+    this.textToSpeechSettings = textToSpeechSettings;
     return this;
   }
 

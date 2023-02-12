@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1beta1.model;
 public final class File extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the File was created.
+   * Output only. The time when the File was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +68,14 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeBytes;
 
   /**
-   * The time when the File was last updated.
+   * Output only. The time when the File was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The time when the File was created.
+   * Output only. The time when the File was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -83,7 +83,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the File was created.
+   * Output only. The time when the File was created.
    * @param createTime createTime or {@code null} for none
    */
   public File setCreateTime(String createTime) {
@@ -164,7 +164,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the File was last updated.
+   * Output only. The time when the File was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -172,7 +172,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the File was last updated.
+   * Output only. The time when the File was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public File setUpdateTime(String updateTime) {

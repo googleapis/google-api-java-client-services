@@ -2025,7 +2025,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Optional service account name. If this field is set, the transfer config will be
+           * Optional service account email. If this field is set, the transfer config will be
            * created with this service account's credentials. It requires that the requesting user
            * calling this API has permissions to act as this service account. Note that not all data
            * sources support service account credentials when creating a transfer config. For the
@@ -2035,7 +2035,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           @com.google.api.client.util.Key
           private java.lang.String serviceAccountName;
 
-          /** Optional service account name. If this field is set, the transfer config will be created with this
+          /** Optional service account email. If this field is set, the transfer config will be created with this
          service account's credentials. It requires that the requesting user calling this API has
          permissions to act as this service account. Note that not all data sources support service account
          credentials when creating a transfer config. For the latest list of data sources, read about [using
@@ -2046,7 +2046,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Optional service account name. If this field is set, the transfer config will be
+           * Optional service account email. If this field is set, the transfer config will be
            * created with this service account's credentials. It requires that the requesting user
            * calling this API has permissions to act as this service account. Note that not all data
            * sources support service account credentials when creating a transfer config. For the
@@ -2796,7 +2796,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Optional service account name. If this field is set, the transfer config will be
+           * Optional service account email. If this field is set, the transfer config will be
            * created with this service account's credentials. It requires that the requesting user
            * calling this API has permissions to act as this service account. Note that not all data
            * sources support service account credentials when creating a transfer config. For the
@@ -2806,7 +2806,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           @com.google.api.client.util.Key
           private java.lang.String serviceAccountName;
 
-          /** Optional service account name. If this field is set, the transfer config will be created with this
+          /** Optional service account email. If this field is set, the transfer config will be created with this
          service account's credentials. It requires that the requesting user calling this API has
          permissions to act as this service account. Note that not all data sources support service account
          credentials when creating a transfer config. For the latest list of data sources, read about [using
@@ -2817,7 +2817,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Optional service account name. If this field is set, the transfer config will be
+           * Optional service account email. If this field is set, the transfer config will be
            * created with this service account's credentials. It requires that the requesting user
            * calling this API has permissions to act as this service account. Note that not all data
            * sources support service account credentials when creating a transfer config. For the
@@ -4191,7 +4191,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional service account name. If this field is set, the transfer config will be created
+         * Optional service account email. If this field is set, the transfer config will be created
          * with this service account's credentials. It requires that the requesting user calling
          * this API has permissions to act as this service account. Note that not all data sources
          * support service account credentials when creating a transfer config. For the latest list
@@ -4201,7 +4201,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         @com.google.api.client.util.Key
         private java.lang.String serviceAccountName;
 
-        /** Optional service account name. If this field is set, the transfer config will be created with this
+        /** Optional service account email. If this field is set, the transfer config will be created with this
        service account's credentials. It requires that the requesting user calling this API has
        permissions to act as this service account. Note that not all data sources support service account
        credentials when creating a transfer config. For the latest list of data sources, read about [using
@@ -4212,7 +4212,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional service account name. If this field is set, the transfer config will be created
+         * Optional service account email. If this field is set, the transfer config will be created
          * with this service account's credentials. It requires that the requesting user calling
          * this API has permissions to act as this service account. Note that not all data sources
          * support service account credentials when creating a transfer config. For the latest list
@@ -4962,7 +4962,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional service account name. If this field is set, the transfer config will be created
+         * Optional service account email. If this field is set, the transfer config will be created
          * with this service account's credentials. It requires that the requesting user calling
          * this API has permissions to act as this service account. Note that not all data sources
          * support service account credentials when creating a transfer config. For the latest list
@@ -4972,7 +4972,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         @com.google.api.client.util.Key
         private java.lang.String serviceAccountName;
 
-        /** Optional service account name. If this field is set, the transfer config will be created with this
+        /** Optional service account email. If this field is set, the transfer config will be created with this
        service account's credentials. It requires that the requesting user calling this API has
        permissions to act as this service account. Note that not all data sources support service account
        credentials when creating a transfer config. For the latest list of data sources, read about [using
@@ -4983,7 +4983,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional service account name. If this field is set, the transfer config will be created
+         * Optional service account email. If this field is set, the transfer config will be created
          * with this service account's credentials. It requires that the requesting user calling
          * this API has permissions to act as this service account. Note that not all data sources
          * support service account credentials when creating a transfer config. For the latest list

@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the File was created.
+   * Output only. The time when the File was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +76,14 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   private java.lang.Long sizeBytes;
 
   /**
-   * The time when the File was last updated.
+   * Output only. The time when the File was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The time when the File was created.
+   * Output only. The time when the File was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -91,7 +91,7 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   }
 
   /**
-   * The time when the File was created.
+   * Output only. The time when the File was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1File setCreateTime(String createTime) {
@@ -191,7 +191,7 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   }
 
   /**
-   * The time when the File was last updated.
+   * Output only. The time when the File was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -199,7 +199,7 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   }
 
   /**
-   * The time when the File was last updated.
+   * Output only. The time when the File was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1File setUpdateTime(String updateTime) {

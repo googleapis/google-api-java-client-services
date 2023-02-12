@@ -2609,7 +2609,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the file to retrieve.
+           * @param name Required. The name of the file to retrieve.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2635,7 +2635,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the file to retrieve.
+             * @param name Required. The name of the file to retrieve.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2713,17 +2713,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the file to retrieve. */
+            /** Required. The name of the file to retrieve. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the file to retrieve.
+            /** Required. The name of the file to retrieve.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The name of the file to retrieve. */
+            /** Required. The name of the file to retrieve. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2747,8 +2747,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the repository whose files will be listed. For example: "projects/p1/locations/us-
-           *        central1/repositories/repo1
+           * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
+           *        /us-central1/repositories/repo1
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2774,8 +2774,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the repository whose files will be listed. For example: "projects/p1/locations/us-
-           *        central1/repositories/repo1
+             * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
+           *        /us-central1/repositories/repo1
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2854,21 +2854,21 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * The name of the repository whose files will be listed. For example:
+             * Required. The name of the repository whose files will be listed. For example:
              * "projects/p1/locations/us-central1/repositories/repo1
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the repository whose files will be listed. For example: "projects/p1/locations/us-
-           central1/repositories/repo1
+            /** Required. The name of the repository whose files will be listed. For example:
+           "projects/p1/locations/us-central1/repositories/repo1
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The name of the repository whose files will be listed. For example:
+             * Required. The name of the repository whose files will be listed. For example:
              * "projects/p1/locations/us-central1/repositories/repo1
              */
             public List setParent(java.lang.String parent) {

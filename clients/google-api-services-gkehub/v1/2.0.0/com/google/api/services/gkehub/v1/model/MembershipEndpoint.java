@@ -52,6 +52,14 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   private GkeCluster gkeCluster;
 
   /**
+   * Output only. Whether the lifecycle of this membership is managed by a google cluster platform
+   * service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean googleManaged;
+
+  /**
    * Output only. Useful Kubernetes-specific metadata.
    * The value may be {@code null}.
    */
@@ -132,6 +140,25 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
    */
   public MembershipEndpoint setGkeCluster(GkeCluster gkeCluster) {
     this.gkeCluster = gkeCluster;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the lifecycle of this membership is managed by a google cluster platform
+   * service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoogleManaged() {
+    return googleManaged;
+  }
+
+  /**
+   * Output only. Whether the lifecycle of this membership is managed by a google cluster platform
+   * service.
+   * @param googleManaged googleManaged or {@code null} for none
+   */
+  public MembershipEndpoint setGoogleManaged(java.lang.Boolean googleManaged) {
+    this.googleManaged = googleManaged;
     return this;
   }
 

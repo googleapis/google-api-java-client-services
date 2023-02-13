@@ -181,6 +181,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private UpgradeNote upgrade;
 
   /**
+   * A note describing a vulnerability assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VulnerabilityAssessmentNote vulnerabilityAssessment;
+
+  /**
    * A package vulnerability type of note.
    * The value may be {@code null}.
    */
@@ -547,6 +554,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setUpgrade(UpgradeNote upgrade) {
     this.upgrade = upgrade;
+    return this;
+  }
+
+  /**
+   * A note describing a vulnerability assessment.
+   * @return value or {@code null} for none
+   */
+  public VulnerabilityAssessmentNote getVulnerabilityAssessment() {
+    return vulnerabilityAssessment;
+  }
+
+  /**
+   * A note describing a vulnerability assessment.
+   * @param vulnerabilityAssessment vulnerabilityAssessment or {@code null} for none
+   */
+  public Note setVulnerabilityAssessment(VulnerabilityAssessmentNote vulnerabilityAssessment) {
+    this.vulnerabilityAssessment = vulnerabilityAssessment;
     return this;
   }
 

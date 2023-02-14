@@ -154,7 +154,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
   public class Enterprises {
 
     /**
-     * Creates an enterprise. This is the last step in the enterprise signup flow.
+     * Creates an enterprise. This is the last step in the enterprise signup flow. See also:
+     * SigninDetail
      *
      * Create a request for the method "enterprises.create".
      *
@@ -175,7 +176,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/enterprises";
 
       /**
-       * Creates an enterprise. This is the last step in the enterprise signup flow.
+       * Creates an enterprise. This is the last step in the enterprise signup flow. See also:
+       * SigninDetail
        *
        * Create a request for the method "enterprises.create".
        *
@@ -804,7 +806,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Updates an enterprise.
+     * Updates an enterprise. See also: SigninDetail
      *
      * Create a request for the method "enterprises.patch".
      *
@@ -829,7 +831,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^enterprises/[^/]+$");
 
       /**
-       * Updates an enterprise.
+       * Updates an enterprise. See also: SigninDetail
        *
        * Create a request for the method "enterprises.patch".
        *

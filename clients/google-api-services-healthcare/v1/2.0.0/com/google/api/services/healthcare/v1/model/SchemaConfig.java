@@ -30,6 +30,14 @@ package com.google.api.services.healthcare.v1.model;
 public final class SchemaConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The configuration for exported BigQuery tables to be partitioned by FHIR resource's last
+   * updated time column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimePartitioning lastUpdatedPartitionConfig;
+
+  /**
    * The depth for all recursive structures in the output analytics schema. For example, `concept`
    * in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table
    * will have a column called `concept.concept` but not `concept.concept.concept`. If not specified
@@ -45,6 +53,25 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String schemaType;
+
+  /**
+   * The configuration for exported BigQuery tables to be partitioned by FHIR resource's last
+   * updated time column.
+   * @return value or {@code null} for none
+   */
+  public TimePartitioning getLastUpdatedPartitionConfig() {
+    return lastUpdatedPartitionConfig;
+  }
+
+  /**
+   * The configuration for exported BigQuery tables to be partitioned by FHIR resource's last
+   * updated time column.
+   * @param lastUpdatedPartitionConfig lastUpdatedPartitionConfig or {@code null} for none
+   */
+  public SchemaConfig setLastUpdatedPartitionConfig(TimePartitioning lastUpdatedPartitionConfig) {
+    this.lastUpdatedPartitionConfig = lastUpdatedPartitionConfig;
+    return this;
+  }
 
   /**
    * The depth for all recursive structures in the output analytics schema. For example, `concept`

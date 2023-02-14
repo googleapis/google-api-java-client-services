@@ -52,7 +52,8 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> enabledNotificationTypes;
 
   /**
-   * The name of the enterprise displayed to users.
+   * The name of the enterprise displayed to users. This field has a maximum length of 100
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +161,8 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the enterprise displayed to users.
+   * The name of the enterprise displayed to users. This field has a maximum length of 100
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnterpriseDisplayName() {
@@ -168,7 +170,8 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the enterprise displayed to users.
+   * The name of the enterprise displayed to users. This field has a maximum length of 100
+   * characters.
    * @param enterpriseDisplayName enterpriseDisplayName or {@code null} for none
    */
   public Enterprise setEnterpriseDisplayName(java.lang.String enterpriseDisplayName) {

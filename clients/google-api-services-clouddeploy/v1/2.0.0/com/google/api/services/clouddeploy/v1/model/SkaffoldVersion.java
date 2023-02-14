@@ -31,6 +31,13 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class SkaffoldVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time at which this version of skaffold will enter maintenance mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maintenanceModeTime;
+
+  /**
    * Date when this version is expected to no longer be supported.
    * The value may be {@code null}.
    */
@@ -38,11 +45,35 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   private Date supportEndDate;
 
   /**
+   * The time at which this version of skaffold will no longer be supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String supportExpirationTime;
+
+  /**
    * Release version number. For example, "1.20.3".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The time at which this version of skaffold will enter maintenance mode.
+   * @return value or {@code null} for none
+   */
+  public String getMaintenanceModeTime() {
+    return maintenanceModeTime;
+  }
+
+  /**
+   * The time at which this version of skaffold will enter maintenance mode.
+   * @param maintenanceModeTime maintenanceModeTime or {@code null} for none
+   */
+  public SkaffoldVersion setMaintenanceModeTime(String maintenanceModeTime) {
+    this.maintenanceModeTime = maintenanceModeTime;
+    return this;
+  }
 
   /**
    * Date when this version is expected to no longer be supported.
@@ -58,6 +89,23 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
    */
   public SkaffoldVersion setSupportEndDate(Date supportEndDate) {
     this.supportEndDate = supportEndDate;
+    return this;
+  }
+
+  /**
+   * The time at which this version of skaffold will no longer be supported.
+   * @return value or {@code null} for none
+   */
+  public String getSupportExpirationTime() {
+    return supportExpirationTime;
+  }
+
+  /**
+   * The time at which this version of skaffold will no longer be supported.
+   * @param supportExpirationTime supportExpirationTime or {@code null} for none
+   */
+  public SkaffoldVersion setSupportExpirationTime(String supportExpirationTime) {
+    this.supportExpirationTime = supportExpirationTime;
     return this;
   }
 

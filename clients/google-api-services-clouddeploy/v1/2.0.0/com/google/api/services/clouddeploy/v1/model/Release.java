@@ -61,6 +61,13 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Information around the state of the Release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReleaseCondition condition;
+
+  /**
    * Output only. Time at which the `Release` was created.
    * The value may be {@code null}.
    */
@@ -233,6 +240,23 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setBuildArtifacts(java.util.List<BuildArtifact> buildArtifacts) {
     this.buildArtifacts = buildArtifacts;
+    return this;
+  }
+
+  /**
+   * Output only. Information around the state of the Release.
+   * @return value or {@code null} for none
+   */
+  public ReleaseCondition getCondition() {
+    return condition;
+  }
+
+  /**
+   * Output only. Information around the state of the Release.
+   * @param condition condition or {@code null} for none
+   */
+  public Release setCondition(ReleaseCondition condition) {
+    this.condition = condition;
     return this;
   }
 

@@ -72,8 +72,8 @@ public final class GoogleCloudChannelV1Entitlement extends com.google.api.client
    * may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR -
    * num_units: The total commitment for commitment-based offers The response may additionally
    * include the following output-only Parameters: - assigned_units: The number of licenses assigned
-   * to users. For GCP billing accounts, the following Parameter may be accepted as input: -
-   * display_name: The display name of the billing account.
+   * to users. For GCP billing subaccounts, the following Parameter may be accepted as input: -
+   * display_name: The display name of the billing subaccount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,8 +219,8 @@ public final class GoogleCloudChannelV1Entitlement extends com.google.api.client
    * may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR -
    * num_units: The total commitment for commitment-based offers The response may additionally
    * include the following output-only Parameters: - assigned_units: The number of licenses assigned
-   * to users. For GCP billing accounts, the following Parameter may be accepted as input: -
-   * display_name: The display name of the billing account.
+   * to users. For GCP billing subaccounts, the following Parameter may be accepted as input: -
+   * display_name: The display name of the billing subaccount.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Parameter> getParameters() {
@@ -233,8 +233,8 @@ public final class GoogleCloudChannelV1Entitlement extends com.google.api.client
    * may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR -
    * num_units: The total commitment for commitment-based offers The response may additionally
    * include the following output-only Parameters: - assigned_units: The number of licenses assigned
-   * to users. For GCP billing accounts, the following Parameter may be accepted as input: -
-   * display_name: The display name of the billing account.
+   * to users. For GCP billing subaccounts, the following Parameter may be accepted as input: -
+   * display_name: The display name of the billing subaccount.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudChannelV1Entitlement setParameters(java.util.List<GoogleCloudChannelV1Parameter> parameters) {

@@ -68,6 +68,13 @@ public final class X509Parameters extends com.google.api.client.json.GenericJson
   private KeyUsage keyUsage;
 
   /**
+   * Optional. Describes the X.509 name constraints extension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NameConstraints nameConstraints;
+
+  /**
    * Optional. Describes the X.509 certificate policy object identifiers, per
    * https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
    * The value may be {@code null}.
@@ -148,6 +155,23 @@ public final class X509Parameters extends com.google.api.client.json.GenericJson
    */
   public X509Parameters setKeyUsage(KeyUsage keyUsage) {
     this.keyUsage = keyUsage;
+    return this;
+  }
+
+  /**
+   * Optional. Describes the X.509 name constraints extension.
+   * @return value or {@code null} for none
+   */
+  public NameConstraints getNameConstraints() {
+    return nameConstraints;
+  }
+
+  /**
+   * Optional. Describes the X.509 name constraints extension.
+   * @param nameConstraints nameConstraints or {@code null} for none
+   */
+  public X509Parameters setNameConstraints(NameConstraints nameConstraints) {
+    this.nameConstraints = nameConstraints;
     return this;
   }
 

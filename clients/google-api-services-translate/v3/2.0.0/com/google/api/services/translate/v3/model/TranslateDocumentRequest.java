@@ -58,7 +58,8 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
 
   /**
    * Optional. If true, use the text removal server to remove the shadow text on background image
-   * for native pdf translation.
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +185,8 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
 
   /**
    * Optional. If true, use the text removal server to remove the shadow text on background image
-   * for native pdf translation.
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableShadowRemovalNativePdf() {
@@ -193,7 +195,8 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
 
   /**
    * Optional. If true, use the text removal server to remove the shadow text on background image
-   * for native pdf translation.
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
    * @param enableShadowRemovalNativePdf enableShadowRemovalNativePdf or {@code null} for none
    */
   public TranslateDocumentRequest setEnableShadowRemovalNativePdf(java.lang.Boolean enableShadowRemovalNativePdf) {

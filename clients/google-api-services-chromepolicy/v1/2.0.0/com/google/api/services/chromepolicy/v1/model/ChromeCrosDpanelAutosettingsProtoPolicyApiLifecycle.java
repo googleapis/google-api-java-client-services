@@ -30,6 +30,14 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle extends com.google.api.client.json.GenericJson {
 
   /**
+   * In the event that this policy was deprecated in favor of another policy, the fully qualified
+   * namespace(s) of the new policies as they will show in PolicyAPI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> deprecatedInFavorOf;
+
+  /**
    * Description about current life cycle.
    * The value may be {@code null}.
    */
@@ -49,6 +57,25 @@ public final class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle extends c
    */
   @com.google.api.client.util.Key
   private java.lang.String policyApiLifecycleStage;
+
+  /**
+   * In the event that this policy was deprecated in favor of another policy, the fully qualified
+   * namespace(s) of the new policies as they will show in PolicyAPI.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDeprecatedInFavorOf() {
+    return deprecatedInFavorOf;
+  }
+
+  /**
+   * In the event that this policy was deprecated in favor of another policy, the fully qualified
+   * namespace(s) of the new policies as they will show in PolicyAPI.
+   * @param deprecatedInFavorOf deprecatedInFavorOf or {@code null} for none
+   */
+  public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle setDeprecatedInFavorOf(java.util.List<java.lang.String> deprecatedInFavorOf) {
+    this.deprecatedInFavorOf = deprecatedInFavorOf;
+    return this;
+  }
 
   /**
    * Description about current life cycle.

@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A customer-specified encryption key for the Compute Engine resources of this workstation
+ * A customer-managed encryption key for the Compute Engine resources of this workstation
  * configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,7 +32,7 @@ package com.google.api.services.workstations.v1beta.model;
 public final class CustomerEncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the encryption key that is stored in Google Cloud KMS, for example,
+   * The name of the Google Cloud KMS encryption key. For example,
    * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
    * The value may be {@code null}.
    */
@@ -40,17 +40,18 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String kmsKey;
 
   /**
-   * The service account being used for the encryption request for the given KMS key. If absent, the
-   * Compute Engine default service account is used. However, it is recommended to use a separate
-   * service account and to follow KMS best practices mentioned at https://cloud.google.com/kms/docs
-   * /separation-of-duties
+   * The service account to use with the specified KMS key. We recommend that you use a separate
+   * service account and follow KMS best practices. For more information, see [Separation of
+   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-
+   * policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-
+   * policy-binding#--member).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyServiceAccount;
 
   /**
-   * The name of the encryption key that is stored in Google Cloud KMS, for example,
+   * The name of the Google Cloud KMS encryption key. For example,
    * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
    * @return value or {@code null} for none
    */
@@ -59,7 +60,7 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the encryption key that is stored in Google Cloud KMS, for example,
+   * The name of the Google Cloud KMS encryption key. For example,
    * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
    * @param kmsKey kmsKey or {@code null} for none
    */
@@ -69,10 +70,11 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The service account being used for the encryption request for the given KMS key. If absent, the
-   * Compute Engine default service account is used. However, it is recommended to use a separate
-   * service account and to follow KMS best practices mentioned at https://cloud.google.com/kms/docs
-   * /separation-of-duties
+   * The service account to use with the specified KMS key. We recommend that you use a separate
+   * service account and follow KMS best practices. For more information, see [Separation of
+   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-
+   * policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-
+   * policy-binding#--member).
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyServiceAccount() {
@@ -80,10 +82,11 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The service account being used for the encryption request for the given KMS key. If absent, the
-   * Compute Engine default service account is used. However, it is recommended to use a separate
-   * service account and to follow KMS best practices mentioned at https://cloud.google.com/kms/docs
-   * /separation-of-duties
+   * The service account to use with the specified KMS key. We recommend that you use a separate
+   * service account and follow KMS best practices. For more information, see [Separation of
+   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-
+   * policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-
+   * policy-binding#--member).
    * @param kmsKeyServiceAccount kmsKeyServiceAccount or {@code null} for none
    */
   public CustomerEncryptionKey setKmsKeyServiceAccount(java.lang.String kmsKeyServiceAccount) {

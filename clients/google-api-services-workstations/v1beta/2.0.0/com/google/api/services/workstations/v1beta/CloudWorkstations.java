@@ -971,17 +971,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** Required. ID to use for the cluster. */
+          /** Required. ID to use for the workstation cluster. */
           @com.google.api.client.util.Key
           private java.lang.String workstationClusterId;
 
-          /** Required. ID to use for the cluster.
+          /** Required. ID to use for the workstation cluster.
            */
           public java.lang.String getWorkstationClusterId() {
             return workstationClusterId;
           }
 
-          /** Required. ID to use for the cluster. */
+          /** Required. ID to use for the workstation cluster. */
           public Create setWorkstationClusterId(java.lang.String workstationClusterId) {
             this.workstationClusterId = workstationClusterId;
             return this;
@@ -1000,7 +1000,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the workstations server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the cluster to delete.
+         * @param name Required. Name of the workstation cluster to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1027,7 +1027,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the cluster to delete.
+           * @param name Required. Name of the workstation cluster to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1095,17 +1095,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the cluster to delete. */
+          /** Required. Name of the workstation cluster to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the cluster to delete.
+          /** Required. Name of the workstation cluster to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the cluster to delete. */
+          /** Required. Name of the workstation cluster to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1117,22 +1117,22 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, the request will be rejected if the latest version of the cluster on the server
-           * does not have this etag.
+           * If set, the request will be rejected if the latest version of the workstation cluster
+           * on the server does not have this etag.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** If set, the request will be rejected if the latest version of the cluster on the server does not
-         have this etag.
+          /** If set, the request will be rejected if the latest version of the workstation cluster on the server
+         does not have this etag.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * If set, the request will be rejected if the latest version of the cluster on the server
-           * does not have this etag.
+           * If set, the request will be rejected if the latest version of the workstation cluster
+           * on the server does not have this etag.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -1140,41 +1140,42 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, any workstation configurations and workstations in the cluster will also be
-           * deleted. Otherwise, the request will work only if the cluster has no configurations or
-           * workstations.
+           * If set, any workstation configurations and workstations in the workstation cluster are
+           * also deleted. Otherwise, the request only works if the workstation cluster has no
+           * configurations or workstations.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** If set, any workstation configurations and workstations in the cluster will also be deleted.
-         Otherwise, the request will work only if the cluster has no configurations or workstations.
+          /** If set, any workstation configurations and workstations in the workstation cluster are also
+         deleted. Otherwise, the request only works if the workstation cluster has no configurations or
+         workstations.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * If set, any workstation configurations and workstations in the cluster will also be
-           * deleted. Otherwise, the request will work only if the cluster has no configurations or
-           * workstations.
+           * If set, any workstation configurations and workstations in the workstation cluster are
+           * also deleted. Otherwise, the request only works if the workstation cluster has no
+           * configurations or workstations.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
             return this;
           }
 
-          /** If set, validate the request and preview the review, but do not actually apply it. */
+          /** If set, validate the request and preview the review, but do not apply it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** If set, validate the request and preview the review, but do not actually apply it.
+          /** If set, validate the request and preview the review, but do not apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** If set, validate the request and preview the review, but do not actually apply it. */
+          /** If set, validate the request and preview the review, but do not apply it. */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -1620,39 +1621,45 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, and the cluster is not found, a new cluster will be created. In this situation,
-           * update_mask is ignored.
+           * If set, and the workstation cluster is not found, a new workstation cluster will be
+           * created. In this situation, update_mask is ignored.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** If set, and the cluster is not found, a new cluster will be created. In this situation, update_mask
-         is ignored.
+          /** If set, and the workstation cluster is not found, a new workstation cluster will be created. In
+         this situation, update_mask is ignored.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
           /**
-           * If set, and the cluster is not found, a new cluster will be created. In this situation,
-           * update_mask is ignored.
+           * If set, and the workstation cluster is not found, a new workstation cluster will be
+           * created. In this situation, update_mask is ignored.
            */
           public Patch setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;
             return this;
           }
 
-          /** Required. Mask specifying which fields in the cluster should be updated. */
+          /**
+           * Required. Mask that specifies which fields in the workstation cluster should be
+           * updated.
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mask specifying which fields in the cluster should be updated.
+          /** Required. Mask that specifies which fields in the workstation cluster should be updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required. Mask specifying which fields in the cluster should be updated. */
+          /**
+           * Required. Mask that specifies which fields in the workstation cluster should be
+           * updated.
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

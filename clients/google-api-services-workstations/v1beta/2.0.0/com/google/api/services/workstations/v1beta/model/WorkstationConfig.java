@@ -89,15 +89,15 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * Encrypts resources of this workstation configuration using a customer-specified encryption key.
-   * If specified, the boot disk of the Compute Engine instance and the persistent disk will be
-   * encrypted using this encryption key. If this field is not set, the disks will be encrypted
-   * using a generated key. Customer-specified encryption keys do not protect disk metadata. If the
-   * customer-specified encryption key is rotated, when the workstation instance is stopped, the
-   * system will attempt to recreate the persistent disk with the new version of the key. Be sure to
-   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
-   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours.
+   * Encrypts resources of this workstation configuration using a customer-managed encryption key.
+   * If specified, the boot disk of the Compute Engine instance and the persistent disk are
+   * encrypted using this encryption key. If this field is not set, the disks are encrypted using a
+   * generated key. Customer-managed encryption keys do not protect disk metadata. If the customer-
+   * managed encryption key is rotated, when the workstation instance is stopped, the system
+   * attempts to recreate the persistent disk with the new version of the key. Be sure to keep older
+   * versions of the key until the persistent disk is recreated. Otherwise, data on the persistent
+   * disk will be lost. If the encryption key is revoked, the workstation session will automatically
+   * be stopped within 7 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,8 +165,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * How long to wait before automatically stopping a workstation after it started. A value of 0
-   * indicates that workstations using this config should never time out. Must be greater than 0 and
-   * less than 24 hours if encryption_key is set. Defaults to 12 hours.
+   * indicates that workstations using this configuration should never time out. Must be greater
+   * than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,15 +310,15 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Encrypts resources of this workstation configuration using a customer-specified encryption key.
-   * If specified, the boot disk of the Compute Engine instance and the persistent disk will be
-   * encrypted using this encryption key. If this field is not set, the disks will be encrypted
-   * using a generated key. Customer-specified encryption keys do not protect disk metadata. If the
-   * customer-specified encryption key is rotated, when the workstation instance is stopped, the
-   * system will attempt to recreate the persistent disk with the new version of the key. Be sure to
-   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
-   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours.
+   * Encrypts resources of this workstation configuration using a customer-managed encryption key.
+   * If specified, the boot disk of the Compute Engine instance and the persistent disk are
+   * encrypted using this encryption key. If this field is not set, the disks are encrypted using a
+   * generated key. Customer-managed encryption keys do not protect disk metadata. If the customer-
+   * managed encryption key is rotated, when the workstation instance is stopped, the system
+   * attempts to recreate the persistent disk with the new version of the key. Be sure to keep older
+   * versions of the key until the persistent disk is recreated. Otherwise, data on the persistent
+   * disk will be lost. If the encryption key is revoked, the workstation session will automatically
+   * be stopped within 7 hours.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getEncryptionKey() {
@@ -326,15 +326,15 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Encrypts resources of this workstation configuration using a customer-specified encryption key.
-   * If specified, the boot disk of the Compute Engine instance and the persistent disk will be
-   * encrypted using this encryption key. If this field is not set, the disks will be encrypted
-   * using a generated key. Customer-specified encryption keys do not protect disk metadata. If the
-   * customer-specified encryption key is rotated, when the workstation instance is stopped, the
-   * system will attempt to recreate the persistent disk with the new version of the key. Be sure to
-   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
-   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours.
+   * Encrypts resources of this workstation configuration using a customer-managed encryption key.
+   * If specified, the boot disk of the Compute Engine instance and the persistent disk are
+   * encrypted using this encryption key. If this field is not set, the disks are encrypted using a
+   * generated key. Customer-managed encryption keys do not protect disk metadata. If the customer-
+   * managed encryption key is rotated, when the workstation instance is stopped, the system
+   * attempts to recreate the persistent disk with the new version of the key. Be sure to keep older
+   * versions of the key until the persistent disk is recreated. Otherwise, data on the persistent
+   * disk will be lost. If the encryption key is revoked, the workstation session will automatically
+   * be stopped within 7 hours.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public WorkstationConfig setEncryptionKey(CustomerEncryptionKey encryptionKey) {
@@ -473,8 +473,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * How long to wait before automatically stopping a workstation after it started. A value of 0
-   * indicates that workstations using this config should never time out. Must be greater than 0 and
-   * less than 24 hours if encryption_key is set. Defaults to 12 hours.
+   * indicates that workstations using this configuration should never time out. Must be greater
+   * than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
    * @return value or {@code null} for none
    */
   public String getRunningTimeout() {
@@ -483,8 +483,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * How long to wait before automatically stopping a workstation after it started. A value of 0
-   * indicates that workstations using this config should never time out. Must be greater than 0 and
-   * less than 24 hours if encryption_key is set. Defaults to 12 hours.
+   * indicates that workstations using this configuration should never time out. Must be greater
+   * than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
    * @param runningTimeout runningTimeout or {@code null} for none
    */
   public WorkstationConfig setRunningTimeout(String runningTimeout) {

@@ -45,7 +45,7 @@ public final class ListWorkstationClustersResponse extends com.google.api.client
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The requested clusters.
+   * The requested workstation clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class ListWorkstationClustersResponse extends com.google.api.client
   }
 
   /**
-   * The requested clusters.
+   * The requested workstation clusters.
    * @return value or {@code null} for none
    */
   public java.util.List<WorkstationCluster> getWorkstationClusters() {
@@ -94,7 +94,7 @@ public final class ListWorkstationClustersResponse extends com.google.api.client
   }
 
   /**
-   * The requested clusters.
+   * The requested workstation clusters.
    * @param workstationClusters workstationClusters or {@code null} for none
    */
   public ListWorkstationClustersResponse setWorkstationClusters(java.util.List<WorkstationCluster> workstationClusters) {

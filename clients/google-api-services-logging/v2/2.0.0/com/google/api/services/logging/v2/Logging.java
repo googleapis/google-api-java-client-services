@@ -1947,6 +1947,175 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has been
+         * created, the bucket's location cannot be changed.
+         *
+         * Create a request for the method "buckets.createAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public CreateAsync createAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          CreateAsync result = new CreateAsync(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CreateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets:createAsync";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has
+           * been created, the bucket's location cannot be changed.
+           *
+           * Create a request for the method "buckets.createAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * CreateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected CreateAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public CreateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateAsync setAccessToken(java.lang.String accessToken) {
+            return (CreateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CreateAsync setAlt(java.lang.String alt) {
+            return (CreateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateAsync setCallback(java.lang.String callback) {
+            return (CreateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public CreateAsync setFields(java.lang.String fields) {
+            return (CreateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public CreateAsync setKey(java.lang.String key) {
+            return (CreateAsync) super.setKey(key);
+          }
+
+          @Override
+          public CreateAsync setOauthToken(java.lang.String oauthToken) {
+            return (CreateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CreateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CreateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CreateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (CreateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CreateAsync setUploadType(java.lang.String uploadType) {
+            return (CreateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource in which to create the log bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          public CreateAsync setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String bucketId;
+
+          /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
+         characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public java.lang.String getBucketId() {
+            return bucketId;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public CreateAsync setBucketId(java.lang.String bucketId) {
+            this.bucketId = bucketId;
+            return this;
+          }
+
+          @Override
+          public CreateAsync set(String parameterName, Object value) {
+            return (CreateAsync) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes a log bucket.Changes the bucket's lifecycle_state to the DELETE_REQUESTED state. After 7
          * days, the bucket will be purged and all log entries in the bucket will be permanently deleted.
          *
@@ -2499,11 +2668,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Updates a log bucket. This method replaces the following fields in the existing bucket with
-         * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-         * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-         * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created, the
-         * bucket's location cannot be changed.
+         * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -2533,11 +2700,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Updates a log bucket. This method replaces the following fields in the existing bucket with
-           * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-           * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-           * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created,
-           * the bucket's location cannot be changed.
+           * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+           * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+           * cannot be changed.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -2859,6 +3024,204 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public Undelete set(String parameterName, Object value) {
             return (Undelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
+         *
+         * Create a request for the method "buckets.updateAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public UpdateAsync updateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          UpdateAsync result = new UpdateAsync(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:updateAsync";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED,
+           * then FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's
+           * location cannot be changed.
+           *
+           * Create a request for the method "buckets.updateAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * UpdateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected UpdateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateAsync setAccessToken(java.lang.String accessToken) {
+            return (UpdateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateAsync setAlt(java.lang.String alt) {
+            return (UpdateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateAsync setCallback(java.lang.String callback) {
+            return (UpdateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateAsync setFields(java.lang.String fields) {
+            return (UpdateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateAsync setKey(java.lang.String key) {
+            return (UpdateAsync) super.setKey(key);
+          }
+
+          @Override
+          public UpdateAsync setOauthToken(java.lang.String oauthToken) {
+            return (UpdateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateAsync setUploadType(java.lang.String uploadType) {
+            return (UpdateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects/my-
+         project/locations/global/buckets/my-bucket"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          public UpdateAsync setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see: https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         updateMask=retention_days
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          public UpdateAsync setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateAsync set(String parameterName, Object value) {
+            return (UpdateAsync) super.set(parameterName, value);
           }
         }
 
@@ -9448,6 +9811,175 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has been
+         * created, the bucket's location cannot be changed.
+         *
+         * Create a request for the method "buckets.createAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public CreateAsync createAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          CreateAsync result = new CreateAsync(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CreateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets:createAsync";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has
+           * been created, the bucket's location cannot be changed.
+           *
+           * Create a request for the method "buckets.createAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * CreateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected CreateAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public CreateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateAsync setAccessToken(java.lang.String accessToken) {
+            return (CreateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CreateAsync setAlt(java.lang.String alt) {
+            return (CreateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateAsync setCallback(java.lang.String callback) {
+            return (CreateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public CreateAsync setFields(java.lang.String fields) {
+            return (CreateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public CreateAsync setKey(java.lang.String key) {
+            return (CreateAsync) super.setKey(key);
+          }
+
+          @Override
+          public CreateAsync setOauthToken(java.lang.String oauthToken) {
+            return (CreateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CreateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CreateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CreateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (CreateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CreateAsync setUploadType(java.lang.String uploadType) {
+            return (CreateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource in which to create the log bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          public CreateAsync setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String bucketId;
+
+          /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
+         characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public java.lang.String getBucketId() {
+            return bucketId;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public CreateAsync setBucketId(java.lang.String bucketId) {
+            this.bucketId = bucketId;
+            return this;
+          }
+
+          @Override
+          public CreateAsync set(String parameterName, Object value) {
+            return (CreateAsync) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes a log bucket.Changes the bucket's lifecycle_state to the DELETE_REQUESTED state. After 7
          * days, the bucket will be purged and all log entries in the bucket will be permanently deleted.
          *
@@ -10000,11 +10532,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Updates a log bucket. This method replaces the following fields in the existing bucket with
-         * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-         * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-         * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created, the
-         * bucket's location cannot be changed.
+         * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -10034,11 +10564,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Updates a log bucket. This method replaces the following fields in the existing bucket with
-           * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-           * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-           * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created,
-           * the bucket's location cannot be changed.
+           * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+           * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+           * cannot be changed.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -10360,6 +10888,204 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public Undelete set(String parameterName, Object value) {
             return (Undelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
+         *
+         * Create a request for the method "buckets.updateAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public UpdateAsync updateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          UpdateAsync result = new UpdateAsync(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:updateAsync";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED,
+           * then FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's
+           * location cannot be changed.
+           *
+           * Create a request for the method "buckets.updateAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * UpdateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected UpdateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateAsync setAccessToken(java.lang.String accessToken) {
+            return (UpdateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateAsync setAlt(java.lang.String alt) {
+            return (UpdateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateAsync setCallback(java.lang.String callback) {
+            return (UpdateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateAsync setFields(java.lang.String fields) {
+            return (UpdateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateAsync setKey(java.lang.String key) {
+            return (UpdateAsync) super.setKey(key);
+          }
+
+          @Override
+          public UpdateAsync setOauthToken(java.lang.String oauthToken) {
+            return (UpdateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateAsync setUploadType(java.lang.String uploadType) {
+            return (UpdateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects/my-
+         project/locations/global/buckets/my-bucket"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          public UpdateAsync setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see: https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         updateMask=retention_days
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          public UpdateAsync setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateAsync set(String parameterName, Object value) {
+            return (UpdateAsync) super.set(parameterName, value);
           }
         }
 
@@ -14180,6 +14906,175 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
+       * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has been
+       * created, the bucket's location cannot be changed.
+       *
+       * Create a request for the method "buckets.createAsync".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource in which to create the log bucket:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+       *        project/locations/global"
+       * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+       * @return the request
+       */
+      public CreateAsync createAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+        CreateAsync result = new CreateAsync(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CreateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+        private static final String REST_PATH = "v2/{+parent}/buckets:createAsync";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+$");
+
+        /**
+         * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has
+         * been created, the bucket's location cannot be changed.
+         *
+         * Create a request for the method "buckets.createAsync".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * CreateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource in which to create the log bucket:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+       *        project/locations/global"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @since 1.13
+         */
+        protected CreateAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) {
+          super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public CreateAsync set$Xgafv(java.lang.String $Xgafv) {
+          return (CreateAsync) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CreateAsync setAccessToken(java.lang.String accessToken) {
+          return (CreateAsync) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CreateAsync setAlt(java.lang.String alt) {
+          return (CreateAsync) super.setAlt(alt);
+        }
+
+        @Override
+        public CreateAsync setCallback(java.lang.String callback) {
+          return (CreateAsync) super.setCallback(callback);
+        }
+
+        @Override
+        public CreateAsync setFields(java.lang.String fields) {
+          return (CreateAsync) super.setFields(fields);
+        }
+
+        @Override
+        public CreateAsync setKey(java.lang.String key) {
+          return (CreateAsync) super.setKey(key);
+        }
+
+        @Override
+        public CreateAsync setOauthToken(java.lang.String oauthToken) {
+          return (CreateAsync) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CreateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CreateAsync) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CreateAsync setQuotaUser(java.lang.String quotaUser) {
+          return (CreateAsync) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CreateAsync setUploadType(java.lang.String uploadType) {
+          return (CreateAsync) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CreateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CreateAsync) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource in which to create the log bucket:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         * project/locations/global"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource in which to create the log bucket:
+       "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource in which to create the log bucket:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         * project/locations/global"
+         */
+        public CreateAsync setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+         * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String bucketId;
+
+        /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
+       characters and can include only letters, digits, underscores, hyphens, and periods.
+         */
+        public java.lang.String getBucketId() {
+          return bucketId;
+        }
+
+        /**
+         * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+         * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+         */
+        public CreateAsync setBucketId(java.lang.String bucketId) {
+          this.bucketId = bucketId;
+          return this;
+        }
+
+        @Override
+        public CreateAsync set(String parameterName, Object value) {
+          return (CreateAsync) super.set(parameterName, value);
+        }
+      }
+      /**
        * Deletes a log bucket.Changes the bucket's lifecycle_state to the DELETE_REQUESTED state. After 7
        * days, the bucket will be purged and all log entries in the bucket will be permanently deleted.
        *
@@ -14730,11 +15625,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a log bucket. This method replaces the following fields in the existing bucket with
-       * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-       * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-       * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created, the
-       * bucket's location cannot be changed.
+       * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+       * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+       * cannot be changed.
        *
        * Create a request for the method "buckets.patch".
        *
@@ -14764,11 +15657,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
         /**
-         * Updates a log bucket. This method replaces the following fields in the existing bucket with
-         * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-         * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-         * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created,
-         * the bucket's location cannot be changed.
+         * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -15090,6 +15981,204 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public Undelete set(String parameterName, Object value) {
           return (Undelete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+       * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+       * cannot be changed.
+       *
+       * Create a request for the method "buckets.updateAsync".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The full resource name of the bucket to update.
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+       *        /my-project/locations/global/buckets/my-bucket"
+       * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+       * @return the request
+       */
+      public UpdateAsync updateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+        UpdateAsync result = new UpdateAsync(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+        private static final String REST_PATH = "v2/{+name}:updateAsync";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+        /**
+         * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED,
+         * then FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's
+         * location cannot be changed.
+         *
+         * Create a request for the method "buckets.updateAsync".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * UpdateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The full resource name of the bucket to update.
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+       *        /my-project/locations/global/buckets/my-bucket"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @since 1.13
+         */
+        protected UpdateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+          super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+          }
+        }
+
+        @Override
+        public UpdateAsync set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateAsync) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateAsync setAccessToken(java.lang.String accessToken) {
+          return (UpdateAsync) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateAsync setAlt(java.lang.String alt) {
+          return (UpdateAsync) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateAsync setCallback(java.lang.String callback) {
+          return (UpdateAsync) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateAsync setFields(java.lang.String fields) {
+          return (UpdateAsync) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateAsync setKey(java.lang.String key) {
+          return (UpdateAsync) super.setKey(key);
+        }
+
+        @Override
+        public UpdateAsync setOauthToken(java.lang.String oauthToken) {
+          return (UpdateAsync) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateAsync) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateAsync setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateAsync) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateAsync setUploadType(java.lang.String uploadType) {
+          return (UpdateAsync) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateAsync) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full resource name of the bucket to update.
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         * /my-project/locations/global/buckets/my-bucket"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The full resource name of the bucket to update.
+       "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects/my-
+       project/locations/global/buckets/my-bucket"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The full resource name of the bucket to update.
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         * /my-project/locations/global/buckets/my-bucket"
+         */
+        public UpdateAsync setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+         * field will be overwritten if, and only if, it is in the update mask. name and output only
+         * fields cannot be updated.For a detailed FieldMask definition, see:
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * updateMask=retention_days
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+       be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+       updated.For a detailed FieldMask definition, see: https://developers.google.com/protocol-
+       buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+       updateMask=retention_days
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+         * field will be overwritten if, and only if, it is in the update mask. name and output only
+         * fields cannot be updated.For a detailed FieldMask definition, see:
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * updateMask=retention_days
+         */
+        public UpdateAsync setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateAsync set(String parameterName, Object value) {
+          return (UpdateAsync) super.set(parameterName, value);
         }
       }
 
@@ -19277,6 +20366,175 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has been
+         * created, the bucket's location cannot be changed.
+         *
+         * Create a request for the method "buckets.createAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public CreateAsync createAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          CreateAsync result = new CreateAsync(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CreateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets:createAsync";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has
+           * been created, the bucket's location cannot be changed.
+           *
+           * Create a request for the method "buckets.createAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * CreateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected CreateAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public CreateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateAsync setAccessToken(java.lang.String accessToken) {
+            return (CreateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CreateAsync setAlt(java.lang.String alt) {
+            return (CreateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateAsync setCallback(java.lang.String callback) {
+            return (CreateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public CreateAsync setFields(java.lang.String fields) {
+            return (CreateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public CreateAsync setKey(java.lang.String key) {
+            return (CreateAsync) super.setKey(key);
+          }
+
+          @Override
+          public CreateAsync setOauthToken(java.lang.String oauthToken) {
+            return (CreateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CreateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CreateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CreateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (CreateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CreateAsync setUploadType(java.lang.String uploadType) {
+            return (CreateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource in which to create the log bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          public CreateAsync setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String bucketId;
+
+          /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
+         characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public java.lang.String getBucketId() {
+            return bucketId;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public CreateAsync setBucketId(java.lang.String bucketId) {
+            this.bucketId = bucketId;
+            return this;
+          }
+
+          @Override
+          public CreateAsync set(String parameterName, Object value) {
+            return (CreateAsync) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes a log bucket.Changes the bucket's lifecycle_state to the DELETE_REQUESTED state. After 7
          * days, the bucket will be purged and all log entries in the bucket will be permanently deleted.
          *
@@ -19829,11 +21087,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Updates a log bucket. This method replaces the following fields in the existing bucket with
-         * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-         * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-         * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created, the
-         * bucket's location cannot be changed.
+         * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -19863,11 +21119,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Updates a log bucket. This method replaces the following fields in the existing bucket with
-           * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-           * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-           * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created,
-           * the bucket's location cannot be changed.
+           * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+           * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+           * cannot be changed.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -20189,6 +21443,204 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public Undelete set(String parameterName, Object value) {
             return (Undelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
+         *
+         * Create a request for the method "buckets.updateAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public UpdateAsync updateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          UpdateAsync result = new UpdateAsync(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:updateAsync";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED,
+           * then FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's
+           * location cannot be changed.
+           *
+           * Create a request for the method "buckets.updateAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * UpdateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected UpdateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateAsync setAccessToken(java.lang.String accessToken) {
+            return (UpdateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateAsync setAlt(java.lang.String alt) {
+            return (UpdateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateAsync setCallback(java.lang.String callback) {
+            return (UpdateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateAsync setFields(java.lang.String fields) {
+            return (UpdateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateAsync setKey(java.lang.String key) {
+            return (UpdateAsync) super.setKey(key);
+          }
+
+          @Override
+          public UpdateAsync setOauthToken(java.lang.String oauthToken) {
+            return (UpdateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateAsync setUploadType(java.lang.String uploadType) {
+            return (UpdateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects/my-
+         project/locations/global/buckets/my-bucket"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          public UpdateAsync setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see: https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         updateMask=retention_days
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          public UpdateAsync setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateAsync set(String parameterName, Object value) {
+            return (UpdateAsync) super.set(parameterName, value);
           }
         }
 
@@ -25273,6 +26725,175 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has been
+         * created, the bucket's location cannot be changed.
+         *
+         * Create a request for the method "buckets.createAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public CreateAsync createAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          CreateAsync result = new CreateAsync(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CreateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets:createAsync";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a log bucket asynchronously that can be used to store log entries.After a bucket has
+           * been created, the bucket's location cannot be changed.
+           *
+           * Create a request for the method "buckets.createAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link CreateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * CreateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource in which to create the log bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected CreateAsync(java.lang.String parent, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public CreateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateAsync setAccessToken(java.lang.String accessToken) {
+            return (CreateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CreateAsync setAlt(java.lang.String alt) {
+            return (CreateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateAsync setCallback(java.lang.String callback) {
+            return (CreateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public CreateAsync setFields(java.lang.String fields) {
+            return (CreateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public CreateAsync setKey(java.lang.String key) {
+            return (CreateAsync) super.setKey(key);
+          }
+
+          @Override
+          public CreateAsync setOauthToken(java.lang.String oauthToken) {
+            return (CreateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CreateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CreateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CreateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (CreateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CreateAsync setUploadType(java.lang.String uploadType) {
+            return (CreateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource in which to create the log bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource in which to create the log bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global"
+           */
+          public CreateAsync setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String bucketId;
+
+          /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
+         characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public java.lang.String getBucketId() {
+            return bucketId;
+          }
+
+          /**
+           * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
+           * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           */
+          public CreateAsync setBucketId(java.lang.String bucketId) {
+            this.bucketId = bucketId;
+            return this;
+          }
+
+          @Override
+          public CreateAsync set(String parameterName, Object value) {
+            return (CreateAsync) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes a log bucket.Changes the bucket's lifecycle_state to the DELETE_REQUESTED state. After 7
          * days, the bucket will be purged and all log entries in the bucket will be permanently deleted.
          *
@@ -25825,11 +27446,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Updates a log bucket. This method replaces the following fields in the existing bucket with
-         * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-         * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-         * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created, the
-         * bucket's location cannot be changed.
+         * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -25859,11 +27478,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Updates a log bucket. This method replaces the following fields in the existing bucket with
-           * values from the new bucket: retention_periodIf the retention period is decreased and the bucket
-           * is locked, FAILED_PRECONDITION will be returned.If the bucket has a lifecycle_state of
-           * DELETE_REQUESTED, then FAILED_PRECONDITION will be returned.After a bucket has been created,
-           * the bucket's location cannot be changed.
+           * Updates a log bucket.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+           * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+           * cannot be changed.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -26185,6 +27802,204 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public Undelete set(String parameterName, Object value) {
             return (Undelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED, then
+         * FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's location
+         * cannot be changed.
+         *
+         * Create a request for the method "buckets.updateAsync".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public UpdateAsync updateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          UpdateAsync result = new UpdateAsync(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateAsync extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:updateAsync";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a log bucket asynchronously.If the bucket has a lifecycle_state of DELETE_REQUESTED,
+           * then FAILED_PRECONDITION will be returned.After a bucket has been created, the bucket's
+           * location cannot be changed.
+           *
+           * Create a request for the method "buckets.updateAsync".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link UpdateAsync#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * UpdateAsync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+         *        /my-project/locations/global/buckets/my-bucket"
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected UpdateAsync(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateAsync set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateAsync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateAsync setAccessToken(java.lang.String accessToken) {
+            return (UpdateAsync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateAsync setAlt(java.lang.String alt) {
+            return (UpdateAsync) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateAsync setCallback(java.lang.String callback) {
+            return (UpdateAsync) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateAsync setFields(java.lang.String fields) {
+            return (UpdateAsync) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateAsync setKey(java.lang.String key) {
+            return (UpdateAsync) super.setKey(key);
+          }
+
+          @Override
+          public UpdateAsync setOauthToken(java.lang.String oauthToken) {
+            return (UpdateAsync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateAsync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateAsync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateAsync setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateAsync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateAsync setUploadType(java.lang.String uploadType) {
+            return (UpdateAsync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateAsync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateAsync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects/my-
+         project/locations/global/buckets/my-bucket"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
+           * /my-project/locations/global/buckets/my-bucket"
+           */
+          public UpdateAsync setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see: https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         updateMask=retention_days
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see:
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+           * updateMask=retention_days
+           */
+          public UpdateAsync setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateAsync set(String parameterName, Object value) {
+            return (UpdateAsync) super.set(parameterName, value);
           }
         }
 

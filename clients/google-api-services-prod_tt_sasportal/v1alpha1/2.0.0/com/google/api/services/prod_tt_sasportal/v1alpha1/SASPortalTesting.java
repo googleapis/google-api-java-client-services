@@ -585,6 +585,108 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
         return (Patch) super.set(parameterName, value);
       }
     }
+    /**
+     * Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an
+     * organization match is not found.
+     *
+     * Create a request for the method "customers.provisionDeployment".
+     *
+     * This request holds the parameters needed by the prod_tt_sasportal server.  After setting any
+     * optional parameters, call the {@link ProvisionDeployment#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest}
+     * @return the request
+     */
+    public ProvisionDeployment provisionDeployment(com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest content) throws java.io.IOException {
+      ProvisionDeployment result = new ProvisionDeployment(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ProvisionDeployment extends SASPortalTestingRequest<com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentResponse> {
+
+      private static final String REST_PATH = "v1alpha1/customers:provisionDeployment";
+
+      /**
+       * Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an
+       * organization match is not found.
+       *
+       * Create a request for the method "customers.provisionDeployment".
+       *
+       * This request holds the parameters needed by the the prod_tt_sasportal server.  After setting
+       * any optional parameters, call the {@link ProvisionDeployment#execute()} method to invoke the
+       * remote operation. <p> {@link ProvisionDeployment#initialize(com.google.api.client.googleapis.se
+       * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest}
+       * @since 1.13
+       */
+      protected ProvisionDeployment(com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest content) {
+        super(SASPortalTesting.this, "POST", REST_PATH, content, com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentResponse.class);
+      }
+
+      @Override
+      public ProvisionDeployment set$Xgafv(java.lang.String $Xgafv) {
+        return (ProvisionDeployment) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ProvisionDeployment setAccessToken(java.lang.String accessToken) {
+        return (ProvisionDeployment) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ProvisionDeployment setAlt(java.lang.String alt) {
+        return (ProvisionDeployment) super.setAlt(alt);
+      }
+
+      @Override
+      public ProvisionDeployment setCallback(java.lang.String callback) {
+        return (ProvisionDeployment) super.setCallback(callback);
+      }
+
+      @Override
+      public ProvisionDeployment setFields(java.lang.String fields) {
+        return (ProvisionDeployment) super.setFields(fields);
+      }
+
+      @Override
+      public ProvisionDeployment setKey(java.lang.String key) {
+        return (ProvisionDeployment) super.setKey(key);
+      }
+
+      @Override
+      public ProvisionDeployment setOauthToken(java.lang.String oauthToken) {
+        return (ProvisionDeployment) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ProvisionDeployment setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ProvisionDeployment) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ProvisionDeployment setQuotaUser(java.lang.String quotaUser) {
+        return (ProvisionDeployment) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ProvisionDeployment setUploadType(java.lang.String uploadType) {
+        return (ProvisionDeployment) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ProvisionDeployment setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ProvisionDeployment) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ProvisionDeployment set(String parameterName, Object value) {
+        return (ProvisionDeployment) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Deployments collection.
@@ -11777,131 +11879,6 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
       @Override
       public Test set(String parameterName, Object value) {
         return (Test) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
-   * An accessor for creating requests from the Provisioning collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code SASPortalTesting prod_tt_sasportal = new SASPortalTesting(...);}
-   *   {@code SASPortalTesting.Provisioning.List request = prod_tt_sasportal.provisioning().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Provisioning provisioning() {
-    return new Provisioning();
-  }
-
-  /**
-   * The "provisioning" collection of methods.
-   */
-  public class Provisioning {
-
-    /**
-     * Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an
-     * organization match is not found.
-     *
-     * Create a request for the method "provisioning.provisionDeployment".
-     *
-     * This request holds the parameters needed by the prod_tt_sasportal server.  After setting any
-     * optional parameters, call the {@link ProvisionDeployment#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param content the {@link com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest}
-     * @return the request
-     */
-    public ProvisionDeployment provisionDeployment(com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest content) throws java.io.IOException {
-      ProvisionDeployment result = new ProvisionDeployment(content);
-      initialize(result);
-      return result;
-    }
-
-    public class ProvisionDeployment extends SASPortalTestingRequest<com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentResponse> {
-
-      private static final String REST_PATH = "v1alpha1/provisioning:provisionDeployment";
-
-      /**
-       * Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an
-       * organization match is not found.
-       *
-       * Create a request for the method "provisioning.provisionDeployment".
-       *
-       * This request holds the parameters needed by the the prod_tt_sasportal server.  After setting
-       * any optional parameters, call the {@link ProvisionDeployment#execute()} method to invoke the
-       * remote operation. <p> {@link ProvisionDeployment#initialize(com.google.api.client.googleapis.se
-       * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest}
-       * @since 1.13
-       */
-      protected ProvisionDeployment(com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentRequest content) {
-        super(SASPortalTesting.this, "POST", REST_PATH, content, com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalProvisionDeploymentResponse.class);
-      }
-
-      @Override
-      public ProvisionDeployment set$Xgafv(java.lang.String $Xgafv) {
-        return (ProvisionDeployment) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public ProvisionDeployment setAccessToken(java.lang.String accessToken) {
-        return (ProvisionDeployment) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public ProvisionDeployment setAlt(java.lang.String alt) {
-        return (ProvisionDeployment) super.setAlt(alt);
-      }
-
-      @Override
-      public ProvisionDeployment setCallback(java.lang.String callback) {
-        return (ProvisionDeployment) super.setCallback(callback);
-      }
-
-      @Override
-      public ProvisionDeployment setFields(java.lang.String fields) {
-        return (ProvisionDeployment) super.setFields(fields);
-      }
-
-      @Override
-      public ProvisionDeployment setKey(java.lang.String key) {
-        return (ProvisionDeployment) super.setKey(key);
-      }
-
-      @Override
-      public ProvisionDeployment setOauthToken(java.lang.String oauthToken) {
-        return (ProvisionDeployment) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ProvisionDeployment setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ProvisionDeployment) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ProvisionDeployment setQuotaUser(java.lang.String quotaUser) {
-        return (ProvisionDeployment) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ProvisionDeployment setUploadType(java.lang.String uploadType) {
-        return (ProvisionDeployment) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public ProvisionDeployment setUploadProtocol(java.lang.String uploadProtocol) {
-        return (ProvisionDeployment) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public ProvisionDeployment set(String parameterName, Object value) {
-        return (ProvisionDeployment) super.set(parameterName, value);
       }
     }
 

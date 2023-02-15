@@ -44,7 +44,9 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
   private java.lang.String path;
 
   /**
-   * Port number to access on the container. Must be in the range 1 to 65535.
+   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
+   * defaults to the exposed port of the container, which is the value of
+   * container.ports[0].containerPort.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,9 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
   }
 
   /**
-   * Port number to access on the container. Must be in the range 1 to 65535.
+   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
+   * defaults to the exposed port of the container, which is the value of
+   * container.ports[0].containerPort.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -93,7 +97,9 @@ public final class GoogleCloudRunV2HTTPGetAction extends com.google.api.client.j
   }
 
   /**
-   * Port number to access on the container. Must be in the range 1 to 65535.
+   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
+   * defaults to the exposed port of the container, which is the value of
+   * container.ports[0].containerPort.
    * @param port port or {@code null} for none
    */
   public GoogleCloudRunV2HTTPGetAction setPort(java.lang.Integer port) {

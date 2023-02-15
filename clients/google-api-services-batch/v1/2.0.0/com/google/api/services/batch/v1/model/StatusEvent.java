@@ -51,6 +51,13 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
   private TaskExecution taskExecution;
 
   /**
+   * Task State
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskState;
+
+  /**
    * Type of the event.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
    */
   public StatusEvent setTaskExecution(TaskExecution taskExecution) {
     this.taskExecution = taskExecution;
+    return this;
+  }
+
+  /**
+   * Task State
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskState() {
+    return taskState;
+  }
+
+  /**
+   * Task State
+   * @param taskState taskState or {@code null} for none
+   */
+  public StatusEvent setTaskState(java.lang.String taskState) {
+    this.taskState = taskState;
     return this;
   }
 

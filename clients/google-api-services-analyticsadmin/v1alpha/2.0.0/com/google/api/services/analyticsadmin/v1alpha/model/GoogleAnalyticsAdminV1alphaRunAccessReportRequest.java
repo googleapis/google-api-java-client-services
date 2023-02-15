@@ -47,8 +47,8 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
   }
 
   /**
-   * Dimension filters allow you to restrict report response to specific dimension values which
-   * match the filter. For example, filtering on access records of a single user. To learn more, see
+   * Dimension filters let you restrict report response to specific dimension values which match the
+   * filter. For example, filtering on access records of a single user. To learn more, see
    * [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides/reporting
    * /data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * The value may be {@code null}.
@@ -170,8 +170,8 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
   }
 
   /**
-   * Dimension filters allow you to restrict report response to specific dimension values which
-   * match the filter. For example, filtering on access records of a single user. To learn more, see
+   * Dimension filters let you restrict report response to specific dimension values which match the
+   * filter. For example, filtering on access records of a single user. To learn more, see
    * [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides/reporting
    * /data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * @return value or {@code null} for none
@@ -181,8 +181,8 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
   }
 
   /**
-   * Dimension filters allow you to restrict report response to specific dimension values which
-   * match the filter. For example, filtering on access records of a single user. To learn more, see
+   * Dimension filters let you restrict report response to specific dimension values which match the
+   * filter. For example, filtering on access records of a single user. To learn more, see
    * [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides/reporting
    * /data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * @param dimensionFilter dimensionFilter or {@code null} for none

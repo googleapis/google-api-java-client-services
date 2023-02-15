@@ -1428,17 +1428,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               return this;
             }
 
-            /** The maximum number of results per page that should be returned. */
+            /** The maximum number of results per page to return. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of results per page that should be returned.
+            /** The maximum number of results per page to return.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of results per page that should be returned. */
+            /** The maximum number of results per page to return. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -6547,17 +6547,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** The maximum number of results per page that should be returned. */
+          /** The maximum number of results to return per page. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results per page that should be returned.
+          /** The maximum number of results to return per page.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of results per page that should be returned. */
+          /** The maximum number of results to return per page. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

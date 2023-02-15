@@ -53,7 +53,9 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterRequest exten
   private java.lang.String idToken;
 
   /**
-   * Required. The user's Game Center player ID.
+   * Required. The user's Game Center player ID. Deprecated by Apple. Pass `playerID` along with
+   * `gamePlayerID` and `teamPlayerID` to initiate the migration of a user's Game Center player ID
+   * to `gamePlayerID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +162,9 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterRequest exten
   }
 
   /**
-   * Required. The user's Game Center player ID.
+   * Required. The user's Game Center player ID. Deprecated by Apple. Pass `playerID` along with
+   * `gamePlayerID` and `teamPlayerID` to initiate the migration of a user's Game Center player ID
+   * to `gamePlayerID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlayerId() {
@@ -168,7 +172,9 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterRequest exten
   }
 
   /**
-   * Required. The user's Game Center player ID.
+   * Required. The user's Game Center player ID. Deprecated by Apple. Pass `playerID` along with
+   * `gamePlayerID` and `teamPlayerID` to initiate the migration of a user's Game Center player ID
+   * to `gamePlayerID`.
    * @param playerId playerId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignInWithGameCenterRequest setPlayerId(java.lang.String playerId) {

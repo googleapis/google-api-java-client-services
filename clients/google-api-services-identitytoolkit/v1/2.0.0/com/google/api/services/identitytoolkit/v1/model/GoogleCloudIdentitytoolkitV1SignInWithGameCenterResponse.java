@@ -73,7 +73,8 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
   private java.lang.String localId;
 
   /**
-   * The user's Game Center player ID.
+   * The user's Game Center player ID. Pass `playerID` along with `gamePlayerID` and `teamPlayerID`
+   * to initiate the migration of a user's Game Center player ID to `gamePlayerID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +201,8 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
   }
 
   /**
-   * The user's Game Center player ID.
+   * The user's Game Center player ID. Pass `playerID` along with `gamePlayerID` and `teamPlayerID`
+   * to initiate the migration of a user's Game Center player ID to `gamePlayerID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlayerId() {
@@ -208,7 +210,8 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse exte
   }
 
   /**
-   * The user's Game Center player ID.
+   * The user's Game Center player ID. Pass `playerID` along with `gamePlayerID` and `teamPlayerID`
+   * to initiate the migration of a user's Game Center player ID to `gamePlayerID`.
    * @param playerId playerId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignInWithGameCenterResponse setPlayerId(java.lang.String playerId) {

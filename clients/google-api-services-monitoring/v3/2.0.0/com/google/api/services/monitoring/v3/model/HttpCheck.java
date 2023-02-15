@@ -68,6 +68,16 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String contentType;
 
   /**
+   * A user provided content type header to use for the check. The invalid configurations outlined
+   * in the content_type field apply to custom_content_type, as well as the following: 1.
+   * content_type is URL_ENCODED and custom_content_type is set. 2. content_type is USER_PROVIDED
+   * and custom_content_type is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customContentType;
+
+  /**
    * The list of headers to send as part of the Uptime check request. If two headers have the same
    * key and different values, they should be entered as a single header, with the value being a
    * comma-separated list of all the desired values as described at
@@ -261,6 +271,29 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   public HttpCheck setContentType(java.lang.String contentType) {
     this.contentType = contentType;
+    return this;
+  }
+
+  /**
+   * A user provided content type header to use for the check. The invalid configurations outlined
+   * in the content_type field apply to custom_content_type, as well as the following: 1.
+   * content_type is URL_ENCODED and custom_content_type is set. 2. content_type is USER_PROVIDED
+   * and custom_content_type is not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomContentType() {
+    return customContentType;
+  }
+
+  /**
+   * A user provided content type header to use for the check. The invalid configurations outlined
+   * in the content_type field apply to custom_content_type, as well as the following: 1.
+   * content_type is URL_ENCODED and custom_content_type is set. 2. content_type is USER_PROVIDED
+   * and custom_content_type is not set.
+   * @param customContentType customContentType or {@code null} for none
+   */
+  public HttpCheck setCustomContentType(java.lang.String customContentType) {
+    this.customContentType = customContentType;
     return this;
   }
 

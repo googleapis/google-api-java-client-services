@@ -1090,14 +1090,14 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * Required. The list of fields to be updated. Field names must be in snake case (for example,
        * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
        * one path with the string "*" to match all fields.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+      /** Required. The list of fields to be updated. Field names must be in snake case (for example,
      "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
      with the string "*" to match all fields.
        */
@@ -1106,7 +1106,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * Required. The list of fields to be updated. Field names must be in snake case (for example,
        * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
        * one path with the string "*" to match all fields.
        */
@@ -4296,7 +4296,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
     /**
      * Acknowledges the terms of user data collection for the specified property. This acknowledgement
-     * must be completed (either in the Google Analytics UI or via this API) before
+     * must be completed (either in the Google Analytics UI or through this API) before
      * MeasurementProtocolSecret resources may be created.
      *
      * Create a request for the method "properties.acknowledgeUserDataCollection".
@@ -4324,7 +4324,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Acknowledges the terms of user data collection for the specified property. This acknowledgement
-       * must be completed (either in the Google Analytics UI or via this API) before
+       * must be completed (either in the Google Analytics UI or through this API) before
        * MeasurementProtocolSecret resources may be created.
        *
        * Create a request for the method "properties.acknowledgeUserDataCollection".

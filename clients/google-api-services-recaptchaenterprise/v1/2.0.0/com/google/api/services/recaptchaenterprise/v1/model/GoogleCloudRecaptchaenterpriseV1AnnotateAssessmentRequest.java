@@ -57,8 +57,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private java.util.List<java.lang.String> reasons;
 
   /**
-   * Optional. If the Assessment is part of a Payment Transaction, provide details on Payment
-   * Lifecycle Events that occur in the Transaction.
+   * Optional. If the assessment is part of a payment transaction, provide details on payment
+   * lifecycle events that occur in the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +160,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. If the Assessment is part of a Payment Transaction, provide details on Payment
-   * Lifecycle Events that occur in the Transaction.
+   * Optional. If the assessment is part of a payment transaction, provide details on payment
+   * lifecycle events that occur in the transaction.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionEvent getTransactionEvent() {
@@ -169,8 +169,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. If the Assessment is part of a Payment Transaction, provide details on Payment
-   * Lifecycle Events that occur in the Transaction.
+   * Optional. If the assessment is part of a payment transaction, provide details on payment
+   * lifecycle events that occur in the transaction.
    * @param transactionEvent transactionEvent or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setTransactionEvent(GoogleCloudRecaptchaenterpriseV1TransactionEvent transactionEvent) {

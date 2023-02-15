@@ -46,16 +46,16 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionEvent extends com.
   private java.lang.String eventType;
 
   /**
-   * Optional. The reason or standardized code which corresponds with this transaction event, if one
-   * exists. E.g. a CHARGEBACK Event with code 4553.
+   * Optional. The reason or standardized code that corresponds with this transaction event, if one
+   * exists. For example, a CHARGEBACK event with code 6005.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * Optional. The value that corresponds with this transaction event, if one exists. E.g. A refund
-   * event where $5.00 was refunded. Currency is obtained from the original transaction data.
+   * Optional. The value that corresponds with this transaction event, if one exists. For example, a
+   * refund event where $5.00 was refunded. Currency is obtained from the original transaction data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionEvent extends com.
   }
 
   /**
-   * Optional. The reason or standardized code which corresponds with this transaction event, if one
-   * exists. E.g. a CHARGEBACK Event with code 4553.
+   * Optional. The reason or standardized code that corresponds with this transaction event, if one
+   * exists. For example, a CHARGEBACK event with code 6005.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -107,8 +107,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionEvent extends com.
   }
 
   /**
-   * Optional. The reason or standardized code which corresponds with this transaction event, if one
-   * exists. E.g. a CHARGEBACK Event with code 4553.
+   * Optional. The reason or standardized code that corresponds with this transaction event, if one
+   * exists. For example, a CHARGEBACK event with code 6005.
    * @param reason reason or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionEvent setReason(java.lang.String reason) {
@@ -117,8 +117,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionEvent extends com.
   }
 
   /**
-   * Optional. The value that corresponds with this transaction event, if one exists. E.g. A refund
-   * event where $5.00 was refunded. Currency is obtained from the original transaction data.
+   * Optional. The value that corresponds with this transaction event, if one exists. For example, a
+   * refund event where $5.00 was refunded. Currency is obtained from the original transaction data.
    * @return value or {@code null} for none
    */
   public java.lang.Double getValue() {
@@ -126,8 +126,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionEvent extends com.
   }
 
   /**
-   * Optional. The value that corresponds with this transaction event, if one exists. E.g. A refund
-   * event where $5.00 was refunded. Currency is obtained from the original transaction data.
+   * Optional. The value that corresponds with this transaction event, if one exists. For example, a
+   * refund event where $5.00 was refunded. Currency is obtained from the original transaction data.
    * @param value value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionEvent setValue(java.lang.Double value) {

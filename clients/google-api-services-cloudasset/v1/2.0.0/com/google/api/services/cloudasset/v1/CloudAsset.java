@@ -756,8 +756,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param parent Required. The name of the project/folder/organization where this feed should be created in. It can
      *        only be an organization number (such as "organizations/123"), a folder number (such as
-     *        "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
-     *        (such as "projects/12345").
+     *        "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such
+     *        as "projects/12345").
      * @param content the {@link com.google.api.services.cloudasset.v1.model.CreateFeedRequest}
      * @return the request
      */
@@ -787,8 +787,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param parent Required. The name of the project/folder/organization where this feed should be created in. It can
      *        only be an organization number (such as "organizations/123"), a folder number (such as
-     *        "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
-     *        (such as "projects/12345").
+     *        "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such
+     *        as "projects/12345").
        * @param content the {@link com.google.api.services.cloudasset.v1.model.CreateFeedRequest}
        * @since 1.13
        */
@@ -860,7 +860,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The name of the project/folder/organization where this feed should be created in.
        * It can only be an organization number (such as "organizations/123"), a folder number (such
-       * as "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+       * as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number
        * (such as "projects/12345").
        */
       @com.google.api.client.util.Key
@@ -868,7 +868,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Required. The name of the project/folder/organization where this feed should be created in. It can
      only be an organization number (such as "organizations/123"), a folder number (such as
-     "folders/123"), a project ID (such as "projects/my-project-id")", or a project number (such as
+     "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as
      "projects/12345").
        */
       public java.lang.String getParent() {
@@ -878,7 +878,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The name of the project/folder/organization where this feed should be created in.
        * It can only be an organization number (such as "organizations/123"), a folder number (such
-       * as "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+       * as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number
        * (such as "projects/12345").
        */
       public Create setParent(java.lang.String parent) {
@@ -1691,7 +1691,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param parent Required. The name of the project/folder/organization where this saved_query should be created in.
      *        It can only be an organization number (such as "organizations/123"), a folder number (such
-     *        as "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+     *        as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number
      *        (such as "projects/12345").
      * @param content the {@link com.google.api.services.cloudasset.v1.model.SavedQuery}
      * @return the request
@@ -1722,7 +1722,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param parent Required. The name of the project/folder/organization where this saved_query should be created in.
      *        It can only be an organization number (such as "organizations/123"), a folder number (such
-     *        as "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+     *        as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number
      *        (such as "projects/12345").
        * @param content the {@link com.google.api.services.cloudasset.v1.model.SavedQuery}
        * @since 1.13
@@ -1795,7 +1795,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The name of the project/folder/organization where this saved_query should be
        * created in. It can only be an organization number (such as "organizations/123"), a folder
-       * number (such as "folders/123"), a project ID (such as "projects/my-project-id")", or a
+       * number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a
        * project number (such as "projects/12345").
        */
       @com.google.api.client.util.Key
@@ -1803,7 +1803,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Required. The name of the project/folder/organization where this saved_query should be created in.
      It can only be an organization number (such as "organizations/123"), a folder number (such as
-     "folders/123"), a project ID (such as "projects/my-project-id")", or a project number (such as
+     "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as
      "projects/12345").
        */
       public java.lang.String getParent() {
@@ -1813,7 +1813,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The name of the project/folder/organization where this saved_query should be
        * created in. It can only be an organization number (such as "organizations/123"), a folder
-       * number (such as "folders/123"), a project ID (such as "projects/my-project-id")", or a
+       * number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a
        * project number (such as "projects/12345").
        */
       public Create setParent(java.lang.String parent) {

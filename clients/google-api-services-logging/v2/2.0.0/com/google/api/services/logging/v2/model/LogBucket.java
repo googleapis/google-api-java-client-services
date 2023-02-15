@@ -30,6 +30,14 @@ package com.google.api.services.logging.v2.model;
 public final class LogBucket extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
+   * disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean analyticsEnabled;
+
+  /**
    * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
    * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
    * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
@@ -118,6 +126,25 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
+   * disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAnalyticsEnabled() {
+    return analyticsEnabled;
+  }
+
+  /**
+   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
+   * disabled.
+   * @param analyticsEnabled analyticsEnabled or {@code null} for none
+   */
+  public LogBucket setAnalyticsEnabled(java.lang.Boolean analyticsEnabled) {
+    this.analyticsEnabled = analyticsEnabled;
+    return this;
+  }
 
   /**
    * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are

@@ -54,9 +54,9 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   private java.lang.String koreanBusinessRegistrationNumber;
 
   /**
-   * The phone number of the business. This can only be updated if a verified phone number is not
-   * already set. To replace a verified phone number use the `Accounts.requestphoneverification` and
-   * `Accounts.verifyphonenumber`.
+   * The phone number of the business in [E.164](https://en.wikipedia.org/wiki/E.164) format. This
+   * can only be updated if a verified phone number is not already set. To replace a verified phone
+   * number use the `Accounts.requestphoneverification` and `Accounts.verifyphonenumber`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +127,9 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   }
 
   /**
-   * The phone number of the business. This can only be updated if a verified phone number is not
-   * already set. To replace a verified phone number use the `Accounts.requestphoneverification` and
-   * `Accounts.verifyphonenumber`.
+   * The phone number of the business in [E.164](https://en.wikipedia.org/wiki/E.164) format. This
+   * can only be updated if a verified phone number is not already set. To replace a verified phone
+   * number use the `Accounts.requestphoneverification` and `Accounts.verifyphonenumber`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -137,9 +137,9 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   }
 
   /**
-   * The phone number of the business. This can only be updated if a verified phone number is not
-   * already set. To replace a verified phone number use the `Accounts.requestphoneverification` and
-   * `Accounts.verifyphonenumber`.
+   * The phone number of the business in [E.164](https://en.wikipedia.org/wiki/E.164) format. This
+   * can only be updated if a verified phone number is not already set. To replace a verified phone
+   * number use the `Accounts.requestphoneverification` and `Accounts.verifyphonenumber`.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public AccountBusinessInformation setPhoneNumber(java.lang.String phoneNumber) {

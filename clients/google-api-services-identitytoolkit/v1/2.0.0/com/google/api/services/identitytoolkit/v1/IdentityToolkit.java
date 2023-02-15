@@ -1094,7 +1094,14 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
      * Identity Platform ID token and refresh token are issued for the authenticated user. The bundle ID
      * is required in the request header as `x-ios-bundle-identifier`. An [API
      * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
-     * to identify the Google Cloud project.
+     * to identify the Google Cloud project. Apple has [deprecated the `playerID`
+     * field](https://developer.apple.com/documentation/gamekit/gkplayer/1521127-playerid/). The Apple
+     * platform Firebase SDK will use `gamePlayerID` and `teamPlayerID` from version 10.5.0 and onwards.
+     * Upgrading to SDK version 10.5.0 or later updates existing integrations that use `playerID` to
+     * instead use `gamePlayerID` and `teamPlayerID`. When making calls to `signInWithGameCenter`, you
+     * must include `playerID` along with the new fields `gamePlayerID` and `teamPlayerID` to
+     * successfully identify all existing users. Upgrading existing Game Center sign in integrations to
+     * SDK version 10.5.0 or later is irreversible.
      *
      * Create a request for the method "accounts.signInWithGameCenter".
      *
@@ -1120,7 +1127,14 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * Identity Platform ID token and refresh token are issued for the authenticated user. The bundle
        * ID is required in the request header as `x-ios-bundle-identifier`. An [API
        * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
-       * to identify the Google Cloud project.
+       * to identify the Google Cloud project. Apple has [deprecated the `playerID`
+       * field](https://developer.apple.com/documentation/gamekit/gkplayer/1521127-playerid/). The Apple
+       * platform Firebase SDK will use `gamePlayerID` and `teamPlayerID` from version 10.5.0 and
+       * onwards. Upgrading to SDK version 10.5.0 or later updates existing integrations that use
+       * `playerID` to instead use `gamePlayerID` and `teamPlayerID`. When making calls to
+       * `signInWithGameCenter`, you must include `playerID` along with the new fields `gamePlayerID`
+       * and `teamPlayerID` to successfully identify all existing users. Upgrading existing Game Center
+       * sign in integrations to SDK version 10.5.0 or later is irreversible.
        *
        * Create a request for the method "accounts.signInWithGameCenter".
        *

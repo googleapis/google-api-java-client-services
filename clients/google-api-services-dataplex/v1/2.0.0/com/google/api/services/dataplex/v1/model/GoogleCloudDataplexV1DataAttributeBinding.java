@@ -93,8 +93,8 @@ public final class GoogleCloudDataplexV1DataAttributeBinding extends com.google.
   private java.util.List<GoogleCloudDataplexV1DataAttributeBindingPath> paths;
 
   /**
-   * Optional. Immutable. The resource name of the resource that is binded to attributes. Presently,
-   * only entity resource is supported in the form:
+   * Optional. Immutable. The resource name of the resource that is associated to attributes.
+   * Presently, only entity resource is supported in the form:
    * projects/{project}/locations/{location}/lakes/{lake}/zones/{zone}/entities/{entity_id} Must
    * belong in the same project and region as the attribute binding, and there can only exist one
    * active binding for a resource.
@@ -267,8 +267,8 @@ public final class GoogleCloudDataplexV1DataAttributeBinding extends com.google.
   }
 
   /**
-   * Optional. Immutable. The resource name of the resource that is binded to attributes. Presently,
-   * only entity resource is supported in the form:
+   * Optional. Immutable. The resource name of the resource that is associated to attributes.
+   * Presently, only entity resource is supported in the form:
    * projects/{project}/locations/{location}/lakes/{lake}/zones/{zone}/entities/{entity_id} Must
    * belong in the same project and region as the attribute binding, and there can only exist one
    * active binding for a resource.
@@ -279,8 +279,8 @@ public final class GoogleCloudDataplexV1DataAttributeBinding extends com.google.
   }
 
   /**
-   * Optional. Immutable. The resource name of the resource that is binded to attributes. Presently,
-   * only entity resource is supported in the form:
+   * Optional. Immutable. The resource name of the resource that is associated to attributes.
+   * Presently, only entity resource is supported in the form:
    * projects/{project}/locations/{location}/lakes/{lake}/zones/{zone}/entities/{entity_id} Must
    * belong in the same project and region as the attribute binding, and there can only exist one
    * active binding for a resource.

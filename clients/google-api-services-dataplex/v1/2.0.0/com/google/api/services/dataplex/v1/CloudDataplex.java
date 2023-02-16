@@ -2137,6 +2137,28 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -3043,6 +3065,28 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /** Required. Mask of fields to update. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 

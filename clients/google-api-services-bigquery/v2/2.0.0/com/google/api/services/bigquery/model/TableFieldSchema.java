@@ -124,6 +124,14 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.Long precision;
 
   /**
+   * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
+   * type fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String roundingMode;
+
+  /**
    * [Optional] See documentation for precision.
    * The value may be {@code null}.
    */
@@ -355,6 +363,25 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   public TableFieldSchema setPrecision(java.lang.Long precision) {
     this.precision = precision;
+    return this;
+  }
+
+  /**
+   * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
+   * type fields.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRoundingMode() {
+    return roundingMode;
+  }
+
+  /**
+   * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
+   * type fields.
+   * @param roundingMode roundingMode or {@code null} for none
+   */
+  public TableFieldSchema setRoundingMode(java.lang.String roundingMode) {
+    this.roundingMode = roundingMode;
     return this;
   }
 

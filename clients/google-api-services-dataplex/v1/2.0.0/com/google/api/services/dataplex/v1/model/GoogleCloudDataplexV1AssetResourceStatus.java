@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AssetResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Service account associated with the BigQuery Connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managedAccessIdentity;
+
+  /**
    * Additional information about the current state.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDataplexV1AssetResourceStatus extends com.google.a
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Service account associated with the BigQuery Connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagedAccessIdentity() {
+    return managedAccessIdentity;
+  }
+
+  /**
+   * Output only. Service account associated with the BigQuery Connection.
+   * @param managedAccessIdentity managedAccessIdentity or {@code null} for none
+   */
+  public GoogleCloudDataplexV1AssetResourceStatus setManagedAccessIdentity(java.lang.String managedAccessIdentity) {
+    this.managedAccessIdentity = managedAccessIdentity;
+    return this;
+  }
 
   /**
    * Additional information about the current state.

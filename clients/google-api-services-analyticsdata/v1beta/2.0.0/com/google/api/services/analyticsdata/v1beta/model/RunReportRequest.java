@@ -63,10 +63,9 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Dimension filters allow you to ask for only specific dimension values in the report. To learn
-   * more, see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides
-   * /reporting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this
-   * filter.
+   * Dimension filters let you ask for only specific dimension values in the report. To learn more,
+   * see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides/repor
+   * ting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,10 +241,9 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Dimension filters allow you to ask for only specific dimension values in the report. To learn
-   * more, see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides
-   * /reporting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this
-   * filter.
+   * Dimension filters let you ask for only specific dimension values in the report. To learn more,
+   * see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides/repor
+   * ting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * @return value or {@code null} for none
    */
   public FilterExpression getDimensionFilter() {
@@ -253,10 +251,9 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Dimension filters allow you to ask for only specific dimension values in the report. To learn
-   * more, see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides
-   * /reporting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this
-   * filter.
+   * Dimension filters let you ask for only specific dimension values in the report. To learn more,
+   * see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides/repor
+   * ting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * @param dimensionFilter dimensionFilter or {@code null} for none
    */
   public RunReportRequest setDimensionFilter(FilterExpression dimensionFilter) {

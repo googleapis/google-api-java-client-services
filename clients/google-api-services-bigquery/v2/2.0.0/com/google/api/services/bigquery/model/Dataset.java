@@ -91,6 +91,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.Long defaultPartitionExpirationMs;
 
   /**
+   * [Output-only] The default rounding mode of the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultRoundingMode;
+
+  /**
    * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
    * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
    * in the dataset will have an expirationTime property set to the creation time plus the value in
@@ -341,6 +348,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setDefaultPartitionExpirationMs(java.lang.Long defaultPartitionExpirationMs) {
     this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
+    return this;
+  }
+
+  /**
+   * [Output-only] The default rounding mode of the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultRoundingMode() {
+    return defaultRoundingMode;
+  }
+
+  /**
+   * [Output-only] The default rounding mode of the dataset.
+   * @param defaultRoundingMode defaultRoundingMode or {@code null} for none
+   */
+  public Dataset setDefaultRoundingMode(java.lang.String defaultRoundingMode) {
+    this.defaultRoundingMode = defaultRoundingMode;
     return this;
   }
 

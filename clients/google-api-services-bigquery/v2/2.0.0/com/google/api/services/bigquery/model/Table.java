@@ -59,6 +59,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultCollation;
 
   /**
+   * [Output-only] The default rounding mode of the table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultRoundingMode;
+
+  /**
    * [Optional] A user-friendly description of this table.
    * The value may be {@code null}.
    */
@@ -408,6 +415,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setDefaultCollation(java.lang.String defaultCollation) {
     this.defaultCollation = defaultCollation;
+    return this;
+  }
+
+  /**
+   * [Output-only] The default rounding mode of the table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultRoundingMode() {
+    return defaultRoundingMode;
+  }
+
+  /**
+   * [Output-only] The default rounding mode of the table.
+   * @param defaultRoundingMode defaultRoundingMode or {@code null} for none
+   */
+  public Table setDefaultRoundingMode(java.lang.String defaultRoundingMode) {
+    this.defaultRoundingMode = defaultRoundingMode;
     return this;
   }
 

@@ -31,6 +31,31 @@ package com.google.api.services.compute.model;
 public final class HttpRouteRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * customErrorResponsePolicy specifies how the Load Balancer returns error responses when
+   * BackendServiceor BackendBucket responds with an error. If a policy for an error code is not
+   * configured for the RouteRule, a policy for the error code configured in
+   * pathMatcher.defaultCustomErrorResponsePolicy is applied. If one is not specified in
+   * pathMatcher.defaultCustomErrorResponsePolicy, the policy configured in
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the
+   * following configuration: - UrlMap.defaultCustomErrorResponsePolicy are configured with policies
+   * for 5xx and 4xx errors - A RouteRule for /coming_soon/ is configured for the error code 404. If
+   * the request is for www.myotherdomain.com and a 404 is encountered, the policy under
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the
+   * request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the
+   * request for www.example.com/coming_soon/ encounters a 404, the policy in
+   * RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example
+   * encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect.
+   * When used in conjunction with routeRules.routeAction.retryPolicy, retries take precedence. Only
+   * once all retries are exhausted, the customErrorResponsePolicy is applied. While attempting a
+   * retry, if load balancer is successful in reaching the service, the customErrorResponsePolicy is
+   * ignored and the response from the service is returned to the client. customErrorResponsePolicy
+   * is supported only for Global External HTTP(S) load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomErrorResponsePolicy customErrorResponsePolicy;
+
+  /**
    * The short description conveying the intent of this routeRule. The description can have a
    * maximum length of 1024 characters.
    * The value may be {@code null}.
@@ -141,6 +166,59 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private HttpRedirectAction urlRedirect;
+
+  /**
+   * customErrorResponsePolicy specifies how the Load Balancer returns error responses when
+   * BackendServiceor BackendBucket responds with an error. If a policy for an error code is not
+   * configured for the RouteRule, a policy for the error code configured in
+   * pathMatcher.defaultCustomErrorResponsePolicy is applied. If one is not specified in
+   * pathMatcher.defaultCustomErrorResponsePolicy, the policy configured in
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the
+   * following configuration: - UrlMap.defaultCustomErrorResponsePolicy are configured with policies
+   * for 5xx and 4xx errors - A RouteRule for /coming_soon/ is configured for the error code 404. If
+   * the request is for www.myotherdomain.com and a 404 is encountered, the policy under
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the
+   * request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the
+   * request for www.example.com/coming_soon/ encounters a 404, the policy in
+   * RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example
+   * encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect.
+   * When used in conjunction with routeRules.routeAction.retryPolicy, retries take precedence. Only
+   * once all retries are exhausted, the customErrorResponsePolicy is applied. While attempting a
+   * retry, if load balancer is successful in reaching the service, the customErrorResponsePolicy is
+   * ignored and the response from the service is returned to the client. customErrorResponsePolicy
+   * is supported only for Global External HTTP(S) load balancing.
+   * @return value or {@code null} for none
+   */
+  public CustomErrorResponsePolicy getCustomErrorResponsePolicy() {
+    return customErrorResponsePolicy;
+  }
+
+  /**
+   * customErrorResponsePolicy specifies how the Load Balancer returns error responses when
+   * BackendServiceor BackendBucket responds with an error. If a policy for an error code is not
+   * configured for the RouteRule, a policy for the error code configured in
+   * pathMatcher.defaultCustomErrorResponsePolicy is applied. If one is not specified in
+   * pathMatcher.defaultCustomErrorResponsePolicy, the policy configured in
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the
+   * following configuration: - UrlMap.defaultCustomErrorResponsePolicy are configured with policies
+   * for 5xx and 4xx errors - A RouteRule for /coming_soon/ is configured for the error code 404. If
+   * the request is for www.myotherdomain.com and a 404 is encountered, the policy under
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the
+   * request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the
+   * request for www.example.com/coming_soon/ encounters a 404, the policy in
+   * RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example
+   * encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect.
+   * When used in conjunction with routeRules.routeAction.retryPolicy, retries take precedence. Only
+   * once all retries are exhausted, the customErrorResponsePolicy is applied. While attempting a
+   * retry, if load balancer is successful in reaching the service, the customErrorResponsePolicy is
+   * ignored and the response from the service is returned to the client. customErrorResponsePolicy
+   * is supported only for Global External HTTP(S) load balancing.
+   * @param customErrorResponsePolicy customErrorResponsePolicy or {@code null} for none
+   */
+  public HttpRouteRule setCustomErrorResponsePolicy(CustomErrorResponsePolicy customErrorResponsePolicy) {
+    this.customErrorResponsePolicy = customErrorResponsePolicy;
+    return this;
+  }
 
   /**
    * The short description conveying the intent of this routeRule. The description can have a

@@ -49,6 +49,29 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
+   * defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when
+   * BackendServiceor BackendBucket responds with an error. This policy takes effect at the Load
+   * Balancer level and applies only when no policy has been defined for the error code at lower
+   * levels like PathMatcher, RouteRule and PathRule within this UrlMap. For example, consider a
+   * UrlMap with the following configuration: - defaultCustomErrorResponsePolicy containing policies
+   * for responding to 5xx and 4xx errors - A PathMatcher configured for *.example.com has
+   * defaultCustomErrorResponsePolicy for 4xx. If a request for http://www.example.com/ encounters a
+   * 404, the policy in pathMatcher.defaultCustomErrorResponsePolicy will be enforced. When the
+   * request for http://www.example.com/ encounters a 502, the policy in
+   * UrlMap.defaultCustomErrorResponsePolicy will be enforced. When a request that does not match
+   * any host in *.example.com such as http://www.myotherexample.com/, encounters a 404,
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with
+   * defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted,
+   * the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is
+   * successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the
+   * response from the service is returned to the client. defaultCustomErrorResponsePolicy is
+   * supported only for Global External HTTP(S) load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomErrorResponsePolicy defaultCustomErrorResponsePolicy;
+
+  /**
    * defaultRouteAction takes effect when none of the hostRules match. The load balancer performs
    * advanced routing actions, such as URL rewrites and header transformations, before forwarding
    * the request to the selected backend. If defaultRouteAction specifies any
@@ -204,6 +227,55 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   public UrlMap setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when
+   * BackendServiceor BackendBucket responds with an error. This policy takes effect at the Load
+   * Balancer level and applies only when no policy has been defined for the error code at lower
+   * levels like PathMatcher, RouteRule and PathRule within this UrlMap. For example, consider a
+   * UrlMap with the following configuration: - defaultCustomErrorResponsePolicy containing policies
+   * for responding to 5xx and 4xx errors - A PathMatcher configured for *.example.com has
+   * defaultCustomErrorResponsePolicy for 4xx. If a request for http://www.example.com/ encounters a
+   * 404, the policy in pathMatcher.defaultCustomErrorResponsePolicy will be enforced. When the
+   * request for http://www.example.com/ encounters a 502, the policy in
+   * UrlMap.defaultCustomErrorResponsePolicy will be enforced. When a request that does not match
+   * any host in *.example.com such as http://www.myotherexample.com/, encounters a 404,
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with
+   * defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted,
+   * the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is
+   * successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the
+   * response from the service is returned to the client. defaultCustomErrorResponsePolicy is
+   * supported only for Global External HTTP(S) load balancing.
+   * @return value or {@code null} for none
+   */
+  public CustomErrorResponsePolicy getDefaultCustomErrorResponsePolicy() {
+    return defaultCustomErrorResponsePolicy;
+  }
+
+  /**
+   * defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when
+   * BackendServiceor BackendBucket responds with an error. This policy takes effect at the Load
+   * Balancer level and applies only when no policy has been defined for the error code at lower
+   * levels like PathMatcher, RouteRule and PathRule within this UrlMap. For example, consider a
+   * UrlMap with the following configuration: - defaultCustomErrorResponsePolicy containing policies
+   * for responding to 5xx and 4xx errors - A PathMatcher configured for *.example.com has
+   * defaultCustomErrorResponsePolicy for 4xx. If a request for http://www.example.com/ encounters a
+   * 404, the policy in pathMatcher.defaultCustomErrorResponsePolicy will be enforced. When the
+   * request for http://www.example.com/ encounters a 502, the policy in
+   * UrlMap.defaultCustomErrorResponsePolicy will be enforced. When a request that does not match
+   * any host in *.example.com such as http://www.myotherexample.com/, encounters a 404,
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with
+   * defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted,
+   * the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is
+   * successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the
+   * response from the service is returned to the client. defaultCustomErrorResponsePolicy is
+   * supported only for Global External HTTP(S) load balancing.
+   * @param defaultCustomErrorResponsePolicy defaultCustomErrorResponsePolicy or {@code null} for none
+   */
+  public UrlMap setDefaultCustomErrorResponsePolicy(CustomErrorResponsePolicy defaultCustomErrorResponsePolicy) {
+    this.defaultCustomErrorResponsePolicy = defaultCustomErrorResponsePolicy;
     return this;
   }
 

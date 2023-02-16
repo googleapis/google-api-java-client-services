@@ -79,6 +79,14 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   private InstanceProperties properties;
 
   /**
+   * [Output Only] URL of the region where the instance template resides. Only applicable for
+   * regional resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] The URL for this instance template. The server defines this URL.
    * The value may be {@code null}.
    */
@@ -213,6 +221,25 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
    */
   public InstanceTemplate setProperties(InstanceProperties properties) {
     this.properties = properties;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the instance template resides. Only applicable for
+   * regional resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the instance template resides. Only applicable for
+   * regional resources.
+   * @param region region or {@code null} for none
+   */
+  public InstanceTemplate setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

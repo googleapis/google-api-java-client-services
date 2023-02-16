@@ -535,6 +535,14 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeDriveMembersOnlyRestriction;
 
     /**
+     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * of this shared drive.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
+
+    /**
      * Whether the current user can comment on files in this shared drive.
      * The value may be {@code null}.
      */
@@ -718,6 +726,25 @@ public final class Drive extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanChangeDriveMembersOnlyRestriction(java.lang.Boolean canChangeDriveMembersOnlyRestriction) {
       this.canChangeDriveMembersOnlyRestriction = canChangeDriveMembersOnlyRestriction;
+      return this;
+    }
+
+    /**
+     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * of this shared drive.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanChangeSharingFoldersRequiresOrganizerPermissionRestriction() {
+      return canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
+    }
+
+    /**
+     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * of this shared drive.
+     * @param canChangeSharingFoldersRequiresOrganizerPermissionRestriction canChangeSharingFoldersRequiresOrganizerPermissionRestriction or {@code null} for none
+     */
+    public Capabilities setCanChangeSharingFoldersRequiresOrganizerPermissionRestriction(java.lang.Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction) {
+      this.canChangeSharingFoldersRequiresOrganizerPermissionRestriction = canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
       return this;
     }
 
@@ -1013,6 +1040,14 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean driveMembersOnly;
 
     /**
+     * If true, only users with the organizer role can share folders. If false, users with either the
+     * organizer role or the file organizer role can share folders.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean sharingFoldersRequiresOrganizerPermission;
+
+    /**
      * Whether administrative privileges on this shared drive are required to modify restrictions.
      * @return value or {@code null} for none
      */
@@ -1085,6 +1120,25 @@ public final class Drive extends com.google.api.client.json.GenericJson {
      */
     public Restrictions setDriveMembersOnly(java.lang.Boolean driveMembersOnly) {
       this.driveMembersOnly = driveMembersOnly;
+      return this;
+    }
+
+    /**
+     * If true, only users with the organizer role can share folders. If false, users with either the
+     * organizer role or the file organizer role can share folders.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getSharingFoldersRequiresOrganizerPermission() {
+      return sharingFoldersRequiresOrganizerPermission;
+    }
+
+    /**
+     * If true, only users with the organizer role can share folders. If false, users with either the
+     * organizer role or the file organizer role can share folders.
+     * @param sharingFoldersRequiresOrganizerPermission sharingFoldersRequiresOrganizerPermission or {@code null} for none
+     */
+    public Restrictions setSharingFoldersRequiresOrganizerPermission(java.lang.Boolean sharingFoldersRequiresOrganizerPermission) {
+      this.sharingFoldersRequiresOrganizerPermission = sharingFoldersRequiresOrganizerPermission;
       return this;
     }
 

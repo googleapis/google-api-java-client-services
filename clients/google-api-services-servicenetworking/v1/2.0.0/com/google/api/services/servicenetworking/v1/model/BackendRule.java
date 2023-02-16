@@ -83,6 +83,13 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.Double operationDeadline;
 
   /**
+   * The map between request protocol and the backend address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, BackendRule> overridesByRequestProtocol;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,6 +234,23 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   public BackendRule setOperationDeadline(java.lang.Double operationDeadline) {
     this.operationDeadline = operationDeadline;
+    return this;
+  }
+
+  /**
+   * The map between request protocol and the backend address.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, BackendRule> getOverridesByRequestProtocol() {
+    return overridesByRequestProtocol;
+  }
+
+  /**
+   * The map between request protocol and the backend address.
+   * @param overridesByRequestProtocol overridesByRequestProtocol or {@code null} for none
+   */
+  public BackendRule setOverridesByRequestProtocol(java.util.Map<String, BackendRule> overridesByRequestProtocol) {
+    this.overridesByRequestProtocol = overridesByRequestProtocol;
     return this;
   }
 

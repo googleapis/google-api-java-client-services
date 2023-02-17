@@ -76,10 +76,19 @@ public final class AppsDynamiteSharedSpaceInfo extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
+   * Deprecated. Use segmented_membership_counts instead which also includes other counts such as
+   * rosters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numMembers;
+
+  /**
+   * Member counts object with types of members and their respective counts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedSegmentedMembershipCounts segmentedMembershipCounts;
 
   /**
    * searching user's membership state in this space
@@ -202,6 +211,8 @@ public final class AppsDynamiteSharedSpaceInfo extends com.google.api.client.jso
   }
 
   /**
+   * Deprecated. Use segmented_membership_counts instead which also includes other counts such as
+   * rosters.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumMembers() {
@@ -209,10 +220,29 @@ public final class AppsDynamiteSharedSpaceInfo extends com.google.api.client.jso
   }
 
   /**
+   * Deprecated. Use segmented_membership_counts instead which also includes other counts such as
+   * rosters.
    * @param numMembers numMembers or {@code null} for none
    */
   public AppsDynamiteSharedSpaceInfo setNumMembers(java.lang.Integer numMembers) {
     this.numMembers = numMembers;
+    return this;
+  }
+
+  /**
+   * Member counts object with types of members and their respective counts.
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedSegmentedMembershipCounts getSegmentedMembershipCounts() {
+    return segmentedMembershipCounts;
+  }
+
+  /**
+   * Member counts object with types of members and their respective counts.
+   * @param segmentedMembershipCounts segmentedMembershipCounts or {@code null} for none
+   */
+  public AppsDynamiteSharedSpaceInfo setSegmentedMembershipCounts(AppsDynamiteSharedSegmentedMembershipCounts segmentedMembershipCounts) {
+    this.segmentedMembershipCounts = segmentedMembershipCounts;
     return this;
   }
 

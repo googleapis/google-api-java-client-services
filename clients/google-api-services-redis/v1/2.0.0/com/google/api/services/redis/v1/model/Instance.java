@@ -58,6 +58,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String authorizedNetwork;
 
   /**
+   * Optional. The available maintenance versions that an instance could update to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableMaintenanceVersions;
+
+  /**
    * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
    * defaults to DIRECT_PEERING.
    * The value may be {@code null}.
@@ -134,6 +141,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private MaintenanceSchedule maintenanceSchedule;
+
+  /**
+   * Optional. The self service update maintenance version. The version is date based such as
+   * "20210712_00_00".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceVersion;
 
   /**
    * Required. Redis memory size in GiB.
@@ -368,6 +383,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The available maintenance versions that an instance could update to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableMaintenanceVersions() {
+    return availableMaintenanceVersions;
+  }
+
+  /**
+   * Optional. The available maintenance versions that an instance could update to.
+   * @param availableMaintenanceVersions availableMaintenanceVersions or {@code null} for none
+   */
+  public Instance setAvailableMaintenanceVersions(java.util.List<java.lang.String> availableMaintenanceVersions) {
+    this.availableMaintenanceVersions = availableMaintenanceVersions;
+    return this;
+  }
+
+  /**
    * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
    * defaults to DIRECT_PEERING.
    * @return value or {@code null} for none
@@ -550,6 +582,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
     this.maintenanceSchedule = maintenanceSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. The self service update maintenance version. The version is date based such as
+   * "20210712_00_00".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceVersion() {
+    return maintenanceVersion;
+  }
+
+  /**
+   * Optional. The self service update maintenance version. The version is date based such as
+   * "20210712_00_00".
+   * @param maintenanceVersion maintenanceVersion or {@code null} for none
+   */
+  public Instance setMaintenanceVersion(java.lang.String maintenanceVersion) {
+    this.maintenanceVersion = maintenanceVersion;
     return this;
   }
 

@@ -31,8 +31,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text that appears below `text`. Always truncates. Supports simple formatting. See Text
-   * formatting for formatting details.
+   * The text that appears below `text`. Always truncates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +93,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private java.lang.String text;
 
   /**
-   * The text that appears above `text`. Always truncates. Supports simple formatting. See Text
-   * formatting for formatting details.
+   * The text that appears above `text`. Always truncates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +108,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private java.lang.Boolean wrapText;
 
   /**
-   * The text that appears below `text`. Always truncates. Supports simple formatting. See Text
-   * formatting for formatting details.
+   * The text that appears below `text`. Always truncates.
    * @return value or {@code null} for none
    */
   public java.lang.String getBottomLabel() {
@@ -119,8 +116,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The text that appears below `text`. Always truncates. Supports simple formatting. See Text
-   * formatting for formatting details.
+   * The text that appears below `text`. Always truncates.
    * @param bottomLabel bottomLabel or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setBottomLabel(java.lang.String bottomLabel) {
@@ -260,8 +256,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The text that appears above `text`. Always truncates. Supports simple formatting. See Text
-   * formatting for formatting details.
+   * The text that appears above `text`. Always truncates.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopLabel() {
@@ -269,8 +264,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * The text that appears above `text`. Always truncates. Supports simple formatting. See Text
-   * formatting for formatting details.
+   * The text that appears above `text`. Always truncates.
    * @param topLabel topLabel or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setTopLabel(java.lang.String topLabel) {

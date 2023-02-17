@@ -31,6 +31,16 @@ package com.google.api.services.chat.v1.model;
 public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Whether the Chat app was installed by a Google Workspace administrator.
+   * Administrators can install a Chat app for their domain, organizational unit, or a group of
+   * users. Administrators can only install Chat apps for direct messaging between users and the
+   * app. To support admin install, your app must feature direct messaging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean adminInstalled;
+
+  /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
    * messages, this field may be empty. Supports up to 128 characters.
@@ -82,6 +92,29 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. Whether the Chat app was installed by a Google Workspace administrator.
+   * Administrators can install a Chat app for their domain, organizational unit, or a group of
+   * users. Administrators can only install Chat apps for direct messaging between users and the
+   * app. To support admin install, your app must feature direct messaging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAdminInstalled() {
+    return adminInstalled;
+  }
+
+  /**
+   * Output only. Whether the Chat app was installed by a Google Workspace administrator.
+   * Administrators can install a Chat app for their domain, organizational unit, or a group of
+   * users. Administrators can only install Chat apps for direct messaging between users and the
+   * app. To support admin install, your app must feature direct messaging.
+   * @param adminInstalled adminInstalled or {@code null} for none
+   */
+  public Space setAdminInstalled(java.lang.Boolean adminInstalled) {
+    this.adminInstalled = adminInstalled;
+    return this;
+  }
 
   /**
    * The space's display name. Required when [creating a

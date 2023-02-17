@@ -23,6 +23,9 @@ package com.google.api.services.chat.v1;
  */
 public class HangoutsChatScopes {
 
+  /** Private Service: https://www.googleapis.com/auth/chat.bot. */
+  public static final String CHAT_BOT = "https://www.googleapis.com/auth/chat.bot";
+
   /** View, add, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
@@ -51,6 +54,7 @@ public class HangoutsChatScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CHAT_BOT);
     set.add(CHAT_MEMBERSHIPS);
     set.add(CHAT_MEMBERSHIPS_READONLY);
     set.add(CHAT_MESSAGES);

@@ -31,53 +31,26 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class RenameInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The `name` field is used to identify the instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Instance instance;
-
-  /**
    * Required. The new `name` of the instance. Format: {instancename}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * Required. The `name` field is used to identify the instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
-   * @return value or {@code null} for none
-   */
-  public Instance getInstance() {
-    return instance;
-  }
-
-  /**
-   * Required. The `name` field is used to identify the instance. Format:
-   * projects/{project}/locations/{location}/instances/{instance}
-   * @param instance instance or {@code null} for none
-   */
-  public RenameInstanceRequest setInstance(Instance instance) {
-    this.instance = instance;
-    return this;
-  }
+  private java.lang.String newName;
 
   /**
    * Required. The new `name` of the instance. Format: {instancename}
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getNewName() {
+    return newName;
   }
 
   /**
    * Required. The new `name` of the instance. Format: {instancename}
-   * @param name name or {@code null} for none
+   * @param newName newName or {@code null} for none
    */
-  public RenameInstanceRequest setName(java.lang.String name) {
-    this.name = name;
+  public RenameInstanceRequest setNewName(java.lang.String newName) {
+    this.newName = newName;
     return this;
   }
 

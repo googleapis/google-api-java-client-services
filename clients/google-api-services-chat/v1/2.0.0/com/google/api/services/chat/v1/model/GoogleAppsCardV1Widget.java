@@ -33,9 +33,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ "button": { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }
-   * "disabled": true }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" },
-   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
+   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }, "disabled": true,
+   * }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
+   * "url": "https://example.com/calendar" } } } ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,9 +44,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
    * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
-   * to schedule an appointment: ``` "date_time_picker": { "name": "appointment_time", "label":
-   * "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME", "valueMsEpoch":
-   * "796435200000" } ```
+   * to schedule an appointment: ``` "dateTimePicker": { "name": "appointment_time", "label": "Book
+   * your appointment at:", "type": "DATE_AND_TIME", "valueMsEpoch": "796435200000" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a decorated text item. For example, the following JSON creates a decorated text widget
    * showing email address: ``` "decoratedText": { "icon": { "knownIcon": "EMAIL" }, "topLabel":
    * "Email Address", "text": "sasha@example.com", "bottomLabel": "This is a new Email address!",
-   * "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
-   * "ControlType.CHECKBOX" } } ```
+   * "switchControl": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
+   * "CHECKBOX" } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,11 +77,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
    * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
    * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
-   * with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
-   * "borderStyle": { "type": "STROKE", "cornerRadius": 4.0 }, "items": [ "image": { "imageUri":
+   * with a single item: ``` "grid": { "title": "A fine collection of items", "columnCount": 2,
+   * "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
-   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" ], "onClick": { "openLink":
-   * { "url":"https://www.example.com" } } } ```
+   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
+   * "openLink": { "url": "https://www.example.com" } } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +89,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays an image. For example, the following JSON creates an image with alternative text: ```
-   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
    * "altText": "Chat app avatar" } ```
    * The value may be {@code null}.
    */
@@ -103,10 +102,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
    * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
-   * "selectionInput": { "name": "size", "label": "Size" "type": "SelectionType.DROPDOWN", "items":
-   * [ { "text": "S", "value": "small", "selected": false }, { "text": "M", "value": "medium",
-   * "selected": true }, { "text": "L", "value": "large", "selected": false }, { "text": "XL",
-   * "value": "extra_large", "selected": false } ] } ```
+   * "selectionInput": { "name": "size", "label": "Size" "type": "DROPDOWN", "items": [ { "text":
+   * "S", "value": "small", "selected": false }, { "text": "M", "value": "medium", "selected": true
+   * }, { "text": "L", "value": "large", "selected": false }, { "text": "XL", "value":
+   * "extra_large", "selected": false } ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,9 +138,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ "button": { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }
-   * "disabled": true }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" },
-   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
+   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }, "disabled": true,
+   * }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
+   * "url": "https://example.com/calendar" } } } ] } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1ButtonList getButtonList() {
@@ -151,9 +150,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ "button": { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }
-   * "disabled": true }, "button": { "icon": { "knownIcon": "INVITE" "altText": "check calendar" },
-   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } }, ] } ```
+   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }, "disabled": true,
+   * }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
+   * "url": "https://example.com/calendar" } } } ] } ```
    * @param buttonList buttonList or {@code null} for none
    */
   public GoogleAppsCardV1Widget setButtonList(GoogleAppsCardV1ButtonList buttonList) {
@@ -164,9 +163,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
    * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
-   * to schedule an appointment: ``` "date_time_picker": { "name": "appointment_time", "label":
-   * "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME", "valueMsEpoch":
-   * "796435200000" } ```
+   * to schedule an appointment: ``` "dateTimePicker": { "name": "appointment_time", "label": "Book
+   * your appointment at:", "type": "DATE_AND_TIME", "valueMsEpoch": "796435200000" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker getDateTimePicker() {
@@ -176,9 +174,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
    * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
-   * to schedule an appointment: ``` "date_time_picker": { "name": "appointment_time", "label":
-   * "Book your appointment at:", "type": "DateTimePickerType.DATE_AND_TIME", "valueMsEpoch":
-   * "796435200000" } ```
+   * to schedule an appointment: ``` "dateTimePicker": { "name": "appointment_time", "label": "Book
+   * your appointment at:", "type": "DATE_AND_TIME", "valueMsEpoch": "796435200000" } ```
    * @param dateTimePicker dateTimePicker or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDateTimePicker(GoogleAppsCardV1DateTimePicker dateTimePicker) {
@@ -190,8 +187,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a decorated text item. For example, the following JSON creates a decorated text widget
    * showing email address: ``` "decoratedText": { "icon": { "knownIcon": "EMAIL" }, "topLabel":
    * "Email Address", "text": "sasha@example.com", "bottomLabel": "This is a new Email address!",
-   * "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
-   * "ControlType.CHECKBOX" } } ```
+   * "switchControl": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
+   * "CHECKBOX" } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText getDecoratedText() {
@@ -202,8 +199,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a decorated text item. For example, the following JSON creates a decorated text widget
    * showing email address: ``` "decoratedText": { "icon": { "knownIcon": "EMAIL" }, "topLabel":
    * "Email Address", "text": "sasha@example.com", "bottomLabel": "This is a new Email address!",
-   * "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
-   * "ControlType.CHECKBOX" } } ```
+   * "switchControl": { "name": "has_send_welcome_email_to_sasha", "selected": false, "controlType":
+   * "CHECKBOX" } } ```
    * @param decoratedText decoratedText or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDecoratedText(GoogleAppsCardV1DecoratedText decoratedText) {
@@ -237,11 +234,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
    * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
    * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
-   * with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
-   * "borderStyle": { "type": "STROKE", "cornerRadius": 4.0 }, "items": [ "image": { "imageUri":
+   * with a single item: ``` "grid": { "title": "A fine collection of items", "columnCount": 2,
+   * "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
-   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" ], "onClick": { "openLink":
-   * { "url":"https://www.example.com" } } } ```
+   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
+   * "openLink": { "url": "https://www.example.com" } } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Grid getGrid() {
@@ -255,11 +252,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
    * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
    * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
-   * with a single item: ``` "grid": { "title": "A fine collection of items", "numColumns": 2,
-   * "borderStyle": { "type": "STROKE", "cornerRadius": 4.0 }, "items": [ "image": { "imageUri":
+   * with a single item: ``` "grid": { "title": "A fine collection of items", "columnCount": 2,
+   * "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
-   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" ], "onClick": { "openLink":
-   * { "url":"https://www.example.com" } } } ```
+   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
+   * "openLink": { "url": "https://www.example.com" } } } ```
    * @param grid grid or {@code null} for none
    */
   public GoogleAppsCardV1Widget setGrid(GoogleAppsCardV1Grid grid) {
@@ -269,7 +266,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays an image. For example, the following JSON creates an image with alternative text: ```
-   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
    * "altText": "Chat app avatar" } ```
    * @return value or {@code null} for none
    */
@@ -279,7 +276,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays an image. For example, the following JSON creates an image with alternative text: ```
-   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+   * "image": { "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
    * "altText": "Chat app avatar" } ```
    * @param image image or {@code null} for none
    */
@@ -294,10 +291,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
    * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
-   * "selectionInput": { "name": "size", "label": "Size" "type": "SelectionType.DROPDOWN", "items":
-   * [ { "text": "S", "value": "small", "selected": false }, { "text": "M", "value": "medium",
-   * "selected": true }, { "text": "L", "value": "large", "selected": false }, { "text": "XL",
-   * "value": "extra_large", "selected": false } ] } ```
+   * "selectionInput": { "name": "size", "label": "Size" "type": "DROPDOWN", "items": [ { "text":
+   * "S", "value": "small", "selected": false }, { "text": "M", "value": "medium", "selected": true
+   * }, { "text": "L", "value": "large", "selected": false }, { "text": "XL", "value":
+   * "extra_large", "selected": false } ] } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput getSelectionInput() {
@@ -310,10 +307,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
    * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
-   * "selectionInput": { "name": "size", "label": "Size" "type": "SelectionType.DROPDOWN", "items":
-   * [ { "text": "S", "value": "small", "selected": false }, { "text": "M", "value": "medium",
-   * "selected": true }, { "text": "L", "value": "large", "selected": false }, { "text": "XL",
-   * "value": "extra_large", "selected": false } ] } ```
+   * "selectionInput": { "name": "size", "label": "Size" "type": "DROPDOWN", "items": [ { "text":
+   * "S", "value": "small", "selected": false }, { "text": "M", "value": "medium", "selected": true
+   * }, { "text": "L", "value": "large", "selected": false }, { "text": "XL", "value":
+   * "extra_large", "selected": false } ] } ```
    * @param selectionInput selectionInput or {@code null} for none
    */
   public GoogleAppsCardV1Widget setSelectionInput(GoogleAppsCardV1SelectionInput selectionInput) {

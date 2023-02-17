@@ -497,6 +497,14 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeDomainUsersOnlyRestriction;
 
     /**
+     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * of this Team Drive.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
+
+    /**
      * Whether the current user can change the background of this Team Drive.
      * The value may be {@code null}.
      */
@@ -667,6 +675,25 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanChangeDomainUsersOnlyRestriction(java.lang.Boolean canChangeDomainUsersOnlyRestriction) {
       this.canChangeDomainUsersOnlyRestriction = canChangeDomainUsersOnlyRestriction;
+      return this;
+    }
+
+    /**
+     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * of this Team Drive.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanChangeSharingFoldersRequiresOrganizerPermissionRestriction() {
+      return canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
+    }
+
+    /**
+     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * of this Team Drive.
+     * @param canChangeSharingFoldersRequiresOrganizerPermissionRestriction canChangeSharingFoldersRequiresOrganizerPermissionRestriction or {@code null} for none
+     */
+    public Capabilities setCanChangeSharingFoldersRequiresOrganizerPermissionRestriction(java.lang.Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction) {
+      this.canChangeSharingFoldersRequiresOrganizerPermissionRestriction = canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
       return this;
     }
 
@@ -1006,6 +1033,14 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean domainUsersOnly;
 
     /**
+     * If true, only users with the organizer role can share folders. If false, users with either the
+     * organizer role or the file organizer role can share folders.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean sharingFoldersRequiresOrganizerPermission;
+
+    /**
      * Whether access to items inside this Team Drive is restricted to members of this Team Drive.
      * The value may be {@code null}.
      */
@@ -1068,6 +1103,25 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
      */
     public Restrictions setDomainUsersOnly(java.lang.Boolean domainUsersOnly) {
       this.domainUsersOnly = domainUsersOnly;
+      return this;
+    }
+
+    /**
+     * If true, only users with the organizer role can share folders. If false, users with either the
+     * organizer role or the file organizer role can share folders.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getSharingFoldersRequiresOrganizerPermission() {
+      return sharingFoldersRequiresOrganizerPermission;
+    }
+
+    /**
+     * If true, only users with the organizer role can share folders. If false, users with either the
+     * organizer role or the file organizer role can share folders.
+     * @param sharingFoldersRequiresOrganizerPermission sharingFoldersRequiresOrganizerPermission or {@code null} for none
+     */
+    public Restrictions setSharingFoldersRequiresOrganizerPermission(java.lang.Boolean sharingFoldersRequiresOrganizerPermission) {
+      this.sharingFoldersRequiresOrganizerPermission = sharingFoldersRequiresOrganizerPermission;
       return this;
     }
 

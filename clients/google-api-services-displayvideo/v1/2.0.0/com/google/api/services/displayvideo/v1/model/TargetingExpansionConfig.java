@@ -19,9 +19,7 @@ package com.google.api.services.displayvideo.v1.model;
 /**
  * Settings that control the targeting expansion of the line item. Targeting expansion allows the
  * line item to reach a larger audience based on the original audience list and the targeting
- * expansion level. Beginning November 7, 2022, these settings may represent the [optimized
- * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
- * expansion. This feature will be rolled out to all partners by November 9, 2022.
+ * expansion level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -45,15 +43,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   private java.lang.Boolean excludeFirstPartyAudience;
 
   /**
-   * Required. Magnitude of expansion for applicable targeting under this line item. Beginning
-   * November 7, 2022, the behavior of this field will change in the following ways with the
-   * replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859): * This field will represent the
-   * optimized targeting checkbox, with a `NO_EXPANSION` value representing optimized targeting
-   * turned off and a `LEAST_EXPANSION` value representing optimized targeting turned on. *
-   * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
-   * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
-   * will automatically be set to `LEAST_EXPANSION`.
+   * Required. Magnitude of expansion for applicable targeting under this line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,15 +73,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Magnitude of expansion for applicable targeting under this line item. Beginning
-   * November 7, 2022, the behavior of this field will change in the following ways with the
-   * replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859): * This field will represent the
-   * optimized targeting checkbox, with a `NO_EXPANSION` value representing optimized targeting
-   * turned off and a `LEAST_EXPANSION` value representing optimized targeting turned on. *
-   * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
-   * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
-   * will automatically be set to `LEAST_EXPANSION`.
+   * Required. Magnitude of expansion for applicable targeting under this line item.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingExpansionLevel() {
@@ -99,15 +81,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Magnitude of expansion for applicable targeting under this line item. Beginning
-   * November 7, 2022, the behavior of this field will change in the following ways with the
-   * replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859): * This field will represent the
-   * optimized targeting checkbox, with a `NO_EXPANSION` value representing optimized targeting
-   * turned off and a `LEAST_EXPANSION` value representing optimized targeting turned on. *
-   * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
-   * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
-   * will automatically be set to `LEAST_EXPANSION`.
+   * Required. Magnitude of expansion for applicable targeting under this line item.
    * @param targetingExpansionLevel targetingExpansionLevel or {@code null} for none
    */
   public TargetingExpansionConfig setTargetingExpansionLevel(java.lang.String targetingExpansionLevel) {

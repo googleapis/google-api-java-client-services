@@ -128,6 +128,15 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   private java.lang.String timeZone;
 
   /**
+   * Configuration for Text-to-Speech synthesization. Used by Phone Gateway to specify
+   * synthesization options. If agent defines synthesization options as well, agent settings
+   * overrides the option here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig ttsConfig;
+
+  /**
    * Output only. Update time of the conversation profile.
    * The value may be {@code null}.
    */
@@ -366,6 +375,27 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setTimeZone(java.lang.String timeZone) {
     this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Configuration for Text-to-Speech synthesization. Used by Phone Gateway to specify
+   * synthesization options. If agent defines synthesization options as well, agent settings
+   * overrides the option here.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig getTtsConfig() {
+    return ttsConfig;
+  }
+
+  /**
+   * Configuration for Text-to-Speech synthesization. Used by Phone Gateway to specify
+   * synthesization options. If agent defines synthesization options as well, agent settings
+   * overrides the option here.
+   * @param ttsConfig ttsConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ConversationProfile setTtsConfig(GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig ttsConfig) {
+    this.ttsConfig = ttsConfig;
     return this;
   }
 

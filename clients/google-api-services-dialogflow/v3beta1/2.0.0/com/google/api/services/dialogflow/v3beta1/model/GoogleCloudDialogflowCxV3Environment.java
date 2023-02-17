@@ -72,9 +72,8 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   private String updateTime;
 
   /**
-   * Required. A list of configurations for flow versions. You should include version configs for
-   * all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be
-   * returned.
+   * A list of configurations for flow versions. You should include version configs for all flows
+   * that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,9 +176,8 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * Required. A list of configurations for flow versions. You should include version configs for
-   * all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be
-   * returned.
+   * A list of configurations for flow versions. You should include version configs for all flows
+   * that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> getVersionConfigs() {
@@ -187,9 +185,8 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * Required. A list of configurations for flow versions. You should include version configs for
-   * all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be
-   * returned.
+   * A list of configurations for flow versions. You should include version configs for all flows
+   * that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
    * @param versionConfigs versionConfigs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setVersionConfigs(java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> versionConfigs) {

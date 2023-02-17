@@ -30,7 +30,10 @@ package com.google.api.services.batch.v1.model;
 public final class LifecyclePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Action to execute when ActionCondition is true.
+   * Action to execute when ActionCondition is true. When RETRY_TASK is specified, we will retry
+   * failed tasks if we notice any exit code match and fail tasks if no match is found. Likewise,
+   * when FAIL_TASK is specified, we will fail tasks if we notice any exit code match and retry
+   * tasks if no match is found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +47,10 @@ public final class LifecyclePolicy extends com.google.api.client.json.GenericJso
   private ActionCondition actionCondition;
 
   /**
-   * Action to execute when ActionCondition is true.
+   * Action to execute when ActionCondition is true. When RETRY_TASK is specified, we will retry
+   * failed tasks if we notice any exit code match and fail tasks if no match is found. Likewise,
+   * when FAIL_TASK is specified, we will fail tasks if we notice any exit code match and retry
+   * tasks if no match is found.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -52,7 +58,10 @@ public final class LifecyclePolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Action to execute when ActionCondition is true.
+   * Action to execute when ActionCondition is true. When RETRY_TASK is specified, we will retry
+   * failed tasks if we notice any exit code match and fail tasks if no match is found. Likewise,
+   * when FAIL_TASK is specified, we will fail tasks if we notice any exit code match and retry
+   * tasks if no match is found.
    * @param action action or {@code null} for none
    */
   public LifecyclePolicy setAction(java.lang.String action) {

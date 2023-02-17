@@ -1732,9 +1732,8 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the baremetalsolution server.  After setting any
          * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
-         *        conventions in https://cloud.google.com/apis/design/resource_names. Format:
-         *        `projects/{project}/locations/{location}/instances/{instance}`
+         * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
          * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest}
          * @return the request
          */
@@ -1744,7 +1743,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           return result;
         }
 
-        public class Rename extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+        public class Rename extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Instance> {
 
           private static final String REST_PATH = "v2/{+name}:rename";
 
@@ -1762,14 +1761,13 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
            * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
-         *        conventions in https://cloud.google.com/apis/design/resource_names. Format:
-         *        `projects/{project}/locations/{location}/instances/{instance}`
+           * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
            * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest}
            * @since 1.13
            */
           protected Rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameInstanceRequest content) {
-            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Instance.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1834,25 +1832,22 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Immutable. The resource name of this `Instance`. Resource names are schemeless URIs
-           * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
-           * Format: `projects/{project}/locations/{location}/instances/{instance}`
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
-         conventions in https://cloud.google.com/apis/design/resource_names. Format:
-         `projects/{project}/locations/{location}/instances/{instance}`
+          /** Required. The `name` field is used to identify the instance. Format:
+         projects/{project}/locations/{location}/instances/{instance}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. The resource name of this `Instance`. Resource names are schemeless URIs
-           * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
-           * Format: `projects/{project}/locations/{location}/instances/{instance}`
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
            */
           public Rename setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

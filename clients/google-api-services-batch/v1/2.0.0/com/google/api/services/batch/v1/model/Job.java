@@ -75,8 +75,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.List<JobNotification> notifications;
 
   /**
-   * Priority of the Job. The valid value range is [0, 100). A job with higher priority value is
-   * more likely to run earlier if all other requirements are satisfied.
+   * Priority of the Job. The valid value range is [0, 100). Default value is 0. Higher value
+   * indicates higher priority. A job with higher priority value is more likely to run earlier if
+   * all other requirements are satisfied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -219,8 +220,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Priority of the Job. The valid value range is [0, 100). A job with higher priority value is
-   * more likely to run earlier if all other requirements are satisfied.
+   * Priority of the Job. The valid value range is [0, 100). Default value is 0. Higher value
+   * indicates higher priority. A job with higher priority value is more likely to run earlier if
+   * all other requirements are satisfied.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -228,8 +230,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Priority of the Job. The valid value range is [0, 100). A job with higher priority value is
-   * more likely to run earlier if all other requirements are satisfied.
+   * Priority of the Job. The valid value range is [0, 100). Default value is 0. Higher value
+   * indicates higher priority. A job with higher priority value is more likely to run earlier if
+   * all other requirements are satisfied.
    * @param priority priority or {@code null} for none
    */
   public Job setPriority(java.lang.Long priority) {

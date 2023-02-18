@@ -69,10 +69,10 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> ports;
 
   /**
-   * Required. Immutable. Scope determines how configuration across multiple Gateway instances are
-   * merged. The configuration for multiple Gateway instances with the same scope will be merged as
-   * presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope
-   * should start with a letter and can only have letters, numbers, hyphens.
+   * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
+   * configuration for multiple Gateway instances with the same scope will be merged as presented as
+   * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
+   * with a letter and can only have letters, numbers, hyphens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,10 +198,10 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Scope determines how configuration across multiple Gateway instances are
-   * merged. The configuration for multiple Gateway instances with the same scope will be merged as
-   * presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope
-   * should start with a letter and can only have letters, numbers, hyphens.
+   * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
+   * configuration for multiple Gateway instances with the same scope will be merged as presented as
+   * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
+   * with a letter and can only have letters, numbers, hyphens.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -209,10 +209,10 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Scope determines how configuration across multiple Gateway instances are
-   * merged. The configuration for multiple Gateway instances with the same scope will be merged as
-   * presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope
-   * should start with a letter and can only have letters, numbers, hyphens.
+   * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
+   * configuration for multiple Gateway instances with the same scope will be merged as presented as
+   * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
+   * with a letter and can only have letters, numbers, hyphens.
    * @param scope scope or {@code null} for none
    */
   public Gateway setScope(java.lang.String scope) {

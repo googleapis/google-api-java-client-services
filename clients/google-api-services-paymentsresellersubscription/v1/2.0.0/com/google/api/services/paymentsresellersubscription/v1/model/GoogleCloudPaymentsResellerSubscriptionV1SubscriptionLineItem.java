@@ -31,6 +31,13 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The price of the product/service in this line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1Amount amount;
+
+  /**
    * Output only. Description of this line item.
    * The value may be {@code null}.
    */
@@ -90,6 +97,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The price of the product/service in this line item.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Amount getAmount() {
+    return amount;
+  }
+
+  /**
+   * Output only. The price of the product/service in this line item.
+   * @param amount amount or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount amount) {
+    this.amount = amount;
+    return this;
+  }
 
   /**
    * Output only. Description of this line item.

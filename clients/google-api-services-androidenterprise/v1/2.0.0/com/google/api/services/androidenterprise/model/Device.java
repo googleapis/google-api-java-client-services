@@ -39,6 +39,28 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String androidId;
 
   /**
+   * The internal hardware codename of the device. This comes from android.os.Build.DEVICE. (field
+   * named "device" per logs/wireless/android/android_checkin.proto)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String device;
+
+  /**
+   * The build fingerprint of the device if known.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latestBuildFingerprint;
+
+  /**
+   * The manufacturer of the device. This comes from android.os.Build.MANUFACTURER.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maker;
+
+  /**
    * Identifies the extent to which the device is controlled by a managed Google Play EMM in various
    * deployment configurations. Possible values include: - "managedDevice", a device that has the
    * EMM's device policy controller (DPC) as the device owner. - "managedProfile", a device that has
@@ -53,6 +75,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String managementType;
 
   /**
+   * The model name of the device. This comes from android.os.Build.MODEL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * The policy enforced on the device.
    * The value may be {@code null}.
    */
@@ -60,11 +89,33 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private Policy policy;
 
   /**
+   * The product name of the device. This comes from android.os.Build.PRODUCT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String product;
+
+  /**
    * The device report updated with the latest app states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceReport report;
+
+  /**
+   * Retail brand for the device, if set. See
+   * https://developer.android.com/reference/android/os/Build.html#BRAND
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String retailBrand;
+
+  /**
+   * API compatibility version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer sdkVersion;
 
   /**
    * The Google Play Services Android ID for the device encoded as a lowercase hex string. For
@@ -82,6 +133,59 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setAndroidId(java.lang.String androidId) {
     this.androidId = androidId;
+    return this;
+  }
+
+  /**
+   * The internal hardware codename of the device. This comes from android.os.Build.DEVICE. (field
+   * named "device" per logs/wireless/android/android_checkin.proto)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDevice() {
+    return device;
+  }
+
+  /**
+   * The internal hardware codename of the device. This comes from android.os.Build.DEVICE. (field
+   * named "device" per logs/wireless/android/android_checkin.proto)
+   * @param device device or {@code null} for none
+   */
+  public Device setDevice(java.lang.String device) {
+    this.device = device;
+    return this;
+  }
+
+  /**
+   * The build fingerprint of the device if known.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatestBuildFingerprint() {
+    return latestBuildFingerprint;
+  }
+
+  /**
+   * The build fingerprint of the device if known.
+   * @param latestBuildFingerprint latestBuildFingerprint or {@code null} for none
+   */
+  public Device setLatestBuildFingerprint(java.lang.String latestBuildFingerprint) {
+    this.latestBuildFingerprint = latestBuildFingerprint;
+    return this;
+  }
+
+  /**
+   * The manufacturer of the device. This comes from android.os.Build.MANUFACTURER.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaker() {
+    return maker;
+  }
+
+  /**
+   * The manufacturer of the device. This comes from android.os.Build.MANUFACTURER.
+   * @param maker maker or {@code null} for none
+   */
+  public Device setMaker(java.lang.String maker) {
+    this.maker = maker;
     return this;
   }
 
@@ -117,6 +221,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The model name of the device. This comes from android.os.Build.MODEL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * The model name of the device. This comes from android.os.Build.MODEL.
+   * @param model model or {@code null} for none
+   */
+  public Device setModel(java.lang.String model) {
+    this.model = model;
+    return this;
+  }
+
+  /**
    * The policy enforced on the device.
    * @return value or {@code null} for none
    */
@@ -134,6 +255,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The product name of the device. This comes from android.os.Build.PRODUCT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProduct() {
+    return product;
+  }
+
+  /**
+   * The product name of the device. This comes from android.os.Build.PRODUCT.
+   * @param product product or {@code null} for none
+   */
+  public Device setProduct(java.lang.String product) {
+    this.product = product;
+    return this;
+  }
+
+  /**
    * The device report updated with the latest app states.
    * @return value or {@code null} for none
    */
@@ -147,6 +285,42 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setReport(DeviceReport report) {
     this.report = report;
+    return this;
+  }
+
+  /**
+   * Retail brand for the device, if set. See
+   * https://developer.android.com/reference/android/os/Build.html#BRAND
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRetailBrand() {
+    return retailBrand;
+  }
+
+  /**
+   * Retail brand for the device, if set. See
+   * https://developer.android.com/reference/android/os/Build.html#BRAND
+   * @param retailBrand retailBrand or {@code null} for none
+   */
+  public Device setRetailBrand(java.lang.String retailBrand) {
+    this.retailBrand = retailBrand;
+    return this;
+  }
+
+  /**
+   * API compatibility version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSdkVersion() {
+    return sdkVersion;
+  }
+
+  /**
+   * API compatibility version.
+   * @param sdkVersion sdkVersion or {@code null} for none
+   */
+  public Device setSdkVersion(java.lang.Integer sdkVersion) {
+    this.sdkVersion = sdkVersion;
     return this;
   }
 

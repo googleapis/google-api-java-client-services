@@ -78,6 +78,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private AccountBusinessInformation businessInformation;
 
   /**
+   * Settings for conversion tracking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccountConversionSettings conversionSettings;
+
+  /**
    * ID of CSS the account belongs to.
    * The value may be {@code null}.
    */
@@ -259,6 +266,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setBusinessInformation(AccountBusinessInformation businessInformation) {
     this.businessInformation = businessInformation;
+    return this;
+  }
+
+  /**
+   * Settings for conversion tracking.
+   * @return value or {@code null} for none
+   */
+  public AccountConversionSettings getConversionSettings() {
+    return conversionSettings;
+  }
+
+  /**
+   * Settings for conversion tracking.
+   * @param conversionSettings conversionSettings or {@code null} for none
+   */
+  public Account setConversionSettings(AccountConversionSettings conversionSettings) {
+    this.conversionSettings = conversionSettings;
     return this;
   }
 

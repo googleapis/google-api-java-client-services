@@ -6511,6 +6511,900 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Conversionsources collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Conversionsources.List request = content.conversionsources().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Conversionsources conversionsources() {
+    return new Conversionsources();
+  }
+
+  /**
+   * The "conversionsources" collection of methods.
+   */
+  public class Conversionsources {
+
+    /**
+     * Creates a new conversion source.
+     *
+     * Create a request for the method "conversionsources.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that owns the new conversion source.
+     * @param content the {@link com.google.api.services.content.model.ConversionSource}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.ConversionSource content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.ConversionSource> {
+
+      private static final String REST_PATH = "{merchantId}/conversionsources";
+
+      /**
+       * Creates a new conversion source.
+       *
+       * Create a request for the method "conversionsources.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that owns the new conversion source.
+       * @param content the {@link com.google.api.services.content.model.ConversionSource}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.ConversionSource content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.ConversionSource.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that owns the new conversion source.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Archives an existing conversion source. It will be recoverable for 30 days. This archiving
+     * behavior is not typical in the Content API and unique to this service.
+     *
+     * Create a request for the method "conversionsources.delete".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that owns the new conversion source.
+     * @param conversionSourceId Required. The ID of the conversion source to be deleted.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long merchantId, java.lang.String conversionSourceId) throws java.io.IOException {
+      Delete result = new Delete(merchantId, conversionSourceId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/conversionsources/{conversionSourceId}";
+
+      /**
+       * Archives an existing conversion source. It will be recoverable for 30 days. This archiving
+       * behavior is not typical in the Content API and unique to this service.
+       *
+       * Create a request for the method "conversionsources.delete".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that owns the new conversion source.
+       * @param conversionSourceId Required. The ID of the conversion source to be deleted.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long merchantId, java.lang.String conversionSourceId) {
+        super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.conversionSourceId = com.google.api.client.util.Preconditions.checkNotNull(conversionSourceId, "Required parameter conversionSourceId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that owns the new conversion source.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      public Delete setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The ID of the conversion source to be deleted. */
+      @com.google.api.client.util.Key
+      private java.lang.String conversionSourceId;
+
+      /** Required. The ID of the conversion source to be deleted.
+       */
+      public java.lang.String getConversionSourceId() {
+        return conversionSourceId;
+      }
+
+      /** Required. The ID of the conversion source to be deleted. */
+      public Delete setConversionSourceId(java.lang.String conversionSourceId) {
+        this.conversionSourceId = conversionSourceId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fetches a conversion source.
+     *
+     * Create a request for the method "conversionsources.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that owns the new conversion source.
+     * @param conversionSourceId Required. The REST ID of the collection.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String conversionSourceId) throws java.io.IOException {
+      Get result = new Get(merchantId, conversionSourceId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ConversionSource> {
+
+      private static final String REST_PATH = "{merchantId}/conversionsources/{conversionSourceId}";
+
+      /**
+       * Fetches a conversion source.
+       *
+       * Create a request for the method "conversionsources.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that owns the new conversion source.
+       * @param conversionSourceId Required. The REST ID of the collection.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String conversionSourceId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ConversionSource.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.conversionSourceId = com.google.api.client.util.Preconditions.checkNotNull(conversionSourceId, "Required parameter conversionSourceId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that owns the new conversion source.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The REST ID of the collection. */
+      @com.google.api.client.util.Key
+      private java.lang.String conversionSourceId;
+
+      /** Required. The REST ID of the collection.
+       */
+      public java.lang.String getConversionSourceId() {
+        return conversionSourceId;
+      }
+
+      /** Required. The REST ID of the collection. */
+      public Get setConversionSourceId(java.lang.String conversionSourceId) {
+        this.conversionSourceId = conversionSourceId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the list of conversion sources the caller has access to.
+     *
+     * Create a request for the method "conversionsources.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that owns the new conversion source.
+     * @return the request
+     */
+    public List list(java.lang.Long merchantId) throws java.io.IOException {
+      List result = new List(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListConversionSourcesResponse> {
+
+      private static final String REST_PATH = "{merchantId}/conversionsources";
+
+      /**
+       * Retrieves the list of conversion sources the caller has access to.
+       *
+       * Create a request for the method "conversionsources.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that owns the new conversion source.
+       * @since 1.13
+       */
+      protected List(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListConversionSourcesResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that owns the new conversion source.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      public List setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The maximum number of conversion sources to return in a page. If no `page_size` is
+       * specified, `100` is used as the default value. The maximum value is `200`. Values above
+       * `200` will be coerced to `200`. Regardless of pagination, at most `200` conversion sources
+       * are returned in total.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of conversion sources to return in a page. If no `page_size` is specified, `100`
+     is used as the default value. The maximum value is `200`. Values above `200` will be coerced to
+     `200`. Regardless of pagination, at most `200` conversion sources are returned in total.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of conversion sources to return in a page. If no `page_size` is
+       * specified, `100` is used as the default value. The maximum value is `200`. Values above
+       * `200` will be coerced to `200`. Regardless of pagination, at most `200` conversion sources
+       * are returned in total.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** If true, also returns archived conversion sources. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showDeleted;
+
+      /** If true, also returns archived conversion sources.
+       */
+      public java.lang.Boolean getShowDeleted() {
+        return showDeleted;
+      }
+
+      /** If true, also returns archived conversion sources. */
+      public List setShowDeleted(java.lang.Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates information of an existing conversion source.
+     *
+     * Create a request for the method "conversionsources.patch".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that owns the new conversion source.
+     * @param conversionSourceId Required. The ID of the conversion source to be updated.
+     * @param content the {@link com.google.api.services.content.model.ConversionSource}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long merchantId, java.lang.String conversionSourceId, com.google.api.services.content.model.ConversionSource content) throws java.io.IOException {
+      Patch result = new Patch(merchantId, conversionSourceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.ConversionSource> {
+
+      private static final String REST_PATH = "{merchantId}/conversionsources/{conversionSourceId}";
+
+      /**
+       * Updates information of an existing conversion source.
+       *
+       * Create a request for the method "conversionsources.patch".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that owns the new conversion source.
+       * @param conversionSourceId Required. The ID of the conversion source to be updated.
+       * @param content the {@link com.google.api.services.content.model.ConversionSource}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long merchantId, java.lang.String conversionSourceId, com.google.api.services.content.model.ConversionSource content) {
+        super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.ConversionSource.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.conversionSourceId = com.google.api.client.util.Preconditions.checkNotNull(conversionSourceId, "Required parameter conversionSourceId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that owns the new conversion source.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      public Patch setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The ID of the conversion source to be updated. */
+      @com.google.api.client.util.Key
+      private java.lang.String conversionSourceId;
+
+      /** Required. The ID of the conversion source to be updated.
+       */
+      public java.lang.String getConversionSourceId() {
+        return conversionSourceId;
+      }
+
+      /** Required. The ID of the conversion source to be updated. */
+      public Patch setConversionSourceId(java.lang.String conversionSourceId) {
+        this.conversionSourceId = conversionSourceId;
+        return this;
+      }
+
+      /** Required. List of fields being updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. List of fields being updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. List of fields being updated. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Re-enables an archived conversion source.
+     *
+     * Create a request for the method "conversionsources.undelete".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that owns the new conversion source.
+     * @param conversionSourceId Required. The ID of the conversion source to be undeleted.
+     * @param content the {@link com.google.api.services.content.model.UndeleteConversionSourceRequest}
+     * @return the request
+     */
+    public Undelete undelete(java.lang.Long merchantId, java.lang.String conversionSourceId, com.google.api.services.content.model.UndeleteConversionSourceRequest content) throws java.io.IOException {
+      Undelete result = new Undelete(merchantId, conversionSourceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Undelete extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/conversionsources/{conversionSourceId}:undelete";
+
+      /**
+       * Re-enables an archived conversion source.
+       *
+       * Create a request for the method "conversionsources.undelete".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that owns the new conversion source.
+       * @param conversionSourceId Required. The ID of the conversion source to be undeleted.
+       * @param content the {@link com.google.api.services.content.model.UndeleteConversionSourceRequest}
+       * @since 1.13
+       */
+      protected Undelete(java.lang.Long merchantId, java.lang.String conversionSourceId, com.google.api.services.content.model.UndeleteConversionSourceRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.conversionSourceId = com.google.api.client.util.Preconditions.checkNotNull(conversionSourceId, "Required parameter conversionSourceId must be specified.");
+      }
+
+      @Override
+      public Undelete set$Xgafv(java.lang.String $Xgafv) {
+        return (Undelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Undelete setAccessToken(java.lang.String accessToken) {
+        return (Undelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Undelete setAlt(java.lang.String alt) {
+        return (Undelete) super.setAlt(alt);
+      }
+
+      @Override
+      public Undelete setCallback(java.lang.String callback) {
+        return (Undelete) super.setCallback(callback);
+      }
+
+      @Override
+      public Undelete setFields(java.lang.String fields) {
+        return (Undelete) super.setFields(fields);
+      }
+
+      @Override
+      public Undelete setKey(java.lang.String key) {
+        return (Undelete) super.setKey(key);
+      }
+
+      @Override
+      public Undelete setOauthToken(java.lang.String oauthToken) {
+        return (Undelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Undelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Undelete setQuotaUser(java.lang.String quotaUser) {
+        return (Undelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Undelete setUploadType(java.lang.String uploadType) {
+        return (Undelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Undelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that owns the new conversion source.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that owns the new conversion source. */
+      public Undelete setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The ID of the conversion source to be undeleted. */
+      @com.google.api.client.util.Key
+      private java.lang.String conversionSourceId;
+
+      /** Required. The ID of the conversion source to be undeleted.
+       */
+      public java.lang.String getConversionSourceId() {
+        return conversionSourceId;
+      }
+
+      /** Required. The ID of the conversion source to be undeleted. */
+      public Undelete setConversionSourceId(java.lang.String conversionSourceId) {
+        this.conversionSourceId = conversionSourceId;
+        return this;
+      }
+
+      @Override
+      public Undelete set(String parameterName, Object value) {
+        return (Undelete) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Csses collection.
    *
    * <p>The typical use is:</p>

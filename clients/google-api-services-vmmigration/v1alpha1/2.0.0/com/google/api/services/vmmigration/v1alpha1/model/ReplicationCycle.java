@@ -107,6 +107,19 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String totalPauseDuration;
 
   /**
+   * Output only. Warnings that occurred during the cycle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MigrationWarning> warnings;
+
+  static {
+    // hack to force ProGuard to consider MigrationWarning used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MigrationWarning.class);
+  }
+
+  /**
    * The cycle's ordinal number.
    * @return value or {@code null} for none
    */
@@ -275,6 +288,23 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
    */
   public ReplicationCycle setTotalPauseDuration(String totalPauseDuration) {
     this.totalPauseDuration = totalPauseDuration;
+    return this;
+  }
+
+  /**
+   * Output only. Warnings that occurred during the cycle.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MigrationWarning> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Output only. Warnings that occurred during the cycle.
+   * @param warnings warnings or {@code null} for none
+   */
+  public ReplicationCycle setWarnings(java.util.List<MigrationWarning> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

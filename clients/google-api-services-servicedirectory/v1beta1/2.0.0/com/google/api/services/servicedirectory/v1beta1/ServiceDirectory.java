@@ -4618,6 +4618,466 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
           }
         }
+        /**
+         * An accessor for creating requests from the Workloads collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceDirectory servicedirectory = new ServiceDirectory(...);}
+         *   {@code ServiceDirectory.Workloads.List request = servicedirectory.workloads().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Workloads workloads() {
+          return new Workloads();
+        }
+
+        /**
+         * The "workloads" collection of methods.
+         */
+        public class Workloads {
+
+          /**
+           * Gets the IAM Policy for a resource
+           *
+           * Create a request for the method "workloads.getIamPolicy".
+           *
+           * This request holds the parameters needed by the servicedirectory server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest}
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest content) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends ServiceDirectoryRequest<com.google.api.services.servicedirectory.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+
+            /**
+             * Gets the IAM Policy for a resource
+             *
+             * Create a request for the method "workloads.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the servicedirectory server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource, com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest content) {
+              super(ServiceDirectory.this, "POST", REST_PATH, content, com.google.api.services.servicedirectory.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+              }
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the IAM Policy for a resource
+           *
+           * Create a request for the method "workloads.setIamPolicy".
+           *
+           * This request holds the parameters needed by the servicedirectory server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends ServiceDirectoryRequest<com.google.api.services.servicedirectory.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+
+            /**
+             * Sets the IAM Policy for a resource
+             *
+             * Create a request for the method "workloads.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the servicedirectory server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest content) {
+              super(ServiceDirectory.this, "POST", REST_PATH, content, com.google.api.services.servicedirectory.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Tests IAM permissions for a resource (namespace, service or service workload only).
+           *
+           * Create a request for the method "workloads.testIamPermissions".
+           *
+           * This request holds the parameters needed by the servicedirectory server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends ServiceDirectoryRequest<com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+
+            /**
+             * Tests IAM permissions for a resource (namespace, service or service workload only).
+             *
+             * Create a request for the method "workloads.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the servicedirectory server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest content) {
+              super(ServiceDirectory.this, "POST", REST_PATH, content, com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/workloads/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the RegistrationPolicies collection.

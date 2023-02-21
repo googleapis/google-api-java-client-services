@@ -53,6 +53,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private CollapsibleGroup collapsibleGroup;
 
   /**
+   * A widget that shows list of incidents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IncidentList incidentList;
+
+  /**
    * A widget that shows a stream of logs.
    * The value may be {@code null}.
    */
@@ -144,6 +151,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setCollapsibleGroup(CollapsibleGroup collapsibleGroup) {
     this.collapsibleGroup = collapsibleGroup;
+    return this;
+  }
+
+  /**
+   * A widget that shows list of incidents.
+   * @return value or {@code null} for none
+   */
+  public IncidentList getIncidentList() {
+    return incidentList;
+  }
+
+  /**
+   * A widget that shows list of incidents.
+   * @param incidentList incidentList or {@code null} for none
+   */
+  public Widget setIncidentList(IncidentList incidentList) {
+    this.incidentList = incidentList;
     return this;
   }
 

@@ -127,7 +127,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
    * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.
+   * event.  - "workingLocation" - A working location event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -374,6 +374,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String visibility;
+
+  /**
+   * Working Location event data. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventWorkingLocationProperties workingLocationProperties;
 
   /**
    * Whether anyone can invite themselves to the event (deprecated). Optional. The default is False.
@@ -688,7 +695,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
    * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.
+   * event.  - "workingLocation" - A working location event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -698,7 +705,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
    * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.
+   * event.  - "workingLocation" - A working location event.
    * @param eventType eventType or {@code null} for none
    */
   public Event setEventType(java.lang.String eventType) {
@@ -1405,6 +1412,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setVisibility(java.lang.String visibility) {
     this.visibility = visibility;
+    return this;
+  }
+
+  /**
+   * Working Location event data. Read-only.
+   * @return value or {@code null} for none
+   */
+  public EventWorkingLocationProperties getWorkingLocationProperties() {
+    return workingLocationProperties;
+  }
+
+  /**
+   * Working Location event data. Read-only.
+   * @param workingLocationProperties workingLocationProperties or {@code null} for none
+   */
+  public Event setWorkingLocationProperties(EventWorkingLocationProperties workingLocationProperties) {
+    this.workingLocationProperties = workingLocationProperties;
     return this;
   }
 

@@ -44,7 +44,7 @@ public final class ListConnectionProfilesResponse extends com.google.api.client.
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * A token which can be sent as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class ListConnectionProfilesResponse extends com.google.api.client.
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * A token which can be sent as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class ListConnectionProfilesResponse extends com.google.api.client.
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * A token which can be sent as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

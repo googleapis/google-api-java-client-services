@@ -31,21 +31,21 @@ package com.google.api.services.datamigration.v1.model;
 public final class IndexEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * The name of the index
+   * The name of the index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Table columns used as part of the Index for e.g. B-TREE index should list the columns which
+   * Table columns used as part of the Index, for example B-TREE index should list the columns which
    * constitutes the index.
    * The value may be {@code null}.
    */
@@ -53,21 +53,21 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tableColumns;
 
   /**
-   * Type of index - e.g. B-TREE
+   * Type of index, for example B-TREE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * boolean value indicating whether the index is unique
+   * Boolean value indicating whether the index is unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean unique;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -75,7 +75,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public IndexEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -84,7 +84,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the index
+   * The name of the index.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -92,7 +92,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the index
+   * The name of the index.
    * @param name name or {@code null} for none
    */
   public IndexEntity setName(java.lang.String name) {
@@ -101,7 +101,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table columns used as part of the Index for e.g. B-TREE index should list the columns which
+   * Table columns used as part of the Index, for example B-TREE index should list the columns which
    * constitutes the index.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table columns used as part of the Index for e.g. B-TREE index should list the columns which
+   * Table columns used as part of the Index, for example B-TREE index should list the columns which
    * constitutes the index.
    * @param tableColumns tableColumns or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of index - e.g. B-TREE
+   * Type of index, for example B-TREE.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -128,7 +128,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of index - e.g. B-TREE
+   * Type of index, for example B-TREE.
    * @param type type or {@code null} for none
    */
   public IndexEntity setType(java.lang.String type) {
@@ -137,7 +137,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * boolean value indicating whether the index is unique
+   * Boolean value indicating whether the index is unique.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnique() {
@@ -145,7 +145,7 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * boolean value indicating whether the index is unique
+   * Boolean value indicating whether the index is unique.
    * @param unique unique or {@code null} for none
    */
   public IndexEntity setUnique(java.lang.Boolean unique) {

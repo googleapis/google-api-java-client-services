@@ -31,28 +31,28 @@ package com.google.api.services.datamigration.v1.model;
 public final class SynonymEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * The name of the entity for which the synonym is being created (the source)
+   * The name of the entity for which the synonym is being created (the source).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceEntity;
 
   /**
-   * The type of the entity for which the synonym is being created (usually a table or a sequence)
+   * The type of the entity for which the synonym is being created (usually a table or a sequence).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceType;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -60,7 +60,7 @@ public final class SynonymEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public SynonymEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -69,7 +69,7 @@ public final class SynonymEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the entity for which the synonym is being created (the source)
+   * The name of the entity for which the synonym is being created (the source).
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceEntity() {
@@ -77,7 +77,7 @@ public final class SynonymEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the entity for which the synonym is being created (the source)
+   * The name of the entity for which the synonym is being created (the source).
    * @param sourceEntity sourceEntity or {@code null} for none
    */
   public SynonymEntity setSourceEntity(java.lang.String sourceEntity) {
@@ -86,7 +86,7 @@ public final class SynonymEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of the entity for which the synonym is being created (usually a table or a sequence)
+   * The type of the entity for which the synonym is being created (usually a table or a sequence).
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceType() {
@@ -94,7 +94,7 @@ public final class SynonymEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of the entity for which the synonym is being created (usually a table or a sequence)
+   * The type of the entity for which the synonym is being created (usually a table or a sequence).
    * @param sourceType sourceType or {@code null} for none
    */
   public SynonymEntity setSourceType(java.lang.String sourceType) {

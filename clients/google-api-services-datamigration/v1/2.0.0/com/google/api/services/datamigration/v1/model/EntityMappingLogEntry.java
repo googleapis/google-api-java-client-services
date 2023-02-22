@@ -38,14 +38,14 @@ public final class EntityMappingLogEntry extends com.google.api.client.json.Gene
   private java.lang.String mappingComment;
 
   /**
-   * Which rule caused it.
+   * Which rule caused this log entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ruleId;
 
   /**
-   * Rule revision id
+   * Rule revision ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class EntityMappingLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Which rule caused it.
+   * Which rule caused this log entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleId() {
@@ -77,7 +77,7 @@ public final class EntityMappingLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Which rule caused it.
+   * Which rule caused this log entry.
    * @param ruleId ruleId or {@code null} for none
    */
   public EntityMappingLogEntry setRuleId(java.lang.String ruleId) {
@@ -86,7 +86,7 @@ public final class EntityMappingLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Rule revision id
+   * Rule revision ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleRevisionId() {
@@ -94,7 +94,7 @@ public final class EntityMappingLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Rule revision id
+   * Rule revision ID.
    * @param ruleRevisionId ruleRevisionId or {@code null} for none
    */
   public EntityMappingLogEntry setRuleRevisionId(java.lang.String ruleRevisionId) {

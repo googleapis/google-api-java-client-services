@@ -62,14 +62,14 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource's name.
+   * The name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The state of the Private Connection.
+   * Output only. The state of the private connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
-   * VPC Peering Config.
+   * VPC peering configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource's name.
+   * The name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -170,7 +170,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource's name.
+   * The name of the resource.
    * @param name name or {@code null} for none
    */
   public PrivateConnection setName(java.lang.String name) {
@@ -179,7 +179,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The state of the Private Connection.
+   * Output only. The state of the private connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -187,7 +187,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The state of the Private Connection.
+   * Output only. The state of the private connection.
    * @param state state or {@code null} for none
    */
   public PrivateConnection setState(java.lang.String state) {
@@ -213,7 +213,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * VPC Peering Config.
+   * VPC peering configuration.
    * @return value or {@code null} for none
    */
   public VpcPeeringConfig getVpcPeeringConfig() {
@@ -221,7 +221,7 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * VPC Peering Config.
+   * VPC peering configuration.
    * @param vpcPeeringConfig vpcPeeringConfig or {@code null} for none
    */
   public PrivateConnection setVpcPeeringConfig(VpcPeeringConfig vpcPeeringConfig) {

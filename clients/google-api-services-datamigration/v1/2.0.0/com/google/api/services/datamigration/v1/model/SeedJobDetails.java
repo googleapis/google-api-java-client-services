@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding a Seed background job
+ * Details regarding a Seed background job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class SeedJobDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The connection profile which was used for the seed job
+   * The connection profile which was used for the seed job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionProfile;
 
   /**
-   * The connection profile which was used for the seed job
+   * The connection profile which was used for the seed job.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionProfile() {
@@ -46,7 +46,7 @@ public final class SeedJobDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The connection profile which was used for the seed job
+   * The connection profile which was used for the seed job.
    * @param connectionProfile connectionProfile or {@code null} for none
    */
   public SeedJobDetails setConnectionProfile(java.lang.String connectionProfile) {

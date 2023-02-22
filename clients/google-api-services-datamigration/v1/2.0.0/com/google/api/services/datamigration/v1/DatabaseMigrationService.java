@@ -174,6 +174,188 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
     public class Locations {
 
       /**
+       * Fetches a set of static IP addresses that need to be allowlisted by the customer when using the
+       * static-IP connectivity method.
+       *
+       * Create a request for the method "locations.fetchStaticIps".
+       *
+       * This request holds the parameters needed by the datamigration server.  After setting any optional
+       * parameters, call the {@link FetchStaticIps#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name for the location for which static IPs should be returned. Must be in the
+       *        format `projects/locations`.
+       * @return the request
+       */
+      public FetchStaticIps fetchStaticIps(java.lang.String name) throws java.io.IOException {
+        FetchStaticIps result = new FetchStaticIps(name);
+        initialize(result);
+        return result;
+      }
+
+      public class FetchStaticIps extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.FetchStaticIpsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:fetchStaticIps";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Fetches a set of static IP addresses that need to be allowlisted by the customer when using the
+         * static-IP connectivity method.
+         *
+         * Create a request for the method "locations.fetchStaticIps".
+         *
+         * This request holds the parameters needed by the the datamigration server.  After setting any
+         * optional parameters, call the {@link FetchStaticIps#execute()} method to invoke the remote
+         * operation. <p> {@link FetchStaticIps#initialize(com.google.api.client.googleapis.services.Abstr
+         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The resource name for the location for which static IPs should be returned. Must be in the
+       *        format `projects/locations`.
+         * @since 1.13
+         */
+        protected FetchStaticIps(java.lang.String name) {
+          super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.FetchStaticIpsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FetchStaticIps set$Xgafv(java.lang.String $Xgafv) {
+          return (FetchStaticIps) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FetchStaticIps setAccessToken(java.lang.String accessToken) {
+          return (FetchStaticIps) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FetchStaticIps setAlt(java.lang.String alt) {
+          return (FetchStaticIps) super.setAlt(alt);
+        }
+
+        @Override
+        public FetchStaticIps setCallback(java.lang.String callback) {
+          return (FetchStaticIps) super.setCallback(callback);
+        }
+
+        @Override
+        public FetchStaticIps setFields(java.lang.String fields) {
+          return (FetchStaticIps) super.setFields(fields);
+        }
+
+        @Override
+        public FetchStaticIps setKey(java.lang.String key) {
+          return (FetchStaticIps) super.setKey(key);
+        }
+
+        @Override
+        public FetchStaticIps setOauthToken(java.lang.String oauthToken) {
+          return (FetchStaticIps) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FetchStaticIps setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FetchStaticIps) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FetchStaticIps setQuotaUser(java.lang.String quotaUser) {
+          return (FetchStaticIps) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FetchStaticIps setUploadType(java.lang.String uploadType) {
+          return (FetchStaticIps) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FetchStaticIps setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FetchStaticIps) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name for the location for which static IPs should be returned.
+         * Must be in the format `projects/locations`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name for the location for which static IPs should be returned. Must be in
+       the format `projects/locations`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name for the location for which static IPs should be returned.
+         * Must be in the format `projects/locations`.
+         */
+        public FetchStaticIps setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Maximum number of IPs to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of IPs to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Maximum number of IPs to return. */
+        public FetchStaticIps setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A page token, received from a previous `FetchStaticIps` call. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `FetchStaticIps` call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A page token, received from a previous `FetchStaticIps` call. */
+        public FetchStaticIps setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FetchStaticIps set(String parameterName, Object value) {
+          return (FetchStaticIps) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".
@@ -542,7 +724,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of connection profiles.
+         * @param parent Required. The parent which owns this collection of connection profiles.
          * @param content the {@link com.google.api.services.datamigration.v1.model.ConnectionProfile}
          * @return the request
          */
@@ -570,7 +752,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of connection profiles.
+           * @param parent Required. The parent which owns this collection of connection profiles.
            * @param content the {@link com.google.api.services.datamigration.v1.model.ConnectionProfile}
            * @since 1.13
            */
@@ -639,17 +821,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of connection profiles. */
+          /** Required. The parent which owns this collection of connection profiles. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of connection profiles.
+          /** Required. The parent which owns this collection of connection profiles.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of connection profiles. */
+          /** Required. The parent which owns this collection of connection profiles. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -677,27 +859,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two requests with the
-         same id, then the second request will be ignored. It is recommended to always set this value to a
-         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
-         The maximum length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
@@ -906,28 +1088,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -1283,7 +1465,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of connection profiles.
+         * @param parent Required. The parent which owns this collection of connection profiles.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1309,7 +1491,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of connection profiles.
+           * @param parent Required. The parent which owns this collection of connection profiles.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1387,17 +1569,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of connection profiles. */
+          /** Required. The parent which owns this collection of connection profiles. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of connection profiles.
+          /** Required. The parent which owns this collection of connection profiles.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of connection profiles. */
+          /** Required. The parent which owns this collection of connection profiles. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1467,14 +1649,14 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           /**
            * The maximum number of connection profiles to return. The service may return fewer than
            * this value. If unspecified, at most 50 connection profiles will be returned. The
-           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           * maximum value is 1000; values above 1000 are coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** The maximum number of connection profiles to return. The service may return fewer than this value.
          If unspecified, at most 50 connection profiles will be returned. The maximum value is 1000; values
-         above 1000 will be coerced to 1000.
+         above 1000 are coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -1483,7 +1665,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           /**
            * The maximum number of connection profiles to return. The service may return fewer than
            * this value. If unspecified, at most 50 connection profiles will be returned. The
-           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           * maximum value is 1000; values above 1000 are coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1657,27 +1839,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two requests with the
-         same id, then the second request will be ignored. It is recommended to always set this value to a
-         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
-         The maximum length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
@@ -1709,22 +1891,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the connection
-           * profile resource by the update.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the conversion workspace resource.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the connection profile
-         resource by the update.
+          /** Required. Field mask is used to specify the fields to be overwritten by the update in the
+         conversion workspace resource.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the connection
-           * profile resource by the update.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the conversion workspace resource.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2080,15 +2262,16 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
       public class ConversionWorkspaces {
 
         /**
-         * Apply draft tree onto a specific destination database
+         * Applies draft tree onto a specific destination database.
          *
          * Create a request for the method "conversionWorkspaces.apply".
          *
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link Apply#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the conversion workspace resource to apply draft to destination for. in the form
-         *        of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param name Required. The name of the conversion workspace resource for which to apply the draft tree. Must be
+         *        in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
          * @param content the {@link com.google.api.services.datamigration.v1.model.ApplyConversionWorkspaceRequest}
          * @return the request
          */
@@ -2106,7 +2289,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
 
           /**
-           * Apply draft tree onto a specific destination database
+           * Applies draft tree onto a specific destination database.
            *
            * Create a request for the method "conversionWorkspaces.apply".
            *
@@ -2116,8 +2299,9 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * Apply#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the conversion workspace resource to apply draft to destination for. in the form
-         *        of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param name Required. The name of the conversion workspace resource for which to apply the draft tree. Must be
+         *        in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            * @param content the {@link com.google.api.services.datamigration.v1.model.ApplyConversionWorkspaceRequest}
            * @since 1.13
            */
@@ -2187,23 +2371,24 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Name of the conversion workspace resource to apply draft to destination for.
-           * in the form of:
+           * Required. The name of the conversion workspace resource for which to apply the draft
+           * tree. Must be in the form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the conversion workspace resource to apply draft to destination for. in the form
-         of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+          /** Required. The name of the conversion workspace resource for which to apply the draft tree. Must be
+         in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the conversion workspace resource to apply draft to destination for.
-           * in the form of:
+           * Required. The name of the conversion workspace resource for which to apply the draft
+           * tree. Must be in the form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public Apply setName(java.lang.String name) {
@@ -2500,7 +2685,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of conversion workspaces.
+         * @param parent Required. The parent which owns this collection of conversion workspaces.
          * @param content the {@link com.google.api.services.datamigration.v1.model.ConversionWorkspace}
          * @return the request
          */
@@ -2528,7 +2713,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of conversion workspaces.
+           * @param parent Required. The parent which owns this collection of conversion workspaces.
            * @param content the {@link com.google.api.services.datamigration.v1.model.ConversionWorkspace}
            * @since 1.13
            */
@@ -2597,17 +2782,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of conversion workspaces. */
+          /** Required. The parent which owns this collection of conversion workspaces. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of conversion workspaces.
+          /** Required. The parent which owns this collection of conversion workspaces.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of conversion workspaces. */
+          /** Required. The parent which owns this collection of conversion workspaces. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2635,28 +2820,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2793,28 +2978,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2835,8 +3020,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * parameters, call the {@link DescribeConversionWorkspaceRevisions#execute()} method to invoke the
          * remote operation.
          *
-         * @param conversionWorkspace Required. Name of the conversion workspace resource whose revisions are listed. in the form of:
-         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whose revisions are listed. Must be in the form
+         *        of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
          * @return the request
          */
         public DescribeConversionWorkspaceRevisions describeConversionWorkspaceRevisions(java.lang.String conversionWorkspace) throws java.io.IOException {
@@ -2863,8 +3048,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * gle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
            * this instance immediately after invoking the constructor. </p>
            *
-           * @param conversionWorkspace Required. Name of the conversion workspace resource whose revisions are listed. in the form of:
-         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whose revisions are listed. Must be in the form
+         *        of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            * @since 1.13
            */
           protected DescribeConversionWorkspaceRevisions(java.lang.String conversionWorkspace) {
@@ -2943,23 +3128,23 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Name of the conversion workspace resource whose revisions are listed. in the
-           * form of:
+           * Required. Name of the conversion workspace resource whose revisions are listed. Must be
+           * in the form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           @com.google.api.client.util.Key
           private java.lang.String conversionWorkspace;
 
-          /** Required. Name of the conversion workspace resource whose revisions are listed. in the form of:
-         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+          /** Required. Name of the conversion workspace resource whose revisions are listed. Must be in the form
+         of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public java.lang.String getConversionWorkspace() {
             return conversionWorkspace;
           }
 
           /**
-           * Required. Name of the conversion workspace resource whose revisions are listed. in the
-           * form of:
+           * Required. Name of the conversion workspace resource whose revisions are listed. Must be
+           * in the form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public DescribeConversionWorkspaceRevisions setConversionWorkspace(java.lang.String conversionWorkspace) {
@@ -2972,17 +3157,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** Optional. Optional filter to request a specific commit id */
+          /** Optional. Optional filter to request a specific commit ID. */
           @com.google.api.client.util.Key
           private java.lang.String commitId;
 
-          /** Optional. Optional filter to request a specific commit id
+          /** Optional. Optional filter to request a specific commit ID.
            */
           public java.lang.String getCommitId() {
             return commitId;
           }
 
-          /** Optional. Optional filter to request a specific commit id */
+          /** Optional. Optional filter to request a specific commit ID. */
           public DescribeConversionWorkspaceRevisions setCommitId(java.lang.String commitId) {
             this.commitId = commitId;
             return this;
@@ -2994,10 +3179,10 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
-         * Use this method to describe the database entities tree for a specific conversion workspace and a
-         * specific tree type. The DB Entities are not a resource like conversion workspace or mapping rule,
-         * and they can not be created, updated or deleted like one. Instead they are simple data objects
-         * describing the structure of the client database.
+         * Describes the database entities tree for a specific conversion workspace and a specific tree
+         * type. Database entities are not resources like conversion workspaces or mapping rules, and they
+         * can't be created, updated or deleted. Instead, they are simple data objects describing the
+         * structure of the client database.
          *
          * Create a request for the method "conversionWorkspaces.describeDatabaseEntities".
          *
@@ -3005,7 +3190,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * parameters, call the {@link DescribeDatabaseEntities#execute()} method to invoke the remote
          * operation.
          *
-         * @param conversionWorkspace Required. Name of the conversion workspace resource whose DB entities are described in the form of:
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whose database entities are described. Must be
+         *        in the form of:
          *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
          * @return the request
          */
@@ -3023,10 +3209,10 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
 
           /**
-           * Use this method to describe the database entities tree for a specific conversion workspace and
-           * a specific tree type. The DB Entities are not a resource like conversion workspace or mapping
-           * rule, and they can not be created, updated or deleted like one. Instead they are simple data
-           * objects describing the structure of the client database.
+           * Describes the database entities tree for a specific conversion workspace and a specific tree
+           * type. Database entities are not resources like conversion workspaces or mapping rules, and they
+           * can't be created, updated or deleted. Instead, they are simple data objects describing the
+           * structure of the client database.
            *
            * Create a request for the method "conversionWorkspaces.describeDatabaseEntities".
            *
@@ -3036,7 +3222,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param conversionWorkspace Required. Name of the conversion workspace resource whose DB entities are described in the form of:
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whose database entities are described. Must be
+         *        in the form of:
          *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            * @since 1.13
            */
@@ -3116,14 +3303,15 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Name of the conversion workspace resource whose DB entities are described in
-           * the form of:
+           * Required. Name of the conversion workspace resource whose database entities are
+           * described. Must be in the form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           @com.google.api.client.util.Key
           private java.lang.String conversionWorkspace;
 
-          /** Required. Name of the conversion workspace resource whose DB entities are described in the form of:
+          /** Required. Name of the conversion workspace resource whose database entities are described. Must be
+         in the form of:
          projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public java.lang.String getConversionWorkspace() {
@@ -3131,8 +3319,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Name of the conversion workspace resource whose DB entities are described in
-           * the form of:
+           * Required. Name of the conversion workspace resource whose database entities are
+           * described. Must be in the form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public DescribeDatabaseEntities setConversionWorkspace(java.lang.String conversionWorkspace) {
@@ -3146,20 +3334,20 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Request a specific commit id. If not specified, the entities from the latest commit are
+           * Request a specific commit ID. If not specified, the entities from the latest commit are
            * returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String commitId;
 
-          /** Request a specific commit id. If not specified, the entities from the latest commit are returned.
+          /** Request a specific commit ID. If not specified, the entities from the latest commit are returned.
            */
           public java.lang.String getCommitId() {
             return commitId;
           }
 
           /**
-           * Request a specific commit id. If not specified, the entities from the latest commit are
+           * Request a specific commit ID. If not specified, the entities from the latest commit are
            * returned.
            */
           public DescribeDatabaseEntities setCommitId(java.lang.String commitId) {
@@ -3184,19 +3372,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * The maximum number of entities to return. The service may return fewer than this value.
+           * The maximum number of entities to return. The service may return fewer entities than
+           * the value specifies.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of entities to return. The service may return fewer than this value.
+          /** The maximum number of entities to return. The service may return fewer entities than the value
+         specifies.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of entities to return. The service may return fewer than this value.
+           * The maximum number of entities to return. The service may return fewer entities than
+           * the value specifies.
            */
           public DescribeDatabaseEntities setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -3625,7 +3816,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of conversion workspaces.
+         * @param parent Required. The parent which owns this collection of conversion workspaces.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3651,7 +3842,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of conversion workspaces.
+           * @param parent Required. The parent which owns this collection of conversion workspaces.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3729,17 +3920,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of conversion workspaces. */
+          /** Required. The parent which owns this collection of conversion workspaces. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of conversion workspaces.
+          /** Required. The parent which owns this collection of conversion workspaces.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of conversion workspaces. */
+          /** Required. The parent which owns this collection of conversion workspaces. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3758,7 +3949,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * workspaces created this year by specifying **createTime %gt;
            * 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you
            * could specify **source.version = "12.c.1"** to select all conversion workspaces with
-           * source database version equal to 12.c.1
+           * source database version equal to 12.c.1.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -3769,7 +3960,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          >, or <. For example, list conversion workspaces created this year by specifying **createTime %gt;
          2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you could specify
          **source.version = "12.c.1"** to select all conversion workspaces with source database version
-         equal to 12.c.1
+         equal to 12.c.1.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -3783,7 +3974,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * workspaces created this year by specifying **createTime %gt;
            * 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you
            * could specify **source.version = "12.c.1"** to select all conversion workspaces with
-           * source database version equal to 12.c.1
+           * source database version equal to 12.c.1.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3792,13 +3983,13 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * The maximum number of conversion workspaces to return. The service may return fewer
-           * than this value. If unspecified, at most 50 sets will be returned.
+           * than this value. If unspecified, at most 50 sets are returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** The maximum number of conversion workspaces to return. The service may return fewer than this
-         value. If unspecified, at most 50 sets will be returned.
+         value. If unspecified, at most 50 sets are returned.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -3806,7 +3997,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * The maximum number of conversion workspaces to return. The service may return fewer
-           * than this value. If unspecified, at most 50 sets will be returned.
+           * than this value. If unspecified, at most 50 sets are returned.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -3983,28 +4174,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -4012,22 +4203,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the conversion
-           * workspace resource by the update.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the conversion workspace resource.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the conversion workspace
-         resource by the update.
+          /** Required. Field mask is used to specify the fields to be overwritten by the update in the
+         conversion workspace resource.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the conversion
-           * workspace resource by the update.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the conversion workspace resource.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4040,14 +4231,14 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
-         * Rollbacks a conversion workspace to the last committed spanshot.
+         * Rolls back a conversion workspace to the last committed snapshot.
          *
          * Create a request for the method "conversionWorkspaces.rollback".
          *
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the conversion workspace resource to rollback to.
+         * @param name Required. Name of the conversion workspace resource to roll back to.
          * @param content the {@link com.google.api.services.datamigration.v1.model.RollbackConversionWorkspaceRequest}
          * @return the request
          */
@@ -4065,7 +4256,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
 
           /**
-           * Rollbacks a conversion workspace to the last committed spanshot.
+           * Rolls back a conversion workspace to the last committed snapshot.
            *
            * Create a request for the method "conversionWorkspaces.rollback".
            *
@@ -4075,7 +4266,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the conversion workspace resource to rollback to.
+           * @param name Required. Name of the conversion workspace resource to roll back to.
            * @param content the {@link com.google.api.services.datamigration.v1.model.RollbackConversionWorkspaceRequest}
            * @since 1.13
            */
@@ -4144,17 +4335,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (Rollback) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the conversion workspace resource to rollback to. */
+          /** Required. Name of the conversion workspace resource to roll back to. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the conversion workspace resource to rollback to.
+          /** Required. Name of the conversion workspace resource to roll back to.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the conversion workspace resource to rollback to. */
+          /** Required. Name of the conversion workspace resource to roll back to. */
           public Rollback setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4171,9 +4362,9 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
-         * Use this method to search/list the background jobs for a specific conversion workspace. The
-         * background jobs are not a resource like conversion workspace or mapping rule, and they can not be
-         * created, updated or deleted like one. Instead they are a way to expose the data plane jobs log.
+         * Searches/lists the background jobs for a specific conversion workspace. The background jobs are
+         * not resources like conversion workspaces or mapping rules, and they can't be created, updated or
+         * deleted. Instead, they are a way to expose the data plane jobs log.
          *
          * Create a request for the method "conversionWorkspaces.searchBackgroundJobs".
          *
@@ -4181,7 +4372,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * parameters, call the {@link SearchBackgroundJobs#execute()} method to invoke the remote
          * operation.
          *
-         * @param conversionWorkspace Required. Name of the conversion workspace resource whos jobs are listed. in the form of:
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whose jobs are listed, in the form of:
          *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
          * @return the request
          */
@@ -4199,10 +4390,9 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
 
           /**
-           * Use this method to search/list the background jobs for a specific conversion workspace. The
-           * background jobs are not a resource like conversion workspace or mapping rule, and they can not
-           * be created, updated or deleted like one. Instead they are a way to expose the data plane jobs
-           * log.
+           * Searches/lists the background jobs for a specific conversion workspace. The background jobs are
+           * not resources like conversion workspaces or mapping rules, and they can't be created, updated
+           * or deleted. Instead, they are a way to expose the data plane jobs log.
            *
            * Create a request for the method "conversionWorkspaces.searchBackgroundJobs".
            *
@@ -4212,7 +4402,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param conversionWorkspace Required. Name of the conversion workspace resource whos jobs are listed. in the form of:
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whose jobs are listed, in the form of:
          *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            * @since 1.13
            */
@@ -4292,14 +4482,14 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Name of the conversion workspace resource whos jobs are listed. in the form
+           * Required. Name of the conversion workspace resource whose jobs are listed, in the form
            * of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           @com.google.api.client.util.Key
           private java.lang.String conversionWorkspace;
 
-          /** Required. Name of the conversion workspace resource whos jobs are listed. in the form of:
+          /** Required. Name of the conversion workspace resource whose jobs are listed, in the form of:
          projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public java.lang.String getConversionWorkspace() {
@@ -4307,7 +4497,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Name of the conversion workspace resource whos jobs are listed. in the form
+           * Required. Name of the conversion workspace resource whose jobs are listed, in the form
            * of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
@@ -4322,22 +4512,21 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Optional. If supplied, will only return jobs that completed until (not including) the
-           * given timestamp.
+           * Optional. If provided, only returns jobs that completed until (not including) the given
+           * timestamp.
            */
           @com.google.api.client.util.Key
           private String completedUntilTime;
 
-          /** Optional. If supplied, will only return jobs that completed until (not including) the given
-         timestamp.
+          /** Optional. If provided, only returns jobs that completed until (not including) the given timestamp.
            */
           public String getCompletedUntilTime() {
             return completedUntilTime;
           }
 
           /**
-           * Optional. If supplied, will only return jobs that completed until (not including) the
-           * given timestamp.
+           * Optional. If provided, only returns jobs that completed until (not including) the given
+           * timestamp.
            */
           public SearchBackgroundJobs setCompletedUntilTime(String completedUntilTime) {
             this.completedUntilTime = completedUntilTime;
@@ -4346,15 +4535,15 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * Optional. The maximum number of jobs to return. The service may return fewer than this
-           * value. If unspecified, at most 100 jobs will be returned. The maximum value is 100;
-           * values above 100 will be coerced to 100.
+           * value. If unspecified, at most 100 jobs are returned. The maximum value is 100; values
+           * above 100 are coerced to 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer maxSize;
 
           /** Optional. The maximum number of jobs to return. The service may return fewer than this value. If
-         unspecified, at most 100 jobs will be returned. The maximum value is 100; values above 100 will be
-         coerced to 100.
+         unspecified, at most 100 jobs are returned. The maximum value is 100; values above 100 are coerced
+         to 100.
            */
           public java.lang.Integer getMaxSize() {
             return maxSize;
@@ -4362,25 +4551,25 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * Optional. The maximum number of jobs to return. The service may return fewer than this
-           * value. If unspecified, at most 100 jobs will be returned. The maximum value is 100;
-           * values above 100 will be coerced to 100.
+           * value. If unspecified, at most 100 jobs are returned. The maximum value is 100; values
+           * above 100 are coerced to 100.
            */
           public SearchBackgroundJobs setMaxSize(java.lang.Integer maxSize) {
             this.maxSize = maxSize;
             return this;
           }
 
-          /** Optional. Whether or not to return just the most recent job per job type */
+          /** Optional. Whether or not to return just the most recent job per job type, */
           @com.google.api.client.util.Key
           private java.lang.Boolean returnMostRecentPerJobType;
 
-          /** Optional. Whether or not to return just the most recent job per job type
+          /** Optional. Whether or not to return just the most recent job per job type,
            */
           public java.lang.Boolean getReturnMostRecentPerJobType() {
             return returnMostRecentPerJobType;
           }
 
-          /** Optional. Whether or not to return just the most recent job per job type */
+          /** Optional. Whether or not to return just the most recent job per job type, */
           public SearchBackgroundJobs setReturnMostRecentPerJobType(java.lang.Boolean returnMostRecentPerJobType) {
             this.returnMostRecentPerJobType = returnMostRecentPerJobType;
             return this;
@@ -4399,7 +4588,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link Seed#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the conversion workspace resource to seed with new database structure. in the form of:
+         * @param name Name of the conversion workspace resource to seed with new database structure, in the form of:
          *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
          * @param content the {@link com.google.api.services.datamigration.v1.model.SeedConversionWorkspaceRequest}
          * @return the request
@@ -4427,7 +4616,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * {@link Seed#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the conversion workspace resource to seed with new database structure. in the form of:
+           * @param name Name of the conversion workspace resource to seed with new database structure, in the form of:
          *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            * @param content the {@link com.google.api.services.datamigration.v1.model.SeedConversionWorkspaceRequest}
            * @since 1.13
@@ -4498,14 +4687,14 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Name of the conversion workspace resource to seed with new database structure. in the
+           * Name of the conversion workspace resource to seed with new database structure, in the
            * form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the conversion workspace resource to seed with new database structure. in the form of:
+          /** Name of the conversion workspace resource to seed with new database structure, in the form of:
          projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
           public java.lang.String getName() {
@@ -4513,7 +4702,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Name of the conversion workspace resource to seed with new database structure. in the
+           * Name of the conversion workspace resource to seed with new database structure, in the
            * form of:
            * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
            */
@@ -5027,7 +5216,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of migration jobs.
+         * @param parent Required. The parent which owns this collection of migration jobs.
          * @param content the {@link com.google.api.services.datamigration.v1.model.MigrationJob}
          * @return the request
          */
@@ -5055,7 +5244,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of migration jobs.
+           * @param parent Required. The parent which owns this collection of migration jobs.
            * @param content the {@link com.google.api.services.datamigration.v1.model.MigrationJob}
            * @since 1.13
            */
@@ -5124,17 +5313,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of migration jobs. */
+          /** Required. The parent which owns this collection of migration jobs. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of migration jobs.
+          /** Required. The parent which owns this collection of migration jobs.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of migration jobs. */
+          /** Required. The parent which owns this collection of migration jobs. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5162,28 +5351,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -5343,28 +5532,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -5851,7 +6040,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of migrationJobs.
+         * @param parent Required. The parent which owns this collection of migrationJobs.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5877,7 +6066,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of migrationJobs.
+           * @param parent Required. The parent which owns this collection of migrationJobs.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5955,17 +6144,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of migrationJobs. */
+          /** Required. The parent which owns this collection of migrationJobs. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of migrationJobs.
+          /** Required. The parent which owns this collection of migrationJobs.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of migrationJobs. */
+          /** Required. The parent which owns this collection of migrationJobs. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6042,14 +6231,14 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           /**
            * The maximum number of migration jobs to return. The service may return fewer than this
            * value. If unspecified, at most 50 migration jobs will be returned. The maximum value is
-           * 1000; values above 1000 will be coerced to 1000.
+           * 1000; values above 1000 are coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** The maximum number of migration jobs to return. The service may return fewer than this value. If
          unspecified, at most 50 migration jobs will be returned. The maximum value is 1000; values above
-         1000 will be coerced to 1000.
+         1000 are coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -6058,7 +6247,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           /**
            * The maximum number of migration jobs to return. The service may return fewer than this
            * value. If unspecified, at most 50 migration jobs will be returned. The maximum value is
-           * 1000; values above 1000 will be coerced to 1000.
+           * 1000; values above 1000 are coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -6235,28 +6424,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique id used to identify the request. If the server receives two requests with the same id,
-         then the second request will be ignored. It is recommended to always set this value to a UUID. The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
+         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
+         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique id used to identify the request. If the server receives two requests with the
-           * same id, then the second request will be ignored. It is recommended to always set this
-           * value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-           * underscores (_), and hyphens (-). The maximum length is 40 characters.
+           * A unique ID used to identify the request. If the server receives two requests with the
+           * same ID, then the second request is ignored. It is recommended to always set this value
+           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+           * and hyphens (-). The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -6264,22 +6453,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the migration
-           * job resource by the update.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the conversion workspace resource.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the migration job resource
-         by the update.
+          /** Required. Field mask is used to specify the fields to be overwritten by the update in the
+         conversion workspace resource.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the migration
-           * job resource by the update.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the conversion workspace resource.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -8182,27 +8371,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two requests with the
-         same id, then the second request will be ignored. It is recommended to always set this value to a
-         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
-         The maximum length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
@@ -8356,27 +8545,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two requests with the
-         same id, then the second request will be ignored. It is recommended to always set this value to a
-         UUID. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
-         The maximum length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two requests
-           * with the same id, then the second request will be ignored. It is recommended to always
-           * set this value to a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
            * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
@@ -8712,14 +8901,14 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * Maximum number of private connections to return. If unspecified, at most 50 private
-           * connections that will be returned. The maximum value is 1000; values above 1000 will be
-           * coerced to 1000.
+           * connections that are returned. The maximum value is 1000; values above 1000 are coerced
+           * to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Maximum number of private connections to return. If unspecified, at most 50 private connections
-         that will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+         that are returned. The maximum value is 1000; values above 1000 are coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -8727,8 +8916,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * Maximum number of private connections to return. If unspecified, at most 50 private
-           * connections that will be returned. The maximum value is 1000; values above 1000 will be
-           * coerced to 1000.
+           * connections that are returned. The maximum value is 1000; values above 1000 are coerced
+           * to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

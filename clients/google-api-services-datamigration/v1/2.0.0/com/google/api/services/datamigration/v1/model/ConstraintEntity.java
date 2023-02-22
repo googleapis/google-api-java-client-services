@@ -32,38 +32,40 @@ package com.google.api.services.datamigration.v1.model;
 public final class ConstraintEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * The name of the table constraint
+   * The name of the table constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Reference Columns which may be associated with the constraint. eg: if the constraint is a
-   * FOREIGN_KEY, this represents the list of full names of referenced columns by the foreign key.
+   * Reference columns which may be associated with the constraint. For example, if the constraint
+   * is a FOREIGN_KEY, this represents the list of full names of referenced columns by the foreign
+   * key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> referenceColumns;
 
   /**
-   * Reference table which may be associated with the constraint. eg: if the constraint is a
-   * FOREIGN_KEY, this represents the list of full name of the referenced table by the foreign key.
+   * Reference table which may be associated with the constraint. For example, if the constraint is
+   * a FOREIGN_KEY, this represents the list of full name of the referenced table by the foreign
+   * key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String referenceTable;
 
   /**
-   * Table columns used as part of the Constraint for e.g. primary key constraint should list the
-   * columns which constitutes the key
+   * Table columns used as part of the Constraint, for example primary key constraint should list
+   * the columns which constitutes the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,15 +81,15 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   private java.lang.String tableName;
 
   /**
-   * Type of constraint - e.g. unique, primary key, foreign key (currently only primary key is
-   * supported)
+   * Type of constraint, for example unique, primary key, foreign key (currently only primary key is
+   * supported).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -95,7 +97,7 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public ConstraintEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -104,7 +106,7 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the table constraint
+   * The name of the table constraint.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -112,7 +114,7 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the table constraint
+   * The name of the table constraint.
    * @param name name or {@code null} for none
    */
   public ConstraintEntity setName(java.lang.String name) {
@@ -121,8 +123,9 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Reference Columns which may be associated with the constraint. eg: if the constraint is a
-   * FOREIGN_KEY, this represents the list of full names of referenced columns by the foreign key.
+   * Reference columns which may be associated with the constraint. For example, if the constraint
+   * is a FOREIGN_KEY, this represents the list of full names of referenced columns by the foreign
+   * key.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferenceColumns() {
@@ -130,8 +133,9 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Reference Columns which may be associated with the constraint. eg: if the constraint is a
-   * FOREIGN_KEY, this represents the list of full names of referenced columns by the foreign key.
+   * Reference columns which may be associated with the constraint. For example, if the constraint
+   * is a FOREIGN_KEY, this represents the list of full names of referenced columns by the foreign
+   * key.
    * @param referenceColumns referenceColumns or {@code null} for none
    */
   public ConstraintEntity setReferenceColumns(java.util.List<java.lang.String> referenceColumns) {
@@ -140,8 +144,9 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Reference table which may be associated with the constraint. eg: if the constraint is a
-   * FOREIGN_KEY, this represents the list of full name of the referenced table by the foreign key.
+   * Reference table which may be associated with the constraint. For example, if the constraint is
+   * a FOREIGN_KEY, this represents the list of full name of the referenced table by the foreign
+   * key.
    * @return value or {@code null} for none
    */
   public java.lang.String getReferenceTable() {
@@ -149,8 +154,9 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Reference table which may be associated with the constraint. eg: if the constraint is a
-   * FOREIGN_KEY, this represents the list of full name of the referenced table by the foreign key.
+   * Reference table which may be associated with the constraint. For example, if the constraint is
+   * a FOREIGN_KEY, this represents the list of full name of the referenced table by the foreign
+   * key.
    * @param referenceTable referenceTable or {@code null} for none
    */
   public ConstraintEntity setReferenceTable(java.lang.String referenceTable) {
@@ -159,8 +165,8 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Table columns used as part of the Constraint for e.g. primary key constraint should list the
-   * columns which constitutes the key
+   * Table columns used as part of the Constraint, for example primary key constraint should list
+   * the columns which constitutes the key.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTableColumns() {
@@ -168,8 +174,8 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Table columns used as part of the Constraint for e.g. primary key constraint should list the
-   * columns which constitutes the key
+   * Table columns used as part of the Constraint, for example primary key constraint should list
+   * the columns which constitutes the key.
    * @param tableColumns tableColumns or {@code null} for none
    */
   public ConstraintEntity setTableColumns(java.util.List<java.lang.String> tableColumns) {
@@ -199,8 +205,8 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Type of constraint - e.g. unique, primary key, foreign key (currently only primary key is
-   * supported)
+   * Type of constraint, for example unique, primary key, foreign key (currently only primary key is
+   * supported).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -208,8 +214,8 @@ public final class ConstraintEntity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Type of constraint - e.g. unique, primary key, foreign key (currently only primary key is
-   * supported)
+   * Type of constraint, for example unique, primary key, foreign key (currently only primary key is
+   * supported).
    * @param type type or {@code null} for none
    */
   public ConstraintEntity setType(java.lang.String type) {

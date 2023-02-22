@@ -32,7 +32,7 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Target entity full name. The draft entity can also include a column, index or constraint using
-   * the same naming notation schema.table.column
+   * the same naming notation schema.table.column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,9 +40,9 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Entity mapping log entries. Multiple rules can be effective and contribute changes to a
-   * converted entity such as, a rule can handle the entity name, another rule can handle an entity
-   * type. In addition, rules which did not change the entity are also logged along the with the
-   * reason preventing them to do so.
+   * converted entity, such as a rule can handle the entity name, another rule can handle an entity
+   * type. In addition, rules which did not change the entity are also logged along with the reason
+   * preventing them to do so.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Source entity full name. The source entity can also be a column, index or constraint using the
-   * same naming notation schema.table.column
+   * same naming notation schema.table.column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Target entity full name. The draft entity can also include a column, index or constraint using
-   * the same naming notation schema.table.column
+   * the same naming notation schema.table.column.
    * @return value or {@code null} for none
    */
   public java.lang.String getDraftEntity() {
@@ -67,7 +67,7 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Target entity full name. The draft entity can also include a column, index or constraint using
-   * the same naming notation schema.table.column
+   * the same naming notation schema.table.column.
    * @param draftEntity draftEntity or {@code null} for none
    */
   public EntityMapping setDraftEntity(java.lang.String draftEntity) {
@@ -77,9 +77,9 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Entity mapping log entries. Multiple rules can be effective and contribute changes to a
-   * converted entity such as, a rule can handle the entity name, another rule can handle an entity
-   * type. In addition, rules which did not change the entity are also logged along the with the
-   * reason preventing them to do so.
+   * converted entity, such as a rule can handle the entity name, another rule can handle an entity
+   * type. In addition, rules which did not change the entity are also logged along with the reason
+   * preventing them to do so.
    * @return value or {@code null} for none
    */
   public java.util.List<EntityMappingLogEntry> getMappingLog() {
@@ -88,9 +88,9 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Entity mapping log entries. Multiple rules can be effective and contribute changes to a
-   * converted entity such as, a rule can handle the entity name, another rule can handle an entity
-   * type. In addition, rules which did not change the entity are also logged along the with the
-   * reason preventing them to do so.
+   * converted entity, such as a rule can handle the entity name, another rule can handle an entity
+   * type. In addition, rules which did not change the entity are also logged along with the reason
+   * preventing them to do so.
    * @param mappingLog mappingLog or {@code null} for none
    */
   public EntityMapping setMappingLog(java.util.List<EntityMappingLogEntry> mappingLog) {
@@ -100,7 +100,7 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Source entity full name. The source entity can also be a column, index or constraint using the
-   * same naming notation schema.table.column
+   * same naming notation schema.table.column.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceEntity() {
@@ -109,7 +109,7 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * Source entity full name. The source entity can also be a column, index or constraint using the
-   * same naming notation schema.table.column
+   * same naming notation schema.table.column.
    * @param sourceEntity sourceEntity or {@code null} for none
    */
   public EntityMapping setSourceEntity(java.lang.String sourceEntity) {

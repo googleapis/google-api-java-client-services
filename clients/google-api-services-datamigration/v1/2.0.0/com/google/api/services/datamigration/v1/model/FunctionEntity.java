@@ -31,21 +31,21 @@ package com.google.api.services.datamigration.v1.model;
 public final class FunctionEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * The SQL code which creates the function
+   * The SQL code which creates the function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlCode;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -53,7 +53,7 @@ public final class FunctionEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public FunctionEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -62,7 +62,7 @@ public final class FunctionEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The SQL code which creates the function
+   * The SQL code which creates the function.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlCode() {
@@ -70,7 +70,7 @@ public final class FunctionEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The SQL code which creates the function
+   * The SQL code which creates the function.
    * @param sqlCode sqlCode or {@code null} for none
    */
   public FunctionEntity setSqlCode(java.lang.String sqlCode) {

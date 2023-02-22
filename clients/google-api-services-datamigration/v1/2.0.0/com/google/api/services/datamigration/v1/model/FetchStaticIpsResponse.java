@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Stored procedure's parent is a schema.
+ * Response message for a 'FetchStaticIps' request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,64 +28,67 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StoredProcedureEntity extends com.google.api.client.json.GenericJson {
+public final class FetchStaticIpsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> customFeatures;
+  private java.lang.String nextPageToken;
 
   /**
-   * The SQL code which creates the stored procedure.
+   * List of static IPs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sqlCode;
+  private java.util.List<java.lang.String> staticIps;
 
   /**
-   * Custom engine specific features.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getCustomFeatures() {
-    return customFeatures;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Custom engine specific features.
-   * @param customFeatures customFeatures or {@code null} for none
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public StoredProcedureEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
-    this.customFeatures = customFeatures;
+  public FetchStaticIpsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * The SQL code which creates the stored procedure.
+   * List of static IPs.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSqlCode() {
-    return sqlCode;
+  public java.util.List<java.lang.String> getStaticIps() {
+    return staticIps;
   }
 
   /**
-   * The SQL code which creates the stored procedure.
-   * @param sqlCode sqlCode or {@code null} for none
+   * List of static IPs.
+   * @param staticIps staticIps or {@code null} for none
    */
-  public StoredProcedureEntity setSqlCode(java.lang.String sqlCode) {
-    this.sqlCode = sqlCode;
+  public FetchStaticIpsResponse setStaticIps(java.util.List<java.lang.String> staticIps) {
+    this.staticIps = staticIps;
     return this;
   }
 
   @Override
-  public StoredProcedureEntity set(String fieldName, Object value) {
-    return (StoredProcedureEntity) super.set(fieldName, value);
+  public FetchStaticIpsResponse set(String fieldName, Object value) {
+    return (FetchStaticIpsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public StoredProcedureEntity clone() {
-    return (StoredProcedureEntity) super.clone();
+  public FetchStaticIpsResponse clone() {
+    return (FetchStaticIpsResponse) super.clone();
   }
 
 }

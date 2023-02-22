@@ -31,7 +31,7 @@ package com.google.api.services.datamigration.v1.model;
 public final class PackageEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class PackageEntity extends com.google.api.client.json.GenericJson 
   private java.lang.String packageBody;
 
   /**
-   * The SQL code which creates the package
+   * The SQL code which creates the package.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageSqlCode;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -61,7 +61,7 @@ public final class PackageEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public PackageEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -89,7 +89,7 @@ public final class PackageEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The SQL code which creates the package
+   * The SQL code which creates the package.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageSqlCode() {
@@ -97,7 +97,7 @@ public final class PackageEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The SQL code which creates the package
+   * The SQL code which creates the package.
    * @param packageSqlCode packageSqlCode or {@code null} for none
    */
   public PackageEntity setPackageSqlCode(java.lang.String packageSqlCode) {

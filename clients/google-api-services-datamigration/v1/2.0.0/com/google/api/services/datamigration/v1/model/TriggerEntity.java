@@ -31,42 +31,42 @@ package com.google.api.services.datamigration.v1.model;
 public final class TriggerEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * The name of the trigger
+   * The name of the trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The SQL code which creates the trigger
+   * The SQL code which creates the trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlCode;
 
   /**
-   * Indicates when the trigger fires, e.g. BEFORE STATEMENT, AFTER EACH ROW
+   * Indicates when the trigger fires, for example BEFORE STATEMENT, AFTER EACH ROW.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerType;
 
   /**
-   * The DML, DDL, or database events that fires the trigger, e.g. INSERT, UPDATE
+   * The DML, DDL, or database events that fire the trigger, for example INSERT, UPDATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> triggeringEvents;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -74,7 +74,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public TriggerEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -83,7 +83,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the trigger
+   * The name of the trigger.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -91,7 +91,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the trigger
+   * The name of the trigger.
    * @param name name or {@code null} for none
    */
   public TriggerEntity setName(java.lang.String name) {
@@ -100,7 +100,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The SQL code which creates the trigger
+   * The SQL code which creates the trigger.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlCode() {
@@ -108,7 +108,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The SQL code which creates the trigger
+   * The SQL code which creates the trigger.
    * @param sqlCode sqlCode or {@code null} for none
    */
   public TriggerEntity setSqlCode(java.lang.String sqlCode) {
@@ -117,7 +117,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates when the trigger fires, e.g. BEFORE STATEMENT, AFTER EACH ROW
+   * Indicates when the trigger fires, for example BEFORE STATEMENT, AFTER EACH ROW.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerType() {
@@ -125,7 +125,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates when the trigger fires, e.g. BEFORE STATEMENT, AFTER EACH ROW
+   * Indicates when the trigger fires, for example BEFORE STATEMENT, AFTER EACH ROW.
    * @param triggerType triggerType or {@code null} for none
    */
   public TriggerEntity setTriggerType(java.lang.String triggerType) {
@@ -134,7 +134,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The DML, DDL, or database events that fires the trigger, e.g. INSERT, UPDATE
+   * The DML, DDL, or database events that fire the trigger, for example INSERT, UPDATE.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTriggeringEvents() {
@@ -142,7 +142,7 @@ public final class TriggerEntity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The DML, DDL, or database events that fires the trigger, e.g. INSERT, UPDATE
+   * The DML, DDL, or database events that fire the trigger, for example INSERT, UPDATE.
    * @param triggeringEvents triggeringEvents or {@code null} for none
    */
   public TriggerEntity setTriggeringEvents(java.util.List<java.lang.String> triggeringEvents) {

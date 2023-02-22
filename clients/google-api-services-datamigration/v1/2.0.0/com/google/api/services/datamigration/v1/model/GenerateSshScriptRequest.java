@@ -45,7 +45,7 @@ public final class GenerateSshScriptRequest extends com.google.api.client.json.G
   private VmCreationConfig vmCreationConfig;
 
   /**
-   * The port that will be open on the bastion host
+   * The port that will be open on the bastion host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GenerateSshScriptRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The port that will be open on the bastion host
+   * The port that will be open on the bastion host.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVmPort() {
@@ -101,7 +101,7 @@ public final class GenerateSshScriptRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The port that will be open on the bastion host
+   * The port that will be open on the bastion host.
    * @param vmPort vmPort or {@code null} for none
    */
   public GenerateSshScriptRequest setVmPort(java.lang.Integer vmPort) {

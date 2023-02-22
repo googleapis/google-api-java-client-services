@@ -20,7 +20,7 @@ package com.google.api.services.advisorynotifications.v1;
  * Service definition for Advisorynotifications (v1).
  *
  * <p>
- * 
+ * An API for accessing Advisory Notifications in Google Cloud
  * </p>
  *
  * <p>

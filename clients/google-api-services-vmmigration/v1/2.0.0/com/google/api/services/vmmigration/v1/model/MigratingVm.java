@@ -97,6 +97,15 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. Details of the last replication cycle. This will be updated whenever a replication
+   * cycle is finished and is not to be confused with last_sync which is only updated on successful
+   * replication cycles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplicationCycle lastReplicationCycle;
+
+  /**
    * Output only. The most updated snapshot created time in the source that finished replication.
    * The value may be {@code null}.
    */
@@ -334,6 +343,27 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. Details of the last replication cycle. This will be updated whenever a replication
+   * cycle is finished and is not to be confused with last_sync which is only updated on successful
+   * replication cycles.
+   * @return value or {@code null} for none
+   */
+  public ReplicationCycle getLastReplicationCycle() {
+    return lastReplicationCycle;
+  }
+
+  /**
+   * Output only. Details of the last replication cycle. This will be updated whenever a replication
+   * cycle is finished and is not to be confused with last_sync which is only updated on successful
+   * replication cycles.
+   * @param lastReplicationCycle lastReplicationCycle or {@code null} for none
+   */
+  public MigratingVm setLastReplicationCycle(ReplicationCycle lastReplicationCycle) {
+    this.lastReplicationCycle = lastReplicationCycle;
     return this;
   }
 

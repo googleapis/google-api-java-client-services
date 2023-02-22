@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
   private java.lang.String name;
 
   /**
-   * Describing the nested structure, or composition of an entity.
+   * Description the nested structure, or composition of an entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
   }
 
   /**
-   * Describing the nested structure, or composition of an entity.
+   * Description the nested structure, or composition of an entity.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty> getProperties() {
@@ -171,7 +171,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
   }
 
   /**
-   * Describing the nested structure, or composition of an entity.
+   * Description the nested structure, or composition of an entity.
    * @param properties properties or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentSchemaEntityType setProperties(java.util.List<GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty> properties) {

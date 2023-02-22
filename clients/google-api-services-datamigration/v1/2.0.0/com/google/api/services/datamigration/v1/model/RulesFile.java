@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details of a single rules file
+ * Details of a single rules file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -31,22 +31,22 @@ package com.google.api.services.datamigration.v1.model;
 public final class RulesFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text content of the rules that needs to be converted
+   * The text content of the rules that needs to be converted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rulesContent;
 
   /**
-   * The filename of the rules that needs to be converted. This is used mainly so future logs of the
-   * import rules job will contain this detail and can therefore be searched by it later
+   * The filename of the rules that needs to be converted. The filename is used mainly so that
+   * future logs of the import rules job contain it, and can therefore be searched by it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rulesSourceFilename;
 
   /**
-   * The text content of the rules that needs to be converted
+   * The text content of the rules that needs to be converted.
    * @return value or {@code null} for none
    */
   public java.lang.String getRulesContent() {
@@ -54,7 +54,7 @@ public final class RulesFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text content of the rules that needs to be converted
+   * The text content of the rules that needs to be converted.
    * @param rulesContent rulesContent or {@code null} for none
    */
   public RulesFile setRulesContent(java.lang.String rulesContent) {
@@ -63,8 +63,8 @@ public final class RulesFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filename of the rules that needs to be converted. This is used mainly so future logs of the
-   * import rules job will contain this detail and can therefore be searched by it later
+   * The filename of the rules that needs to be converted. The filename is used mainly so that
+   * future logs of the import rules job contain it, and can therefore be searched by it.
    * @return value or {@code null} for none
    */
   public java.lang.String getRulesSourceFilename() {
@@ -72,8 +72,8 @@ public final class RulesFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filename of the rules that needs to be converted. This is used mainly so future logs of the
-   * import rules job will contain this detail and can therefore be searched by it later
+   * The filename of the rules that needs to be converted. The filename is used mainly so that
+   * future logs of the import rules job contain it, and can therefore be searched by it.
    * @param rulesSourceFilename rulesSourceFilename or {@code null} for none
    */
   public RulesFile setRulesSourceFilename(java.lang.String rulesSourceFilename) {

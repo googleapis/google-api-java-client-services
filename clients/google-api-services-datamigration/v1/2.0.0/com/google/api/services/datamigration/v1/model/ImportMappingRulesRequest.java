@@ -38,7 +38,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   private java.lang.Boolean autoCommit;
 
   /**
-   * One or more rules files
+   * One or more rules files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * One or more rules files
+   * One or more rules files.
    * @return value or {@code null} for none
    */
   public java.util.List<RulesFile> getRulesFiles() {
@@ -77,7 +77,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * One or more rules files
+   * One or more rules files.
    * @param rulesFiles rulesFiles or {@code null} for none
    */
   public ImportMappingRulesRequest setRulesFiles(java.util.List<RulesFile> rulesFiles) {

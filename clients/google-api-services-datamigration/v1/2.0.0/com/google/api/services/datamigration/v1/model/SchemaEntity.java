@@ -18,7 +18,7 @@ package com.google.api.services.datamigration.v1.model;
 
 /**
  * Schema typically has no parent entity, but can have a parent entity DatabaseInstance (for
- * database engines which supports it). For some database engines the term schema and user can be
+ * database engines which support it). For some database engines, the terms schema and user can be
  * used interchangeably when they refer to a namespace or a collection of other database entities.
  * Can store additional information which is schema specific.
  *
@@ -34,14 +34,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class SchemaEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -49,7 +49,7 @@ public final class SchemaEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public SchemaEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {

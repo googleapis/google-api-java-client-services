@@ -17,8 +17,8 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * The base entity type for all the database related entities The message contains the entity name,
- * the name of its parent, its type and the specific details per its type
+ * The base entity type for all the database related entities. The message contains the entity name,
+ * the name of its parent, the entity type, and the specific details per entity type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -32,14 +32,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class DatabaseEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Function
+   * Function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FunctionEntity databaseFunction;
 
   /**
-   * Package
+   * Package.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   private SchemaEntity schema;
 
   /**
-   * Sequence
+   * Sequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,14 +91,14 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   private java.lang.String shortName;
 
   /**
-   * Stored Procedure
+   * Stored procedure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StoredProcedureEntity storedProcedure;
 
   /**
-   * Synonym
+   * Synonym.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,14 +119,14 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   private java.lang.String tree;
 
   /**
-   * View
+   * View.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ViewEntity view;
 
   /**
-   * Function
+   * Function.
    * @return value or {@code null} for none
    */
   public FunctionEntity getDatabaseFunction() {
@@ -134,7 +134,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Function
+   * Function.
    * @param databaseFunction databaseFunction or {@code null} for none
    */
   public DatabaseEntity setDatabaseFunction(FunctionEntity databaseFunction) {
@@ -143,7 +143,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Package
+   * Package.
    * @return value or {@code null} for none
    */
   public PackageEntity getDatabasePackage() {
@@ -151,7 +151,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Package
+   * Package.
    * @param databasePackage databasePackage or {@code null} for none
    */
   public DatabaseEntity setDatabasePackage(PackageEntity databasePackage) {
@@ -234,7 +234,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sequence
+   * Sequence.
    * @return value or {@code null} for none
    */
   public SequenceEntity getSequence() {
@@ -242,7 +242,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sequence
+   * Sequence.
    * @param sequence sequence or {@code null} for none
    */
   public DatabaseEntity setSequence(SequenceEntity sequence) {
@@ -268,7 +268,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Stored Procedure
+   * Stored procedure.
    * @return value or {@code null} for none
    */
   public StoredProcedureEntity getStoredProcedure() {
@@ -276,7 +276,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Stored Procedure
+   * Stored procedure.
    * @param storedProcedure storedProcedure or {@code null} for none
    */
   public DatabaseEntity setStoredProcedure(StoredProcedureEntity storedProcedure) {
@@ -285,7 +285,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Synonym
+   * Synonym.
    * @return value or {@code null} for none
    */
   public SynonymEntity getSynonym() {
@@ -293,7 +293,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Synonym
+   * Synonym.
    * @param synonym synonym or {@code null} for none
    */
   public DatabaseEntity setSynonym(SynonymEntity synonym) {
@@ -336,7 +336,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * View
+   * View.
    * @return value or {@code null} for none
    */
   public ViewEntity getView() {
@@ -344,7 +344,7 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * View
+   * View.
    * @param view view or {@code null} for none
    */
   public DatabaseEntity setView(ViewEntity view) {

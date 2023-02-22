@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * The type and version of a source or destination DB.
+ * The type and version of a source or destination database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.datamigration.v1.model;
 public final class DatabaseEngineInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Engine Type.
+   * Required. Engine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String engine;
 
   /**
-   * Required. Engine named version, for e.g. 12.c.1
+   * Required. Engine named version, for example 12.c.1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Required. Engine Type.
+   * Required. Engine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getEngine() {
@@ -53,7 +53,7 @@ public final class DatabaseEngineInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Engine Type.
+   * Required. Engine type.
    * @param engine engine or {@code null} for none
    */
   public DatabaseEngineInfo setEngine(java.lang.String engine) {
@@ -62,7 +62,7 @@ public final class DatabaseEngineInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Engine named version, for e.g. 12.c.1
+   * Required. Engine named version, for example 12.c.1.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -70,7 +70,7 @@ public final class DatabaseEngineInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Engine named version, for e.g. 12.c.1
+   * Required. Engine named version, for example 12.c.1.
    * @param version version or {@code null} for none
    */
   public DatabaseEngineInfo setVersion(java.lang.String version) {

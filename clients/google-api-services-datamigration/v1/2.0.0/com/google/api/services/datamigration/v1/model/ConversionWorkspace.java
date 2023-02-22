@@ -45,7 +45,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   private DatabaseEngineInfo destination;
 
   /**
-   * The display name for the workspace
+   * The display name for the workspace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,14 +63,14 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
 
   /**
    * Output only. Whether the workspace has uncommitted changes (changes which were made after the
-   * workspace was committed)
+   * workspace was committed).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasUncommittedChanges;
 
   /**
-   * Output only. The latest commit id
+   * Output only. The latest commit ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name for the workspace
+   * The display name for the workspace.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -148,7 +148,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name for the workspace
+   * The display name for the workspace.
    * @param displayName displayName or {@code null} for none
    */
   public ConversionWorkspace setDisplayName(java.lang.String displayName) {
@@ -181,7 +181,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
 
   /**
    * Output only. Whether the workspace has uncommitted changes (changes which were made after the
-   * workspace was committed)
+   * workspace was committed).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasUncommittedChanges() {
@@ -190,7 +190,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
 
   /**
    * Output only. Whether the workspace has uncommitted changes (changes which were made after the
-   * workspace was committed)
+   * workspace was committed).
    * @param hasUncommittedChanges hasUncommittedChanges or {@code null} for none
    */
   public ConversionWorkspace setHasUncommittedChanges(java.lang.Boolean hasUncommittedChanges) {
@@ -199,7 +199,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The latest commit id
+   * Output only. The latest commit ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestCommitId() {
@@ -207,7 +207,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The latest commit id
+   * Output only. The latest commit ID.
    * @param latestCommitId latestCommitId or {@code null} for none
    */
   public ConversionWorkspace setLatestCommitId(java.lang.String latestCommitId) {

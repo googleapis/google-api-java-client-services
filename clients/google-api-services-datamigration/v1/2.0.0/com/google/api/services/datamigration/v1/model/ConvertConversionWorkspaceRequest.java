@@ -31,7 +31,8 @@ package com.google.api.services.datamigration.v1.model;
 public final class ConvertConversionWorkspaceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Should the conversion workspace be committed automatically after the conversion.
+   * Specifies whether the conversion workspace is to be committed automatically after the
+   * conversion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class ConvertConversionWorkspaceRequest extends com.google.api.clie
   private java.lang.String filter;
 
   /**
-   * Should the conversion workspace be committed automatically after the conversion.
+   * Specifies whether the conversion workspace is to be committed automatically after the
+   * conversion.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCommit() {
@@ -54,7 +56,8 @@ public final class ConvertConversionWorkspaceRequest extends com.google.api.clie
   }
 
   /**
-   * Should the conversion workspace be committed automatically after the conversion.
+   * Specifies whether the conversion workspace is to be committed automatically after the
+   * conversion.
    * @param autoCommit autoCommit or {@code null} for none
    */
   public ConvertConversionWorkspaceRequest setAutoCommit(java.lang.Boolean autoCommit) {

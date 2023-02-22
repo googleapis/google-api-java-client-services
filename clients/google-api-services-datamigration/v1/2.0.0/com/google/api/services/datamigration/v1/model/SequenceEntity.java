@@ -31,56 +31,56 @@ package com.google.api.services.datamigration.v1.model;
 public final class SequenceEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates number of entries to cache / precreate
+   * Indicates number of entries to cache / precreate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long cache;
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * Indicates whether the sequence value should cycle through
+   * Indicates whether the sequence value should cycle through.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cycle;
 
   /**
-   * Increment value for the sequence
+   * Increment value for the sequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long increment;
 
   /**
-   * Maximum number for the sequence represented as bytes to accommodate large numbers
+   * Maximum number for the sequence represented as bytes to accommodate large. numbers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maxValue;
 
   /**
-   * Minimum number for the sequence represented as bytes to accommodate large numbers
+   * Minimum number for the sequence represented as bytes to accommodate large. numbers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String minValue;
 
   /**
-   * Start number for the sequence represented as bytes to accommodate large numbers
+   * Start number for the sequence represented as bytes to accommodate large. numbers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startValue;
 
   /**
-   * Indicates number of entries to cache / precreate
+   * Indicates number of entries to cache / precreate.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCache() {
@@ -88,7 +88,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates number of entries to cache / precreate
+   * Indicates number of entries to cache / precreate.
    * @param cache cache or {@code null} for none
    */
   public SequenceEntity setCache(java.lang.Long cache) {
@@ -97,7 +97,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -105,7 +105,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public SequenceEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -114,7 +114,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates whether the sequence value should cycle through
+   * Indicates whether the sequence value should cycle through.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCycle() {
@@ -122,7 +122,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates whether the sequence value should cycle through
+   * Indicates whether the sequence value should cycle through.
    * @param cycle cycle or {@code null} for none
    */
   public SequenceEntity setCycle(java.lang.Boolean cycle) {
@@ -131,7 +131,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Increment value for the sequence
+   * Increment value for the sequence.
    * @return value or {@code null} for none
    */
   public java.lang.Long getIncrement() {
@@ -139,7 +139,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Increment value for the sequence
+   * Increment value for the sequence.
    * @param increment increment or {@code null} for none
    */
   public SequenceEntity setIncrement(java.lang.Long increment) {
@@ -148,7 +148,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Maximum number for the sequence represented as bytes to accommodate large numbers
+   * Maximum number for the sequence represented as bytes to accommodate large. numbers
    * @see #decodeMaxValue()
    * @return value or {@code null} for none
    */
@@ -157,7 +157,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Maximum number for the sequence represented as bytes to accommodate large numbers
+   * Maximum number for the sequence represented as bytes to accommodate large. numbers
    * @see #getMaxValue()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -168,7 +168,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Maximum number for the sequence represented as bytes to accommodate large numbers
+   * Maximum number for the sequence represented as bytes to accommodate large. numbers
    * @see #encodeMaxValue()
    * @param maxValue maxValue or {@code null} for none
    */
@@ -178,7 +178,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Maximum number for the sequence represented as bytes to accommodate large numbers
+   * Maximum number for the sequence represented as bytes to accommodate large. numbers
    * @see #setMaxValue()
    *
    * <p>
@@ -193,7 +193,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Minimum number for the sequence represented as bytes to accommodate large numbers
+   * Minimum number for the sequence represented as bytes to accommodate large. numbers
    * @see #decodeMinValue()
    * @return value or {@code null} for none
    */
@@ -202,7 +202,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Minimum number for the sequence represented as bytes to accommodate large numbers
+   * Minimum number for the sequence represented as bytes to accommodate large. numbers
    * @see #getMinValue()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -213,7 +213,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Minimum number for the sequence represented as bytes to accommodate large numbers
+   * Minimum number for the sequence represented as bytes to accommodate large. numbers
    * @see #encodeMinValue()
    * @param minValue minValue or {@code null} for none
    */
@@ -223,7 +223,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Minimum number for the sequence represented as bytes to accommodate large numbers
+   * Minimum number for the sequence represented as bytes to accommodate large. numbers
    * @see #setMinValue()
    *
    * <p>
@@ -238,7 +238,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Start number for the sequence represented as bytes to accommodate large numbers
+   * Start number for the sequence represented as bytes to accommodate large. numbers
    * @see #decodeStartValue()
    * @return value or {@code null} for none
    */
@@ -247,7 +247,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Start number for the sequence represented as bytes to accommodate large numbers
+   * Start number for the sequence represented as bytes to accommodate large. numbers
    * @see #getStartValue()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -258,7 +258,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Start number for the sequence represented as bytes to accommodate large numbers
+   * Start number for the sequence represented as bytes to accommodate large. numbers
    * @see #encodeStartValue()
    * @param startValue startValue or {@code null} for none
    */
@@ -268,7 +268,7 @@ public final class SequenceEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Start number for the sequence represented as bytes to accommodate large numbers
+   * Start number for the sequence represented as bytes to accommodate large. numbers
    * @see #setStartValue()
    *
    * <p>

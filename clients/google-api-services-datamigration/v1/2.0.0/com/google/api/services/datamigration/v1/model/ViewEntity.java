@@ -31,7 +31,7 @@ package com.google.api.services.datamigration.v1.model;
 public final class ViewEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * View Constraints.
+   * View constraints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ViewEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ViewEntity extends com.google.api.client.json.GenericJson {
   private java.lang.String sqlCode;
 
   /**
-   * View Constraints.
+   * View constraints.
    * @return value or {@code null} for none
    */
   public java.util.List<ConstraintEntity> getConstraints() {
@@ -66,7 +66,7 @@ public final class ViewEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * View Constraints.
+   * View constraints.
    * @param constraints constraints or {@code null} for none
    */
   public ViewEntity setConstraints(java.util.List<ConstraintEntity> constraints) {
@@ -75,7 +75,7 @@ public final class ViewEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -83,7 +83,7 @@ public final class ViewEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public ViewEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {

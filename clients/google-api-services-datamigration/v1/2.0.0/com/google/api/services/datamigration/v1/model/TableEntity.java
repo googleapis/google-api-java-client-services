@@ -31,7 +31,7 @@ package com.google.api.services.datamigration.v1.model;
 public final class TableEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Table Columns.
+   * Table columns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Comment associated with the table
+   * Comment associated with the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String comment;
 
   /**
-   * Table Constraints.
+   * Table constraints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +64,14 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * Table Indices.
+   * Table indices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   private java.util.List<TriggerEntity> triggers;
 
   /**
-   * Table Columns.
+   * Table columns.
    * @return value or {@code null} for none
    */
   public java.util.List<ColumnEntity> getColumns() {
@@ -99,7 +99,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table Columns.
+   * Table columns.
    * @param columns columns or {@code null} for none
    */
   public TableEntity setColumns(java.util.List<ColumnEntity> columns) {
@@ -108,7 +108,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Comment associated with the table
+   * Comment associated with the table.
    * @return value or {@code null} for none
    */
   public java.lang.String getComment() {
@@ -116,7 +116,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Comment associated with the table
+   * Comment associated with the table.
    * @param comment comment or {@code null} for none
    */
   public TableEntity setComment(java.lang.String comment) {
@@ -125,7 +125,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table Constraints.
+   * Table constraints.
    * @return value or {@code null} for none
    */
   public java.util.List<ConstraintEntity> getConstraints() {
@@ -133,7 +133,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table Constraints.
+   * Table constraints.
    * @param constraints constraints or {@code null} for none
    */
   public TableEntity setConstraints(java.util.List<ConstraintEntity> constraints) {
@@ -142,7 +142,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomFeatures() {
@@ -150,7 +150,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom engine specific features
+   * Custom engine specific features.
    * @param customFeatures customFeatures or {@code null} for none
    */
   public TableEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
@@ -159,7 +159,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table Indices.
+   * Table indices.
    * @return value or {@code null} for none
    */
   public java.util.List<IndexEntity> getIndices() {
@@ -167,7 +167,7 @@ public final class TableEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table Indices.
+   * Table indices.
    * @param indices indices or {@code null} for none
    */
   public TableEntity setIndices(java.util.List<IndexEntity> indices) {

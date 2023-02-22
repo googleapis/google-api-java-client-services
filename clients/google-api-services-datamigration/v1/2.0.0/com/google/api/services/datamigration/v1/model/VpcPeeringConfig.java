@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * The VPC Peering configuration is used to create VPC peering with the consumer's VPC.
+ * The VPC peering configuration is used to create VPC peering with the consumer's VPC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class VpcPeeringConfig extends com.google.api.client.json.GenericJs
   private java.lang.String subnet;
 
   /**
-   * Required. Fully qualified name of the VPC DMS will peer to.
+   * Required. Fully qualified name of the VPC that Database Migration Service will peer to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class VpcPeeringConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Fully qualified name of the VPC DMS will peer to.
+   * Required. Fully qualified name of the VPC that Database Migration Service will peer to.
    * @return value or {@code null} for none
    */
   public java.lang.String getVpcName() {
@@ -70,7 +70,7 @@ public final class VpcPeeringConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Fully qualified name of the VPC DMS will peer to.
+   * Required. Fully qualified name of the VPC that Database Migration Service will peer to.
    * @param vpcName vpcName or {@code null} for none
    */
   public VpcPeeringConfig setVpcName(java.lang.String vpcName) {

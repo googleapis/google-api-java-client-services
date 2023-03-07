@@ -51,7 +51,6 @@ jobs:
       - name: Generate services and PR
         run: |
           cd google-api-java-client-services
-          git checkout main
           services=(${{ matrix.batch }})
 
           for service in ${services[@]} ; do

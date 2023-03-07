@@ -61,6 +61,8 @@ jobs:
       - name: Generate services and PR
         run: |
           cd google-api-java-client-services
+          git fetch origin
+          git checkout main
           services=(${{ matrix.batch }})
 
           for service in ${services[@]} ; do
@@ -94,7 +96,7 @@ jobs:
               git push --force --set-upstream origin $NEW_BRANCH_NAME
 
               # creates PR
-              gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body "$DESCRIPTION"
+              # gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body "$DESCRIPTION"
 
               git checkout main
             fi

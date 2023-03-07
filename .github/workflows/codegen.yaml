@@ -20,17 +20,18 @@ jobs:
           script: |
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
-            const MAX_BATCH_SIZE = 256
+            const MAX_BATCH_SIZE = 2
             const result = [];
             for (let i = 0; i < services.length; i += MAX_BATCH_SIZE) {
-              result.push(services.slice(i, i + MAX_BATCH_SIZE));
+              result.push(services.slice(i, i + MAX_BATCH_SIZE).join(' '));
             }
             return result
   generate:
     runs-on: ubuntu-20.04
     needs: batch
     strategy:
-      fail-fast: false
+      # fail-fast: false TODO restore
+      fail-fast: true
       max-parallel: 4
       matrix: 
         batch: ${{fromJson(needs.batch.outputs.batches)}}
@@ -49,7 +50,8 @@ jobs:
           python-version: 2.7.18
       - run: |
           echo ${{ matrix.batch }}
-          for service in ( ${{ matrix.batch }} ) ; do
+          services=${{ matrix.batch }}
+          for service in $services ; do
             echo $service
           done | xargs -L1 -P4 ./google-api-java-client-services/.github/workflows/generate.sh
       # - uses: googleapis/code-suggester@v2 # takes the changes from git directory

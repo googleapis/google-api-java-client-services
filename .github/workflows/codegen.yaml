@@ -48,6 +48,7 @@ jobs:
         with:
           python-version: 2.7.18
       - run: |
+          echo ${{ matrix.batch }}
           for service in ( ${{ matrix.batch }} ) ; do
             echo $service
           done | xargs -L1 -P4 ./google-api-java-client-services/.github/workflows/generate.sh

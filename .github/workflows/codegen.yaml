@@ -22,8 +22,8 @@ jobs:
             const services = ${{ needs.discovery.outputs.services }}
             const MAX_BATCH_SIZE = 256
             const result = [];
-            for (let i = 0; i < array.length; i += chunkSize) {
-              result.push(array.slice(i, i + chunkSize));
+            for (let i = 0; i < services.length; i += chunkSize) {
+              result.push(services.slice(i, i + chunkSize));
             }
             return result
   generate:

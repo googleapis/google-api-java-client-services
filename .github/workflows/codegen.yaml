@@ -84,7 +84,7 @@ jobs:
               git push --set-upstream origin $NEW_BRANCH_NAME
 
               # creates PR
-              gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body $DESCRIPTION
+              gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body "$DESCRIPTION"
 
               git checkout main
             fi

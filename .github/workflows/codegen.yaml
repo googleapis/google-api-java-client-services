@@ -70,17 +70,7 @@ jobs:
               NEW_BRANCH_NAME=`echo "regenerate-$service"`
               DESCRIPTION=`echo "Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml"`
 
-              # stashes the source branch with generated libs 
-              git stash push -- $service_location
-              git reset --hard
-              git remote update
-              git fetch
-
-              # pops the changes in a new branch from main
-              git checkout main
-              git checkout -b $NEW_BRANCH_NAME
-              git stash pop
-              git add .
+              git add $service_location
 
               # configure author
               git config --global user.name "yoshi-code-bot"
@@ -93,6 +83,8 @@ jobs:
 
               # creates PR
               gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body $DESCRIPTION
+
+              git checkout main
             fi
           done 
         env:

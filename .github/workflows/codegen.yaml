@@ -51,7 +51,9 @@ jobs:
       - name: Generate services and PR
         run: |
           cd google-api-java-client-services
+          git checkout main
           services=(${{ matrix.batch }})
+
           for service in ${services[@]} ; do
             # generates library
             ./.github/workflows/generate.sh $service
@@ -70,6 +72,7 @@ jobs:
               NEW_BRANCH_NAME=`echo "regenerate-$service"`
               DESCRIPTION=`echo "Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml"`
 
+              git checkout -b $NEW_BRANCH_NAME
               git add $service_location
 
               # configure author

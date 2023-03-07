@@ -65,9 +65,9 @@ jobs:
               echo "No changes detected for $service"
             else
 
-              MESSAGE=`chore: regenerate $service client'`
-              NEW_BRANCH_NAME=`regenerate-$service`
-              DESCRIPTION="Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml"
+              MESSAGE=`echo "chore: regenerate $service client"`
+              NEW_BRANCH_NAME=`echo "regenerate-$service"`
+              DESCRIPTION=`echo "Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml"`
 
               # stashes the source branch with generated libs 
               git stash push -- $service_location

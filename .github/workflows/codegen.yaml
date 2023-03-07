@@ -36,6 +36,16 @@ jobs:
       matrix: 
         batch: ${{fromJson(needs.batch.outputs.batches)}}
     steps:
+      - uses: actions/cache@v2
+        with:
+          key: apiary-cache
+          path: ./google-api-java-client-services
+          expire_in: next-build
+      - uses: actions/cache@v2
+        with:
+          key: discovery-cache
+          path: ./discovery-artifact-manager
+          expire_in: next-build
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
@@ -79,7 +89,7 @@ jobs:
               git config --global user.email "yoshi-code-bot@google.com"
 
               # commit
-              git remote set-url origin https://x-access-token:$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY
+              git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY
               git commit -m "$MESSAGE"
               git push --force --set-upstream origin $NEW_BRANCH_NAME
 
@@ -90,7 +100,7 @@ jobs:
             fi
           done 
         env:
-          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+          GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
       # - uses: googleapis/code-suggester@v2 # takes the changes from git directory
       #   env:
       #     ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}

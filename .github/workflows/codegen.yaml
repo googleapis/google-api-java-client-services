@@ -81,7 +81,7 @@ jobs:
               # commit
               git remote set-url origin https://x-access-token:$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY
               git commit -m "$MESSAGE"
-              git push --set-upstream origin $NEW_BRANCH_NAME
+              git push --force --set-upstream origin $NEW_BRANCH_NAME
 
               # creates PR
               gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body "$DESCRIPTION"

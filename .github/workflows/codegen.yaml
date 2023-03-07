@@ -11,9 +11,10 @@ jobs:
   batch:
     needs: discovery
     outputs: 
-      batches: ${{ step.split.outputs.result }}
+      batches: ${{ steps.chunk.outputs.result }}
     steps:
       - uses: actions/github-script@v5
+        id: chunk
         with: 
           script: |
             console.log('splitting service names list into batches')

@@ -49,9 +49,8 @@ jobs:
         with:
           python-version: 2.7.18
       - run: |
-          echo ${{ matrix.batch }}
-          services=${{ matrix.batch }}
-          for service in $services ; do
+          services=(${{ matrix.batch }})
+          for service in ${services[@]} ; do
             echo $service
           done | xargs -L1 -P4 ./google-api-java-client-services/.github/workflows/generate.sh
       # - uses: googleapis/code-suggester@v2 # takes the changes from git directory

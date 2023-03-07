@@ -9,6 +9,7 @@ jobs:
   discovery:
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
   batch:
+    runs-on: ubuntu-20.04
     needs: discovery
     outputs: 
       batches: ${{ steps.chunk.outputs.result }}

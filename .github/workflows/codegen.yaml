@@ -30,7 +30,8 @@ jobs:
     runs-on: ubuntu-20.04
     needs: batch
     strategy:
-      fail-fast: false 
+      # fail-fast: false 
+      fail-fast: true 
       max-parallel: 4
       matrix: 
         batch: ${{fromJson(needs.batch.outputs.batches)}}
@@ -49,13 +50,14 @@ jobs:
           python-version: 2.7.18
       - name: Generate services and PR
         run: |
+          cd google-api-java-client-services
           services=(${{ matrix.batch }})
           for service in ${services[@]} ; do
             # generates library
-            ./google-api-java-client-services/.github/workflows/generate.sh $service
+            ./.github/workflows/generate.sh $service
 
             # counts number of changed files
-            service_location=./google-api-java-client-services/clients/google-api-services-$service
+            service_location=./clients/google-api-services-$service
             git add $service_location
             CHANGED_FILES=`git diff --cached --numstat | wc -l | awk '{print $1}'`
             git reset -- $service_location # unstage changes

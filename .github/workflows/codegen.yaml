@@ -58,6 +58,7 @@ jobs:
 
             # counts number of changed files
             service_location=./clients/google-api-services-$service
+            set -x
             git add $service_location
             CHANGED_FILES=`git diff --cached --numstat | wc -l | awk '{print $1}'`
             git reset -- $service_location # unstage changes

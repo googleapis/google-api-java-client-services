@@ -35,16 +35,6 @@ jobs:
       matrix: 
         batch: ${{fromJson(needs.batch.outputs.batches)}}
     steps:
-      - uses: actions/cache@v2
-        with:
-          key: apiary-cache
-          path: ./google-api-java-client-services
-          expire_in: next-build
-      - uses: actions/cache@v2
-        with:
-          key: discovery-cache
-          path: ./discovery-artifact-manager
-          expire_in: next-build
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1

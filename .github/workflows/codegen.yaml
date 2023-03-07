@@ -47,7 +47,8 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 2.7.18
-      - run: |
+      - name: Generate services and PR
+        run: |
           services=(${{ matrix.batch }})
           for service in ${services[@]} ; do
             # generates library
@@ -85,7 +86,7 @@ jobs:
               git config --global user.email "yoshi-code-bot@google.com"
 
               # commit
-              git remote set-url origin https://x-access-token:${{ $ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
+              git remote set-url origin https://x-access-token:$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY
               git commit -m "$MESSAGE"
               git push --set-upstream origin $NEW_BRANCH_NAME
 
@@ -95,18 +96,18 @@ jobs:
           done 
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
-        env:
-          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-        with:
-          command: pr
-          upstream_owner: ${{ github.repository_owner }}
-          upstream_repo: google-api-java-client-services
-          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-          title: 'chore: regenerate ${{ matrix.service }} client'
-          message: 'chore: regenerate ${{ matrix.service }} client'
-          branch: regenerate-${{ matrix.service }}
-          git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-          primary: main
-          force: true
-          fork: true
+      # - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+      #   env:
+      #     ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+      #   with:
+      #     command: pr
+      #     upstream_owner: ${{ github.repository_owner }}
+      #     upstream_repo: google-api-java-client-services
+      #     description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
+      #     title: 'chore: regenerate ${{ matrix.service }} client'
+      #     message: 'chore: regenerate ${{ matrix.service }} client'
+      #     branch: regenerate-${{ matrix.service }}
+      #     git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
+      #     primary: main
+      #     force: true
+      #     fork: true

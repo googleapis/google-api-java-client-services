@@ -30,8 +30,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: batch
     strategy:
-      # fail-fast: false TODO restore
-      fail-fast: true
+      fail-fast: false 
       max-parallel: 4
       matrix: 
         batch: ${{fromJson(needs.batch.outputs.batches)}}
@@ -51,20 +50,63 @@ jobs:
       - run: |
           services=(${{ matrix.batch }})
           for service in ${services[@]} ; do
+            # generates library
             ./google-api-java-client-services/.github/workflows/generate.sh $service
+
+            # counts number of changed files
+            service_location=./google-api-java-client-services/clients/google-api-services-$service
+            git add $service_location
+            CHANGED_FILES=`git diff --cached --numstat | wc -l | awk '{print $1}'`
+            git reset -- $service_location # unstage changes
+            echo "$CHANGED_FILES have changed after generation"
+            if [[ $CHANGED_FILES -eq 0 ]]; then
+              echo "Branch will not be updated"
+              continue
+            else
+
+              MESSAGE=`chore: regenerate $service client'`
+              NEW_BRANCH_NAME=`regenerate-$service`
+              DESCRIPTION="Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml"
+
+              # stashes the source branch with generated libs 
+              git stash push -- $service_location
+              git reset --hard
+              git remote update
+              git fetch
+
+              # pops the changes in a new branch from main
+              git checkout main
+              git checkout -b $NEW_BRANCH_NAME
+              git stash pop
+              git add .
+
+              # configure author
+              git config --global user.name "yoshi-code-bot"
+              git config --global user.email "yoshi-code-bot@google.com"
+
+              # commit
+              git remote set-url origin https://x-access-token:${{ $ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
+              git commit -m "$MESSAGE"
+              git push --set-upstream origin $NEW_BRANCH_NAME
+
+              # creates PR
+              gh pr create --draft -B main -H $NEW_BRANCH_NAME --title "$MESSAGE" --body $DESCRIPTION
+            fi
           done 
-      # - uses: googleapis/code-suggester@v2 # takes the changes from git directory
-      #   env:
-      #     ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-      #   with:
-      #     command: pr
-      #     upstream_owner: ${{ github.repository_owner }}
-      #     upstream_repo: google-api-java-client-services
-      #     description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-      #     title: 'chore: regenerate ${{ matrix.service }} client'
-      #     message: 'chore: regenerate ${{ matrix.service }} client'
-      #     branch: regenerate-${{ matrix.service }}
-      #     git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-      #     primary: main
-      #     force: true
-      #     fork: true
+        env:
+          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+        env:
+          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+        with:
+          command: pr
+          upstream_owner: ${{ github.repository_owner }}
+          upstream_repo: google-api-java-client-services
+          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
+          title: 'chore: regenerate ${{ matrix.service }} client'
+          message: 'chore: regenerate ${{ matrix.service }} client'
+          branch: regenerate-${{ matrix.service }}
+          git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
+          primary: main
+          force: true
+          fork: true

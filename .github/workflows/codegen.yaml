@@ -92,18 +92,3 @@ jobs:
           done 
         env:
           GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-      # - uses: googleapis/code-suggester@v2 # takes the changes from git directory
-      #   env:
-      #     ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-      #   with:
-      #     command: pr
-      #     upstream_owner: ${{ github.repository_owner }}
-      #     upstream_repo: google-api-java-client-services
-      #     description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-      #     title: 'chore: regenerate ${{ matrix.service }} client'
-      #     message: 'chore: regenerate ${{ matrix.service }} client'
-      #     branch: regenerate-${{ matrix.service }}
-      #     git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-      #     primary: main
-      #     force: true
-      #     fork: true

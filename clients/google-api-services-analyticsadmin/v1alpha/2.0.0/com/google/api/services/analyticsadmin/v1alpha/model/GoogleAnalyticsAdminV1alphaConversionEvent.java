@@ -49,7 +49,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   private java.lang.Boolean custom;
 
   /**
-   * Output only. If set, this event can currently be deleted via DeleteConversionEvent.
+   * Output only. If set, this event can currently be deleted with DeleteConversionEvent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   }
 
   /**
-   * Output only. If set, this event can currently be deleted via DeleteConversionEvent.
+   * Output only. If set, this event can currently be deleted with DeleteConversionEvent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeletable() {
@@ -121,7 +121,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   }
 
   /**
-   * Output only. If set, this event can currently be deleted via DeleteConversionEvent.
+   * Output only. If set, this event can currently be deleted with DeleteConversionEvent.
    * @param deletable deletable or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaConversionEvent setDeletable(java.lang.Boolean deletable) {

@@ -67,6 +67,13 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
   private java.lang.Boolean includeAdvertisingId;
 
   /**
+   * If set true, enables intraday export to the linked Google Cloud project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean intradayExportEnabled;
+
+  /**
    * Output only. Resource name of this BigQuery link. Format:
    * 'properties/{property_id}/bigQueryLinks/{bigquery_link_id}' Format:
    * 'properties/1234/bigQueryLinks/abc567'
@@ -176,6 +183,23 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaBigQueryLink setIncludeAdvertisingId(java.lang.Boolean includeAdvertisingId) {
     this.includeAdvertisingId = includeAdvertisingId;
+    return this;
+  }
+
+  /**
+   * If set true, enables intraday export to the linked Google Cloud project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIntradayExportEnabled() {
+    return intradayExportEnabled;
+  }
+
+  /**
+   * If set true, enables intraday export to the linked Google Cloud project.
+   * @param intradayExportEnabled intradayExportEnabled or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaBigQueryLink setIntradayExportEnabled(java.lang.Boolean intradayExportEnabled) {
+    this.intradayExportEnabled = intradayExportEnabled;
     return this;
   }
 

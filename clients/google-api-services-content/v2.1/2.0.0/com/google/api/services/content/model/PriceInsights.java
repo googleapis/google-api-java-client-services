@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Price Insights fields requested by the merchant in the query. Field values are only set if the
+ * Price insights fields requested by the merchant in the query. Field values are only set if the
  * merchant queries `PriceInsightsProductView`. https://support.google.com/merchants/answer/11916926
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

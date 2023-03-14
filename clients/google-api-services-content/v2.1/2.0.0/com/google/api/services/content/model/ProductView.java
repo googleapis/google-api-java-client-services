@@ -18,8 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * Product fields. Values are only set for fields requested explicitly in the request's search
- * query. Available only to selected merchants. Submit the [interest
- * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
+ * query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

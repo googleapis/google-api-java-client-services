@@ -261,7 +261,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Claims the website of a Merchant Center sub-account.
+     * Claims the website of a Merchant Center sub-account. Merchant accounts with approved third-party
+     * CSSs aren't required to claim a website.
      *
      * Create a request for the method "accounts.claimwebsite".
      *
@@ -285,7 +286,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/accounts/{accountId}/claimwebsite";
 
       /**
-       * Claims the website of a Merchant Center sub-account.
+       * Claims the website of a Merchant Center sub-account. Merchant accounts with approved third-
+       * party CSSs aren't required to claim a website.
        *
        * Create a request for the method "accounts.claimwebsite".
        *

@@ -49,7 +49,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
 
   /**
    * Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both
-   * `feedLabel` and `country` is specified, the values must match.
+   * `feedLabel` and `country` is specified, the values must match. Must be less than or equal to 20
+   * uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +123,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
 
   /**
    * Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both
-   * `feedLabel` and `country` is specified, the values must match.
+   * `feedLabel` and `country` is specified, the values must match. Must be less than or equal to 20
+   * uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -131,7 +133,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
 
   /**
    * Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both
-   * `feedLabel` and `country` is specified, the values must match.
+   * `feedLabel` and `country` is specified, the values must match. Must be less than or equal to 20
+   * uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @param feedLabel feedLabel or {@code null} for none
    */
   public DatafeedTarget setFeedLabel(java.lang.String feedLabel) {

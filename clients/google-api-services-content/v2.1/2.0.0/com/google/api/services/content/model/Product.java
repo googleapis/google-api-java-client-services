@@ -273,7 +273,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String externalSellerId;
 
   /**
-   * Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+   * Feed label for the item. Either `targetCountry` or `feedLabel` is required. Must be less than
+   * or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1291,7 +1292,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+   * Feed label for the item. Either `targetCountry` or `feedLabel` is required. Must be less than
+   * or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -1299,7 +1301,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+   * Feed label for the item. Either `targetCountry` or `feedLabel` is required. Must be less than
+   * or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @param feedLabel feedLabel or {@code null} for none
    */
   public Product setFeedLabel(java.lang.String feedLabel) {

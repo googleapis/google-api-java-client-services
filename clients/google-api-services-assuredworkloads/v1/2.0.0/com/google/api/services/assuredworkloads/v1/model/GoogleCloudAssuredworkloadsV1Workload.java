@@ -82,6 +82,13 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String displayName;
 
   /**
+   * Optional. Represents the Ekm Provisioning State of the given workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse ekmProvisioningResponse;
+
+  /**
    * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by
    * Europe/Canada customers.
    * The value may be {@code null}.
@@ -289,6 +296,23 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Represents the Ekm Provisioning State of the given workload.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse getEkmProvisioningResponse() {
+    return ekmProvisioningResponse;
+  }
+
+  /**
+   * Optional. Represents the Ekm Provisioning State of the given workload.
+   * @param ekmProvisioningResponse ekmProvisioningResponse or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setEkmProvisioningResponse(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse ekmProvisioningResponse) {
+    this.ekmProvisioningResponse = ekmProvisioningResponse;
     return this;
   }
 

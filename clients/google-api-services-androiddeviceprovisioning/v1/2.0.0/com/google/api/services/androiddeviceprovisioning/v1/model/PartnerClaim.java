@@ -73,6 +73,14 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   private java.lang.String sectionType;
 
   /**
+   * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
+   * The unique identifier of the SimLock profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long simlockProfileId;
+
+  /**
    * The ID of the customer for whom the device is being claimed.
    * @return value or {@code null} for none
    */
@@ -171,6 +179,25 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
    */
   public PartnerClaim setSectionType(java.lang.String sectionType) {
     this.sectionType = sectionType;
+    return this;
+  }
+
+  /**
+   * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
+   * The unique identifier of the SimLock profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSimlockProfileId() {
+    return simlockProfileId;
+  }
+
+  /**
+   * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
+   * The unique identifier of the SimLock profile.
+   * @param simlockProfileId simlockProfileId or {@code null} for none
+   */
+  public PartnerClaim setSimlockProfileId(java.lang.Long simlockProfileId) {
+    this.simlockProfileId = simlockProfileId;
     return this;
   }
 

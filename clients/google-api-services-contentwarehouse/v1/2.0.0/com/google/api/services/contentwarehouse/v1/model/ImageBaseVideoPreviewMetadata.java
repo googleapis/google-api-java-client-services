@@ -106,6 +106,22 @@ public final class ImageBaseVideoPreviewMetadata extends com.google.api.client.j
   private java.lang.String type;
 
   /**
+   * The end timestamp of the video segment in microseconds that this preview is generated from.
+   * Used for segmented video previews.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long videoSegmentEndUs;
+
+  /**
+   * The start timestamp of the video segment in microseconds that this preview is generated from.
+   * Used for segmented video previews.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long videoSegmentStartUs;
+
+  /**
    * Width of the stored preview.
    * The value may be {@code null}.
    */
@@ -283,6 +299,44 @@ public final class ImageBaseVideoPreviewMetadata extends com.google.api.client.j
    */
   public ImageBaseVideoPreviewMetadata setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * The end timestamp of the video segment in microseconds that this preview is generated from.
+   * Used for segmented video previews.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVideoSegmentEndUs() {
+    return videoSegmentEndUs;
+  }
+
+  /**
+   * The end timestamp of the video segment in microseconds that this preview is generated from.
+   * Used for segmented video previews.
+   * @param videoSegmentEndUs videoSegmentEndUs or {@code null} for none
+   */
+  public ImageBaseVideoPreviewMetadata setVideoSegmentEndUs(java.lang.Long videoSegmentEndUs) {
+    this.videoSegmentEndUs = videoSegmentEndUs;
+    return this;
+  }
+
+  /**
+   * The start timestamp of the video segment in microseconds that this preview is generated from.
+   * Used for segmented video previews.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVideoSegmentStartUs() {
+    return videoSegmentStartUs;
+  }
+
+  /**
+   * The start timestamp of the video segment in microseconds that this preview is generated from.
+   * Used for segmented video previews.
+   * @param videoSegmentStartUs videoSegmentStartUs or {@code null} for none
+   */
+  public ImageBaseVideoPreviewMetadata setVideoSegmentStartUs(java.lang.Long videoSegmentStartUs) {
+    this.videoSegmentStartUs = videoSegmentStartUs;
     return this;
   }
 

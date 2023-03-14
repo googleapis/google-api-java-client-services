@@ -18,8 +18,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * A single understood lexicon of the |category| on byte range from |begin_offset| (inclusive) to
- * |end_offset| (exclusive). The byte range could be a subtoken range or span across multiple
- * tokens.
+ * |end_offset| (exclusive). The offsets are all byte offsets relative to the full original query
+ * and cover both the mentions and surrounding markers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -33,7 +33,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefLexicalRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Byte offset of the begin of the |category|.
+   * Begin byte offset relative to the full original query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class RepositoryWebrefLexicalRange extends com.google.api.client.js
   private java.lang.String direction;
 
   /**
-   * Byte offset of the end of the |category|.
+   * End byte offset relative to the full original query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class RepositoryWebrefLexicalRange extends com.google.api.client.js
   private java.math.BigInteger facetMid;
 
   /**
-   * Byte offset of the begin of the |category|.
+   * Begin byte offset relative to the full original query.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBeginOffset() {
@@ -75,7 +75,7 @@ public final class RepositoryWebrefLexicalRange extends com.google.api.client.js
   }
 
   /**
-   * Byte offset of the begin of the |category|.
+   * Begin byte offset relative to the full original query.
    * @param beginOffset beginOffset or {@code null} for none
    */
   public RepositoryWebrefLexicalRange setBeginOffset(java.lang.Integer beginOffset) {
@@ -116,7 +116,7 @@ public final class RepositoryWebrefLexicalRange extends com.google.api.client.js
   }
 
   /**
-   * Byte offset of the end of the |category|.
+   * End byte offset relative to the full original query.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndOffset() {
@@ -124,7 +124,7 @@ public final class RepositoryWebrefLexicalRange extends com.google.api.client.js
   }
 
   /**
-   * Byte offset of the end of the |category|.
+   * End byte offset relative to the full original query.
    * @param endOffset endOffset or {@code null} for none
    */
   public RepositoryWebrefLexicalRange setEndOffset(java.lang.Integer endOffset) {

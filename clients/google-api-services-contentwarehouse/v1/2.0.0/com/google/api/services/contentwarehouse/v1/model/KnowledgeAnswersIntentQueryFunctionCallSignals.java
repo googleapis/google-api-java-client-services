@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 35
+ * Next ID: 36
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -246,6 +246,13 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String refxSummaryNodeId;
+
+  /**
+   * Signal data from SRM generation. Solely used internally. See: go/srm-design.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals responseMeaningSignals;
 
   /**
    * The list of result supports for this FunctionCall.
@@ -760,6 +767,23 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   public KnowledgeAnswersIntentQueryFunctionCallSignals setRefxSummaryNodeId(java.lang.String refxSummaryNodeId) {
     this.refxSummaryNodeId = refxSummaryNodeId;
+    return this;
+  }
+
+  /**
+   * Signal data from SRM generation. Solely used internally. See: go/srm-design.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals getResponseMeaningSignals() {
+    return responseMeaningSignals;
+  }
+
+  /**
+   * Signal data from SRM generation. Solely used internally. See: go/srm-design.
+   * @param responseMeaningSignals responseMeaningSignals or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryFunctionCallSignals setResponseMeaningSignals(KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals responseMeaningSignals) {
+    this.responseMeaningSignals = responseMeaningSignals;
     return this;
   }
 

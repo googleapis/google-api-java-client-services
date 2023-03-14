@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 39
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 44
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -101,6 +101,14 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private AssistantGroundingRankerGroundingProviderFeatures groundingProviderFeatures;
 
   /**
+   * Whether the interpretation has a Search answer group object, signifying it came from Search
+   * resolution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasAnswerGroup;
+
+  /**
    * This is a cross-intent feature which is calculated by iterating all intent candidates. This
    * feature should be populated in post-IG stage (before GB).
    * The value may be {@code null}.
@@ -137,6 +145,27 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isFeasible;
+
+  /**
+   * Whether the intent is fully grounded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isFullyGrounded;
+
+  /**
+   * Whether the intent is a PlayGenericMusic-type intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isPlayGenericMusic;
+
+  /**
+   * Whether the intent is a podcast intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isPodcastIntent;
 
   /**
    * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
@@ -224,6 +253,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Double numVariablesGrounded;
+
+  /**
+   * A ID corresponding to which bucket a given parsing score belongs in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer parsingScoreMse8BucketId;
 
   /**
    * Cosine similarity between predicted query-to-term model and assistant intent-type-based salient
@@ -440,6 +476,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Whether the interpretation has a Search answer group object, signifying it came from Search
+   * resolution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasAnswerGroup() {
+    return hasAnswerGroup;
+  }
+
+  /**
+   * Whether the interpretation has a Search answer group object, signifying it came from Search
+   * resolution.
+   * @param hasAnswerGroup hasAnswerGroup or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setHasAnswerGroup(java.lang.Boolean hasAnswerGroup) {
+    this.hasAnswerGroup = hasAnswerGroup;
+    return this;
+  }
+
+  /**
    * This is a cross-intent feature which is calculated by iterating all intent candidates. This
    * feature should be populated in post-IG stage (before GB).
    * @return value or {@code null} for none
@@ -527,6 +582,57 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsFeasible(java.lang.Boolean isFeasible) {
     this.isFeasible = isFeasible;
+    return this;
+  }
+
+  /**
+   * Whether the intent is fully grounded.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsFullyGrounded() {
+    return isFullyGrounded;
+  }
+
+  /**
+   * Whether the intent is fully grounded.
+   * @param isFullyGrounded isFullyGrounded or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsFullyGrounded(java.lang.Boolean isFullyGrounded) {
+    this.isFullyGrounded = isFullyGrounded;
+    return this;
+  }
+
+  /**
+   * Whether the intent is a PlayGenericMusic-type intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsPlayGenericMusic() {
+    return isPlayGenericMusic;
+  }
+
+  /**
+   * Whether the intent is a PlayGenericMusic-type intent.
+   * @param isPlayGenericMusic isPlayGenericMusic or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsPlayGenericMusic(java.lang.Boolean isPlayGenericMusic) {
+    this.isPlayGenericMusic = isPlayGenericMusic;
+    return this;
+  }
+
+  /**
+   * Whether the intent is a podcast intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsPodcastIntent() {
+    return isPodcastIntent;
+  }
+
+  /**
+   * Whether the intent is a podcast intent.
+   * @param isPodcastIntent isPodcastIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsPodcastIntent(java.lang.Boolean isPodcastIntent) {
+    this.isPodcastIntent = isPodcastIntent;
     return this;
   }
 
@@ -734,6 +840,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumVariablesGrounded(java.lang.Double numVariablesGrounded) {
     this.numVariablesGrounded = numVariablesGrounded;
+    return this;
+  }
+
+  /**
+   * A ID corresponding to which bucket a given parsing score belongs in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getParsingScoreMse8BucketId() {
+    return parsingScoreMse8BucketId;
+  }
+
+  /**
+   * A ID corresponding to which bucket a given parsing score belongs in.
+   * @param parsingScoreMse8BucketId parsingScoreMse8BucketId or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setParsingScoreMse8BucketId(java.lang.Integer parsingScoreMse8BucketId) {
+    this.parsingScoreMse8BucketId = parsingScoreMse8BucketId;
     return this;
   }
 

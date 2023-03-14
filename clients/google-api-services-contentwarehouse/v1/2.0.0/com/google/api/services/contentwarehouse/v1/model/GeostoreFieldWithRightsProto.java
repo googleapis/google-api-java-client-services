@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Proto used to represent rights for a field type. See go/geo-rights for more details. NOTE: Use
  * google3/geostore/provenance/public/rights.h or
- * google3/java/com/google/geostore/provenance/rights/Rights.swig instead of accessing this proto
+ * google3/java/com/google/geostore/provenance/rights/Rights.java instead of accessing this proto
  * directly.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

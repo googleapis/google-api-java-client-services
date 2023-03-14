@@ -52,6 +52,13 @@ public final class GeostoreSpeedLimitProto extends com.google.api.client.json.Ge
   }
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceType;
+
+  /**
    * A constant speed limit.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class GeostoreSpeedLimitProto extends com.google.api.client.json.Ge
    */
   public GeostoreSpeedLimitProto setCondition(java.util.List<GeostoreRoadConditionalProto> condition) {
     this.condition = condition;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceType() {
+    return sourceType;
+  }
+
+  /**
+   * RESERVED
+   * @param sourceType sourceType or {@code null} for none
+   */
+  public GeostoreSpeedLimitProto setSourceType(java.lang.String sourceType) {
+    this.sourceType = sourceType;
     return this;
   }
 

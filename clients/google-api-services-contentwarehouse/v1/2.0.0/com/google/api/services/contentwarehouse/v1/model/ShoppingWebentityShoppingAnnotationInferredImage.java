@@ -42,7 +42,21 @@ public final class ShoppingWebentityShoppingAnnotationInferredImage extends com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String inferredImageSource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String inferredImageType;
+
+  /**
+   * This field will only be populated if the inferred image is a neardup of an inferred image. It
+   * stores the type and source of the images it is a neardup of.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo> neardupInfo;
 
   /**
    * @return value or {@code null} for none
@@ -62,6 +76,21 @@ public final class ShoppingWebentityShoppingAnnotationInferredImage extends com.
   /**
    * @return value or {@code null} for none
    */
+  public java.lang.String getInferredImageSource() {
+    return inferredImageSource;
+  }
+
+  /**
+   * @param inferredImageSource inferredImageSource or {@code null} for none
+   */
+  public ShoppingWebentityShoppingAnnotationInferredImage setInferredImageSource(java.lang.String inferredImageSource) {
+    this.inferredImageSource = inferredImageSource;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.String getInferredImageType() {
     return inferredImageType;
   }
@@ -71,6 +100,25 @@ public final class ShoppingWebentityShoppingAnnotationInferredImage extends com.
    */
   public ShoppingWebentityShoppingAnnotationInferredImage setInferredImageType(java.lang.String inferredImageType) {
     this.inferredImageType = inferredImageType;
+    return this;
+  }
+
+  /**
+   * This field will only be populated if the inferred image is a neardup of an inferred image. It
+   * stores the type and source of the images it is a neardup of.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo> getNeardupInfo() {
+    return neardupInfo;
+  }
+
+  /**
+   * This field will only be populated if the inferred image is a neardup of an inferred image. It
+   * stores the type and source of the images it is a neardup of.
+   * @param neardupInfo neardupInfo or {@code null} for none
+   */
+  public ShoppingWebentityShoppingAnnotationInferredImage setNeardupInfo(java.util.List<ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo> neardupInfo) {
+    this.neardupInfo = neardupInfo;
     return this;
   }
 

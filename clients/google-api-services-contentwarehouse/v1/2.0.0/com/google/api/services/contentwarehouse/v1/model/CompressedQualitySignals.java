@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A message containing per doc signals that are compressed and included in Mustang and TeraGoogle.
  * For TeraGoogle, this message is included in perdocdata which means it can be used in preliminary
  * scoring. CAREFUL: For TeraGoogle, this data resides in very limited serving memory (Flash
- * storage) for a huge number of documents. Next id: 40
+ * storage) for a huge number of documents. Next id: 42
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -260,6 +260,22 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.Long productReviewPPromoteSite;
+
+  /**
+   * Fields product_review_p_review_page and product_review_p_uhq_page are for promoting/demoting
+   * HQ/LQ review pages in NGS. See go/pr-boosts for details. The possibility of a page being a
+   * review page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long productReviewPReviewPage;
+
+  /**
+   * The possibility of a page being a high quality review page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long productReviewPUhqPage;
 
   /**
    * Scam model score. Used as one of the web page quality qstar signals. Value range from 0 to
@@ -844,6 +860,44 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
    */
   public CompressedQualitySignals setProductReviewPPromoteSite(java.lang.Long productReviewPPromoteSite) {
     this.productReviewPPromoteSite = productReviewPPromoteSite;
+    return this;
+  }
+
+  /**
+   * Fields product_review_p_review_page and product_review_p_uhq_page are for promoting/demoting
+   * HQ/LQ review pages in NGS. See go/pr-boosts for details. The possibility of a page being a
+   * review page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProductReviewPReviewPage() {
+    return productReviewPReviewPage;
+  }
+
+  /**
+   * Fields product_review_p_review_page and product_review_p_uhq_page are for promoting/demoting
+   * HQ/LQ review pages in NGS. See go/pr-boosts for details. The possibility of a page being a
+   * review page.
+   * @param productReviewPReviewPage productReviewPReviewPage or {@code null} for none
+   */
+  public CompressedQualitySignals setProductReviewPReviewPage(java.lang.Long productReviewPReviewPage) {
+    this.productReviewPReviewPage = productReviewPReviewPage;
+    return this;
+  }
+
+  /**
+   * The possibility of a page being a high quality review page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProductReviewPUhqPage() {
+    return productReviewPUhqPage;
+  }
+
+  /**
+   * The possibility of a page being a high quality review page.
+   * @param productReviewPUhqPage productReviewPUhqPage or {@code null} for none
+   */
+  public CompressedQualitySignals setProductReviewPUhqPage(java.lang.Long productReviewPUhqPage) {
+    this.productReviewPUhqPage = productReviewPUhqPage;
     return this;
   }
 

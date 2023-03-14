@@ -45,12 +45,6 @@ public final class CompositeDocQualitySignals extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QualityTimebasedOldnessInfo oldnessInfo;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private QualityTimebasedPageType pagetype;
 
   /**
@@ -71,21 +65,6 @@ public final class CompositeDocQualitySignals extends com.google.api.client.json
    */
   public CompositeDocQualitySignals setLastSignificantUpdate(QualityTimebasedLastSignificantUpdate lastSignificantUpdate) {
     this.lastSignificantUpdate = lastSignificantUpdate;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public QualityTimebasedOldnessInfo getOldnessInfo() {
-    return oldnessInfo;
-  }
-
-  /**
-   * @param oldnessInfo oldnessInfo or {@code null} for none
-   */
-  public CompositeDocQualitySignals setOldnessInfo(QualityTimebasedOldnessInfo oldnessInfo) {
-    this.oldnessInfo = oldnessInfo;
     return this;
   }
 

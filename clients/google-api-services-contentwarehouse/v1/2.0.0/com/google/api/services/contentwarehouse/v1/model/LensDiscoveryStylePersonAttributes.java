@@ -17,12 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This message holds person attributes from the LookNet-Person model (go/looknet-person) and the
- * Style AI Iconic Person Scorer (http://go/styleai-indexing-g3doc#iconic-person-scorer) for the
- * most iconic person in a style image. There is an ongoing collaboration with the Human Sensing
- * team on LookNet-Person v3 (go/looknet-person-v3-collaboration) that deals with some of these
- * signals together. Hence, the combined proto definition. Discretization of float values is
- * recommended by CDS for cheaper and more efficient storage. Next ID: 11
+ * This message holds person attributes from the Person Interpreter model (go/person-interpreter)
+ * and the Style AI Iconic Person Scorer (go/styleai-indexing-g3doc#iconic-person-scorer) for the
+ * most iconic person in a style image. Discretization of float values is recommended by CDS for
+ * cheaper and more efficient storage. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -38,6 +38,13 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentResponse extends c
   private GoogleCloudContentwarehouseV1Document document;
 
   /**
+   * post-processing LROs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleLongrunningOperation> longRunningOperations;
+
+  /**
    * Additional information for the API invocation, such as the request tracking id.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GoogleCloudContentwarehouseV1CreateDocumentResponse extends c
    */
   public GoogleCloudContentwarehouseV1CreateDocumentResponse setDocument(GoogleCloudContentwarehouseV1Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * post-processing LROs
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleLongrunningOperation> getLongRunningOperations() {
+    return longRunningOperations;
+  }
+
+  /**
+   * post-processing LROs
+   * @param longRunningOperations longRunningOperations or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1CreateDocumentResponse setLongRunningOperations(java.util.List<GoogleLongrunningOperation> longRunningOperations) {
+    this.longRunningOperations = longRunningOperations;
     return this;
   }
 

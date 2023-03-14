@@ -31,8 +31,8 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
-   * is available when the resource belongs(directly or cascadingly) to one or more folders.
+   * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the resource belongs (directly or cascadingly) to one or more folders.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +47,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   private java.lang.String fullResourceName;
 
   /**
-   * The organization that this resource belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs(directly
-   * or cascadingly) to an organization.
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to an organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,16 +64,16 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   private java.lang.String parent;
 
   /**
-   * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
-   * is available when the resource belongs to a project.
+   * The project that this resource belongs to, in the format of projects/{PROJECT_NUMBER}. This
+   * field is available when the resource belongs to a project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
-   * is available when the resource belongs(directly or cascadingly) to one or more folders.
+   * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the resource belongs (directly or cascadingly) to one or more folders.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFolders() {
@@ -81,8 +81,8 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
-   * is available when the resource belongs(directly or cascadingly) to one or more folders.
+   * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the resource belongs (directly or cascadingly) to one or more folders.
    * @param folders folders or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource setFolders(java.util.List<java.lang.String> folders) {
@@ -110,9 +110,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The organization that this resource belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs(directly
-   * or cascadingly) to an organization.
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to an organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganization() {
@@ -120,9 +120,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The organization that this resource belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs(directly
-   * or cascadingly) to an organization.
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to an organization.
    * @param organization organization or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource setOrganization(java.lang.String organization) {
@@ -150,8 +150,8 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
-   * is available when the resource belongs to a project.
+   * The project that this resource belongs to, in the format of projects/{PROJECT_NUMBER}. This
+   * field is available when the resource belongs to a project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -159,8 +159,8 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
-   * is available when the resource belongs to a project.
+   * The project that this resource belongs to, in the format of projects/{PROJECT_NUMBER}. This
+   * field is available when the resource belongs to a project.
    * @param project project or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource setProject(java.lang.String project) {

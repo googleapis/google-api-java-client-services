@@ -41,17 +41,18 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   private java.lang.String attachedResource;
 
   /**
-   * The folder(s) that this IAM policy belongs to, in the form of folders/{FOLDER_NUMBER}. This
-   * field is available when the IAM policy belongs(directly or cascadingly) to one or more folders.
+   * The folder(s) that this IAM policy belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the IAM policy belongs (directly or cascadingly) to one or more
+   * folders.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> folders;
 
   /**
-   * The organization that this IAM policy belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy
-   * belongs(directly or cascadingly) to an organization.
+   * The organization that this IAM policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy belongs
+   * (directly or cascadingly) to an organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   private Policy policy;
 
   /**
-   * The project that this IAM policy belongs to, in the form of projects/{PROJECT_NUMBER}. This
+   * The project that this IAM policy belongs to, in the format of projects/{PROJECT_NUMBER}. This
    * field is available when the IAM policy belongs to a project.
    * The value may be {@code null}.
    */
@@ -96,8 +97,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The folder(s) that this IAM policy belongs to, in the form of folders/{FOLDER_NUMBER}. This
-   * field is available when the IAM policy belongs(directly or cascadingly) to one or more folders.
+   * The folder(s) that this IAM policy belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the IAM policy belongs (directly or cascadingly) to one or more
+   * folders.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFolders() {
@@ -105,8 +107,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The folder(s) that this IAM policy belongs to, in the form of folders/{FOLDER_NUMBER}. This
-   * field is available when the IAM policy belongs(directly or cascadingly) to one or more folders.
+   * The folder(s) that this IAM policy belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the IAM policy belongs (directly or cascadingly) to one or more
+   * folders.
    * @param folders folders or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy setFolders(java.util.List<java.lang.String> folders) {
@@ -115,9 +118,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The organization that this IAM policy belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy
-   * belongs(directly or cascadingly) to an organization.
+   * The organization that this IAM policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy belongs
+   * (directly or cascadingly) to an organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganization() {
@@ -125,9 +128,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The organization that this IAM policy belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy
-   * belongs(directly or cascadingly) to an organization.
+   * The organization that this IAM policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy belongs
+   * (directly or cascadingly) to an organization.
    * @param organization organization or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy setOrganization(java.lang.String organization) {
@@ -153,7 +156,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The project that this IAM policy belongs to, in the form of projects/{PROJECT_NUMBER}. This
+   * The project that this IAM policy belongs to, in the format of projects/{PROJECT_NUMBER}. This
    * field is available when the IAM policy belongs to a project.
    * @return value or {@code null} for none
    */
@@ -162,7 +165,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The project that this IAM policy belongs to, in the form of projects/{PROJECT_NUMBER}. This
+   * The project that this IAM policy belongs to, in the format of projects/{PROJECT_NUMBER}. This
    * field is available when the IAM policy belongs to a project.
    * @param project project or {@code null} for none
    */

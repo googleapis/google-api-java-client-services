@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Fields related to the [Best Sellers
+ * Fields related to the [Best sellers
  * reports](https://support.google.com/merchants/answer/9488679).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

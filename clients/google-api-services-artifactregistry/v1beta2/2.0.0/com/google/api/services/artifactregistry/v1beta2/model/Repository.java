@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1beta2.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the repository was created.
+   * Output only. The time when the repository was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,14 +101,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeBytes;
 
   /**
-   * The time when the repository was last updated.
+   * Output only. The time when the repository was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The time when the repository was created.
+   * Output only. The time when the repository was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -116,7 +116,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the repository was created.
+   * Output only. The time when the repository was created.
    * @param createTime createTime or {@code null} for none
    */
   public Repository setCreateTime(String createTime) {
@@ -275,7 +275,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the repository was last updated.
+   * Output only. The time when the repository was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -283,7 +283,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the repository was last updated.
+   * Output only. The time when the repository was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Repository setUpdateTime(String updateTime) {

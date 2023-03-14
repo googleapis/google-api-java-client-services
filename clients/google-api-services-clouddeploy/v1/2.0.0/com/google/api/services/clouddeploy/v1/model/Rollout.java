@@ -55,6 +55,15 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String approveTime;
 
   /**
+   * Output only. Name of the `ControllerRollout`. Format is projects/{project}/
+   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
+   * releases/{release}/rollouts/a-z{0,62}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String controllerRollout;
+
+  /**
    * Output only. Time at which the `Rollout` was created.
    * The value may be {@code null}.
    */
@@ -234,6 +243,27 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setApproveTime(String approveTime) {
     this.approveTime = approveTime;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the `ControllerRollout`. Format is projects/{project}/
+   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
+   * releases/{release}/rollouts/a-z{0,62}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getControllerRollout() {
+    return controllerRollout;
+  }
+
+  /**
+   * Output only. Name of the `ControllerRollout`. Format is projects/{project}/
+   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
+   * releases/{release}/rollouts/a-z{0,62}.
+   * @param controllerRollout controllerRollout or {@code null} for none
+   */
+  public Rollout setControllerRollout(java.lang.String controllerRollout) {
+    this.controllerRollout = controllerRollout;
     return this;
   }
 

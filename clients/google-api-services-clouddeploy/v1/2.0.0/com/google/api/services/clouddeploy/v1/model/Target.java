@@ -107,6 +107,13 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Information specifying a multiTarget.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiTarget multiTarget;
+
+  /**
    * Optional. Name of the `Target`. Format is
    * projects/{project}/locations/{location}/targets/a-z{0,62}.
    * The value may be {@code null}.
@@ -308,6 +315,23 @@ public final class Target extends com.google.api.client.json.GenericJson {
    */
   public Target setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Information specifying a multiTarget.
+   * @return value or {@code null} for none
+   */
+  public MultiTarget getMultiTarget() {
+    return multiTarget;
+  }
+
+  /**
+   * Information specifying a multiTarget.
+   * @param multiTarget multiTarget or {@code null} for none
+   */
+  public Target setMultiTarget(MultiTarget multiTarget) {
+    this.multiTarget = multiTarget;
     return this;
   }
 

@@ -32,6 +32,20 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class JobRun extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Information specific to an advanceChildRollout `JobRun`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvanceChildRolloutJobRun advanceChildRolloutJobRun;
+
+  /**
+   * Output only. Information specific to a createChildRollout `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateChildRolloutJobRun createChildRolloutJobRun;
+
+  /**
    * Output only. Time at which the `JobRun` was created.
    * The value may be {@code null}.
    */
@@ -110,6 +124,40 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VerifyJobRun verifyJobRun;
+
+  /**
+   * Output only. Information specific to an advanceChildRollout `JobRun`
+   * @return value or {@code null} for none
+   */
+  public AdvanceChildRolloutJobRun getAdvanceChildRolloutJobRun() {
+    return advanceChildRolloutJobRun;
+  }
+
+  /**
+   * Output only. Information specific to an advanceChildRollout `JobRun`
+   * @param advanceChildRolloutJobRun advanceChildRolloutJobRun or {@code null} for none
+   */
+  public JobRun setAdvanceChildRolloutJobRun(AdvanceChildRolloutJobRun advanceChildRolloutJobRun) {
+    this.advanceChildRolloutJobRun = advanceChildRolloutJobRun;
+    return this;
+  }
+
+  /**
+   * Output only. Information specific to a createChildRollout `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public CreateChildRolloutJobRun getCreateChildRolloutJobRun() {
+    return createChildRolloutJobRun;
+  }
+
+  /**
+   * Output only. Information specific to a createChildRollout `JobRun`.
+   * @param createChildRolloutJobRun createChildRolloutJobRun or {@code null} for none
+   */
+  public JobRun setCreateChildRolloutJobRun(CreateChildRolloutJobRun createChildRolloutJobRun) {
+    this.createChildRolloutJobRun = createChildRolloutJobRun;
+    return this;
+  }
 
   /**
    * Output only. Time at which the `JobRun` was created.

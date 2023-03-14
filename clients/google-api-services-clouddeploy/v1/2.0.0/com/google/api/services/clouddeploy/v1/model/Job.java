@@ -31,6 +31,20 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. An advanceChildRollout Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvanceChildRolloutJob advanceChildRolloutJob;
+
+  /**
+   * Output only. A createChildRollout Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateChildRolloutJob createChildRolloutJob;
+
+  /**
    * Output only. A deploy Job.
    * The value may be {@code null}.
    */
@@ -64,6 +78,40 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VerifyJob verifyJob;
+
+  /**
+   * Output only. An advanceChildRollout Job.
+   * @return value or {@code null} for none
+   */
+  public AdvanceChildRolloutJob getAdvanceChildRolloutJob() {
+    return advanceChildRolloutJob;
+  }
+
+  /**
+   * Output only. An advanceChildRollout Job.
+   * @param advanceChildRolloutJob advanceChildRolloutJob or {@code null} for none
+   */
+  public Job setAdvanceChildRolloutJob(AdvanceChildRolloutJob advanceChildRolloutJob) {
+    this.advanceChildRolloutJob = advanceChildRolloutJob;
+    return this;
+  }
+
+  /**
+   * Output only. A createChildRollout Job.
+   * @return value or {@code null} for none
+   */
+  public CreateChildRolloutJob getCreateChildRolloutJob() {
+    return createChildRolloutJob;
+  }
+
+  /**
+   * Output only. A createChildRollout Job.
+   * @param createChildRolloutJob createChildRolloutJob or {@code null} for none
+   */
+  public Job setCreateChildRolloutJob(CreateChildRolloutJob createChildRolloutJob) {
+    this.createChildRolloutJob = createChildRolloutJob;
+    return this;
+  }
 
   /**
    * Output only. A deploy Job.

@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * LINT.IfChange Configuration describing device targeting criteria for the content of an app.
+ * Configuration describing device targeting criteria for the content of an app.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

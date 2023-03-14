@@ -1221,6 +1221,178 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Returns a customized report of data access records. The report provides records of each time a
+     * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
+     * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+     * This method is only available to Administrators. These data access records include GA4 UI
+     * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+     * retrieve data from Google Analytics through a linkage. These records don't include property
+     * configuration changes like adding a stream or changing a property's time zone. For configuration
+     * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
+     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+     *
+     * Create a request for the method "accounts.runAccessReport".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportRequest}
+     * @return the request
+     */
+    public RunAccessReport runAccessReport(java.lang.String entity, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportRequest content) throws java.io.IOException {
+      RunAccessReport result = new RunAccessReport(entity, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RunAccessReport extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+entity}:runAccessReport";
+
+      private final java.util.regex.Pattern ENTITY_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+      /**
+       * Returns a customized report of data access records. The report provides records of each time a
+       * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
+       * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+       * This method is only available to Administrators. These data access records include GA4 UI
+       * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+       * retrieve data from Google Analytics through a linkage. These records don't include property
+       * configuration changes like adding a stream or changing a property's time zone. For
+       * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
+       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+       *
+       * Create a request for the method "accounts.runAccessReport".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
+       * operation. <p> {@link RunAccessReport#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportRequest}
+       * @since 1.13
+       */
+      protected RunAccessReport(java.lang.String entity, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportResponse.class);
+        this.entity = com.google.api.client.util.Preconditions.checkNotNull(entity, "Required parameter entity must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ENTITY_PATTERN.matcher(entity).matches(),
+              "Parameter entity must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public RunAccessReport set$Xgafv(java.lang.String $Xgafv) {
+        return (RunAccessReport) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RunAccessReport setAccessToken(java.lang.String accessToken) {
+        return (RunAccessReport) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RunAccessReport setAlt(java.lang.String alt) {
+        return (RunAccessReport) super.setAlt(alt);
+      }
+
+      @Override
+      public RunAccessReport setCallback(java.lang.String callback) {
+        return (RunAccessReport) super.setCallback(callback);
+      }
+
+      @Override
+      public RunAccessReport setFields(java.lang.String fields) {
+        return (RunAccessReport) super.setFields(fields);
+      }
+
+      @Override
+      public RunAccessReport setKey(java.lang.String key) {
+        return (RunAccessReport) super.setKey(key);
+      }
+
+      @Override
+      public RunAccessReport setOauthToken(java.lang.String oauthToken) {
+        return (RunAccessReport) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RunAccessReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RunAccessReport) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RunAccessReport setQuotaUser(java.lang.String quotaUser) {
+        return (RunAccessReport) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RunAccessReport setUploadType(java.lang.String uploadType) {
+        return (RunAccessReport) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RunAccessReport setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RunAccessReport) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String entity;
+
+      /** The Data Access Report supports requesting at the property level or account level. If requested at
+     the account level, Data Access Reports include all access for all properties under that account. To
+     request at the property level, entity should be for example 'properties/123' if "123" is your GA4
+     property ID. To request at the account level, entity should be for example 'accounts/1234' if
+     "1234" is your GA4 Account ID.
+       */
+      public java.lang.String getEntity() {
+        return entity;
+      }
+
+      /**
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       */
+      public RunAccessReport setEntity(java.lang.String entity) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ENTITY_PATTERN.matcher(entity).matches(),
+              "Parameter entity must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+        this.entity = entity;
+        return this;
+      }
+
+      @Override
+      public RunAccessReport set(String parameterName, Object value) {
+        return (RunAccessReport) super.set(parameterName, value);
+      }
+    }
+    /**
      * Searches through all changes to an account or its children given the specified set of filters.
      *
      * Create a request for the method "accounts.searchChangeHistoryEvents".
@@ -1532,9 +1704,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-       *        accounts/{account} - properties/{property}
+       * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field in DeleteAccessBindingRequest messages must match this field.
+       *        Formats: - accounts/{account} - properties/{property}
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
        * @return the request
        */
@@ -1562,9 +1734,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-       *        accounts/{account} - properties/{property}
+         * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field in DeleteAccessBindingRequest messages must match this field.
+       *        Formats: - accounts/{account} - properties/{property}
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
          * @since 1.13
          */
@@ -1634,15 +1806,15 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field in DeleteAccessBindingRequest messages must match
+         * this field. Formats: - accounts/{account} - properties/{property}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account or property that owns the access bindings. The parent field in the
-       DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+        /** Required. The account or property that owns the access bindings. The parent of all provided values
+       for the 'names' field in DeleteAccessBindingRequest messages must match this field. Formats: -
        accounts/{account} - properties/{property}
          */
         public java.lang.String getParent() {
@@ -1650,9 +1822,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field in DeleteAccessBindingRequest messages must match
+         * this field. Formats: - accounts/{account} - properties/{property}
          */
         public BatchDelete setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1856,8 +2028,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       * @param parent Required. The account or property that owns the access bindings. The parent of all provided
+       *        AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: -
        *        accounts/{account} - properties/{property}
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
        * @return the request
@@ -1886,8 +2058,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * @param parent Required. The account or property that owns the access bindings. The parent of all provided
+       *        AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: -
        *        accounts/{account} - properties/{property}
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
          * @since 1.13
@@ -1958,15 +2130,15 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided AccessBinding in UpdateAccessBindingRequest messages must match this field.
+         * Formats: - accounts/{account} - properties/{property}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account or property that owns the access bindings. The parent field in the
-       UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+        /** Required. The account or property that owns the access bindings. The parent of all provided
+       AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: -
        accounts/{account} - properties/{property}
          */
         public java.lang.String getParent() {
@@ -1974,9 +2146,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided AccessBinding in UpdateAccessBindingRequest messages must match this field.
+         * Formats: - accounts/{account} - properties/{property}
          */
         public BatchUpdate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4530,6 +4702,108 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20
+     * connected site tags per property. Note: This API cannot be used on GA4 properties.
+     *
+     * Create a request for the method "properties.createConnectedSiteTag".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link CreateConnectedSiteTag#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest}
+     * @return the request
+     */
+    public CreateConnectedSiteTag createConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest content) throws java.io.IOException {
+      CreateConnectedSiteTag result = new CreateConnectedSiteTag(content);
+      initialize(result);
+      return result;
+    }
+
+    public class CreateConnectedSiteTag extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:createConnectedSiteTag";
+
+      /**
+       * Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20
+       * connected site tags per property. Note: This API cannot be used on GA4 properties.
+       *
+       * Create a request for the method "properties.createConnectedSiteTag".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link CreateConnectedSiteTag#execute()} method to invoke the
+       * remote operation. <p> {@link CreateConnectedSiteTag#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest}
+       * @since 1.13
+       */
+      protected CreateConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagResponse.class);
+      }
+
+      @Override
+      public CreateConnectedSiteTag set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateConnectedSiteTag) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setAccessToken(java.lang.String accessToken) {
+        return (CreateConnectedSiteTag) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setAlt(java.lang.String alt) {
+        return (CreateConnectedSiteTag) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setCallback(java.lang.String callback) {
+        return (CreateConnectedSiteTag) super.setCallback(callback);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setFields(java.lang.String fields) {
+        return (CreateConnectedSiteTag) super.setFields(fields);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setKey(java.lang.String key) {
+        return (CreateConnectedSiteTag) super.setKey(key);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setOauthToken(java.lang.String oauthToken) {
+        return (CreateConnectedSiteTag) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CreateConnectedSiteTag) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setQuotaUser(java.lang.String quotaUser) {
+        return (CreateConnectedSiteTag) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setUploadType(java.lang.String uploadType) {
+        return (CreateConnectedSiteTag) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateConnectedSiteTag setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateConnectedSiteTag) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CreateConnectedSiteTag set(String parameterName, Object value) {
+        return (CreateConnectedSiteTag) super.set(parameterName, value);
+      }
+    }
+    /**
      * Marks target Property as soft-deleted (ie: "trashed") and returns it. This API does not have a
      * method to restore soft-deleted properties. However, they can be restored using the Trash Can UI.
      * If the properties are not restored before the expiration time, the Property and all child
@@ -4675,6 +4949,108 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a connected site tag for a Universal Analytics property. Note: this has no effect on GA4
+     * properties.
+     *
+     * Create a request for the method "properties.deleteConnectedSiteTag".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link DeleteConnectedSiteTag#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest}
+     * @return the request
+     */
+    public DeleteConnectedSiteTag deleteConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest content) throws java.io.IOException {
+      DeleteConnectedSiteTag result = new DeleteConnectedSiteTag(content);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteConnectedSiteTag extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+      private static final String REST_PATH = "v1alpha/properties:deleteConnectedSiteTag";
+
+      /**
+       * Deletes a connected site tag for a Universal Analytics property. Note: this has no effect on
+       * GA4 properties.
+       *
+       * Create a request for the method "properties.deleteConnectedSiteTag".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link DeleteConnectedSiteTag#execute()} method to invoke the
+       * remote operation. <p> {@link DeleteConnectedSiteTag#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest}
+       * @since 1.13
+       */
+      protected DeleteConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteConnectedSiteTag) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setAccessToken(java.lang.String accessToken) {
+        return (DeleteConnectedSiteTag) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setAlt(java.lang.String alt) {
+        return (DeleteConnectedSiteTag) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setCallback(java.lang.String callback) {
+        return (DeleteConnectedSiteTag) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setFields(java.lang.String fields) {
+        return (DeleteConnectedSiteTag) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setKey(java.lang.String key) {
+        return (DeleteConnectedSiteTag) super.setKey(key);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setOauthToken(java.lang.String oauthToken) {
+        return (DeleteConnectedSiteTag) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteConnectedSiteTag) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteConnectedSiteTag) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setUploadType(java.lang.String uploadType) {
+        return (DeleteConnectedSiteTag) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteConnectedSiteTag) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public DeleteConnectedSiteTag set(String parameterName, Object value) {
+        return (DeleteConnectedSiteTag) super.set(parameterName, value);
       }
     }
     /**
@@ -5607,6 +5983,108 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected site
+     * tags will be returned. Note: this has no effect on GA4 property.
+     *
+     * Create a request for the method "properties.listConnectedSiteTags".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link ListConnectedSiteTags#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest}
+     * @return the request
+     */
+    public ListConnectedSiteTags listConnectedSiteTags(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest content) throws java.io.IOException {
+      ListConnectedSiteTags result = new ListConnectedSiteTags(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ListConnectedSiteTags extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:listConnectedSiteTags";
+
+      /**
+       * Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected
+       * site tags will be returned. Note: this has no effect on GA4 property.
+       *
+       * Create a request for the method "properties.listConnectedSiteTags".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link ListConnectedSiteTags#execute()} method to invoke the
+       * remote operation. <p> {@link ListConnectedSiteTags#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest}
+       * @since 1.13
+       */
+      protected ListConnectedSiteTags(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse.class);
+      }
+
+      @Override
+      public ListConnectedSiteTags set$Xgafv(java.lang.String $Xgafv) {
+        return (ListConnectedSiteTags) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListConnectedSiteTags setAccessToken(java.lang.String accessToken) {
+        return (ListConnectedSiteTags) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListConnectedSiteTags setAlt(java.lang.String alt) {
+        return (ListConnectedSiteTags) super.setAlt(alt);
+      }
+
+      @Override
+      public ListConnectedSiteTags setCallback(java.lang.String callback) {
+        return (ListConnectedSiteTags) super.setCallback(callback);
+      }
+
+      @Override
+      public ListConnectedSiteTags setFields(java.lang.String fields) {
+        return (ListConnectedSiteTags) super.setFields(fields);
+      }
+
+      @Override
+      public ListConnectedSiteTags setKey(java.lang.String key) {
+        return (ListConnectedSiteTags) super.setKey(key);
+      }
+
+      @Override
+      public ListConnectedSiteTags setOauthToken(java.lang.String oauthToken) {
+        return (ListConnectedSiteTags) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListConnectedSiteTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListConnectedSiteTags) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListConnectedSiteTags setQuotaUser(java.lang.String quotaUser) {
+        return (ListConnectedSiteTags) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListConnectedSiteTags setUploadType(java.lang.String uploadType) {
+        return (ListConnectedSiteTags) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListConnectedSiteTags setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListConnectedSiteTags) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ListConnectedSiteTags set(String parameterName, Object value) {
+        return (ListConnectedSiteTags) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates a property.
      *
      * Create a request for the method "properties.patch".
@@ -5789,8 +6267,11 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
      * operation.
      *
-     * @param entity The Data Access Report is requested for this property. For example if "123" is your GA4 property ID,
-     *        then entity should be "properties/123".
+     * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
      * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportRequest}
      * @return the request
      */
@@ -5826,8 +6307,11 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param entity The Data Access Report is requested for this property. For example if "123" is your GA4 property ID,
-     *        then entity should be "properties/123".
+       * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRunAccessReportRequest}
        * @since 1.13
        */
@@ -5897,22 +6381,31 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The Data Access Report is requested for this property. For example if "123" is your GA4
-       * property ID, then entity should be "properties/123".
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String entity;
 
-      /** The Data Access Report is requested for this property. For example if "123" is your GA4 property
-     ID, then entity should be "properties/123".
+      /** The Data Access Report supports requesting at the property level or account level. If requested at
+     the account level, Data Access Reports include all access for all properties under that account. To
+     request at the property level, entity should be for example 'properties/123' if "123" is your GA4
+     property ID. To request at the account level, entity should be for example 'accounts/1234' if
+     "1234" is your GA4 Account ID.
        */
       public java.lang.String getEntity() {
         return entity;
       }
 
       /**
-       * The Data Access Report is requested for this property. For example if "123" is your GA4
-       * property ID, then entity should be "properties/123".
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
        */
       public RunAccessReport setEntity(java.lang.String entity) {
         if (!getSuppressPatternChecks()) {
@@ -6716,9 +7209,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-       *        accounts/{account} - properties/{property}
+       * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field in DeleteAccessBindingRequest messages must match this field.
+       *        Formats: - accounts/{account} - properties/{property}
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
        * @return the request
        */
@@ -6746,9 +7239,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-       *        accounts/{account} - properties/{property}
+         * @param parent Required. The account or property that owns the access bindings. The parent of all provided values
+       *        for the 'names' field in DeleteAccessBindingRequest messages must match this field.
+       *        Formats: - accounts/{account} - properties/{property}
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest}
          * @since 1.13
          */
@@ -6818,15 +7311,15 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field in DeleteAccessBindingRequest messages must match
+         * this field. Formats: - accounts/{account} - properties/{property}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account or property that owns the access bindings. The parent field in the
-       DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
+        /** Required. The account or property that owns the access bindings. The parent of all provided values
+       for the 'names' field in DeleteAccessBindingRequest messages must match this field. Formats: -
        accounts/{account} - properties/{property}
          */
         public java.lang.String getParent() {
@@ -6834,9 +7327,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * DeleteAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided values for the 'names' field in DeleteAccessBindingRequest messages must match
+         * this field. Formats: - accounts/{account} - properties/{property}
          */
         public BatchDelete setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -7040,8 +7533,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+       * @param parent Required. The account or property that owns the access bindings. The parent of all provided
+       *        AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: -
        *        accounts/{account} - properties/{property}
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
        * @return the request
@@ -7070,8 +7563,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account or property that owns the access bindings. The parent field in the
-       *        UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+         * @param parent Required. The account or property that owns the access bindings. The parent of all provided
+       *        AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: -
        *        accounts/{account} - properties/{property}
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequest}
          * @since 1.13
@@ -7142,15 +7635,15 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided AccessBinding in UpdateAccessBindingRequest messages must match this field.
+         * Formats: - accounts/{account} - properties/{property}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account or property that owns the access bindings. The parent field in the
-       UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
+        /** Required. The account or property that owns the access bindings. The parent of all provided
+       AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: -
        accounts/{account} - properties/{property}
          */
         public java.lang.String getParent() {
@@ -7158,9 +7651,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The account or property that owns the access bindings. The parent field in the
-         * UpdateAccessBindingRequest messages must either be empty or match this field. Formats: -
-         * accounts/{account} - properties/{property}
+         * Required. The account or property that owns the access bindings. The parent of all
+         * provided AccessBinding in UpdateAccessBindingRequest messages must match this field.
+         * Formats: - accounts/{account} - properties/{property}
          */
         public BatchUpdate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -11748,6 +12241,162 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
+       * Returns the enhanced measurement settings for this data stream. Note that the stream must enable
+       * enhanced measurement for these settings to take effect.
+       *
+       * Create a request for the method "dataStreams.getEnhancedMeasurementSettings".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetEnhancedMeasurementSettings#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param name Required. The name of the settings to lookup. Format:
+       *        properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+       *        "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+       * @return the request
+       */
+      public GetEnhancedMeasurementSettings getEnhancedMeasurementSettings(java.lang.String name) throws java.io.IOException {
+        GetEnhancedMeasurementSettings result = new GetEnhancedMeasurementSettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetEnhancedMeasurementSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+/enhancedMeasurementSettings$");
+
+        /**
+         * Returns the enhanced measurement settings for this data stream. Note that the stream must
+         * enable enhanced measurement for these settings to take effect.
+         *
+         * Create a request for the method "dataStreams.getEnhancedMeasurementSettings".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link GetEnhancedMeasurementSettings#execute()} method to invoke
+         * the remote operation. <p> {@link GetEnhancedMeasurementSettings#initialize(com.google.api.clien
+         * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the settings to lookup. Format:
+       *        properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+       *        "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         * @since 1.13
+         */
+        protected GetEnhancedMeasurementSettings(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/enhancedMeasurementSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetEnhancedMeasurementSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setAccessToken(java.lang.String accessToken) {
+          return (GetEnhancedMeasurementSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setAlt(java.lang.String alt) {
+          return (GetEnhancedMeasurementSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setCallback(java.lang.String callback) {
+          return (GetEnhancedMeasurementSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setFields(java.lang.String fields) {
+          return (GetEnhancedMeasurementSettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setKey(java.lang.String key) {
+          return (GetEnhancedMeasurementSettings) super.setKey(key);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setOauthToken(java.lang.String oauthToken) {
+          return (GetEnhancedMeasurementSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetEnhancedMeasurementSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetEnhancedMeasurementSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setUploadType(java.lang.String uploadType) {
+          return (GetEnhancedMeasurementSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetEnhancedMeasurementSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the settings to lookup. Format:
+         * properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+         * "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the settings to lookup. Format:
+       properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+       "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the settings to lookup. Format:
+         * properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+         * "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         */
+        public GetEnhancedMeasurementSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/enhancedMeasurementSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetEnhancedMeasurementSettings set(String parameterName, Object value) {
+          return (GetEnhancedMeasurementSettings) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns the Site Tag for the specified web stream. Site Tags are immutable singletons.
        *
        * Create a request for the method "dataStreams.getGlobalSiteTag".
@@ -12255,6 +12904,180 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the enhanced measurement settings for this data stream. Note that the stream must enable
+       * enhanced measurement for these settings to take effect.
+       *
+       * Create a request for the method "dataStreams.updateEnhancedMeasurementSettings".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link UpdateEnhancedMeasurementSettings#execute()} method to
+       * invoke the remote operation.
+       *
+       * @param name Output only. Resource name of the Enhanced Measurement Settings. Format:
+       *        properties/{property_id}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+       *        "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings}
+       * @return the request
+       */
+      public UpdateEnhancedMeasurementSettings updateEnhancedMeasurementSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings content) throws java.io.IOException {
+        UpdateEnhancedMeasurementSettings result = new UpdateEnhancedMeasurementSettings(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateEnhancedMeasurementSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+/enhancedMeasurementSettings$");
+
+        /**
+         * Updates the enhanced measurement settings for this data stream. Note that the stream must
+         * enable enhanced measurement for these settings to take effect.
+         *
+         * Create a request for the method "dataStreams.updateEnhancedMeasurementSettings".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link UpdateEnhancedMeasurementSettings#execute()} method to
+         * invoke the remote operation. <p> {@link UpdateEnhancedMeasurementSettings#initialize(com.google
+         * .api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of the Enhanced Measurement Settings. Format:
+       *        properties/{property_id}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+       *        "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings}
+         * @since 1.13
+         */
+        protected UpdateEnhancedMeasurementSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/enhancedMeasurementSettings$");
+          }
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateEnhancedMeasurementSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setAccessToken(java.lang.String accessToken) {
+          return (UpdateEnhancedMeasurementSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setAlt(java.lang.String alt) {
+          return (UpdateEnhancedMeasurementSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setCallback(java.lang.String callback) {
+          return (UpdateEnhancedMeasurementSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setFields(java.lang.String fields) {
+          return (UpdateEnhancedMeasurementSettings) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setKey(java.lang.String key) {
+          return (UpdateEnhancedMeasurementSettings) super.setKey(key);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setOauthToken(java.lang.String oauthToken) {
+          return (UpdateEnhancedMeasurementSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateEnhancedMeasurementSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateEnhancedMeasurementSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setUploadType(java.lang.String uploadType) {
+          return (UpdateEnhancedMeasurementSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateEnhancedMeasurementSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of the Enhanced Measurement Settings. Format:
+         * properties/{property_id}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+         * "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of the Enhanced Measurement Settings. Format:
+       properties/{property_id}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+       "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of the Enhanced Measurement Settings. Format:
+         * properties/{property_id}/dataStreams/{data_stream}/enhancedMeasurementSettings Example:
+         * "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+         */
+        public UpdateEnhancedMeasurementSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/enhancedMeasurementSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public UpdateEnhancedMeasurementSettings setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateEnhancedMeasurementSettings set(String parameterName, Object value) {
+          return (UpdateEnhancedMeasurementSettings) super.set(parameterName, value);
         }
       }
 

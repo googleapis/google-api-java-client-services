@@ -30,6 +30,13 @@ package com.google.api.services.analyticshub.v1beta1.model;
 public final class RestrictedExportConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, enable restricted export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabled;
+
+  /**
    * If true, restrict direct table access(read api/tabledata.list) on linked table.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class RestrictedExportConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean restrictQueryResult;
+
+  /**
+   * If true, enable restricted export.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabled() {
+    return enabled;
+  }
+
+  /**
+   * If true, enable restricted export.
+   * @param enabled enabled or {@code null} for none
+   */
+  public RestrictedExportConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
+    return this;
+  }
 
   /**
    * If true, restrict direct table access(read api/tabledata.list) on linked table.

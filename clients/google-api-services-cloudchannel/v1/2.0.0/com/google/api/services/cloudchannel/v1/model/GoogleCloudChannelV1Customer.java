@@ -63,6 +63,14 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   private GoogleCloudChannelV1CloudIdentityInfo cloudIdentityInfo;
 
   /**
+   * Optional. External CRM ID for the customer. Populated only if a CRM ID exists for this
+   * customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String correlationId;
+
+  /**
    * Output only. Time when the customer was created.
    * The value may be {@code null}.
    */
@@ -197,6 +205,25 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
    */
   public GoogleCloudChannelV1Customer setCloudIdentityInfo(GoogleCloudChannelV1CloudIdentityInfo cloudIdentityInfo) {
     this.cloudIdentityInfo = cloudIdentityInfo;
+    return this;
+  }
+
+  /**
+   * Optional. External CRM ID for the customer. Populated only if a CRM ID exists for this
+   * customer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCorrelationId() {
+    return correlationId;
+  }
+
+  /**
+   * Optional. External CRM ID for the customer. Populated only if a CRM ID exists for this
+   * customer.
+   * @param correlationId correlationId or {@code null} for none
+   */
+  public GoogleCloudChannelV1Customer setCorrelationId(java.lang.String correlationId) {
+    this.correlationId = correlationId;
     return this;
   }
 

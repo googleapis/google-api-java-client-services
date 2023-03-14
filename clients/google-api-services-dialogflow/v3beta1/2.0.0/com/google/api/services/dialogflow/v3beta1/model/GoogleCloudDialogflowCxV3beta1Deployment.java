@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents an deployment in an environment. A deployment happens when a flow version configured
- * to be active in the environment. You can configure running pre-deployment steps, e.g. running
+ * Represents a deployment in an environment. A deployment happens when a flow version configured to
+ * be active in the environment. You can configure running pre-deployment steps, e.g. running
  * validation test cases, experiment auto-rollout, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

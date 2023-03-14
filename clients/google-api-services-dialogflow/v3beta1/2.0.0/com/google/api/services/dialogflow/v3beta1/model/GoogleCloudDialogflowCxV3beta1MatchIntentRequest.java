@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1MatchIntentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Persist session parameter changes from `query_params`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean persistParameterChanges;
+
+  /**
    * Required. The input specification.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentRequest extends com.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1QueryParameters queryParams;
+
+  /**
+   * Persist session parameter changes from `query_params`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPersistParameterChanges() {
+    return persistParameterChanges;
+  }
+
+  /**
+   * Persist session parameter changes from `query_params`.
+   * @param persistParameterChanges persistParameterChanges or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1MatchIntentRequest setPersistParameterChanges(java.lang.Boolean persistParameterChanges) {
+    this.persistParameterChanges = persistParameterChanges;
+    return this;
+  }
 
   /**
    * Required. The input specification.

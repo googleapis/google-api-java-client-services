@@ -1725,7 +1725,8 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * RenameInstance sets a new name for an instance.
+         * RenameInstance sets a new name for an instance. Use with caution, previous names become
+         * immediately invalidated.
          *
          * Create a request for the method "instances.rename".
          *
@@ -1751,7 +1752,8 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * RenameInstance sets a new name for an instance.
+           * RenameInstance sets a new name for an instance. Use with caution, previous names become
+           * immediately invalidated.
            *
            * Create a request for the method "instances.rename".
            *
@@ -2924,6 +2926,148 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * RenameNetwork sets a new name for a network. Use with caution, previous names become immediately
+         * invalidated.
+         *
+         * Create a request for the method "networks.rename".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the network. Format:
+         *        projects/{project}/locations/{location}/networks/{network}
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameNetworkRequest}
+         * @return the request
+         */
+        public Rename rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameNetworkRequest content) throws java.io.IOException {
+          Rename result = new Rename(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rename extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Network> {
+
+          private static final String REST_PATH = "v2/{+name}:rename";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networks/[^/]+$");
+
+          /**
+           * RenameNetwork sets a new name for a network. Use with caution, previous names become
+           * immediately invalidated.
+           *
+           * Create a request for the method "networks.rename".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Rename#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the network. Format:
+         *        projects/{project}/locations/{location}/networks/{network}
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameNetworkRequest}
+           * @since 1.13
+           */
+          protected Rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameNetworkRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Network.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networks/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rename set$Xgafv(java.lang.String $Xgafv) {
+            return (Rename) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rename setAccessToken(java.lang.String accessToken) {
+            return (Rename) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rename setAlt(java.lang.String alt) {
+            return (Rename) super.setAlt(alt);
+          }
+
+          @Override
+          public Rename setCallback(java.lang.String callback) {
+            return (Rename) super.setCallback(callback);
+          }
+
+          @Override
+          public Rename setFields(java.lang.String fields) {
+            return (Rename) super.setFields(fields);
+          }
+
+          @Override
+          public Rename setKey(java.lang.String key) {
+            return (Rename) super.setKey(key);
+          }
+
+          @Override
+          public Rename setOauthToken(java.lang.String oauthToken) {
+            return (Rename) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rename setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rename) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rename setQuotaUser(java.lang.String quotaUser) {
+            return (Rename) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rename setUploadType(java.lang.String uploadType) {
+            return (Rename) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rename setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rename) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the network. Format:
+           * projects/{project}/locations/{location}/networks/{network}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the network. Format:
+         projects/{project}/locations/{location}/networks/{network}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the network. Format:
+           * projects/{project}/locations/{location}/networks/{network}
+           */
+          public Rename setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networks/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Rename set(String parameterName, Object value) {
+            return (Rename) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -3695,6 +3839,170 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
       }
       /**
+       * An accessor for creating requests from the Nfsshares collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
+       *   {@code Baremetalsolution.Nfsshares.List request = baremetalsolution.nfsshares().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Nfsshares nfsshares() {
+        return new Nfsshares();
+      }
+
+      /**
+       * The "nfsshares" collection of methods.
+       */
+      public class Nfsshares {
+
+        /**
+         * RenameNfsShare sets a new name for an nfsshare. Use with caution, previous names become
+         * immediately invalidated.
+         *
+         * Create a request for the method "nfsshares.rename".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the nfsshare. Format:
+         *        projects/{project}/locations/{location}/nfsshares/{nfsshare}
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameNfsShareRequest}
+         * @return the request
+         */
+        public Rename rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameNfsShareRequest content) throws java.io.IOException {
+          Rename result = new Rename(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rename extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.NfsShare> {
+
+          private static final String REST_PATH = "v2/{+name}:rename";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nfsshares/[^/]+$");
+
+          /**
+           * RenameNfsShare sets a new name for an nfsshare. Use with caution, previous names become
+           * immediately invalidated.
+           *
+           * Create a request for the method "nfsshares.rename".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Rename#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the nfsshare. Format:
+         *        projects/{project}/locations/{location}/nfsshares/{nfsshare}
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameNfsShareRequest}
+           * @since 1.13
+           */
+          protected Rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameNfsShareRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.NfsShare.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nfsshares/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rename set$Xgafv(java.lang.String $Xgafv) {
+            return (Rename) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rename setAccessToken(java.lang.String accessToken) {
+            return (Rename) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rename setAlt(java.lang.String alt) {
+            return (Rename) super.setAlt(alt);
+          }
+
+          @Override
+          public Rename setCallback(java.lang.String callback) {
+            return (Rename) super.setCallback(callback);
+          }
+
+          @Override
+          public Rename setFields(java.lang.String fields) {
+            return (Rename) super.setFields(fields);
+          }
+
+          @Override
+          public Rename setKey(java.lang.String key) {
+            return (Rename) super.setKey(key);
+          }
+
+          @Override
+          public Rename setOauthToken(java.lang.String oauthToken) {
+            return (Rename) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rename setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rename) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rename setQuotaUser(java.lang.String quotaUser) {
+            return (Rename) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rename setUploadType(java.lang.String uploadType) {
+            return (Rename) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rename setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rename) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the nfsshare. Format:
+           * projects/{project}/locations/{location}/nfsshares/{nfsshare}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the nfsshare. Format:
+         projects/{project}/locations/{location}/nfsshares/{nfsshare}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the nfsshare. Format:
+           * projects/{project}/locations/{location}/nfsshares/{nfsshare}
+           */
+          public Rename setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nfsshares/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Rename set(String parameterName, Object value) {
+            return (Rename) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -3715,8 +4023,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
       public class Operations {
 
         /**
-         * Get details about an operation. This method used only to work around CCFE lack of passthrough LRO
-         * support (b/221498758).
+         * Get details about an operation.
          *
          * Create a request for the method "operations.get".
          *
@@ -3740,8 +4047,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/.*$");
 
           /**
-           * Get details about an operation. This method used only to work around CCFE lack of passthrough
-           * LRO support (b/221498758).
+           * Get details about an operation.
            *
            * Create a request for the method "operations.get".
            *
@@ -5811,6 +6117,148 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * RenameVolume sets a new name for a volume. Use with caution, previous names become immediately
+         * invalidated.
+         *
+         * Create a request for the method "volumes.rename".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the volume. Format:
+         *        projects/{project}/locations/{location}/volumes/{volume}
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameVolumeRequest}
+         * @return the request
+         */
+        public Rename rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameVolumeRequest content) throws java.io.IOException {
+          Rename result = new Rename(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rename extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Volume> {
+
+          private static final String REST_PATH = "v2/{+name}:rename";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * RenameVolume sets a new name for a volume. Use with caution, previous names become immediately
+           * invalidated.
+           *
+           * Create a request for the method "volumes.rename".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Rename#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the volume. Format:
+         *        projects/{project}/locations/{location}/volumes/{volume}
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.RenameVolumeRequest}
+           * @since 1.13
+           */
+          protected Rename(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.RenameVolumeRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Volume.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rename set$Xgafv(java.lang.String $Xgafv) {
+            return (Rename) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rename setAccessToken(java.lang.String accessToken) {
+            return (Rename) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rename setAlt(java.lang.String alt) {
+            return (Rename) super.setAlt(alt);
+          }
+
+          @Override
+          public Rename setCallback(java.lang.String callback) {
+            return (Rename) super.setCallback(callback);
+          }
+
+          @Override
+          public Rename setFields(java.lang.String fields) {
+            return (Rename) super.setFields(fields);
+          }
+
+          @Override
+          public Rename setKey(java.lang.String key) {
+            return (Rename) super.setKey(key);
+          }
+
+          @Override
+          public Rename setOauthToken(java.lang.String oauthToken) {
+            return (Rename) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rename setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rename) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rename setQuotaUser(java.lang.String quotaUser) {
+            return (Rename) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rename setUploadType(java.lang.String uploadType) {
+            return (Rename) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rename setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rename) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the volume. Format:
+           * projects/{project}/locations/{location}/volumes/{volume}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the volume. Format:
+         projects/{project}/locations/{location}/volumes/{volume}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the volume. Format:
+           * projects/{project}/locations/{location}/volumes/{volume}
+           */
+          public Rename setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Rename set(String parameterName, Object value) {
+            return (Rename) super.set(parameterName, value);
           }
         }
         /**

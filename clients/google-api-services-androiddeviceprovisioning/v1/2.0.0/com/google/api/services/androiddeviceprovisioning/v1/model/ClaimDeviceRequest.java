@@ -74,7 +74,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
 
   /**
    * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
-   * The unique identifier of the SimLock profile (go/simlock/profiles).
+   * The unique identifier of the SimLock profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -184,7 +184,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
 
   /**
    * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
-   * The unique identifier of the SimLock profile (go/simlock/profiles).
+   * The unique identifier of the SimLock profile.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSimlockProfileId() {
@@ -193,7 +193,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
 
   /**
    * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
-   * The unique identifier of the SimLock profile (go/simlock/profiles).
+   * The unique identifier of the SimLock profile.
    * @param simlockProfileId simlockProfileId or {@code null} for none
    */
   public ClaimDeviceRequest setSimlockProfileId(java.lang.Long simlockProfileId) {

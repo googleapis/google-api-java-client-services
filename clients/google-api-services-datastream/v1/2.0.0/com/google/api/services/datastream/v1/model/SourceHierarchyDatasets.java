@@ -31,12 +31,14 @@ package com.google.api.services.datastream.v1.model;
 public final class SourceHierarchyDatasets extends com.google.api.client.json.GenericJson {
 
   /**
+   * The dataset template to use for dynamic dataset creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatasetTemplate datasetTemplate;
 
   /**
+   * The dataset template to use for dynamic dataset creation.
    * @return value or {@code null} for none
    */
   public DatasetTemplate getDatasetTemplate() {
@@ -44,6 +46,7 @@ public final class SourceHierarchyDatasets extends com.google.api.client.json.Ge
   }
 
   /**
+   * The dataset template to use for dynamic dataset creation.
    * @param datasetTemplate datasetTemplate or {@code null} for none
    */
   public SourceHierarchyDatasets setDatasetTemplate(DatasetTemplate datasetTemplate) {

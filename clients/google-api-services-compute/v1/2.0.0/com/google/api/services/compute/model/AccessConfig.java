@@ -33,8 +33,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   /**
    * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
    * is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address,
-   * it must be unused and in the same region as the instance's zone. If not specified, GCP will
-   * automatically assign an external IPv6 address from the instance's subnetwork.
+   * it must be unused and in the same region as the instance's zone. If not specified, Google Cloud
+   * will automatically assign an external IPv6 address from the instance's subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +112,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   /**
    * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
    * is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address,
-   * it must be unused and in the same region as the instance's zone. If not specified, GCP will
-   * automatically assign an external IPv6 address from the instance's subnetwork.
+   * it must be unused and in the same region as the instance's zone. If not specified, Google Cloud
+   * will automatically assign an external IPv6 address from the instance's subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIpv6() {
@@ -123,8 +123,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   /**
    * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
    * is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address,
-   * it must be unused and in the same region as the instance's zone. If not specified, GCP will
-   * automatically assign an external IPv6 address from the instance's subnetwork.
+   * it must be unused and in the same region as the instance's zone. If not specified, Google Cloud
+   * will automatically assign an external IPv6 address from the instance's subnetwork.
    * @param externalIpv6 externalIpv6 or {@code null} for none
    */
   public AccessConfig setExternalIpv6(java.lang.String externalIpv6) {

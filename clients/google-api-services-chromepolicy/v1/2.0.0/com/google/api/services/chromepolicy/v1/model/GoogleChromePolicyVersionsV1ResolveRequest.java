@@ -44,10 +44,10 @@ public final class GoogleChromePolicyVersionsV1ResolveRequest extends com.google
   private java.lang.String pageToken;
 
   /**
-   * The schema filter to apply to the resolve request. Specify a schema name to view a particular
-   * schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only in the
-   * leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please read
-   * https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
+   * Required. The schema filter to apply to the resolve request. Specify a schema name to view a
+   * particular schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only
+   * in the leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please
+   * read https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
    * namespaces. For example: Valid: "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*"
    * Invalid: "*", "*.users", "chrome.*", "chrome.*.apps.*"
    * The value may be {@code null}.
@@ -97,10 +97,10 @@ public final class GoogleChromePolicyVersionsV1ResolveRequest extends com.google
   }
 
   /**
-   * The schema filter to apply to the resolve request. Specify a schema name to view a particular
-   * schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only in the
-   * leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please read
-   * https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
+   * Required. The schema filter to apply to the resolve request. Specify a schema name to view a
+   * particular schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only
+   * in the leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please
+   * read https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
    * namespaces. For example: Valid: "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*"
    * Invalid: "*", "*.users", "chrome.*", "chrome.*.apps.*"
    * @return value or {@code null} for none
@@ -110,10 +110,10 @@ public final class GoogleChromePolicyVersionsV1ResolveRequest extends com.google
   }
 
   /**
-   * The schema filter to apply to the resolve request. Specify a schema name to view a particular
-   * schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only in the
-   * leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please read
-   * https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
+   * Required. The schema filter to apply to the resolve request. Specify a schema name to view a
+   * particular schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only
+   * in the leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please
+   * read https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
    * namespaces. For example: Valid: "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*"
    * Invalid: "*", "*.users", "chrome.*", "chrome.*.apps.*"
    * @param policySchemaFilter policySchemaFilter or {@code null} for none

@@ -95,13 +95,6 @@ public final class GoogleChromePolicyVersionsV1PolicySchema extends com.google.a
   private ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifecycle;
 
   /**
-   * Deprecated field because of typo.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifeycle;
-
-  /**
    * Output only. Description about the policy schema for user consumption.
    * The value may be {@code null}.
    */
@@ -270,23 +263,6 @@ public final class GoogleChromePolicyVersionsV1PolicySchema extends com.google.a
    */
   public GoogleChromePolicyVersionsV1PolicySchema setPolicyApiLifecycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifecycle) {
     this.policyApiLifecycle = policyApiLifecycle;
-    return this;
-  }
-
-  /**
-   * Deprecated field because of typo.
-   * @return value or {@code null} for none
-   */
-  public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle getPolicyApiLifeycle() {
-    return policyApiLifeycle;
-  }
-
-  /**
-   * Deprecated field because of typo.
-   * @param policyApiLifeycle policyApiLifeycle or {@code null} for none
-   */
-  public GoogleChromePolicyVersionsV1PolicySchema setPolicyApiLifeycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifeycle) {
-    this.policyApiLifeycle = policyApiLifeycle;
     return this;
   }
 

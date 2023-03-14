@@ -8087,6 +8087,249 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * List entitlement history. Possible error codes: * PERMISSION_DENIED: The reseller account making
+         * the request and the provided reseller account are different. * INVALID_ARGUMENT: Missing or
+         * invalid required fields in the request. * NOT_FOUND: The parent resource doesn't exist. Usually
+         * the result of an invalid name parameter. * INTERNAL: Any non-user error related to a technical
+         * issue in the backend. In this case, contact CloudChannel support. * UNKNOWN: Any non-user error
+         * related to a technical issue in the backend. In this case, contact Cloud Channel support. Return
+         * value: List of EntitlementChanges.
+         *
+         * Create a request for the method "entitlements.listEntitlementChanges".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link ListEntitlementChanges#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The resource name of the entitlement for which to list entitlement changes. The `-`
+         *        wildcard may be used to match entitlements across a customer. Formats: *
+         *        accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} *
+         *        accounts/{account_id}/customers/{customer_id}/entitlements/-
+         * @return the request
+         */
+        public ListEntitlementChanges listEntitlementChanges(java.lang.String parent) throws java.io.IOException {
+          ListEntitlementChanges result = new ListEntitlementChanges(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListEntitlementChanges extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListEntitlementChangesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:listEntitlementChanges";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
+
+          /**
+           * List entitlement history. Possible error codes: * PERMISSION_DENIED: The reseller account
+           * making the request and the provided reseller account are different. * INVALID_ARGUMENT: Missing
+           * or invalid required fields in the request. * NOT_FOUND: The parent resource doesn't exist.
+           * Usually the result of an invalid name parameter. * INTERNAL: Any non-user error related to a
+           * technical issue in the backend. In this case, contact CloudChannel support. * UNKNOWN: Any non-
+           * user error related to a technical issue in the backend. In this case, contact Cloud Channel
+           * support. Return value: List of EntitlementChanges.
+           *
+           * Create a request for the method "entitlements.listEntitlementChanges".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link ListEntitlementChanges#execute()} method to invoke the
+           * remote operation. <p> {@link ListEntitlementChanges#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the entitlement for which to list entitlement changes. The `-`
+         *        wildcard may be used to match entitlements across a customer. Formats: *
+         *        accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} *
+         *        accounts/{account_id}/customers/{customer_id}/entitlements/-
+           * @since 1.13
+           */
+          protected ListEntitlementChanges(java.lang.String parent) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListEntitlementChangesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListEntitlementChanges set$Xgafv(java.lang.String $Xgafv) {
+            return (ListEntitlementChanges) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListEntitlementChanges setAccessToken(java.lang.String accessToken) {
+            return (ListEntitlementChanges) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListEntitlementChanges setAlt(java.lang.String alt) {
+            return (ListEntitlementChanges) super.setAlt(alt);
+          }
+
+          @Override
+          public ListEntitlementChanges setCallback(java.lang.String callback) {
+            return (ListEntitlementChanges) super.setCallback(callback);
+          }
+
+          @Override
+          public ListEntitlementChanges setFields(java.lang.String fields) {
+            return (ListEntitlementChanges) super.setFields(fields);
+          }
+
+          @Override
+          public ListEntitlementChanges setKey(java.lang.String key) {
+            return (ListEntitlementChanges) super.setKey(key);
+          }
+
+          @Override
+          public ListEntitlementChanges setOauthToken(java.lang.String oauthToken) {
+            return (ListEntitlementChanges) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListEntitlementChanges setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListEntitlementChanges) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListEntitlementChanges setQuotaUser(java.lang.String quotaUser) {
+            return (ListEntitlementChanges) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListEntitlementChanges setUploadType(java.lang.String uploadType) {
+            return (ListEntitlementChanges) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListEntitlementChanges setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListEntitlementChanges) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the entitlement for which to list entitlement changes.
+           * The `-` wildcard may be used to match entitlements across a customer. Formats: *
+           * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} *
+           * accounts/{account_id}/customers/{customer_id}/entitlements/-
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the entitlement for which to list entitlement changes. The `-`
+         wildcard may be used to match entitlements across a customer. Formats: *
+         accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} *
+         accounts/{account_id}/customers/{customer_id}/entitlements/-
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the entitlement for which to list entitlement changes.
+           * The `-` wildcard may be used to match entitlements across a customer. Formats: *
+           * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id} *
+           * accounts/{account_id}/customers/{customer_id}/entitlements/-
+           */
+          public ListEntitlementChanges setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filters applied to the list results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filters applied to the list results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filters applied to the list results. */
+          public ListEntitlementChanges setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of entitlement changes to return. The service may return
+           * fewer than this value. If unspecified, returns at most 10 entitlement changes. The
+           * maximum value is 50; the server will coerce values above 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of entitlement changes to return. The service may return fewer than
+         this value. If unspecified, returns at most 10 entitlement changes. The maximum value is 50; the
+         server will coerce values above 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of entitlement changes to return. The service may return
+           * fewer than this value. If unspecified, returns at most 10 entitlement changes. The
+           * maximum value is 50; the server will coerce values above 50.
+           */
+          public ListEntitlementChanges setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous
+           * CloudChannelService.ListEntitlementChanges call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
+           * CloudChannelService.ListEntitlementChanges must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous CloudChannelService.ListEntitlementChanges call.
+         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
+         CloudChannelService.ListEntitlementChanges must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous
+           * CloudChannelService.ListEntitlementChanges call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
+           * CloudChannelService.ListEntitlementChanges must match the call that provided the page
+           * token.
+           */
+          public ListEntitlementChanges setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListEntitlementChanges set(String parameterName, Object value) {
+            return (ListEntitlementChanges) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns the requested Offer resource. Possible error codes: * PERMISSION_DENIED: The entitlement
          * doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or
          * invalid. * NOT_FOUND: Entitlement or offer was not found. Return value: The Offer resource.
@@ -8811,6 +9054,32 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         /** Optional. A token for a page of results other than the first page. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. A boolean flag that determines if a response returns future offers 30 days from
+         * now. If the show_future_offers is true, the response will only contain offers that are
+         * scheduled to be available 30 days from now.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showFutureOffers;
+
+        /** Optional. A boolean flag that determines if a response returns future offers 30 days from now. If
+       the show_future_offers is true, the response will only contain offers that are scheduled to be
+       available 30 days from now.
+         */
+        public java.lang.Boolean getShowFutureOffers() {
+          return showFutureOffers;
+        }
+
+        /**
+         * Optional. A boolean flag that determines if a response returns future offers 30 days from
+         * now. If the show_future_offers is true, the response will only contain offers that are
+         * scheduled to be available 30 days from now.
+         */
+        public List setShowFutureOffers(java.lang.Boolean showFutureOffers) {
+          this.showFutureOffers = showFutureOffers;
           return this;
         }
 
@@ -9829,12 +10098,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-     * the binding to use different resource name schemes, such as `users/operations`. To override the
-     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-     * configuration. For backwards compatibility, the default name includes the operations collection
-     * id, however overriding users must ensure the name binding is the parent resource, without the
-     * operations collection id.
+     * this method, it returns `UNIMPLEMENTED`.
      *
      * Create a request for the method "operations.list".
      *
@@ -9859,12 +10123,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-       * override the binding to use different resource name schemes, such as `users/operations`. To
-       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-       * their service configuration. For backwards compatibility, the default name includes the
-       * operations collection id, however overriding users must ensure the name binding is the parent
-       * resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`.
        *
        * Create a request for the method "operations.list".
        *

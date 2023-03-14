@@ -38,12 +38,35 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   private java.util.List<java.lang.String> advancedOcrOptions;
 
   /**
+   * Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR
+   * responses are of poor quality for a given input. Adds additional latency comparable to regular
+   * OCR to the process call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableImageQualityScores;
+
+  /**
    * Enables special handling for PDFs with existing text information. Results in better text
    * extraction quality in such PDF inputs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableNativePdfParsing;
+
+  /**
+   * Includes symbol level OCR information if set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSymbol;
+
+  /**
+   * Hints for the OCR model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3OcrConfigHints hints;
 
   /**
    * A list of advanced OCR options to further fine-tune OCR behavior.
@@ -63,6 +86,27 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   }
 
   /**
+   * Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR
+   * responses are of poor quality for a given input. Adds additional latency comparable to regular
+   * OCR to the process call.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableImageQualityScores() {
+    return enableImageQualityScores;
+  }
+
+  /**
+   * Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR
+   * responses are of poor quality for a given input. Adds additional latency comparable to regular
+   * OCR to the process call.
+   * @param enableImageQualityScores enableImageQualityScores or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3OcrConfig setEnableImageQualityScores(java.lang.Boolean enableImageQualityScores) {
+    this.enableImageQualityScores = enableImageQualityScores;
+    return this;
+  }
+
+  /**
    * Enables special handling for PDFs with existing text information. Results in better text
    * extraction quality in such PDF inputs.
    * @return value or {@code null} for none
@@ -78,6 +122,40 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig setEnableNativePdfParsing(java.lang.Boolean enableNativePdfParsing) {
     this.enableNativePdfParsing = enableNativePdfParsing;
+    return this;
+  }
+
+  /**
+   * Includes symbol level OCR information if set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSymbol() {
+    return enableSymbol;
+  }
+
+  /**
+   * Includes symbol level OCR information if set to true.
+   * @param enableSymbol enableSymbol or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3OcrConfig setEnableSymbol(java.lang.Boolean enableSymbol) {
+    this.enableSymbol = enableSymbol;
+    return this;
+  }
+
+  /**
+   * Hints for the OCR model.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3OcrConfigHints getHints() {
+    return hints;
+  }
+
+  /**
+   * Hints for the OCR model.
+   * @param hints hints or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3OcrConfig setHints(GoogleCloudDocumentaiV1beta3OcrConfigHints hints) {
+    this.hints = hints;
     return this;
   }
 

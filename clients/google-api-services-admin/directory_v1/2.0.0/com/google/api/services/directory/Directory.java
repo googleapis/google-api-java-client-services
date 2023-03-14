@@ -14503,22 +14503,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The user's primary email address, alias email address, or unique user ID. If included in
-       * the request, returns role assignments only for this user.
+       * The primary email address, alias email address, or unique user or group ID. If included in
+       * the request, returns role assignments only for this user or group.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
-      /** The user's primary email address, alias email address, or unique user ID. If included in the
-     request, returns role assignments only for this user.
+      /** The primary email address, alias email address, or unique user or group ID. If included in the
+     request, returns role assignments only for this user or group.
        */
       public java.lang.String getUserKey() {
         return userKey;
       }
 
       /**
-       * The user's primary email address, alias email address, or unique user ID. If included in
-       * the request, returns role assignments only for this user.
+       * The primary email address, alias email address, or unique user or group ID. If included in
+       * the request, returns role assignments only for this user or group.
        */
       public List setUserKey(java.lang.String userKey) {
         this.userKey = userKey;

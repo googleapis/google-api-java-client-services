@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
 
   /**
    * Immutable. The full resource name of the document. Format: `projects/{project}/locations/{locat
-   * ion}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a
-   * UTF-8 encoded string with a length limit of 1024 characters.
+   * ion}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+   * `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +118,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
 
   /**
    * Immutable. The full resource name of the document. Format: `projects/{project}/locations/{locat
-   * ion}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a
-   * UTF-8 encoded string with a length limit of 1024 characters.
+   * ion}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+   * `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -128,8 +128,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
 
   /**
    * Immutable. The full resource name of the document. Format: `projects/{project}/locations/{locat
-   * ion}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a
-   * UTF-8 encoded string with a length limit of 1024 characters.
+   * ion}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+   * `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocument setName(java.lang.String name) {

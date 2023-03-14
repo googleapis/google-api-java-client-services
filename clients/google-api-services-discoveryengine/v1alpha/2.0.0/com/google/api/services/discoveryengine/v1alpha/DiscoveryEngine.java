@@ -174,6 +174,3242 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
     public class Locations {
 
       /**
+       * An accessor for creating requests from the Collections collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.Collections.List request = discoveryengine.collections().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Collections collections() {
+        return new Collections();
+      }
+
+      /**
+       * The "collections" collection of methods.
+       */
+      public class Collections {
+
+        /**
+         * An accessor for creating requests from the DataStores collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.DataStores.List request = discoveryengine.dataStores().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DataStores dataStores() {
+          return new DataStores();
+        }
+
+        /**
+         * The "dataStores" collection of methods.
+         */
+        public class DataStores {
+
+          /**
+           * An accessor for creating requests from the Branches collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Branches.List request = discoveryengine.branches().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Branches branches() {
+            return new Branches();
+          }
+
+          /**
+           * The "branches" collection of methods.
+           */
+          public class Branches {
+
+            /**
+             * An accessor for creating requests from the Documents collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.Documents.List request = discoveryengine.documents().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Documents documents() {
+              return new Documents();
+            }
+
+            /**
+             * The "documents" collection of methods.
+             */
+            public class Documents {
+
+              /**
+               * Creates a Document.
+               *
+               * Create a request for the method "documents.create".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+               *        llection}/dataStores/{data_store}/branches/{branch}`.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
+               * @return the request
+               */
+              public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument content) throws java.io.IOException {
+                Create result = new Create(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/documents";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                /**
+                 * Creates a Document.
+                 *
+                 * Create a request for the method "documents.create".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+               *        llection}/dataStores/{data_store}/branches/{branch}`.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
+                 * @since 1.13
+                 */
+                protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Create set$Xgafv(java.lang.String $Xgafv) {
+                  return (Create) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Create setAccessToken(java.lang.String accessToken) {
+                  return (Create) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Create setAlt(java.lang.String alt) {
+                  return (Create) super.setAlt(alt);
+                }
+
+                @Override
+                public Create setCallback(java.lang.String callback) {
+                  return (Create) super.setCallback(callback);
+                }
+
+                @Override
+                public Create setFields(java.lang.String fields) {
+                  return (Create) super.setFields(fields);
+                }
+
+                @Override
+                public Create setKey(java.lang.String key) {
+                  return (Create) super.setKey(key);
+                }
+
+                @Override
+                public Create setOauthToken(java.lang.String oauthToken) {
+                  return (Create) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Create) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Create setQuotaUser(java.lang.String quotaUser) {
+                  return (Create) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Create setUploadType(java.lang.String uploadType) {
+                  return (Create) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Create) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name, such as `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{c
+               ollection}/dataStores/{data_store}/branches/{branch}`.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name, such as `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 */
+                public Create setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Required. The ID to use for the Document, which will become the final component
+                 * of the Document.name. If the caller does not have permission to create the
+                 * Document, regardless of whether or not it exists, a PERMISSION_DENIED error is
+                 * returned. This field must be unique among all Documents with the same parent.
+                 * Otherwise, an ALREADY_EXISTS error is returned. This field must conform to
+                 * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
+                 * 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String documentId;
+
+                /** Required. The ID to use for the Document, which will become the final component of the
+               Document.name. If the caller does not have permission to create the Document, regardless of whether
+               or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all
+               Documents with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must
+               conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+               characters. Otherwise, an INVALID_ARGUMENT error is returned.
+                 */
+                public java.lang.String getDocumentId() {
+                  return documentId;
+                }
+
+                /**
+                 * Required. The ID to use for the Document, which will become the final component
+                 * of the Document.name. If the caller does not have permission to create the
+                 * Document, regardless of whether or not it exists, a PERMISSION_DENIED error is
+                 * returned. This field must be unique among all Documents with the same parent.
+                 * Otherwise, an ALREADY_EXISTS error is returned. This field must conform to
+                 * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
+                 * 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+                 */
+                public Create setDocumentId(java.lang.String documentId) {
+                  this.documentId = documentId;
+                  return this;
+                }
+
+                @Override
+                public Create set(String parameterName, Object value) {
+                  return (Create) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Deletes a Document.
+               *
+               * Create a request for the method "documents.delete".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+               *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to delete the Document, regardless of whether or not it
+               *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
+               *        NOT_FOUND error is returned.
+               * @return the request
+               */
+              public Delete delete(java.lang.String name) throws java.io.IOException {
+                Delete result = new Delete(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+
+                /**
+                 * Deletes a Document.
+                 *
+                 * Create a request for the method "documents.delete".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+               *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to delete the Document, regardless of whether or not it
+               *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
+               *        NOT_FOUND error is returned.
+                 * @since 1.13
+                 */
+                protected Delete(java.lang.String name) {
+                  super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Delete set$Xgafv(java.lang.String $Xgafv) {
+                  return (Delete) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Delete setAccessToken(java.lang.String accessToken) {
+                  return (Delete) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Delete setAlt(java.lang.String alt) {
+                  return (Delete) super.setAlt(alt);
+                }
+
+                @Override
+                public Delete setCallback(java.lang.String callback) {
+                  return (Delete) super.setCallback(callback);
+                }
+
+                @Override
+                public Delete setFields(java.lang.String fields) {
+                  return (Delete) super.setFields(fields);
+                }
+
+                @Override
+                public Delete setKey(java.lang.String key) {
+                  return (Delete) super.setKey(key);
+                }
+
+                @Override
+                public Delete setOauthToken(java.lang.String oauthToken) {
+                  return (Delete) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Delete) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Delete setQuotaUser(java.lang.String quotaUser) {
+                  return (Delete) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Delete setUploadType(java.lang.String uploadType) {
+                  return (Delete) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Delete) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Full resource name of Document, such as `projects/{project}/locations/{
+                 * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
+                 * ments/{document}`. If the caller does not have permission to delete the Document,
+                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+                 * the Document to delete does not exist, a NOT_FOUND error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
+               ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+               does not have permission to delete the Document, regardless of whether or not it exists, a
+               PERMISSION_DENIED error is returned. If the Document to delete does not exist, a NOT_FOUND error is
+               returned.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Full resource name of Document, such as `projects/{project}/locations/{
+                 * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
+                 * ments/{document}`. If the caller does not have permission to delete the Document,
+                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+                 * the Document to delete does not exist, a NOT_FOUND error is returned.
+                 */
+                public Delete setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Delete set(String parameterName, Object value) {
+                  return (Delete) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Gets a Document.
+               *
+               * Create a request for the method "documents.get".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+               *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to access the Document, regardless of whether or not it
+               *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
+               *        NOT_FOUND error is returned.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+
+                /**
+                 * Gets a Document.
+                 *
+                 * Create a request for the method "documents.get".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+               *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to access the Document, regardless of whether or not it
+               *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
+               *        NOT_FOUND error is returned.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Full resource name of Document, such as `projects/{project}/locations/{
+                 * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
+                 * ments/{document}`. If the caller does not have permission to access the Document,
+                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+                 * the requested Document does not exist, a NOT_FOUND error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
+               ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+               does not have permission to access the Document, regardless of whether or not it exists, a
+               PERMISSION_DENIED error is returned. If the requested Document does not exist, a NOT_FOUND error is
+               returned.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Full resource name of Document, such as `projects/{project}/locations/{
+                 * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
+                 * ments/{document}`. If the caller does not have permission to access the Document,
+                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+                 * the requested Document does not exist, a NOT_FOUND error is returned.
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items will
+               * be created. Note: It is possible for a subset of the Documents to be successfully updated.
+               *
+               * Create a request for the method "documents.import".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+               *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Requires create/update
+               *        permission.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest}
+               * @return the request
+               */
+              public DiscoveryEngineImport discoveryengineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest content) throws java.io.IOException {
+                DiscoveryEngineImport result = new DiscoveryEngineImport(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class DiscoveryEngineImport extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/documents:import";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                /**
+                 * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items
+                 * will be created. Note: It is possible for a subset of the Documents to be successfully updated.
+                 *
+                 * Create a request for the method "documents.import".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the
+                 * remote operation. <p> {@link DiscoveryEngineImport#initialize(com.google.api.client.googleapis.
+                 * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+                 * after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+               *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Requires create/update
+               *        permission.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest}
+                 * @since 1.13
+                 */
+                protected DiscoveryEngineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                }
+
+                @Override
+                public DiscoveryEngineImport set$Xgafv(java.lang.String $Xgafv) {
+                  return (DiscoveryEngineImport) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public DiscoveryEngineImport setAccessToken(java.lang.String accessToken) {
+                  return (DiscoveryEngineImport) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public DiscoveryEngineImport setAlt(java.lang.String alt) {
+                  return (DiscoveryEngineImport) super.setAlt(alt);
+                }
+
+                @Override
+                public DiscoveryEngineImport setCallback(java.lang.String callback) {
+                  return (DiscoveryEngineImport) super.setCallback(callback);
+                }
+
+                @Override
+                public DiscoveryEngineImport setFields(java.lang.String fields) {
+                  return (DiscoveryEngineImport) super.setFields(fields);
+                }
+
+                @Override
+                public DiscoveryEngineImport setKey(java.lang.String key) {
+                  return (DiscoveryEngineImport) super.setKey(key);
+                }
+
+                @Override
+                public DiscoveryEngineImport setOauthToken(java.lang.String oauthToken) {
+                  return (DiscoveryEngineImport) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public DiscoveryEngineImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (DiscoveryEngineImport) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public DiscoveryEngineImport setQuotaUser(java.lang.String quotaUser) {
+                  return (DiscoveryEngineImport) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public DiscoveryEngineImport setUploadType(java.lang.String uploadType) {
+                  return (DiscoveryEngineImport) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public DiscoveryEngineImport setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (DiscoveryEngineImport) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent branch resource name, such as `projects/{project}/locations/
+                 * {location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 * Requires create/update permission.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collect
+               ions/{collection}/dataStores/{data_store}/branches/{branch}`. Requires create/update permission.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent branch resource name, such as `projects/{project}/locations/
+                 * {location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 * Requires create/update permission.
+                 */
+                public DiscoveryEngineImport setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public DiscoveryEngineImport set(String parameterName, Object value) {
+                  return (DiscoveryEngineImport) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Gets a list of Documents.
+               *
+               * Create a request for the method "documents.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+               *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
+               *        branch ID, to list documents under the default branch. If the caller does not have
+               *        permission to list Documentss under this branch, regardless of whether or not this branch
+               *        exists, a PERMISSION_DENIED error is returned.
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListDocumentsResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/documents";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                /**
+                 * Gets a list of Documents.
+                 *
+                 * Create a request for the method "documents.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+               *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
+               *        branch ID, to list documents under the default branch. If the caller does not have
+               *        permission to list Documentss under this branch, regardless of whether or not this branch
+               *        exists, a PERMISSION_DENIED error is returned.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListDocumentsResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent branch resource name, such as `projects/{project}/locations/
+                 * {location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 * Use `default_branch` as the branch ID, to list documents under the default
+                 * branch. If the caller does not have permission to list Documentss under this
+                 * branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+                 * error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collect
+               ions/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch
+               ID, to list documents under the default branch. If the caller does not have permission to list
+               Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+               error is returned.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent branch resource name, such as `projects/{project}/locations/
+                 * {location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 * Use `default_branch` as the branch ID, to list documents under the default
+                 * branch. If the caller does not have permission to list Documentss under this
+                 * branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+                 * error is returned.
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Maximum number of Documents to return. If unspecified, defaults to 100. The
+                 * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
+                 * field is negative, an INVALID_ARGUMENT error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value
+               is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an INVALID_ARGUMENT
+               error is returned.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Maximum number of Documents to return. If unspecified, defaults to 100. The
+                 * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
+                 * field is negative, an INVALID_ARGUMENT error is returned.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * A page token ListDocumentsResponse.next_page_token, received from a previous
+                 * DocumentService.ListDocuments call. Provide this to retrieve the subsequent page.
+                 * When paginating, all other parameters provided to DocumentService.ListDocuments
+                 * must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
+                 * error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** A page token ListDocumentsResponse.next_page_token, received from a previous
+               DocumentService.ListDocuments call. Provide this to retrieve the subsequent page. When paginating,
+               all other parameters provided to DocumentService.ListDocuments must match the call that provided
+               the page token. Otherwise, an INVALID_ARGUMENT error is returned.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * A page token ListDocumentsResponse.next_page_token, received from a previous
+                 * DocumentService.ListDocuments call. Provide this to retrieve the subsequent page.
+                 * When paginating, all other parameters provided to DocumentService.ListDocuments
+                 * must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
+                 * error is returned.
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Updates a Document.
+               *
+               * Create a request for the method "documents.patch".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               *
+               * @param name Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}/
+               *        collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+               *        `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
+               * @return the request
+               */
+              public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument content) throws java.io.IOException {
+                Patch result = new Patch(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+
+                /**
+                 * Updates a Document.
+                 *
+                 * Create a request for the method "documents.patch".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}/
+               *        collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+               *        `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
+                 * @since 1.13
+                 */
+                protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument content) {
+                  super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Patch set$Xgafv(java.lang.String $Xgafv) {
+                  return (Patch) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Patch setAccessToken(java.lang.String accessToken) {
+                  return (Patch) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Patch setAlt(java.lang.String alt) {
+                  return (Patch) super.setAlt(alt);
+                }
+
+                @Override
+                public Patch setCallback(java.lang.String callback) {
+                  return (Patch) super.setCallback(callback);
+                }
+
+                @Override
+                public Patch setFields(java.lang.String fields) {
+                  return (Patch) super.setFields(fields);
+                }
+
+                @Override
+                public Patch setKey(java.lang.String key) {
+                  return (Patch) super.setKey(key);
+                }
+
+                @Override
+                public Patch setOauthToken(java.lang.String oauthToken) {
+                  return (Patch) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Patch) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Patch setQuotaUser(java.lang.String quotaUser) {
+                  return (Patch) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Patch setUploadType(java.lang.String uploadType) {
+                  return (Patch) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Patch) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Immutable. The full resource name of the document. Format: `projects/{project}/lo
+                 * cations/{location}/collections/{collection}/dataStores/{data_store}/branches/{bra
+                 * nch}/documents/{document_id}`. This field must be a UTF-8 encoded string with a
+                 * length limit of 1024 characters.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}
+               /collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This
+               field must be a UTF-8 encoded string with a length limit of 1024 characters.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Immutable. The full resource name of the document. Format: `projects/{project}/lo
+                 * cations/{location}/collections/{collection}/dataStores/{data_store}/branches/{bra
+                 * nch}/documents/{document_id}`. This field must be a UTF-8 encoded string with a
+                 * length limit of 1024 characters.
+                 */
+                public Patch setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * If set to true, and the Document is not found, a new Document will be created.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean allowMissing;
+
+                /** If set to true, and the Document is not found, a new Document will be created.
+                 */
+                public java.lang.Boolean getAllowMissing() {
+                  return allowMissing;
+                }
+
+                /**
+                 * If set to true, and the Document is not found, a new Document will be created.
+                 */
+                public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+                  this.allowMissing = allowMissing;
+                  return this;
+                }
+
+                @Override
+                public Patch set(String parameterName, Object value) {
+                  return (Patch) super.set(parameterName, value);
+                }
+              }
+
+            }
+            /**
+             * An accessor for creating requests from the Operations collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Operations operations() {
+              return new Operations();
+            }
+
+            /**
+             * The "operations" collection of methods.
+             */
+            public class Operations {
+
+              /**
+               * Gets the latest state of a long-running operation. Clients can use this method to poll the
+               * operation result at intervals as recommended by the API service.
+               *
+               * Create a request for the method "operations.get".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name The name of the operation resource.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+
+                /**
+                 * Gets the latest state of a long-running operation. Clients can use this method to poll the
+                 * operation result at intervals as recommended by the API service.
+                 *
+                 * Create a request for the method "operations.get".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name The name of the operation resource.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** The name of the operation resource. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** The name of the operation resource.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** The name of the operation resource. */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Lists operations that match the specified filter in the request. If the server doesn't support
+               * this method, it returns `UNIMPLEMENTED`.
+               *
+               * Create a request for the method "operations.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param name The name of the operation's parent resource.
+               * @return the request
+               */
+              public List list(java.lang.String name) throws java.io.IOException {
+                List result = new List(name);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+name}/operations";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                /**
+                 * Lists operations that match the specified filter in the request. If the server doesn't support
+                 * this method, it returns `UNIMPLEMENTED`.
+                 *
+                 * Create a request for the method "operations.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name The name of the operation's parent resource.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** The name of the operation's parent resource. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** The name of the operation's parent resource.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** The name of the operation's parent resource. */
+                public List setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /** The standard list filter. */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** The standard list filter.
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /** The standard list filter. */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /** The standard list page size. */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** The standard list page size.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /** The standard list page size. */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /** The standard list page token. */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** The standard list page token.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /** The standard list page token. */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+          /**
+           * An accessor for creating requests from the Models collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Models.List request = discoveryengine.models().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Models models() {
+            return new Models();
+          }
+
+          /**
+           * The "models" collection of methods.
+           */
+          public class Models {
+
+            /**
+             * An accessor for creating requests from the Operations collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Operations operations() {
+              return new Operations();
+            }
+
+            /**
+             * The "operations" collection of methods.
+             */
+            public class Operations {
+
+              /**
+               * Gets the latest state of a long-running operation. Clients can use this method to poll the
+               * operation result at intervals as recommended by the API service.
+               *
+               * Create a request for the method "operations.get".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name The name of the operation resource.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/models/[^/]+/operations/[^/]+$");
+
+                /**
+                 * Gets the latest state of a long-running operation. Clients can use this method to poll the
+                 * operation result at intervals as recommended by the API service.
+                 *
+                 * Create a request for the method "operations.get".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name The name of the operation resource.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/models/[^/]+/operations/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** The name of the operation resource. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** The name of the operation resource.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** The name of the operation resource. */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/models/[^/]+/operations/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Lists operations that match the specified filter in the request. If the server doesn't support
+               * this method, it returns `UNIMPLEMENTED`.
+               *
+               * Create a request for the method "operations.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param name The name of the operation's parent resource.
+               * @return the request
+               */
+              public List list(java.lang.String name) throws java.io.IOException {
+                List result = new List(name);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+name}/operations";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/models/[^/]+$");
+
+                /**
+                 * Lists operations that match the specified filter in the request. If the server doesn't support
+                 * this method, it returns `UNIMPLEMENTED`.
+                 *
+                 * Create a request for the method "operations.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name The name of the operation's parent resource.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/models/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** The name of the operation's parent resource. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** The name of the operation's parent resource.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** The name of the operation's parent resource. */
+                public List setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/models/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /** The standard list filter. */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** The standard list filter.
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /** The standard list filter. */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /** The standard list page size. */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** The standard list page size.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /** The standard list page size. */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /** The standard list page token. */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** The standard list page token.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /** The standard list page token. */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+          /**
+           * An accessor for creating requests from the Operations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Operations operations() {
+            return new Operations();
+          }
+
+          /**
+           * The "operations" collection of methods.
+           */
+          public class Operations {
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the operation resource.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/operations/[^/]+$");
+
+              /**
+               * Gets the latest state of a long-running operation. Clients can use this method to poll the
+               * operation result at intervals as recommended by the API service.
+               *
+               * Create a request for the method "operations.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the operation resource.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/operations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the operation resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the operation resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the operation resource. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/operations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists operations that match the specified filter in the request. If the server doesn't support
+             * this method, it returns `UNIMPLEMENTED`.
+             *
+             * Create a request for the method "operations.list".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the operation's parent resource.
+             * @return the request
+             */
+            public List list(java.lang.String name) throws java.io.IOException {
+              List result = new List(name);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+name}/operations";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Lists operations that match the specified filter in the request. If the server doesn't support
+               * this method, it returns `UNIMPLEMENTED`.
+               *
+               * Create a request for the method "operations.list".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the operation's parent resource.
+               * @since 1.13
+               */
+              protected List(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the operation's parent resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the operation's parent resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the operation's parent resource. */
+              public List setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The standard list filter. */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** The standard list filter.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** The standard list filter. */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** The standard list page size. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The standard list page size.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** The standard list page size. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The standard list page token. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The standard list page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The standard list page token. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the ServingConfigs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.ServingConfigs.List request = discoveryengine.servingConfigs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public ServingConfigs servingConfigs() {
+            return new ServingConfigs();
+          }
+
+          /**
+           * The "servingConfigs" collection of methods.
+           */
+          public class ServingConfigs {
+
+            /**
+             * Makes a recommendation, which requires a contextual user event.
+             *
+             * Create a request for the method "servingConfigs.recommend".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
+             *
+             * @param servingConfig Required. Full resource name of the format:
+             *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+             *        recommendations from your model, you must create at least one serving config for it.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
+             * @return the request
+             */
+            public Recommend recommend(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest content) throws java.io.IOException {
+              Recommend result = new Recommend(servingConfig, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Recommend extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+servingConfig}:recommend";
+
+              private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+
+              /**
+               * Makes a recommendation, which requires a contextual user event.
+               *
+               * Create a request for the method "servingConfigs.recommend".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Recommend#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Recommend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param servingConfig Required. Full resource name of the format:
+             *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+             *        recommendations from your model, you must create at least one serving config for it.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
+               * @since 1.13
+               */
+              protected Recommend(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendResponse.class);
+                this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Recommend set$Xgafv(java.lang.String $Xgafv) {
+                return (Recommend) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Recommend setAccessToken(java.lang.String accessToken) {
+                return (Recommend) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Recommend setAlt(java.lang.String alt) {
+                return (Recommend) super.setAlt(alt);
+              }
+
+              @Override
+              public Recommend setCallback(java.lang.String callback) {
+                return (Recommend) super.setCallback(callback);
+              }
+
+              @Override
+              public Recommend setFields(java.lang.String fields) {
+                return (Recommend) super.setFields(fields);
+              }
+
+              @Override
+              public Recommend setKey(java.lang.String key) {
+                return (Recommend) super.setKey(key);
+              }
+
+              @Override
+              public Recommend setOauthToken(java.lang.String oauthToken) {
+                return (Recommend) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Recommend setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Recommend) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Recommend setQuotaUser(java.lang.String quotaUser) {
+                return (Recommend) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Recommend setUploadType(java.lang.String uploadType) {
+                return (Recommend) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Recommend setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Recommend) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of the format:
+               * projects/locations/global/collections/dataStores/servingConfigs Before you can
+               * request recommendations from your model, you must create at least one serving
+               * config for it.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfig;
+
+              /** Required. Full resource name of the format:
+             projects/locations/global/collections/dataStores/servingConfigs Before you can request
+             recommendations from your model, you must create at least one serving config for it.
+               */
+              public java.lang.String getServingConfig() {
+                return servingConfig;
+              }
+
+              /**
+               * Required. Full resource name of the format:
+               * projects/locations/global/collections/dataStores/servingConfigs Before you can
+               * request recommendations from your model, you must create at least one serving
+               * config for it.
+               */
+              public Recommend setServingConfig(java.lang.String servingConfig) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+                }
+                this.servingConfig = servingConfig;
+                return this;
+              }
+
+              @Override
+              public Recommend set(String parameterName, Object value) {
+                return (Recommend) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the UserEvents collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.UserEvents.List request = discoveryengine.userEvents().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public UserEvents userEvents() {
+            return new UserEvents();
+          }
+
+          /**
+           * The "userEvents" collection of methods.
+           */
+          public class UserEvents {
+
+            /**
+             * Writes a single user event from the browser. This uses a GET request to due to browser
+             * restriction of POST-ing to a 3rd party domain. This method is used only by the Discovery Engine
+             * API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
+             *
+             * Create a request for the method "userEvents.collect".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Collect#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent DataStore resource name, such as
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+             *        .
+             * @return the request
+             */
+            public Collect collect(java.lang.String parent) throws java.io.IOException {
+              Collect result = new Collect(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class Collect extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleApiHttpBody> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/userEvents:collect";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Writes a single user event from the browser. This uses a GET request to due to browser
+               * restriction of POST-ing to a 3rd party domain. This method is used only by the Discovery Engine
+               * API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
+               *
+               * Create a request for the method "userEvents.collect".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Collect#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Collect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent DataStore resource name, such as
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+             *        .
+               * @since 1.13
+               */
+              protected Collect(java.lang.String parent) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleApiHttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Collect set$Xgafv(java.lang.String $Xgafv) {
+                return (Collect) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Collect setAccessToken(java.lang.String accessToken) {
+                return (Collect) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Collect setAlt(java.lang.String alt) {
+                return (Collect) super.setAlt(alt);
+              }
+
+              @Override
+              public Collect setCallback(java.lang.String callback) {
+                return (Collect) super.setCallback(callback);
+              }
+
+              @Override
+              public Collect setFields(java.lang.String fields) {
+                return (Collect) super.setFields(fields);
+              }
+
+              @Override
+              public Collect setKey(java.lang.String key) {
+                return (Collect) super.setKey(key);
+              }
+
+              @Override
+              public Collect setOauthToken(java.lang.String oauthToken) {
+                return (Collect) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Collect setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Collect) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Collect setQuotaUser(java.lang.String quotaUser) {
+                return (Collect) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Collect setUploadType(java.lang.String uploadType) {
+                return (Collect) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Collect setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Collect) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent DataStore resource name, such as `projects/{project}/locations
+               * /{location}/collections/{collection}/dataStores/{data_store}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent DataStore resource name, such as
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent DataStore resource name, such as `projects/{project}/locations
+               * /{location}/collections/{collection}/dataStores/{data_store}`.
+               */
+              public Collect setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The event timestamp in milliseconds. This prevents browser caching of otherwise
+               * identical get requests. The name is abbreviated to reduce the payload bytes.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Long ets;
+
+              /** The event timestamp in milliseconds. This prevents browser caching of otherwise identical get
+             requests. The name is abbreviated to reduce the payload bytes.
+               */
+              public java.lang.Long getEts() {
+                return ets;
+              }
+
+              /**
+               * The event timestamp in milliseconds. This prevents browser caching of otherwise
+               * identical get requests. The name is abbreviated to reduce the payload bytes.
+               */
+              public Collect setEts(java.lang.Long ets) {
+                this.ets = ets;
+                return this;
+              }
+
+              /**
+               * The URL including cgi-parameters but excluding the hash fragment with a length
+               * limit of 5,000 characters. This is often more useful than the referer URL, because
+               * many browsers only send the domain for 3rd party requests.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String uri;
+
+              /** The URL including cgi-parameters but excluding the hash fragment with a length limit of 5,000
+             characters. This is often more useful than the referer URL, because many browsers only send the
+             domain for 3rd party requests.
+               */
+              public java.lang.String getUri() {
+                return uri;
+              }
+
+              /**
+               * The URL including cgi-parameters but excluding the hash fragment with a length
+               * limit of 5,000 characters. This is often more useful than the referer URL, because
+               * many browsers only send the domain for 3rd party requests.
+               */
+              public Collect setUri(java.lang.String uri) {
+                this.uri = uri;
+                return this;
+              }
+
+              /**
+               * Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String userEvent;
+
+              /** Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
+               */
+              public java.lang.String getUserEvent() {
+                return userEvent;
+              }
+
+              /**
+               * Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
+               */
+              public Collect setUserEvent(java.lang.String userEvent) {
+                this.userEvent = userEvent;
+                return this;
+              }
+
+              @Override
+              public Collect set(String parameterName, Object value) {
+                return (Collect) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Bulk import of User events. Request processing might be synchronous. Events that already exist
+             * are skipped. Use this method for backfilling historical user events. Operation.response is of
+             * type ImportResponse. Note that it is possible for a subset of the items to be successfully
+             * inserted. Operation.metadata is of type ImportMetadata.
+             *
+             * Create a request for the method "userEvents.import".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param parent Required. Parent DataStore resource name, of the form
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest}
+             * @return the request
+             */
+            public DiscoveryEngineImport discoveryengineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest content) throws java.io.IOException {
+              DiscoveryEngineImport result = new DiscoveryEngineImport(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class DiscoveryEngineImport extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/userEvents:import";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Bulk import of User events. Request processing might be synchronous. Events that already exist
+               * are skipped. Use this method for backfilling historical user events. Operation.response is of
+               * type ImportResponse. Note that it is possible for a subset of the items to be successfully
+               * inserted. Operation.metadata is of type ImportMetadata.
+               *
+               * Create a request for the method "userEvents.import".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the
+               * remote operation. <p> {@link DiscoveryEngineImport#initialize(com.google.api.client.googleapis.
+               * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent DataStore resource name, of the form
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest}
+               * @since 1.13
+               */
+              protected DiscoveryEngineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public DiscoveryEngineImport set$Xgafv(java.lang.String $Xgafv) {
+                return (DiscoveryEngineImport) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public DiscoveryEngineImport setAccessToken(java.lang.String accessToken) {
+                return (DiscoveryEngineImport) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public DiscoveryEngineImport setAlt(java.lang.String alt) {
+                return (DiscoveryEngineImport) super.setAlt(alt);
+              }
+
+              @Override
+              public DiscoveryEngineImport setCallback(java.lang.String callback) {
+                return (DiscoveryEngineImport) super.setCallback(callback);
+              }
+
+              @Override
+              public DiscoveryEngineImport setFields(java.lang.String fields) {
+                return (DiscoveryEngineImport) super.setFields(fields);
+              }
+
+              @Override
+              public DiscoveryEngineImport setKey(java.lang.String key) {
+                return (DiscoveryEngineImport) super.setKey(key);
+              }
+
+              @Override
+              public DiscoveryEngineImport setOauthToken(java.lang.String oauthToken) {
+                return (DiscoveryEngineImport) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public DiscoveryEngineImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (DiscoveryEngineImport) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public DiscoveryEngineImport setQuotaUser(java.lang.String quotaUser) {
+                return (DiscoveryEngineImport) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public DiscoveryEngineImport setUploadType(java.lang.String uploadType) {
+                return (DiscoveryEngineImport) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public DiscoveryEngineImport setUploadProtocol(java.lang.String uploadProtocol) {
+                return (DiscoveryEngineImport) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent DataStore resource name, of the form `projects/{project}/locations
+               * /{location}/collections/{collection}/dataStores/{data_store}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent DataStore resource name, of the form
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Parent DataStore resource name, of the form `projects/{project}/locations
+               * /{location}/collections/{collection}/dataStores/{data_store}`
+               */
+              public DiscoveryEngineImport setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public DiscoveryEngineImport set(String parameterName, Object value) {
+                return (DiscoveryEngineImport) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Writes a single user event.
+             *
+             * Create a request for the method "userEvents.write".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent DataStore resource name, such as
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+             *        .
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
+             * @return the request
+             */
+            public Write write(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent content) throws java.io.IOException {
+              Write result = new Write(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Write extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/userEvents:write";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Writes a single user event.
+               *
+               * Create a request for the method "userEvents.write".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent DataStore resource name, such as
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+             *        .
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
+               * @since 1.13
+               */
+              protected Write(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Write set$Xgafv(java.lang.String $Xgafv) {
+                return (Write) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Write setAccessToken(java.lang.String accessToken) {
+                return (Write) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Write setAlt(java.lang.String alt) {
+                return (Write) super.setAlt(alt);
+              }
+
+              @Override
+              public Write setCallback(java.lang.String callback) {
+                return (Write) super.setCallback(callback);
+              }
+
+              @Override
+              public Write setFields(java.lang.String fields) {
+                return (Write) super.setFields(fields);
+              }
+
+              @Override
+              public Write setKey(java.lang.String key) {
+                return (Write) super.setKey(key);
+              }
+
+              @Override
+              public Write setOauthToken(java.lang.String oauthToken) {
+                return (Write) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Write setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Write) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Write setQuotaUser(java.lang.String quotaUser) {
+                return (Write) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Write setUploadType(java.lang.String uploadType) {
+                return (Write) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Write setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Write) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent DataStore resource name, such as `projects/{project}/locations
+               * /{location}/collections/{collection}/dataStores/{data_store}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent DataStore resource name, such as
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent DataStore resource name, such as `projects/{project}/locations
+               * /{location}/collections/{collection}/dataStores/{data_store}`.
+               */
+              public Write setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Write set(String parameterName, Object value) {
+                return (Write) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/operations/[^/]+$");
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation's parent resource.
+           * @return the request
+           */
+          public List list(java.lang.String name) throws java.io.IOException {
+            List result = new List(name);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}/operations";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
+
+            /**
+             * Lists operations that match the specified filter in the request. If the server doesn't support
+             * this method, it returns `UNIMPLEMENTED`.
+             *
+             * Create a request for the method "operations.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation's parent resource.
+             * @since 1.13
+             */
+            protected List(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation's parent resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation's parent resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation's parent resource. */
+            public List setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** The standard list filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The standard list filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** The standard list filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** The standard list page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The standard list page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The standard list page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The standard list page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The standard list page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The standard list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the DataStores collection.
        *
        * <p>The typical use is:</p>
@@ -241,8 +3477,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent resource name, such as
-             *        `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+             * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+             *        llection}/dataStores/{data_store}/branches/{branch}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
              * @return the request
              */
@@ -270,8 +3506,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent resource name, such as
-             *        `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+               * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+             *        llection}/dataStores/{data_store}/branches/{branch}`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
                * @since 1.13
                */
@@ -342,13 +3578,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The parent resource name, such as `projects/{project}/locations/{location
-               * }/dataStores/{data_store}/branches/{branch}`.
+               * }/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent resource name, such as
-             `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+              /** Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{c
+             ollection}/dataStores/{data_store}/branches/{branch}`.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -356,7 +3592,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The parent resource name, such as `projects/{project}/locations/{location
-               * }/dataStores/{data_store}/branches/{branch}`.
+               * }/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -418,11 +3654,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/dataStore
-             *        s/{data_store}/branches/{branch}/documents/{document}`. If the caller does not have
-             *        permission to delete the Document, regardless of whether or not it exists, a
-             *        PERMISSION_DENIED error is returned. If the Document to delete does not exist, a NOT_FOUND
-             *        error is returned.
+             * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+             *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+             *        caller does not have permission to delete the Document, regardless of whether or not it
+             *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
+             *        NOT_FOUND error is returned.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -449,11 +3685,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/dataStore
-             *        s/{data_store}/branches/{branch}/documents/{document}`. If the caller does not have
-             *        permission to delete the Document, regardless of whether or not it exists, a
-             *        PERMISSION_DENIED error is returned. If the Document to delete does not exist, a NOT_FOUND
-             *        error is returned.
+               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+             *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+             *        caller does not have permission to delete the Document, regardless of whether or not it
+             *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
+             *        NOT_FOUND error is returned.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -523,18 +3759,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
-               * cation}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
-               * caller does not have permission to delete the Document, regardless of whether or
-               * not it exists, a PERMISSION_DENIED error is returned. If the Document to delete
-               * does not exist, a NOT_FOUND error is returned.
+               * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
+               * s/{document}`. If the caller does not have permission to delete the Document,
+               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+               * the Document to delete does not exist, a NOT_FOUND error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/dataStor
-             es/{data_store}/branches/{branch}/documents/{document}`. If the caller does not have permission to
-             delete the Document, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
-             If the Document to delete does not exist, a NOT_FOUND error is returned.
+              /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
+             ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+             does not have permission to delete the Document, regardless of whether or not it exists, a
+             PERMISSION_DENIED error is returned. If the Document to delete does not exist, a NOT_FOUND error is
+             returned.
                */
               public java.lang.String getName() {
                 return name;
@@ -542,10 +3779,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
-               * cation}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
-               * caller does not have permission to delete the Document, regardless of whether or
-               * not it exists, a PERMISSION_DENIED error is returned. If the Document to delete
-               * does not exist, a NOT_FOUND error is returned.
+               * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
+               * s/{document}`. If the caller does not have permission to delete the Document,
+               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+               * the Document to delete does not exist, a NOT_FOUND error is returned.
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -570,11 +3807,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/dataStore
-             *        s/{data_store}/branches/{branch}/documents/{document}`. If the caller does not have
-             *        permission to access the Document, regardless of whether or not it exists, a
-             *        PERMISSION_DENIED error is returned. If the requested Document does not exist, a NOT_FOUND
-             *        error is returned.
+             * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+             *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+             *        caller does not have permission to access the Document, regardless of whether or not it
+             *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
+             *        NOT_FOUND error is returned.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -600,11 +3837,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/dataStore
-             *        s/{data_store}/branches/{branch}/documents/{document}`. If the caller does not have
-             *        permission to access the Document, regardless of whether or not it exists, a
-             *        PERMISSION_DENIED error is returned. If the requested Document does not exist, a NOT_FOUND
-             *        error is returned.
+               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+             *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+             *        caller does not have permission to access the Document, regardless of whether or not it
+             *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
+             *        NOT_FOUND error is returned.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -684,18 +3921,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
-               * cation}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
-               * caller does not have permission to access the Document, regardless of whether or
-               * not it exists, a PERMISSION_DENIED error is returned. If the requested Document
-               * does not exist, a NOT_FOUND error is returned.
+               * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
+               * s/{document}`. If the caller does not have permission to access the Document,
+               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+               * the requested Document does not exist, a NOT_FOUND error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/dataStor
-             es/{data_store}/branches/{branch}/documents/{document}`. If the caller does not have permission to
-             access the Document, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
-             If the requested Document does not exist, a NOT_FOUND error is returned.
+              /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
+             ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+             does not have permission to access the Document, regardless of whether or not it exists, a
+             PERMISSION_DENIED error is returned. If the requested Document does not exist, a NOT_FOUND error is
+             returned.
                */
               public java.lang.String getName() {
                 return name;
@@ -703,10 +3941,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
-               * cation}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
-               * caller does not have permission to access the Document, regardless of whether or
-               * not it exists, a PERMISSION_DENIED error is returned. If the requested Document
-               * does not exist, a NOT_FOUND error is returned.
+               * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
+               * s/{document}`. If the caller does not have permission to access the Document,
+               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
+               * the requested Document does not exist, a NOT_FOUND error is returned.
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -733,9 +3971,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the remote
              * operation.
              *
-             * @param parent Required. The parent branch resource name, such as
-             *        `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
-             *        Requires create/update permission.
+             * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Requires create/update
+             *        permission.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest}
              * @return the request
              */
@@ -764,9 +4002,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
                * after invoking the constructor. </p>
                *
-               * @param parent Required. The parent branch resource name, such as
-             *        `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
-             *        Requires create/update permission.
+               * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Requires create/update
+             *        permission.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest}
                * @since 1.13
                */
@@ -837,15 +4075,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The parent branch resource name, such as `projects/{project}/locations/{l
-               * ocation}/dataStores/{data_store}/branches/{branch}`. Requires create/update
-               * permission.
+               * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+               * Requires create/update permission.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent branch resource name, such as
-             `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`. Requires
-             create/update permission.
+              /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collect
+             ions/{collection}/dataStores/{data_store}/branches/{branch}`. Requires create/update permission.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -853,8 +4090,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The parent branch resource name, such as `projects/{project}/locations/{l
-               * ocation}/dataStores/{data_store}/branches/{branch}`. Requires create/update
-               * permission.
+               * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+               * Requires create/update permission.
                */
               public DiscoveryEngineImport setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -879,11 +4116,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent branch resource name, such as
-             *        `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`. Use
-             *        `default_branch` as the branch ID, to list documents under the default branch. If the
-             *        caller does not have permission to list Documentss under this branch, regardless of
-             *        whether or not this branch exists, a PERMISSION_DENIED error is returned.
+             * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
+             *        branch ID, to list documents under the default branch. If the caller does not have
+             *        permission to list Documentss under this branch, regardless of whether or not this branch
+             *        exists, a PERMISSION_DENIED error is returned.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -909,11 +4146,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent branch resource name, such as
-             *        `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`. Use
-             *        `default_branch` as the branch ID, to list documents under the default branch. If the
-             *        caller does not have permission to list Documentss under this branch, regardless of
-             *        whether or not this branch exists, a PERMISSION_DENIED error is returned.
+               * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
+             *        branch ID, to list documents under the default branch. If the caller does not have
+             *        permission to list Documentss under this branch, regardless of whether or not this branch
+             *        exists, a PERMISSION_DENIED error is returned.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -993,19 +4230,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The parent branch resource name, such as `projects/{project}/locations/{l
-               * ocation}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
-               * branch ID, to list documents under the default branch. If the caller does not have
-               * permission to list Documentss under this branch, regardless of whether or not this
-               * branch exists, a PERMISSION_DENIED error is returned.
+               * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use
+               * `default_branch` as the branch ID, to list documents under the default branch. If
+               * the caller does not have permission to list Documentss under this branch,
+               * regardless of whether or not this branch exists, a PERMISSION_DENIED error is
+               * returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent branch resource name, such as
-             `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`. Use
-             `default_branch` as the branch ID, to list documents under the default branch. If the caller does
-             not have permission to list Documentss under this branch, regardless of whether or not this branch
-             exists, a PERMISSION_DENIED error is returned.
+              /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collect
+             ions/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch
+             ID, to list documents under the default branch. If the caller does not have permission to list
+             Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+             error is returned.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -1013,10 +4251,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The parent branch resource name, such as `projects/{project}/locations/{l
-               * ocation}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
-               * branch ID, to list documents under the default branch. If the caller does not have
-               * permission to list Documentss under this branch, regardless of whether or not this
-               * branch exists, a PERMISSION_DENIED error is returned.
+               * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use
+               * `default_branch` as the branch ID, to list documents under the default branch. If
+               * the caller does not have permission to list Documentss under this branch,
+               * regardless of whether or not this branch exists, a PERMISSION_DENIED error is
+               * returned.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -1099,8 +4338,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}/
-             *        dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a
-             *        UTF-8 encoded string with a length limit of 1024 characters.
+             *        collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+             *        `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
              * @return the request
              */
@@ -1129,8 +4368,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}/
-             *        dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a
-             *        UTF-8 encoded string with a length limit of 1024 characters.
+             *        collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}
+             *        `. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocument}
                * @since 1.13
                */
@@ -1201,15 +4440,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. The full resource name of the document. Format: `projects/{project}/loca
-               * tions/{location}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`
-               * . This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               * tions/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}
+               * /documents/{document_id}`. This field must be a UTF-8 encoded string with a length
+               * limit of 1024 characters.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}
-             /dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a UTF-8
-             encoded string with a length limit of 1024 characters.
+             /collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This
+             field must be a UTF-8 encoded string with a length limit of 1024 characters.
                */
               public java.lang.String getName() {
                 return name;
@@ -1217,8 +4457,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. The full resource name of the document. Format: `projects/{project}/loca
-               * tions/{location}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`
-               * . This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               * tions/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}
+               * /documents/{document_id}`. This field must be a UTF-8 encoded string with a length
+               * limit of 1024 characters.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -1415,12 +4656,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-             * the binding to use different resource name schemes, such as `users/operations`. To override the
-             * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-             * configuration. For backwards compatibility, the default name includes the operations collection
-             * id, however overriding users must ensure the name binding is the parent resource, without the
-             * operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *
@@ -1445,12 +4681,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Lists operations that match the specified filter in the request. If the server doesn't support
-               * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-               * override the binding to use different resource name schemes, such as `users/operations`. To
-               * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-               * their service configuration. For backwards compatibility, the default name includes the
-               * operations collection id, however overriding users must ensure the name binding is the parent
-               * resource, without the operations collection id.
+               * this method, it returns `UNIMPLEMENTED`.
                *
                * Create a request for the method "operations.list".
                *
@@ -1796,12 +5027,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-             * the binding to use different resource name schemes, such as `users/operations`. To override the
-             * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-             * configuration. For backwards compatibility, the default name includes the operations collection
-             * id, however overriding users must ensure the name binding is the parent resource, without the
-             * operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *
@@ -1826,12 +5052,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Lists operations that match the specified filter in the request. If the server doesn't support
-               * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-               * override the binding to use different resource name schemes, such as `users/operations`. To
-               * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-               * their service configuration. For backwards compatibility, the default name includes the
-               * operations collection id, however overriding users must ensure the name binding is the parent
-               * resource, without the operations collection id.
+               * this method, it returns `UNIMPLEMENTED`.
                *
                * Create a request for the method "operations.list".
                *
@@ -2157,12 +5378,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-           * the binding to use different resource name schemes, such as `users/operations`. To override the
-           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-           * configuration. For backwards compatibility, the default name includes the operations collection
-           * id, however overriding users must ensure the name binding is the parent resource, without the
-           * operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -2187,12 +5403,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-             * override the binding to use different resource name schemes, such as `users/operations`. To
-             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-             * their service configuration. For backwards compatibility, the default name includes the
-             * operations collection id, however overriding users must ensure the name binding is the parent
-             * resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *
@@ -2383,9 +5594,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
            *
-           * @param servingConfig Required. Full resource name of the format: projects/locations/global/dataStores/servingConfigs
-           *        Before you can request recommendations from your model, you must create at least one
-           *        serving config for it.
+           * @param servingConfig Required. Full resource name of the format:
+           *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+           *        recommendations from your model, you must create at least one serving config for it.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
            * @return the request
            */
@@ -2413,9 +5624,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Recommend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param servingConfig Required. Full resource name of the format: projects/locations/global/dataStores/servingConfigs
-           *        Before you can request recommendations from your model, you must create at least one
-           *        serving config for it.
+             * @param servingConfig Required. Full resource name of the format:
+           *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+           *        recommendations from your model, you must create at least one serving config for it.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
              * @since 1.13
              */
@@ -2486,15 +5697,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of the format:
-             * projects/locations/global/dataStores/servingConfigs Before you can request
-             * recommendations from your model, you must create at least one serving config for it.
+             * projects/locations/global/collections/dataStores/servingConfigs Before you can
+             * request recommendations from your model, you must create at least one serving config
+             * for it.
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
-            /** Required. Full resource name of the format: projects/locations/global/dataStores/servingConfigs
-           Before you can request recommendations from your model, you must create at least one serving config
-           for it.
+            /** Required. Full resource name of the format:
+           projects/locations/global/collections/dataStores/servingConfigs Before you can request
+           recommendations from your model, you must create at least one serving config for it.
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
@@ -2502,8 +5714,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of the format:
-             * projects/locations/global/dataStores/servingConfigs Before you can request
-             * recommendations from your model, you must create at least one serving config for it.
+             * projects/locations/global/collections/dataStores/servingConfigs Before you can
+             * request recommendations from your model, you must create at least one serving config
+             * for it.
              */
             public Recommend setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -2553,7 +5766,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Collect#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent DataStore resource name, such as
-           *        `projects/{project}/locations/{location}/dataStores/{data_store}`.
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+           *        .
            * @return the request
            */
           public Collect collect(java.lang.String parent) throws java.io.IOException {
@@ -2583,7 +5797,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent DataStore resource name, such as
-           *        `projects/{project}/locations/{location}/dataStores/{data_store}`.
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+           *        .
              * @since 1.13
              */
             protected Collect(java.lang.String parent) {
@@ -2662,22 +5877,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The parent DataStore resource name, such as
-             * `projects/{project}/locations/{location}/dataStores/{data_store}`.
+             * Required. The parent DataStore resource name, such as `projects/{project}/locations/{
+             * location}/collections/{collection}/dataStores/{data_store}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent DataStore resource name, such as
-           `projects/{project}/locations/{location}/dataStores/{data_store}`.
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent DataStore resource name, such as
-             * `projects/{project}/locations/{location}/dataStores/{data_store}`.
+             * Required. The parent DataStore resource name, such as `projects/{project}/locations/{
+             * location}/collections/{collection}/dataStores/{data_store}`.
              */
             public Collect setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2776,7 +5991,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * operation.
            *
            * @param parent Required. Parent DataStore resource name, of the form
-           *        `projects/{project}/locations/{location}/dataStores/{data_store}`
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest}
            * @return the request
            */
@@ -2808,7 +6023,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * after invoking the constructor. </p>
              *
              * @param parent Required. Parent DataStore resource name, of the form
-           *        `projects/{project}/locations/{location}/dataStores/{data_store}`
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest}
              * @since 1.13
              */
@@ -2878,22 +6093,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Parent DataStore resource name, of the form
-             * `projects/{project}/locations/{location}/dataStores/{data_store}`
+             * Required. Parent DataStore resource name, of the form `projects/{project}/locations/{
+             * location}/collections/{collection}/dataStores/{data_store}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. Parent DataStore resource name, of the form
-           `projects/{project}/locations/{location}/dataStores/{data_store}`
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Parent DataStore resource name, of the form
-             * `projects/{project}/locations/{location}/dataStores/{data_store}`
+             * Required. Parent DataStore resource name, of the form `projects/{project}/locations/{
+             * location}/collections/{collection}/dataStores/{data_store}`
              */
             public DiscoveryEngineImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2919,7 +6134,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent DataStore resource name, such as
-           *        `projects/{project}/locations/{location}/dataStores/{data_store}`.
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+           *        .
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
            * @return the request
            */
@@ -2948,7 +6164,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent DataStore resource name, such as
-           *        `projects/{project}/locations/{location}/dataStores/{data_store}`.
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+           *        .
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
              * @since 1.13
              */
@@ -3018,22 +6235,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The parent DataStore resource name, such as
-             * `projects/{project}/locations/{location}/dataStores/{data_store}`.
+             * Required. The parent DataStore resource name, such as `projects/{project}/locations/{
+             * location}/collections/{collection}/dataStores/{data_store}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent DataStore resource name, such as
-           `projects/{project}/locations/{location}/dataStores/{data_store}`.
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent DataStore resource name, such as
-             * `projects/{project}/locations/{location}/dataStores/{data_store}`.
+             * Required. The parent DataStore resource name, such as `projects/{project}/locations/{
+             * location}/collections/{collection}/dataStores/{data_store}`.
              */
             public Write setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3215,12 +6432,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -3245,12 +6457,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -3576,12 +6783,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       }
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-       * the binding to use different resource name schemes, such as `users/operations`. To override the
-       * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-       * configuration. For backwards compatibility, the default name includes the operations collection
-       * id, however overriding users must ensure the name binding is the parent resource, without the
-       * operations collection id.
+       * this method, it returns `UNIMPLEMENTED`.
        *
        * Create a request for the method "operations.list".
        *
@@ -3606,12 +6808,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-         * override the binding to use different resource name schemes, such as `users/operations`. To
-         * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-         * their service configuration. For backwards compatibility, the default name includes the
-         * operations collection id, however overriding users must ensure the name binding is the parent
-         * resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *

@@ -30,14 +30,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineLoggingServiceContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * An identifier of the service. For example, "discoveryengine.googleapis.com".
+   * An identifier of the service—for example, `discoveryengine.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * An identifier of the service. For example, "discoveryengine.googleapis.com".
+   * An identifier of the service—for example, `discoveryengine.googleapis.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineLoggingServiceContext extends com.g
   }
 
   /**
-   * An identifier of the service. For example, "discoveryengine.googleapis.com".
+   * An identifier of the service—for example, `discoveryengine.googleapis.com`.
    * @param service service or {@code null} for none
    */
   public GoogleCloudDiscoveryengineLoggingServiceContext setService(java.lang.String service) {

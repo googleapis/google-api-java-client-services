@@ -17,9 +17,9 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * The error payload that is populated on LRO import APIs. Including:
- * "google.cloud.discoveryengine.v1alpha.DocumentService.ImportDocuments"
- * "google.cloud.discoveryengine.v1alpha.UserEventService.ImportUserEvents"
+ * The error payload that is populated on LRO import APIs, including the following: *
+ * `google.cloud.discoveryengine.v1alpha.DocumentService.ImportDocuments` *
+ * `google.cloud.discoveryengine.v1alpha.UserEventService.ImportUserEvents`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

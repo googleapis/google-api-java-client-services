@@ -30,16 +30,16 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineLoggingSourceLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human-readable name of a function or method. For example, "
-   * google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend".
+   * Human-readable name of a function or method—for example,
+   * `google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String functionName;
 
   /**
-   * Human-readable name of a function or method. For example, "
-   * google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend".
+   * Human-readable name of a function or method—for example,
+   * `google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFunctionName() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineLoggingSourceLocation extends com.g
   }
 
   /**
-   * Human-readable name of a function or method. For example, "
-   * google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend".
+   * Human-readable name of a function or method—for example,
+   * `google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend`.
    * @param functionName functionName or {@code null} for none
    */
   public GoogleCloudDiscoveryengineLoggingSourceLocation setFunctionName(java.lang.String functionName) {

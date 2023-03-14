@@ -41,6 +41,16 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> accessLevels;
 
   /**
+   * Optional. Dry run access level that will be evaluated but will not be enforced. The access
+   * denial based on dry run policy will be logged. Only one access level is supported, not
+   * multiple. This list must have exactly one element. Example:
+   * "accessPolicies/9522/accessLevels/device_trusted"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> dryRunAccessLevels;
+
+  /**
    * Required. Immutable. Google Group id whose members are subject to this binding's restrictions.
    * See "id" in the [G Suite Directory API's Groups resource] (https://developers.google.com/admin-
    * sdk/directory/v1/reference/groups#resource). If a group's email address/alias is changed, this
@@ -79,6 +89,29 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
    */
   public GcpUserAccessBinding setAccessLevels(java.util.List<java.lang.String> accessLevels) {
     this.accessLevels = accessLevels;
+    return this;
+  }
+
+  /**
+   * Optional. Dry run access level that will be evaluated but will not be enforced. The access
+   * denial based on dry run policy will be logged. Only one access level is supported, not
+   * multiple. This list must have exactly one element. Example:
+   * "accessPolicies/9522/accessLevels/device_trusted"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDryRunAccessLevels() {
+    return dryRunAccessLevels;
+  }
+
+  /**
+   * Optional. Dry run access level that will be evaluated but will not be enforced. The access
+   * denial based on dry run policy will be logged. Only one access level is supported, not
+   * multiple. This list must have exactly one element. Example:
+   * "accessPolicies/9522/accessLevels/device_trusted"
+   * @param dryRunAccessLevels dryRunAccessLevels or {@code null} for none
+   */
+  public GcpUserAccessBinding setDryRunAccessLevels(java.util.List<java.lang.String> dryRunAccessLevels) {
+    this.dryRunAccessLevels = dryRunAccessLevels;
     return this;
   }
 

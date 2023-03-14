@@ -31,6 +31,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1DeploymentGroupConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Type of the deployment group, which will be either Standard or Extensible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentGroupType;
+
+  /**
    * Name of the deployment group in the following format:
    * `organizations/{org}/environments/{env}/deploymentGroups/{group}`.
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class GoogleCloudApigeeV1DeploymentGroupConfig extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Type of the deployment group, which will be either Standard or Extensible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentGroupType() {
+    return deploymentGroupType;
+  }
+
+  /**
+   * Type of the deployment group, which will be either Standard or Extensible.
+   * @param deploymentGroupType deploymentGroupType or {@code null} for none
+   */
+  public GoogleCloudApigeeV1DeploymentGroupConfig setDeploymentGroupType(java.lang.String deploymentGroupType) {
+    this.deploymentGroupType = deploymentGroupType;
+    return this;
+  }
 
   /**
    * Name of the deployment group in the following format:

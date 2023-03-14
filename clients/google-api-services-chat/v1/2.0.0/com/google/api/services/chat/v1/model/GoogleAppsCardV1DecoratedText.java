@@ -45,9 +45,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Button button;
 
   /**
-   * An icon displayed after the text. Supports
-   * [standard](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons)
-   * and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
+   * An icon displayed after the text. Supports [built-
+   * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
+   * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
    * icons.
    * The value may be {@code null}.
    */
@@ -76,9 +76,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Icon startIcon;
 
   /**
-   * A switch widget can be clicked to change its state and trigger an action. Currently supported
-   * in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * A switch widget can be clicked to change its state and trigger an action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,9 +140,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * An icon displayed after the text. Supports
-   * [standard](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons)
-   * and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
+   * An icon displayed after the text. Supports [built-
+   * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
+   * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
    * icons.
    * @return value or {@code null} for none
    */
@@ -153,9 +151,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * An icon displayed after the text. Supports
-   * [standard](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons)
-   * and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
+   * An icon displayed after the text. Supports [built-
+   * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
+   * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
    * icons.
    * @param endIcon endIcon or {@code null} for none
    */
@@ -216,9 +214,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A switch widget can be clicked to change its state and trigger an action. Currently supported
-   * in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * A switch widget can be clicked to change its state and trigger an action.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl getSwitchControl() {
@@ -226,9 +222,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A switch widget can be clicked to change its state and trigger an action. Currently supported
-   * in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
+   * A switch widget can be clicked to change its state and trigger an action.
    * @param switchControl switchControl or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setSwitchControl(GoogleAppsCardV1SwitchControl switchControl) {

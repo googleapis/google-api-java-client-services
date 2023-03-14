@@ -605,14 +605,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /**
        * Optional. The maximum number of spaces to return. The service may return fewer than this
        * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
-       * above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+       * above 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of spaces to return. The service may return fewer than this value. If
      unspecified, at most 100 spaces are returned. The maximum value is 1000; values above 1000 are
-     coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+     coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -621,7 +621,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /**
        * Optional. The maximum number of spaces to return. The service may return fewer than this
        * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
-       * above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+       * above 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -1021,7 +1021,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A page token, received from a previous list memberships call. Provide this to retrieve
+         * A page token, received from a previous call to list memberships. Provide this to retrieve
          * the subsequent page. When paginating, all other parameters provided should match the call
          * that provided the page token. Passing different values to the other parameters may lead
          * to unexpected results.
@@ -1029,7 +1029,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous list memberships call. Provide this to retrieve the
+        /** A page token, received from a previous call to list memberships. Provide this to retrieve the
        subsequent page. When paginating, all other parameters provided should match the call that provided
        the page token. Passing different values to the other parameters may lead to unexpected results.
          */
@@ -1038,7 +1038,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A page token, received from a previous list memberships call. Provide this to retrieve
+         * A page token, received from a previous call to list memberships. Provide this to retrieve
          * the subsequent page. When paginating, all other parameters provided should match the call
          * that provided the page token. Passing different values to the other parameters may lead
          * to unexpected results.

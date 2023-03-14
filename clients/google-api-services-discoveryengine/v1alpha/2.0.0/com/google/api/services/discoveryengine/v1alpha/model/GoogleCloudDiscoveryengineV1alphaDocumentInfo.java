@@ -38,7 +38,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
 
   /**
    * Required. The Document resource full name, of the form: projects/{project\_id}/locations/{locat
-   * ion}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+   * ion}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/
+   * {document\_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
 
   /**
    * Required. The Document resource full name, of the form: projects/{project\_id}/locations/{locat
-   * ion}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+   * ion}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/
+   * {document\_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,7 +91,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
 
   /**
    * Required. The Document resource full name, of the form: projects/{project\_id}/locations/{locat
-   * ion}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+   * ion}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/
+   * {document\_id}
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentInfo setName(java.lang.String name) {

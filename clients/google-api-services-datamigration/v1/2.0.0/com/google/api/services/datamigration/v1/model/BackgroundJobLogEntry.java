@@ -31,6 +31,13 @@ package com.google.api.services.datamigration.v1.model;
 public final class BackgroundJobLogEntry extends com.google.api.client.json.GenericJson {
 
   /**
+   * Apply job details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApplyJobDetails applyJobDetails;
+
+  /**
    * Job completion comment, such as how many entities were seeded, how many warnings were found
    * during conversion, and similar information.
    * The value may be {@code null}.
@@ -44,6 +51,13 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String completionState;
+
+  /**
+   * Convert job details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConvertJobDetails convertJobDetails;
 
   /**
    * The timestamp when the background job was finished.
@@ -96,6 +110,23 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   private String startTime;
 
   /**
+   * Apply job details.
+   * @return value or {@code null} for none
+   */
+  public ApplyJobDetails getApplyJobDetails() {
+    return applyJobDetails;
+  }
+
+  /**
+   * Apply job details.
+   * @param applyJobDetails applyJobDetails or {@code null} for none
+   */
+  public BackgroundJobLogEntry setApplyJobDetails(ApplyJobDetails applyJobDetails) {
+    this.applyJobDetails = applyJobDetails;
+    return this;
+  }
+
+  /**
    * Job completion comment, such as how many entities were seeded, how many warnings were found
    * during conversion, and similar information.
    * @return value or {@code null} for none
@@ -128,6 +159,23 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
    */
   public BackgroundJobLogEntry setCompletionState(java.lang.String completionState) {
     this.completionState = completionState;
+    return this;
+  }
+
+  /**
+   * Convert job details.
+   * @return value or {@code null} for none
+   */
+  public ConvertJobDetails getConvertJobDetails() {
+    return convertJobDetails;
+  }
+
+  /**
+   * Convert job details.
+   * @param convertJobDetails convertJobDetails or {@code null} for none
+   */
+  public BackgroundJobLogEntry setConvertJobDetails(ConvertJobDetails convertJobDetails) {
+    this.convertJobDetails = convertJobDetails;
     return this;
   }
 

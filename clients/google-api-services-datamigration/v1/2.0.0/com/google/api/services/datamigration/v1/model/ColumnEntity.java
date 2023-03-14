@@ -143,7 +143,7 @@ public final class ColumnEntity extends com.google.api.client.json.GenericJson {
   private java.lang.Integer scale;
 
   /**
-   * Specifies the list of values allowed in the column. List is empty if setValues is not required.
+   * Specifies the list of values allowed in the column. Only used for set data type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,7 +429,7 @@ public final class ColumnEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the list of values allowed in the column. List is empty if setValues is not required.
+   * Specifies the list of values allowed in the column. Only used for set data type.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSetValues() {
@@ -437,7 +437,7 @@ public final class ColumnEntity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the list of values allowed in the column. List is empty if setValues is not required.
+   * Specifies the list of values allowed in the column. Only used for set data type.
    * @param setValues setValues or {@code null} for none
    */
   public ColumnEntity setSetValues(java.util.List<java.lang.String> setValues) {

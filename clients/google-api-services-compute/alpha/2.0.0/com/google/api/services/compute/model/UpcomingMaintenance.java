@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Upcoming Maintenance notification information. TODO(b/242069500) Deprecate this proto once it's
- * fully migrated to be under proto ResourceStatus.UpcomingMaintenance.
+ * Upcoming Maintenance notification information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -39,14 +38,15 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
-   * format. DEPRECATED: Use start_time_window instead.
+   * format. DEPRECATED: Use window_start_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String date;
 
   /**
-   * [Output Only] The start time window of the maintenance disruption.
+   * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
+   * window_start_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
-   * format. DEPRECATED: Use start_time_window instead.
+   * format. DEPRECATED: Use window_start_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
-   * format. DEPRECATED: Use start_time_window instead.
+   * format. DEPRECATED: Use window_start_time instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getDate() {
@@ -95,7 +95,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
-   * format. DEPRECATED: Use start_time_window instead.
+   * format. DEPRECATED: Use window_start_time instead.
    * @param date date or {@code null} for none
    */
   public UpcomingMaintenance setDate(java.lang.String date) {
@@ -104,7 +104,8 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The start time window of the maintenance disruption.
+   * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
+   * window_start_time instead.
    * @return value or {@code null} for none
    */
   public UpcomingMaintenanceTimeWindow getStartTimeWindow() {
@@ -112,7 +113,8 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The start time window of the maintenance disruption.
+   * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
+   * window_start_time instead.
    * @param startTimeWindow startTimeWindow or {@code null} for none
    */
   public UpcomingMaintenance setStartTimeWindow(UpcomingMaintenanceTimeWindow startTimeWindow) {
@@ -122,7 +124,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
-   * format. DEPRECATED: Use start_time_window instead.
+   * format. DEPRECATED: Use window_start_time instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTime() {
@@ -131,7 +133,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
-   * format. DEPRECATED: Use start_time_window instead.
+   * format. DEPRECATED: Use window_start_time instead.
    * @param time time or {@code null} for none
    */
   public UpcomingMaintenance setTime(java.lang.String time) {

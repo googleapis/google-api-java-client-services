@@ -103,7 +103,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
 
   /**
    * The request path of the HTTP health check request. The default value is /. This field does not
-   * support query parameters.
+   * support query parameters. Must comply with RFC3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,7 +306,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
 
   /**
    * The request path of the HTTP health check request. The default value is /. This field does not
-   * support query parameters.
+   * support query parameters. Must comply with RFC3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestPath() {
@@ -315,7 +315,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
 
   /**
    * The request path of the HTTP health check request. The default value is /. This field does not
-   * support query parameters.
+   * support query parameters. Must comply with RFC3986.
    * @param requestPath requestPath or {@code null} for none
    */
   public HttpHealthCheck setRequestPath(java.lang.String requestPath) {

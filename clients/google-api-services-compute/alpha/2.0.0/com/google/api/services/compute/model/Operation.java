@@ -167,6 +167,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SetCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata;
+
+  /**
    * [Output Only] The time that this operation was started by the server. This value is in RFC3339
    * text format.
    * The value may be {@code null}.
@@ -542,6 +548,21 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SetCommonInstanceMetadataOperationMetadata getSetCommonInstanceMetadataOperationMetadata() {
+    return setCommonInstanceMetadataOperationMetadata;
+  }
+
+  /**
+   * @param setCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata or {@code null} for none
+   */
+  public Operation setSetCommonInstanceMetadataOperationMetadata(SetCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata) {
+    this.setCommonInstanceMetadataOperationMetadata = setCommonInstanceMetadataOperationMetadata;
     return this;
   }
 

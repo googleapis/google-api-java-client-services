@@ -46,7 +46,7 @@ public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.c
 
   /**
    * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
-   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+   * must be a time zone name from the tz database: https://wikipedia.org/wiki/Tz_database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.c
 
   /**
    * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
-   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+   * must be a time zone name from the tz database: https://wikipedia.org/wiki/Tz_database.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -111,7 +111,7 @@ public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.c
 
   /**
    * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
-   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+   * must be a time zone name from the tz database: https://wikipedia.org/wiki/Tz_database.
    * @param timeZone timeZone or {@code null} for none
    */
   public ResourcePolicyInstanceSchedulePolicy setTimeZone(java.lang.String timeZone) {

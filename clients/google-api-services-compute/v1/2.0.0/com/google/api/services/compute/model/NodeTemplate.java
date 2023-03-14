@@ -115,9 +115,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   private java.lang.String nodeType;
 
   /**
-   * The flexible properties of the desired node type. Node groups that use this node template will
-   * create nodes of a type that matches these properties. This field is mutually exclusive with the
-   * node_type property; you can only define one or the other, but not both.
+   * Do not use. Instead, use the node_type property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,9 +335,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The flexible properties of the desired node type. Node groups that use this node template will
-   * create nodes of a type that matches these properties. This field is mutually exclusive with the
-   * node_type property; you can only define one or the other, but not both.
+   * Do not use. Instead, use the node_type property.
    * @return value or {@code null} for none
    */
   public NodeTemplateNodeTypeFlexibility getNodeTypeFlexibility() {
@@ -347,9 +343,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The flexible properties of the desired node type. Node groups that use this node template will
-   * create nodes of a type that matches these properties. This field is mutually exclusive with the
-   * node_type property; you can only define one or the other, but not both.
+   * Do not use. Instead, use the node_type property.
    * @param nodeTypeFlexibility nodeTypeFlexibility or {@code null} for none
    */
   public NodeTemplate setNodeTypeFlexibility(NodeTemplateNodeTypeFlexibility nodeTypeFlexibility) {

@@ -76,6 +76,15 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private SecurityPolicyRuleMatcher match;
 
   /**
+   * Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate
+   * preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have
+   * no effect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRulePreconfiguredWafConfig preconfiguredWafConfig;
+
+  /**
    * If set to true, the specified action is not enforced.
    * The value may be {@code null}.
    */
@@ -208,6 +217,27 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setMatch(SecurityPolicyRuleMatcher match) {
     this.match = match;
+    return this;
+  }
+
+  /**
+   * Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate
+   * preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have
+   * no effect.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRulePreconfiguredWafConfig getPreconfiguredWafConfig() {
+    return preconfiguredWafConfig;
+  }
+
+  /**
+   * Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate
+   * preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have
+   * no effect.
+   * @param preconfiguredWafConfig preconfiguredWafConfig or {@code null} for none
+   */
+  public SecurityPolicyRule setPreconfiguredWafConfig(SecurityPolicyRulePreconfiguredWafConfig preconfiguredWafConfig) {
+    this.preconfiguredWafConfig = preconfiguredWafConfig;
     return this;
   }
 

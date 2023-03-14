@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Price Competitiveness fields requested by the merchant in the query. Field values are only set if
+ * Price competitiveness fields requested by the merchant in the query. Field values are only set if
  * the merchant queries `PriceCompetitivenessProductView`.
  * https://support.google.com/merchants/answer/9626903
  *

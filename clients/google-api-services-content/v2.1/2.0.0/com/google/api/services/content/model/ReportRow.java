@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Best Sellers fields requested by the merchant in the query. Field values are only set if the
+   * Best sellers fields requested by the merchant in the query. Field values are only set if the
    * merchant queries `BestSellersProductClusterView` or `BestSellersBrandView`.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   private Metrics metrics;
 
   /**
-   * Price Competitiveness fields requested by the merchant in the query. Field values are only set
+   * Price competitiveness fields requested by the merchant in the query. Field values are only set
    * if the merchant queries `PriceCompetitivenessProductView`.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   private PriceCompetitiveness priceCompetitiveness;
 
   /**
-   * Price Insights fields requested by the merchant in the query. Field values are only set if the
+   * Price insights fields requested by the merchant in the query. Field values are only set if the
    * merchant queries `PriceInsightsProductView`.
    * The value may be {@code null}.
    */
@@ -80,8 +80,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `ProductView`. Available only to selected merchants. Submit the [interest
-   * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
+   * merchant queries `ProductView`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +95,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   private Segments segments;
 
   /**
-   * Best Sellers fields requested by the merchant in the query. Field values are only set if the
+   * Best sellers fields requested by the merchant in the query. Field values are only set if the
    * merchant queries `BestSellersProductClusterView` or `BestSellersBrandView`.
    * @return value or {@code null} for none
    */
@@ -105,7 +104,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Best Sellers fields requested by the merchant in the query. Field values are only set if the
+   * Best sellers fields requested by the merchant in the query. Field values are only set if the
    * merchant queries `BestSellersProductClusterView` or `BestSellersBrandView`.
    * @param bestSellers bestSellers or {@code null} for none
    */
@@ -153,7 +152,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Price Competitiveness fields requested by the merchant in the query. Field values are only set
+   * Price competitiveness fields requested by the merchant in the query. Field values are only set
    * if the merchant queries `PriceCompetitivenessProductView`.
    * @return value or {@code null} for none
    */
@@ -162,7 +161,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Price Competitiveness fields requested by the merchant in the query. Field values are only set
+   * Price competitiveness fields requested by the merchant in the query. Field values are only set
    * if the merchant queries `PriceCompetitivenessProductView`.
    * @param priceCompetitiveness priceCompetitiveness or {@code null} for none
    */
@@ -172,7 +171,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Price Insights fields requested by the merchant in the query. Field values are only set if the
+   * Price insights fields requested by the merchant in the query. Field values are only set if the
    * merchant queries `PriceInsightsProductView`.
    * @return value or {@code null} for none
    */
@@ -181,7 +180,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Price Insights fields requested by the merchant in the query. Field values are only set if the
+   * Price insights fields requested by the merchant in the query. Field values are only set if the
    * merchant queries `PriceInsightsProductView`.
    * @param priceInsights priceInsights or {@code null} for none
    */
@@ -211,8 +210,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `ProductView`. Available only to selected merchants. Submit the [interest
-   * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
+   * merchant queries `ProductView`.
    * @return value or {@code null} for none
    */
   public ProductView getProductView() {
@@ -221,8 +219,7 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
 
   /**
    * Product fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `ProductView`. Available only to selected merchants. Submit the [interest
-   * form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
+   * merchant queries `ProductView`.
    * @param productView productView or {@code null} for none
    */
   public ReportRow setProductView(ProductView productView) {

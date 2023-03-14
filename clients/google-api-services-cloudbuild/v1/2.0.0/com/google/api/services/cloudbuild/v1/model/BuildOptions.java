@@ -30,6 +30,13 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Option to specify how default logs buckets are setup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultLogsBucketBehavior;
+
+  /**
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some
    * of the space will be used by the operating system and build utilities. Also note that this is
    * the minimum disk size that will be allocated for the build -- the build may run with a larger
@@ -138,6 +145,23 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * Optional. Option to specify how default logs buckets are setup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultLogsBucketBehavior() {
+    return defaultLogsBucketBehavior;
+  }
+
+  /**
+   * Optional. Option to specify how default logs buckets are setup.
+   * @param defaultLogsBucketBehavior defaultLogsBucketBehavior or {@code null} for none
+   */
+  public BuildOptions setDefaultLogsBucketBehavior(java.lang.String defaultLogsBucketBehavior) {
+    this.defaultLogsBucketBehavior = defaultLogsBucketBehavior;
+    return this;
+  }
 
   /**
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some

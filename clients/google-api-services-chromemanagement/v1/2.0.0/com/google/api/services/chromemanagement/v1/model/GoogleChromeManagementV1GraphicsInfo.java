@@ -43,6 +43,33 @@ public final class GoogleChromeManagementV1GraphicsInfo extends com.google.api.c
   private GoogleChromeManagementV1GraphicsAdapterInfo adapterInfo;
 
   /**
+   * Output only. Information about the display(s) of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1DisplayDevice> displayDevices;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1DisplayDevice used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1DisplayDevice.class);
+  }
+
+  /**
+   * Output only. Is ePrivacy screen supported or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean eprivacySupported;
+
+  /**
+   * Output only. Information about the internal touch screen(s) of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TouchScreenInfo touchScreenInfo;
+
+  /**
    * Output only. Information about the graphics adapter (GPU).
    * @return value or {@code null} for none
    */
@@ -56,6 +83,57 @@ public final class GoogleChromeManagementV1GraphicsInfo extends com.google.api.c
    */
   public GoogleChromeManagementV1GraphicsInfo setAdapterInfo(GoogleChromeManagementV1GraphicsAdapterInfo adapterInfo) {
     this.adapterInfo = adapterInfo;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the display(s) of the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1DisplayDevice> getDisplayDevices() {
+    return displayDevices;
+  }
+
+  /**
+   * Output only. Information about the display(s) of the device.
+   * @param displayDevices displayDevices or {@code null} for none
+   */
+  public GoogleChromeManagementV1GraphicsInfo setDisplayDevices(java.util.List<GoogleChromeManagementV1DisplayDevice> displayDevices) {
+    this.displayDevices = displayDevices;
+    return this;
+  }
+
+  /**
+   * Output only. Is ePrivacy screen supported or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEprivacySupported() {
+    return eprivacySupported;
+  }
+
+  /**
+   * Output only. Is ePrivacy screen supported or not.
+   * @param eprivacySupported eprivacySupported or {@code null} for none
+   */
+  public GoogleChromeManagementV1GraphicsInfo setEprivacySupported(java.lang.Boolean eprivacySupported) {
+    this.eprivacySupported = eprivacySupported;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the internal touch screen(s) of the device.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TouchScreenInfo getTouchScreenInfo() {
+    return touchScreenInfo;
+  }
+
+  /**
+   * Output only. Information about the internal touch screen(s) of the device.
+   * @param touchScreenInfo touchScreenInfo or {@code null} for none
+   */
+  public GoogleChromeManagementV1GraphicsInfo setTouchScreenInfo(GoogleChromeManagementV1TouchScreenInfo touchScreenInfo) {
+    this.touchScreenInfo = touchScreenInfo;
     return this;
   }
 

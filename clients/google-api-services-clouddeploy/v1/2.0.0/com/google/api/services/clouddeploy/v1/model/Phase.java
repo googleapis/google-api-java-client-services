@@ -31,6 +31,13 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Phase extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. ChildRollout job composition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChildRolloutJobs childRolloutJobs;
+
+  /**
    * Output only. Deployment job composition.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class Phase extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. ChildRollout job composition.
+   * @return value or {@code null} for none
+   */
+  public ChildRolloutJobs getChildRolloutJobs() {
+    return childRolloutJobs;
+  }
+
+  /**
+   * Output only. ChildRollout job composition.
+   * @param childRolloutJobs childRolloutJobs or {@code null} for none
+   */
+  public Phase setChildRolloutJobs(ChildRolloutJobs childRolloutJobs) {
+    this.childRolloutJobs = childRolloutJobs;
+    return this;
+  }
 
   /**
    * Output only. Deployment job composition.

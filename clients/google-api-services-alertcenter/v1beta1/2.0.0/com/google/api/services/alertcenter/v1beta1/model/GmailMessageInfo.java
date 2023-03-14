@@ -80,6 +80,13 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   private java.lang.String recipient;
 
   /**
+   * The sent time of the email.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String sentTime;
+
+  /**
    * The email subject text (only available for reported emails).
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
    */
   public GmailMessageInfo setRecipient(java.lang.String recipient) {
     this.recipient = recipient;
+    return this;
+  }
+
+  /**
+   * The sent time of the email.
+   * @return value or {@code null} for none
+   */
+  public String getSentTime() {
+    return sentTime;
+  }
+
+  /**
+   * The sent time of the email.
+   * @param sentTime sentTime or {@code null} for none
+   */
+  public GmailMessageInfo setSentTime(String sentTime) {
+    this.sentTime = sentTime;
     return this;
   }
 

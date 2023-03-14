@@ -155,8 +155,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String status;
 
   /**
-   * [Output Only] Set to true for locations that support physical zone separation. Defaults to
-   * false if the field is not present.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -457,8 +456,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Set to true for locations that support physical zone separation. Defaults to
-   * false if the field is not present.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsPzs() {
@@ -466,8 +464,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Set to true for locations that support physical zone separation. Defaults to
-   * false if the field is not present.
+   * [Output Only] Reserved for future use.
    * @param supportsPzs supportsPzs or {@code null} for none
    */
   public InterconnectLocation setSupportsPzs(java.lang.Boolean supportsPzs) {

@@ -103,7 +103,8 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   private java.lang.Integer port;
 
   /**
-   * The request path of the HTTPS health check request. The default value is "/".
+   * The request path of the HTTPS health check request. The default value is "/". Must comply with
+   * RFC3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,7 +306,8 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTPS health check request. The default value is "/".
+   * The request path of the HTTPS health check request. The default value is "/". Must comply with
+   * RFC3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestPath() {
@@ -313,7 +315,8 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTPS health check request. The default value is "/".
+   * The request path of the HTTPS health check request. The default value is "/". Must comply with
+   * RFC3986.
    * @param requestPath requestPath or {@code null} for none
    */
   public HttpsHealthCheck setRequestPath(java.lang.String requestPath) {

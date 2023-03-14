@@ -31,12 +31,12 @@ jobs:
             return result
   generate_one:
     runs-on: ubuntu-20.04
-    needs: discovery
+    needs: batch
     strategy:
       fail-fast: false
       max-parallel: 4
       matrix: 
-        service: ${{fromJson(needs.discovery.outputs.services).one}}
+        service: ${{fromJson(needs.batch.outputs.services).one}}
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v2
@@ -69,12 +69,12 @@ jobs:
           fork: true
   generate_two:
     runs-on: ubuntu-20.04
-    needs: discovery
+    needs: batch
     strategy:
       fail-fast: false
       max-parallel: 4
       matrix: 
-        service: ${{fromJson(needs.discovery.outputs.services).two}}
+        service: ${{fromJson(needs.batch.outputs.services).two}}
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v2

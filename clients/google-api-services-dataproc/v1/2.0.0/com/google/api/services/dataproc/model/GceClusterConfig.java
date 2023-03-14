@@ -64,8 +64,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/default
-   * projects/[project_id]/regions/[region]/default default
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default
+   * projects/[project_id]/global/networks/default default
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,8 +228,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/default
-   * projects/[project_id]/regions/[region]/default default
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default
+   * projects/[project_id]/global/networks/default default
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -242,8 +242,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/[region]/default
-   * projects/[project_id]/regions/[region]/default default
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default
+   * projects/[project_id]/global/networks/default default
    * @param networkUri networkUri or {@code null} for none
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {

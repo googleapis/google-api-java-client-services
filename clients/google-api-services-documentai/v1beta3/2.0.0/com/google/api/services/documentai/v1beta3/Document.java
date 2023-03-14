@@ -967,12 +967,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -997,12 +992,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -3698,6 +3688,147 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Imports a processor version from source processor version.
+           *
+           * Create a request for the method "processorVersions.importProcessorVersion".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link ImportProcessorVersion#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The destination processor name to create the processor version in. Format:
+           *        `projects/{project}/locations/{location}/processors/{processor}`
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest}
+           * @return the request
+           */
+          public ImportProcessorVersion importProcessorVersion(java.lang.String parent, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest content) throws java.io.IOException {
+            ImportProcessorVersion result = new ImportProcessorVersion(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ImportProcessorVersion extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta3/{+parent}/processorVersions:importProcessorVersion";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+$");
+
+            /**
+             * Imports a processor version from source processor version.
+             *
+             * Create a request for the method "processorVersions.importProcessorVersion".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link ImportProcessorVersion#execute()} method to invoke the
+             * remote operation. <p> {@link ImportProcessorVersion#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent Required. The destination processor name to create the processor version in. Format:
+           *        `projects/{project}/locations/{location}/processors/{processor}`
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest}
+             * @since 1.13
+             */
+            protected ImportProcessorVersion(java.lang.String parent, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+$");
+              }
+            }
+
+            @Override
+            public ImportProcessorVersion set$Xgafv(java.lang.String $Xgafv) {
+              return (ImportProcessorVersion) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ImportProcessorVersion setAccessToken(java.lang.String accessToken) {
+              return (ImportProcessorVersion) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ImportProcessorVersion setAlt(java.lang.String alt) {
+              return (ImportProcessorVersion) super.setAlt(alt);
+            }
+
+            @Override
+            public ImportProcessorVersion setCallback(java.lang.String callback) {
+              return (ImportProcessorVersion) super.setCallback(callback);
+            }
+
+            @Override
+            public ImportProcessorVersion setFields(java.lang.String fields) {
+              return (ImportProcessorVersion) super.setFields(fields);
+            }
+
+            @Override
+            public ImportProcessorVersion setKey(java.lang.String key) {
+              return (ImportProcessorVersion) super.setKey(key);
+            }
+
+            @Override
+            public ImportProcessorVersion setOauthToken(java.lang.String oauthToken) {
+              return (ImportProcessorVersion) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ImportProcessorVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ImportProcessorVersion) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ImportProcessorVersion setQuotaUser(java.lang.String quotaUser) {
+              return (ImportProcessorVersion) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ImportProcessorVersion setUploadType(java.lang.String uploadType) {
+              return (ImportProcessorVersion) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ImportProcessorVersion setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ImportProcessorVersion) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The destination processor name to create the processor version in. Format:
+             * `projects/{project}/locations/{location}/processors/{processor}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The destination processor name to create the processor version in. Format:
+           `projects/{project}/locations/{location}/processors/{processor}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The destination processor name to create the processor version in. Format:
+             * `projects/{project}/locations/{location}/processors/{processor}`
+             */
+            public ImportProcessorVersion setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ImportProcessorVersion set(String parameterName, Object value) {
+              return (ImportProcessorVersion) super.set(parameterName, value);
             }
           }
           /**

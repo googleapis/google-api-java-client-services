@@ -51,16 +51,16 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   private OracleRdbms includeObjects;
 
   /**
-   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
-   * set to 0), the system's default value will be used.
+   * Maximum number of concurrent backfill tasks. The number should be non-negative. If not set (or
+   * set to 0), the system's default value is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxConcurrentBackfillTasks;
 
   /**
-   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
-   * to 0), the system's default value will be used.
+   * Maximum number of concurrent CDC tasks. The number should be non-negative. If not set (or set
+   * to 0), the system's default value is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
-   * set to 0), the system's default value will be used.
+   * Maximum number of concurrent backfill tasks. The number should be non-negative. If not set (or
+   * set to 0), the system's default value is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConcurrentBackfillTasks() {
@@ -134,8 +134,8 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or
-   * set to 0), the system's default value will be used.
+   * Maximum number of concurrent backfill tasks. The number should be non-negative. If not set (or
+   * set to 0), the system's default value is used.
    * @param maxConcurrentBackfillTasks maxConcurrentBackfillTasks or {@code null} for none
    */
   public OracleSourceConfig setMaxConcurrentBackfillTasks(java.lang.Integer maxConcurrentBackfillTasks) {
@@ -144,8 +144,8 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
-   * to 0), the system's default value will be used.
+   * Maximum number of concurrent CDC tasks. The number should be non-negative. If not set (or set
+   * to 0), the system's default value is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConcurrentCdcTasks() {
@@ -153,8 +153,8 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
-   * to 0), the system's default value will be used.
+   * Maximum number of concurrent CDC tasks. The number should be non-negative. If not set (or set
+   * to 0), the system's default value is used.
    * @param maxConcurrentCdcTasks maxConcurrentCdcTasks or {@code null} for none
    */
   public OracleSourceConfig setMaxConcurrentCdcTasks(java.lang.Integer maxConcurrentCdcTasks) {

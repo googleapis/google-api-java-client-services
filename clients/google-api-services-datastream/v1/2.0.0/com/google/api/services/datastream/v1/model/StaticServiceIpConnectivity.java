@@ -17,7 +17,9 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Static IP address connectivity.
+ * Static IP address connectivity. Used when the source database is configured to allow incoming
+ * connections from the Datastream public IP addresses for the region specified in the connection
+ * profile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:

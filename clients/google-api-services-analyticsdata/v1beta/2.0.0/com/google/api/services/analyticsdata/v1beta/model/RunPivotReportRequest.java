@@ -86,7 +86,11 @@ public final class RunPivotReportRequest extends com.google.api.client.json.Gene
 
   /**
    * If false or unspecified, each row with all metrics equal to 0 will not be returned. If true,
-   * these rows will be returned if they are not separately removed by a filter.
+   * these rows will be returned if they are not separately removed by a filter. Regardless of this
+   * `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be
+   * displayed in a report. For example if a property never logs a `purchase` event, then a query
+   * for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase"
+   * and eventCount: 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +254,11 @@ public final class RunPivotReportRequest extends com.google.api.client.json.Gene
 
   /**
    * If false or unspecified, each row with all metrics equal to 0 will not be returned. If true,
-   * these rows will be returned if they are not separately removed by a filter.
+   * these rows will be returned if they are not separately removed by a filter. Regardless of this
+   * `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be
+   * displayed in a report. For example if a property never logs a `purchase` event, then a query
+   * for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase"
+   * and eventCount: 0.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKeepEmptyRows() {
@@ -259,7 +267,11 @@ public final class RunPivotReportRequest extends com.google.api.client.json.Gene
 
   /**
    * If false or unspecified, each row with all metrics equal to 0 will not be returned. If true,
-   * these rows will be returned if they are not separately removed by a filter.
+   * these rows will be returned if they are not separately removed by a filter. Regardless of this
+   * `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be
+   * displayed in a report. For example if a property never logs a `purchase` event, then a query
+   * for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase"
+   * and eventCount: 0.
    * @param keepEmptyRows keepEmptyRows or {@code null} for none
    */
   public RunPivotReportRequest setKeepEmptyRows(java.lang.Boolean keepEmptyRows) {

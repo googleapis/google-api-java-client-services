@@ -28,40 +28,40 @@ package com.google.api.services.baremetalsolution.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RenameInstanceRequest extends com.google.api.client.json.GenericJson {
+public final class RenameNetworkRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The new `id` of the instance.
+   * Required. The new `id` of the network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String newInstanceId;
+  private java.lang.String newNetworkId;
 
   /**
-   * Required. The new `id` of the instance.
+   * Required. The new `id` of the network.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNewInstanceId() {
-    return newInstanceId;
+  public java.lang.String getNewNetworkId() {
+    return newNetworkId;
   }
 
   /**
-   * Required. The new `id` of the instance.
-   * @param newInstanceId newInstanceId or {@code null} for none
+   * Required. The new `id` of the network.
+   * @param newNetworkId newNetworkId or {@code null} for none
    */
-  public RenameInstanceRequest setNewInstanceId(java.lang.String newInstanceId) {
-    this.newInstanceId = newInstanceId;
+  public RenameNetworkRequest setNewNetworkId(java.lang.String newNetworkId) {
+    this.newNetworkId = newNetworkId;
     return this;
   }
 
   @Override
-  public RenameInstanceRequest set(String fieldName, Object value) {
-    return (RenameInstanceRequest) super.set(fieldName, value);
+  public RenameNetworkRequest set(String fieldName, Object value) {
+    return (RenameNetworkRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RenameInstanceRequest clone() {
-    return (RenameInstanceRequest) super.clone();
+  public RenameNetworkRequest clone() {
+    return (RenameNetworkRequest) super.clone();
   }
 
 }

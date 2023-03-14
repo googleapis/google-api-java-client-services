@@ -28,40 +28,40 @@ package com.google.api.services.baremetalsolution.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RenameInstanceRequest extends com.google.api.client.json.GenericJson {
+public final class RenameVolumeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The new `id` of the instance.
+   * Required. The new `id` of the volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String newInstanceId;
+  private java.lang.String newVolumeId;
 
   /**
-   * Required. The new `id` of the instance.
+   * Required. The new `id` of the volume.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNewInstanceId() {
-    return newInstanceId;
+  public java.lang.String getNewVolumeId() {
+    return newVolumeId;
   }
 
   /**
-   * Required. The new `id` of the instance.
-   * @param newInstanceId newInstanceId or {@code null} for none
+   * Required. The new `id` of the volume.
+   * @param newVolumeId newVolumeId or {@code null} for none
    */
-  public RenameInstanceRequest setNewInstanceId(java.lang.String newInstanceId) {
-    this.newInstanceId = newInstanceId;
+  public RenameVolumeRequest setNewVolumeId(java.lang.String newVolumeId) {
+    this.newVolumeId = newVolumeId;
     return this;
   }
 
   @Override
-  public RenameInstanceRequest set(String fieldName, Object value) {
-    return (RenameInstanceRequest) super.set(fieldName, value);
+  public RenameVolumeRequest set(String fieldName, Object value) {
+    return (RenameVolumeRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RenameInstanceRequest clone() {
-    return (RenameInstanceRequest) super.clone();
+  public RenameVolumeRequest clone() {
+    return (RenameVolumeRequest) super.clone();
   }
 
 }

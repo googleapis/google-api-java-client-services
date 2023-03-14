@@ -38,6 +38,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The firmware version for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firmwareVersion;
+
+  /**
    * True if you enable hyperthreading for the server, otherwise false. The default value is false.
    * The value may be {@code null}.
    */
@@ -188,6 +195,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The firmware version for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirmwareVersion() {
+    return firmwareVersion;
+  }
+
+  /**
+   * Output only. The firmware version for the instance.
+   * @param firmwareVersion firmwareVersion or {@code null} for none
+   */
+  public Instance setFirmwareVersion(java.lang.String firmwareVersion) {
+    this.firmwareVersion = firmwareVersion;
     return this;
   }
 

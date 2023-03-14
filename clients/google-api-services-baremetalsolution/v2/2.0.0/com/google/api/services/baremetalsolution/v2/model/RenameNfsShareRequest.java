@@ -28,40 +28,40 @@ package com.google.api.services.baremetalsolution.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RenameInstanceRequest extends com.google.api.client.json.GenericJson {
+public final class RenameNfsShareRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The new `id` of the instance.
+   * Required. The new `id` of the nfsshare.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String newInstanceId;
+  private java.lang.String newNfsshareId;
 
   /**
-   * Required. The new `id` of the instance.
+   * Required. The new `id` of the nfsshare.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNewInstanceId() {
-    return newInstanceId;
+  public java.lang.String getNewNfsshareId() {
+    return newNfsshareId;
   }
 
   /**
-   * Required. The new `id` of the instance.
-   * @param newInstanceId newInstanceId or {@code null} for none
+   * Required. The new `id` of the nfsshare.
+   * @param newNfsshareId newNfsshareId or {@code null} for none
    */
-  public RenameInstanceRequest setNewInstanceId(java.lang.String newInstanceId) {
-    this.newInstanceId = newInstanceId;
+  public RenameNfsShareRequest setNewNfsshareId(java.lang.String newNfsshareId) {
+    this.newNfsshareId = newNfsshareId;
     return this;
   }
 
   @Override
-  public RenameInstanceRequest set(String fieldName, Object value) {
-    return (RenameInstanceRequest) super.set(fieldName, value);
+  public RenameNfsShareRequest set(String fieldName, Object value) {
+    return (RenameNfsShareRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RenameInstanceRequest clone() {
-    return (RenameInstanceRequest) super.clone();
+  public RenameNfsShareRequest clone() {
+    return (RenameNfsShareRequest) super.clone();
   }
 
 }

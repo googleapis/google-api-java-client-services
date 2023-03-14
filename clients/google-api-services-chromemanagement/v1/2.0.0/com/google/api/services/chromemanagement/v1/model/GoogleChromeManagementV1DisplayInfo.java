@@ -38,6 +38,13 @@ public final class GoogleChromeManagementV1DisplayInfo extends com.google.api.cl
   private java.lang.Long deviceId;
 
   /**
+   * Output only. Display device name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Output only. Indicates if display is internal or not.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class GoogleChromeManagementV1DisplayInfo extends com.google.api.cl
    */
   public GoogleChromeManagementV1DisplayInfo setDeviceId(java.lang.Long deviceId) {
     this.deviceId = deviceId;
+    return this;
+  }
+
+  /**
+   * Output only. Display device name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. Display device name.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleChromeManagementV1DisplayInfo setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

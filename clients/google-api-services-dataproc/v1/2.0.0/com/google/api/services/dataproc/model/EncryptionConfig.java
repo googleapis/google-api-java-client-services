@@ -38,6 +38,14 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
   private java.lang.String gcePdKmsKeyName;
 
   /**
+   * Optional. The Cloud KMS key name to use for encrypting customer core content and cluster PD
+   * disk for all instances in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
+
+  /**
    * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the
    * cluster.
    * @return value or {@code null} for none
@@ -53,6 +61,25 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
    */
   public EncryptionConfig setGcePdKmsKeyName(java.lang.String gcePdKmsKeyName) {
     this.gcePdKmsKeyName = gcePdKmsKeyName;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud KMS key name to use for encrypting customer core content and cluster PD
+   * disk for all instances in the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Optional. The Cloud KMS key name to use for encrypting customer core content and cluster PD
+   * disk for all instances in the cluster.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public EncryptionConfig setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

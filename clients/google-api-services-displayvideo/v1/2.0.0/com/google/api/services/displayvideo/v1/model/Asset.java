@@ -39,7 +39,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * Media ID of the uploaded asset. This is a unique identifier for the asset. This ID can be
-   * passed to other API calls, e.g. CreateCreative to associate the asset with a creative.
+   * passed to other API calls, e.g. CreateCreative to associate the asset with a creative. **On
+   * April 5, 2023, the value of this ID will be updated. Before this date, we recommend that you
+   * stop using any cached media IDs when creating or updating creatives, and instead upload assets
+   * immediately before using them for creative production.** **After April 5, you can update cached
+   * media IDs to the new values by retrieving them from associated creative resources or re-
+   * uploading them.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -64,7 +69,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * Media ID of the uploaded asset. This is a unique identifier for the asset. This ID can be
-   * passed to other API calls, e.g. CreateCreative to associate the asset with a creative.
+   * passed to other API calls, e.g. CreateCreative to associate the asset with a creative. **On
+   * April 5, 2023, the value of this ID will be updated. Before this date, we recommend that you
+   * stop using any cached media IDs when creating or updating creatives, and instead upload assets
+   * immediately before using them for creative production.** **After April 5, you can update cached
+   * media IDs to the new values by retrieving them from associated creative resources or re-
+   * uploading them.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getMediaId() {
@@ -73,7 +83,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * Media ID of the uploaded asset. This is a unique identifier for the asset. This ID can be
-   * passed to other API calls, e.g. CreateCreative to associate the asset with a creative.
+   * passed to other API calls, e.g. CreateCreative to associate the asset with a creative. **On
+   * April 5, 2023, the value of this ID will be updated. Before this date, we recommend that you
+   * stop using any cached media IDs when creating or updating creatives, and instead upload assets
+   * immediately before using them for creative production.** **After April 5, you can update cached
+   * media IDs to the new values by retrieving them from associated creative resources or re-
+   * uploading them.**
    * @param mediaId mediaId or {@code null} for none
    */
   public Asset setMediaId(java.lang.Long mediaId) {

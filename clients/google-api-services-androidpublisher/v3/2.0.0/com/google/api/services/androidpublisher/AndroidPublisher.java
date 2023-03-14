@@ -12661,6 +12661,166 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Consumes a purchase for an inapp item.
+       *
+       * Create a request for the method "products.consume".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Consume#execute()} method to invoke the remote operation.
+       *
+       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+       * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
+       * @param token The token provided to the user's device when the inapp product was purchased.
+       * @return the request
+       */
+      public Consume consume(java.lang.String packageName, java.lang.String productId, java.lang.String token) throws java.io.IOException {
+        Consume result = new Consume(packageName, productId, token);
+        initialize(result);
+        return result;
+      }
+
+      public class Consume extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:consume";
+
+        /**
+         * Consumes a purchase for an inapp item.
+         *
+         * Create a request for the method "products.consume".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Consume#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Consume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
+         * @param token The token provided to the user's device when the inapp product was purchased.
+         * @since 1.13
+         */
+        protected Consume(java.lang.String packageName, java.lang.String productId, java.lang.String token) {
+          super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Consume set$Xgafv(java.lang.String $Xgafv) {
+          return (Consume) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Consume setAccessToken(java.lang.String accessToken) {
+          return (Consume) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Consume setAlt(java.lang.String alt) {
+          return (Consume) super.setAlt(alt);
+        }
+
+        @Override
+        public Consume setCallback(java.lang.String callback) {
+          return (Consume) super.setCallback(callback);
+        }
+
+        @Override
+        public Consume setFields(java.lang.String fields) {
+          return (Consume) super.setFields(fields);
+        }
+
+        @Override
+        public Consume setKey(java.lang.String key) {
+          return (Consume) super.setKey(key);
+        }
+
+        @Override
+        public Consume setOauthToken(java.lang.String oauthToken) {
+          return (Consume) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Consume setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Consume) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Consume setQuotaUser(java.lang.String quotaUser) {
+          return (Consume) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Consume setUploadType(java.lang.String uploadType) {
+          return (Consume) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Consume setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Consume) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        public Consume setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The inapp product SKU (for example, 'com.some.thing.inapp1'). */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** The inapp product SKU (for example, 'com.some.thing.inapp1').
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** The inapp product SKU (for example, 'com.some.thing.inapp1'). */
+        public Consume setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /** The token provided to the user's device when the inapp product was purchased. */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** The token provided to the user's device when the inapp product was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /** The token provided to the user's device when the inapp product was purchased. */
+        public Consume setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Consume set(String parameterName, Object value) {
+          return (Consume) super.set(parameterName, value);
+        }
+      }
+      /**
        * Checks the purchase and consumption status of an inapp item.
        *
        * Create a request for the method "products.get".

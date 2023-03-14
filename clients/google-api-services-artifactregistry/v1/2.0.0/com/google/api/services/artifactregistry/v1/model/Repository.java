@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the repository was created.
+   * Output only. The time when the repository was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,6 +43,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Docker repository config contains repository level configuration for the repositories of docker
+   * type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DockerRepositoryConfig dockerConfig;
 
   /**
    * The format of packages that are stored in the repository.
@@ -115,7 +123,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeBytes;
 
   /**
-   * The time when the repository was last updated.
+   * Output only. The time when the repository was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +137,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private VirtualRepositoryConfig virtualRepositoryConfig;
 
   /**
-   * The time when the repository was created.
+   * Output only. The time when the repository was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -137,7 +145,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the repository was created.
+   * Output only. The time when the repository was created.
    * @param createTime createTime or {@code null} for none
    */
   public Repository setCreateTime(String createTime) {
@@ -159,6 +167,25 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Docker repository config contains repository level configuration for the repositories of docker
+   * type.
+   * @return value or {@code null} for none
+   */
+  public DockerRepositoryConfig getDockerConfig() {
+    return dockerConfig;
+  }
+
+  /**
+   * Docker repository config contains repository level configuration for the repositories of docker
+   * type.
+   * @param dockerConfig dockerConfig or {@code null} for none
+   */
+  public Repository setDockerConfig(DockerRepositoryConfig dockerConfig) {
+    this.dockerConfig = dockerConfig;
     return this;
   }
 
@@ -330,7 +357,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the repository was last updated.
+   * Output only. The time when the repository was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -338,7 +365,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the repository was last updated.
+   * Output only. The time when the repository was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Repository setUpdateTime(String updateTime) {

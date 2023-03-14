@@ -41,7 +41,7 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   private String committedUntil;
 
   /**
-   * TODO(b/265939748) To be removed, always false from User Status Service.
+   * TODO(b/265939748) To be removed, always false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   }
 
   /**
-   * TODO(b/265939748) To be removed, always false from User Status Service.
+   * TODO(b/265939748) To be removed, always false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCommittedUntilIsMixed() {
@@ -109,7 +109,7 @@ public final class GoogleInternalAppsWaldoV1alphaInMeeting extends com.google.ap
   }
 
   /**
-   * TODO(b/265939748) To be removed, always false from User Status Service.
+   * TODO(b/265939748) To be removed, always false.
    * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaInMeeting setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {

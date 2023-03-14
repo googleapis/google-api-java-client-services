@@ -62,12 +62,6 @@ public final class RepositoryWebrefSimplifiedCompositeDoc extends com.google.api
   private RepositoryWebrefPreprocessingUrlMatchingMetadata matchingMetadata;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RepositoryWebrefSimplifiedAnchors obsoleteAnchorsWithoutInterwiki;
-
-  /**
    * Additional document metadata needed by Refcon.
    * The value may be {@code null}.
    */
@@ -163,21 +157,6 @@ public final class RepositoryWebrefSimplifiedCompositeDoc extends com.google.api
    */
   public RepositoryWebrefSimplifiedCompositeDoc setMatchingMetadata(RepositoryWebrefPreprocessingUrlMatchingMetadata matchingMetadata) {
     this.matchingMetadata = matchingMetadata;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefSimplifiedAnchors getObsoleteAnchorsWithoutInterwiki() {
-    return obsoleteAnchorsWithoutInterwiki;
-  }
-
-  /**
-   * @param obsoleteAnchorsWithoutInterwiki obsoleteAnchorsWithoutInterwiki or {@code null} for none
-   */
-  public RepositoryWebrefSimplifiedCompositeDoc setObsoleteAnchorsWithoutInterwiki(RepositoryWebrefSimplifiedAnchors obsoleteAnchorsWithoutInterwiki) {
-    this.obsoleteAnchorsWithoutInterwiki = obsoleteAnchorsWithoutInterwiki;
     return this;
   }
 

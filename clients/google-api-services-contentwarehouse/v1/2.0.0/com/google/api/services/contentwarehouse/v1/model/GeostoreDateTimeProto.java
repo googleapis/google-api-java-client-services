@@ -17,7 +17,13 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for GeostoreDateTimeProto.
+ * WARNING: Outside of FeatureProto, please avoid in favor of a standard civil time type. Direct
+ * usage is error-prone due to the conflation of physical time and civil time (go/httat). In a
+ * protocol buffer, please use google.type.Date, with an additional google.type.TimeOfDay for
+ * precision finer-grained than a day. (For google.type.DateTime, go/prototime#types cites
+ * go/httat#zoned_datetime as a caveat). In a programming language, see go/time-devguide/languages.
+ * Additionally in C++, google3/geostore/base/public/datetime.h has conversion functions between
+ * DateTimeProto and Abseil's civil time types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

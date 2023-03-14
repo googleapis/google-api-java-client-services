@@ -38,7 +38,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostorePoseProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * The height of the poses above the WGS-84 ellipsoid in meters.
+   * The height of the pose. A positive height is above the WGS-84 ellipsoid in meters; negative is
+   * below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class GeostorePoseProto extends com.google.api.client.json.GenericJ
   private java.lang.Double yaw;
 
   /**
-   * The height of the poses above the WGS-84 ellipsoid in meters.
+   * The height of the pose. A positive height is above the WGS-84 ellipsoid in meters; negative is
+   * below.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAltitude() {
@@ -95,7 +97,8 @@ public final class GeostorePoseProto extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The height of the poses above the WGS-84 ellipsoid in meters.
+   * The height of the pose. A positive height is above the WGS-84 ellipsoid in meters; negative is
+   * below.
    * @param altitude altitude or {@code null} for none
    */
   public GeostorePoseProto setAltitude(java.lang.Double altitude) {

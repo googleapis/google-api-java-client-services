@@ -119,6 +119,18 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
   private java.util.List<java.lang.String> raffiaLookupKeys;
 
   /**
+   * The url used by NsrSignalMerger (http://google3/indexing/signals/signal-
+   * merger.h;l=1801;rcl=509297232) to select which NsrData value to keep. The SignalMerger merges
+   * all the NsrData coming from the dup url cluster, and select the NsrData value to return by
+   * choosing a single url in the cluster (see NsrSignalMerger class for details). NOTE: This field
+   * is populated only when there *is* a cluster. If there is no cluster, this is empty and the key
+   * used is the canonical (and only) url.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String raffiaSignalMergerUrl;
+
+  /**
    * Encoded lookup information. The fields set above are expensive to store. Storing them in
    * docjoins is fine, but we cannot store them in MDU shards. In order for the MDU shards to
    * display field provenance information, we store them as a bitfield. For details about the
@@ -353,6 +365,33 @@ public final class QualityNsrNsrDataMetadata extends com.google.api.client.json.
    */
   public QualityNsrNsrDataMetadata setRaffiaLookupKeys(java.util.List<java.lang.String> raffiaLookupKeys) {
     this.raffiaLookupKeys = raffiaLookupKeys;
+    return this;
+  }
+
+  /**
+   * The url used by NsrSignalMerger (http://google3/indexing/signals/signal-
+   * merger.h;l=1801;rcl=509297232) to select which NsrData value to keep. The SignalMerger merges
+   * all the NsrData coming from the dup url cluster, and select the NsrData value to return by
+   * choosing a single url in the cluster (see NsrSignalMerger class for details). NOTE: This field
+   * is populated only when there *is* a cluster. If there is no cluster, this is empty and the key
+   * used is the canonical (and only) url.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRaffiaSignalMergerUrl() {
+    return raffiaSignalMergerUrl;
+  }
+
+  /**
+   * The url used by NsrSignalMerger (http://google3/indexing/signals/signal-
+   * merger.h;l=1801;rcl=509297232) to select which NsrData value to keep. The SignalMerger merges
+   * all the NsrData coming from the dup url cluster, and select the NsrData value to return by
+   * choosing a single url in the cluster (see NsrSignalMerger class for details). NOTE: This field
+   * is populated only when there *is* a cluster. If there is no cluster, this is empty and the key
+   * used is the canonical (and only) url.
+   * @param raffiaSignalMergerUrl raffiaSignalMergerUrl or {@code null} for none
+   */
+  public QualityNsrNsrDataMetadata setRaffiaSignalMergerUrl(java.lang.String raffiaSignalMergerUrl) {
+    this.raffiaSignalMergerUrl = raffiaSignalMergerUrl;
     return this;
   }
 

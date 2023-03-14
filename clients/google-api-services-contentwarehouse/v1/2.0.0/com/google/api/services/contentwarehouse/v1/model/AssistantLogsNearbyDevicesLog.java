@@ -38,6 +38,13 @@ public final class AssistantLogsNearbyDevicesLog extends com.google.api.client.j
   private java.lang.Long deviceArbitrationCreationTimestampMs;
 
   /**
+   * The timestamp that DeviceTargetingInput is built in milliseconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long deviceTargetingInputCreationTimestampMs;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,6 +130,23 @@ public final class AssistantLogsNearbyDevicesLog extends com.google.api.client.j
    */
   public AssistantLogsNearbyDevicesLog setDeviceArbitrationCreationTimestampMs(java.lang.Long deviceArbitrationCreationTimestampMs) {
     this.deviceArbitrationCreationTimestampMs = deviceArbitrationCreationTimestampMs;
+    return this;
+  }
+
+  /**
+   * The timestamp that DeviceTargetingInput is built in milliseconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDeviceTargetingInputCreationTimestampMs() {
+    return deviceTargetingInputCreationTimestampMs;
+  }
+
+  /**
+   * The timestamp that DeviceTargetingInput is built in milliseconds.
+   * @param deviceTargetingInputCreationTimestampMs deviceTargetingInputCreationTimestampMs or {@code null} for none
+   */
+  public AssistantLogsNearbyDevicesLog setDeviceTargetingInputCreationTimestampMs(java.lang.Long deviceTargetingInputCreationTimestampMs) {
+    this.deviceTargetingInputCreationTimestampMs = deviceTargetingInputCreationTimestampMs;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for ImageSafesearchContentOCRAnnotation.
+ * A protocol buffer to store the OCR annotation. Next available tag id: 10.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -29,6 +29,13 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class ImageSafesearchContentOCRAnnotation extends com.google.api.client.json.GenericJson {
+
+  /**
+   * A string that indicates the version of SafeSearch OCR annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ocrAnnotationVersion;
 
   /**
    * The score produced by Aksara geometry and spoof score. Describes the 'visibility' or
@@ -79,6 +86,23 @@ public final class ImageSafesearchContentOCRAnnotation extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Float vulgarScore;
+
+  /**
+   * A string that indicates the version of SafeSearch OCR annotation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOcrAnnotationVersion() {
+    return ocrAnnotationVersion;
+  }
+
+  /**
+   * A string that indicates the version of SafeSearch OCR annotation.
+   * @param ocrAnnotationVersion ocrAnnotationVersion or {@code null} for none
+   */
+  public ImageSafesearchContentOCRAnnotation setOcrAnnotationVersion(java.lang.String ocrAnnotationVersion) {
+    this.ocrAnnotationVersion = ocrAnnotationVersion;
+    return this;
+  }
 
   /**
    * The score produced by Aksara geometry and spoof score. Describes the 'visibility' or

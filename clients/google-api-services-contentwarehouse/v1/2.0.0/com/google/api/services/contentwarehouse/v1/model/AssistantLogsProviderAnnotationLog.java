@@ -17,7 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Provider annotation annotated from the query.
+ * Provider annotation annotated from the query. These fields contain the detailed information for
+ * the provider. (e.g. for Youtube, package_names contains "com.google.android.youtube",
+ * localized_names contains "youtube", and lang contains "en" from "en-US" which depends on user's
+ * setting.)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -34,7 +37,49 @@ public final class AssistantLogsProviderAnnotationLog extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String lang;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> localizedNames;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> packageNames;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLang() {
+    return lang;
+  }
+
+  /**
+   * @param lang lang or {@code null} for none
+   */
+  public AssistantLogsProviderAnnotationLog setLang(java.lang.String lang) {
+    this.lang = lang;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocalizedNames() {
+    return localizedNames;
+  }
+
+  /**
+   * @param localizedNames localizedNames or {@code null} for none
+   */
+  public AssistantLogsProviderAnnotationLog setLocalizedNames(java.util.List<java.lang.String> localizedNames) {
+    this.localizedNames = localizedNames;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

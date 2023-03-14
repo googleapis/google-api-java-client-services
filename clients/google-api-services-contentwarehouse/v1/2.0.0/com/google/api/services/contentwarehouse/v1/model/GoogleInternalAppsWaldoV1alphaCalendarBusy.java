@@ -42,7 +42,7 @@ public final class GoogleInternalAppsWaldoV1alphaCalendarBusy extends com.google
   private String committedUntil;
 
   /**
-   * TODO(b/265939748) To be removed, always false from User Status Service.
+   * TODO(b/265939748) To be removed, always false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GoogleInternalAppsWaldoV1alphaCalendarBusy extends com.google
   }
 
   /**
-   * TODO(b/265939748) To be removed, always false from User Status Service.
+   * TODO(b/265939748) To be removed, always false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCommittedUntilIsMixed() {
@@ -103,7 +103,7 @@ public final class GoogleInternalAppsWaldoV1alphaCalendarBusy extends com.google
   }
 
   /**
-   * TODO(b/265939748) To be removed, always false from User Status Service.
+   * TODO(b/265939748) To be removed, always false.
    * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaCalendarBusy setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {

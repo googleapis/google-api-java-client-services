@@ -70,6 +70,12 @@ public final class SearchPolicyRankableSensitivity extends com.google.api.client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private SearchPolicyRankableSensitivityGroundingProvider groundingProvider;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private SearchPolicyRankableSensitivityPrefilter prefilter;
 
   /**
@@ -162,6 +168,21 @@ public final class SearchPolicyRankableSensitivity extends com.google.api.client
    */
   public SearchPolicyRankableSensitivity setFollowon(SearchPolicyRankableSensitivityFollowOn followon) {
     this.followon = followon;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SearchPolicyRankableSensitivityGroundingProvider getGroundingProvider() {
+    return groundingProvider;
+  }
+
+  /**
+   * @param groundingProvider groundingProvider or {@code null} for none
+   */
+  public SearchPolicyRankableSensitivity setGroundingProvider(SearchPolicyRankableSensitivityGroundingProvider groundingProvider) {
+    this.groundingProvider = groundingProvider;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The configuration of exporting documents from the Document Warehouse to CDW pipeline.
+ * The configuration of processing documents in Document Warehouse with DocAi processors pipeline.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,15 +28,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The CDW dataset resource name. Format:
-   * projects/{project}/locations/{location}/processors/{processor}/dataset
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String docAiDataset;
+public final class GoogleCloudContentwarehouseV1ProcessWithDocAi extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of all the resource names of the documents to be processed. Format:
@@ -55,31 +47,18 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
   private java.lang.String exportFolderPath;
 
   /**
-   * Ratio of training dataset split. When importing into Document AI Workbench, documents will be
-   * automatically split into training and test split category with the specified ratio.
+   * The CDW processor information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float trainingSplitRatio;
+  private GoogleCloudContentwarehouseV1ProcessorInfo processorInfo;
 
   /**
-   * The CDW dataset resource name. Format:
-   * projects/{project}/locations/{location}/processors/{processor}/dataset
-   * @return value or {@code null} for none
+   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * The value may be {@code null}.
    */
-  public java.lang.String getDocAiDataset() {
-    return docAiDataset;
-  }
-
-  /**
-   * The CDW dataset resource name. Format:
-   * projects/{project}/locations/{location}/processors/{processor}/dataset
-   * @param docAiDataset docAiDataset or {@code null} for none
-   */
-  public GoogleCloudContentwarehouseV1ExportToCdwPipeline setDocAiDataset(java.lang.String docAiDataset) {
-    this.docAiDataset = docAiDataset;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.String processorResultsFolderPath;
 
   /**
    * The list of all the resource names of the documents to be processed. Format:
@@ -95,7 +74,7 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
    * projects/{project_number}/locations/{location}/documents/{document_id}.
    * @param documents documents or {@code null} for none
    */
-  public GoogleCloudContentwarehouseV1ExportToCdwPipeline setDocuments(java.util.List<java.lang.String> documents) {
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi setDocuments(java.util.List<java.lang.String> documents) {
     this.documents = documents;
     return this;
   }
@@ -114,38 +93,53 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
    * Format: gs:.
    * @param exportFolderPath exportFolderPath or {@code null} for none
    */
-  public GoogleCloudContentwarehouseV1ExportToCdwPipeline setExportFolderPath(java.lang.String exportFolderPath) {
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi setExportFolderPath(java.lang.String exportFolderPath) {
     this.exportFolderPath = exportFolderPath;
     return this;
   }
 
   /**
-   * Ratio of training dataset split. When importing into Document AI Workbench, documents will be
-   * automatically split into training and test split category with the specified ratio.
+   * The CDW processor information.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getTrainingSplitRatio() {
-    return trainingSplitRatio;
+  public GoogleCloudContentwarehouseV1ProcessorInfo getProcessorInfo() {
+    return processorInfo;
   }
 
   /**
-   * Ratio of training dataset split. When importing into Document AI Workbench, documents will be
-   * automatically split into training and test split category with the specified ratio.
-   * @param trainingSplitRatio trainingSplitRatio or {@code null} for none
+   * The CDW processor information.
+   * @param processorInfo processorInfo or {@code null} for none
    */
-  public GoogleCloudContentwarehouseV1ExportToCdwPipeline setTrainingSplitRatio(java.lang.Float trainingSplitRatio) {
-    this.trainingSplitRatio = trainingSplitRatio;
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi setProcessorInfo(GoogleCloudContentwarehouseV1ProcessorInfo processorInfo) {
+    this.processorInfo = processorInfo;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProcessorResultsFolderPath() {
+    return processorResultsFolderPath;
+  }
+
+  /**
+   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * @param processorResultsFolderPath processorResultsFolderPath or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi setProcessorResultsFolderPath(java.lang.String processorResultsFolderPath) {
+    this.processorResultsFolderPath = processorResultsFolderPath;
     return this;
   }
 
   @Override
-  public GoogleCloudContentwarehouseV1ExportToCdwPipeline set(String fieldName, Object value) {
-    return (GoogleCloudContentwarehouseV1ExportToCdwPipeline) super.set(fieldName, value);
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi set(String fieldName, Object value) {
+    return (GoogleCloudContentwarehouseV1ProcessWithDocAi) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudContentwarehouseV1ExportToCdwPipeline clone() {
-    return (GoogleCloudContentwarehouseV1ExportToCdwPipeline) super.clone();
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi clone() {
+    return (GoogleCloudContentwarehouseV1ProcessWithDocAi) super.clone();
   }
 
 }

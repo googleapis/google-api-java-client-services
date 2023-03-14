@@ -33,6 +33,17 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class SafesearchVideoContentSignals extends com.google.api.client.json.GenericJson {
 
   /**
+   * This is used by Amarna to determine whether it should notify Raffia for immediate reprocessing.
+   * This field will be generated in Amarna's image_metadata corpus and exported to
+   * references_video_search corpus and written to
+   * ExportState.module_state.critical_metadata_checksum for determining whether Amarna should
+   * immediately notify Raffia whenever is_abuse_with_high_confidence's value changes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAbuseWithHighConfidence;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +61,31 @@ public final class SafesearchVideoContentSignals extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private SafesearchVideoClassifierOutput videoClassifierOutput;
+
+  /**
+   * This is used by Amarna to determine whether it should notify Raffia for immediate reprocessing.
+   * This field will be generated in Amarna's image_metadata corpus and exported to
+   * references_video_search corpus and written to
+   * ExportState.module_state.critical_metadata_checksum for determining whether Amarna should
+   * immediately notify Raffia whenever is_abuse_with_high_confidence's value changes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAbuseWithHighConfidence() {
+    return isAbuseWithHighConfidence;
+  }
+
+  /**
+   * This is used by Amarna to determine whether it should notify Raffia for immediate reprocessing.
+   * This field will be generated in Amarna's image_metadata corpus and exported to
+   * references_video_search corpus and written to
+   * ExportState.module_state.critical_metadata_checksum for determining whether Amarna should
+   * immediately notify Raffia whenever is_abuse_with_high_confidence's value changes.
+   * @param isAbuseWithHighConfidence isAbuseWithHighConfidence or {@code null} for none
+   */
+  public SafesearchVideoContentSignals setIsAbuseWithHighConfidence(java.lang.Boolean isAbuseWithHighConfidence) {
+    this.isAbuseWithHighConfidence = isAbuseWithHighConfidence;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

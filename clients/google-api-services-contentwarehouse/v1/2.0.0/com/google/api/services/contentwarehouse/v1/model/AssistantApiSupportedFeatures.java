@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These are the set of features that are supported by the device. It's a part of the
- * SoftwareCapabilities of the device. Next ID: 62
+ * SoftwareCapabilities of the device. Next ID: 63
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -111,6 +111,15 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean clientOpResultBatchingSupported;
+
+  /**
+   * Whether the client supports confirmation flow before announcement of multiple messages. If set
+   * to true the user will be prompted once and confirmation will be taken before all the messages
+   * are announced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean confirmationBeforeReadingMultipleMessagesSupported;
 
   /**
    * Whether the client supports cross-device broadcast (i.e. on Torus).
@@ -681,6 +690,27 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   public AssistantApiSupportedFeatures setClientOpResultBatchingSupported(java.lang.Boolean clientOpResultBatchingSupported) {
     this.clientOpResultBatchingSupported = clientOpResultBatchingSupported;
+    return this;
+  }
+
+  /**
+   * Whether the client supports confirmation flow before announcement of multiple messages. If set
+   * to true the user will be prompted once and confirmation will be taken before all the messages
+   * are announced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConfirmationBeforeReadingMultipleMessagesSupported() {
+    return confirmationBeforeReadingMultipleMessagesSupported;
+  }
+
+  /**
+   * Whether the client supports confirmation flow before announcement of multiple messages. If set
+   * to true the user will be prompted once and confirmation will be taken before all the messages
+   * are announced.
+   * @param confirmationBeforeReadingMultipleMessagesSupported confirmationBeforeReadingMultipleMessagesSupported or {@code null} for none
+   */
+  public AssistantApiSupportedFeatures setConfirmationBeforeReadingMultipleMessagesSupported(java.lang.Boolean confirmationBeforeReadingMultipleMessagesSupported) {
+    this.confirmationBeforeReadingMultipleMessagesSupported = confirmationBeforeReadingMultipleMessagesSupported;
     return this;
   }
 

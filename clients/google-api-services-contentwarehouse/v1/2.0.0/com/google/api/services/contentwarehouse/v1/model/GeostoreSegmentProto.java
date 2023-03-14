@@ -470,9 +470,8 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   private GeostoreFeatureIdProto sibling;
 
   /**
-   * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) If this option
-   * is missing it means that the surface is unknown. Specific lanes may override this segment-level
-   * surface type.
+   * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) Specific lanes
+   * may override this segment-level surface type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1406,9 +1405,8 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) If this option
-   * is missing it means that the surface is unknown. Specific lanes may override this segment-level
-   * surface type.
+   * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) Specific lanes
+   * may override this segment-level surface type.
    * @return value or {@code null} for none
    */
   public java.lang.String getSurface() {
@@ -1416,9 +1414,8 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) If this option
-   * is missing it means that the surface is unknown. Specific lanes may override this segment-level
-   * surface type.
+   * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) Specific lanes
+   * may override this segment-level surface type.
    * @param surface surface or {@code null} for none
    */
   public GeostoreSegmentProto setSurface(java.lang.String surface) {

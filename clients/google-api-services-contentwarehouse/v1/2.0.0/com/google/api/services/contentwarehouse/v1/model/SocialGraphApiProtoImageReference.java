@@ -18,7 +18,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * A reference to a photo in either Photos Backend or SGI storage. This message should be treated as
- * an opaque blob to avoid a dependency on a specific storage backend.
+ * an opaque blob to avoid a dependency on a specific storage backend. This version of
+ * ImageReference is visible outside of SGBE. Do not add fields that should not be exposed outside
+ * of Profile Service and Image Service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -32,11 +34,38 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class SocialGraphApiProtoImageReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Identifies the most recent version of this photo. Use this as a FIFE param (ie -iv12) to
+   * prevent reads of a stale version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long contentVersion;
+
+  /**
    * Unique identifier for the photo. For now, this will always be a Photos Backend media key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mediaId;
+
+  /**
+   * Identifies the most recent version of this photo. Use this as a FIFE param (ie -iv12) to
+   * prevent reads of a stale version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getContentVersion() {
+    return contentVersion;
+  }
+
+  /**
+   * Identifies the most recent version of this photo. Use this as a FIFE param (ie -iv12) to
+   * prevent reads of a stale version.
+   * @param contentVersion contentVersion or {@code null} for none
+   */
+  public SocialGraphApiProtoImageReference setContentVersion(java.lang.Long contentVersion) {
+    this.contentVersion = contentVersion;
+    return this;
+  }
 
   /**
    * Unique identifier for the photo. For now, this will always be a Photos Backend media key.

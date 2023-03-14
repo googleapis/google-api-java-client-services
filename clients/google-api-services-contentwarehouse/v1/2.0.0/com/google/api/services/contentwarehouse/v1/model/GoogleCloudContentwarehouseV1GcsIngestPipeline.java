@@ -39,6 +39,15 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
   private java.lang.String inputPath;
 
   /**
+   * The Doc AI processor type name. Only used when the format of ingested files is Doc AI Document
+   * proto format. Reference: https://source.corp.google.com/piperdepot/google3/cloud/ai/documentai/
+   * core/c/proto/processor.proto;l=21
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String processorType;
+
+  /**
    * The Document Warehouse schema resource name. All documents processed by this pipeline will use
    * this schema. Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
@@ -63,6 +72,27 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
    */
   public GoogleCloudContentwarehouseV1GcsIngestPipeline setInputPath(java.lang.String inputPath) {
     this.inputPath = inputPath;
+    return this;
+  }
+
+  /**
+   * The Doc AI processor type name. Only used when the format of ingested files is Doc AI Document
+   * proto format. Reference: https://source.corp.google.com/piperdepot/google3/cloud/ai/documentai/
+   * core/c/proto/processor.proto;l=21
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProcessorType() {
+    return processorType;
+  }
+
+  /**
+   * The Doc AI processor type name. Only used when the format of ingested files is Doc AI Document
+   * proto format. Reference: https://source.corp.google.com/piperdepot/google3/cloud/ai/documentai/
+   * core/c/proto/processor.proto;l=21
+   * @param processorType processorType or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestPipeline setProcessorType(java.lang.String processorType) {
+    this.processorType = processorType;
     return this;
   }
 

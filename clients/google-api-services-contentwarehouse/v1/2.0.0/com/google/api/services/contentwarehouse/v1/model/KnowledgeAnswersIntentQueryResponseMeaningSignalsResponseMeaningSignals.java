@@ -17,10 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Proto used to represent rights for FeatureProto. See go/geo-rights for more details. NOTE: Use
- * google3/geostore/provenance/public/rights.h or
- * google3/java/com/google/geostore/provenance/rights/Rights.java instead of accessing this proto
- * directly.
+ * SRM signal data. Properties here should be nonsemantic. Semantic properties should be modeled
+ * directly in the SRM.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,43 +29,43 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreRightsStatusProto extends com.google.api.client.json.GenericJson {
+public final class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GeostoreFieldWithRightsProto> fieldWithRights;
+  private java.util.List<FreebasePropertyValue> propertyValue;
 
   static {
-    // hack to force ProGuard to consider GeostoreFieldWithRightsProto used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider FreebasePropertyValue used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GeostoreFieldWithRightsProto.class);
+    com.google.api.client.util.Data.nullOf(FreebasePropertyValue.class);
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<GeostoreFieldWithRightsProto> getFieldWithRights() {
-    return fieldWithRights;
+  public java.util.List<FreebasePropertyValue> getPropertyValue() {
+    return propertyValue;
   }
 
   /**
-   * @param fieldWithRights fieldWithRights or {@code null} for none
+   * @param propertyValue propertyValue or {@code null} for none
    */
-  public GeostoreRightsStatusProto setFieldWithRights(java.util.List<GeostoreFieldWithRightsProto> fieldWithRights) {
-    this.fieldWithRights = fieldWithRights;
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals setPropertyValue(java.util.List<FreebasePropertyValue> propertyValue) {
+    this.propertyValue = propertyValue;
     return this;
   }
 
   @Override
-  public GeostoreRightsStatusProto set(String fieldName, Object value) {
-    return (GeostoreRightsStatusProto) super.set(fieldName, value);
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals set(String fieldName, Object value) {
+    return (KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreRightsStatusProto clone() {
-    return (GeostoreRightsStatusProto) super.clone();
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals clone() {
+    return (KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals) super.clone();
   }
 
 }

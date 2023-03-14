@@ -31,7 +31,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Export docuemnts from Document Warehouseing to CDW for training purpose.
+   * Export docuemnts from Document Warehouse to CDW for training purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,23 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
   private GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline gcsIngestWithDocAiProcessorsPipeline;
 
   /**
-   * Export docuemnts from Document Warehouseing to CDW for training purpose.
+   * Use a DocAI processor to process documents in Document Warehouse, and re-ingest the updated
+   * results into Document Warehouse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1ProcessWithDocAi processWithDocAiPipeline;
+
+  /**
+   * The meta information collected about the end user, used to enforce access control for the
+   * service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1RequestMetadata requestMetadata;
+
+  /**
+   * Export docuemnts from Document Warehouse to CDW for training purpose.
    * @return value or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1ExportToCdwPipeline getExportCdwPipeline() {
@@ -61,7 +77,7 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
   }
 
   /**
-   * Export docuemnts from Document Warehouseing to CDW for training purpose.
+   * Export docuemnts from Document Warehouse to CDW for training purpose.
    * @param exportCdwPipeline exportCdwPipeline or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1RunPipelineRequest setExportCdwPipeline(GoogleCloudContentwarehouseV1ExportToCdwPipeline exportCdwPipeline) {
@@ -102,6 +118,44 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
    */
   public GoogleCloudContentwarehouseV1RunPipelineRequest setGcsIngestWithDocAiProcessorsPipeline(GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline gcsIngestWithDocAiProcessorsPipeline) {
     this.gcsIngestWithDocAiProcessorsPipeline = gcsIngestWithDocAiProcessorsPipeline;
+    return this;
+  }
+
+  /**
+   * Use a DocAI processor to process documents in Document Warehouse, and re-ingest the updated
+   * results into Document Warehouse.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1ProcessWithDocAi getProcessWithDocAiPipeline() {
+    return processWithDocAiPipeline;
+  }
+
+  /**
+   * Use a DocAI processor to process documents in Document Warehouse, and re-ingest the updated
+   * results into Document Warehouse.
+   * @param processWithDocAiPipeline processWithDocAiPipeline or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineRequest setProcessWithDocAiPipeline(GoogleCloudContentwarehouseV1ProcessWithDocAi processWithDocAiPipeline) {
+    this.processWithDocAiPipeline = processWithDocAiPipeline;
+    return this;
+  }
+
+  /**
+   * The meta information collected about the end user, used to enforce access control for the
+   * service.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RequestMetadata getRequestMetadata() {
+    return requestMetadata;
+  }
+
+  /**
+   * The meta information collected about the end user, used to enforce access control for the
+   * service.
+   * @param requestMetadata requestMetadata or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineRequest setRequestMetadata(GoogleCloudContentwarehouseV1RequestMetadata requestMetadata) {
+    this.requestMetadata = requestMetadata;
     return this;
   }
 

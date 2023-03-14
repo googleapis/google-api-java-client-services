@@ -31,14 +31,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The classify or split processor information.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudContentwarehouseV1ProcessorInfo classifySplitProcessorInfos;
-
-  /**
-   * The entity or key-value pair extracting processor information.
+   * The extract processors information. One matched extract processor will be used to process
+   * documents based on the classify processor result. If no classify processor is specificied, the
+   * first extract processor will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,24 +55,17 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
   private java.lang.String processorResultsFolderPath;
 
   /**
-   * The classify or split processor information.
-   * @return value or {@code null} for none
+   * The split and classify processor information. The split and classify result will be used to
+   * find a matched extract processor.
+   * The value may be {@code null}.
    */
-  public GoogleCloudContentwarehouseV1ProcessorInfo getClassifySplitProcessorInfos() {
-    return classifySplitProcessorInfos;
-  }
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1ProcessorInfo splitClassifyProcessorInfo;
 
   /**
-   * The classify or split processor information.
-   * @param classifySplitProcessorInfos classifySplitProcessorInfos or {@code null} for none
-   */
-  public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setClassifySplitProcessorInfos(GoogleCloudContentwarehouseV1ProcessorInfo classifySplitProcessorInfos) {
-    this.classifySplitProcessorInfos = classifySplitProcessorInfos;
-    return this;
-  }
-
-  /**
-   * The entity or key-value pair extracting processor information.
+   * The extract processors information. One matched extract processor will be used to process
+   * documents based on the classify processor result. If no classify processor is specificied, the
+   * first extract processor will be used.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudContentwarehouseV1ProcessorInfo> getExtractProcessorInfos() {
@@ -85,7 +73,9 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
   }
 
   /**
-   * The entity or key-value pair extracting processor information.
+   * The extract processors information. One matched extract processor will be used to process
+   * documents based on the classify processor result. If no classify processor is specificied, the
+   * first extract processor will be used.
    * @param extractProcessorInfos extractProcessorInfos or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setExtractProcessorInfos(java.util.List<GoogleCloudContentwarehouseV1ProcessorInfo> extractProcessorInfos) {
@@ -126,6 +116,25 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
    */
   public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setProcessorResultsFolderPath(java.lang.String processorResultsFolderPath) {
     this.processorResultsFolderPath = processorResultsFolderPath;
+    return this;
+  }
+
+  /**
+   * The split and classify processor information. The split and classify result will be used to
+   * find a matched extract processor.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1ProcessorInfo getSplitClassifyProcessorInfo() {
+    return splitClassifyProcessorInfo;
+  }
+
+  /**
+   * The split and classify processor information. The split and classify result will be used to
+   * find a matched extract processor.
+   * @param splitClassifyProcessorInfo splitClassifyProcessorInfo or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setSplitClassifyProcessorInfo(GoogleCloudContentwarehouseV1ProcessorInfo splitClassifyProcessorInfo) {
+    this.splitClassifyProcessorInfo = splitClassifyProcessorInfo;
     return this;
   }
 

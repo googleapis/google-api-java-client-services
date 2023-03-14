@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Marks that this sensitivity is from a synthetic intent.
+ * Model definition for NlpSemanticParsingLocalEvChargingStationConnectorConstraint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,16 +28,37 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SearchPolicyRankableSensitivitySyntheticIntent extends com.google.api.client.json.GenericJson {
+public final class NlpSemanticParsingLocalEvChargingStationConnectorConstraint extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public SearchPolicyRankableSensitivitySyntheticIntent set(String fieldName, Object value) {
-    return (SearchPolicyRankableSensitivitySyntheticIntent) super.set(fieldName, value);
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorType;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorType() {
+    return connectorType;
+  }
+
+  /**
+   * @param connectorType connectorType or {@code null} for none
+   */
+  public NlpSemanticParsingLocalEvChargingStationConnectorConstraint setConnectorType(java.lang.String connectorType) {
+    this.connectorType = connectorType;
+    return this;
   }
 
   @Override
-  public SearchPolicyRankableSensitivitySyntheticIntent clone() {
-    return (SearchPolicyRankableSensitivitySyntheticIntent) super.clone();
+  public NlpSemanticParsingLocalEvChargingStationConnectorConstraint set(String fieldName, Object value) {
+    return (NlpSemanticParsingLocalEvChargingStationConnectorConstraint) super.set(fieldName, value);
+  }
+
+  @Override
+  public NlpSemanticParsingLocalEvChargingStationConnectorConstraint clone() {
+    return (NlpSemanticParsingLocalEvChargingStationConnectorConstraint) super.clone();
   }
 
 }

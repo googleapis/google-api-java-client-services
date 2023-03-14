@@ -94,6 +94,14 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   private StorageGraphBfgLmsPolicyMetadata lmsPolicyMetadata;
 
   /**
+   * This triple is protected by the policies with PolicyDataScope identified by these global unique
+   * ids.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> policyDataScopeKeys;
+
+  /**
    * Policy metadata are VERTICAL by default. Vertical policy makers / providers does not need to
    * set this field explicitly.
    * The value may be {@code null}.
@@ -215,6 +223,25 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   public StorageGraphBfgPolicyMetadata setLmsPolicyMetadata(StorageGraphBfgLmsPolicyMetadata lmsPolicyMetadata) {
     this.lmsPolicyMetadata = lmsPolicyMetadata;
+    return this;
+  }
+
+  /**
+   * This triple is protected by the policies with PolicyDataScope identified by these global unique
+   * ids.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getPolicyDataScopeKeys() {
+    return policyDataScopeKeys;
+  }
+
+  /**
+   * This triple is protected by the policies with PolicyDataScope identified by these global unique
+   * ids.
+   * @param policyDataScopeKeys policyDataScopeKeys or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setPolicyDataScopeKeys(java.util.List<java.lang.Integer> policyDataScopeKeys) {
+    this.policyDataScopeKeys = policyDataScopeKeys;
     return this;
   }
 

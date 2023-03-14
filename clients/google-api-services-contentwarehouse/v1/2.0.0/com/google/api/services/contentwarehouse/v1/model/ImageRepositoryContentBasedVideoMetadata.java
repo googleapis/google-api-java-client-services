@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next Tag: 48
+ * Next Tag: 49
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -130,6 +130,15 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
   private ImageData representativeFrameData;
 
   /**
+   * Trnascript generated through AMARNA_CLOUD_SPEECH asset in Venom. Note that AMARNA_CLOUD_SPEECH
+   * uses S3 as the speech engine backend, similar to YT caption's SPEECH_RECOGNIZER asset. However,
+   * they may use different S3 models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageRepositoryAmarnaCloudSpeechSignals s3Asr;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +207,8 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
   }
 
   /**
-   * Speech related metadata
+   * Speech related metadata The transcript_asr field is generated from the YT caption's
+   * SPEECH_RECOGNIZER asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -546,6 +556,27 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
   }
 
   /**
+   * Trnascript generated through AMARNA_CLOUD_SPEECH asset in Venom. Note that AMARNA_CLOUD_SPEECH
+   * uses S3 as the speech engine backend, similar to YT caption's SPEECH_RECOGNIZER asset. However,
+   * they may use different S3 models.
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryAmarnaCloudSpeechSignals getS3Asr() {
+    return s3Asr;
+  }
+
+  /**
+   * Trnascript generated through AMARNA_CLOUD_SPEECH asset in Venom. Note that AMARNA_CLOUD_SPEECH
+   * uses S3 as the speech engine backend, similar to YT caption's SPEECH_RECOGNIZER asset. However,
+   * they may use different S3 models.
+   * @param s3Asr s3Asr or {@code null} for none
+   */
+  public ImageRepositoryContentBasedVideoMetadata setS3Asr(ImageRepositoryAmarnaCloudSpeechSignals s3Asr) {
+    this.s3Asr = s3Asr;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public ImageRepositoryS3LangIdSignals getS3LanguageIdentification() {
@@ -697,7 +728,8 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
   }
 
   /**
-   * Speech related metadata
+   * Speech related metadata The transcript_asr field is generated from the YT caption's
+   * SPEECH_RECOGNIZER asset.
    * @return value or {@code null} for none
    */
   public PseudoVideoData getTranscriptAsr() {
@@ -705,7 +737,8 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
   }
 
   /**
-   * Speech related metadata
+   * Speech related metadata The transcript_asr field is generated from the YT caption's
+   * SPEECH_RECOGNIZER asset.
    * @param transcriptAsr transcriptAsr or {@code null} for none
    */
   public ImageRepositoryContentBasedVideoMetadata setTranscriptAsr(PseudoVideoData transcriptAsr) {

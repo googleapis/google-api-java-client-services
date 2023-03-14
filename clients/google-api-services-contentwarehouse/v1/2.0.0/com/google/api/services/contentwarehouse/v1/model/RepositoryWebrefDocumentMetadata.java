@@ -32,24 +32,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefDocumentMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * A copy of selected extensions from cdoc.doc_attachments and cdoc.per_doc_data, controlled by:
-   * --webref_doc_metadata_copy_instant_navboost_document (copies
-   * doc_attachments[quality_freshness_abacus::InstantNavBoostDocument] (TypeId 105421467), defined
-   * in quality/freshness/abacus/public/abacus.proto). Used in Querybase to have navboost associated
-   * with relevant cdocs. --webref_doc_metadata_copy_per_doc_navboost (copies
-   * per_doc_data[navboostdata]) (TypeId 4256936), defined in
-   * mustang/repository/navboost/proto/navboostmustang.proto. Used in Querybase to have navboost
-   * associated with relevant docs. Note that it is not present in the original doc_attachments, but
-   * in per_doc_data, and we copy it over here so as not to depend on the proto directly, as they
-   * are not compatible due to different app_engine compatibility. --webref_doc_metadata_copy_images
-   * (copies doc_attachments[indexing::images::RelatedImageSignal]) (TypeId 21265426), defined in
-   * indexing/images/proto/image-linker.proto.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Proto2BridgeMessageSet cdocAttachments;
-
-  /**
    * The timestamp of when the document was crawled (if known). Copied from
    * CompositeDoc.Content.CrawlTime.
    * The value may be {@code null}.
@@ -106,21 +88,6 @@ public final class RepositoryWebrefDocumentMetadata extends com.google.api.clien
   private java.lang.Float numIncomingAnchors;
 
   /**
-   * Copies of selected repeated extensions from cdoc, controlled by:
-   * --webref_doc_metadata_copy_images (copies the repeated doc_images field (TypeId 8798074),
-   * defined in image/search/imagedoc.proto).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Proto2BridgeMessageSet> repeatedCdocAttachments;
-
-  static {
-    // hack to force ProGuard to consider Proto2BridgeMessageSet used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Proto2BridgeMessageSet.class);
-  }
-
-  /**
    * The salient terms for this document. Only set if --webref_doc_metadata_copy_salient_terms is
    * true. Same motivation as the title field above.
    * The value may be {@code null}.
@@ -150,45 +117,6 @@ public final class RepositoryWebrefDocumentMetadata extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
-
-  /**
-   * A copy of selected extensions from cdoc.doc_attachments and cdoc.per_doc_data, controlled by:
-   * --webref_doc_metadata_copy_instant_navboost_document (copies
-   * doc_attachments[quality_freshness_abacus::InstantNavBoostDocument] (TypeId 105421467), defined
-   * in quality/freshness/abacus/public/abacus.proto). Used in Querybase to have navboost associated
-   * with relevant cdocs. --webref_doc_metadata_copy_per_doc_navboost (copies
-   * per_doc_data[navboostdata]) (TypeId 4256936), defined in
-   * mustang/repository/navboost/proto/navboostmustang.proto. Used in Querybase to have navboost
-   * associated with relevant docs. Note that it is not present in the original doc_attachments, but
-   * in per_doc_data, and we copy it over here so as not to depend on the proto directly, as they
-   * are not compatible due to different app_engine compatibility. --webref_doc_metadata_copy_images
-   * (copies doc_attachments[indexing::images::RelatedImageSignal]) (TypeId 21265426), defined in
-   * indexing/images/proto/image-linker.proto.
-   * @return value or {@code null} for none
-   */
-  public Proto2BridgeMessageSet getCdocAttachments() {
-    return cdocAttachments;
-  }
-
-  /**
-   * A copy of selected extensions from cdoc.doc_attachments and cdoc.per_doc_data, controlled by:
-   * --webref_doc_metadata_copy_instant_navboost_document (copies
-   * doc_attachments[quality_freshness_abacus::InstantNavBoostDocument] (TypeId 105421467), defined
-   * in quality/freshness/abacus/public/abacus.proto). Used in Querybase to have navboost associated
-   * with relevant cdocs. --webref_doc_metadata_copy_per_doc_navboost (copies
-   * per_doc_data[navboostdata]) (TypeId 4256936), defined in
-   * mustang/repository/navboost/proto/navboostmustang.proto. Used in Querybase to have navboost
-   * associated with relevant docs. Note that it is not present in the original doc_attachments, but
-   * in per_doc_data, and we copy it over here so as not to depend on the proto directly, as they
-   * are not compatible due to different app_engine compatibility. --webref_doc_metadata_copy_images
-   * (copies doc_attachments[indexing::images::RelatedImageSignal]) (TypeId 21265426), defined in
-   * indexing/images/proto/image-linker.proto.
-   * @param cdocAttachments cdocAttachments or {@code null} for none
-   */
-  public RepositoryWebrefDocumentMetadata setCdocAttachments(Proto2BridgeMessageSet cdocAttachments) {
-    this.cdocAttachments = cdocAttachments;
-    return this;
-  }
 
   /**
    * The timestamp of when the document was crawled (if known). Copied from
@@ -320,27 +248,6 @@ public final class RepositoryWebrefDocumentMetadata extends com.google.api.clien
    */
   public RepositoryWebrefDocumentMetadata setNumIncomingAnchors(java.lang.Float numIncomingAnchors) {
     this.numIncomingAnchors = numIncomingAnchors;
-    return this;
-  }
-
-  /**
-   * Copies of selected repeated extensions from cdoc, controlled by:
-   * --webref_doc_metadata_copy_images (copies the repeated doc_images field (TypeId 8798074),
-   * defined in image/search/imagedoc.proto).
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Proto2BridgeMessageSet> getRepeatedCdocAttachments() {
-    return repeatedCdocAttachments;
-  }
-
-  /**
-   * Copies of selected repeated extensions from cdoc, controlled by:
-   * --webref_doc_metadata_copy_images (copies the repeated doc_images field (TypeId 8798074),
-   * defined in image/search/imagedoc.proto).
-   * @param repeatedCdocAttachments repeatedCdocAttachments or {@code null} for none
-   */
-  public RepositoryWebrefDocumentMetadata setRepeatedCdocAttachments(java.util.List<Proto2BridgeMessageSet> repeatedCdocAttachments) {
-    this.repeatedCdocAttachments = repeatedCdocAttachments;
     return this;
   }
 

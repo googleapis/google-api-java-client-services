@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These capabilities represent what software features the client supports. This should be
- * determined based on the client's various software versions (OS, GSA version, etc). Next ID: 26
+ * determined based on the client's various software versions (OS, GSA version, etc). Next ID: 27
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -112,6 +112,13 @@ public final class AssistantApiSoftwareCapabilities extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private AssistantApiGcmCapabilities gcmCapabilities;
+
+  /**
+   * Google Home app features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiCapabilitiesHomeAppCapabilities homeAppCapabilities;
 
   /**
    * Capabilities related to live TV channels.
@@ -364,6 +371,23 @@ public final class AssistantApiSoftwareCapabilities extends com.google.api.clien
    */
   public AssistantApiSoftwareCapabilities setGcmCapabilities(AssistantApiGcmCapabilities gcmCapabilities) {
     this.gcmCapabilities = gcmCapabilities;
+    return this;
+  }
+
+  /**
+   * Google Home app features.
+   * @return value or {@code null} for none
+   */
+  public AssistantApiCapabilitiesHomeAppCapabilities getHomeAppCapabilities() {
+    return homeAppCapabilities;
+  }
+
+  /**
+   * Google Home app features.
+   * @param homeAppCapabilities homeAppCapabilities or {@code null} for none
+   */
+  public AssistantApiSoftwareCapabilities setHomeAppCapabilities(AssistantApiCapabilitiesHomeAppCapabilities homeAppCapabilities) {
+    this.homeAppCapabilities = homeAppCapabilities;
     return this;
   }
 

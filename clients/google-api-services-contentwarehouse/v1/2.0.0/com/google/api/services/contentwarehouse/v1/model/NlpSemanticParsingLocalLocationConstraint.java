@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * All the possible location constraints. This message is associated with a location and can be
  * nested accordingly. E.g., for a compound location the constraint may be associated with the
  * entire location or with either of the two internal locations (loc_1 and loc_2). There is an
- * implicit AND relation between the different constraints. Next ID: 24.
+ * implicit AND relation between the different constraints. Next ID: 25.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -51,6 +51,13 @@ public final class NlpSemanticParsingLocalLocationConstraint extends com.google.
    */
   @com.google.api.client.util.Key
   private NlpSemanticParsingLocalCuisineConstraint cuisine;
+
+  /**
+   * Used for populating ElectricVehicleConnectorRefinement from QBF go/evcs-qbf-connector
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpSemanticParsingLocalEvChargingStationConnectorConstraint evcsConnectorConstraint;
 
   /**
    * The value may be {@code null}.
@@ -219,6 +226,23 @@ public final class NlpSemanticParsingLocalLocationConstraint extends com.google.
    */
   public NlpSemanticParsingLocalLocationConstraint setCuisine(NlpSemanticParsingLocalCuisineConstraint cuisine) {
     this.cuisine = cuisine;
+    return this;
+  }
+
+  /**
+   * Used for populating ElectricVehicleConnectorRefinement from QBF go/evcs-qbf-connector
+   * @return value or {@code null} for none
+   */
+  public NlpSemanticParsingLocalEvChargingStationConnectorConstraint getEvcsConnectorConstraint() {
+    return evcsConnectorConstraint;
+  }
+
+  /**
+   * Used for populating ElectricVehicleConnectorRefinement from QBF go/evcs-qbf-connector
+   * @param evcsConnectorConstraint evcsConnectorConstraint or {@code null} for none
+   */
+  public NlpSemanticParsingLocalLocationConstraint setEvcsConnectorConstraint(NlpSemanticParsingLocalEvChargingStationConnectorConstraint evcsConnectorConstraint) {
+    this.evcsConnectorConstraint = evcsConnectorConstraint;
     return this;
   }
 

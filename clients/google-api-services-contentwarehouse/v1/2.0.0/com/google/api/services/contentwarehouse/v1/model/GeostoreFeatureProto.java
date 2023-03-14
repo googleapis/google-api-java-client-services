@@ -320,7 +320,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreFeatureIdProto id;
 
   /**
-   * RESERVED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1425,7 +1424,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @return value or {@code null} for none
    */
   public GeostoreInferredGeometryProto getInferredGeometry() {
@@ -1433,7 +1431,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @param inferredGeometry inferredGeometry or {@code null} for none
    */
   public GeostoreFeatureProto setInferredGeometry(GeostoreInferredGeometryProto inferredGeometry) {

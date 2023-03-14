@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 1 minute
+   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
    * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
    * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
    * detect intent, `config` must be provided in the first request and `audio` must be provided in
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   private GoogleCloudDialogflowCxV3InputAudioConfig config;
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 1 minute
+   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
    * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
    * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
    * detect intent, `config` must be provided in the first request and `audio` must be provided in
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 1 minute
+   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
    * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
    * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
    * detect intent, `config` must be provided in the first request and `audio` must be provided in
@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 1 minute
+   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
    * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
    * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
    * detect intent, `config` must be provided in the first request and `audio` must be provided in
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 1 minute
+   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
    * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
    * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
    * detect intent, `config` must be provided in the first request and `audio` must be provided in

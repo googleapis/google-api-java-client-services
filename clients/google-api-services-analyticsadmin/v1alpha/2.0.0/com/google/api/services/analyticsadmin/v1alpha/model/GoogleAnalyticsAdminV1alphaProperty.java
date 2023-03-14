@@ -104,7 +104,7 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   /**
    * Immutable. The property type for this Property resource. When creating a property, if the type
    * is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and
-   * "ROLLUP_PROPERTY" types cannot yet be created via Google Analytics Admin API.
+   * "ROLLUP_PROPERTY" types cannot yet be created with the Google Analytics Admin API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,7 +306,7 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   /**
    * Immutable. The property type for this Property resource. When creating a property, if the type
    * is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and
-   * "ROLLUP_PROPERTY" types cannot yet be created via Google Analytics Admin API.
+   * "ROLLUP_PROPERTY" types cannot yet be created with the Google Analytics Admin API.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyType() {
@@ -316,7 +316,7 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   /**
    * Immutable. The property type for this Property resource. When creating a property, if the type
    * is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and
-   * "ROLLUP_PROPERTY" types cannot yet be created via Google Analytics Admin API.
+   * "ROLLUP_PROPERTY" types cannot yet be created with the Google Analytics Admin API.
    * @param propertyType propertyType or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaProperty setPropertyType(java.lang.String propertyType) {

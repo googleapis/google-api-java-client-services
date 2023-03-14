@@ -101,6 +101,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal;
 
   /**
+   * A snapshot of EnhancedMeasurementSettings resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings enhancedMeasurementSettings;
+
+  /**
    * A snapshot of an ExpandedDataSet resource in change history.
    * The value may be {@code null}.
    */
@@ -316,6 +323,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDisplayVideo360AdvertiserLinkProposal(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal) {
     this.displayVideo360AdvertiserLinkProposal = displayVideo360AdvertiserLinkProposal;
+    return this;
+  }
+
+  /**
+   * A snapshot of EnhancedMeasurementSettings resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings getEnhancedMeasurementSettings() {
+    return enhancedMeasurementSettings;
+  }
+
+  /**
+   * A snapshot of EnhancedMeasurementSettings resource in change history.
+   * @param enhancedMeasurementSettings enhancedMeasurementSettings or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setEnhancedMeasurementSettings(GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings enhancedMeasurementSettings) {
+    this.enhancedMeasurementSettings = enhancedMeasurementSettings;
     return this;
   }
 

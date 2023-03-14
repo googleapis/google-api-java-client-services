@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.analyticsadmin.v1alpha.model;
+package com.google.api.services.analyticsadmin.v1beta.model;
 
 /**
  * The request for a Data Access Record Report.
@@ -28,7 +28,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleAnalyticsAdminV1betaRunAccessReportRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Date ranges of access records to read. If multiple date ranges are requested, each response row
@@ -38,12 +38,12 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessDateRange> dateRanges;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessDateRange> dateRanges;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessDateRange used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessDateRange used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessDateRange.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessDateRange.class);
   }
 
   /**
@@ -54,7 +54,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleAnalyticsAdminV1alphaAccessFilterExpression dimensionFilter;
+  private GoogleAnalyticsAdminV1betaAccessFilterExpression dimensionFilter;
 
   /**
    * The dimensions requested and displayed in the response. Requests are allowed up to 9
@@ -62,12 +62,12 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessDimension> dimensions;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessDimension> dimensions;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessDimension used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessDimension used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessDimension.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessDimension.class);
   }
 
   /**
@@ -90,19 +90,19 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleAnalyticsAdminV1alphaAccessFilterExpression metricFilter;
+  private GoogleAnalyticsAdminV1betaAccessFilterExpression metricFilter;
 
   /**
    * The metrics requested and displayed in the response. Requests are allowed up to 10 metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessMetric> metrics;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessMetric> metrics;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessMetric used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessMetric used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessMetric.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessMetric.class);
   }
 
   /**
@@ -120,12 +120,12 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessOrderBy> orderBys;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessOrderBy> orderBys;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessOrderBy used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessOrderBy used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessOrderBy.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessOrderBy.class);
   }
 
   /**
@@ -153,7 +153,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * allowed up to 2 date ranges.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessDateRange> getDateRanges() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessDateRange> getDateRanges() {
     return dateRanges;
   }
 
@@ -164,7 +164,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * allowed up to 2 date ranges.
    * @param dateRanges dateRanges or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setDateRanges(java.util.List<GoogleAnalyticsAdminV1alphaAccessDateRange> dateRanges) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setDateRanges(java.util.List<GoogleAnalyticsAdminV1betaAccessDateRange> dateRanges) {
     this.dateRanges = dateRanges;
     return this;
   }
@@ -176,7 +176,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * /data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * @return value or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaAccessFilterExpression getDimensionFilter() {
+  public GoogleAnalyticsAdminV1betaAccessFilterExpression getDimensionFilter() {
     return dimensionFilter;
   }
 
@@ -187,7 +187,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * /data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this filter.
    * @param dimensionFilter dimensionFilter or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setDimensionFilter(GoogleAnalyticsAdminV1alphaAccessFilterExpression dimensionFilter) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setDimensionFilter(GoogleAnalyticsAdminV1betaAccessFilterExpression dimensionFilter) {
     this.dimensionFilter = dimensionFilter;
     return this;
   }
@@ -197,7 +197,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * dimensions.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessDimension> getDimensions() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessDimension> getDimensions() {
     return dimensions;
   }
 
@@ -206,7 +206,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * dimensions.
    * @param dimensions dimensions or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setDimensions(java.util.List<GoogleAnalyticsAdminV1alphaAccessDimension> dimensions) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setDimensions(java.util.List<GoogleAnalyticsAdminV1betaAccessDimension> dimensions) {
     this.dimensions = dimensions;
     return this;
   }
@@ -235,7 +235,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
    * @param limit limit or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setLimit(java.lang.Long limit) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setLimit(java.lang.Long limit) {
     this.limit = limit;
     return this;
   }
@@ -246,7 +246,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * clause. Dimensions cannot be used in this filter.
    * @return value or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaAccessFilterExpression getMetricFilter() {
+  public GoogleAnalyticsAdminV1betaAccessFilterExpression getMetricFilter() {
     return metricFilter;
   }
 
@@ -256,7 +256,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * clause. Dimensions cannot be used in this filter.
    * @param metricFilter metricFilter or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setMetricFilter(GoogleAnalyticsAdminV1alphaAccessFilterExpression metricFilter) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setMetricFilter(GoogleAnalyticsAdminV1betaAccessFilterExpression metricFilter) {
     this.metricFilter = metricFilter;
     return this;
   }
@@ -265,7 +265,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The metrics requested and displayed in the response. Requests are allowed up to 10 metrics.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessMetric> getMetrics() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessMetric> getMetrics() {
     return metrics;
   }
 
@@ -273,7 +273,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * The metrics requested and displayed in the response. Requests are allowed up to 10 metrics.
    * @param metrics metrics or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setMetrics(java.util.List<GoogleAnalyticsAdminV1alphaAccessMetric> metrics) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setMetrics(java.util.List<GoogleAnalyticsAdminV1betaAccessMetric> metrics) {
     this.metrics = metrics;
     return this;
   }
@@ -296,7 +296,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * pers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
    * @param offset offset or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setOffset(java.lang.Long offset) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setOffset(java.lang.Long offset) {
     this.offset = offset;
     return this;
   }
@@ -305,7 +305,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * Specifies how rows are ordered in the response.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessOrderBy> getOrderBys() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessOrderBy> getOrderBys() {
     return orderBys;
   }
 
@@ -313,7 +313,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * Specifies how rows are ordered in the response.
    * @param orderBys orderBys or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setOrderBys(java.util.List<GoogleAnalyticsAdminV1alphaAccessOrderBy> orderBys) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setOrderBys(java.util.List<GoogleAnalyticsAdminV1betaAccessOrderBy> orderBys) {
     this.orderBys = orderBys;
     return this;
   }
@@ -332,7 +332,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * returned in [AccessQuota](#AccessQuota). For account-level requests, this field must be false.
    * @param returnEntityQuota returnEntityQuota or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setReturnEntityQuota(java.lang.Boolean returnEntityQuota) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setReturnEntityQuota(java.lang.Boolean returnEntityQuota) {
     this.returnEntityQuota = returnEntityQuota;
     return this;
   }
@@ -355,19 +355,19 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    * "America/New_York" or "Asia/Tokyo".
    * @param timeZone timeZone or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setTimeZone(java.lang.String timeZone) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest setTimeZone(java.lang.String timeZone) {
     this.timeZone = timeZone;
     return this;
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest set(String fieldName, Object value) {
-    return (GoogleAnalyticsAdminV1alphaRunAccessReportRequest) super.set(fieldName, value);
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest set(String fieldName, Object value) {
+    return (GoogleAnalyticsAdminV1betaRunAccessReportRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest clone() {
-    return (GoogleAnalyticsAdminV1alphaRunAccessReportRequest) super.clone();
+  public GoogleAnalyticsAdminV1betaRunAccessReportRequest clone() {
+    return (GoogleAnalyticsAdminV1betaRunAccessReportRequest) super.clone();
   }
 
 }

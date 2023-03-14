@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.analyticsadmin.v1alpha.model;
+package com.google.api.services.analyticsadmin.v1beta.model;
 
 /**
  * The customized Data Access Record Report response.
@@ -28,7 +28,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleAnalyticsAdminV1betaRunAccessReportResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The header for a column in the report that corresponds to a specific dimension. The number of
@@ -36,12 +36,12 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessDimensionHeader> dimensionHeaders;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessDimensionHeader> dimensionHeaders;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessDimensionHeader used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessDimensionHeader used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessDimensionHeader.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessDimensionHeader.class);
   }
 
   /**
@@ -50,12 +50,12 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessMetricHeader> metricHeaders;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessMetricHeader> metricHeaders;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessMetricHeader used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessMetricHeader used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessMetricHeader.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessMetricHeader.class);
   }
 
   /**
@@ -64,7 +64,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleAnalyticsAdminV1alphaAccessQuota quota;
+  private GoogleAnalyticsAdminV1betaAccessQuota quota;
 
   /**
    * The total number of rows in the query result. `rowCount` is independent of the number of rows
@@ -83,12 +83,12 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAnalyticsAdminV1alphaAccessRow> rows;
+  private java.util.List<GoogleAnalyticsAdminV1betaAccessRow> rows;
 
   static {
-    // hack to force ProGuard to consider GoogleAnalyticsAdminV1alphaAccessRow used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleAnalyticsAdminV1betaAccessRow used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1alphaAccessRow.class);
+    com.google.api.client.util.Data.nullOf(GoogleAnalyticsAdminV1betaAccessRow.class);
   }
 
   /**
@@ -96,7 +96,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * DimensionHeaders and ordering of DimensionHeaders matches the dimensions present in rows.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessDimensionHeader> getDimensionHeaders() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessDimensionHeader> getDimensionHeaders() {
     return dimensionHeaders;
   }
 
@@ -105,7 +105,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * DimensionHeaders and ordering of DimensionHeaders matches the dimensions present in rows.
    * @param dimensionHeaders dimensionHeaders or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse setDimensionHeaders(java.util.List<GoogleAnalyticsAdminV1alphaAccessDimensionHeader> dimensionHeaders) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse setDimensionHeaders(java.util.List<GoogleAnalyticsAdminV1betaAccessDimensionHeader> dimensionHeaders) {
     this.dimensionHeaders = dimensionHeaders;
     return this;
   }
@@ -115,7 +115,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * MetricHeaders and ordering of MetricHeaders matches the metrics present in rows.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessMetricHeader> getMetricHeaders() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessMetricHeader> getMetricHeaders() {
     return metricHeaders;
   }
 
@@ -124,7 +124,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * MetricHeaders and ordering of MetricHeaders matches the metrics present in rows.
    * @param metricHeaders metricHeaders or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse setMetricHeaders(java.util.List<GoogleAnalyticsAdminV1alphaAccessMetricHeader> metricHeaders) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse setMetricHeaders(java.util.List<GoogleAnalyticsAdminV1betaAccessMetricHeader> metricHeaders) {
     this.metricHeaders = metricHeaders;
     return this;
   }
@@ -134,7 +134,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * with account-level requests.
    * @return value or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaAccessQuota getQuota() {
+  public GoogleAnalyticsAdminV1betaAccessQuota getQuota() {
     return quota;
   }
 
@@ -143,7 +143,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * with account-level requests.
    * @param quota quota or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse setQuota(GoogleAnalyticsAdminV1alphaAccessQuota quota) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse setQuota(GoogleAnalyticsAdminV1betaAccessQuota quota) {
     this.quota = quota;
     return this;
   }
@@ -170,7 +170,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * /basics#pagination).
    * @param rowCount rowCount or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse setRowCount(java.lang.Integer rowCount) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse setRowCount(java.lang.Integer rowCount) {
     this.rowCount = rowCount;
     return this;
   }
@@ -179,7 +179,7 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * Rows of dimension value combinations and metric values in the report.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAnalyticsAdminV1alphaAccessRow> getRows() {
+  public java.util.List<GoogleAnalyticsAdminV1betaAccessRow> getRows() {
     return rows;
   }
 
@@ -187,19 +187,19 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportResponse extends co
    * Rows of dimension value combinations and metric values in the report.
    * @param rows rows or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse setRows(java.util.List<GoogleAnalyticsAdminV1alphaAccessRow> rows) {
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse setRows(java.util.List<GoogleAnalyticsAdminV1betaAccessRow> rows) {
     this.rows = rows;
     return this;
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse set(String fieldName, Object value) {
-    return (GoogleAnalyticsAdminV1alphaRunAccessReportResponse) super.set(fieldName, value);
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse set(String fieldName, Object value) {
+    return (GoogleAnalyticsAdminV1betaRunAccessReportResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaRunAccessReportResponse clone() {
-    return (GoogleAnalyticsAdminV1alphaRunAccessReportResponse) super.clone();
+  public GoogleAnalyticsAdminV1betaRunAccessReportResponse clone() {
+    return (GoogleAnalyticsAdminV1betaRunAccessReportResponse) super.clone();
   }
 
 }

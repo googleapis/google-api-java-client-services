@@ -1221,6 +1221,178 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Returns a customized report of data access records. The report provides records of each time a
+     * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
+     * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+     * This method is only available to Administrators. These data access records include GA4 UI
+     * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+     * retrieve data from Google Analytics through a linkage. These records don't include property
+     * configuration changes like adding a stream or changing a property's time zone. For configuration
+     * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
+     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+     *
+     * Create a request for the method "accounts.runAccessReport".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
+     * @return the request
+     */
+    public RunAccessReport runAccessReport(java.lang.String entity, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest content) throws java.io.IOException {
+      RunAccessReport result = new RunAccessReport(entity, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RunAccessReport extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportResponse> {
+
+      private static final String REST_PATH = "v1beta/{+entity}:runAccessReport";
+
+      private final java.util.regex.Pattern ENTITY_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+      /**
+       * Returns a customized report of data access records. The report provides records of each time a
+       * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
+       * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+       * This method is only available to Administrators. These data access records include GA4 UI
+       * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+       * retrieve data from Google Analytics through a linkage. These records don't include property
+       * configuration changes like adding a stream or changing a property's time zone. For
+       * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
+       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+       *
+       * Create a request for the method "accounts.runAccessReport".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
+       * operation. <p> {@link RunAccessReport#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
+       * @since 1.13
+       */
+      protected RunAccessReport(java.lang.String entity, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportResponse.class);
+        this.entity = com.google.api.client.util.Preconditions.checkNotNull(entity, "Required parameter entity must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ENTITY_PATTERN.matcher(entity).matches(),
+              "Parameter entity must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public RunAccessReport set$Xgafv(java.lang.String $Xgafv) {
+        return (RunAccessReport) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RunAccessReport setAccessToken(java.lang.String accessToken) {
+        return (RunAccessReport) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RunAccessReport setAlt(java.lang.String alt) {
+        return (RunAccessReport) super.setAlt(alt);
+      }
+
+      @Override
+      public RunAccessReport setCallback(java.lang.String callback) {
+        return (RunAccessReport) super.setCallback(callback);
+      }
+
+      @Override
+      public RunAccessReport setFields(java.lang.String fields) {
+        return (RunAccessReport) super.setFields(fields);
+      }
+
+      @Override
+      public RunAccessReport setKey(java.lang.String key) {
+        return (RunAccessReport) super.setKey(key);
+      }
+
+      @Override
+      public RunAccessReport setOauthToken(java.lang.String oauthToken) {
+        return (RunAccessReport) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RunAccessReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RunAccessReport) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RunAccessReport setQuotaUser(java.lang.String quotaUser) {
+        return (RunAccessReport) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RunAccessReport setUploadType(java.lang.String uploadType) {
+        return (RunAccessReport) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RunAccessReport setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RunAccessReport) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String entity;
+
+      /** The Data Access Report supports requesting at the property level or account level. If requested at
+     the account level, Data Access Reports include all access for all properties under that account. To
+     request at the property level, entity should be for example 'properties/123' if "123" is your GA4
+     property ID. To request at the account level, entity should be for example 'accounts/1234' if
+     "1234" is your GA4 Account ID.
+       */
+      public java.lang.String getEntity() {
+        return entity;
+      }
+
+      /**
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       */
+      public RunAccessReport setEntity(java.lang.String entity) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ENTITY_PATTERN.matcher(entity).matches(),
+              "Parameter entity must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+        this.entity = entity;
+        return this;
+      }
+
+      @Override
+      public RunAccessReport set(String parameterName, Object value) {
+        return (RunAccessReport) super.set(parameterName, value);
+      }
+    }
+    /**
      * Searches through all changes to an account or its children given the specified set of filters.
      *
      * Create a request for the method "accounts.searchChangeHistoryEvents".
@@ -2451,6 +2623,178 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns a customized report of data access records. The report provides records of each time a
+     * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
+     * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+     * This method is only available to Administrators. These data access records include GA4 UI
+     * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+     * retrieve data from Google Analytics through a linkage. These records don't include property
+     * configuration changes like adding a stream or changing a property's time zone. For configuration
+     * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
+     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+     *
+     * Create a request for the method "properties.runAccessReport".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
+     * @return the request
+     */
+    public RunAccessReport runAccessReport(java.lang.String entity, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest content) throws java.io.IOException {
+      RunAccessReport result = new RunAccessReport(entity, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RunAccessReport extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportResponse> {
+
+      private static final String REST_PATH = "v1beta/{+entity}:runAccessReport";
+
+      private final java.util.regex.Pattern ENTITY_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+      /**
+       * Returns a customized report of data access records. The report provides records of each time a
+       * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
+       * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+       * This method is only available to Administrators. These data access records include GA4 UI
+       * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+       * retrieve data from Google Analytics through a linkage. These records don't include property
+       * configuration changes like adding a stream or changing a property's time zone. For
+       * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
+       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+       *
+       * Create a request for the method "properties.runAccessReport".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link RunAccessReport#execute()} method to invoke the remote
+       * operation. <p> {@link RunAccessReport#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
+     *        the account level, Data Access Reports include all access for all properties under that
+     *        account. To request at the property level, entity should be for example 'properties/123'
+     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
+     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
+       * @since 1.13
+       */
+      protected RunAccessReport(java.lang.String entity, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportResponse.class);
+        this.entity = com.google.api.client.util.Preconditions.checkNotNull(entity, "Required parameter entity must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ENTITY_PATTERN.matcher(entity).matches(),
+              "Parameter entity must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+      }
+
+      @Override
+      public RunAccessReport set$Xgafv(java.lang.String $Xgafv) {
+        return (RunAccessReport) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RunAccessReport setAccessToken(java.lang.String accessToken) {
+        return (RunAccessReport) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RunAccessReport setAlt(java.lang.String alt) {
+        return (RunAccessReport) super.setAlt(alt);
+      }
+
+      @Override
+      public RunAccessReport setCallback(java.lang.String callback) {
+        return (RunAccessReport) super.setCallback(callback);
+      }
+
+      @Override
+      public RunAccessReport setFields(java.lang.String fields) {
+        return (RunAccessReport) super.setFields(fields);
+      }
+
+      @Override
+      public RunAccessReport setKey(java.lang.String key) {
+        return (RunAccessReport) super.setKey(key);
+      }
+
+      @Override
+      public RunAccessReport setOauthToken(java.lang.String oauthToken) {
+        return (RunAccessReport) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RunAccessReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RunAccessReport) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RunAccessReport setQuotaUser(java.lang.String quotaUser) {
+        return (RunAccessReport) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RunAccessReport setUploadType(java.lang.String uploadType) {
+        return (RunAccessReport) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RunAccessReport setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RunAccessReport) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String entity;
+
+      /** The Data Access Report supports requesting at the property level or account level. If requested at
+     the account level, Data Access Reports include all access for all properties under that account. To
+     request at the property level, entity should be for example 'properties/123' if "123" is your GA4
+     property ID. To request at the account level, entity should be for example 'accounts/1234' if
+     "1234" is your GA4 Account ID.
+       */
+      public java.lang.String getEntity() {
+        return entity;
+      }
+
+      /**
+       * The Data Access Report supports requesting at the property level or account level. If
+       * requested at the account level, Data Access Reports include all access for all properties
+       * under that account. To request at the property level, entity should be for example
+       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
+       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       */
+      public RunAccessReport setEntity(java.lang.String entity) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ENTITY_PATTERN.matcher(entity).matches(),
+              "Parameter entity must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+        this.entity = entity;
+        return this;
+      }
+
+      @Override
+      public RunAccessReport set(String parameterName, Object value) {
+        return (RunAccessReport) super.set(parameterName, value);
       }
     }
     /**

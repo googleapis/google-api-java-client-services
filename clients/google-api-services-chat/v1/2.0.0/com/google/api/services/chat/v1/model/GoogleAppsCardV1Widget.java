@@ -74,11 +74,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
-   * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
-   * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
-   * with a single item: ``` "grid": { "title": "A fine collection of items", "columnCount": 2,
-   * "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
+   * has 6 rows. For example, the following JSON creates a 2 column grid with a single item: ```
+   * "grid": { "title": "A fine collection of items", "columnCount": 2, "borderStyle": { "type":
+   * "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
    * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
    * "openLink": { "url": "https://www.example.com" } } } ```
@@ -98,29 +96,23 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays a selection control that lets users select items. Selection controls can be check
-   * boxes, radio buttons, switches, or dropdown menus. Currently supported in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
-   * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
-   * "selectionInput": { "name": "size", "label": "Size" "type": "DROPDOWN", "items": [ { "text":
-   * "S", "value": "small", "selected": false }, { "text": "M", "value": "medium", "selected": true
-   * }, { "text": "L", "value": "large", "selected": false }, { "text": "XL", "value":
-   * "extra_large", "selected": false } ] } ```
+   * boxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates a
+   * dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
+   * "Size" "type": "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
+   * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
+   * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1SelectionInput selectionInput;
 
   /**
-   * Displays a text box that users can type into. Currently supported in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
-   * For example, the following JSON creates a text input for an email address: ``` "textInput": {
-   * "name": "mailing_address", "label": "Mailing Address" } ``` As another example, the following
-   * JSON creates a text input for a programming language with static suggestions: ``` "textInput":
-   * { "name": "preferred_programing_language", "label": "Preferred Language", "initialSuggestions":
-   * { "items": [ { "text": "C++" }, { "text": "Java" }, { "text": "JavaScript" }, { "text":
-   * "Python" } ] } } ```
+   * Displays a text box that users can type into. For example, the following JSON creates a text
+   * input for an email address: ``` "textInput": { "name": "mailing_address", "label": "Mailing
+   * Address" } ``` As another example, the following JSON creates a text input for a programming
+   * language with static suggestions: ``` "textInput": { "name": "preferred_programing_language",
+   * "label": "Preferred Language", "initialSuggestions": { "items": [ { "text": "C++" }, { "text":
+   * "Java" }, { "text": "JavaScript" }, { "text": "Python" } ] } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,11 +223,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
-   * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
-   * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
-   * with a single item: ``` "grid": { "title": "A fine collection of items", "columnCount": 2,
-   * "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
+   * has 6 rows. For example, the following JSON creates a 2 column grid with a single item: ```
+   * "grid": { "title": "A fine collection of items", "columnCount": 2, "borderStyle": { "type":
+   * "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
    * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
    * "openLink": { "url": "https://www.example.com" } } } ```
@@ -249,11 +239,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. Currently supported in [dialogs](https://developers.google.com/chat/how-
-   * tos/dialogs). Support for [card messages](https://developers.google.com/chat/api/guides
-   * /message-formats/cards) is coming soon. For example, the following JSON creates a 2 column grid
-   * with a single item: ``` "grid": { "title": "A fine collection of items", "columnCount": 2,
-   * "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
+   * has 6 rows. For example, the following JSON creates a 2 column grid with a single item: ```
+   * "grid": { "title": "A fine collection of items", "columnCount": 2, "borderStyle": { "type":
+   * "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
    * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
    * "openLink": { "url": "https://www.example.com" } } } ```
@@ -287,14 +275,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays a selection control that lets users select items. Selection controls can be check
-   * boxes, radio buttons, switches, or dropdown menus. Currently supported in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
-   * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
-   * "selectionInput": { "name": "size", "label": "Size" "type": "DROPDOWN", "items": [ { "text":
-   * "S", "value": "small", "selected": false }, { "text": "M", "value": "medium", "selected": true
-   * }, { "text": "L", "value": "large", "selected": false }, { "text": "XL", "value":
-   * "extra_large", "selected": false } ] } ```
+   * boxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates a
+   * dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
+   * "Size" "type": "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
+   * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
+   * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput getSelectionInput() {
@@ -303,14 +288,11 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays a selection control that lets users select items. Selection controls can be check
-   * boxes, radio buttons, switches, or dropdown menus. Currently supported in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
-   * For example, the following JSON creates a dropdown menu that lets users choose a size: ```
-   * "selectionInput": { "name": "size", "label": "Size" "type": "DROPDOWN", "items": [ { "text":
-   * "S", "value": "small", "selected": false }, { "text": "M", "value": "medium", "selected": true
-   * }, { "text": "L", "value": "large", "selected": false }, { "text": "XL", "value":
-   * "extra_large", "selected": false } ] } ```
+   * boxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates a
+   * dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
+   * "Size" "type": "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
+   * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
+   * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
    * @param selectionInput selectionInput or {@code null} for none
    */
   public GoogleAppsCardV1Widget setSelectionInput(GoogleAppsCardV1SelectionInput selectionInput) {
@@ -319,15 +301,12 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text box that users can type into. Currently supported in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
-   * For example, the following JSON creates a text input for an email address: ``` "textInput": {
-   * "name": "mailing_address", "label": "Mailing Address" } ``` As another example, the following
-   * JSON creates a text input for a programming language with static suggestions: ``` "textInput":
-   * { "name": "preferred_programing_language", "label": "Preferred Language", "initialSuggestions":
-   * { "items": [ { "text": "C++" }, { "text": "Java" }, { "text": "JavaScript" }, { "text":
-   * "Python" } ] } } ```
+   * Displays a text box that users can type into. For example, the following JSON creates a text
+   * input for an email address: ``` "textInput": { "name": "mailing_address", "label": "Mailing
+   * Address" } ``` As another example, the following JSON creates a text input for a programming
+   * language with static suggestions: ``` "textInput": { "name": "preferred_programing_language",
+   * "label": "Preferred Language", "initialSuggestions": { "items": [ { "text": "C++" }, { "text":
+   * "Java" }, { "text": "JavaScript" }, { "text": "Python" } ] } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1TextInput getTextInput() {
@@ -335,15 +314,12 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text box that users can type into. Currently supported in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) is coming soon.
-   * For example, the following JSON creates a text input for an email address: ``` "textInput": {
-   * "name": "mailing_address", "label": "Mailing Address" } ``` As another example, the following
-   * JSON creates a text input for a programming language with static suggestions: ``` "textInput":
-   * { "name": "preferred_programing_language", "label": "Preferred Language", "initialSuggestions":
-   * { "items": [ { "text": "C++" }, { "text": "Java" }, { "text": "JavaScript" }, { "text":
-   * "Python" } ] } } ```
+   * Displays a text box that users can type into. For example, the following JSON creates a text
+   * input for an email address: ``` "textInput": { "name": "mailing_address", "label": "Mailing
+   * Address" } ``` As another example, the following JSON creates a text input for a programming
+   * language with static suggestions: ``` "textInput": { "name": "preferred_programing_language",
+   * "label": "Preferred Language", "initialSuggestions": { "items": [ { "text": "C++" }, { "text":
+   * "Java" }, { "text": "JavaScript" }, { "text": "Python" } ] } } ```
    * @param textInput textInput or {@code null} for none
    */
   public GoogleAppsCardV1Widget setTextInput(GoogleAppsCardV1TextInput textInput) {

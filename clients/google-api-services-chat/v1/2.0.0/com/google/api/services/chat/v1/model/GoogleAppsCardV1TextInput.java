@@ -22,8 +22,6 @@ package com.google.api.services.chat.v1.model;
  * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
  * tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users,
  * use a text input. To collect defined data from users, use the selection input widget instead.
- * Only supported in [dialogs](https://developers.google.com/chat/how-tos/dialogs). Support for
- * [card messages](https://developers.google.com/chat/api/guides/message-formats/cards) coming soon.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An icon displayed in a widget on a card. Supports
- * [standard](https://developers.google.com/chat/api/guides/message-formats/cards) and
+ * An icon displayed in a widget on a card. Supports [built-
+ * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
  * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons) icons.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -55,17 +55,17 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * The crop style applied to the image. In some cases, applying a `CIRCLE` crop causes the image
-   * to be drawn larger than a standard icon.
+   * to be drawn larger than a built-in icon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageType;
 
   /**
-   * Display one of the standard icons provided by Google Workspace. For example, to display an
+   * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [standard icons](https://developers.google.com/chat/api/guides/message-
-   * formats/cards).
+   * icons, see [built-in icons](https://developers.google.com/chat/api/guides/message-
+   * formats/cards#builtinicons).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * The crop style applied to the image. In some cases, applying a `CIRCLE` crop causes the image
-   * to be drawn larger than a standard icon.
+   * to be drawn larger than a built-in icon.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -132,7 +132,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * The crop style applied to the image. In some cases, applying a `CIRCLE` crop causes the image
-   * to be drawn larger than a standard icon.
+   * to be drawn larger than a built-in icon.
    * @param imageType imageType or {@code null} for none
    */
   public GoogleAppsCardV1Icon setImageType(java.lang.String imageType) {
@@ -141,10 +141,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * Display one of the standard icons provided by Google Workspace. For example, to display an
+   * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [standard icons](https://developers.google.com/chat/api/guides/message-
-   * formats/cards).
+   * icons, see [built-in icons](https://developers.google.com/chat/api/guides/message-
+   * formats/cards#builtinicons).
    * @return value or {@code null} for none
    */
   public java.lang.String getKnownIcon() {
@@ -152,10 +152,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * Display one of the standard icons provided by Google Workspace. For example, to display an
+   * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [standard icons](https://developers.google.com/chat/api/guides/message-
-   * formats/cards).
+   * icons, see [built-in icons](https://developers.google.com/chat/api/guides/message-
+   * formats/cards#builtinicons).
    * @param knownIcon knownIcon or {@code null} for none
    */
   public GoogleAppsCardV1Icon setKnownIcon(java.lang.String knownIcon) {

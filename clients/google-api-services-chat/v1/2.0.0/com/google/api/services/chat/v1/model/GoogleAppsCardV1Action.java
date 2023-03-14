@@ -18,7 +18,8 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * An action that describes the behavior when the form is submitted. For example, an Apps Script can
- * be invoked to handle the form.
+ * be invoked to handle the form. If the action is triggered, the form values are sent to the
+ * server.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -69,16 +70,17 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
-   * `true`, form values remain after the action is triggered. When using
-   * [LoadIndicator.NONE](https://developers.google.com/workspace/add-
-   * ons/reference/rpc/google.apps.card.v1#loadindicator) for actions, `persist_values` = `true`is
-   * recommended, as it ensures that any changes made by the user after form or on change actions
-   * are sent to the server are not overwritten by the response. If `false`, the form values are
-   * cleared when the action is triggered. When `persist_values` is set to `false`, it is strongly
-   * recommended that the card use [LoadIndicator.SPINNER](https://developers.google.com/workspace
-   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) for all actions, as this locks the UI
-   * to ensure no changes are made by the user while the action is being processed. Not supported by
-   * Chat apps.
+   * `true`, form values remain after the action is triggered. To let the user make changes while
+   * the action is being processed, set [LoadIndicator](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) in Chat apps,
+   * you must also set the action's [ResponseType](https://developers.google.com/chat/api/reference/
+   * rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https://
+   * developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card that
+   * contained the action. If `false`, the form values are cleared when the action is triggered. To
+   * prevent the user from making changes while the action is being processed, set
+   * [LoadIndicator](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `SPINNER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,16 +174,17 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
-   * `true`, form values remain after the action is triggered. When using
-   * [LoadIndicator.NONE](https://developers.google.com/workspace/add-
-   * ons/reference/rpc/google.apps.card.v1#loadindicator) for actions, `persist_values` = `true`is
-   * recommended, as it ensures that any changes made by the user after form or on change actions
-   * are sent to the server are not overwritten by the response. If `false`, the form values are
-   * cleared when the action is triggered. When `persist_values` is set to `false`, it is strongly
-   * recommended that the card use [LoadIndicator.SPINNER](https://developers.google.com/workspace
-   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) for all actions, as this locks the UI
-   * to ensure no changes are made by the user while the action is being processed. Not supported by
-   * Chat apps.
+   * `true`, form values remain after the action is triggered. To let the user make changes while
+   * the action is being processed, set [LoadIndicator](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) in Chat apps,
+   * you must also set the action's [ResponseType](https://developers.google.com/chat/api/reference/
+   * rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https://
+   * developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card that
+   * contained the action. If `false`, the form values are cleared when the action is triggered. To
+   * prevent the user from making changes while the action is being processed, set
+   * [LoadIndicator](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `SPINNER`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPersistValues() {
@@ -190,16 +193,17 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
-   * `true`, form values remain after the action is triggered. When using
-   * [LoadIndicator.NONE](https://developers.google.com/workspace/add-
-   * ons/reference/rpc/google.apps.card.v1#loadindicator) for actions, `persist_values` = `true`is
-   * recommended, as it ensures that any changes made by the user after form or on change actions
-   * are sent to the server are not overwritten by the response. If `false`, the form values are
-   * cleared when the action is triggered. When `persist_values` is set to `false`, it is strongly
-   * recommended that the card use [LoadIndicator.SPINNER](https://developers.google.com/workspace
-   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) for all actions, as this locks the UI
-   * to ensure no changes are made by the user while the action is being processed. Not supported by
-   * Chat apps.
+   * `true`, form values remain after the action is triggered. To let the user make changes while
+   * the action is being processed, set [LoadIndicator](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * messages](https://developers.google.com/chat/api/guides/message-formats/cards) in Chat apps,
+   * you must also set the action's [ResponseType](https://developers.google.com/chat/api/reference/
+   * rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https://
+   * developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card that
+   * contained the action. If `false`, the form values are cleared when the action is triggered. To
+   * prevent the user from making changes while the action is being processed, set
+   * [LoadIndicator](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `SPINNER`.
    * @param persistValues persistValues or {@code null} for none
    */
   public GoogleAppsCardV1Action setPersistValues(java.lang.Boolean persistValues) {

@@ -50,7 +50,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message with all Chat app mentions stripped out.
+   * Output only. Plain-text body of the message with all Chat app mentions stripped out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
    * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
-   * displayed below the plain-text body of the message.
+   * displayed below the plain-text body of the message. `cards` and `cards_v2` can have a maximum
+   * size of 32 KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,10 +89,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
    * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
    * Cards are usually displayed below the text body of a Chat message, but can situationally appear
-   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
-   * `cardId` is a unique identifier among cards in the same message and for identifying user input
-   * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
-   * `ButtonList` - `Divider`
+   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). Each card
+   * can have a maximum size of 32 KB. The `cardId` is a unique identifier among cards in the same
+   * message and for identifying user input values. Currently supported widgets include: -
+   * `TextParagraph` - `DecoratedText` - `Image` - `ButtonList` - `Divider` - `TextInput` -
+   * `SelectionInput` - `Grid`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +157,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The user who created the message.
+   * Output only. The user who created the message. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,9 +173,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private SlashCommand slashCommand;
 
   /**
-   * The space the message belongs to. When accessed with [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users), only the name of the
-   * Space is populated.
+   * If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [space](https://developers.google.com/chat/api/reference/rest/v1/spaces) `name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,7 +243,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message with all Chat app mentions stripped out.
+   * Output only. Plain-text body of the message with all Chat app mentions stripped out.
    * @return value or {@code null} for none
    */
   public java.lang.String getArgumentText() {
@@ -247,7 +251,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message with all Chat app mentions stripped out.
+   * Output only. Plain-text body of the message with all Chat app mentions stripped out.
    * @param argumentText argumentText or {@code null} for none
    */
   public Message setArgumentText(java.lang.String argumentText) {
@@ -275,7 +279,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
    * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
-   * displayed below the plain-text body of the message.
+   * displayed below the plain-text body of the message. `cards` and `cards_v2` can have a maximum
+   * size of 32 KB.
    * @return value or {@code null} for none
    */
   public java.util.List<Card> getCards() {
@@ -285,7 +290,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
    * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
-   * displayed below the plain-text body of the message.
+   * displayed below the plain-text body of the message. `cards` and `cards_v2` can have a maximum
+   * size of 32 KB.
    * @param cards cards or {@code null} for none
    */
   public Message setCards(java.util.List<Card> cards) {
@@ -297,10 +303,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
    * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
    * Cards are usually displayed below the text body of a Chat message, but can situationally appear
-   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
-   * `cardId` is a unique identifier among cards in the same message and for identifying user input
-   * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
-   * `ButtonList` - `Divider`
+   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). Each card
+   * can have a maximum size of 32 KB. The `cardId` is a unique identifier among cards in the same
+   * message and for identifying user input values. Currently supported widgets include: -
+   * `TextParagraph` - `DecoratedText` - `Image` - `ButtonList` - `Divider` - `TextInput` -
+   * `SelectionInput` - `Grid`
    * @return value or {@code null} for none
    */
   public java.util.List<CardWithId> getCardsV2() {
@@ -311,10 +318,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
    * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
    * Cards are usually displayed below the text body of a Chat message, but can situationally appear
-   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
-   * `cardId` is a unique identifier among cards in the same message and for identifying user input
-   * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
-   * `ButtonList` - `Divider`
+   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). Each card
+   * can have a maximum size of 32 KB. The `cardId` is a unique identifier among cards in the same
+   * message and for identifying user input values. Currently supported widgets include: -
+   * `TextParagraph` - `DecoratedText` - `Image` - `ButtonList` - `Divider` - `TextInput` -
+   * `SelectionInput` - `Grid`
    * @param cardsV2 cardsV2 or {@code null} for none
    */
   public Message setCardsV2(java.util.List<CardWithId> cardsV2) {
@@ -443,7 +451,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user who created the message.
+   * Output only. The user who created the message. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
    * @return value or {@code null} for none
    */
   public User getSender() {
@@ -451,7 +461,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user who created the message.
+   * Output only. The user who created the message. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
    * @param sender sender or {@code null} for none
    */
   public Message setSender(User sender) {
@@ -477,9 +489,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space the message belongs to. When accessed with [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users), only the name of the
-   * Space is populated.
+   * If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [space](https://developers.google.com/chat/api/reference/rest/v1/spaces) `name`.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -487,9 +499,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space the message belongs to. When accessed with [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users), only the name of the
-   * Space is populated.
+   * If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [space](https://developers.google.com/chat/api/reference/rest/v1/spaces) `name`.
    * @param space space or {@code null} for none
    */
   public Message setSpace(Space space) {

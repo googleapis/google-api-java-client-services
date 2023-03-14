@@ -17,8 +17,8 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * LINT.IfChange A group of devices. A group is defined by a set of device selectors. A device
- * belongs to the group if it matches any selector (logical OR).
+ * A group of devices. A group is defined by a set of device selectors. A device belongs to the
+ * group if it matches any selector (logical OR).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

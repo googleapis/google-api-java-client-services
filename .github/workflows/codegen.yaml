@@ -8,15 +8,73 @@ name: codegen
 jobs:
   discovery:
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
-
-  generate:
+  batch:
     runs-on: ubuntu-20.04
     needs: discovery
+    outputs:
+      services: ${{ steps.chunk.outputs.result }}
+    steps:
+      - uses: actions/github-script@v5
+        id: chunk
+        with:
+          script: |
+            console.log('splitting service names list into batches')
+            const services = ${{ needs.discovery.outputs.services }}
+            const result = {
+              "one": [],
+              "two": [],
+            };
+            for (let i = 0; i < services.length; i++) {
+              resultBatchKey = i % 2 ? "one" : "two";
+              result[resultBatchKey].push(services[i])
+            }
+            return result
+  generate_one:
+    runs-on: ubuntu-20.04
+    needs: batch
     strategy:
       fail-fast: false
       max-parallel: 4
       matrix: 
-        service: ${{fromJson(needs.discovery.outputs.services)}}
+        service: ${{fromJson(needs.batch.outputs.services).one}}
+    steps:
+      - run: echo generating ${{ matrix.service }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          path: google-api-java-client-services
+      - uses: actions/checkout@v2
+        with:
+          repository: googleapis/discovery-artifact-manager
+          fetch-depth: 1
+          path: discovery-artifact-manager
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 2.7.18
+      - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
+      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+        env:
+          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+        with:
+          command: pr
+          upstream_owner: ${{ github.repository_owner }}
+          upstream_repo: google-api-java-client-services
+          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
+          title: 'chore: regenerate ${{ matrix.service }} client'
+          message: 'chore: regenerate ${{ matrix.service }} client'
+          branch: regenerate-${{ matrix.service }}
+          git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
+          primary: main
+          force: true
+          fork: true
+  generate_two:
+    runs-on: ubuntu-20.04
+    needs: batch
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: 
+        service: ${{fromJson(needs.batch.outputs.services).two}}
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v2

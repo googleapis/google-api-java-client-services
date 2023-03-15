@@ -59,7 +59,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private QueueingPolicy queueingPolicy;
 
   /**
-   * Output only. State of the QueuedResource request
+   * Output only. State of the QueuedResource request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. State of the QueuedResource request
+   * Output only. State of the QueuedResource request.
    * @return value or {@code null} for none
    */
   public QueuedResourceState getState() {
@@ -149,7 +149,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. State of the QueuedResource request
+   * Output only. State of the QueuedResource request.
    * @param state state or {@code null} for none
    */
   public QueuedResource setState(QueuedResourceState state) {

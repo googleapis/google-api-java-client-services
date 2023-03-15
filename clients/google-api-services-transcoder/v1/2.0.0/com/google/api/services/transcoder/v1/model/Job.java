@@ -110,8 +110,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Specify the `template_id` to use for populating `Job.config`. The default is
-   * `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined
-   * JobTemplate: `{job_template_id}`
+   * `preset/web-hd`, which is the only supported preset. User defined JobTemplate:
+   * `{job_template_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -315,8 +315,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Specify the `template_id` to use for populating `Job.config`. The default is
-   * `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined
-   * JobTemplate: `{job_template_id}`
+   * `preset/web-hd`, which is the only supported preset. User defined JobTemplate:
+   * `{job_template_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplateId() {
@@ -325,8 +325,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Specify the `template_id` to use for populating `Job.config`. The default is
-   * `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined
-   * JobTemplate: `{job_template_id}`
+   * `preset/web-hd`, which is the only supported preset. User defined JobTemplate:
+   * `{job_template_id}`
    * @param templateId templateId or {@code null} for none
    */
   public Job setTemplateId(java.lang.String templateId) {

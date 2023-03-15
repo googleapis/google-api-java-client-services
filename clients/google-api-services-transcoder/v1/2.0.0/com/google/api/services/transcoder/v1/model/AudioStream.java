@@ -63,6 +63,22 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
   private java.lang.String codec;
 
   /**
+   * The name for this particular audio stream that will be added to the HLS/DASH manifest. Not
+   * supported in MP4 files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not supported in MP4 files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
    * The value may be {@code null}.
    */
@@ -157,6 +173,44 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
    */
   public AudioStream setCodec(java.lang.String codec) {
     this.codec = codec;
+    return this;
+  }
+
+  /**
+   * The name for this particular audio stream that will be added to the HLS/DASH manifest. Not
+   * supported in MP4 files.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The name for this particular audio stream that will be added to the HLS/DASH manifest. Not
+   * supported in MP4 files.
+   * @param displayName displayName or {@code null} for none
+   */
+  public AudioStream setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not supported in MP4 files.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not supported in MP4 files.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public AudioStream setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
     return this;
   }
 

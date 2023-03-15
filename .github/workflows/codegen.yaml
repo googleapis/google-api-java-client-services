@@ -1,13 +1,27 @@
 on:
   schedule:
-    # daily at 12:30 am
-    - cron: '30 0 * * *'
+    # every one hour from 00:30 to 03:30
+    - cron: '30 0-3 * * *'
   workflow_dispatch:
 
 name: codegen
 jobs:
   discovery:
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
+  total_service_size_check:
+    runs-on: ubuntu-20.04
+    needs: discovery
+    steps:
+      - uses: actions/github-script@v5
+        id: chunk
+        with:
+          script: |
+            console.log('checking size of services')
+            const MAX_SERVICE_SIZE = 400 // 00:30 to 03:30 implies 4 batches of size 100
+            const services = ${{ needs.discovery.outputs.services }}
+            if (services.length > MAX_SERVICE_SIZE) {
+              throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)
+            }
   batch:
     runs-on: ubuntu-20.04
     needs: discovery
@@ -20,88 +34,19 @@ jobs:
           script: |
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
+            const hour = new Date().getHours()
+            const MAX_BATCH_SIZE = 100
             const result = {
-              "one": [],
-              "two": [],
+              batches: [],
+              hour: new Date().getHours(),
             };
-            for (let i = 0; i < services.length; i++) {
-              resultBatchKey = i % 2 ? "one" : "two";
-              result[resultBatchKey].push(services[i])
+            for (let i = 0; i < services.length; i += MAX_BATCH_SIZE) {
+              result.batches.push(services.slice(i, i + MAX_BATCH_SIZE))
             }
             return result
-  generate_one:
-    runs-on: ubuntu-20.04
+  generate:
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@master
     needs: batch
-    strategy:
-      fail-fast: false
-      max-parallel: 4
-      matrix: 
-        service: ${{fromJson(needs.batch.outputs.services).one}}
-    steps:
-      - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-          path: google-api-java-client-services
-      - uses: actions/checkout@v2
-        with:
-          repository: googleapis/discovery-artifact-manager
-          fetch-depth: 1
-          path: discovery-artifact-manager
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 2.7.18
-      - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
-      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
-        env:
-          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-        with:
-          command: pr
-          upstream_owner: ${{ github.repository_owner }}
-          upstream_repo: google-api-java-client-services
-          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-          title: 'chore: regenerate ${{ matrix.service }} client'
-          message: 'chore: regenerate ${{ matrix.service }} client'
-          branch: regenerate-${{ matrix.service }}
-          git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-          primary: main
-          force: true
-          fork: true
-  generate_two:
-    runs-on: ubuntu-20.04
-    needs: batch
-    strategy:
-      fail-fast: false
-      max-parallel: 4
-      matrix: 
-        service: ${{fromJson(needs.batch.outputs.services).two}}
-    steps:
-      - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-          path: google-api-java-client-services
-      - uses: actions/checkout@v2
-        with:
-          repository: googleapis/discovery-artifact-manager
-          fetch-depth: 1
-          path: discovery-artifact-manager
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 2.7.18
-      - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
-      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
-        env:
-          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-        with:
-          command: pr
-          upstream_owner: ${{ github.repository_owner }}
-          upstream_repo: google-api-java-client-services
-          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-          title: 'chore: regenerate ${{ matrix.service }} client'
-          message: 'chore: regenerate ${{ matrix.service }} client'
-          branch: regenerate-${{ matrix.service }}
-          git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-          primary: main
-          force: true
-          fork: true
+    if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
+    with: 
+      services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}

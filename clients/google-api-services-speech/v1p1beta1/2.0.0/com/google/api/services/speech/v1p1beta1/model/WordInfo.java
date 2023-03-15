@@ -51,10 +51,21 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
+   * Output only. A label value assigned for every unique speaker within the audio. This field
+   * specifies which speaker was detected to have spoken this word. For some models, like
+   * medical_conversation this can be actual speaker role, for example "patient" or "provider", but
+   * generally this would be a number identifying a speaker. This field is only set if
+   * enable_speaker_diarization = 'true' and only for the top alternative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String speakerLabel;
+
+  /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
    * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
+   * 'true' and only for the top alternative. Note: Use speaker_label instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,10 +134,35 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. A label value assigned for every unique speaker within the audio. This field
+   * specifies which speaker was detected to have spoken this word. For some models, like
+   * medical_conversation this can be actual speaker role, for example "patient" or "provider", but
+   * generally this would be a number identifying a speaker. This field is only set if
+   * enable_speaker_diarization = 'true' and only for the top alternative.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpeakerLabel() {
+    return speakerLabel;
+  }
+
+  /**
+   * Output only. A label value assigned for every unique speaker within the audio. This field
+   * specifies which speaker was detected to have spoken this word. For some models, like
+   * medical_conversation this can be actual speaker role, for example "patient" or "provider", but
+   * generally this would be a number identifying a speaker. This field is only set if
+   * enable_speaker_diarization = 'true' and only for the top alternative.
+   * @param speakerLabel speakerLabel or {@code null} for none
+   */
+  public WordInfo setSpeakerLabel(java.lang.String speakerLabel) {
+    this.speakerLabel = speakerLabel;
+    return this;
+  }
+
+  /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
    * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
+   * 'true' and only for the top alternative. Note: Use speaker_label instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSpeakerTag() {
@@ -137,7 +173,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
    * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
+   * 'true' and only for the top alternative. Note: Use speaker_label instead.
    * @param speakerTag speakerTag or {@code null} for none
    */
   public WordInfo setSpeakerTag(java.lang.Integer speakerTag) {

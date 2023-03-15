@@ -32,7 +32,7 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
 
   /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
-   * recognition result using a speaker_tag provided in the WordInfo.
+   * recognition result using a speaker_label provided in the WordInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
 
   /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
-   * recognition result using a speaker_tag provided in the WordInfo.
+   * recognition result using a speaker_label provided in the WordInfo.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSpeakerDiarization() {
@@ -74,7 +74,7 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
 
   /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
-   * recognition result using a speaker_tag provided in the WordInfo.
+   * recognition result using a speaker_label provided in the WordInfo.
    * @param enableSpeakerDiarization enableSpeakerDiarization or {@code null} for none
    */
   public SpeakerDiarizationConfig setEnableSpeakerDiarization(java.lang.Boolean enableSpeakerDiarization) {

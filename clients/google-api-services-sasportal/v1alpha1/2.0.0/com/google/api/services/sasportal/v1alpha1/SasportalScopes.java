@@ -23,6 +23,9 @@ package com.google.api.services.sasportal.v1alpha1;
  */
 public class SasportalScopes {
 
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
+  public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
+
   /** Read, create, update, and delete your SAS Portal data.. */
   public static final String SASPORTAL = "https://www.googleapis.com/auth/sasportal";
 
@@ -33,6 +36,7 @@ public class SasportalScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_PLATFORM);
     set.add(SASPORTAL);
     return java.util.Collections.unmodifiableSet(set);
   }

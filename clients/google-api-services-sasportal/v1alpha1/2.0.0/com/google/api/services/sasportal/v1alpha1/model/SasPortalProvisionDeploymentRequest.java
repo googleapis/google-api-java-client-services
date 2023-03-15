@@ -18,9 +18,9 @@ package com.google.api.services.sasportal.v1alpha1.model;
 
 /**
  * Request for [ProvisionDeployment].
- * [spectrum.sas.portal.v1alpha1.Provisioning.ProvisionDeployment]. No input is needed, because GCP
- * Project, Organization Info, and caller’s GAIA ID should be retrieved from the RPC handler, and
- * used as inputs to create a new SAS organization (if not exists) and a new SAS deployment.
+ * [spectrum.sas.portal.v1alpha1.Provisioning.ProvisionDeployment]. GCP Project, Organization Info,
+ * and caller’s GAIA ID should be retrieved from the RPC handler, and used as inputs to create a new
+ * SAS organization (if not exists) and a new SAS deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the SAS Portal API. For a detailed explanation see:
@@ -31,6 +31,60 @@ package com.google.api.services.sasportal.v1alpha1.model;
  */
 @SuppressWarnings("javadoc")
 public final class SasPortalProvisionDeploymentRequest extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. If this field is set, and a new SAS Portal Deployment needs to be created, its
+   * display name will be set to the value of this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String newDeploymentDisplayName;
+
+  /**
+   * Optional. If this field is set, and a new SAS Portal Organization needs to be created, its
+   * display name will be set to the value of this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String newOrganizationDisplayName;
+
+  /**
+   * Optional. If this field is set, and a new SAS Portal Deployment needs to be created, its
+   * display name will be set to the value of this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNewDeploymentDisplayName() {
+    return newDeploymentDisplayName;
+  }
+
+  /**
+   * Optional. If this field is set, and a new SAS Portal Deployment needs to be created, its
+   * display name will be set to the value of this field.
+   * @param newDeploymentDisplayName newDeploymentDisplayName or {@code null} for none
+   */
+  public SasPortalProvisionDeploymentRequest setNewDeploymentDisplayName(java.lang.String newDeploymentDisplayName) {
+    this.newDeploymentDisplayName = newDeploymentDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. If this field is set, and a new SAS Portal Organization needs to be created, its
+   * display name will be set to the value of this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNewOrganizationDisplayName() {
+    return newOrganizationDisplayName;
+  }
+
+  /**
+   * Optional. If this field is set, and a new SAS Portal Organization needs to be created, its
+   * display name will be set to the value of this field.
+   * @param newOrganizationDisplayName newOrganizationDisplayName or {@code null} for none
+   */
+  public SasPortalProvisionDeploymentRequest setNewOrganizationDisplayName(java.lang.String newOrganizationDisplayName) {
+    this.newOrganizationDisplayName = newOrganizationDisplayName;
+    return this;
+  }
 
   @Override
   public SasPortalProvisionDeploymentRequest set(String fieldName, Object value) {

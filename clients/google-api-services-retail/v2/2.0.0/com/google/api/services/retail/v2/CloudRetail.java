@@ -2496,10 +2496,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           public class Products {
 
             /**
-             * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous
-             * and does not require the Product to exist before updating fulfillment information. If the request
-             * is valid, the update will be enqueued and processed downstream. As a consequence, when a response
-             * is returned, the added place IDs are not immediately manifested in the Product queried by
+             * It is recommended to use the ProductService.AddLocalInventories method instead of
+             * ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results
+             * but provides more fine-grained control over ingesting local inventory data. Incrementally adds
+             * place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not
+             * require the Product to exist before updating fulfillment information. If the request is valid,
+             * the update will be enqueued and processed downstream. As a consequence, when a response is
+             * returned, the added place IDs are not immediately manifested in the Product queried by
              * ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be
              * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
@@ -2532,6 +2535,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
 
               /**
+               * It is recommended to use the ProductService.AddLocalInventories method instead of
+               * ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same
+               * results but provides more fine-grained control over ingesting local inventory data.
                * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
@@ -3969,12 +3975,15 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
-             * asynchronous and does not require the Product to exist before updating fulfillment information.
-             * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
-             * when a response is returned, the removed place IDs are not immediately manifested in the Product
-             * queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will
-             * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
+             * It is recommended to use the ProductService.RemoveLocalInventories method instead of
+             * ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same
+             * results but provides more fine-grained control over ingesting local inventory data. Incrementally
+             * removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and
+             * does not require the Product to exist before updating fulfillment information. If the request is
+             * valid, the update will be enqueued and processed downstream. As a consequence, when a response is
+             * returned, the removed place IDs are not immediately manifested in the Product queried by
+             * ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be
+             * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
              * until being obsolete.
              *
@@ -4005,6 +4014,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
 
               /**
+               * It is recommended to use the ProductService.RemoveLocalInventories method instead of
+               * ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same
+               * results but provides more fine-grained control over ingesting local inventory data.
                * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
@@ -5815,6 +5827,153 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Gets a model.
+           *
+           * Create a request for the method "models.get".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Model to get. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog}/models/{model_id}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+
+            /**
+             * Gets a model.
+             *
+             * Create a request for the method "models.get".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Model to get. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog}/models/{model_id}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2.model.GoogleCloudRetailV2Model.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Model to get. Format: `projects/{project_number}/l
+             * ocations/{location_id}/catalogs/{catalog}/models/{model_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Model to get. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog}/models/{model_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Model to get. Format: `projects/{project_number}/l
+             * ocations/{location_id}/catalogs/{catalog}/models/{model_id}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/models/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists all the models linked to this event store.
            *
            * Create a request for the method "models.list".
@@ -6763,12 +6922,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-           * the binding to use different resource name schemes, such as `users/operations`. To override the
-           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-           * configuration. For backwards compatibility, the default name includes the operations collection
-           * id, however overriding users must ensure the name binding is the parent resource, without the
-           * operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -6793,12 +6947,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-             * override the binding to use different resource name schemes, such as `users/operations`. To
-             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-             * their service configuration. For backwards compatibility, the default name includes the
-             * operations collection id, however overriding users must ensure the name binding is the parent
-             * resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *
@@ -9823,12 +9972,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -9853,12 +9997,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -10184,12 +10323,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       }
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-       * the binding to use different resource name schemes, such as `users/operations`. To override the
-       * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-       * configuration. For backwards compatibility, the default name includes the operations collection
-       * id, however overriding users must ensure the name binding is the parent resource, without the
-       * operations collection id.
+       * this method, it returns `UNIMPLEMENTED`.
        *
        * Create a request for the method "operations.list".
        *
@@ -10214,12 +10348,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-         * override the binding to use different resource name schemes, such as `users/operations`. To
-         * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-         * their service configuration. For backwards compatibility, the default name includes the
-         * operations collection id, however overriding users must ensure the name binding is the parent
-         * resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *

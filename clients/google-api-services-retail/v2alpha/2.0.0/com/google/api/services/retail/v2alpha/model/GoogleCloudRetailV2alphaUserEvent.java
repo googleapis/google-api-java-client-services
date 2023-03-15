@@ -87,6 +87,15 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   private GoogleCloudRetailV2alphaCompletionDetail completionDetail;
 
   /**
+   * Represents the domain of the user event, for projects that combine domains. For example:
+   * retailer can have events from multiple domains like retailer-main, retailer-baby, retailer-
+   * meds, etc. under one project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String domain;
+
+  /**
    * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event
    * happened.
    * The value may be {@code null}.
@@ -366,6 +375,27 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
    */
   public GoogleCloudRetailV2alphaUserEvent setCompletionDetail(GoogleCloudRetailV2alphaCompletionDetail completionDetail) {
     this.completionDetail = completionDetail;
+    return this;
+  }
+
+  /**
+   * Represents the domain of the user event, for projects that combine domains. For example:
+   * retailer can have events from multiple domains like retailer-main, retailer-baby, retailer-
+   * meds, etc. under one project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDomain() {
+    return domain;
+  }
+
+  /**
+   * Represents the domain of the user event, for projects that combine domains. For example:
+   * retailer can have events from multiple domains like retailer-main, retailer-baby, retailer-
+   * meds, etc. under one project.
+   * @param domain domain or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaUserEvent setDomain(java.lang.String domain) {
+    this.domain = domain;
     return this;
   }
 

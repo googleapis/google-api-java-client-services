@@ -5597,6 +5597,288 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     public class Instances {
 
       /**
+       * Get Disk Shrink Config for a given instance.
+       *
+       * Create a request for the method "instances.getDiskShrinkConfig".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link GetDiskShrinkConfig#execute()} method to invoke the remote operation.
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @return the request
+       */
+      public GetDiskShrinkConfig getDiskShrinkConfig(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+        GetDiskShrinkConfig result = new GetDiskShrinkConfig(project, instance);
+        initialize(result);
+        return result;
+      }
+
+      public class GetDiskShrinkConfig extends SQLAdminRequest<com.google.api.services.sqladmin.model.SqlInstancesGetDiskShrinkConfigResponse> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/getDiskShrinkConfig";
+
+        /**
+         * Get Disk Shrink Config for a given instance.
+         *
+         * Create a request for the method "instances.getDiskShrinkConfig".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link GetDiskShrinkConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetDiskShrinkConfig#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param project Project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @since 1.13
+         */
+        protected GetDiskShrinkConfig(java.lang.String project, java.lang.String instance) {
+          super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.SqlInstancesGetDiskShrinkConfigResponse.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetDiskShrinkConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetDiskShrinkConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setAccessToken(java.lang.String accessToken) {
+          return (GetDiskShrinkConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setAlt(java.lang.String alt) {
+          return (GetDiskShrinkConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setCallback(java.lang.String callback) {
+          return (GetDiskShrinkConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setFields(java.lang.String fields) {
+          return (GetDiskShrinkConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setKey(java.lang.String key) {
+          return (GetDiskShrinkConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetDiskShrinkConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetDiskShrinkConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetDiskShrinkConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setUploadType(java.lang.String uploadType) {
+          return (GetDiskShrinkConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetDiskShrinkConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetDiskShrinkConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Project ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** Project ID of the project that contains the instance. */
+        public GetDiskShrinkConfig setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public GetDiskShrinkConfig setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        @Override
+        public GetDiskShrinkConfig set(String parameterName, Object value) {
+          return (GetDiskShrinkConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Perform Disk Shrink on primary instance.
+       *
+       * Create a request for the method "instances.performDiskShrink".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link PerformDiskShrink#execute()} method to invoke the remote operation.
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.PerformDiskShrinkContext}
+       * @return the request
+       */
+      public PerformDiskShrink performDiskShrink(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.PerformDiskShrinkContext content) throws java.io.IOException {
+        PerformDiskShrink result = new PerformDiskShrink(project, instance, content);
+        initialize(result);
+        return result;
+      }
+
+      public class PerformDiskShrink extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/performDiskShrink";
+
+        /**
+         * Perform Disk Shrink on primary instance.
+         *
+         * Create a request for the method "instances.performDiskShrink".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link PerformDiskShrink#execute()} method to invoke the remote
+         * operation. <p> {@link PerformDiskShrink#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param project Project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sqladmin.model.PerformDiskShrinkContext}
+         * @since 1.13
+         */
+        protected PerformDiskShrink(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.PerformDiskShrinkContext content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public PerformDiskShrink set$Xgafv(java.lang.String $Xgafv) {
+          return (PerformDiskShrink) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public PerformDiskShrink setAccessToken(java.lang.String accessToken) {
+          return (PerformDiskShrink) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public PerformDiskShrink setAlt(java.lang.String alt) {
+          return (PerformDiskShrink) super.setAlt(alt);
+        }
+
+        @Override
+        public PerformDiskShrink setCallback(java.lang.String callback) {
+          return (PerformDiskShrink) super.setCallback(callback);
+        }
+
+        @Override
+        public PerformDiskShrink setFields(java.lang.String fields) {
+          return (PerformDiskShrink) super.setFields(fields);
+        }
+
+        @Override
+        public PerformDiskShrink setKey(java.lang.String key) {
+          return (PerformDiskShrink) super.setKey(key);
+        }
+
+        @Override
+        public PerformDiskShrink setOauthToken(java.lang.String oauthToken) {
+          return (PerformDiskShrink) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public PerformDiskShrink setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (PerformDiskShrink) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public PerformDiskShrink setQuotaUser(java.lang.String quotaUser) {
+          return (PerformDiskShrink) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public PerformDiskShrink setUploadType(java.lang.String uploadType) {
+          return (PerformDiskShrink) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public PerformDiskShrink setUploadProtocol(java.lang.String uploadProtocol) {
+          return (PerformDiskShrink) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Project ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** Project ID of the project that contains the instance. */
+        public PerformDiskShrink setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public PerformDiskShrink setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        @Override
+        public PerformDiskShrink set(String parameterName, Object value) {
+          return (PerformDiskShrink) super.set(parameterName, value);
+        }
+      }
+      /**
        * Reschedules the maintenance on the given instance.
        *
        * Create a request for the method "instances.rescheduleMaintenance".
@@ -5732,6 +6014,143 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public RescheduleMaintenance set(String parameterName, Object value) {
           return (RescheduleMaintenance) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reset Replica Size to primary instance disk size.
+       *
+       * Create a request for the method "instances.resetReplicaSize".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link ResetReplicaSize#execute()} method to invoke the remote operation.
+       *
+       * @param project ID of the project that contains the read replica.
+       * @param instance Cloud SQL read replica instance name.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesResetReplicaSizeRequest}
+       * @return the request
+       */
+      public ResetReplicaSize resetReplicaSize(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesResetReplicaSizeRequest content) throws java.io.IOException {
+        ResetReplicaSize result = new ResetReplicaSize(project, instance, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ResetReplicaSize extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/resetReplicaSize";
+
+        /**
+         * Reset Replica Size to primary instance disk size.
+         *
+         * Create a request for the method "instances.resetReplicaSize".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link ResetReplicaSize#execute()} method to invoke the remote
+         * operation. <p> {@link ResetReplicaSize#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param project ID of the project that contains the read replica.
+         * @param instance Cloud SQL read replica instance name.
+         * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesResetReplicaSizeRequest}
+         * @since 1.13
+         */
+        protected ResetReplicaSize(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesResetReplicaSizeRequest content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public ResetReplicaSize set$Xgafv(java.lang.String $Xgafv) {
+          return (ResetReplicaSize) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ResetReplicaSize setAccessToken(java.lang.String accessToken) {
+          return (ResetReplicaSize) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ResetReplicaSize setAlt(java.lang.String alt) {
+          return (ResetReplicaSize) super.setAlt(alt);
+        }
+
+        @Override
+        public ResetReplicaSize setCallback(java.lang.String callback) {
+          return (ResetReplicaSize) super.setCallback(callback);
+        }
+
+        @Override
+        public ResetReplicaSize setFields(java.lang.String fields) {
+          return (ResetReplicaSize) super.setFields(fields);
+        }
+
+        @Override
+        public ResetReplicaSize setKey(java.lang.String key) {
+          return (ResetReplicaSize) super.setKey(key);
+        }
+
+        @Override
+        public ResetReplicaSize setOauthToken(java.lang.String oauthToken) {
+          return (ResetReplicaSize) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ResetReplicaSize setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ResetReplicaSize) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ResetReplicaSize setQuotaUser(java.lang.String quotaUser) {
+          return (ResetReplicaSize) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ResetReplicaSize setUploadType(java.lang.String uploadType) {
+          return (ResetReplicaSize) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ResetReplicaSize setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ResetReplicaSize) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** ID of the project that contains the read replica. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** ID of the project that contains the read replica.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** ID of the project that contains the read replica. */
+        public ResetReplicaSize setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL read replica instance name. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL read replica instance name.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL read replica instance name. */
+        public ResetReplicaSize setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        @Override
+        public ResetReplicaSize set(String parameterName, Object value) {
+          return (ResetReplicaSize) super.set(parameterName, value);
         }
       }
       /**

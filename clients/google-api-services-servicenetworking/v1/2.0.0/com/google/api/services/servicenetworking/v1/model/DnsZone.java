@@ -31,7 +31,8 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class DnsZone extends com.google.api.client.json.GenericJson {
 
   /**
-   * The DNS name suffix of this zone e.g. `example.com.`.
+   * The DNS name suffix of this zone e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends
+   * with a trailing dot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class DnsZone extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The DNS name suffix of this zone e.g. `example.com.`.
+   * The DNS name suffix of this zone e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends
+   * with a trailing dot.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsSuffix() {
@@ -55,7 +57,8 @@ public final class DnsZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS name suffix of this zone e.g. `example.com.`.
+   * The DNS name suffix of this zone e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends
+   * with a trailing dot.
    * @param dnsSuffix dnsSuffix or {@code null} for none
    */
   public DnsZone setDnsSuffix(java.lang.String dnsSuffix) {

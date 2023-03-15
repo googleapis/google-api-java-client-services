@@ -39,7 +39,8 @@ public final class DnsRecordSet extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> data;
 
   /**
-   * Required. The DNS or domain name of the record set, e.g. `test.example.com`.
+   * Required. The DNS or domain name of the record set, e.g. `test.example.com`. Cloud DNS requires
+   * that a DNS suffix ends with a trailing dot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +80,8 @@ public final class DnsRecordSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The DNS or domain name of the record set, e.g. `test.example.com`.
+   * Required. The DNS or domain name of the record set, e.g. `test.example.com`. Cloud DNS requires
+   * that a DNS suffix ends with a trailing dot.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -87,7 +89,8 @@ public final class DnsRecordSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The DNS or domain name of the record set, e.g. `test.example.com`.
+   * Required. The DNS or domain name of the record set, e.g. `test.example.com`. Cloud DNS requires
+   * that a DNS suffix ends with a trailing dot.
    * @param domain domain or {@code null} for none
    */
   public DnsRecordSet setDomain(java.lang.String domain) {

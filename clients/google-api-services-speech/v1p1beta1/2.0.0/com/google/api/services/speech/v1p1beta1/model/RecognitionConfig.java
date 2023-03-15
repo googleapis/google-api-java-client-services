@@ -107,7 +107,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
-   * recognition result using a speaker_tag provided in the WordInfo. Note: Use diarization_config
+   * recognition result using a speaker_label provided in the WordInfo. Note: Use diarization_config
    * instead.
    * The value may be {@code null}.
    */
@@ -428,7 +428,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
-   * recognition result using a speaker_tag provided in the WordInfo. Note: Use diarization_config
+   * recognition result using a speaker_label provided in the WordInfo. Note: Use diarization_config
    * instead.
    * @return value or {@code null} for none
    */
@@ -438,7 +438,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
-   * recognition result using a speaker_tag provided in the WordInfo. Note: Use diarization_config
+   * recognition result using a speaker_label provided in the WordInfo. Note: Use diarization_config
    * instead.
    * @param enableSpeakerDiarization enableSpeakerDiarization or {@code null} for none
    */

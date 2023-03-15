@@ -31,11 +31,9 @@ jobs:
             }
             return result
   generate:
-    runs-on: ubuntu-20.04
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@matrix-fix-2
     needs: batch
     if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
-    steps:
-      - uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@matrix-fix-2
-        with: 
-          # services: ${{fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
-          services: ${{fromJson(needs.batch.outputs.services).batches[0]}}
+    with: 
+      # services: ${{fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
+      services: ${{fromJson(needs.batch.outputs.services).batches[0]}}

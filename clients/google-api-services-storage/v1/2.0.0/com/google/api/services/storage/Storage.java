@@ -7532,6 +7532,22 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Filter results to objects and prefixes that match this glob pattern. */
+      @com.google.api.client.util.Key
+      private java.lang.String matchGlob;
+
+      /** Filter results to objects and prefixes that match this glob pattern.
+       */
+      public java.lang.String getMatchGlob() {
+        return matchGlob;
+      }
+
+      /** Filter results to objects and prefixes that match this glob pattern. */
+      public List setMatchGlob(java.lang.String matchGlob) {
+        this.matchGlob = matchGlob;
+        return this;
+      }
+
       /**
        * Maximum number of items plus prefixes to return in a single page of responses. As duplicate
        * prefixes are omitted, fewer total results may be returned than requested. The service will

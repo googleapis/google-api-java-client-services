@@ -31,7 +31,7 @@ jobs:
             }
             return result
   generate:
-    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@matrix-fix-2
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@master
     needs: batch
     if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     with: 

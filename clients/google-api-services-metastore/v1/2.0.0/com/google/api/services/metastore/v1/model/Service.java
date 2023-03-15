@@ -135,6 +135,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String releaseChannel;
 
   /**
+   * Scaling configuration of the metastore service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScalingConfig scalingConfig;
+
+  /**
    * Output only. The current state of the metastore service.
    * The value may be {@code null}.
    */
@@ -425,6 +432,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setReleaseChannel(java.lang.String releaseChannel) {
     this.releaseChannel = releaseChannel;
+    return this;
+  }
+
+  /**
+   * Scaling configuration of the metastore service.
+   * @return value or {@code null} for none
+   */
+  public ScalingConfig getScalingConfig() {
+    return scalingConfig;
+  }
+
+  /**
+   * Scaling configuration of the metastore service.
+   * @param scalingConfig scalingConfig or {@code null} for none
+   */
+  public Service setScalingConfig(ScalingConfig scalingConfig) {
+    this.scalingConfig = scalingConfig;
     return this;
   }
 

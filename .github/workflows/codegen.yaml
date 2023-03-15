@@ -1,7 +1,7 @@
 on:
   schedule:
     # daily at 12:30 am
-    - cron: '30 0,1 * * *'
+    - cron: '30 * * * *'
   workflow_dispatch:
 
 name: codegen
@@ -21,31 +21,21 @@ jobs:
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
             const hour = new Date().getHours()
+            const MAX_BATCH_SIZE = 100
             const result = {
-              "one": [],
-              "two": [],
-              "isEvenHour": hour % 2 == 0,
+              batches: [],
+              hour: new Date().getHours(),
             };
-            for (let i = 0; i < services.length; i++) {
-              resultBatchKey = i % 2 ? "one" : "two";
-              result[resultBatchKey].push(services[i])
+            for (let i = 0; i < services.length; i += MAX_BATCH_SIZE) {
+              result.batches.push(services.slice(i, i + MAX_BATCH_SIZE))
             }
             return result
-  generate_one:
+  generate:
     runs-on: ubuntu-20.04
     needs: batch
-    if: ${{fromJson(needs.batch.outputs.services).isEvenHour}}
+    if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     steps:
-      - uses: actions/checkout@v3
-      - uses: googleapis/google-api-java-client-services/generate.yaml@matrix-fix-2
+      - uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@matrix-fix-2
         with: 
-          services: fromJson(needs.batch.outputs.services).one
-  generate_two:
-    runs-on: ubuntu-20.04
-    needs: batch
-    if: ${{!fromJson(needs.batch.outputs.services).isEvenHour}}
-    steps:
-      - uses: actions/checkout@v3
-      - uses: googleapis/google-api-java-client-services/generate.yaml@matrix-fix-2
-        with: 
-          services: fromJson(needs.batch.outputs.services).two
+          # services: ${{fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
+          services: ${{fromJson(needs.batch.outputs.services).batches[0]}}

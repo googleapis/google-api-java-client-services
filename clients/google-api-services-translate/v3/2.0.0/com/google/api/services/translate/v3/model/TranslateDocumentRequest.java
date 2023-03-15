@@ -104,9 +104,9 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   private java.lang.String model;
 
   /**
-   * Optional. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support. If the source language isn't
-   * specified, the API attempts to identify the source language automatically and returns the
+   * Optional. The ISO-639 language code of the input document if known, for example, "en-US" or
+   * "sr-Latn". Supported language codes are listed in Language Support. If the source language
+   * isn't specified, the API attempts to identify the source language automatically and returns the
    * source language within the response. Source language must be specified if the request contains
    * a glossary or a custom model.
    * The value may be {@code null}.
@@ -115,7 +115,7 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   private java.lang.String sourceLanguageCode;
 
   /**
-   * Required. The BCP-47 language code to use for translation of the input document, set to one of
+   * Required. The ISO-639 language code to use for translation of the input document, set to one of
    * the language codes listed in Language Support.
    * The value may be {@code null}.
    */
@@ -293,9 +293,9 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support. If the source language isn't
-   * specified, the API attempts to identify the source language automatically and returns the
+   * Optional. The ISO-639 language code of the input document if known, for example, "en-US" or
+   * "sr-Latn". Supported language codes are listed in Language Support. If the source language
+   * isn't specified, the API attempts to identify the source language automatically and returns the
    * source language within the response. Source language must be specified if the request contains
    * a glossary or a custom model.
    * @return value or {@code null} for none
@@ -305,9 +305,9 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support. If the source language isn't
-   * specified, the API attempts to identify the source language automatically and returns the
+   * Optional. The ISO-639 language code of the input document if known, for example, "en-US" or
+   * "sr-Latn". Supported language codes are listed in Language Support. If the source language
+   * isn't specified, the API attempts to identify the source language automatically and returns the
    * source language within the response. Source language must be specified if the request contains
    * a glossary or a custom model.
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
@@ -318,7 +318,7 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The BCP-47 language code to use for translation of the input document, set to one of
+   * Required. The ISO-639 language code to use for translation of the input document, set to one of
    * the language codes listed in Language Support.
    * @return value or {@code null} for none
    */
@@ -327,7 +327,7 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The BCP-47 language code to use for translation of the input document, set to one of
+   * Required. The ISO-639 language code to use for translation of the input document, set to one of
    * the language codes listed in Language Support.
    * @param targetLanguageCode targetLanguageCode or {@code null} for none
    */

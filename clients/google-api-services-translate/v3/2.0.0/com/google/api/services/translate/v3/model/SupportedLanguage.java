@@ -40,7 +40,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
 
   /**
    * Supported language code, generally consisting of its ISO 639-1 identifier, for example, 'en',
-   * 'ja'. In certain cases, BCP-47 codes including language and region identifiers are returned
+   * 'ja'. In certain cases, ISO-639 codes including language and region identifiers are returned
    * (for example, 'zh-TW' and 'zh-CN').
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
 
   /**
    * Supported language code, generally consisting of its ISO 639-1 identifier, for example, 'en',
-   * 'ja'. In certain cases, BCP-47 codes including language and region identifiers are returned
+   * 'ja'. In certain cases, ISO-639 codes including language and region identifiers are returned
    * (for example, 'zh-TW' and 'zh-CN').
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class SupportedLanguage extends com.google.api.client.json.GenericJ
 
   /**
    * Supported language code, generally consisting of its ISO 639-1 identifier, for example, 'en',
-   * 'ja'. In certain cases, BCP-47 codes including language and region identifiers are returned
+   * 'ja'. In certain cases, ISO-639 codes including language and region identifiers are returned
    * (for example, 'zh-TW' and 'zh-CN').
    * @param languageCode languageCode or {@code null} for none
    */

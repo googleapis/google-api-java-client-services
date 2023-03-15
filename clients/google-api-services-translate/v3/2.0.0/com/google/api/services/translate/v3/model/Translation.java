@@ -31,7 +31,7 @@ package com.google.api.services.translate.v3.model;
 public final class Translation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BCP-47 language code of source text in the initial request, detected automatically, if no
+   * The ISO-639 language code of source text in the initial request, detected automatically, if no
    * source language was passed within the initial request. If the source language was passed, auto-
    * detection of the language does not occur and this field is empty.
    * The value may be {@code null}.
@@ -65,7 +65,7 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   private java.lang.String translatedText;
 
   /**
-   * The BCP-47 language code of source text in the initial request, detected automatically, if no
+   * The ISO-639 language code of source text in the initial request, detected automatically, if no
    * source language was passed within the initial request. If the source language was passed, auto-
    * detection of the language does not occur and this field is empty.
    * @return value or {@code null} for none
@@ -75,7 +75,7 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The BCP-47 language code of source text in the initial request, detected automatically, if no
+   * The ISO-639 language code of source text in the initial request, detected automatically, if no
    * source language was passed within the initial request. If the source language was passed, auto-
    * detection of the language does not occur and this field is empty.
    * @param detectedLanguageCode detectedLanguageCode or {@code null} for none

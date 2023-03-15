@@ -31,7 +31,7 @@ package com.google.api.services.translate.v3.model;
 public final class LanguageCodePair extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an
+   * Required. The ISO-639 language code of the input text, for example, "en-US". Expected to be an
    * exact match for GlossaryTerm.language_code.
    * The value may be {@code null}.
    */
@@ -39,15 +39,15 @@ public final class LanguageCodePair extends com.google.api.client.json.GenericJs
   private java.lang.String sourceLanguageCode;
 
   /**
-   * Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be
-   * an exact match for GlossaryTerm.language_code.
+   * Required. The ISO-639 language code for translation output, for example, "zh-CN". Expected to
+   * be an exact match for GlossaryTerm.language_code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetLanguageCode;
 
   /**
-   * Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an
+   * Required. The ISO-639 language code of the input text, for example, "en-US". Expected to be an
    * exact match for GlossaryTerm.language_code.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class LanguageCodePair extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an
+   * Required. The ISO-639 language code of the input text, for example, "en-US". Expected to be an
    * exact match for GlossaryTerm.language_code.
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
    */
@@ -66,8 +66,8 @@ public final class LanguageCodePair extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be
-   * an exact match for GlossaryTerm.language_code.
+   * Required. The ISO-639 language code for translation output, for example, "zh-CN". Expected to
+   * be an exact match for GlossaryTerm.language_code.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetLanguageCode() {
@@ -75,8 +75,8 @@ public final class LanguageCodePair extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be
-   * an exact match for GlossaryTerm.language_code.
+   * Required. The ISO-639 language code for translation output, for example, "zh-CN". Expected to
+   * be an exact match for GlossaryTerm.language_code.
    * @param targetLanguageCode targetLanguageCode or {@code null} for none
    */
   public LanguageCodePair setTargetLanguageCode(java.lang.String targetLanguageCode) {

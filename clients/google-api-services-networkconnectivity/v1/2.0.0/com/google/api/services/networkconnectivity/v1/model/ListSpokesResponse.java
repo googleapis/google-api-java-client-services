@@ -31,8 +31,8 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ListSpokesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The next pagination token in the List response. It should be used as page_token for the
-   * following request. An empty value means no more result.
+   * The token for the next page of the response. To see more results, use this value as the
+   * page_token for your next request. If this value is empty, there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class ListSpokesResponse extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The next pagination token in the List response. It should be used as page_token for the
-   * following request. An empty value means no more result.
+   * The token for the next page of the response. To see more results, use this value as the
+   * page_token for your next request. If this value is empty, there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -62,8 +62,8 @@ public final class ListSpokesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The next pagination token in the List response. It should be used as page_token for the
-   * following request. An empty value means no more result.
+   * The token for the next page of the response. To see more results, use this value as the
+   * page_token for your next request. If this value is empty, there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSpokesResponse setNextPageToken(java.lang.String nextPageToken) {

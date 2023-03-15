@@ -987,15 +987,15 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Optional. The orderding applied to the [Executions.ListExecutions] results. By
-             * default the ordering is based on descending start time. The following fields are
-             * supported for order by: executionID, startTime, endTime, duration, state, and
+             * Optional. The ordering applied to the [Executions.ListExecutions] results. By default
+             * the ordering is based on descending start time. The following fields are supported
+             * for order by: executionID, startTime, endTime, duration, state, and
              * workflowRevisionID.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. The orderding applied to the [Executions.ListExecutions] results. By default the ordering
+            /** Optional. The ordering applied to the [Executions.ListExecutions] results. By default the ordering
            is based on descending start time. The following fields are supported for order by: executionID,
            startTime, endTime, duration, state, and workflowRevisionID.
              */
@@ -1004,9 +1004,9 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Optional. The orderding applied to the [Executions.ListExecutions] results. By
-             * default the ordering is based on descending start time. The following fields are
-             * supported for order by: executionID, startTime, endTime, duration, state, and
+             * Optional. The ordering applied to the [Executions.ListExecutions] results. By default
+             * the ordering is based on descending start time. The following fields are supported
+             * for order by: executionID, startTime, endTime, duration, state, and
              * workflowRevisionID.
              */
             public List setOrderBy(java.lang.String orderBy) {
@@ -1046,14 +1046,17 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             /**
              * A page token, received from a previous `ListExecutions` call. Provide this to
              * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListExecutions` must match the call that provided the page token.
+             * `ListExecutions` must match the call that provided the page token. Note that
+             * pagination is applied to dynamic data. The list of executions returned can change
+             * between page requests.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** A page token, received from a previous `ListExecutions` call. Provide this to retrieve the
            subsequent page. When paginating, all other parameters provided to `ListExecutions` must match the
-           call that provided the page token.
+           call that provided the page token. Note that pagination is applied to dynamic data. The list of
+           executions returned can change between page requests.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -1062,7 +1065,9 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             /**
              * A page token, received from a previous `ListExecutions` call. Provide this to
              * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListExecutions` must match the call that provided the page token.
+             * `ListExecutions` must match the call that provided the page token. Note that
+             * pagination is applied to dynamic data. The list of executions returned can change
+             * between page requests.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

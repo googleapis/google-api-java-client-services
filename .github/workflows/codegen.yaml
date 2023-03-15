@@ -36,6 +36,7 @@ jobs:
     needs: batch
     if: ${{fromJson(needs.batch.outputs.services).isEvenHour}}
     steps:
+      - uses: actions/checkout@v3
       - uses: googleapis/google-api-java-client-services/generate.yaml@matrix-fix-2
         with: 
           services: fromJson(needs.batch.outputs.services).one
@@ -44,6 +45,7 @@ jobs:
     needs: batch
     if: ${{!fromJson(needs.batch.outputs.services).isEvenHour}}
     steps:
+      - uses: actions/checkout@v3
       - uses: googleapis/google-api-java-client-services/generate.yaml@matrix-fix-2
         with: 
           services: fromJson(needs.batch.outputs.services).two

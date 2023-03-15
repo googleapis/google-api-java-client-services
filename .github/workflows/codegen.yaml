@@ -8,6 +8,20 @@ name: codegen
 jobs:
   discovery:
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
+  total_service_size_check:
+    runs-on: ubuntu-20.04
+    needs: discovery
+    steps:
+      - uses: actions/github-script@v5
+        id: chunk
+        with:
+          script: |
+            console.log('checking size of services')
+            const MAX_SERVICE_SIZE = 400 // 00:30 to 03:30 implies 4 batches of size 100
+            const services = ${{ needs.discovery.outputs.services }}
+            if (services.length > MAX_SERVICE_SIZE) {
+              throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)
+            }
   batch:
     runs-on: ubuntu-20.04
     needs: discovery

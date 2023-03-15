@@ -53,6 +53,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1Event event;
 
   /**
+   * Assessment returned by Fraud Prevention when TransactionData is provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment;
+
+  /**
    * Output only. The resource name for the Assessment in the format
    * "projects/{project}/assessments/{assessment}".
    * The value may be {@code null}.
@@ -132,6 +139,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setEvent(GoogleCloudRecaptchaenterpriseV1Event event) {
     this.event = event;
+    return this;
+  }
+
+  /**
+   * Assessment returned by Fraud Prevention when TransactionData is provided.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment getFraudPreventionAssessment() {
+    return fraudPreventionAssessment;
+  }
+
+  /**
+   * Assessment returned by Fraud Prevention when TransactionData is provided.
+   * @param fraudPreventionAssessment fraudPreventionAssessment or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setFraudPreventionAssessment(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment) {
+    this.fraudPreventionAssessment = fraudPreventionAssessment;
     return this;
   }
 

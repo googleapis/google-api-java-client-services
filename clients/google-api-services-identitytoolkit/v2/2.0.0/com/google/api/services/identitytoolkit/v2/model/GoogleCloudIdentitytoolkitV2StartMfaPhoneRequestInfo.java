@@ -58,6 +58,16 @@ public final class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo extends 
   private java.lang.String phoneNumber;
 
   /**
+   * Android only. Used to assert application identity in place of a recaptcha token (or safety net
+   * token). A Play Integrity Token can be generated via the [PlayIntegrity API]
+   * (https://developer.android.com/google/play/integrity) with applying SHA256 to the
+   * `phone_number` field as the nonce.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String playIntegrityToken;
+
+  /**
    * Web only. Recaptcha solution.
    * The value may be {@code null}.
    */
@@ -139,6 +149,29 @@ public final class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo extends 
    */
   public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo setPhoneNumber(java.lang.String phoneNumber) {
     this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+  /**
+   * Android only. Used to assert application identity in place of a recaptcha token (or safety net
+   * token). A Play Integrity Token can be generated via the [PlayIntegrity API]
+   * (https://developer.android.com/google/play/integrity) with applying SHA256 to the
+   * `phone_number` field as the nonce.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlayIntegrityToken() {
+    return playIntegrityToken;
+  }
+
+  /**
+   * Android only. Used to assert application identity in place of a recaptcha token (or safety net
+   * token). A Play Integrity Token can be generated via the [PlayIntegrity API]
+   * (https://developer.android.com/google/play/integrity) with applying SHA256 to the
+   * `phone_number` field as the nonce.
+   * @param playIntegrityToken playIntegrityToken or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo setPlayIntegrityToken(java.lang.String playIntegrityToken) {
+    this.playIntegrityToken = playIntegrityToken;
     return this;
   }
 

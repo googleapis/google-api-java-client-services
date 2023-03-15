@@ -542,9 +542,8 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the workloadmanager server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the evaluation location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         * @param parent Required. The resource prefix of the evaluation location using the form:
+         *        `projects/{project_id}/locations/{location_id}`
          * @param content the {@link com.google.api.services.workloadmanager.v1.model.Evaluation}
          * @return the request
          */
@@ -572,9 +571,8 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the evaluation location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+           * @param parent Required. The resource prefix of the evaluation location using the form:
+         *        `projects/{project_id}/locations/{location_id}`
            * @param content the {@link com.google.api.services.workloadmanager.v1.model.Evaluation}
            * @since 1.13
            */
@@ -644,24 +642,22 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The resource name of the evaluation location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * Required. The resource prefix of the evaluation location using the form:
+           * `projects/{project_id}/locations/{location_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The resource name of the evaluation location using the form:
-         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region.
+          /** Required. The resource prefix of the evaluation location using the form:
+         `projects/{project_id}/locations/{location_id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The resource name of the evaluation location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * Required. The resource prefix of the evaluation location using the form:
+           * `projects/{project_id}/locations/{location_id}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -673,24 +669,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and evaluation_id from the method_signature of Create RPC
-           */
+          /** Required. Id of the requesting object */
           @com.google.api.client.util.Key
           private java.lang.String evaluationId;
 
-          /** Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-         evaluation_id from the method_signature of Create RPC
+          /** Required. Id of the requesting object
            */
           public java.lang.String getEvaluationId() {
             return evaluationId;
           }
 
-          /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and evaluation_id from the method_signature of Create RPC
-           */
+          /** Required. Id of the requesting object */
           public Create setEvaluationId(java.lang.String evaluationId) {
             this.evaluationId = evaluationId;
             return this;
@@ -701,7 +690,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -713,7 +702,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
+         example, consider a situation where you make an initial request and the request times out. If you
          make the request again with the same request ID, the server can check if original operation with
          the same request ID was received, and if so, will ignore the second request. This prevents clients
          from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
@@ -728,7 +717,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception

@@ -1,8 +1,9 @@
 on:
-  schedule:
-    # daily at 12:30 am
-    - cron: '30 0,1 * * *'
   workflow_dispatch:
+    inputs:
+      services:
+        required: true
+        type: string
   workflow_call:
     inputs:
       services:

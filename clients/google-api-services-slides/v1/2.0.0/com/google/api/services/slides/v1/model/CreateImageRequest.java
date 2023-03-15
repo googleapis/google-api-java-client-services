@@ -55,8 +55,9 @@ public final class CreateImageRequest extends com.google.api.client.json.Generic
   /**
    * The image URL. The image is fetched once at insertion time and a copy is stored for display
    * inside the presentation. Images must be less than 50 MB in size, can't exceed 25 megapixels,
-   * and must be in one of PNG, JPEG, or GIF formats. The provided URL can be up to 2 KB in length.
-   * The URL is saved with the image, and exposed through the Image.source_url field.
+   * and must be in one of PNG, JPEG, or GIF formats. The provided URL must be publicly accessible
+   * and up to 2 KB in length. The URL is saved with the image, and exposed through the
+   * Image.source_url field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +118,9 @@ public final class CreateImageRequest extends com.google.api.client.json.Generic
   /**
    * The image URL. The image is fetched once at insertion time and a copy is stored for display
    * inside the presentation. Images must be less than 50 MB in size, can't exceed 25 megapixels,
-   * and must be in one of PNG, JPEG, or GIF formats. The provided URL can be up to 2 KB in length.
-   * The URL is saved with the image, and exposed through the Image.source_url field.
+   * and must be in one of PNG, JPEG, or GIF formats. The provided URL must be publicly accessible
+   * and up to 2 KB in length. The URL is saved with the image, and exposed through the
+   * Image.source_url field.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -128,8 +130,9 @@ public final class CreateImageRequest extends com.google.api.client.json.Generic
   /**
    * The image URL. The image is fetched once at insertion time and a copy is stored for display
    * inside the presentation. Images must be less than 50 MB in size, can't exceed 25 megapixels,
-   * and must be in one of PNG, JPEG, or GIF formats. The provided URL can be up to 2 KB in length.
-   * The URL is saved with the image, and exposed through the Image.source_url field.
+   * and must be in one of PNG, JPEG, or GIF formats. The provided URL must be publicly accessible
+   * and up to 2 KB in length. The URL is saved with the image, and exposed through the
+   * Image.source_url field.
    * @param url url or {@code null} for none
    */
   public CreateImageRequest setUrl(java.lang.String url) {

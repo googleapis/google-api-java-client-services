@@ -130,7 +130,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   private CellFormat userEnteredFormat;
 
   /**
-   * The value the user entered in the cell. e.g, `1234`, `'Hello'`, or `=NOW()` Note: Dates, Times
+   * The value the user entered in the cell. e.g., `1234`, `'Hello'`, or `=NOW()` Note: Dates, Times
    * and DateTimes are represented as doubles in serial number format.
    * The value may be {@code null}.
    */
@@ -371,7 +371,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value the user entered in the cell. e.g, `1234`, `'Hello'`, or `=NOW()` Note: Dates, Times
+   * The value the user entered in the cell. e.g., `1234`, `'Hello'`, or `=NOW()` Note: Dates, Times
    * and DateTimes are represented as doubles in serial number format.
    * @return value or {@code null} for none
    */
@@ -380,7 +380,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value the user entered in the cell. e.g, `1234`, `'Hello'`, or `=NOW()` Note: Dates, Times
+   * The value the user entered in the cell. e.g., `1234`, `'Hello'`, or `=NOW()` Note: Dates, Times
    * and DateTimes are represented as doubles in serial number format.
    * @param userEnteredValue userEnteredValue or {@code null} for none
    */

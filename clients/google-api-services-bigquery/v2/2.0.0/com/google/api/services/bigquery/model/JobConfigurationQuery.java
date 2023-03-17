@@ -61,6 +61,14 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
+   * [Optional] Specifies whether the query should be executed as a continuous query. The default
+   * value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean continuous;
+
+  /**
    * [Optional] Specifies whether the job is allowed to create new tables. The following values are
    * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
@@ -340,6 +348,25 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    */
   public JobConfigurationQuery setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
     this.connectionProperties = connectionProperties;
+    return this;
+  }
+
+  /**
+   * [Optional] Specifies whether the query should be executed as a continuous query. The default
+   * value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContinuous() {
+    return continuous;
+  }
+
+  /**
+   * [Optional] Specifies whether the query should be executed as a continuous query. The default
+   * value is false.
+   * @param continuous continuous or {@code null} for none
+   */
+  public JobConfigurationQuery setContinuous(java.lang.Boolean continuous) {
+    this.continuous = continuous;
     return this;
   }
 

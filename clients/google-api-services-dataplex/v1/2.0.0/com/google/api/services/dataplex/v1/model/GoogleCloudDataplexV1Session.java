@@ -45,6 +45,7 @@ public final class GoogleCloudDataplexV1Session extends com.google.api.client.js
   private java.lang.String name;
 
   /**
+   * Output only. State of Session
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +95,7 @@ public final class GoogleCloudDataplexV1Session extends com.google.api.client.js
   }
 
   /**
+   * Output only. State of Session
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -101,6 +103,7 @@ public final class GoogleCloudDataplexV1Session extends com.google.api.client.js
   }
 
   /**
+   * Output only. State of Session
    * @param state state or {@code null} for none
    */
   public GoogleCloudDataplexV1Session setState(java.lang.String state) {

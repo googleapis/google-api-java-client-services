@@ -3570,9 +3570,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the DataScanJob:
-           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_sca
-           *        n_job_id} where project refers to a project_id or project_number and location_id refers to
-           *        a GCP region.
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id
+           *        } where project refers to a project_id or project_number and location_id refers to a GCP
+           *        region.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3599,9 +3599,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the DataScanJob:
-           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_sca
-           *        n_job_id} where project refers to a project_id or project_number and location_id refers to
-           *        a GCP region.
+           *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id
+           *        } where project refers to a project_id or project_number and location_id refers to a GCP
+           *        region.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3681,15 +3681,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
-             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where project refers
-             * to a project_id or project_number and location_id refers to a GCP region.
+             * n_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project refers to a
+             * project_id or project_number and location_id refers to a GCP region.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the DataScanJob:
-           projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-           where project refers to a project_id or project_number and location_id refers to a GCP region.
+           projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where
+           project refers to a project_id or project_number and location_id refers to a GCP region.
              */
             public java.lang.String getName() {
               return name;
@@ -3697,8 +3697,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
-             * n_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id} where project refers
-             * to a project_id or project_number and location_id refers to a GCP region.
+             * n_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project refers to a
+             * project_id or project_number and location_id refers to a GCP region.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -20269,12 +20269,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
-         * binding to use different resource name schemes, such as users/operations. To override the
-         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns UNIMPLEMENTED.
          *
          * Create a request for the method "operations.list".
          *
@@ -20299,12 +20294,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
-           * the binding to use different resource name schemes, such as users/operations. To override the
-           * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
-           * configuration. For backwards compatibility, the default name includes the operations collection
-           * id, however overriding users must ensure the name binding is the parent resource, without the
-           * operations collection id.
+           * this method, it returns UNIMPLEMENTED.
            *
            * Create a request for the method "operations.list".
            *

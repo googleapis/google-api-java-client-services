@@ -75,19 +75,7 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String localypVersion;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo modernFormatContent;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String modernFormatContentVersion;
 
   /**
    * LINT.IfChange
@@ -95,13 +83,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo navboost;
-
-  /**
-   * DEPRECATED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String navboostVersion;
 
   /**
    * The value may be {@code null}.
@@ -125,19 +106,7 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String videoScoringSignalVersion;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo volt;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String voltVersion;
 
   /**
    * @return value or {@code null} for none
@@ -219,21 +188,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getLocalypVersion() {
-    return localypVersion;
-  }
-
-  /**
-   * @param localypVersion localypVersion or {@code null} for none
-   */
-  public IndexingDocjoinerDataVersion setLocalypVersion(java.lang.String localypVersion) {
-    this.localypVersion = localypVersion;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
   public IndexingDocjoinerDataVersionVersionInfo getModernFormatContent() {
     return modernFormatContent;
   }
@@ -243,21 +197,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setModernFormatContent(IndexingDocjoinerDataVersionVersionInfo modernFormatContent) {
     this.modernFormatContent = modernFormatContent;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getModernFormatContentVersion() {
-    return modernFormatContentVersion;
-  }
-
-  /**
-   * @param modernFormatContentVersion modernFormatContentVersion or {@code null} for none
-   */
-  public IndexingDocjoinerDataVersion setModernFormatContentVersion(java.lang.String modernFormatContentVersion) {
-    this.modernFormatContentVersion = modernFormatContentVersion;
     return this;
   }
 
@@ -275,23 +214,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setNavboost(IndexingDocjoinerDataVersionVersionInfo navboost) {
     this.navboost = navboost;
-    return this;
-  }
-
-  /**
-   * DEPRECATED
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNavboostVersion() {
-    return navboostVersion;
-  }
-
-  /**
-   * DEPRECATED
-   * @param navboostVersion navboostVersion or {@code null} for none
-   */
-  public IndexingDocjoinerDataVersion setNavboostVersion(java.lang.String navboostVersion) {
-    this.navboostVersion = navboostVersion;
     return this;
   }
 
@@ -343,21 +265,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getVideoScoringSignalVersion() {
-    return videoScoringSignalVersion;
-  }
-
-  /**
-   * @param videoScoringSignalVersion videoScoringSignalVersion or {@code null} for none
-   */
-  public IndexingDocjoinerDataVersion setVideoScoringSignalVersion(java.lang.String videoScoringSignalVersion) {
-    this.videoScoringSignalVersion = videoScoringSignalVersion;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
   public IndexingDocjoinerDataVersionVersionInfo getVolt() {
     return volt;
   }
@@ -367,21 +274,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setVolt(IndexingDocjoinerDataVersionVersionInfo volt) {
     this.volt = volt;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVoltVersion() {
-    return voltVersion;
-  }
-
-  /**
-   * @param voltVersion voltVersion or {@code null} for none
-   */
-  public IndexingDocjoinerDataVersion setVoltVersion(java.lang.String voltVersion) {
-    this.voltVersion = voltVersion;
     return this;
   }
 

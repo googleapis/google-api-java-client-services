@@ -20,9 +20,9 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A general non-self-intersecting spherical polygon, consisting of one or more loops defining
  * multiple disconnected regions possibly with holes. All loops should be oriented CCW around the
  * region they define. This applies to the exterior loop(s) as well as any holes. Within MapFacts
- * (and underlying infrastructure) the data fields may be replaced by a single shape_id; see
- * comments on shape_id below. Any such PolygonProtos shouldn't be expected to work with public
- * functions in //geostore/base/public/polygon.h.
+ * (and underlying infrastructure) the data fields may be replaced by a single shape_id stored in
+ * internal_feature. Any such PolygonProtos shouldn't be expected to work with public functions in
+ * //geostore/base/public/polygon.h.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -100,18 +100,6 @@ public final class GeostorePolygonProto extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private GeostoreFieldMetadataProto metadata;
-
-  /**
-   * A unique identifier for this polygon's data which is being held externally in Shapestore (see
-   * go/shapestore). This is only ever set internally within MapFacts or underlying infrastructure
-   * and if set is set in lieu of other fields. Clients of MapFacts (or anyone downstream of them)
-   * can rely on the guarantee that this field will never be set and that the actual data for the
-   * polygon will be present instead. This field has been deprecated in favor of
-   * FeatureProto.internal.polygon_shape_id
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String shapeId;
 
   /**
    * A place for clients to attach arbitrary data to a polygon. Never set in MapFacts.
@@ -296,33 +284,6 @@ public final class GeostorePolygonProto extends com.google.api.client.json.Gener
    */
   public GeostorePolygonProto setMetadata(GeostoreFieldMetadataProto metadata) {
     this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * A unique identifier for this polygon's data which is being held externally in Shapestore (see
-   * go/shapestore). This is only ever set internally within MapFacts or underlying infrastructure
-   * and if set is set in lieu of other fields. Clients of MapFacts (or anyone downstream of them)
-   * can rely on the guarantee that this field will never be set and that the actual data for the
-   * polygon will be present instead. This field has been deprecated in favor of
-   * FeatureProto.internal.polygon_shape_id
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getShapeId() {
-    return shapeId;
-  }
-
-  /**
-   * A unique identifier for this polygon's data which is being held externally in Shapestore (see
-   * go/shapestore). This is only ever set internally within MapFacts or underlying infrastructure
-   * and if set is set in lieu of other fields. Clients of MapFacts (or anyone downstream of them)
-   * can rely on the guarantee that this field will never be set and that the actual data for the
-   * polygon will be present instead. This field has been deprecated in favor of
-   * FeatureProto.internal.polygon_shape_id
-   * @param shapeId shapeId or {@code null} for none
-   */
-  public GeostorePolygonProto setShapeId(java.lang.String shapeId) {
-    this.shapeId = shapeId;
     return this;
   }
 

@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * assistant.api.core_types.SurfaceType enum. A surface's capabilities can differ from the device's.
  * An example would be ANDROID_ALLO running on Pixel. Allo does not support AudioInput while the
  * Pixel does. In this case, audio_input will be set to false for Assistant Allo requests while it
- * might be set to true for OPA_NEXUS requests. Next ID: 34
+ * might be set to true for OPA_NEXUS requests. Next ID: 35
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -59,6 +59,13 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private AssistantApiAudioOutput audioOutput;
+
+  /**
+   * Bluetooth capabilities related to usage of a feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiBluetoothCapabilities bluetoothCapabilities;
 
   /**
    * The call capabilities of this device. go/call-capabilities
@@ -339,6 +346,23 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   public AssistantApiDeviceCapabilities setAudioOutput(AssistantApiAudioOutput audioOutput) {
     this.audioOutput = audioOutput;
+    return this;
+  }
+
+  /**
+   * Bluetooth capabilities related to usage of a feature.
+   * @return value or {@code null} for none
+   */
+  public AssistantApiBluetoothCapabilities getBluetoothCapabilities() {
+    return bluetoothCapabilities;
+  }
+
+  /**
+   * Bluetooth capabilities related to usage of a feature.
+   * @param bluetoothCapabilities bluetoothCapabilities or {@code null} for none
+   */
+  public AssistantApiDeviceCapabilities setBluetoothCapabilities(AssistantApiBluetoothCapabilities bluetoothCapabilities) {
+    this.bluetoothCapabilities = bluetoothCapabilities;
     return this;
   }
 

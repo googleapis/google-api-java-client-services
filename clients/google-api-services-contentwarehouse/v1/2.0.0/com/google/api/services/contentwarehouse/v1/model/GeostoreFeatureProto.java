@@ -739,7 +739,7 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreExistenceProto status;
 
   /**
-   * Represents information about the store front geoemtry. Only TYPE_ESTABLISHMENT_POI should have
+   * Represents information about the store front geometry. Only TYPE_ESTABLISHMENT_POI should have
    * this field set.
    * The value may be {@code null}.
    */
@@ -2343,7 +2343,7 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Represents information about the store front geoemtry. Only TYPE_ESTABLISHMENT_POI should have
+   * Represents information about the store front geometry. Only TYPE_ESTABLISHMENT_POI should have
    * this field set.
    * @return value or {@code null} for none
    */
@@ -2352,7 +2352,7 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Represents information about the store front geoemtry. Only TYPE_ESTABLISHMENT_POI should have
+   * Represents information about the store front geometry. Only TYPE_ESTABLISHMENT_POI should have
    * this field set.
    * @param storefrontGeometry storefrontGeometry or {@code null} for none
    */

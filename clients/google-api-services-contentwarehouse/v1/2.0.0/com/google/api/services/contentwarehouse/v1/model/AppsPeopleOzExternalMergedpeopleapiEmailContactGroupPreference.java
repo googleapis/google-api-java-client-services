@@ -37,8 +37,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreferenc
   private java.lang.String contactGroupId;
 
   /**
-   * If the Preference was implicitly set by PeopleApi. A preference with this bit will not be
-   * saved. See go/contact-group-email-preference-papi-problem for more info.
+   * If the Preference was implicitly set by PeopleApi/Contacts Service. A preference with this bit
+   * will not be saved to storage. See go/contact-group-email-preference-papi-problem for more info.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreferenc
   }
 
   /**
-   * If the Preference was implicitly set by PeopleApi. A preference with this bit will not be
-   * saved. See go/contact-group-email-preference-papi-problem for more info.
+   * If the Preference was implicitly set by PeopleApi/Contacts Service. A preference with this bit
+   * will not be saved to storage. See go/contact-group-email-preference-papi-problem for more info.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSynthetic() {
@@ -75,8 +75,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreferenc
   }
 
   /**
-   * If the Preference was implicitly set by PeopleApi. A preference with this bit will not be
-   * saved. See go/contact-group-email-preference-papi-problem for more info.
+   * If the Preference was implicitly set by PeopleApi/Contacts Service. A preference with this bit
+   * will not be saved to storage. See go/contact-group-email-preference-papi-problem for more info.
    * @param isSynthetic isSynthetic or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreference setIsSynthetic(java.lang.Boolean isSynthetic) {

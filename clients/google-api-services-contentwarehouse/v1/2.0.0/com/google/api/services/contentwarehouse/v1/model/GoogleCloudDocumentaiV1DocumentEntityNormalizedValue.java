@@ -32,7 +32,7 @@ public final class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends 
 
   /**
    * Postal address. See also:
-   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_ address.proto
+   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_address.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends 
 
   /**
    * Postal address. See also:
-   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_ address.proto
+   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_address.proto
    * @return value or {@code null} for none
    */
   public GoogleTypePostalAddress getAddressValue() {
@@ -107,7 +107,7 @@ public final class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends 
 
   /**
    * Postal address. See also:
-   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_ address.proto
+   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_address.proto
    * @param addressValue addressValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentEntityNormalizedValue setAddressValue(GoogleTypePostalAddress addressValue) {

@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Message describing ContactCenter object
+ * Message describing ContactCenter object Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -29,6 +29,13 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
  */
 @SuppressWarnings("javadoc")
 public final class ContactCenter extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. Info about the first admin user, such as given name and family name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdminUser adminUser;
 
   /**
    * Optional. Whether to enable users to be created in the CCAIP-instance concurrently to having
@@ -110,11 +117,28 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   private URIs uris;
 
   /**
-   * Optional. Email address of the first admin users.
+   * Optional. Email address of the first admin user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userEmail;
+
+  /**
+   * Optional. Info about the first admin user, such as given name and family name.
+   * @return value or {@code null} for none
+   */
+  public AdminUser getAdminUser() {
+    return adminUser;
+  }
+
+  /**
+   * Optional. Info about the first admin user, such as given name and family name.
+   * @param adminUser adminUser or {@code null} for none
+   */
+  public ContactCenter setAdminUser(AdminUser adminUser) {
+    this.adminUser = adminUser;
+    return this;
+  }
 
   /**
    * Optional. Whether to enable users to be created in the CCAIP-instance concurrently to having
@@ -308,7 +332,7 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Email address of the first admin users.
+   * Optional. Email address of the first admin user.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserEmail() {
@@ -316,7 +340,7 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Email address of the first admin users.
+   * Optional. Email address of the first admin user.
    * @param userEmail userEmail or {@code null} for none
    */
   public ContactCenter setUserEmail(java.lang.String userEmail) {

@@ -144,6 +144,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceDirectory;
 
   /**
+   * Optional. Ssl config of a connection
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslConfig sslConfig;
+
+  /**
    * Output only. Current status of the connection.
    * The value may be {@code null}.
    */
@@ -419,6 +426,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setServiceDirectory(java.lang.String serviceDirectory) {
     this.serviceDirectory = serviceDirectory;
+    return this;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @return value or {@code null} for none
+   */
+  public SslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public Connection setSslConfig(SslConfig sslConfig) {
+    this.sslConfig = sslConfig;
     return this;
   }
 

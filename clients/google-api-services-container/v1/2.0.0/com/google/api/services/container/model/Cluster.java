@@ -195,6 +195,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String expireTime;
 
   /**
+   * Fleet information for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Fleet fleet;
+
+  /**
    * Output only. Unique id for the cluster.
    * The value may be {@code null}.
    */
@@ -939,6 +946,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setExpireTime(java.lang.String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Fleet information for the cluster.
+   * @return value or {@code null} for none
+   */
+  public Fleet getFleet() {
+    return fleet;
+  }
+
+  /**
+   * Fleet information for the cluster.
+   * @param fleet fleet or {@code null} for none
+   */
+  public Cluster setFleet(Fleet fleet) {
+    this.fleet = fleet;
     return this;
   }
 

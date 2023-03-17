@@ -40,6 +40,15 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   private java.lang.String customizedAttribution;
 
   /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableShadowRemovalNativePdf;
+
+  /**
    * Optional.
    * The value may be {@code null}.
    */
@@ -89,8 +98,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   private BatchDocumentOutputConfig outputConfig;
 
   /**
-   * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in [Language
+   * Required. The ISO-639 language code of the input document if known, for example, "en-US" or
+   * "sr-Latn". Supported language codes are listed in [Language
    * Support](https://cloud.google.com/translate/docs/languages).
    * The value may be {@code null}.
    */
@@ -98,7 +107,7 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   private java.lang.String sourceLanguageCode;
 
   /**
-   * Required. The BCP-47 language code to use for translation of the input document. Specify up to
+   * Required. The ISO-639 language code to use for translation of the input document. Specify up to
    * 10 language codes here.
    * The value may be {@code null}.
    */
@@ -123,6 +132,27 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
    */
   public BatchTranslateDocumentRequest setCustomizedAttribution(java.lang.String customizedAttribution) {
     this.customizedAttribution = customizedAttribution;
+    return this;
+  }
+
+  /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableShadowRemovalNativePdf() {
+    return enableShadowRemovalNativePdf;
+  }
+
+  /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
+   * @param enableShadowRemovalNativePdf enableShadowRemovalNativePdf or {@code null} for none
+   */
+  public BatchTranslateDocumentRequest setEnableShadowRemovalNativePdf(java.lang.Boolean enableShadowRemovalNativePdf) {
+    this.enableShadowRemovalNativePdf = enableShadowRemovalNativePdf;
     return this;
   }
 
@@ -228,8 +258,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in [Language
+   * Required. The ISO-639 language code of the input document if known, for example, "en-US" or
+   * "sr-Latn". Supported language codes are listed in [Language
    * Support](https://cloud.google.com/translate/docs/languages).
    * @return value or {@code null} for none
    */
@@ -238,8 +268,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in [Language
+   * Required. The ISO-639 language code of the input document if known, for example, "en-US" or
+   * "sr-Latn". Supported language codes are listed in [Language
    * Support](https://cloud.google.com/translate/docs/languages).
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
    */
@@ -249,7 +279,7 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. The BCP-47 language code to use for translation of the input document. Specify up to
+   * Required. The ISO-639 language code to use for translation of the input document. Specify up to
    * 10 language codes here.
    * @return value or {@code null} for none
    */
@@ -258,7 +288,7 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. The BCP-47 language code to use for translation of the input document. Specify up to
+   * Required. The ISO-639 language code to use for translation of the input document. Specify up to
    * 10 language codes here.
    * @param targetLanguageCodes targetLanguageCodes or {@code null} for none
    */

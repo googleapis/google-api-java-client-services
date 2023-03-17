@@ -38,7 +38,7 @@ public final class DetectedLanguage extends com.google.api.client.json.GenericJs
   private java.lang.Float confidence;
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * The ISO-639 language code of the source content in the request, detected automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class DetectedLanguage extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * The ISO-639 language code of the source content in the request, detected automatically.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -70,7 +70,7 @@ public final class DetectedLanguage extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The BCP-47 language code of the source content in the request, detected automatically.
+   * The ISO-639 language code of the source content in the request, detected automatically.
    * @param languageCode languageCode or {@code null} for none
    */
   public DetectedLanguage setLanguageCode(java.lang.String languageCode) {

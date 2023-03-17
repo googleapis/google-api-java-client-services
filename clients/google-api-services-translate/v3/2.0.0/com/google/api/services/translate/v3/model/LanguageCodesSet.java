@@ -31,16 +31,18 @@ package com.google.api.services.translate.v3.model;
 public final class LanguageCodesSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list
-   * contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+   * The ISO-639 language code(s) for terms defined in the glossary. All entries are unique. The
+   * list contains at least two entries. Expected to be an exact match for
+   * GlossaryTerm.language_code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> languageCodes;
 
   /**
-   * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list
-   * contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+   * The ISO-639 language code(s) for terms defined in the glossary. All entries are unique. The
+   * list contains at least two entries. Expected to be an exact match for
+   * GlossaryTerm.language_code.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguageCodes() {
@@ -48,8 +50,9 @@ public final class LanguageCodesSet extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list
-   * contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+   * The ISO-639 language code(s) for terms defined in the glossary. All entries are unique. The
+   * list contains at least two entries. Expected to be an exact match for
+   * GlossaryTerm.language_code.
    * @param languageCodes languageCodes or {@code null} for none
    */
   public LanguageCodesSet setLanguageCodes(java.util.List<java.lang.String> languageCodes) {

@@ -40,6 +40,15 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   private java.lang.String customizedAttribution;
 
   /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableShadowRemovalNativePdf;
+
+  /**
    * Optional.
    * The value may be {@code null}.
    */
@@ -123,6 +132,27 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
    */
   public BatchTranslateDocumentRequest setCustomizedAttribution(java.lang.String customizedAttribution) {
     this.customizedAttribution = customizedAttribution;
+    return this;
+  }
+
+  /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableShadowRemovalNativePdf() {
+    return enableShadowRemovalNativePdf;
+  }
+
+  /**
+   * Optional. If true, use the text removal server to remove the shadow text on background image
+   * for native pdf translation. Shadow removal feature can only be enabled when
+   * is_translate_native_pdf_only: false && pdf_native_only: false
+   * @param enableShadowRemovalNativePdf enableShadowRemovalNativePdf or {@code null} for none
+   */
+  public BatchTranslateDocumentRequest setEnableShadowRemovalNativePdf(java.lang.Boolean enableShadowRemovalNativePdf) {
+    this.enableShadowRemovalNativePdf = enableShadowRemovalNativePdf;
     return this;
   }
 

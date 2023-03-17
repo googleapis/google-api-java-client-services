@@ -63,6 +63,12 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key
+  private java.lang.Double crowdingMultiplier;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long dasContactCount;
 
@@ -198,6 +204,21 @@ public final class DynamiteMessagesScoringInfo extends com.google.api.client.jso
    */
   public DynamiteMessagesScoringInfo setCreatorInSearcherContactList(java.lang.Boolean creatorInSearcherContactList) {
     this.creatorInSearcherContactList = creatorInSearcherContactList;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCrowdingMultiplier() {
+    return crowdingMultiplier;
+  }
+
+  /**
+   * @param crowdingMultiplier crowdingMultiplier or {@code null} for none
+   */
+  public DynamiteMessagesScoringInfo setCrowdingMultiplier(java.lang.Double crowdingMultiplier) {
+    this.crowdingMultiplier = crowdingMultiplier;
     return this;
   }
 

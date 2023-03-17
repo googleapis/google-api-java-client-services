@@ -31,25 +31,26 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class UriOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Host override. When specified, will replace the host part of the task URL. For example, if the
-   * task URL is "https://www.google.com", and host value is set to "example.net", the overridden
-   * URI will be changed to "https://example.net". Host value cannot be an empty string.
+   * Host override. When specified, replaces the host part of the task URL. For example, if the task
+   * URL is "https://www.google.com," and host value is set to "example.net", the overridden URI
+   * will be changed to "https://example.net." Host value cannot be an empty string
+   * (INVALID_ARGUMENT).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * URI path. When specified, will replace the existing path of the task URL. Setting the path
-   * value to an empty string clears the URI path segment.
+   * URI path. When specified, replaces the existing path of the task URL. Setting the path value to
+   * an empty string clears the URI path segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PathOverride pathOverride;
 
   /**
-   * Port override. When specified, will replace the port part of the task URI. For instance, for a
-   * URI http://www.google.com/foo and port=123, the overridden URI becomes
+   * Port override. When specified, replaces the port part of the task URI. For instance, for a URI
+   * http://www.google.com/foo and port=123, the overridden URI becomes
    * http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the
    * port to 0 (Zero) clears the URI port.
    * The value may be {@code null}.
@@ -58,8 +59,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   private java.lang.Long port;
 
   /**
-   * URI Query. When specified, will replace the query part of the task URI. Setting the query value
-   * to an empty string clears the URI query segment.
+   * URI Query. When specified, replaces the query part of the task URI. Setting the query value to
+   * an empty string clears the URI query segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +83,10 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   private java.lang.String uriOverrideEnforceMode;
 
   /**
-   * Host override. When specified, will replace the host part of the task URL. For example, if the
-   * task URL is "https://www.google.com", and host value is set to "example.net", the overridden
-   * URI will be changed to "https://example.net". Host value cannot be an empty string.
+   * Host override. When specified, replaces the host part of the task URL. For example, if the task
+   * URL is "https://www.google.com," and host value is set to "example.net", the overridden URI
+   * will be changed to "https://example.net." Host value cannot be an empty string
+   * (INVALID_ARGUMENT).
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -92,9 +94,10 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Host override. When specified, will replace the host part of the task URL. For example, if the
-   * task URL is "https://www.google.com", and host value is set to "example.net", the overridden
-   * URI will be changed to "https://example.net". Host value cannot be an empty string.
+   * Host override. When specified, replaces the host part of the task URL. For example, if the task
+   * URL is "https://www.google.com," and host value is set to "example.net", the overridden URI
+   * will be changed to "https://example.net." Host value cannot be an empty string
+   * (INVALID_ARGUMENT).
    * @param host host or {@code null} for none
    */
   public UriOverride setHost(java.lang.String host) {
@@ -103,8 +106,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI path. When specified, will replace the existing path of the task URL. Setting the path
-   * value to an empty string clears the URI path segment.
+   * URI path. When specified, replaces the existing path of the task URL. Setting the path value to
+   * an empty string clears the URI path segment.
    * @return value or {@code null} for none
    */
   public PathOverride getPathOverride() {
@@ -112,8 +115,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI path. When specified, will replace the existing path of the task URL. Setting the path
-   * value to an empty string clears the URI path segment.
+   * URI path. When specified, replaces the existing path of the task URL. Setting the path value to
+   * an empty string clears the URI path segment.
    * @param pathOverride pathOverride or {@code null} for none
    */
   public UriOverride setPathOverride(PathOverride pathOverride) {
@@ -122,8 +125,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Port override. When specified, will replace the port part of the task URI. For instance, for a
-   * URI http://www.google.com/foo and port=123, the overridden URI becomes
+   * Port override. When specified, replaces the port part of the task URI. For instance, for a URI
+   * http://www.google.com/foo and port=123, the overridden URI becomes
    * http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the
    * port to 0 (Zero) clears the URI port.
    * @return value or {@code null} for none
@@ -133,8 +136,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Port override. When specified, will replace the port part of the task URI. For instance, for a
-   * URI http://www.google.com/foo and port=123, the overridden URI becomes
+   * Port override. When specified, replaces the port part of the task URI. For instance, for a URI
+   * http://www.google.com/foo and port=123, the overridden URI becomes
    * http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the
    * port to 0 (Zero) clears the URI port.
    * @param port port or {@code null} for none
@@ -145,8 +148,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI Query. When specified, will replace the query part of the task URI. Setting the query value
-   * to an empty string clears the URI query segment.
+   * URI Query. When specified, replaces the query part of the task URI. Setting the query value to
+   * an empty string clears the URI query segment.
    * @return value or {@code null} for none
    */
   public QueryOverride getQueryOverride() {
@@ -154,8 +157,8 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI Query. When specified, will replace the query part of the task URI. Setting the query value
-   * to an empty string clears the URI query segment.
+   * URI Query. When specified, replaces the query part of the task URI. Setting the query value to
+   * an empty string clears the URI query segment.
    * @param queryOverride queryOverride or {@code null} for none
    */
   public UriOverride setQueryOverride(QueryOverride queryOverride) {

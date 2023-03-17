@@ -30,14 +30,14 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class QueryOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * The query parameters (e.g., qparam1=123=456). Default is Empty string.
+   * The query parameters (e.g., qparam1=123=456). Default is an empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String queryParams;
 
   /**
-   * The query parameters (e.g., qparam1=123=456). Default is Empty string.
+   * The query parameters (e.g., qparam1=123=456). Default is an empty string.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryParams() {
@@ -45,7 +45,7 @@ public final class QueryOverride extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The query parameters (e.g., qparam1=123=456). Default is Empty string.
+   * The query parameters (e.g., qparam1=123=456). Default is an empty string.
    * @param queryParams queryParams or {@code null} for none
    */
   public QueryOverride setQueryParams(java.lang.String queryParams) {

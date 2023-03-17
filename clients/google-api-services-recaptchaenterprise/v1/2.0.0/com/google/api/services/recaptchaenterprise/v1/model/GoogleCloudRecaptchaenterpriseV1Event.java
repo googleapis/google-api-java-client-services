@@ -17,7 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Model definition for GoogleCloudRecaptchaenterpriseV1Event.
+ * The event being assessed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -39,12 +39,41 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String expectedAction;
 
   /**
+   * Optional. Optional flag for a reCAPTCHA express request for an assessment without a token. If
+   * enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean express;
+
+  /**
    * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
    * using hmac-sha256 with stable secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hashedAccountId;
+
+  /**
+   * Optional. Optional HTTP header information about the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> headers;
+
+  /**
+   * Optional. Optional JA3 fingerprint for SSL clients.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ja3;
+
+  /**
+   * Optional. The URI resource the user requested that triggered an assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestedUri;
 
   /**
    * Optional. The site key that was used to invoke reCAPTCHA Enterprise on your site and generate
@@ -61,6 +90,15 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String token;
+
+  /**
+   * Optional. Data describing a payment transaction to be assessed. Sending this data enables
+   * reCAPTCHA Enterprise Fraud Prevention and the FraudPreventionAssessment component in the
+   * response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1TransactionData transactionData;
 
   /**
    * Optional. The user agent present in the request from the user's device related to this event.
@@ -92,6 +130,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   public GoogleCloudRecaptchaenterpriseV1Event setExpectedAction(java.lang.String expectedAction) {
     this.expectedAction = expectedAction;
+    return this;
+  }
+
+  /**
+   * Optional. Optional flag for a reCAPTCHA express request for an assessment without a token. If
+   * enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExpress() {
+    return express;
+  }
+
+  /**
+   * Optional. Optional flag for a reCAPTCHA express request for an assessment without a token. If
+   * enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * @param express express or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setExpress(java.lang.Boolean express) {
+    this.express = express;
     return this;
   }
 
@@ -145,6 +202,57 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
+   * Optional. Optional HTTP header information about the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHeaders() {
+    return headers;
+  }
+
+  /**
+   * Optional. Optional HTTP header information about the request.
+   * @param headers headers or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setHeaders(java.util.List<java.lang.String> headers) {
+    this.headers = headers;
+    return this;
+  }
+
+  /**
+   * Optional. Optional JA3 fingerprint for SSL clients.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJa3() {
+    return ja3;
+  }
+
+  /**
+   * Optional. Optional JA3 fingerprint for SSL clients.
+   * @param ja3 ja3 or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setJa3(java.lang.String ja3) {
+    this.ja3 = ja3;
+    return this;
+  }
+
+  /**
+   * Optional. The URI resource the user requested that triggered an assessment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestedUri() {
+    return requestedUri;
+  }
+
+  /**
+   * Optional. The URI resource the user requested that triggered an assessment.
+   * @param requestedUri requestedUri or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setRequestedUri(java.lang.String requestedUri) {
+    this.requestedUri = requestedUri;
+    return this;
+  }
+
+  /**
    * Optional. The site key that was used to invoke reCAPTCHA Enterprise on your site and generate
    * the token.
    * @return value or {@code null} for none
@@ -179,6 +287,27 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   public GoogleCloudRecaptchaenterpriseV1Event setToken(java.lang.String token) {
     this.token = token;
+    return this;
+  }
+
+  /**
+   * Optional. Data describing a payment transaction to be assessed. Sending this data enables
+   * reCAPTCHA Enterprise Fraud Prevention and the FraudPreventionAssessment component in the
+   * response.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1TransactionData getTransactionData() {
+    return transactionData;
+  }
+
+  /**
+   * Optional. Data describing a payment transaction to be assessed. Sending this data enables
+   * reCAPTCHA Enterprise Fraud Prevention and the FraudPreventionAssessment component in the
+   * response.
+   * @param transactionData transactionData or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setTransactionData(GoogleCloudRecaptchaenterpriseV1TransactionData transactionData) {
+    this.transactionData = transactionData;
     return this;
   }
 

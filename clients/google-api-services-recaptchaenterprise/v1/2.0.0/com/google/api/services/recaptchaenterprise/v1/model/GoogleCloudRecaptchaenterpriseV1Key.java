@@ -39,7 +39,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private GoogleCloudRecaptchaenterpriseV1AndroidKeySettings androidSettings;
 
   /**
-   * The timestamp corresponding to the creation of this Key.
+   * Output only. The timestamp corresponding to the creation of this Key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * The timestamp corresponding to the creation of this Key.
+   * Output only. The timestamp corresponding to the creation of this Key.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -120,7 +120,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * The timestamp corresponding to the creation of this Key.
+   * Output only. The timestamp corresponding to the creation of this Key.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setCreateTime(String createTime) {

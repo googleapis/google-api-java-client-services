@@ -17,7 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Model definition for GoogleCloudRecaptchaenterpriseV1TokenProperties.
+ * Properties of the provided event token.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation

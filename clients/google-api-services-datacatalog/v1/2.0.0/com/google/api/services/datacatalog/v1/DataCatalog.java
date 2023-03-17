@@ -2519,10 +2519,12 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Imports entries from a source, such as data previously dumped into a Cloud Storage bucket, into
-           * Data Catalog. `ImportEntries` accepts source data snapshots of third-party system state. Import
-           * of entries is a sync operation that reconciles the state of the third-party system with Data
-           * Catalog. `ImportEntries` returns a long-running operation resource that can be queried with
-           * Operations.GetOperation to return ImportEntriesMetadata and an ImportEntriesResponse message.
+           * Data Catalog. Import of entries is a sync operation that reconciles the state of the third-party
+           * system with the Data Catalog. `ImportEntries` accepts source data snapshots of a third-party
+           * system. Snapshot should be delivered as a .wire or base65-encoded .txt file containing a sequence
+           * of Protocol Buffer messages of DumpItem type. `ImportEntries` returns a long-running operation
+           * resource that can be queried with Operations.GetOperation to return ImportEntriesMetadata and an
+           * ImportEntriesResponse message.
            *
            * Create a request for the method "entries.import".
            *
@@ -2548,10 +2550,12 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Imports entries from a source, such as data previously dumped into a Cloud Storage bucket, into
-             * Data Catalog. `ImportEntries` accepts source data snapshots of third-party system state. Import
-             * of entries is a sync operation that reconciles the state of the third-party system with Data
-             * Catalog. `ImportEntries` returns a long-running operation resource that can be queried with
-             * Operations.GetOperation to return ImportEntriesMetadata and an ImportEntriesResponse message.
+             * Data Catalog. Import of entries is a sync operation that reconciles the state of the third-
+             * party system with the Data Catalog. `ImportEntries` accepts source data snapshots of a third-
+             * party system. Snapshot should be delivered as a .wire or base65-encoded .txt file containing a
+             * sequence of Protocol Buffer messages of DumpItem type. `ImportEntries` returns a long-running
+             * operation resource that can be queried with Operations.GetOperation to return
+             * ImportEntriesMetadata and an ImportEntriesResponse message.
              *
              * Create a request for the method "entries.import".
              *
@@ -5651,12 +5655,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -5681,12 +5680,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *

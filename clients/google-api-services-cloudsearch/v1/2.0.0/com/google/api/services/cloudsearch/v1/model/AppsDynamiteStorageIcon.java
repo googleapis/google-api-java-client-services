@@ -60,6 +60,16 @@ public final class AppsDynamiteStorageIcon extends com.google.api.client.json.Ge
   private java.lang.String knownIcon;
 
   /**
+   * Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to
+   * display a [check box icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outline
+   * d%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name":
+   * "check_box" }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteStorageMaterialIcon materialIcon;
+
+  /**
    * The description of the icon, used for accessibility. The default value is provided if you don't
    * specify one.
    * @return value or {@code null} for none
@@ -128,6 +138,29 @@ public final class AppsDynamiteStorageIcon extends com.google.api.client.json.Ge
    */
   public AppsDynamiteStorageIcon setKnownIcon(java.lang.String knownIcon) {
     this.knownIcon = knownIcon;
+    return this;
+  }
+
+  /**
+   * Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to
+   * display a [check box icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outline
+   * d%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name":
+   * "check_box" }
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteStorageMaterialIcon getMaterialIcon() {
+    return materialIcon;
+  }
+
+  /**
+   * Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to
+   * display a [check box icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outline
+   * d%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name":
+   * "check_box" }
+   * @param materialIcon materialIcon or {@code null} for none
+   */
+  public AppsDynamiteStorageIcon setMaterialIcon(AppsDynamiteStorageMaterialIcon materialIcon) {
+    this.materialIcon = materialIcon;
     return this;
   }
 

@@ -69,6 +69,14 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> jarUris;
 
   /**
+   * The fully qualified name of a class in jar_uris, for example, com.example.wordcount. Exactly
+   * one of main_class and main_jar_uri field should be set for Java/Scala language type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mainClass;
+
+  /**
    * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
    * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
    * field should be set for Java/Scala language type.
@@ -192,6 +200,25 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
    */
   public SparkOptions setJarUris(java.util.List<java.lang.String> jarUris) {
     this.jarUris = jarUris;
+    return this;
+  }
+
+  /**
+   * The fully qualified name of a class in jar_uris, for example, com.example.wordcount. Exactly
+   * one of main_class and main_jar_uri field should be set for Java/Scala language type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMainClass() {
+    return mainClass;
+  }
+
+  /**
+   * The fully qualified name of a class in jar_uris, for example, com.example.wordcount. Exactly
+   * one of main_class and main_jar_uri field should be set for Java/Scala language type.
+   * @param mainClass mainClass or {@code null} for none
+   */
+  public SparkOptions setMainClass(java.lang.String mainClass) {
+    this.mainClass = mainClass;
     return this;
   }
 

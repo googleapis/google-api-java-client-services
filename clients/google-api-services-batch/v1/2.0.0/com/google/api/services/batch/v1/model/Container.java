@@ -30,8 +30,9 @@ package com.google.api.services.batch.v1.model;
 public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, external network access to and from container will be blocked. The container
-   * will use the default internal network 'goog-internal'.
+   * If set to true, external network access to and from container will be blocked, containers that
+   * are with block_external_network as true can still communicate with each other, network cannot
+   * be specified in the `container.options` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +94,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> volumes;
 
   /**
-   * If set to true, external network access to and from container will be blocked. The container
-   * will use the default internal network 'goog-internal'.
+   * If set to true, external network access to and from container will be blocked, containers that
+   * are with block_external_network as true can still communicate with each other, network cannot
+   * be specified in the `container.options` field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBlockExternalNetwork() {
@@ -102,8 +104,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set to true, external network access to and from container will be blocked. The container
-   * will use the default internal network 'goog-internal'.
+   * If set to true, external network access to and from container will be blocked, containers that
+   * are with block_external_network as true can still communicate with each other, network cannot
+   * be specified in the `container.options` field.
    * @param blockExternalNetwork blockExternalNetwork or {@code null} for none
    */
   public Container setBlockExternalNetwork(java.lang.Boolean blockExternalNetwork) {

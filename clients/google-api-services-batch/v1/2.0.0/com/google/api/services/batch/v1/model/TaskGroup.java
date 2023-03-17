@@ -39,7 +39,8 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Max number of tasks that can run in parallel. Default to min(task_count, 1000).
+   * Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field
+   * parallelism must be 1 if the scheduling_policy is IN_ORDER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -62,7 +63,7 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requireHostsFile;
 
   /**
-   * Number of Tasks in the TaskGroup. default is 1
+   * Number of Tasks in the TaskGroup. Default is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -122,7 +123,8 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Max number of tasks that can run in parallel. Default to min(task_count, 1000).
+   * Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field
+   * parallelism must be 1 if the scheduling_policy is IN_ORDER.
    * @return value or {@code null} for none
    */
   public java.lang.Long getParallelism() {
@@ -130,7 +132,8 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Max number of tasks that can run in parallel. Default to min(task_count, 1000).
+   * Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field
+   * parallelism must be 1 if the scheduling_policy is IN_ORDER.
    * @param parallelism parallelism or {@code null} for none
    */
   public TaskGroup setParallelism(java.lang.Long parallelism) {
@@ -177,7 +180,7 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of Tasks in the TaskGroup. default is 1
+   * Number of Tasks in the TaskGroup. Default is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTaskCount() {
@@ -185,7 +188,7 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of Tasks in the TaskGroup. default is 1
+   * Number of Tasks in the TaskGroup. Default is 1.
    * @param taskCount taskCount or {@code null} for none
    */
   public TaskGroup setTaskCount(java.lang.Long taskCount) {

@@ -18,7 +18,7 @@ package com.google.api.services.batch.v1.model;
 
 /**
  * A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local
- * SSD partitions. https://cloud.google.com/compute/docs/disks#pdspecs.
+ * SSD partitions. See https://cloud.google.com/compute/docs/disks#pdspecs and
  * https://cloud.google.com/compute/docs/disks#localssds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -41,12 +41,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of a public or custom image used as the data source. For example, the following are all
-   * valid URLs: (1) Specify the image by its family name:
-   * projects/{project}/global/images/family/{image_family} (2) Specify the image version:
+   * valid URLs: * Specify the image by its family name:
+   * projects/{project}/global/images/family/{image_family} * Specify the image version:
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
-   * short names. The following image values are supported for a boot disk: "batch-debian": use
-   * Batch Debian images. "batch-centos": use Batch CentOS images. "batch-cos": use Batch Container-
-   * Optimized images.
+   * short names. The following image values are supported for a boot disk: * "batch-debian": use
+   * Batch Debian images. * "batch-centos": use Batch CentOS images. * "batch-cos": use Batch
+   * Container-Optimized images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeGb;
 
   /**
-   * Name of a snapshot used as the data source.
+   * Name of a snapshot used as the data source. Snapshot is not supported as boot disk now.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,12 +101,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of a public or custom image used as the data source. For example, the following are all
-   * valid URLs: (1) Specify the image by its family name:
-   * projects/{project}/global/images/family/{image_family} (2) Specify the image version:
+   * valid URLs: * Specify the image by its family name:
+   * projects/{project}/global/images/family/{image_family} * Specify the image version:
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
-   * short names. The following image values are supported for a boot disk: "batch-debian": use
-   * Batch Debian images. "batch-centos": use Batch CentOS images. "batch-cos": use Batch Container-
-   * Optimized images.
+   * short names. The following image values are supported for a boot disk: * "batch-debian": use
+   * Batch Debian images. * "batch-centos": use Batch CentOS images. * "batch-cos": use Batch
+   * Container-Optimized images.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -115,12 +115,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of a public or custom image used as the data source. For example, the following are all
-   * valid URLs: (1) Specify the image by its family name:
-   * projects/{project}/global/images/family/{image_family} (2) Specify the image version:
+   * valid URLs: * Specify the image by its family name:
+   * projects/{project}/global/images/family/{image_family} * Specify the image version:
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
-   * short names. The following image values are supported for a boot disk: "batch-debian": use
-   * Batch Debian images. "batch-centos": use Batch CentOS images. "batch-cos": use Batch Container-
-   * Optimized images.
+   * short names. The following image values are supported for a boot disk: * "batch-debian": use
+   * Batch Debian images. * "batch-centos": use Batch CentOS images. * "batch-cos": use Batch
+   * Container-Optimized images.
    * @param image image or {@code null} for none
    */
   public Disk setImage(java.lang.String image) {
@@ -156,7 +156,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a snapshot used as the data source.
+   * Name of a snapshot used as the data source. Snapshot is not supported as boot disk now.
    * @return value or {@code null} for none
    */
   public java.lang.String getSnapshot() {
@@ -164,7 +164,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a snapshot used as the data source.
+   * Name of a snapshot used as the data source. Snapshot is not supported as boot disk now.
    * @param snapshot snapshot or {@code null} for none
    */
   public Disk setSnapshot(java.lang.String snapshot) {

@@ -39,6 +39,13 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
   private java.lang.String assignedTo;
 
   /**
+   * Output only. The type of the assignee (`USER` or `GROUP`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assigneeType;
+
+  /**
    * ETag of the resource.
    * The value may be {@code null}.
    */
@@ -99,6 +106,23 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
    */
   public RoleAssignment setAssignedTo(java.lang.String assignedTo) {
     this.assignedTo = assignedTo;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the assignee (`USER` or `GROUP`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssigneeType() {
+    return assigneeType;
+  }
+
+  /**
+   * Output only. The type of the assignee (`USER` or `GROUP`).
+   * @param assigneeType assigneeType or {@code null} for none
+   */
+  public RoleAssignment setAssigneeType(java.lang.String assigneeType) {
+    this.assigneeType = assigneeType;
     return this;
   }
 

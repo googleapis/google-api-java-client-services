@@ -470,6 +470,13 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   private GeostoreFeatureIdProto sibling;
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreSlopeProto> slope;
+
+  /**
    * clang-format on LINT.ThenChange(//depot/google3/geostore/base/proto/lane.proto) Specific lanes
    * may override this segment-level surface type.
    * The value may be {@code null}.
@@ -1401,6 +1408,23 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
    */
   public GeostoreSegmentProto setSibling(GeostoreFeatureIdProto sibling) {
     this.sibling = sibling;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreSlopeProto> getSlope() {
+    return slope;
+  }
+
+  /**
+   * RESERVED
+   * @param slope slope or {@code null} for none
+   */
+  public GeostoreSegmentProto setSlope(java.util.List<GeostoreSlopeProto> slope) {
+    this.slope = slope;
     return this;
   }
 

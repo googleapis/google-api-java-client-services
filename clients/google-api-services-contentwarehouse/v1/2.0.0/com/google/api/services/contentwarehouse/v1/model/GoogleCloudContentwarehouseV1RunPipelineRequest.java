@@ -58,7 +58,7 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudContentwarehouseV1ProcessWithDocAi processWithDocAiPipeline;
+  private GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline processWithDocAiPipeline;
 
   /**
    * The meta information collected about the end user, used to enforce access control for the
@@ -126,7 +126,7 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
    * results into Document Warehouse.
    * @return value or {@code null} for none
    */
-  public GoogleCloudContentwarehouseV1ProcessWithDocAi getProcessWithDocAiPipeline() {
+  public GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline getProcessWithDocAiPipeline() {
     return processWithDocAiPipeline;
   }
 
@@ -135,7 +135,7 @@ public final class GoogleCloudContentwarehouseV1RunPipelineRequest extends com.g
    * results into Document Warehouse.
    * @param processWithDocAiPipeline processWithDocAiPipeline or {@code null} for none
    */
-  public GoogleCloudContentwarehouseV1RunPipelineRequest setProcessWithDocAiPipeline(GoogleCloudContentwarehouseV1ProcessWithDocAi processWithDocAiPipeline) {
+  public GoogleCloudContentwarehouseV1RunPipelineRequest setProcessWithDocAiPipeline(GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline processWithDocAiPipeline) {
     this.processWithDocAiPipeline = processWithDocAiPipeline;
     return this;
   }

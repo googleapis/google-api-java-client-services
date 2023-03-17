@@ -452,6 +452,145 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Returns the EkmConfig singleton resource for a given project and location.
+       *
+       * Create a request for the method "locations.getEkmConfig".
+       *
+       * This request holds the parameters needed by the cloudkms server.  After setting any optional
+       * parameters, call the {@link GetEkmConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the EkmConfig to get.
+       * @return the request
+       */
+      public GetEkmConfig getEkmConfig(java.lang.String name) throws java.io.IOException {
+        GetEkmConfig result = new GetEkmConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetEkmConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.EkmConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/ekmConfig$");
+
+        /**
+         * Returns the EkmConfig singleton resource for a given project and location.
+         *
+         * Create a request for the method "locations.getEkmConfig".
+         *
+         * This request holds the parameters needed by the the cloudkms server.  After setting any
+         * optional parameters, call the {@link GetEkmConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetEkmConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the EkmConfig to get.
+         * @since 1.13
+         */
+        protected GetEkmConfig(java.lang.String name) {
+          super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.EkmConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/ekmConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetEkmConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetEkmConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetEkmConfig setAccessToken(java.lang.String accessToken) {
+          return (GetEkmConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetEkmConfig setAlt(java.lang.String alt) {
+          return (GetEkmConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetEkmConfig setCallback(java.lang.String callback) {
+          return (GetEkmConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetEkmConfig setFields(java.lang.String fields) {
+          return (GetEkmConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetEkmConfig setKey(java.lang.String key) {
+          return (GetEkmConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetEkmConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetEkmConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetEkmConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetEkmConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetEkmConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetEkmConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetEkmConfig setUploadType(java.lang.String uploadType) {
+          return (GetEkmConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetEkmConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetEkmConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the EkmConfig to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the EkmConfig to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the EkmConfig to get. */
+        public GetEkmConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/ekmConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetEkmConfig set(String parameterName, Object value) {
+          return (GetEkmConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -651,6 +790,159 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the EkmConfig singleton resource for a given project and location.
+       *
+       * Create a request for the method "locations.updateEkmConfig".
+       *
+       * This request holds the parameters needed by the cloudkms server.  After setting any optional
+       * parameters, call the {@link UpdateEkmConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. The resource name for the EkmConfig in the format `projects/locations/ekmConfig`.
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.EkmConfig}
+       * @return the request
+       */
+      public UpdateEkmConfig updateEkmConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.EkmConfig content) throws java.io.IOException {
+        UpdateEkmConfig result = new UpdateEkmConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateEkmConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.EkmConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/ekmConfig$");
+
+        /**
+         * Updates the EkmConfig singleton resource for a given project and location.
+         *
+         * Create a request for the method "locations.updateEkmConfig".
+         *
+         * This request holds the parameters needed by the the cloudkms server.  After setting any
+         * optional parameters, call the {@link UpdateEkmConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateEkmConfig#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Output only. The resource name for the EkmConfig in the format `projects/locations/ekmConfig`.
+         * @param content the {@link com.google.api.services.cloudkms.v1.model.EkmConfig}
+         * @since 1.13
+         */
+        protected UpdateEkmConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.EkmConfig content) {
+          super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.EkmConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/ekmConfig$");
+          }
+        }
+
+        @Override
+        public UpdateEkmConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateEkmConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateEkmConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateEkmConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateEkmConfig setAlt(java.lang.String alt) {
+          return (UpdateEkmConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateEkmConfig setCallback(java.lang.String callback) {
+          return (UpdateEkmConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateEkmConfig setFields(java.lang.String fields) {
+          return (UpdateEkmConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateEkmConfig setKey(java.lang.String key) {
+          return (UpdateEkmConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateEkmConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateEkmConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateEkmConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateEkmConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateEkmConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateEkmConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateEkmConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateEkmConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateEkmConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateEkmConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. The resource name for the EkmConfig in the format
+         * `projects/locations/ekmConfig`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. The resource name for the EkmConfig in the format `projects/locations/ekmConfig`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. The resource name for the EkmConfig in the format
+         * `projects/locations/ekmConfig`.
+         */
+        public UpdateEkmConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/ekmConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. List of fields to be updated in this request. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields to be updated in this request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. List of fields to be updated in this request. */
+        public UpdateEkmConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateEkmConfig set(String parameterName, Object value) {
+          return (UpdateEkmConfig) super.set(parameterName, value);
         }
       }
 

@@ -14445,6 +14445,32 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
+      /**
+       * When set to `true`, fetches indirect role assignments (i.e. role assignment via a group) as
+       * well as direct ones. Defaults to `false`. You must specify `user_key` or the indirect role
+       * assignments will not be included.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeIndirectRoleAssignments;
+
+      /** When set to `true`, fetches indirect role assignments (i.e. role assignment via a group) as well as
+     direct ones. Defaults to `false`. You must specify `user_key` or the indirect role assignments will
+     not be included.
+       */
+      public java.lang.Boolean getIncludeIndirectRoleAssignments() {
+        return includeIndirectRoleAssignments;
+      }
+
+      /**
+       * When set to `true`, fetches indirect role assignments (i.e. role assignment via a group) as
+       * well as direct ones. Defaults to `false`. You must specify `user_key` or the indirect role
+       * assignments will not be included.
+       */
+      public List setIncludeIndirectRoleAssignments(java.lang.Boolean includeIndirectRoleAssignments) {
+        this.includeIndirectRoleAssignments = includeIndirectRoleAssignments;
+        return this;
+      }
+
       /** Maximum number of results to return. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;

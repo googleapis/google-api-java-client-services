@@ -383,7 +383,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String thumbnailPhotoEtag;
 
   /**
-   * Output only. Photo Url of the user (Read-only)
+   * Output only. The URL of the user's profile photo. The URL might be temporary or private.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1229,7 +1229,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Photo Url of the user (Read-only)
+   * Output only. The URL of the user's profile photo. The URL might be temporary or private.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailPhotoUrl() {
@@ -1237,7 +1237,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Photo Url of the user (Read-only)
+   * Output only. The URL of the user's profile photo. The URL might be temporary or private.
    * @param thumbnailPhotoUrl thumbnailPhotoUrl or {@code null} for none
    */
   public User setThumbnailPhotoUrl(java.lang.String thumbnailPhotoUrl) {

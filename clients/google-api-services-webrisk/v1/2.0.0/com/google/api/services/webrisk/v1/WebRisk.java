@@ -766,12 +766,7 @@ public class WebRisk extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-       * the binding to use different resource name schemes, such as `users/operations`. To override the
-       * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-       * configuration. For backwards compatibility, the default name includes the operations collection
-       * id, however overriding users must ensure the name binding is the parent resource, without the
-       * operations collection id.
+       * this method, it returns `UNIMPLEMENTED`.
        *
        * Create a request for the method "operations.list".
        *
@@ -796,12 +791,7 @@ public class WebRisk extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-         * override the binding to use different resource name schemes, such as `users/operations`. To
-         * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-         * their service configuration. For backwards compatibility, the default name includes the
-         * operations collection id, however overriding users must ensure the name binding is the parent
-         * resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -1131,181 +1121,6 @@ public class WebRisk extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
-        }
-      }
-
-    }
-    /**
-     * An accessor for creating requests from the Uris collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code WebRisk webrisk = new WebRisk(...);}
-     *   {@code WebRisk.Uris.List request = webrisk.uris().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Uris uris() {
-      return new Uris();
-    }
-
-    /**
-     * The "uris" collection of methods.
-     */
-    public class Uris {
-
-      /**
-       * Submits a URI suspected of containing malicious content to be reviewed. Returns a
-       * google.longrunning.Operation which, once the review is complete, is updated with its result. You
-       * can use the [Pub/Sub API] (https://cloud.google.com/pubsub) to receive notifications for the
-       * returned Operation. If the result verifies the existence of malicious content, the site will be
-       * added to the [Google's Social Engineering lists]
-       * (https://support.google.com/webmasters/answer/6350487/) in order to protect users that could get
-       * exposed to this threat in the future. Only allowlisted projects can use this method during Early
-       * Access. Please reach out to Sales or your customer engineer to obtain access.
-       *
-       * Create a request for the method "uris.submit".
-       *
-       * This request holds the parameters needed by the webrisk server.  After setting any optional
-       * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
-       *
-       * @param parent Required. The name of the project that is making the submission. This string is in the format
-       *        "projects/{project_number}".
-       * @param content the {@link com.google.api.services.webrisk.v1.model.GoogleCloudWebriskV1SubmitUriRequest}
-       * @return the request
-       */
-      public Submit submit(java.lang.String parent, com.google.api.services.webrisk.v1.model.GoogleCloudWebriskV1SubmitUriRequest content) throws java.io.IOException {
-        Submit result = new Submit(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Submit extends WebRiskRequest<com.google.api.services.webrisk.v1.model.GoogleLongrunningOperation> {
-
-        private static final String REST_PATH = "v1/{+parent}/uris:submit";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-        /**
-         * Submits a URI suspected of containing malicious content to be reviewed. Returns a
-         * google.longrunning.Operation which, once the review is complete, is updated with its result.
-         * You can use the [Pub/Sub API] (https://cloud.google.com/pubsub) to receive notifications for
-         * the returned Operation. If the result verifies the existence of malicious content, the site
-         * will be added to the [Google's Social Engineering lists]
-         * (https://support.google.com/webmasters/answer/6350487/) in order to protect users that could
-         * get exposed to this threat in the future. Only allowlisted projects can use this method during
-         * Early Access. Please reach out to Sales or your customer engineer to obtain access.
-         *
-         * Create a request for the method "uris.submit".
-         *
-         * This request holds the parameters needed by the the webrisk server.  After setting any optional
-         * parameters, call the {@link Submit#execute()} method to invoke the remote operation. <p> {@link
-         * Submit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent Required. The name of the project that is making the submission. This string is in the format
-       *        "projects/{project_number}".
-         * @param content the {@link com.google.api.services.webrisk.v1.model.GoogleCloudWebriskV1SubmitUriRequest}
-         * @since 1.13
-         */
-        protected Submit(java.lang.String parent, com.google.api.services.webrisk.v1.model.GoogleCloudWebriskV1SubmitUriRequest content) {
-          super(WebRisk.this, "POST", REST_PATH, content, com.google.api.services.webrisk.v1.model.GoogleLongrunningOperation.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-        }
-
-        @Override
-        public Submit set$Xgafv(java.lang.String $Xgafv) {
-          return (Submit) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Submit setAccessToken(java.lang.String accessToken) {
-          return (Submit) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Submit setAlt(java.lang.String alt) {
-          return (Submit) super.setAlt(alt);
-        }
-
-        @Override
-        public Submit setCallback(java.lang.String callback) {
-          return (Submit) super.setCallback(callback);
-        }
-
-        @Override
-        public Submit setFields(java.lang.String fields) {
-          return (Submit) super.setFields(fields);
-        }
-
-        @Override
-        public Submit setKey(java.lang.String key) {
-          return (Submit) super.setKey(key);
-        }
-
-        @Override
-        public Submit setOauthToken(java.lang.String oauthToken) {
-          return (Submit) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Submit setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Submit) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Submit setQuotaUser(java.lang.String quotaUser) {
-          return (Submit) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Submit setUploadType(java.lang.String uploadType) {
-          return (Submit) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Submit setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Submit) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The name of the project that is making the submission. This string is in the
-         * format "projects/{project_number}".
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The name of the project that is making the submission. This string is in the format
-       "projects/{project_number}".
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * Required. The name of the project that is making the submission. This string is in the
-         * format "projects/{project_number}".
-         */
-        public Submit setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public Submit set(String parameterName, Object value) {
-          return (Submit) super.set(parameterName, value);
         }
       }
 

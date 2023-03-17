@@ -2347,7 +2347,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
          * exist or is not associated with the given account. * INTERNAL: Any non-user error related to
          * technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If
          * successful, the ChannelPartnerRepricingConfig resources. The data for each resource is displayed
-         * in the ascending order of: * channel partner ID * RepricingConfig.effective_invoice_month *
+         * in the ascending order of: * Channel Partner ID * RepricingConfig.effective_invoice_month *
          * ChannelPartnerRepricingConfig.update_time If unsuccessful, returns an error.
          *
          * Create a request for the method "channelPartnerRepricingConfigs.list".
@@ -2380,7 +2380,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
            * specified does not exist or is not associated with the given account. * INTERNAL: Any non-user
            * error related to technical issues in the backend. In this case, contact Cloud Channel support.
            * Return Value: If successful, the ChannelPartnerRepricingConfig resources. The data for each
-           * resource is displayed in the ascending order of: * channel partner ID *
+           * resource is displayed in the ascending order of: * Channel Partner ID *
            * RepricingConfig.effective_invoice_month * ChannelPartnerRepricingConfig.update_time If
            * unsuccessful, returns an error.
            *
@@ -6327,7 +6327,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
          * is not associated with the given account. * INTERNAL: Any non-user error related to technical
          * issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful,
          * the CustomerRepricingConfig resources. The data for each resource is displayed in the ascending
-         * order of: * customer ID * RepricingConfig.EntitlementGranularity.entitlement *
+         * order of: * Customer ID * RepricingConfig.EntitlementGranularity.entitlement *
          * RepricingConfig.effective_invoice_month * CustomerRepricingConfig.update_time If unsuccessful,
          * returns an error.
          *
@@ -6361,7 +6361,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
            * or is not associated with the given account. * INTERNAL: Any non-user error related to
            * technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If
            * successful, the CustomerRepricingConfig resources. The data for each resource is displayed in
-           * the ascending order of: * customer ID * RepricingConfig.EntitlementGranularity.entitlement *
+           * the ascending order of: * Customer ID * RepricingConfig.EntitlementGranularity.entitlement *
            * RepricingConfig.effective_invoice_month * CustomerRepricingConfig.update_time If unsuccessful,
            * returns an error.
            *

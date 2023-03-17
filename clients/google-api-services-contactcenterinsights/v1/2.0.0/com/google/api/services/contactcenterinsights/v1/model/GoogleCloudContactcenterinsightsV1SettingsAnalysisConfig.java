@@ -47,6 +47,14 @@ public final class GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig exte
   private java.lang.Double runtimeIntegrationAnalysisPercentage;
 
   /**
+   * Percentage of conversations created using the UploadConversation endpoint to analyze
+   * automatically, between [0, 100].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double uploadConversationAnalysisPercentage;
+
+  /**
    * To select the annotators to run and the phrase matchers to use (if any). If not specified, all
    * annotators will be run.
    * @return value or {@code null} for none
@@ -81,6 +89,25 @@ public final class GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig exte
    */
   public GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig setRuntimeIntegrationAnalysisPercentage(java.lang.Double runtimeIntegrationAnalysisPercentage) {
     this.runtimeIntegrationAnalysisPercentage = runtimeIntegrationAnalysisPercentage;
+    return this;
+  }
+
+  /**
+   * Percentage of conversations created using the UploadConversation endpoint to analyze
+   * automatically, between [0, 100].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUploadConversationAnalysisPercentage() {
+    return uploadConversationAnalysisPercentage;
+  }
+
+  /**
+   * Percentage of conversations created using the UploadConversation endpoint to analyze
+   * automatically, between [0, 100].
+   * @param uploadConversationAnalysisPercentage uploadConversationAnalysisPercentage or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig setUploadConversationAnalysisPercentage(java.lang.Double uploadConversationAnalysisPercentage) {
+    this.uploadConversationAnalysisPercentage = uploadConversationAnalysisPercentage;
     return this;
   }
 

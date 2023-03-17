@@ -58,6 +58,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.util.List<EnumOption> enumOptions;
 
   /**
+   * Indicates if current template is part of advanced settings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAdvanced;
+
+  /**
    * Key of the config variable.
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setEnumOptions(java.util.List<EnumOption> enumOptions) {
     this.enumOptions = enumOptions;
+    return this;
+  }
+
+  /**
+   * Indicates if current template is part of advanced settings
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAdvanced() {
+    return isAdvanced;
+  }
+
+  /**
+   * Indicates if current template is part of advanced settings
+   * @param isAdvanced isAdvanced or {@code null} for none
+   */
+  public ConfigVariableTemplate setIsAdvanced(java.lang.Boolean isAdvanced) {
+    this.isAdvanced = isAdvanced;
     return this;
   }
 

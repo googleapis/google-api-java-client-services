@@ -35,7 +35,6 @@ jobs:
           python-version: 2.7.18
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - uses: googleapis/code-suggester@v2 # takes the changes from git directory
-        secrets: inherit
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
         with:

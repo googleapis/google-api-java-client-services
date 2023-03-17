@@ -31,6 +31,14 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class Volume extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Is the Volume attached at at least one instance. This field is a lightweight
+   * counterpart of `instances` field. It is filled in List responses as well.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean attached;
+
+  /**
    * The size, in GiB, that this storage volume has expanded as a result of an auto grow policy. In
    * the absence of auto-grow, the value is 0.
    * The value may be {@code null}.
@@ -77,6 +85,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * Output only. Instances this Volume is attached to. This field is set only in Get requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> instances;
 
   /**
    * Labels as key value pairs.
@@ -210,6 +225,25 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String workloadProfile;
 
   /**
+   * Output only. Is the Volume attached at at least one instance. This field is a lightweight
+   * counterpart of `instances` field. It is filled in List responses as well.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAttached() {
+    return attached;
+  }
+
+  /**
+   * Output only. Is the Volume attached at at least one instance. This field is a lightweight
+   * counterpart of `instances` field. It is filled in List responses as well.
+   * @param attached attached or {@code null} for none
+   */
+  public Volume setAttached(java.lang.Boolean attached) {
+    this.attached = attached;
+    return this;
+  }
+
+  /**
    * The size, in GiB, that this storage volume has expanded as a result of an auto grow policy. In
    * the absence of auto-grow, the value is 0.
    * @return value or {@code null} for none
@@ -320,6 +354,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Instances this Volume is attached to. This field is set only in Get requests.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInstances() {
+    return instances;
+  }
+
+  /**
+   * Output only. Instances this Volume is attached to. This field is set only in Get requests.
+   * @param instances instances or {@code null} for none
+   */
+  public Volume setInstances(java.util.List<java.lang.String> instances) {
+    this.instances = instances;
     return this;
   }
 

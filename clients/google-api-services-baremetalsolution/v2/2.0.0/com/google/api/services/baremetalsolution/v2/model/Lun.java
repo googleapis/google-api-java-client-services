@@ -53,6 +53,13 @@ public final class Lun extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Output only. Instances this Lun is attached to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> instances;
+
+  /**
    * The LUN multiprotocol type ensures the characteristics of the LUN are optimized for each
    * operating system.
    * The value may be {@code null}.
@@ -159,6 +166,23 @@ public final class Lun extends com.google.api.client.json.GenericJson {
    */
   public Lun setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Instances this Lun is attached to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInstances() {
+    return instances;
+  }
+
+  /**
+   * Output only. Instances this Lun is attached to.
+   * @param instances instances or {@code null} for none
+   */
+  public Lun setInstances(java.util.List<java.lang.String> instances) {
+    this.instances = instances;
     return this;
   }
 

@@ -3836,33 +3836,11 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return (Patch) super.set(parameterName, value);
           }
         }
-
-      }
-      /**
-       * An accessor for creating requests from the Nfsshares collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
-       *   {@code Baremetalsolution.Nfsshares.List request = baremetalsolution.nfsshares().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Nfsshares nfsshares() {
-        return new Nfsshares();
-      }
-
-      /**
-       * The "nfsshares" collection of methods.
-       */
-      public class Nfsshares {
-
         /**
          * RenameNfsShare sets a new name for an nfsshare. Use with caution, previous names become
          * immediately invalidated.
          *
-         * Create a request for the method "nfsshares.rename".
+         * Create a request for the method "nfsShares.rename".
          *
          * This request holds the parameters needed by the baremetalsolution server.  After setting any
          * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
@@ -3883,13 +3861,13 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           private static final String REST_PATH = "v2/{+name}:rename";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nfsshares/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
 
           /**
            * RenameNfsShare sets a new name for an nfsshare. Use with caution, previous names become
            * immediately invalidated.
            *
-           * Create a request for the method "nfsshares.rename".
+           * Create a request for the method "nfsShares.rename".
            *
            * This request holds the parameters needed by the the baremetalsolution server.  After setting
            * any optional parameters, call the {@link Rename#execute()} method to invoke the remote
@@ -3908,7 +3886,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/nfsshares/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
             }
           }
 
@@ -3989,7 +3967,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/nfsshares/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
             }
             this.name = name;
             return this;

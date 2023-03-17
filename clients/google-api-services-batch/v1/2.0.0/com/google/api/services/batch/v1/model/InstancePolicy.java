@@ -44,8 +44,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Book disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
-   * deleted when the VM is deleted.
+   * Boot disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
+   * deleted when the VM is deleted. Batch API now only supports booting from image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String machineType;
 
   /**
-   * The minimum CPU platform. See `https://cloud.google.com/compute/docs/instances/specify-min-cpu-
-   * platform`. Not yet implemented.
+   * The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform. Not yet implemented.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +105,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Book disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
-   * deleted when the VM is deleted.
+   * Boot disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
+   * deleted when the VM is deleted. Batch API now only supports booting from image.
    * @return value or {@code null} for none
    */
   public Disk getBootDisk() {
@@ -114,8 +114,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Book disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
-   * deleted when the VM is deleted.
+   * Boot disk to be created and attached to each VM by this InstancePolicy. Boot disk will be
+   * deleted when the VM is deleted. Batch API now only supports booting from image.
    * @param bootDisk bootDisk or {@code null} for none
    */
   public InstancePolicy setBootDisk(Disk bootDisk) {
@@ -160,8 +160,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The minimum CPU platform. See `https://cloud.google.com/compute/docs/instances/specify-min-cpu-
-   * platform`. Not yet implemented.
+   * The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform. Not yet implemented.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -169,8 +169,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The minimum CPU platform. See `https://cloud.google.com/compute/docs/instances/specify-min-cpu-
-   * platform`. Not yet implemented.
+   * The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform. Not yet implemented.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstancePolicy setMinCpuPlatform(java.lang.String minCpuPlatform) {

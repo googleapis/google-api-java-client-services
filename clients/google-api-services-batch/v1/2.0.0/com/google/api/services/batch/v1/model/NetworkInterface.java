@@ -31,9 +31,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The URL of an existing network resource. You can specify the network as a full or partial URL.
-   * For example, the following are all valid URLs:
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-   * projects/{project}/global/networks/{network} global/networks/{network}
+   * For example, the following are all valid URLs: *
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} *
+   * projects/{project}/global/networks/{network} * global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +52,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The URL of an existing subnetwork resource in the network. You can specify the subnetwork as a
-   * full or partial URL. For example, the following are all valid URLs: https://www.googleapis.com/
-   * compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
-   * projects/{project}/regions/{region}/subnetworks/{subnetwork}
+   * full or partial URL. For example, the following are all valid URLs: * https://www.googleapis.co
+   * m/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork} *
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} *
    * regions/{region}/subnetworks/{subnetwork}
    * The value may be {@code null}.
    */
@@ -63,9 +63,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The URL of an existing network resource. You can specify the network as a full or partial URL.
-   * For example, the following are all valid URLs:
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-   * projects/{project}/global/networks/{network} global/networks/{network}
+   * For example, the following are all valid URLs: *
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} *
+   * projects/{project}/global/networks/{network} * global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -74,9 +74,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The URL of an existing network resource. You can specify the network as a full or partial URL.
-   * For example, the following are all valid URLs:
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-   * projects/{project}/global/networks/{network} global/networks/{network}
+   * For example, the following are all valid URLs: *
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} *
+   * projects/{project}/global/networks/{network} * global/networks/{network}
    * @param network network or {@code null} for none
    */
   public NetworkInterface setNetwork(java.lang.String network) {
@@ -111,9 +111,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The URL of an existing subnetwork resource in the network. You can specify the subnetwork as a
-   * full or partial URL. For example, the following are all valid URLs: https://www.googleapis.com/
-   * compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
-   * projects/{project}/regions/{region}/subnetworks/{subnetwork}
+   * full or partial URL. For example, the following are all valid URLs: * https://www.googleapis.co
+   * m/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork} *
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} *
    * regions/{region}/subnetworks/{subnetwork}
    * @return value or {@code null} for none
    */
@@ -123,9 +123,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The URL of an existing subnetwork resource in the network. You can specify the subnetwork as a
-   * full or partial URL. For example, the following are all valid URLs: https://www.googleapis.com/
-   * compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
-   * projects/{project}/regions/{region}/subnetworks/{subnetwork}
+   * full or partial URL. For example, the following are all valid URLs: * https://www.googleapis.co
+   * m/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork} *
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} *
    * regions/{region}/subnetworks/{subnetwork}
    * @param subnetwork subnetwork or {@code null} for none
    */

@@ -154,6 +154,289 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
   public class Locations {
 
     /**
+     * Returns the values for each date from a given time range and optionally the sub entity type,
+     * where applicable, that are associated with the specific daily metrics. Example request: `GET http
+     * s://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSeries
+     * ?dailyMetrics=WEBSITE_CLICKS=CALL_CLICKS_range.start_date.year=2022_range.start_date.month=1_rang
+     * e.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_date.day=31`
+     *
+     * Create a request for the method "locations.fetchMultiDailyMetricsTimeSeries".
+     *
+     * This request holds the parameters needed by the businessprofileperformance server.  After setting
+     * any optional parameters, call the {@link FetchMultiDailyMetricsTimeSeries#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param location Required. The location for which the time series should be fetched. Format: locations/{location_id}
+     *        where location_id is an unobfuscated listing id.
+     * @return the request
+     */
+    public FetchMultiDailyMetricsTimeSeries fetchMultiDailyMetricsTimeSeries(java.lang.String location) throws java.io.IOException {
+      FetchMultiDailyMetricsTimeSeries result = new FetchMultiDailyMetricsTimeSeries(location);
+      initialize(result);
+      return result;
+    }
+
+    public class FetchMultiDailyMetricsTimeSeries extends BusinessProfilePerformanceRequest<com.google.api.services.businessprofileperformance.v1.model.FetchMultiDailyMetricsTimeSeriesResponse> {
+
+      private static final String REST_PATH = "v1/{+location}:fetchMultiDailyMetricsTimeSeries";
+
+      private final java.util.regex.Pattern LOCATION_PATTERN =
+          java.util.regex.Pattern.compile("^locations/[^/]+$");
+
+      /**
+       * Returns the values for each date from a given time range and optionally the sub entity type,
+       * where applicable, that are associated with the specific daily metrics. Example request: `GET ht
+       * tps://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSe
+       * ries?dailyMetrics=WEBSITE_CLICKS=CALL_CLICKS_range.start_date.year=2022_range.start_date.month=
+       * 1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_date.day=31`
+       *
+       * Create a request for the method "locations.fetchMultiDailyMetricsTimeSeries".
+       *
+       * This request holds the parameters needed by the the businessprofileperformance server.  After
+       * setting any optional parameters, call the {@link FetchMultiDailyMetricsTimeSeries#execute()}
+       * method to invoke the remote operation. <p> {@link FetchMultiDailyMetricsTimeSeries#initialize(c
+       * om.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param location Required. The location for which the time series should be fetched. Format: locations/{location_id}
+     *        where location_id is an unobfuscated listing id.
+       * @since 1.13
+       */
+      protected FetchMultiDailyMetricsTimeSeries(java.lang.String location) {
+        super(BusinessProfilePerformance.this, "GET", REST_PATH, null, com.google.api.services.businessprofileperformance.v1.model.FetchMultiDailyMetricsTimeSeriesResponse.class);
+        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+              "Parameter location must conform to the pattern " +
+              "^locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries set$Xgafv(java.lang.String $Xgafv) {
+        return (FetchMultiDailyMetricsTimeSeries) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setAccessToken(java.lang.String accessToken) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setAlt(java.lang.String alt) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setAlt(alt);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setCallback(java.lang.String callback) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setCallback(callback);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setFields(java.lang.String fields) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setFields(fields);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setKey(java.lang.String key) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setKey(key);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setOauthToken(java.lang.String oauthToken) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setQuotaUser(java.lang.String quotaUser) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setUploadType(java.lang.String uploadType) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FetchMultiDailyMetricsTimeSeries) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The location for which the time series should be fetched. Format:
+       * locations/{location_id} where location_id is an unobfuscated listing id.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Required. The location for which the time series should be fetched. Format: locations/{location_id}
+     where location_id is an unobfuscated listing id.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /**
+       * Required. The location for which the time series should be fetched. Format:
+       * locations/{location_id} where location_id is an unobfuscated listing id.
+       */
+      public FetchMultiDailyMetricsTimeSeries setLocation(java.lang.String location) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+              "Parameter location must conform to the pattern " +
+              "^locations/[^/]+$");
+        }
+        this.location = location;
+        return this;
+      }
+
+      /** Required. The metrics to retrieve time series for. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> dailyMetrics;
+
+      /** Required. The metrics to retrieve time series for.
+       */
+      public java.util.List<java.lang.String> getDailyMetrics() {
+        return dailyMetrics;
+      }
+
+      /** Required. The metrics to retrieve time series for. */
+      public FetchMultiDailyMetricsTimeSeries setDailyMetrics(java.util.List<java.lang.String> dailyMetrics) {
+        this.dailyMetrics = dailyMetrics;
+        return this;
+      }
+
+      /**
+       * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+       * year by itself or a year and month where the day isn't significant.
+       */
+      @com.google.api.client.util.Key("dailyRange.endDate.day")
+      private java.lang.Integer dailyRangeEndDateDay;
+
+      /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+     itself or a year and month where the day isn't significant.
+       */
+      public java.lang.Integer getDailyRangeEndDateDay() {
+        return dailyRangeEndDateDay;
+      }
+
+      /**
+       * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+       * year by itself or a year and month where the day isn't significant.
+       */
+      public FetchMultiDailyMetricsTimeSeries setDailyRangeEndDateDay(java.lang.Integer dailyRangeEndDateDay) {
+        this.dailyRangeEndDateDay = dailyRangeEndDateDay;
+        return this;
+      }
+
+      /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. */
+      @com.google.api.client.util.Key("dailyRange.endDate.month")
+      private java.lang.Integer dailyRangeEndDateMonth;
+
+      /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+       */
+      public java.lang.Integer getDailyRangeEndDateMonth() {
+        return dailyRangeEndDateMonth;
+      }
+
+      /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. */
+      public FetchMultiDailyMetricsTimeSeries setDailyRangeEndDateMonth(java.lang.Integer dailyRangeEndDateMonth) {
+        this.dailyRangeEndDateMonth = dailyRangeEndDateMonth;
+        return this;
+      }
+
+      /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+      @com.google.api.client.util.Key("dailyRange.endDate.year")
+      private java.lang.Integer dailyRangeEndDateYear;
+
+      /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+       */
+      public java.lang.Integer getDailyRangeEndDateYear() {
+        return dailyRangeEndDateYear;
+      }
+
+      /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+      public FetchMultiDailyMetricsTimeSeries setDailyRangeEndDateYear(java.lang.Integer dailyRangeEndDateYear) {
+        this.dailyRangeEndDateYear = dailyRangeEndDateYear;
+        return this;
+      }
+
+      /**
+       * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+       * year by itself or a year and month where the day isn't significant.
+       */
+      @com.google.api.client.util.Key("dailyRange.startDate.day")
+      private java.lang.Integer dailyRangeStartDateDay;
+
+      /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+     itself or a year and month where the day isn't significant.
+       */
+      public java.lang.Integer getDailyRangeStartDateDay() {
+        return dailyRangeStartDateDay;
+      }
+
+      /**
+       * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+       * year by itself or a year and month where the day isn't significant.
+       */
+      public FetchMultiDailyMetricsTimeSeries setDailyRangeStartDateDay(java.lang.Integer dailyRangeStartDateDay) {
+        this.dailyRangeStartDateDay = dailyRangeStartDateDay;
+        return this;
+      }
+
+      /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. */
+      @com.google.api.client.util.Key("dailyRange.startDate.month")
+      private java.lang.Integer dailyRangeStartDateMonth;
+
+      /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+       */
+      public java.lang.Integer getDailyRangeStartDateMonth() {
+        return dailyRangeStartDateMonth;
+      }
+
+      /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. */
+      public FetchMultiDailyMetricsTimeSeries setDailyRangeStartDateMonth(java.lang.Integer dailyRangeStartDateMonth) {
+        this.dailyRangeStartDateMonth = dailyRangeStartDateMonth;
+        return this;
+      }
+
+      /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+      @com.google.api.client.util.Key("dailyRange.startDate.year")
+      private java.lang.Integer dailyRangeStartDateYear;
+
+      /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+       */
+      public java.lang.Integer getDailyRangeStartDateYear() {
+        return dailyRangeStartDateYear;
+      }
+
+      /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+      public FetchMultiDailyMetricsTimeSeries setDailyRangeStartDateYear(java.lang.Integer dailyRangeStartDateYear) {
+        this.dailyRangeStartDateYear = dailyRangeStartDateYear;
+        return this;
+      }
+
+      @Override
+      public FetchMultiDailyMetricsTimeSeries set(String parameterName, Object value) {
+        return (FetchMultiDailyMetricsTimeSeries) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the values for each date from a given time range that are associated with the specific
      * daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/location
      * s/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range.sta

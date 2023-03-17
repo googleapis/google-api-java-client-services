@@ -40,11 +40,27 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   private String createTime;
 
   /**
+   * Optional. Identifies the EKM Crypto Space that this EkmConnection maps to. Note: This field is
+   * required if KeyManagementMode is CLOUD_KMS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoSpacePath;
+
+  /**
    * Optional. Etag of the currently stored EkmConnection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Optional. Describes who can perform control plane operations on the EKM. If unset, this
+   * defaults to MANUAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyManagementMode;
 
   /**
    * Output only. The resource name for the EkmConnection in the format
@@ -80,6 +96,25 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Identifies the EKM Crypto Space that this EkmConnection maps to. Note: This field is
+   * required if KeyManagementMode is CLOUD_KMS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoSpacePath() {
+    return cryptoSpacePath;
+  }
+
+  /**
+   * Optional. Identifies the EKM Crypto Space that this EkmConnection maps to. Note: This field is
+   * required if KeyManagementMode is CLOUD_KMS.
+   * @param cryptoSpacePath cryptoSpacePath or {@code null} for none
+   */
+  public EkmConnection setCryptoSpacePath(java.lang.String cryptoSpacePath) {
+    this.cryptoSpacePath = cryptoSpacePath;
+    return this;
+  }
+
+  /**
    * Optional. Etag of the currently stored EkmConnection.
    * @return value or {@code null} for none
    */
@@ -93,6 +128,25 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
    */
   public EkmConnection setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Describes who can perform control plane operations on the EKM. If unset, this
+   * defaults to MANUAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyManagementMode() {
+    return keyManagementMode;
+  }
+
+  /**
+   * Optional. Describes who can perform control plane operations on the EKM. If unset, this
+   * defaults to MANUAL.
+   * @param keyManagementMode keyManagementMode or {@code null} for none
+   */
+  public EkmConnection setKeyManagementMode(java.lang.String keyManagementMode) {
+    this.keyManagementMode = keyManagementMode;
     return this;
   }
 

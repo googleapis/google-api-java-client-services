@@ -74,6 +74,14 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   private String destroyTime;
 
   /**
+   * Output only. The root cause of the most recent external destruction failure. Only present if
+   * state is EXTERNAL_DESTRUCTION_FAILED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalDestructionFailureReason;
+
+  /**
    * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
    * CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection
    * levels.
@@ -88,6 +96,14 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String generateTime;
+
+  /**
+   * Output only. The root cause of the most recent generation failure. Only present if state is
+   * GENERATION_FAILED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String generationFailureReason;
 
   /**
    * Output only. The root cause of the most recent import failure. Only present if state is
@@ -237,6 +253,25 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. The root cause of the most recent external destruction failure. Only present if
+   * state is EXTERNAL_DESTRUCTION_FAILED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalDestructionFailureReason() {
+    return externalDestructionFailureReason;
+  }
+
+  /**
+   * Output only. The root cause of the most recent external destruction failure. Only present if
+   * state is EXTERNAL_DESTRUCTION_FAILED.
+   * @param externalDestructionFailureReason externalDestructionFailureReason or {@code null} for none
+   */
+  public CryptoKeyVersion setExternalDestructionFailureReason(java.lang.String externalDestructionFailureReason) {
+    this.externalDestructionFailureReason = externalDestructionFailureReason;
+    return this;
+  }
+
+  /**
    * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
    * CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection
    * levels.
@@ -271,6 +306,25 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
    */
   public CryptoKeyVersion setGenerateTime(String generateTime) {
     this.generateTime = generateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The root cause of the most recent generation failure. Only present if state is
+   * GENERATION_FAILED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGenerationFailureReason() {
+    return generationFailureReason;
+  }
+
+  /**
+   * Output only. The root cause of the most recent generation failure. Only present if state is
+   * GENERATION_FAILED.
+   * @param generationFailureReason generationFailureReason or {@code null} for none
+   */
+  public CryptoKeyVersion setGenerationFailureReason(java.lang.String generationFailureReason) {
+    this.generationFailureReason = generationFailureReason;
     return this;
   }
 

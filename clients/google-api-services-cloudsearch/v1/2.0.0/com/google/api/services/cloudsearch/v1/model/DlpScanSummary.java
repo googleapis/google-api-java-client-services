@@ -45,7 +45,8 @@ public final class DlpScanSummary extends com.google.api.client.json.GenericJson
    * the given context (e.g. atomic mutuate). If this is true, scan_outcome should not be set. This
    * flag is used to identify messages that DLP did not attempt to scan for monitoring scan
    * coverage. Contents that DLP attempted to scan but skipped can be identified by
-   * DlpScanOutcome.SCAN_SKIPPED_* reasons.
+   * DlpScanOutcome.SCAN_SKIPPED_* reasons. DEPRECATED: The prober can determine this from the
+   * context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,8 @@ public final class DlpScanSummary extends com.google.api.client.json.GenericJson
    * the given context (e.g. atomic mutuate). If this is true, scan_outcome should not be set. This
    * flag is used to identify messages that DLP did not attempt to scan for monitoring scan
    * coverage. Contents that DLP attempted to scan but skipped can be identified by
-   * DlpScanOutcome.SCAN_SKIPPED_* reasons.
+   * DlpScanOutcome.SCAN_SKIPPED_* reasons. DEPRECATED: The prober can determine this from the
+   * context.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getScanNotApplicableForContext() {
@@ -96,7 +98,8 @@ public final class DlpScanSummary extends com.google.api.client.json.GenericJson
    * the given context (e.g. atomic mutuate). If this is true, scan_outcome should not be set. This
    * flag is used to identify messages that DLP did not attempt to scan for monitoring scan
    * coverage. Contents that DLP attempted to scan but skipped can be identified by
-   * DlpScanOutcome.SCAN_SKIPPED_* reasons.
+   * DlpScanOutcome.SCAN_SKIPPED_* reasons. DEPRECATED: The prober can determine this from the
+   * context.
    * @param scanNotApplicableForContext scanNotApplicableForContext or {@code null} for none
    */
   public DlpScanSummary setScanNotApplicableForContext(java.lang.Boolean scanNotApplicableForContext) {

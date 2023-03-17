@@ -152,15 +152,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Data Loss Prevention scan information for this message. Messages are evaluated in the backend
-   * on create message/topic and edit message actions. DEPRECATED: use dlp_scan_summary instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String dlpScanOutcome;
-
-  /**
-   * Data Loss Prevention scan information for this message. Messages are evaluated in the backend
-   * on create message/topic and edit message actions.
+   * on create message/topic and edit message actions. DEPRECATED: Use DATA_LOSS_PREVENTION
+   * Annotation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -632,26 +625,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Data Loss Prevention scan information for this message. Messages are evaluated in the backend
-   * on create message/topic and edit message actions. DEPRECATED: use dlp_scan_summary instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDlpScanOutcome() {
-    return dlpScanOutcome;
-  }
-
-  /**
-   * Data Loss Prevention scan information for this message. Messages are evaluated in the backend
-   * on create message/topic and edit message actions. DEPRECATED: use dlp_scan_summary instead.
-   * @param dlpScanOutcome dlpScanOutcome or {@code null} for none
-   */
-  public Message setDlpScanOutcome(java.lang.String dlpScanOutcome) {
-    this.dlpScanOutcome = dlpScanOutcome;
-    return this;
-  }
-
-  /**
-   * Data Loss Prevention scan information for this message. Messages are evaluated in the backend
-   * on create message/topic and edit message actions.
+   * on create message/topic and edit message actions. DEPRECATED: Use DATA_LOSS_PREVENTION
+   * Annotation.
    * @return value or {@code null} for none
    */
   public DlpScanSummary getDlpScanSummary() {
@@ -660,7 +635,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Data Loss Prevention scan information for this message. Messages are evaluated in the backend
-   * on create message/topic and edit message actions.
+   * on create message/topic and edit message actions. DEPRECATED: Use DATA_LOSS_PREVENTION
+   * Annotation.
    * @param dlpScanSummary dlpScanSummary or {@code null} for none
    */
   public Message setDlpScanSummary(DlpScanSummary dlpScanSummary) {

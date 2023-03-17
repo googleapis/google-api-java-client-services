@@ -30,6 +30,13 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class MessageInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Message author’s user type (human/bot).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authorUserType;
+
+  /**
    * The content of a matching message.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class MessageInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String searcherMembershipState;
+
+  /**
+   * Message author’s user type (human/bot).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthorUserType() {
+    return authorUserType;
+  }
+
+  /**
+   * Message author’s user type (human/bot).
+   * @param authorUserType authorUserType or {@code null} for none
+   */
+  public MessageInfo setAuthorUserType(java.lang.String authorUserType) {
+    this.authorUserType = authorUserType;
+    return this;
+  }
 
   /**
    * The content of a matching message.

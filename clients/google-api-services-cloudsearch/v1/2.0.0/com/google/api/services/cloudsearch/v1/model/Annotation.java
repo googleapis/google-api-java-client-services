@@ -18,7 +18,7 @@ package com.google.api.services.cloudsearch.v1.model;
 
 /**
  * NOTE WHEN ADDING NEW PROTO FIELDS: Be sure to add datapol annotations to new fields with
- * potential PII, so they get scrubbed when logging protos for errors. NEXT TAG: 29
+ * potential PII, so they get scrubbed when logging protos for errors. NEXT TAG: 31
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -45,7 +45,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private CardCapabilityMetadata cardCapabilityMetadata;
 
   /**
-   * Whether the annotation should be rendered as a chip. If this is missing or unspecified,
+   * Whether the annotation should be rendered as a preview chip. If this is missing or unspecified,
    * fallback to should_not_render on the metadata.
    * The value may be {@code null}.
    */
@@ -105,12 +105,26 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private IncomingWebhookChangedMetadata incomingWebhookChangedMetadata;
 
   /**
+   * The inline render format of this annotation. go/drive-smart-chips-chat-v2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inlineRenderFormat;
+
+  /**
    * LINT.ThenChange(//depot/google3/java/com/google/apps/dynamite/v1/backend/action/common/SystemMe
    * ssageHelper.java)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IntegrationConfigUpdatedMetadata integrationConfigUpdated;
+
+  /**
+   * Additional interaction data for this annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InteractionData interactionData;
 
   /**
    * Length of the text_body substring beginning from start_index the Annotation corresponds to.
@@ -267,7 +281,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the annotation should be rendered as a chip. If this is missing or unspecified,
+   * Whether the annotation should be rendered as a preview chip. If this is missing or unspecified,
    * fallback to should_not_render on the metadata.
    * @return value or {@code null} for none
    */
@@ -276,7 +290,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the annotation should be rendered as a chip. If this is missing or unspecified,
+   * Whether the annotation should be rendered as a preview chip. If this is missing or unspecified,
    * fallback to should_not_render on the metadata.
    * @param chipRenderType chipRenderType or {@code null} for none
    */
@@ -414,6 +428,23 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The inline render format of this annotation. go/drive-smart-chips-chat-v2.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInlineRenderFormat() {
+    return inlineRenderFormat;
+  }
+
+  /**
+   * The inline render format of this annotation. go/drive-smart-chips-chat-v2.
+   * @param inlineRenderFormat inlineRenderFormat or {@code null} for none
+   */
+  public Annotation setInlineRenderFormat(java.lang.String inlineRenderFormat) {
+    this.inlineRenderFormat = inlineRenderFormat;
+    return this;
+  }
+
+  /**
    * LINT.ThenChange(//depot/google3/java/com/google/apps/dynamite/v1/backend/action/common/SystemMe
    * ssageHelper.java)
    * @return value or {@code null} for none
@@ -429,6 +460,23 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    */
   public Annotation setIntegrationConfigUpdated(IntegrationConfigUpdatedMetadata integrationConfigUpdated) {
     this.integrationConfigUpdated = integrationConfigUpdated;
+    return this;
+  }
+
+  /**
+   * Additional interaction data for this annotation.
+   * @return value or {@code null} for none
+   */
+  public InteractionData getInteractionData() {
+    return interactionData;
+  }
+
+  /**
+   * Additional interaction data for this annotation.
+   * @param interactionData interactionData or {@code null} for none
+   */
+  public Annotation setInteractionData(InteractionData interactionData) {
+    this.interactionData = interactionData;
     return this;
   }
 

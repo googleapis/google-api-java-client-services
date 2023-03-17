@@ -43,6 +43,14 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Optional] Specifies whether the query should be executed as a continuous query. The default
+   * value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean continuous;
+
+  /**
    * If true, creates a new session, where session id will be a server generated random id. If
    * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
    * query in non-session mode.
@@ -215,6 +223,25 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
     this.connectionProperties = connectionProperties;
+    return this;
+  }
+
+  /**
+   * [Optional] Specifies whether the query should be executed as a continuous query. The default
+   * value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContinuous() {
+    return continuous;
+  }
+
+  /**
+   * [Optional] Specifies whether the query should be executed as a continuous query. The default
+   * value is false.
+   * @param continuous continuous or {@code null} for none
+   */
+  public QueryRequest setContinuous(java.lang.Boolean continuous) {
+    this.continuous = continuous;
     return this;
   }
 

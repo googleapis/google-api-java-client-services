@@ -48,7 +48,7 @@ public final class StandardSqlDataType extends com.google.api.client.json.Generi
   private StandardSqlStructType structType;
 
   /**
-   * Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64",
+   * Required. The top level type of this field. Can be any GoogleSQL data type (e.g., "INT64",
    * "DATE", "ARRAY").
    * The value may be {@code null}.
    */
@@ -90,7 +90,7 @@ public final class StandardSqlDataType extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64",
+   * Required. The top level type of this field. Can be any GoogleSQL data type (e.g., "INT64",
    * "DATE", "ARRAY").
    * @return value or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class StandardSqlDataType extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64",
+   * Required. The top level type of this field. Can be any GoogleSQL data type (e.g., "INT64",
    * "DATE", "ARRAY").
    * @param typeKind typeKind or {@code null} for none
    */

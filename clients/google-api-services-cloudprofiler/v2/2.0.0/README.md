@@ -1,14 +1,14 @@
-# Stackdriver Profiler API Client Library for Java
+# Cloud Profiler API Client Library for Java
 
 Manages continuous profiling information.
 
-This page contains information about getting started with the Stackdriver Profiler API
+This page contains information about getting started with the Cloud Profiler API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Stackdriver Profiler API][javadoc]
+* Browse the [Javadoc reference for the Cloud Profiler API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Stackdriver Profiler API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Cloud Profiler API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudprofiler</artifactId>
-      <version>v2-rev20220627-2.0.0</version>
+      <version>v2-rev20230306-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-cloudprofiler:v2-rev20220627-2.0.0'
+  implementation 'com.google.apis:google-api-services-cloudprofiler:v2-rev20230306-2.0.0'
 }
 ```
 

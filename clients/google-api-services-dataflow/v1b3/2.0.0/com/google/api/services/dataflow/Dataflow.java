@@ -1802,6 +1802,37 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * The list of fields to update relative to Job. If empty, only RequestedJobState will be
+         * considered for update. If the FieldMask is not empty and RequestedJobState is none/empty,
+         * The fields specified in the update mask will be the only ones considered for update. If
+         * both RequestedJobState and update_mask are specified, we will first handle
+         * RequestedJobState and then the update_mask fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to update relative to Job. If empty, only RequestedJobState will be considered
+       for update. If the FieldMask is not empty and RequestedJobState is none/empty, The fields specified
+       in the update mask will be the only ones considered for update. If both RequestedJobState and
+       update_mask are specified, we will first handle RequestedJobState and then the update_mask fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The list of fields to update relative to Job. If empty, only RequestedJobState will be
+         * considered for update. If the FieldMask is not empty and RequestedJobState is none/empty,
+         * The fields specified in the update mask will be the only ones considered for update. If
+         * both RequestedJobState and update_mask are specified, we will first handle
+         * RequestedJobState and then the update_mask fields.
+         */
+        public Update setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
         @Override
         public Update set(String parameterName, Object value) {
           return (Update) super.set(parameterName, value);
@@ -4446,6 +4477,37 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /** The job ID. */
           public Update setJobId(java.lang.String jobId) {
             this.jobId = jobId;
+            return this;
+          }
+
+          /**
+           * The list of fields to update relative to Job. If empty, only RequestedJobState will be
+           * considered for update. If the FieldMask is not empty and RequestedJobState is
+           * none/empty, The fields specified in the update mask will be the only ones considered
+           * for update. If both RequestedJobState and update_mask are specified, we will first
+           * handle RequestedJobState and then the update_mask fields.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to update relative to Job. If empty, only RequestedJobState will be considered
+         for update. If the FieldMask is not empty and RequestedJobState is none/empty, The fields specified
+         in the update mask will be the only ones considered for update. If both RequestedJobState and
+         update_mask are specified, we will first handle RequestedJobState and then the update_mask fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The list of fields to update relative to Job. If empty, only RequestedJobState will be
+           * considered for update. If the FieldMask is not empty and RequestedJobState is
+           * none/empty, The fields specified in the update mask will be the only ones considered
+           * for update. If both RequestedJobState and update_mask are specified, we will first
+           * handle RequestedJobState and then the update_mask fields.
+           */
+          public Update setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
             return this;
           }
 

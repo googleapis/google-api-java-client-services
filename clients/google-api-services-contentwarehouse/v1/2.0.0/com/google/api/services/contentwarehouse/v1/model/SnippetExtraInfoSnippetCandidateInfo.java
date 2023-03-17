@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 14
+ * Next ID: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -42,6 +42,12 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(QualitySnippetsTruncationSnippetBoldedRange.class);
   }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SnippetExtraInfoSnippetCandidateInfoExtendedSnippet extendedSnippet;
 
   /**
    * Candidate identifier number, unique among all snippet candidates under each document in each
@@ -130,6 +136,21 @@ public final class SnippetExtraInfoSnippetCandidateInfo extends com.google.api.c
    */
   public SnippetExtraInfoSnippetCandidateInfo setBoldedRanges(java.util.List<QualitySnippetsTruncationSnippetBoldedRange> boldedRanges) {
     this.boldedRanges = boldedRanges;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SnippetExtraInfoSnippetCandidateInfoExtendedSnippet getExtendedSnippet() {
+    return extendedSnippet;
+  }
+
+  /**
+   * @param extendedSnippet extendedSnippet or {@code null} for none
+   */
+  public SnippetExtraInfoSnippetCandidateInfo setExtendedSnippet(SnippetExtraInfoSnippetCandidateInfoExtendedSnippet extendedSnippet) {
+    this.extendedSnippet = extendedSnippet;
     return this;
   }
 

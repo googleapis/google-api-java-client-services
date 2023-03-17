@@ -55,6 +55,13 @@ public final class GoogleInternalAppsWaldoV1alphaOfficeLocation extends com.goog
   private java.lang.String experimentalFloorId;
 
   /**
+   * The display label of this office location. For example a building name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String label;
+
+  /**
    * Experimental. Can change or disappear without warning or notice. References a building from
    * http://google3/ccc/hosted/api/rosy/resources/calendar/building.proto For example "US-NYC-9TH".
    * @return value or {@code null} for none
@@ -108,6 +115,23 @@ public final class GoogleInternalAppsWaldoV1alphaOfficeLocation extends com.goog
    */
   public GoogleInternalAppsWaldoV1alphaOfficeLocation setExperimentalFloorId(java.lang.String experimentalFloorId) {
     this.experimentalFloorId = experimentalFloorId;
+    return this;
+  }
+
+  /**
+   * The display label of this office location. For example a building name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLabel() {
+    return label;
+  }
+
+  /**
+   * The display label of this office location. For example a building name.
+   * @param label label or {@code null} for none
+   */
+  public GoogleInternalAppsWaldoV1alphaOfficeLocation setLabel(java.lang.String label) {
+    this.label = label;
     return this;
   }
 

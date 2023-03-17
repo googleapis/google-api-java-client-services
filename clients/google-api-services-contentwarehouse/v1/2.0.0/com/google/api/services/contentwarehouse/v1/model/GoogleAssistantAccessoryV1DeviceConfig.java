@@ -36,13 +36,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleAssistantAccessoryV1DeviceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * *Required* Identifier for the device which sent the request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAssistantEmbeddedV1DeviceBuild deviceBuild;
-
-  /**
    * Device model capabilities from client to override capabilities in the primary device model.
    * The value may be {@code null}.
    */
@@ -59,20 +52,10 @@ public final class GoogleAssistantAccessoryV1DeviceConfig extends com.google.api
 
   /**
    * *Required* Identifier for the device which sent the request.
-   * @return value or {@code null} for none
+   * The value may be {@code null}.
    */
-  public GoogleAssistantEmbeddedV1DeviceBuild getDeviceBuild() {
-    return deviceBuild;
-  }
-
-  /**
-   * *Required* Identifier for the device which sent the request.
-   * @param deviceBuild deviceBuild or {@code null} for none
-   */
-  public GoogleAssistantAccessoryV1DeviceConfig setDeviceBuild(GoogleAssistantEmbeddedV1DeviceBuild deviceBuild) {
-    this.deviceBuild = deviceBuild;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private GoogleAssistantEmbeddedV1SurfaceIdentity surfaceIdentity;
 
   /**
    * Device model capabilities from client to override capabilities in the primary device model.
@@ -107,6 +90,23 @@ public final class GoogleAssistantAccessoryV1DeviceConfig extends com.google.api
    */
   public GoogleAssistantAccessoryV1DeviceConfig setHeterodyneToken(java.lang.String heterodyneToken) {
     this.heterodyneToken = heterodyneToken;
+    return this;
+  }
+
+  /**
+   * *Required* Identifier for the device which sent the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleAssistantEmbeddedV1SurfaceIdentity getSurfaceIdentity() {
+    return surfaceIdentity;
+  }
+
+  /**
+   * *Required* Identifier for the device which sent the request.
+   * @param surfaceIdentity surfaceIdentity or {@code null} for none
+   */
+  public GoogleAssistantAccessoryV1DeviceConfig setSurfaceIdentity(GoogleAssistantEmbeddedV1SurfaceIdentity surfaceIdentity) {
+    this.surfaceIdentity = surfaceIdentity;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a single entry in a directory.
+ * `ComputeRepositoryAccessTokenStatus` response message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
+public final class ComputeRepositoryAccessTokenStatusResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * Indicates the status of the Git access token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String directory;
+  private java.lang.String tokenStatus;
 
   /**
-   * A file in the directory.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String file;
-
-  /**
-   * A child directory in the directory.
+   * Indicates the status of the Git access token.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirectory() {
-    return directory;
+  public java.lang.String getTokenStatus() {
+    return tokenStatus;
   }
 
   /**
-   * A child directory in the directory.
-   * @param directory directory or {@code null} for none
+   * Indicates the status of the Git access token.
+   * @param tokenStatus tokenStatus or {@code null} for none
    */
-  public DirectoryEntry setDirectory(java.lang.String directory) {
-    this.directory = directory;
-    return this;
-  }
-
-  /**
-   * A file in the directory.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFile() {
-    return file;
-  }
-
-  /**
-   * A file in the directory.
-   * @param file file or {@code null} for none
-   */
-  public DirectoryEntry setFile(java.lang.String file) {
-    this.file = file;
+  public ComputeRepositoryAccessTokenStatusResponse setTokenStatus(java.lang.String tokenStatus) {
+    this.tokenStatus = tokenStatus;
     return this;
   }
 
   @Override
-  public DirectoryEntry set(String fieldName, Object value) {
-    return (DirectoryEntry) super.set(fieldName, value);
+  public ComputeRepositoryAccessTokenStatusResponse set(String fieldName, Object value) {
+    return (ComputeRepositoryAccessTokenStatusResponse) super.set(fieldName, value);
   }
 
   @Override
-  public DirectoryEntry clone() {
-    return (DirectoryEntry) super.clone();
+  public ComputeRepositoryAccessTokenStatusResponse clone() {
+    return (ComputeRepositoryAccessTokenStatusResponse) super.clone();
   }
 
 }

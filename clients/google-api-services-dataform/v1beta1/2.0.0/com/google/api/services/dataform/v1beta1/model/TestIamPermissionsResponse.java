@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a single entry in a directory.
+ * Response message for `TestIamPermissions` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
+public final class TestIamPermissionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String directory;
+  private java.util.List<java.lang.String> permissions;
 
   /**
-   * A file in the directory.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String file;
-
-  /**
-   * A child directory in the directory.
+   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirectory() {
-    return directory;
+  public java.util.List<java.lang.String> getPermissions() {
+    return permissions;
   }
 
   /**
-   * A child directory in the directory.
-   * @param directory directory or {@code null} for none
+   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
+   * @param permissions permissions or {@code null} for none
    */
-  public DirectoryEntry setDirectory(java.lang.String directory) {
-    this.directory = directory;
-    return this;
-  }
-
-  /**
-   * A file in the directory.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFile() {
-    return file;
-  }
-
-  /**
-   * A file in the directory.
-   * @param file file or {@code null} for none
-   */
-  public DirectoryEntry setFile(java.lang.String file) {
-    this.file = file;
+  public TestIamPermissionsResponse setPermissions(java.util.List<java.lang.String> permissions) {
+    this.permissions = permissions;
     return this;
   }
 
   @Override
-  public DirectoryEntry set(String fieldName, Object value) {
-    return (DirectoryEntry) super.set(fieldName, value);
+  public TestIamPermissionsResponse set(String fieldName, Object value) {
+    return (TestIamPermissionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public DirectoryEntry clone() {
-    return (DirectoryEntry) super.clone();
+  public TestIamPermissionsResponse clone() {
+    return (TestIamPermissionsResponse) super.clone();
   }
 
 }

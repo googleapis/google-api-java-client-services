@@ -30,9 +30,12 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The schema to use when parsing the data from the source. Supported values for imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document
-   * per line. Each document must have a valid Document.id.
+   * The schema to use when parsing the data from the source. Supported values for document imports:
+   * * `document` (default): One JSON Document per line. Each document must have a valid
+   * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
+   * will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
+   * string. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * per line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,16 +45,19 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
    * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files, and each file can be up to 2 GB.
+   * 100 files or 100000 files if the data_schema is `content`. And each file can be up to 2 GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inputUris;
 
   /**
-   * The schema to use when parsing the data from the source. Supported values for imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document
-   * per line. Each document must have a valid Document.id.
+   * The schema to use when parsing the data from the source. Supported values for document imports:
+   * * `document` (default): One JSON Document per line. Each document must have a valid
+   * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
+   * will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
+   * string. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * per line.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -59,9 +65,12 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
   }
 
   /**
-   * The schema to use when parsing the data from the source. Supported values for imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document
-   * per line. Each document must have a valid Document.id.
+   * The schema to use when parsing the data from the source. Supported values for document imports:
+   * * `document` (default): One JSON Document per line. Each document must have a valid
+   * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
+   * will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
+   * string. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * per line.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaGcsSource setDataSchema(java.lang.String dataSchema) {
@@ -73,7 +82,7 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
    * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files, and each file can be up to 2 GB.
+   * 100 files or 100000 files if the data_schema is `content`. And each file can be up to 2 GB.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputUris() {
@@ -84,7 +93,7 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
    * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files, and each file can be up to 2 GB.
+   * 100 files or 100000 files if the data_schema is `content`. And each file can be up to 2 GB.
    * @param inputUris inputUris or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaGcsSource setInputUris(java.util.List<java.lang.String> inputUris) {

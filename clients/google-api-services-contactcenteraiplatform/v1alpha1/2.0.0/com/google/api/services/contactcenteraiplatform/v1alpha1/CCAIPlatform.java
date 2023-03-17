@@ -832,7 +832,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -844,7 +844,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
+         example, consider a situation where you make an initial request and the request times out. If you
          make the request again with the same request ID, the server can check if original operation with
          the same request ID was received, and if so, will ignore the second request. This prevents clients
          from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
@@ -859,7 +859,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -1004,7 +1004,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * after the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -1016,7 +1016,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes after the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
+         example, consider a situation where you make an initial request and the request times out. If you
          make the request again with the same request ID, the server can check if original operation with
          the same request ID was received, and if so, will ignore the second request. This prevents clients
          from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
@@ -1031,7 +1031,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * after the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -1527,7 +1527,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -1539,7 +1539,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and t he request times out. If you
+         example, consider a situation where you make an initial request and the request times out. If you
          make the request again with the same request ID, the server can check if original operation with
          the same request ID was received, and if so, will ignore the second request. This prevents clients
          from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
@@ -1554,7 +1554,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
-           * request and t he request times out. If you make the request again with the same request
+           * request and the request times out. If you make the request again with the same request
            * ID, the server can check if original operation with the same request ID was received,
            * and if so, will ignore the second request. This prevents clients from accidentally
            * creating duplicate commitments. The request ID must be a valid UUID with the exception
@@ -2040,12 +2040,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -2070,12 +2065,7 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *

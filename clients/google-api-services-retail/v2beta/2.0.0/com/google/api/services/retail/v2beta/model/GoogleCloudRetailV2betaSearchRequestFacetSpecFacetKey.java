@@ -48,8 +48,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   private java.util.List<java.lang.String> contains;
 
   /**
-   * Set only if values should be bucketized into intervals. Must be set for facets with numerical
-   * values. Must not be set for facet with text values. Maximum number of intervals is 30.
+   * For all numerical facet keys that appear in the list of products from the catalog, the
+   * percentiles 0, 10, 30, 50, 70, 90 and 100 are computed from their distribution weekly. If the
+   * model assigns a high score to a numerical facet key and its intervals are not specified in the
+   * search request, these percentiles will become the bounds for its intervals and will be returned
+   * in the response. If the facet key intervals are specified in the request, then the specified
+   * intervals will be returned instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,8 +180,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   }
 
   /**
-   * Set only if values should be bucketized into intervals. Must be set for facets with numerical
-   * values. Must not be set for facet with text values. Maximum number of intervals is 30.
+   * For all numerical facet keys that appear in the list of products from the catalog, the
+   * percentiles 0, 10, 30, 50, 70, 90 and 100 are computed from their distribution weekly. If the
+   * model assigns a high score to a numerical facet key and its intervals are not specified in the
+   * search request, these percentiles will become the bounds for its intervals and will be returned
+   * in the response. If the facet key intervals are specified in the request, then the specified
+   * intervals will be returned instead.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2betaInterval> getIntervals() {
@@ -185,8 +193,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   }
 
   /**
-   * Set only if values should be bucketized into intervals. Must be set for facets with numerical
-   * values. Must not be set for facet with text values. Maximum number of intervals is 30.
+   * For all numerical facet keys that appear in the list of products from the catalog, the
+   * percentiles 0, 10, 30, 50, 70, 90 and 100 are computed from their distribution weekly. If the
+   * model assigns a high score to a numerical facet key and its intervals are not specified in the
+   * search request, these percentiles will become the bounds for its intervals and will be returned
+   * in the response. If the facet key intervals are specified in the request, then the specified
+   * intervals will be returned instead.
    * @param intervals intervals or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey setIntervals(java.util.List<GoogleCloudRetailV2betaInterval> intervals) {

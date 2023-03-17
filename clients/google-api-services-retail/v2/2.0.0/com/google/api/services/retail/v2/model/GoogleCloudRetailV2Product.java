@@ -245,9 +245,9 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   private java.lang.String languageCode;
 
   /**
-   * Output only. A list of local inventories specific to different places. This is only available
-   * for users who have Retail Search enabled, and it can be managed by
-   * ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs.
+   * Output only. A list of local inventories specific to different places. This field can be
+   * managed by ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs if
+   * fine-grained, high-volume updates are necessary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -882,9 +882,9 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * Output only. A list of local inventories specific to different places. This is only available
-   * for users who have Retail Search enabled, and it can be managed by
-   * ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs.
+   * Output only. A list of local inventories specific to different places. This field can be
+   * managed by ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs if
+   * fine-grained, high-volume updates are necessary.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2LocalInventory> getLocalInventories() {
@@ -892,9 +892,9 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * Output only. A list of local inventories specific to different places. This is only available
-   * for users who have Retail Search enabled, and it can be managed by
-   * ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs.
+   * Output only. A list of local inventories specific to different places. This field can be
+   * managed by ProductService.AddLocalInventories and ProductService.RemoveLocalInventories APIs if
+   * fine-grained, high-volume updates are necessary.
    * @param localInventories localInventories or {@code null} for none
    */
   public GoogleCloudRetailV2Product setLocalInventories(java.util.List<GoogleCloudRetailV2LocalInventory> localInventories) {

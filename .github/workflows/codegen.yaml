@@ -47,6 +47,8 @@ jobs:
   generate:
     uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
     needs: batch
-    if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
+    # if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     with: 
-      services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}
+      # services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}
+      services: ${{toJson(fromJson(needs.batch.outputs.services).batches[0])}}
+      access_token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}

@@ -1,12 +1,11 @@
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       services:
         required: true
         type: string
-  workflow_call:
-    inputs:
-      services:
+    secrets:
+      access_token: 
         required: true
         type: string
 
@@ -36,7 +35,7 @@ jobs:
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - uses: googleapis/code-suggester@v2 # takes the changes from git directory
         env:
-          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.access_token }}
         with:
           command: pr
           upstream_owner: ${{ github.repository_owner }}

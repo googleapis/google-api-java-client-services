@@ -60,6 +60,14 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   private java.lang.Integer sizeGb;
 
   /**
+   * Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type must be
+   * empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceSnapshot;
+
+  /**
    * Type of the disk to use.
    * @return value or {@code null} for none
    */
@@ -126,6 +134,25 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
    */
   public GceRegionalPersistentDisk setSizeGb(java.lang.Integer sizeGb) {
     this.sizeGb = sizeGb;
+    return this;
+  }
+
+  /**
+   * Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type must be
+   * empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceSnapshot() {
+    return sourceSnapshot;
+  }
+
+  /**
+   * Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type must be
+   * empty.
+   * @param sourceSnapshot sourceSnapshot or {@code null} for none
+   */
+  public GceRegionalPersistentDisk setSourceSnapshot(java.lang.String sourceSnapshot) {
+    this.sourceSnapshot = sourceSnapshot;
     return this;
   }
 

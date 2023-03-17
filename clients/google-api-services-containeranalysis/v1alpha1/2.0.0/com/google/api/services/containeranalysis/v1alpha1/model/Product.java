@@ -31,13 +31,6 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains a URI which is vendor-specific. Example: The artifact repository URL of an image.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String genericUri;
-
-  /**
    * Token that identifies a product so that it can be referred to from other parts in the document.
    * There is no predefined format as long as it uniquely identifies a group in the context of the
    * current document.
@@ -47,28 +40,18 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Helps in identifying the underlying product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentifierHelper identifierHelper;
+
+  /**
    * Name of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Contains a URI which is vendor-specific. Example: The artifact repository URL of an image.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getGenericUri() {
-    return genericUri;
-  }
-
-  /**
-   * Contains a URI which is vendor-specific. Example: The artifact repository URL of an image.
-   * @param genericUri genericUri or {@code null} for none
-   */
-  public Product setGenericUri(java.lang.String genericUri) {
-    this.genericUri = genericUri;
-    return this;
-  }
 
   /**
    * Token that identifies a product so that it can be referred to from other parts in the document.
@@ -88,6 +71,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Helps in identifying the underlying product.
+   * @return value or {@code null} for none
+   */
+  public IdentifierHelper getIdentifierHelper() {
+    return identifierHelper;
+  }
+
+  /**
+   * Helps in identifying the underlying product.
+   * @param identifierHelper identifierHelper or {@code null} for none
+   */
+  public Product setIdentifierHelper(IdentifierHelper identifierHelper) {
+    this.identifierHelper = identifierHelper;
     return this;
   }
 

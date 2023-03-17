@@ -31,14 +31,6 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class Publisher extends com.google.api.client.json.GenericJson {
 
   /**
-   * The context or namespace. Contains a URL which is under control of the issuing party and can be
-   * used as a globally unique identifier for that issuing party. Example: https://csaf.io
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String context;
-
-  /**
    * Provides information about the authority of the issuing party to release the document, in
    * particular, the party's constituency and responsibilities or other obligations.
    * The value may be {@code null}.
@@ -56,21 +48,10 @@ public final class Publisher extends com.google.api.client.json.GenericJson {
   /**
    * The context or namespace. Contains a URL which is under control of the issuing party and can be
    * used as a globally unique identifier for that issuing party. Example: https://csaf.io
-   * @return value or {@code null} for none
+   * The value may be {@code null}.
    */
-  public java.lang.String getContext() {
-    return context;
-  }
-
-  /**
-   * The context or namespace. Contains a URL which is under control of the issuing party and can be
-   * used as a globally unique identifier for that issuing party. Example: https://csaf.io
-   * @param context context or {@code null} for none
-   */
-  public Publisher setContext(java.lang.String context) {
-    this.context = context;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.String publisherNamespace;
 
   /**
    * Provides information about the authority of the issuing party to release the document, in
@@ -105,6 +86,25 @@ public final class Publisher extends com.google.api.client.json.GenericJson {
    */
   public Publisher setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The context or namespace. Contains a URL which is under control of the issuing party and can be
+   * used as a globally unique identifier for that issuing party. Example: https://csaf.io
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublisherNamespace() {
+    return publisherNamespace;
+  }
+
+  /**
+   * The context or namespace. Contains a URL which is under control of the issuing party and can be
+   * used as a globally unique identifier for that issuing party. Example: https://csaf.io
+   * @param publisherNamespace publisherNamespace or {@code null} for none
+   */
+  public Publisher setPublisherNamespace(java.lang.String publisherNamespace) {
+    this.publisherNamespace = publisherNamespace;
     return this;
   }
 

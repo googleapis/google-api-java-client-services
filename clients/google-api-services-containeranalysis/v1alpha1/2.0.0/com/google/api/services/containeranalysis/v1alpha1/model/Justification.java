@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * Specifies details on how to handle (and presumably, fix) a vulnerability.
+ * Justification provides the justification when the state of the assessment if NOT_AFFECTED.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -28,31 +28,24 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Remediation extends com.google.api.client.json.GenericJson {
+public final class Justification extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains a comprehensive human-readable discussion of the remediation.
+   * Additional details on why this justification was chosen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String details;
 
   /**
-   * The type of remediation that can be applied.
+   * The justification type for this vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String remediationType;
+  private java.lang.String justificationType;
 
   /**
-   * Contains the URL where to obtain the remediation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private URI remediationUri;
-
-  /**
-   * Contains a comprehensive human-readable discussion of the remediation.
+   * Additional details on why this justification was chosen.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -60,56 +53,39 @@ public final class Remediation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains a comprehensive human-readable discussion of the remediation.
+   * Additional details on why this justification was chosen.
    * @param details details or {@code null} for none
    */
-  public Remediation setDetails(java.lang.String details) {
+  public Justification setDetails(java.lang.String details) {
     this.details = details;
     return this;
   }
 
   /**
-   * The type of remediation that can be applied.
+   * The justification type for this vulnerability.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRemediationType() {
-    return remediationType;
+  public java.lang.String getJustificationType() {
+    return justificationType;
   }
 
   /**
-   * The type of remediation that can be applied.
-   * @param remediationType remediationType or {@code null} for none
+   * The justification type for this vulnerability.
+   * @param justificationType justificationType or {@code null} for none
    */
-  public Remediation setRemediationType(java.lang.String remediationType) {
-    this.remediationType = remediationType;
-    return this;
-  }
-
-  /**
-   * Contains the URL where to obtain the remediation.
-   * @return value or {@code null} for none
-   */
-  public URI getRemediationUri() {
-    return remediationUri;
-  }
-
-  /**
-   * Contains the URL where to obtain the remediation.
-   * @param remediationUri remediationUri or {@code null} for none
-   */
-  public Remediation setRemediationUri(URI remediationUri) {
-    this.remediationUri = remediationUri;
+  public Justification setJustificationType(java.lang.String justificationType) {
+    this.justificationType = justificationType;
     return this;
   }
 
   @Override
-  public Remediation set(String fieldName, Object value) {
-    return (Remediation) super.set(fieldName, value);
+  public Justification set(String fieldName, Object value) {
+    return (Justification) super.set(fieldName, value);
   }
 
   @Override
-  public Remediation clone() {
-    return (Remediation) super.clone();
+  public Justification clone() {
+    return (Justification) super.clone();
   }
 
 }

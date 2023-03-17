@@ -39,6 +39,20 @@ public final class Assessment extends com.google.api.client.json.GenericJson {
   private java.lang.String cve;
 
   /**
+   * Contains information about the impact of this vulnerability, this will change with time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> impacts;
+
+  /**
+   * Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Justification justification;
+
+  /**
    * A detailed description of this Vex.
    * The value may be {@code null}.
    */
@@ -76,13 +90,6 @@ public final class Assessment extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Contains information about this vulnerability, this will change with time.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Threat> threats;
-
-  /**
    * Holds the MITRE standard Common Vulnerabilities and Exposures (CVE) tracking number for the
    * vulnerability.
    * @return value or {@code null} for none
@@ -98,6 +105,40 @@ public final class Assessment extends com.google.api.client.json.GenericJson {
    */
   public Assessment setCve(java.lang.String cve) {
     this.cve = cve;
+    return this;
+  }
+
+  /**
+   * Contains information about the impact of this vulnerability, this will change with time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getImpacts() {
+    return impacts;
+  }
+
+  /**
+   * Contains information about the impact of this vulnerability, this will change with time.
+   * @param impacts impacts or {@code null} for none
+   */
+  public Assessment setImpacts(java.util.List<java.lang.String> impacts) {
+    this.impacts = impacts;
+    return this;
+  }
+
+  /**
+   * Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+   * @return value or {@code null} for none
+   */
+  public Justification getJustification() {
+    return justification;
+  }
+
+  /**
+   * Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+   * @param justification justification or {@code null} for none
+   */
+  public Assessment setJustification(Justification justification) {
+    this.justification = justification;
     return this;
   }
 
@@ -187,23 +228,6 @@ public final class Assessment extends com.google.api.client.json.GenericJson {
    */
   public Assessment setState(java.lang.String state) {
     this.state = state;
-    return this;
-  }
-
-  /**
-   * Contains information about this vulnerability, this will change with time.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Threat> getThreats() {
-    return threats;
-  }
-
-  /**
-   * Contains information about this vulnerability, this will change with time.
-   * @param threats threats or {@code null} for none
-   */
-  public Assessment setThreats(java.util.List<Threat> threats) {
-    this.threats = threats;
     return this;
   }
 

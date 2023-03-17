@@ -48,8 +48,8 @@ public final class SamlIdpConfig extends com.google.api.client.json.GenericJson 
   /**
    * The **Logout Redirect URL** (sign-out page URL) of the identity provider. When a user clicks
    * the sign-out link on a Google page, they will be redirected to this URL. This is a pure
-   * redirect with no attached SAML `LogoutRequest` i.e. SAML single logout is currently not
-   * supported. Must use `HTTPS`.
+   * redirect with no attached SAML `LogoutRequest` i.e. SAML single logout is not supported. Must
+   * use `HTTPS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class SamlIdpConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The `SingleSignOnService` endpoint location (sign-in page URL) of the identity
-   * provider. This is the URL where the `AuthnRequest` will be sent. Must use `HTTPS`. Currently
-   * assumed to accept the `HTTP-Redirect` binding.
+   * provider. This is the URL where the `AuthnRequest` will be sent. Must use `HTTPS`. Assumed to
+   * accept the `HTTP-Redirect` binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +105,8 @@ public final class SamlIdpConfig extends com.google.api.client.json.GenericJson 
   /**
    * The **Logout Redirect URL** (sign-out page URL) of the identity provider. When a user clicks
    * the sign-out link on a Google page, they will be redirected to this URL. This is a pure
-   * redirect with no attached SAML `LogoutRequest` i.e. SAML single logout is currently not
-   * supported. Must use `HTTPS`.
+   * redirect with no attached SAML `LogoutRequest` i.e. SAML single logout is not supported. Must
+   * use `HTTPS`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogoutRedirectUri() {
@@ -116,8 +116,8 @@ public final class SamlIdpConfig extends com.google.api.client.json.GenericJson 
   /**
    * The **Logout Redirect URL** (sign-out page URL) of the identity provider. When a user clicks
    * the sign-out link on a Google page, they will be redirected to this URL. This is a pure
-   * redirect with no attached SAML `LogoutRequest` i.e. SAML single logout is currently not
-   * supported. Must use `HTTPS`.
+   * redirect with no attached SAML `LogoutRequest` i.e. SAML single logout is not supported. Must
+   * use `HTTPS`.
    * @param logoutRedirectUri logoutRedirectUri or {@code null} for none
    */
   public SamlIdpConfig setLogoutRedirectUri(java.lang.String logoutRedirectUri) {
@@ -127,8 +127,8 @@ public final class SamlIdpConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The `SingleSignOnService` endpoint location (sign-in page URL) of the identity
-   * provider. This is the URL where the `AuthnRequest` will be sent. Must use `HTTPS`. Currently
-   * assumed to accept the `HTTP-Redirect` binding.
+   * provider. This is the URL where the `AuthnRequest` will be sent. Must use `HTTPS`. Assumed to
+   * accept the `HTTP-Redirect` binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getSingleSignOnServiceUri() {
@@ -137,8 +137,8 @@ public final class SamlIdpConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The `SingleSignOnService` endpoint location (sign-in page URL) of the identity
-   * provider. This is the URL where the `AuthnRequest` will be sent. Must use `HTTPS`. Currently
-   * assumed to accept the `HTTP-Redirect` binding.
+   * provider. This is the URL where the `AuthnRequest` will be sent. Must use `HTTPS`. Assumed to
+   * accept the `HTTP-Redirect` binding.
    * @param singleSignOnServiceUri singleSignOnServiceUri or {@code null} for none
    */
   public SamlIdpConfig setSingleSignOnServiceUri(java.lang.String singleSignOnServiceUri) {

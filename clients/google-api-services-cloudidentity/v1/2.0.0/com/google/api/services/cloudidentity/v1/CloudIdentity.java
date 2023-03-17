@@ -5604,34 +5604,51 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The search query. Must be specified in [Common Expression
-       * Language](https://opensource.google/projects/cel). May only contain equality operators on
-       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
-       * begin with "C" (for example, 'C046psxkn'). [Find your customer ID.]
-       * (https://support.google.com/cloudidentity/answer/10070793)
+       * Required. The search query. * Must be specified in [Common Expression
+       * Language](https://opensource.google/projects/cel). * Must contain equality operators on the
+       * parent, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C"
+       * (for example, 'C046psxkn'). [Find your customer ID.]
+       * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
+       * operators on `labels` such as `'cloudidentity.googleapis.com/groups.discussion_forum' in
+       * labels`). * Can contain an optional equality operator on `domain_name`. e.g. `domain_name
+       * == 'abc.com'` * Can contain optional `startsWith/contains/equality` operators on
+       * `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key ==
+       * 'dev@abc.com'` * Can contain optional `startsWith/contains/equality` operators on
+       * `display_name`, such as `display_name.startsWith('dev')` , `display_name.contains('dev')`,
+       * `display_name == 'dev'`
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. The search query. Must be specified in [Common Expression
-     Language](https://opensource.google/projects/cel). May only contain equality operators on the
-     parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must begin
-     with "C" (for example, 'C046psxkn'). [Find your customer ID.]
-     (https://support.google.com/cloudidentity/answer/10070793)
+      /** Required. The search query. * Must be specified in [Common Expression
+     Language](https://opensource.google/projects/cel). * Must contain equality operators on the parent,
+     e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+     'C046psxkn'). [Find your customer ID.] (https://support.google.com/cloudidentity/answer/10070793) *
+     Can contain optional inclusion operators on `labels` such as
+     `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). * Can contain an optional
+     equality operator on `domain_name`. e.g. `domain_name == 'abc.com'` * Can contain optional
+     `startsWith/contains/equality` operators on `group_key`, e.g. `group_key.startsWith('dev')`,
+     `group_key.contains('dev'), group_key == 'dev@abc.com'` * Can contain optional
+     `startsWith/contains/equality` operators on `display_name`, such as
+     `display_name.startsWith('dev')` , `display_name.contains('dev')`, `display_name == 'dev'`
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Required. The search query. Must be specified in [Common Expression
-       * Language](https://opensource.google/projects/cel). May only contain equality operators on
-       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
-       * begin with "C" (for example, 'C046psxkn'). [Find your customer ID.]
-       * (https://support.google.com/cloudidentity/answer/10070793)
+       * Required. The search query. * Must be specified in [Common Expression
+       * Language](https://opensource.google/projects/cel). * Must contain equality operators on the
+       * parent, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C"
+       * (for example, 'C046psxkn'). [Find your customer ID.]
+       * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
+       * operators on `labels` such as `'cloudidentity.googleapis.com/groups.discussion_forum' in
+       * labels`). * Can contain an optional equality operator on `domain_name`. e.g. `domain_name
+       * == 'abc.com'` * Can contain optional `startsWith/contains/equality` operators on
+       * `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key ==
+       * 'dev@abc.com'` * Can contain optional `startsWith/contains/equality` operators on
+       * `display_name`, such as `display_name.startsWith('dev')` , `display_name.contains('dev')`,
+       * `display_name == 'dev'`
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -7440,7 +7457,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * is supported on labels. Identity-mapped groups are uniquely identified by both a
          * `member_key_id` and a `member_key_namespace`, which requires an additional query input:
          * `member_key_namespace`. Example query: `member_key_id == 'member_key_id_value' && in
-         * labels`
+         * labels` Query may optionally contain equality operators on the parent of the group
+         * restricting the search within a particular customer, e.g. `parent ==
+         * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on
+         * the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels
+         * && parent == 'customers/C046psxkn'`
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
@@ -7449,7 +7471,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        `required` field. Users can search on label attributes of groups. CONTAINS match ('in') is
        supported on labels. Identity-mapped groups are uniquely identified by both a `member_key_id` and a
        `member_key_namespace`, which requires an additional query input: `member_key_namespace`. Example
-       query: `member_key_id == 'member_key_id_value' && in labels`
+       query: `member_key_id == 'member_key_id_value' && in labels` Query may optionally contain equality
+       operators on the parent of the group restricting the search within a particular customer, e.g.
+       `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+       'C046psxkn'). This filtering is only supported for Admins with groups read permissons on the input
+       customer. Example query: `member_key_id == 'member_key_id_value' && in labels && parent ==
+       'customers/C046psxkn'`
          */
         public java.lang.String getQuery() {
           return query;
@@ -7461,7 +7488,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * is supported on labels. Identity-mapped groups are uniquely identified by both a
          * `member_key_id` and a `member_key_namespace`, which requires an additional query input:
          * `member_key_namespace`. Example query: `member_key_id == 'member_key_id_value' && in
-         * labels`
+         * labels` Query may optionally contain equality operators on the parent of the group
+         * restricting the search within a particular customer, e.g. `parent ==
+         * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on
+         * the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels
+         * && parent == 'customers/C046psxkn'`
          */
         public SearchTransitiveGroups setQuery(java.lang.String query) {
           this.query = query;
@@ -8180,7 +8212,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
-       * results. The only currently-supported filter is filtering by customer. For example:
+       * results. The only supported filter is filtering by customer. For example:
        * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
        * `customer=="customers/my_customer"` will return the profiles for the customer that the
        * caller (authenticated user) belongs to.
@@ -8189,7 +8221,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private java.lang.String filter;
 
       /** A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
-     results. The only currently-supported filter is filtering by customer. For example:
+     results. The only supported filter is filtering by customer. For example:
      `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
      `customer=="customers/my_customer"` will return the profiles for the customer that the caller
      (authenticated user) belongs to.
@@ -8200,7 +8232,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * A [Common Expression Language](https://github.com/google/cel-spec) expression to filter the
-       * results. The only currently-supported filter is filtering by customer. For example:
+       * results. The only supported filter is filtering by customer. For example:
        * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter of
        * `customer=="customers/my_customer"` will return the profiles for the customer that the
        * caller (authenticated user) belongs to.
@@ -9590,17 +9622,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A CEL expression to filter the results. The only currently-supported filter is filtering by
-       * customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a
-       * filter of `customer==customers/my_customer` will return the assignments for the customer
-       * that the caller (authenticated user) belongs to.
+       * A CEL expression to filter the results. The only supported filter is filtering by customer.
+       * For example: `customer==customers/C0123abc`. Omitting the filter or specifying a filter of
+       * `customer==customers/my_customer` will return the assignments for the customer that the
+       * caller (authenticated user) belongs to.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** A CEL expression to filter the results. The only currently-supported filter is filtering by
-     customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a filter
-     of `customer==customers/my_customer` will return the assignments for the customer that the caller
+      /** A CEL expression to filter the results. The only supported filter is filtering by customer. For
+     example: `customer==customers/C0123abc`. Omitting the filter or specifying a filter of
+     `customer==customers/my_customer` will return the assignments for the customer that the caller
      (authenticated user) belongs to.
        */
       public java.lang.String getFilter() {
@@ -9608,10 +9640,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A CEL expression to filter the results. The only currently-supported filter is filtering by
-       * customer. For example: `customer==customers/C0123abc`. Omitting the filter or specifying a
-       * filter of `customer==customers/my_customer` will return the assignments for the customer
-       * that the caller (authenticated user) belongs to.
+       * A CEL expression to filter the results. The only supported filter is filtering by customer.
+       * For example: `customer==customers/C0123abc`. Omitting the filter or specifying a filter of
+       * `customer==customers/my_customer` will return the assignments for the customer that the
+       * caller (authenticated user) belongs to.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

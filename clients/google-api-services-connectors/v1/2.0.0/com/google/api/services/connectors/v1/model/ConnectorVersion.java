@@ -122,6 +122,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private java.util.List<RoleGrant> roleGrants;
 
   /**
+   * Output only. Ssl configuration supported by the Connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslConfigTemplate sslConfigTemplate;
+
+  /**
    * Output only. Information about the runtime features supported by the Connector.
    * The value may be {@code null}.
    */
@@ -325,6 +332,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setRoleGrants(java.util.List<RoleGrant> roleGrants) {
     this.roleGrants = roleGrants;
+    return this;
+  }
+
+  /**
+   * Output only. Ssl configuration supported by the Connector.
+   * @return value or {@code null} for none
+   */
+  public SslConfigTemplate getSslConfigTemplate() {
+    return sslConfigTemplate;
+  }
+
+  /**
+   * Output only. Ssl configuration supported by the Connector.
+   * @param sslConfigTemplate sslConfigTemplate or {@code null} for none
+   */
+  public ConnectorVersion setSslConfigTemplate(SslConfigTemplate sslConfigTemplate) {
+    this.sslConfigTemplate = sslConfigTemplate;
     return this;
   }
 

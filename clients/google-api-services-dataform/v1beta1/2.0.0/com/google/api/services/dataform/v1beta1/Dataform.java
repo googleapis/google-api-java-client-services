@@ -551,6 +551,279 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
       public class Repositories {
 
         /**
+         * Applies a Git commit to a Repository. The Repository must not have a value for
+         * `git_remote_settings.url`.
+         *
+         * Create a request for the method "repositories.commit".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The repository's name.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesRequest}
+         * @return the request
+         */
+        public Commit commit(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesRequest content) throws java.io.IOException {
+          Commit result = new Commit(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Commit extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:commit";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Applies a Git commit to a Repository. The Repository must not have a value for
+           * `git_remote_settings.url`.
+           *
+           * Create a request for the method "repositories.commit".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesRequest}
+           * @since 1.13
+           */
+          protected Commit(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public Commit set$Xgafv(java.lang.String $Xgafv) {
+            return (Commit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Commit setAccessToken(java.lang.String accessToken) {
+            return (Commit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Commit setAlt(java.lang.String alt) {
+            return (Commit) super.setAlt(alt);
+          }
+
+          @Override
+          public Commit setCallback(java.lang.String callback) {
+            return (Commit) super.setCallback(callback);
+          }
+
+          @Override
+          public Commit setFields(java.lang.String fields) {
+            return (Commit) super.setFields(fields);
+          }
+
+          @Override
+          public Commit setKey(java.lang.String key) {
+            return (Commit) super.setKey(key);
+          }
+
+          @Override
+          public Commit setOauthToken(java.lang.String oauthToken) {
+            return (Commit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Commit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Commit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Commit setQuotaUser(java.lang.String quotaUser) {
+            return (Commit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Commit setUploadType(java.lang.String uploadType) {
+            return (Commit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Commit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public Commit setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Commit set(String parameterName, Object value) {
+            return (Commit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Computes a Repository's Git access token status.
+         *
+         * Create a request for the method "repositories.computeAccessTokenStatus".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link ComputeAccessTokenStatus#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The repository's name.
+         * @return the request
+         */
+        public ComputeAccessTokenStatus computeAccessTokenStatus(java.lang.String name) throws java.io.IOException {
+          ComputeAccessTokenStatus result = new ComputeAccessTokenStatus(name);
+          initialize(result);
+          return result;
+        }
+
+        public class ComputeAccessTokenStatus extends DataformRequest<com.google.api.services.dataform.v1beta1.model.ComputeRepositoryAccessTokenStatusResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:computeAccessTokenStatus";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Computes a Repository's Git access token status.
+           *
+           * Create a request for the method "repositories.computeAccessTokenStatus".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link ComputeAccessTokenStatus#execute()} method to invoke the
+           * remote operation. <p> {@link ComputeAccessTokenStatus#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @since 1.13
+           */
+          protected ComputeAccessTokenStatus(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.ComputeRepositoryAccessTokenStatusResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ComputeAccessTokenStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (ComputeAccessTokenStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setAccessToken(java.lang.String accessToken) {
+            return (ComputeAccessTokenStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setAlt(java.lang.String alt) {
+            return (ComputeAccessTokenStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setCallback(java.lang.String callback) {
+            return (ComputeAccessTokenStatus) super.setCallback(callback);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setFields(java.lang.String fields) {
+            return (ComputeAccessTokenStatus) super.setFields(fields);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setKey(java.lang.String key) {
+            return (ComputeAccessTokenStatus) super.setKey(key);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setOauthToken(java.lang.String oauthToken) {
+            return (ComputeAccessTokenStatus) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ComputeAccessTokenStatus) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setQuotaUser(java.lang.String quotaUser) {
+            return (ComputeAccessTokenStatus) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setUploadType(java.lang.String uploadType) {
+            return (ComputeAccessTokenStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ComputeAccessTokenStatus) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public ComputeAccessTokenStatus setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ComputeAccessTokenStatus set(String parameterName, Object value) {
+            return (ComputeAccessTokenStatus) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new Repository in a given project and location.
          *
          * Create a request for the method "repositories.create".
@@ -866,6 +1139,196 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Fetches a Repository's history of commits. The Repository must not have a value for
+         * `git_remote_settings.url`.
+         *
+         * Create a request for the method "repositories.fetchHistory".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link FetchHistory#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The repository's name.
+         * @return the request
+         */
+        public FetchHistory fetchHistory(java.lang.String name) throws java.io.IOException {
+          FetchHistory result = new FetchHistory(name);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchHistory extends DataformRequest<com.google.api.services.dataform.v1beta1.model.FetchRepositoryHistoryResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:fetchHistory";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Fetches a Repository's history of commits. The Repository must not have a value for
+           * `git_remote_settings.url`.
+           *
+           * Create a request for the method "repositories.fetchHistory".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link FetchHistory#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * FetchHistory#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @since 1.13
+           */
+          protected FetchHistory(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.FetchRepositoryHistoryResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchHistory set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchHistory) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchHistory setAccessToken(java.lang.String accessToken) {
+            return (FetchHistory) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchHistory setAlt(java.lang.String alt) {
+            return (FetchHistory) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchHistory setCallback(java.lang.String callback) {
+            return (FetchHistory) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchHistory setFields(java.lang.String fields) {
+            return (FetchHistory) super.setFields(fields);
+          }
+
+          @Override
+          public FetchHistory setKey(java.lang.String key) {
+            return (FetchHistory) super.setKey(key);
+          }
+
+          @Override
+          public FetchHistory setOauthToken(java.lang.String oauthToken) {
+            return (FetchHistory) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchHistory setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchHistory) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchHistory setQuotaUser(java.lang.String quotaUser) {
+            return (FetchHistory) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchHistory setUploadType(java.lang.String uploadType) {
+            return (FetchHistory) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchHistory setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchHistory) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public FetchHistory setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of commits to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of commits to return. The server may return fewer items than requested. If
+         unspecified, the server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of commits to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          public FetchHistory setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous `FetchRepositoryHistory` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `FetchRepositoryHistory` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous `FetchRepositoryHistory` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `FetchRepositoryHistory` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous `FetchRepositoryHistory` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `FetchRepositoryHistory` must match the call that provided the page token.
+           */
+          public FetchHistory setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public FetchHistory set(String parameterName, Object value) {
+            return (FetchHistory) super.set(parameterName, value);
+          }
+        }
+        /**
          * Fetches a Repository's remote branches.
          *
          * Create a request for the method "repositories.fetchRemoteBranches".
@@ -1140,6 +1603,204 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "repositories.getIamPolicy".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Policy> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "repositories.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
           }
         }
         /**
@@ -1526,6 +2187,722 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the contents of a given Repository directory. The Repository must not have a value for
+         * `git_remote_settings.url`.
+         *
+         * Create a request for the method "repositories.queryDirectoryContents".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link QueryDirectoryContents#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The repository's name.
+         * @return the request
+         */
+        public QueryDirectoryContents queryDirectoryContents(java.lang.String name) throws java.io.IOException {
+          QueryDirectoryContents result = new QueryDirectoryContents(name);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryDirectoryContents extends DataformRequest<com.google.api.services.dataform.v1beta1.model.QueryRepositoryDirectoryContentsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:queryDirectoryContents";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Returns the contents of a given Repository directory. The Repository must not have a value for
+           * `git_remote_settings.url`.
+           *
+           * Create a request for the method "repositories.queryDirectoryContents".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link QueryDirectoryContents#execute()} method to invoke the
+           * remote operation. <p> {@link QueryDirectoryContents#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @since 1.13
+           */
+          protected QueryDirectoryContents(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.QueryRepositoryDirectoryContentsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryDirectoryContents set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryDirectoryContents) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryDirectoryContents setAccessToken(java.lang.String accessToken) {
+            return (QueryDirectoryContents) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryDirectoryContents setAlt(java.lang.String alt) {
+            return (QueryDirectoryContents) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryDirectoryContents setCallback(java.lang.String callback) {
+            return (QueryDirectoryContents) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryDirectoryContents setFields(java.lang.String fields) {
+            return (QueryDirectoryContents) super.setFields(fields);
+          }
+
+          @Override
+          public QueryDirectoryContents setKey(java.lang.String key) {
+            return (QueryDirectoryContents) super.setKey(key);
+          }
+
+          @Override
+          public QueryDirectoryContents setOauthToken(java.lang.String oauthToken) {
+            return (QueryDirectoryContents) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryDirectoryContents setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryDirectoryContents) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryDirectoryContents setQuotaUser(java.lang.String quotaUser) {
+            return (QueryDirectoryContents) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryDirectoryContents setUploadType(java.lang.String uploadType) {
+            return (QueryDirectoryContents) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryDirectoryContents setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryDirectoryContents) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public QueryDirectoryContents setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The Commit SHA for the commit to query from. If unset, the directory will be
+           * queried from HEAD.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String commitSha;
+
+          /** Optional. The Commit SHA for the commit to query from. If unset, the directory will be queried from
+         HEAD.
+           */
+          public java.lang.String getCommitSha() {
+            return commitSha;
+          }
+
+          /**
+           * Optional. The Commit SHA for the commit to query from. If unset, the directory will be
+           * queried from HEAD.
+           */
+          public QueryDirectoryContents setCommitSha(java.lang.String commitSha) {
+            this.commitSha = commitSha;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of paths to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of paths to return. The server may return fewer items than requested. If
+         unspecified, the server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of paths to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          public QueryDirectoryContents setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous `QueryRepositoryDirectoryContents` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `QueryRepositoryDirectoryContents` must match the call that provided the
+           * page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous `QueryRepositoryDirectoryContents` call. Provide this
+         to retrieve the subsequent page. When paginating, all other parameters provided to
+         `QueryRepositoryDirectoryContents` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous `QueryRepositoryDirectoryContents` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `QueryRepositoryDirectoryContents` must match the call that provided the
+           * page token.
+           */
+          public QueryDirectoryContents setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The directory's full path including directory name, relative to root. If left
+           * unset, the root is used.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String path;
+
+          /** Optional. The directory's full path including directory name, relative to root. If left unset, the
+         root is used.
+           */
+          public java.lang.String getPath() {
+            return path;
+          }
+
+          /**
+           * Optional. The directory's full path including directory name, relative to root. If left
+           * unset, the root is used.
+           */
+          public QueryDirectoryContents setPath(java.lang.String path) {
+            this.path = path;
+            return this;
+          }
+
+          @Override
+          public QueryDirectoryContents set(String parameterName, Object value) {
+            return (QueryDirectoryContents) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the contents of a file (inside a Repository). The Repository must not have a value for
+         * `git_remote_settings.url`.
+         *
+         * Create a request for the method "repositories.readFile".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link ReadFile#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The repository's name.
+         * @return the request
+         */
+        public ReadFile readFile(java.lang.String name) throws java.io.IOException {
+          ReadFile result = new ReadFile(name);
+          initialize(result);
+          return result;
+        }
+
+        public class ReadFile extends DataformRequest<com.google.api.services.dataform.v1beta1.model.ReadRepositoryFileResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:readFile";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Returns the contents of a file (inside a Repository). The Repository must not have a value for
+           * `git_remote_settings.url`.
+           *
+           * Create a request for the method "repositories.readFile".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link ReadFile#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * ReadFile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @since 1.13
+           */
+          protected ReadFile(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.ReadRepositoryFileResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ReadFile set$Xgafv(java.lang.String $Xgafv) {
+            return (ReadFile) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReadFile setAccessToken(java.lang.String accessToken) {
+            return (ReadFile) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReadFile setAlt(java.lang.String alt) {
+            return (ReadFile) super.setAlt(alt);
+          }
+
+          @Override
+          public ReadFile setCallback(java.lang.String callback) {
+            return (ReadFile) super.setCallback(callback);
+          }
+
+          @Override
+          public ReadFile setFields(java.lang.String fields) {
+            return (ReadFile) super.setFields(fields);
+          }
+
+          @Override
+          public ReadFile setKey(java.lang.String key) {
+            return (ReadFile) super.setKey(key);
+          }
+
+          @Override
+          public ReadFile setOauthToken(java.lang.String oauthToken) {
+            return (ReadFile) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReadFile setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReadFile) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReadFile setQuotaUser(java.lang.String quotaUser) {
+            return (ReadFile) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReadFile setUploadType(java.lang.String uploadType) {
+            return (ReadFile) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReadFile setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReadFile) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public ReadFile setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The commit SHA for the commit to read from. If unset, the file will be read
+           * from HEAD.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String commitSha;
+
+          /** Optional. The commit SHA for the commit to read from. If unset, the file will be read from HEAD.
+           */
+          public java.lang.String getCommitSha() {
+            return commitSha;
+          }
+
+          /**
+           * Optional. The commit SHA for the commit to read from. If unset, the file will be read
+           * from HEAD.
+           */
+          public ReadFile setCommitSha(java.lang.String commitSha) {
+            this.commitSha = commitSha;
+            return this;
+          }
+
+          /** Required. Full file path to read including filename, from repository root. */
+          @com.google.api.client.util.Key
+          private java.lang.String path;
+
+          /** Required. Full file path to read including filename, from repository root.
+           */
+          public java.lang.String getPath() {
+            return path;
+          }
+
+          /** Required. Full file path to read including filename, from repository root. */
+          public ReadFile setPath(java.lang.String path) {
+            this.path = path;
+            return this;
+          }
+
+          @Override
+          public ReadFile set(String parameterName, Object value) {
+            return (ReadFile) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         *
+         * Create a request for the method "repositories.setIamPolicy".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Policy> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "repositories.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "repositories.testIamPermissions".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends DataformRequest<com.google.api.services.dataform.v1beta1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "repositories.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
           }
         }
 
@@ -5880,6 +7257,204 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+           * does not have a policy set.
+           *
+           * Create a request for the method "workspaces.getIamPolicy".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+             * and does not have a policy set.
+             *
+             * Create a request for the method "workspaces.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource) {
+              super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            @com.google.api.client.util.Key("options.requestedPolicyVersion")
+            private java.lang.Integer optionsRequestedPolicyVersion;
+
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public java.lang.Integer getOptionsRequestedPolicyVersion() {
+              return optionsRequestedPolicyVersion;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+              this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
            * Installs dependency NPM packages (inside a Workspace).
            *
            * Create a request for the method "workspaces.installNpmPackages".
@@ -7662,6 +9237,304 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Reset set(String parameterName, Object value) {
               return (Reset) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "workspaces.setIamPolicy".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             *
+             * Create a request for the method "workspaces.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.SetIamPolicyRequest content) {
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "workspaces.testIamPermissions".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends DataformRequest<com.google.api.services.dataform.v1beta1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Returns permissions that a caller has on the specified resource. If the resource does not
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
+             *
+             * Create a request for the method "workspaces.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.dataform.v1beta1.model.TestIamPermissionsRequest content) {
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
             }
           }
           /**

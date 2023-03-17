@@ -37,6 +37,29 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private GitRemoteSettings gitRemoteSettings;
 
   /**
+   * Optional. Input only. The initial commit file contents. Represented as map from file path to
+   * contents. The path is the full file path to commit including filename, from repository root.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> initialCommitFileContents;
+
+  /**
+   * Optional. Input only. An optional initial commit metadata for the Repository. The Repository
+   * must not have a value for `git_remote_settings.url`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommitMetadata initialCommitMetadata;
+
+  /**
+   * Optional. Repository user labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. The repository's name.
    * The value may be {@code null}.
    */
@@ -75,6 +98,61 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setGitRemoteSettings(GitRemoteSettings gitRemoteSettings) {
     this.gitRemoteSettings = gitRemoteSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The initial commit file contents. Represented as map from file path to
+   * contents. The path is the full file path to commit including filename, from repository root.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getInitialCommitFileContents() {
+    return initialCommitFileContents;
+  }
+
+  /**
+   * Optional. Input only. The initial commit file contents. Represented as map from file path to
+   * contents. The path is the full file path to commit including filename, from repository root.
+   * @param initialCommitFileContents initialCommitFileContents or {@code null} for none
+   */
+  public Repository setInitialCommitFileContents(java.util.Map<String, java.lang.String> initialCommitFileContents) {
+    this.initialCommitFileContents = initialCommitFileContents;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. An optional initial commit metadata for the Repository. The Repository
+   * must not have a value for `git_remote_settings.url`.
+   * @return value or {@code null} for none
+   */
+  public CommitMetadata getInitialCommitMetadata() {
+    return initialCommitMetadata;
+  }
+
+  /**
+   * Optional. Input only. An optional initial commit metadata for the Repository. The Repository
+   * must not have a value for `git_remote_settings.url`.
+   * @param initialCommitMetadata initialCommitMetadata or {@code null} for none
+   */
+  public Repository setInitialCommitMetadata(CommitMetadata initialCommitMetadata) {
+    this.initialCommitMetadata = initialCommitMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. Repository user labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Repository user labels.
+   * @param labels labels or {@code null} for none
+   */
+  public Repository setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

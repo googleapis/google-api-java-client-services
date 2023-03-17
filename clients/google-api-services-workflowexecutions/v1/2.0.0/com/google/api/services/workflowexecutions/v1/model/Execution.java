@@ -73,8 +73,9 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Labels associated with this execution. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
-   * underscores and dashes. Label keys must start with a letter. International characters are
-   * allowed.
+   * underscores, and dashes. Label keys must start with a letter. International characters are
+   * allowed. By default, labels are inherited from the workflow but are overridden by any labels
+   * associated with the execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,8 +221,9 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Labels associated with this execution. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
-   * underscores and dashes. Label keys must start with a letter. International characters are
-   * allowed.
+   * underscores, and dashes. Label keys must start with a letter. International characters are
+   * allowed. By default, labels are inherited from the workflow but are overridden by any labels
+   * associated with the execution.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -231,8 +233,9 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Labels associated with this execution. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
-   * underscores and dashes. Label keys must start with a letter. International characters are
-   * allowed.
+   * underscores, and dashes. Label keys must start with a letter. International characters are
+   * allowed. By default, labels are inherited from the workflow but are overridden by any labels
+   * associated with the execution.
    * @param labels labels or {@code null} for none
    */
   public Execution setLabels(java.util.Map<String, java.lang.String> labels) {

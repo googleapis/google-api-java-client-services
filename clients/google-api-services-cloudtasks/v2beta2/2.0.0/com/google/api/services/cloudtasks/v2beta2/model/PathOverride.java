@@ -30,14 +30,14 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class PathOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URI path (e.g., a/b/c). Default is Empty string.
+   * The URI path (e.g., /users/1234). Default is an empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * The URI path (e.g., a/b/c). Default is Empty string.
+   * The URI path (e.g., /users/1234). Default is an empty string.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -45,7 +45,7 @@ public final class PathOverride extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI path (e.g., a/b/c). Default is Empty string.
+   * The URI path (e.g., /users/1234). Default is an empty string.
    * @param path path or {@code null} for none
    */
   public PathOverride setPath(java.lang.String path) {

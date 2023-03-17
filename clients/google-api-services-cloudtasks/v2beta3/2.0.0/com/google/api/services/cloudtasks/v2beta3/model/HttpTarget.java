@@ -56,16 +56,16 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP method to use for the request. When specified, it will override HttpRequest for the
-   * task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored
-   * at execution time.
+   * The HTTP method to use for the request. When specified, it overrides HttpRequest for the task.
+   * Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at
+   * execution time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String httpMethod;
 
   /**
-   * URI override. When specified, modifies the execution URI for all the tasks in the queue.
+   * URI override. When specified, overrides the execution URI for all the tasks in the queue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,9 +113,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP method to use for the request. When specified, it will override HttpRequest for the
-   * task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored
-   * at execution time.
+   * The HTTP method to use for the request. When specified, it overrides HttpRequest for the task.
+   * Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at
+   * execution time.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpMethod() {
@@ -123,9 +123,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP method to use for the request. When specified, it will override HttpRequest for the
-   * task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored
-   * at execution time.
+   * The HTTP method to use for the request. When specified, it overrides HttpRequest for the task.
+   * Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at
+   * execution time.
    * @param httpMethod httpMethod or {@code null} for none
    */
   public HttpTarget setHttpMethod(java.lang.String httpMethod) {
@@ -134,7 +134,7 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI override. When specified, modifies the execution URI for all the tasks in the queue.
+   * URI override. When specified, overrides the execution URI for all the tasks in the queue.
    * @return value or {@code null} for none
    */
   public UriOverride getUriOverride() {
@@ -142,7 +142,7 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI override. When specified, modifies the execution URI for all the tasks in the queue.
+   * URI override. When specified, overrides the execution URI for all the tasks in the queue.
    * @param uriOverride uriOverride or {@code null} for none
    */
   public HttpTarget setUriOverride(UriOverride uriOverride) {

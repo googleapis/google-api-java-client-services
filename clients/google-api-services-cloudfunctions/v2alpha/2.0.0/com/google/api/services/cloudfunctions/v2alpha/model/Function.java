@@ -60,6 +60,15 @@ public final class Function extends com.google.api.client.json.GenericJson {
   private EventTrigger eventTrigger;
 
   /**
+   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
+   * resources. It must match the pattern
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Labels associated with this Cloud Function.
    * The value may be {@code null}.
    */
@@ -169,6 +178,27 @@ public final class Function extends com.google.api.client.json.GenericJson {
    */
   public Function setEventTrigger(EventTrigger eventTrigger) {
     this.eventTrigger = eventTrigger;
+    return this;
+  }
+
+  /**
+   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
+   * resources. It must match the pattern
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
+   * resources. It must match the pattern
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public Function setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 

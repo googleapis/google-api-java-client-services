@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a single entry in a directory.
+ * Represents a single file operation to the repository.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
+public final class FileOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * Represents the delete operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String directory;
+  private DeleteFile deleteFile;
 
   /**
-   * A file in the directory.
+   * Represents the write operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String file;
+  private WriteFile writeFile;
 
   /**
-   * A child directory in the directory.
+   * Represents the delete operation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirectory() {
-    return directory;
+  public DeleteFile getDeleteFile() {
+    return deleteFile;
   }
 
   /**
-   * A child directory in the directory.
-   * @param directory directory or {@code null} for none
+   * Represents the delete operation.
+   * @param deleteFile deleteFile or {@code null} for none
    */
-  public DirectoryEntry setDirectory(java.lang.String directory) {
-    this.directory = directory;
+  public FileOperation setDeleteFile(DeleteFile deleteFile) {
+    this.deleteFile = deleteFile;
     return this;
   }
 
   /**
-   * A file in the directory.
+   * Represents the write operation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFile() {
-    return file;
+  public WriteFile getWriteFile() {
+    return writeFile;
   }
 
   /**
-   * A file in the directory.
-   * @param file file or {@code null} for none
+   * Represents the write operation.
+   * @param writeFile writeFile or {@code null} for none
    */
-  public DirectoryEntry setFile(java.lang.String file) {
-    this.file = file;
+  public FileOperation setWriteFile(WriteFile writeFile) {
+    this.writeFile = writeFile;
     return this;
   }
 
   @Override
-  public DirectoryEntry set(String fieldName, Object value) {
-    return (DirectoryEntry) super.set(fieldName, value);
+  public FileOperation set(String fieldName, Object value) {
+    return (FileOperation) super.set(fieldName, value);
   }
 
   @Override
-  public DirectoryEntry clone() {
-    return (DirectoryEntry) super.clone();
+  public FileOperation clone() {
+    return (FileOperation) super.clone();
   }
 
 }

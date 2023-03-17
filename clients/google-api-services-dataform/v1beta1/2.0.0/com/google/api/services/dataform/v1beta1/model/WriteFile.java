@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a single entry in a directory.
+ * Represents the write file operation (for files added or modified).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,64 +27,68 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
+public final class WriteFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * The file's contents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String directory;
+  private java.lang.String contents;
 
   /**
-   * A file in the directory.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String file;
-
-  /**
-   * A child directory in the directory.
+   * The file's contents.
+   * @see #decodeContents()
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirectory() {
-    return directory;
+  public java.lang.String getContents() {
+    return contents;
   }
 
   /**
-   * A child directory in the directory.
-   * @param directory directory or {@code null} for none
+   * The file's contents.
+   * @see #getContents()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
    */
-  public DirectoryEntry setDirectory(java.lang.String directory) {
-    this.directory = directory;
+  public byte[] decodeContents() {
+    return com.google.api.client.util.Base64.decodeBase64(contents);
+  }
+
+  /**
+   * The file's contents.
+   * @see #encodeContents()
+   * @param contents contents or {@code null} for none
+   */
+  public WriteFile setContents(java.lang.String contents) {
+    this.contents = contents;
     return this;
   }
 
   /**
-   * A file in the directory.
-   * @return value or {@code null} for none
+   * The file's contents.
+   * @see #setContents()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
    */
-  public java.lang.String getFile() {
-    return file;
-  }
-
-  /**
-   * A file in the directory.
-   * @param file file or {@code null} for none
-   */
-  public DirectoryEntry setFile(java.lang.String file) {
-    this.file = file;
+  public WriteFile encodeContents(byte[] contents) {
+    this.contents = com.google.api.client.util.Base64.encodeBase64URLSafeString(contents);
     return this;
   }
 
   @Override
-  public DirectoryEntry set(String fieldName, Object value) {
-    return (DirectoryEntry) super.set(fieldName, value);
+  public WriteFile set(String fieldName, Object value) {
+    return (WriteFile) super.set(fieldName, value);
   }
 
   @Override
-  public DirectoryEntry clone() {
-    return (DirectoryEntry) super.clone();
+  public WriteFile clone() {
+    return (WriteFile) super.clone();
   }
 
 }

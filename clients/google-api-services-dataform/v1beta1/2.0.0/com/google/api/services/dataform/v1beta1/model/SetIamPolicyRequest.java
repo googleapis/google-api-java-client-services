@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a single entry in a directory.
+ * Request message for `SetIamPolicy` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,64 +27,46 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
+public final class SetIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
+   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
+   * (such as Projects) might reject them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String directory;
+  private Policy policy;
 
   /**
-   * A file in the directory.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String file;
-
-  /**
-   * A child directory in the directory.
+   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
+   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
+   * (such as Projects) might reject them.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirectory() {
-    return directory;
+  public Policy getPolicy() {
+    return policy;
   }
 
   /**
-   * A child directory in the directory.
-   * @param directory directory or {@code null} for none
+   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
+   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
+   * (such as Projects) might reject them.
+   * @param policy policy or {@code null} for none
    */
-  public DirectoryEntry setDirectory(java.lang.String directory) {
-    this.directory = directory;
-    return this;
-  }
-
-  /**
-   * A file in the directory.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFile() {
-    return file;
-  }
-
-  /**
-   * A file in the directory.
-   * @param file file or {@code null} for none
-   */
-  public DirectoryEntry setFile(java.lang.String file) {
-    this.file = file;
+  public SetIamPolicyRequest setPolicy(Policy policy) {
+    this.policy = policy;
     return this;
   }
 
   @Override
-  public DirectoryEntry set(String fieldName, Object value) {
-    return (DirectoryEntry) super.set(fieldName, value);
+  public SetIamPolicyRequest set(String fieldName, Object value) {
+    return (SetIamPolicyRequest) super.set(fieldName, value);
   }
 
   @Override
-  public DirectoryEntry clone() {
-    return (DirectoryEntry) super.clone();
+  public SetIamPolicyRequest clone() {
+    return (SetIamPolicyRequest) super.clone();
   }
 
 }

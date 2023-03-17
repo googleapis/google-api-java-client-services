@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a single entry in a directory.
+ * Represents a Dataform Git commit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
+public final class CommitMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * Required. The commit's author.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String directory;
+  private CommitAuthor author;
 
   /**
-   * A file in the directory.
+   * Optional. The commit's message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String file;
+  private java.lang.String commitMessage;
 
   /**
-   * A child directory in the directory.
+   * Required. The commit's author.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirectory() {
-    return directory;
+  public CommitAuthor getAuthor() {
+    return author;
   }
 
   /**
-   * A child directory in the directory.
-   * @param directory directory or {@code null} for none
+   * Required. The commit's author.
+   * @param author author or {@code null} for none
    */
-  public DirectoryEntry setDirectory(java.lang.String directory) {
-    this.directory = directory;
+  public CommitMetadata setAuthor(CommitAuthor author) {
+    this.author = author;
     return this;
   }
 
   /**
-   * A file in the directory.
+   * Optional. The commit's message.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFile() {
-    return file;
+  public java.lang.String getCommitMessage() {
+    return commitMessage;
   }
 
   /**
-   * A file in the directory.
-   * @param file file or {@code null} for none
+   * Optional. The commit's message.
+   * @param commitMessage commitMessage or {@code null} for none
    */
-  public DirectoryEntry setFile(java.lang.String file) {
-    this.file = file;
+  public CommitMetadata setCommitMessage(java.lang.String commitMessage) {
+    this.commitMessage = commitMessage;
     return this;
   }
 
   @Override
-  public DirectoryEntry set(String fieldName, Object value) {
-    return (DirectoryEntry) super.set(fieldName, value);
+  public CommitMetadata set(String fieldName, Object value) {
+    return (CommitMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public DirectoryEntry clone() {
-    return (DirectoryEntry) super.clone();
+  public CommitMetadata clone() {
+    return (CommitMetadata) super.clone();
   }
 
 }

@@ -4521,6 +4521,32 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
+       * This is used by the Working Location developer preview and only the default value is
+       * allowed for non-opted-in users.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> eventTypes;
+
+      /** Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is
+     used by the Working Location developer preview and only the default value is allowed for non-opted-
+     in users.
+       */
+      public java.util.List<java.lang.String> getEventTypes() {
+        return eventTypes;
+      }
+
+      /**
+       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
+       * This is used by the Working Location developer preview and only the default value is
+       * allowed for non-opted-in users.
+       */
+      public List setEventTypes(java.util.List<java.lang.String> eventTypes) {
+        this.eventTypes = eventTypes;
+        return this;
+      }
+
+      /**
        * Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use
        * this if you want to search for an event by its iCalendar ID.
        */
@@ -5993,6 +6019,32 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        */
       public Watch setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
+        return this;
+      }
+
+      /**
+       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
+       * This is used by the Working Location developer preview and only the default value is
+       * allowed for non-opted-in users.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> eventTypes;
+
+      /** Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is
+     used by the Working Location developer preview and only the default value is allowed for non-opted-
+     in users.
+       */
+      public java.util.List<java.lang.String> getEventTypes() {
+        return eventTypes;
+      }
+
+      /**
+       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
+       * This is used by the Working Location developer preview and only the default value is
+       * allowed for non-opted-in users.
+       */
+      public Watch setEventTypes(java.util.List<java.lang.String> eventTypes) {
+        this.eventTypes = eventTypes;
         return this;
       }
 

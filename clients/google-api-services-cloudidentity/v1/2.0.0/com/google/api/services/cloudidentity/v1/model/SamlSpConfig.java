@@ -31,7 +31,7 @@ public final class SamlSpConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SAML **Assertion Consumer Service (ACS) URL** to be used for the IDP-initiated
-   * login. Currently assumed to accept response messages via the `HTTP-POST` binding.
+   * login. Assumed to accept response messages via the `HTTP-POST` binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class SamlSpConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SAML **Assertion Consumer Service (ACS) URL** to be used for the IDP-initiated
-   * login. Currently assumed to accept response messages via the `HTTP-POST` binding.
+   * login. Assumed to accept response messages via the `HTTP-POST` binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssertionConsumerServiceUri() {
@@ -55,7 +55,7 @@ public final class SamlSpConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SAML **Assertion Consumer Service (ACS) URL** to be used for the IDP-initiated
-   * login. Currently assumed to accept response messages via the `HTTP-POST` binding.
+   * login. Assumed to accept response messages via the `HTTP-POST` binding.
    * @param assertionConsumerServiceUri assertionConsumerServiceUri or {@code null} for none
    */
   public SamlSpConfig setAssertionConsumerServiceUri(java.lang.String assertionConsumerServiceUri) {

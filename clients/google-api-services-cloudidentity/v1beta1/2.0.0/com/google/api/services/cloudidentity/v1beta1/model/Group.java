@@ -31,6 +31,19 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Additional group keys associated with the Group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EntityKey> additionalGroupKeys;
+
+  static {
+    // hack to force ProGuard to consider EntityKey used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityKey.class);
+  }
+
+  /**
    * Output only. The time when the `Group` was created.
    * The value may be {@code null}.
    */
@@ -113,6 +126,23 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Additional group keys associated with the Group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EntityKey> getAdditionalGroupKeys() {
+    return additionalGroupKeys;
+  }
+
+  /**
+   * Output only. Additional group keys associated with the Group.
+   * @param additionalGroupKeys additionalGroupKeys or {@code null} for none
+   */
+  public Group setAdditionalGroupKeys(java.util.List<EntityKey> additionalGroupKeys) {
+    this.additionalGroupKeys = additionalGroupKeys;
+    return this;
+  }
 
   /**
    * Output only. The time when the `Group` was created.

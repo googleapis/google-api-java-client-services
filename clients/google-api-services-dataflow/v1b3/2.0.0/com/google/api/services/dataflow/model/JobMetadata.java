@@ -104,6 +104,13 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
   private java.util.List<SpannerIODetails> spannerDetails;
 
   /**
+   * List of display properties to help UI filter jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> userDisplayProperties;
+
+  /**
    * Identification of a Cloud Bigtable source used in the Dataflow job.
    * @return value or {@code null} for none
    */
@@ -219,6 +226,23 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
    */
   public JobMetadata setSpannerDetails(java.util.List<SpannerIODetails> spannerDetails) {
     this.spannerDetails = spannerDetails;
+    return this;
+  }
+
+  /**
+   * List of display properties to help UI filter jobs.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getUserDisplayProperties() {
+    return userDisplayProperties;
+  }
+
+  /**
+   * List of display properties to help UI filter jobs.
+   * @param userDisplayProperties userDisplayProperties or {@code null} for none
+   */
+  public JobMetadata setUserDisplayProperties(java.util.Map<String, java.lang.String> userDisplayProperties) {
+    this.userDisplayProperties = userDisplayProperties;
     return this;
   }
 

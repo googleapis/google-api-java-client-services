@@ -37,6 +37,15 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> customMetadata;
 
   /**
+   * Optional. Specifies a group name for this parameter to be rendered under. Group header text
+   * will be rendered exactly as specified in this field. Only considered when parent_name is NOT
+   * provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String groupName;
+
+  /**
    * Required. The help text to display for the parameter.
    * The value may be {@code null}.
    */
@@ -72,6 +81,25 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String paramType;
 
   /**
+   * Optional. Specifies the name of the parent parameter. Used in conjunction with
+   * 'parent_trigger_values' to make this parameter conditional (will only be rendered
+   * conditionally). Should be mappable to a ParameterMetadata.name field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentName;
+
+  /**
+   * Optional. The value(s) of the 'parent_name' parameter which will trigger this parameter to be
+   * shown. If left empty, ANY non-empty value in parent_name will trigger this parameter to be
+   * shown. Only considered when this parameter is conditional (when 'parent_name' has been
+   * provided).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> parentTriggerValues;
+
+  /**
    * Optional. Regexes that the parameter must match.
    * The value may be {@code null}.
    */
@@ -92,6 +120,27 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   public ParameterMetadata setCustomMetadata(java.util.Map<String, java.lang.String> customMetadata) {
     this.customMetadata = customMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies a group name for this parameter to be rendered under. Group header text
+   * will be rendered exactly as specified in this field. Only considered when parent_name is NOT
+   * provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGroupName() {
+    return groupName;
+  }
+
+  /**
+   * Optional. Specifies a group name for this parameter to be rendered under. Group header text
+   * will be rendered exactly as specified in this field. Only considered when parent_name is NOT
+   * provided.
+   * @param groupName groupName or {@code null} for none
+   */
+  public ParameterMetadata setGroupName(java.lang.String groupName) {
+    this.groupName = groupName;
     return this;
   }
 
@@ -177,6 +226,50 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   public ParameterMetadata setParamType(java.lang.String paramType) {
     this.paramType = paramType;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the name of the parent parameter. Used in conjunction with
+   * 'parent_trigger_values' to make this parameter conditional (will only be rendered
+   * conditionally). Should be mappable to a ParameterMetadata.name field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentName() {
+    return parentName;
+  }
+
+  /**
+   * Optional. Specifies the name of the parent parameter. Used in conjunction with
+   * 'parent_trigger_values' to make this parameter conditional (will only be rendered
+   * conditionally). Should be mappable to a ParameterMetadata.name field.
+   * @param parentName parentName or {@code null} for none
+   */
+  public ParameterMetadata setParentName(java.lang.String parentName) {
+    this.parentName = parentName;
+    return this;
+  }
+
+  /**
+   * Optional. The value(s) of the 'parent_name' parameter which will trigger this parameter to be
+   * shown. If left empty, ANY non-empty value in parent_name will trigger this parameter to be
+   * shown. Only considered when this parameter is conditional (when 'parent_name' has been
+   * provided).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getParentTriggerValues() {
+    return parentTriggerValues;
+  }
+
+  /**
+   * Optional. The value(s) of the 'parent_name' parameter which will trigger this parameter to be
+   * shown. If left empty, ANY non-empty value in parent_name will trigger this parameter to be
+   * shown. Only considered when this parameter is conditional (when 'parent_name' has been
+   * provided).
+   * @param parentTriggerValues parentTriggerValues or {@code null} for none
+   */
+  public ParameterMetadata setParentTriggerValues(java.util.List<java.lang.String> parentTriggerValues) {
+    this.parentTriggerValues = parentTriggerValues;
     return this;
   }
 

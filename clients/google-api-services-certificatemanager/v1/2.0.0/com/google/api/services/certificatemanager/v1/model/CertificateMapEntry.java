@@ -31,7 +31,7 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class CertificateMapEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of Certificates defines for the given `hostname`. There can be defined up to fifteen
+   * A set of Certificates defines for the given `hostname`. There can be defined up to four
    * certificates in each Certificate Map Entry. Each certificate must match pattern
    * `projects/locations/certificates`.
    * The value may be {@code null}.
@@ -99,7 +99,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   private String updateTime;
 
   /**
-   * A set of Certificates defines for the given `hostname`. There can be defined up to fifteen
+   * A set of Certificates defines for the given `hostname`. There can be defined up to four
    * certificates in each Certificate Map Entry. Each certificate must match pattern
    * `projects/locations/certificates`.
    * @return value or {@code null} for none
@@ -109,7 +109,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * A set of Certificates defines for the given `hostname`. There can be defined up to fifteen
+   * A set of Certificates defines for the given `hostname`. There can be defined up to four
    * certificates in each Certificate Map Entry. Each certificate must match pattern
    * `projects/locations/certificates`.
    * @param certificates certificates or {@code null} for none

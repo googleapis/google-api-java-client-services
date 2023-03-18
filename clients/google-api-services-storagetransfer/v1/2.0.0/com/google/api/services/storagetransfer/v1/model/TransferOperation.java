@@ -57,6 +57,13 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Cloud Logging configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfig loggingConfig;
+
+  /**
    * A globally unique ID assigned by the system.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
    */
   public TransferOperation setErrorBreakdowns(java.util.List<ErrorSummary> errorBreakdowns) {
     this.errorBreakdowns = errorBreakdowns;
+    return this;
+  }
+
+  /**
+   * Cloud Logging configuration.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Cloud Logging configuration.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public TransferOperation setLoggingConfig(LoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 

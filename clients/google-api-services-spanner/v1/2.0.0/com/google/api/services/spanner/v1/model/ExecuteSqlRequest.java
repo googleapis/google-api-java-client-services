@@ -30,6 +30,15 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * If this is for a partitioned query and this field is set to `true`, the request will be
+   * executed via Spanner independent compute resources. If the field is set to `true` but the
+   * request does not set `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dataBoostEnabled;
+
+  /**
    * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
    * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
    * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
@@ -123,6 +132,27 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private TransactionSelector transaction;
+
+  /**
+   * If this is for a partitioned query and this field is set to `true`, the request will be
+   * executed via Spanner independent compute resources. If the field is set to `true` but the
+   * request does not set `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDataBoostEnabled() {
+    return dataBoostEnabled;
+  }
+
+  /**
+   * If this is for a partitioned query and this field is set to `true`, the request will be
+   * executed via Spanner independent compute resources. If the field is set to `true` but the
+   * request does not set `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+   * @param dataBoostEnabled dataBoostEnabled or {@code null} for none
+   */
+  public ExecuteSqlRequest setDataBoostEnabled(java.lang.Boolean dataBoostEnabled) {
+    this.dataBoostEnabled = dataBoostEnabled;
+    return this;
+  }
 
   /**
    * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For

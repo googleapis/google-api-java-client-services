@@ -88,6 +88,13 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
+   * Bool indicating whether mixer client should be disabled. Default: False
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mixerDisabled;
+
+  /**
    * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the
    * [cron format](https://en.wikipedia.org/wiki/Cron).
    * The value may be {@code null}.
@@ -242,6 +249,23 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   public RuntimeSoftwareConfig setKernels(java.util.List<ContainerImage> kernels) {
     this.kernels = kernels;
+    return this;
+  }
+
+  /**
+   * Bool indicating whether mixer client should be disabled. Default: False
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMixerDisabled() {
+    return mixerDisabled;
+  }
+
+  /**
+   * Bool indicating whether mixer client should be disabled. Default: False
+   * @param mixerDisabled mixerDisabled or {@code null} for none
+   */
+  public RuntimeSoftwareConfig setMixerDisabled(java.lang.Boolean mixerDisabled) {
+    this.mixerDisabled = mixerDisabled;
     return this;
   }
 

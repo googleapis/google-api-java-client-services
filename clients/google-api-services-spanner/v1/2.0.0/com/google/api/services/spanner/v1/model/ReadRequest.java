@@ -37,6 +37,15 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> columns;
 
   /**
+   * If this is for a partitioned read and this field is set to `true`, the request will be executed
+   * via Spanner independent compute resources. If the field is set to `true` but the request does
+   * not set `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dataBoostEnabled;
+
+  /**
    * If non-empty, the name of an index on table. This index is used instead of the table primary
    * key when interpreting key_set and sorting result rows. See key_set for further information.
    * The value may be {@code null}.
@@ -120,6 +129,27 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    */
   public ReadRequest setColumns(java.util.List<java.lang.String> columns) {
     this.columns = columns;
+    return this;
+  }
+
+  /**
+   * If this is for a partitioned read and this field is set to `true`, the request will be executed
+   * via Spanner independent compute resources. If the field is set to `true` but the request does
+   * not set `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDataBoostEnabled() {
+    return dataBoostEnabled;
+  }
+
+  /**
+   * If this is for a partitioned read and this field is set to `true`, the request will be executed
+   * via Spanner independent compute resources. If the field is set to `true` but the request does
+   * not set `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+   * @param dataBoostEnabled dataBoostEnabled or {@code null} for none
+   */
+  public ReadRequest setDataBoostEnabled(java.lang.Boolean dataBoostEnabled) {
+    this.dataBoostEnabled = dataBoostEnabled;
     return this;
   }
 

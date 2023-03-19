@@ -32,6 +32,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   /**
    * The properties to make distinct. The query results will contain the first result for each
    * distinct combination of values for the given properties (if empty, all results are returned).
+   * Requires: * If `order` is specified, the set of distinct on properties must appear before the
+   * non-distinct on properties in `order`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,6 +129,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   /**
    * The properties to make distinct. The query results will contain the first result for each
    * distinct combination of values for the given properties (if empty, all results are returned).
+   * Requires: * If `order` is specified, the set of distinct on properties must appear before the
+   * non-distinct on properties in `order`.
    * @return value or {@code null} for none
    */
   public java.util.List<PropertyReference> getDistinctOn() {
@@ -136,6 +140,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   /**
    * The properties to make distinct. The query results will contain the first result for each
    * distinct combination of values for the given properties (if empty, all results are returned).
+   * Requires: * If `order` is specified, the set of distinct on properties must appear before the
+   * non-distinct on properties in `order`.
    * @param distinctOn distinctOn or {@code null} for none
    */
   public Query setDistinctOn(java.util.List<PropertyReference> distinctOn) {

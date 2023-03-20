@@ -87,6 +87,13 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   private java.lang.String name;
 
   /**
+   * Shows if dry run is supported for this constraint or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsDryRun;
+
+  /**
    * Defines this constraint as being a BooleanConstraint.
    * @return value or {@code null} for none
    */
@@ -195,6 +202,23 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
    */
   public GoogleCloudOrgpolicyV2Constraint setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Shows if dry run is supported for this constraint or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsDryRun() {
+    return supportsDryRun;
+  }
+
+  /**
+   * Shows if dry run is supported for this constraint or not.
+   * @param supportsDryRun supportsDryRun or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2Constraint setSupportsDryRun(java.lang.Boolean supportsDryRun) {
+    this.supportsDryRun = supportsDryRun;
     return this;
   }
 

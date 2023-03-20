@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.policysimulator.v1alpha;
+package com.google.api.services.policysimulator.v1beta;
 
 /**
- * Service definition for PolicySimulator (v1alpha).
+ * Service definition for PolicySimulator (v1beta).
  *
  * <p>
  *  Policy Simulator is a collection of endpoints for creating, running, and viewing a Replay. A `Replay` is a type of simulation that lets you see how your members' access to resources might change if you changed your IAM policy. During a `Replay`, Policy Simulator re-evaluates, or replays, past access attempts under both the current policy and your proposed policy, and compares those results to determine how your members' access might change under the proposed policy.
@@ -231,9 +231,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+/operations/.*$");
@@ -253,7 +253,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -414,9 +414,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/replays/[^/]+/operations/.*$");
@@ -436,7 +436,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -554,9 +554,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/replays/[^/]+/operations$");
@@ -576,7 +576,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected List(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -768,9 +768,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
       return result;
     }
 
-    public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+    public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-      private static final String REST_PATH = "v1alpha/{+name}";
+      private static final String REST_PATH = "v1beta/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^operations/.*$");
@@ -790,7 +790,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
        * @since 1.13
        */
       protected Get(java.lang.String name) {
-        super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+        super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -908,9 +908,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
       return result;
     }
 
-    public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+    public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse> {
 
-      private static final String REST_PATH = "v1alpha/{+name}";
+      private static final String REST_PATH = "v1beta/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^operations$");
@@ -930,7 +930,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
        * @since 1.13
        */
       protected List(java.lang.String name) {
-        super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+        super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1179,9 +1179,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+/operations/.*$");
@@ -1201,7 +1201,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1362,9 +1362,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/replays/[^/]+/operations/.*$");
@@ -1384,7 +1384,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1502,9 +1502,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/replays/[^/]+/operations$");
@@ -1524,7 +1524,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected List(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1776,9 +1776,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+/operations/.*$");
@@ -1798,7 +1798,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1959,9 +1959,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+          public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/replays/[^/]+/operations/.*$");
@@ -1981,7 +1981,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2099,9 +2099,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             return result;
           }
 
-          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse> {
+          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse> {
 
-            private static final String REST_PATH = "v1alpha/{+name}";
+            private static final String REST_PATH = "v1beta/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/replays/[^/]+/operations$");
@@ -2121,7 +2121,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * @since 1.13
              */
             protected List(java.lang.String name) {
-              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningListOperationsResponse.class);
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningListOperationsResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

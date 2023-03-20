@@ -109,6 +109,19 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateM
   private GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec;
 
   /**
+   * User view to select. The output data will correspond to the selected view. **Supported
+   * values:** * `OS_PUBLIC` To select data from all publicly released Android versions. This is the
+   * default. Supports all the above dimensions. * `APP_TESTERS` To select data from users who have
+   * opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select data from beta
+   * android versions only, excluding data from released android versions. Only the following
+   * dimensions are supported: * `versionCode` (int64): version of the app that was running on the
+   * user's device. * `osBuild` (string): OS build of the user's device, e.g., "T1B2.220916.004".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userCohort;
+
+  /**
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
    * of Android that was running on the user's device. * `versionCode` (int64): version of the app
    * that was running on the user's device. * `deviceModel` (string): unique identifier of the
@@ -279,6 +292,35 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateM
    */
   public GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateMetricSetRequest setTimelineSpec(GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec) {
     this.timelineSpec = timelineSpec;
+    return this;
+  }
+
+  /**
+   * User view to select. The output data will correspond to the selected view. **Supported
+   * values:** * `OS_PUBLIC` To select data from all publicly released Android versions. This is the
+   * default. Supports all the above dimensions. * `APP_TESTERS` To select data from users who have
+   * opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select data from beta
+   * android versions only, excluding data from released android versions. Only the following
+   * dimensions are supported: * `versionCode` (int64): version of the app that was running on the
+   * user's device. * `osBuild` (string): OS build of the user's device, e.g., "T1B2.220916.004".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserCohort() {
+    return userCohort;
+  }
+
+  /**
+   * User view to select. The output data will correspond to the selected view. **Supported
+   * values:** * `OS_PUBLIC` To select data from all publicly released Android versions. This is the
+   * default. Supports all the above dimensions. * `APP_TESTERS` To select data from users who have
+   * opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select data from beta
+   * android versions only, excluding data from released android versions. Only the following
+   * dimensions are supported: * `versionCode` (int64): version of the app that was running on the
+   * user's device. * `osBuild` (string): OS build of the user's device, e.g., "T1B2.220916.004".
+   * @param userCohort userCohort or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1QueryExcessiveWakeupRateMetricSetRequest setUserCohort(java.lang.String userCohort) {
+    this.userCohort = userCohort;
     return this;
   }
 

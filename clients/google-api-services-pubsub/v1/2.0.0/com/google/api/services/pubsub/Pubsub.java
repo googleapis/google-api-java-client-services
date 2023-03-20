@@ -736,22 +736,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The revision ID to roll back to. It must be a revision of the same schema.
-         * Example: c7cfa2a8
+         * Optional. This field is deprecated and should not be used for specifying the revision ID.
+         * The revision ID should be specified via the `name` parameter.
          */
         @com.google.api.client.util.Key
         private java.lang.String revisionId;
 
-        /** Required. The revision ID to roll back to. It must be a revision of the same schema. Example:
-       c7cfa2a8
+        /** Optional. This field is deprecated and should not be used for specifying the revision ID. The
+       revision ID should be specified via the `name` parameter.
          */
         public java.lang.String getRevisionId() {
           return revisionId;
         }
 
         /**
-         * Required. The revision ID to roll back to. It must be a revision of the same schema.
-         * Example: c7cfa2a8
+         * Optional. This field is deprecated and should not be used for specifying the revision ID.
+         * The revision ID should be specified via the `name` parameter.
          */
         public DeleteRevision setRevisionId(java.lang.String revisionId) {
           this.revisionId = revisionId;

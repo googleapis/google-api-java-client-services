@@ -38,6 +38,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.Double benchmarkIndex;
 
   /**
+   * The version of libraries with which these results were generated. Ex: axe-core.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> credits;
+
+  /**
    * The user agent string of the version of Chrome used.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setBenchmarkIndex(java.lang.Double benchmarkIndex) {
     this.benchmarkIndex = benchmarkIndex;
+    return this;
+  }
+
+  /**
+   * The version of libraries with which these results were generated. Ex: axe-core.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getCredits() {
+    return credits;
+  }
+
+  /**
+   * The version of libraries with which these results were generated. Ex: axe-core.
+   * @param credits credits or {@code null} for none
+   */
+  public Environment setCredits(java.util.Map<String, java.lang.String> credits) {
+    this.credits = credits;
     return this;
   }
 

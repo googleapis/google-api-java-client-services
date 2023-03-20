@@ -30,7 +30,11 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class RunAggregationQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which the aggregate value is valid for.
+   * The time at which the aggregate result was computed. This is always monotonically increasing;
+   * in this case, the previous AggregationResult in the result stream are guaranteed not to have
+   * changed between their `read_time` and this one. If the query returns no results, a response
+   * with `read_time` and no `result` will be sent, and this represents the time at which the query
+   * was run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +56,11 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
   private java.lang.String transaction;
 
   /**
-   * The time at which the aggregate value is valid for.
+   * The time at which the aggregate result was computed. This is always monotonically increasing;
+   * in this case, the previous AggregationResult in the result stream are guaranteed not to have
+   * changed between their `read_time` and this one. If the query returns no results, a response
+   * with `read_time` and no `result` will be sent, and this represents the time at which the query
+   * was run.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -60,7 +68,11 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
   }
 
   /**
-   * The time at which the aggregate value is valid for.
+   * The time at which the aggregate result was computed. This is always monotonically increasing;
+   * in this case, the previous AggregationResult in the result stream are guaranteed not to have
+   * changed between their `read_time` and this one. If the query returns no results, a response
+   * with `read_time` and no `result` will be sent, and this represents the time at which the query
+   * was run.
    * @param readTime readTime or {@code null} for none
    */
   public RunAggregationQueryResponse setReadTime(String readTime) {

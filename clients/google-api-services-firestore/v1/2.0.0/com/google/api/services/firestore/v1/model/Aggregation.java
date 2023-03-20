@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * Defines a aggregation that produces a single result.
+ * Defines an aggregation that produces a single result.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -33,10 +33,10 @@ public final class Aggregation extends com.google.api.client.json.GenericJson {
    * Optional. Optional name of the field to store the result of the aggregation into. If not
    * provided, Firestore will pick a default name following the format `field_`. For example: ```
    * AGGREGATE COUNT_UP_TO(1) AS count_up_to_1, COUNT_UP_TO(2), COUNT_UP_TO(3) AS count_up_to_3,
-   * COUNT_UP_TO(4) OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
-   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT_UP_TO(4) AS field_2 OVER (
-   * ... ); ``` Requires: * Must be unique across all aggregation aliases. * Conform to document
-   * field name limitations.
+   * COUNT(*) OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
+   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT(*) AS field_2 OVER ( ... );
+   * ``` Requires: * Must be unique across all aggregation aliases. * Conform to document field name
+   * limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,10 +53,10 @@ public final class Aggregation extends com.google.api.client.json.GenericJson {
    * Optional. Optional name of the field to store the result of the aggregation into. If not
    * provided, Firestore will pick a default name following the format `field_`. For example: ```
    * AGGREGATE COUNT_UP_TO(1) AS count_up_to_1, COUNT_UP_TO(2), COUNT_UP_TO(3) AS count_up_to_3,
-   * COUNT_UP_TO(4) OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
-   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT_UP_TO(4) AS field_2 OVER (
-   * ... ); ``` Requires: * Must be unique across all aggregation aliases. * Conform to document
-   * field name limitations.
+   * COUNT(*) OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
+   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT(*) AS field_2 OVER ( ... );
+   * ``` Requires: * Must be unique across all aggregation aliases. * Conform to document field name
+   * limitations.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlias() {
@@ -67,10 +67,10 @@ public final class Aggregation extends com.google.api.client.json.GenericJson {
    * Optional. Optional name of the field to store the result of the aggregation into. If not
    * provided, Firestore will pick a default name following the format `field_`. For example: ```
    * AGGREGATE COUNT_UP_TO(1) AS count_up_to_1, COUNT_UP_TO(2), COUNT_UP_TO(3) AS count_up_to_3,
-   * COUNT_UP_TO(4) OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
-   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT_UP_TO(4) AS field_2 OVER (
-   * ... ); ``` Requires: * Must be unique across all aggregation aliases. * Conform to document
-   * field name limitations.
+   * COUNT(*) OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
+   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT(*) AS field_2 OVER ( ... );
+   * ``` Requires: * Must be unique across all aggregation aliases. * Conform to document field name
+   * limitations.
    * @param alias alias or {@code null} for none
    */
   public Aggregation setAlias(java.lang.String alias) {

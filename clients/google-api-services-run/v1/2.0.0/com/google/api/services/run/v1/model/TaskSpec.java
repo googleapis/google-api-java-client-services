@@ -44,7 +44,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Number of retries allowed per task, before marking this job failed.
+   * Optional. Number of retries allowed per task, before marking this job failed. Defaults to 3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Duration in seconds the task may be active before the system will actively try to
    * mark it failed and kill associated containers. This applies per attempt of a task, meaning each
-   * retry can run for the full timeout.
+   * retry can run for the full timeout. Defaults to 600 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -97,7 +97,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Number of retries allowed per task, before marking this job failed.
+   * Optional. Number of retries allowed per task, before marking this job failed. Defaults to 3.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRetries() {
@@ -105,7 +105,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Number of retries allowed per task, before marking this job failed.
+   * Optional. Number of retries allowed per task, before marking this job failed. Defaults to 3.
    * @param maxRetries maxRetries or {@code null} for none
    */
   public TaskSpec setMaxRetries(java.lang.Integer maxRetries) {
@@ -139,7 +139,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Duration in seconds the task may be active before the system will actively try to
    * mark it failed and kill associated containers. This applies per attempt of a task, meaning each
-   * retry can run for the full timeout.
+   * retry can run for the full timeout. Defaults to 600 seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTimeoutSeconds() {
@@ -149,7 +149,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Duration in seconds the task may be active before the system will actively try to
    * mark it failed and kill associated containers. This applies per attempt of a task, meaning each
-   * retry can run for the full timeout.
+   * retry can run for the full timeout. Defaults to 600 seconds.
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public TaskSpec setTimeoutSeconds(java.lang.Long timeoutSeconds) {

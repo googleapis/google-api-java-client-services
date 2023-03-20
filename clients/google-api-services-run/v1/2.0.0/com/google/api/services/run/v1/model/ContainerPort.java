@@ -30,7 +30,9 @@ package com.google.api.services.run.v1.model;
 public final class ContainerPort extends com.google.api.client.json.GenericJson {
 
   /**
-   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+   * Port number the container listens on. If present, this must be a valid port number, 0 < x <
+   * 65536. If not present, it will default to port 8080. For more information, see
+   * https://cloud.google.com/run/docs/container-contract#port
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +53,9 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   private java.lang.String protocol;
 
   /**
-   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+   * Port number the container listens on. If present, this must be a valid port number, 0 < x <
+   * 65536. If not present, it will default to port 8080. For more information, see
+   * https://cloud.google.com/run/docs/container-contract#port
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerPort() {
@@ -59,7 +63,9 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+   * Port number the container listens on. If present, this must be a valid port number, 0 < x <
+   * 65536. If not present, it will default to port 8080. For more information, see
+   * https://cloud.google.com/run/docs/container-contract#port
    * @param containerPort containerPort or {@code null} for none
    */
   public ContainerPort setContainerPort(java.lang.Integer containerPort) {

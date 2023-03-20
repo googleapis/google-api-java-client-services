@@ -63,7 +63,7 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   /**
    * Specifies the desired number of tasks the execution should run. Setting to 1 means that
    * parallelism is limited to 1 and the success of that task signals the success of the execution.
-   * More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * Defaults to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   /**
    * Specifies the desired number of tasks the execution should run. Setting to 1 means that
    * parallelism is limited to 1 and the success of that task signals the success of the execution.
-   * More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * Defaults to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTaskCount() {
@@ -160,7 +160,7 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   /**
    * Specifies the desired number of tasks the execution should run. Setting to 1 means that
    * parallelism is limited to 1 and the success of that task signals the success of the execution.
-   * More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * Defaults to 1.
    * @param taskCount taskCount or {@code null} for none
    */
   public GoogleCloudRunV2ExecutionTemplate setTaskCount(java.lang.Integer taskCount) {

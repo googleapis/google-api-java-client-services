@@ -211,6 +211,13 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private java.lang.Integer retried;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Email address of the IAM service account associated with the Task of a Job. The service account
    * represents the identity of the running task, and determines what permissions the task has. If
    * not provided, the task will use the project's default service account.
@@ -667,6 +674,23 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setRetried(java.lang.Integer retried) {
     this.retried = retried;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudRunV2Task setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

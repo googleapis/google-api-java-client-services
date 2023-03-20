@@ -58,7 +58,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private java.lang.String executionEnvironment;
 
   /**
-   * Number of retries allowed per Task, before marking this Task failed.
+   * Number of retries allowed per Task, before marking this Task failed. Defaults to 3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   /**
    * Max allowed time duration the Task may be active before the system will actively try to mark it
    * failed and kill associated containers. This applies per attempt of a task, meaning each retry
-   * can run for the full timeout.
+   * can run for the full timeout. Defaults to 600 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * Number of retries allowed per Task, before marking this Task failed.
+   * Number of retries allowed per Task, before marking this Task failed. Defaults to 3.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRetries() {
@@ -159,7 +159,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * Number of retries allowed per Task, before marking this Task failed.
+   * Number of retries allowed per Task, before marking this Task failed. Defaults to 3.
    * @param maxRetries maxRetries or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate setMaxRetries(java.lang.Integer maxRetries) {
@@ -191,7 +191,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   /**
    * Max allowed time duration the Task may be active before the system will actively try to mark it
    * failed and kill associated containers. This applies per attempt of a task, meaning each retry
-   * can run for the full timeout.
+   * can run for the full timeout. Defaults to 600 seconds.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -201,7 +201,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   /**
    * Max allowed time duration the Task may be active before the system will actively try to mark it
    * failed and kill associated containers. This applies per attempt of a task, meaning each retry
-   * can run for the full timeout.
+   * can run for the full timeout. Defaults to 600 seconds.
    * @param timeout timeout or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate setTimeout(String timeout) {

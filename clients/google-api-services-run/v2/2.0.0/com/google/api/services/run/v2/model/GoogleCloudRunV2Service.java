@@ -181,7 +181,10 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
-   * `GA`. If no value is specified, GA is assumed.
+   * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
+   * to allow use of preview features in that stage. On read (or output), describes whether the
+   * resource uses preview features. For example, if ALPHA is provided as input, but only BETA and
+   * GA-level features are used, this field will be BETA on output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,6 +228,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
 
   /**
    * Required. The template used to create revisions for this Service.
@@ -614,7 +624,10 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
-   * `GA`. If no value is specified, GA is assumed.
+   * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
+   * to allow use of preview features in that stage. On read (or output), describes whether the
+   * resource uses preview features. For example, if ALPHA is provided as input, but only BETA and
+   * GA-level features are used, this field will be BETA on output.
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunchStage() {
@@ -624,7 +637,10 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
-   * `GA`. If no value is specified, GA is assumed.
+   * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
+   * to allow use of preview features in that stage. On read (or output), describes whether the
+   * resource uses preview features. For example, if ALPHA is provided as input, but only BETA and
+   * GA-level features are used, this field will be BETA on output.
    * @param launchStage launchStage or {@code null} for none
    */
   public GoogleCloudRunV2Service setLaunchStage(java.lang.String launchStage) {
@@ -716,6 +732,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

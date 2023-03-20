@@ -71,6 +71,19 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   private ConfigSettings configSettings;
 
   /**
+   * Entity classification data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LhrEntity> entities;
+
+  static {
+    // hack to force ProGuard to consider LhrEntity used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LhrEntity.class);
+  }
+
+  /**
    * Environment settings that were used when making this LHR.
    * The value may be {@code null}.
    */
@@ -85,11 +98,25 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   private java.lang.String fetchTime;
 
   /**
+   * URL displayed on the page after Lighthouse finishes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String finalDisplayedUrl;
+
+  /**
    * The final resolved url that was audited.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finalUrl;
+
+  /**
+   * Screenshot data of the full page, along with node rects relevant to the audit results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object fullPageScreenshot;
 
   /**
    * The internationalization strings that are required to render the LHR.
@@ -104,6 +131,13 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String lighthouseVersion;
+
+  /**
+   * URL of the main document request of the final navigation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mainDocumentUrl;
 
   /**
    * The original requested url.
@@ -217,6 +251,23 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   }
 
   /**
+   * Entity classification data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LhrEntity> getEntities() {
+    return entities;
+  }
+
+  /**
+   * Entity classification data.
+   * @param entities entities or {@code null} for none
+   */
+  public LighthouseResultV5 setEntities(java.util.List<LhrEntity> entities) {
+    this.entities = entities;
+    return this;
+  }
+
+  /**
    * Environment settings that were used when making this LHR.
    * @return value or {@code null} for none
    */
@@ -251,6 +302,23 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   }
 
   /**
+   * URL displayed on the page after Lighthouse finishes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFinalDisplayedUrl() {
+    return finalDisplayedUrl;
+  }
+
+  /**
+   * URL displayed on the page after Lighthouse finishes.
+   * @param finalDisplayedUrl finalDisplayedUrl or {@code null} for none
+   */
+  public LighthouseResultV5 setFinalDisplayedUrl(java.lang.String finalDisplayedUrl) {
+    this.finalDisplayedUrl = finalDisplayedUrl;
+    return this;
+  }
+
+  /**
    * The final resolved url that was audited.
    * @return value or {@code null} for none
    */
@@ -264,6 +332,23 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    */
   public LighthouseResultV5 setFinalUrl(java.lang.String finalUrl) {
     this.finalUrl = finalUrl;
+    return this;
+  }
+
+  /**
+   * Screenshot data of the full page, along with node rects relevant to the audit results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getFullPageScreenshot() {
+    return fullPageScreenshot;
+  }
+
+  /**
+   * Screenshot data of the full page, along with node rects relevant to the audit results.
+   * @param fullPageScreenshot fullPageScreenshot or {@code null} for none
+   */
+  public LighthouseResultV5 setFullPageScreenshot(java.lang.Object fullPageScreenshot) {
+    this.fullPageScreenshot = fullPageScreenshot;
     return this;
   }
 
@@ -298,6 +383,23 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    */
   public LighthouseResultV5 setLighthouseVersion(java.lang.String lighthouseVersion) {
     this.lighthouseVersion = lighthouseVersion;
+    return this;
+  }
+
+  /**
+   * URL of the main document request of the final navigation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMainDocumentUrl() {
+    return mainDocumentUrl;
+  }
+
+  /**
+   * URL of the main document request of the final navigation.
+   * @param mainDocumentUrl mainDocumentUrl or {@code null} for none
+   */
+  public LighthouseResultV5 setMainDocumentUrl(java.lang.String mainDocumentUrl) {
+    this.mainDocumentUrl = mainDocumentUrl;
     return this;
   }
 

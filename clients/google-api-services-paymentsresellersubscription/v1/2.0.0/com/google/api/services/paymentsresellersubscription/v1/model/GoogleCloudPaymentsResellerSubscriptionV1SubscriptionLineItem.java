@@ -31,7 +31,8 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The price of the product/service in this line item.
+   * Output only. The price of the product/service in this line item. The amount could be the
+   * wholesale price, or it can include a cost of sale based on the contract.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +46,10 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private java.lang.String description;
 
   /**
-   * Output only. It is set only if the line item has its own free trial applied. End time of the
-   * line item free trial period, in ISO 8061 format. For example, "2019-08-31T17:28:54.564Z". It
-   * will be set the same as createTime if no free trial promotion is specified.
+   * Output only. The free trial end time will be populated after the line item is successfully
+   * processed. End time of the line item free trial period, in ISO 8061 format. For example,
+   * "2019-08-31T17:28:54.564Z". It will be set the same as createTime if no free trial promotion is
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +101,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private java.lang.String state;
 
   /**
-   * Output only. The price of the product/service in this line item.
+   * Output only. The price of the product/service in this line item. The amount could be the
+   * wholesale price, or it can include a cost of sale based on the contract.
    * @return value or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Amount getAmount() {
@@ -107,7 +110,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
-   * Output only. The price of the product/service in this line item.
+   * Output only. The price of the product/service in this line item. The amount could be the
+   * wholesale price, or it can include a cost of sale based on the contract.
    * @param amount amount or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount amount) {
@@ -133,9 +137,10 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
-   * Output only. It is set only if the line item has its own free trial applied. End time of the
-   * line item free trial period, in ISO 8061 format. For example, "2019-08-31T17:28:54.564Z". It
-   * will be set the same as createTime if no free trial promotion is specified.
+   * Output only. The free trial end time will be populated after the line item is successfully
+   * processed. End time of the line item free trial period, in ISO 8061 format. For example,
+   * "2019-08-31T17:28:54.564Z". It will be set the same as createTime if no free trial promotion is
+   * specified.
    * @return value or {@code null} for none
    */
   public String getLineItemFreeTrialEndTime() {
@@ -143,9 +148,10 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
-   * Output only. It is set only if the line item has its own free trial applied. End time of the
-   * line item free trial period, in ISO 8061 format. For example, "2019-08-31T17:28:54.564Z". It
-   * will be set the same as createTime if no free trial promotion is specified.
+   * Output only. The free trial end time will be populated after the line item is successfully
+   * processed. End time of the line item free trial period, in ISO 8061 format. For example,
+   * "2019-08-31T17:28:54.564Z". It will be set the same as createTime if no free trial promotion is
+   * specified.
    * @param lineItemFreeTrialEndTime lineItemFreeTrialEndTime or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setLineItemFreeTrialEndTime(String lineItemFreeTrialEndTime) {

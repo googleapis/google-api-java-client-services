@@ -31,6 +31,13 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class PackageData extends com.google.api.client.json.GenericJson {
 
   /**
+   * The architecture of the package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
    * may manifest. Examples include distro or storage location for vulnerable jar.
    * The value may be {@code null}.
@@ -73,6 +80,13 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String hashDigest;
+
+  /**
+   * The maintainer of the package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Maintainer maintainer;
 
   /**
    * The OS affected by a vulnerability Used to generate the cpe_uri for OS packages
@@ -121,6 +135,23 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The architecture of the package.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * The architecture of the package.
+   * @param architecture architecture or {@code null} for none
+   */
+  public PackageData setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
 
   /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
@@ -195,6 +226,23 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setHashDigest(java.lang.String hashDigest) {
     this.hashDigest = hashDigest;
+    return this;
+  }
+
+  /**
+   * The maintainer of the package.
+   * @return value or {@code null} for none
+   */
+  public Maintainer getMaintainer() {
+    return maintainer;
+  }
+
+  /**
+   * The maintainer of the package.
+   * @param maintainer maintainer or {@code null} for none
+   */
+  public PackageData setMaintainer(Maintainer maintainer) {
+    this.maintainer = maintainer;
     return this;
   }
 

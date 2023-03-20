@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.policysimulator.v1.model;
+package com.google.api.services.policysimulator.v1beta.model;
 
 /**
  * Associates `members`, or principals, with a `role`.

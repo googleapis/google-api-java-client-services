@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-run</artifactId>
-  <version>v2-rev20230212-2.0.0</version>
-  <name>Cloud Run Admin API v2-rev20230212-2.0.0</name>
+  <version>v2-rev20230312-2.0.0</version>
+  <name>Cloud Run Admin API v2-rev20230312-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -90,7 +90,7 @@
           <windowtitle>Cloud Run Admin API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.42.3/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.43.1/</link>
             <link>https://googleapis.dev/java/google-oauth-client/1.34.1/</link>
             <link>https://googleapis.dev/java/google-api-client/2.2.0/</link>
           </links>

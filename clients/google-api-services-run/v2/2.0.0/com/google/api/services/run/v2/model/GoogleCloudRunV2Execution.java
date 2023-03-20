@@ -131,9 +131,11 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Set the launch stage to a preview stage on write to allow use of preview features in that
-   * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+   * The least stable launch stage needed to create this resource, as defined by [Google Cloud
+   * Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
+   * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For
+   * example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level
+   * features are were, this field will be BETA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,6 +195,13 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer runningCount;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
 
   /**
    * Output only. Represents time when the execution started to run. It is not guaranteed to be set
@@ -466,9 +475,11 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * Set the launch stage to a preview stage on write to allow use of preview features in that
-   * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+   * The least stable launch stage needed to create this resource, as defined by [Google Cloud
+   * Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
+   * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For
+   * example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level
+   * features are were, this field will be BETA.
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunchStage() {
@@ -476,9 +487,11 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * Set the launch stage to a preview stage on write to allow use of preview features in that
-   * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+   * The least stable launch stage needed to create this resource, as defined by [Google Cloud
+   * Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
+   * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For
+   * example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level
+   * features are were, this field will be BETA.
    * @param launchStage launchStage or {@code null} for none
    */
   public GoogleCloudRunV2Execution setLaunchStage(java.lang.String launchStage) {
@@ -614,6 +627,23 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Execution setRunningCount(java.lang.Integer runningCount) {
     this.runningCount = runningCount;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

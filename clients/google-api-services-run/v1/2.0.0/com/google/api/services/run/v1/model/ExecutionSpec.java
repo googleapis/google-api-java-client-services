@@ -43,7 +43,7 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Specifies the desired number of tasks the execution should run. Setting to 1 means
    * that parallelism is limited to 1 and the success of that task signals the success of the
-   * execution.
+   * execution. Defaults to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Specifies the desired number of tasks the execution should run. Setting to 1 means
    * that parallelism is limited to 1 and the success of that task signals the success of the
-   * execution.
+   * execution. Defaults to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTaskCount() {
@@ -94,7 +94,7 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Specifies the desired number of tasks the execution should run. Setting to 1 means
    * that parallelism is limited to 1 and the success of that task signals the success of the
-   * execution.
+   * execution. Defaults to 1.
    * @param taskCount taskCount or {@code null} for none
    */
   public ExecutionSpec setTaskCount(java.lang.Integer taskCount) {

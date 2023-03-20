@@ -92,7 +92,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The projection to return.
+   * Optional sub-set of the fields to return. This acts as a DocumentMask over the documents
+   * returned from a query. When not set, assumes that the caller wants all fields returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,7 +240,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The projection to return.
+   * Optional sub-set of the fields to return. This acts as a DocumentMask over the documents
+   * returned from a query. When not set, assumes that the caller wants all fields returned.
    * @return value or {@code null} for none
    */
   public Projection getSelect() {
@@ -247,7 +249,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The projection to return.
+   * Optional sub-set of the fields to return. This acts as a DocumentMask over the documents
+   * returned from a query. When not set, assumes that the caller wants all fields returned.
    * @param select select or {@code null} for none
    */
   public StructuredQuery setSelect(Projection select) {

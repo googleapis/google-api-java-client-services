@@ -2502,7 +2502,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Listens to changes.
+         * Listens to changes. This method is only available via gRPC or WebChannel (not REST).
          *
          * Create a request for the method "documents.listen".
          *
@@ -2527,7 +2527,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
 
           /**
-           * Listens to changes.
+           * Listens to changes. This method is only available via gRPC or WebChannel (not REST).
            *
            * Create a request for the method "documents.listen".
            *
@@ -3471,7 +3471,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Streams batches of document updates and deletes, in order.
+         * Streams batches of document updates and deletes, in order. This method is only available via gRPC
+         * or WebChannel (not REST).
          *
          * Create a request for the method "documents.write".
          *
@@ -3497,7 +3498,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
 
           /**
-           * Streams batches of document updates and deletes, in order.
+           * Streams batches of document updates and deletes, in order. This method is only available via
+           * gRPC or WebChannel (not REST).
            *
            * Create a request for the method "documents.write".
            *

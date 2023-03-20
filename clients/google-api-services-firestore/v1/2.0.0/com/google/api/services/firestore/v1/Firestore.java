@@ -301,17 +301,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. The ID to use for the database, which will become the final component of the
-         * database's resource name. This value should be 4-63 characters. Valid characters are
-         * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
-         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         * database's resource name. The value must be set to "(default)".
          */
         @com.google.api.client.util.Key
         private java.lang.String databaseId;
 
         /** Required. The ID to use for the database, which will become the final component of the database's
-       resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first
-       character a letter and the last a letter or a number. Must not be UUID-like
-       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+       resource name. The value must be set to "(default)".
          */
         public java.lang.String getDatabaseId() {
           return databaseId;
@@ -319,9 +315,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. The ID to use for the database, which will become the final component of the
-         * database's resource name. This value should be 4-63 characters. Valid characters are
-         * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
-         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         * database's resource name. The value must be set to "(default)".
          */
         public Create setDatabaseId(java.lang.String databaseId) {
           this.databaseId = databaseId;
@@ -501,29 +495,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
-          return this;
-        }
-
-        /**
-         * If set, will free the database_id associated with this database. uid will be used as the
-         * resource id to identify this deleted database.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean freeId;
-
-        /** If set, will free the database_id associated with this database. uid will be used as the resource
-       id to identify this deleted database.
-         */
-        public java.lang.Boolean getFreeId() {
-          return freeId;
-        }
-
-        /**
-         * If set, will free the database_id associated with this database. uid will be used as the
-         * resource id to identify this deleted database.
-         */
-        public Delete setFreeId(java.lang.Boolean freeId) {
-          this.freeId = freeId;
           return this;
         }
 
@@ -4628,7 +4599,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Listens to changes.
+         * Listens to changes. This method is only available via gRPC or WebChannel (not REST).
          *
          * Create a request for the method "documents.listen".
          *
@@ -4653,7 +4624,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
 
           /**
-           * Listens to changes.
+           * Listens to changes. This method is only available via gRPC or WebChannel (not REST).
            *
            * Create a request for the method "documents.listen".
            *
@@ -5597,7 +5568,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Streams batches of document updates and deletes, in order.
+         * Streams batches of document updates and deletes, in order. This method is only available via gRPC
+         * or WebChannel (not REST).
          *
          * Create a request for the method "documents.write".
          *
@@ -5623,7 +5595,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
 
           /**
-           * Streams batches of document updates and deletes, in order.
+           * Streams batches of document updates and deletes, in order. This method is only available via
+           * gRPC or WebChannel (not REST).
            *
            * Create a request for the method "documents.write".
            *
@@ -6178,12 +6151,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -6208,12 +6176,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *

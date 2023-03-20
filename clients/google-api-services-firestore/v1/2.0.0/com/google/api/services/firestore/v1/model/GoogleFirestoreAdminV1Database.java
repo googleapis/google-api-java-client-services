@@ -45,6 +45,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String concurrencyMode;
 
   /**
+   * Output only. The timestamp at which this database was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -86,6 +93,21 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String type;
 
   /**
+   * Output only. The system-generated UUID4 for this Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
+   * Output only. The timestamp at which this database was most recently updated. Note this only
+   * includes updates to the database resource and not data contained by the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The App Engine integration mode to use for this database.
    * @return value or {@code null} for none
    */
@@ -116,6 +138,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setConcurrencyMode(java.lang.String concurrencyMode) {
     this.concurrencyMode = concurrencyMode;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp at which this database was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp at which this database was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -213,6 +252,42 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. The system-generated UUID4 for this Database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. The system-generated UUID4 for this Database.
+   * @param uid uid or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setUid(java.lang.String uid) {
+    this.uid = uid;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp at which this database was most recently updated. Note this only
+   * includes updates to the database resource and not data contained by the database.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The timestamp at which this database was most recently updated. Note this only
+   * includes updates to the database resource and not data contained by the database.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

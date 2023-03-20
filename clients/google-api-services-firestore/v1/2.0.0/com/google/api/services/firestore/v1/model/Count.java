@@ -32,7 +32,7 @@ public final class Count extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Optional constraint on the maximum number of documents to count. This provides a way
-   * to set an upper bound on the number of documents to scan, limiting latency and cost.
+   * to set an upper bound on the number of documents to scan, limiting latency, and cost.
    * Unspecified is interpreted as no bound. High-Level Example: ``` AGGREGATE COUNT_UP_TO(1000)
    * OVER ( SELECT * FROM k ); ``` Requires: * Must be greater than zero when present.
    * The value may be {@code null}.
@@ -42,7 +42,7 @@ public final class Count extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Optional constraint on the maximum number of documents to count. This provides a way
-   * to set an upper bound on the number of documents to scan, limiting latency and cost.
+   * to set an upper bound on the number of documents to scan, limiting latency, and cost.
    * Unspecified is interpreted as no bound. High-Level Example: ``` AGGREGATE COUNT_UP_TO(1000)
    * OVER ( SELECT * FROM k ); ``` Requires: * Must be greater than zero when present.
    * @return value or {@code null} for none
@@ -53,7 +53,7 @@ public final class Count extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Optional constraint on the maximum number of documents to count. This provides a way
-   * to set an upper bound on the number of documents to scan, limiting latency and cost.
+   * to set an upper bound on the number of documents to scan, limiting latency, and cost.
    * Unspecified is interpreted as no bound. High-Level Example: ``` AGGREGATE COUNT_UP_TO(1000)
    * OVER ( SELECT * FROM k ); ``` Requires: * Must be greater than zero when present.
    * @param upTo upTo or {@code null} for none

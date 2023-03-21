@@ -42,17 +42,6 @@ public final class LiveBroadcastStatistics extends com.google.api.client.json.Ge
   private java.math.BigInteger concurrentViewers;
 
   /**
-   * The total number of live chat messages currently on the broadcast. The property and its value
-   * will be present if the broadcast is public, has the live chat feature enabled, and has at least
-   * one message. Note that this field will not be filled after the broadcast ends. So this property
-   * would not identify the number of chat messages for an archived video of a completed live
-   * broadcast.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger totalChatCount;
-
-  /**
    * The number of viewers currently watching the broadcast. The property and its value will be
    * present if the broadcast has current viewers and the broadcast owner has not hidden the
    * viewcount for the video. Note that YouTube stops tracking the number of concurrent viewers for
@@ -74,31 +63,6 @@ public final class LiveBroadcastStatistics extends com.google.api.client.json.Ge
    */
   public LiveBroadcastStatistics setConcurrentViewers(java.math.BigInteger concurrentViewers) {
     this.concurrentViewers = concurrentViewers;
-    return this;
-  }
-
-  /**
-   * The total number of live chat messages currently on the broadcast. The property and its value
-   * will be present if the broadcast is public, has the live chat feature enabled, and has at least
-   * one message. Note that this field will not be filled after the broadcast ends. So this property
-   * would not identify the number of chat messages for an archived video of a completed live
-   * broadcast.
-   * @return value or {@code null} for none
-   */
-  public java.math.BigInteger getTotalChatCount() {
-    return totalChatCount;
-  }
-
-  /**
-   * The total number of live chat messages currently on the broadcast. The property and its value
-   * will be present if the broadcast is public, has the live chat feature enabled, and has at least
-   * one message. Note that this field will not be filled after the broadcast ends. So this property
-   * would not identify the number of chat messages for an archived video of a completed live
-   * broadcast.
-   * @param totalChatCount totalChatCount or {@code null} for none
-   */
-  public LiveBroadcastStatistics setTotalChatCount(java.math.BigInteger totalChatCount) {
-    this.totalChatCount = totalChatCount;
     return this;
   }
 

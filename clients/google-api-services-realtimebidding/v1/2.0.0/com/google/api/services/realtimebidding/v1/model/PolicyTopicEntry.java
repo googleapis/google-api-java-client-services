@@ -46,6 +46,15 @@ public final class PolicyTopicEntry extends com.google.api.client.json.GenericJs
   private java.lang.String helpCenterUrl;
 
   /**
+   * Whether or not the policy topic is missing a certificate. Some policy topics require a
+   * certificate to unblock serving in some regions. For more information about creative
+   * certification, refer to: https://support.google.com/authorizedbuyers/answer/7450776
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean missingCertificate;
+
+  /**
    * Policy topic this entry refers to. For example, "ALCOHOL", "TRADEMARKS_IN_AD_TEXT", or
    * "DESTINATION_NOT_WORKING". The set of possible policy topics is not fixed for a particular API
    * version and may change at any time. Can be used to filter the response of the creatives.list
@@ -86,6 +95,27 @@ public final class PolicyTopicEntry extends com.google.api.client.json.GenericJs
    */
   public PolicyTopicEntry setHelpCenterUrl(java.lang.String helpCenterUrl) {
     this.helpCenterUrl = helpCenterUrl;
+    return this;
+  }
+
+  /**
+   * Whether or not the policy topic is missing a certificate. Some policy topics require a
+   * certificate to unblock serving in some regions. For more information about creative
+   * certification, refer to: https://support.google.com/authorizedbuyers/answer/7450776
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMissingCertificate() {
+    return missingCertificate;
+  }
+
+  /**
+   * Whether or not the policy topic is missing a certificate. Some policy topics require a
+   * certificate to unblock serving in some regions. For more information about creative
+   * certification, refer to: https://support.google.com/authorizedbuyers/answer/7450776
+   * @param missingCertificate missingCertificate or {@code null} for none
+   */
+  public PolicyTopicEntry setMissingCertificate(java.lang.Boolean missingCertificate) {
+    this.missingCertificate = missingCertificate;
     return this;
   }
 

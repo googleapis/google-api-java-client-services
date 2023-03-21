@@ -71,7 +71,9 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    * and an enhanced version of the specified model for the language does not exist, then the speech
    * is recognized using the standard version of the specified model. Refer to [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
-   * details.
+   * details. If you specify a model, the following models typically have the best performance: -
+   * phone_call (best for Agent Assist and telephony) - latest_short (best for Dialogflow non-
+   * telephony) - command_and_search (best for very short utterances and commands)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +216,9 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    * and an enhanced version of the specified model for the language does not exist, then the speech
    * is recognized using the standard version of the specified model. Refer to [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
-   * details.
+   * details. If you specify a model, the following models typically have the best performance: -
+   * phone_call (best for Agent Assist and telephony) - latest_short (best for Dialogflow non-
+   * telephony) - command_and_search (best for very short utterances and commands)
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -228,7 +232,9 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    * and an enhanced version of the specified model for the language does not exist, then the speech
    * is recognized using the standard version of the specified model. Refer to [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
-   * details.
+   * details. If you specify a model, the following models typically have the best performance: -
+   * phone_call (best for Agent Assist and telephony) - latest_short (best for Dialogflow non-
+   * telephony) - command_and_search (best for very short utterances and commands)
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setModel(java.lang.String model) {

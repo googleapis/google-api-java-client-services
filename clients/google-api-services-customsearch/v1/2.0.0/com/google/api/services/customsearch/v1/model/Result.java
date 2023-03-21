@@ -414,7 +414,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   public static final class Image extends com.google.api.client.json.GenericJson {
 
     /**
-     * The size of the image, in pixels.
+     * The size of the image, in bytes.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -463,7 +463,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
     private java.lang.Integer width;
 
     /**
-     * The size of the image, in pixels.
+     * The size of the image, in bytes.
      * @return value or {@code null} for none
      */
     public java.lang.Integer getByteSize() {
@@ -471,7 +471,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The size of the image, in pixels.
+     * The size of the image, in bytes.
      * @param byteSize byteSize or {@code null} for none
      */
     public Image setByteSize(java.lang.Integer byteSize) {

@@ -38,6 +38,13 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   private String autoClose;
 
   /**
+   * Control how notifications will be sent out, on a per-channel basis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NotificationChannelStrategy> notificationChannelStrategy;
+
+  /**
    * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
    * policies that are not log-based.
    * The value may be {@code null}.
@@ -59,6 +66,23 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
    */
   public AlertStrategy setAutoClose(String autoClose) {
     this.autoClose = autoClose;
+    return this;
+  }
+
+  /**
+   * Control how notifications will be sent out, on a per-channel basis.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NotificationChannelStrategy> getNotificationChannelStrategy() {
+    return notificationChannelStrategy;
+  }
+
+  /**
+   * Control how notifications will be sent out, on a per-channel basis.
+   * @param notificationChannelStrategy notificationChannelStrategy or {@code null} for none
+   */
+  public AlertStrategy setNotificationChannelStrategy(java.util.List<NotificationChannelStrategy> notificationChannelStrategy) {
+    this.notificationChannelStrategy = notificationChannelStrategy;
     return this;
   }
 

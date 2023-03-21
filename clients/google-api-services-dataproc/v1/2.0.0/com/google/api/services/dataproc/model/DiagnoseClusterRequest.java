@@ -45,11 +45,26 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
   private java.lang.String job;
 
   /**
+   * Optional. Specifies a list of jobs on which diagnosis is to be performed. Format:
+   * projects/{project}/regions/{region}/jobs/{job}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> jobs;
+
+  /**
    * Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String yarnApplicationId;
+
+  /**
+   * Optional. Specifies a list of yarn applications on which diagnosis is to be performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> yarnApplicationIds;
 
   /**
    * Optional. Time interval in which diagnosis should be carried out on the cluster.
@@ -88,6 +103,25 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. Specifies a list of jobs on which diagnosis is to be performed. Format:
+   * projects/{project}/regions/{region}/jobs/{job}
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getJobs() {
+    return jobs;
+  }
+
+  /**
+   * Optional. Specifies a list of jobs on which diagnosis is to be performed. Format:
+   * projects/{project}/regions/{region}/jobs/{job}
+   * @param jobs jobs or {@code null} for none
+   */
+  public DiagnoseClusterRequest setJobs(java.util.List<java.lang.String> jobs) {
+    this.jobs = jobs;
+    return this;
+  }
+
+  /**
    * Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
    * @return value or {@code null} for none
    */
@@ -101,6 +135,23 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
    */
   public DiagnoseClusterRequest setYarnApplicationId(java.lang.String yarnApplicationId) {
     this.yarnApplicationId = yarnApplicationId;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies a list of yarn applications on which diagnosis is to be performed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getYarnApplicationIds() {
+    return yarnApplicationIds;
+  }
+
+  /**
+   * Optional. Specifies a list of yarn applications on which diagnosis is to be performed.
+   * @param yarnApplicationIds yarnApplicationIds or {@code null} for none
+   */
+  public DiagnoseClusterRequest setYarnApplicationIds(java.util.List<java.lang.String> yarnApplicationIds) {
+    this.yarnApplicationIds = yarnApplicationIds;
     return this;
   }
 

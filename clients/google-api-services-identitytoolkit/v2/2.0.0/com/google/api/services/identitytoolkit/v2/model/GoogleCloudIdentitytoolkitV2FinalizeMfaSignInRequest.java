@@ -30,6 +30,13 @@ package com.google.api.services.identitytoolkit.v2.model;
 public final class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The MFA enrollment ID from the user's list of current MFA enrollments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mfaEnrollmentId;
+
+  /**
    * Required. Pending credential from first factor sign-in.
    * The value may be {@code null}.
    */
@@ -50,6 +57,30 @@ public final class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest extends 
    */
   @com.google.api.client.util.Key
   private java.lang.String tenantId;
+
+  /**
+   * Proof of completion of the TOTP based MFA challenge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo totpVerificationInfo;
+
+  /**
+   * The MFA enrollment ID from the user's list of current MFA enrollments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMfaEnrollmentId() {
+    return mfaEnrollmentId;
+  }
+
+  /**
+   * The MFA enrollment ID from the user's list of current MFA enrollments.
+   * @param mfaEnrollmentId mfaEnrollmentId or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest setMfaEnrollmentId(java.lang.String mfaEnrollmentId) {
+    this.mfaEnrollmentId = mfaEnrollmentId;
+    return this;
+  }
 
   /**
    * Required. Pending credential from first factor sign-in.
@@ -101,6 +132,23 @@ public final class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest extends 
    */
   public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest setTenantId(java.lang.String tenantId) {
     this.tenantId = tenantId;
+    return this;
+  }
+
+  /**
+   * Proof of completion of the TOTP based MFA challenge.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo getTotpVerificationInfo() {
+    return totpVerificationInfo;
+  }
+
+  /**
+   * Proof of completion of the TOTP based MFA challenge.
+   * @param totpVerificationInfo totpVerificationInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest setTotpVerificationInfo(GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo totpVerificationInfo) {
+    this.totpVerificationInfo = totpVerificationInfo;
     return this;
   }
 

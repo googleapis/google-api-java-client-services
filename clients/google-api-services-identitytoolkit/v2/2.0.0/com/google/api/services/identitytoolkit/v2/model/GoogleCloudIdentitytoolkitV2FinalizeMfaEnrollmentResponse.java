@@ -51,6 +51,13 @@ public final class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse ext
   private java.lang.String refreshToken;
 
   /**
+   * Auxiliary auth info specific to TOTP auth.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentResponseInfo totpAuthInfo;
+
+  /**
    * ID token updated to reflect MFA enrollment.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse ext
    */
   public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse setRefreshToken(java.lang.String refreshToken) {
     this.refreshToken = refreshToken;
+    return this;
+  }
+
+  /**
+   * Auxiliary auth info specific to TOTP auth.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentResponseInfo getTotpAuthInfo() {
+    return totpAuthInfo;
+  }
+
+  /**
+   * Auxiliary auth info specific to TOTP auth.
+   * @param totpAuthInfo totpAuthInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse setTotpAuthInfo(GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentResponseInfo totpAuthInfo) {
+    this.totpAuthInfo = totpAuthInfo;
     return this;
   }
 

@@ -52,6 +52,13 @@ public final class GoogleCloudIdentitytoolkitV2StartMfaEnrollmentRequest extends
   private java.lang.String tenantId;
 
   /**
+   * Sign-in info specific to TOTP auth.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentRequestInfo totpEnrollmentInfo;
+
+  /**
    * Required. User's ID token.
    * @return value or {@code null} for none
    */
@@ -101,6 +108,23 @@ public final class GoogleCloudIdentitytoolkitV2StartMfaEnrollmentRequest extends
    */
   public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentRequest setTenantId(java.lang.String tenantId) {
     this.tenantId = tenantId;
+    return this;
+  }
+
+  /**
+   * Sign-in info specific to TOTP auth.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentRequestInfo getTotpEnrollmentInfo() {
+    return totpEnrollmentInfo;
+  }
+
+  /**
+   * Sign-in info specific to TOTP auth.
+   * @param totpEnrollmentInfo totpEnrollmentInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentRequest setTotpEnrollmentInfo(GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentRequestInfo totpEnrollmentInfo) {
+    this.totpEnrollmentInfo = totpEnrollmentInfo;
     return this;
   }
 

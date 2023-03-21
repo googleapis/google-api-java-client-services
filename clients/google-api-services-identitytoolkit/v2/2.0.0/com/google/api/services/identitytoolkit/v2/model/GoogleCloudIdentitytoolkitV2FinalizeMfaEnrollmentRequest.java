@@ -60,6 +60,13 @@ public final class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest exte
   private java.lang.String tenantId;
 
   /**
+   * Verification information for TOTP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo totpVerificationInfo;
+
+  /**
    * Display name which is entered by users to distinguish between different second factors with
    * same type or different type.
    * @return value or {@code null} for none
@@ -128,6 +135,23 @@ public final class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest exte
    */
   public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest setTenantId(java.lang.String tenantId) {
     this.tenantId = tenantId;
+    return this;
+  }
+
+  /**
+   * Verification information for TOTP.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo getTotpVerificationInfo() {
+    return totpVerificationInfo;
+  }
+
+  /**
+   * Verification information for TOTP.
+   * @param totpVerificationInfo totpVerificationInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest setTotpVerificationInfo(GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo totpVerificationInfo) {
+    this.totpVerificationInfo = totpVerificationInfo;
     return this;
   }
 

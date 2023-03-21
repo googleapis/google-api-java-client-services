@@ -37,6 +37,14 @@ public final class GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig extend
   private java.util.List<java.lang.String> enabledProviders;
 
   /**
+   * A list of usable second factors for this project along with their configurations. This field
+   * does not support phone based MFA, for that use the 'enabled_providers' field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIdentitytoolkitAdminV2ProviderConfig> providerConfigs;
+
+  /**
    * Whether MultiFactor Authentication has been enabled for this project.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig extend
    */
   public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig setEnabledProviders(java.util.List<java.lang.String> enabledProviders) {
     this.enabledProviders = enabledProviders;
+    return this;
+  }
+
+  /**
+   * A list of usable second factors for this project along with their configurations. This field
+   * does not support phone based MFA, for that use the 'enabled_providers' field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIdentitytoolkitAdminV2ProviderConfig> getProviderConfigs() {
+    return providerConfigs;
+  }
+
+  /**
+   * A list of usable second factors for this project along with their configurations. This field
+   * does not support phone based MFA, for that use the 'enabled_providers' field.
+   * @param providerConfigs providerConfigs or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig setProviderConfigs(java.util.List<GoogleCloudIdentitytoolkitAdminV2ProviderConfig> providerConfigs) {
+    this.providerConfigs = providerConfigs;
     return this;
   }
 

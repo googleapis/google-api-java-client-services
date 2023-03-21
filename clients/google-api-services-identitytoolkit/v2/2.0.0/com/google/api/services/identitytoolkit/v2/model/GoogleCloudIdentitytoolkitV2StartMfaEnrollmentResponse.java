@@ -37,6 +37,13 @@ public final class GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse extend
   private GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo phoneSessionInfo;
 
   /**
+   * Enrollment response info specific to TOTP auth.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo totpSessionInfo;
+
+  /**
    * Verification info to authorize sending an SMS for phone verification.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse extend
    */
   public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse setPhoneSessionInfo(GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo phoneSessionInfo) {
     this.phoneSessionInfo = phoneSessionInfo;
+    return this;
+  }
+
+  /**
+   * Enrollment response info specific to TOTP auth.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo getTotpSessionInfo() {
+    return totpSessionInfo;
+  }
+
+  /**
+   * Enrollment response info specific to TOTP auth.
+   * @param totpSessionInfo totpSessionInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse setTotpSessionInfo(GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo totpSessionInfo) {
+    this.totpSessionInfo = totpSessionInfo;
     return this;
   }
 

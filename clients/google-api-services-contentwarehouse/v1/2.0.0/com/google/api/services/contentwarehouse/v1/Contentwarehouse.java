@@ -164,7 +164,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
      *
      * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
      *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-     *        project: projects/{project_number}.
+     *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+     *        Format for project: projects/{project_number}.
      * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchAclRequest}
      * @return the request
      */
@@ -195,7 +196,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
        *
        * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
      *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-     *        project: projects/{project_number}.
+     *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+     *        Format for project: projects/{project_number}.
        * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchAclRequest}
        * @since 1.13
        */
@@ -267,13 +269,15 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
       /**
        * Required. REQUIRED: The resource for which the policy is being requested. Format for
        * document: projects/{project_number}/locations/{location}/documents/{document_id}. Format
-       * for project: projects/{project_number}.
+       * for collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+       * Format for project: projects/{project_number}.
        */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
       /** Required. REQUIRED: The resource for which the policy is being requested. Format for document:
-     projects/{project_number}/locations/{location}/documents/{document_id}. Format for project:
+     projects/{project_number}/locations/{location}/documents/{document_id}. Format for collection:
+     projects/{project_number}/locations/{location}/collections/{collection_id}. Format for project:
      projects/{project_number}.
        */
       public java.lang.String getResource() {
@@ -283,7 +287,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
       /**
        * Required. REQUIRED: The resource for which the policy is being requested. Format for
        * document: projects/{project_number}/locations/{location}/documents/{document_id}. Format
-       * for project: projects/{project_number}.
+       * for collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+       * Format for project: projects/{project_number}.
        */
       public FetchAcl setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
@@ -310,7 +315,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
      *
      * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
      *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-     *        project: projects/{project_number}.
+     *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+     *        Format for project: projects/{project_number}.
      * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetAclRequest}
      * @return the request
      */
@@ -340,7 +346,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
        *
        * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
      *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-     *        project: projects/{project_number}.
+     *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+     *        Format for project: projects/{project_number}.
        * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetAclRequest}
        * @since 1.13
        */
@@ -412,13 +419,15 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
       /**
        * Required. REQUIRED: The resource for which the policy is being requested. Format for
        * document: projects/{project_number}/locations/{location}/documents/{document_id}. Format
-       * for project: projects/{project_number}.
+       * for collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+       * Format for project: projects/{project_number}.
        */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
       /** Required. REQUIRED: The resource for which the policy is being requested. Format for document:
-     projects/{project_number}/locations/{location}/documents/{document_id}. Format for project:
+     projects/{project_number}/locations/{location}/documents/{document_id}. Format for collection:
+     projects/{project_number}/locations/{location}/collections/{collection_id}. Format for project:
      projects/{project_number}.
        */
       public java.lang.String getResource() {
@@ -428,7 +437,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
       /**
        * Required. REQUIRED: The resource for which the policy is being requested. Format for
        * document: projects/{project_number}/locations/{location}/documents/{document_id}. Format
-       * for project: projects/{project_number}.
+       * for collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+       * Format for project: projects/{project_number}.
        */
       public SetAcl setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
@@ -746,54 +756,184 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * An accessor for creating requests from the Collections collection.
+       * An accessor for creating requests from the DataExportJobs collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Contentwarehouse contentwarehouse = new Contentwarehouse(...);}
-       *   {@code Contentwarehouse.Collections.List request = contentwarehouse.collections().list(parameters ...)}
+       *   {@code Contentwarehouse.DataExportJobs.List request = contentwarehouse.dataExportJobs().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Collections collections() {
-        return new Collections();
+      public DataExportJobs dataExportJobs() {
+        return new DataExportJobs();
       }
 
       /**
-       * The "collections" collection of methods.
+       * The "dataExportJobs" collection of methods.
        */
-      public class Collections {
+      public class DataExportJobs {
 
         /**
-         * Creates a collection.
+         * Archives a data export job.
          *
-         * Create a request for the method "collections.create".
+         * Create a request for the method "dataExportJobs.archiveDataExportJob".
+         *
+         * This request holds the parameters needed by the contentwarehouse server.  After setting any
+         * optional parameters, call the {@link ArchiveDataExportJob#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name.
+         * @return the request
+         */
+        public ArchiveDataExportJob archiveDataExportJob(java.lang.String name) throws java.io.IOException {
+          ArchiveDataExportJob result = new ArchiveDataExportJob(name);
+          initialize(result);
+          return result;
+        }
+
+        public class ArchiveDataExportJob extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExportJobs/[^/]+$");
+
+          /**
+           * Archives a data export job.
+           *
+           * Create a request for the method "dataExportJobs.archiveDataExportJob".
+           *
+           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
+           * optional parameters, call the {@link ArchiveDataExportJob#execute()} method to invoke the
+           * remote operation. <p> {@link ArchiveDataExportJob#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name.
+           * @since 1.13
+           */
+          protected ArchiveDataExportJob(java.lang.String name) {
+            super(Contentwarehouse.this, "DELETE", REST_PATH, null, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataExportJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public ArchiveDataExportJob set$Xgafv(java.lang.String $Xgafv) {
+            return (ArchiveDataExportJob) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ArchiveDataExportJob setAccessToken(java.lang.String accessToken) {
+            return (ArchiveDataExportJob) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ArchiveDataExportJob setAlt(java.lang.String alt) {
+            return (ArchiveDataExportJob) super.setAlt(alt);
+          }
+
+          @Override
+          public ArchiveDataExportJob setCallback(java.lang.String callback) {
+            return (ArchiveDataExportJob) super.setCallback(callback);
+          }
+
+          @Override
+          public ArchiveDataExportJob setFields(java.lang.String fields) {
+            return (ArchiveDataExportJob) super.setFields(fields);
+          }
+
+          @Override
+          public ArchiveDataExportJob setKey(java.lang.String key) {
+            return (ArchiveDataExportJob) super.setKey(key);
+          }
+
+          @Override
+          public ArchiveDataExportJob setOauthToken(java.lang.String oauthToken) {
+            return (ArchiveDataExportJob) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ArchiveDataExportJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ArchiveDataExportJob) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ArchiveDataExportJob setQuotaUser(java.lang.String quotaUser) {
+            return (ArchiveDataExportJob) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ArchiveDataExportJob setUploadType(java.lang.String uploadType) {
+            return (ArchiveDataExportJob) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ArchiveDataExportJob setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ArchiveDataExportJob) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name. */
+          public ArchiveDataExportJob setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataExportJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ArchiveDataExportJob set(String parameterName, Object value) {
+            return (ArchiveDataExportJob) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a data export job.
+         *
+         * Create a request for the method "dataExportJobs.create".
          *
          * This request holds the parameters needed by the contentwarehouse server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent name.
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection}
+         * @param parent Required. The resource parent name.
+         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
-        public class Create extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection> {
+        public class Create extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob> {
 
-          private static final String REST_PATH = "v1/{+parent}/collections";
+          private static final String REST_PATH = "v1/{+parent}/dataExportJobs";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a collection.
+           * Creates a data export job.
            *
-           * Create a request for the method "collections.create".
+           * Create a request for the method "dataExportJobs.create".
            *
            * This request holds the parameters needed by the the contentwarehouse server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
@@ -801,12 +941,12 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent name.
-           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection}
+           * @param parent Required. The resource parent name.
+           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection content) {
-            super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection.class);
+          protected Create(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob content) {
+            super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1DataExportJob.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -870,17 +1010,17 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent name. */
+          /** Required. The resource parent name. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent name.
+          /** Required. The resource parent name.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent name. */
+          /** Required. The resource parent name. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -894,700 +1034,6 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Deletes a collection.
-         *
-         * Create a request for the method "collections.delete".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the collection to delete.
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleProtobufEmpty> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-
-          /**
-           * Deletes a collection.
-           *
-           * Create a request for the method "collections.delete".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the collection to delete.
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(Contentwarehouse.this, "DELETE", REST_PATH, null, com.google.api.services.contentwarehouse.v1.model.GoogleProtobufEmpty.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The name of the collection to delete. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the collection to delete.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** Required. The name of the collection to delete. */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Gets the access control policy for the collection. Returns NOT_FOUND error if the collection does
-         * not exist. Returns an empty policy if the collection exists but does not have a policy set.
-         *
-         * Create a request for the method "collections.fetchCollectionAcl".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link FetchCollectionAcl#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param name Required. The name of the collection.
-         *        projects/{project_number}/locations/{location}/collections/{document_id}.
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchCollectionAclRequest}
-         * @return the request
-         */
-        public FetchCollectionAcl fetchCollectionAcl(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchCollectionAclRequest content) throws java.io.IOException {
-          FetchCollectionAcl result = new FetchCollectionAcl(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class FetchCollectionAcl extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchCollectionAclResponse> {
-
-          private static final String REST_PATH = "v1/{+name}:fetchCollectionAcl";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-
-          /**
-           * Gets the access control policy for the collection. Returns NOT_FOUND error if the collection
-           * does not exist. Returns an empty policy if the collection exists but does not have a policy
-           * set.
-           *
-           * Create a request for the method "collections.fetchCollectionAcl".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link FetchCollectionAcl#execute()} method to invoke the remote
-           * operation. <p> {@link FetchCollectionAcl#initialize(com.google.api.client.googleapis.services.A
-           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param name Required. The name of the collection.
-         *        projects/{project_number}/locations/{location}/collections/{document_id}.
-           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchCollectionAclRequest}
-           * @since 1.13
-           */
-          protected FetchCollectionAcl(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchCollectionAclRequest content) {
-            super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchCollectionAclResponse.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-          }
-
-          @Override
-          public FetchCollectionAcl set$Xgafv(java.lang.String $Xgafv) {
-            return (FetchCollectionAcl) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public FetchCollectionAcl setAccessToken(java.lang.String accessToken) {
-            return (FetchCollectionAcl) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public FetchCollectionAcl setAlt(java.lang.String alt) {
-            return (FetchCollectionAcl) super.setAlt(alt);
-          }
-
-          @Override
-          public FetchCollectionAcl setCallback(java.lang.String callback) {
-            return (FetchCollectionAcl) super.setCallback(callback);
-          }
-
-          @Override
-          public FetchCollectionAcl setFields(java.lang.String fields) {
-            return (FetchCollectionAcl) super.setFields(fields);
-          }
-
-          @Override
-          public FetchCollectionAcl setKey(java.lang.String key) {
-            return (FetchCollectionAcl) super.setKey(key);
-          }
-
-          @Override
-          public FetchCollectionAcl setOauthToken(java.lang.String oauthToken) {
-            return (FetchCollectionAcl) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public FetchCollectionAcl setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (FetchCollectionAcl) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public FetchCollectionAcl setQuotaUser(java.lang.String quotaUser) {
-            return (FetchCollectionAcl) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public FetchCollectionAcl setUploadType(java.lang.String uploadType) {
-            return (FetchCollectionAcl) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public FetchCollectionAcl setUploadProtocol(java.lang.String uploadProtocol) {
-            return (FetchCollectionAcl) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the collection.
-           * projects/{project_number}/locations/{location}/collections/{document_id}.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the collection.
-         projects/{project_number}/locations/{location}/collections/{document_id}.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the collection.
-           * projects/{project_number}/locations/{location}/collections/{document_id}.
-           */
-          public FetchCollectionAcl setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public FetchCollectionAcl set(String parameterName, Object value) {
-            return (FetchCollectionAcl) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Gets a collection.
-         *
-         * Create a request for the method "collections.get".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the collection to retrieve.
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-
-          /**
-           * Gets a collection.
-           *
-           * Create a request for the method "collections.get".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the collection to retrieve.
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(Contentwarehouse.this, "GET", REST_PATH, null, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Collection.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The name of the collection to retrieve. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the collection to retrieve.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** Required. The name of the collection to retrieve. */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Searches for collections using provided SearchCollectionsRequest. This call only returns
-         * collections that the caller has permission to search against.
-         *
-         * Create a request for the method "collections.search".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The parent, which owns the collections. Format:
-         *        projects/{project_number}/locations/{location}.
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SearchCollectionsRequest}
-         * @return the request
-         */
-        public Search search(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SearchCollectionsRequest content) throws java.io.IOException {
-          Search result = new Search(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Search extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SearchCollectionsResponse> {
-
-          private static final String REST_PATH = "v1/{+parent}/collections:search";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Searches for collections using provided SearchCollectionsRequest. This call only returns
-           * collections that the caller has permission to search against.
-           *
-           * Create a request for the method "collections.search".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The parent, which owns the collections. Format:
-         *        projects/{project_number}/locations/{location}.
-           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SearchCollectionsRequest}
-           * @since 1.13
-           */
-          protected Search(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SearchCollectionsRequest content) {
-            super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SearchCollectionsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Search set$Xgafv(java.lang.String $Xgafv) {
-            return (Search) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Search setAccessToken(java.lang.String accessToken) {
-            return (Search) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Search setAlt(java.lang.String alt) {
-            return (Search) super.setAlt(alt);
-          }
-
-          @Override
-          public Search setCallback(java.lang.String callback) {
-            return (Search) super.setCallback(callback);
-          }
-
-          @Override
-          public Search setFields(java.lang.String fields) {
-            return (Search) super.setFields(fields);
-          }
-
-          @Override
-          public Search setKey(java.lang.String key) {
-            return (Search) super.setKey(key);
-          }
-
-          @Override
-          public Search setOauthToken(java.lang.String oauthToken) {
-            return (Search) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Search) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Search setQuotaUser(java.lang.String quotaUser) {
-            return (Search) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Search setUploadType(java.lang.String uploadType) {
-            return (Search) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Search setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Search) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The parent, which owns the collections. Format:
-           * projects/{project_number}/locations/{location}.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The parent, which owns the collections. Format:
-         projects/{project_number}/locations/{location}.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The parent, which owns the collections. Format:
-           * projects/{project_number}/locations/{location}.
-           */
-          public Search setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Search set(String parameterName, Object value) {
-            return (Search) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Sets the access control policy for the collection. Replaces any existing policy.
-         *
-         * Create a request for the method "collections.setCollectionAcl".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link SetCollectionAcl#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param name Required. The name of the collection for which the policy is being set.
-         *        projects/{project_number}/locations/{location}/collections/{document_id}.
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetCollectionAclRequest}
-         * @return the request
-         */
-        public SetCollectionAcl setCollectionAcl(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetCollectionAclRequest content) throws java.io.IOException {
-          SetCollectionAcl result = new SetCollectionAcl(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class SetCollectionAcl extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetCollectionAclResponse> {
-
-          private static final String REST_PATH = "v1/{+name}:setCollectionAcl";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-
-          /**
-           * Sets the access control policy for the collection. Replaces any existing policy.
-           *
-           * Create a request for the method "collections.setCollectionAcl".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link SetCollectionAcl#execute()} method to invoke the remote
-           * operation. <p> {@link SetCollectionAcl#initialize(com.google.api.client.googleapis.services.Abs
-           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param name Required. The name of the collection for which the policy is being set.
-         *        projects/{project_number}/locations/{location}/collections/{document_id}.
-           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetCollectionAclRequest}
-           * @since 1.13
-           */
-          protected SetCollectionAcl(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetCollectionAclRequest content) {
-            super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetCollectionAclResponse.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-          }
-
-          @Override
-          public SetCollectionAcl set$Xgafv(java.lang.String $Xgafv) {
-            return (SetCollectionAcl) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public SetCollectionAcl setAccessToken(java.lang.String accessToken) {
-            return (SetCollectionAcl) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public SetCollectionAcl setAlt(java.lang.String alt) {
-            return (SetCollectionAcl) super.setAlt(alt);
-          }
-
-          @Override
-          public SetCollectionAcl setCallback(java.lang.String callback) {
-            return (SetCollectionAcl) super.setCallback(callback);
-          }
-
-          @Override
-          public SetCollectionAcl setFields(java.lang.String fields) {
-            return (SetCollectionAcl) super.setFields(fields);
-          }
-
-          @Override
-          public SetCollectionAcl setKey(java.lang.String key) {
-            return (SetCollectionAcl) super.setKey(key);
-          }
-
-          @Override
-          public SetCollectionAcl setOauthToken(java.lang.String oauthToken) {
-            return (SetCollectionAcl) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public SetCollectionAcl setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (SetCollectionAcl) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public SetCollectionAcl setQuotaUser(java.lang.String quotaUser) {
-            return (SetCollectionAcl) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public SetCollectionAcl setUploadType(java.lang.String uploadType) {
-            return (SetCollectionAcl) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public SetCollectionAcl setUploadProtocol(java.lang.String uploadProtocol) {
-            return (SetCollectionAcl) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the collection for which the policy is being set.
-           * projects/{project_number}/locations/{location}/collections/{document_id}.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the collection for which the policy is being set.
-         projects/{project_number}/locations/{location}/collections/{document_id}.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the collection for which the policy is being set.
-           * projects/{project_number}/locations/{location}/collections/{document_id}.
-           */
-          public SetCollectionAcl setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public SetCollectionAcl set(String parameterName, Object value) {
-            return (SetCollectionAcl) super.set(parameterName, value);
           }
         }
 
@@ -2666,7 +2112,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
          *
          * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
          *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-         *        project: projects/{project_number}.
+         *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+         *        Format for project: projects/{project_number}.
          * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchAclRequest}
          * @return the request
          */
@@ -2697,7 +2144,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
            *
            * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
          *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-         *        project: projects/{project_number}.
+         *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+         *        Format for project: projects/{project_number}.
            * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1FetchAclRequest}
            * @since 1.13
            */
@@ -2769,13 +2217,16 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           /**
            * Required. REQUIRED: The resource for which the policy is being requested. Format for
            * document: projects/{project_number}/locations/{location}/documents/{document_id}.
-           * Format for project: projects/{project_number}.
+           * Format for collection:
+           * projects/{project_number}/locations/{location}/collections/{collection_id}. Format for
+           * project: projects/{project_number}.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
           /** Required. REQUIRED: The resource for which the policy is being requested. Format for document:
-         projects/{project_number}/locations/{location}/documents/{document_id}. Format for project:
+         projects/{project_number}/locations/{location}/documents/{document_id}. Format for collection:
+         projects/{project_number}/locations/{location}/collections/{collection_id}. Format for project:
          projects/{project_number}.
            */
           public java.lang.String getResource() {
@@ -2785,7 +2236,9 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           /**
            * Required. REQUIRED: The resource for which the policy is being requested. Format for
            * document: projects/{project_number}/locations/{location}/documents/{document_id}.
-           * Format for project: projects/{project_number}.
+           * Format for collection:
+           * projects/{project_number}/locations/{location}/collections/{collection_id}. Format for
+           * project: projects/{project_number}.
            */
           public FetchAcl setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -3666,7 +3119,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
          *
          * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
          *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-         *        project: projects/{project_number}.
+         *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+         *        Format for project: projects/{project_number}.
          * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetAclRequest}
          * @return the request
          */
@@ -3696,7 +3150,8 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
            *
            * @param resource Required. REQUIRED: The resource for which the policy is being requested. Format for document:
          *        projects/{project_number}/locations/{location}/documents/{document_id}. Format for
-         *        project: projects/{project_number}.
+         *        collection: projects/{project_number}/locations/{location}/collections/{collection_id}.
+         *        Format for project: projects/{project_number}.
            * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1SetAclRequest}
            * @since 1.13
            */
@@ -3768,13 +3223,16 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           /**
            * Required. REQUIRED: The resource for which the policy is being requested. Format for
            * document: projects/{project_number}/locations/{location}/documents/{document_id}.
-           * Format for project: projects/{project_number}.
+           * Format for collection:
+           * projects/{project_number}/locations/{location}/collections/{collection_id}. Format for
+           * project: projects/{project_number}.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
           /** Required. REQUIRED: The resource for which the policy is being requested. Format for document:
-         projects/{project_number}/locations/{location}/documents/{document_id}. Format for project:
+         projects/{project_number}/locations/{location}/documents/{document_id}. Format for collection:
+         projects/{project_number}/locations/{location}/collections/{collection_id}. Format for project:
          projects/{project_number}.
            */
           public java.lang.String getResource() {
@@ -3784,7 +3242,9 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           /**
            * Required. REQUIRED: The resource for which the policy is being requested. Format for
            * document: projects/{project_number}/locations/{location}/documents/{document_id}.
-           * Format for project: projects/{project_number}.
+           * Format for collection:
+           * projects/{project_number}/locations/{location}/collections/{collection_id}. Format for
+           * project: projects/{project_number}.
            */
           public SetAcl setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -4566,586 +4026,6 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
           }
 
         }
-      }
-      /**
-       * An accessor for creating requests from the Links collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Contentwarehouse contentwarehouse = new Contentwarehouse(...);}
-       *   {@code Contentwarehouse.Links.List request = contentwarehouse.links().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Links links() {
-        return new Links();
-      }
-
-      /**
-       * The "links" collection of methods.
-       */
-      public class Links {
-
-        /**
-         * Creates a link.
-         *
-         * Create a request for the method "links.create".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The parent name.
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link> {
-
-          private static final String REST_PATH = "v1/{+parent}/links";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Creates a link.
-           *
-           * Create a request for the method "links.create".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The parent name.
-           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link content) {
-            super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The parent name. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The parent name.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The parent name. */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Deletes a link between a collection and a document.
-         *
-         * Create a request for the method "links.delete".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the link to delete.
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleProtobufEmpty> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/links/[^/]+$");
-
-          /**
-           * Deletes a link between a collection and a document.
-           *
-           * Create a request for the method "links.delete".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the link to delete.
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(Contentwarehouse.this, "DELETE", REST_PATH, null, com.google.api.services.contentwarehouse.v1.model.GoogleProtobufEmpty.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/links/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The name of the link to delete. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the link to delete.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** Required. The name of the link to delete. */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/links/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Gets a link.
-         *
-         * Create a request for the method "links.get".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the link to retrieve.
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/links/[^/]+$");
-
-          /**
-           * Gets a link.
-           *
-           * Create a request for the method "links.get".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the link to retrieve.
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(Contentwarehouse.this, "GET", REST_PATH, null, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/links/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The name of the link to retrieve. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the link to retrieve.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** Required. The name of the link to retrieve. */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/links/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Updates the link using provided UpdateLinkRequest.
-         *
-         * Create a request for the method "links.patch".
-         *
-         * This request holds the parameters needed by the contentwarehouse server.  After setting any
-         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-         *
-         * @param name The resource name of the link. Format: projects/{project_number}/locations/{location}/links/{link}.
-         *        The name is ignored when creating a link.
-         * @param linksId
-         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link}
-         * @return the request
-         */
-        public Patch patch(java.lang.String name, java.lang.String linksId, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link content) throws java.io.IOException {
-          Patch result = new Patch(name, linksId, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Patch extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link> {
-
-          private static final String REST_PATH = "v1/{+name}/links/{linksId}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Updates the link using provided UpdateLinkRequest.
-           *
-           * Create a request for the method "links.patch".
-           *
-           * This request holds the parameters needed by the the contentwarehouse server.  After setting any
-           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The resource name of the link. Format: projects/{project_number}/locations/{location}/links/{link}.
-         *        The name is ignored when creating a link.
-           * @param linksId
-           * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link}
-           * @since 1.13
-           */
-          protected Patch(java.lang.String name, java.lang.String linksId, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link content) {
-            super(Contentwarehouse.this, "PATCH", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1Link.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.linksId = com.google.api.client.util.Preconditions.checkNotNull(linksId, "Required parameter linksId must be specified.");
-          }
-
-          @Override
-          public Patch set$Xgafv(java.lang.String $Xgafv) {
-            return (Patch) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Patch setAlt(java.lang.String alt) {
-            return (Patch) super.setAlt(alt);
-          }
-
-          @Override
-          public Patch setCallback(java.lang.String callback) {
-            return (Patch) super.setCallback(callback);
-          }
-
-          @Override
-          public Patch setFields(java.lang.String fields) {
-            return (Patch) super.setFields(fields);
-          }
-
-          @Override
-          public Patch setKey(java.lang.String key) {
-            return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Patch) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Patch setQuotaUser(java.lang.String quotaUser) {
-            return (Patch) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Patch setUploadType(java.lang.String uploadType) {
-            return (Patch) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Patch) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The resource name of the link. Format:
-           * projects/{project_number}/locations/{location}/links/{link}. The name is ignored when
-           * creating a link.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The resource name of the link. Format: projects/{project_number}/locations/{location}/links/{link}.
-         The name is ignored when creating a link.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The resource name of the link. Format:
-           * projects/{project_number}/locations/{location}/links/{link}. The name is ignored when
-           * creating a link.
-           */
-          public Patch setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @com.google.api.client.util.Key
-          private java.lang.String linksId;
-
-          /**
-
-           */
-          public java.lang.String getLinksId() {
-            return linksId;
-          }
-
-          public Patch setLinksId(java.lang.String linksId) {
-            this.linksId = linksId;
-            return this;
-          }
-
-          @Override
-          public Patch set(String parameterName, Object value) {
-            return (Patch) super.set(parameterName, value);
-          }
-        }
-
       }
       /**
        * An accessor for creating requests from the Operations collection.

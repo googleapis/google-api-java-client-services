@@ -92,6 +92,15 @@ public final class GeostoreLaneProtoLaneConnection extends com.google.api.client
   private GeostoreFeatureIdProto segment;
 
   /**
+   * The inverse of the primary connection bit that provides a hint that this connection is part of
+   * a merge and a vehicle following this connection should yield to vehicles following other
+   * incoming connections.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean yieldToOtherConnections;
+
+  /**
    * References to any gcid:physical_lane_marker features that bound this lane connection.
    * @return value or {@code null} for none
    */
@@ -219,6 +228,27 @@ public final class GeostoreLaneProtoLaneConnection extends com.google.api.client
    */
   public GeostoreLaneProtoLaneConnection setSegment(GeostoreFeatureIdProto segment) {
     this.segment = segment;
+    return this;
+  }
+
+  /**
+   * The inverse of the primary connection bit that provides a hint that this connection is part of
+   * a merge and a vehicle following this connection should yield to vehicles following other
+   * incoming connections.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getYieldToOtherConnections() {
+    return yieldToOtherConnections;
+  }
+
+  /**
+   * The inverse of the primary connection bit that provides a hint that this connection is part of
+   * a merge and a vehicle following this connection should yield to vehicles following other
+   * incoming connections.
+   * @param yieldToOtherConnections yieldToOtherConnections or {@code null} for none
+   */
+  public GeostoreLaneProtoLaneConnection setYieldToOtherConnections(java.lang.Boolean yieldToOtherConnections) {
+    this.yieldToOtherConnections = yieldToOtherConnections;
     return this;
   }
 

@@ -5977,14 +5977,15 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Only the fields specified in this mask are updated. Because name and group_key
-         * cannot be changed, update_mask is required and must always be: update_mask { paths:
-         * "access_levels" }
+         * cannot be changed, update_mask is required and may only contain the following fields:
+         * `access_levels`, `dry_run_access_levels`. update_mask { paths: "access_levels" }
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. Only the fields specified in this mask are updated. Because name and group_key cannot be
-       changed, update_mask is required and must always be: update_mask { paths: "access_levels" }
+       changed, update_mask is required and may only contain the following fields: `access_levels`,
+       `dry_run_access_levels`. update_mask { paths: "access_levels" }
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5992,8 +5993,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Only the fields specified in this mask are updated. Because name and group_key
-         * cannot be changed, update_mask is required and must always be: update_mask { paths:
-         * "access_levels" }
+         * cannot be changed, update_mask is required and may only contain the following fields:
+         * `access_levels`, `dry_run_access_levels`. update_mask { paths: "access_levels" }
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

@@ -32,7 +32,7 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class GcpUserAccessBinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Access level that a user must have to be granted access. Only one access level is
+   * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
    * "accessPolicies/9522/accessLevels/device_trusted"
    * The value may be {@code null}.
@@ -72,7 +72,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Required. Access level that a user must have to be granted access. Only one access level is
+   * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
    * "accessPolicies/9522/accessLevels/device_trusted"
    * @return value or {@code null} for none
@@ -82,7 +82,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Access level that a user must have to be granted access. Only one access level is
+   * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
    * "accessPolicies/9522/accessLevels/device_trusted"
    * @param accessLevels accessLevels or {@code null} for none

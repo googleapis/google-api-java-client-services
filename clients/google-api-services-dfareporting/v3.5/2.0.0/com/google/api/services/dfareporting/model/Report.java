@@ -2519,6 +2519,13 @@ public final class Report extends com.google.api.client.json.GenericJson {
     private com.google.api.client.util.DateTime startDate;
 
     /**
+     * The timezone when the report will run.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String timezone;
+
+    /**
      * Whether the schedule is active or not. Must be set to either true or false.
      * @return value or {@code null} for none
      */
@@ -2644,6 +2651,23 @@ public final class Report extends com.google.api.client.json.GenericJson {
      */
     public Schedule setStartDate(com.google.api.client.util.DateTime startDate) {
       this.startDate = startDate;
+      return this;
+    }
+
+    /**
+     * The timezone when the report will run.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTimezone() {
+      return timezone;
+    }
+
+    /**
+     * The timezone when the report will run.
+     * @param timezone timezone or {@code null} for none
+     */
+    public Schedule setTimezone(java.lang.String timezone) {
+      this.timezone = timezone;
       return this;
     }
 

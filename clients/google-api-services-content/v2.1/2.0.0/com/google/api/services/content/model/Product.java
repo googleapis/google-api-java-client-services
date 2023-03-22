@@ -368,7 +368,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Additional URLs of lifestyle images of the item, used to explicitly identify images that
+   * Additional URLs of lifestyle images of the item. Used to explicitly identify images that
    * showcase your item in a real-world context. See the Help Center article for more information.
    * The value may be {@code null}.
    */
@@ -1518,7 +1518,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional URLs of lifestyle images of the item, used to explicitly identify images that
+   * Additional URLs of lifestyle images of the item. Used to explicitly identify images that
    * showcase your item in a real-world context. See the Help Center article for more information.
    * @return value or {@code null} for none
    */
@@ -1527,7 +1527,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional URLs of lifestyle images of the item, used to explicitly identify images that
+   * Additional URLs of lifestyle images of the item. Used to explicitly identify images that
    * showcase your item in a real-world context. See the Help Center article for more information.
    * @param lifestyleImageLinks lifestyleImageLinks or {@code null} for none
    */

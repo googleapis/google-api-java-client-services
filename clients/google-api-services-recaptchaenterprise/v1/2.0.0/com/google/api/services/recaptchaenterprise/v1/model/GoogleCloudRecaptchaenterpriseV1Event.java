@@ -39,12 +39,21 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String expectedAction;
 
   /**
-   * Optional. Optional flag for a reCAPTCHA express request for an assessment without a token. If
-   * enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled,
+   * `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean express;
+
+  /**
+   * Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the
+   * firewall policy will be evaluated and a suggested firewall action will be returned in the
+   * response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean firewallPolicyEvaluation;
 
   /**
    * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
@@ -55,7 +64,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String hashedAccountId;
 
   /**
-   * Optional. Optional HTTP header information about the request.
+   * Optional. HTTP header information about the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,6 +124,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String userIpAddress;
 
   /**
+   * Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and
+   * have been created by a WAF-enabled key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean wafTokenAssessment;
+
+  /**
    * Optional. The expected action for this type of event. This should be the same action provided
    * at token generation time on client-side platforms already integrated with recaptcha enterprise.
    * @return value or {@code null} for none
@@ -134,8 +151,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional flag for a reCAPTCHA express request for an assessment without a token. If
-   * enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled,
+   * `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExpress() {
@@ -143,12 +160,33 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional flag for a reCAPTCHA express request for an assessment without a token. If
-   * enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled,
+   * `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
    * @param express express or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setExpress(java.lang.Boolean express) {
     this.express = express;
+    return this;
+  }
+
+  /**
+   * Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the
+   * firewall policy will be evaluated and a suggested firewall action will be returned in the
+   * response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFirewallPolicyEvaluation() {
+    return firewallPolicyEvaluation;
+  }
+
+  /**
+   * Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the
+   * firewall policy will be evaluated and a suggested firewall action will be returned in the
+   * response.
+   * @param firewallPolicyEvaluation firewallPolicyEvaluation or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setFirewallPolicyEvaluation(java.lang.Boolean firewallPolicyEvaluation) {
+    this.firewallPolicyEvaluation = firewallPolicyEvaluation;
     return this;
   }
 
@@ -202,7 +240,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional HTTP header information about the request.
+   * Optional. HTTP header information about the request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHeaders() {
@@ -210,7 +248,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional HTTP header information about the request.
+   * Optional. HTTP header information about the request.
    * @param headers headers or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setHeaders(java.util.List<java.lang.String> headers) {
@@ -342,6 +380,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   public GoogleCloudRecaptchaenterpriseV1Event setUserIpAddress(java.lang.String userIpAddress) {
     this.userIpAddress = userIpAddress;
+    return this;
+  }
+
+  /**
+   * Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and
+   * have been created by a WAF-enabled key.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWafTokenAssessment() {
+    return wafTokenAssessment;
+  }
+
+  /**
+   * Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and
+   * have been created by a WAF-enabled key.
+   * @param wafTokenAssessment wafTokenAssessment or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setWafTokenAssessment(java.lang.Boolean wafTokenAssessment) {
+    this.wafTokenAssessment = wafTokenAssessment;
     return this;
   }
 

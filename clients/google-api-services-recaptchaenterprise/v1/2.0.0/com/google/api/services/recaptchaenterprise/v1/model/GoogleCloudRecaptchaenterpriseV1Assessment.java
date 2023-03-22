@@ -53,6 +53,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1Event event;
 
   /**
+   * Assessment returned when firewall policies belonging to the project are evaluated using the
+   * field firewall_policy_evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment firewallPolicyAssessment;
+
+  /**
    * Assessment returned by Fraud Prevention when TransactionData is provided.
    * The value may be {@code null}.
    */
@@ -139,6 +147,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setEvent(GoogleCloudRecaptchaenterpriseV1Event event) {
     this.event = event;
+    return this;
+  }
+
+  /**
+   * Assessment returned when firewall policies belonging to the project are evaluated using the
+   * field firewall_policy_evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment getFirewallPolicyAssessment() {
+    return firewallPolicyAssessment;
+  }
+
+  /**
+   * Assessment returned when firewall policies belonging to the project are evaluated using the
+   * field firewall_policy_evaluation.
+   * @param firewallPolicyAssessment firewallPolicyAssessment or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setFirewallPolicyAssessment(GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment firewallPolicyAssessment) {
+    this.firewallPolicyAssessment = firewallPolicyAssessment;
     return this;
   }
 

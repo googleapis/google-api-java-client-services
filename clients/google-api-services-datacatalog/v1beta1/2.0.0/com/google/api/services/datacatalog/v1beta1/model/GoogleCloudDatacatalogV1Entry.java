@@ -59,6 +59,14 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1BusinessContext businessContext;
 
   /**
+   * Specification that applies to Cloud Bigtable system. Only settable when `integrated_system` is
+   * equal to `CLOUD_BIGTABLE`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1CloudBigtableSystemSpec cloudBigtableSystemSpec;
+
+  /**
    * Output only. Physical location of the entry.
    * The value may be {@code null}.
    */
@@ -200,6 +208,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1Schema schema;
 
   /**
+   * Specification that applies to a Service resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1ServiceSpec serviceSpec;
+
+  /**
    * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the
    * entry has a system listed in the `IntegratedSystem` enum. For entries with
    * `user_specified_system`, this field is optional and defaults to an empty timestamp.
@@ -308,6 +323,25 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setBusinessContext(GoogleCloudDatacatalogV1BusinessContext businessContext) {
     this.businessContext = businessContext;
+    return this;
+  }
+
+  /**
+   * Specification that applies to Cloud Bigtable system. Only settable when `integrated_system` is
+   * equal to `CLOUD_BIGTABLE`
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1CloudBigtableSystemSpec getCloudBigtableSystemSpec() {
+    return cloudBigtableSystemSpec;
+  }
+
+  /**
+   * Specification that applies to Cloud Bigtable system. Only settable when `integrated_system` is
+   * equal to `CLOUD_BIGTABLE`
+   * @param cloudBigtableSystemSpec cloudBigtableSystemSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setCloudBigtableSystemSpec(GoogleCloudDatacatalogV1CloudBigtableSystemSpec cloudBigtableSystemSpec) {
+    this.cloudBigtableSystemSpec = cloudBigtableSystemSpec;
     return this;
   }
 
@@ -638,6 +672,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setSchema(GoogleCloudDatacatalogV1Schema schema) {
     this.schema = schema;
+    return this;
+  }
+
+  /**
+   * Specification that applies to a Service resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ServiceSpec getServiceSpec() {
+    return serviceSpec;
+  }
+
+  /**
+   * Specification that applies to a Service resource.
+   * @param serviceSpec serviceSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setServiceSpec(GoogleCloudDatacatalogV1ServiceSpec serviceSpec) {
+    this.serviceSpec = serviceSpec;
     return this;
   }
 

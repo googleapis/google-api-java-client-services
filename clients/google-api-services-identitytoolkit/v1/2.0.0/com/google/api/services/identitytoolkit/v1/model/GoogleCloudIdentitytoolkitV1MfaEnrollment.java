@@ -60,6 +60,13 @@ public final class GoogleCloudIdentitytoolkitV1MfaEnrollment extends com.google.
   private java.lang.String phoneInfo;
 
   /**
+   * Contains information specific to TOTP MFA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV1TotpInfo totpInfo;
+
+  /**
    * Output only. Unobfuscated phone_info.
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class GoogleCloudIdentitytoolkitV1MfaEnrollment extends com.google.
    */
   public GoogleCloudIdentitytoolkitV1MfaEnrollment setPhoneInfo(java.lang.String phoneInfo) {
     this.phoneInfo = phoneInfo;
+    return this;
+  }
+
+  /**
+   * Contains information specific to TOTP MFA.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1TotpInfo getTotpInfo() {
+    return totpInfo;
+  }
+
+  /**
+   * Contains information specific to TOTP MFA.
+   * @param totpInfo totpInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1MfaEnrollment setTotpInfo(GoogleCloudIdentitytoolkitV1TotpInfo totpInfo) {
+    this.totpInfo = totpInfo;
     return this;
   }
 

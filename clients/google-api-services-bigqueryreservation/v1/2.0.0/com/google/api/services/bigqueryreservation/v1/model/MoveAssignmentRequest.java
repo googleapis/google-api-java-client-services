@@ -34,11 +34,41 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class MoveAssignmentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The optional assignment ID. A new assignment name is generated if this field is empty. This
+   * field can contain only lowercase alphanumeric characters or dashes. Max length is 64
+   * characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assignmentId;
+
+  /**
    * The new reservation ID, e.g.: `projects/myotherproject/locations/US/reservations/team2-prod`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationId;
+
+  /**
+   * The optional assignment ID. A new assignment name is generated if this field is empty. This
+   * field can contain only lowercase alphanumeric characters or dashes. Max length is 64
+   * characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssignmentId() {
+    return assignmentId;
+  }
+
+  /**
+   * The optional assignment ID. A new assignment name is generated if this field is empty. This
+   * field can contain only lowercase alphanumeric characters or dashes. Max length is 64
+   * characters.
+   * @param assignmentId assignmentId or {@code null} for none
+   */
+  public MoveAssignmentRequest setAssignmentId(java.lang.String assignmentId) {
+    this.assignmentId = assignmentId;
+    return this;
+  }
 
   /**
    * The new reservation ID, e.g.: `projects/myotherproject/locations/US/reservations/team2-prod`

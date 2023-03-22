@@ -2310,14 +2310,14 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         /**
          * Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
          * are not supported in this filter. Note: Only >= and <= comparators are supported in this
-         * filter. Supported filter fields: * completion_time
+         * filter. Supported filter fields: * complete_time
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not
        supported in this filter. Note: Only >= and <= comparators are supported in this filter. Supported
-       filter fields: * completion_time
+       filter fields: * complete_time
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2326,7 +2326,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         /**
          * Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
          * are not supported in this filter. Note: Only >= and <= comparators are supported in this
-         * filter. Supported filter fields: * completion_time
+         * filter. Supported filter fields: * complete_time
          */
         public CountPrintJobsByPrinter setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2568,14 +2568,14 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         /**
          * Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
          * are not supported in this filter. Note: Only >= and <= comparators are supported in this
-         * filter. Supported filter fields: * completion_time
+         * filter. Supported filter fields: * complete_time
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not
        supported in this filter. Note: Only >= and <= comparators are supported in this filter. Supported
-       filter fields: * completion_time
+       filter fields: * complete_time
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2584,7 +2584,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         /**
          * Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
          * are not supported in this filter. Note: Only >= and <= comparators are supported in this
-         * filter. Supported filter fields: * completion_time
+         * filter. Supported filter fields: * complete_time
          */
         public CountPrintJobsByUser setFilter(java.lang.String filter) {
           this.filter = filter;
